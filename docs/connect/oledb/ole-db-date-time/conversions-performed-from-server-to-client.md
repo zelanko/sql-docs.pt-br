@@ -25,7 +25,7 @@ ms.locfileid: "47736464"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Descreve as conversões de data/hora executadas entre o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB Driver for SQL Server.  
+  Este artigo descreve as conversões de data/hora executadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB Driver para SQL Server.  
   
 ## <a name="conversions"></a>Conversões  
  A tabela a seguir descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se tiver sido chamado ICommandWithParameters:: SetParameterInfo e o tipo especificado na *pwszDataSourceType* não corresponde ao tipo real no servidor, uma conversão implícita será executado pelo servidor , e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de ICommandWithParameters:: SetParameterInfo. Isto pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes daquelas descritas neste artigo. Por exemplo, quando é necessário fornecer uma data padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa 1/1/1900 em vez de 30/12/1899.  

@@ -36,7 +36,7 @@ public void updateBlob(int columnIndex,
   
  Um **int** que indica o índice de coluna.  
   
- InputStream  
+ *inputStream*  
   
  Um objeto InputStream.  
   
@@ -47,7 +47,7 @@ public void updateBlob(int columnIndex,
  Esse método updateBlob é especificado pelo método updateBlob na interface do resultset.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [Método updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -27,7 +27,7 @@ ms.locfileid: "47639064"
   
  **Estende:** java.lang.Object  
   
- Implementa:** java.sql.Clob, java.io.Serializable  
+ **Implementa:** java.sql.Clob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -26,7 +26,7 @@ ms.locfileid: "47745524"
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>Método getTrustServerCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna um valor **booliano** que indica se a propriedade trustServerCertificate está habilitada.  
+  Retorna um valor **Booliano** que indica se a propriedade trustServerCertificate está habilitada.  
   
 ## <a name="syntax"></a>Sintaxe  
   

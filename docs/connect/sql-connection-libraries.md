@@ -1,25 +1,23 @@
 ---
 title: Bibliotecas de Conexão para bancos de dados do Microsoft SQL | Microsoft Docs
-description: Fornece links de download para os módulos que permitem a conexão ao Microsoft SQL Server e banco de dados SQL Azure, de uma variedade de linguagens de programação do cliente.
+description: Fornece links de download para módulos que permitem a conexão ao Microsoft SQL Server e banco de dados SQL Azure, de uma variedade de linguagens de programação do cliente.
 author: MightyPen
-ms.suite: sql
 ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: dbe-data-tier-apps
+ms.technology: ''
 ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
-ms.translationtype: MT
+ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36246838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806080"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados do Microsoft SQL
+# <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de Conexão para bancos de dados SQL do Microsoft
 
-Este artigo fornece links de download para os módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com [Microsoft SQL Server](../relational-databases/database-features.md)e com seu duas na nuvem [Azure Banco de dados SQL](http://docs.microsoft.com/azure/sql-database/). Drivers estão disponíveis para uma variedade de linguagens de programação, em execução em sistemas operacionais a seguir:
+Este artigo fornece links de download para os módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com [Microsoft SQL Server](../relational-databases/database-features.md)e com seu gêmeo na nuvem [Azure Banco de dados SQL](http://docs.microsoft.com/azure/sql-database/). Drivers estão disponíveis para uma variedade de linguagens de programação, em execução em sistemas operacionais a seguir:
 
 - Linux (Ubuntu)
 - MacOS
@@ -27,9 +25,9 @@ Este artigo fornece links de download para os módulos de conexão ou *drivers* 
 
 #### <a name="oop-to-relational-mismatch"></a>Incompatibilidade de OOP para relacional
 
-*Relacional*: programas de cliente que são escritos em uma linguagem de (OOP) programação orientada a objeto geralmente usam drivers SQL que retornam dados consultados em um formato que seja mais relacional que orientada a objeto. C# usando o ADO.NET é um exemplo. Incompatibilidade de formato OOP relacional torna, às vezes, o código OOP mais difícil de escrever e entender.
+*Relacional*: os programas de cliente que são escritos em uma linguagem de (OOP) programação orientada a objeto geralmente usam drivers do SQL que retornam dados consultados em um formato que seja mais relacional que orientada a objeto. Em C# usando o ADO.NET é um exemplo. A incompatibilidade de formato relacional de OOP, às vezes, torna o código OOP mais difícil de escrever e entender.
 
-*ORM*: outros drivers ou estruturas retornarem dados consultados no formato do OOP, evitando a incompatibilidade. Esses drivers funcionam esperando classes foram definidas para corresponder às colunas de dados de determinadas tabelas SQL. O driver executa a *mapeamento relacional de objeto* (ORM) para retornar dados consultados como uma instância de uma classe. Entity Framework (EF da Microsoft) para c# e hibernação para Java, são dois exemplos.
+*ORM*: outros drivers ou estruturas de retornam dados consultados no formato OOP, evitando a incompatibilidade. Esses drivers trabalhar, esperando que as classes foram definidas de acordo com as colunas de dados de determinadas tabelas SQL. O driver, em seguida, executa o *mapeamento relacional de objeto* (ORM) para retornar dados consultados como uma instância de uma classe. Entity Framework (EF da Microsoft) para c# e Hibernar para Java, são dois exemplos.
 
 O presente artigo dedica seções separadas para esses dois tipos de drivers de conexão.
 
@@ -51,13 +49,13 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | Linguagem | Baixar o driver do SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo do .NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo do .NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core para Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core para Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Driver do Node. js, instruções de instalação](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
-| Python | [pyodbc, instruções de instalação](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Baixe o ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
-| Ruby | [Driver Ruby, instruções de instalação](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de download Ruby](https://rubyinstaller.org/downloads/) |
+| Python | [pyodbc, instruções de instalação](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Baixar o ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Driver Ruby, instruções de instalação](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de download do Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
 <a name="anchor-40-drivers-orm-access" />
@@ -65,41 +63,41 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## <a name="drivers-for-orm-access"></a>Drivers para acesso ORM
 
 
-A tabela a seguir lista exemplos de estruturas de mapeamento relacional objeto (ORM) que aplicativos cliente usam para se conectar aos bancos de dados do Microsoft SQL.
+A tabela a seguir lista exemplos de estruturas de objeto ORM (mapeamento relacional) que aplicativos cliente usam para se conectar a bancos de dados SQL do Microsoft.
 
 
 | Linguagem | Download do driver ORM |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6. x ou posterior)](http://docs.microsoft.com/ef/) |
-| Java | [No modo de hibernação ORM](http://hibernate.org/orm)|
-| PHP | [Eloquente ORM, incluído na instalação de Laravel](http://laravel.com/docs/) |
+| Java | [Hibernar ORM](http://hibernate.org/orm)|
+| PHP | [Com eloquência o ORM, incluído na instalação do Laravel](http://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby nos trilhos](http://rubyonrails.org/) |
+| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
-## <a name="build-an-app-webpages"></a>Construir um aplicativo páginas da Web
-[http://aka.ms/sqldev](http://aka.ms/sqldev) leva para um conjunto de *construir um aplicativo* páginas da Web. Páginas da Web que fornecem informações sobre várias combinações de programação de idioma, o sistema operacional e o driver de conexão de SQL. Entre as informações fornecidas por páginas da Web para construir um aplicativo são os seguintes itens:
+## <a name="build-an-app-webpages"></a>Páginas de compilação um aplicativo da Web
+[http://aka.ms/sqldev](http://aka.ms/sqldev) leva você para um conjunto de *Build um aplicativo* páginas da Web. As páginas da Web fornecem informações sobre várias combinações de idioma, o sistema operacional e o driver de conexão SQL de programação. Entre as informações fornecidas pelo Build um aplicativo páginas da Web são os seguintes itens:
 
-- Detalhes sobre como começar do começo, para cada combinação de idioma, o sistema operacional + o driver.
+- Detalhes sobre como começar desde o início, para cada combinação de idioma, o sistema operacional + o driver.
     - Instruções para instalar os drivers mais recentes de conexão SQL.
 - Exemplos de código para cada um dos seguintes itens:
     - Exemplos de código de objeto relacional.
-    - Exemplos de código do ORM.
+    - Exemplos de código ORM.
     - Demonstrações do índice ColumnStore para um desempenho muito mais rápido.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Primeira página das páginas de construir um aplicativo da Web
-![Construir um aplicativo páginas da Web, primeiro captura de tela de página][image-ref-163-buildanapp-webpages-first-page]
+#### <a name="first-page-of-build-an-app-webpages"></a>Primeira página das páginas de compilação um aplicativo da Web
+![Construir um aplicativo páginas da Web, primeira captura de tela da página][image-ref-163-buildanapp-webpages-first-page]
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menu de Java - Ubuntu das páginas de construir um aplicativo da Web
-![Construir um aplicativo páginas da Web, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menu para Java - Ubuntu de páginas de compilação um aplicativo da Web
+![Construir um aplicativo páginas da Web, menu Ubuntu de Java][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 &nbsp;
 
 ## <a name="related-links"></a>Links relacionados
-- [Exemplos para se conectar ao banco de dados SQL Azure na nuvem, com o Java e outras linguagens de código](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Exemplos de código de se conectar ao banco de dados SQL Azure na nuvem, com Java e outras linguagens](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

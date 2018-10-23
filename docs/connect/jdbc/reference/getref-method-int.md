@@ -26,7 +26,7 @@ ms.locfileid: "47726584"
 # <a name="getref-method-int"></a>Método getRef (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um objeto  na linguagem de programação Java, considerando o índice do parâmetro.  
+  Recupera o valor do parâmetro designado como um objeto Ref na linguagem de programação Java, considerando o índice do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,10 +47,10 @@ public java.sql.Ref getRef(int i)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getInt é especificado pelo método getInt na interface java.sql.CallableStatement.  
+ Esse método getRef é especificado pelo método getRef na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getInt &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
+ [Método getRef &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

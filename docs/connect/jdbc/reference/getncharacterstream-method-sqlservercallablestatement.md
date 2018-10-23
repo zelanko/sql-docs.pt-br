@@ -27,8 +27,8 @@ ms.locfileid: "47734574"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método getNCharacterStream (int)](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o índice do parâmetro.|  
-|[Método getNCharacterStream (java.lang.String)](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o nome do parâmetro.|  
+|[Método getNCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o índice do parâmetro.|  
+|[Método getNCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um objeto java.io.Reader, considerando o nome do parâmetro.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

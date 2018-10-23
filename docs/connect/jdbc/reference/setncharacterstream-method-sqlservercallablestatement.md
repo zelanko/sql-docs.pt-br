@@ -21,14 +21,14 @@ ms.locfileid: "47617074"
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>Método setNCharacterStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto java.io.Reader especificado.  
+  Define o parâmetro designado como o objeto Reader especificado.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setNCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
-|[Método setNCharacterStream (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto  especificado, que é o número especificado de caracteres.|  
+|[Método setNCharacterStream &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto Reader especificado.|  
+|[Método setNCharacterStream &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto Reader especificado, que é o número especificado de caracteres.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

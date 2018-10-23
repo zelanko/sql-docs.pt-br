@@ -23,7 +23,7 @@ ms.locfileid: "48154230"
 # <a name="select-script-component-type"></a>Selecionar Tipo de Componente do Script
   Use a caixa de diálogo **Selecionar Tipo de Componente do Script** para especificar se deve ser criada uma Transformação Scripts pré-configurada para uso como origem, transformação ou destino.  
   
- Para obter mais informações sobre o componente Script, consulte [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para saber mais sobre o componente Script, consulte [componente de Script](data-flow/transformations/script-component.md) e [Configurando o componente Script no Editor de componente de Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opções  
  Sua seleção de **Origem**, **Destino**ou **Transformação** afeta a configuração da Transformação Scripts e as páginas do Editor de Transformação Scripts.  

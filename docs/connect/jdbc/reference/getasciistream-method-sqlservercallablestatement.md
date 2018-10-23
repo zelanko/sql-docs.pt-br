@@ -26,13 +26,13 @@ ms.locfileid: "47762252"
 # <a name="getasciistream-method-sqlservercallablestatement"></a>Método getAsciiStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um fluxo de caracteres .  
+  Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-int.md)|Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o índice do parâmetro.|  
+|[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o índice do parâmetro.|  
 |[getAsciiStream &#40;lang&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o nome do parâmetro.|  
   
 ## <a name="see-also"></a>Consulte Também  

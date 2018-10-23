@@ -26,7 +26,7 @@ ms.locfileid: "47810654"
 # <a name="getfloat-method-int-sqlserverresultset"></a>Método getFloat (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **float** na linguagem de programação Java.  
+  Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **float** na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public float getFloat(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Esse método getFloat é especificado pelo método getFloat na interface do resultset.  
   
- Esse método retorna todos os tipos baseados em número com a fidelidadedo Java.  
+ Esse método retorna todos os tipos baseados em número com a fidelidade do Java **float**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   

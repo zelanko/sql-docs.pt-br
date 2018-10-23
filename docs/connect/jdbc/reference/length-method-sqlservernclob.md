@@ -21,7 +21,7 @@ ms.locfileid: "47713194"
 # <a name="length-method-sqlservernclob"></a>Método length (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o número de caracteres em um .  
+  Recupera o número de caracteres no **NClob**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,7 +31,7 @@ public long length()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- O comprimento do  em número de caracteres.  
+ O tamanho do **NClob** em número de caracteres.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

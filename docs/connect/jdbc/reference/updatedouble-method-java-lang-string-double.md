@@ -26,7 +26,7 @@ ms.locfileid: "47709144"
 # <a name="updatedouble-method-javalangstring-double"></a>Método updateDouble (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um valor **double**, considerando o índice da coluna.  
+  Atualiza a coluna designada com um valor **double**, considerando o nome da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   

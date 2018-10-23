@@ -26,7 +26,7 @@ ms.locfileid: "47633766"
 # <a name="issamerm-method-sqlserverxaresource"></a>Método isSameRM (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Determina se a instância do gerenciador de recursos representada pelo objeto de destino é igual à instância do gerenciador de recursos representada pelo objeto  fornecido.  
+  Determina se a instância do gerenciador de recursos representada pelo objeto de destino é a mesma representada pelo objeto XAResource fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   

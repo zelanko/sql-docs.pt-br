@@ -28,7 +28,7 @@ ms.locfileid: "47790604"
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Envia dados de fluxos de parâmetro para o servidor. Até oito quilobytes (8 KB) de dados são enviados com cada chamada para sqlsrv_send_stream_data **.  
+Envia dados de fluxos de parâmetro para o servidor. Até oito quilobytes (8 KB) de dados são enviados com cada chamada para **sqlsrv_send_stream_data**.  
   
 > [!NOTE]  
 > Por padrão, todos os dados de fluxo são enviados para o servidor quando uma consulta é executada. Se esse comportamento padrão não for alterado, você não precisará usar **sqlsrv_send_stream_data** para enviar dados de fluxo para o servidor. Para obter informações sobre como alterar o comportamento padrão, consulte a seção Parâmetros de [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  

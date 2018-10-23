@@ -1,5 +1,5 @@
 ---
-title: Suporte a colunas esparsas no OLE DB Driver for SQL Server | Microsoft Docs
+title: Compatibilidade de UTF-16 com OLE DB Driver para SQL Server| Microsoft Docs
 description: Suporte ao UTF-16 no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018

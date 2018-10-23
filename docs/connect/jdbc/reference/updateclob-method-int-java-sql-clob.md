@@ -52,7 +52,7 @@ public void updateClob(int columnIndex,
  Esse método updateClob é especificado pelo método updateClob na interface do resultset.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
+ [Método updateClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -49,10 +49,10 @@ public void setTimestamp(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setTime é especificado pelo método setTime na interface java.sql.CallableStatement.  
+ Esse método setTimestamp é especificado pelo método setTimestamp na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
- [getTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [Método setTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

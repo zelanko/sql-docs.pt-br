@@ -21,13 +21,13 @@ ms.locfileid: "47810554"
 # <a name="position-method-sqlservernclob"></a>Método position (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera a posição do caractere do objeto  ou da subcadeia de caracteres especificada no  com base na posição inicial.  
+  Recupera a posição do caractere do objeto **NClob** ou da subcadeia de caracteres especificada no **NClob** com base na posição inicial.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método position (java.sql.NClob, long)](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera a posição do caractere em que a especificada **NClob** objeto *searchstr* aparece neste **NClob** objeto.|  
+|[Método position &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera a posição do caractere em que a especificada **NClob** objeto *searchstr* aparece neste **NClob** objeto.|  
 |[Método Position &#40;lang, longo&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Recupera a posição do caractere na qual a subcadeia de caracteres especificada *searchstr* aparece na **NCLOB** valor representado por esse **NClob** objeto.|  
   
 ## <a name="see-also"></a>Consulte Também  

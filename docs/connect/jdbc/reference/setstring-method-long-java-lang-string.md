@@ -26,7 +26,7 @@ ms.locfileid: "47839104"
 # <a name="setstring-method-long-javalangstring"></a>Método setString (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Grava a cadeia de caracteresfornecida no CLOB, começando na posição fornecida.  
+  Grava o **String** fornecido no CLOB, começando na posição fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ public int setString(long pos,
   
  *s*  
   
- A cadeia de caracteres a ser gravada no CLOB.  
+ A **cadeia de caracteres** a ser gravada no CLOB.  
   
 ## <a name="return-value"></a>Valor retornado  
  O número de caracteres gravados.  

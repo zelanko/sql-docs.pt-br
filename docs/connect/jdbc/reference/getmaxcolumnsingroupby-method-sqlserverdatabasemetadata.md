@@ -36,7 +36,7 @@ public int getMaxColumnsInGroupBy()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Umque indica o número máximo de colunas permitidas.  
+ Um **int** que indica o número máximo de colunas permitidas.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

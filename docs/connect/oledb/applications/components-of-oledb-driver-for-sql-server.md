@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: Componentes do OLE DB Driver para SQL Server | Microsoft Docs
 description: Componentes do OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018

@@ -52,7 +52,7 @@ public java.sql.Timestamp getTimestamp(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTime é especificado pelo método getTime na interface java.sql.CallableStatement.  
+ Esse método getTimestamp é especificado pelo método getTimestamp na interface java.sql.CallableStatement.  
   
  Esse método só retorna valores das colunas **datetime** e **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

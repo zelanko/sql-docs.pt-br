@@ -26,7 +26,7 @@ ms.locfileid: "47704054"
 # <a name="getselectmethod-method-sqlserverdatasource"></a>Método getSelectMethod (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna o tipo de cursor padrão usado em todos os conjuntos de resultados criados com o objeto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+  Retorna o tipo de cursor padrão usado em todos os conjuntos de resultados criados usando este objeto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ public java.lang.String getSelectMethod()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valorque contém o tipo de cursor padrão.  
+ Um valor **String** que contém o tipo de cursor padrão.  
   
 ## <a name="remarks"></a>Remarks  
  A propriedade selectMethod especifica o tipo de cursor padrão que é usado para um conjunto de resultados. Essa propriedade é útil quando você está lidando com conjuntos de resultados grandes e não deseja armazenar o conjunto de resultados inteiro na memória no lado do cliente. Ao definir a propriedade como "cursor", você pode criar um cursor do lado do servidor que pode buscar partes menores de dados por vez. Se a propriedade selectMethod não for definida, getSelectMethod retornará o valor padrão "direto".  

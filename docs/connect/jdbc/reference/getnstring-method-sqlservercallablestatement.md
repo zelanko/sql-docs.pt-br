@@ -28,7 +28,7 @@ ms.locfileid: "47633654"
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método getNString &#40;int&#41;](../../../connect/jdbc/reference/getnstring-method-int.md)|Recupera o valor do designado **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.|  
-|[Método getNString (java.lang.String)](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|Recupera o valor do designado **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.|  
+|[Método getNString &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|Recupera o valor do designado **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

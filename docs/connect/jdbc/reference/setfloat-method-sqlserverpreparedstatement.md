@@ -26,7 +26,7 @@ ms.locfileid: "47660276"
 # <a name="setfloat-method-sqlserverpreparedstatement"></a>Método setFloat (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o valor Java fornecido.  
+  Define o parâmetro designado como o valor **float** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   

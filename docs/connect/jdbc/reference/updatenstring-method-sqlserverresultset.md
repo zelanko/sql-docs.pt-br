@@ -27,8 +27,8 @@ ms.locfileid: "47706084"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método updateNString (int, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o rótulo de coluna especificado.|  
-|[Método updateNString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o rótulo de coluna especificado.|  
+|[Método updateNString &#40;int, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o índice de coluna especificado.|  
+|[Método updateNString &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o rótulo de coluna especificado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

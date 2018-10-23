@@ -1,25 +1,20 @@
 ---
 title: Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828264"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ Este exemplo insere uma linha na tabela Pacientes. Observe o seguinte:
 
 - Não há nada específico de criptografia no código de exemplo. O driver detecta automaticamente e criptografa os valores dos parâmetros de SSN e data, que se destinam a colunas criptografadas. Isso torna a criptografia transparente para o aplicativo.
 
-- Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros associados (veja [função SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate fossem passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não tentará criptografar ou processar os literais em consultas. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
+- Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros associados (consulte [Função SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate fossem passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não tentará criptografar ou processar os literais em consultas. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
 
 - O tipo SQL do parâmetro inserido na coluna SSN é definido como SQL_CHAR, que mapeia para o **char** tipo de dados do SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se o tipo do parâmetro foi definido como SQL_WCHAR, que mapeia para **nchar**, a consulta falharia, como Always Encrypted não suporta conversões de lado do servidor de valores nchar criptografados em valores criptografados char. Ver [referência do programador de ODBC – tipos de dados do apêndice d:](https://msdn.microsoft.com/library/ms713607.aspx) para obter informações sobre os mapeamentos de tipo de dados.
 
@@ -144,9 +139,9 @@ Este exemplo insere uma linha na tabela Pacientes. Observe o seguinte:
 
 O exemplo a seguir demonstra a filtragem de dados com base em valores criptografados e a recuperação de dados de texto sem formatação de colunas criptografadas. Observe o seguinte:
 
-- O valor usado na cláusula WHERE para filtrar na coluna SSN precisa ser passado com SQLBindParameter, para que o driver de modo transparente pode criptografá-lo antes de enviá-la para o servidor.
+- O valor usado na cláusula WHERE a ser filtrado na coluna SSN precisa ser passado usando o SQLBindParameter para que o driver possa criptografá-lo de modo transparente antes de enviá-lo para o servidor.
 
-- Todos os valores impressos pelo programa será em texto não criptografado, já que o driver descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
+- Todos os valores impressos pelo programa estarão em texto não criptografado, já que o driver descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
 
 > [!NOTE]
 > As consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia é determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 Nenhuma outra alteração de aplicativo de ODBC devem usar o AKV para armazenamento CMK.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Usando o provedor do Windows Store de certificado
+### <a name="using-the-windows-certificate-store-provider"></a>Uso do Provedor do Repositório de Certificados do Windows
 
 O Driver ODBC para SQL Server no Windows inclui um provedor de repositório de chaves mestras de coluna interna para a Store de certificado do Windows, chamado `MSSQL_CERTIFICATE_STORE`. (Esse provedor não está disponível no macOS ou Linux.) Com esse provedor, a CMK é armazenada localmente no computador cliente e nenhuma configuração adicional pelo aplicativo é necessária usá-lo com o driver. No entanto, o aplicativo deve ter acesso ao certificado e sua chave privada no repositório. Veja [Criar e armazenar chaves mestras de coluna (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
 
@@ -574,7 +569,7 @@ Veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relation
 
 |Nome|Descrição|  
 |----------|-----------------|  
-|`ColumnEncryption`|Os valores aceitos são `Enabled` / `Disabled`.<br>`Enabled` -- habilita ou desabilita a funcionalidade Always Encrypted para a conexão.<br>`Disabled` – desabilitar a funcionalidade Always Encrypted para a conexão. <br><br>O padrão é `Disabled`.|  
+|`ColumnEncryption`|Os valores aceitos são `Enabled` / `Disabled`.<br>`Enabled` -- habilita ou desabilita a funcionalidade Always Encrypted para a conexão.<br>`Disabled` -- desabilita a funcionalidade Always Encrypted para a conexão. <br><br>O padrão é `Disabled`.|  
 |`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword`, defina esse valor como um nome válido de entidade de usuário do Active Directory do Azure. <br>Quando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` definir esse valor como um válido do Azure Active Directory aplicativo ID do cliente |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword` definir esse valor como a senha para o nome de usuário correspondente. <br>Quando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` definir esse valor como o segredo do aplicativo associado com um válido do Azure Active Directory aplicativo ID do cliente|

@@ -55,9 +55,9 @@ ms.locfileid: "47703164"
   
 -   [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) Descreve a operação e a configuração de entrega de servidor de relatório.  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Etapas detalhadas para criação de assinaturas com um servidor de relatório do modo Nativo.  
+-   [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Etapas detalhadas para criação de assinaturas com um servidor de relatório do modo Nativo.  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Etapas detalhadas para criação de assinaturas com um servidor de relatório do modo SharePoint.  
+-   [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Etapas detalhadas para criação de assinaturas com um servidor de relatório do modo SharePoint.  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) Descreve a operação e a configuração de entrega de compartilhamento de arquivos do servidor de relatórios.  
   

@@ -48,7 +48,7 @@ A tabela a seguir descreve os valores que você pode especificar o *linha* parâ
 |SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Isso é o valor padrão, se você não especificar o *linha* parâmetro para um conjunto de resultados roláveis.|  
 |SQLSRV_SCROLL_PRIOR|Especifica a linha antes da linha atual.|  
 |SQLSRV_SCROLL_FIRST|Especifica a primeira linha no conjunto de resultados.|  
-|SQLSRV_SCROLL_LAST|Especifica a primeira linha no conjunto de resultados.|  
+|SQLSRV_SCROLL_LAST|Especifica a última linha no conjunto de resultados.|  
 |SQLSRV_SCROLL_ABSOLUTE|Especifica a linha especificada com o *deslocamento* parâmetro.|  
 |SQLSRV_SCROLL_RELATIVE|Especifica a linha especificada com o *deslocamento* parâmetro da linha atual.|  
   

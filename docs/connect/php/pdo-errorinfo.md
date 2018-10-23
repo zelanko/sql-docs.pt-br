@@ -39,7 +39,7 @@ Uma matriz de informações de erro sobre a operação mais recente no identific
   
 -   A mensagem de erro específica do driver.  
   
-Se não houver nenhum erro ou se o SQLSTATE não for definido, os campos específicos do driver serão NULL.  
+Se não houver nenhum erro ou se o SQLSTATE não estiver definido, os campos específicos do driver serão NULL.  
   
 ## <a name="remarks"></a>Remarks  
 PDO::errorInfo recupera somente informações de erro de operações realizadas diretamente no banco de dados. Use PDOStatement::errorInfo quando uma instância de PDOStatement for criada usando PDO::prepare ou PDO::query.  

@@ -47,7 +47,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método commit é especificado pelo método commit na interface javax.transaction.xa.XAResource.  
+ Esse método de recuperação é especificado pelo método de recuperação na interface javax.transaction.xa.XAResource.  
   
  Se o parâmetro **sinalizador** não é XAResource.TMSTARTRSCAN ou XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, uma verificação de recuperação deve estar em andamento.  
   

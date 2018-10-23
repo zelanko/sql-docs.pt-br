@@ -64,7 +64,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="remarks"></a>Remarks  
  Esse método getProcedureColumns é especificado pelo método getProcedureColumns na interface DatabaseMetadata.  
   
- O conjunto de resultados retornado pelo método getProcedures conterá as seguintes informações:  
+ O conjunto de resultados retornado pelo método getProcedureColumns conterá as seguintes informações:  
   
 |Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  

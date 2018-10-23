@@ -36,7 +36,7 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Umaque contém o nome do driver JDBC.  
+ Uma **cadeia de caracteres** que contém o nome do driver JDBC.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

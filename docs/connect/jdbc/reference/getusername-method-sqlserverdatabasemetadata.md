@@ -42,7 +42,7 @@ public java.lang.String getUserName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getURL é especificado pelo método getURL na interface java.sql.DatabaseMetaData.  
+ Esse método getUserName é especificado pelo método getUserName na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

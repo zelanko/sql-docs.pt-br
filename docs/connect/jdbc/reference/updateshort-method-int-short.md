@@ -26,7 +26,7 @@ ms.locfileid: "47771495"
 # <a name="updateshort-method-int-short"></a>Método updateShort (int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um valor **short**, considerando o nome da coluna.  
+  Atualiza a coluna designada com um valor **short**, considerando o índice da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   

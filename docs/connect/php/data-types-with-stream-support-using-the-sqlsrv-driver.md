@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados com suporte a fluxo usando o driver SQLSRV
+title: Tipos de dados compatíveis com fluxo usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

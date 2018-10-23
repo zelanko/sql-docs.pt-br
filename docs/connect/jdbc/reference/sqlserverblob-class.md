@@ -32,7 +32,7 @@ ms.locfileid: "47812254"
   
  **Estende:** java.lang.Object  
   
- Implementa:** java.sql.Blob, java.io.Serializable  
+ **Implementa:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxe  
   

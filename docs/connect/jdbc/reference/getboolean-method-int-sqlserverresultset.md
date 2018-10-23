@@ -26,7 +26,7 @@ ms.locfileid: "47598064"
 # <a name="getboolean-method-int-sqlserverresultset"></a>Método getBoolean (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **booliano** na linguagem de programação Java.  
+  Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **booliano** na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -26,7 +26,7 @@ ms.locfileid: "47677920"
 # <a name="setref-method-sqlserverpreparedstatement"></a>Método setRef (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto  fornecido.  
+  Define o parâmetro designado como o objeto Ref fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public final void setRef(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método  é especificado pelo método  na interface java.sql.PreparedStatement.  
+ Esse método setRef é especificado pelo método setRef na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

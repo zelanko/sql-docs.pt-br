@@ -36,9 +36,9 @@ public void setDatabaseName(java.lang.String databaseName)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *DatabaseName*  
+ *databaseName*  
   
- Uma Cadeia de caracteres que contém o nome do banco de dados.  
+ Uma **cadeia de caracteres** que contém o nome do banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

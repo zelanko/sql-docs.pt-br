@@ -1,5 +1,5 @@
 ---
-title: Como recuperar parâmetros de saída usando o driver SQLSRV
+title: Como recuperar parâmetros de saída usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql

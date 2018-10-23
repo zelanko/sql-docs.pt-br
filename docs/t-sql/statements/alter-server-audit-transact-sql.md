@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756554"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Na Instância Gerenciada do Banco de Dados SQL do Azure, a auditoria do SQL funciona no nível de servidor e armazena arquivos `.xel` no Armazenamento de Blobs do Azure.
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  O caminho da trilha de auditoria. O nome do arquivo é gerado com base no nome da auditoria e no GUID da auditoria.  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  Especifica o tamanho máximo até o qual o arquivo de auditoria pode crescer. O valor de *max_size* deve ser um inteiro seguido de **MB**, **GB**, **TB** ou **UNLIMITED**. O tamanho mínimo que você pode especificar para *max_size* é 2 **MB** e o máximo é 2.147.483.647 **TB**. Quando **UNLIMITED** for especificado, o arquivo aumentará até que o disco esteja cheio. Especificar um valor inferior a 2 MB gera o erro MSG_MAXSIZE_TOO_SMALL. O valor padrão é **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  Especifica o número máximo de arquivos a serem retidos no sistema de arquivos. Ao configurar MAX_ROLLOVER_FILES=0 não haverá nenhum limite ao número de arquivos de substituição a serem criados. O valor padrão é 0. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -101,7 +98,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Essa opção pré-aloca o arquivo no disco para o valor MAXSIZE. Só será aplicável se MAXSIZE não for igual a UNLIMITED. O valor padrão é OFF.  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  Determina a hora, em milissegundos, que pode decorrer antes que o processamento das ações de auditoria seja forçado. Um valor 0 indica entrega síncrona. O valor mínimo de atraso de consulta configurável é 1000 (1 segundo), que é o padrão. O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos). A especificação de um número inválido gera o erro MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

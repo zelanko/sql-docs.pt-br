@@ -36,7 +36,7 @@ public int getMaxColumnNameLength()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Umque indica o número máximo de caracteres permitidos.  
+ Um **int** que indica o número máximo de caracteres permitidos.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

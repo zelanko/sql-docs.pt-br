@@ -5,25 +5,22 @@ ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d97cbdf8e73254b790ff0c8f965fa8b6d647951a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641965"
 ---
-# <a name="data-source-wizard-screen-1"></a>Tela 1 do Assistente de fonte de dados
+# <a name="data-source-wizard-screen-1"></a>Tela 1 do Assistente de Fonte de Dados
 
-Especifique o nome e descrição da fonte de dados e o nome do servidor que está executando o SQL Server ao qual se conectar a fonte de dados. 
+Especifique o nome e a descrição da fonte de dados e o nome do servidor que executa o SQL Server ao qual a fonte de dados se conectará. 
     
 ## <a name="options"></a>Opções
 
@@ -31,7 +28,7 @@ Especifique o nome e descrição da fonte de dados e o nome do servidor que est�
 
 O nome da fonte de dados usado por um aplicativo ODBC quando solicita uma conexão com a fonte de dados. Por exemplo, "Pessoal". O nome da fonte de dados é exibido na caixa de diálogo Administrador de Fonte de Dados ODBC.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrição
 
 (Opcional) Uma descrição da fonte de dados. Por exemplo, "data de admissão, histórico de salário e análise atual de todos os funcionários".
 
@@ -39,20 +36,20 @@ O nome da fonte de dados usado por um aplicativo ODBC quando solicita uma conex�
 
 O nome de uma instância do SQL Server em sua rede. Você precisará especificar um servidor na próxima caixa de edição.
 
-Na maioria dos casos, o driver ODBC pode se conectar usando a ordem dos protocolos padrão e o nome do servidor fornecido nesta caixa. Use o SQL Server Configuration Manager se desejar criar um alias para o servidor ou configurar bibliotecas de rede do cliente.
+Na maioria dos casos, o driver ODBC pode se conectar usando a ordem de protocolos padrão e o nome do servidor fornecido nesta caixa. Use o SQL Server Configuration Manager se você desejar criar um alias para o servidor ou configurar bibliotecas de rede de cliente.
 
-Você pode digitar "(local)" na caixa do servidor quando você estiver usando o mesmo computador que o SQL Server. O usuário, em seguida, pode se conectar à instância local do SQL Server, mesmo se estiver executando uma versão fora da rede do SQL Server. Podem executar várias instâncias do SQL Server no mesmo computador. Para especificar uma instância nomeada do SQL Server, o nome do servidor é especificado como _ServerName_\\_InstanceName_.
+Você poderá digitar "(local)" na caixa de servidor quando estiver usando o mesmo computador como SQL Server. Assim, o usuário pode se conectar à instância local do SQL Server, até mesmo ao executar uma versão do SQL Server que não está em rede. É possível executar várias instâncias do SQL Server no mesmo computador. Para especificar uma instância nomeada do SQL Server, o nome do servidor é especificado como _ServerName_\\_InstanceName_.
 
-Para obter mais informações sobre nomes de servidor para diferentes tipos de redes, consulte a documentação de instalação do SQL Server nos Manuais Online do SQL Server.
+Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira a documentação de instalação do SQL Server nos Manuais Online do SQL Server.
 
 ### <a name="finish"></a>Concluir
 
-Se as informações especificadas nesta tela são tudo o que é necessário para se conectar ao SQL Server, você pode clicar em **concluir**. Os padrões são usados para todos os atributos especificados em outras telas do assistente.
+Se as informações especificadas nesta tela constituírem todos os dados necessários para conexão com o SQL Server, clique em **Concluir**. Os padrões são usados para todos os atributos especificados em outras telas do assistente.
 
 ### <a name="next"></a>Próximo
 
-Para prosseguir para a próxima tela do assistente, clique em **próximo**.
+Para prosseguir para a próxima tela do assistente, clique em **próxima**.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Tela 2 do Assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-2.md)
+[Tela 2 do Assistente de Fonte de Dados](../../../connect/odbc/windows/dsn-wizard-2.md)

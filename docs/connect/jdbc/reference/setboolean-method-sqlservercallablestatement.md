@@ -26,7 +26,7 @@ ms.locfileid: "47652714"
 # <a name="setboolean-method-sqlservercallablestatement"></a>Método setBoolean (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o valor  fornecido.  
+  Define o parâmetro designado como o valor **boolean** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public void setBoolean(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setObject é especificado pelo método setObject na interface java.sql.CallableStatement.  
+ Esse método setBoolean é especificado pelo método setBoolean na interface do java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

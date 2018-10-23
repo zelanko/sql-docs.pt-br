@@ -48,17 +48,17 @@ Uma matriz associativa com chaves descritas na tabela abaixo, ou **false** , se 
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  
-|DriverVer|Versão do ODBC Driver 11 for SQL Server:<br /><br />xx.yy.zzzz [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 3.2 ou 3.1|  
-|ExtensionVer|versão do php_sqlsrv.dll:<br /><br />3.2.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]para  versão 3.2<br /><br />3.1.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]para  versão 3.1|  
+|DriverVer|Versão do ODBC Driver 11 for SQL Server:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 3.2 ou 3.1)|  
+|ExtensionVer|versão do php_sqlsrv.dll:<br /><br />3.2.xxxx.x (para [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 3.2)<br /><br />3.1.xxxx.x (para [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 3.1)|  
   
 **Para versões 3.0 e 2.0 do PHP para SQL Server**:  
   
 |Chave|Descrição|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10.DLL [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0|  
+|DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  
-|DriverVer|Versão de DLL do SQL Server Native Client:<br /><br />10.50.xxx [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0|  
-|ExtensionVer|versão do php_sqlsrv.dll:<br /><br />2.0.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0|  
+|DriverVer|Versão de DLL do SQL Server Native Client:<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0)|  
+|ExtensionVer|versão do php_sqlsrv.dll:<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0)|  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir grava informações do cliente no console quando o exemplo é executado na linha de comando. O exemplo supõe que o SQL Server esteja instalado no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  

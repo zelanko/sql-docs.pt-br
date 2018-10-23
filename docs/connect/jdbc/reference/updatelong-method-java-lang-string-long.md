@@ -26,7 +26,7 @@ ms.locfileid: "47820724"
 # <a name="updatelong-method-javalangstring-long"></a>Método updateLong (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um valor de data, considerando o nome da coluna.  
+  Atualiza a coluna designada com um valor **long**, considerando o nome da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   

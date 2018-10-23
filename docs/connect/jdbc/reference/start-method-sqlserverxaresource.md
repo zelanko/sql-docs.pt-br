@@ -26,7 +26,7 @@ ms.locfileid: "47810164"
 # <a name="start-method-sqlserverxaresource"></a>Método start (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicia o trabalho em nome de uma filial de transação especificada no objeto .  
+  Inicia o trabalho em nome de um branch de transação especificada no objeto Xid.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public void start(javax.transaction.xa.Xid xid,
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método commit é especificado pelo método commit na interface javax.transaction.xa.XAResource.  
+ Esse método start é especificado pelo método start na interface javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

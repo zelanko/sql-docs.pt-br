@@ -1,5 +1,5 @@
 ---
-title: Método getNCharacterStream (java.lang.String) (SQLServerResultSet)
+title: Método getNCharacterStream (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -47,7 +47,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  Esse método pode ser usado para recuperar o valor de uma **nvarchar**, **nchar**, **nvarchar (max)**, **ntext**, ou **xml** coluna na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto. Se você tentar usar esse método para recuperar valores de outros tipos de dados, uma exceção será lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   
+ [Método getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

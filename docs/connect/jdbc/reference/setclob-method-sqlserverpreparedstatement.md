@@ -27,9 +27,9 @@ ms.locfileid: "47624854"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setClob (int, java.io.Reader)](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Define o parâmetro designado como um objeto CLOB.|  
-|[Método setClob (int, java.sql.Clob)](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Define o parâmetro designado como o valor Java fornecido.|  
-|[Método setClob (int, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Define o parâmetro designado como um objeto , com o número de caracteres especificado.|  
+|[Método setClob &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Define o parâmetro designado como um objeto CLOB.|  
+|[Método setClob &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Define o parâmetro designado como o objeto java.sql.Clob fornecido.|  
+|[Método setClob &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Define o parâmetro designado como um objeto java.sql.Clob, com o número de caracteres long especificado.|  
   
 ## <a name="remarks"></a>Remarks  
  Nenhum comportamento de driver de servidor. Para obter detalhes, consulte a especificação da API do JSE 6.  

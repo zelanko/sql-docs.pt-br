@@ -21,7 +21,7 @@ ms.locfileid: "47648954"
 # <a name="getsubstring-method-sqlservernclob"></a>Método getSubString (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera uma cópia da subcadeia de caracteres especificada no  com base na posição inicial especificada e no número de caracteres a serem copiados.  
+  Recupera uma cópia da subcadeia de caracteres especificada no **NCLOB** com base na posição inicial especificada e no número de caracteres a serem copiados.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -31,9 +31,9 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$class*name*: uma cadeia de caracteres opcional especificando o nome da classe a ser criada. O padrão é stdClass.  
+$*class_name*: uma cadeia de caracteres opcional que especifica o nome da classe a ser criada. O padrão é stdClass.  
   
-$ctor*args*: uma matriz opcional com argumentos para um construtor de classe personalizada.  
+$*ctor_args*: uma matriz opcional com argumentos para um construtor de classe personalizada.  
   
 ## <a name="return-value"></a>Valor retornado  
 Em caso de sucesso, retorna um objeto com uma instância da classe. Propriedades mapeiam para colunas. Retorna falso em caso de falha.  

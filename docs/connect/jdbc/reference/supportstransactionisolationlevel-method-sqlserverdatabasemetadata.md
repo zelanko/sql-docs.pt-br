@@ -36,9 +36,9 @@ public boolean supportsTransactionIsolationLevel(int level)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Nível*  
+ *level*  
   
- Umque indica o nível de isolamento da transação.  
+ Um **int** que indica o nível de isolamento da transação.  
   
 ## <a name="return-value"></a>Valor retornado  
  **True** se houver suporte. Caso contrário, **false**.  

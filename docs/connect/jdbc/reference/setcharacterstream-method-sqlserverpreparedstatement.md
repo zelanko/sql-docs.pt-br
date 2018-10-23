@@ -21,15 +21,15 @@ ms.locfileid: "47726424"
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>Método setCharacterStream (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto java.io.Reader especificado.  
+  Define o parâmetro designado como o objeto java.io.Reader fornecido.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setCharacterStream (int, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
-|[Método setCharacterStream (int, java.io.Reader, int)](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|Define o parâmetro designado como o objeto  especificado, que é o número especificado de caracteres.|  
-|[Método setCharacterStream (int, java.io.Reader, long)](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-long.md)|Define o parâmetro designado como o objeto  especificado, que é o número especificado de caracteres.|  
+|[Método setCharacterStream &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
+|[Método setCharacterStream &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|Define o parâmetro designado como o objeto java.io.Reader especificado, que é o número especificado de caracteres.|  
+|[Método setCharacterStream &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-long.md)|Define o parâmetro designado como o objeto java.io.Reader especificado, que é o número especificado de caracteres.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -21,7 +21,7 @@ ms.locfileid: "47612114"
 # <a name="updatenclob-method-int-javaioreader"></a>Método updateNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada usando o objeto Reader especificado.  
+  Atualiza a coluna designada usando o objeto **Reader** especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

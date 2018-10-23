@@ -1,5 +1,5 @@
 ---
-title: Como carregar Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
+title: Baixar os Microsoft Drivers para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -28,7 +28,7 @@ As seguintes versões de drivers para PHP no Windows estão disponíveis para do
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Microsoft Drivers 4.0, 3.2, 3.1 for PHP for SQL Server:](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Microsoft Drivers 4.0, 3.2, 3.1 e 3.0 para PHP para SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
 
 ## <a name="linux-and-macos"></a>Linux e macOS
 

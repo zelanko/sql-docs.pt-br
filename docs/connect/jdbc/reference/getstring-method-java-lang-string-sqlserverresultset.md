@@ -1,5 +1,5 @@
 ---
-title: Método getLong (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: Método getString (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47642884"
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>Método getString (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como uma **String** na linguagem de programação Java.  
+  Recupera o valor do nome da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como uma **String** na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ public java.lang.String getString(java.lang.String columnName)
   
  Os tipos que diferenciam local, como money, smallmoney, datetime, smalldatetime, float, real, decimal e numeric, retornarão o formato toString() canônico para o valor subjacente do tipo.  
   
- Os tipos definidos pelo usuário são retornados como valores de **String** hexadecimais.  
+ Os tipos definidos pelo usuário são retornados como valores de **cadeia de caracteres** hexadecimais.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   

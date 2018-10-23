@@ -26,7 +26,7 @@ ms.locfileid: "47635084"
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>Método othersUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera se as exclusões feitas por outros são visíveis.  
+  Recupera se as atualizações feitas por outros são visíveis.  
   
 ## <a name="syntax"></a>Sintaxe  
   

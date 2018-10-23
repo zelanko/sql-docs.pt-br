@@ -27,9 +27,9 @@ ms.locfileid: "47716264"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setBinaryStream (int, java.io.InputStream)](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)|Define o parâmetro designado como o fluxo de entrada especificado.|  
-|[Método setBinaryStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|Define o parâmetro designado como o fluxo de entrada especificado, que terá o número de bytes especificado.|  
-|[Método setBinaryStream (int, java.io.InputStream, long)](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-long.md)|Define o parâmetro designado como o fluxo de entrada especificado, que terá o número de bytes especificado.|  
+|[Método setBinaryStream &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)|Define o parâmetro designado como o fluxo de entrada especificado.|  
+|[Método setBinaryStream &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|Define o parâmetro designado como o fluxo de entrada especificado, que terá o número de bytes especificado.|  
+|[Método setBinaryStream &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-long.md)|Define o parâmetro designado como o fluxo de entrada especificado, que terá o número de bytes especificado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

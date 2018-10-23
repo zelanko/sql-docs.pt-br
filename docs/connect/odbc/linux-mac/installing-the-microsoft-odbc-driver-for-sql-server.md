@@ -507,7 +507,7 @@ O Driver ODBC no Linux e MacOS consiste dos seguintes componentes:
 
 |Componente|Descrição|  
 |---------------|-----------------|  
-|libmsodbcsql-17. X.so.X.X ou libmsodbcsql-13. X.so.X.X|O arquivo de biblioteca dinâmica (`so`) que contém toda a funcionalidade do driver. Esse arquivo é instalado em `/opt/microsoft/msodbcsql17/lib64/` para o Driver 17 e, em `/opt/microsoft/msodbcsql/lib64/` para Driver 13.|  
+|libmsodbcsql-17. X.so.X.X ou libmsodbcsql-13. X.so.X.X|O arquivo de biblioteca dinâmica (`so`) do objeto compartilhado que contém toda a funcionalidade do driver. Esse arquivo é instalado em `/opt/microsoft/msodbcsql17/lib64/` para o Driver 17 e, em `/opt/microsoft/msodbcsql/lib64/` para Driver 13.|  
 |`msodbcsqlr17.rll` ou `msodbcsqlr13.rll`|O arquivo de recursos que acompanha a biblioteca do driver. Esse arquivo é instalado em `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|O arquivo de cabeçalho que contém todas as novas definições necessárias para usar o driver.<br /><br /> **Observação:**  você não pode referenciar msodbcsql.h e odbcss.h no mesmo programa.<br /><br /> h é instalado em `/opt/microsoft/msodbcsql17/include/` para o Driver 17 e, em `/opt/microsoft/msodbcsql/include/` para Driver 13. |
 |License. txt|O arquivo de texto que contém os termos do contrato de licença do usuário final. Esse arquivo é colocado no `/usr/share/doc/msodbcsql17/` para o Driver 17 e, em `/usr/share/doc/msodbcsql/` para Driver 13.|

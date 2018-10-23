@@ -36,7 +36,7 @@ public java.lang.String getProcedureTerm()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Umaque contém o termo do procedimento.  
+ Uma **cadeia de caracteres** que contém o termo do procedimento.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configuração do IIS para os drivers da Microsoft para PHP para SQL Server
+title: Configuração do IIS para o Microsoft Drivers para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

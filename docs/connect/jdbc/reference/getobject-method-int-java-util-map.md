@@ -55,7 +55,7 @@ public java.lang.Object getObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setObject é especificado pelo método setObject na interface java.sql.CallableStatement.  
+ Esse método getObject é especificado pelo método getObject na interface java.sql.CallableStatement.  
   
  Esse método retornará o valor da coluna fornecida como um objeto Java. O tipo desse objeto será o tipo de objeto Java padrão correspondente ao tipo SQL da coluna, seguindo o mapeamento para tipos internos constante na especificação do JDBC. Se o valor for um SQL NULL, o driver retornará um Java nulo.  
   

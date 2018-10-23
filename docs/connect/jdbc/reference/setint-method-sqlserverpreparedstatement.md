@@ -26,7 +26,7 @@ ms.locfileid: "47755455"
 # <a name="setint-method-sqlserverpreparedstatement"></a>Método setInt (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o valor  fornecido.  
+  Define o parâmetro designado como o valor **int** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public final void setInt(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método  é especificado pelo método  na interface java.sql.PreparedStatement.  
+ Esse método setInt é especificado pelo método setInt na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

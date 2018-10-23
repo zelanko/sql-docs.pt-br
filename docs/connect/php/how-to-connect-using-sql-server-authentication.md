@@ -1,27 +1,24 @@
 ---
-title: 'Como: conectar-se usando a autenticação do SQL Server | Microsoft Docs'
+title: Como se conectar usando a Autenticação do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca3084ccdabf2ecd0f5be9ca707fb5f5f3387f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731794"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ Os seguintes pontos devem ser considerados ao usar a Autenticação do SQL Serve
   
 -   A Autenticação de modo misto do SQL Server deve estar habilitada no servidor.  
   
--   A ID de usuário e senha (*UID* e *PWD* atributos de conexão no driver SQLSRV) devem ser definidas quando você tentar estabelecer uma conexão. A ID de usuário e a senha devem mapear para um usuário e uma senha válidos do SQL Server.  
+-   A ID de usuário e a senha (atributos de conexão *UID* e *PWD* no driver SQLSRV) precisam ser definidas quando você tentar estabelecer uma conexão. A ID de usuário e a senha devem mapear para um usuário e uma senha válidos do SQL Server.  
   
 > [!NOTE]  
 > Em senhas contendo uma chave de fechamento (}), uma segunda chave de fechamento deverá ser incluída. Por exemplo, se a senha do SQL Server for "pass} word", o valor do atributo de conexão *PWD* deve ser definido como "pass}} word".  
@@ -54,9 +51,9 @@ As seguintes precauções devem ser tomadas ao usar a Autenticação do SQL Serv
 > Os atributos de conexão, a ID de usuário e a senha podem ser definidos ao estabelecer uma conexão. Para obter uma lista completa dos atributos de conexão com suporte, consulte [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir usa o driver SQLSRV com Autenticação do SQL Server para se conectar a uma instância local do SQL Server. Os valores para o *UID* e *PWD* atributos de conexão são obtidos de arquivos de texto específicos do aplicativo, *uid.txt* e *pwd.txt*, além de *C:\AppData* directory. Depois que a conexão é estabelecida, o servidor é consultado para verificar o logon do usuário.  
+O exemplo a seguir usa o driver SQLSRV com Autenticação do SQL Server para se conectar a uma instância local do SQL Server. Os valores para os atributos de conexão *UID* e *PWD* necessários são obtidos em arquivos de texto específicos do aplicativo, *uid.txt* e *pwd.txt*, no diretório *C:\AppData*. Depois que a conexão é estabelecida, o servidor é consultado para verificar o logon do usuário.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
   
 ```  
 <?php  
@@ -133,22 +130,22 @@ Este exemplo usa o driver PDO_SQLSRV para demonstrar como se conectar com a Aute
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[Como: criar um logon do SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Como criar um logon do SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Como: criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Como criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gerenciando usuários, funções e logons](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Separação do esquema de usuário](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+[Separação do Esquema de Usuário](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [Conceder permissões de objeto (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

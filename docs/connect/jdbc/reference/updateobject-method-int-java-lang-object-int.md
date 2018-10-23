@@ -1,5 +1,5 @@
 ---
-title: Método setObject (int, java.lang.Object, int, int) | Microsoft Docs
+title: Método updateObject (int, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

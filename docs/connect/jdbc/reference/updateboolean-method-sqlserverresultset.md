@@ -1,13 +1,11 @@
 ---
-title: Método (SQLServerResultSet) updateBoolean | Microsoft Docs
+title: Método updateBoolean (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBoolean
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40698a5b30d595a60a9bdac26feec590bef548f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2e5f6c5b835c0f759fc2dd0a9ec6484f7e2cd67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827814"
 ---
-# <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean método (SQLServerResultSet)
+# <a name="updateboolean-method-sqlserverresultset"></a>Método updateBoolean (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um **booliano** valor.  
+  Atualiza a coluna designada com um valor **booliano**.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|[updateBoolean (int, booliano)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|Atualiza a coluna designada com um **booliano** valor, considerando o índice da coluna.|  
-|[updateBoolean (Java, booleano)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|Atualiza a coluna designada com um **booliano** valor, considerando o nome da coluna.|  
+|[updateBoolean (int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|Atualiza a coluna designada com um valor **boolean**, considerando o índice da coluna.|  
+|[updateBoolean (java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|Atualiza a coluna designada com um valor **booliano**, considerando o nome da coluna.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

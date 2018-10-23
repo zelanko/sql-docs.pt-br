@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785650"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878109"
 ---
 # <a name="sql-server-privacy-supplement"></a>Suplemento de privacidade do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,6 +128,7 @@ Os seguintes são considerados metadados do sistema quando não incluem cliente 
 - Dados de configuração do servidor, por exemplo, configurações de sp_configure
 - Dados de configuração de recurso
 - Nomes de evento e códigos de erro
+- Configurações e identificação de hardware, como o fabricante OEM
 
 A Microsoft examina valores de nome de aplicativo definidos por outros programas que usam o SQL Server (exemplo: o Sharepoint ou programas empacotados de terceiros e inclui essas informações nos metadados do sistema enviados à Microsoft quando a opção Dados de Uso está habilitada). Os clientes não devem colocar dados pessoais, como informações de identificação do usuário final, nos campos de metadados do sistema nem criar aplicativos projetados para armazenar dados pessoais nesses campos. 
 

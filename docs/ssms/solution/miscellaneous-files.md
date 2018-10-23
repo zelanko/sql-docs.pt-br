@@ -16,12 +16,12 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 842b6e8c91431152080055a09ef2627a03e99abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecabdec464cb72cf5024feab83e547c95cafd9d6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119793"
 ---
 # <a name="miscellaneous-files"></a>arquivos diversos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

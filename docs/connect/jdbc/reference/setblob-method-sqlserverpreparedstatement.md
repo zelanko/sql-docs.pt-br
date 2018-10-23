@@ -26,7 +26,7 @@ ms.locfileid: "47643517"
 # <a name="setblob-method-sqlserverpreparedstatement"></a>Método setBlob (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto  fornecido.  
+  Define o parâmetro designado como o objeto Blob fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public final void setBlob(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método é especificado pelo método execute na interface java.sql.PreparedStatement.  
+ Esse método setBlob é especificado pelo método setBlob na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

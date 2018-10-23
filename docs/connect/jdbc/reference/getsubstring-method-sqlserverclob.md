@@ -46,7 +46,7 @@ public java.lang.String getSubString(long pos,
  O número de caracteres consecutivos a serem copiados.  
   
 ## <a name="return-value"></a>Valor retornado  
- Umaque é a subcadeia de caracteres especificada no CLOB.  
+ Uma **cadeia de caracteres** que é a subcadeia de caracteres especificada no CLOB.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

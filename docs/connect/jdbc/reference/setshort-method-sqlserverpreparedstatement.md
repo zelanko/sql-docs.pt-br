@@ -26,7 +26,7 @@ ms.locfileid: "47621664"
 # <a name="setshort-method-sqlserverpreparedstatement"></a>Método setShort (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o valor Java fornecido.  
+  Define o parâmetro designado como o valor **short** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   

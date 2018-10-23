@@ -26,7 +26,7 @@ ms.locfileid: "47804894"
 # <a name="setlong-method-sqlserverpreparedstatement"></a>Método setLong (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o valor Java fornecido.  
+  Define o parâmetro designado como o valor **long** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ public final void setLong(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método é especificado pelo método execute na interface java.sql.PreparedStatement.  
+ Esse método setLong é especificado pelo método setLong na interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

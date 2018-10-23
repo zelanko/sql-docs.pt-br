@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309025"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604228"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Uma instrução deve ser executada antes que os resultados possam ser recuperados. Para obter informações sobre como executar uma instrução, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*linha* [opcional]: um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável:  
+*row* [OPCIONAL]: um dos valores a seguir que especifica a linha a ser acessada em um conjunto de resultados que usa um cursor rolável:  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Para obter mais informações sobre esses valores, consulte [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*deslocamento* [opcional]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
+*offset* [OPCIONAL]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
   
 ## <a name="return-value"></a>Valor retornado  
 Se a próxima linha do conjunto de resultados for recuperada com êxito, **true** será retornado. Se não houver mais nenhum resultado no conjunto de resultados, **null** será retornado. Se ocorrer um erro, **false** será retornado.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir usa **sqlsrv_fetch** para recuperar uma linha de dados que contém uma análise do produto e o nome do revisor. Para recuperar dados do conjunto de resultados, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) é usado. O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir usa **sqlsrv_fetch** para recuperar uma linha de dados que contém uma análise do produto e o nome do revisor. Para recuperar dados do conjunto de resultados, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) é usado. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -126,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

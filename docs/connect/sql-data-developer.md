@@ -21,7 +21,7 @@ ms.locfileid: "47615494"
 # <a name="sql-data-developer"></a>SQL Data Developer
 Use plataforma de dados SQL da Microsoft para criar soluções centralizadas em dados em dispositivos móveis e desktops para servidores web, servidores corporativos e a nuvem.  
 
-## <a name="sql-data-storage"></a>Armazenamento de Dados
+## <a name="sql-data-storage"></a>Armazenamento de Dados SQL
 * [O mecanismo de banco de dados do SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): usar o mecanismo de banco de dados do SQL Server para criar bancos de dados relacionais para processamento de transações online ou dados de processamento analítico on-line. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): uso de SQL Azure para mover seu banco de dados para a nuvem 
 * [O SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact para compilar aplicativos ocasionalmente conectados para dispositivos móveis, desktops e independente e clientes Web.
@@ -37,7 +37,7 @@ Use plataforma de dados SQL da Microsoft para criar soluções centralizadas em 
 * [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): Use os serviços de dados para uma solução de perto de turnkey para facilmente criar e consumir serviços OData na web e de intranet
 * [Estrutura de sincronização](https://msdn.microsoft.com/library/jj839436.aspx): Use o Sync Framework para habilitar o acesso offline a qualquer tipo de dados, qualquer armazenamento de dados, qualquer protocolo de transferência e qualquer topologia de rede.
 * [Extensões reativas](https://msdn.microsoft.com/library/hh242985.aspx): usar as extensões reativas (Rx) para executar a programação de fluxo de eventos e simplificar a programação assíncrona usando sequências observáveis e operadores de consulta estilo LINQ.  Use as extensões reativas para JavaScript (RxJS) para simplificar a programação assíncrona de baseada em retorno de chamada e orientada a eventos na web usando sequências observáveis.
-* Isso significa que você pode escrever procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e funções de streaming com valor de tabela, usando qualquer linguagem do .NET Framework, incluindo o [ Visual Basic .NET e o ](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) Visual C#. 
+* [Integração com CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md): use a integração com CLR para gravar procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e funções com valor de tabela de streaming usando qualquer linguagem do .NET Framework, incluindo o Microsoft Visual Basic .NET e o Microsoft Visual C#. 
 * [O SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): usar o SQLXML 4.0 ao exportar dados relacionais para XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Coleta de dados, processamento e de visualização

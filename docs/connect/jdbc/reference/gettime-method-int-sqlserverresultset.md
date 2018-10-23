@@ -47,7 +47,7 @@ public java.sql.Time getTime(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTime é especificado pelo método getTime na interface java.sql.CallableStatement.  
+ Esse método getTime é especificado pelo método getTime na interface java.sql.ResultSet.  
   
  Este método retorna uma parte de hora válida de um tipo de dados datetime ou smalldatetime do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de data definida como a data de linha de base do Java de 1970/01/01.  
   

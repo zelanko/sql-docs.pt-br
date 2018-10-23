@@ -26,7 +26,7 @@ ms.locfileid: "47660314"
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>Método getLockTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna um valorque indica o número de milissegundos que o banco de dados esperará antes de informar um tempo limite de bloqueio.  
+  Retorna um valor **int** que indica o número de milissegundos que o banco de dados esperará antes de informar um tempo limite de bloqueio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ public int getLockTimeout()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valorque contém o número de milissegundos que o banco de dados esperará.  
+ Um valor **int** que contém o número de milissegundos que o banco de dados esperará.  
   
 ## <a name="remarks"></a>Remarks  
  O tempo limite de bloqueio é o número de milissegundos de espera antes de o banco de dados informar um tempo limite de bloqueio. O valor padrão de -1 significa que ele aguardará por tempo indefinido. Se for especificado, esse valor será o padrão para todas as instruções na conexão.  

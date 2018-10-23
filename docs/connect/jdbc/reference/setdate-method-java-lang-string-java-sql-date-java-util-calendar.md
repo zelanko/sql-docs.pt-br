@@ -54,7 +54,7 @@ public void setDate(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getDate é especificado pelo método getDate na interface java.sql.CallableStatement.  
+ Esse método setDate é especificado pelo método setDate na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o Java | Microsoft Docs'
+title: 'Etapa 3: prova de conceito da conexão com o SQL usando o Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

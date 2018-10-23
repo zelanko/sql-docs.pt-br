@@ -65,7 +65,7 @@ ms.locfileid: "47724294"
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
-  O JDBC Driver 6.4 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.4.0.jre7.jar** e **mssql-jdbc-6.4.0.jre8.jar**.
+  O JDBC Driver 6.4 inclui três bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** e **mssql-jdbc-6.4.0.jre9.jar**.
 
   OJDBC Driver 6.4 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java equivalentes às da Sun, mas foi testado somente com Sun JRE 7.0, 8.0 e 9.0.
   

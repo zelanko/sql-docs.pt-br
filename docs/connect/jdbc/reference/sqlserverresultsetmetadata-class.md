@@ -27,7 +27,7 @@ ms.locfileid: "47611991"
   
  **Estende:** java.lang.Object  
   
- Implementa:** java.sql.ResultSetMetaData  
+ **Implementa:** java.sql.ResultSetMetaData  
   
 ## <a name="syntax"></a>Sintaxe  
   

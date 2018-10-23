@@ -21,7 +21,7 @@ ms.locfileid: "47650014"
 # <a name="setnstring-method-int-javalangstring"></a>Método setNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto  especificado.  
+  Define o parâmetro designado como o objeto **String** especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ public final void setNString(int parameterIndex,
   
  *value*  
   
- Um objeto  que contém o valor do parâmetro.  
+ Um objeto **String** que contém o valor do parâmetro.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

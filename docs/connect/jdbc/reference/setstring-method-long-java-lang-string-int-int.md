@@ -1,5 +1,5 @@
 ---
-title: Método setString (long, java.lang.String, int, int) (SQLServerNClob)
+title: Método setString (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -43,7 +43,7 @@ public int setString(long pos,
   
  A posição em que a gravação deve ser iniciada no CLOB.  
   
- *STR*  
+ *str*  
   
  A cadeia de caracteres a ser gravada no CLOB.  
   

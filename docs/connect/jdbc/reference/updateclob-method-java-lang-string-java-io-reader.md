@@ -1,5 +1,5 @@
 ---
-title: Método updateNClob (java.lang.String, java.io.Reader) | Microsoft Docs
+title: Método updateClob (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -47,7 +47,7 @@ public void updateClob(java.lang.String columnLabel,
  Esse método updateClob é especificado pelo método updateClob na interface do resultset.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
+ [Método updateClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -36,9 +36,9 @@ public void setDescription(java.lang.String description)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Descrição  
+ *description*  
   
- Uma cadeia de caracteres que contém a descrição.  
+ Uma **cadeia de caracteres** que contém a descrição.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

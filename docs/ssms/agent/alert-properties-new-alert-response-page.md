@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6a9385a4b783409f66d924f29a719897bc7bdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a8d46d0d43d3e1fd1e56b6774976640b690c7d7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804564"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906167"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propriedades do alerta – Novo alerta (página Resposta)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Use **net send** para notificar o operador.
 Exibe a caixa de diálogo **Novo Operador** que você pode usar para criar um operador novo.  
   
 **Exibir operador**  
-Exibe a caixa de diálogo **Propriedades** para o operador selecionado atualmente. Você pode exibir e modificar as propriedades do operador na caixa de diálogo **Propriedades do Operador** .  
+Exibe a caixa de diálogo **Propriedades** para o operador selecionado atualmente. Você pode exibir e modificar as propriedades do operador na caixa de diálogo **Propriedades do Operador**.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Alertas](../../ssms/agent/alerts.md)  

@@ -64,7 +64,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="remarks"></a>Remarks  
  Esse método getColumnPrivileges é especificado pelo método getColumnPrivileges na interface DatabaseMetadata.  
   
- O conjunto de resultados retornado pelo método getTablePrivileges conterá as seguintes informações:  
+ O conjunto de resultados retornado pelo método getColumnPrivileges conterá as seguintes informações:  
   
 |Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  

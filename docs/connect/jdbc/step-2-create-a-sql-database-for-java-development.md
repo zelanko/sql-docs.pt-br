@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento de PHP | Microsoft Docs'
+title: 'Etapa 2: criar um Banco de Dados SQL para o desenvolvimento de Java | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

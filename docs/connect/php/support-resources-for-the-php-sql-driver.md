@@ -1,5 +1,5 @@
 ---
-title: Recursos de suporte para os drivers da Microsoft para PHP para SQL Server
+title: Recursos de compatibilidade para os Microsoft Drivers para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

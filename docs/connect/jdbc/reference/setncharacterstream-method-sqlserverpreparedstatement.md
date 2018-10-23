@@ -21,14 +21,14 @@ ms.locfileid: "47598463"
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>Método setNCharacterStream (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto java.io.Reader especificado.  
+  Define o parâmetro designado como o objeto java.io.Reader fornecido.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setNCharacterStream (int, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
-|[Método setNCharacterStream (int, java.io.Reader, long)](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
+|[Método setNCharacterStream &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
+|[Método setNCharacterStream &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

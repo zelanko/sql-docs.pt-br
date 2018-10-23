@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171818"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838494"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, o da
 |ACP|Converte colunas do tipo de dados **char**, **varchar** ou **text** da página de código do ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (padrão)|Converte colunas do tipo de dados **char**, **varchar** ou **text** da página de código de OEM do sistema na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Não ocorre nenhuma conversão de uma página de código em outra. Esta é a opção mais rápida.|  
-|*code_page*|Indica a página de código de origem na qual são codificados os dados de caracteres do arquivo de dados; por exemplo, 850.<br /><br /> **\*\* Importante \*\*** As versões anteriores à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não dão suporte à página de código 65001 (codificação UTF-8).|  
+|*code_page*|Indica a página de código de origem na qual são codificados os dados de caracteres do arquivo de dados; por exemplo, 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** As versões anteriores à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não são compatíveis com a página de código 65001 (codificação UTF-8).|  
   
  ERRORFILE ='*file_name*'  
  Especifica o arquivo usado para coletar linhas com erros de formatação e que não podem ser convertidas em um conjunto de linhas OLE DB. Essas linhas são copiadas do arquivo de dados para esse arquivo de erro "no estado em que se encontram".  
@@ -235,7 +232,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
   
  No acesso a fontes de dados OLE DB remotas, a identidade de logon das conexões confiáveis não são delegadas automaticamente do servidor no qual o cliente é conectado ao servidor que está sendo consultado. A delegação de autenticação deve ser configurada.  
   
- Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de *catalog* e *schema* poderão ser omitidos quando o Provedor OLE DB não der suporte a eles. Se o provedor for compatível apenas com nomes de esquema, será necessário especificar um nome de duas partes no formato *esquema ***.*** objeto*. Se o provedor for compatível apenas com nomes de catálogo, será necessário especificar um nome de três partes no formato *catálogo ***.*** esquema ***.*** objeto*. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Serão necessários os nomes de catálogo e de esquema, se o provedor OLE DB oferecer suporte a vários catálogos e esquemas na fonte de dados especificada. Os valores de _catalog_ e )_schema_ poderão ser omitidos quando o provedor OLE DB não for compatível com eles. Se o provedor for compatível apenas com nomes de esquema, um nome de duas partes no formato _schema_**.**_object_ deverá ser especificado. Se o provedor for compatível apenas com nomes de catálogo, um nome de três partes no formato _catalog_**.**_schema_**.**_object_ deverá ser especificado. Devem ser especificados nomes de três partes para consultas de passagem que usam o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obter mais informações, consulte [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  `OPENROWSET` não aceita variáveis para seus argumentos.  
   

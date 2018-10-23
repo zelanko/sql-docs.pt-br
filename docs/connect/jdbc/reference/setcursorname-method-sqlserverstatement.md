@@ -41,7 +41,7 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>Parâmetros  
  *name*  
   
- Uma  que contém o nome do cursor.  
+ Uma **String** que contém o nome do cursor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Método updateBinaryStream (int, java.io.InputStream) | Microsoft Docs
+title: Método updateBinaryStream (java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

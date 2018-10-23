@@ -28,7 +28,7 @@ ms.locfileid: "47612034"
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método setString &#40;lang longo,&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Grava a especificada **cadeia de caracteres** para o **NCLOB** começando na posição especificada.|  
-|[Método setString (long, java.lang.String, int, int) (SQLServerNClob)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Grava a cadeia de caracteres especificada no  começando na posição especificada, e com base no deslocamento e comprimento especificados.|  
+|[Método setString &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Grava a cadeia de caracteres especificada no NCLOB começando na posição especificada, com base no deslocamento e no tamanho especificados.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Notas de versão dos Microsoft Drivers for PHP for SQL Server
+title: Notas sobre a versão para os Microsoft Drivers para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql

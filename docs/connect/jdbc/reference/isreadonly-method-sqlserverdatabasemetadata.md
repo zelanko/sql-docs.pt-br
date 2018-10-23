@@ -36,7 +36,7 @@ public boolean isReadOnly()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- O banco de dados está no modo somente leitura. Caso contrário, **false**.  
+ **true** se o banco de dados estiver no modo somente leitura. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

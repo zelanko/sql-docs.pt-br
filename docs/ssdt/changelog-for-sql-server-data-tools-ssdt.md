@@ -1,33 +1,47 @@
 ---
 title: Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743499"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072170"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este log de alterações é para o [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT para Visual Studio 2017 (15.8.1)
+Número de build: 14.0.16179.0  
+Data de lançamento: 27 de setembro de 2018  
+
+### <a name="whats-new"></a>Novidades
+
+**SSIS:**
+
+1. Adicionar suporte para [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+2. Remova o suporte para o SQL Server 2012.
+
+### <a name="known-issues"></a>Problemas conhecidos:
+
+- A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
+- No momento, o SSDT 15.8.1 não dá suporte ao Windows 7 SP1, portanto permaneça na versão 15.8.0 se você estiver usando o Windows 7 SP1
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT para Visual Studio 2017 (15.8)
 Número de build: 14.0.16174.0  
@@ -750,7 +764,7 @@ Número de build: 14.0.60629.0
 * **Ferramentas de banco de dados:**
     * De agora em diante o SSDT nunca desabilitará a TDE (Transparent Data Encryption) em um banco de dados. Anteriormente, uma vez que a opção de criptografia padrão nas configurações do banco de dados do projeto era desabilitada, a criptografia seria desligada. Com essa correção, a criptografia pode ser habilitada, mas nunca desabilitada durante a publicação. 
     * Aumento na contagem de novas tentativas e na resiliência para conexões de BD do SQL do Azure durante a conexão inicial.
-    * Se o grupo de arquivos padrão não for PRIMARY, importar/publicar no Azure V12 falhará. Agora, essa configuração é ignorada durante a publicação.
+    * Se o grupo de arquivos padrão não for PRIMARY, ocorrerá falha ao importar/publicar no Azure V12. Agora, essa configuração é ignorada durante a publicação.
     * Foi corrigido um problema em que ao exportar um banco de dados com um objeto com o Identificador entre Aspas ativado, a validação de exportação poderia falhar em alguns casos.
     * Foi corrigido um problema em que a opção TEXTIMAGE_ON era incorretamente adicionada para criações de tabela Hekaton, nas quais isso não é permitido.
     * Foi corrigido um problema em que a exportação de grande quantidade de dados demorava muito tempo, devido a uma gravação no arquivo model.xml depois da conclusão da fase de dados, o que fazia com que o conteúdo do arquivo .bacpac fosse regravado.

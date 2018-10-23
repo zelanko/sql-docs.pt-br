@@ -23,7 +23,7 @@ ms.locfileid: "47772595"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este tópico fornece informações sobre o Driver do OLE DB para o suporte do SQL Server para colunas esparsas. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no Driver do OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). [Exibir metadados de colunas e catálogos para colunas esparsas &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+  Este tópico fornece informações sobre o Driver do OLE DB para o suporte do SQL Server para colunas esparsas. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no Driver do OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Para ver um exemplo, confira [Exibir metadados de colunas e de catálogos para colunas esparsas &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## <a name="ole-db-statement-metadata"></a>Metadados de instruções do OLE DB  
  Começando com o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está disponível. Esse valor deve ser definido para colunas que são valores **column_set**. O sinalizador DBCOLUMNFLAGS pode ser recuperado por meio de *dwFlags* parâmetro de icolumnsinfo:: Getcolumnsinfo e a coluna DBCOLUMN_FLAGS do conjunto de linhas retornado por IColumnsRowset:: Getcolumnsrowset.  

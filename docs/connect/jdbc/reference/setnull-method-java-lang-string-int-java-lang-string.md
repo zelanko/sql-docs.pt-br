@@ -1,5 +1,5 @@
 ---
-title: Método setNull (java.lang.String, int, java.lang.String)
+title: Método setNull (java.lang.String, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -48,16 +48,16 @@ public void setNull(java.lang.String sCol,
   
  *sTypeName*  
   
- Umaque indica o nome totalmente qualificado do parâmetro que está sendo definido.  
+ Uma **cadeia de caracteres** que indica o nome totalmente qualificado do parâmetro que está sendo definido.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setURL é especificado pelo método setURL na interface java.sql.CallableStatement.  
+ Esse método setNull é especificado pelo método setNull na interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+ [Método setNull &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

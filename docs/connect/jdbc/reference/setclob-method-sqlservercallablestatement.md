@@ -27,9 +27,9 @@ ms.locfileid: "47732564"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setClob (java.lang.String, java.sql.Clob)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|Define o parâmetro designado como o objeto  especificado.|  
-|[Método setClob (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
-|[Método setClob (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto  especificado, que é o número especificado de caracteres.|  
+|[Método setClob &#40;java.lang.String, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|Define o parâmetro designado como o objeto Clob especificado.|  
+|[Método setClob &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto Reader especificado.|  
+|[Método setClob &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto Reader especificado, que é o número especificado de caracteres.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

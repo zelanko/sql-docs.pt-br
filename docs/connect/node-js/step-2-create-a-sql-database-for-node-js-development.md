@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento de PHP | Microsoft Docs'
+title: 'Etapa 2: criar um Banco de Dados SQL para o desenvolvimento de Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

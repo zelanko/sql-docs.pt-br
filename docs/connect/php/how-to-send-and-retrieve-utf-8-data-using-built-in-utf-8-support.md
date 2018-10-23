@@ -1,5 +1,5 @@
 ---
-title: Como enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8
+title: Como enviar e recuperar dados UTF-8 usando a compatibilidade interna com UTF-8 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -37,10 +37,10 @@ Para recuperar ou enviar dados codificados em UTF-8 para o servidor:
   
     Quando você especifica um conjunto de caracteres como parte das opções de conexão, o driver pressupõe que as outras cadeias de caracteres da opção de conexão usem esse mesmo conjunto de caracteres. Também pressupõe-se que o nome do servidor e as cadeias de caracteres de consulta usem o mesmo conjunto de caracteres.  
   
-Observe que você pode passar UTF-8 ou SQLSRV_ENC_CHAR para CharacterSet** (não é possível passar SQLSRV_ENC_BINARY). A codificação padrão é SQLSRV_ENC_CHAR.  
+Você pode passar UTF-8 ou SQLSRV_ENC_CHAR para **CharacterSet**, mas não é possível passar SQLSRV_ENC_BINARY. A codificação padrão é SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir demonstra como enviar e recuperar dados codificados em UTF-8 especificando o conjunto de caracteres UTF-8 ao fazer a conexão. O exemplo atualiza a coluna Comments da tabela Production.ProductReview para uma ID de análise especificada. O exemplo também recupera e exibe os dados recém-atualizados. Observe que a coluna Comments é do tipo nvarchar(3850).** Observe também que antes de os dados serem enviados ao servidor, eles serão convertidos para a codificação UTF-8 usando a função utf8_encode** do PHP. Isso é feito apenas para fins de demonstração. Em um cenário de aplicativo real, você começaria com os dados codificados em UTF-8.  
+O exemplo a seguir demonstra como enviar e recuperar dados codificados em UTF-8 especificando o conjunto de caracteres UTF-8 ao fazer a conexão. O exemplo atualiza a coluna Comments da tabela Production.ProductReview para uma ID de análise especificada. O exemplo também recupera e exibe os dados recém-atualizados. Observe que a coluna Comments é do tipo **nvarchar(3850).** Observe também que antes de os dados serem enviados para o servidor, eles serão convertidos na codificação UTF-8 usando a função **utf8_encode** do PHP. Isso é feito apenas para fins de demonstração. Em um cenário de aplicativo real, você começaria com os dados codificados em UTF-8.  
   
 O exemplo supõe que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no navegador quando o exemplo é executado a partir do navegador.  
   
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Para obter informações sobre como armazenar dados Unicode, consulte [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
+Para obter informações sobre como armazenar dados Unicode, confira [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir é semelhante ao primeiro exemplo, mas em vez de especificar o conjunto de caracteres UTF-8 na conexão, este exemplo mostra como especificar o conjunto de caracteres UTF-8 na coluna.  

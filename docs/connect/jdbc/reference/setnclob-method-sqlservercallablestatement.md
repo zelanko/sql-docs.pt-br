@@ -27,9 +27,9 @@ ms.locfileid: "47679764"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método setNClob (java.lang.String, java.sql.NClob)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|Define o parâmetro designado como o objeto  especificado.|  
-|[Método setNClob (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto java.io.Reader especificado.|  
-|[Método setNClob (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto  especificado, que é o número especificado de caracteres.|  
+|[Método setNClob &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|Define o parâmetro designado como o objeto NClob especificado.|  
+|[Método setNClob &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|Define o parâmetro designado como o objeto Reader especificado.|  
+|[Método setNClob &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|Define o parâmetro designado como o objeto Reader especificado, que é o número especificado de caracteres.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

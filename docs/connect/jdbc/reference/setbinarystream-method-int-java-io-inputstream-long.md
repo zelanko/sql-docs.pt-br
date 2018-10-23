@@ -1,25 +1,22 @@
 ---
-title: Método setBinaryStream (int, Java.IO. InputStream, long) | Microsoft Docs
+title: Método setBinaryStream (int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e499fd093f754092040a2494ca78aa71d25cef30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bf7e9a394671f8e66fe80c186f6dfa915ef45116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842095"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>Método setBinaryStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,23 +39,23 @@ public final void setBinaryStream(int parameterIndex,
   
  *x*  
   
- Um objeto Java.IO. InputStream.  
+ Um objeto java.io.InputStream.  
   
- *Comprimento*  
+ *length*  
   
- Um **longo** que indica o número de bytes.  
+ Um **long** que indica o número de bytes.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setBinaryStream é especificado pelo método setBinaryStream na interface PreparedStatement.  
+ Esse método setBinaryStream é especificado pelo método setBinaryStream na interface do PreparedStatement.  
   
- Se o comprimento do fluxo for diferente da que foi especificado no *comprimento* parâmetro, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
+ Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   
- Se o comprimento do fluxo for desconhecido, o *comprimento* parâmetro pode ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente de seu tamanho. Com sqljdbc4.jar, é recomendável que você use o método do JDBC 4.0 [método setBinaryStream &#40;int, Java.IO. InputStream&#41; ](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md) quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
+ Se o comprimento do fluxo for desconhecido, o parâmetro *length* poderá ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente do seu comprimento. Com sqljdbc4.jar, é recomendável usar o método [setBinaryStream Method &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md) do JDBC 4.0 quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método setBinaryStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

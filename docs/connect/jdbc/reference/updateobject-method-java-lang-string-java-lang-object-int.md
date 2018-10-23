@@ -1,5 +1,5 @@
 ---
-title: Método setObject (java.lang.String, java.lang.Object, int) | Microsoft Docs
+title: Método updateObject (java.lang.String, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47654904"
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>Método updateObject (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um valor **Object**, dados a escala e o índice da coluna.  
+  Atualiza a coluna designada com um valor **Object**, considerando o nome da coluna e a escala.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ public void updateObject(java.lang.String columnName,
   
  *scale*  
   
- Para tipos java.sql.Types.DECIMAL ou java.sql.Types.NUMERIC, esse é o número de dígitos depois da vírgula decimal. Para todos os outros tipos, esse valor é ignorado.  
+ Para tipos java.sql.Types.DECIMAL ou java.sql.Types.NUMERIC, esse é o número de dígitos depois da vírgula decimal. Esse valor é ignorado para todos os outros tipos.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

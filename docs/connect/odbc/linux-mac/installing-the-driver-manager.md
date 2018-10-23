@@ -46,7 +46,7 @@ Para instalar o gerenciador de driver:
   
 2.  Vá para o diretório em que o download do [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver colocou o arquivo chamado `msodbcsql-11.0.2270.0.tar.gz`. Verifique se você tem o arquivo \*.tar.gz que corresponde à sua versão do Linux. Para extrair os arquivos, execute o seguinte comando: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
-3.  Altere para o diretório `msodbcsql-11.0.2270.0`. Lá, você deverá ver um arquivo chamado `build_dm.sh`install.sh. Você pode executar `build_dm.sh` para instalar o Gerenciador de Driver unixODBC.
+3.  Altere para o diretório `msodbcsql-11.0.2270.0`. Lá, você verá um arquivo chamado `build_dm.sh`. Você pode executar `build_dm.sh` para instalar o Gerenciador de Driver unixODBC.
 
 4.  Para ver uma lista das opções disponíveis, execute o seguinte comando: **./build_dm.sh --help**.  
   

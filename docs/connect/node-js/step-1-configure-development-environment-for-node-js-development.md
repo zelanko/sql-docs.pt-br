@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de PHP | Microsoft Docs'
+title: 'Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento de Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
