@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600524"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383841"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, confira [Utilitário bcp](bcp-utility.md).
 
  > Para obter a versão mais recente do utilitário bcp, consulte [14.0 de utilitários de linha de comando do Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**batch\_size**_<a name="b"></a>  
  Especifica o número de linhas por lote de dados importados. Cada lote é importado e registrado como uma transação separada que importa o lote inteiro antes de ser confirmado. Por padrão, todas as linhas no arquivo de dados são importadas como um lote. Para distribuir as linhas entre vários lotes, especifique um *batch_size* que seja menor do que o número de linhas no arquivo de dados. Se a transação apresentar falha para qualquer lote, só serão revertidas as inserções do lote atual. Lotes já importados por transações confirmadas não serão afetados por uma falha posterior.  
   
- Não use essa opção junto com a opção **-h "** ROWS_PER_BATCH **=**_bb_**"**.  
+ Não use essa opção junto com a opção **-h "** ROWS_PER_BATCH **=**_bb_**"** .  
  
  **-c**<a name="c"></a>  
  Executa a operação usando um tipo de dados de caractere. Essa opção não solicita informações para cada campo; ela usa **char** como o tipo de armazenamento, sem prefixos e com **\t** (caractere de tabulação) como separador de campos e **\r\n** (caractere de nova linha) como terminador de linha. **-c** não é compatível com **-w**.  
@@ -144,7 +142,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Especifica a página de código dos dados no arquivo de dados. *code_page* só será relevante se os dados contiverem colunas **char**, **varchar**ou **text** com valores de caractere maiores que 127 ou menores que 32.  
   
 > [!NOTE]
-> Recomendamos a especificação de um nome de agrupamento para cada coluna em um arquivo de formato, exceto quando você quiser que a opção 65001 tenha prioridade sobre a especificação de agrupamento/página de código.
+> Recomendamos a especificação de um nome de ordenação para cada coluna em um arquivo de formato, exceto quando você quiser que a opção 65001 tenha prioridade sobre a especificação de ordenação/página de código.
   
 |Valor da página de código|Descrição|  
 |---------------------|-----------------|  
@@ -438,7 +436,7 @@ O utilitário bcp também pode ser baixado separadamente do [Feature Pack do Mic
   
 |Tipo de dados|Efeito|  
 |---------------|------------|  
-|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento. O efeito é o mesmo que especificar a opção **-c** sem especificar um arquivo de formato.|  
+|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pela ordenação. O efeito é o mesmo que especificar a opção **-c** sem especificar um arquivo de formato.|  
 |SQLNCHAR ou SQLNVARCHAR|Os dados são enviados como Unicode. O efeito é o mesmo que especificar a opção **-w** sem especificar um arquivo de formato.|  
 |SQLBINARY ou SQLVARYBIN|Os dados são enviados sem qualquer conversão.|  
   

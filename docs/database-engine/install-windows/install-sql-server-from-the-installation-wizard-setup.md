@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731484"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460681"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Este artigo explica como instalar o SQL Server com o Assistente de Instalação. Aplica-se a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014 por meio do Assistente de Instalação (Instalação)](install-sql-server-from-the-installation-wizard-setup.md).
+Este artigo explica como instalar o SQL Server com o Assistente de Instalação. Aplica-se a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
 Este artigo apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre como instalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individualmente, veja [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 
@@ -69,7 +69,7 @@ A Microsoft identificou um problema com a versão específica dos binários do T
 4.  Na página Termos de Licença, examine o contrato de licença e, se concordar, marque a caixa de seleção **Aceito os termos da licença** e clique em **Avançar**.  
 
   >[!NOTE]
-  > O SQL Server transmite informações sobre sua experiência de instalação, bem como outros dados de uso e desempenho para ajudar a Microsoft a melhorar o produto. Para saber mais sobre o processamento de dados do SQL Server e controles de privacidade, confira a [Política de privacidade](https://privacy.microsoft.com/en-us/privacystatement) e [Configurar o SQL Server para enviar comentários à Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
+  > O SQL Server transmite informações sobre sua experiência de instalação, bem como outros dados de uso e desempenho para ajudar a Microsoft a melhorar o produto. Para saber mais sobre o processamento de dados do SQL Server e controles de privacidade, confira a [Política de privacidade](https://privacy.microsoft.com/en-us/privacystatement) e [Configurar o SQL Server para enviar comentários à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Na janela Regras Globais, o procedimento de instalação avançará automaticamente para a janela Atualizações de Produto se não houver nenhum erro de regra.  
   
@@ -128,7 +128,7 @@ A Microsoft identificou um problema com a versão específica dos binários do T
     > [!NOTE]
     > A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], marque a caixa *Conceder privilégio Realizar Tarefa de Manutenção de Volume para o Serviço de Mecanismo de Banco de Dados do SQL Server* para permitir que a conta de serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] use a [Inicialização Instantânea de Arquivo do Banco de Dados](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Use a página Configuração do Servidor — Agrupamento para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+     Use a página Configuração do Servidor — Ordenação para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Suporte a ordenações e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 15. Use a página Configuração — Configuração do servidor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para especificar o seguinte:  
   

@@ -19,19 +19,17 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f868f562ead9ff0d4b9dfa895624a02d018da9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827684"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383781"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [TDE (Transparent Data Encryption)](transparent-data-encryption-tde.md).
-
-  *TDE* (Transparent Data Encryption) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] , o que é conhecido como criptografia de dados em repouso. Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
+  *TDE* (Transparent Data Encryption) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)], o que é conhecido como criptografia de dados em repouso. Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
   
  A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados mestre do servidor ou uma chave assimétrica protegida por um módulo EKM. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Isso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES, sem alterar os aplicativos existentes.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "47827684"
   
  **Informações aplicáveis a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Ao usar a TDE com o [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, o certificado de nível de servidor armazenado no banco de dados mestre é criado automaticamente pelo [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para mover um banco de dados de TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é necessário descriptografar o banco de dados, movê-lo e habilitar novamente a TDE no destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obter instruções passo a passo sobre a TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], veja [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Ao usar a TDE com o [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, o certificado de nível de servidor armazenado no banco de dados mestre é criado automaticamente pelo [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para mover um banco de dados de TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é necessário descriptografar o banco de dados, movê-lo e habilitar novamente a TDE no destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obter instruções passo a passo para a TDE em [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informações aplicáveis a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

@@ -11,16 +11,14 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608444"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384071"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
-
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: criar o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
   

@@ -15,17 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 110d60fa0f94f5c66ba59e2d8068d6eb0084df28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820034"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383911"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices clusterizados e não clusterizados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Índices clusterizados e não clusterizados descritos](clustered-and-nonclustered-indexes-described.md).
 
   Um índice é uma estrutura em disco associada a uma tabela ou exibição, que agiliza a recuperação das linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura (árvore B) que habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
   

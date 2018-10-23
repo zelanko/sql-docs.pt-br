@@ -17,16 +17,15 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: adc3db5b6930cbbc9e3af95aaa2a1245bb40c25a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851781"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383931"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 O **LocalDB** do Microsoft SQL Server 2016 Express é um recurso do [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) voltado para desenvolvedores. Ele está disponível no SQL Server 2016 Express with Advanced Services.  
 
@@ -58,7 +57,7 @@ Selecione **LocalDB** na página **Seleção de Recursos/Recursos Compartilhados
   
  O utilitário SqlLocalDb pode criar novas instâncias do **LocalDB**, iniciar e interromper uma instância do **LocalDB**, e contém opções para ajudar a gerenciar o **LocalDB**.  Para obter mais informações sobre o utilitário SqlLocalDb, consulte [Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
- O agrupamento de instância para **LocalDB** é definido como SQL_Latin1_General_CP1_CI_AS e não pode ser alterado. Normalmente há suporte para agrupamentos nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de agrupamentos tempdb definidas por [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
+ A ordenação de instância para **LocalDB** é definida como SQL_Latin1_General_CP1_CI_AS e não pode ser alterada. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de ordenações tempdb definidas por [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).  
   
 ### <a name="restrictions"></a>Restrictions  
  O**LocalDB** não pode ser um assinante de replicação de mesclagem.  

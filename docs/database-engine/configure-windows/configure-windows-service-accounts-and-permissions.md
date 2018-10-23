@@ -51,17 +51,15 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0093ef6c277198953a93c8f8f7ba21c17af3ebd
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694976"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383801"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar contas e permissões do serviço Windows](configure-windows-service-accounts-and-permissions.md).
-
 
   Cada serviço no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa um processo ou um conjunto de processos para gerenciar a autenticação das operações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Windows. Este tópico descreve a configuração padrão de serviços nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as opções de configuração de serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode definir durante e após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico ajuda usuários avançados a entender os detalhes das contas de serviço.  
   
@@ -544,7 +542,7 @@ Em toda a instalação, a Instalação do [!INCLUDE[ssNoVersion](../../includes/
 ###  <a name="SSAS"></a> Provisionamento SSAS  
  Os requisitos da conta do serviço[!INCLUDE[ssAS](../../includes/ssas-md.md)] variam, dependendo de como o servidor está implantado. Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a configuração do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a execução em uma conta de domínio. Contas de domínio são necessárias para dar suporte ao recurso de conta gerenciada criada no SharePoint. Por essa razão, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma conta de serviço padrão, como uma conta virtual, para uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obter mais informações sobre o provisionamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, consulte [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
- Para todas as outras instalações autônomas do [!INCLUDE[ssAS](../../includes/ssas-md.md)] , você pode provisionar o serviço para ser executado em uma conta de domínio, conta de sistema interna, conta gerenciada ou conta virtual. Para obter mais informações sobre o provisionamento de conta, consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
+ Para todas as outras instalações autônomas do [!INCLUDE[ssAS](../../includes/ssas-md.md)], você pode provisionar o serviço para ser executado em uma conta de domínio, conta de sistema interna, conta gerenciada ou conta virtual. Para obter mais informações sobre o provisionamento de conta, consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   
  Para instalações clusterizadas, especifique uma conta de domínio ou uma conta de sistema interna. Não há suporte para contas gerenciadas nem contas virtuais em clusters de failover do [!INCLUDE[ssAS](../../includes/ssas-md.md)] .  
   

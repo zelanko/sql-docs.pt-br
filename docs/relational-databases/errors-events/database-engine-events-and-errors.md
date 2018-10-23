@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100537"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384171"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. 
@@ -1290,6 +1290,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2597    |   10  |   não  |   Ignorando o sinalizador de rastreamento %d. Trata-se de um sinalizador de rastreamento inválido ou que somente pode ser especificado durante a inicialização do servidor.    |
 |   2599    |   16  |   não  |   Não é possível alternar para o texto da linha na tabela "%.*ls".  |
 |   2601    |   14  |   não  |   Não é possível inserir uma linha de chave duplicada no objeto '%.*ls' com o índice exclusivo '%.* ls'.    |
+|   2628    |   16  |   não  |   Os dados da cadeia de caracteres seriam truncados na tabela '%.*ls', coluna '%.* ls'. Valor truncado: '%.*ls'.|
 |   2627    |   14  |   não  |   Violação da restrição %ls '%.*ls'. Não é possível inserir uma chave duplicada no objeto '%.* ls'. |
 |   2701    |   10  |   não  |   Nome do banco de dados '%.*ls' ignorado, fazendo referência a objeto em tempdb.    |
 |   2702    |   16  |   não  |   O banco de dados '%.*ls' não existe.    |
@@ -1789,8 +1790,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   3970    |   16  |   não  |   Esta operação está em conflito com outra operação pendente desta transação. Falha na operação.  |
 |   3971    |   16  |   não  |   O servidor não pôde continuar a transação. Desc:%I64x.    |
 |   3972    |   20  |   Sim |   O protocolo TDS de entrada está incorreto. O comprimento do evento do Gerenciador de Transação é incorreto. Tipo de evento: %d. Comprimento esperado: %d. Comprimento real: %d.   |
-|   3973    |   16  |   não  |   O banco de dados está sendo usado por outro thread no mesmo espaço de trabalho no modo exclusivo. Falha na operação.    |
-|   3974    |   16  |   não  |   O número de bancos de dados que usam o modo exclusivo em um espaço de trabalho é limitado. O limite foi excedido e, portanto, a operação falhou.    |
+|   3973    |   16  |   não  |   O banco de dados está sendo usado por outro thread no mesmo workspace no modo exclusivo. Falha na operação.    |
+|   3974    |   16  |   não  |   O número de bancos de dados que usam o modo exclusivo em um workspace é limitado. O limite foi excedido e, portanto, a operação falhou.    |
 |   3975    |   16  |   não  |   O tipo de dados varchar(max) não tem suporte para sp_getbindtoken. O lote foi anulado.    |
 |   3976    |   16  |   não  |   O nome da transação tem o comprimento fora do padrão %d. O lote foi anulado. |
 |   3977    |   16  |   não  |   O nome do ponto de salvamento não pode ser NULL. O lote foi anulado.  |
