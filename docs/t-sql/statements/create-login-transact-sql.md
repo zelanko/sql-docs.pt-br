@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7509aaa81af19bc94fdb09526f3a940695651a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840966"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252103"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -54,7 +54,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Sintaxe 
   
@@ -260,26 +260,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Banco de Dados SQL<br />Banco de Dados SQL*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* Banco de Dados SQL<br />servidor lógico \*_**|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
   
 ## <a name="syntax"></a>Sintaxe 
   
@@ -389,26 +376,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Banco de Dados SQL<br />Instância Gerenciada \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
 
 ## <a name="overview"></a>Visão geral
 
@@ -522,23 +496,13 @@ GO
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>>   <th><strong><em>* SQL Data<br />Warehouse*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada]()|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
   
 ## <a name="syntax"></a>Sintaxe 
   
@@ -644,24 +608,13 @@ GO
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada]()|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
   
 ## <a name="syntax"></a>Sintaxe 
