@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767364"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643934"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Ferramentas do SQL e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Estas são as ferramentas de GUI (interface) gráfica do usuário principal:
 | Ferramenta | Descrição | É executado em |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] é uma ferramenta gratuita, leve, para gerenciar bancos de dados, independentemente de onde elas estão em execução. Esta versão de visualização fornece recursos de gerenciamento de banco de dados, incluindo um editor Transact-SQL estendido e personalizáveis percepções sobre o estado operacional dos seus bancos de dados. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, macOS e Linux**.|
-| [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | Use o SQL Server Management Studio (SSMS) para consultar, criar e gerenciar seu SQL Server, o banco de dados SQL e o Azure SQL Data Warehouse. | **SSMS seja executado em Windows**.|
+| [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | Use o SQL Server Management Studio (SSMS) para consultar, criar e gerenciar seu SQL Server, o banco de dados SQL e o Azure SQL Data Warehouse. | **O SSMS é executado no Windows**.|
 | [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transforme o Visual Studio em um ambiente de desenvolvimento avançado para o SQL Server, banco de dados SQL e Azure SQL Data Warehouse.| **O SSDT é executado no Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Após instalar o Visual Studio Code, o [extensão mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) para o desenvolvimento do Microsoft SQL Server, banco de dados SQL e SQL Data Warehouse.| **Visual Studio Code é executado no Windows, macOS e Linux**.|
 
@@ -72,6 +72,7 @@ Estas são as principais ferramentas de linha de comando:
 |:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use o SQL Server Configuration Manager para configurar os serviços do SQL Server e configurar a conectividade de rede. Configuration Manager é executado no Windows|
 | [Assistente de Migração do SQL Server](../ssma/sql-server-migration-assistant.md) | Use o Assistente de Migração do SQL Server para automatizar a migração do banco de dados do Microsoft Access, do DB2, do MySQL, do Oracle e do Sybase para o SQL Server.|
+| [Assistente para Experimentos de Banco de Dados](../dea/database-experimentation-assistant-overview.md) | Use o Assistente de experimentação do banco de dados para avaliar uma versão de destino do SQL para uma determinada carga de trabalho. |
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use o recurso Distributed Replay para ajudá-lo a avaliar o impacto de atualizações futuras do SQL Server. Também use o Distributed Replay para ajudar a avaliar o impacto de hardware e atualizações do sistema operacional e ajuste do SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | O utilitário ssbdiagnose relata problemas em conversas do Service Broker ou a configuração de serviços do Service Broker. |
 
