@@ -38,7 +38,7 @@ ms.locfileid: "47755664"
  Permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina a afinidade de E/S.  
   
  **Máximo de threads de trabalho**  
- 0 permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina dinamicamente o número de threads de trabalho. Essa configuração é melhor para a maioria dos sistemas. Porém, dependendo de sua configuração de sistema, definir essa opção com um valor específico às vezes melhora o desempenho. Para obter mais informações, consulte [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).  
+ 0 permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina dinamicamente o número de threads de trabalho. Essa configuração é melhor para a maioria dos sistemas. Porém, dependendo de sua configuração de sistema, definir essa opção com um valor específico às vezes melhora o desempenho. Para obter mais informações, consulte [configurar a opção de configuração de servidor max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).  
   
  **Aumentar a prioridade do SQL Server**  
  Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser executado em uma prioridade de agendamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows mais alta que outros processos no mesmo computador. Para obter mais informações, consulte [Configure the priority boost Server Configuration Option](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md).  

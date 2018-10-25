@@ -29,7 +29,7 @@ Como alternativa, a alta disponibilidade no lado do Mestre do Scale Out pode ser
 Para configurar a alta disponibilidade no lado do Mestre do Scale Out com o Always On para o catálogo do SSIS, siga estas etapas:
 
 ## <a name="1-prerequisites"></a>1. Prerequisites
-Configurar um cluster de failover do Windows. Confira a postagem no blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.
+Configurar um cluster de failover do Windows. Confira a postagem no blog [Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalar o Mestre do Scale Out no nó primário
 Instale os Serviços de Mecanismo de Banco de Dados do SQL Server, o Integration Services e o Mestre do Scale Out no nó primário do Mestre do Scale Out. 

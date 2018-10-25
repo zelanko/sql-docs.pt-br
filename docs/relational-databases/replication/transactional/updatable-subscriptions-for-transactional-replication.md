@@ -42,7 +42,7 @@ ms.locfileid: "47756934"
   
  Se você criar uma publicação transacional com assinaturas atualizáveis no Assistente para Nova Publicação, tanto a atualização imediata quanto a enfileirada são habilitadas. Se você criar uma publicação com procedimentos armazenados, é possível habilitar uma ou ambas as opções. Ao criar uma assinatura para a publicação, você especifica o modo de atualização a ser usado. É possível então alternar entre modos de atualização se necessário. Para obter mais informações, consulte a seguinte seção "Alternando entre modos de atualização".  
   
- Para habilitar assinaturas atualizáveis para publicações transacionais, [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ Para habilitar assinaturas atualizáveis para publicações transacionais, [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  Para criar assinaturas atualizáveis para publicações transacionais, consulte [Criar uma assinatura atualizável para uma publicação transacional (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) 
   
@@ -57,7 +57,7 @@ ms.locfileid: "47756934"
  **Para alternar entre modos de atualização**  
   
  Para alternar entre modos de atualização, deve-se habilitar a publicação e a assinatura para ambos os modos de atualização e, então, alternar entre eles, se necessário. Para obter mais informações, consulte  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Alternar entre modos de atualização para uma assinatura transacional atualizável](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considerações para o uso de assinaturas atualizáveis  
   

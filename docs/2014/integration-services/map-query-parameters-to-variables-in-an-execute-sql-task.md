@@ -70,7 +70,7 @@ ms.locfileid: "48070916"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Para obter exemplos de como usar parâmetros com procedimentos armazenados, consulte [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Para obter exemplos de como usar parâmetros com procedimentos armazenados, consulte [Parâmetros e códigos de retorno na Tarefa Executar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Clique em **Mapeamento de Parâmetro**.  
   

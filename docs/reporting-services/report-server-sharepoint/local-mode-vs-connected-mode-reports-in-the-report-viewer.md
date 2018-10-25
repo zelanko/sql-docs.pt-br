@@ -36,7 +36,7 @@ ms.locfileid: "47682444"
   
  A seguir há uma lista de extensões de processamento de dados que dão suporte a relatório no modo local:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Extensão de relatório do Access 2010. Para obter mais informações sobre os Serviços do Access, consulte [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Usar Serviços do Access com o SQL Reporting Services: Instalando o Suplemento do SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Extensão de relatório do Access 2010. Para obter mais informações sobre os Serviços do Access, consulte [Usar Serviços do Access com o SQL Reporting Services: Instalando o Suplemento do SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   A extensão de dados de lista do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre a Extensão de dados de lista do SharePoint, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -75,11 +75,11 @@ ms.locfileid: "47682444"
   
 4.  Reinicie o IIS.  
   
- Para obter mais informações, consulte [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) (Usar Serviços do Access com o SQL Reporting Services: Instalando o Suplemento do SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)) e [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
+ Para obter mais informações, consulte [Usar Serviços do Access com o SQL Reporting Services: Instalando o Suplemento do SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) e [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>modo conectado
 
- Para obter as informações mais recentes sobre o uso da extensão ADS com o modo conectado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte [Access Services Report in SharePoint Site shows error in data extension ‘ADS’](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(Relatório de Serviços do Access no site do SharePoint mostra erro na extensão de dados ‘ADS’).  
+ Para obter as informações mais recentes sobre o uso da extensão ADS com o modo conectado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte [Relatório de Serviços do Access no site do SharePoint mostra erro na extensão de dados ‘ADS’](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Confira também
 

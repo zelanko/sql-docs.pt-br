@@ -31,7 +31,7 @@ ms.locfileid: "47800144"
 > [!NOTE]  
 >  Um conjunto de dados compartilhado deve ser baseado em uma fonte de dados compartilhada. Se a fonte de dados de que você precisa não estiver disponível, será necessário criar uma no servidor de relatório. Para obter mais informações, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Para obter mais informações, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ### <a name="dataset"></a>Dataset  
  Use o botão **Definir Opções** para definir propriedades de conjunto de dados compartilhadas. Entre elas estão as seguintes:  

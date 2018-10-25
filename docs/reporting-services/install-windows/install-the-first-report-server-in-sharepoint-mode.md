@@ -281,7 +281,7 @@ ms.locfileid: "47715484"
   
 6.  Selecione **Ativar**. O status dos recursos será alterado para **Ativo**.  
   
- Este procedimento é concluído para cada coleção de sites. Para obter mais informações, consulte [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
+ Este procedimento é concluído para cada coleção de sites. Para obter mais informações, consulte [Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
 ##  <a name="bkmk_full_script"></a> Script do Windows PowerShell para as etapas 1 a 4  
  O script do PowerShell nesta seção é o equivalente a concluir as etapas de 1 a 4 nas seções anteriores. O script conclui o seguinte:  

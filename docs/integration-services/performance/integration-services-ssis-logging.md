@@ -40,7 +40,7 @@ ms.locfileid: "47799096"
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
- Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](#server_logging).  
   
  Você também pode incluir o log ao executar um pacote por meio do utilitário de prompt de comando **dtexec** . Para obter mais informações sobre os argumentos do prompt de comando que oferecem suporte para registros, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   

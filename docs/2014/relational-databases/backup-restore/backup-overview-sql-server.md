@@ -86,7 +86,7 @@ ms.locfileid: "48049388"
  **Mídia de backup de termos e definições**  
   
  [Dispositivo de backup](backup-devices-sql-server.md)  
- Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Microsoft Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Microsoft Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [mídia de backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  

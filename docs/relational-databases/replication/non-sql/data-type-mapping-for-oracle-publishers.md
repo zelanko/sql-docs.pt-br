@@ -104,7 +104,7 @@ ms.locfileid: "47739184"
   
 -   Globalmente altere o padrão para todos os artigos futuros usando procedimentos armazenados (não são alterados os padrões para os artigos existentes).  
   
- Para especificar mapeamentos alternativos de tipo de dados, consulte [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Para especificar mapeamentos alternativos de tipo de dados, consulte [Especificar mapeamentos de tipo de dados para um Publicador Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

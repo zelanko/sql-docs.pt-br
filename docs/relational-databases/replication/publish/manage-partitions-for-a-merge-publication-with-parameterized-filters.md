@@ -112,7 +112,7 @@ ms.locfileid: "47638378"
   
     -   **@host_name** – quando o filtro com parâmetros estiver definido pelo valor retornado por [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
-2.  Crie e inicialize o instantâneo com parâmetros para esta partição nova. Para obter mais informações, consulte [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Crie e inicialize o instantâneo com parâmetros para esta partição nova. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Para excluir uma partição  
   
@@ -125,7 +125,7 @@ ms.locfileid: "47638378"
      Isso também remove o trabalho de instantâneo e qualquer arquivo de instantâneo para a partição.  
   
 ##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
- Para gerenciar melhor uma publicação com filtros com parâmetros, você pode criar programaticamente novas partições de Assinante, enumerar as partições de Assinante existentes e excluir partições de Assinante usando RMO (Replication Management Objects). Para obter informações sobre como criar partições de Assinante, consulte [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). As informações a seguir a respeito das partições existentes podem ser obtidas:  
+ Para gerenciar melhor uma publicação com filtros com parâmetros, você pode criar programaticamente novas partições de Assinante, enumerar as partições de Assinante existentes e excluir partições de Assinante usando RMO (Replication Management Objects). Para obter informações sobre como criar partições de Assinante, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). As informações a seguir a respeito das partições existentes podem ser obtidas:  
   
 -   A função do valor e da filtragem sobre a qual a partição está baseada.  
   

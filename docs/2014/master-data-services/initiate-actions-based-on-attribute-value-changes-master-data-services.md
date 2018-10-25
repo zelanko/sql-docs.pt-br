@@ -31,7 +31,7 @@ ms.locfileid: "48150876"
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Seus atributos devem estar em um grupo de controle de alterações. Consulte [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obter mais informações.  
+-   Seus atributos devem estar em um grupo de controle de alterações. Consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obter mais informações.  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>Criar uma regra de negócios para iniciar ações com base em alterações de valores  
   
