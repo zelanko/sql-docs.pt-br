@@ -55,7 +55,7 @@ ms.locfileid: "49169196"
 |`New-SqlHadrEndPoint`|Cria um novo ponto de extremidade de espelhamento de banco de dados em uma instância de servidor. Esse ponto de extremidade é necessário para a movimentação de dados entre os bancos de dados primário e secundário.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Altera as propriedades de um ponto de extremidade de espelhamento de banco de dados existente, como o nome, o estado ou as propriedades de autenticação.|Uma instância de servidor que dá suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e não tem um ponto de extremidade de espelhamento de banco de dados.|  
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a> Fazendo backup e restaurando bancos de dados e logs de transações  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  

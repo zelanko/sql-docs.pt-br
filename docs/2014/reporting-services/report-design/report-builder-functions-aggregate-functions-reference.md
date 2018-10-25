@@ -45,7 +45,7 @@ ms.locfileid: "48194107"
   
 -   [Testando para escopo](#TestingforScope)  
   
- Para determinar os escopos válidos para uma função, consulte o tópico de referência da função individual. Para obter mais informações e exemplos, consulte [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para determinar os escopos válidos para uma função, consulte o tópico de referência da função individual. Para obter mais informações e exemplos, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
