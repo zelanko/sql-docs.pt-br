@@ -25,7 +25,7 @@ ms.locfileid: "47776134"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico cobre as várias abordagens de combinações de detecção e resolução de conflitos possíveis ao usar registros lógicos. Um conflito na replicação de mesclagem ocorre quando mais de um nó altera os mesmos dados ou quando a replicação de mesclagem encontra determinados tipos de erros, como violação de restrição, durante a replicação de alterações. Para obter mais informações sobre detecção e resolução de conflitos, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [especificar o nível de resolução e de rastreamento de conflito para artigos de mesclagem](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-detection"></a>Detecção de conflito  
  A forma pela qual os conflitos são detectados para registros lógicos é determinada por duas propriedades do artigo: **column_tracking** e **logical_record_level_conflict_detection**. O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores também dão suporte à detecção do nível de registro lógico.  

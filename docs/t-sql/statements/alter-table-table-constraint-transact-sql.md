@@ -175,7 +175,7 @@ ms.locfileid: "47607904"
  Especifica a coluna associada a uma definição de DEFAULT em nível de tabela.  
   
  WITH VALUES  
- Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
 Se isso for usado quando a coluna relacionada também não estiver sendo adicionada, não terá qualquer efeito. 
   
  CHECK  

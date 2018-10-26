@@ -61,7 +61,7 @@ ms.locfileid: "48176096"
   
 -   O erro ocorre durante uma inserção na tabela do sistema **MSmerge_contents**.  
   
-     O erro pode ocorrer devido a um valor incorreto para a propriedade de filtro de junção **join_unique_key**. Essa propriedade só deverá ser definida como TRUE se a coluna associada na tabela pai for exclusiva. Se a propriedade for definida como TRUE, mas a coluna não for exclusiva, esse erro será gerado. Para obter mais informações sobre como definir essa propriedade, consulte [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     O erro pode ocorrer devido a um valor incorreto para a propriedade de filtro de junção **join_unique_key**. Essa propriedade só deverá ser definida como TRUE se a coluna associada na tabela pai for exclusiva. Se a propriedade for definida como TRUE, mas a coluna não for exclusiva, esse erro será gerado. Para obter mais informações sobre como definir essa propriedade, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  

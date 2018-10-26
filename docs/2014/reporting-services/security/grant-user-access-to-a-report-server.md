@@ -40,7 +40,7 @@ ms.locfileid: "48071146"
 ## <a name="before-you-start"></a>Antes de iniciar  
  Revise a lista a seguir antes de adicionar usuários a um servidor de relatório no modo nativo.  
   
--   Você deve ser um membro do grupo Administradores local no computador do servidor de relatório. Se estiver implantando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] ou no Windows Server 2008, uma configuração adicional é necessária antes de administrar um servidor de relatório localmente. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+-   Você deve ser um membro do grupo Administradores local no computador do servidor de relatório. Se estiver implantando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] ou no Windows Server 2008, uma configuração adicional é necessária antes de administrar um servidor de relatório localmente. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 -   Para delegar essa tarefa a outros usuários, crie atribuições de função que mapeiam contas de usuário para as funções Gerenciador de Conteúdo e Administrador do Sistema. Os usuários que têm as permissões Gerenciador de Conteúdo e Administrador do Sistema podem adicionar usuários a um servidor de relatório.  
   
