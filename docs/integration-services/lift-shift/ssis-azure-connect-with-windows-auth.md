@@ -1,7 +1,7 @@
 ---
 title: Conectar-se a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows | Microsoft Docs
 description: Saiba como configurar o Catálogo do SSIS no Banco de Dados SQL e o Tempo de Execução de Integração do Azure-SSIS para executar pacotes que se conectam a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows.
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608626"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119973"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Conectar-se a fontes de dados e a compartilhamentos de arquivos com a Autenticação do Windows de pacotes SSIS no Azure
 Você pode usar a autenticação do Windows para se conectar a fontes de dados e compartilhamentos de arquivos na mesma rede virtual que o Azure SSIS IR (Integration Runtime), em máquinas virtuais locais/do Azure e em Arquivos do Azure. Há três métodos de se conectar a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows de pacotes SSIS em execução no Azure-SSIS IR:
@@ -34,7 +34,7 @@ Você pode usar a autenticação do Windows para se conectar a fontes de dados e
 O restante deste artigo descreve como configurar o catálogo do SSIS no Banco de Dados SQL do Azure para executar pacotes que usam a autenticação do Windows para se conectar a compartilhamentos de arquivos e a fontes de dados. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>Você só pode usar um conjunto de credenciais
-Nesse método, você pode usar apenas um conjunto de credenciais em um pacote. As credenciais de domínio que você fornece ao seguir as etapas neste artigo se aplicam a todas as execuções de pacote, interativas ou agendadas, no Azure-SSIS IR até você alterar ou remover as credenciais. Se o pacote precisar se conectar a várias fontes de dados e compartilhamentos de arquivos com diferentes conjuntos de credenciais, talvez você precise considerar os métodos alternativos acima.
+Ao usar a autenticação do Windows em um pacote SSIS, você pode usar apenas um conjunto de credenciais em um pacote. As credenciais de domínio que você fornece ao seguir as etapas neste artigo se aplicam a todas as execuções de pacote, interativas ou agendadas, no Azure-SSIS IR até você alterar ou remover as credenciais. Se o pacote precisar se conectar a várias fontes de dados e compartilhamentos de arquivos com diferentes conjuntos de credenciais, talvez você precise considerar os métodos alternativos acima.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Forneça credenciais de domínio para Autenticação do Windows
 Para fornecer credenciais de domínio que permitem que os pacotes usam a autenticação do Windows para se conectar a fontes de dados locais/compartilhamentos de arquivos, faça o seguinte:
@@ -100,7 +100,7 @@ Para se conectar a um SQL Server local de um pacote em execução no Azure, voc�
 3.  Para se conectar com a Autenticação do Windows, verifique se seu Azure SSIS IR pertence a uma rede virtual que também inclui o SQL Server local.  Para obter mais informações, consulte [Unir um Azure-SSIS Integration Runtime a uma rede virtual](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Em seguida, use `catalog.set_execution_credential` para fornecer credenciais, conforme descrito neste artigo.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Conectar-se a um compartilhamento de arquivos local
-Para verificar se você pode se conectar a um compartilhamento de arquivos local, faça o seguinte:
+Para testar se você pode se conectar a um compartilhamento de arquivos local, faça o seguinte:
 
 1.  Para executar este teste, localize um computador não ingressado em domínio.
 

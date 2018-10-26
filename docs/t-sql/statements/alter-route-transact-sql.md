@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697974"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169019"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  com  
  Introduz as cláusulas que definem a rota a ser alterada.  
   
- SERVICE_NAME **='***service_name***'**  
- Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera o agrupamento atual. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
+ SERVICE_NAME **='**_service\_name_**'**  
+ Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
   
  Se a cláusula SERVICE_NAME for omitida, o nome de serviço para a rota permanecerá inalterado.  
   
- BROKER_INSTANCE **='***broker_instance***'**  
+ BROKER_INSTANCE **='**_broker\_instance_**'**  
  Especifica o banco de dados que hospeda o serviço de destino. O parâmetro *broker_instance* precisa ser o identificador da instância do agente para o banco de dados remoto, que pode ser obtido ao executar a seguinte consulta no banco de dados selecionado:  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, o tempo de vida da rota permanecerá inalterado.  
   
- ADDRESS **='***next_hop_address'*  
+ ADDRESS **='**_next\_hop\_address_'  
 
  Para a Instância Gerenciada do Banco de Dados SQL do Azure, `ADDRESS` deve ser local.
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Especifica o endereço de rede para o servidor espelho de um par espelhado cujo servidor principal está no *next_hop_address*. O *next_hop_mirror_address* especifica um endereço TCP/IP no seguinte formato:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

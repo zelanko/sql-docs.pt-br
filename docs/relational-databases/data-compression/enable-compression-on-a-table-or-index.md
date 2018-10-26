@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61b696e96cdad99bc536cf6d1e983996624bce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 838fd86c8293554eb1c6d546b789c1dc60a2a658
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798096"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906446"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 
@@ -228,7 +228,7 @@ ms.locfileid: "47798096"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Em seguida, ele executa o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado do ID de índice especificado se fosse usar a configuração de compactação PAGE. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Em seguida, ele executaria o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado da ID de índice especificada como se a configuração de compactação PAGE fosse usada. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
   
     ```  
     USE AdventureWorks2012;   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d9fc1cf8a82021363bd72faafdd14f4e47fd92d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27092b8bc1d52bd02c26653b1fec8f5e2f5c4af0
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794324"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085182"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,4 +69,4 @@ ms.locfileid: "47794324"
 -   Aspas de abertura e fechamento em abributos.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Correspondência de parênteses dos Editores MDX e DMX  
- Os Editores de expressões MDX e DMX fazem a correspondência automática dos pares de parênteses nas funções.
+ Os Editores MDX (Expressões Multidimensionais) e DMX (Expressões de Mineração de Dados) combinam automaticamente pares de parênteses nas funções.

@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704505"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120193"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
  **Hora da Última Operação de Refazer**  
  Indica a hora em que o último registro de log que foi refeito no banco de dados secundário. Esse valor é ocultado por padrão.  
  
+
+   > [!NOTE]  
+   >  A maioria dos dados baseia-se em DM hadr_database_replica_states, portanto, algumas restrições podem ser aplicadas. Para obter mais informações, veja [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Relatórios de latência do grupo de disponibilidade Always On
 O relatório de latência do grupo de disponibilidade é uma ferramenta interna ao painel de controle de grupo de disponibilidade e está disponível em relatórios do [SQL Server Management Studio versão 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Esse recurso fornece um relatório fácil de entender que detalha o tempo gasto durante as várias fases do processo de transporte de log. Isso fornece uma maneira de restringir a causa potencial de latência durante o processo de sincronização. 

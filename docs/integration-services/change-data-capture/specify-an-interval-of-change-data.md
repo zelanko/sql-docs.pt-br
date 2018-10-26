@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf5d6989b7485ddd993b39d3f9f0f35c1f357ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654424"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120323"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Estes pontos de extremidade são valores **datetime** e são armazenados em variáveis do pacote para uso posterior.  
@@ -101,7 +101,7 @@ ms.locfileid: "47654424"
 3.  Na página **Conjunto de Resultados** do **Editor da tarefa Executar SQL**, mapeie o resultado de ExtractStartTime para a variável do pacote ExtractStartTime e o resultado de ExtractEndTime para a variável do pacote ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando você usa uma expressão para definir o valor de uma variável [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , a expressão é avaliada sempre que o valor da variável é acessado.  
+    >  Quando você usa uma expressão para definir o valor de uma variável [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a expressão é avaliada sempre que o valor da variável é acessado.  
   
 ## <a name="next-step"></a>Próxima etapa  
  Depois de calcular o ponto inicial e final para um intervalo de alterações, a próxima etapa é determinar se os dados de alteração estão prontos.  
@@ -110,7 +110,7 @@ ms.locfileid: "47654424"
   
 ## <a name="see-also"></a>Consulte Também  
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md)   
  [Tarefa Script](../../integration-services/control-flow/script-task.md)  
   

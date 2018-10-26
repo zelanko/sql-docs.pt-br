@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232540"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336265"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -118,6 +118,7 @@ ms.locfileid: "48232540"
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Banco de Dados SQL do Azure</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>SQL Data Warehouse do Azure</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>Novidades</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -235,7 +236,7 @@ ms.locfileid: "48232540"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Migrar, carregar e mover dados</h3>
-                                                          <p><b>Assistentes de migração, Integration Services, assistente de importação e exportação, replicação </b> </p>
+                                                          <p><b>SSIS (Assistentes de Migração, Integration Services), Assistente de Importação e Exportação, Replicação </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -348,9 +349,11 @@ ms.locfileid: "48232540"
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                    <li><a class="barLink" href="/rest/api/sql/">API REST do SQL</a></li>
                                                 </ul></td>
                                                 <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
+                                                     <li><a class="barLink" href="/dotnet/api/?view=sqlserver-2017">API do SDK do SQL .NET</a></li>
                                                      <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
                                                      <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Exemplos de banco de dados</a></li>
                                                      <li><a class="barLink" href="/previous-versions/sql/">Conteúdo arquivado (SQL 2005 a 2012)</a></li>
@@ -373,7 +376,7 @@ ms.locfileid: "48232540"
                                                         <ul class="noBullet">
                                                              <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
                                                             <li><a class="barLink" href="/power-bi/service-get-started/">Serviço do Power BI</a></li>
-                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Servidor de relatórios do PowerBI</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Servidor de Relatório do Power BI</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -425,10 +428,16 @@ ms.locfileid: "48232540"
         <h2>Mantenha contato conosco</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribua com a documentação do SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuir </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Comentários sobre a documentação do SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obter ajuda </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Comentários </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Pesquisa </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -444,4 +453,3 @@ ms.locfileid: "48232540"
             </li>
         </ul>
     </div>
-

@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723954"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905786"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Os KPIs são valores mensuráveis com importância comercial. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado com cores, medidores e indicadores.
   

@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 52e7bd927c8b3df503b335b522ca8b3444f5f5fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830904"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120283"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "47830904"
 > [!NOTE]  
 >  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir.  
 >   
->  -   Você restaura ou realiza failover para uma cópia do banco de dados de conteúdo que não tenha recebido as mesmas atualizações recentes que o banco de dados do servidor de relatório.  
+>  -   Você restaura ou realiza failover para uma cópia do banco de dados de conteúdo que não tenha recebido as mesmas atualizações recentes que o banco de dados do servidor de relatório recebeu.  
 > -   O processo de sincronização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará diferenças entre a lista de itens no banco de dados de conteúdo e os bancos de dados do servidor de relatório.  
 > -   O processo de sincronização excluirá ou atualizará itens no banco de dados de conteúdo.  
   

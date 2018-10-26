@@ -20,12 +20,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53849f61b723d3881716a4ef24e3f0054871eaf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323560bbca3b4914dd9f72bad6f781973d3a34e7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606594"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119695"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "47606594"
 > [!NOTE]  
 >  Arquivos esparsos crescem em incrementos de 64 KB (quilobyte); portanto, o tamanho de um arquivo esparso no disco sempre é um múltiplo de 64 KB.  
   
- Para exibir o número de bytes que cada arquivo esparso de um instantâneo está usando no disco no momento, consulte a coluna **size_on_disk_bytes** da exibição de gerenciamento dinâmico [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para exibir o número de bytes que cada arquivo esparso de um instantâneo está usando no disco no momento, confira a coluna **size_on_disk_bytes** da exibição de gerenciamento dinâmico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
   
- Para exibir o espaço em disco usado por um arquivo esparso, clique com o botão direito do mouse no Microsoft Windows, clique em **Propriedades** e examine o valor de **Tamanho em disco**.  
+ Para exibir o espaço em disco usado por um arquivo esparso, clique com o botão direito do mouse no Microsoft Windows, clique em **Propriedades**e examine o valor de **Tamanho em disco** .  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Descobrir o tamanho máximo de um arquivo esparso  
  O tamanho máximo de crescimento de um arquivo esparso é o tamanho do arquivo de banco de dados de origem correspondente, no momento da criação do instantâneo. Para saber qual é este tamanho, você pode usar uma das alternativas seguintes:  

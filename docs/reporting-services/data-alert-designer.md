@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8e214d201fb6cba77122062587f4ccddcad1c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe7960d68c43f7afe46ca518c84be58a60c6463
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732344"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120144"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
 

@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00b487d0828d13d4905f609b2631b45b8c61802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630494"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169307"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
 Você pode remover a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode descartar a indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Descartar um novo índice semântico usando Transact-SQL  
-Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***nome_da_coluna***DROP STATISTICAL_SEMANTIC**. Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
+Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN**_nome_da\_coluna_**DROP STATISTICAL_SEMANTICS**. Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Para remover a indexação semântica e de texto completo de uma coluna, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***nome_da_coluna***DROP**.  
+Para remover a indexação semântica e de texto completo de uma coluna, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN**_nome_da\_coluna_**DROP**.  
   
 ```sql  
 USE database_name  

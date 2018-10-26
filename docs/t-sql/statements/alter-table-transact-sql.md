@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171868"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085532"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ Algumas alterações de tipo de dados podem causar uma alteração nos dados. Po
 >  
 > Uma coluna incluída em uma restrição de chave primária não pode ser alterada de **NOT NULL** para **NULL**.  
   
-Se a coluna que está sendo modificada for criptografada usando `ENCRYPTED WITH`, você poderá alterar o tipo de dados para um tipo de dados compatível (como INT para BIGINT), mas não poderá alterar as configurações de criptografia.  
+Ao usar o Always Encrypted (sem enclaves seguros), se a coluna que está sendo modificada estiver criptografada usando 'ENCRYPTED WITH', você poderá alterar o tipo de dados para um tipo de dados compatível (como INT para BIGINT), mas não poderá alterar as configurações de criptografia.  
+
+Ao usar o Always Encrypted com enclaves seguros, você pode alterar qualquer configuração de criptografia, desde que a chave de criptografia de coluna que protege a coluna (e a nova chave de criptografia de coluna, se estiver alterando a chave) seja compatível com cálculos de enclave (criptografada com chaves mestras de coluna habilitadas para enclave). Para conhecer detalhes, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode ter, no máximo, 128 caracteres. Para novas colunas, *column_name* pode ser omitido para colunas criadas com um tipo de dados **timestamp**. O nome **timestamp** é usado se nenhum *column_name* for especificado para uma coluna de tipo de dados **timestamp**.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  É o novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. *type_name* não pode ser especificado para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes:  
   
 -   Um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -489,7 +488,7 @@ Os seguintes são critérios para *type_name* de uma coluna alterada:
 -   A configuração atual para SET ARITHABORT é ignorada. ALTER TABLE operará como se ARITHABORT estivesse definido como ON.  
   
 > [!NOTE]  
-> Se a cláusula COLLATE não for especificada, a alteração do tipo de dados de uma coluna fará com que um agrupamento seja modificado para o agrupamento padrão do banco de dados.  
+> Se a cláusula COLLATE não for especificada, a alteração do tipo de dados de uma coluna fará com que uma ordenação seja modificada para a ordenação padrão do banco de dados.  
   
  *precisão*  
  É a precisão do tipo de dados especificado. Para obter mais informações sobre valores de precisão válidos, veja [Precisão, escala e tamanho &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -505,14 +504,14 @@ Os seguintes são critérios para *type_name* de uma coluna alterada:
   
  Aplica-se apenas ao tipo de dados **xml** para associar um esquema XML ao tipo. Antes de digitar uma coluna **xml** em uma coleção de esquema, a coleção de esquema deve ser criada primeiramente no banco de dados, usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
-COLLATE \< *collation_name* > especifica o novo agrupamento para a coluna alterada. Se não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Para obter uma lista e mais informações, veja [Nome do agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+COLLATE \<*collation_name* &gt; especifica a nova ordenação para a coluna alterada. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações, veja [Nome da ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- A cláusula COLLATE pode ser usada para alterar os agrupamentos somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**. Para alterar o agrupamento de uma coluna de tipo de dados de alias definido pelo usuário, você deve executar instruções ALTER TABLE separadas para alterar a coluna para um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alterar seu agrupamento. Depois, deve alterar novamente a coluna para um tipo de dados de alias.  
+ A cláusula COLLATE pode ser usada para alterar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**. Para alterar a ordenação de uma coluna de tipo de dados de alias definido pelo usuário, você deve executar instruções ALTER TABLE separadas para alterar a coluna para um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alterar sua ordenação. Depois, deve alterar novamente a coluna para um tipo de dados de alias.  
   
-ALTER COLUMN não poderá ter uma alteração de agrupamento se ocorrer uma ou mais das condições a seguir:  
+ALTER COLUMN não poderá ter uma alteração de ordenação se ocorrer uma ou mais das condições a seguir:  
   
 -   Se uma restrição CHECK, FOREIGN KEY ou colunas computadas referenciarem a coluna alterada.  
--   Se forem criados qualquer índice, estatísticas ou índice de texto completo na coluna. As estatísticas criadas automaticamente na coluna alterada serão descartadas se o agrupamento da coluna for alterado.  
+-   Se forem criados qualquer índice, estatísticas ou índice de texto completo na coluna. As estatísticas criadas automaticamente na coluna alterada serão descartadas se a ordenação da coluna for alterada.  
 -   Se uma função ou exibição associada a esquema referenciar a coluna.  
   
 Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
@@ -571,7 +570,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 WITH ( ONLINE = ON | OFF) \<conforme se aplica a alterar uma coluna>  
  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Permite que muitas ações de coluna sejam executadas enquanto a tabela permanece disponível. O padrão é OFF. A alteração da coluna pode ser executada online para as alterações de coluna relacionadas ao tipo de dados, comprimento da coluna ou precisão, nulidade, dispersão e agrupamento.  
+ Permite que muitas ações de coluna sejam executadas enquanto a tabela permanece disponível. O padrão é OFF. A alteração da coluna pode ser executada online para as alterações de coluna relacionadas ao tipo de dados, comprimento da coluna ou precisão, nulidade, dispersão e ordenação.  
   
  A alteração online de coluna permite que as estatísticas automáticas e criadas pelo usuário usem como referência a coluna alterada durante a operação ALTER COLUMN. Isso permite executar consultas como de costume. No final da operação, as estatísticas automáticas que fazem referência à coluna são descartadas e as estatísticas criadas pelo usuário são invalidadas. O usuário deve atualizar manualmente as estatísticas geradas pelo usuário após a conclusão da operação. Se a coluna fizer parte de uma expressão de filtro para estatísticas ou índices, você não poderá executar uma operação de alteração de coluna.  
   
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  Use esse argumento junto com o argumento SET SYSTEM_VERSIONING para habilitar o controle de versão do sistema em uma tabela existente. Para obter mais informações, veja [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [Introdução às tabelas temporais no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- Do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM***\<table>* não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
+ Do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM**_\<table/>_ não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
   
 DROP  
 Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas, ou remover a especificação das colunas que o sistema usará para controle de versão do sistema.  
@@ -716,7 +715,7 @@ Especifica que *constraint_name* ou *column_name* é removida da tabela. Várias
 > [!NOTE]  
 > As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica o local para onde mover as linhas de dados atualmente no nível folha do índice clusterizado. A tabela é movida para o novo local. Esta opção se aplica apenas a restrições que criam um índice clusterizado.  
@@ -753,7 +752,7 @@ Especifica que *constraint_name* ou *column_name* é removida da tabela. Várias
   
  Especifica se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] controla quais colunas com alteração controlada foram atualizadas. O valor padrão é OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Alterna um bloco de dados em um dos seguintes modos:  
@@ -892,7 +891,7 @@ TABLE
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  O Banco de Dados SQL do Azure não é compatível com `FILETABLE`.  
   
- Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do SQL. Pode ser usado apenas com uma FileTable.  
+ Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do SQL. Pode ser usado apenas com uma FileTable.  
 ```    
  SET (  
         REMOTE_DATA_ARCHIVE   
@@ -1092,7 +1091,7 @@ Para resolver o problema, remova o uso de um prefixo de 4 partes.
 |--------------|------------------------------|  
 |[Adicionando colunas e restrições](#add)|ADD • PRIMARY KEY com opções de índice • colunas esparsas e conjuntos de colunas •|  
 |[Descartando colunas e restrições](#Drop)|DROP|  
-|[Alterando uma definição de coluna](#alter_column)|alterar o tipo de dados • alterar o tamanho da coluna • agrupamento|  
+|[Alterando uma definição de coluna](#alter_column)|alterar o tipo de dados • alterar o tamanho da coluna • ordenação|  
 |[Alterando uma definição de tabela](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • controle de alterações|  
 |[Desabilitando e habilitando restrições e gatilhos](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
@@ -1427,8 +1426,8 @@ SELECT name, TYPE_NAME(system_type_id), max_length, precision, scale
 FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');  
 ```  
   
-#### <a name="c-changing-column-collation"></a>C. Alterando o agrupamento de colunas  
- Os exemplos a seguir mostram como alterar o agrupamento de uma coluna. Primeiro, uma tabela é criada com o agrupamento de usuário padrão.  
+#### <a name="c-changing-column-collation"></a>C. Alterando a ordenação de colunas  
+ Os exemplos a seguir mostram como alterar a ordenação de uma coluna. Primeiro, uma tabela é criada com a ordenação de usuário padrão.  
   
 ```sql  
 CREATE TABLE T3  
@@ -1439,13 +1438,40 @@ C4 int ) ;
 GO  
 ```  
   
- Em seguida, o agrupamento da coluna `C2` é alterado para Latin1_General_BIN. Observe que o tipo de dados é obrigatório, mesmo que não tenha sido alterado.  
+ Em seguida, a ordenação da coluna `C2` é alterada para Latin1_General_BIN. Observe que o tipo de dados é obrigatório, mesmo que não tenha sido alterado.  
   
 ```sql  
 ALTER TABLE T3  
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. Criptografar uma coluna  
+ O exemplo a seguir mostra como criptografar uma coluna usando [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+Primeiro, uma tabela é criada sem nenhuma coluna criptografada.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Em seguida, a coluna 'C2' é criptografada com uma chave de criptografia de coluna, chamada CEK1, e a criptografia aleatória. Observe que, para a instrução abaixo ser bem-sucedida:
+- A chave de criptografia de coluna deve ser habilitado para enclave, o que significa que ela deve ser criptografada com uma chave mestra de coluna que permita cálculos de enclave.
+- A instância do SQL Server de destino dá suporte a Always Encrypted com enclaves seguros.
+- A instrução deve ser emitida por uma conexão configurada para Always Encrypted com enclaves seguros e usando um driver de cliente com suporte.
+- O aplicativo de chamada deve ter acesso à chave mestra de coluna, protegendo CEK1.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Alterando uma definição de tabela  
  Os exemplos desta seção demonstram como alterar a definição de uma tabela.  

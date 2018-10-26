@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f3b28d6c3b731a25103c950c784594325f095a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853314"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906006"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funções lógicas – CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE age como um índice em uma matriz, onde a matriz é composta pelos argumentos que acompanham o argumento de índice. O argumento de índice determina qual dos valores a seguir será retornado.  
   
 ## <a name="examples"></a>Exemplos  
+
+### <a name="a-simple-choose-example"></a>A. Exemplo simples de ESCOLHA
+
  O exemplo a seguir retorna o terceiro item da lista de valores fornecida.  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -70,7 +73,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### <a name="b-simple-choose-example-based-on-column"></a>B. Exemplo simples de ESCOLHA com base na coluna
+
  O exemplo a seguir retorna uma cadeia de caracteres simples com base no valor da coluna `ProductCategoryID`.  
   
 ```  
@@ -94,8 +99,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### <a name="c-choose-in-combination-with-month"></a>C. ESCOLHA em combinação com MÊS
   
- O exemplo a seguir retorna o trimestre em que um funcionário foi contratado. A função MONTH é usada para retornar o valor do mês da coluna `HireDate`.  
+ O exemplo a seguir retorna a estação em que um funcionário foi contratado. A função MONTH é usada para retornar o valor do mês da coluna `HireDate`.  
   
 ```  
 USE AdventureWorks2012;  

@@ -15,12 +15,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a221283f40f53260f9ebe8903b87d19da2963cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df640eb9b9efd4e5b67f6cc7829135b356e9cd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828500"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906066"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47828500"
   
      [Segurança](#Security)  
   
--   **Para configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados usando:**  
+-   **Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados usando:**  
   
      [SQL Server Configuration Manager](#SSMSProcedure)  
   

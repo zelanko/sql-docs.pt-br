@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171888"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906466"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
   
  Para obter tópicos de FILESTREAM relacionados, veja [Dados de blob &#40;objeto binário grande&#41;&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  Especifica o tipo de dados da coluna e o esquema ao qual ele pertence. Para tabelas com base em disco, o tipo de dados pode ser um dos seguintes:  
   
 -   Um tipo de dados do sistema.  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
   
  Especifica que uma coluna datetime2 especificada será usada pelo sistema para registrar a hora de início para a qual um registro é válido ou a hora de término para a qual um registro é válido. A coluna deve ser definida como NOT NULL. Se você tentar especificá-los como NULL, o sistema gerará um erro. Se você não especificar explicitamente NOT NULL para uma coluna de período, o sistema definirá a coluna como NOT NULL por padrão. Use esse argumento junto com os argumentos PERIOD FOR SYSTEM_TIME e WITH SYSTEM_VERSIONING = ON para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- Você pode marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM***`<table>`* não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal. Para alterar o atributo **HIDDEN** para uma coluna de período existente, **PERIOD** deve ser descartado e recriado com um sinalizador oculto diferente.  
+ Você pode marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM**_`<table>`_ não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal. Para alterar o atributo **HIDDEN** para uma coluna de período existente, **PERIOD** deve ser descartado e recriado com um sinalizador oculto diferente.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  O índice columnstore não clusterizado é armazenado e gerenciado como um índice columnstore clusterizado. Isso é chamado de índice columnstore não clusterizado porque as colunas podem ser limitadas e existem como um índice secundário em uma tabela.  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  Especifica o esquema de partição que define os grupos de arquivos nos quais as partições de um índice particionado serão mapeadas. O esquema de partição deve existir no banco de dados com a execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) ou [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica a coluna com relação à qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Qualquer coluna da tabela base pode ser especificada, exceto que, ao particionar um índice UNIQUE, *column_name* deve ser escolhido entre aqueles usados como chave exclusiva. Essa restrição permite ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificar a exclusividade de valores de chave em uma única partição apenas.  
   
 > [!NOTE]  
@@ -567,11 +565,13 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
  Especifica a chave de criptografia de coluna. Para obter mais informações, veja [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. Usar criptografia determinística permite pesquisar usando comparação de igualdade, agrupamento e junção de tabelas usando junções de igualdade baseadas em valores criptografados, mas também pode permitir que usuários não autorizados adivinhem informações sobre valores criptografados examinando padrões na coluna criptografada. A união de duas tabelas em colunas criptografadas de maneira determinística só é possível se ambas as colunas são criptografadas com a mesma chave de criptografia de coluna. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
+ **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. Usar criptografia determinística permite pesquisar usando comparação de igualdade, agrupamento e junção de tabelas usando junções de igualdade baseadas em valores criptografados, mas também pode permitir que usuários não autorizados adivinhem informações sobre valores criptografados examinando padrões na coluna criptografada. A união de duas tabelas em colunas criptografadas de maneira determinística só é possível se ambas as colunas são criptografadas com a mesma chave de criptografia de coluna. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
   
- **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. A criptografia randomizada é mais segura, mas impede pesquisas de igualdade, agrupamento e junção em colunas criptografadas. Colunas usando criptografia randomizada não podem ser indexadas.  
+ **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. A criptografia aleatória é mais segura, mas impede que cálculos e indexação sejam feitos em colunas criptografadas, a menos que sua instância do SQL Server tenha suporte para Always Encrypted com enclaves seguros. Veja [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md) para obter detalhes.
   
- Use a criptografia determinística para colunas que serão parâmetros de pesquisa ou parâmetros de agrupamento, por exemplo, um número da ID do governo. Use criptografia randomizada para dados como número de cartão de crédito, que não são agrupados a outros registros nem usados para unir tabelas e que não são pesquisados porque você usa outras colunas (como número de transações) para localizar a linha que contém a coluna criptografada de interesse.  
+ Se você estiver usando o Always Encrypted (sem enclaves seguros), use a criptografia determinística para colunas que serão pesquisadas com parâmetros ou com parâmetros de agrupamento, por exemplo, um número de identificação do governo. Use criptografia randomizada, para dados como número de cartão de crédito, que não é agrupada a outros registros nem usada para unir tabelas, e não é pesquisada porque você usa outras colunas (como número de transações) para localizar a linha que contém a coluna criptografada de interesse.
+
+ Se você está usando o Always Encrypted com enclaves seguros, a criptografia aleatória é um tipo de criptografia recomendado.
   
  As colunas devem ser de um tipo de dados qualificado.  
   
@@ -615,9 +615,9 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
  Quando o atributo de armazenamento FILESTREAM é especificado para uma coluna, todos os valores da coluna são armazenados em um contêiner de dados FILESTREAM no sistema de arquivos.  
   
  COLLATE *collation_name*  
- Especifica o agrupamento da coluna. O nome do agrupamento tanto pode ser um nome de agrupamento do Windows como um nome de agrupamento SQL. *collation_name* é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuído o agrupamento do tipo de dados definido pelo usuário, se a coluna for de um tipo de dados definido pelo usuário, ou o agrupamento do banco de dados atual.  
+ Especifica a ordenação da coluna. O nome da ordenação tanto pode ser um nome de ordenação do Windows como um nome de ordenação SQL. *collation_name* é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário, se a coluna for de um tipo de dados definido pelo usuário, ou a ordenação do banco de dados atual.  
   
- Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, veja [Nome de agrupamento do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de agrupamento do SQL](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, consulte [Nome de ordenação do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  Para obter mais informações sobre a cláusula COLLATE, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  É uma restrição que fornece integridade referencial para os dados na coluna ou colunas. As restrições FOREIGN KEY requerem que cada valor na coluna exista na coluna ou colunas referenciadas correspondentes na tabela referenciada. As restrições FOREIGN KEY podem fazer referência somente a colunas que sejam restrições PRIMARY KEY ou UNIQUE na tabela ou colunas referenciadas em um UNIQUE INDEX na tabela referenciada. As chaves estrangeiras em colunas computadas também devem ser marcadas como PERSISTED.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  É o nome da tabela referenciada pela restrição FOREIGN KEY e o esquema ao qual ela pertence.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  É o nome do esquema de partição que define os grupos de arquivos sobre os quais as partições de uma tabela particionada serão mapeadas. O esquema de partição deve existir no banco de dados.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  Especifica a coluna que servirá de base para o particionamento de uma tabela particionada. A coluna deve corresponder àquela especificada na função de partição que *partition_scheme_name* está usando em termos de tipo de dados, comprimento e precisão. Uma coluna computada que participa de uma função de partição deve ser marcada explicitamente como PERSISTED.  
   
 > [!IMPORTANT]  
 >  Recomendamos a especificação de NOT NULL na coluna de particionamento das tabelas particionadas e também de tabelas não particionadas que servem de origem e destino para as operações ALTER TABLE...SWITCH. Isso garante que toda restrição CHECK de colunas de particionamento não terão que verificar se existem valores nulos.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Especifica o quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher cada página de índice usada para armazenar os dados de índice. Os valores de *fillfactor* especificados pelo usuário podem ser de 1 a 100. Se um valor não for especificado, o padrão será 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  Quando ON, a porcentagem de espaço livre especificada por FILLFACTOR será aplicada às páginas de nível intermediário do índice. Quando OFF ou se o valor de FILLFACTOR não foi especificado, as páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias. O padrão é OFF.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  Especifica uma porcentagem que indica quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou alteração do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -846,19 +846,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Especifica o nome do diretório FileTable compatível com Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento. Se esse valor não for especificado, o nome de filetable será usado.  
+ Especifica o nome do diretório FileTable compatível com Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação. Se esse valor não for especificado, o nome de filetable será usado.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Banco de Dados SQL do Azure não é compatível com `FILETABLE`. 
   
- Especifica o nome do agrupamento a ser aplicado à coluna **Name** da FileTable. O agrupamento não deve diferenciar maiúsculas de minúsculas para ser compatível com a semântica de nomenclatura de arquivos do Windows. Se esse valor não for especificado, o agrupamento padrão do banco de dados será usado. Se o agrupamento padrão do banco de dados diferenciar maiúsculas de minúsculas, será gerado um erro e a operação CREATE TABLE falhará.  
+ Especifica o nome da ordenação a ser aplicado à coluna **Name** da FileTable. A ordenação não deve diferenciar maiúsculas de minúsculas para ser compatível com a semântica de nomenclatura de arquivos do Windows. Se esse valor não for especificado, a ordenação padrão do banco de dados será usada. Se a ordenação padrão do banco de dados diferenciar maiúsculas de minúsculas, será gerado um erro e a operação CREATE TABLE falhará.  
   
  *collation_name*  
- O nome de um agrupamento sem diferenciação de maiúsculas e minúsculas.  
+ O nome de uma ordenação sem diferenciação de maiúsculas e minúsculas.  
   
  database_default  
- Especifica que o agrupamento padrão do banco de dados deve ser usado. Esse agrupamento não deve diferenciar maiúsculas de minúsculas.  
+ Especifica que a ordenação padrão do banco de dados deve ser usada. Esse ordenação não deve diferenciar maiúsculas de minúsculas.  
   
  FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*  
    

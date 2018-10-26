@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, SQL Data Warehouse do Azure e Parallel Data Warehouse
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2842601d89be8efcd3851fd34610ee8ed5981c0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675984"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100517"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,10 +62,11 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\*SQL Server\*_** | [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current) | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\*SQL Server\*_** | [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current) | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
+&nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>Visão geral
 
@@ -191,14 +192,14 @@ CREATE DATABASE database_snapshot_name
  LOG ON não pode ser especificado em um instantâneo do banco de dados.  
   
  COLLATE *collation_name*  
- Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não estiver especificado, o agrupamento padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuído ao banco de dados. Um nome de agrupamento não pode ser especificado em um instantâneo do banco de dados.  
+ Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se não estiver especificado, a ordenação padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuída ao banco de dados. Um nome de ordenação não pode ser especificado em um instantâneo do banco de dados.  
   
- Um nome de agrupamento não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar o agrupamento de um banco de dados anexado, acesse o [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Um nome de ordenação não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar a ordenação de um banco de dados anexado, acesse o [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &amp;#40;Transact-SQL&amp;#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
->  Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Veja [Agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.  
+>  Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.  
   
  WITH \<option>  
  -   **\<filestream_options>** 
@@ -216,7 +217,7 @@ CREATE DATABASE database_snapshot_name
   
      DIRECTORY_NAME = \<directory_name> **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-     Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de Database_Directory na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.  
+     Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de Database_Directory na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.  
   
  As opções a seguir são permitidas apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.  
   
@@ -708,8 +709,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Criando um banco de dados e especificando um nome e opções de agrupamento  
- O exemplo a seguir cria o banco de dados `MyOptionsTest`. Um nome de agrupamento é especificado e as opções `TRUSTYWORTHY` e `DB_CHAINING` são definidas como `ON`.  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Criando um banco de dados e especificando um nome e opções de ordenação  
+ O exemplo a seguir cria o banco de dados `MyOptionsTest`. Um nome de ordenação é especificado e as opções `TRUSTYWORTHY` e `DB_CHAINING` são definidas como `ON`.  
   
 ```sql  
 USE master;  
@@ -871,30 +872,17 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Banco de Dados SQL<br />Banco de Dados SQL*</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Banco de Dados SQL<br />servidor lógico \*_**  | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
 
 ## <a name="overview"></a>Visão geral
 
-No servidor lógico do Banco de Dados SQL, essa instrução pode ser usada com um servidor Azure SQL para criar um banco de dados único ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, o agrupamento, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor lógico.
+No servidor lógico do Banco de Dados SQL, essa instrução pode ser usada com um servidor Azure SQL para criar um banco de dados único ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor lógico.
 
 ## <a name="syntax"></a>Sintaxe 
 
@@ -951,15 +939,15 @@ O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e de
   
 *Collation_name*  
 
-Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não for especificado, o banco de dados será atribuído o agrupamento padrão, que é SQL_Latin1_General_CP1_CI_AS.  
+Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se nenhum for especificado, a ordenação padrão, ou seja, o SQL_Latin1_General_CP1_CI_AS, será atribuída ao banco de dados.  
   
-Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
-Especifica o agrupamento padrão do catálogo de metadados. *DATABASE_DEFAULT* especifica que o catálogo de metadados usado para exibições do sistema e tabelas do sistema seja agrupado para corresponder ao agrupamento padrão do banco de dados.  Esse é o comportamento encontrado no SQL Server. 
+Especifica a ordenação padrão do catálogo de metadados. *DATABASE_DEFAULT* especifica que o catálogo de metadados usado para exibições do sistema e tabelas do sistema seja agrupado para corresponder à ordenação padrão do banco de dados.  Esse é o comportamento encontrado no SQL Server. 
 
-*SQL_Latin1_General_CP1_CI_AS* especifica que o catálogo de metadados usado para exibições do sistema e tabelas seja agrupado em um agrupamento SQL_Latin1_General_CP1_CI_AS fixo.  Essa será a configuração padrão no Banco de Dados SQL do Azure, se não for especificado.
+*SQL_Latin1_General_CP1_CI_AS* especifica que o catálogo de metadados usado para exibições do sistema e tabelas seja agrupado em uma ordenação SQL_Latin1_General_CP1_CI_AS fixo.  Essa será a configuração padrão no Banco de Dados SQL do Azure, se não for especificado.
 
 EDITION
  
@@ -1193,9 +1181,9 @@ CREATE DATABASE db_copy
   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
 ```  
 
-### <a name="create-database-with-specified-catalog-collation-value"></a>Criar banco de dados com um valor de agrupamento de catálogo especificado
+### <a name="create-database-with-specified-catalog-collation-value"></a>Criar banco de dados com um valor de ordenação de catálogo especificado
 
-O exemplo a seguir define o agrupamento de catálogo como DATABASE_DEFAULT durante a criação do banco de dados, que define o agrupamento de catálogo como sendo o mesmo que o agrupamento de banco de dados.
+O exemplo a seguir define a ordenação de catálogo como DATABASE_DEFAULT durante a criação do banco de dados, que define a ordenação de catálogo como sendo a mesma que a ordenação de banco de dados.
 
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
@@ -1212,30 +1200,17 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
 
 ## <a name="overview"></a>Visão geral
 
-Na Instância Gerenciada de Banco de Dados do SQL, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma Instância Gerenciada, você deve especificar o nome do banco de dados e o agrupamento. 
+Na Instância Gerenciada de Banco de Dados do SQL, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma Instância Gerenciada, você deve especificar o nome do banco de dados e a ordenação. 
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -1254,9 +1229,9 @@ O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e de
   
 *Collation_name*  
 
-Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não for especificado, o banco de dados será atribuído o agrupamento padrão, que é SQL_Latin1_General_CP1_CI_AS.  
+Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se nenhum for especificado, a ordenação padrão, ou seja, o SQL_Latin1_General_CP1_CI_AS, será atribuída ao banco de dados.  
   
-Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1296,30 +1271,17 @@ Confira [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* SQL Data<br />Warehouse*</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
 ## <a name="overview"></a>Visão geral
 
-No Azure SQL Data Warehouse, essa instrução pode ser usada com um servidor lógico do Azure SQL para criar um banco de dados do SQL Data Warehouse. Com esta instrução, você especifica o nome do banco de dados, o agrupamento, o tamanho máximo, a edição e o objetivo de serviço.
+No Azure SQL Data Warehouse, essa instrução pode ser usada com um servidor lógico do Azure SQL para criar um banco de dados do SQL Data Warehouse. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -1348,9 +1310,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 O nome do novo banco de dados. Esse nome deve ser exclusivo no servidor SQL, que pode hospedar os bancos de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], e ser compatível com as regras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
-Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não for especificado, o banco de dados receberá o agrupamento padrão, que é SQL_Latin1_General_CP1_CI_AS.  
+Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se não for especificado, o banco de dados receberá a ordenação padrão, que é SQL_Latin1_General_CP1_CI_AS.  
   
-Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Especifica a camada de serviço do banco de dados. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use 'datawarehouse'.  
@@ -1391,12 +1353,12 @@ Você deve estar conectado ao banco de dados mestre para criar um novo banco de 
   
 A instrução `CREATE DATABASE` deve ser a única instrução em um lote do [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-Não é possível alterar o agrupamento de banco de dados depois que o banco de dados é criado.   
+Não é possível alterar a ordenação de banco de dados depois que o banco de dados é criado.   
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
 ### <a name="a-simple-example"></a>A. Exemplo simples  
-Um exemplo simples para criar um banco de dados de data warehouse. Isso cria o banco de dados com o menor tamanho máximo que é 10240 GB, o agrupamento padrão que é SQL_Latin1_General_CP1_CI_AS e a menor potência de computação que é DW100.  
+Um exemplo simples para criar um banco de dados de data warehouse. Isso cria o banco de dados com o menor tamanho máximo que é 10240 GB, a ordenação padrão que é SQL_Latin1_General_CP1_CI_AS e a menor potência de computação que é DW100.  
   
 ```  
 CREATE DATABASE TestDW  
@@ -1420,32 +1382,19 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 ## <a name="overview"></a>Visão geral
 
 No Parallel Data Warehouse, essa instrução é usada para criar um novo banco de dados em um dispositivo Parallel Data Warehouse. Use essa instrução para criar todos os arquivos associados a um banco de dados do dispositivo e para definir as opções de tamanho máximo e aumento automático para as tabelas de banco de dados e o log de transações.
 
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
 ```  
 CREATE DATABASE database_name   
@@ -1457,7 +1406,8 @@ WITH (
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+  
  *database_name*  
  O nome do novo banco de dados. Para obter mais informações sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" e "Nomes de banco de dados reservados" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

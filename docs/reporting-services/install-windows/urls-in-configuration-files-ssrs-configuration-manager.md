@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb3b8189c8a863b37d05334d1e2a12a8c447d20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b87a6012a419ff1e4cc2b15d1f4ef37ada4e2e50
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634604"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906356"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URLs em arquivos de configuração (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativos em um arquivo RSReportServer.config. Nesse arquivo, há parâmetros de configuração para URLs e reservas de URL. Esses parâmetros de configuração têm propósitos muito diferentes e regras para modificação. Se estiver acostumado a modificar arquivos de configuração para ajustar uma implantação, este tópico pode ajudá-lo a entender como cada configuração de URL é usada.  
@@ -25,9 +25,9 @@ ms.locfileid: "47634604"
 #### <a name="urls-for-application-access"></a>URLs para acesso a aplicativos  
  as URLs são usadas para acessar o serviço Web do Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Para configurar as URLs, você deve usar a ferramenta Configuração do Reporting Services. A ferramenta cria as reservas de URL para cada aplicativo em HTTP.SYS e adiciona entradas para as URLs na seção **URLReservations** de RSReportServer.config.  
   
--   Para exibir as descrições de cada elemento na seção **URLReservations** , consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Para exibir as descrições de cada elemento na seção **URLReservations**, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Para obter mais informações sobre a sintaxe apenas do elemento **UrlString**, consulte [Sintaxe de reserva de URL &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   Para obter mais informações sobre a sintaxe apenas do elemento **UrlString**, consulte [Sintaxe da reserva de URL e SSRS &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 -   Para obter instruções sobre como configurar uma URL para acesso do aplicativo, veja [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   

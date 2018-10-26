@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentação do Microsoft Azure
-description: Saiba como criar e gerenciar aplicativos poderosos usando serviços de nuvem do Microsoft Azure. Obtenha documentação, código de exemplo, tutoriais e muito mais.
+title: SQL Server – instalação e atualização
+description: Encontre o conteúdo que ajudará você a instalar ou atualizar do SQL Server e serviços relacionados.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: a5f717bdf6b90bff892b70ae5861dc668dd86e53
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797073"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336165"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -305,10 +305,16 @@ ms.locfileid: "48797073"
         <h2>Mantenha contato conosco</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribua com a documentação do SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuir </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Comentários sobre a documentação do SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obter ajuda </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Comentários </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Pesquisa </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -324,4 +330,5 @@ ms.locfileid: "48797073"
             </li>
         </ul>
     </div>
+
 

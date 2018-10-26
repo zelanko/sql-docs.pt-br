@@ -40,49 +40,54 @@ items:
   href: build-database-projects-by-using-sql-server-management-studio.md
 - name: Compreender o Gerenciamento do Windows SSMS
   href: understand-sql-server-management-studio-windows-management.md
-- name: Caixa de diálogo Ferramentas Externas
-  href: external-tools-dialog-box.md
-- name: Caixa de diálogo Argumentos
-  href: arguments-dialog-box.md
 - name: Administrar Servidores com o SSMS
   href: administer-servers-with-sql-server-management-studio.md
-- name: Termos de Licença
-  href: sql-server-management-studio-license-terms.md
 - name: Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server
   href: configure-wmi-to-show-server-status-in-sql-server-tools.md
 - name: O Ambiente de SSMS
   href: the-sql-server-management-studio-environment.md
-- name: Páginas de propriedade no SSMS
-  href: property-pages-in-sql-server-management-studio.md
-- name: Janela Propriedades no SSMS
-  href: properties-window-management-studio.md
-- name: Janela de Saída no SSMS
-  href: output-window.md
-- name: Caixa de diálogo Sobre
-  href: about-dialog-box.md
-- name: Navegador da Web SSMS
-  href: sql-server-management-studio-web-browser.md
-- name: Elementos gerais da interface de usuário
-  href: general-user-interface-elements.md
-- name: Assistência ao usuário no SSMS
-  href: user-assistance-in-sql-server-management-studio.md
-- name: Argumentos de ferramentas externas
+  items:
+  - name: Elementos gerais da interface de usuário
+    href: general-user-interface-elements.md
+  - name: caixa de diálogo Argumentos
+    href: arguments-dialog-box.md
+  - name: caixa de diálogo Sobre
+    href: about-dialog-box.md
+  - name: Navegador da Web SSMS
+    href: sql-server-management-studio-web-browser.md
+  - name: Caixa de diálogo Ferramentas Externas
+    href: external-tools-dialog-box.md
+  - name: Páginas de propriedade no SSMS
+    href: property-pages-in-sql-server-management-studio.md
+  - name: Janela Propriedades no SSMS
+    href: properties-window-management-studio.md
+  - name: Janela de Saída no SSMS
+    href: output-window.md
+  - name: Navegador da Web SSMS
+    href: sql-server-management-studio-web-browser.md
+  - name: Usar a Caixa de Ferramentas
+    href: use-the-toolbox.md
+- name: Arguments for External Tools
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: Adicionar uma Ferramenta Externa ao Menu Ferramentas
   href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
 - name: Configurar a Auditoria de Logon
   href: configure-login-auditing-sql-server-management-studio.md
-- name: Usar a Caixa de Ferramentas
-  href: use-the-toolbox.md
-- name: Utilitário de Ssms
+- name: Utilitário SSMS
   href: ssms-utility.md
 - name: Atalhos de Teclado SSMS
   href: sql-server-management-studio-keyboard-shortcuts.md
-- name: Dados de uso anônimos
-  href: sql-server-management-studio-telemetry-ssms.md
-ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+- name: Recursos
+  items:
+  - name: Termos de Licença
+    href: sql-server-management-studio-license-terms.md
+  - name: Assistência ao usuário no SSMS
+    href: user-assistance-in-sql-server-management-studio.md
+  - name: Dados de uso anônimos
+    href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: c7d5f4ba9328f7563efa3d95616e8636c88f6c66
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899685"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336115"

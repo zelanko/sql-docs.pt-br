@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 883252a6b4c7e69c488a497308889db6f7f9ac05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834644"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120393"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual forçado de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "47834644"
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para forçar o failover (com possível perda de dados)**  
   
-1.  Conecte-se a uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING no grupo de disponibilidade que precisa sofrer failover.  
+1.  Conecte-se a uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING no grupo de disponibilidade que precisa passar por failover.  
   
 2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47834644"
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para forçar o failover (com possível perda de dados)**  
   
-1.  Altere o diretório (**cd**) para uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING no grupo de disponibilidade que precisa sofrer failover.  
+1.  Altere o diretório (**cd**) para uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING no grupo de disponibilidade que precisa passar por failover.  
   
 2.  Use o cmdlet **Switch-SqlAvailabilityGroup** com o parâmetro **AllowDataLoss** de uma das seguintes formas:  
   

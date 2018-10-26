@@ -1,11 +1,9 @@
 ---
 title: SSMS (SQL Server Management Studio) | Microsoft Docs
-ms.date: 02/02/2017
+ms.date: 10/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: ssms
+ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssms.viewhelp.f1
@@ -15,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0944f50125ba0619c3339c1e0a35ff9488f6634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0594446d70ff739ec670645d8d28e12680ec84
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761111"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336075"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +31,6 @@ ms.locfileid: "47761111"
  - [**Baixar o SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
  - [**Baixar o Visual Studio**](https://www.visualstudio.com/downloads/)
 
-  
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio  
   
 |Descrição|Componente|  
@@ -44,7 +41,16 @@ ms.locfileid: "47761111"
 |Como usar as ferramentas de design visuais incluídas no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |Como usar os editores de idioma do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar interativamente e depurar consultas e scripts.|[Editores de consultas e de texto (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
+## <a name="support-policy-for-ssms"></a>Política de suporte para SSMS
+
+- Começando com o SSMS 17.0, a equipe de Ferramentas SQL adotou a [Política de Ciclo de Vida Moderna da Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+- Leia o [comunicado de Política de Ciclo de Vida Moderna](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy) original.
+- Para obter informações adicionais, veja as [Perguntas frequentes sobre a Política de Ciclo de Vida Moderna](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## <a name="next-steps"></a>Próximas etapas  
 [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [Tutorial: Gravando instruções Transact-SQL](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

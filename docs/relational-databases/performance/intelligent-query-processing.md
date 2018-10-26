@@ -2,7 +2,7 @@
 title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35306ebbde5586401f78f368334634f0fadfe7a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753964"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072240"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ As seguintes cargas de trabalho podem se beneficiar com o modo de lote no rowsto
 1.  Uma parte significativa da carga de trabalho consiste em consultas analíticas (como regra geral, as consultas com operadores, como junções ou agregações processam centenas de milhares de linhas ou mais), **E**
 2.  A carga de trabalho é limitada pela CPU (se o gargalo for E/S, ainda é recomendado considerar um índice columnstore, se possível), **E**
 3.  Criar um índice columnstore adiciona sobrecarga excessiva à parte transacional da carga de trabalho **OU** criar um índice columnstore não é viável porque seu aplicativo depende de um recurso que ainda não é compatível com índice columnstore.
+
+> [!NOTE]
+> O modo de lote em rowstore só pode ajudar a reduzir o consumo de CPU. Se o gargalo for relacionado à E/S e os dados ainda não estiverem armazenados em cache (cache “frio”), o modo de lote em rowstore NÃO melhorará o tempo decorrido. Da mesma forma, se não houver memória suficiente no computador para armazenar em cache todos os dados, será improvável que ocorra uma melhoria de desempenho.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>O que muda com o modo de lote no rowstore
 Além de mover para o nível de compatibilidade 150, não é necessário mudar nada no seu lado para habilitar o modo de lote no rowstore para cargas de trabalho do candidato.

@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: f897c332130ece43357869972ff406ea79a6c21d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc4d8ec77fa0782fa2aa4f851a5d8f756cb0ecfa
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725008"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120053"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 

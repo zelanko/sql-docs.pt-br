@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710704"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906526"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47710704"
   
 -   Recursos de bloqueio que preservam o isolamento da transação.  
   
--   Recursos de log garantem a durabilidade da transação. Para transações completamente duráveis, o registro de log é protegido no disco antes da confirmação das transações. Assim, mesmo se o hardware do servidor, o sistema operacional ou a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] falhar, a instância usará os logs de transações ao reinicializar para reverter automaticamente qualquer transação incompleta até o ponto da falha do sistema. As transações duráveis atrasadas confirmar antes que o registro de log de transação é protegido no disco. Essas transações podem ser perdidas se houver uma falha do sistema antes de o registro de log ser protegido no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
+-   Recursos de log garantem a durabilidade da transação. Para transações completamente duráveis, o registro de log é protegido no disco antes da confirmação das transações. Assim, mesmo se o hardware do servidor, o sistema operacional ou a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] falharem, a instância usa os logs da transação ao reinicializar para reverter automaticamente qualquer transação incompleta até o ponto da falha do sistema. As transações duráveis atrasadas confirmar antes que o registro de log de transação é protegido no disco. Essas transações podem ser perdidas se houver uma falha do sistema antes de o registro de log ser protegido no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
   
 -   Recursos de administração de transação que impõem a atomicidade e a consistência da transação. Depois que uma transação tiver sido iniciada, ela deve ser concluída com êxito (confirmada) ou o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] desfará todas as modificações de dados feitas desde que a transação foi iniciada. Essa operação é denominada de reversão da transação porque retorna os dados ao estado anterior a essas alterações.  
   
@@ -662,7 +662,7 @@ INSERT mytable VALUES ('Dan');
  Ao trabalhar com CLR, o monitor de deadlock detecta automaticamente um deadlock para recursos de sincronização (monitores, bloqueio de leitura/gravação ou junção de thread) acessados dentro dos procedimentos gerenciados. Entretanto, o deadlock é resolvido ao se lançar uma exceção no procedimento selecionado como a vítima de deadlock. É importante entender que a exceção não libera automaticamente os recursos pertencentes à vítima; os recursos devem ser liberados explicitamente. Em consonância com o comportamento de exceção, a exceção usada para identificar uma vítima de deadlock pode ser capturada e ignorada.  
   
 ##### <a name="deadlock_tools"></a> Ferramentas de informações sobre deadlock  
- Para exibir informações de deadlock, a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fornece ferramentas de monitoramento na forma da sessão xEvent system\_lock, dois sinalizadores de rastreamento e o evento de grafo de deadlock no SQL Profiler.  
+ Para exibir informações de deadlock, a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fornece ferramentas de monitoramento na forma da sessão xEvent system\_health, dois sinalizadores de rastreamento e o evento de grafo de deadlock no SQL Profiler.  
 
 ###### <a name="deadlock_xevent"></a> Deadlock na sessão system_health
 Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando ocorrerem deadlocks, a sessão system\_health captura todos os xEvents `xml_deadlock_report`. A sessão system\_health é habilitado por padrão. O grafo de deadlock capturado geralmente tem três nós distintos:
@@ -1804,7 +1804,7 @@ GO
  As sessões associadas podem ser usadas para desenvolver aplicativos de três camadas nos quais a lógica empresarial está incorporada em programas separados que trabalham cooperativamente em uma única transação empresarial. Esses programas devem ser codificados para coordenar seu acesso cuidadosamente a um banco de dados. Como as duas sessões compartilham os mesmos bloqueios, os dois programas não devem tentar modificar os mesmos dados ao mesmo tempo. Em qualquer point-in-time, apenas uma sessão pode trabalhar como parte da transação; não pode haver execução paralela. A transação pode ser alternada apenas entre sessões em pontos bem definidos, como quando todas as instruções DML forem concluídas e seus resultados forem recuperados.  
   
 ### <a name="coding-efficient-transactions"></a>Codificando transações eficientes  
- É importante manter as transações tão curtas quanto possível. Quando uma transação é iniciada, um DBMS (Sistema de administração de banco de dados), deve manter muitos recursos, até o término da transação, para proteger as propriedades (ACID) de atomicidade, consistência, isolamento e durabilidade da transação. Se os dados forem modificados, as linhas modificadas devem ser protegidas com bloqueios exclusivos que evitem a leitura das linhas por qualquer outra transação, e os bloqueios exclusivos devem ser mantidos até que a transação seja confirmada ou revertida. Dependendo das configurações de nível de isolamento da transação, as instruções `SELECT` podem obter bloqueios que devem ser mantidos até a transação ser confirmada ou revertida. Especialmente em sistemas com muitos usuários, as transações devem ser mantidas tão curtas quanto possível para reduzir a contenção de bloqueios de recursos em conexões simultâneas. Transações longas e ineficazes podem não causar problemas com um número pequeno de usuários, mas são intoleráveis em um sistema com milhares de usuários. Começando com o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], há compatibilidade com transações duráveis atrasadas. As transações duráveis atrasadas não garantem a durabilidade. Consulte o tópico [Durabilidade da Transação](../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
+ É importante manter as transações tão curtas quanto possível. Quando uma transação é iniciada, um DBMS (Sistema de administração de banco de dados), deve manter muitos recursos, até o término da transação, para proteger as propriedades (ACID) de atomicidade, consistência, isolamento e durabilidade da transação. Se os dados forem modificados, as linhas modificadas devem ser protegidas com bloqueios exclusivos que evitem a leitura das linhas por qualquer outra transação, e os bloqueios exclusivos devem ser mantidos até que a transação seja confirmada ou revertida. Dependendo das configurações de nível de isolamento da transação, as instruções `SELECT` podem obter bloqueios que devem ser mantidos até a transação ser confirmada ou revertida. Especialmente em sistemas com muitos usuários, as transações devem ser mantidas tão curtas quanto possível para reduzir a contenção de bloqueios de recursos em conexões simultâneas. Transações longas e ineficazes podem não causar problemas com um número pequeno de usuários, mas são intoleráveis em um sistema com milhares de usuários. A partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], há suporte para transações duráveis atrasadas. As transações duráveis atrasadas não garantem a durabilidade. Consulte o tópico [Durabilidade da Transação](../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
   
 #### <a name="guidelines"></a> Codificando diretrizes  
  Estas são diretrizes para codificar transações eficazes:  

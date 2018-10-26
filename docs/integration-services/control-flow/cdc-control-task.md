@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2bb0f1a92ffd45e4929ed97a5f73f205d3ccf2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732414"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071750"
 ---
 # <a name="cdc-control-task"></a>Tarefa Controle de CDC
   A tarefa Controle de CDC é usada para controlar o ciclo de vida de pacotes de captura de dados de alterações (CDC). Ela trata a sincronização de pacotes CDC com o pacote de carga inicial e o gerenciamento de intervalos de LSN (número de sequência de log) processados na execução de um pacote CDC. Além disso, a tarefa Controle de CDC lida com cenários de erro e recuperação.  
@@ -110,7 +110,7 @@ ms.locfileid: "47732414"
   
      Se você selecionar **Marcar fim da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
--   **Marcar início do CDC**: esta operação é usada quando a carga inicial é feita de um banco de dados de instantâneo ou de um banco de dados novo. Ele é invocado em qualquer ponto dentro do pacote de carga inicial. A operação aceita um parâmetro que pode ser um LSN instantâneo, um nome de um banco de dados de instantâneo (do qual o LSN instantâneo será derivado automaticamente) ou pode ser deixado vazio e, nesse caso, o LSN do banco de dados atual será usado como o LSN inicial para o pacote de processamento de alteração.  
+-   **Marcar início do CDC**: esta operação é usada quando a carga inicial é feita de um banco de dados de instantâneo ou de um banco de dados fechado para novas sessões. Ele é invocado em qualquer ponto dentro do pacote de carga inicial. A operação aceita um parâmetro que pode ser um LSN instantâneo, um nome de um banco de dados de instantâneo (do qual o LSN instantâneo será derivado automaticamente) ou pode ser deixado vazio e, nesse caso, o LSN do banco de dados atual será usado como o LSN inicial para o pacote de processamento de alteração.  
   
      Esta operação é usada em vez das operações Marcar início/fim da carga inicial.  
   

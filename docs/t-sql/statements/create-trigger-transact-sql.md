@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719634"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120433"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>Otimizando gatilhos DML
  Os gatilhos funcionam em transações (implícitas ou não) e, enquanto estiverem abertos, bloquearão recursos. O bloqueio permanecerá em vigor até que a transação seja confirmada (com COMMIT) ou rejeitada (com um ROLLBACK). Quanto mais um gatilho é executado, maior a probabilidade de outro processo ser bloqueado. Portanto, os gatilhos devem ser escritos de maneira a reduzir sua duração sempre que possível. Uma maneira de fazer isso é liberar um gatilho quando uma instrução DML altera 0 linhas. 
 
-Para liberar o gatilho para um comando que não altera nenhuma linha, empregue a variável de sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+Para liberar o gatilho para um comando que não altera nenhuma linha, empregue a variável de sistema [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 O seguinte snippet de código T-SQL fará isso, e deverá estar presente no início de cada gatilho DML:
 
@@ -362,7 +362,7 @@ RETURN;
  Não há suporte para transações distribuídas em um gatilho de logon. O erro 3969 é retornado quando um gatilho de logon contendo uma transação distribuída é disparado.  
   
 ### <a name="disabling-a-logon-trigger"></a>Desabilitando um gatilho de logon  
- Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa **sysadmin** . Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa **sysadmin** podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa **sysadmin** . Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa **sysadmin** podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="general-trigger-considerations"></a>Considerações gerais sobre gatilhos  
   

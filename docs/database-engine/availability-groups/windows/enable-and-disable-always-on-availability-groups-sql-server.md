@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806863"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120313"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Usando o SQL Server PowerShell  
  **Para desabilitar o AlwaysOn**  
   
-1.  Altere o diretório (**cd**) para uma instância de servidor atualmente habilitada que você deseja desabilitar para os Grupos de Disponibilidade AlwaysOn.  
+1.  Altere o diretório (**cd**) para uma instância de servidor atualmente habilitada que você deseja desabilitar para os Grupos de Disponibilidade Always On.  
   
 2.  Use o cmdlet **Disable-SqlAlwaysOn** para habilitar Grupos de Disponibilidade AlwaysOn.  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a57110500cc51bda0ddaea459d69af7a127ec67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605957"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119904"
 ---
 # <a name="report-server-web-service-endpoints"></a>Pontos de extremidade do serviço Web Servidor de Relatórios
   O serviço Web Servidor de Relatórios fornece vários pontos de extremidade para gerenciar um servidor de relatório como também executar relatórios e navegar neles.  
   
 ## <a name="the-management-endpoints"></a>Pontos de extremidade de gerenciamento  
- Existem três pontos de extremidade disponíveis para o gerenciamento de objetos em um servidor de relatório: <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. O ponto de extremidade <xref:ReportService2005> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo nativo. O ponto de extremidade <xref:ReportService2006> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo integrado do SharePoint. O ponto de extremidade <xref:ReportService2010> mescla as funcionalidades do <xref:ReportService2005> e do <xref:ReportService2006> e pode gerenciar objetos em um servidor de relatório configurado para modo nativo ou integrado do SharePoint.  
+ Existem três pontos de extremidade disponíveis para o gerenciamento de objetos em um servidor de relatório: <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. O ponto de extremidade <xref:ReportService2005> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo nativo. O ponto de extremidade <xref:ReportService2006> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo integrado do SharePoint. O ponto de extremidade <xref:ReportService2010> mescla as funcionalidades do <xref:ReportService2005> e do <xref:ReportService2006> e pode gerenciar objetos em um servidor de relatório configurado para modo integrado ou nativo do SharePoint.  
   
 > [!IMPORTANT]  
 >  Quando um servidor de relatório estiver configurado para o modo integrado do SharePoint, as APIs do <xref:ReportService2005> retornarão um erro **rsOperationNotSupportedSharePointMode**. Se o servidor de relatório estiver configurado para o modo nativo, as APIs do <xref:ReportService2006> retornarão um erro **rsOperationNotSupportedNativeMode**. Da mesma forma, quando APIs específicas ao modo no <xref:ReportService2010> forem usadas em modos sem finalidade, as APIs retornarão os respectivos erros.  

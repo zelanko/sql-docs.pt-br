@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentação do Microsoft Azure
-description: Saiba como criar e gerenciar aplicativos poderosos usando serviços de nuvem do Microsoft Azure. Obtenha documentação, código de exemplo, tutoriais e muito mais.
+title: Design do Banco de Dados do SQL Server
+description: Descubra os recursos do SQL Server que ajudam você a criar o banco de dados mais adequado às suas necessidades empresariais.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4e87c2ff5408394b3723083739c5fde0b5e5a771
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 3cae88b1597cc02fc87eeccc2300b7a1451d84bc
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797076"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336275"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -92,8 +92,8 @@ ms.locfileid: "48797076"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Agrupamento</h3>
-                                                    <p>Os agrupamentos no SQL Server fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. </p>
+                                                    <h3>Ordenação</h3>
+                                                    <p>Os agrupamentos no SQL Server fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações utilizadas com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -395,10 +395,16 @@ ms.locfileid: "48797076"
         <h2>Mantenha contato conosco</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribua com a documentação do SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuir </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Comentários sobre a documentação do SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obter ajuda </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Comentários </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Pesquisa </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -414,4 +420,3 @@ ms.locfileid: "48797076"
             </li>
         </ul>
     </div>
-

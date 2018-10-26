@@ -18,12 +18,12 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9108d6a7ec54e0c1fb7d4027fc77953f661f4b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba9ea786496a427f02993ca1bfa9354eb3c32de7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835974"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905537"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 A ID do certificado usado para proteger a chave simétrica. *cert_ID* tem um tipo de dados **int**.  
   
 *cert_password*  
-A senha usada para criptografar a chave privada do certificado. Pode ter um valor `NULL` se a chave mestra do banco de dados protege a chave privada. *cert_password* tem um tipo de dados **nvarchar**.  
+A senha usada para criptografar a chave privada do certificado. Pode ter um valor `NULL` se a chave mestra do banco de dados proteger a chave privada. *cert_password* tem um tipo de dados **nvarchar**.  
 
 '*ciphertext*'  
 A cadeia de caracteres de dados criptografados com a chave. *ciphertext* tem um tipo de dados **varbinary**.  

@@ -11,12 +11,12 @@ ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e856bfbbcb8cba527d1f34f0f7bc99afadc023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792874"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336095"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Como: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server
 Antes de gravar testes de unidade que avaliem objetos de banco de dados, você deve primeiro criar um projeto de teste. O projeto contém testes de unidade do SQL Server, mas pode conter também outros tipos de teste.  
@@ -35,7 +35,7 @@ Existem três opções para adicionar um projeto de teste a uma solução que co
   
 -   Adicionar um projeto de teste à solução. O projeto de teste contém um teste de unidade padrão, que você pode excluir. Esse projeto não contém uma classe de teste de unidade do SQL Server, que você deve adicionar.  
   
--   Adicione um novo teste de unidade do SQL Server no menu **Test**. Quando você adicionar o teste de unidade, o SQL Server Data Tools também criará um projeto de teste se você solicitá-lo. Este projeto contém uma classe de teste de unidade do SQL Server. As classes de teste da unidade do SQL Server contêm um ou mais testes de unidade.  
+-   Adicione um novo teste de unidade do SQL Server no menu **Test**. Quando você adicionar o teste de unidade, o SQL Server Data Tools também criará um projeto de teste se você solicitá-lo. Este projeto contém uma classe de teste de unidade do SQL Server. As classes de teste de unidade do SQL Server contêm um ou mais testes de unidade.  
   
 -   Crie um teste de unidade a partir de um procedimento armazenado, função ou acionador de um projeto aberto no Pesquisador de Objetos do SQL Server. Quando você criar o teste de unidade, o SQL Server Data Tools também criará um projeto de teste se você solicitá-lo. Este projeto contém uma classe de teste de unidade do SQL Server. As classes de teste do SQL Server contêm um ou mais testes de unidade.  
   

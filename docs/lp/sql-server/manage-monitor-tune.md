@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentação do Microsoft Azure
-description: Saiba como criar e gerenciar aplicativos poderosos usando serviços de nuvem do Microsoft Azure. Obtenha documentação, código de exemplo, tutoriais e muito mais.
+title: Gerenciar, monitorar, ajustar o SQL Server
+description: Descubra os recursos que ajudam você a gerenciar, monitorar e ajustar o SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 28f96825ac65d398afbba3f71f9dc9b243d21e1e
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ea070c1fbdbeb372bdd04bafb1705e1ad7ea77c4
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797090"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336135"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -465,10 +465,16 @@ ms.locfileid: "48797090"
         <h2>Mantenha contato conosco</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribua com a documentação do SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuir </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Comentários sobre a documentação do SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obter ajuda </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Comentários </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Pesquisa </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -484,4 +490,3 @@ ms.locfileid: "48797090"
             </li>
         </ul>
     </div>
-

@@ -1,7 +1,7 @@
 ---
 title: Criar um destino ODBC com o componente Script | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816245"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100437"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você normalmente salva os dados em um destino ODBC usando um destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Porém, você também pode criar um destino ODBC ad hoc para uso em um único pacote. Para criar esse destino ODBC ad hoc, use o componente Script conforme demonstrado no exemplo seguinte.  
@@ -38,7 +38,7 @@ ms.locfileid: "47816245"
   
 -   O **OdbcCommand** espera parâmetros posicionais. As posições dos parâmetros são indicadas pelos pontos de interrogação (?) no texto do comando. (Por outro lado, um **SqlCommand** espera parâmetros nomeados.)  
   
- Essa amostra usa a tabela **Person.Address** no banco de dados de exemplo **AdventureWorks**. O exemplo transmite a primeira e a quarta colunas, e as colunas **int*AddressID*** e **nvarchar(30)City** dessa tabela pelo fluxo de dados. Esses mesmos dados são usados nas amostras de origem, transformação e destino no tópico [Desenvolvendo tipos específicos de componentes Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Essa amostra usa a tabela **Person.Address** no banco de dados de exemplo **AdventureWorks**. O exemplo transmite a primeira e a quarta colunas, e as colunas **int _AddressID_** e **nvarchar(30) _City_** dessa tabela pelo fluxo de dados. Esses mesmos dados são usados nas amostras de origem, transformação e destino no tópico [Desenvolvendo tipos específicos de componentes Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar esse exemplo de componente Script  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816245"
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um destino com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Criar um destino com o componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

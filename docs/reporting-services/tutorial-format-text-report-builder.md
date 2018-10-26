@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741500"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906476"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -197,7 +197,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 8.  Clique em **Design** para retornar à exibição de design.  
   
-9. Selecione a célula **Total** na coluna **LinkText** e mantenha a tecla SHIFT pressionada e selecione as duas células à direita: a célula vazia na coluna **Product** e a célula `[Sum(Sales)]` da coluna **Sales** .  
+9. Selecione a célula **Total** na coluna **LinkText** e mantenha a tecla SHIFT pressionada e selecione as duas células à direita: a célula vazia na coluna **Product** e a célula `[Sum(Sales)]` da coluna **Sales**.  
   
 11. Com essas três células selecionadas, clique com o botão direito do mouse em uma delas e clique em **Excluir Linhas**.  
 

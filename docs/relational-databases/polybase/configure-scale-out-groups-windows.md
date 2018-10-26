@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821173"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905126"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Aprimorar grupos de expansão do PolyBase no Windows
 
@@ -58,9 +58,9 @@ Veja o passo a passo de como configurar um Grupo do PolyBase usando:
 
 1. Execute setup.exe.
   
-2. Na página Seleção de Recurso, escolha **Serviço de Consulta do PolyBase para Dados Externos**.
+2. Na página Seleção de Recursos, escolha **Serviço de Consulta do PolyBase para Dados Externos**.
   
-3. Na página Configuração do Servidor, use a **conta de domínio** PQTH4A\PolybaseUser para o Serviço de Movimentação de Dados do PolyBase do SQL Server e Mecanismo do PolyBase do SQL Server.
+3. Na página Configuração do Servidor, use a **conta de domínio** PQTH4A\PolybaseUser para o Mecanismo PolyBase do SQL Server e o Serviço de Movimentação de Dados PolyBase do SQL Server.
   
 4. Na página Configuração do PolyBase, escolha a opção **Usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase**. Isso abre o firewall para permitir conexões de entrada para os serviços do PolyBase.
   

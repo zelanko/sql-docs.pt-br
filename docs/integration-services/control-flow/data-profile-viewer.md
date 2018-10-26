@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733880"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905986"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "47733880"
 > [!IMPORTANT]  
 >  O recurso de busca detalhada que está disponível no Visualizador de Perfil de Dados envia consultas ao vivo à fonte de dados original. Essas consultas podem ter um impacto negativo no desempenho do servidor.  
 >   
->  Se você fizer busca detalhada em um arquivo de saída que não foi criado recentemente, as consultas de busca detalhada poderão retornar um conjunto diferente de linhas daquelas nas quais a saída original foi calculada.  
+>  Se você fizer uma busca detalhada em um arquivo de saída que não foi criado recentemente, as consultas de busca detalhada poderão retornar um conjunto diferente de linhas daquelas nas quais a saída original foi calculada.  
   
  Para obter mais informações sobre a interface do usuário do Visualizador de Perfil de Dados, consulte [Ajuda de F1 do Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "47733880"
  **Value**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
  **Porcentagem**  
@@ -189,7 +189,7 @@ ms.locfileid: "47733880"
  **\<column1>, \<column2>, etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Tipo de Perfil = Perfil de Dependência Funcional  
@@ -240,6 +240,6 @@ ms.locfileid: "47733880"
  **\<column1>, \<column2>, etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
- **Contagem**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   

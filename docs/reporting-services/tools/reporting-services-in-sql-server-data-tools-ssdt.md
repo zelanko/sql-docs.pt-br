@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609734"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905996"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47609734"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
- O Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório, e **Visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
+ O Designer de Relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório, e **Visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  
@@ -240,7 +240,7 @@ ms.locfileid: "47609734"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
- Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, essa pasta está no seguinte local: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
+ Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, esta pasta está no seguinte local: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
   
  Também é possível adicionar estilos personalizados ao assistente de relatório.  
   

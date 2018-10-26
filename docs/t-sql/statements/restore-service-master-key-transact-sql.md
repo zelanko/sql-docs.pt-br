@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5353a53c8a7082d4f23c62fa48bc03bcbd27e0b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde847ead524e78c02aaad0544c0fec18ebe5c2f
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607894"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169086"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Especifica o caminho completo, inclusive o nome do arquivo, para a chave mestra do serviço. *path_to_file* pode ser um caminho local ou um caminho UNC para um local de rede.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Especifica a senha exigida para decifrar a chave mestra de serviço que está sendo importada de um arquivo.  
   
  FORCE  

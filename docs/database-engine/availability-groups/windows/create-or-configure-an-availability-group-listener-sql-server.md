@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821984"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120233"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -303,7 +303,7 @@ ms.locfileid: "47821984"
   
 -   Cadeias de conexão que não definem **MultiSubnetFailover** como true  
   
-     Quando `RegisterAllProvidersIP = 1`, quaisquer clientes cujas cadeias de conexão não usem `MultiSubnetFailover = True`encontrarão conexões de alta latência. Isso ocorre porque esses clientes tentam conexões com todos os IPs em sequência. Em contrapartida, se **RegisterAllProvidersIP** for alterado para 0, o endereço IP ativo será registrado no Ponto de Acesso para Cliente no cluster WSFC, reduzindo a latência para clientes herdados. Portanto, se você tiver clientes herdados que precisem se conectar a um ouvinte de grupo de disponibilidade e não possa usar a propriedade **MultiSubnetFailover** , recomendamos alterar **RegisterAllProvidersIP** para 0.  
+     Quando `RegisterAllProvidersIP = 1`, quaisquer clientes cujas cadeias de conexão não usem `MultiSubnetFailover = True`encontrarão conexões de alta latência. Isso ocorre porque esses clientes tentam conexões com todos os IPs em sequência. Em contrapartida, se **RegisterAllProvidersIP** for alterado para 0, o endereço IP ativo será registrado no Ponto de Acesso para Cliente no cluster WSFC, reduzindo a latência para clientes herdados. Portanto, se você tem clientes herdados que precisam se conectar a um ouvinte de grupo de disponibilidade e não podem usar a propriedade **MultiSubnetFailover**, recomendamos alterar **RegisterAllProvidersIP** para 0.  
   
     > [!IMPORTANT]  
     >  Quando você cria um ouvinte do grupo de disponibilidade no cluster WSFC (GUI do Gerenciador de Cluster de Failover), **RegisterAllProvidersIP** será 0 (false) por padrão.  

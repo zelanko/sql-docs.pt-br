@@ -13,16 +13,16 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 27a66ab0882c057bbaa4aa48962a15e68aeb7abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612704"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169296"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
+  Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
    
 ##  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -172,7 +172,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá *<number_of_active_connections>***Conexão(ões) ativa(s)** — por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá _\<número\_de\_conexões\_ativas\>_**Conexões ativas** — por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -190,7 +190,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo *Localizar Arquivos de Banco de Dados –***server_name*, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
+9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –**_nome_do\_servidor_, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   

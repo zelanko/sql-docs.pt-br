@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64f8ccd8f1cfcc2ea9c72d31b62382a6937ccfa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 845a120f1fe8b4bc56b8cac835251b062cade112
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817767"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072190"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
 
@@ -59,7 +59,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      O nome padrão da definição de alerta é o nome do relatório. Os nomes de definições de alertas não precisam ser exclusivos, o que pode dificultar sua diferenciação quando você exibir a lista de alertas mais tarde no Gerenciador de Alertas de Dados. É recomendável usar nomes de definições de alertas significativos e exclusivos.  
   
-6.  Opcionalmente, altere a opção de dados padrão de **quaisquer dados do feed de dados possui** para **nenhum dos dados do feed de dados tem**.  
+6.  Opcionalmente, altere a opção de dados padrão de **quaisquer dados do feed de dados tem** para **nenhum dado do feed de dados tem**.  
   
 7.  Clique em **Adicionar regra**.  
   

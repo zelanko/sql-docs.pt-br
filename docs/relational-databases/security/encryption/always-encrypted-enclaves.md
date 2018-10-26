@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c15426e44ef6897cb5763d3c98f2a214298298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814076"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307110"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -140,3 +140,7 @@ As seguintes limitações se aplicam à Versão prévia atual, mas estão em nos
 ## <a name="known-issues"></a>Problemas conhecidos
 
 - Cálculos avançados em colunas de cadeia de caracteres não UNICODE (char, varchar) exigem que um agrupamento BIN2 seja definido no nível do banco de dados. Consulte as Considerações especiais sobre colunas de cadeia de caracteres não UNICODE em [Gerenciar agrupamentos](configure-always-encrypted-enclaves.md#manage-collations).
+
+## <a name="next-steps"></a>Next Steps
+
+- Configure seu ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguros no SSMS – consulte [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8751dee05c58353d8c83954497bf934591a6f6b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc40029559843dfd520eb73aeda4653f910349dd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701364"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905948"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -53,7 +53,7 @@ ms.locfileid: "47701364"
   
  As URLs terão o registro cancelado se você interromper o serviço ou reciclar o serviço Web ou o domínio do aplicativo do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] . Se você modificar uma reserva de URL enquanto o serviço estiver em execução, o servidor de relatório reciclará o domínio do aplicativo imediatamente para que o registro da antiga URL seja cancelado e a nova URL possa ser usada.  
   
- Alguns exemplos simples ilustram o conceito de uma reserva de URL e como ela está relacionada aos endereços de URL usados para aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um ponto importante a ser observado é que a reserva de URL tem sintaxe diferente da URL usada para acessar o aplicativo.  
+ Alguns exemplos simples ilustram o conceito de uma reserva de URL e como ela está relacionada aos endereços de URL usados para aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um ponto importante a ser observado é que a reserva de URL tem sintaxe diferente da URL usada para acessar o aplicativo:  
   
 |Reserva de URL em HTTP.SYS|URL|Explicação|  
 |---------------------------------|---------|-----------------|  

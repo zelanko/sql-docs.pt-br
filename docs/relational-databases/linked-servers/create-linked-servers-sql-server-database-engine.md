@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625514"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120003"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625514"
     > [!NOTE]  
     >  Se a instância do **SQL Server** for a instância padrão, digite o nome do computador que hospeda a instância do **SQL Server**. Se o **SQL Server** for uma instância nomeada, digite o nome do computador e o nome da instância, como **Accounting\SQLExpress**.  
   
-3.  Na área **Tipo de servidor** , selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
+3.  Na área **Tipo de servidor**, selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
   
 4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio onde os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon** . Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
   
@@ -124,8 +124,8 @@ ms.locfileid: "47625514"
   
 5.  Opcionalmente, para exibir ou especificar opções de servidor, clique na página **Opções de Servidor**  .  
   
-     **Compatível com Agrupamento**  
-     Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção estiver definida como true, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, no que diz respeito ao conjunto de caracteres e à sequência do agrupamento (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.  
+     **Compatível com Ordenação**  
+     Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção estiver definida como true, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, no que diz respeito ao conjunto de caracteres e à sequência da ordenação (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.  
   
      Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.  
   
@@ -138,19 +138,19 @@ ms.locfileid: "47625514"
      **RPC Out**  
      Habilita o RPC para o servidor especificado.  
   
-     **Usar Agrupamento Remoto**  
-     Determina se o agrupamento de uma coluna remota ou de um servidor local será usado.  
+     **Usar Ordenação Remota**  
+     Determina se a ordenação de uma coluna remota ou de um servidor local será usada.  
   
-     Se verdadeiro, o agrupamento de colunas remotas será usado para as fontes dos dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o agrupamento especificado no nome será usado para fontes de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Se true, a ordenação de colunas remotas será usada para as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a ordenação especificada no nome da ordenação será usada para fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Se falso, as consultas distribuídas usarão sempre o agrupamento padrão do servidor local, enquanto que o nome do agrupamento e o agrupamento de colunas remotas serão ignorados. O padrão é falso.  
+     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é falso.  
   
-     **Nome do Agrupamento**  
-     Especifica o nome do agrupamento usado pela fonte de dados remotos se o uso do agrupamento remoto for verdadeiro e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O nome deve ser um dos agrupamentos que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     **Nome da Ordenação**  
+     Especifica o nome da ordenação usado pela fonte de dados remota se o uso da ordenação remota for true e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome deve ser uma das ordenações que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cujo agrupamento coincide com um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cuja ordenação coincide com uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     O servidor vinculado deve fornecer suporte a um único agrupamento a ser usado para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a vários agrupamentos dentro de uma única fonte de dados ou se o agrupamento do servidor vinculado não puder ser determinado para corresponder a um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     O servidor vinculado deve fornecer suporte a uma única ordenação a ser usada para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a várias ordenações dentro de uma única fonte de dados ou se a ordenação do servidor vinculado não puder ser determinada para corresponder a uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      **Tempo-limite da conexão**  
      O valor do tempo limite em segundos para conexão a um servidor vinculado.  

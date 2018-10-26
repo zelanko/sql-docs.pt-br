@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839754"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100457"
 ---
 # <a name="table-transact-sql"></a>tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ table_type_definition ::=
 Para obter mais informações sobre a sintaxe, veja [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) e [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 *collation_definition*  
-É o agrupamento da coluna composta de uma localidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e um estilo de comparação, uma localidade do Windows e a notação binária ou um agrupamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *collation_definition* não for especificado, a coluna herdará o agrupamento do banco de dados atual. Ou se a coluna estiver definida como um tipo CLR (Common Language Runtime) definido pelo usuário, a coluna herdará o agrupamento do tipo definido pelo usuário.
+É a ordenação da coluna composta de uma localidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e um estilo de comparação, uma localidade do Windows e a notação binária ou uma ordenação do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *collation_definition* não for especificado, a coluna herdará a ordenação do banco de dados atual. Ou se a coluna estiver definida como um tipo CLR (Common Language Runtime) definido pelo usuário, a coluna herdará a ordenação do tipo definido pelo usuário.
   
 ## <a name="remarks"></a>Remarks  
 As variáveis **table** podem ser referenciadas por nome na cláusula FROM de um lote, conforme mostra o seguinte exemplo:
@@ -127,6 +127,44 @@ A compilação adiada de variável da tabela **não** altera nenhuma caracterís
 A compilação adiada de variável da tabela **não aumenta a frequência de recompilação**.  Em vez disso, ela alterna onde ocorre a compilação inicial. O plano armazenado em cache resultante é gerado com base na contagem da linha de variável da tabela de compilação adiada inicial. O plano armazenado em cache é reutilizado por consultas consecutivas até que o plano seja removido ou recompilado. 
 
 Se a contagem de linha de variável de tabela usada para a compilação de plano inicial representar um valor típico significativamente diferente de uma estimativa de contagem de linha fixa, as operações downstream serão beneficiadas.  Se a contagem de linha de variável de tabela variar consideravelmente entre as execuções, o desempenho pode não ser melhorado por esse recurso.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Desabilitar a compilação adiada de variável de tabela sem alterar o nível de compatibilidade
+A compilação adiada de variável de tabela pode ser desabilitada no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Para desabilitar a compilação adiada de variável de tabela para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Para reabilitar a compilação adiada de variável de tabela para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+Você também pode desabilitar a compilação adiada de variável de tabela em uma consulta específica designando DISABLE_DEFERRED_COMPILATION_TV como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>Exemplos  

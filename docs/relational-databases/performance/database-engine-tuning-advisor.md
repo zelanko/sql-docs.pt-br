@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ab1458236e0b3a7002fc0058c2ecc43b5c6a7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649444"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085252"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47649444"
  A versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
  carga de trabalho  
- Um arquivo de script, um arquivo de rastreamento ou uma tabela de rastreamento Transact-SQL que contém uma carga de trabalho representativa para os bancos de dados a serem ajustados. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode especificar o cache de planos como carga de trabalho.  A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível [especificar o Repositório de Consultas como a carga de trabalho](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
+ Um arquivo de script, um arquivo de rastreamento ou uma tabela de rastreamento Transact-SQL que contém uma carga de trabalho representativa para os bancos de dados a serem ajustados. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode especificar o cache de planos como carga de trabalho.  Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, é possível [especificar o Repositório de Consultas como a carga de trabalho](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
  Arquivo de entrada XML  
  Um arquivo formatado pelo XML que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar cargas de trabalho. O arquivo de entrada XML dá suporte a opções de ajuste avançadas que não estão disponível na GUI nem no utilitário **dta** .  

@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783564"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906326"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ ms.locfileid: "47783564"
 ###  <a name="ForcedFailoverRisks"></a> Riscos de forçar o failover  
  É essencial compreender que forçar o failover pode provocar perda de dados. É possível que haja perda de dados porque a réplica de destino não pode se comunicar com a réplica primária e, portanto, não pode garantir que os bancos de dados estejam sincronizados. O forçamento do failover inicia uma bifurcação de recuperação. Como os bancos de dados primários originais e os bancos de dados secundários estão em bifurcações de recuperação diferentes, cada banco de dados agora contém dados que o outro banco de dados não tem: cada banco de dados primário original contém as alterações que ainda não foram enviadas de sua fila de envio para o banco de dados secundário antigo (o log não enviado); o banco de dados secundário antigo contém as alterações feitas depois que o failover foi forçado.  
   
- Se o failover for forçado porque houve falha na réplica primária, a perda potencial de dados dependerá de os logs de transações não terem sido enviados à réplica secundária antes da ocorrência da falha. No modo de confirmação assíncrona, o log acumulado não enviado é sempre uma possibilidade. No modo de confirmação síncrona, isso é possível apenas até que os bancos de dados secundários sejam sincronizados.  
+ Se o failover for forçado porque houve falha na réplica primária, a perda em potencial de dados dependerá de se os logs de transações foram enviados à réplica secundária ou não antes da ocorrência da falha. No modo de confirmação assíncrona, o log acumulado não enviado é sempre uma possibilidade. No modo de confirmação síncrono, isso é possível apenas até que os bancos de dados secundários sejam sincronizados.  
   
  A tabela a seguir resume a possibilidade de perda de dados para um banco de dados específico na réplica para a qual você força o failover.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47783564"
 |Synchronous-commit|não|Sim|  
 |Asynchronous-commit|não|Sim|  
   
- Os bancos de dados secundários acompanham apenas duas bifurcações de recuperação, portanto, se você executar vários failovers forçados, nenhum banco de dados secundário que iniciou a sincronização de dados com o failover forçado anterior poderá ser retomado. Se isso ocorrer, qualquer banco de dados secundário que não pode ser retomado precisará ser removido do grupo de disponibilidade e unido novamente depois de ser restaurado para o período correto e reunido para o grupo de disponibilidade. Uma restauração não funcionará em várias bifurcações de recuperação, portanto, certifique-se de executar um backup do log depois de executar mais de um failover forçado.  
+ Os bancos de dados secundários acompanham apenas duas bifurcações de recuperação, portanto, se você executar vários failovers forçados, nenhum banco de dados secundário que iniciou a sincronização de dados com o failover forçado anterior poderá ser retomado. Se isso ocorrer, qualquer banco de dados secundário que não pode ser retomado precisará ser removido do grupo de disponibilidade e unido novamente depois de ser restaurado para o período correto e reunido para o grupo de disponibilidade. Erro 1408 com o estado 103 pode ser observado neste cenário (Erro: 1408, Gravidade: 16, Estado: 103). Uma restauração não funcionará em várias bifurcações de recuperação, portanto, certifique-se de executar um backup do log depois de executar mais de um failover forçado.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Por que o failover forçado é necessário após um quorum forçado  
  Depois de forçar o quorum no cluster WSFC (*quorum forçado*), é necessário realizar um failover forçado (com possível perda de dados) em cada grupo de disponibilidade. O failover forçado é necessário porque o estado real dos valores do cluster WSFC pode ter sido perdido. É necessário evitar failovers normais após um quorum forçado devido à possibilidade de que uma réplica secundária não sincronizada apareça para ser sincronizada no cluster WSFC reconfigurado.  

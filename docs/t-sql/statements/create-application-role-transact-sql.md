@@ -24,12 +24,12 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b880607c133225a3dd85dc2f4abd6fc051ef931a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753374"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168916"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Especifica o nome da função de aplicativo. Esse nome ainda não deve ser usado para referenciar qualquer entidade no banco de dados.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Especifica a senha que os usuários de banco de dados usam para ativar a função do aplicativo. Você sempre deve usar senhas fortes. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schema\_name_  
  Especifica o primeiro esquema que é pesquisado pelo servidor quando ele resolve os nomes de objetos para essa função. Se DEFAULT_SCHEMA for deixado indefinido, a função de aplicativo usará DBO como seu esquema padrão. *schema_name* pode ser um esquema que não existe no banco de dados.  
   
 ## <a name="remarks"></a>Remarks  

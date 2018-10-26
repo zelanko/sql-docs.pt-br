@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90107457214d5edec92c45620d70f4e48504ab6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672244"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072242"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -120,7 +120,7 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
 
  
 > [!WARNING]  
-    >  Você deve [instalar o IIS](#InstallIIS) antes de iniciar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Caso contrário, o Configuration Manager exibirá um erro de Serviços de Informações e você não poderá criar o aplicativo Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
+    >  Você deve [instalar o IIS](#InstallIIS) antes de iniciar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Caso contrário, o Configuration Manager exibirá um erro de Serviços de Informações da Internet e você não poderá criar o aplicativo Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
     
 > **Requisitos do navegador**
 >>O aplicativo Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.    
@@ -136,11 +136,11 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar um agrupamento do Windows, desmarque a caixa de seleção **Agrupamento padrão do SQL Server** e clique em uma ou mais das opções disponíveis como **Diferenciar maiúsculas de minúsculas**. Clique em **Avançar**.
+4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar uma ordenação do Windows, desmarque a caixa de seleção **Ordenação padrão do SQL Server** e clique em uma ou mais das opções disponíveis como **Diferenciar maiúsculas de minúsculas**. Clique em **Avançar**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Para obter mais informações sobre o agrupamento do Windows, consulte [Nome de agrupamento do Windows (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
+     Para obter mais informações sobre a ordenação do Windows, consulte [Nome de ordenação do Windows (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  No campo **Nome de usuário** , especifique a conta do Windows do usuário que será o Superusuário padrão do Master Data Services. Um Superusuário tem acesso a todas as áreas funcionais e pode adicionar, excluir e atualizar todos os modelos.  
 

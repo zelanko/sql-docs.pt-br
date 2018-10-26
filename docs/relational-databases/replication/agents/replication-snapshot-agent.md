@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39756ee24011373c30ec23cd4c0caab2eb813338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6553c3531545a17b6a47ad88cb2fbeace845a1b6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756774"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169367"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ snapshot [ -?]
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- É o nome do Publicador. Especifica server_name para a ocorrência padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Editor** *nome_do_servidor*[**\\**_nome_da\_instância_]  
+ É o nome do Publicador. Especifica server_name para a ocorrência padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _nome_do\_servidor_**\\**_nome_da\_instância_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-Publication** *publication*  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
@@ -95,8 +95,8 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Distributor** *nome_do_servidor*[**\\**_nome_da\_instância_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _nome_do\_servidor_**\\**_nome_da\_instância_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  É a prioridade da conexão do Snapshot Agent com o Distribuidor quando um deadlock ocorre. Esse parâmetro é especificado para resolver deadlocks que possam ocorrer entre o Snapshot Agent e aplicativos de usuário durante a geração de instantâneo.  
@@ -155,7 +155,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  Esse parâmetro é usado para ajuste de desempenho do desempenho de **bcp** de um Publicador Oracle.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize**_block\_size_  
  É o tamanho, em kilobyte (KB), de cada bloco de dados **bcp** . O valor padrão é 64 KB. **HRBcpBlocks** só é usado com publicações Oracle.  
   
 > [!NOTE]  
@@ -223,7 +223,7 @@ snapshot [ -?]
 |**0** (padrão)|A prioridade não é atribuída.|  
 |**1**|O Snapshot Agent tem prioridade quando um deadlock ocorre no Publicador.|  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** *nome_do_servidor*[**\\**_nome_da\_instância_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  

@@ -2,7 +2,7 @@
 title: Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851414"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324629"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Você pode acompanhar os eventos de comentários de concessão de memória usand
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Comentários de concessão de memória, administrador de recursos e dicas de consulta
 A memória real concedida cumpre o limite de memória de consulta determinado pela dica de consulta ou pelo administrador de recursos.
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Desabilitar comentários de concessão de memória sem alterar o nível de compatibilidade
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Desabilitar comentários de concessão de memória de modo de lote sem alterar o nível de compatibilidade
 Comentários de concessão de memória podem ser desabilitados no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Para desabilitar os comentários de concessão de memória em modo de lotes para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory mostra a memória concedida em kilobytes (KB) na execução 
 
 > [!NOTE]
 > Os atributos do plano de comentários de concessão de memória do modo de linha da versão prévia pública estão visíveis nos planos de execução de consulta gráfica do SQL Server Management Studio nas versões 17.9 e superiores. 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Desabilitar comentários de concessão de memória de modo de linha sem alterar o nível de compatibilidade
+Comentários de concessão de memória de modo de linha podem ser desabilitados no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Para desabilitar os comentários de concessão de memória em modo de linha para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Para reabilitar os comentários de concessão de memória em modo de linha para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Você também pode desabilitar os comentários de concessão de memória em modo de linha para uma consulta específica, especificando DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
+
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções Adaptáveis de modo de lote
 O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.

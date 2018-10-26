@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712460"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307120"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurar o Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ Para configurar o Always Encrypted com enclaves seguros, use o fluxo de trabalho
 4. Configurar o tipo de enclave em sua instância do SQL Server.
 5. Provisionar chaves habilitadas para enclave.
 6. Criptografar colunas que contêm dados confidenciais.
- 
 
+>[!NOTE]
+>Para ver um tutorial passo a passo sobre como configurar um ambiente de teste e experimentar a funcionalidade do Always Encrypted com enclaves seguros no SSMS, confira [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurar seu ambiente
 
@@ -78,7 +79,7 @@ Instale as ferramentas a seguir no computador cliente/de desenvolvimento:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 ou posterior](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [Módulo do SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) versão 21.5 ou posterior.
+3. [Módulo do SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) versão 21.1 ou posterior.
 4. [Visual Studio (2017 ou posterior recomendado)](https://visualstudio.microsoft.com/downloads/).
 5. [Pacote do Desenvolvedor para .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Pacote NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), versão 2.2.0 ou posterior.
@@ -111,7 +112,7 @@ Abra o computador cliente/de desenvolvimento:
    RECONFIGURE
    ```
 
-4. Reinicie a instância do SQL Server para que as alterações anteriores entrem em vigor. Você pode reiniciar a instância no SSMS clicando nela com o botão direito do mouse no Pesquisador de Objetos e selecionando Reiniciar. Após a instância ser reiniciada, conecte-se a ela novamente.
+4. Reinicie a instância do SQL Server para que as alterações anteriores entrem em vigor. Para reiniciar a instância no SSMS, clique nela com o botão direito do mouse no Pesquisador de Objetos e selecionando Reiniciar. Após a instância ser reiniciada, conecte-se a ela novamente.
 
 5. Confirme que o enclave seguro está carregado executando a consulta a seguir:
 
@@ -162,7 +163,7 @@ As etapas a seguir criam chaves habilitadas para enclave (é necessário o SSMS 
     2. Selecione o nome de sua chave mestra da coluna.
     3. Certifique-se de selecionar **Repositório de certificados do Windows (usuário atual ou computador local)** ou **Azure Key Vault**.
     4. Selecione **Permitir computações de enclave**.
-    5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, consulte [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Gerenciar cofres de chaves do portal do Azure).
+    5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Selecione a chave se ela já existir ou siga as instruções no formulário para criar uma nova chave.
     7. Clique em **OK**.
 
@@ -759,7 +760,7 @@ A maneira mais rápida de testar consultas avançadas em suas colunas habilitada
     1.  Selecione **Consultar** no menu principal do SSMS.
     2.  Selecione **Opções de Consulta…**.
     3.  Navegue para **Execução** > **Avançado**.
-    4.  Selecione ou desmarque Habilitar Parametrização de Always Encrypted.
+    4.  Selecione ou desmarque a seleção de Habilitar Parametrização de Always Encrypted.
     5.  Clique em OK.
 
 3.  Crie e execute suas consultas usando cálculos avançados ou colunas criptografadas. Você precisa declarar uma variável Transact-SQL para cada valor destinado a uma coluna criptografada em sua consulta. As variáveis devem usar inicializações embutidas (não podem ser definidas por meio da instrução SET).

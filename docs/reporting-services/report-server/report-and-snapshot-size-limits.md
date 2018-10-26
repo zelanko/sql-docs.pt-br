@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842874"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119934"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -78,7 +78,7 @@ EXEC sp_spaceused
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](../../reporting-services/report-server/process-large-reports.md)  
   

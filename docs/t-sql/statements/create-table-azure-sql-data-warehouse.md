@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 57c63acb4de381e89484ffc356592dfb2b57bbc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817536"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120423"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Opções de coluna
 
  `COLLATE` *Windows_collation_name*  
- Especifica o agrupamento da expressão. O agrupamento precisa ser um dos agrupamentos do Windows compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de agrupamentos do Windows compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Nome de agrupamento do Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
+ Especifica a ordenação da expressão. A ordenação precisa ser uma das ordenações do Windows compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de ordenações do Windows compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Nome de ordenação do Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
  Especifica se os valores `NULL` são permitidos na coluna. O padrão é `NULL`.  
@@ -312,7 +312,7 @@ Para obter mais informações, consulte estes tópicos:
  Não é possível definir uma restrição DEFAULT em uma coluna de distribuição.  
   
  ### <a name="partitions"></a>Partições
- Ao usar partições, a coluna de partição não pode ter um agrupamento somente Unicode. Por exemplo, a instrução a seguir falhará.  
+ Ao usar partições, a coluna de partição não pode ter uma ordenação somente Unicode. Por exemplo, a instrução a seguir falhará.  
   
  `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
  
@@ -339,8 +339,8 @@ Para obter mais informações, consulte estes tópicos:
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>Exemplos de colunas
 
-### <a name="ColumnCollation"></a> A. Especificar um agrupamento de coluna 
- No exemplo a seguir, a tabela `MyTable` é criada com dois agrupamentos de coluna diferentes. Por padrão, a coluna `mycolumn1`, tem o agrupamento padrão Latin1_General_100_CI_AS_KS_WS. A coluna `mycolumn2` tem o agrupamento Frisian_100_CS_AS.  
+### <a name="ColumnCollation"></a> A. Especificar uma ordenação de coluna 
+ No exemplo a seguir, a tabela `MyTable` é criada com duas ordenações de coluna diferentes. Por padrão, a coluna `mycolumn1`, tem a ordenação padrão Latin1_General_100_CI_AS_KS_WS. A coluna `mycolumn2` tem a ordenação Frisian_100_CS_AS.  
   
 ```  
 CREATE TABLE MyTable   

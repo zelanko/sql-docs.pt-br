@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8011b61d86f91506cc7e194e8521415816310131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784314"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072136"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Serviços SCM – conectar-se a outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47784314"
   
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.  
   
-11. No menu **Janela** , clique em **Raiz do Console**, para retornar à primeira janela e excluir a janela.  
+11. No menu **Janela**, clique em **Raiz do Console** para retornar à primeira janela e exclui-la.  
   
 12. No menu **Arquivo** , clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com a extensão de arquivo **.msc** . Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

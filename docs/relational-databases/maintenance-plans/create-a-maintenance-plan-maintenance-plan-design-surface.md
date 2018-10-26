@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687114"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168887"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ ms.locfileid: "47687114"
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name*.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar pasta –**_nome_do\_servidor_ ou **Localizar arquivos de banco de dados –**_nome_do\_servidor_.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687114"
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name*.  
+     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do arquivo de log –**_nome_do\_servidor_.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
@@ -256,7 +256,7 @@ ms.locfileid: "47687114"
      **Resumo do arquivo de log**  
      Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
   
-     **Date**  
+     **Data**  
      Exibe a data do evento.  
   
      **Origem**  

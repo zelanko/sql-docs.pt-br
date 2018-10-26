@@ -32,12 +32,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db97dcaf1b8ad8833127fd5e4907d3c553629247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788044"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324619"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,6 +113,7 @@ ms.locfileid: "47788044"
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|Fornece informações sobre a atividade geral em todo o servidor, como o número de usuários conectados a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|Fornece informações sobre alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .|  
 |[SQL Server:HADR Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)|Fornece informações sobre as réplicas do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .|  
+|[SQL Server: Armazenamento HTTP](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|Fornece informações para monitorar uma conta de Armazenamento do Microsoft Azure ao usar [Arquivos de Dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|Fornece informações sobre as travas em recursos internos, como páginas de banco de dados, utilizadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|Fornece informações sobre as solicitações de bloqueio individuais feitas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tempos limite de bloqueio e deadlocks. Pode haver várias instâncias deste objeto.|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|Descreve as estatísticas para o pool livre dentro do Pool de Logs.|
