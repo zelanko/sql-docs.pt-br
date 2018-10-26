@@ -44,7 +44,7 @@ ms.locfileid: "48192626"
   
  Além das molduras de borda padrão, é possível aplicar outras molduras. Para obter mais informações, consulte [Adicionar um quadro de borda a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
   
- Também é possível adicionar uma borda ao próprio relatório. Para obter mais informações, consulte [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ Também é possível adicionar uma borda ao próprio relatório. Para obter mais informações, consulte [Adicionar uma borda a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="applying-background-colors"></a>Aplicando cores do plano de fundo  
  Uma cor sólida pode ser adicionada ao plano de fundo do relatório inteiro, de uma caixa de texto do relatório ou de uma célula ou de um grupo de células de uma região de dados. Por padrão, a cor do plano de fundo é branca; no entanto, é possível selecionar uma cor na guia **Preenchimento** da caixa de diálogo **Propriedades** do item de relatório. Por exemplo, para alterar a cor da tela de fundo de uma caixa de texto, clique com o botão direito do mouse na caixa de texto e selecione **Propriedades da Caixa de Texto**. Clique em **Preenchimento** e selecione a cor desejada. Nessa caixa de diálogo, é possível selecionar a cor do plano de fundo do item selecionado ou adicionar uma imagem que será exibida no plano de fundo.  
