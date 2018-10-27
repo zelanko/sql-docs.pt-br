@@ -1,5 +1,5 @@
 ---
-title: Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação | Microsoft Docs
+title: Conectar-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4699746404fcc7e5f4384f2ce9871232d9aa44a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098969"
 ---
-# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação
+# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , adicione-o a uma lista de associações de serviço.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "34024143"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e configurar um aplicativo de serviço do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Configuração inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
+ [Configuração Inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   

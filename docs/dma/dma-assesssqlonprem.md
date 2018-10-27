@@ -2,7 +2,7 @@
 title: Executar uma avaliação de migração do SQL Server (Assistente de migração de dados) | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para avaliar um SQL Server no local antes de migrar para outro SQL Server ou banco de dados do Azure SQL
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706180"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643974"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de migração de dados
 
@@ -44,7 +44,7 @@ As instruções passo a passo a seguir o ajudam a executar sua primeira avaliaç
 
 2. Selecione o tipo de relatório.
 
-   Quando você estiver avaliando sua instância do SQL Server de origem para a migração para o SQL Server no local ou ao SQL Server hospedado em destinos de VM do Azure, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
+   Quando você está avaliando sua instância do SQL Server de origem para a migração para o SQL Server no local ou ao SQL Server hospedado em destinos de VM do Azure, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
 
     -   **Problemas de compatibilidade**
 
@@ -52,7 +52,7 @@ As instruções passo a passo a seguir o ajudam a executar sua primeira avaliaç
 
     ![Selecione um tipo de relatório de avaliação para o destino do SQL Server](../dma/media/AssessmentTypes.png)
 
-   Quando você estiver avaliando a instância do SQL Server de origem para migração para o banco de dados SQL, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
+   Ao avaliar a instância do SQL Server de origem para migração para o banco de dados SQL, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
 
     -   **Verificar a compatibilidade do banco de dados**
 
@@ -77,7 +77,7 @@ As instruções passo a passo a seguir o ajudam a executar sua primeira avaliaç
 
 ## <a name="view-results"></a>Exibir resultados
 
-A duração da avaliação depende do número de bancos de dados adicionados e o tamanho do esquema de cada banco de dados. Os resultados são exibidos para cada banco de dados assim que estiverem disponíveis.
+A duração da avaliação depende do número de bancos de dados adicionados e o tamanho do esquema de cada banco de dados. Os resultados são exibidos para cada banco de dados assim que elas estão disponíveis.
 
 1.  Selecione o banco de dados que foi concluída a avaliação e, em seguida, alternar entre **problemas de compatibilidade** e **recomendações de recurso** usando o seletor.
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348637"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147951"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "43348637"
   
 |Object|Caracteres inválidos|  
 |------------|------------------------|  
-|**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Ver [convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obter detalhes.|  
+|**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |**DataSource**|: / \ * &#124; ? "[()] {} <>|  
 |**Level** ou **Attribute**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** ou **Hierarchy**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
@@ -88,6 +88,6 @@ ms.locfileid: "43348637"
 ## <a name="see-also"></a>Consulte também  
  [Palavras reservadas para MDX](../../../mdx/mdx-reserved-words.md)   
  [Suporte a tradução no Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [Conformidade XML for Analysis &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [Conformidade XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

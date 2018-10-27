@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173096"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146061"
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
   Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executada em outro computador na mesma rede.  
@@ -92,10 +92,10 @@ ms.locfileid: "48173096"
 2.  Como etapa final, modifique o trabalho para ser executado em uma agenda que você definir, adicionando quaisquer alertas ou notificações necessários para administrar o trabalho. Você também poderá refinar o script de processamento ou criar várias etapas do trabalho para processar objetos independentemente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Componentes do SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [O processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
- [Processamento de objetos &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [Processando objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

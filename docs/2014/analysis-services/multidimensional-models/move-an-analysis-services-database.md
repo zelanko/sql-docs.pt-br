@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055146"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145321"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
   Frequentemente, há situações em que um dba (administrador de banco de dados) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer mover um modelo de banco de dados multidimensional ou de tabela para um local diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto.  
@@ -146,9 +146,9 @@ ms.locfileid: "48055146"
  [Anexar e desanexar bancos de dados do Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](database-storage-location.md)   
  [Banco de dados ReadWriteModes](database-readwritemodes.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

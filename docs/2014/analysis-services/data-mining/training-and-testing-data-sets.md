@@ -16,12 +16,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120258"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144991"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
   A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
@@ -44,7 +44,7 @@ ms.locfileid: "48120258"
   
  Você também pode configurar o assistente para definir um número máximo de casos de treinamento de casos ou você pode combinar os limites para limitar uma porcentagem máxima de casos até um número máximo de casos especificados. Quando você especifica uma porcentagem máxima de casos e um número máximo de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa o menor dos dois limites como o tamanho do conjunto de teste. Por exemplo, se você especificar uma validação de 30% para testar casos e o número máximo de casos de teste como 1.000, o tamanho do conjunto de teste nunca excederá 1.000 casos. Isso pode ser útil se quiser garantir que o tamanho do seu conjunto de teste se mantenha consistente mesmo que mais dados de treinamento sejam adicionados ao modelo.  
   
- Se você usar a mesma exibição de fonte de dados para estruturas de mineração diferentes e quiser garantir que os dados sejam divididos aproximadamente da mesma forma para todas as estruturas de mineração e seus modelos, você deve especificar a semente usada para inicializar a amostragem aleatória. Quando você especifica um valor para `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará esse valor para iniciar a amostragem. Caso contrário, a amostragem usa um algoritmo de hash no nome da estrutura de mineração para criar o valor de semente.  
+ Se você usar a mesma exibição de fonte de dados para estruturas de mineração diferentes e quiser garantir que os dados sejam divididos aproximadamente da mesma forma para todas as estruturas de mineração e seus modelos, você deve especificar a semente usada para inicializar a amostragem aleatória. Quando você especificar um valor para `HoldoutSeed`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará esse valor para iniciar a amostragem. Caso contrário, a amostragem usa um algoritmo de hash no nome da estrutura de mineração para criar o valor de semente.  
   
 > [!NOTE]  
 >  Se você criar uma cópia da estrutura de mineração usando as instruções `EXPORT` e `IMPORT`, a nova estrutura de mineração terá os mesmos conjuntos de dados de treinamento e teste, porque o processo de exportação cria uma nova ID, mas usa o mesmo nome. No entanto, se duas estruturas de mineração usam a mesma fonte de dados subjacente, mas têm nomes diferentes, os conjuntos criados para cada estrutura de mineração serão diferentes.  
@@ -88,7 +88,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>Limitações no uso de dados de controle  
   
--   Para usar o controle, a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> da estrutura de mineração deve ser definida como o valor padrão, `KeepTrainingCases`. Se você alterar o `CacheMode` propriedade para `ClearAfterProcessing`e, em seguida, reprocessar a estrutura de mineração, a partição será perdida.  
+-   Para usar o controle, a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> da estrutura de mineração deve ser definida como o valor padrão, `KeepTrainingCases`. Se você alterar a propriedade `CacheMode` para `ClearAfterProcessing` e, em seguida, reprocessar a estrutura de mineração, a partição será perdida.  
   
 -   Você não pode remover dados de um modelo de série temporal; portanto, você não pode separar os dados de origem em conjuntos de treinamento e teste. Se você começar a criar uma estrutura de mineração e modelo e escolher o algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series), a opção de criar um conjunto de dados de controle será desabilitada. O uso de dados de controle também será desabilitado se a estrutura de mineração contiver uma coluna KEY TIME no caso ou no nível de tabela aninhada.  
   
@@ -96,22 +96,22 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Na maioria dos casos, o valor de validação padrão de 30 fornece um bom equilíbrio entre os dados de treinamento e teste. Não há uma maneira simples de determinar o tamanho necessário do conjunto de dados para fornecer treinamento suficiente, nem o quão esparso o conjunto de treinamentos pode ser e, conseguir, ainda, evitar o superajuste. Porém, depois que você criar um modelo, pode usar validação cruzada para avaliar o conjunto de dados em relação a um modelo específico.  
   
--   Além das propriedades listadas na tabela anterior, uma propriedade somente leitura `HoldoutActualSize` é fornecida no AMO e XML DDL. No entanto, como o tamanho real de uma partição não pode ser determinado precisamente até que a estrutura foi processada, você deve verificar se o modelo foi processado antes de recuperar o valor da `HoldoutActualSize` propriedade.  
+-   Além das propriedades listadas na tabela anterior, uma propriedade somente leitura `HoldoutActualSize` é fornecida no AMO e XML DDL. No entanto, como o tamanho real de uma partição não pode ser determinado precisamente até que a estrutura tenha sido processada, você deve verificar se o modelo foi processado antes de recuperar o valor da propriedade `HoldoutActualSize`.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 |Tópicos|Links|  
 |------------|-----------|  
-|Descreve como os filtros em um modelo interagem com conjuntos de dados de treinamento e teste.|[Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)|  
-|Descreve como o uso de dados de treinamento e teste afeta a validação cruzada.|[A validação cruzada &#40;Analysis Services - mineração de dados&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Fornece informações sobre as interfaces programáticas para funcionar com conjuntos de treinamento e teste em uma estrutura de mineração.|[Conceitos e modelo de objeto AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|Fornece sintaxe de DMX para criar conjuntos de controle.|[CRIAR ESTRUTURA DE MINERAÇÃO &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Descreve como os filtros em um modelo interagem com conjuntos de dados de treinamento e teste.|[Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)|  
+|Descreve como o uso de dados de treinamento e teste afeta a validação cruzada.|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Fornece informações sobre as interfaces programáticas para funcionar com conjuntos de treinamento e teste em uma estrutura de mineração.|[Conceitos e modelo de objeto AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Fornece sintaxe de DMX para criar conjuntos de controle.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultando os conjuntos de linhas de esquema de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Conceitos de mineração de dados](data-mining-concepts.md)   
  [Soluções de mineração de dados](data-mining-solutions.md)   
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

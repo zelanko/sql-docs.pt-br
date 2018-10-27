@@ -2,7 +2,7 @@
 title: Migrar logons do SQL Server com o Assistente de migração de dados | Microsoft Docs
 description: Saiba como migrar logons do SQL Server com o Assistente de migração de dados
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836934"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643804"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar logons do SQL Server com o Assistente de migração de dados
 
@@ -44,7 +44,7 @@ Este artigo fornece uma visão geral da migração logons do SQL Server usando o
 
 - Como parte da migração de logon, Assistente de migração de dados atribui as permissões para protegíveis no SQL Server de destino como eles existem no SQL Server de origem. 
 
-  Se o logon já existe no destino do SQL Server, Assistente de migração de dados migra apenas as permissões atribuídas a protegíveis e não criará o logon inteiro novamente.
+  Se o logon já existe no destino do SQL Server, o Assistente de migração de dados migra apenas as permissões atribuídas a protegíveis e não recrie o logon todo.
 
 - Assistente de migração de dados torna o melhor esforço para mapear o logon para usuários de banco de dados se o logon já existe no servidor de destino.
 

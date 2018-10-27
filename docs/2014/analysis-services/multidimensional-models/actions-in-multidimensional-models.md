@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084676"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146421"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
   Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48084676"
  Depois de selecionar o tipo de objeto de destino, em **Objeto de destino**, selecione o objeto de cubo do tipo designado.  
   
  **Condição (Opcional)**  
- Especifique uma expressão MDX opcional que resolve um valor booliano. Se o valor for `True`, a ação é executada no destino especificado. Se o valor for `False`, a ação não será executada.  
+ Especifique uma expressão MDX opcional que resolve um valor booliano. Se o valor for `True`, a ação será executada no destino especificado. Se for `False`, a ação não será executada.  
   
  **Conteúdo da Ação**  
  Selecione o tipo de ação. A tabela a seguir resume os tipos disponíveis:  
@@ -77,10 +77,10 @@ ms.locfileid: "48084676"
 |**Aplicativo**|Descreve o aplicativo da ação.|  
 |**Descrição**|Descreve a ação.|  
 |**Caption**|Fornece uma legenda que é exibida para a ação. Se a legenda for MDX, especifique `True` para **legenda é MDX**.|  
-|**A legenda é MDX**|Especificar `True` se a legenda for MDX ou `False` se não for.|  
+|**A legenda é MDX**|Especifique `True` se a legenda for MDX ou `False` se não for.|  
   
 > [!NOTE]  
->  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) e [Programando objetos OLAP AMO avançados](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) e [Programando objetos OLAP AMO avançados](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Criando uma ação de relatório  
  O servidor de relatório responde a solicitações baseadas na URL para relatórios. Para criar uma ação de relatório, no menu **Cubo** , clique em **Nova Ação de Relatório**. As opções a seguir são específicas de uma ação de relatório.  

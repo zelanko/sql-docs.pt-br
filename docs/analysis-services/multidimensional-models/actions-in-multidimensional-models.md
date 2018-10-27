@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024273"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145701"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34024273"
 |**A legenda é MDX**|Especifique **True** se a legenda for MDX ou **False** se não for.|  
   
 > [!NOTE]  
->  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) e [Programando objetos OLAP AMO avançados](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) e [Programando objetos OLAP AMO avançados](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Criando uma ação de relatório  
  O servidor de relatório responde a solicitações baseadas na URL para relatórios. Para criar uma ação de relatório, no menu **Cubo** , clique em **Nova Ação de Relatório**. As opções a seguir são específicas de uma ação de relatório.  

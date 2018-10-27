@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147766"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146736"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Explorando o modelo de clustering (Tutorial de mineração de dados básico)
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering agrupa casos em clusters que contenham características semelhantes. Esses agrupamentos são úteis para explorar dados, identificando anomalias nos dados e criar previsões.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147766"
  Com o **características do Cluster** guia, você pode examinar mais detalhadamente as características que compõem um cluster. Em vez de comparar as características de todos os clusters (como na guia Perfis de Cluster), você pode explorar um cluster por vez. Por exemplo, se você selecionar **altos compradores de bicicleta** da **Cluster** lista, você pode ver as características dos clientes neste cluster. Embora a exibição seja diferente do visualizador Perfis de Cluster, as informações são as mesmas.  
   
 > [!NOTE]  
->  A menos que você defina um valor inicial para **holdoutseed**, os resultados irão variar sempre que você processar o modelo. Para obter mais informações, consulte [elemento HoldoutSeed](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  A menos que você defina um valor inicial para **holdoutseed**, os resultados irão variar sempre que você processar o modelo. Para obter mais informações, consulte [elemento HoldoutSeed](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

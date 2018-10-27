@@ -2,7 +2,7 @@
 title: Analisar relatórios consolidados de avaliação de Assistente de migração de dados com o Power BI (SQL Server) | Microsoft Docs
 description: Saiba como usar o Power BI para analisar os relatórios de avaliação de migração de dados que você já importou e consolidados no SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832224"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643964"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidado criados pelo Assistente de migração de dados com o Power BI
 
@@ -120,7 +120,7 @@ Este relatório mostra a preparação do banco de dados para migrar para o V12 d
 
 Use esse relatório para destacar as *recursos de nível de instância* que não são suportados pelo V12 de banco de dados SQL do Azure.
 
-Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e recursos de banco de dados que não são suportados. No exemplo a seguir, esse recurso está selecionado: **não há suporte para Always on a configuração do grupo de disponibilidade no Azure SQL Database**.  
+Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e recursos de banco de dados que não têm suporte. No exemplo a seguir, esse recurso está selecionado: **não há suporte para Always on a configuração do grupo de disponibilidade no Azure SQL Database**.  
 
 ![O recurso de grupo de disponibilidade do AlwaysOn](../dma/media/Feature_AlwaysOnAvailability.png)
 

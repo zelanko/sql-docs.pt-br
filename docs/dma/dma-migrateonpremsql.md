@@ -2,7 +2,7 @@
 title: Atualização do SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados local | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para atualizar um SQL Server no local para uma versão posterior do SQL Server ou ao SQL Server em VMs do Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833124"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643834"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Atualizar o local SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados
 
@@ -81,7 +81,7 @@ Este artigo fornece instruções passo a passo para a atualização do SQL Serve
 
 5. Selecione **Avançar**.
 
-O Assistente de migração de dados executa validações nas pastas de backup, dados e arquivos de log locais. Se qualquer validação falhar, corrija as opções e, em seguida, selecione **próxima**.
+O Assistente de migração de dados executa validações nas pastas de backup, dados e locais de arquivos de log. Se nenhuma validação falhar, corrija as opções e, em seguida, selecione **próxima**.
 
 ## <a name="select-logins"></a>Selecionar logons
 

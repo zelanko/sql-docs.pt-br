@@ -1,22 +1,22 @@
 ---
 title: O que é um pool de dados de clusters de grandes dados SQL? | Microsoft Docs
-description: ''
+description: Este artigo descreve o pool de dados em um cluster de big data do SQL Server de 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a75f47148ff59d58d0d0d1397ba445b064c028f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050758"
 ---
 # <a name="what-is-a-sql-big-data-clusters-data-pool"></a>O que é um pool de dados de clusters de grandes dados SQL?
 
-Este artigo descreve a função do *pools de dados do SQL Server* em um servidor de SQL 2019 visualizar o cluster de Big Data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de dados SQL.
+Este artigo descreve a função do *pools de dados do SQL Server* em um cluster de big data de visualização de 2019 do SQL Server. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de dados SQL.
 
 ## <a name="data-pool-architecture"></a>Arquitetura do pool de dados
 
@@ -32,4 +32,4 @@ Os pools de dados permitem a criação de armazéns de dados de expansão, onde 
 
 Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
 
-- [O que é o SQL Server 2019 clusters de big data?](big-data-cluster-overview.md)
+- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)

@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025733"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146154"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriedades de membro MDX - propriedades intrínsecas do membro
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriedades de membro MDX – propriedades intrínsecas do membro
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expõe propriedades intrínsecas em membros de dimensão que você pode incluir em uma consulta para retornar dados ou metadados adicionais para uso em um aplicativo personalizado ou para ajudar na investigação ou na construção do modelo. Se você estiver usando as ferramentas de cliente do SQL Server, poderá exibir propriedades intrínsecas no SQL Server Management Studio (SSMS).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34025733"
  A tabela a seguir lista as propriedades intrínsecas não sensíveis ao contexto com suporte pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre o conjunto de linhas do esquema **MEMBERS** , consulte [Conjunto de linhas MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre o conjunto de linhas do esquema **MEMBERS** , consulte [Conjunto de linhas MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [Filhos &#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarquize & #40; MDX & #41;](../../../mdx/hierarchize-mdx.md)   
- [Contagem de & #40; Definir & #41; & #40; MDX & #41;](../../../mdx/count-set-mdx.md)   
- [Filtro & #40; MDX & #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40; MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40; MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [Propriedades & #40; MDX & #41;](../../../mdx/properties-mdx.md)   
+ [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [Usando propriedades do membro & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Usando propriedades do membro &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

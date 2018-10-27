@@ -12,12 +12,12 @@ ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 427acf4413bba023f8ff3c8300cfb7a53a4b0b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c42e12dc43febf4927ea2f559631b63c5ba4e143
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062156"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100167"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programabilidade do Web Part do Visualizador de Relatórios na Integração do SharePoint
   A Web Part do Visualizador de Relatórios é um controle de servidor de `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` que contém um conjunto de APIs (interfaces de programação de aplicativos) públicas, permitindo que os desenvolvedores criem aplicativos de SharePoint personalizados. Você pode criar Web Parts personalizadas que fornecem o caminho do relatório e parâmetros para a Web Part do Visualizador de Relatórios que usa conexões de Web Part. Você também pode inserir a Web Part em uma página personalizada de Web Parts do SharePoint e personalizá-la usando a API pública.  
@@ -61,6 +61,6 @@ ms.locfileid: "48062156"
     >  Você pode conectar várias Web Parts de `T:Microsoft.SharePoint.WebPartPages.IFilterValues` à Web Part do Visualizador de Relatórios por vez. No entanto, você não pode conectar uma Web Part de <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> e uma Web Part de `T:Microsoft.SharePoint.WebPartPages.IFilterValues` à Web Part do Visualizador de Relatórios ao mesmo tempo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Interface IFilterValues](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
+ [Interface IFilterValues](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
   
   

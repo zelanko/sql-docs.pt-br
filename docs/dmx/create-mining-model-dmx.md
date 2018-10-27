@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980586"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148041"
 ---
 # <a name="create-mining-model-dmx"></a>CRIAR UM MODELO DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor atual.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada por meio [conjunto de linhas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
+>  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada por meio [conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
  *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;mineração de dados&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Tipos de conteúdo &#40;mineração de dados&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuições de colunas &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Sinalizadores de modelagem &#40;mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte ao uso dos seguintes \<Column relationship > cláusula.  
   
@@ -124,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obter uma lista dos parâmetros que estão associados com cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você desejar criar um modelo que tem um conjunto de dados de teste interno, deverá usar a instrução CREATE MINING STRUCTURE seguida por ALTER MINING STRUCTURE. No entanto nem todos os tipos de modelo oferecem suporte a um conjunto de dados de validação. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Para obter uma explicação de como criar um modelo de mineração usando a instrução CREATEMODEL, consulte [Tutorial de DMX de previsão de série temporal](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  

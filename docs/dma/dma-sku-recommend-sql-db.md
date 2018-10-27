@@ -2,7 +2,7 @@
 title: Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local (Assistente de migração de dados) | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para identificar o direito de SKU de banco de dados SQL do Azure para seu banco de dados local
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684444"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643994"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 
@@ -141,7 +141,7 @@ Segue uma descrição de cada coluna.
 - **MetricValue** -recomendado do banco de dados SQL do Azure SKU.
 - **SQLMiEquivalentCores** -se você escolher Ir para o banco de dados de instância gerenciada do SQL, você pode usar esse valor para contagem de núcleos.
 - **IsTierRecommended** -podemos fazer uma recomendação mínima do SKU para cada camada. Em seguida, aplicamos heurística para determinar a camada certa para seu banco de dados. 
-- **ExclusionReasons** -esse valor estará em branco se uma camada é recomendada. Para cada camada que não é recomendada, nós fornecemos os motivos por que ele não foi recebido.
+- **ExclusionReasons** -esse valor estará em branco se uma camada é recomendada. Para cada camada que não é recomendada, nós fornecemos os motivos por que ele não foi escolhido.
 - **AppliedRules** -uma notação curta das regras que foram aplicadas.
 
 O valor recomendado é o SKU mínimo necessário para suas consultas para execução no Azure com uma taxa de sucesso semelhante a seus bancos de dados local. Por exemplo, se a SKU de mínima recomendada é S4 para a camada standard, em seguida, escolha S3 ou abaixo será fazer com que consultas atingir o tempo limite ou não ser executada.

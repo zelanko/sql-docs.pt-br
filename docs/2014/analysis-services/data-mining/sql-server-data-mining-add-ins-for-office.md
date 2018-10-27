@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2909079aa87638386db1398af6f62c10f96f66b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099877"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
@@ -82,7 +82,7 @@ ms.locfileid: "48223767"
   
 -   Standard  
   
- Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
  Para obter ajuda adicional com a instalação, consulte esta página no Centro de Download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

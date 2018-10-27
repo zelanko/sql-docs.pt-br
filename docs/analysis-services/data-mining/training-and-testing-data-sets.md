@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018233"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145611"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -98,14 +98,14 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |Descreve como os filtros em um modelo interagem com conjuntos de dados de treinamento e teste.|[Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
 |Descreve como o uso de dados de treinamento e teste afeta a validação cruzada.|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Fornece informações sobre as interfaces programáticas para funcionar com conjuntos de treinamento e teste em uma estrutura de mineração.|[Conceitos e modelo de objeto AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Fornece sintaxe de DMX para criar conjuntos de controle.|[CRIAR ESTRUTURA DE MINERAÇÃO & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Conjuntos de linhas de esquema de mineração de dados &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|Fornece informações sobre as interfaces programáticas para funcionar com conjuntos de treinamento e teste em uma estrutura de mineração.|[Conceitos e modelo de objeto AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Fornece sintaxe de DMX para criar conjuntos de controle.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [Conjuntos de linhas de esquema de mineração de dados &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
  [Conceitos de mineração de dados](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

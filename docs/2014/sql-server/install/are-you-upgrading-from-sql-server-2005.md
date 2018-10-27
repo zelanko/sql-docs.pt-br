@@ -11,12 +11,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e211d3c6d787cc57f8f64378bac34659b3a6545c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099657"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Você está atualizando do SQL Server 2005?
   O fim do suporte estendido para o SQL Server 2005 é um motivo para atualizar agora para uma versão mais recente do SQL Server e do Banco de Dados SQL do Microsoft Azure. A atualização permite manter a segurança e a conformidade, alcançar um desempenho inovador e otimizar a infraestrutura da plataforma de dados.  
@@ -82,7 +82,7 @@ ms.locfileid: "48133216"
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 o fim do suporte](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [Atualização do SQL Server 2005 para SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [Fim do suporte do SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [Atualização do SQL Server 2005 para SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

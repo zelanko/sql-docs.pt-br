@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b95231d3065a07339bd5b4817bb614d97a9a91ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 616cc1e633d6683283d62d6fb3b3434780d9a919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034784"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147241"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Monitorar o Analysis Services com Eventos Estendidos do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "38034784"
  O nome especificado para este rastreamento; normalmente uma definição legível do rastreamento. O uso do valor *trace_id* como o nome é uma prática comum.  
   
  *AS_event*  
- O evento do Analysis Services a ser exposto. Consulte [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md) para os nomes dos eventos.  
+ O evento do Analysis Services a ser exposto. Consulte [Eventos de rastreamento do Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) para os nomes dos eventos.  
   
  *data_filename*  
  O nome do arquivo que contém dados dos eventos. Este nome terá um carimbo de data/hora como sufixo para evitar a substituição de dados se o rastreamento for enviado repetidas vezes.  

@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120373"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100407"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120373"
  Este exemplo apresenta o novo recurso [!INCLUDE[hek_2](../includes/hek-2-md.md)], que faz parte do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ele mostra as novas tabelas com otimização de memória e os procedimentos armazenados compilados nativamente, e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  Para exibir esse tópico para o SQL Server 2016, consulte [Extensões do AdventureWorks para demonstrar OLTP na memória](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  Para exibir esse tópico para o SQL Server 2016, consulte [Extensões do AdventureWorks para demonstrar OLTP na memória](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  O exemplo a seguir migra 5 tabelas do banco de dados do AdventureWorks para a otimização de memória, e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar [!INCLUDE[hek_2](../includes/hek-2-md.md)] no servidor.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "49120373"
   
 -   *UDTs de alias* – a tabela original usa dados definidos pelo usuário do tipo dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
   
--   *Agrupamento BIN2* – As colunas Name e ProductNumber são incluídas em chaves de índice e devem ter agrupamentos BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de agrupamento, como a não diferenciação de maiúsculas e minúsculas.  
+-   *Ordenação BIN2* – As colunas Name e ProductNumber são incluídas em chaves de índice e devem ter ordenações BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
   
 -   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Podemos ver um total de aproximadamente 6,5 GB de dados. Observe que o tamanho dos índices em tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem é igual ao tamanho dos índices antes de inserir os pedidos de vendas. O tamanho do índice não foi alterado porque ambas as tabelas estão usando índices de hash, e os índices de hash são estáticos.  
+ Podemos ver um total de aproximadamente 6,5 GB de dados. Observe que o tamanho dos índices nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem equivale ao tamanho dos índices antes de inserir os pedidos de vendas. O tamanho do índice não foi alterado porque ambas as tabelas estão usando índices de hash, e os índices de hash são estáticos.  
   
 #### <a name="after-demo-reset"></a>Após a redefinição de demonstração  
  O procedimento armazenado Demo.usp_DemoReset pode ser usado para redefinir a demonstração. Ele exclui os dados nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem, e repropaga os dados das tabelas originais SalesOrderHeader e SalesOrderDetail.  

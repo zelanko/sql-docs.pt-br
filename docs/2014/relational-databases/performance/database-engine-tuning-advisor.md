@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127408"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991169"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   O DTA (Orientador de Otimização do Mecanismo de Banco de Dados) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] analisa bancos de dados e faz recomendações que você pode usar para otimizar desempenho de consulta. Você pode usar o Orientador de Otimização do Mecanismo de Banco de Dados para selecionar e criar um conjunto ideal de índices, exibições indexadas e partições de tabela sem precisar de conhecimentos avançados sobre a estrutura do banco de dados ou dos recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com o DTA, é possível executar as tarefas a seguir.  
@@ -94,7 +94,7 @@ ms.locfileid: "48127408"
   
     2.  Os índices recomendados não oferecem aperfeiçoamento suficiente no desempenho da consulta no design do banco de dados físico atual.  
   
-    3.  O usuário que executa o orientador de otimização do mecanismo de banco de dados não é um membro do `db_owner` função de banco de dados ou o `sysadmin` função de servidor fixa. As consultas na carga de trabalho são analisadas no contexto de segurança do usuário que executa o Orientador de Otimização do Mecanismo de Banco de Dados. O usuário deve ser um membro da função de banco de dados `db_owner`.  
+    3.  O usuário que executa o Orientador de Otimização do Mecanismo de Banco de Dados não é um membro da função de banco de dados `db_owner` nem da função de servidor fixa `sysadmin`. As consultas na carga de trabalho são analisadas no contexto de segurança do usuário que executa o Orientador de Otimização do Mecanismo de Banco de Dados. O usuário deve ser um membro da função de banco de dados `db_owner`.  
   
 -   O Orientador de Otimização do Mecanismo de Banco de Dados armazena dados de sessão de ajuste e outras informações no banco de dados `msdb`. Se forem feitas alterações no banco de dados `msdb`, você estará correndo o risco de perder dados da sessão de ajuste. Para eliminar esse risco, implemente uma estratégia de backup apropriada para o banco de dados `msdb`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127408"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dependência em Procedimento armazenado estendido xp_msver  
  O Orientador de Otimização do Mecanismo de Banco de Dados depende do procedimento armazenado estendido **xp_msver** para fornecer a funcionalidade completa. Esse procedimento armazenado estendido é ativado por padrão. O Orientador de Otimização do Mecanismo de Banco de Dados usa esse procedimento armazenado estendido para buscar o número de processadores e a memória disponível no computador onde o banco de dados que está sendo ajustado está localizado. Se o **xp_msver** não estiver disponível, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá as características de hardware do computador no qual o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado. Se as características de hardware do computador onde o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado não estiverem disponíveis, supõe-se um processador e 1024 megabytes (MBs) de memória.  
   
- Essa dependência afeta as recomendações de particionamento porque o número de partições recomendado depende destes dois valores (número de processadores e memória disponível). A dependência também afeta os resultados de ajustes quando você usar um servidor de teste para ajustar o servidor de produção. Nesse cenário,o Orientador de Otimização do Mecanismo de Banco de Dados usa o **xp_msver** para buscar propriedades de hardware do servidor de produção. Após ajustar a carga de trabalho no servidor de teste, o Orientador de Otimização do Mecanismo de Banco de Dados usa estas propriedades de hardware para gerar uma recomendação. Para obter mais informações, consulte [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Essa dependência afeta as recomendações de particionamento porque o número de partições recomendado depende destes dois valores (número de processadores e memória disponível). A dependência também afeta os resultados de ajustes quando você usar um servidor de teste para ajustar o servidor de produção. Nesse cenário,o Orientador de Otimização do Mecanismo de Banco de Dados usa o **xp_msver** para buscar propriedades de hardware do servidor de produção. Após ajustar a carga de trabalho no servidor de teste, o Orientador de Otimização do Mecanismo de Banco de Dados usa estas propriedades de hardware para gerar uma recomendação. Para obter mais informações, veja [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Tarefas do Orientador de Otimização do Mecanismo de Banco de Dados  
  A tabela a seguir lista as tarefas comuns do Orientador de Otimização do Mecanismo de Banco de Dados e os tópicos que descrevem como executá-los.  

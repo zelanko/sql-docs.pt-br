@@ -18,21 +18,21 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153056"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145951"
 ---
 # <a name="translations-analysis-services"></a>Traduções (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
   
  Em um modelo de dados multidimensionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode inserir várias traduções de uma legenda para fornecer sequências de caracteres específicas da localidade com base no LCID. As traduções podem ser adicionadas ao nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados.  
   
- Definir uma tradução cria os metadados e legenda traduzida dentro do modelo, mas para processar cadeias de caracteres localizadas em um aplicativo cliente, você deve definir a propriedade `Language` no objeto ou aprovar um parâmetro `Locale Identifier` na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar sequências em francês). Planeje o uso de `Locale Identifier` se desejar dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definindo o `Language` propriedade funciona, mas isso também afeta o processamento e consultas, que pode ter consequências não intencionais. Definindo `Locale Identifier` é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
+ A definição de uma tradução cria os metadados e a legenda traduzida dentro do modelo, mas para renderizar cadeias de caracteres localizadas em um aplicativo cliente, você deve definir a propriedade `Language` no objeto ou passar um parâmetro `Locale Identifier` na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar cadeias de caracteres em francês). Planeje o uso de `Locale Identifier` para dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definir a propriedade `Language` funciona, mas isso também afeta o processamento e as consultas, o que pode ter consequências indesejadas. Definir `Locale Identifier` é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
   
- Uma tradução consiste em um LCID (Identificador de Localidade), uma legenda traduzida para o objeto (por exemplo, dimensão ou nome do atributo), e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar o mesmo agrupamento, então, quando criar a solução, tenha essas restrições naturais em mente.  
+ Uma tradução consiste em um LCID (Identificador de Localidade), uma legenda traduzida para o objeto (por exemplo, dimensão ou nome do atributo), e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há nenhum limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar a mesma ordenação, portanto, ao criar a solução, lembre-se dessas restrições naturais.  
   
 > [!TIP]  
 >  Você pode usar os aplicativos cliente, como o Excel, o Management Studio e o [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para retornar cadeias de caracteres traduzidas. Para obter detalhes, consulte [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
@@ -52,12 +52,12 @@ ms.locfileid: "48153056"
   
 4.  Clique com o botão direito do mouse em qualquer campo e selecione **Explorar dados**. Você verá as traduções em francês, espanhol e inglês de cada membro.  
   
- Formatos de data, hora e moeda não são implementados por meio de conversões. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de conversão de moeda e a propriedade `FormatString`. Consulte [Conversões de moeda e &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md) para obter detalhes.  
+ Formatos de data, hora e moeda não são implementados por meio de conversões. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de Conversão de Moeda e a propriedade `FormatString`. Consulte [Conversões de moeda e &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) para obter detalhes.  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) no Tutorial do Analysis Services orientará você pelas etapas de criação e teste de traduções.  
   
 ## <a name="defining-translations"></a>Definindo traduções  
- Definir uma tradução cria um objeto `Translation` como um filho do banco de dados, dimensão ou objeto de cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Use [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir a solução e definir traduções.  
+ A definição de uma tradução cria um objeto `Translation` como um filho de banco de dados, dimensão ou cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Use [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir a solução e definir traduções.  
   
 ### <a name="add-translations-to-a-cube"></a>Adicionar traduções a um cubo  
  Você pode adicionar traduções ao cubo, grupos de medidas, medidas, dimensões do cubo, perspectivas, KPIs, ações, conjuntos nomeados e membros calculados.  
@@ -68,7 +68,7 @@ ms.locfileid: "48153056"
   
 3.  Para cada objeto, especifique o idioma de destino (resolve internamente para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, se você estiver definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
-     Lembre-se de que você não pode alterar o agrupamento. Um cubo essencialmente usa um agrupamento, mesmo se você estiver dando suporte a vários idiomas por meio de legendas traduzidas (há uma exceção para atributos de dimensão, discutida abaixo). Se os idiomas não forem classificados corretamente no agrupamento compartilhado, será necessário fazer cópias do cubo para acomodar seus requisitos de agrupamento.  
+     Lembre-se de que você não pode alterar a ordenação. Um cubo essencialmente usa uma ordenação, mesmo se você estiver dando suporte a vários idiomas por meio de legendas traduzidas (há uma exceção para atributos de dimensão, discutida abaixo). Se os idiomas não forem classificados corretamente na ordenação compartilhada, será necessário fazer cópias do cubo para acomodar seus requisitos de ordenação.  
   
 4.  Compilar e implantar o projeto.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48153056"
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Adicionar traduções a uma dimensão e atributos  
  Você pode adicionar traduções a dimensões de banco de dados, atributos, hierarquias e níveis em uma hierarquia.  
   
- Legendas traduzidas são adicionadas ao modelo manualmente usando o teclado ou copiar e colar, mas para membros de atributo de dimensão, você pode obter valores traduzidos de um banco de dados externo. Especificamente, o `CaptionColumn` propriedade de um atributo pode ser associada a uma coluna em uma exibição da fonte de dados.  
+ Legendas traduzidas são adicionadas ao modelo manualmente usando o teclado ou copiar e colar, mas para membros de atributo de dimensão, você pode obter valores traduzidos de um banco de dados externo. Especificamente, a propriedade `CaptionColumn` de um atributo pode ser associada a uma coluna em uma exibição da fonte de dados.  
   
- No nível de atributo, você pode substituir as configurações de agrupamento, por exemplo, você pode desejar ajustar diferenciação de largura ou usar uma classificação binária para um atributo específico. Em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o agrupamento é exposto onde as associações de dados são definidas. Como você está associando uma tradução de atributo de dimensão a uma coluna de origem diferente no DSV, uma configuração de agrupamento está disponível para que você possa especificar o agrupamento usado pela coluna de origem. Consulte [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) para obter detalhes sobre o agrupamento da coluna no banco de dados relacional.  
+ No nível de atributo, você pode substituir as configurações de ordenação, por exemplo, você pode desejar ajustar diferenciação de largura ou usar uma classificação binária para um atributo específico. Em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a ordenação é exposta onde as associações de dados são definidas. Como você está associando uma tradução de atributo de dimensão a uma coluna de origem diferente no DSV, uma configuração de ordenação está disponível para que você possa especificar a ordenação usada pela coluna de origem. Consulte [Definir ou alterar a ordenação de coluna](../relational-databases/collations/set-or-change-the-column-collation.md) para obter detalhes sobre a ordenação da coluna no banco de dados relacional.  
   
 1.  No Gerenciador de Soluções, clique duas vezes no nome da dimensão para abrir o designer de dimensão.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48153056"
   
     4.  Escolha a coluna de origem que fornece os valores de membros de atributo traduzidos. Somente colunas já existentes na tabela ou consulta associada à dimensão estão disponíveis. Se a coluna não existir, você precisa modificar a exibição da fonte de dados, dimensão e cubo para selecionar a coluna.  
   
-    5.  Escolha a ordem de agrupamento e de classificação, se aplicável.  
+    5.  Escolha a ordem de ordenação e de classificação, se aplicável.  
   
 4.  Compilar e implantar o projeto.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48153056"
   
 2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, quer você esteja definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
-3.  Na página de propriedades do banco de dados, defina `Language` com o mesmo LCID especificado para a tradução. Opcionalmente, defina o `Collation` também se o padrão não faz mais sentido.  
+3.  Na página Propriedades do banco de dados, defina `Language` com o mesmo LCID especificado para a tradução. Opcionalmente, defina `Collation` também se o padrão não fizer mais sentido.  
   
 4.  Compilar e implantar o banco de dados.  
   
@@ -119,8 +119,8 @@ ms.locfileid: "48153056"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Idiomas e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
- [Definir ou alterar o agrupamento de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Dicas de globalização e práticas recomendadas para o &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md)   
+ [Definir ou alterar a ordenação de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

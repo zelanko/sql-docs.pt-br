@@ -1,26 +1,26 @@
 ---
 title: Conceitos de segurança para o cluster de big data do SQL Server | Microsoft Docs
-description: ''
+description: Este artigo descreve conceitos de segurança para o cluster de big data do SQL Server de 2019.
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050878"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>Conceitos de segurança para o cluster de big data do SQL Server
 
-Um cluster de Big Data seguro implica suporte consistente e coerente para cenários de autenticação e autorização, entre o SQL Server e o HDFS/Spark. A autenticação é o processo de verificação da identidade de um usuário ou serviço e garantir que eles são quem eles são afirmando ser. Autorização refere-se para conceder ou negar o acesso a recursos específicos com base na identidade do usuário solicitante. Esta etapa é executada depois que um usuário é identificado por meio da autenticação.
+Um cluster de big data seguro implica suporte consistente e coerente para cenários de autenticação e autorização, entre o SQL Server e o HDFS/Spark. A autenticação é o processo de verificação da identidade de um usuário ou serviço e garantir que eles são quem eles são afirmando ser. Autorização refere-se para conceder ou negar o acesso a recursos específicos com base na identidade do usuário solicitante. Esta etapa é executada depois que um usuário é identificado por meio da autenticação.
 
 Autorização no contexto de Big Data geralmente é feita por meio de listas de controle de acesso (ACLs) que associam identidades de usuário com permissões específicas. HDFS dá suporte a autorização, limitando o acesso a APIs do serviço, arquivos HDFS e execução do trabalho.
 
-Este artigo abordará os principais conceitos de segurança do cluster de Big Data.
+Este artigo abordará os principais conceitos relacionados à segurança no cluster de big data.
 
 ## <a name="cluster-endpoints"></a>Pontos de extremidade do cluster
 
@@ -80,5 +80,5 @@ Comunicação com os serviços não-SQL dentro do cluster de big data, como o Li
 
 Para saber mais sobre os clusters de grandes dados do SQL Server, consulte os seguintes artigos:
 
-- [O que é o SQL Server 2019 clusters de big data?](big-data-cluster-overview.md)
+- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)
 - [Início rápido: Implantar um cluster de big data do SQL Server no Kubernetes](quickstart-big-data-cluster-deploy.md)

@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062797"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146231"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
   *Statefulness* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062797"
   
 -   Vários comandos podem ser executados no contexto de uma única sessão.  
   
--   Suporte a transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o [Execute](../xmla/xml-elements-methods-execute.md) método.  
+-   Suporte a transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
   
  O XMLA define uma forma de suportar sessões em um ambiente da Web em um modo similar à abordagem usada pelo protocolo DAV (Distributed Authoring and Versioning) para a implementação do bloqueio em um ambiente flexível. Esta implementação se compara ao DAV, já que o provedor pode fazer uma sessão expirar por vários motivos (por exemplo, um tempo limite ou um erro de conexão). Quando as sessões forem suportadas, os serviços Web deverão estar atentos e prontos para lidarem com conjuntos de comandos interrompidos que deverão ser reiniciados.  
   

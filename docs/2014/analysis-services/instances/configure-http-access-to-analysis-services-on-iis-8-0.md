@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd3a478fd3412e035e71ac33790e26595af309c1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120223"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146071"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS (Serviços de Informações da Internet) 8.0
   Este artigo explica como configurar um ponto de extremidade HTTP para acessar uma instância do Analysis Services. É possível habilitar o acesso HTTP configurando o MSMDPUMP.dll, uma extensão de ISAPI que é executada no IIS (Serviços de Informações da Internet) e que bombeia dados entre os aplicativos cliente e um servidor do Analysis Services. Esta abordagem oferece um meio alternativo de se conectar ao Analysis Services quando sua solução de BI requer os seguintes recursos:  
@@ -294,7 +294,7 @@ ms.locfileid: "49120223"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Para obter mais informações sobre como configurar a conexão de modo programático, consulte [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md).  
+ Para obter mais informações sobre como configurar a conexão de modo programático, consulte [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  Como etapa final, faça testes mais rigorosos usando um computador cliente executado no ambiente de rede no qual as conexões serão originadas.  
   

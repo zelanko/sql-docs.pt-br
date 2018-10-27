@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989908"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144542"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *estrutura*  
  Identificador de estrutura.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você não especificar **modelo de MINERAÇÃO** ou **estrutura de MINERAÇÃO**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procura o tipo de objeto com base no nome e processa o objeto correto. Se o servidor contiver uma estrutura de mineração e um modelo de mineração com nomes idênticos, um erro será retornado.  
   
  A tabela a seguir descreve o resultado de se usarem as diferentes formas da sintaxe.  
@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |DELETE FROM MINING STRUCTURE*\<estrutura >*. CASOS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
 |Excluir de MINING MODEL*\<modelo >*<br /><br /> ou em<br /><br /> Excluir de MINING MODEL*\<modelo >*. CONTEÚDO|Executa ProcessClear no modelo de mineração, mas deixa intacto os valores de estado. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
   
- Para obter mais informações sobre tipos de processamento, consulte [tipo de elemento &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ Para obter mais informações sobre tipos de processamento, consulte [tipo de elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove todo o conteúdo do modelo de NB_Sample.  

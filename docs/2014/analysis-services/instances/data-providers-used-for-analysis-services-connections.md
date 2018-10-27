@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136996"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145213"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provedores de dados usados para conexões do Analysis Services
   O Analysis Services fornece três provedores de dados do servidor e acesso a dados. Todos os aplicativos que se conectam ao Analysis Services fazem isso usando um desses provedores. Dois dos provedores, ADOMD.NET e AMO (objetos de gerenciamento do Analysis Services), são provedores de dados gerenciados. O provedor OLE DB do Analysis Services (MSOLAP DLL) é um provedor de dados nativo.  
@@ -42,7 +42,7 @@ ms.locfileid: "48136996"
   
 -   No SQL Server Management Studio, conecte-se à instância do Analysis Services. Clique com botão direito a instância que você deseja verificar, aponte para **relatórios**e clique em **geral**. As informações sobre a versão e a edição serão exibidas no relatório.  
   
- Número de versão inicial do build o principal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é 12.0.2000.9.  
+ O número principal da versão inicial do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é 12.0.2000.9.  
   
  Para obter mais informações sobre como descobrir a versão e a edição do SQL Server, consulte [Como determinar a versão e a edição do SQL Server e seus componentes](http://support.microsoft.com/kb/321185).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48136996"
   
  Ao conectar-se a um banco de dados, as propriedades da cadeia de conexão das três bibliotecas são basicamente as mesmas. Quase todas as cadeias de conexão que você define para o ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) também funcionarão para o AMO e o provedor OLE DB para Analysis Services. Consulte [Propriedades da cadeia de conexão &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) para obter mais informações.  
   
- Para obter mais informações sobre conexões programáticas, consulte [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ Para obter mais informações sobre conexões programáticas, consulte [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  O AMO é um provedor de dados gerenciado usado para administração do servidor e definição de dados. Por exemplo, o SQL Server Management Studio usa o AMO para se conectar ao Analysis Services.  
@@ -109,7 +109,7 @@ ms.locfileid: "48136996"
   
  Uma conexão usando o AMO geralmente é mínima, consistindo de "fonte de dados =\<servername >". Depois que uma conexão é estabelecida, você usa a API para trabalhar com coleções de bancos de dados e objetos principais. O SSDT e o SSMS usam o AMO para se conectar a uma instância do Analysis Services.  
   
- Para obter mais informações sobre conexões programáticas, consulte [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ Para obter mais informações sobre conexões programáticas, consulte [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conectar ao Analysis Services](connect-to-analysis-services.md)  

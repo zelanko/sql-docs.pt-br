@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164286"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147571"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece ferramentas de cliente que você pode usar para gerenciar estruturas de mineração e modelos de mineração existentes. Esta seção descreve as operações de gerenciamento que você pode executar usando cada ambiente.  
@@ -29,9 +29,9 @@ ms.locfileid: "48164286"
 ## <a name="in-this-section"></a>Nesta seção  
  [Movendo objetos de Mineração de dados](moving-data-mining-objects.md)  
   
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usando o SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services - mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Usando o SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services – Mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Localização de objetos de mineração de dados  
  As estruturas e os modelos de mineração que foram processados são armazenados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "48164286"
   
 -   [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)  
   
--   [Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
+-   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
   
 -   [Exibir ou alterar parâmetros do algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164286"
 > [!WARNING]  
 >  Todas as alterações em uma estrutura ou um modelo de mineração, inclusive alterações em metadados como um nome ou uma descrição, requerem que a estrutura ou o modelo sejam reprocessados.  
   
- Se você não tiver o arquivo de solução que foi usado para criar o projeto de mineração de dados ou objetos, você pode importar o projeto existente do servidor usando o Assistente de importação do Analysis Services, fazer modificações aos objetos e, em seguida, reimplantar usando a `Incremental` opção. Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Se você não tiver o arquivo de solução que foi usado para criar o projeto ou objetos de mineração de dados, poderá importar o projeto existente do servidor usando o Assistente de Importação do Analysis Services, fazer modificações nos objetos e, em seguida, reimplantar usando a opção `Incremental`. Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Gerenciando objetos de mineração de dados no SQL Server Management Studio  
  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível fazer scripts, processar ou excluir estruturas e modelos de mineração. Você pode exibir apenas um conjunto limitado de propriedades usando o Pesquisador de Objetos; entretanto, é possível exibir metadados adicionais sobre modelos de mineração abrindo a janela **Consultas DMX** e selecionando uma estrutura de mineração.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164286"
 ### <a name="analysis-management-objects-amo"></a>Objetos de Gerenciamento de Análise (AMO)  
  AMO (Objetos de Gerenciamento de Análise) é um modelo de objeto criado com base em XMLA que lhe proporciona o controle total sobre objetos de mineração de dados. Usando o AMO, você pode criar, implantar e monitorar estruturas e modelos de mineração  
   
--   [Conceitos e modelo de objeto AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Conceitos e modelo de objeto AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164286"
 ### <a name="data-mining-extensions-dmx"></a>Extensões DMX  
  Extensões DMX podem ser usadas com outras interfaces de comando como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.Net para criar, excluir e consultar estruturas e modelos de mineração.  
   
--   [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](/sql/dmx/dmx-statements-data-definition)  
+-   [Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
  **Restrições:** algumas propriedades não podem ser alteradas usando DMX.  
   

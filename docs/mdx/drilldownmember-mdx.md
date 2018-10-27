@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7991ec4b9f1e4968060774825c08a7cb82fb49b7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f5ab4ee77bad08ab3883645ad5e2628a265aa4e9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740485"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144891"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 
@@ -44,12 +44,12 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  Uma palavra-chave que indica comparação recursiva de conjuntos.  
   
  *Include_Calc_Members*  
- Uma palavra-chave para habilitar os membros calculados a serem incluídas nos resultados da busca detalhada.  
+ Uma palavra-chave para habilitar a ser incluído nos resultados da busca detalhada dos membros calculados.  
   
-## <a name="remarks"></a>Remarks  
- Essa função retorna um conjunto de membros filho que são ordenados por hierarquia e inclui membros especificados no primeiro conjunto que também estão presentes no segundo conjunto. Membros pai não serão buscados se o primeiro conjunto contiver o membro pai e um ou mais filhos. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto, a não ser que todos os membros filho incluídos no conjunto de resultados da função sejam imediatamente incluídos com seu membro pai. A função constrói o conjunto de resultados recuperando os filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto. Se **RECURSIVA** for especificado, a função continua recursivamente comparar os membros do conjunto em relação ao segundo conjunto, recuperando os filhos para cada membro no resultado de resultados conjunto que também está presente no segundo conjunto até que nenhum membro do conjunto de resultados pode ser encontrado no segundo conjunto.  
+## <a name="remarks"></a>Comentários  
+ Essa função retorna um conjunto de membros filho que são ordenados por hierarquia e inclui membros especificados no primeiro conjunto que também estão presentes no segundo conjunto. Membros pai não serão buscados se o primeiro conjunto contiver o membro pai e um ou mais filhos. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto, a não ser que todos os membros filho incluídos no conjunto de resultados da função sejam imediatamente incluídos com seu membro pai. A função constrói o conjunto de resultados recuperando os filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto. Se **RECURSIVA** for especificado, a função continua a comparar recursivamente os membros do resultado definidos em relação ao segundo conjunto, recuperando os filhos para cada membro no conjunto de resultados que também está presente no segundo conjunto até que não mais os membros do conjunto de resultados podem ser encontrados no segundo conjunto.  
   
- Consultando a propriedade XMLA **MdpropMdxDrillFunctions** permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)para obter detalhes.  
+ Consultando a propriedade XMLA **MdpropMdxDrillFunctions** lhe permite verificar se o nível de suporte que o servidor fornece para as funções de detalhamento; consulte [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)para obter detalhes.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. A busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
@@ -82,6 +82,6 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

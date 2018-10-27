@@ -2,7 +2,7 @@
 title: Definir as configurações para o Assistente de migração de dados (SQL Server) | Microsoft Docs
 description: Saiba como definir as configurações para o Assistente de migração de dados atualizando os valores no arquivo de configuração
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755574"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643814"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir as configurações para o Assistente de migração de dados
 
 Você pode ajustar o comportamento específico do Assistente de migração de dados, definindo valores de configuração no arquivo dma.exe.config. Este artigo descreve os valores de configuração de chave.
 
-Você pode encontrar o arquivo dma.exe.config para o aplicativo de desktop do Assistente de migração de dados e o utilitário de linha de comando, nas seguintes pastas em seu computador.
+Você pode encontrar o arquivo dma.exe.config para aplicativo de desktop do Assistente de migração de dados e o utilitário de linha de comando, nas seguintes pastas em seu computador.
 
 - Aplicativo da área de trabalho
 
@@ -40,7 +40,7 @@ Certifique-se de salvar uma cópia do arquivo de configuração original antes d
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bancos de dados para avaliar em paralelo
 
-Assistente de migração de dados avalia vários bancos de dados em paralelo. Durante a avaliação de Assistente de migração de dados extrai camada de dados dacpac (aplicativo) para compreender o esquema de banco de dados. Essa operação pode tempo limite se vários bancos de dados no mesmo servidor são avaliados em paralelo. 
+Assistente de migração de dados avalia vários bancos de dados em paralelo. Durante a avaliação de Assistente de migração de dados extrai camada de dados dacpac (aplicativo) para compreender o esquema de banco de dados. Essa operação pode atingir o tempo limite se vários bancos de dados no mesmo servidor são avaliados em paralelo. 
 
 Começando com o Assistente de migração de dados v2.0, você pode controlar isso definindo o parallelDatabases valor de configuração. Valor padrão é 8.
 
@@ -87,15 +87,15 @@ Durante a avaliação, o Assistente de migração de dados extrai camada de dado
 
 - commandTimeout
 
-   Isso define a propriedade IDbCommand.CommandTimeout nas *segundos*. (Padrão = 60)
+   Esse parâmetro define a propriedade IDbCommand.CommandTimeout na *segundos*. (Padrão = 60)
 
 - databaseLockTimeout
 
-   Isso é equivalente a [bloqueio definido\_tempo limite de tempo limite\_período ](../t-sql/statements/set-lock-timeout-transact-sql.md) na *milissegundos*. (Padrão = 5000)
+   Esse parâmetro é equivalente a [bloqueio definido\_tempo limite de tempo limite\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) na *milissegundos*. (Padrão = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Número de conexões de pool de conexão SQL para usar. (Padrão = 8)
+  Esse parâmetro define o número de conexões de pool de conexão SQL para usar. (Padrão = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Limite de recomendação
 

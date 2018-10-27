@@ -1,18 +1,18 @@
 ---
 title: O que é o controlador de cluster de big data do SQL Server? | Microsoft Docs
-description: ''
+description: Este artigo descreve o controlador de um cluster de big data do SQL Server de 2019.
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460601"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050868"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>O que é o controlador de clusters de grandes dados do SQL Server?
 
@@ -69,4 +69,4 @@ Autenticação para o ponto de extremidade de serviço do controlador se baseia 
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

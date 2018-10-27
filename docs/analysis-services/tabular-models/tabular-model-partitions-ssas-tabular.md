@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045250"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146281"
 ---
 # <a name="tabular-model-partitions"></a>Partições de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições e pode criar novas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As informações fornecidas neste tópico descrevem partições em um banco de dados modelo tabular implantado. Para obter mais informações sobre como criar e gerenciar partições durante a criação do modelo, consulte [partições](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições e pode criar novas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As informações fornecidas neste tópico descrevem partições em um banco de dados modelo tabular implantado. Para obter mais informações sobre como criar e gerenciar partições durante a criação de modelos, consulte [partições](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Seções neste tópico:  
   
@@ -58,15 +58,15 @@ ms.locfileid: "34045250"
 |----------------|-------------|  
 |Administrador|Ler, processar, criar, copiar, mesclar, excluir|  
 |Processar|Leitura e processo|  
-|Somente Leitura|Leitura|  
+|Somente Leitura|leitura|  
   
- Para saber mais sobre como criar funções durante a criação do modelo usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para saber mais sobre como gerenciar os membros da função para funções modelo tabulares implantadas usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [funções de modelo de tabela](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Para saber mais sobre como criar funções durante a criação de modelo usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para saber mais sobre como gerenciar os membros da função para funções de modelo de tabela implantadas por meio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Processamento paralelo  
 O Analysis Services inclui o processamento paralelo para tabelas com duas ou mais partições, aumentando o desempenho de processamento. Não há nenhuma configuração para o processamento paralelo (consulte as observações). O processamento paralelo ocorre por padrão quando você processa a tabela ou seleciona várias partições para a mesma tabela e processo. Você ainda pode optar por processar as partições de uma tabela de forma independente.  
   
 > [!NOTE]  
->  Para especificar se as operações de atualização são executadas em sequência ou em paralelo, você pode usar a opção da propriedade **maxParallism** com o [comando Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
+>  Para especificar se as operações de atualização são executadas em sequência ou em paralelo, você pode usar a opção da propriedade **maxParallism** com o [comando Sequence (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl).
 
 > [!NOTE]  
 >  Se a recodificação for detectada, o processamento paralelo pode causar aumento do uso de recursos do sistema. Isso ocorre porque várias operações de partição devem ser interrompidas e reiniciadas com a nova codificação em paralelo.  

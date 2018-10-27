@@ -1,5 +1,5 @@
 ---
-title: Etapa 4 criar recursos de dados usando o T-SQL | Microsoft Docs
+title: Criar recursos de dados usando o T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202068"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806676"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>Etapa 4: Criar recursos de dados usando o T-SQL
+# <a name="create-data-features-using-t-sql"></a>Criar recursos de dados usando o T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Depois de exploração de dados, coletar algumas informações dos dados e estiver pronto para migrar para *engenharia de recurso*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
+Depois de exploração de dados, você reuniu algumas ideias sobre a partir dos dados e está pronto para ir para *engenharia de recursos*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
 
-Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artigo faz parte de um tutorial [análise de Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Nesta etapa, você aprenderá a criar recursos de dados brutos usando uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você chamará essa função por meio de um procedimento armazenado para criar uma tabela que contém os valores do recurso.
 
@@ -29,7 +29,7 @@ Os valores de distância relatados nos dados originais baseiam-se na distância 
 
 Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância de viagem usando fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância da corrida usando fnCalculateDistance
 
 1.  A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para esse passo a passo. Reserve um minuto para examinar o código.
   
@@ -106,16 +106,16 @@ Para adicionar o valor calculado a uma tabela que pode ser usada para treinar o 
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. É por isso engenharia de recurso é importante.
+    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. É por isso a engenharia de recursos é importante.
 
-A próxima etapa, você aprenderá como usar esses recursos de dados para criar e treinar um modelo de aprendizado de máquina usando Python.
+Na próxima etapa, você aprenderá a usar esses recursos de dados para criar e treinar um modelo de aprendizado de máquina usando o Python.
 
 ## <a name="next-step"></a>Próxima etapa
 
-[Etapa 5: Treinar e salvar um modelo de Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Treinar e salvar um modelo de Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Etapa anterior
 
-[Etapa 3: Explorar e visualizar os dados](sqldev-py3-explore-and-visualize-the-data.md)
+[Explorar e visualizar os dados](sqldev-py3-explore-and-visualize-the-data.md)
 
 

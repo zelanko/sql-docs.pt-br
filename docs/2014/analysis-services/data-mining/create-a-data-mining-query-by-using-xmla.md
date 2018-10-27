@@ -13,12 +13,12 @@ ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dae6b521b26158e8bf854fe357d7119ca3a3b4c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161746"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148081"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Criar uma consulta de mineração de dados usando XMLA
   Você pode criar várias consultas referentes a objetos de mineração de dados usando AMO, DMX ou XML/A.  
@@ -100,7 +100,7 @@ ms.locfileid: "48161746"
      O painel Resultados exibe a definição de esquema, junto com os valores para o modelo especificado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Conjuntos de linhas de esquema de mineração de dados](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

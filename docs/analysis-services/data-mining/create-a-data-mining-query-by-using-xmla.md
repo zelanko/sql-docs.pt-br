@@ -1,5 +1,5 @@
 ---
-title: Criar uma consulta de mineração de dados usando o XMLA | Microsoft Docs
+title: Criar uma consulta de mineração de dados usando XMLA | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a786279915b38abb93941d7485f2b8c3a3413d6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9741a81c10a71623f6e336795bb47ae199ee13d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017403"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146951"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Criar uma consulta de mineração de dados usando XMLA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34017403"
   
 2.  No **consulta** painel, coloque o cursor depois  **\<lista de restrições >** e pressione ENTER para adicionar uma nova linha.  
   
-3.  Posicione o cursor na linha em branco e digite  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Coloque o cursor na linha em branco e digite  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      A seção completa de restrições deverá ser parecida com esta:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34017403"
      O painel Resultados exibe a definição de esquema, junto com os valores para o modelo especificado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Linhas do esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

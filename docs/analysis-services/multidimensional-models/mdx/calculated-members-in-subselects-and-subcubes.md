@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023823"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145311"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Um membro calculado é um membro da dimensão cujo valor é calculado a partir de uma expressão em tempo de execução e pode ser usado em subseleções e subcubos para definir com mais precisão o cubespace de uma consulta.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Permissão de membros calculados no subespaço  
- A propriedade de cadeia de conexão **SubQueries** na propriedade <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROPMSMDSUBQUERIES** em [Propriedades XMLA com suporte &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) define o comportamento ou a permissão de membros ou conjuntos calculados em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
+ A propriedade de cadeia de conexão **SubQueries** na propriedade <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROPMSMDSUBQUERIES** em [Propriedades XMLA com suporte &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) define o comportamento ou a permissão de membros ou conjuntos calculados em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
   
  A propriedade SubQueries permite os seguintes valores.  
   
 |||  
 |-|-|  
-|Value|Descrição|  
+|Valor|Description|  
 |0|Os membros calculados não são permitidos em subseleções ou subcubos.<br /><br /> Ocorrerá um erro durante a avaliação da subseleção ou do subcubo se um membro calculado for referenciado.|  
 |1|Os membros calculados são permitidos em subseleções ou subcubos, mas nenhum membro ascendente é introduzido no subespaço retornando.|  
 |2|Os membros calculados são permitidos em subseleções e subcubos, mas nenhum membro ascendente é introduzido no subespaço retornando. Além disso, a granularidade mista é permitida na seleção de membros calculados.|  
@@ -108,7 +108,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||Todos os Períodos|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|Estados Unidos|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
@@ -125,6 +125,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subseleções em consultas](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Propriedades XMLA suportadas & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Propriedades XMLA com suporte &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

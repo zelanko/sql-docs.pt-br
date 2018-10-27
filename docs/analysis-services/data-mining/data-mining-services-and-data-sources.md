@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016583"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145881"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34016583"
  Também é possível definir propriedades que permitem ajustar o servidor e controlar a segurança para uso de cliente. Para obter mais informações, consulte [Propriedades do Recurso](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o suporte para algoritmos de plug-in nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre o suporte para algoritmos de plug-in pelas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acesso programático a objetos de mineração de dados  
  Você pode usar os seguintes modelos de objeto para criar uma conexão com um banco de dados do Analysis Services e trabalhar com objetos de mineração de dados:  
@@ -117,14 +117,14 @@ ms.locfileid: "34016583"
   
  Se o procedimento retornar um conjunto de dados, o cliente receberá um conjunto de dados ou uma tabela de dados com uma tabela aninhada contendo as linhas. Por exemplo, se você criar uma consulta baseada no conteúdo de modelo, a consulta retornará o modelo inteiro. Para evitar que sejam retornadas muitas linhas, você pode gravar procedimentos armazenados usando o modelo de objeto ADOMD+.  
   
- Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados não podem ser usados para alterar a segurança em objetos de servidor de dados. Quando você executa um procedimento armazenado, o contexto atual do usuário é usado para determinar o acesso a todos os objetos de servidor. Portanto, os usuários devem ter as permissões apropriadas em qualquer objeto de banco de dados que eles acessam.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquitetura física &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitetura física & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Arquitetura física &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Gerenciamento de soluções de mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

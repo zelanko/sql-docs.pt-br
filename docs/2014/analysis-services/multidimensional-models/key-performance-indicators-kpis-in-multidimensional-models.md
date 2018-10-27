@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134006"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145212"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
   Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
   
- Um KPI processa informações sobre um conjunto de metas, a fórmula real do desempenho registrado em cubos e a medida para mostrar a tendência e o status do desempenho. O AMO é usado para definir as fórmulas e outras definições sobre os valores de um KPI. Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor os valores de KPI ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Um KPI processa informações sobre um conjunto de metas, a fórmula real do desempenho registrado em cubos e a medida para mostrar a tendência e o status do desempenho. O AMO é usado para definir as fórmulas e outras definições sobre os valores de um KPI. Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor os valores de KPI ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Kpi> é composto de: informações básicas, a meta, o valor real atingido, o valor de status, o valor de tendência e a pasta na qual o KPI é exibido. As informações básicas incluem o nome e a descrição do KPI. A meta é uma expressão MDX que avalia a um número. O valor real é uma expressão MDX que avalia a um número. O status e valor de tendência são expressões MDX que avaliam a um número. A pasta é um local sugerido para o KPI para ser apresentado ao cliente.  
   

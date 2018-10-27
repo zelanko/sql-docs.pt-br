@@ -11,19 +11,19 @@ ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1d70c3276c479de8d8f8d67256729ad9f2bce005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63cbcd4defa3840fc7fdb5c80340e5fd1ea1244e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099817"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Escolhendo ferramentas de análise e emissão de relatórios da Microsoft
   A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão de relatórios para as ferramentas BI da Microsoft mais adequadas para cargas de trabalho.  
   
  O objetivo é ajudá-lo a escolher a ferramenta que melhor atenda às suas necessidades. Para obter mais informações sobre de um produto, clique no link do produto na tabela.  
   
- Se você estiver procurando uma visão geral breve dessas ferramentas para ajudá-lo a decidir quais ferramentas são certa para você, consulte [apresentando o Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/en-us/library/dn655131.aspx).  
+ Se estiver procurando uma visão geral breve dessas ferramentas para ajudá-lo a escolher as ferramentas mais adequadas, consulte [Apresentando ferramentas de Business Intelligence (BI) da Microsoft](http://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Cargas de trabalho|Usuário|||Ferramentas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -33,9 +33,9 @@ ms.locfileid: "48223816"
 |Crie modelos de dados avançados||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
 |Execute análise de previsão de autoatendimento||||||[Data Mining Add-Ins para Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Visualize e explore dados||[Power View](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
-|Faça perguntas usando a consulta de linguagem natural|||||[P E R](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
+|Faça perguntas usando a consulta de linguagem natural|||||[P & R](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
 |Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à exibição de arquivos de < 10 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (dá suporte à visualização < 250MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI para aplicativo do Windows](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [aplicativo de iPad para Power BI](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
-|Colabore e compartilhe|||[Sites do SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites de equipe do SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites do Power BI](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
+|Colabore e compartilhe|||[Sites do SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites da equipe do SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites do Power BI](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Crie visualizações de dados ad-hoc|||[Power View para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  

@@ -1,5 +1,5 @@
 ---
-title: Etapa 6 Operacionalizar o modelo de Python usando o SQL Server | Microsoft Docs
+title: Operacionalizar o modelo de Python usando o SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888952"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806806"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Etapa 6: Operacionalizar o modelo de Python usando o SQL Server
+# <a name="operationalize-the-python-model-using-sql-server"></a>Operacionalizar o modelo de Python usando o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial [análise de Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md). 
@@ -361,7 +361,7 @@ Neste tutorial, você aprendeu como trabalhar com o código Python inserido em p
 
 ## <a name="previous-step"></a>Etapa anterior
 
-[Etapa 5: Treinar e salvar um modelo de Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Treinar e salvar um modelo de Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>Confira também
 

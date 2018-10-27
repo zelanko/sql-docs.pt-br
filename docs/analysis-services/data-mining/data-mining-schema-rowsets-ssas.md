@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linhas do esquema (SSAs) de mineração de dados | Microsoft Docs
+title: Data Mining Schema Rowsets (SSAs) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f29f8578fad9fe1f9ed50bf23a5aba80e14c560a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017723"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144282"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Conjuntos de linhas de esquema de mineração de dados (SSAs)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 > [!NOTE]  
 >  Você também pode consultar os conjuntos de linhas de esquema de mineração de dados usando o XMLA. Para obter mais informações sobre como fazer isso no SQL Server Management Studio, consulte [Criar uma consulta de mineração de dados usando o XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  

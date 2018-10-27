@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 003e50efa8ed21720410830a3d02134df15c3c97
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c1f37be45b702828d3c663eac0fb575a0af3bbd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023773"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146931"
 ---
 # <a name="adomdnet-server-functionality"></a>Funcionalidade de servidor do ADOMD.NET
   Todos os objetos de servidor do ADOMD.NET oferecem acesso somente leitura aos dados e metadados do servidor. Para recuperar dados e metadados, use o modelo de objeto de servidor do ADOMD.NET, uma vez que o modelo de objeto de servidor não dá suporte a conjuntos de linhas do esquema.  
@@ -44,11 +44,11 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>O que é um procedimento armazenado?  
  Um *procedimento armazenado* é um método que tem as seguintes características:  
   
--   Você chamar um procedimento armazenado em sua própria com MDX [chamar](../../mdx/mdx-data-manipulation-call.md) instrução.  
+-   Você chamar um procedimento armazenado em sua própria com o MDX [chamar](../../mdx/mdx-data-manipulation-call.md) instrução.  
   
 -   Um procedimento armazenado pode conter qualquer número de parâmetros.  
   
--   Um procedimento armazenado pode retornar um conjunto de dados, um **IDataReader**, ou um resultado vazio.  
+-   Um procedimento armazenado pode retornar um conjunto de dados, uma **IDataReader**, ou um resultado vazio.  
   
  O exemplo a seguir usa o procedimento armazenado fictício `FinalSalesNumbers`:  
   
@@ -57,6 +57,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação do servidor no ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [Programação do servidor no ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

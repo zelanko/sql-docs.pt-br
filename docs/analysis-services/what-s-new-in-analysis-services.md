@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016083"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145991"
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que&#39;novo no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ Uma *tabela calculada* é uma construção exclusivamente de modelos com base em
  ### <a name="powershell-for-tabular-models"></a>PowerShell para modelos de tabela    
  Esta versão inclui aprimoramentos do PowerShell para modelos de tabela no nível de compatibilidade 1200. Você pode usar todos os cmdlets aplicáveis, além de cmdlets específicos para o modo Tabular: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) e [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Operações de banco de dados de script de SSMS    
- No [SSMS (SQL Server Management Studio) mais recente](http://msdn.microsoft.com/library/mt238290.aspx), o script agora está habilitado para comandos de banco de dados, inclusive Create, Alter, Delete, Backup, Restore, Attach e Detach. A saída é em TMSL (linguagem de script de modelo de tabela) em JSON. Consulte [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para obter mais informações.    
+ No [SSMS (SQL Server Management Studio) mais recente](http://msdn.microsoft.com/library/mt238290.aspx), o script agora está habilitado para comandos de banco de dados, inclusive Create, Alter, Delete, Backup, Restore, Attach e Detach. A saída é em TMSL (linguagem de script de modelo de tabela) em JSON. Consulte [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) para obter mais informações.    
  ### <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services    
  A[Tarefa Executar DDL do Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) agora também aceita comandos de TMSL (linguagem de script de modelo de tabela).     
  ### <a name="ssas-powershell-cmdlet"></a>Cmdlet do PowerShell do SSAS    
@@ -103,7 +103,7 @@ Para obter detalhes, consulte [Analysis Services PowerShell Reference](../analys
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>A TMSL (linguagem de script de modelo de tabela) tem suporte no SSMS    
   Usando a [versão mais recente do SSMS](http://msdn.microsoft.com/library/mt238290.aspx), agora você pode criar scripts para automatizar a maioria das tarefas administrativas para modelos de tabela 1200. Atualmente, as seguintes tarefas podem ser incluídas no script: Process em qualquer nível, além de CREATE, ALTER e DELETE no nível do banco de dados.    
     
- Funcionalmente, TMSL é equivalente à extensão de ASSL XMLA que fornece definições de objeto multidimensional, exceto pelo fato de que o TMSL usa descritores nativos como **model**, **table**e **relationship** para descrever metadados tabulares. Consulte [Referência de Linguagem de Scripts de Modelo de Tabela &#40;TMSL&#41;](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para ver mais detalhes sobre o esquema.    
+ Funcionalmente, TMSL é equivalente à extensão de ASSL XMLA que fornece definições de objeto multidimensional, exceto pelo fato de que o TMSL usa descritores nativos como **model**, **table**e **relationship** para descrever metadados tabulares. Consulte [Referência de Linguagem de Scripts de Modelo de Tabela &#40;TMSL&#41;](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) para ver mais detalhes sobre o esquema.    
     
  Um script gerado com base em JSON para um modelo de tabela pode ter a seguinte aparência:    
     
@@ -121,7 +121,7 @@ Para obter detalhes, consulte [Analysis Services PowerShell Reference](../analys
 }    
 ```    
 
-A carga é um documento JSON que pode ser tão mínimo quanto o exemplo mostrado acima, ou altamente enriquecido com o conjunto completo de definições de objeto. [Referência de Linguagem de Scripts de Modelo de Tabela &#40;TMSL&#41;](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) descreve a sintaxe.
+A carga é um documento JSON que pode ser tão mínimo quanto o exemplo mostrado acima, ou altamente enriquecido com o conjunto completo de definições de objeto. [Referência de Linguagem de Scripts de Modelo de Tabela &#40;TMSL&#41;](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) descreve a sintaxe.
 
 No nível do banco de dados, os comandos CREATE, ALTER e DELETE produzirão o script TMSL de saída na janela XMLA familiar.  Outros comandos, como o Process, também podem ser com script nesta versão. O suporte a scripts para muitas outras ações pode ser adicionado em uma versão futura.    
 

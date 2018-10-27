@@ -9,41 +9,41 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b7ac934afdc086a50020e9ba22ca2d236ee091b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ea192588186f69adbc04ab6a56123206e1fb7817
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026263"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146451"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipos de dados no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Para todos os <xref:Microsoft.AnalysisServices.DataItem> objetos, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte ao seguinte subconjunto de **System.Data.OleDb.OleDbType**. Para definir ou ler o tipo de dados, use [o tipo de dados DataItem &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+  Para todos os <xref:Microsoft.AnalysisServices.DataItem> objetos, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte ao seguinte subconjunto dos **System.Data.OleDb.OleDbType**. Para definir ou ler o tipo de dados, use [tipos de dados DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Tipos de dados com suporte  
   
 |||  
 |-|-|  
 |BigInt|Um inteiro de 64 bytes com sinal. O *BigInt* tipo de valor representa inteiros com valores que variam de 9.223.372.036.854.775.808 negativo a 9.223.372.036.854.775.807 positivo.|  
-|Binary|Um fluxo de dados binários de **bytes** tipo. **Bytes** é um tipo de valor que representa inteiros sem sinal com valores que variam de 0 a 255.|  
-|Booliano|As instâncias desse tipo têm valores de **true** ou **false**.|  
-|Moeda|Um *moeda* valor variando de -922.337.203.685.477,5808 a + 922.337.203.685.477,5807 com precisão de dez milésimos de uma unidade de moeda (quatro casas decimais).|  
-|Data|Dados de data e hora armazenados como um duplo. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é uma fração de um dia ou hora do dia.|  
+|Binary|Um fluxo de dados binários da **bytes** tipo. **Bytes** é um tipo de valor que representa inteiros sem sinal com valores que variam de 0 a 255.|  
+|Booliano|As instâncias desse tipo têm valores de **verdadeira** ou **falso**.|  
+|CURRENCY|Um *moeda* valor variando de -922.337.203.685.477,5808 a + 922.337.203.685.477,5807 com precisão de dez milésimos de uma unidade de moeda (quatro casas decimais).|  
+|data|Dados de data e hora armazenados como um duplo. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é uma fração de um dia ou hora do dia.|  
 |Double|Um número de ponto flutuante dentro do intervalo de -1,79769313486232E +308 a 1,79769313486232E +308. Um valor Double armazena informações numéricas com até 15 dígitos decimais de precisão.|  
 |Integer|Um número inteiro com sinal de 32 bits que representa números inteiros com valores que variam de 2.147.483.648 negativo a 2.147.483.647 positivo.|  
 |Single|Um número de ponto flutuante dentro do intervalo de - 3,4028235E +38 a 3,4028235E +38. Um valor Single armazena informações numéricas com até sete dígitos decimais de precisão.|  
 |Smallint|Um inteiro com sinal de 16 bits. O *Smallint* tipo de valor representa inteiros com sinal com valores que variam de 32768 negativo a 32767 positivo.|  
 |Tinyint|Um inteiro com sinal de 8 bits. O tipo de valor Tinyint representa inteiros com valores que variam de 128 negativo a 127 positivo.|  
 |UnsignedBigInt|Um inteiro não assinado de 64 bits. O *UnsignedBigInt* tipo de valor representa inteiros sem sinal com valores que variam de 0 a 18.446.744.073.709.551.615.|  
-|UnsignedInt|Um inteiro não assinado de 32 bits. O *UnsignedInt* tipo de valor representa inteiros sem sinal com valores entre 0 e 4.294.967.295.|  
+|UnsignedInt|Um inteiro não assinado de 32 bits. O *UnsignedInt* tipo de valor representa inteiros sem sinal com valores que variam de 0 a 4.294.967.295.|  
 |UnsignedSmallInt|Um inteiro sem sinal de 16 bits. O *UnsignedSmallInt* tipo de valor representa inteiros sem sinal com valores que variam de 0 a 65535.|  
 |UnsignedTinyInt|Um inteiro sem sinal de 8 bits. O *UnsignedTinyInt* tipo de valor representa inteiros sem sinal com valores que variam de 0 a 255|  
-|WChar|Um fluxo com terminação nula de caracteres Unicode. Um *WChar* é uma coleção sequencial de caracteres Unicode que é usada para representar o texto.|  
+|WChar|Um fluxo com terminação nula de caracteres Unicode. Um *WChar* é uma coleção sequencial de caracteres Unicode que é usada para representar texto.|  
   
 ## <a name="amo-validations-on-data-types"></a>Validações de AMO em tipos de dados  
  A tabela a seguir lista as validações extras que o AMO (Objetos de Gerenciamento de Análise) faz para determinadas associações:  
   
-|Objeto|Associação|Tipos de dados permitidos|  
+|Object|Associação|Tipos de dados permitidos|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Todos menos Binary|  
 ||NameColumn|Apenas WChar|  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40099bef14b2172205a18101036b57d71f3b5812
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830044"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146041"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Os conjuntos de resultados retornados dependem *nome* é especificado, quando ele é especificado e o objeto de banco de dados é.  
+ Os conjuntos de resultados retornados dependem *nome* é especificado, quando ele é especificado, e qual objeto de banco de dados é.  
   
 1.  Se **sp_help** é executado sem argumentos, as informações de resumo de objetos de todos os tipos que existem no banco de dados atual serão retornadas.  
   
@@ -72,7 +72,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Rule_name**|**nvarchar(** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
-    |**Agrupamento**|**sysname**|Agrupamento do tipo de dados. NULL para tipos de dados de não caracteres.|  
+    |**Ordenação**|**sysname**|Ordenação do tipo de dados. NULL para tipos de dados de não caracteres.|  
   
 3.  Se *nome* é qualquer objeto de banco de dados que não seja um tipo de dados **sp_help** retorna esse resultado conjuntos de resultados de conjunto e também adicionais, com base no tipo de objeto especificado.  
   
@@ -100,7 +100,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos na coluna: Sim ou Não.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Exclui os espaços em branco à direita. Retorna Sim ou Não.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Somente para compatibilidade com versões anteriores.|  
-        |**Agrupamento**|**sysname**|Agrupamento da coluna. NULL para tipos de dados não caracteres.|  
+        |**Ordenação**|**sysname**|Ordenação da coluna. NULL para tipos de dados não caracteres.|  
   
     -   Conjunto de resultados adicionais retornado em colunas de identidade:  
   

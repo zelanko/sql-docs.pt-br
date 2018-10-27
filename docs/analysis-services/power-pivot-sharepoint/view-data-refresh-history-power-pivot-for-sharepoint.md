@@ -1,5 +1,5 @@
 ---
-title: Exibir histórico (PowerPivot para SharePoint) de atualização de dados | Microsoft Docs
+title: Exibir histórico (Power Pivot para SharePoint) de atualização de dados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099677"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Exibir o Histórico de Atualização de Dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34028642"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Agendar uma atualização de dados (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
- [Atualização de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
+ [Agendar uma Atualização de Dados (Power Pivot para SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Atualização de Dados PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

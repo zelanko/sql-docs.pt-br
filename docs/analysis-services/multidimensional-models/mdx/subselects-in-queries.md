@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025263"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147881"
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -202,7 +202,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Valor das Vendas pela Internet|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|Estados Unidos|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -257,7 +257,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||Todos os Produtos|Acessórios|Componentes|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|Estados Unidos|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -282,7 +282,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||Todos os Produtos|Acessórios|Componentes|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|Estados Unidos|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   A cláusula HAVING não é permitida em uma cláusula de eixo. Em vez disso, use uma expressão de função [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md).  
   
--   Por padrão os membros calculados não são permitidos em subseleções; No entanto, essa restrição pode ser alterada, em uma base por sessão, atribuindo um valor para o **subconsultas** propriedade de cadeia de caracteres de conexão em <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROP_MSMD_SUBQUERIES** propriedade [ Suporte para propriedades XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consulte [Membros calculados em subseleções e subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
+-   Por padrão os membros calculados não são permitidos em subseleções; No entanto, essa restrição pode ser alterada, em uma base por sessão, atribuindo um valor para o **subconsultas** propriedade de cadeia de caracteres de conexão no <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROP_MSMD_SUBQUERIES** propriedade no [ Suporte para propriedades XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consulte [Membros calculados em subseleções e subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
   
   

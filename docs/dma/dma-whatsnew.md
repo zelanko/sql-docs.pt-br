@@ -1,7 +1,7 @@
 ---
 title: O que há de novo no Assistente de migração de dados (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655645"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643944"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 Este artigo lista as adições em cada versão de DMA Data Migration Assistant ().
+
+## <a name="dma-v41"></a>V 4.1 DMA
+A versão v 4.1 de DMA introduz suporte para uma avaliação abrangente dos bancos de dados do SQL Server local migrando para o banco de dados de instância gerenciada do SQL.
+
+O fluxo de trabalho de avaliação ajuda a detectar os problemas a seguir, que podem afetar sua migração para o banco de dados de instância gerenciada do SQL:
+
+- **Sem suporte ou recursos parcialmente suportados**. O DMA avalia seu banco de dados do SQL Server de origem para os recursos em uso que são parcialmente compatível ou não no destino de banco de dados de instância gerenciada do SQL. A ferramenta, em seguida, fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas de mitigação para que os clientes podem tirar essas informações em consideração ao planejar seus projetos de migração.
+
+- **Problemas de compatibilidade**. O DMA também identifica problemas de compatibilidade relacionados às áreas a seguir:
+
+    - Alterações significativas: os objetos de esquema específico que podem interromper a funcionalidade de migração para o banco de dados de destino.  É recomendável corrigir esses objetos de esquema após a migração de banco de dados.
+    - Alterações de comportamento: os objetos de esquema relatados podem continuar a funcionar, mas eles podem apresentar um comportamento diferente, por exemplo degradação do desempenho.
+    - Problemas de informação: estes objetos não terá impacto sobre a migração, mas foi preteridos do recurso de versões do SQL Server.
+
+Depois que a avaliação for concluída, use nosso [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de bancos de dados do SQL Server para o banco de dados de instância gerenciada do SQL.  DMS dá suporte a ambos [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (uma vez) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) migrações de banco de dados (tempo de inatividade mínimo) para o banco de dados de instância gerenciada do SQL.
 
 ## <a name="dma-v40"></a>O DMA v4.0
 A versão de v 4.0 de DMA apresenta o recurso de recomendações de SKU de banco de dados SQL do Azure, que permite que os usuários identifiquem o mínimo recomendado de SKU de banco de dados SQL do Azure com base nos contadores de desempenho coletados dos computadores de seus bancos de dados de hospedagem. Esse recurso fornece recomendações relacionadas ao preço da camada, nível de computação e tamanho máximo de dados, bem como o custo estimado por mês. Ele também oferece a capacidade de provisionar todos os seus bancos de dados do Azure em massa.

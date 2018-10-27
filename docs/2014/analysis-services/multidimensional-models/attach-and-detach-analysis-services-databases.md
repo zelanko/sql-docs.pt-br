@@ -19,26 +19,26 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44624d6e223c00d76142b2b0859e8b312647da9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186176"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144911"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos esses casos e muito mais, o `Attach` e `Detach` comandos permitem o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para colocar o banco de dados offline e colocá-lo online novamente com pouco esforço.  
   
 ## <a name="attach-and-detach-commands"></a>Comandos Anexar e Desanexar  
- O `Attach` comando permite que você colocar online um banco de dados foi colocado offline. Você pode anexar o banco de dados à instância do servidor original ou a outra instância. Ao anexar um banco de dados, o usuário pode especificar a configuração **ReadWriteMode** para o banco de dados. O comando `Detach` permite colocar no modo offline um banco de dados do servidor.  
+ O comando `Attach` permite que o banco de dados que estava offline seja alterado para online. Você pode anexar o banco de dados à instância do servidor original ou a outra instância. Ao anexar um banco de dados, o usuário pode especificar a configuração **ReadWriteMode** para o banco de dados. O comando `Detach` permite colocar no modo offline um banco de dados do servidor.  
   
 ## <a name="attach-and-detach-usage"></a>Uso dos comandos Anexar e Desanexar  
- O `Attach` comando é usado para colocar online uma estrutura de banco de dados existente. Se o banco de dados esteja anexado em `ReadWrite` modo, ele pode ser anexado somente uma vez em uma instância de servidor. No entanto, se o banco de dados esteja anexado em `ReadOnly` modo, ele pode ser anexado várias vezes para diferentes instâncias de servidor. O mesmo banco de dados não pode ser anexado mais de uma vez à mesma instância de servidor. Ocorrerá um erro se você tentar anexar o mesmo banco de dados mais de uma vez, mesmo se os dados forem copiados para pastas diferentes.  
+ O comando `Attach` é usado para colocar uma estrutura de banco de dados existente no modo online. Caso o banco de dados esteja anexado em modo `ReadWrite`, ele poderá ser anexado somente uma vez em uma instância de servidor. No entanto, caso o banco de dados esteja anexado em modo `ReadOnly`, ele poderá ser anexado várias vezes em diferentes instâncias de servidor. O mesmo banco de dados não pode ser anexado mais de uma vez à mesma instância de servidor. Ocorrerá um erro se você tentar anexar o mesmo banco de dados mais de uma vez, mesmo se os dados forem copiados para pastas diferentes.  
   
 > [!IMPORTANT]  
 >  Se for preciso informar uma senha para desanexar o banco de dados, a mesma senha será necessária para anexar o banco de dados.  
   
- O `Detach` comando é usado para colocar offline uma estrutura de banco de dados existente. Ao desanexar o banco de dados, é preciso fornecer uma senha para proteger os metadados confidenciais.  
+ O comando `Detach` é usado para colocar uma estrutura de banco de dados existente no modo offline. Ao desanexar o banco de dados, é preciso fornecer uma senha para proteger os metadados confidenciais.  
   
 > [!IMPORTANT]  
 >  Para proteger o conteúdo dos arquivos de dados, use uma lista de controle de acesso para a pasta, as subpastas e os arquivos de dados.  
@@ -52,7 +52,7 @@ ms.locfileid: "48186176"
  Os comandos `Attach` e `Detach` devem ser executados como operações únicas. Eles não podem ser combinados com outras operações na mesma transação. Além disso, o `Attach` e `Detach` comandos são comandos transacionais atômicos. Isso significa que a operação poderá ser bem-sucedida ou não. Nenhum banco de dados ficará incompleto.  
   
 > [!IMPORTANT]  
->  Privilégios de administrador de banco de dados ou do servidor são necessárias para executar o `Detach` comando.  
+>  Para executar o comando `Detach`, é preciso ter privilégios de administrador do banco de dados ou do servidor.  
   
 > [!IMPORTANT]  
 >  Para executar o comando `Attach`, é preciso ter privilégios de administrador do servidor.  
@@ -63,7 +63,7 @@ ms.locfileid: "48186176"
  [Mover um banco de dados do Analysis Services](move-an-analysis-services-database.md)   
  [Banco de dados ReadWriteModes](database-readwritemodes.md)   
  [Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)  
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

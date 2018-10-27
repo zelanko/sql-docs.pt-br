@@ -1,6 +1,6 @@
 ---
 title: Baixe dados de demonstração de táxi de NYC e scripts para embedded R e Python (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Instruções para baixar dados de exemplo de táxi de Nova York e criação de um banco de dados. Dados são usados nos tutoriais do SQL Server que mostra como inserir o R e Python no SQL Server procedimentos armazenados e funções T-SQL.
+description: Instruções para baixar dados de exemplo de táxi de Nova York e criação de um banco de dados. Dados são usados nos tutoriais de linguagem Python do SQL Server e R que mostra como incorporar o script em procedimentos armazenados do SQL Server e funções T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463018"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806706"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>Dados de demonstração de táxi de Nova York para o SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de NYC para tutoriais do SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo explica como configurar um banco de dados de exemplo consiste em dados públicos a partir de [táxi de Nova York e Limusines comissão](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados nos tutoriais de várias R e Python para análise no banco de dados no SQL Server. Os dados de exemplo serão um por cento do conjunto de dados público. Em seu sistema, o arquivo de backup do banco de dados é um pouco mais de 90 MB, fornecendo 1.7 milhões de linhas na tabela de dados primário.
@@ -26,7 +26,7 @@ Tutoriais e guias de início rápido usando esse conjunto de dados incluem o seg
 
 +  [Usar um modelo de Python no SQL Server para treinamento e pontuação](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>Baixe o banco de dados de demonstração
+## <a name="download-files"></a>Baixar arquivos
 
 O banco de dados de exemplo é um arquivo de backup hospedado pela Microsoft. Download do arquivo começa imediatamente quando você clica no link. 
 
@@ -66,7 +66,7 @@ A tabela a seguir resume os objetos criados no banco de dados de demonstração 
 |**PredictTipSingleMode**  |procedimento armazenado| Criado pelo script PredictTipSingleMode.sql. Chama o modelo treinado para criar previsões usando o modelo. Esse procedimento armazenado aceita uma nova observação como entrada, com valores de recursos individuais passados como parâmetros na linha, e retorna um valor que prevê o resultado da nova observação. Esse procedimento armazenado é usado em [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |procedimento armazenado|Criado pelo script TrainTipPredictionModel.sql. Treina um modelo de regressão logística chamando um pacote R. O modelo prevê o valor da coluna tipped e é treinado usando uma seleção aleatória de 70% dos dados. A saída do procedimento armazenado é o modelo treinado, que é salvo na tabela nyc_taxi_models. Esse procedimento armazenado é usado em [treinar e salvar um modelo](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## <a name="query-data-for-verification"></a>Consultar dados de verificação
+## <a name="query-the-data"></a>Consultar os dados
 
 Como uma etapa de validação, execute uma consulta para confirmar se que os dados foram carregados.
 

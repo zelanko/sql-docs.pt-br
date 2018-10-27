@@ -1,5 +1,5 @@
 ---
-title: Usando propriedades de célula (MDX) | Microsoft Docs
+title: Usando propriedades da célula (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023423"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145301"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>Propriedades de célula MDX - usando as propriedades de célula
+# <a name="mdx-cell-properties---using-cell-properties"></a>Propriedades de célula MDX – usando propriedades da célula
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   As propriedades de célula em expressões multidimensionais (MDX) contêm informações sobre o conteúdo e o formato das células de uma fonte de dados multidimensional, como um cubo.  
   
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009) A célula não pode ser atualizada porque a atualização não tem suporte nas dimensões de mineração de dados, indireta ou de modelo de mineração.|  
 |**VALUE**|O valor não formatado da célula.|  
   
- Somente as propriedades de célula **CELL_ORDINAL**, **FORMATTED_VALUE**e **VALUE** são necessárias. Todas as propriedades de célula, intrínsecas ou específicas do provedor, são definidas no conjunto de linhas do esquema **PROPERTIES** , incluindo seus tipos de dados e o suporte do provedor. Para obter mais informações sobre o conjunto de linhas do esquema **PROPERTIES** , consulte [Conjunto de linhas MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Somente as propriedades de célula **CELL_ORDINAL**, **FORMATTED_VALUE**e **VALUE** são necessárias. Todas as propriedades de célula, intrínsecas ou específicas do provedor, são definidas no conjunto de linhas do esquema **PROPERTIES** , incluindo seus tipos de dados e o suporte do provedor. Para obter mais informações sobre o conjunto de linhas do esquema **PROPERTIES** , consulte [Conjunto de linhas MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  Por padrão, se a palavra-chave **CELL PROPERTIES** não for usada, as propriedades da célula retornadas serão **VALUE**, **FORMATTED_VALUE**e **CELL_ORDINAL** (nessa ordem). Se a palavra-chave **CELL PROPERTIES** for usada, serão retornadas somente as propriedades de célula explicitamente declaradas com a palavra-chave.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

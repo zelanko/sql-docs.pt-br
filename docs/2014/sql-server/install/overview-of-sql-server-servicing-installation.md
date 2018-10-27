@@ -11,19 +11,19 @@ ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21f672002f73600d74043f2b38bcfc88df508977
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab2ef4879ae4c29c43bfa07c0ccf314eae51ff39
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100207"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Visão geral da instalação de manutenção do SQL Server
   Você pode aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se o nível da versão de um componente existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for posterior ao da versão de atualização, o programa de Instalação o excluirá da atualização. Para obter mais informações sobre como aplicar uma manutenção de atualização, consulte [instalar o SQL Server 2014 atualizações de serviço](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
   
  As seguintes considerações se aplicam à instalação de atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   Todos os recursos que pertencem a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser atualizados ao mesmo tempo. Por exemplo, quando atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], você também deverá atualizar os componentes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se eles estiverem instalados como parte da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos compartilhados, como as ferramentas de gerenciamento [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sempre devem ser atualizados para a versão mais recente. Se nenhuma instância ou nenhum componente da árvore de recursos estiver selecionado, ele não será atualizado.  
+-   Todos os recursos que pertencem a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser atualizados ao mesmo tempo. Por exemplo, quando atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], você também deverá atualizar os componentes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se eles estiverem instalados como parte da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos compartilhados, como as Ferramentas de Gerenciamento, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sempre devem ser atualizados para a versão mais recente. Se nenhuma instância ou nenhum componente da árvore de recursos estiver selecionado, ele não será atualizado.  
   
 -   Por padrão, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de log de atualização são salvos como % arquivos de programas %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48070148"
 ## <a name="requirements-and-known-issues"></a>Requisitos e problemas conhecidos  
  Os requisitos de espaço em disco recomendados são, aproximadamente, 2,5 vezes o tamanho do pacote para instalação, download e extração do pacote. Após instalar um service pack, você pode remover o pacote baixado. Todos os arquivos temporários serão removidos automaticamente.  
   
- **Examine os problemas conhecidos:** para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico de notas de versão correspondentes aqui: [Notas de versão do SQL Server](http://msdn.microsoft.com/en-us/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Examine os problemas conhecidos:** para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico de notas de versão correspondentes aqui: [Notas de versão do SQL Server](http://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Visão geral da instalação  
  Esta seção aborda a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para atualizações cumulativas e service packs, inclusive como fazer o seguinte:  
@@ -48,9 +48,9 @@ ms.locfileid: "48070148"
 -   Reiniciar serviços e aplicativos  
   
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>Preparar-se para uma instalação de atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- É altamente recomendável que você faça o seguinte antes de instalar atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
+ É altamente recomendável que você faça o seguinte antes de instalar atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
--   **Fazer backup de seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados do sistema** — antes de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] atualizações, fazer backup de `master`, `msdb`, e `model` bancos de dados. A instalação de uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] altera esses bancos de dados, tornando-os incompatíveis com versões anteriores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os backups desses bancos de dados serão necessários se você decidir reinstalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem essas atualizações.  
+-   **Fazer backup de seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados do sistema** — antes de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] atualizações, fazer backup de `master`, `msdb`, e `model` bancos de dados. A instalação de uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] altera esses bancos de dados, tornando-os incompatíveis com versões anteriores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os backups desses bancos de dados serão necessários se você decidir reinstalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem essas atualizações.  
   
      Também é recomendável fazer backup dos bancos de dados de usuário.  
   
@@ -61,12 +61,12 @@ ms.locfileid: "48070148"
   
     -   Bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por padrão, eles são instalados em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\. Para a instalação do WOW, o caminho padrão é C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\.  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definição de configuração no arquivo de configuração msmdsrv. ini. Por padrão, ele fica localizado em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Config\ directory.  
+    -   Parâmetro de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no arquivo de configuração msmdsrv.ini. Por padrão, ele fica localizado em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Config\ directory.  
   
-    -   (Opcional) O banco de dados que contém o repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta etapa será necessária somente se o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiver sido configurado para funcionar com a biblioteca de DSO (Decision Support Objects).  
+    -   (Opcional) O banco de dados que contém o repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta etapa será necessária somente se o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiver sido configurado para funcionar com a biblioteca de DSO (Decision Support Objects).  
   
     > [!NOTE]  
-    >  Se não for feito o backup dos bancos de dados, do arquivo de configuração e do repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você não poderá reverter uma instância atualizada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a versão anterior.  
+    >  Se não for feito o backup dos bancos de dados, do arquivo de configuração e do repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você não poderá reverter uma instância atualizada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a versão anterior.  
   
 -   **Verifique se os bancos de dados do sistema têm espaço livre suficiente** — se a opção de crescimento automático não estiver selecionada para o `master` e `msdb` bancos de dados do sistema, esses bancos de dados devem ter pelo menos 500 KB de espaço livre. Para verificar se os bancos de dados têm espaço suficiente, execute o procedimento armazenado do sistema `sp_spaceused` nos bancos de dados `master` e `msdb`. Se o espaço não alocado de um deles for inferior a 500 KB, aumente o tamanho do banco de dados.  
   
@@ -83,10 +83,10 @@ ms.locfileid: "48070148"
  Esta seção descreve o processo de instalação.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] atualizações devem ser instaladas em uma conta que tenha privilégios administrativos no computador em que eles serão instalados. Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
+>  As atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] devem ser instaladas com uma conta que tenha privilégios administrativos no computador em que serão instaladas. Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Iniciando uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Para instalar uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], execute o arquivo de pacote autoextraível.  
+ Para instalar uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , execute o arquivo de pacote autoextraível.  
   
  Pacote de atualização cumulativa (CU): \<lt;sqlserver2014 > - KBxxxxxx -*PPP*.exe  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48070148"
  Para aplicar as atualizações aos componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que fazem parte de um cluster de failover, consulte a seção sobre a instalação de cluster de failover. Para obter mais informações sobre como executar uma instalação de atualização no modo autônomo, consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ####  <a name="Slipstream"></a> Atualizações de produto no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalação  
- A Atualização de Produto é um recurso na Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ela integra as últimas atualizações de produto com a instalação principal, para que o produto principal e suas atualizações aplicáveis sejam instalados ao mesmo tempo. A Atualização de Produto pode procurar as atualizações aplicáveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, no WSUS (Windows Server Update Services), em uma pasta local ou em um compartilhamento de rede.  Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode efetuar pull de uma atualização cumulativa, service pack ou service pack mais atualização cumulativa. A funcionalidade da Atualização de Produto é uma extensão da funcionalidade Instalação Integrada que estava disponível no PCU1 do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
+ A Atualização de Produto é um recurso na Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ela integra as últimas atualizações de produto com a instalação principal, para que o produto principal e suas atualizações aplicáveis sejam instalados ao mesmo tempo. A Atualização de Produto pode procurar as atualizações aplicáveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, no WSUS (Windows Server Update Services), em uma pasta local ou em um compartilhamento de rede.  Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode efetuar pull de uma atualização cumulativa, service pack ou service pack mais atualização cumulativa. A funcionalidade da Atualização de Produto é uma extensão da funcionalidade Instalação Integrada que estava disponível no PCU1 do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="updating-a-prepared-image-of-includessnoversionincludesssnoversion-mdmd"></a>Atualizando uma imagem preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  É possível aplicar uma atualização a uma instância preparada não configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem concluir a configuração da instância preparada. As diferentes maneiras de aplicar uma atualização a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são explicados a seguir:  

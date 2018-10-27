@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063386"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147841"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "48063386"
   
 |Object|Caracteres inválidos|  
 |------------|------------------------|  
-|`Server`|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Ver [convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obter detalhes.|  
+|`Server`|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|: / \ * &#124; ? "[()] {} <>|  
 |`Level` ou `Attribute`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` ou `Hierarchy`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
@@ -92,6 +92,6 @@ ms.locfileid: "48063386"
 ## <a name="see-also"></a>Consulte também  
  [Palavras reservadas para MDX](/sql/mdx/mdx-reserved-words)   
  [Traduções &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [Conformidade XML for Analysis &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [Conformidade XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevelBottom (MDX) | Microsoft Docs
+title: Drilldownlevelbottom=1=«conjunto (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d691efc1b8e1758f5dbacd43b2886eed75fa6dd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 14b0b2dfd3e4578558e49cc305c37821e208c65d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740775"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144931"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 
@@ -31,7 +31,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Contagem*  
+ *Count*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Level_Expression*  
@@ -43,14 +43,14 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Include_Calc_Members*  
  Opcional. Uma palavra-chave que adiciona membros calculados aos resultados da busca detalhada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma expressão numérica for especificada, o **DrilldownLevelBottom** função classificará, em ordem crescente, os filhos de cada membro no conjunto especificado, de acordo com o valor especificado, conforme avaliado sobre o conjunto de membros filho. Se uma expressão numérica não for especificada, a função classificará, em ordem crescente, os filhos de cada membro no conjunto especificado, de acordo com os valores das células representados pelo conjunto de membros filho, como determinados pelo contexto de consulta; esse comportamento é semelhante às funções BottomCount e Tail (MDX), que retornam um conjunto de membros em ordem natural, sem qualquer classificação.  
   
- Depois da classificação, o **DrilldownLevelBottom** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados em *contagem*, com o menor valor.  
+ Depois da classificação, o **DrilldownLevelBottom** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados na *contagem*, com o menor valor.  
   
- O **DrilldownLevelBottom** função é semelhante ao [DrilldownLevel](../mdx/drilldownlevel-mdx.md) função, mas em vez de incluir todos os filhos de cada membro no nível especificado, o **DrilldownLevelBottom** função retorna o número mais baixo de membros filho.  
+ O **DrilldownLevelBottom** função é semelhante ao [DrilldownLevel](../mdx/drilldownlevel-mdx.md) função, mas em vez de incluir todos os filhos de cada membro no nível especificado, o  **Drilldownlevelbottom=1=«conjunto** função retorna o número mais baixo de membros filho.  
   
- Consultando a propriedade XMLA MdpropMdxDrillFunctions permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) para obter detalhes.  
+ Consultando a propriedade XMLA MdpropMdxDrillFunctions permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna os três filhos inferiores do nível Categoria do Produto, com base na medida padrão. No cubo de exemplo do Adventure Works, os três filhos inferiores de Acessórios são Pneus e tubos, Bombas e Alforjes. No Management Studio, na janela de consulta do MDX, você pode navegar para Produtos | Categorias de Produto | Membros | Todos os Produtos | Acessórios para exibir a lista completa. Você pode aumentar o argumento Contagem para retornar mais membros.  
@@ -83,6 +83,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte também  
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

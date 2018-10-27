@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027556"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147781"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027556"
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
   
- Um KPI processa informações sobre um conjunto de metas, a fórmula real do desempenho registrado em cubos e a medida para mostrar a tendência e o status do desempenho. O AMO é usado para definir as fórmulas e outras definições sobre os valores de um KPI. Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor os valores de KPI ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Um KPI processa informações sobre um conjunto de metas, a fórmula real do desempenho registrado em cubos e a medida para mostrar a tendência e o status do desempenho. O AMO é usado para definir as fórmulas e outras definições sobre os valores de um KPI. Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor os valores de KPI ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Kpi> é composto de: informações básicas, a meta, o valor real atingido, o valor de status, o valor de tendência e a pasta na qual o KPI é exibido. As informações básicas incluem o nome e a descrição do KPI. A meta é uma expressão MDX que avalia a um número. O valor real é uma expressão MDX que avalia a um número. O status e valor de tendência são expressões MDX que avaliam a um número. A pasta é um local sugerido para o KPI para ser apresentado ao cliente.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34027556"
 |Termo|Definição|  
 |----------|----------------|  
 |Meta|Uma expressão numérica MDX ou um cálculo que retorna o valor alvo do KPI.|  
-|Value|Uma expressão numérica MDX que retorna o valor real do KPI.|  
+|Valor|Uma expressão numérica MDX que retorna o valor real do KPI.|  
 |Status|Uma expressão MDX que representa o estado do KPI em um point-in-time.<br /><br /> O status da expressão MDX deve retornar um valor normalizado entre -1 e 1. Valores iguais ou menores que -1 serão interpretados como "ruim" ou "baixo". Um valor de zero (0) será interpretado como "aceitável" ou "médio". Os valores iguais ou maiores que 1 serão interpretados como "bom" ou "alto".<br /><br /> Um número ilimitado de valores intermediários pode ser opcionalmente retornado e pode ser usado para exibir qualquer número de estados adicionais, caso tenham suporte pelo aplicativo cliente.|  
 |Tendência|Uma expressão MDX que avalia o valor do KPI ao longo do tempo. A tendência pode ser qualquer critério com base no tempo e que seja útil em um contexto empresarial específico.<br /><br /> A expressão MDX de tendência permite que um usuário empresarial determine se o KPI está melhorando ou piorando ao longo do tempo.|  
 |Indicador de status|Um elemento visual que fornece uma indicação rápida do status de um KPI. A exibição do elemento é determinada pelo valor da expressão MDX que avalia o status.|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027556"
 ## <a name="parent-kpis"></a>KPIs Pai  
  Uma organização pode rastrear diferentes métricas empresariais em diferentes níveis. Por exemplo, apenas dois ou três KPIs podem ser usados para medir o sucesso de toda a empresa, mas esses KPIs gerais podem ser usados em três ou quatro outros KPIs rastreados pelas unidades de negócios ao longo da empresa. Além disso, as unidades de negócio em uma empresa podem usar estatísticas diferentes para calcular o mesmo KPI, esses resultados são acumulados para o KPI geral.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]permite que você defina uma relação pai-filho entre KPIs. Essa relação pai-filho permite que os resultados do KPI filho seja usada para calcular os resultados do KPI pai. Os aplicativos cliente também podem usar essa relação para exibir os KPIs pai e filho adequadamente.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação pai-filho entre KPIs. Essa relação pai-filho permite que os resultados do KPI filho seja usada para calcular os resultados do KPI pai. Os aplicativos cliente também podem usar essa relação para exibir os KPIs pai e filho adequadamente.  
   
 ## <a name="weights"></a>Pesos  
  Os pesos também podem ser atribuídos à KPIs filho. Os pesos permitem que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste proporcionalmente os resultados do KPI filho ao calcular o valor do KPI pai.  

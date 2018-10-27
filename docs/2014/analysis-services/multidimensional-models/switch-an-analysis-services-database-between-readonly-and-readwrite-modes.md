@@ -15,15 +15,15 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178196"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147871"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
-  Geralmente há situações quando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de banco de dados (dba) quer alterar o modo de leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como compartilhar o banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência de usuário.  
+  Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como compartilhar o banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência de usuário.  
   
  Um modo de banco de dados pode ser alternado de várias formas. Este documento explica os cenários comuns a seguir:  
   
@@ -173,9 +173,9 @@ ms.locfileid: "48178196"
  [Anexar e desanexar bancos de dados do Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](database-storage-location.md)   
  [Banco de dados ReadWriteModes](database-readwritemodes.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

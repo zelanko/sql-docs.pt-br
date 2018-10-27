@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193656"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146582"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
   As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
@@ -33,13 +33,13 @@ ms.locfileid: "48193656"
   
 -   Ações padrão, que retornam o elemento de ação (URL, HTML, DataSet, RowSet e outros elementos) associado a uma seção selecionada do cubo onde a ação ocorre.  
   
- Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor as ações ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor as ações ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Um objeto simples <xref:Microsoft.AnalysisServices.Action> é composto de: informações básicas, o destino no qual a ação deve ocorrer, uma condição para limitar o escopo da ação e o tipo. As informações básicas incluem o nome da ação, sua descrição, a legenda sugerida e outros.  
   
  O destino é o local real no cubo onde a ação deve acontecer. O destino é composto de um tipo de destino e um objeto de destino. O tipo de destino representa o tipo de objeto, no cubo, onde a ação será habilitada. Tipo de destino pode ser membros de nível, células, hierarquia, membros de hierarquia ou outros. O objeto de destino for um objeto específico do tipo de destino, se o tipo de destino for hierarquia, então o objeto de destino será qualquer uma das hierarquias definidas no cubo.  
   
- A condição é um `Boolean` expressão MDX que é avaliada no evento da ação. Se a condição for avaliada como `true`, em seguida, a ação é executada. Caso contrário, a ação não será executada.  
+ A condição é uma expressão MDX `Boolean` avaliada no evento da ação. Se a condição for avaliada como `true`, então, a ação será executada. Caso contrário, a ação não será executada.  
   
  O tipo é a forma de ação a ser executada. <xref:Microsoft.AnalysisServices.Action> é uma classe abstrata, portanto, a ser usada se precisar usar uma das classes derivadas. Dois tipos de ações são predefinidos: análise e relatório. Elas têm classes derivadas correspondentes: <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Outras ações são abrangidas na classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

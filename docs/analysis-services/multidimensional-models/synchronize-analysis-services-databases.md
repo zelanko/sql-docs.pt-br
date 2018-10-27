@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025363"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145911"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025363"
   
  A porta TCP 2383 deve estar aberta em ambos os servidores para permitir conexões remotas entre instâncias padrão. Para obter mais informações sobre a criação de uma exceção no Firewall do Windows, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Servidores de origem e de destino devem ser a mesma versão e o service pack. Porque os metadados do modelo é sincronizado, para garantir a compatibilidade de compilação número para ambos os servidores deve ser o mesmo. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre os recursos em cada edição, consulte [edições e os recursos com suporte para SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Servidores de origem e de destino devem ser a mesma versão e service pack. Porque os metadados do modelo também são sincronizados, para garantir a compatibilidade da compilação número para ambos os servidores deve ser o mesmo. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre os recursos em cada edição, consulte [edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  O modo de implantação de servidor deve ser idêntico em cada servidor. Se o banco de dados que você estiver sincronizando for multidimensional, os servidores de origem e de destino deverão ser configurados no modo de servidor multidimensional. Para obter mais informações sobre modos de implantação, consulte [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34025363"
  Se você não sincronizou funções ou associação, lembre-se de especificar agora as permissões de acesso de usuário no banco de dados de destino.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Implantar soluções modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Implantar soluções modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Implantar soluções de modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

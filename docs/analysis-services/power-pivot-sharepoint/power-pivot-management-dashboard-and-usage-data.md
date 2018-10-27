@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099927"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento Power Pivot e dados de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "34030337"
     9. Em Especificar Consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados com os quais deseja trabalhar. Em seguida, crie relatórios de Tabela Dinâmica ou Gráfico Dinâmico para visualizar os dados no Excel.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atualização de dados do Power Pivot com o SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Atualização de dados do Power Pivot com o SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Arquitetura lógica (Analysis Services – mineração de dados) | Microsoft Docs
+title: Arquitetura lógica (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fa39b3e6e0bce7596ea38c6aa049fd7e942a08d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018583"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145522"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34018583"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Uma estrutura de mineração de dados é um contêiner de dados lógicos que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode dar suporte a diversos modelos de mineração.  
   
- Quando precisar usar os dados na solução de mineração de dados, o Analysis Services lerá os dados da origem e gerará um cache com agregações e outras informações. Por padrão, este cache é persistido para que os dados de treinamento possam ser reutilizado para dar suporte a modelos adicionais. Se você precisar excluir o cache, altere a propriedade **CacheMode** no objeto da estrutura de mineração para o valor **ClearAfterProcessing**. Para obter mais informações, consulte [Classes de mineração de dados AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Quando precisar usar os dados na solução de mineração de dados, o Analysis Services lerá os dados da origem e gerará um cache com agregações e outras informações. Por padrão, este cache é persistido para que os dados de treinamento possam ser reutilizado para dar suporte a modelos adicionais. Se você precisar excluir o cache, altere a propriedade **CacheMode** no objeto da estrutura de mineração para o valor **ClearAfterProcessing**. Para obter mais informações, consulte [Classes de mineração de dados AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
- Analysis Services também fornece a capacidade de separar seus dados em conjuntos de dados de treinamento e teste para que você possa testar seus modelos de mineração em um conjunto de dados representativo, selecionado aleatoriamente. Os dados não são de fato armazenados separadamente; em vez disso, os dados de caso no cache da estrutura são marcados com uma propriedade que indica se esse caso em particular é usado para treinamento ou teste. Se o cache for excluído, essas informações não poderão ser recuperadas.  
+ Analysis Services também fornece a capacidade de separar seus dados em conjuntos de dados, treinamento e teste, para que você possa testar seus modelos de mineração em um conjunto representativo, selecionado aleatoriamente de dados. Os dados não são de fato armazenados separadamente; em vez disso, os dados de caso no cache da estrutura são marcados com uma propriedade que indica se esse caso em particular é usado para treinamento ou teste. Se o cache for excluído, essas informações não poderão ser recuperadas.  
   
  Para obter mais informações, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018583"
  Para obter mais informações, consulte [Gerenciamento de assemblies de modelo multidimensional](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimentos armazenados personalizados**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mineração de dados oferece suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] A mineração de dados dá suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
   
  [Definindo procedimentos armazenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "34018583"
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém muitos procedimentos armazenados do sistema que são usados internamente para mineração de dados. Embora os procedimentos armazenados do sistema sejam para uso interno, você pode achá-los atalhos úteis. A Microsoft reserva-se o direito de alterar estes procedimentos armazenados conforme o necessário; portanto, para uso de produção, nós recomendamos que você crie consultas usando DMX, AMO ou XMLA.  
   
  **Algoritmos de plug-in personalizado**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados para a instância do servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados à instância de servidor.  
   
  O Analysis Services usa interfaces COM para se comunicar com algoritmos de plugin. Para saber mais sobre como implementar novos algoritmos, consulte [Algoritmos de plug-in](../../analysis-services/data-mining/plugin-algorithms.md).  
   
@@ -101,6 +101,6 @@ ms.locfileid: "34018583"
   
 ## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

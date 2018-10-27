@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8cec81d0e6281ce9f57d9d689bd5dfdc2d6feb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738204"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099527"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
 As configurações de projeto de migração permitem que você configure como os dados são migrados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -88,5 +88,5 @@ Especifica se o SSMA deve corrigir as datas de acesso anteriores ao mais antigo 
 Tamanho do lote usado durante a migração de dados. Uma transação é registrada após cada lote. Por padrão, o tamanho do lote para todos os esquemas é 10000.  
   
 ## <a name="see-also"></a>Consulte também  
-[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

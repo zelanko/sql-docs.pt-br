@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159789"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100247"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Backup Gerenciado do SQL Server para Microsoft Azure
   O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerenciar e automatiza os backups do SQL Server no serviço de armazenamento de Blob do Windows Azure. A estratégia de backup usada pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] baseia-se no período de retenção e na carga de trabalho da transação no banco de dados. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.   
@@ -42,7 +42,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
  Um recurso do SQL Server que automatiza o backup do banco de dados e mantém os backups com base no período de retenção.  
   
  Período de Retenção  
- O período de retenção é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para determinar quais arquivos de backup devem ser mantidos no armazenamento para recuperar um banco de dados para um ponto no tempo dentro do período de tempo especificado.  Os valores com suporte estão no intervalo de 1-30 dias.  
+ O período de retenção é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para determinar quais arquivos de backup devem ser mantidos no armazenamento para recuperar um banco de dados pontual dentro do período especificado.  Os valores com suporte estão no intervalo de 1-30 dias.  
   
  Cadeia de logs  
  Uma sequência contínua de backups de log é denominada cadeia de logs. Uma cadeia de logs começa com um backup completo do banco de dados.  
@@ -72,7 +72,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 |-|-|  
 |Objeto do Sistema|Description|  
 |**MSDB**|Armazena os metadados, o histórico de backup de todos os backups criados pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Procedimento armazenado do sistema para habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Procedimento armazenado do sistema para habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procedimento para habilitar e configurar as configurações padrão armazenado do sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância do SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Procedimento armazenado do sistema para pausar e retomar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procedimento armazenado do sistema para habilitar e configurar o monitoramento para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Exemplos: habilitação de eventos estendidos, configurações de email para notificações.|  
@@ -140,7 +140,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
 -   O serviço de Armazenamento de Blob do Windows Azure é a única opção de armazenamento de backup com suporte. Não há suporte para backups em disco ou fita.  
   
--   Atualmente, o tamanho máximo de arquivo permitido para um blob de página no armazenamento do Windows Azure é 1 TB. Os arquivos de backup superiores a 1 TB apresentarão falha. Para evitar essa situação, é recomendável que, para bancos de dados grandes, você use a compactação e teste o tamanho do arquivo de backup antes de configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você pode realizar o teste fazendo backup para um disco local ou fazendo o backup manual do armazenamento do Windows Azure usando a instrução Transact-SQL `BACKUP TO URL`. Para obter mais informações, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   Atualmente, o tamanho máximo de arquivo permitido para um blob de página no armazenamento do Windows Azure é 1 TB. Os arquivos de backup superiores a 1 TB apresentarão falha. Para evitar essa situação, é recomendável que, para bancos de dados grandes, você use a compactação e teste o tamanho do arquivo de backup antes de configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você pode realizar o teste fazendo backup para um disco local ou fazendo o backup manual do armazenamento do Windows Azure usando a instrução Transact-SQL `BACKUP TO URL`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Modelos de recuperação: somente os bancos de dados definidos como modelo Completo ou Bulk-logged têm suporte.  Os bancos de dados definidos como modelo de recuperação simples não têm suporte.  
   

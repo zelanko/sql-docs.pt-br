@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111941"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145591"
 ---
 # <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
   Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
@@ -44,9 +44,9 @@ ms.locfileid: "48111941"
   
  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as credenciais são especificadas para cada fonte de dados por meio da página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados existente na caixa de diálogo **Conexões Existentes** .  
   
- Quando os dados são importados ou processados, as credenciais especificadas na página **Informações sobre Representação** são usadas para conectar-se à fonte de dados e buscar os dados. Essa é uma operação do *servidor* que é executado no contexto de um aplicativo cliente porque o servidor do Analysis Services que hospeda o banco de dados de espaço de trabalho conecta-se à fonte de dados e busca os dados.  
+ Quando os dados são importados ou processados, as credenciais especificadas na página **Informações sobre Representação** são usadas para conectar-se à fonte de dados e buscar os dados. Essa é uma operação do *servidor* que é executado no contexto de um aplicativo cliente porque o servidor do Analysis Services que hospeda o banco de dados de workspace conecta-se à fonte de dados e busca os dados.  
   
- Ao implantar um modelo no servidor do Analysis Services, se o banco de dados de espaço de trabalho estiver na memória quando o modelo for implantado, as credenciais serão passadas para o servidor do Analysis Services para o qual o modelo é implantado. Em nenhum momento as credenciais de usuário armazenados em disco.  
+ Ao implantar um modelo no servidor do Analysis Services, se o banco de dados de workspace estiver na memória quando o modelo for implantado, as credenciais serão passadas para o servidor do Analysis Services para o qual o modelo é implantado. Em nenhum momento as credenciais de usuário armazenados em disco.  
   
  Quando um modelo implantado processa dados de uma fonte de dados, as credenciais de representação, persistidas no banco de dados na memória, são usadas para a conexão à fonte de dados e a busca de dados. Como esse processo é tratado pelo servidor do Analysis Services que gerencia o banco de dados modelo, essa é mais uma vez uma operação do servidor.  
   
@@ -71,22 +71,22 @@ ms.locfileid: "48111941"
 |**Nome de usuário específicos do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
- <sup>1</sup>ImpersonationMode Especifica o valor para o [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propriedade na fonte de dados.  
+ <sup>1</sup>ImpersonationMode Especifica o valor para o [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propriedade na fonte de dados.  
   
  <sup>2</sup>ao usar essa opção, se o banco de dados do espaço de trabalho for removido da memória, devido a uma reinicialização ou o **retenção de espaço de trabalho** estiver definida como **descarregar da memória** ou  **Excluir do espaço de trabalho**, e o projeto de modelo é fechado, na sessão subsequente, se você tentar processar dados de tabela, você será solicitado a inserir as credenciais para cada fonte de dados. De maneira semelhante, se um banco de dados modelo implantado for removido da memória, as credenciais para cada fonte de dados serão solicitadas a você.  
   
 ##  <a name="bkmk_impers_sec"></a> Segurança  
- As credenciais usadas com representação são persistidas na memória pelo mecanismo analítico na memória xVelocity (VertiPaq) associado ao servidor do Analysis Services que gerencia o banco de dados de espaço de trabalho ou um modelo implantado.  Em nenhum momento as credenciais são gravadas em disco. Se o banco de dados de espaço de trabalho não estiver na memória quando o modelo for implantado, o usuário será solicitado a digitar as credenciais usadas para conectar-se à fonte de dados e buscar dados.  
+ As credenciais usadas com representação são persistidas na memória pelo mecanismo analítico na memória xVelocity (VertiPaq) associado ao servidor do Analysis Services que gerencia o banco de dados de workspace ou um modelo implantado.  Em nenhum momento as credenciais são gravadas em disco. Se o banco de dados de workspace não estiver na memória quando o modelo for implantado, o usuário será solicitado a digitar as credenciais usadas para conectar-se à fonte de dados e buscar dados.  
   
 > [!NOTE]  
 >  É recomendável especificar uma conta de usuário do Windows e uma senha para credenciais de representação. Uma conta de usuário do Windows pode ser configurada para usar privilégios mínimos necessários conectar-se e ler dados da fonte de dados.  
   
 ##  <a name="bkmk_imp_newmodel"></a> Representação ao importar um modelo  
- Ao contrários dos modelos tabulares, que podem usar vários diferentes modos de representação para dar suporte à coleta de dados fora do processo, o PowerPivot usa apenas um modo, o ImpersonateCurrentUser. Como o PowerPivot sempre é executado em processo, ele conecta-se a fontes de dados por meio das credenciais do usuário conectado no momento. Em modelos tabulares, as credenciais do usuário conectado no momento são usadas apenas com o recurso **Visualizar e Filtrar** no Assistente de Importação de Tabela e ao exibir as **Propriedades da Tabela**. As credenciais de representação usadas ao importar ou processar dados no banco de dados de espaço de trabalho ou ao importar ou processar dados em um modelo implantado.  
+ Ao contrários dos modelos tabulares, que podem usar vários diferentes modos de representação para dar suporte à coleta de dados fora do processo, o PowerPivot usa apenas um modo, o ImpersonateCurrentUser. Como o PowerPivot sempre é executado em processo, ele conecta-se a fontes de dados por meio das credenciais do usuário conectado no momento. Em modelos tabulares, as credenciais do usuário conectado no momento são usadas apenas com o recurso **Visualizar e Filtrar** no Assistente de Importação de Tabela e ao exibir as **Propriedades da Tabela**. As credenciais de representação usadas ao importar ou processar dados no banco de dados de workspace ou ao importar ou processar dados em um modelo implantado.  
   
  Ao criar um novo modelo com a importação de uma pasta de trabalho PowerPivot existente, por padrão, o designer de modelo configurará a representação para usar a conta de serviço (ImpersonateServiceAccount). É recomendável alterar as credenciais de representação em modelos importados PowerPivot para uma conta de usuário do Windows. Depois que a pasta de trabalho do PowerPivot foi importada e o novo modelo criado no designer de modelo, você pode alterar as credenciais usando o **conexões existentes** caixa de diálogo.  
   
- Ao criar um novo modelo com a importação de um modelo existente em um servidor do Analysis Services, as credenciais de representação são passadas do banco de dados modelo existente para o novo banco de dados de espaço de trabalho modelo. Se necessário, você pode alterar as credenciais no novo modelo com o uso da caixa de diálogo **Conexões Existentes** .  
+ Ao criar um novo modelo com a importação de um modelo existente em um servidor do Analysis Services, as credenciais de representação são passadas do banco de dados modelo existente para o novo banco de dados de workspace modelo. Se necessário, você pode alterar as credenciais no novo modelo com o uso da caixa de diálogo **Conexões Existentes** .  
   
 ##  <a name="bkmk_conf_imp_info"></a> Configurando a representação  
  O local e o contexto onde um modelo existe determinará como as informações de representação serão configuradas. Para modelos que estão sendo criados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode configurar informações de representação na página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados na caixa de diálogo **Conexões Existentes** . Para exibir conexões existentes, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Model** , clique em **Conexões Existentes**.  
@@ -95,7 +95,7 @@ ms.locfileid: "48111941"
   
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](directquery-mode-ssas-tabular.md)   
- [Fontes de dados &#40;Tabular do SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Fontes de dados &#40;SSAS de Tabela&#41;](../data-sources-ssas-tabular.md)   
+ [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

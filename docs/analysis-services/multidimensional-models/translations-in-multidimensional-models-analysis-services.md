@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026673"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147071"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traduções em modelos multidimensionais (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026673"
   
 4.  Clique com o botão direito do mouse em qualquer campo e selecione **Explorar dados**. Você verá as traduções em francês, espanhol e inglês de cada membro.  
   
- Formatos de data, hora e moeda não são implementados por meio de traduções. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de conversão de moeda e a propriedade **FormatString** . Consulte [Conversões de moeda e &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md) para obter detalhes.  
+ Formatos de data, hora e moeda não são implementados por meio de traduções. Para fornecer dinamicamente formatos culturalmente específicos com base na localidade do cliente, use o Assistente de conversão de moeda e a propriedade **FormatString** . Consulte [Conversões de moeda e &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) e [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) para obter detalhes.  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) no Tutorial do Analysis Services orientará você pelas etapas de criação e teste de traduções.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026673"
   
 3.  Para cada objeto, especifique o idioma de destino (resolve internamente para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, se você estiver definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
-     Lembre-se de que você não pode alterar o agrupamento. Um cubo essencialmente usa um agrupamento, mesmo se você estiver dando suporte a vários idiomas por meio de legendas traduzidas (há uma exceção para atributos de dimensão, discutida abaixo). Se os idiomas não forem classificados corretamente no agrupamento compartilhado, será necessário fazer cópias do cubo para acomodar seus requisitos de agrupamento.  
+     Lembre-se de que você não pode alterar a ordenação. Um cubo essencialmente usa uma ordenação, mesmo se você estiver dando suporte a vários idiomas por meio de legendas traduzidas (há uma exceção para atributos de dimensão, discutida abaixo). Se os idiomas não forem classificados corretamente na ordenação compartilhada, será necessário fazer cópias do cubo para acomodar seus requisitos de ordenação.  
   
 4.  Compilar e implantar o projeto.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34026673"
   
  Legendas traduzidas são adicionadas ao modelo manualmente usando o teclado ou copiar e colar, mas para membros de atributo de dimensão, você pode obter valores traduzidos de um banco de dados externo. Especificamente, a propriedade **CaptionColumn** de um atributo pode ser associada a uma coluna em uma exibição da fonte de dados.  
   
- No nível de atributo, você pode substituir as configurações de agrupamento, por exemplo, você pode desejar ajustar diferenciação de largura ou usar uma classificação binária para um atributo específico. Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o agrupamento é exposto onde as associações de dados são definidas. Como você está associando uma tradução de atributo de dimensão a uma coluna de origem diferente no DSV, uma configuração de agrupamento está disponível para que você possa especificar o agrupamento usado pela coluna de origem. Consulte [Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md) para obter detalhes sobre o agrupamento da coluna no banco de dados relacional.  
+ No nível de atributo, você pode substituir as configurações de ordenação, por exemplo, você pode desejar ajustar diferenciação de largura ou usar uma classificação binária para um atributo específico. Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a ordenação é exposta onde as associações de dados são definidas. Como você está associando uma tradução de atributo de dimensão a uma coluna de origem diferente no DSV, uma configuração de ordenação está disponível para que você possa especificar a ordenação usada pela coluna de origem. Consulte [Definir ou alterar a ordenação de coluna](../../relational-databases/collations/set-or-change-the-column-collation.md) para obter detalhes sobre a ordenação da coluna no banco de dados relacional.  
   
 1.  No Gerenciador de Soluções, clique duas vezes no nome da dimensão para abrir o designer de dimensão.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34026673"
   
     4.  Escolha a coluna de origem que fornece os valores de membros de atributo traduzidos. Somente colunas já existentes na tabela ou consulta associada à dimensão estão disponíveis. Se a coluna não existir, você precisa modificar a exibição da fonte de dados, dimensão e cubo para selecionar a coluna.  
   
-    5.  Escolha a ordem de agrupamento e de classificação, se aplicável.  
+    5.  Escolha a ordem de ordenação e de classificação, se aplicável.  
   
 4.  Compilar e implantar o projeto.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34026673"
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto | **Editar banco de dados** para abrir o designer de banco de dados.  
   
-2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, quer você esteja definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
+2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, se você estiver definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
 3.  Na página Propriedades do banco de dados, defina **Language** com o mesmo LCID especificado para a tradução. Opcionalmente, defina **Collation** também se o padrão não fizer mais sentido.  
   
@@ -119,6 +119,6 @@ ms.locfileid: "34026673"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Idiomas e agrupamentos &#40;do Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

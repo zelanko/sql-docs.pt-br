@@ -2,7 +2,7 @@
 title: Avaliar uma empresa e consolidar relatórios de avaliação (SQL Server) | Microsoft Docs
 description: Saiba como usar o DMA para avaliar uma empresa e consolidar relatórios de avaliação antes de atualizar o SQL Server ou migrando para o banco de dados SQL.
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721084"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960780"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
@@ -37,14 +37,14 @@ As seguintes instruções passo a passo ajudam você a usar o Assistente de migr
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Baixe e extraia:
     - O [modelo do Power BI DMA relatórios](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - O [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
+    - O [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Carregando os módulos do PowerShell
 Salvar os módulos do PowerShell para o diretório de módulos do PowerShell permite que você chame os módulos sem a necessidade de carregar explicitamente-los antes do uso.
 
 Para carregar os módulos, execute as seguintes etapas:
 1. Navegue até C:\Program files\windowspowershell\modules. e, em seguida, crie uma pasta chamada **DataMigrationAssistant**.
-2. Abra o [módulos do PowerShell](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)e, em seguida, salvá-los para a pasta que você criou.
+2. Abra o [módulos do PowerShell](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)e, em seguida, salvá-los para a pasta que você criou.
 
       ![Módulos do PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ Para carregar os módulos, execute as seguintes etapas:
 
     PowerShell agora deve carregar esses módulos automaticamente quando uma nova sessão do PowerShell é iniciado.
 
-## <a name="create-an-inventory-of-sql-servers"></a>Criar um inventário de servidores SQL
+## <a name="create-inventory"></a> Criar um inventário de servidores SQL
 Antes de executar o script do PowerShell para avaliar seus servidores SQL, você precisa criar um inventário dos SQL Servers que você deseja avaliar.
 
 Esse inventário pode estar em uma das duas formas:
@@ -98,7 +98,7 @@ Os parâmetros associados à função dmaDataCollector são descritos na tabela 
 
 |Parâmetro  |Description
 |---------|---------|
-|**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**. |
+|**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**.<br/>Para obter mais informações, consulte [criar um inventário de servidores SQL](#create-inventory). |
 |**serverName** | O nome da instância do SQL Server do inventário ao usar **SqlServer** na **getServerListFrom** parâmetro. |
 |**databaseName** | O banco de dados que hospeda a tabela de estoque. |
 |**AssessmentName** | O nome da avaliação de DMA. |
@@ -121,12 +121,12 @@ Os parâmetros associados à função dmaProcessor são descritos na tabela a se
 |Parâmetro  |Description
 |---------|---------|
 |**processTo**  | O local para o qual o arquivo JSON será processado. Os valores possíveis são **SQLServer** e **AzureSQLDatabase**. |
-|**serverName** | A instância do SQL Server para o qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o **processTo** parâmetro, em seguida, inclua apenas o nome do SQL Server (não inclua. database.windows.net). Você será solicitado para dois logons durante o direcionamento para o banco de dados SQL Azure; a primeira é suas credenciais de locatário do Azure, enquanto o segundo é o logon de administrador para o servidor do SQL Azure. |
-|**CreateDMAReporting** | O banco de dados temporário criar para processar o arquivo JSON.  Se o banco de dados especificado já existe e você definir esse parâmetro para um, objetos não são criados.  Esse parâmetro é útil para a recriação de um único objeto que foi descartado. |
+|**serverName** | A instância do SQL Server para o qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o **processTo** parâmetro, em seguida, inclua apenas o nome do SQL Server (não inclua. database.windows.net). Você será solicitado a fornecer dois logons durante o direcionamento para o banco de dados SQL Azure; a primeira é suas credenciais de locatário do Azure, enquanto o segundo é o logon de administrador para o servidor do SQL Azure. |
+|**CreateDMAReporting** | O banco de dados temporário criar para processar o arquivo JSON.  Se o banco de dados especificado já existe e você definir esse parâmetro para um, os objetos não são criados.  Esse parâmetro é útil para a recriação de um único objeto que foi descartado. |
 |**CreateDataWarehouse** | Cria o data warehouse que será usado pelo relatório do Power BI. |
 |**databaseName** | O nome do banco de dados DMAReporting. |
 |**warehouseName** | O nome do banco de dados de depósito de dados. |
-|**jsonDirectory** | O diretório que contém o arquivo JSON de avaliação.  Se houver vários arquivos JSON no diretório, eles são processados individualmente. |
+|**jsonDirectory** | O diretório que contém o arquivo JSON de avaliação.  Se há vários arquivos JSON no diretório, eles são processados individualmente. |
 
 A função dmaProcessor deve levar apenas alguns segundos para processar um único arquivo.
 
@@ -135,7 +135,7 @@ O dmaProcessor terminar de processar os arquivos de avaliação, após os dados 
 
 1. Use o script de LoadWarehouse para preencher valores ausentes nas dimensões.
 
-    O script irá pegar os dados da tabela de dados do relatório no banco de dados DMAReporting e carregá-lo para o warehouse.  Se houver erros durante esse processo de carregamento, eles são provavelmente resultado de entradas ausentes nas tabelas de dimensões.
+    O script irá pegar os dados da tabela de dados do relatório no banco de dados DMAReporting e carregá-lo para o warehouse.  Se houver erros durante esse processo de carregamento, elas são provavelmente resultado de entradas ausentes nas tabelas de dimensões.
 
 2. Carregar o data warehouse.
  

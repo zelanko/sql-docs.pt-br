@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8789efdd287964cc0c2db29fc128f11685df9898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715524"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991189"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
@@ -36,7 +36,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 > [!div class="checklist"]
 > * Efetuar pull e executar a imagem de contêiner do SQL Server Linux mais recente.
-> * Copie o arquivo de banco de dados do World Wide Importers no contêiner.
+> * Copie o arquivo de banco de dados da Wide World Importers no contêiner.
 > * Restaure o banco de dados no contêiner.
 > * Execute instruções Transact-SQL para exibir e modificar o banco de dados.
 > * Fazer backup de banco de dados modificado.

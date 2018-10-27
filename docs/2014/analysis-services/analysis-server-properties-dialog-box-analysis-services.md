@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078056"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145091"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Caixa de diálogo Propriedades do Analysis Server (Analysis Services)
   Use a caixa de diálogo **Propriedades do Analysis Server** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir configurações gerais, de linguagem/agrupamento e segurança para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível exibir a caixa de diálogo **Propriedades do Analysis Server** clicando com o botão direito do mouse em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Explorador de Objetos** e selecionando **Propriedades** no menu de contexto. A caixa de diálogo **Propriedades do Analysis Server** contém as propriedades a seguir.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078056"
   
 -   **1103** é o nível de compatibilidade padrão dos modos de implantação 1 ou 2, para instalações que dão suporte ao modo de tabela ou ao [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- O servidor retorna esse valor quando um cliente que dá suporte ao namespace solicita DISCOVER_XML_METADATA. Consulte [Conjunto de linhas DISCOVER_XML_METADATA](schema-rowsets/xml/discover-xml-metadata-rowset.md) para obter mais detalhes.  
+ O servidor retorna esse valor quando um cliente que dá suporte ao namespace solicita DISCOVER_XML_METADATA. Consulte [Conjunto de linhas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset) para obter mais detalhes.  
   
 ## <a name="general-properties"></a>Propriedades gerais  
  Use essa página para definir as propriedades gerais básicas e avançadas, como configurações de locais de pasta e de rede, para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -64,8 +64,8 @@ ms.locfileid: "48078056"
   
 -   [Propriedades de pool de threads](server-properties/thread-pool-properties.md)  
   
-## <a name="language-collation-properties"></a>Propriedades de Idioma/Agrupamento  
- Use essa página para definir opções de agrupamento e idioma padrão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A lista a seguir contém breves descrições de cada opção. Consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) para obter detalhes.  
+## <a name="language-collation-properties"></a>Propriedades de Idioma/Ordenação  
+ Use essa página para definir opções de ordenação e idioma padrão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A lista a seguir contém breves descrições de cada opção. Consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md) para obter detalhes.  
   
 -   **Binário** é usado para classificar e comparar dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária diferencia maiúsculas e minúsculas, isto é, minúscula precede maiúscula, e diferencia acento. Essa é a ordem de classificação mais rápida.  
   
@@ -96,10 +96,10 @@ ms.locfileid: "48078056"
  Use essa página para especificar as contas de usuário e grupo do Windows pertencentes à função de administrador do servidor para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . A associação nessa função transmite a permissão para executar tarefas em todo o servidor, como criar ou processar um banco de dados, modificar propriedades do servidor, adicionar/remover outros membros dessa função ou iniciar um rastreamento. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Determinar o modo de servidor de uma instância do Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurar propriedades de servidor no Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Funções e permissões &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Idiomas e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](languages-and-collations-analysis-services.md)  
   
   

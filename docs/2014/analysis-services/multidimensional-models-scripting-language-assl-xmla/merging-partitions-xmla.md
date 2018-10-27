@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142446"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145832"
 ---
 # <a name="merging-partitions-xmla"></a>Mesclando partições (XMLA)
-  Se partições tiverem o mesmo design de agregação e a estrutura, você pode mesclar a partição usando o [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) no XML for Analysis (XMLA). A mesclagem de partições é uma ação importante a ser executada quando você gerencia partições, principalmente as partições que contêm dados históricos divididos por data.  
+  Se partições tiverem o mesmo design de agregação e a estrutura, você pode mesclar a partição usando o [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) no XML for Analysis (XMLA). A mesclagem de partições é uma ação importante a ser executada quando você gerencia partições, principalmente as partições que contêm dados históricos divididos por data.  
   
  Por exemplo, um cubo financeiro pode usar duas partições:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142446"
  Ambas as partições utilizam configurações de armazenamento diferentes, mas usam o mesmo design de agregação. Em vez de processar o cubo nos anos de dados históricos no final do ano, você pode usar o comando `MergePartitions` para mesclar a partição do ano atual com a partição dos anos anteriores. Isso preservará os dados de agregação sem exibir um processamento completo do cubo potencialmente demorado.  
   
 ## <a name="specifying-partitions-to-merge"></a>Especificando partições para mesclagem  
- Quando o `MergePartitions` comando é executado, os dados de agregação armazenados nas partições de origem especificadas na [código-fonte](../xmla/xml-elements-properties/source-element-xmla.md) propriedade é adicionada à partição de destino especificada no [destino](../xmla/xml-elements-properties/target-element-xmla.md) propriedade.  
+ Quando o `MergePartitions` comando é executado, os dados de agregação armazenados nas partições de origem especificadas na [código-fonte](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propriedade é adicionada à partição de destino especificada no [destino](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propriedade.  
   
 > [!NOTE]  
 >  A propriedade `Source` pode conter mais de uma referência de objeto de partição. No entanto, a propriedade `Target` não pode.  

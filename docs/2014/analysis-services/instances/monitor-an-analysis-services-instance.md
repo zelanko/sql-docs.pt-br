@@ -16,12 +16,12 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 669703a6f086c760f669d58bb167f1bddd19f97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075593"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144243"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorar uma instância do Analysis Services
   Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
@@ -32,13 +32,13 @@ ms.locfileid: "48075593"
 ## <a name="in-this-section"></a>Nesta seção  
  Siga estes links para saber mais sobre como monitorar.  
   
- [Eventos de rastreamento do Analysis Services](../trace-events/analysis-services-trace-events.md)  
+ [Eventos de rastreamento do Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
  [Usar o SQL Server Profiler para monitorar o Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  [Usar eventos estendidos do SQL Server &#40;XEvents&#41; monitorar o Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Usar exibições de gerenciamento dinâmico &#40;DMVs&#41; monitorar o Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  [Contadores de desempenho &#40;SSAS&#41;](performance-counters-ssas.md)  
   

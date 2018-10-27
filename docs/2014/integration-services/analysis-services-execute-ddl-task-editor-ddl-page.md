@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bee729056f1654e265e7e37d92dcfd0015381f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119907"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146852"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor da Tarefa Executar DDL do Analysis Services (Página DDL)
   Use a página **DDL** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para especificar uma conexão com um projeto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e para fornecer informações sobre a origem das instruções DDL (linguagem de definição de dados).  
@@ -52,7 +52,7 @@ ms.locfileid: "48119907"
  **Origem**  
  Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md)  
+ **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Origem**  
@@ -62,10 +62,10 @@ ms.locfileid: "48119907"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services Execute DDL Editor da tarefa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página expressões](expressions/expressions-page.md)   
- [Fluxo de controle](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; referência](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41; referência](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Editor da Tarefa Executar DDL do Analysis Services &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página Expressões](expressions/expressions-page.md)   
+ [Fluxo de Controle](control-flow/control-flow.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Referência de XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

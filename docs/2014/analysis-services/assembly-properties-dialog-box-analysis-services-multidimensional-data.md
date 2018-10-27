@@ -13,12 +13,12 @@ ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdaa5e0fe92c09b728540d28aa71bdc786d8cae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149176"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147711"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Propriedades do Assembly (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Propriedades do Assembly** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma referência de assembly em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades do Assembly** clicando com o botão direito do mouse em um assembly no **Explorador de Objetos** e selecionando **Propriedades**.  
@@ -35,10 +35,10 @@ ms.locfileid: "48149176"
 |**Tipo**|Exibe o tipo da referência de assembly. Os seguintes valores são exibidos:<br /><br /> **Assembly .NET**: A referência de assembly faz referência a um [!INCLUDE[msCoName](../includes/msconame-md.md)] assembly do .NET Framework.<br /><br /> **DLL COM**: A referência de assembly faz referência a uma biblioteca COM.|  
 |**Origem**|Exibe a origem da referência de assembly. Essa propriedade normalmente contém o caminho completo e o nome de arquivo do assembly referido pela referência de assembly.|  
 |**Conjunto de permissões**|Selecione o conjunto de permissões usado para determinar acesso à referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, consulte <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
-|**Informações sobre Representação**|Selecione a informações de representação a serem usadas ao acessar a referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, consulte [Elemento ImpersonationInfo &#40;ASSL&#41;](scripting/properties/impersonationinfo-element-assl.md)|  
+|**Informações sobre Representação**|Selecione a informações de representação a serem usadas ao acessar a referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, consulte [Elemento ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Gerenciamento de Assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Gerenciamento de assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

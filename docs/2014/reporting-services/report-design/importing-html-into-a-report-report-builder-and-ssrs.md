@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099508"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
   É possível usar uma caixa de texto para inserir em um relatório um texto formatado em HTML recuperado de um campo em seu conjunto de dados. O texto pode ser de qualquer expressão simples ou complexa avaliada como HTML formatado corretamente. O texto formatado pode ser renderizado em todos os formatos de saída com suporte, inclusive PDF.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115706"
   
     -   As unidades de comprimento CSS relativas são ignoradas e não têm suporte. As unidades com suporte são em, ex, px,%,rem.  
   
-     Para saber mais sobre as unidades CSS, veja: [Valores CSS e referência de unidades](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     Para saber mais sobre as unidades CSS, veja: [Valores CSS e referência de unidades](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115706"
 -   Para atributos e a estilos CSS, se uma propriedade for especificada mais de uma vez, somente sua última instância será aplicada. Por exemplo, se o texto for **\<p align="left" align="right">**, ele será alinhado à direita.  
   
 ## <a name="see-also"></a>Consulte também  
- [Renderizando para HTML &#40;relatórios e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

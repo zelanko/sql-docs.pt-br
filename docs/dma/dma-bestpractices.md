@@ -2,7 +2,7 @@
 title: Práticas recomendadas para o Assistente de migração de dados (SQL Server) | Microsoft Docs
 description: Conheça as práticas recomendadas para migrar bancos de dados do SQL Server com o Assistente de migração de dados
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9a8d346e3cc4a2ddc718d9e2758ec02caa458a8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632687"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643824"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de migração de dados
 Este artigo fornece algumas informações de prática recomendadas para instalação, avaliação e migração.
 
 ## <a name="installation"></a>Instalação
-Não instalar e executar o Assistente de migração de dados diretamente no computador de host do SQL Server.
+Não instale e execute o Assistente de migração de dados diretamente no computador de host do SQL Server.
 
 ## <a name="assessment"></a>Avaliação
 - Execute avaliações em bancos de dados de produção durante horários de pico.

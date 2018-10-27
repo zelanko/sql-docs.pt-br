@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c7f7a6139adb75c9a041238e4c8f911bb88ff711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e051c454223fc7fc710f45b97a1a76ecceb10f2b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019093"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147441"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Criar um alias para uma coluna de modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode criar um alias para uma coluna de modelo. Isso é útil quando o nome da estrutura de mineração é muito comprido, dificultando o trabalho, ou quando é necessário renomear a coluna para uma descrição mais detalhada de seu conteúdo ou uso no modelo. Por exemplo, se fizer uma cópia da coluna de estrutura e em seguida diferenciar a coluna para um modelo específico, você poderá renomear a coluna de modo a refletir o conteúdo com maior exatidão.  
   
- Para criar um alias para uma coluna de modelo, use o painel **Propriedades** e defina a propriedade [Nome](../../analysis-services/scripting/properties/name-element-assl.md) da coluna.  
+ Para criar um alias para uma coluna de modelo, use o painel **Propriedades** e defina a propriedade [Nome](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) da coluna.  
   
  Na guia **Modelos de Mineração** do Designer de Data Mining, o alias aparece entre parênteses próximo ao rótulo de uso da coluna.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34019093"
 2.  Na janela **Propriedades** , no lado direito da tela, clique na célula ao lado da propriedade Nome e exclua o valor atual. Digite um novo nome para a coluna.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md)  
   
   

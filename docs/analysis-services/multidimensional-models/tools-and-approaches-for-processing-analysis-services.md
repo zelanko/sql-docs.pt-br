@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027313"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147731"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Ferramentas e abordagens para processamento (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027313"
   
 -   Monitorar o processamento com o SQL Server Profiler  
   
--   Programar uma solução personalizada usando AMO. Para obter mais informações, consulte [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Programar uma solução personalizada usando AMO. Para obter mais informações, consulte [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  O processamento é uma operação altamente configurável, controlada por um conjunto de opções de processamento que determinam se o processamento cheio ou incremental ocorre no nível do objeto. Para obter mais informações sobre como processar opções e objetos, consulte [Opções e configurações de processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) e [Processando objetos do Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  Este tópico descreve as ferramentas e as abordagens para processar modelos multidimensionais. Para obter mais informações sobre o processamento de modelos de tabela, consulte [processar banco de dados, tabela ou partição &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) e [processar dados](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  Este tópico descreve as ferramentas e as abordagens para processar modelos multidimensionais. Para obter mais informações sobre como processar modelos de tabela, consulte [processar banco de dados, tabela ou partição &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) e [processar dados](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Processando objetos no SQL Server Management Studio  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34027313"
   
     -   Modelos de mineração  
   
-    -   Estruturas de Mineração  
+    -   Estruturas de mineração  
   
      Objetos do Analysis Services são hierárquicos. Se você escolher o banco de dados, o processamento poderá ocorrer para todos os objetos contidos no banco de dados. O real processamento depende da opção de processamento selecionada e do estado do objeto. Especificamente, se um objeto não for processado, o processamento de seu pai resultará no processamento desse objeto. Para obter mais informações sobre dependências de objeto, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   

@@ -1,22 +1,22 @@
 ---
 title: O que é um pool de computação de clusters de grandes dados SQL? | Microsoft Docs
-description: ''
+description: Este artigo descreve o pool de computação em um cluster de big data do SQL Server de 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050789"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>O que é um pool de computação de clusters de grandes dados SQL?
 
-Este artigo descreve a função do *pools de computação do SQL Server* em um servidor de SQL 2019 visualizar o cluster de Big Data. Pools de computação fornecem recursos computacionais de escalabilidade horizontal para um cluster de Big Data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de computação.
+Este artigo descreve a função do *pools de computação do SQL Server* em um cluster de big data de visualização de 2019 do SQL Server. Pools de computação fornecem recursos computacionais de escalabilidade horizontal para um cluster de big data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de computação.
 
 ## <a name="compute-pool-architecture"></a>Arquitetura do pool de computação
 
@@ -33,4 +33,4 @@ Um pool de computação pode agir como um grupo de escala horizontal do PolyBase
 
 Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
 
-- [O que é o SQL Server 2019 clusters de big data?](big-data-cluster-overview.md)
+- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)

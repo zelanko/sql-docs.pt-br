@@ -17,12 +17,12 @@ ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e81e0e7acf0d31be45f1d653ed2a6926f55b57fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d83a8422bc8bfbe851a77d8dc42f83db159454
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113400"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146981"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introdução ao monitoramento do Analysis Services com o SQL Server Profiler
   É possível usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar eventos gerados por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode fazer o seguinte:  
@@ -60,7 +60,7 @@ ms.locfileid: "48113400"
  Para obter o desempenho ideal, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar somente os eventos pelos quais você tem maior interesse. O monitoramento de muitos eventos pode causar sobrecarga e aumentar muito a tabela ou o arquivo de rastreamento, especialmente durante o monitoramento em um longo período de tempo. Além disso, use a filtragem para limitar a quantidade de dados coletados e impedir o aumento em excesso dos rastreamentos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Eventos de rastreamento do Analysis Services](../trace-events/analysis-services-trace-events.md)   
+ [Eventos de rastreamento do Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
  [Criar rastreamentos do Profiler para reprodução &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

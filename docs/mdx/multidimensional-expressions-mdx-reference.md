@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cae2aba7475a987561bb089edc36410a4f08ab97
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742675"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145331"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Referência de linguagem MDX
 
@@ -25,12 +25,12 @@ ms.locfileid: "34742675"
 |Tópico|Description|  
 |-----------|-----------------|  
 |[Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Descreve os vários elementos de sintaxe disponíveis na linguagem MDX para expressões, instruções e scripts MDX.|  
-|[Referência de linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Descreve as instruções, os operadores e as funções que definem a linguagem MDX.|  
+|[Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Descreve as instruções, os operadores e as funções que definem a linguagem MDX.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Consultando dados multidimensionais com MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Recuperando dados de uma fonte de dados analíticos](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
+ [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Recuperando dados de uma fonte de dados analíticos](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [Definir atribuições e outros comandos de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

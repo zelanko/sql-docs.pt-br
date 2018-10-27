@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36760091"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145671"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Conceder direitos de administração de servidor a uma instância do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "36760091"
   
  Por padrão, os membros do grupo Administradores local também recebem automaticamente direitos administrativos no Analysis Services. Embora o grupo local não seja explicitamente associado à função de administrador de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , os administradores locais podem criar bancos de dados, adicionar usuários e permissões, e executar qualquer outra tarefa permitida aos administradores do sistema. A concessão implícita de permissões de administrador é configurável. Ele é determinado pela propriedade de servidor **BuiltinAdminsAreServerAdmins** , que é definida como **true** por padrão. Você pode alterar essa propriedade em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Security Properties](../../analysis-services/server-properties/security-properties.md).  
   
- Após a instalação, você pode modificar a associação da função para adicionar quaisquer usuários que precisam de direitos totais para o serviço. Também é possível gerenciar funções de servidor com o Analysis Management Objects (AMO). Para obter mais informações, consulte [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+ Após a instalação, você pode modificar a associação da função para adicionar quaisquer usuários que precisam de direitos totais para o serviço. Também é possível gerenciar funções de servidor com o Analysis Management Objects (AMO). Para obter mais informações, consulte [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Fornece uma progressão de funções cada vez mais granulares para processamento e consulta no servidor, banco de dados e níveis de objeto. Consulte [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obter instruções sobre como usar essas funções.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece uma progressão de funções cada vez mais granulares para processamento e consulta no servidor, banco de dados e níveis de objeto. Consulte [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obter instruções sobre como usar essas funções.  
   
 ## <a name="modify-server-role-membership"></a>Modificar a associação a funções de servidor  
   

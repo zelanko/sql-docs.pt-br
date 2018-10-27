@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019963"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145071"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34019963"
   
      O modelo **Consulta de Conteúdo** é aberto no editor de códigos apropriado. O painel de metadados lista os modelos que estão disponíveis no banco de dados atual. Para alterar o banco de dados, selecione outro banco de dados na lista **Bancos de Dados Disponíveis** .  
   
-5.  Insira o nome de um modelo de mineração na linha, `FROM` [*\<modelo de mineração, nome, MyModel >*]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
+5.  Insira o nome de um modelo de mineração na linha `FROM` [*\<modelo de mineração, nome, MyModel >*]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
   
      Se não quiser digitar o nome, você poderá selecionar um modelo de mineração no **Pesquisador de Objetos** e arrastá-lo para o modelo.  
   
-6.  Na linha, `SELECT` *\<lista de seleção, lista de expr, \* >*, digite os nomes das colunas no conjunto de linhas de esquema de conteúdo de modelo de mineração.  
+6.  Na linha `SELECT` *\<lista de seleção, lista de expr \* >*, digite os nomes das colunas no conjunto de linhas do esquema de conteúdo modelo de mineração.  
   
-     Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+     Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 7.  Se preferir, digite uma condição na cláusula WHERE do modelo para restringir as linhas retornadas a nós ou valores específicos.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019963"
      O painel Resultados exibe o conteúdo do modelo.  
   
     > [!NOTE]  
-    >  Para ver uma lista de todos os conjuntos de linhas de esquema que você pode consultar na instância atual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Para ver uma lista de conjuntos de linhas de esquema específicos de mineração de dados, consulte [Conjuntos de linhas de esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+    >  Para ver uma lista de todos os conjuntos de linhas de esquema que você pode consultar na instância atual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Para ver uma lista de conjuntos de linhas de esquema específicos de mineração de dados, consulte [Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Linhas do esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

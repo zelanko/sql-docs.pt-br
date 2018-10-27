@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989754"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147811"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de fonte de dados&gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,10 +35,10 @@ OPENQUERY(<named datasource>, <query syntax>)
  *sintaxe de consulta*  
  Sintaxe de consulta que retorna um conjunto de linhas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **OPENQUERY** fornece uma maneira mais segura para acessar dados externos, oferecendo suporte a permissões de fonte de dados. Como a cadeia de conexão é armazenada na fonte de dados, os administradores podem usar as propriedades da fonte de dados para gerenciar o acesso aos dados. Para obter mais informações sobre fontes de dados, consulte [fontes de dados com suporte &#40;SSAS - Multidimensional&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
- Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando as **MDSCHEMA_INPUT_DATASOURCES** linhas de esquema. Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [de linhas MDSCHEMA_INPUT_DATASOURCES](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md).  
+ Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando as **MDSCHEMA_INPUT_DATASOURCES** linhas de esquema. Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [de linhas MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
  Também é possível retornar uma lista das fontes de dados no banco de dados atual do Analysis Services usando a seguinte consulta DMX:  
   

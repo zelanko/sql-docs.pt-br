@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8d5a8e800b961406231e0f0e515b250a17cb3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091076"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146011"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
   O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
@@ -74,7 +74,7 @@ ms.locfileid: "48091076"
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
- É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) em XMLA. A tabela a seguir descreve cada parâmetro.  
+ É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) em XMLA. A tabela a seguir descreve cada parâmetro.  
   
 > [!NOTE]  
 >  Não é possível alterar os parâmetros de um modelo existente usando uma instrução DMX; você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL ao criar o modelo.  
@@ -144,7 +144,7 @@ ms.locfileid: "48091076"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como tendo dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.  
+ Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.  
   
  Aplica-se à coluna do modelo de mineração.  
   
@@ -163,8 +163,8 @@ ms.locfileid: "48091076"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo associação da Microsoft](microsoft-association-algorithm.md)   
- [Exemplos de consulta de modelo de associação](association-model-query-examples.md)   
- [Mining Model Content para modelos de associação &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Algoritmo Associação da Microsoft](microsoft-association-algorithm.md)   
+ [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

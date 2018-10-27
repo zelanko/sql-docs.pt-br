@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e24cab61196e8d16f8bb79caeb47e075725d6ab2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015173"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147941"
 ---
 # <a name="data-mining-query-tools"></a>Ferramentas de Consulta de Mineração de Dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015173"
  O Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também permite criar e executar consultas DMX. É possível conectar-se a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e selecionar um banco de dados, colunas de estrutura de mineração e um modelo de mineração. O **Gerenciador de Metadados** contém uma lista de funções de previsão que você pode procurar.  
   
 ##  <a name="bkmk_Templates"></a> Modelos DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fornece modelos de consulta interativa DMX que você pode usar para criar consultas DMX. Se você não vir a lista de modelos, clique em **Exibição** na barra de ferramentas e selecione **Explorador de Modelos**. Para ver todos os modelos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluindo modelos para DMX, MDX e XMLA, clique no ícone do cubo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta interativa DMX que você poderá usar para criar consultas DMX. Se você não vir a lista de modelos, clique em **Exibição** na barra de ferramentas e selecione **Explorador de Modelos**. Para ver todos os modelos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluindo modelos para DMX, MDX e XMLA, clique no ícone do cubo.  
   
  Para criar uma consulta usando um modelo, você pode arrastar o modelo em uma janela de consulta aberta ou pode clicar duas vezes no modelo para abrir uma nova conexão e um novo painel de consulta.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "34015173"
   
  Porém, o XMLA constitui o formato de mensagem subjacente para todas as interações com um servidor do Analysis Service. Dentro de uma mensagem de XMLA, as consultas são representadas de maneira diferente dependendo se você está enviando uma consulta de previsão com base em DMX, uma consulta de conteúdo ou uma consulta que recupera metadados modelo usando os conjuntos de linhas de esquema de mineração de dados.  
   
--   O texto de **consultas de previsão** (e todas as outras instruções DMX) é enviado em XMLA usando o método [Método Execute &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md), com a consulta DMX colocada como texto dentro do [Elemento Statement &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) do elemento [Elemento Command &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md).  
+-   O texto de **consultas de previsão** (e todas as outras instruções DMX) é enviado em XMLA usando o método [Método Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), com a consulta DMX colocada como texto dentro do [Elemento Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) do elemento [Elemento Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Para recuperar o **conteúdo modelo** e os **metadados modelo**, como o número de clusters, os atributos usados em árvores de decisão, a data de processamento do modelo e os parâmetros de algoritmo usados ao criar o modelo, você pode usar o método [Método Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) e especificar um dos conjuntos de linhas de esquema de mineração de dados no cabeçalho [Elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Para restringir o escopo da consulta, insira critérios como restrições dentro do elemento [Elemento RestrictionList &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Para recuperar o **conteúdo modelo** e os **metadados modelo**, como o número de clusters, os atributos usados em árvores de decisão, a data de processamento do modelo e os parâmetros de algoritmo usados ao criar o modelo, você pode usar o método [Método Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) e especificar um dos conjuntos de linhas de esquema de mineração de dados no cabeçalho [Elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla). Para restringir o escopo da consulta, insira critérios como restrições dentro do elemento [Elemento RestrictionList &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados & #40; DMX & #41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Noções básicas sobre a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
- [Estrutura e o uso de consultas de previsão DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Compreendendo a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Estrutura e uso de consultas de previsão DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Criar uma consulta de previsão usando o construtor de consultas de previsão](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Criar uma consulta DMX no SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   

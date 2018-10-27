@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cdae19df652c081290f04d6227a394aa6d90676f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f5f58f5c771d176cedf332e51a33c354bbaf652c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027233"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145432"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensões em modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34027233"
  Ao criar um cubo, você também pode adicionar a ele todas as dimensões já existentes no banco de dados. Elas podem ter sido previamente definidas para outro cubo ou pelo Assistente para Dimensões. Depois que a dimensão do banco de dados estiver definida, será possível modificá-la e configurá-la no Designer de Dimensão. Até um certo limite, você também pode personalizar a dimensão do cubo no Designer de Cubo.  
   
 > [!NOTE]  
->  Também é possível projetar e configurar dimensões, atributos e hierarquias de forma programática usando o XMLA ou o Analysis Management Objects (AMO). Para obter mais informações, consulte [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) e [Desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Também é possível projetar e configurar dimensões, atributos e hierarquias de forma programática usando o XMLA ou o Analysis Management Objects (AMO). Para obter mais informações, consulte [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) e [Desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  A tabela a seguir descreve os tópicos dessa seção.  
@@ -48,7 +48,7 @@ ms.locfileid: "34027233"
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Descreve como definir, modificar e configurar uma hierarquia definida pelo usuário de atributos da dimensão usando o Designer de Dimensão.  
   
- [Use o Assistente de Business Intelligence para aprimorar dimensões](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [Usar o Assistente de Business Intelligence para aprimorar dimensões](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Descreve como aprimorar a dimensão do banco de dados usando o Assistente de Business Intelligence.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981179"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148131"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "38981179"
 5.  Clique duas vezes no texto dentro de \<arquivo > elemento. Digite o nome do arquivo de backup, incluindo a extensão .abf. Especifique o caminho de arquivo completo se você não estiver usando o local de backup padrão. Para obter mais informações, consulte [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA  
- O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Observe que muitos dos conjuntos de linha de esquema também foram expostos como DMVs (Exibições de Gerenciamento Dinâmico) por questões de simplicidade. Ao usar a DMV correspondente, você pode consultar o conjunto de linhas de esquema usando uma sintaxe semelhante à do Transact-SQL. Por exemplo, as consultas a seguir retornam os mesmos resultados, mas um está em formato XML e um está em um formato de tabela. Para obter mais informações sobre os DMVs, consulte [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Abra o **Gerenciador de Modelos**e arraste o modelo **Descobrir Conjuntos de Linhas de Esquema**para a janela de consulta em branco.  
   
-3.  No modelo, substitua os [elemento RequestType &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento com o seguinte texto: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  No modelo, substitua os [elemento RequestType &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) elemento com o seguinte texto: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Clique em **Executar**.  
   
@@ -216,7 +216,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## <a name="see-also"></a>Consulte também  
  [Referência de expressões multidimensionais &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

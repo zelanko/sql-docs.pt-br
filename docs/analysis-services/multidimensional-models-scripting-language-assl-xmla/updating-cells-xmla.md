@@ -9,28 +9,28 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1e886925621378aa5d01cc77a74edf0e1ea246cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0cfee2adf9d730b458fd482317d16d963f15ebc1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020133"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146766"
 ---
 # <a name="updating-cells-xmla"></a>Atualizando células (XMLA)
-  Você pode usar o [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando para alterar o valor de uma ou mais células em um cubo habilitado para write-back de cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] armazena as informações atualizadas em uma tabela de write-back separada para cada partição que contém células a serem atualizadas.  
+  Você pode usar o [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) comando para alterar o valor de uma ou mais células em um cubo habilitado para write-back de cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] armazena as informações atualizadas em uma tabela de write-back separada para cada partição que contém células a serem atualizadas.  
   
 > [!NOTE]  
->  O **UpdateCells** comando não oferece suporte a alocações durante o write-back de cubo. Para usar o write-back alocado, você deve usar o [instrução](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) comando para enviar uma instrução UPDATE de MDX (Multidimensional Expressions). Para obter mais informações, consulte [instrução UPDATE CUBE &#40;MDX&#41;](../../mdx/mdx-data-manipulation-update-cube.md).  
+>  O **UpdateCells** comando não dá suporte a alocações durante o write-back de cubo. Para usar o write-back alocado, você deve usar o [instrução](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) comando para enviar uma instrução UPDATE do MDX (Multidimensional Expressions). Para obter mais informações, consulte [instrução UPDATE CUBE &#40;MDX&#41;](../../mdx/mdx-data-manipulation-update-cube.md).  
   
 ## <a name="specifying-cells"></a>Especificando células  
- O [célula](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) propriedade o **UpdateCells** comando contém as células a serem atualizadas. Identifica cada célula no **célula** propriedade usando um número ordinal dessa célula. Conceitualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] numera células em um cubo como se o cubo for um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal. A ilustração a seguir mostra a fórmula para o cálculo do número ordinal de uma célula.  
+ O [célula](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) propriedade da **UpdateCells** comando contém as células a serem atualizadas. Identifica cada célula na **célula** propriedade usando um número ordinal dessa célula. Conceitualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] numera células em um cubo, como se o cubo for um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal. A ilustração a seguir mostra a fórmula para o cálculo do número ordinal de uma célula.  
   
  ![Fórmula para calcular a posição ordinal da célula](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/media/cellordinalformula.gif "fórmula para calcular a posição ordinal da célula")  
   
- Quando você souber o número ordinal de uma célula, você pode indicar o valor desejado da célula no [valor](../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md) propriedade o [célula](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) propriedade.  
+ Quando você souber o número ordinal de uma célula, você pode indicar o valor pretendido da célula na [valor](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) propriedade da [célula](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atualizar o elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

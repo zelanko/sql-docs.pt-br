@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022573"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147721"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Conceder permissões em uma dimensão (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,18 +53,18 @@ ms.locfileid: "34022573"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
-2.  No **dimensões** painel, altere a definição da dimensão \<nome do cubo > **dimensões de cubo**.  
+2.  No **dimensões** painel, altere a dimensão é definida como \<nome do cubo > **dimensões do cubo**.  
   
      Por padrão, as permissões são herdadas a partir de uma dimensão de banco de dados correspondente. Desmarque a caixa de seleção **Herdar** para alterar as permissões de **Leitura** para **Leitura/Gravação**. Antes de usar **Leitura/Gravação**, leia a observação na seção anterior.  
   
 > [!IMPORTANT]  
->  Se você configurar permissões de função de banco de dados usando Objetos de Gerenciamento de Análise (AMO), qualquer referência a uma dimensão de cubo no atributo DimensionPermission de um cubo cortará a herança de permissão do atributo DimensionPermission do banco de dados. Para obter mais informações sobre AMO, consulte [Desenvolvendo com Objetos de Gerenciamento de Análise &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Se você configurar permissões de função de banco de dados usando Objetos de Gerenciamento de Análise (AMO), qualquer referência a uma dimensão de cubo no atributo DimensionPermission de um cubo cortará a herança de permissão do atributo DimensionPermission do banco de dados. Para obter mais informações sobre AMO, consulte [Desenvolvendo com Objetos de Gerenciamento de Análise &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Conceder permissões de modelo ou de cubo & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder acesso personalizado a dimensão de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acesso personalizado a célula de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

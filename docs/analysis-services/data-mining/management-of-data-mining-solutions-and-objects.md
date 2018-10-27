@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015813"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145681"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34015813"
  Além dessas ferramentas, você pode gerenciar objetos de mineração de dados programaticamente, usando AMO, ou usar outros clientes que se conectam a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Movendo objetos de Mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
@@ -42,13 +42,13 @@ ms.locfileid: "34015813"
   
  Os links a seguir fornecem informações sobre como modificar objetos de mineração de dados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Alterar as propriedades de um modelo de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Exibir ou alterar modelagem sinalizadores & #40; mineração de dados & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Exibir ou alterar parâmetros do algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015813"
 ### <a name="analysis-management-objects-amo"></a>Objetos de Gerenciamento de Análise (AMO)  
  AMO (Objetos de Gerenciamento de Análise) é um modelo de objeto criado com base em XMLA que lhe proporciona o controle total sobre objetos de mineração de dados. Usando o AMO, você pode criar, implantar e monitorar estruturas e modelos de mineração  
   
--   [Conceitos e modelo de objeto AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Conceitos e modelo de objeto AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

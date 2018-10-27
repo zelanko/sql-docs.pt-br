@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberBottom (MDX) | Microsoft Docs
+title: Drilldownmemberbottom=1=«conjunto1 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b145ad7de1832012bd0d78faef58556dfc31d45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 854f880cf9cb4f06ee4fc44fd18cec5f0ab99ca8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740635"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145111"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
@@ -35,7 +35,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Contagem*  
+ *Count*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Numeric_Expression*  
@@ -48,22 +48,22 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  Uma palavra-chave que indica comparação recursiva de conjuntos.  
   
  *Include_Calc_Members*  
- Uma palavra-chave para habilitar os membros calculados a serem incluídas nos resultados da busca detalhada.  
+ Uma palavra-chave para habilitar a ser incluído nos resultados da busca detalhada dos membros calculados.  
   
-## <a name="remarks"></a>Remarks  
- Se uma expressão numérica for especificada, o **DrilldownMemberBottom** função classificará, em ordem crescente, os filhos de cada membro no primeiro conjunto, de acordo com o valor da expressão numérica, conforme avaliado sobre o conjunto de membros filho. Se não for especificada uma expressão numérica, a função classificará, em ordem crescente, os filhos de cada membro no primeiro conjunto de acordo com os valores das células representadas pelo conjunto de membros filho, conforme determinado pelo contexto da consulta. Este comportamento é semelhante às funções BottomCount e Tail (MDX), que retornam um conjunto de membros em ordem natural, sem qualquer classificação.  
+## <a name="remarks"></a>Comentários  
+ Se uma expressão numérica for especificada, o **DrilldownMemberBottom** função classificará, em ordem crescente, os filhos de cada membro no primeiro conjunto, de acordo com o valor da expressão numérica, conforme avaliado sobre o conjunto de filho membros. Se não for especificada uma expressão numérica, a função classificará, em ordem crescente, os filhos de cada membro no primeiro conjunto de acordo com os valores das células representadas pelo conjunto de membros filho, conforme determinado pelo contexto da consulta. Este comportamento é semelhante às funções BottomCount e Tail (MDX), que retornam um conjunto de membros em ordem natural, sem qualquer classificação.  
   
- Depois da classificação, o **DrilldownMemberBottom** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados em *contagem,* com o valor mais baixo e que estão contidos em ambos os conjuntos.  
+ Depois da classificação, o **DrilldownMemberBottom** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados na *contagem,* com o valor mais baixo e que estão contidos pelas duas define.  
   
- Se **RECURSIVA** for especificado, a função classificará o primeiro conjunto, conforme descrito anteriormente, em seguida, compara recursivamente os membros do primeiro conjunto, conforme organizado em uma hierarquia, em relação ao segundo conjunto. A função recupera o número mais baixo dos filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto.  
+ Se **RECURSIVA** for especificado, a função classificará o primeiro conjunto, conforme descrito anteriormente e, em seguida, compara recursivamente os membros do primeiro conjunto, conforme organizado em uma hierarquia, em relação ao segundo conjunto. A função recupera o número mais baixo dos filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. Busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
- O **DrilldownMemberBottom** função é semelhante ao [DrilldownMember](../mdx/drilldownmember-mdx.md) funcionarão, mas em vez de incluir todos os filhos de cada membro no primeiro conjunto que também está presente no segundo conjunto, o **DrilldownMemberBottom** função retorna o número mais baixo de membros filho para cada membro.  
+ O **DrilldownMemberBottom** função é semelhante ao [DrilldownMember](../mdx/drilldownmember-mdx.md) funcionar, mas em vez de incluir todos os filhos de cada membro no primeiro conjunto que também está presente no segundo conjunto, o  **Drilldownmemberbottom=1=«conjunto1** função retorna o número mais baixo dos membros filho para cada membro.  
   
- Consultando a propriedade XMLA MdpropMdxDrillFunctions permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) para obter detalhes.  
+ Consultando a propriedade XMLA MdpropMdxDrillFunctions permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

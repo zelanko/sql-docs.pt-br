@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023133"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144881"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
-  *Status do processo* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
+  *Statefulness* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
   
- Para fornecer statefulness, o XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções a serem executadas em conjunto. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
+ Para fornecer statefulness, o XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções seja executada em conjunto. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
   
  Em geral, as sessões em XMLA seguem o comportamento a seguir, descrito pela especificação do OLE DB 2.6:  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34023133"
   
 -   Vários comandos podem ser executados no contexto de uma única sessão.  
   
--   Suporte a transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+-   Suporte a transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
   
  O XMLA define uma forma de suportar sessões em um ambiente da Web em um modo similar à abordagem usada pelo protocolo DAV (Distributed Authoring and Versioning) para a implementação do bloqueio em um ambiente flexível. Esta implementação se compara ao DAV, já que o provedor pode fazer uma sessão expirar por vários motivos (por exemplo, um tempo limite ou um erro de conexão). Quando as sessões forem suportadas, os serviços Web deverão estar atentos e prontos para lidarem com conjuntos de comandos interrompidos que deverão ser reiniciados.  
   

@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6a4ad929c866658ce241f33ddd2a5326dc78e19
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099329"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Especifique marcar como tabela de data para uso com inteligência de tempo
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Para usar as funções de inteligência de tempo em fórmulas DAX, você deve especificar uma tabela de data e uma coluna de identificador exclusivo (datetime) do tipo de dados de data. Quando uma coluna na tabela de datas é especificada como um identificador exclusivo, você pode criar relações entre colunas na tabela de datas e qualquer tabela de fatos.  
+  Para usar funções de inteligência de tempo em fórmulas DAX, você deve especificar uma tabela de data e uma coluna de identificador exclusivo (datetime) do tipo de dados de data. Quando uma coluna na tabela de datas é especificada como um identificador exclusivo, você pode criar relações entre colunas na tabela de datas e qualquer tabela de fatos.  
   
- Ao usar as funções de inteligência de tempo, as seguintes regras se aplicam:  
+ Ao usar funções de inteligência de tempo, as seguintes regras se aplicam:  
   
--   Ao usar as funções de inteligência de tempo DAX, nunca especifique uma coluna de data e hora de uma tabela de fatos. Sempre crie uma tabela de datas separada em seu modelo com pelo menos uma coluna de datetime de tipo de dados de data e com valores exclusivos.  
+-   Ao usar funções de inteligência de tempo DAX, nunca especifique uma coluna de data e hora de uma tabela de fatos. Sempre crie uma tabela de datas separada em seu modelo com pelo menos uma coluna de datetime de tipo de dados de data e com valores exclusivos.  
   
 -   Tenha certeza de que sua tabela de datas tem um intervalo de datas contínuo.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34039780"
   
 3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione uma coluna a ser usada como um identificador exclusivo. Esta coluna deve conter valores exclusivos e deve ser do tipo de dados de data. Por exemplo:  
   
-    |Data|  
+    |data|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "34039780"
   
 ## <a name="see-also"></a>Consulte também  
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Funções de inteligência de tempo (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Funções de inteligência de tempo (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

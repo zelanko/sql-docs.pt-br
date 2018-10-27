@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098507"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991249"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -254,9 +254,9 @@ Para obter mais informações sobre os componentes e os procedimentos descritos 
 [Trabalhar com arquivos do Excel com a tarefa Script](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>Sobre o Assistente de Importação e de Exportação do SQL Server
-[Conectar-se a uma fonte de dados do Excel](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Começar com esse exemplo simples de Assistente de Importação e Exportação](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Conectar-se a uma fonte de dados do Excel](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[Começar com esse exemplo simples de Assistente de Importação e Exportação](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>Outros artigos
-[Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

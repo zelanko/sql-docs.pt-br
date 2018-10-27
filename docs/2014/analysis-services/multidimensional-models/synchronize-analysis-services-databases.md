@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a627434141bd417d9801354a7879d0879e1c85cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174136"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147847"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
@@ -188,7 +188,7 @@ ms.locfileid: "48174136"
  Se você não sincronizou funções ou associação, lembre-se de especificar agora as permissões de acesso de usuário no banco de dados de destino.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Implantar soluções de modelo usando XMLA](deploy-model-solutions-using-xmla.md)   
  [Implantar soluções de modelo usando o Assistente de implantação](deploy-model-solutions-using-the-deployment-wizard.md)  
   

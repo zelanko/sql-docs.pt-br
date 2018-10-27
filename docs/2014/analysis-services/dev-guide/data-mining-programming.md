@@ -14,12 +14,12 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8aa16d708683a33281ee0836321e11f0a16e3211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0148c1f8284610178cde16852494c297fb4c6e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047696"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147351"
 ---
 # <a name="data-mining-programming"></a>Programação de mineração de dados
   Se você considerar que ferramentas e visualizadores internos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não atendem às suas necessidades, poderá ampliar a capacidade do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções:  
@@ -57,17 +57,17 @@ ms.locfileid: "48047696"
  Descreve adições à especificação para dar suporte à mineração de dados e a dados multidimensionais: novos conjuntos de linhas e colunas de esquemas, linguagem DMX para criação e gerenciamento de estruturas de mineração.  
   
 ## <a name="related-reference"></a>Referência relacionada  
- [Desenvolvendo com ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  Apresenta objetos de programação do servidor e do cliente ADOMD.NET.  
   
- [Desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  Apresenta a biblioteca de programação AMO.  
   
- [Desenvolvimento com o Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Apresenta o XML for Analysis (XMLA) e suas extensões.  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia do desenvolvedor do &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aab7c06903f334ee0b24907cb4189b56d620b49a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903fd6b9af4bc363f5f37ea353ab9ddeb93e347c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099410"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gerenciar senhas (OracleToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -127,5 +127,5 @@ Exemplo:
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executar o Console do SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

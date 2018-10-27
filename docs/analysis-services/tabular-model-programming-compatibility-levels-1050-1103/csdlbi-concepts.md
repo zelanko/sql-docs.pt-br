@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99d7461164bb6d73a0577b817c2f9317889d348d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045230"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146261"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,16 +33,16 @@ ms.locfileid: "34045230"
   
 -   Cada tabela é listada com o **EntityContainer** como um **EntitySet**.  
   
--   Cada relação entre duas tabelas é descrita como um **AssociationSet** que define os pontos de extremidade de relação e as funções de relação.  
+-   Cada relação entre duas tabelas é descrita como uma **AssociationSet** que define os pontos de extremidade da relação e as funções de relação.  
   
--   O **EntityType** elemento é estendido para BISM a fim de fornecer detalhes adicionais sobre as tabelas e colunas neles, inclusive propriedades de classificação e fins de exibição.  
+-   O **EntityType** elemento é estendido para BISM a fim de fornecer detalhes adicionais sobre as tabelas e as colunas nelas, inclusive propriedades para classificação e fins de exibição.  
   
--   O **medidas** elemento define cálculos que podem ser usados no modelo. Uma medida pode ser convertida em um KPI, adicionando um conjunto de atributos de exibição especiais, usando o novo **KPI** elemento.  
+-   O **medida** elemento define cálculos que podem ser usados no modelo. Uma medida pode ser convertida em um KPI, adicionando um conjunto de atributos de exibição especiais, usando o novo **KPI** elemento.  
   
 -   Não há nenhuma representação separada de perspectivas. Colunas e tabelas que não estão incluídas em uma perspectiva estão presentes na CSDL, mas sinalizadas com o **Hidden** atributo.  
   
 ### <a name="entities-entitysets-and-entitytypes"></a>Entities, EntitySets e EntityTypes  
- A noção de uma entidade na Estrutura de Dados de Entidade é estendida para representar colunas e tabelas do modelo de dados. O trecho a seguir mostra a lista de **EntitySet** elementos em uma simples que contém apenas três tabelas de modelo.  
+ A noção de uma entidade na Estrutura de Dados de Entidade é estendida para representar colunas e tabelas do modelo de dados. O trecho a seguir mostra a lista de **EntitySet** contendo apenas três tabelas de modelo de elementos em um simples.  
   
 ```  
 <EntityContainer Name="SimpleModel">  
@@ -85,11 +85,11 @@ ms.locfileid: "34045230"
 ### <a name="relationships"></a>Relações  
  Na estrutura de dados de entidade, as relações são definidas como *associações* entre entidades.  
   
- As associações sempre têm exatamente duas extremidades, cada uma apontando para um campo ou uma coluna em uma tabela. Portanto, várias relações são possíveis entre duas tabelas, se as relações tiverem pontos de extremidade diferentes. Um nome de função é atribuído aos pontos de extremidade da associação e indica como a associação é usada no contexto do modelo de dados. Um exemplo de um nome de função pode ser **ShipTo**, quando aplicado a uma ID de cliente que está relacionada à ID de cliente em uma tabela Orders.  
+ As associações sempre têm exatamente duas extremidades, cada uma apontando para um campo ou uma coluna em uma tabela. Portanto, várias relações são possíveis entre duas tabelas, se as relações tiverem pontos de extremidade diferentes. Um nome de função é atribuído aos pontos de extremidade da associação e indica como a associação é usada no contexto do modelo de dados. Um exemplo de um nome de função pode ser **ShipTo**, quando aplicado a uma ID de cliente que está relacionada à ID de cliente em uma tabela de pedidos.  
   
- A representação CSDLBI do modelo também contém atributos na associação que determinam como as entidades são mapeadas umas às outras em termos do *multiplicidade* da associação. A multiplicidade indica se o atributo ou a coluna no ponto de extremidade de uma relação entre tabelas está em um dos lados de uma relação ou nos vários lados. Não há nenhum valor separado para relações um para um. As anotações da CSDLBI oferecem suporte à multiplicidade 0 (o que significa que a entidade não está associada a nada) ou 0..1 (o que significa uma relação um para um ou um para muitos).  
+ A representação CSDLBI do modelo também contém atributos na associação que determinam como as entidades são mapeadas para as outras em termos do *multiplicidade* da associação. A multiplicidade indica se o atributo ou a coluna no ponto de extremidade de uma relação entre tabelas está em um dos lados de uma relação ou nos vários lados. Não há nenhum valor separado para relações um para um. As anotações da CSDLBI oferecem suporte à multiplicidade 0 (o que significa que a entidade não está associada a nada) ou 0..1 (o que significa uma relação um para um ou um para muitos).  
   
- O exemplo a seguir representa a saída da CSDLBI de uma relação entre as tabelas Date e ProductInventory, na qual as duas tabelas são unidas na coluna DateAlternateKey. Observe que, por padrão, o nome do **AssociationSet** é o nome totalmente qualificado das colunas que estão envolvidos na relação. Porém, você pode alterar esse comportamento ao criar o modelo, para usar um formato de nomenclatura diferente.  
+ O exemplo a seguir representa a saída da CSDLBI de uma relação entre as tabelas Date e ProductInventory, na qual as duas tabelas são unidas na coluna DateAlternateKey. Observe que, por padrão, o nome da **AssociationSet** é o nome totalmente qualificado das colunas que estão envolvidos na relação. Porém, você pode alterar esse comportamento ao criar o modelo, para usar um formato de nomenclatura diferente.  
   
 ```  
 <AssociationSet Name="ProductInventory_Date_DateKey" Association="Model.ProductInventory_Date_DateKey">  
@@ -100,7 +100,7 @@ ms.locfileid: "34045230"
   
 ```  
   
-### <a name="visualization-and-navigation-properties"></a>Visualização e propriedades de navegação  
+### <a name="visualization-and-navigation-properties"></a>Visualização e as propriedades de navegação  
  Uma parte importante das anotações da CSDLBI são as propriedades para definição da apresentação na camada de relatório e para navegação nas relações entre entidades. Normalmente, ao criar um modelo de dados, você não considera importante controlar como os dados são ordenados ou agrupados, ou qual pode ser o valor padrão, pressupondo que o aplicativo cliente especificará ordenação e outros detalhes da apresentação. No entanto, os modelos de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] foram projetados para integração ao cliente de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], e incluem propriedades e atributos que oferecem suporte à apresentação de entidades do modelo de dados na superfície de design do relatório.  
   
  As extensões de visualização incluem atributos que especificam a agregação padrão a ser usada com dados numéricos, indicam que um campo de texto aponta para a URL de uma imagem ou especificam o campo usado para classificar o campo atual.  
@@ -123,17 +123,17 @@ ms.locfileid: "34045230"
 ## <a name="additions-to-support-multidimensional-models"></a>Adições para oferecer suporte aos modelos multidimensionais  
  A versão 1.0 das anotações da CSDLBI oferecia suporte apenas a modelos de tabela. Na versão 1.1, foi adicionado suporte para modelos multidimensionais (cubos OLAP) criados usando ferramentas tradicionais de desenvolvimento de BI. Portanto, agora você pode emitir uma solicitação XML para um modelo multidimensional e receber uma definição CSDLBI do modelo, para uso em relatórios.  
   
- **Cubos:** um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de tabela pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
+ **Cubos:** um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados tabular pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
   
  De qualquer forma, a representação de um cubo é muito semelhante a de um banco de dados modelo de tabela. O nome do cubo e o cubo correspondem ao nome do banco de dados de tabela e ao identificador do banco de dados.  
   
- **Dimensões:** uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que, mesmo que não são incluídas em uma perspectiva, uma dimensão que está incluída no modelo será representada na saída da CSDL, marcada como **Hidden**.  
+ **Dimensões:** uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que mesmo não incluída em uma perspectiva, uma dimensão que está incluída no modelo será representada na saída da CSDL, marcada como **Hidden**.  
   
- **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [linhas DISCOVER_CSDL_METADATA](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hierarquias:** hierarquias têm suporte e representadas na CSDLBI como um conjunto de níveis.  
+ **Hierarquias:** hierarquias têm suporte e são representadas na CSDLBI como um conjunto de níveis.  
   
- **Membros:** suporte para o membro padrão foi adicionado e valores padrão são automaticamente adicionados à saída da CSDLBI.  
+ **Membros:** o suporte para o membro padrão foi adicionado e valores padrão são automaticamente adicionados à saída da CSDLBI.  
   
  **Membros calculados:** modelos multidimensionais dão suporte a membros calculados para filhos de **todos os** com um único membro real.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "34045230"
  **Limitações:** não há suporte para a segurança da célula.  
   
 ## <a name="see-also"></a>Consulte também  
- [Anotações CSDL para Business Intelligence & #40; CSDLBI & #41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

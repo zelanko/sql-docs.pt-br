@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143788"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146741"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -109,7 +109,7 @@ ms.locfileid: "48143788"
 5.  Clique duas vezes no texto dentro de \<arquivo > elemento. Digite o nome do arquivo de backup, incluindo a extensão .abf. Especifique o caminho de arquivo completo se você não estiver usando o local de backup padrão. Para obter mais informações, consulte [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA  
- O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](../schema-rowsets/analysis-services-schema-rowsets.md).  
+ O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Observe que muitos dos conjuntos de linha de esquema também foram expostos como DMVs (Exibições de Gerenciamento Dinâmico) por questões de simplicidade. Ao usar a DMV correspondente, você pode consultar o conjunto de linhas de esquema usando uma sintaxe semelhante à do Transact-SQL. Por exemplo, as consultas a seguir retornam os mesmos resultados, mas um está em formato XML e um está em um formato de tabela. Para obter mais informações sobre os DMVs, consulte [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Abra o **Gerenciador de Modelos**e arraste o modelo **Descobrir Conjuntos de Linhas de Esquema**para a janela de consulta em branco.  
   
-3.  No modelo, substitua os [elemento RequestType &#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) elemento com o seguinte texto: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  No modelo, substitua os [elemento RequestType &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) elemento com o seguinte texto: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Clique em **Executar**.  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Previsão Singleton Aninhada|Demonstra como usar um DMX SELECT FROM  *\<modelo >* cláusula NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão, em uma coluna cujo nome corresponde a uma coluna no modelo de mineração e que contém um conjunto de valores em uma tabela aninhada criada usando uma instrução UNION, cujos nomes também correspondem às colunas aninhadas no modelo de mineração.|  
 ||Previsão Singleton|Demonstra como usar um DMX SELECT FROM \<modelo > instrução NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão, em uma coluna cujo nome corresponde a uma coluna em o modelo de mineração.|  
 ||Chamada de Procedimento Armazenado|Demonstra como usar a instrução DMX CALL para chamar um procedimento armazenado.|  
-|MDX\Expressões|Média Móvel-Fixa|Demonstra como usar o MDX `ParallelPeriod` e `CurrentMember` funções com um conjunto ordenado naturalmente para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número fixo de períodos de tempo contidos em uma hierarquia em uma dimensão de tempo.|  
-||Média Móvel-Variável|Demonstra como usar o MDX `CASE` instrução dentro de `Avg` função para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número variável de períodos de tempo contidos em uma dimensão de tempo de hierarquia.|  
+|MDX\Expressões|Média Móvel-Fixa|Demonstra como usar as funções MDX `ParallelPeriod` e `CurrentMember` com um conjunto ordenado naturalmente para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número fixo de períodos de tempo contidos em uma hierarquia de dimensão de tempo.|  
+||Média Móvel-Variável|Demonstra como usar a instrução MDX `CASE` na função `Avg` para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número variável de períodos de tempo contidos em uma hierarquia de dimensão de tempo.|  
 ||Períodos até a Data|Demonstra como usar a função MDX `PeriodsToDate` em um membro calculado.|  
-||Proporção do Pai|Demonstra como usar o MDX `Parent` função para criar uma medida calculada que representa uma porcentagem proporcional de uma medida para cada filho de um membro pai em uma hierarquia especificada.|  
+||Proporção do Pai|Demonstra como usar a função MDX `Parent` para criar uma medida calculada que representa uma porcentagem proporcional de uma medida para cada filho de um membro pai na hierarquia especificada.|  
 ||Proporção do Total|Demonstra como usar o membro All para criar uma medida calculada que representa uma porcentagem proporcional de uma medida para cada membro da hierarquia especificada.|  
 |MDX\Consultas|Consulta Básica|Demonstra uma instrução MDX SELECT básica a partir da qual você pode construir uma consulta MDX.|  
-||Consulta KPI|Demonstra como usar o MDX `KPIValue` e `KPIGoal` funções para recuperar informações de KPI (indicador) de chave de desempenho em uma consulta MDX.|  
+||Consulta KPI|Demonstra como usar as funções MDX `KPIValue` e `KPIGoal` para recuperar informações sobre o KPI (indicador chave de desempenho) em uma consulta MDX.|  
 ||Consulta de Subseleção|Demonstra como criar uma instrução MDX SELECT que recupera informações de um subcubo definidas por outra instrução SELECT.|  
 ||Com Membro Calculado|Demonstra como usar a cláusula WITH na instrução SELECT para definir um membro calculado limitado a uma consulta MDX.|  
 ||Com Conjunto Nomeado|Demonstra como usar a cláusula MDX WITH em uma instrução SELECT para definir um conjunto nomeado para uma consulta MDX.|  
-|XMLA\Gerenciamento|Backup|Demonstra como usar o XMLA `Backup` comando para fazer backup de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados para um arquivo.|  
-||Cancelar|Demonstra como usar o XMLA `Cancel` comando para cancelar todas as operações em execução na sessão atual (para usuários que não sejam administradores ou administradores de servidor), do banco de dados (para administradores) ou na instância (para administradores de servidor).|  
+|XMLA\Gerenciamento|Backup|Demonstra como usar o comando XMLA `Backup` para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em arquivo.|  
+||Cancelar|Demonstra como usar o comando XMLA `Cancel` para cancelar todas as operações em execução na sessão (para usuários que não são administradores ou administradores de servidor), no banco de dados (para administradores) ou na instância (para administradores de servidor).|  
 ||Criar banco de dados de partição remota|Demonstra como usar o comando XMLA `Create` com o elemento de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) para criar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma fonte de dados para armazenar partições remotas.|  
-||DELETE|Demonstra como usar o XMLA `Delete` comando para excluir um existente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.|  
+||DELETE|Demonstra como usar o comando XMLA `Delete` para excluir um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente.|  
 ||Processar Dimensão|Demonstra como usar o comando XMLA `Batch` combinado com o elemento `Parallel`  e o comando `Process` para atualizar os atributos de uma dimensão usando uma operação em lote paralela.|  
-||Processar Partição|Demonstra como usar o XMLA `Batch` combinado com o `Parallel` elemento e o `Process` comando para processar completamente uma partição usando uma operação em lote paralela.|  
-||Restaurar|Demonstra como usar o XMLA `Restore` comando para restaurar um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de um arquivo de backup existente.|  
-||Sincronizar|Demonstra como usar o XMLA `Synchronize` comando para sincronizar outro [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados com o atual [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados usando a opção SkipMembership na marca SynchronizeSecurity.|  
+||Processar Partição|Demonstra como usar o comando XMLA `Batch` combinado com o elemento `Parallel` e o comando `Process` para processar completamente uma partição usando uma operação em lote paralela.|  
+||Restaurar|Demonstra como usar o comando XMLA `Restore` comando para restaurar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a partir de um arquivo de backup.|  
+||Sincronizar|Demonstra como usar o comando XMLA `Synchronize` para sincronizar outro banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com o banco de dados atual do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando a opção SkipMembership na marca SynchronizeSecurity.|  
 |XMLA\Conjuntos de linhas do esquema|Descobrir conjuntos de linhas de esquema|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_SCHEMA_ROWSETS.|  
-|XMLA\Status do servidor|Conexões|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_CONNECTIONS.|  
-||trabalhos|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_JOBS.|  
-||Locais|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo de linhas de esquema DISCOVER_LOCATIONS, especificando o caminho dos arquivos de backup local.|  
+|XMLA\Status do servidor|Conexões|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_CONNECTIONS.|  
+||trabalhos|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_JOBS.|  
+||Locais|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_LOCATIONS, especificando o caminho dos arquivos de backup da localização.|  
 ||Locks|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_LOCKS.|  
 ||Concessão de Memória|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_MEMORYGRANT.|  
-||Contadores de desempenho|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
+||Contadores de desempenho|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sessões|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_SESSIONS.|  
-||Rastreamentos|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRACES.|  
-||Transações|Demonstra como usar o XMLA `Discover` método para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
+||Rastreamentos|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRACES.|  
+||Transações|Demonstra como usar o método XMLA `Discover` para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; referência](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; referência](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

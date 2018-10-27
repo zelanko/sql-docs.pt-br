@@ -13,12 +13,12 @@ ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf3b448db7f61064a99f059186fcd2408fab42a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088166"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148031"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
   Você pode consultar o conteúdo do modelo de mineração via programação usando AMO ou XML/A, mas é mais fácil criar consultas usando DMX. Também é possível criar consultas nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e criando uma consulta usando os DMVs fornecidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "48088166"
   
 6.  Na linha `SELECT` *\<lista de seleção, lista de expr \* >*, digite os nomes das colunas no conjunto de linhas do esquema de conteúdo modelo de mineração.  
   
-     Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Mineração de Dados&#41;](mining-model-content-analysis-services-data-mining.md).  
+     Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 7.  Se preferir, digite uma condição na cláusula WHERE do modelo para restringir as linhas retornadas a nós ou valores específicos.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48088166"
     >  Para ver uma lista de todos os conjuntos de linhas de esquema que você pode consultar na instância atual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Para ver uma lista de conjuntos de linhas de esquema específicos de mineração de dados, consulte [Conjuntos de linhas de esquema de mineração de dados](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Conjuntos de linhas de esquema de mineração de dados](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conjuntos de linhas de esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113686"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100317"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2014)
 A linguagem de expressão de análise de dados (DAX) pode ser usada para criar medidas e outras fórmulas personalizadas para uso em modelos de tabela do Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados em pastas de trabalho do Excel e modelos de dados do Power BI Desktop. Na maioria dos aspectos, os modelos que você cria nesses ambientes são idênticos, e você pode usar o mesmo medidas, relações e KPIs, etc. No entanto, se você cria um modelo de tabela do Analysis Services e implantá-lo no modo DirectQuery, há algumas restrições sobre as fórmulas que você pode usar. Este tópico fornece uma visão geral dessas diferenças, lista as funções que não são suportadas no modelo do SQL Server 2014 Analysis Services tabulars no nível de compatibilidade 1100 ou 1103 e no modo DirectQuery, e lista as funções que têm suporte, mas talvez retorne resultados diferentes.  
   
-Neste tópico, usamos o termo *modelo na memória* para se referir aos modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos do DirectQuery* para se referir aos modelos de tabela que tiveram sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+Neste tópico, usamos o termo *modelo na memória* para se referir aos modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos do DirectQuery* para se referir aos modelos de tabela que tiveram sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Diferenças entre os modos na memória e DirectQuery  
@@ -92,7 +92,7 @@ Para obter informações sobre as regras que controlam conversões de cadeia de 
 Os modelos que usam o repositório de dados na memória oferecem suporte a um intervalo mais limitado de formatos de texto para datas que os formatos de cadeias de caracteres para datas que têm suporte no SQL Server. No entanto, a DAX oferece suporte a formatos de data e hora personalizados.  
   
 **Conversão de cadeia de caracteres em outros valores não boolianos**  
-Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Não é permitido converter de números em cadeia de caracteres**  
 EXEMPLO: `CONCATENATE(102,”,345”)`  
@@ -263,9 +263,9 @@ EXEMPLO: `LEFT([“text”], 2)`
   
 No modo DirectQuery, o uso de maiúsculas/minúsculas do caractere retornado sempre é exatamente igual ao da letra armazenada no banco de dados. No entanto, o mecanismo xVelocity usa um algoritmo diferente para compactação e indexação de valores, para melhorar o desempenho.  
   
-Por padrão, é usado o agrupamento Latin1_General, que não diferencia maiúsculas/minúsculas, mas diferencia acentos. Portanto, se houver várias instâncias de uma cadeia de caracteres de texto em minúsculas, maiúsculas ou minúsculas/maiúsculas, todas as instâncias serão consideradas a mesma cadeia de caracteres e somente a primeira instância da cadeia de caracteres será armazenada no índice. Todas as funções de texto que operam em cadeias de caracteres armazenadas recuperarão a parte especificada do formulário indexado. Assim, a fórmula de exemplo retornaria o mesmo valor de toda a coluna, usando a primeira instância como a entrada.  
+Por padrão, é usada a ordenação Latin1_General, que não diferencia maiúsculas/minúsculas, mas diferencia acentos. Portanto, se houver várias instâncias de uma cadeia de caracteres de texto em minúsculas, maiúsculas ou minúsculas/maiúsculas, todas as instâncias serão consideradas a mesma cadeia de caracteres e somente a primeira instância da cadeia de caracteres será armazenada no índice. Todas as funções de texto que operam em cadeias de caracteres armazenadas recuperarão a parte especificada do formulário indexado. Assim, a fórmula de exemplo retornaria o mesmo valor de toda a coluna, usando a primeira instância como a entrada.  
   
-[Armazenamento de cadeia e agrupamento em modelos de tabela](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Ordenação e armazenamento de cadeia de caracteres em modelos tabulares](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Esse comportamento também se aplica a outras funções de texto, incluindo RIGHT, MID etc.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Confira também  
-[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

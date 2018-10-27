@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098136"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146512"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098136"
   
  **Dimensões:** uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que mesmo não incluída em uma perspectiva, uma dimensão incluída no modelo será representada na saída da CSDL, marcada como `Hidden`.  
   
- **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Hierarquias:** hierarquias têm suporte e são representadas na CSDLBI como um conjunto de níveis.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098136"
  **Limitações:** não há suporte para a segurança da célula.  
   
 ## <a name="see-also"></a>Consulte também  
- [Anotações CSDL para Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019683"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147861"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
   
 -   Bancos de dados Multidimensionais e bancos de dados com nível de compatibilidade 1100 ou 1103 de Tabela anteriores ao SQL Server 2016 são descritos em construtos de modelagem multidimensional como **cubeID**, **measuregroupID**e **partitionID**.  
   
--   Metadados para novos bancos de dados de modelo de tabela no nível de compatibilidade 1200 e maior consistem em descritores como **TableName** e **PartitionName**.  
+-   Metadados para novos bancos de dados de modelo Tabular no nível de compatibilidade 1200 e superior consistem em descritores como **TableName** e **PartitionName**.  
   
  O DBCC para Analysis Services será executado em qualquer banco de dados do Analysis Services em qualquer nível de compatibilidade, desde que o banco de dados esteja em execução em uma instância do SQL Server 2016. Verifique se que você está usando a sintaxe de comando correta para cada tipo de banco de dados.  
   
@@ -41,9 +41,9 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
  Você deve ser um administrador do servidor ou do banco de dados do Analysis Services (um membro da função de servidor) para executar o comando. Consulte [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) ou [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter instruções.  
   
 ## <a name="command-syntax"></a>Sintaxe de comando 
- Níveis mais altos de compatibilidade e de bancos de dados tabulares na 1200 usam metadados tabulares para definições de objeto. A sintaxe completa de DBCC para um banco de dados tabular criado em um nível funcional do SQL Server 2016 é ilustrada no exemplo a seguir.  
+ Bancos de dados tabulares no 1200 e níveis mais altos de compatibilidade usam metadados tabulares para definições de objeto. A sintaxe completa de DBCC para um banco de dados tabular criado em um nível funcional do SQL Server 2016 é ilustrada no exemplo a seguir.  
   
- Principais diferenças entre as duas sintaxes incluem um namespace mais recente do XMLA, não \<objeto > elemento e não \<modelo > elemento (há apenas um modelo por banco de dados).  
+ As principais diferenças entre as duas sintaxes incluem um namespace mais recente do XMLA, não \<objeto > elemento e não \<modelo > elemento (há apenas um modelo por banco de dados).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
  Você pode obter os nomes de objeto e o DatabaseID no Management Studio, por meio da página de propriedades de cada objeto.  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>A sintaxe de comando para bancos de dados Multidimensionais e Tabulares 110x  
- O DBCC usa sintaxe idêntica para bancos de dados multidimensionais, bem como bancos de dados 1100 e 1103. Você pode executar o DBCC em objetos de banco de dados específicos, incluindo o banco de dados inteiro. Consulte [Elemento Object &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) Para obter mais informações sobre a definição do objeto.  
+ O DBCC usa sintaxe idêntica para bancos de dados multidimensionais, bem como bancos de dados 1100 e 1103. Você pode executar o DBCC em objetos de banco de dados específicos, incluindo o banco de dados inteiro. Consulte [Elemento Object &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Para obter mais informações sobre a definição do objeto.  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -176,7 +176,7 @@ Execution complete
   
      Para ambas as subclasses de eventos, examine os valores do **TextData** para as mensagens retornadas por DBCC.  
   
-     Mensagens de status começam com "Verificando a consistência da \<objeto >", "verificação iniciada \<objeto >", ou "terminar verificando \<objeto >".  
+     Mensagens de status começam com "Verificando a consistência da \<objeto >", "iniciada a verificação \<objeto >", ou "concluída a verificação \<objeto >".  
   
     > [!NOTE]  
     >  No CTP 3.0, os objetos são identificados por nomes internos. Por exemplo, uma hierarquia de categorias é articulada como H$ Categories -\<objectID >. Nomes internos devem ser substituídos por nomes amigáveis de usuário em um CTP futuro.  
@@ -196,7 +196,7 @@ Execution complete
   
 5.  Examine os valores de TextData para mensagens retornadas pelo DBCC.  TextData é uma propriedade de um campo de evento e mostra o status e as mensagens de erro retornadas pelo evento.  
   
-     Mensagens de status começam com "Verificando a consistência da \<objeto >", "verificação iniciada \<objeto >", ou "terminar verificando \<objeto >".  
+     Mensagens de status começam com "Verificando a consistência da \<objeto >", "iniciada a verificação \<objeto >", ou "concluída a verificação \<objeto >".  
   
      As mensagens de erro estão listadas abaixo.  
   
@@ -230,17 +230,17 @@ Execution complete
 |Hierarquia|Gerar um erro se a ordem de classificação da hierarquia não for um valor reconhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
 |Hierarquia|As verificações executadas na hierarquia dependem do tipo interno de esquema de mapeamento de hierarquia usado.<br /><br /> Todas as hierarquias são verificadas em relação ao estado processado correto, se a hierarquia de repositório existe e se, quando aplicável, estruturas de dados usadas para uma conversão de ID de dados para posição de hierarquia existem.<br /><br /> Supondo que todas essas verificações passem, a estrutura da hierarquia será movimentada para verificar se cada posição na hierarquia corresponde ao membro correto.<br />Se algum desses testes falhar, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
 |Hierarquia definida pelo usuário|Verifica se os nomes de nível de hierarquia são definidos.<br /><br /> Se a hierarquia foi processada, verifique se o armazenamento de dados da hierarquia interna tem o formato correto.  Verifique se o repositório de hierarquia interna não contém nenhum valor de dados inválido.<br /><br /> Se a hierarquia for marcada como não processada, confirme que esse estado se aplicará a estruturas de dados antigas e que todos os níveis da hierarquia serão marcados como vazios.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
-|Coluna|Gerar um erro se a codificação usada para a coluna não for definida para um valor conhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Verifique se a coluna foi compactada pelo mecanismo na memória ou não.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Verifique o tipo de compactação na coluna de valores conhecidos.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Quando a coluna "geração de tokens" não estiver definida para um valor conhecido, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Se o intervalo de ID armazenado para um dicionário de dados de colunas não coincidir com o número de valores no dicionário de dados ou estiver fora do intervalo permitido, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o dicionário de dados.|  
-|Coluna|Verifique se o número de segmentos de dados de uma coluna corresponde ao número de segmentos de dados da tabela à qual ela pertence.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Verifique se o número de partições de uma coluna de dados corresponde ao número de partições do mapa de segmento de dados da coluna.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
-|Coluna|Verifique se o número de registros em um segmento de coluna corresponde à contagem de registros armazenada no índice desse segmento de coluna.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Se uma coluna não tiver nenhuma estatística de segmento, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
-|Coluna|Se uma coluna não tiver informações de compactação ou de armazenamento de segmento, será gerado um erro.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
-|Coluna|Relate um erro se as estatísticas do segmento de uma coluna não coincidirem com os valores da coluna real para a ID de dados mínimos, ID de dados máximos, número de valores distintos, número de linhas ou a presença de valores NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
+|coluna|Gerar um erro se a codificação usada para a coluna não for definida para um valor conhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Verifique se a coluna foi compactada pelo mecanismo na memória ou não.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Verifique o tipo de compactação na coluna de valores conhecidos.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Quando a coluna "geração de tokens" não estiver definida para um valor conhecido, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Se o intervalo de ID armazenado para um dicionário de dados de colunas não coincidir com o número de valores no dicionário de dados ou estiver fora do intervalo permitido, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o dicionário de dados.|  
+|coluna|Verifique se o número de segmentos de dados de uma coluna corresponde ao número de segmentos de dados da tabela à qual ela pertence.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Verifique se o número de partições de uma coluna de dados corresponde ao número de partições do mapa de segmento de dados da coluna.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
+|coluna|Verifique se o número de registros em um segmento de coluna corresponde à contagem de registros armazenada no índice desse segmento de coluna.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Se uma coluna não tiver nenhuma estatística de segmento, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
+|coluna|Se uma coluna não tiver informações de compactação ou de armazenamento de segmento, será gerado um erro.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
+|coluna|Relate um erro se as estatísticas do segmento de uma coluna não coincidirem com os valores da coluna real para a ID de dados mínimos, ID de dados máximos, número de valores distintos, número de linhas ou a presença de valores NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se a ID de dados mínimos ou a ID de dados máximos for menor que o valor do sistema reservado para NULL, marque as informações de segmento de coluna como corrompido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se não houver nenhuma linha para este segmento, os valores mínimo e máximo de dados da coluna devem ser definidos para o valor do sistema reservado para NULL.  Se o valor não for nulo, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se a coluna tiver linhas e pelo menos um valor não nulo, verifique que a ID de dados mínimos e máximos da coluna é maior que o valor do sistema reservado para NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
@@ -252,8 +252,8 @@ Execution complete
 |Tabela de DBCC|Para a tabela em validação, verifique se o número de colunas é menor que zero e gere um erro se for verdadeiro.  Também ocorrerá um erro se o repositório de coluna de uma coluna na tabela for NULL.|Há corrupção na camada de armazenamento. A coleção de colunas na tabela '%{parent/}' está corrompida.|  
 |Partição do DBCC|Verifica se a quem a tabela que pertence a partição que está sendo validada pertence e se o número de colunas da tabela for menor que zero, indica que a coleção de colunas está corrompida para a tabela. Também ocorrerá um erro se o repositório de coluna de uma coluna na tabela for NULL.|Há corrupção na camada de armazenamento. A coleção de colunas na tabela '%{parent/}' está corrompida.|  
 |Partição do DBCC|Percorre cada coluna da partição selecionada e verifica se cada segmento da partição tem um link válido para uma estrutura de segmento de coluna.  Se nenhum segmento tiver um link NULL, a partição será considerada corrompida.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Retornará um erro se o tipo de coluna não for válido.|Um tipo de segmento inválido foi encontrado.|  
-|Coluna|Retornará um erro se qualquer coluna tiver uma contagem negativa para o número de segmentos em uma coluna ou se o ponteiro para a estrutura de segmento de coluna de um segmento tiver um link NULL.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Retornará um erro se o tipo de coluna não for válido.|Um tipo de segmento inválido foi encontrado.|  
+|coluna|Retornará um erro se qualquer coluna tiver uma contagem negativa para o número de segmentos em uma coluna ou se o ponteiro para a estrutura de segmento de coluna de um segmento tiver um link NULL.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
 |Comando DBCC|O comando DBCC relatará várias mensagens de status conforme ele passa para a operação de DBCC.  Ele relatará uma mensagem de status antes de iniciar, que inclui o banco de dados, a tabela ou o nome de coluna do objeto e novamente após a conclusão de cada verificação de objeto.|Verificando a consistência do \<objectname > \<objecttype >. Fase: pré-verificação.<br /><br /> Verificando a consistência do \<objectname > \<objecttype >. Fase: pós-verificação.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Resoluções comuns para condições de erro  
@@ -262,14 +262,14 @@ Execution complete
 |Erro|Problema|Resolução|  
 |-----------|-----------|----------------|  
 |**Erros no gerenciador de metadados**<br /><br /> A referência de objeto '\<objectID >' não é válido. Ela não corresponde à estrutura da hierarquia da classe de metadados.|comando malformado|Verifique a sintaxe do comando. Provavelmente, você incluiu um objeto de nível inferior sem especificar um ou mais dos seus objetos pai.|  
-|**Erros no gerenciador de metadados**<br /><br /> Ou o \<objeto > com a ID '\<objectID >' não existe no \<parentobject > com a ID '\<parentobjectID >', ou o usuário não tem permissões para acessar o objeto.|Corrupção de índice (multidimensional)|Reprocesse o objeto e todos os objetos dependentes.|  
-|**Erro durante a verificação de consistência da partição**<br /><br /> Ocorreu um erro ao verificar a consistência do \<nome da partição > partição do \<nome do grupo de medidas > grupo de medidas para o \<nome do cubo > do cubo do \<nome do banco de dados > banco de dados. Processe novamente a partição ou os índices para corrigir a corrupção.|Corrupção de índice (multidimensional)|Reprocesse o objeto e todos os objetos dependentes.|  
+|**Erros no gerenciador de metadados**<br /><br /> Ambos o \<objeto > com a ID de '\<objectID >' não existe na \<parentobject > com a ID de '\<parentobjectID >', ou o usuário não tem permissões para acessar o objeto.|Corrupção de índice (multidimensional)|Reprocesse o objeto e todos os objetos dependentes.|  
+|**Erro durante a verificação de consistência da partição**<br /><br /> Ocorreu um erro ao verificar a consistência do \<nome da partição > partição do \<measure-group-name > grupo de medidas para o \<nome do cubo > do cubo do \<nome do banco de dados > banco de dados. Processe novamente a partição ou os índices para corrigir a corrupção.|Corrupção de índice (multidimensional)|Reprocesse o objeto e todos os objetos dependentes.|  
 |**As estatísticas do segmento da partição estão corrompidas**|Corrupção de índice (multidimensional)|Reprocesse o objeto e todos os objetos dependentes.|  
 |**O segmento da partição está corrompido**|Corrupção de metadados (multidimensional ou tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
 |**Metadados de tabela corrompidos**<br /><br /> Tabela \<nome da tabela > arquivo de metadados está corrompido. A tabela principal não foi encontrada no nó DataFileList.|Corrupção de metadados (somente tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
-|**Corrupção na camada de armazenamento**<br /><br /> Corrupção na camada de armazenamento: coleção de \<nome do tipo > em \<pai-name > \<tipo pai > está corrompido.|Corrupção de metadados (somente tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
+|**Corrupção na camada de armazenamento**<br /><br /> Corrupção na camada de armazenamento: coleção de \<tipo-name > no \<nome do pai > \<tipo pai > está corrompido.|Corrupção de metadados (somente tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
 |**A tabela do sistema está ausente**<br /><br /> Tabela do sistema \<nome da tabela > está ausente.|Corrupção do objeto (somente tabular)|Reprocesse o objeto e todos os objetos dependentes|  
-|**As estatísticas de tabela estão corrompidas**<br /><br /> Estatísticas de tabela do sistema \<nome da tabela > está ausente.|Corrupção de metadados (somente tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
+|**As estatísticas de tabela estão corrompidas**<br /><br /> Estatísticas da tabela de sistema de tabela \<nome da tabela > está ausente.|Corrupção de metadados (somente tabular)|Excluir e reimplantar o projeto ou restaurar de um backup e reprocessar.<br /><br /> Consulte [How to Deal with Corruption in Analysis Services (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Como lidar com danos nos bancos de dados do Analysis Services) para obter instruções.|  
   
 ## <a name="disable-automatic-consistency-checks-on-database-load-operations-through--the-msmdsrvini-configuration-file"></a>Desabilitar verificações automáticas de consistência em operações de carregamento de banco de dados por meio do arquivo de configuração msmdsrv.ini  
  Embora não seja recomendado, você pode desabilitar as verificações de consistência do banco de dados integrado que ocorrem automaticamente em eventos de carregamento de banco de dados (somente em bancos de dados tabulares). Para fazer isso, você precisará modificar uma definição de configuração no arquivo msmdsrv.ini:  
@@ -299,7 +299,7 @@ Execution complete
 ## <a name="see-also"></a>Consulte também  
  [Processar banco de dados, tabela ou partição &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

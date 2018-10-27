@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090966"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145891"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
   A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "48090966"
 -   `AllowAdHocOpenRowsetQueries` Controla o acesso ad hoc a provedores OLE DB, que são carregados diretamente no espaço de memória do servidor.  
   
     > [!IMPORTANT]  
-    >  Para melhorar a segurança, é recomendável definir esta propriedade como `false`. O valor padrão é `false`. No entanto, ainda que esta propriedade é definida como `false`, os usuários podem continuar criando consultas singleton e usar OPENQUERY em fontes de dados permitidas.  
+    >  Para melhorar a segurança, é recomendável definir esta propriedade como `false`. O valor padrão é `false`. No entanto, ainda que esta propriedade seja definida como `false`, os usuários podem continuar criando consultas singleton e usar OPENQUERY em fontes de dados permitidas.  
   
 -   **AllowedProvidersInOpenRowset** Especificará o provedor se ad hoc acesso estiver habilitado. Para especificar vários provedores, digite uma lista de ProgIDs separados por vírgula.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090966"
   
  Se o procedimento retornar um conjunto de dados, o cliente receberá um conjunto de dados ou uma tabela de dados com uma tabela aninhada contendo as linhas. Por exemplo, se você criar uma consulta baseada no conteúdo de modelo, a consulta retornará o modelo inteiro. Para evitar que sejam retornadas muitas linhas, você pode gravar procedimentos armazenados usando o modelo de objeto ADOMD+.  
   
- Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Para gravar um procedimento armazenado de servidor, você deve fazer referência ao namespace Microsoft.AnalysisServices.AdomdServer. Para obter mais informações sobre como criar e usar procedimentos armazenados, consulte [Funções e procedimentos armazenados definidos pelo usuário](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados não podem ser usados para alterar a segurança em objetos de servidor de dados. Quando você executa um procedimento armazenado, o contexto atual do usuário é usado para determinar o acesso a todos os objetos de servidor. Portanto, os usuários devem ter as permissões apropriadas em qualquer objeto de banco de dados que eles acessam.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura física &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)   
- [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
+ [Arquitetura física &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Arquitetura física &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [Gerenciamento de soluções de mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
   

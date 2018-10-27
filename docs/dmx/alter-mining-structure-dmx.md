@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842689"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145921"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Cria um novo modelo de mineração baseado em uma estrutura de mineração existente.  Quando você usa o **ALTER MINING STRUCTURE** instrução para criar um novo modelo de mineração, a estrutura já deve existir. Por outro lado, quando você usa a instrução [criar modelo de MINERAÇÃO &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), você cria um modelo e gerar automaticamente sua estrutura de mineração subjacente ao mesmo tempo.  
+  Cria um novo modelo de mineração baseado em uma estrutura de mineração existente.  Quando você usa o **ALTER MINING STRUCTURE** instrução para criar um novo modelo de mineração, a estrutura já deve existir. Por outro lado, quando você usa a instrução [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), você cria um modelo e gerar automaticamente sua estrutura de mineração subjacente ao mesmo tempo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,28 +52,28 @@ USING <algorithm> [(<parameter list>)]
  *critérios de filtro aninhado*  
  Uma expressão de filtro que é aplicada às colunas em uma tabela aninhada.  
   
- *Algoritmo*  
+ *algoritmo*  
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada usando [linhas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de mineração de dados](../analysis-services/server-properties/data-mining-properties.md).  
+>  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada por meio [conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
- *Lista de parâmetros*  
+ *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
  *critérios de filtro*  
  Uma expressão de filtro que é aplicada às colunas na tabela de casos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a estrutura de mineração contiver chaves compostas, o modelo de mineração deve incluir todas as colunas de chave definidas na estrutura.  
   
  Se o modelo não precisar de uma coluna previsível, por exemplo, os modelos criados com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e com algoritmos MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering), não será necessário incluir uma definição de coluna na instrução. Todos os atributos no modelo resultante serão tratados como entradas.  
   
  No **WITH** cláusula aplica-se a tabela de casos, você pode especificar opções de filtragem e detalhamento:  
   
--   Adicionar o **filtro** palavra-chave e uma condição de filtro. O filtro se aplica aos casos no modelo de mineração.  
+-   Adicione a **filtro** palavra-chave e uma condição de filtro. O filtro se aplica aos casos no modelo de mineração.  
   
--   Adicionar o **DETALHAMENTO** palavra-chave para permitir que os usuários do modelo de mineração fazer uma busca detalhada dos resultados do modelo para os dados de caso. Em DMX, o detalhamento pode ser habilitado somente quando você cria o modelo.  
+-   Adicione a **DETALHAMENTO** palavra-chave para permitir que os usuários do modelo de mineração fazer uma busca detalhada dos resultados do modelo de dados do caso. Em DMX, o detalhamento pode ser habilitado somente quando você cria o modelo.  
   
  Para usar maiusculas filtragem e detalhamento, você combinar as palavras-chave em uma única **WITH** cláusula usando a sintaxe mostrada no exemplo a seguir:  
   
@@ -88,7 +88,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   Sinalizadores de modelagem  
   
--   Solicitação de previsão, que indica ao algoritmo se a coluna contém um valor previsível, indicado pelo **PREVER** ou **PREDICT_ONLY** cláusula  
+-   Solicitação de previsão, que indica ao algoritmo se a coluna contém um valor previsível, indicado pelo **PREDICT** ou **PREDICT_ONLY** cláusula  
   
  Use a seguinte sintaxe para obter a lista de definições de coluna para definir uma única coluna:  
   
@@ -99,7 +99,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="column-name-and-alias"></a>Nome e alias de coluna  
  O nome de coluna usado na lista de definições de coluna deve ser o mesmo nome da coluna usado na estrutura de mineração. No entanto, você pode definir um alias, se desejar, para representar a coluna de estrutura no modelo de mineração. Também é possível criar várias definições para a mesma coluna de estrutura e atribuir uma utilização de alias e previsão diferente para cada cópia da coluna. Por padrão, o nome de coluna de estrutura será usado se você não definir um alias. Para obter mais informações, consulte [criar um Alias para uma coluna de modelo](../analysis-services/data-mining/create-an-alias-for-a-model-column.md).  
   
- Para colunas de tabela aninhada, você pode especificar o nome da tabela aninhada, especifique o tipo de dados como **tabela**e, em seguida, fornecer a lista de colunas aninhadas para incluir no modelo, entre parênteses.  
+ Para colunas de tabela aninhada, especifique o nome da tabela aninhada, especifique o tipo de dados como **tabela**e, em seguida, forneça a lista de colunas aninhadas para incluir no modelo, entre parênteses.  
   
  Você pode definir uma expressão de filtro aplicável à tabela aninhada afixando uma expressão de critério de filtro depois da definição de coluna da tabela aninhada.  
   
@@ -138,7 +138,7 @@ USING <algorithm> [(<parameter list>)]
  Para obter mais informações sobre operadores e sintaxe DMX, consulte [colunas do modelo de mineração](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="parameter-definition-list"></a>Lista de definições de parâmetro  
- Você pode ajustar o desempenho e a funcionalidade de um modelo adicionando parâmetros de algoritmo à lista de parâmetros. Os parâmetros que podem ser usados dependem do algoritmo especificado na cláusula USING. Para obter uma lista de parâmetros que estão associados a cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Você pode ajustar o desempenho e a funcionalidade de um modelo adicionando parâmetros de algoritmo à lista de parâmetros. Os parâmetros que podem ser usados dependem do algoritmo especificado na cláusula USING. Para obter uma lista de parâmetros que estão associados com cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  A sintaxe da lista de parâmetros é a seguinte:  
   
@@ -147,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="example-1-add-a-model-to-a-structure"></a>Exemplo 1: Adicionar um modelo a uma estrutura  
- O exemplo a seguir adiciona um modelo de mineração Naive Bayes para o **novo envio** estrutura de mineração e limites informa o número máximo de atributos a 50.  
+ O exemplo a seguir adiciona um modelo de mineração Naive Bayes para o **novo envio** estrutura de mineração e limites que o número máximo de atributo estados como 50.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -178,7 +178,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemplo 3: Adicionar um modelo filtrado a uma estrutura com uma tabela aninhada  
- O exemplo a seguir adiciona um modelo de mineração a uma versão modificada da estrutura de mineração de market basket. A estrutura de mineração usada no exemplo foi modificada para adicionar um **região** coluna, que contém atributos para a região do cliente, e um **Incomegroup** coluna, que classifica a renda do cliente usando os valores **alta**, **moderada**, ou **baixa**.  
+ O exemplo a seguir adiciona um modelo de mineração a uma versão modificada da estrutura de mineração de market basket. A estrutura de mineração usada no exemplo foi modificada para adicionar um **região** coluna, que contém os atributos para a região do cliente, e um **Incomegroup** coluna, que classifica a renda do cliente usando o os valores **alta**, **moderado**, ou **baixa**.  
   
  A estrutura de mineração também inclui uma tabela aninhada que lista os itens que o cliente comprou.  
   

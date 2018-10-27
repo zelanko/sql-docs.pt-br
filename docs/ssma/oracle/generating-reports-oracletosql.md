@@ -14,12 +14,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: ca32e043a07ba15046637df8bc3c14a1d6a79968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3a51f05159967505c22854817b0331ff607d7e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099507"
 ---
 # <a name="generating-reports-oracletosql"></a>Geração de relatórios (OracleToSQL)
 Os relatórios de determinadas atividades executadas usando os comandos são gerados no Console do SSMA no nível da árvore de objeto.  
@@ -142,5 +142,5 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
 -   Falha-script  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executar o Console do SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

@@ -14,12 +14,12 @@ ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b3100fc8ccf9f21a6c0cf760d799dcf1b15cbb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8df7e950f300028b2246450bf29ed0e8776f2cd4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202206"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145291"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>Conceder permissões de administrador do servidor (Analysis Services)
   Os membros da função de administrador de servidor em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] têm acesso ilimitado a todos os objetos e dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nessa instância. O usuário deve ser membro da função de administrador de servidor para realizar qualquer tarefa em todo o servidor, como criar ou processar um banco de dados, modificar propriedades do servidor ou iniciar um rastreamento (em vez de eventos de processamento).  
@@ -38,10 +38,10 @@ ms.locfileid: "48202206"
   
  Por padrão, os membros do grupo Administradores local também recebem automaticamente direitos administrativos no Analysis Services. Embora o grupo local não seja explicitamente associado à função de administrador de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , os administradores locais podem criar bancos de dados, adicionar usuários e permissões, e executar qualquer outra tarefa permitida aos administradores do sistema. Esse comportamento é configurável. Ele é determinado pela `BuiltinAdminsAreServerAdmins` propriedade de servidor, que é definida como **verdadeiro** por padrão. Você pode alterar essa propriedade em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Security Properties](../server-properties/security-properties.md).  
   
- Também é possível gerenciar funções de servidor com o Analysis Management Objects (AMO). Para obter mais informações, consulte [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+ Também é possível gerenciar funções de servidor com o Analysis Management Objects (AMO). Para obter mais informações, consulte [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Consulte também  
- [Autorizar o acesso a objetos e operações de &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Funções de segurança &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Autorizando o acesso a objetos e operações &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Funções de Segurança &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

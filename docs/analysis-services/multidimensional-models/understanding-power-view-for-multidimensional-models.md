@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300494"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147451"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "34300494"
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
 |Dimensão do cubo|Table|  
-|Atributos de dimensão (chave(s), nome)|Coluna|  
+|Atributos de dimensão (chave(s), nome)|coluna|  
 |Grupo de Medidas|Tabela|  
 |Measure|Measure|  
 |Medida sem um grupo de medidas|Em uma tabela chamada Medidas|  
 |Grupo de Medidas Cubo Dimensão Relação|Relação|  
-|Perspective|Perspective|  
+|Perspectiva|Perspectiva|  
 |KPI|KPI|  
 |Hierarquias pai-filho/usuário|Hierarquia|  
 |Exibir Pasta|Exibir Pasta|  
@@ -94,7 +94,7 @@ ms.locfileid: "34300494"
  ![Hierarquia não agregável no Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Hierarquia não agregável no Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
- Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para modelos multidimensionais, como dados de atributo de dimensão são armazenados diferente, consultar as medidas implícitas poderá demorar muito. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
+ Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para modelos multidimensionais, como dados de atributo de dimensão são armazenados de forma diferente, consultar as medidas implícitas pode levar muito tempo. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensões, atributos e hierarquias  
  As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão com a propriedade AttributeHierarchyEnabled definida como false; por exemplo, o atributo Data de Nascimento na dimensão Cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na Lista de Campos do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
@@ -125,7 +125,7 @@ ms.locfileid: "34300494"
   
  **Relatório do Power View com membros calculados**  
   
- ![Membros calculados em Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "membros calculados em Power View")  
+ ![Membros calculados na Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "membros calculados na Power View")  
   
 ### <a name="default-members"></a>Membros padrão  
  Membros padrão de suporte a modelos multidimensionais para atributos de dimensão. O membro padrão é usado pelo Analysis Services durante a agregação de dados para uma consulta. O membro padrão de um atributo de dimensão é exposto como o valor ou o filtro padrão para a coluna correspondente nos metadados tabulares.  
@@ -225,7 +225,7 @@ ms.locfileid: "34300494"
   
  O documento CSDL de saída de retorno representa o modelo como um namespace, que contém entidades, associações e propriedades.  
   
- Para obter informações mais detalhadas sobre anotações de CSDLBI para modelos tabulares, consulte [Referência técnica para anotações de BI em CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) no MSDN e [\[MS-CSDLBI\]: Formato de arquivo de definições de esquema conceitual com anotações de Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Para obter informações mais detalhadas sobre anotações de CSDLBI para modelos tabulares, consulte [Referência técnica para anotações de BI em CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) no MSDN e [\[MS-CSDLBI\]: Formato de arquivo de definições de esquema conceitual com anotações de Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Ajuda do cliente no Office.com  
  Os artigos a seguir são fornecidos no site Office.com para ajudar os usuários a descobrir como os objetos do Modelo Multidimensional aparecem no Power View e como criar relatório de exemplo:  

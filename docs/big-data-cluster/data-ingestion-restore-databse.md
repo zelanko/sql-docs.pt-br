@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e921948cb5dcd0bda52ed9ebcc07c8a2496611ff
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d772ba3ad5c40437ca819ae7992a717057c066bb
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051028"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar um banco de dados para a instância de mestre de cluster de big data do SQL Server
 
@@ -108,4 +108,4 @@ GO
 
 Para saber mais sobre os clusters de grandes dados do SQL Server, consulte a visão geral a seguir:
 
-- [O que é o SQL Server 2019 clusters de big data?](big-data-cluster-overview.md)
+- [Quais são os clusters do SQL Server 2019 grandes dados?](big-data-cluster-overview.md)

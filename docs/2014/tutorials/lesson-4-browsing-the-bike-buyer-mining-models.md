@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171416"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147341"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lição 4: Explorando modelos de mineração Comprador de Bicicleta
   Nesta lição, você aprenderá a usar o [SELECT (DMX)](/sql/dmx/select-dmx) instrução para explorar o conteúdo na árvore de decisão e mineração de clustering de modelos que você criou no [lição 2: adicionando modelos de mineração à estrutura de mineração preditiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- As colunas contidas em um modelo de mineração não são as colunas definidas pela estrutura de mineração. Ao contrário, constituem um conjunto específico de colunas que descrevem as tendências e os padrões encontrados pelo algoritmo. Essas colunas do modelo de mineração são descritas na [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) linhas de esquema. Por exemplo, a coluna de MODEL_NAME no conjunto de linhas de esquema de conteúdo traz o nome do modelo de mineração. Para um modelo de mineração de clustering, a coluna de NODE_CAPTION contém o nome de cada cluster e a coluna NODE_DESCRIPTION contém a descrição das características de cada cluster. Você pode procurar essas colunas usando SELECT FROM \<modelo >. Instrução CONTENT em DMX. Também pode usar essa instrução para explorar os dados usados para criar o modelo de mineração. O uso dessa instrução requer que as análises sejam habilitadas na estrutura de mineração. Para obter mais informações sobre a instrução, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ As colunas contidas em um modelo de mineração não são as colunas definidas pela estrutura de mineração. Ao contrário, constituem um conjunto específico de colunas que descrevem as tendências e os padrões encontrados pelo algoritmo. Essas colunas do modelo de mineração são descritas na [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) linhas de esquema. Por exemplo, a coluna de MODEL_NAME no conjunto de linhas de esquema de conteúdo traz o nome do modelo de mineração. Para um modelo de mineração de clustering, a coluna de NODE_CAPTION contém o nome de cada cluster e a coluna NODE_DESCRIPTION contém a descrição das características de cada cluster. Você pode procurar essas colunas usando SELECT FROM \<modelo >. Instrução CONTENT em DMX. Também pode usar essa instrução para explorar os dados usados para criar o modelo de mineração. O uso dessa instrução requer que as análises sejam habilitadas na estrutura de mineração. Para obter mais informações sobre a instrução, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  Você também pode retornar todos os estados de uma coluna discreta usando a instrução SELECT DISTINCT. Por exemplo, se você executar esta operação na coluna gênero, a consulta retornará `male` e `female`.  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- A cláusula .CONTENT, próxima ao nome do modelo de mineração, determina que você está retornando conteúdo do modelo de mineração. Para obter mais informações sobre as colunas contidas no modelo de mineração, consulte [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ A cláusula .CONTENT, próxima ao nome do modelo de mineração, determina que você está retornando conteúdo do modelo de mineração. Para obter mais informações sobre as colunas contidas no modelo de mineração, consulte [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Você pode optar por usar a linha final do código para filtrar os resultados retornados pela instrução:  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     Você também pode substituir * com uma lista de qualquer uma das colunas contidas dentro de [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+     Você também pode substituir * com uma lista de qualquer uma das colunas contidas dentro de [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 4.  Substitua o seguinte:  
   

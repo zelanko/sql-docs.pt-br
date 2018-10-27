@@ -9,32 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24aab35b34ed9339ec2d7950efab21a94b2c0d96
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021513"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145741"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
-  Você pode usar o [assinar](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **assinar** comando retorna os resultados de um rastreamento como um conjunto de linhas.  
+  Você pode usar o [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) comando XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **Subscribe** comando retorna os resultados de um rastreamento como um conjunto de linhas.  
   
 ## <a name="specifying-a-trace"></a>Especificando um rastreamento  
- O [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propriedade do **assinar** comando deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se o **objeto** propriedade não for especificada, ou um identificador de rastreamento não está especificado no **objeto** propriedade, o **assinar** comando monitora o rastreamento de sessão padrão para a sessão explícita especificada no cabeçalho SOAP para o comando.  
+ O [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriedade da **Subscribe** comando deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se o **objeto** propriedade não for especificada, ou um identificador de rastreamento não é especificado na **objeto** propriedade, o **Subscribe** comando monitora o rastreamento de sessão padrão para a sessão explícita especificada no cabeçalho SOAP para o comando.  
   
 ## <a name="returning-results"></a>Retornando resultados  
- O **assinar** comando retorna um conjunto de linhas que contêm os eventos de rastreamento capturados pelo rastreamento especificado. O **assinar** comando retorna os resultados do rastreamento até que o comando é cancelado, o [Cancelar](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
+ O **Subscribe** comando retorna um conjunto de linhas que contêm os eventos de rastreamento capturados pelo rastreamento especificado. O **Subscribe** comando retorna os resultados do rastreamento até que o comando é cancelado, o [Cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando.  
   
  O conjunto de linhas contém as colunas listadas na tabela a seguir.  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|A classe de evento do evento recebido pelo rastreamento.|  
 |EventSubclass|Long integer|A subclasse do evento recebido pelo rastreamento.|  
-|CurrentTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|StartTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|EndTime|Datetime|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
-|Duration|Long integer|O tempo total (em milissegundos) decorrido no evento.|  
+|CurrentTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|StartTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|EndTime|DATETIME|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
+|Duração|Long integer|O tempo total (em milissegundos) decorrido no evento.|  
 |CPUTime|Long integer|O tempo de processador (em milissegundos) decorrido no evento.|  
 |JobID|Long integer|O identificador de trabalho para o processo.|  
 |SessionID|Cadeia de caracteres|O identificador da sessão para a qual o evento ocorreu.|  
@@ -48,8 +48,8 @@ ms.locfileid: "34021513"
 |ObjectReference|Cadeia de caracteres|A representação XML da referência de objeto para o objeto especificado em ObjectName.|  
 |NestLevel|Integer|O nível da transação para a qual o evento ocorreu.|  
 |NumSegments|Long integer|O número de segmentos de dados afetados ou acessados pelo comando para o qual o evento ocorreu.|  
-|Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> <br /><br /> 0: êxito<br /><br /> <br /><br /> 1: obter informações<br /><br /> <br /><br /> 2: aviso<br /><br /> <br /><br /> 3: erro|  
-|Success|Booliano|Indica se um comando teve êxito ou se falhou.|  
+|Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> <br /><br /> 0: êxito<br /><br /> <br /><br /> 1: informações<br /><br /> <br /><br /> 2: aviso<br /><br /> <br /><br /> 3: erro|  
+|Êxito|Booliano|Indica se um comando teve êxito ou se falhou.|  
 |Erro|Long integer|O número do erro do evento, se aplicável.|  
 |ConnectionID|Cadeia de caracteres|O identificador da conexão para a qual o evento ocorreu.|  
 |DatabaseName|Cadeia de caracteres|O nome do banco de dados para o qual o evento ocorreu.|  

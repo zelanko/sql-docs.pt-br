@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f7c111f85e3b43a560b70171f8af470a9fc505a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024763"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146241"
 ---
-# <a name="autoexists"></a>Autoexists
+# <a name="autoexists"></a>autoexists
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
   
@@ -308,15 +308,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] Parâmetros na cadeia de conexão; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro.  
+ Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] parâmetro na cadeia de conexão; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Espaço de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Trabalhando com membros, tuplas e conjuntos de & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Referência de linguagem MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Expressões multidimensionais & #40; MDX & #41; Referência](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Referência de expressões multidimensionais &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

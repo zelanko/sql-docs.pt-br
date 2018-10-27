@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020483"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146361"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020483"
   
 -   Ações padrão, que retornam o elemento de ação (URL, HTML, DataSet, RowSet e outros elementos) associado a uma seção selecionada do cubo onde a ação ocorre.  
   
- Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor as ações ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Uma interface de consulta, como ADOMD.NET, é usada pelo aplicativo cliente para recuperar e expor as ações ao usuário final. Para obter mais informações, consulte [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Um objeto simples <xref:Microsoft.AnalysisServices.Action> é composto de: informações básicas, o destino no qual a ação deve ocorrer, uma condição para limitar o escopo da ação e o tipo. As informações básicas incluem o nome da ação, sua descrição, a legenda sugerida e outros.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "34020483"
 |Tipo de ação|Description|  
 |-----------------|-----------------|  
 |CommandLine|Executa um comando no prompt de comando.|  
-|Conjunto de dados|Retorna um conjunto de dados a um aplicativo cliente.|  
+|Dataset|Retorna um conjunto de dados a um aplicativo cliente.|  
 |Detalhamento|Retorna uma instrução de detalhamento como uma expressão e que o cliente executa para retornar um conjunto de dados.|  
 |Html|Executa um script HTML em um navegador de Internet.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
 |Relatório|Envia uma solicitação com base em URL parametrizada para um servidor de relatórios e retorna um relatório a um aplicativo cliente.|  
 |Conjunto de linhas|Retorna um conjunto de linhas a um aplicativo cliente.|  
-|Instrução|Executa um comando OLE DB.|  
+|de|Executa um comando OLE DB.|  
 |URL|Exibe uma página da Web dinâmica em um navegador de Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Resolvendo e executando ações  
