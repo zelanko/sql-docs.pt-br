@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169006"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148071"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
   Este artigo descreve o recurso Power View para Modelos Multidimensionais no Microsoft SQL Server 2014 e oferece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para Modelos Multidimensionais na respectiva organização.  
@@ -92,7 +92,7 @@ ms.locfileid: "48169006"
   
  **Medida como variante**  
   
- ![Hierarquia não agregável no Power View](../media/daxmd-nonaggrattrib.gif "hierarquia não agregável no Power View")  
+ ![Hierarquia não agregável no Power View](../media/daxmd-nonaggrattrib.gif "Hierarquia não agregável no Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
  Os modelos tabulares oferece aos usuários a capacidade de criar medidas *implícitas* como contagem, soma ou média em campos. Para os modelos multidimensionais, como os dados de atributo de dimensão são armazenados de forma diferente, a consulta de medidas implícitas poderá demorar mais. Por causa disso, as medidas implícitas não estão disponíveis no Power View.  
@@ -141,7 +141,7 @@ ms.locfileid: "48169006"
   
  **Hierarquia não agregável no Power View**  
   
- ![Hierarquia não agregável no Power View](../media/daxmd-nonaggrattrib.gif "hierarquia não agregável no Power View")  
+ ![Hierarquia não agregável no Power View](../media/daxmd-nonaggrattrib.gif "Hierarquia não agregável no Power View")  
   
 ## <a name="images"></a>Imagens  
  O Power View fornece a capacidade de renderizar imagens. Em modelos multidimensionais, uma das maneiras de poder fornecer imagens ao Power View é expor colunas com URLs das imagens. Com esta versão, o Analysis Services dá suporte à marcação de atributos de dimensão, como o tipo ImageURL. Esse tipo de dados é então fornecido ao Power View nos metadados tabulares. O Power View pode então baixar e exibir as imagens especificadas nas URLs nas visualizações.  
@@ -155,7 +155,7 @@ ms.locfileid: "48169006"
   
  **Hierarquias pai-filho no Power View**  
   
- ![Hierarquias pai-filho](../media/daxmd-ssdt-hierarchies.gif "hierarquias pai-filho")  
+ ![Hierarquias pai-filho](../media/daxmd-ssdt-hierarchies.gif "Hierarquias pai-filho")  
   
 ## <a name="perspectives-and-translations"></a>Perspectivas e traduções  
  As perspectivas são exibições de cubos, onde somente determinadas dimensões ou grupos de medidas estão visíveis em ferramentas de cliente. Você pode especificar um nome de perspectiva como um valor para a propriedade da cadeia de conexão de Cubo. Por exemplo, na cadeia de conexão a seguir, 'Vendas Diretas' é uma perspectiva no modelo multidimensional:  
@@ -226,12 +226,12 @@ ms.locfileid: "48169006"
   
  O documento CSDL de saída de retorno representa o modelo como um namespace, que contém entidades, associações e propriedades.  
   
- Para obter informações mais detalhadas sobre anotações de CSDLBI para modelos tabulares, consulte [Referência técnica para anotações de BI em CSDL](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) no MSDN e [\[MS-CSDLBI\]: Formato de arquivo de definições de esquema conceitual com anotações de Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Para obter informações mais detalhadas sobre anotações de CSDLBI para modelos tabulares, consulte [Referência técnica para anotações de BI em CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) no MSDN e [\[MS-CSDLBI\]: Formato de arquivo de definições de esquema conceitual com anotações de Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Ajuda do cliente no Office.com  
  Os artigos a seguir são fornecidos no site Office.com para ajudar os usuários a descobrir como os objetos do Modelo Multidimensional aparecem no Power View e como criar relatório de exemplo:  
   
- [Noções básicas sobre objetos de modelo Multidimensional no Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Noções básicas sobre objetos do Modelo Multidimensional no Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
  [Explore o Modelo Multidimensional da Adventure Works usando o Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

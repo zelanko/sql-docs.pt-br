@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164706"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148421"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Compreendendo o modelo de objeto de tabela
-  Um modelo de tabela é uma representação lógica de tabelas, relações, hierarquias, perspectivas, medidas, e Chave de Desempenho. Esta seção apresenta a implementação interna usando AMO. Ver [desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) se você não tiver usado AMO antes.  
+  Um modelo de tabela é uma representação lógica de tabelas, relações, hierarquias, perspectivas, medidas, e Chave de Desempenho. Esta seção apresenta a implementação interna usando AMO. Ver [desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) se você não tiver usado AMO antes.  
   
  A abordagem aqui é invertida, todos os objetos pertinentes no modelo de tabela são mapeados logicamente para objetos AMO e a interação ou o fluxo de trabalho necessário explicada. Um exemplo de código-fonte para criar um modelo de tabela usando AMO, AMO para Tabela, está disponível em Codeplex. Uma observação importante sobre o código no exemplo: ele é fornecido apenas como um suporte aos conceitos lógicos explicados aqui e não deve ser usado em um ambiente de produção. O exemplo é fornecido sem suporte ou garantia.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48164706"
  Ver [representação de indicador chave de desempenho &#40;tabela&#41; ](tables-key-performance-indicator-representation.md) para obter uma explicação detalhada sobre como criar e manipular a representação de KPI.  
   
 ### <a name="partition-representation"></a>Representação de partição  
- Para fins operacionais, uma tabela pode ser dividida em subconjuntos diferentes de linhas que, quando combinados formam a tabela. Cada um desses subconjuntos é uma partição da tabela. Em termos de objetos AMO, uma representação de partição tem uma relação de mapeamento um para um com <xref:Microsoft.AnalysisServices.Partition> e nenhum outro objeto AMO principal é necessário. É importante observar que isso não significa que todos os objetos contidos no banco de dados AMO podem ser usados durante a modelagem de tabela.  
+ Para fins operacionais, uma tabela pode ser dividida em subconjuntos diferentes de linhas que, quando combinados formam a tabela. Cada um desses subconjuntos é uma partição da tabela. Em termos de objetos AMO, uma representação de partição tem uma relação de mapeamento de um para um com <xref:Microsoft.AnalysisServices.Partition> e nenhum outro objeto AMO principal é necessário. É importante observar que isso não significa que todos os objetos contidos no banco de dados AMO podem ser usados durante a modelagem de tabela.  
   
  Ver [representação de partição &#40;tabela&#41; ](tables-partition-representation.md) para obter uma explicação detalhada sobre como criar e manipular a representação de partição.  
   

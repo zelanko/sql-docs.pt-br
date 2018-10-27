@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55a4e841a181e788892c293ec9c39a1a53a0459e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148411"
 ---
-# <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX - SELECT
+# <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX – SELECT
 
 
   Recupera dados de um cubo especificado.  
@@ -110,14 +110,14 @@ FROM
  *MemberProperty_Name*  
  Uma cadeia de caracteres válida que representa uma propriedade de membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A expressão `<SELECT slicer axis clause>` deve conter membros em dimensões e hierarquias diferentes daquelas mencionadas nas expressões `<SELECT query axis clause>` especificadas.  
   
  Se um atributo no cubo for omitido das expressões `<SELECT query axis clause>` e do valor `<SELECT slicer axis clause>` especificados, o membro padrão do atributo será implicitamente adicionado ao eixo do slicer.  
   
  A opção NON VISUAL na instrução subselect lhe permite filtrar os membros enquanto mantém os totais verdadeiros, em vez dos totais filtrados. Isso lhe permite consultar as dez vendas principais (pessoas/produtos/regiões) e obter o total verdadeiro das vendas para todos os membros consultados, em vez do valor total das vendas para os dez principais retornados. Veja os exemplos abaixo para obter mais informações.  
   
- Membros calculados podem ser incluídos em \<cláusula de eixo de consulta SELECT > sempre que a conexão foi aberta usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*; consulte [propriedades com suporte do XMLA &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
+ Membros calculados podem ser incluídos no \<cláusula de eixo de consulta SELECT > sempre que a conexão foi aberta usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*; consulte [propriedades XMLA com suporte &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
 ## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
@@ -340,10 +340,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] Parâmetros na cadeia de conexão; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro.  
+ Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] parâmetro na cadeia de conexão; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a soma da `Measures.[Order Quantity]` membro, agregado sobre os primeiros oito meses do ano calendário 2003 contidos no `Date` dimensão, do **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros oito meses do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Para entender **NON VISUAL** o exemplo a seguir é uma consulta da [Adventure Works] para obter números de [valor das vendas do revendedor] em uma tabela em que as categorias de produto são as colunas e reseller business types são as linhas. Observe que os totais são atribuídos para produtos e revendedores.  
+ Para entender **NON VISUAL** o exemplo a seguir é uma consulta da [Adventure Works] para obter números de [vendas do revendedor] em uma tabela na qual as categorias de produto são as colunas e reseller business types são as linhas. Observe que os totais são atribuídos para produtos e revendedores.  
   
  A seguinte instrução SELECT:  
   
@@ -464,9 +464,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restringindo a consulta com os eixos de consulta e Slicer &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Restringindo a consulta com eixos de consulta e segmentação de dados &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

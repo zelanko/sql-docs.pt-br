@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849274"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150197"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,58 +59,58 @@ Determina o nível de detalhes na saída da função. 'Limitado' retornará valo
 
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id |INT |ID do banco de dados |
-|file_id |INT |ID do Arquivo |
-|page_id |INT |ID da página |
-|page_type |INT |Tipo de página |
-|page_type_desc |Nvarchar(64) |Descrição do tipo de página |
-|page_flag_bits |Nvarchar(64) |Sinalizador de bits no cabeçalho da página |
-|page_flag_bits_desc |nvarchar(256) |Descrição do sinalizador bits no cabeçalho da página |
-|page_type_flag_bits |Nvarchar(64) |Bits de sinalizador de tipo no cabeçalho da página |
-|page_type_flag_bits_desc |Nvarchar(64) |Descrição de bits de sinalizador de tipo no cabeçalho da página |
-|object_id |INT |ID do objeto que possui a página |
-|index_id |INT |ID do índice (0 para o heap de páginas de dados) |
-|partition_id |BIGINT |ID da partição |
-|alloc_unit_id |BIGINT |ID da unidade de alocação |
-|page_level |INT |Nível da página no índice (folha = 0) |
-|slot_count |SMALLINT |Número total de slots (utilizado e não utilizado) <br> Para uma página de dados, esse número é equivalente ao número de linhas. |
-|ghost_rec_count |SMALLINT |Número de registros marcados como "Ghost" na página <br> Um registro fantasma é aquele que foi marcado para exclusão, mas ainda terá de ser removido. |
-|torn_bits |INT |1 bit por setor para a detecção de gravações incorretas. Também usado para armazenar a soma de verificação <br> Esse valor é usado para detectar corrupção de dados |
-|is_iam_pg |bit |Bit para indicar se a página é uma página IAM  |
-|is_mixed_ext |bit |Bit indicar se alocados em uma extensão mista |
-|pfs_file_id |SMALLINT |ID do arquivo da página correspondente de PFS |
-|pfs_page_id |INT |ID de página correspondente de PFS |
-|pfs_alloc_percent |INT |Percentual de alocação, conforme indicado pelo byte PFS |
-|pfs_status |Nvarchar(64) |PFS |
-|pfs_status_desc |Nvarchar(64) |Descrição do byte PFS |
-|gam_file_id |SMALLINT |ID do arquivo da página GAM correspondente |
-|gam_page_id |INT |ID da página da página GAM correspondente |
-|gam_status |bit |Bit indicar se alocada em GAM |
-|gam_status_desc |Nvarchar(64) |Descrição do status bit GAM |
-|sgam_file_id |SMALLINT |ID do arquivo da página SGAM correspondente |
-|sgam_page_id |INT |ID da página da página SGAM correspondente |
-|sgam_status |bit |Bit indicar se alocada no SGAM |
-|sgam_status_desc |Nvarchar(64) |Descrição do status bit SGAM |
-|diff_map_file_id |SMALLINT |ID da página correspondente do bitmap diferencial do arquivo |
-|diff_map_page_id |INT |ID da página da página correspondente do bitmap diferencial |
-|diff_status |bit |Bit para indicar se o status de comparação é alterado |
-|diff_status_desc |Nvarchar(64) |Descrição do bit de status de comparação |
-|ml_file_id |SMALLINT |ID do arquivo da página correspondente do bitmap de registro em log mínimo |
-|ml_page_id |INT |ID da página da página correspondente do bitmap de registro em log mínimo |
-|ml_status |bit |Bit para indicar se a página é minimamente registrada |
-|ml_status_desc |Nvarchar(64) |Descrição do status de registro em log mínimo de bits |
-|free_bytes |SMALLINT |Número de bytes livres na página |
-|free_data_offset |INT |Deslocamento de espaço livre no final da área de dados |
-|reserved_bytes |SMALLINT |Número de bytes livres reservadas por todas as transações (se heap) <br> Número de linhas fantasmas (se o índice de folha) |
-|reserved_xdes_id |SMALLINT |Espaço contribuído por m_xdesID para m_reservedCnt <br> Apenas para fins de depuração |
-|xdes_id |Nvarchar(64) |Transação mais recente da contribuição m_reserved <br> Apenas para fins de depuração |
-|prev_page_file_id |SMALLINT |ID do arquivo de página anterior |
-|prev_page_page_id |INT |ID de página anterior da página |
-|next_page_file_id |SMALLINT |Próxima ID de arquivo de página |
-|next_page_page_id |INT |ID da página próxima página |
-|min_len |SMALLINT |Comprimento de linhas de tamanho fixo |
-|lsn |Nvarchar(64) |Número de sequência de log / carimbo de hora |
-|header_version |INT |Versão de cabeçalho de página |
+|database_id |INT |ID do banco de dados |
+|file_id |INT |ID do Arquivo |
+|page_id |INT |ID da página |
+|page_type |INT |Tipo de página |
+|page_type_desc |Nvarchar(64) |Descrição do tipo de página |
+|page_flag_bits |Nvarchar(64) |Sinalizador de bits no cabeçalho da página |
+|page_flag_bits_desc |nvarchar(256) |Descrição do sinalizador bits no cabeçalho da página |
+|page_type_flag_bits |Nvarchar(64) |Bits de sinalizador de tipo no cabeçalho da página |
+|page_type_flag_bits_desc |Nvarchar(64) |Descrição de bits de sinalizador de tipo no cabeçalho da página |
+|object_id |INT |ID do objeto que possui a página |
+|index_id |INT |ID do índice (0 para o heap de páginas de dados) |
+|partition_id |BIGINT |ID da partição |
+|alloc_unit_id |BIGINT |ID da unidade de alocação |
+|page_level |INT |Nível da página no índice (folha = 0) |
+|slot_count |SMALLINT |Número total de slots (utilizado e não utilizado) <br> Para uma página de dados, esse número é equivalente ao número de linhas. |
+|ghost_rec_count |SMALLINT |Número de registros marcados como "Ghost" na página <br> Um registro fantasma é aquele que foi marcado para exclusão, mas ainda terá de ser removido. |
+|torn_bits |INT |1 bit por setor para a detecção de gravações incorretas. Também usado para armazenar a soma de verificação <br> Esse valor é usado para detectar corrupção de dados |
+|is_iam_pg |bit |Bit para indicar se a página é uma página IAM  |
+|is_mixed_ext |bit |Bit indicar se alocados em uma extensão mista |
+|pfs_file_id |SMALLINT |ID do arquivo da página correspondente de PFS |
+|pfs_page_id |INT |ID de página correspondente de PFS |
+|pfs_alloc_percent |INT |Percentual de alocação, conforme indicado pelo byte PFS |
+|pfs_status |Nvarchar(64) |PFS |
+|pfs_status_desc |Nvarchar(64) |Descrição do byte PFS |
+|gam_file_id |SMALLINT |ID do arquivo da página GAM correspondente |
+|gam_page_id |INT |ID da página da página GAM correspondente |
+|gam_status |bit |Bit indicar se alocada em GAM |
+|gam_status_desc |Nvarchar(64) |Descrição do status bit GAM |
+|sgam_file_id |SMALLINT |ID do arquivo da página SGAM correspondente |
+|sgam_page_id |INT |ID da página da página SGAM correspondente |
+|sgam_status |bit |Bit indicar se alocada no SGAM |
+|sgam_status_desc |Nvarchar(64) |Descrição do status bit SGAM |
+|diff_map_file_id |SMALLINT |ID da página correspondente do bitmap diferencial do arquivo |
+|diff_map_page_id |INT |ID da página da página correspondente do bitmap diferencial |
+|diff_status |bit |Bit para indicar se o status de comparação é alterado |
+|diff_status_desc |Nvarchar(64) |Descrição do bit de status de comparação |
+|ml_file_id |SMALLINT |ID do arquivo da página correspondente do bitmap de registro em log mínimo |
+|ml_page_id |INT |ID da página da página correspondente do bitmap de registro em log mínimo |
+|ml_status |bit |Bit para indicar se a página é minimamente registrada |
+|ml_status_desc |Nvarchar(64) |Descrição do status de registro em log mínimo de bits |
+|free_bytes |SMALLINT |Número de bytes livres na página |
+|free_data_offset |INT |Deslocamento de espaço livre no final da área de dados |
+|reserved_bytes |SMALLINT |Número de bytes livres reservadas por todas as transações (se heap) <br> Número de linhas fantasmas (se o índice de folha) |
+|reserved_xdes_id |SMALLINT |Espaço contribuído por m_xdesID para m_reservedCnt <br> Apenas para fins de depuração |
+|xdes_id |Nvarchar(64) |Transação mais recente da contribuição m_reserved <br> Apenas para fins de depuração |
+|prev_page_file_id |SMALLINT |ID do arquivo de página anterior |
+|prev_page_page_id |INT |ID de página anterior da página |
+|next_page_file_id |SMALLINT |Próxima ID de arquivo de página |
+|next_page_page_id |INT |ID da página próxima página |
+|min_len |SMALLINT |Comprimento de linhas de tamanho fixo |
+|lsn |Nvarchar(64) |Número de sequência de log / carimbo de hora |
+|header_version |INT |Versão de cabeçalho de página |
 
 ## <a name="remarks"></a>Comentários
 O `sys.dm_db_page_info` função de gerenciamento dinâmico retorna informações de página semelhantes `page_id`, `file_id`, `index_id`, `object_id` etc. que estão presentes em um cabeçalho de página. Essas informações são úteis para solução de problemas e depuração de vários problemas de desempenho (contenção de bloqueio e trava) e corrupção.
@@ -143,7 +143,7 @@ A consulta a seguir retorna uma linha por `wait_resource` expostos pelo `sys.dm_
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## <a name="see-also"></a>Consulte também  

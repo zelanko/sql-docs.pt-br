@@ -11,17 +11,17 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cbb873693a80b284e263594bfbcd4cb2046b216
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079796"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148111"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
   As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
   
- Para a maioria das consultas DMV, você deve usar um `SELECT` instrução e o `$System` esquema com um conjunto de linhas de esquema XML/A.  
+ Para a maioria das consultas DMV, use uma instrução `SELECT` e o esquema `$System` com um conjunto de linhas de esquema XML/A.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -103,69 +103,69 @@ ORDER BY TABLE_NAME ASC
   
 |Conjunto de linhas|Description|  
 |------------|-----------------|  
-|[Conjunto de linhas DBSCHEMA_CATALOGS](../schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|Retorna uma lista de bancos de dados do Analysis Services na conexão atual.|  
-|[Conjunto de linhas DBSCHEMA_COLUMNS](../schema-rowsets/ole-db/dbschema-columns-rowset.md)|Retorna uma lista de todas as colunas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
-|[Conjunto de linhas DBSCHEMA_PROVIDER_TYPES](../schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|Retorna propriedades sobre os tipos de dados base para os quais o provedor de dados OLE DB oferece suporte.|  
-|[Conjunto de linhas DBSCHEMA_TABLES](../schema-rowsets/ole-db/dbschema-tables-rowset.md)|Retorna uma lista de todas as tabelas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
-|[Conjunto de linhas DISCOVER_CALC_DEPENDENCY](../schema-rowsets/xml/discover-calc-dependency-rowset.md)|Retorna uma lista de colunas e tabelas usadas em um modelo que têm dependências em outras colunas e tabelas.|  
-|[Conjunto de linhas DISCOVER_COMMAND_OBJECTS](../schema-rowsets/xml/discover-command-objects-rowset.md)|Fornece informações de uso de recurso e atividade sobre objetos em uso pelo comando referenciado.|  
-|[Conjunto de linhas DISCOVER_COMMANDS](../schema-rowsets/xml/discover-commands-rowset.md)|Fornece informações de uso de recurso e atividade sobre o comando em execução no momento.|  
-|[Conjunto de linhas DISCOVER_CONNECTIONS](../schema-rowsets/xml/discover-connections-rowset.md)|Fornece informações de uso de recurso e atividade sobre conexões abertas com o Analysis Services.|  
-|[Conjunto de linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Retorna informações sobre um modelo de tabela.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
-|[Conjunto de linhas DISCOVER_DB_CONNECTIONS](../schema-rowsets/xml/discover-db-connections-rowset.md)|Fornece informações de uso de recurso e atividade sobre conexões abertas do Analysis Services com fontes de dados externas, por exemplo, durante o processamento ou a importação.|  
-|[Conjunto de linhas DISCOVER_DIMENSION_STAT](../schema-rowsets/xml/discover-dimension-stat-rowset.md)|Retorna os atributos em uma dimensão ou colunas em uma tabela, dependendo do tipo de modelo.|  
-|[Conjunto de linhas DISCOVER_ENUMERATORS](../schema-rowsets/xml/discover-enumerators-rowset.md)|Retorna metadados sobre os enumeradores com suporte para uma fonte de dados específica.|  
-|[Conjunto de linhas DISCOVER_INSTANCES](../schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Retorna informações sobre a instância especificada.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
-|[Conjunto de linhas DISCOVER_JOBS](../schema-rowsets/xml/discover-jobs-rowset.md)|Retorna informações sobre os trabalhos atuais.|  
-|[Conjunto de linhas DISCOVER_KEYWORDS &#40;XMLA&#41;](../schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Retorna a lista de palavras-chave reservadas.|  
-|[Conjunto de linhas DISCOVER_LITERALS](../schema-rowsets/xml/discover-literals-rowset.md)|Retorna a lista de literais, incluindo tipos de dados e valores, com suporte do XMLA.|  
-|[Conjunto de linhas DISCOVER_LOCKS](../schema-rowsets/xml/discover-locks-rowset.md)|Retorna um instantâneo dos bloqueios usados em um determinado momento.|  
-|[Conjunto de linhas DISCOVER_MEMORYGRANT](../schema-rowsets/xml/discover-memorygrant-rowset.md)|Retorna informações sobre a memória alocada pelo Analysis Services na inicialização.|  
-|[Conjunto de linhas DISCOVER_MEMORYUSAGE](../schema-rowsets/xml/discover-memoryusage-rowset.md)|Mostra o uso de memória por objetos específicos.|  
-|[Conjunto de linhas DISCOVER_OBJECT_ACTIVITY](../schema-rowsets/xml/discover-object-activity-rowset.md)|Relata a atividade de objeto desde a última inicialização do serviço.|  
-|[Conjunto de linhas DISCOVER_OBJECT_MEMORY_USAGE](../schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Relata o consumo de memória por objeto.|  
-|[Conjunto de linhas DISCOVER_PARTITION_DIMENSION_STAT](../schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Fornece informações sobre os atributos em uma dimensão.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
-|[Conjunto de linhas DISCOVER_PARTITION_STAT](../schema-rowsets/xml/discover-partition-stat-rowset.md)|Fornece informações sobre as partições em uma dimensão, uma tabela ou um grupo de medidas.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
-|[Conjunto de linhas DISCOVER_PERFORMANCE_COUNTERS](../schema-rowsets/xml/discover-performance-counters-rowset.md)|Lista as colunas usadas em um contador de desempenho.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
-|[Conjunto de linhas DISCOVER_PROPERTIES](../schema-rowsets/xml/discover-properties-rowset.md)|Retorna informações sobre propriedades com suporte pelo XMLA para a fonte de dados especificada.|  
-|[Conjunto de linhas DISCOVER_SCHEMA_ROWSETS](../schema-rowsets/xml/discover-schema-rowsets-rowset.md)|Retorna os nomes, as restrições, a descrição e outras informações de todos os valores de enumeração com suporte do XMLA.|  
-|[Conjunto de linhas DISCOVER_SESSIONS](../schema-rowsets/xml/discover-sessions-rowset.md)|Relata as sessões ativas, incluindo o usuário e a duração da sessão.|  
-|[Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](../schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.|  
-|[Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS](../schema-rowsets/xml/discover-storage-table-columns-rowset.md)|Permite ao cliente determinar a atribuição de colunas para tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.|  
-|[Conjunto de linhas DISCOVER_STORAGE_TABLES](../schema-rowsets/xml/discover-storage-tables-rowset.md)|Retorna informações sobre as tabelas usadas para armazenamento de modelos em um banco de dados modelo de Tabela.|  
-|[Conjunto de linhas DISCOVER_TRACE_COLUMNS](../schema-rowsets/xml/discover-trace-columns-rowset.md)|Retorna uma descrição XML das colunas disponíveis em um rastreamento.|  
-|[Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO](../schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|Retorna informações de nome e versão do provedor.|  
-|[Conjunto de linhas DISCOVER_TRACE_EVENT_CATEGORIES](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Retorna uma lista de categorias disponíveis.|  
-|[Conjunto de linhas DISCOVER_TRACES](../schema-rowsets/xml/discover-traces-rowset.md)|Retorna uma lista de rastreamentos em execução ativa na conexão atual.|  
-|[Conjunto de linhas DISCOVER_TRANSACTIONS](../schema-rowsets/xml/discover-transactions-rowset.md)|Retorna uma lista de transações em execução ativa na conexão atual.|  
+|[Conjunto de linhas DBSCHEMA_CATALOGS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Retorna uma lista de bancos de dados do Analysis Services na conexão atual.|  
+|[Conjunto de linhas de DBSCHEMA_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Retorna uma lista de todas as colunas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
+|[Conjunto de linhas DBSCHEMA_PROVIDER_TYPES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|Retorna propriedades sobre os tipos de dados base para os quais o provedor de dados OLE DB oferece suporte.|  
+|[Conjunto de linhas DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Retorna uma lista de todas as tabelas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
+|[Conjunto de linhas DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Retorna uma lista de colunas e tabelas usadas em um modelo que têm dependências em outras colunas e tabelas.|  
+|[Conjunto de linhas DISCOVER_COMMAND_OBJECTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Fornece informações de uso de recurso e atividade sobre objetos em uso pelo comando referenciado.|  
+|[Conjunto de linhas DISCOVER_COMMANDS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Fornece informações de uso de recurso e atividade sobre o comando em execução no momento.|  
+|[Conjunto de linhas DISCOVER_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Fornece informações de uso de recurso e atividade sobre conexões abertas com o Analysis Services.|  
+|[Conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Retorna informações sobre um modelo de tabela.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
+|[Conjunto de linhas DISCOVER_DB_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Fornece informações de uso de recurso e atividade sobre conexões abertas do Analysis Services com fontes de dados externas, por exemplo, durante o processamento ou a importação.|  
+|[Conjunto de linhas DISCOVER_DIMENSION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-dimension-stat-rowset)|Retorna os atributos em uma dimensão ou colunas em uma tabela, dependendo do tipo de modelo.|  
+|[Conjunto de linhas DISCOVER_ENUMERATORS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|Retorna metadados sobre os enumeradores com suporte para uma fonte de dados específica.|  
+|[Conjunto de linhas DISCOVER_INSTANCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|Retorna informações sobre a instância especificada.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
+|[Conjunto de linhas DISCOVER_JOBS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|Retorna informações sobre os trabalhos atuais.|  
+|[Conjunto de linhas DISCOVER_KEYWORDS &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|Retorna a lista de palavras-chave reservadas.|  
+|[Conjunto de linhas DISCOVER_LITERALS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|Retorna a lista de literais, incluindo tipos de dados e valores, com suporte do XMLA.|  
+|[Conjunto de linhas DISCOVER_LOCKS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|Retorna um instantâneo dos bloqueios usados em um determinado momento.|  
+|[Conjunto de linhas DISCOVER_MEMORYGRANT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|Retorna informações sobre a memória alocada pelo Analysis Services na inicialização.|  
+|[Conjunto de linhas DISCOVER_MEMORYUSAGE](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|Mostra o uso de memória por objetos específicos.|  
+|[Conjunto de linhas DISCOVER_OBJECT_ACTIVITY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|Relata a atividade de objeto desde a última inicialização do serviço.|  
+|[Conjunto de linhas DISCOVER_OBJECT_MEMORY_USAGE](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-memory-usage-rowset)|Relata o consumo de memória por objeto.|  
+|[Conjunto de linhas DISCOVER_PARTITION_DIMENSION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-dimension-stat-rowset)|Fornece informações sobre os atributos em uma dimensão.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
+|[Conjunto de linhas DISCOVER_PARTITION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|Fornece informações sobre as partições em uma dimensão, uma tabela ou um grupo de medidas.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
+|[Conjunto de linhas DISCOVER_PERFORMANCE_COUNTERS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|Lista as colunas usadas em um contador de desempenho.<br /><br /> Requer a adição de SYSTEMRESTRICTSCHEMA e parâmetros adicionais.|  
+|[Conjunto de linhas DISCOVER_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|Retorna informações sobre propriedades com suporte pelo XMLA para a fonte de dados especificada.|  
+|[Conjunto de linhas DISCOVER_SCHEMA_ROWSETS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|Retorna os nomes, as restrições, a descrição e outras informações de todos os valores de enumeração com suporte do XMLA.|  
+|[Conjunto de linhas DISCOVER_SESSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|Relata as sessões ativas, incluindo o usuário e a duração da sessão.|  
+|[Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.|  
+|[Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|Permite ao cliente determinar a atribuição de colunas para tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.|  
+|[Conjunto de linhas DISCOVER_STORAGE_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|Retorna informações sobre as tabelas usadas para armazenamento de modelos em um banco de dados modelo de Tabela.|  
+|[Conjunto de linhas DISCOVER_TRACE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|Retorna uma descrição XML das colunas disponíveis em um rastreamento.|  
+|[Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|Retorna informações de nome e versão do provedor.|  
+|[Conjunto de linhas DISCOVER_TRACE_EVENT_CATEGORIES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|Retorna uma lista de categorias disponíveis.|  
+|[Conjunto de linhas DISCOVER_TRACES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|Retorna uma lista de rastreamentos em execução ativa na conexão atual.|  
+|[Conjunto de linhas DISCOVER_TRANSACTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|Retorna uma lista de transações em execução ativa na conexão atual.|  
 |[Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)|Retorna uma lista de rastreamentos xevent em execução ativa na conexão atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_COLUMNS](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Lista as colunas individuais de todos os modelos de mineração disponíveis na conexão atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Retorna uma lista de funções com suporte dos algoritmos de mineração de dados no servidor.|  
-|[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT_PMML](../schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual no formato PMML.|  
-|[Conjunto de linhas DMSCHEMA_MINING_MODEL_XML](../schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual no formato PMML.|  
-|[Conjunto de linhas DMSCHEMA_MINING_MODELS](../schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Retorna uma lista dos modelos de mineração no banco de dados atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_SERVICE_PARAMETERS](../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|Retorna uma lista dos parâmetros para os algoritmos no servidor.|  
-|[Conjunto de linhas DMSCHEMA_MINING_SERVICES](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|Fornece uma lista dos algoritmos de mineração de dados disponíveis no servidor.|  
-|[Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS](../schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Retorna uma lista de todas as colunas de todos os modelos de mineração disponíveis na conexão atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_STRUCTURES](../schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|Lista as estruturas de mineração disponíveis na conexão atual.|  
-|[Conjunto de linhas MDSCHEMA_CUBES](../schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Retorna informações sobre os cubos definidos no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_DIMENSIONS](../schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Retorna informações sobre as dimensões definidas no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_FUNCTIONS](../schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|Retorna uma lista das funções disponíveis para aplicativos cliente conectados ao banco de dados.|  
-|[Conjunto de linhas MDSCHEMA_HIERARCHIES](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|Retorna informações sobre as hierarquias definidas no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_INPUT_DATASOURCES](../schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|Retorna informações sobre os objetos de fonte de dados definidos no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_KPIS](../schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Retorna informações sobre os KPIs definidos no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_LEVELS](../schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Retorna informações sobre os níveis nas hierarquias definidos no banco de dados atual.|  
-|[Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS](../schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Lista a dimensão dos grupos de medidas.|  
-|[Conjunto de linhas MDSCHEMA_MEASURESGROUPS](../schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Retorna uma lista dos grupos de medidas na conexão atual.|  
-|[Conjunto de linhas MDSCHEMA_MEASURES](../schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Retorna uma lista de medidas na conexão atual.|  
-|[Conjunto de linhas MDSCHEMA_MEMBERS](../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Retorna uma lista de todos os membros na conexão atual, organizada por banco de dados, cubo e dimensão.|  
-|[Conjunto de linhas MDSCHEMA_PROPERTIES](../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retorna um nome totalmente qualificado de cada propriedade, junto com o tipo de propriedade, o tipo de dados e outros metadados.|  
-|[Conjunto de linhas MDSCHEMA_SETS](../schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retorna uma lista de conjuntos definidos na conexão atual.|  
+|[Conjunto de linhas de DMSCHEMA_MINING_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|Lista as colunas individuais de todos os modelos de mineração disponíveis na conexão atual.|  
+|[Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|Retorna uma lista de funções com suporte dos algoritmos de mineração de dados no servidor.|  
+|[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual.|  
+|[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual no formato PMML.|  
+|[Conjunto de linhas DMSCHEMA_MINING_MODEL_XML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual no formato PMML.|  
+|[Conjunto de linhas DMSCHEMA_MINING_MODELS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-models-rowset)|Retorna uma lista dos modelos de mineração no banco de dados atual.|  
+|[Conjunto de linhas DMSCHEMA_MINING_SERVICE_PARAMETERS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset)|Retorna uma lista dos parâmetros para os algoritmos no servidor.|  
+|[Conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)|Fornece uma lista dos algoritmos de mineração de dados disponíveis no servidor.|  
+|[Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset)|Retorna uma lista de todas as colunas de todos os modelos de mineração disponíveis na conexão atual.|  
+|[Conjunto de linhas DMSCHEMA_MINING_STRUCTURES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|Lista as estruturas de mineração disponíveis na conexão atual.|  
+|[Conjunto de linhas MDSCHEMA_CUBES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|Retorna informações sobre os cubos definidos no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|Retorna informações sobre as dimensões definidas no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_FUNCTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|Retorna uma lista das funções disponíveis para aplicativos cliente conectados ao banco de dados.|  
+|[Conjunto de linhas MDSCHEMA_HIERARCHIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|Retorna informações sobre as hierarquias definidas no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Retorna informações sobre os objetos de fonte de dados definidos no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_KPIS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Retorna informações sobre os KPIs definidos no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_LEVELS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Retorna informações sobre os níveis nas hierarquias definidos no banco de dados atual.|  
+|[Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Lista a dimensão dos grupos de medidas.|  
+|[Conjunto de linhas MDSCHEMA_MEASURESGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Retorna uma lista dos grupos de medidas na conexão atual.|  
+|[Conjunto de linhas MDSCHEMA_MEASURES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Retorna uma lista de medidas na conexão atual.|  
+|[Conjunto de linhas MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Retorna uma lista de todos os membros na conexão atual, organizada por banco de dados, cubo e dimensão.|  
+|[Conjunto de linhas MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Retorna um nome totalmente qualificado de cada propriedade, junto com o tipo de propriedade, o tipo de dados e outros metadados.|  
+|[Conjunto de linhas MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Retorna uma lista de conjuntos definidos na conexão atual.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas restritos e DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

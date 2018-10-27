@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 562a3c0fd3b73c60f3e729afe926d61d68e55b1b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015653"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148271"
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definição de dados (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "34015653"
   
 -   Defina o conjunto de dados usado para treinar um modelo, usando [INSERT INTO &#40;DMX&#41;](../../dmx/insert-into-dmx.md) junto com uma consulta de fonte de dados como OPENROWSET.  
   
- O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta que podem ajudá-lo a criar consultas de definição de dados. Para obter mais informações, consulte [Usar modelos do Analysis Services no SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta que podem ajudá-lo a criar consultas de definição de dados. Para obter mais informações, consulte [Usar modelos do Analysis Services no SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
  Em geral, os modelos que são fornecidos para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contêm somente a definição de sintaxe geral que você deve personalizar, ou digitando na janela **Consulta** ou usando a caixa de diálogo fornecida para inserir parâmetros.  
   
  Para ver um exemplo de como inserir parâmetros usando a interface, consulte [Criar uma consulta de previsão Singleton com base em um modelo](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ###  <a name="bkmk_Scripts"></a> Instruções de definição de dados de script  
- O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias linguagens de script e programação que você pode usar para criar ou alterar objetos de mineração de dados ou para definir fontes de dados.  Embora o DMX seja criado para agilizar tarefas de mineração de dados, você também pode usar XMLA e AMO para manipular objetos em scripts ou em código personalizado.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias linguagens de script e programação que você pode usar para criar ou alterar objetos de mineração de dados ou para definir fontes de dados.  Embora o DMX seja criado para agilizar tarefas de mineração de dados, você também pode usar XMLA e AMO para manipular objetos em scripts ou em código personalizado.  
   
  O Suplemento de Mineração de Dados para o Excel também inclui muitos modelos de consulta e fornece o **Editor de Consulta Avançada**que ajuda a compor instruções DMX complexas. Você pode criar uma consulta interativamente e, em seguida, alterar para a Exibição SQL para capturar a instrução DMX.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "34015653"
 |||  
 |-|-|  
 |Trabalhar com modelos para consultas DMX.|[Usar modelos do Analysis Services no SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|Criar consultas de todos os tipos, usando Construtor de Consultas de Previsão.|[Criar uma consulta de previsão usando o construtor de consultas de previsão](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capturar definições de consultas usando o SQL Server Profiler e usar rastreamento para monitorar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Saiba mais sobre as linguagens de scripts e linguagens de programação fornecidas para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis & #40; XMLA & #41; Referência](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Desenvolvendo com o Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Saiba como gerenciar modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORTAR & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [IMPORTAR & #40; DMX & #41;](../../dmx/import-dmx.md)|  
+|Criar consultas de todos os tipos, usando Construtor de Consultas de Previsão.|[Criar uma consulta de previsão usando o Construtor de Consultas de previsão](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
+|Capturar definições de consultas usando o SQL Server Profiler e usar rastreamento para monitorar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Saiba mais sobre as linguagens de scripts e linguagens de programação fornecidas para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Referência de XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Saiba como gerenciar modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |Saiba mais sobre OPENROWSET e outros modos de consultar dados externos.|[&#60;consulta de dados de origem&#62;](../../dmx/source-data-query.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Assistente de mineração de dados & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   
