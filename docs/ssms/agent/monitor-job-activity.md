@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ba379c9369ddda44f8ad089e572d17748f73c55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f83ca887d7028f7ffcdcf0f9fab78155d6ac915c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804074"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100027"
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Você também pode exibir a atividade de trabalhos da sessão atual, usando o pr
   
 ## <a name="see-also"></a>Consulte Também  
 [Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)  
-[sysjobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e)  
-[syssessions (Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  
-[sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/d344864f-b4d3-46b1-8933-b81dec71f511)  
+[sysjobactivity (Transact-SQL)](http://msdn.microsoft.com/fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e)  
+[syssessions (Transact-SQL)](http://msdn.microsoft.com/187819b6-c7f4-4a26-b74c-0a89e96695cf)  
+[sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511)  
   

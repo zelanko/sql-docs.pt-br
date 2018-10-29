@@ -14,12 +14,12 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2373f9a3181a94c71b4beaa75169da58232c1a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28b0db7c8232642f18859c6687afe81dcf8914f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100227"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opções (página Ambiente – Fontes e Cores)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,5 +87,5 @@ Exibe um exemplo de estilo e tamanho de fonte e esquema de cores para valores se
   
 ## <a name="see-also"></a>Consulte Também  
 [Codificação de cores nos editores de códigos](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Opções (Editor de Texto/página Guia do Editor e Barra de Status)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
+[Opções (Editor de Texto/página Guia do Editor e Barra de Status)](http://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

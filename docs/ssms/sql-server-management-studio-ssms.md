@@ -13,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0854aa50a4e370ca1c4946831d5fcbb3c8e1afb
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6d3b144a29b098a7a98624c2ce4c12062064f7bb
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099937"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "49419147"
 
 ## <a name="next-steps"></a>Próximas etapas  
 [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Tutorial: Gravando instruções Transact-SQL](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Tutorial: Gravando instruções Transact-SQL](http://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

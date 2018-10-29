@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f05341938208dc0459afda8de77bb85b5f5efd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 642427e5291fecdcbe64bca3c66d0606ac8b2523
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100137"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -94,8 +94,8 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 |Genérico|||  
 |Esquema padrão|dbo|Especifica o esquema padrão no qual os objetos SQLCLR e Transact\-SQL são criados. É possível substituir essa configuração especificando o esquema diretamente em objetos.|  
 |Incluir nome de esquema no nome de arquivo.|não|Especifica se os nomes de arquivos incluem o esquema como um prefixo (por exemplo, dbo.Products.table.sql). Se essa caixa de seleção for limpa, os nomes de arquivos de objetos terão o formato ObjectName.ObjectType.sql (por exemplo, Products.table.sql).|  
-|Validar Uso de Maiúsculas em Identificadores|sim|Especifica se maiúsculas e minúsculas em identificadores de objetos SQL do projeto são validadas quando o projeto é compilado. Essa opção se aplica a projetos de banco de dados que especificam agrupamento com diferenciação de maiúsculas e minúsculas para o banco de dados.|  
-|Configurações de Banco de Dados|Configurações padrão baseadas nos parâmetros padrão para um banco de dados|Exemplos de configurações que podem ser especificadas incluem o método de agrupamento e o nível do banco de dados para um banco de dados do SQL Server.|  
+|Validar Uso de Maiúsculas em Identificadores|sim|Especifica se maiúsculas e minúsculas em identificadores de objetos SQL do projeto são validadas quando o projeto é compilado. Essa opção se aplica a projetos de banco de dados que especificam ordenação com diferenciação de maiúsculas e minúsculas para o banco de dados.|  
+|Configurações de Banco de Dados|Configurações padrão baseadas nos parâmetros padrão para um banco de dados|Exemplos de configurações que podem ser especificadas incluem o método de ordenação e o nível do banco de dados para um banco de dados do SQL Server.|  
   
 ## <a name="bkmk_evf"></a>Verificação Estendida Transact-SQL  
   
@@ -107,7 +107,7 @@ A Verificação Estendida Transact-SQL é um recurso do sistema de projetos de b
 ### <a name="transact-sql-compiler-service"></a>Serviço do Compilador Transact-SQL  
 O Serviço do Compilador Transact-SQL é um componente baseado no Mecanismo de Banco de Dados do Microsoft SQL Server 2012. Esse serviço pode validar a sintaxe e a semântica das instruções DDL com a mesma fidelidade que um Mecanismo de Banco de Dados do Microsoft SQL Server 2012. E significa que o Serviço do Compilador não tem suporte para a sintaxe ou recursos que foram substituídos no Microsoft SQL Server 2012. Para obter mais informações sobre recursos preteridos, veja [Funcionalidade do Mecanismo de Banco de Dados Descontinuada no SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
-Para validar o projeto de banco de dados, o Serviço do Compilador cria um banco de dados parcialmente independente e simula a execução das instruções DDL em relação àquele banco de dados. Para obter mais informações, consulte [Bancos de dados parcialmente independentes](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
+Para validar o projeto de banco de dados, o Serviço do Compilador cria um banco de dados parcialmente independente e simula a execução das instruções DDL em relação àquele banco de dados. Para obter mais informações, consulte [Bancos de dados parcialmente independentes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 O Serviço do Compilador tem duas categorias de limitações.  
   
@@ -129,10 +129,10 @@ Recursos que não têm suporte para validação no momento incluindo:
   
 -   Esquemas particionados com grupos de arquivos definidos pelo usuário  
   
--   Agrupamento de metadados do SQL Azure (o Serviço do compilador usa o agrupamento de metadados do banco de dados parcialmente independente do SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC.  
+-   Ordenação de metadados do SQL Azure (o Serviço do compilador usa a ordenação de metadados do banco de dados parcialmente independente do SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC.  
   
 ### <a name="enablingdisabling-extended-verification"></a>Habilitar/Desabilitar a Verificação Estendida Transact-SQL  
-A Verificação Estendida Transact-SQL é habilitada por padrão em um projeto de banco de dados que é criado diretamente de um banco de dados do SQL Azure ou em um projeto cuja plataforma de destino é configurada para o SQL Azure. Recomenda-se que a Verificação Estendida seja usada durante o desenvolvimento para SQL Azure ou em um banco de dados com escopo de aplicativo direcionado para SQL Server 2012. Para obter mais informações sobre bancos de dados com escopo de aplicativo, consulte [Bancos de dados parcialmente independentes](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
+A Verificação Estendida Transact-SQL é habilitada por padrão em um projeto de banco de dados que é criado diretamente de um banco de dados do SQL Azure ou em um projeto cuja plataforma de destino é configurada para o SQL Azure. Recomenda-se que a Verificação Estendida seja usada durante o desenvolvimento para SQL Azure ou em um banco de dados com escopo de aplicativo direcionado para SQL Server 2012. Para obter mais informações sobre bancos de dados com escopo de aplicativo, consulte [Bancos de dados parcialmente independentes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 O recurso de Verificação Estendida também pode ser usado durante o desenvolvimento de um banco de dados para SQL Server 2008/R2 a fim de ter compatibilidade com o Microsoft SQL Server 2012 e o SQL Azure.  
   
@@ -153,22 +153,22 @@ O recurso de Verificação Estendida também pode ser usado durante o desenvolvi
   
 ![Propriedades do arquivo](../ssdt/media/ssdt-evf.gif "Propriedades do arquivo")  
   
-### <a name="special-considerations-for-collations"></a>Considerações especiais para agrupamentos  
-Para obter mais informações sobre agrupamentos em bancos de dados parcialmente independentes, consulte [Agrupamentos de bancos de dados independentes](http://msdn.microsoft.com/en-us/library/ff929080%28v=sql.110%29.aspx).  
+### <a name="special-considerations-for-collations"></a>Considerações especiais para ordenações  
+Para obter mais informações sobre ordenações em bancos de dados parcialmente independentes, consulte [Ordenações de bancos de dados independentes](http://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
 ## <a name="bkmk_sqlclr"></a>SQLCLR  
-Para obter informações sobre as opções de Assembly, consulte [Caixa de diálogo Informações do Assembly](http://msdn.microsoft.com/en-us/library/1h52t681.aspx?queryresult=true).  
+Para obter informações sobre as opções de Assembly, consulte [Caixa de diálogo Informações do Assembly](http://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
-Para obter informações sobre como assinar, consulte a seção **Assinatura do Assembly** do tópico [Página de assinatura, Project Designer](http://msdn.microsoft.com/en-us/library/0k50fs3b.aspx?queryresult=true) .  
+Para obter informações sobre como assinar, consulte a seção **Assinatura do Assembly** do tópico [Página de assinatura, Project Designer](http://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>Build SQLCLR e SQLCLR  
 As páginas de propriedades de **SQLCLR** e **Compilação SQLCLR** contêm muitas configurações para usar objetos SQL CLR em seu projeto. Especificamente, a página de propriedades de **SQLCLR** tem uma configuração de nível de permissão para definir permissões no assembly do SQLCLR. Também tem um parâmetro "Gerar DDL" para controlar se o DDL (Dynamic Data Language) é gerado para os objetos SQLCLR adicionados ao projeto. A página de propriedades de **Compilação** contém todas as opções de compilador que podem ser definidas para configurar a compilação de código SQLCLR no projeto.  
   
 A página de propriedades **Compilação SQLCLR** contém configurações avançadas de compilação para compilar seus objetos SQL CLR. São fornecidas diferentes opções com base na linguagem (VB ou C#) usada para codificar os objetos SQL CLR.  
   
-1.  Se o objeto for escrito em C#, você poderá acessar as opções com um clique no botão **Avançado** na página de propriedades de **Compilação SQLCLR**. As descrições das opções da linguagem C# podem ser localizadas em [Caixa de diálogo Configurações de Compilação Avançadas (C#)](http://msdn.microsoft.com/en-us/library/s4wcexbc.aspx).  
+1.  Se o objeto for escrito em C#, você poderá acessar as opções com um clique no botão **Avançado** na página de propriedades de **Compilação SQLCLR**. As descrições das opções da linguagem C# podem ser localizadas em [Caixa de diálogo Configurações de Compilação Avançadas (C#)](http://msdn.microsoft.com/library/s4wcexbc.aspx).  
   
-2.  Se o objeto for escrito em VB, você poderá primeiro escolher VB na lista suspensa **Linguagem** e clicar no botão **Avançado** . As descrições para as opções do VB podem ser localizadas em [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](http://msdn.microsoft.com/en-us/library/07bysfz2.aspx)  
+2.  Se o objeto for escrito em VB, você poderá primeiro escolher VB na lista suspensa **Linguagem** e clicar no botão **Avançado** . As descrições para as opções do VB podem ser localizadas em [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](http://msdn.microsoft.com/library/07bysfz2.aspx)  
   
 Para saber mais, confira [Compilar propriedades de configuração](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
   
@@ -229,10 +229,10 @@ Além disso, a publicação de linha de comando permite que você substitua esse
 |Avançado...|não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  
   
 ## <a name="bkmk_ref_paths"></a>Caminhos de Referência  
-É possível usar esta página para definir as variáveis do servidor e do banco de dados que estão associadas a uma referência entre bancos de dados. Além disso, você pode especificar os valores dessas variáveis. Para obter mais informações, consulte [Usando referências em projetos de banco de dados](http://msdn.microsoft.com/en-us/library/bb386242.aspx).  
+É possível usar esta página para definir as variáveis do servidor e do banco de dados que estão associadas a uma referência entre bancos de dados. Além disso, você pode especificar os valores dessas variáveis. Para obter mais informações, consulte [Usando referências em projetos de banco de dados](http://msdn.microsoft.com/library/bb386242.aspx).  
   
 ## <a name="bkmk_code_analysis"></a>Análise de Código  
 Você pode usar Análise de Código para descobrir problemas potenciais em seus scripts, como design, nomeação e problemas de desempenho. As regras para projetos de bancos de dados são organizadas em conjuntos de regras predefinidas que se destinam a áreas específicas, e você pode habilitar ou desabilitar qualquer regra na guia **Análise de Código** na página de propriedades **Propriedades de Projeto** . Na mesma guia, você pode especificar a análise de código para ser executada automaticamente toda vez que um projeto é compilado, ou se os avisos são tratados como erros.  
   
-Para usar a Análise de Código manualmente, clique com o botão direito do mouse no seu projeto no **Gerenciador de Soluções** e selecione **Executar Análise de Código**. Os avisos da análise de código são listados na janela **Lista de Erros** . Você pode clicar duas vezes em um aviso para navegar para o código-fonte que contém o problema e você pode exibir informações adicionais e possíveis correções para um aviso usando o menu contextual **Mostrar Ajuda para erros**. Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](http://msdn.microsoft.com/en-us/library/dd172133.aspx)(a página pode estar em inglês).  
+Para usar a Análise de Código manualmente, clique com o botão direito do mouse no seu projeto no **Gerenciador de Soluções** e selecione **Executar Análise de Código**. Os avisos da análise de código são listados na janela **Lista de Erros** . Você pode clicar duas vezes em um aviso para navegar para o código-fonte que contém o problema e você pode exibir informações adicionais e possíveis correções para um aviso usando o menu contextual **Mostrar Ajuda para erros**. Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](http://msdn.microsoft.com/library/dd172133.aspx)(a página pode estar em inglês).  
   
