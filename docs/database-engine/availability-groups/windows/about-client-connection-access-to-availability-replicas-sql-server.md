@@ -56,7 +56,7 @@ ms.locfileid: "47642184"
  Conexões somente de intenção de leitura  
  Os bancos de dados secundários estão disponíveis apenas para a conexão para a qual a propriedade de conexão **Application Intent** está definida como **ReadOnly** (*conexões de intenção de leitura*).  
   
- Para obter mais informações sobre essa propriedade de conexão, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obter mais informações sobre essa propriedade de conexão, consulte [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Permitir qualquer conexão somente leitura  
  Todos os bancos de dados secundários estão disponíveis para conexões de acesso de leitura. Essa opção permite a conexão de clientes com versão inferior.  

@@ -2,16 +2,16 @@
 layout: HubPage
 hide_bc: true
 title: SQL Server – carregar e mover dados
-description: Explore os recursos que ajudam você a mover, carregar e gerenciar seus dados com o SQL Server.
+description: Explore os recursos que ajudam você a carregar, mover e migrar bancos de dados e dados com o SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 069e58327e32484d4ae1718130b469af1a0e51af
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 50ad47c11ccba509399104f019aaa07080299fd8
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336155"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390848"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -142,6 +142,25 @@ ms.locfileid: "49336155"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>DEA (Assistente para Experimentos de Banco de Dados)</h3>
+                                                    <p>Auxilia na avaliação de uma versão de destino do SQL Server para uma carga de trabalho existente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Carregar e mover dados</h2>
@@ -204,25 +223,6 @@ ms.locfileid: "49336155"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Replicação</h3>
-                                                    <p> Um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -235,6 +235,25 @@ ms.locfileid: "49336155"
                                                 <div class="cardText">
                                                     <h3>SQL Server Integration Services (SSIS)</h3>
                                                     <p>Extraia e transforme dados de uma ampla variedade de fontes, como arquivos simples e fontes de dados relacionais, e carregue os dados no seu banco de dados SQL. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Replicação</h3>
+                                                    <p> Um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.</p>
                                                 </div>
                                             </div>
                                         </div>

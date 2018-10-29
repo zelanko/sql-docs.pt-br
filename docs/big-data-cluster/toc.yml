@@ -47,6 +47,8 @@ items:
       href: deploy-on-minikube.md
     - name: Implantar no AKS
       href: deploy-on-aks.md
+    - name: Implantar com o Kubeadm
+      href: deploy-with-kubeadm.md
     - name: Conectar-se com o Azure Data Studio
       href: deploy-big-data-tools.md
   - name: Virtualização de dados
@@ -89,9 +91,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Solicitar acesso aos clusters de Big Data
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 043325b8d864561a23dd10ebd31480502242ea9b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 002406f8631806d30c8c1c3d4600bf19d5512dd9
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643764"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050818"
