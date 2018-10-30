@@ -87,7 +87,7 @@ ms.locfileid: "47857108"
  Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  **Replicar**  
- Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
  A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolvedor**.  
@@ -105,7 +105,7 @@ ms.locfileid: "47857108"
  Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
   
  **Opções de partição**  
- Especifica o tipo de partição criado por um filtro com parâmetros. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Especifica o tipo de partição criado por um filtro com parâmetros. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Nível de rastreamento**  
  Determina se as alterações para a mesma linha ou para a mesma coluna devem ser tratadas como um conflito.  
@@ -126,18 +126,18 @@ ms.locfileid: "47857108"
  Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
- Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+ Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Resolvedores Microsoft baseados em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  **Permitir que o Assinante resolva conflitos interativamente durante a sincronização sob demanda**  
- Selecione essa opção se o Assinante for usar sincronização sob demanda (o padrão em replicação de mesclagem) e você quiser resolver os conflitos interativamente. Especifique sincronização sob demanda na página **Agenda de Sincronização** do Assistente para Nova Assinatura. Para resolver conflitos interativamente, use a interface do usuário Resolvedor Interativo. Para obter mais informações, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Selecione essa opção se o Assinante for usar sincronização sob demanda (o padrão em replicação de mesclagem) e você quiser resolver os conflitos interativamente. Especifique sincronização sob demanda na página **Agenda de Sincronização** do Assistente para Nova Assinatura. Para resolver conflitos interativamente, use a interface do usuário Resolvedor Interativo. Para obter mais informações, consulte [Resolução de conflito interativo](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Requer verificação de uma assinatura digital antes da mesclagem**  
  Todos os resolvedores com base em COM fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] são assinados. Selecione essa opção para verificar se o resolvedor é válido na sincronização.  
   
 ## <a name="options-for-oracle-publications"></a>Opções para publicações Oracle  
- A caixa de diálogo **Propriedades do Artigo** para publicações Oracle tem duas guias: **Propriedades** e **Mapeamento de Dados**. Publicações Oracle não oferecem suporte a todas as propriedades que as publicações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem. Para obter mais informações, consulte [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ A caixa de diálogo **Propriedades do Artigo** para publicações Oracle tem duas guias: **Propriedades** e **Mapeamento de Dados**. Publicações Oracle não oferecem suporte a todas as propriedades que as publicações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem. Para obter mais informações, consulte [Considerações de design e limitações para Publicadores Oracle](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Copiar procedimentos armazenados INSERT, UPDATE e DELETE**  
@@ -172,7 +172,7 @@ ms.locfileid: "47857108"
   
 -   Para alguns tipos de dados, há somente um mapeamento possível; em tal caso, a coluna na grade de propriedades é somente leitura.  
   
--   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
+-   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Mapeamento de tipo de dados para Publicadores Oracle ](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
