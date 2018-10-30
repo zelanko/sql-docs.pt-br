@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461061"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146051"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -89,7 +89,7 @@ Isso adiciona o seguinte texto à parte superior do artigo:
 
 ![Texto do Applies to](./media/sql-server-docs-contribute/applies-to.png)
 
-Para encontrar o include applies-to correto para o artigo, use as dicas a seguir:
+Para encontrar o arquivo include applies-to correto para o artigo, use as dicas a seguir:
 
 - Para obter uma lista dos includes mais usados, veja [Versão do SQL Server e arquivos do include applies-to](applies-to-includes.md).
 - Examine outros artigos que abordam o mesmo recurso ou uma tarefa relacionada. Se você editar esse artigo, poderá copiar o Markdown para o link do include applies-to (será possível cancelar a edição sem enviá-la).

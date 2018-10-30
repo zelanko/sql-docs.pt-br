@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864384"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150177"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: mais dicas e truques para usar o SSMS
 Este tutorial apresenta mais alguns truques para usar o SSMS (SQL Server Management Studio). Este artigo mostra como: 
@@ -133,7 +133,7 @@ Você pode usar os botões de recuo na barra de ferramentas para aumentar ou dim
 
 
 ## <a name="filter-objects-in-object-explorer"></a>Filtrar objetos no Pesquisador de Objetos
-Você pode filtrar os objetos para facilitar a localização de um objeto específico em bancos de dados que têm muitos objetos. Esta seção descreve como filtrar tabelas, mas você pode usar as etapas a seguir em qualquer outro nó no Pesquisador de Objetos:
+Em bancos de dados que têm muitos objetos, é possível usar a filtragem para pesquisar exibições, tabelas específicas, etc. Esta seção descreve como filtrar tabelas, mas você pode usar as etapas a seguir em qualquer outro nó no Pesquisador de Objetos:
 
 1. Conecte-se ao seu SQL Server.
 2. Expanda **Bancos de Dados** > **AdventureWorks** > **Tabelas**. Todas as tabelas no banco de dados são exibidas.

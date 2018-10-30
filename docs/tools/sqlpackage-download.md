@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: ecefe3f1abe47a1a4f1af967cb1a15ee9f4dd52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050918"
 ---
 # <a name="download-and-install-sqlpackage"></a>Baixe e instale o sqlpackage
 
@@ -23,11 +23,11 @@ sqlpackage é executado no Windows, macOS e Linux.
 
 Baixe e instale a versão mais recente do .NET Framework e o macOS e Linux visualizações:
 
-|Plataforma|Download|Data de liberação|Versão|Compilação|
+|Plataforma|Download|Data de liberação|Versão|Compilação
 |:---|:---|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=875508)|22 de junho de 2018|17.8|14.0.4079.2|
-|macOS (versão prévia)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|9 de maio de 2018 |0.0.1|15.0.4057.1|
-|Linux (versão prévia)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|9 de maio de 2018 |0.0.1|15.0.4057.1|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2033947)|24 de outubro de 2018|18.0|15.0.4200.1|
+|macOS (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=873927)|9 de maio de 2018 |0.0.1|15.0.4057.1|
+|Linux (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=873926)|9 de maio de 2018 |0.0.1|15.0.4057.1|
 
 Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](sqlpackage-release-notes.md).
 
@@ -35,9 +35,10 @@ Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](
 
 Esta versão do sqlpackage inclui uma experiência padrão do Windows installer e. zip: 
 
-1. Baixe e execute o [dacframework. msi installer para Windows](https://go.microsoft.com/fwlink/?linkid=875508).
+1. Baixe e execute o [dacframework. msi installer para Windows](https://go.microsoft.com/fwlink/?linkid=2033947).
 2. Abra uma nova janela de Prompt de comando e execute sqlpackage.exe
-    - sqlpackage é instalado para o ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` pasta
+    - sqlpackage é instalado para o ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` pasta
+    - Instalando o x86 versão em um x64 máquina, o sqlpackage é instalado para o ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` pasta
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Obter sqlpackage (visualização) para macOS
 
@@ -47,7 +48,8 @@ Esta versão do sqlpackage inclui uma experiência padrão do Windows installer 
    **Instalação do .zip:**
 
    ```bash
-   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
    sqlpackage

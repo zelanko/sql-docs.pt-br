@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050848"
 ---
 # <a name="sqlpackage-release-notes"></a>Notas de versão do sqlpackage
 
 **[Baixar a versão mais recente](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+Data de lançamento: 24 de outubro de 2018  
+Compilação: 15.0.4200.1 
+
+A versão inclui os seguintes recursos e correções:
+
+- Adicionado suporte para o nível de compatibilidade do banco de dados 150.
+- Adicionado suporte para instâncias gerenciadas.
+- Adicionado o parâmetro de linha de comando MaxParallelism para especificar o grau de paralelismo para operações de banco de dados.
+- Adicione parâmetro de linha de comando AccessToken para especificar um token de autenticação ao se conectar ao SQL Server.
+- Adicionado suporte para tipos de dados BLOB/CLOB de fluxo para importações.
+- Adicionado suporte para UDF escalar opção 'INLINE'.
+- Adicionado suporte para sintaxe 'MERGE' da tabela de gráfico.
+- Coluna de pseudo não resolvida fixa para tabelas de grafo.
+- Correção de criação de um banco de dados com um arquivo otimizado de memória grupos quando tabelas com otimização de memória são usados.
+- Correção incluindo as propriedades estendidas em tabelas externas.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ Build: 14.0.4079.2
 A versão inclui as seguintes correções:
 
 - Aprimorada a mensagens de erro para falhas de conexão, incluindo a mensagem de exceção do SqlClient.
-- Adicionado o parâmetro de linha de comando MaxParallelism para especificar o grau de paralelismo para operações de banco de dados.
 - Suporte à compactação de índice nos índices de partição única para importação/exportação.
 - Corrigido um problema de engenharia reverso para conjuntos de colunas XML com o SQL 2017 e posterior.
 - Corrigido um problema em que o nível de compatibilidade 140 do banco de dados de criação de scripts foi ignorada para o banco de dados SQL.

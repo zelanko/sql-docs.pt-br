@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775604"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356137"
 ---
 # <a name="databases"></a>Bancos de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47775604"
  Um usuário que tem acesso a um banco de dados pode receber permissão para acessar os objetos no banco de dados. Embora possam ser concedidas permissões a usuários individuais, é recomendável criar funções de banco de dados, adicionando os usuários de banco de dados às funções, e conceder permissão de acesso às funções. A concessão de permissões a funções, e não a usuários, faz com que seja mais fácil manter as permissões consistentes e compreensíveis à medida que o número de usuários aumenta e muda continuamente. Para obter mais informações sobre permissões de funções, consulte [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) e [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Trabalhando com bancos de dados  
- A maioria das pessoas que trabalha com bancos de dados usa a ferramenta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . A ferramenta [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] tem uma interface gráfica do usuário para criar bancos de dados e objetos nos bancos de dados. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] também tem um editor de consultas para interagir com bancos de dados gravando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode ser instalado no disco de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou baixado do MSDN.  
+ A maioria das pessoas que trabalha com bancos de dados usa a ferramenta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . A ferramenta [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] tem uma interface gráfica do usuário para criar bancos de dados e objetos nos bancos de dados. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] também tem um editor de consultas para interagir com bancos de dados gravando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode ser instalado no disco de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou baixado do MSDN. Para saber mais sobre a ferramenta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>Nesta seção  
   

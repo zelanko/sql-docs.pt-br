@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072170"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991299"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ Data de lançamento: 27 de setembro de 2018
 ### <a name="known-issues"></a>Problemas conhecidos:
 
 - A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
-- No momento, o SSDT 15.8.1 não dá suporte ao Windows 7 SP1, portanto permaneça na versão 15.8.0 se você estiver usando o Windows 7 SP1
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT para Visual Studio 2017 (15.8)
@@ -235,7 +234,7 @@ Número de build: 14.0.61712.050
 - Correção de um problema com a renomeação de funções.
 - Correção de problemas com as Configurações de Projeto que poderão ter causado alterações de não salvar\sincronizar corretamente em alguns casos.
 - Correção de um problema no editor do PowerQuery que adicionava etapas “Alterar Tipo” automaticamente.
-- Correção de um problema que causou um erro ao abrir o arquivo BIM depois de alternar entre o modo Espaço de Trabalho Integrado.
+- Correção de um problema que causou um erro ao abrir o arquivo BIM depois de alternar entre o modo Workspace Integrado.
 - A propriedade MaxConnections agora está visível para fontes de dados em modelos de tabela.
 - Aumento do tamanho inicial da janela do editor do PowerQuery.
 - Palavras-chave da Consulta M, como “Origem” no editor do PowerQuery, agora serão mostradas como localizadas.
@@ -420,7 +419,7 @@ Número de build: 14.0.61707.300
 - Correção de um problema que deixava o designer de tabela desabilitado após Importar nova tabela da fonte de dados existente por meio do Gerenciador de modelos de tabela.
 - Correção de um problema que pode fazer com que os itens do menu Modelo Importar da fonte de dados/Adicionar fonte de dados permaneçam ocultos no contexto errado.
 - Melhoria da experiência ao criar uma medida do Gerenciador de modelos de tabela para evitar alternar o foco de volta para a coluna usada para criar uma medida.
-- Ao mudar do espaço de trabalho integrado em projetor de tabela AS para o servidor explícito do espaço de trabalho, os arquivos de banco de dados antigos serão limpos.
+- Ao mudar do workspace integrado em projetor de tabela AS para o servidor explícito do workspace, os arquivos de banco de dados antigos serão limpos.
 - Correção de um problema em projetos de modelos de tabela 1400 do AS em que o estado da interface do usuário da caixa de seleção da Segurança em Nível de Linha inicialmente era exibido como desmarcado independentemente do estado real do objeto em questão.
 - Correção de uma falha que poderia ocorrer ao importar o arquivo de texto ou o arquivo do Excel para o modelo de tabela de modo de compatibilidade com 1400 usando o Power Query e a exceção sem tratamento gerada.
 - Correção de um problema que poderia ocorrer com a posição da barra de rolagem no controle de edição de fórmula do DAX no designer de modelo de tabela do AS.
@@ -460,7 +459,7 @@ Número de build: 14.0.61705.170
 - Correção de diversos problemas com a integração do PowerQuery para modelos de tabela de nível de compatibilidade 1400 do Analysis Services
 - Correção de um problema na nova janela de ferramentas do editor DAX em que o operador de atribuição não podia ficar em uma linha separada ao definir uma medida
 - Correção de um problema que impedia a atualização da exibição da medida de tabela ao renomear as medidas na perspectiva
-- Atualização do mecanismo de espaço de trabalho integrado do Analysis Services e do Modelo de Objeto de Tabela que corrige uma regressão que causava uma falha em projetos de tabela 1200 que continham translações ao serem implantados para o servidor do SQL Server 2016 Analysis Services
+- Atualização do mecanismo de workspace integrado do Analysis Services e do Modelo de Objeto de Tabela que corrige uma regressão que causava uma falha em projetos de tabela 1200 que continham translações ao serem implantados para o servidor do SQL Server 2016 Analysis Services
 - Correção de um problema de desempenho que causava lentidão na criação\exclusão de novas fontes de dados de tabelas 1400
 - Correção de um problema em que a renderização do diagrama DSV em modelos multidimensionais poderia ser interrompida se a exibição fosse alterada rapidamente entre diferentes DSVs
 
@@ -492,16 +491,16 @@ Número de build: 14.0.61704.140
     - Adicionar colunas por exemplo no PowerQuery
     - Opções de acesso a dados em modelos 1400 (propriedades do nível de modelo usadas pelo mecanismo M)
         - Habilitar combinação rápida (o padrão é false; quando definido como true, o mecanismo de mashup ignora os níveis de privacidade de fonte de dados ao combinar dados)
-        - Habilitar redirecionamentos herdados (o padrão é false; quando definido como true, o mecanismo de mashup segue redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
-        - Retornar valores de erro como Null (o padrão é false; quando definido como true, os erros no nível da célula são retornados como null. Quando definido como false, uma exceção será gerada se a célula contiver um erro)  
+        - Habilitar redirecionamentos herdados (o padrão é false; quando definido como true, o mecanismo de mashup segue redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
+        - Retornar valores de erro como Null (o padrão é false; quando definido como true, os erros no nível da célula são retornados como null. Quando definido como false, uma exceção será gerada se a célula contiver um erro)  
     - Fontes de dados adicionais (fontes de dados de arquivo) usando o PowerQuery
-        - Excel 
-        - Texto/CSV 
-        - Xml 
-        - Json 
-        - Pasta 
-        - Banco de dados do Access 
-        - Armazenamento de blobs do Azure 
+        - Excel 
+        - Texto/CSV 
+        - Xml 
+        - Json 
+        - Pasta 
+        - Banco de dados do Access 
+        - Armazenamento de blobs do Azure 
     - Interface do usuário do PowerQuery localizada
 - Janela de Ferramentas do Editor DAX
     - Experiência de edição aprimorada no DAX para medições, colunas calculadas e expressões de linhas de detalhes, disponíveis por meio dos menus Exibir e Outras Janelas no SSDT
@@ -520,7 +519,7 @@ Número de build: 14.0.61704.140
 - Multidimensionais: corrigido um problema em que a caixa de diálogo de processamento não era utilizável em computadores com alto DPI.
 - Tabular: correção de um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto. [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabular: corrigido um problema em que hierarquias não estavam sendo corretamente salvas no arquivo bim em um modelo 1103.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
-- Tabular: corrigido um problema em que modo de espaço de trabalho integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
+- Tabular: corrigido um problema em que modo de workspace integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
 - Tabular: corrigido um problema em que clicar em qualquer coisa no modo de semisseleção (digitando uma expressão DAX mas clicando em uma medida, por exemplo) poderia causar falhas.
 - Tabela: Corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name de volta para "Model". [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabular: correção de um problema em que selecionar uma hierarquia em TME deveria exibir propriedades mesmo se a exibição de diagrama não estivesse selecionada.
@@ -532,7 +531,7 @@ Número de build: 14.0.61704.140
 - Correção de um problema no qual o intellisense para a função DAX Related() não estava funcionando corretamente para mostrar colunas de outras tabelas
 - Aprimoramento da importação de projeto de tabela do AS da caixa de diálogo de banco de dados por meio da classificação da lista de bancos de dados do AS
 - Correção de um problema ao criar tabelas calculadas no modelo de tabela do AS em que as Tabelas não eram listadas como os objetos sugeridos na expressão
-- Correção de um problema de visualização de modelos do AS 1400 tentando abrir usando o servidor de Espaço de Trabalho Integrado após a visualização do código
+- Correção de um problema de visualização de modelos do AS 1400 tentando abrir usando o servidor de Workspace Integrado após a visualização do código
 - Correção de um problema que impedia algumas fontes de dados (sem suporte para o catálogo inicial) de funcionar corretamente em determinadas circunstâncias 
 - O Assistente de Implantação deve aplicar as alterações em partições de tabela calculadas, mesmo quando a opção de manter as partições estiver habilitada
 - Correção de um problema no qual a caixa de diálogo Propriedades Avançadas da Conexão do AS existente não mostrava a lista completa até a nova seleção
@@ -542,7 +541,7 @@ Número de build: 14.0.61704.140
 - Correção de um problema com o Assistente de Relatório que podia levar a configurações de fonte de dados incorretas durante a alteração do SQL para o AS
 - Correção de um problema que causava falha de compilação de projeto (Tabela) do Analysis Services da linha de comando (devenv.com\exe)
 - Correção de um problema com o analisador de medidas do DAX para mostrar a cor e realce corretos do texto ao iniciar com letras antes de :=
-- Correção de um problema ao disparar um ObjectRefException se os caminhos fossem longos demais ao tentar Mostrar Todos os Arquivos em projetos de Tabela em um modo de espaço de trabalho integrado
+- Correção de um problema ao disparar um ObjectRefException se os caminhos fossem longos demais ao tentar Mostrar Todos os Arquivos em projetos de Tabela em um modo de workspace integrado
 - Correção de um problema com o Designer de Fonte de Dados para Compact 4.0 Client Data Provider em que ele parecia estar indisponível
 - Correção de um problema que causava um erro ao tentar navegar pelo modelo de mineração do AS no VS2017
 - Correção de um problema no modelo multidimensional do AS no VS2017 em que o diagrama DSV parava a renderização depois de alterar as exibições e atingir uma exceção
@@ -610,24 +609,24 @@ Exemplo de uso:
 No DacFx, foram adicionadas duas novas APIs: DacServices.Publish() and DacServices.Script(). Elas também dão suporte à realização de ações de publicação + script + relatório em uma única operação. Exemplo de uso:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -662,7 +661,7 @@ Para obter mais informações, leia a [Postagem de blog do Analysis Services](ht
 
 **Serviço de integração**
 
-* Bug de conexão [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) corrigido: mover vários pacotes de tarefas do serviço de integração
+* Bug de conexão  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) corrigido: mover várias tarefas de pacotes do serviço de integração
 
 
 
@@ -675,11 +674,11 @@ Número de build: 14.0.60918
 
 **Novidades**
 
-Agora há suporte para a Comparação de Esquemas nas APIs SqlPackage.exe e DacFx (Data-Tier Application Framework). Para obter detalhes, consulte [Comparação de Esquemas na SqlPackage e na Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/).
+Agora há suporte para a Comparação de Esquemas nas APIs SqlPackage.exe e DacFx (Data-Tier Application Framework). Para obter detalhes, veja  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Comparação de Esquemas na SqlPackage e na Data-Tier Application Framework).
 
-**Analysis Services – modo integrado de espaço de trabalho para SSDT Tabular (SSAS)**
+**Analysis Services – modo integrado de workspace para SSDT Tabular (SSAS)**
 
-O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular inicia automaticamente em segundo plano se o modo de espaço de trabalho integrado estiver habilitado, para que você possa adicionar e exibir dados, tabelas e colunas no designer de modelo sem ter que fornecer uma instância de servidor de espaço de trabalho externo. Modo de espaço de trabalho integrado não será alterado quando SSDT Tabular trabalhar com um servidor de espaço de trabalho e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do espaço de trabalho. Para habilitar o modo de espaço de trabalho integrado, selecione a opção Espaço de Trabalho Integrado na caixa de diálogo Designer de Modelos de Tabela, exibida ao criar um novo projeto tabular. Para projetos tabulares existentes, que atualmente usam um servidor de espaço de trabalho explícito, você pode mudar para o modo de espaço de trabalho integrado, definindo o parâmetro Modo de Espaço de Trabalho Integrado como True na janela Propriedades, que é exibida quando você seleciona o arquivo Model.bim no Gerenciador de Soluções. Para obter detalhes, consulte a [Postagem de blog do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular inicia automaticamente em segundo plano se o modo de workspace integrado estiver habilitado, para que você possa adicionar e exibir dados, tabelas e colunas no designer de modelo sem ter que fornecer uma instância de servidor de workspace externo. Modo de workspace integrado não será alterado quando SSDT Tabular trabalhar com um servidor de workspace e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do workspace. Para habilitar o modo de workspace integrado, selecione a opção Workspace Integrado na caixa de diálogo Designer de Modelos de Tabela, exibida ao criar um novo projeto tabular. Para projetos tabulares existentes, que atualmente usam um servidor de workspace explícito, você pode mudar para o modo de workspace integrado, definindo o parâmetro Modo de Workspace Integrado como True na janela Propriedades, que é exibida quando você seleciona o arquivo Model.bim no Gerenciador de Soluções. Para obter detalhes, consulte a [Postagem de blog do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
 
 **Atualizações e correções**
 **Ferramentas de banco de dados:**
