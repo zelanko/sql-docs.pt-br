@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd379df3c82a16924a984464d1bdbe68e8ebfce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632124"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359293"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47632124"
 ### <a name="a-using-error-to-detect-a-specific-error"></a>A. Usando @@ERROR para detectar um erro específico  
  O exemplo a seguir usa `@@ERROR` para verificar se existe violação de restrição (erro #547) em uma instrução `UPDATE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -72,7 +72,7 @@ GO
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando @@ERROR para sair de um procedimento condicionalmente  
  O exemplo seguinte usa instruções `IF...ELSE` para testar `@@ERROR` depois de uma instrução `DELETE` em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -107,7 +107,7 @@ GO
 ### <a name="c-using-error-with-rowcount"></a>C. Usando @@ERROR com @@ROWCOUNT  
  O exemplo a seguir usa `@@ERROR` com `@@ROWCOUNT` para validar a operação de uma instrução `UPDATE`. O valor de `@@ERROR` é verificado para não haver indicação de erro, e `@@ROWCOUNT` é usado para garantir que a atualização foi aplicada com sucesso na linha da tabela.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -176,7 +176,7 @@ GO
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [Referência de Erros e Eventos &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716545"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636435"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,18 +42,18 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Quando o agrupamento do banco de dados não contiver o sinalizador de caractere suplementar (SC), esse será um número inteiro positivo de 0 a 65535 (0 a 0xFFFF). Se for especificado um valor fora deste intervalo, será retornado NULL. Para obter mais informações sobre caracteres suplementares, veja [Suporte para agrupamento e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando a ordenação do banco de dados não contiver o sinalizador de [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), esse será um inteiro positivo de 0 a 65535 (0 a 0xFFFF). Se for especificado um valor fora deste intervalo, será retornado NULL. Para obter mais informações sobre caracteres suplementares, veja [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Quando o agrupamento do banco de dados não oferecer suporte ao sinalizador de caractere suplementar (SC), esse será um número inteiro positivo de 0 a 1114111 (0 a 0x10FFFF). Se for especificado um valor fora deste intervalo, será retornado NULL.  
+ Quando a ordenação do banco de dados oferecer suporte ao sinalizador de SC, esse será um inteiro positivo de 0 a 1114111 (0 a 0x10FFFF). Se for especificado um valor fora deste intervalo, será retornado NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nchar(1)** quando o agrupamento de banco de dados padrão não é compatível com caracteres suplementares.  
+ **nchar(1)** quando a ordenação de banco de dados padrão não é compatível com caracteres suplementares.  
   
- **nvarchar(2)** quando o agrupamento de banco de dados padrão é compatível com caracteres suplementares.  
+ **nvarchar(2)** quando a ordenação de banco de dados padrão é compatível com caracteres suplementares.  
   
- Se o parâmetro *integer_expression* estiver no intervalo de 0 a 0xFFFF, somente um caractere será retornado. Para valores mais altos, NCHAR retorna o par alternativo correspondente. Não construa um par alternativo usando `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Em vez disso, use um agrupamento de banco de dados com suporte para caracteres suplementares e especifique o ponto de código Unicode para o par substituto. O exemplo a seguir demonstra o método de estilo antigo de construir um par substituto e o método preferencial de especificar o ponto de código Unicode.  
+ Se o parâmetro *integer_expression* estiver no intervalo de 0 a 0xFFFF, somente um caractere será retornado. Para valores mais altos, NCHAR retorna o par alternativo correspondente. Não construa um par alternativo usando `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Em vez disso, use uma ordenação de banco de dados com suporte para caracteres suplementares e especifique o ponto de código Unicode para o par substituto. O exemplo a seguir demonstra o método de estilo antigo de construir um par substituto e o método preferencial de especificar o ponto de código Unicode.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Usando NCHAR e UNICODE  
  O exemplo a seguir usa as funções `UNICODE` e `NCHAR` para imprimir o valor `UNICODE` e o `NCHAR` (caractere Unicode) do segundo caractere da cadeia de caracteres `København` e para imprimir o segundo caractere real, `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. Usando SUBSTRING, UNICODE, CONVERT e NCHAR  
  O exemplo a seguir usa as funções `SUBSTRING`, `UNICODE`, `CONVERT` e `NCHAR` para imprimir o número do caractere, o caractere Unicode e o valor UNICODE de cada caractere na cadeia `København`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

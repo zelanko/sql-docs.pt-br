@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23b3938eb6ef388f5ddb50e1c9e768e222dfd488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711124"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359274"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,8 +62,7 @@ Quando chamado em um bloco CATCH em que um erro ocorre, `ERROR_SEVERITY` retorna
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Usando ERROR_SEVERIRTY em um bloco CATCH  
 Este exemplo mostra um procedimento armazenado que gera um erro de divisão por zero. `ERROR_SEVERITY` retorna o valor da gravidade desse erro.  
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -72,7 +71,9 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -88,8 +89,7 @@ ErrorSeverity
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_SEVERITY em um bloco CATCH com outras ferramentas de tratamento de erros  
 Este exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. O procedimento armazenado retorna informações sobre o erro.  
 
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +104,9 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -127,6 +129,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [Referência de Erros e Eventos &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

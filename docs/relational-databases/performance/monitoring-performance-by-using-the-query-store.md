@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717050"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359343"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,9 @@ Para obter mais opções de sintaxe relacionadas ao repositório de consultas, c
   
  Como o repositório de consultas mantém vários planos de execução por consulta, ele pode impor políticas para direcionar o processador de consultas para usar um plano de execução específico para uma consulta. Isso é conhecido como imposição de plano. A imposição de plano no repositório de consultas é fornecida usando um mecanismo semelhante à dica de consulta [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , mas não requer nenhuma alteração nos aplicativos do usuário. A imposição de plano pode resolver uma regressão de desempenho de consulta causada por uma alteração do plano em um período muito curto.  
 
+> [!NOTE]
+> O Repositório de Consultas coleta planos para Instruções DML, como SELECT, INSERT, UPDATE, DELETE, MERGE e BULK INSERT.
+
  As **estatísticas de espera** são outra fonte de informações que ajudam a solucionar problemas de desempenho no SQL Server. Por muito tempo, as estatísticas de espera estavam disponíveis somente no nível da instância, o que tornava difícil refazer o caminho para a consulta real. No SQL Server 2017 e no Banco de Dados SQL do Azure adicionamos outra dimensão no Repositório de Consultas que controla as estatísticas de espera. 
 
  Cenários comuns para o uso do recurso Repositório de Consultas são:  
@@ -109,7 +112,7 @@ INNER JOIN sys.query_store_query_text AS Txt
  Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
 ##  <a name="Waiting"></a> Localizando consultas de espera
 
-Começando com o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as estatísticas de espera por consulta ao longo do tempo estão disponíveis no Repositório de Consultas. No Repositório de Consultas, os tipos de espera são combinados em **categorias de espera**. O mapeamento das categorias de espera para tipos de espera está disponível em [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as estatísticas de espera por consulta ao longo do tempo estão disponíveis no Repositório de Consultas. No Repositório de Consultas, os tipos de espera são combinados em **categorias de espera**. O mapeamento das categorias de espera para tipos de espera está disponível em [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
 As **categorias de espera** combinam tipos diferentes de espera em buckets semelhantes por natureza. Categorias de espera diferentes exigem um acompanhamento de análise diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas muito semelhantes e fornecer a consulta afetada com base nas esperas seria a peça que faltava para concluir a maioria dessas investigações de com êxito.
 
@@ -554,7 +557,7 @@ OPTION (MERGE JOIN);
 ###  <a name="Stability"></a> Manter a estabilidade do desempenho da consulta  
  Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planos, resultando em diferentes utilizações de recurso e duração. Com o Repositório de Consultas, você pode detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode impor esse plano ideal para execução futura da consulta.  
   
- Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros ( autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
+ Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros (autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
   
  **Impor um plano para uma consulta (aplicar política de imposição).** Quando um plano é forçado para determinada consulta, sempre que uma consulta é executada com o plano imposto.  
   

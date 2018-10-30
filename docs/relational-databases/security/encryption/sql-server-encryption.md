@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782844"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643924"
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,9 @@ Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnover
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Visão geral de como ajudar a proteger a plataforma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como trabalhar com usuários e objetos protegíveis.  
+
+[Uma visão geral das funcionalidades de segurança do Banco de Dados SQL do Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>Visão geral de segurança do Banco de Dados SQL do Azure para proteção de dados, controle de acesso e o monitoramento proativo.
   
  [Funções criptográficas &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Informações sobre como implementar funções de criptografia.  

@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802914"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419271"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Executar um procedimento armazenado](execute-a-stored-procedure.md).
 
   Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47802914"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   O agrupamento de banco de dados de chamada é usado durante a correspondência de nomes dos procedimentos do sistema. Portanto, em seu aplicativo, você deve sempre fazer a diferenciação exata entre maiúsculas e minúsculas nos nomes em chamadas de procedimento. Por exemplo, este código falhará se for executado no contexto de um banco de dados que tenha um agrupamento com diferenciação de maiúsculas e minúsculas:  
+-   A ordenação de banco de dados de chamada é usada durante a correspondência de nomes dos procedimentos do sistema. Portanto, em seu aplicativo, você deve sempre fazer a diferenciação exata entre maiúsculas e minúsculas nos nomes em chamadas de procedimento. Por exemplo, este código falhará se for executado no contexto de um banco de dados que tenha uma ordenação com diferenciação de maiúsculas e minúsculas:  
   
     ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
@@ -69,7 +68,7 @@ ms.locfileid: "47802914"
   
 -   Executando procedimentos armazenados do sistema  
   
-     Procedimentos armazenados do sistema começam com o prefixo **sp_**. Como eles aparecem logicamente em todos os bancos de dados definidos pelo usuário e o sistema, podem ser executados de qualquer banco de dados sem ter que qualificar totalmente o nome de procedimento. No entanto, recomendamos que você qualifique por esquema todos os nomes dos procedimentos armazenados do sistema com o nome do esquema **sys** para evitar conflitos de nomes. O exemplo a seguir mostra o método recomendado para chamar um procedimento armazenado do sistema.  
+     Procedimentos armazenados do sistema começam com o prefixo **sp_**. Como eles aparecem logicamente em todos os bancos de dados definidos pelo usuário e pelo sistema, podem ser executados de qualquer banco de dados sem ter que qualificar totalmente o nome de procedimento. No entanto, recomendamos que você qualifique por esquema todos os nomes dos procedimentos armazenados do sistema com o nome do esquema **sys** para evitar conflitos de nomes. O exemplo a seguir mostra o método recomendado para chamar um procedimento armazenado do sistema.  
   
     ```sql  
     EXEC sys.sp_who;  

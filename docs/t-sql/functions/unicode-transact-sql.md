@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae9988ac496800cca11139e562a9ba57dc62fe8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845014"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636445"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,14 +49,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a função UNICODE retorna um ponto de código UCS-2 no intervalo de 0 a 0xFFFF. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e em edições posteriores, ao usar agrupamentos SC, UNICODE retorna um ponto de código UTF-16 no intervalo 0 a 0x10FFFF.  
+ Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a função UNICODE retorna um ponto de código UCS-2 no intervalo de 0 a 0xFFFF. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ao usar ordenações habilitadas por [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), o UNICODE retorna um ponto de código UTF-16 no intervalo de 0 a 0x10FFFF.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-unicode-and-the-nchar-function"></a>A. Usando UNICODE e a função NCHAR  
  O exemplo a seguir usa as funções `UNICODE` e `NCHAR` para imprimir o valor UNICODE do primeiro caractere da cadeia de 24 caracteres `Åkergatan` e para imprimir o primeiro caractere real, `Å`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### <a name="b-using-substring-unicode-and-convert"></a>B. Usando SUBSTRING, UNICODE e CONVERT  
  O exemplo a seguir usa as funções `SUBSTRING`, `UNICODE` e `CONVERT` para imprimir o número do caractere, o caractere Unicode e o valor UNICODE de cada um dos caracteres na cadeia `Åkergatan 24`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
@@ -145,7 +145,7 @@ Character # Unicode Character UNICODE Value
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

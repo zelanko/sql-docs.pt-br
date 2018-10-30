@@ -1,7 +1,7 @@
 ---
 title: char e varchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,42 +19,49 @@ helpviewer_keywords:
 - varchar(max) data type
 - variable-length data types [SQL Server]
 - varchar data type
+- utf8
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6699c1b1c02f071dd95cd642f15a9b449de8e815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824778"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644004"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Esses tipos de dados são de comprimento variável ou fixo.  
+Tipos de dados de caractere que sejam de comprimento fixo, **char** ou de comprimento variável, **varchar**. A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando uma ordenação habilitada por UTF-8 é usada, esses tipos de dados armazenam o intervalo completo de dados de caractere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usam a codificação de caracteres [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Se uma ordenação não UTF-8 for especificada, esses tipos de dados armazenarão apenas um subconjunto de caracteres compatíveis com a página de código correspondente dessa ordenação.
   
 ## <a name="arguments"></a>Argumentos  
-**char** [ ( *n* ) ] Dados de cadeia de caracteres não Unicode de comprimento fixo. *n* define o tamanho da cadeia de caracteres e deve ser um valor de 1 a 8.000. O tamanho do armazenamento é *n* bytes. O sinônimo ISO para **char** é **character**.
-  
-**varchar** [ ( *n* | **max** ) ] Dados de cadeia de caracteres não Unicode de tamanho variável. *n* define o tamanho da cadeia de caracteres e pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**.
-  
+**char** [ ( *n* ) ] Dados de cadeia de caracteres de comprimento fixo. *n* define o tamanho da cadeia de caracteres em bytes e deve ser um valor entre 1 a 8.000. Para conjuntos de caracteres de codificação de byte único, como *Latino*, o tamanho de armazenamento é *n* bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para conjuntos de caracteres de codificação multibyte, o tamanho de armazenamento ainda será *n* bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n*. O sinônimo ISO para **char** é **character**. Para saber mais sobre conjuntos de caracteres, consulte [Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
+**varchar** [ ( *n* | **max** ) ] dados de cadeia de caracteres de comprimento variável. *n* define o tamanho da cadeia de caracteres em bytes e pode ser um valor entre 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é 2^31-1 bytes (2 GB). Para conjuntos de caracteres de codificação de byte único, como *Latino*, o tamanho de armazenamento é *n* bytes + 2 bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para codificação de conjuntos de caracteres multibyte, o tamanho de armazenamento ainda será *n* bytes + 2 bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n*. Os sinônimos ISO para **varchar** são **charvarying** ou **charactervarying**. Para saber mais sobre conjuntos de caracteres, consulte [Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 ## <a name="remarks"></a>Remarks  
 Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado ao usar as funções CAST e CONVERT, o tamanho padrão é 30.
   
-Os objetos que usam **char** ou **varchar** são atribuídos ao agrupamento padrão do banco de dados, a menos que um agrupamento específico seja atribuído usando da cláusula COLLATE. O agrupamento controla a página de código que é usada para armazenar os dados de caractere.
-  
-Se você tiver sites compatíveis com vários idiomas, considere usar tipos de dados Unicode **nchar** ou **nvarchar** para minimizar problemas de conversão de caracteres. Se você usar **char** ou **varchar**, recomendamos o seguinte:
+Os objetos que usam **char** ou **varchar** são atribuídos à ordenação padrão do banco de dados, a menos que uma ordenação específica seja atribuída usando da cláusula COLLATE. A ordenação controla a página de código que é usada para armazenar os dados de caractere.
+
+As codificações multibyte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluem:
+-   Conjuntos de caracteres de byte duplo (DBCS) para alguns idiomas do Leste Asiático que usam páginas de código 936 e 950 (chinês), 932 (japonês) ou 949 (coreano).
+-   UTF-8 com página de código 65001. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+
+Se você tiver sites compatíveis com vários idiomas:
+- A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], considere o uso de uma ordenação habilitada para UTF-8 para dar suporte a Unicode e minimizar os problemas de conversão de caracteres. 
+- Caso use uma versão inferior do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere o uso dos tipos de dados **nchar** ou **nvarchar** Unicode para minimizar os problemas de conversão de caracteres.   
+
+Caso use **char** ou **varchar**, recomendamos que:
 - Use **char** quando os tamanhos das entradas de dados de coluna forem consistentes.  
 - Use **varchar** quando os tamanhos das entradas de dados de coluna variarem consideravelmente.  
-- Use **varchar(max)** quando os tamanhos das entradas de dados de coluna variarem consideravelmente e o tamanho puder exceder 8.000 bytes.  
+- Use **varchar(max)** quando os tamanhos das entradas de dados de coluna variarem consideravelmente e o tamanho da cadeia de caracteres puder exceder 8.000 bytes.  
   
 Se SET ANSI_PADDING for OFF quando CREATE TABLE ou ALTER TABLE for executada, uma coluna **char** definida como NULL será tratada como **varchar**.
   
-Quando a página de código de agrupamento usar caracteres de dois bytes, o tamanho do armazenamento ainda será *n* bytes. Dependendo da cadeia de caracteres, o tamanho de armazenamento de *n* bytes pode ser menor que *n* caracteres.
-
 > [!WARNING]
 > Cada coluna varchar(max) ou nvarchar(max) não nula requer 24 bytes de alocação fixa adicional que conta para o limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas varchar(max) ou nvarchar(max) não nulas que podem ser criadas em uma tabela.  
 Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.
@@ -62,10 +69,10 @@ Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comu
 ##  <a name="_character"></a> Convertendo dados de caractere  
 Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O tipo **uniqueidentifier** é considerado um tipo de caractere para fins de conversão de uma expressão de caractere e, portanto, está sujeito às regras de truncamento para conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
   
-Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, o agrupamento do valor de entrada é atribuído ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, o agrupamento padrão do banco de dados atual será atribuído ao valor convertido. Em qualquer caso, você pode atribuir um agrupamento específico usando a cláusula [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, a ordenação do valor de entrada é atribuída ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, a ordenação padrão do banco de dados atual será atribuída ao valor convertido. Em qualquer caso, você pode atribuir uma ordenação específica usando a cláusula [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 > [!NOTE]  
->  Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
+> Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
   
 As expressões character que estão sendo convertidas em um tipo de dados **numeric** aproximado podem incluir notação exponencial opcional (um e minúsculo ou um E maiúsculo seguido por um sinal de mais (+) ou menos (-) opcional e, depois, um número).
   
@@ -115,7 +122,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -144,7 +151,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -158,6 +165,7 @@ String                                       TruncatedValue
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-  
+[Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
+[Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+[Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   
