@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776074"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020340"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Arquivo de configuração RsReportServer.config
 O arquivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** armazena configurações que são usadas pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  
@@ -57,7 +57,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
  A tabela a seguir fornece informações sobre as configurações gerais que aparecem na primeira parte do arquivo. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração. A última coluna da tabela indica se a configuração se aplica a um servidor de relatório no modo nativo **(N)** , a um servidor de relatório no modo do PharePoint **(S)** ou a ambos.  
   
 > [!NOTE]  
->  Neste tópico, “o número inteiro máximo” se refere ao valor INT_MAX de 2147483647.  Para saber mais, veja [Limites de inteiros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  Neste tópico, “o número inteiro máximo” se refere ao valor INT_MAX de 2147483647.  Para saber mais, veja [Limites de inteiros](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Configuração|Descrição|Modo|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
  **URLReservations** define o acesso HTTP ao serviço Web Servidor de Relatórios e ao portal da Web para a instância atual. Os URLs são reservados e armazenados em HTTP.SYS quando você configura o servidor de relatório.  
   
 > [!WARNING]  
->  Para o modo do SharePoint, as reservas de URL são configuradas na Administração Central do SharePoint. Para saber mais, veja [Configurar o mapeamento de acesso alternativo (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Para o modo do SharePoint, as reservas de URL são configuradas na Administração Central do SharePoint. Para saber mais, veja [Configurar o mapeamento de acesso alternativo (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Não modifique as reservas de URL diretamente no arquivo de configuração. Sempre use a ferramenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager ou o provedor WMI do servidor de relatório para criar ou modificar reservas de URL para um servidor de relatório no modo nativo. Se os valores forem modificados no arquivo de configuração, você pode corromper a reserva, o que causa erros de servidor em tempo de execução ou deixa reservas órfãs em HTTP.SYS que não são removidas se o software é desinstalado. Para obter mais informações, consulte [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) e [URLs em arquivos de configuração &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |**ExcludedRenderFormats**, **RenderingExtension**|Estas configurações são usadas para excluir intencionalmente formatos de exportação que não funcionam bem com a entrega de compartilhamento de arquivos. Estes formatos normalmente são usados para relatórios interativos, visualização ou para pré-carregar o cache de relatório. Eles não produzem arquivos de aplicativo que podem ser exibidos facilmente a partir de um aplicativo de desktop.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Nulo|  
   
 ####  <a name="bkmk_email_extension"></a> Configurações de extensão de email do servidor de relatório  
- O email do servidor de relatório usa um dispositivo de rede SMTP para enviar relatórios a endereços de email. Esta extensão de entrega deve ser configurada antes de ser usada. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ O email do servidor de relatório usa um dispositivo de rede SMTP para enviar relatórios a endereços de email. Esta extensão de entrega deve ser configurada antes de ser usada. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |-------------|-----------------|  
 |**MaxConnections**|Especifica o número máximo de conexões com Serviços Web Bing Maps.|  
 |**Tempo Limite**|Especifica o tempo limite, em segundos, de espera por uma resposta dos Serviços Web Bing Maps.|  
-|**AppID**|Especifica o AppID (identificador de aplicativo) a ser usado para os Serviços Web Bing Maps. **(Default)** especifica o AppID padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Não altere este valor a menos que você precise especificar um AppID personalizado para o seu próprio contrato de licença do Bing Maps. Ao alterar o AppID, você não precisa reiniciar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que a alteração se efetive.|  
-|**CacheLevel**|Especifica um valor da Enumeração HttpRequestCacheLevel de System.Net.Cache. O valor padrão é **Default**. Para obter mais informações, consulte [Enumeração HttpRequestCacheLevel](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Especifica o AppID (identificador de aplicativo) a ser usado para os Serviços Web Bing Maps. **(Default)** especifica o AppID padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Não altere este valor a menos que você precise especificar um AppID personalizado para o seu próprio contrato de licença do Bing Maps. Ao alterar o AppID, você não precisa reiniciar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que a alteração se efetive.|  
+|**CacheLevel**|Especifica um valor da Enumeração HttpRequestCacheLevel de System.Net.Cache. O valor padrão é **Default**. Para obter mais informações, consulte [Enumeração HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Arquivo de configuração padrão para um servidor de relatório no modo nativo  
  Por padrão, o arquivo rsreportserver.config é instalado no seguinte local:  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

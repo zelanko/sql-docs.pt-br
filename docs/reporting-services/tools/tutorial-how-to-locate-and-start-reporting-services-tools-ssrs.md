@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021160"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as ferramentas do Reporting Services (SSRS)
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856782"
 4.  Se você executar o Portal da Web no servidor de relatório local, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Os administradores de servidor de relatório podem usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para gerenciar um servidor de relatório com outros servidores de componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Os administradores de servidor de relatório podem usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para gerenciar um servidor de relatório com outros servidores de componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
   
 ### <a name="to-start-sql-server-management-studio"></a>Para iniciar o SQL Server Management Studio  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856782"
   
  O Designer de Relatórios está disponível em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio. A superfície de design do Designer de Relatórios inclui janelas tabuladas, assistentes e menus usados para acessar recursos de criação de relatórios. A ferramenta do designer de relatórios torna-se disponível quando você escolhe um modelo de Projeto do Report Server ou um Assistente do Report Server em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para saber mais, consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
-Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).  
+Baixar o [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).  
   
 ### <a name="to-start-report-designer"></a>Para iniciar o Designer de Relatórios  
   
@@ -134,7 +134,7 @@ Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  O[Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) é um aplicativo autônomo que você pode usar para criar relatórios paginados fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode personalizar e atualizar todos os relatórios existentes, quer tenham sido criados no Designer de Relatórios ou em versões anteriores do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
   
- [Baixe o Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
+ [Baixe o Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Para iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
      Ou  
   
-     [Baixe o Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
+     [Baixe o Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é aberto e você pode criar ou abrir um relatório paginado.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- Use o [Publicador de Relatórios Móveis do SQL Server](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) para criar relatórios móveis que você pode exibir no portal da Web do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e em dispositivos móveis, como iPads e iPhones.   Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
+ Use o [Publicador de Relatórios Móveis do SQL Server](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) para criar relatórios móveis que você pode exibir no portal da Web do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e em dispositivos móveis, como iPads e iPhones.   Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
   
- [Baixar Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) do Centro de Download da Microsoft.  
+ [Baixar Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) do Centro de Download da Microsoft.  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Para iniciar o [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
      Ou  
   
-     [Baixar Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) do Centro de Download da Microsoft.  
+     [Baixar Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) do Centro de Download da Microsoft.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] é aberto e você pode criar ou abrir um relatório móvel.  
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Baixar Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[Baixe o Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Baixar Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[Baixe o Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[Baixar o SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Instalar o Reporting Services no modo do SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Ferramentas de Design da Consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Tutoriais de Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

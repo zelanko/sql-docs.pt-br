@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657164"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030325"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios paginados são definições de relatório baseadas em XML que incluem dados de relatório e elementos de layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que você publica um relatório paginado, ele é um item de relatório armazenado no servidor de relatório ou site do SharePoint. Os relatórios paginados são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você também pode [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47657164"
 ## <a name="view-reports"></a>Exibir relatórios  
  Além de visualizar um relatório salvo localmente ou publicado em um servidor de relatório, você pode fornecer uma variedade de experiências de exibição para os leitores de seus relatórios. Para exibir um relatório:  
   
--   **Navegador.**  Use o Serviço Web Servidor de Relatórios ou o site do SharePoint para exibir relatórios publicados. Em um site do SharePoint, você também pode configurar uma Web Part para exibir relatórios publicados. Para obter mais informações, consulte [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Navegador.**  Use o Serviço Web Servidor de Relatórios ou o site do SharePoint para exibir relatórios publicados. Em um site do SharePoint, você também pode configurar uma Web Part para exibir relatórios publicados. Para obter mais informações, consulte [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
 -   **Entrega.**  Configure uma assinatura para entregar relatórios aos leitores por email ou por uma pasta de arquivos compartilhada.  Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657164"
   
 -   **Imprimir.**  O leitor do relatório pode imprimir um relatório ou páginas do documento dependendo do modo no qual é exibido. Para obter mais informações, consulte [Imprimir Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo ASP.NET AJAX ou Windows Form que hospede o controle do Visualizador de Relatórios. O controle pode apontar para relatórios publicados em um servidor de relatório. Para obter mais informações, consulte [Relatórios da Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo ASP.NET AJAX ou Windows Form que hospede o controle do Visualizador de Relatórios. O controle pode apontar para relatórios publicados em um servidor de relatório. Para obter mais informações, consulte [Relatórios da Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gerenciar relatórios  
  Para gerenciar um relatório publicado:  

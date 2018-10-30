@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031645"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets do PowerShell para o modo do SharePoint do Reporting Services
 
@@ -34,7 +34,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
 
 ## <a name="cmdlet-summary"></a>Resumo do cmdlet
 
- Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](http://technet.microsoft.com/library/hh847814.aspx). Nos resumos de cmdlets a seguir, as referências a “bancos de dados” do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
+ Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](https://technet.microsoft.com/library/hh847814.aspx). Nos resumos de cmdlets a seguir, as referências a “bancos de dados” do aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço do Reporting Services. Isso inclui a os bancos de dados de configuração, alerta e temp.  
   
  Se uma mensagem de erro semelhante à seguinte for exibida quando você digitar os exemplos do PowerShell:  
   
@@ -51,7 +51,7 @@ Quando você instala o modo do SharePoint do SQL Server 2016 Reporting Services,
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Para obter mais informações, consulte [Usar o Windows PowerShell para administrar o SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Para obter mais informações, consulte [Usar o Windows PowerShell para administrar o SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Abrir o Shell de Gerenciamento do SharePoint e executar cmdlets
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [Lista de verificação: Usar o PowerShell para verificar o Power Pivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Obter ajuda para o PowerShell do SQL Server](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d22f07d4375d92dd49f18f5fe80653f1e401b744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021830"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
   Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como designer de modelo, determina o que é exibido nos relatórios de clickthrough definindo as propriedades **DefaultDetailAttribute** e **DefaultAggregateAttribute** que você atribui a uma entidade no modelo de relatório.  
@@ -47,6 +47,6 @@ ms.locfileid: "47855004"
 >  A entidade principal, ou básica, usada no relatório deve ser a mesma entidade à qual você vincula o relatório.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Vincular um relatório a um modelo como um relatório de clickthrough](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [Vincular um relatório a um modelo como um relatório de clickthrough](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

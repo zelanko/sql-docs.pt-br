@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838574"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031765"
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  
   
- Para definir propriedades de execução de relatório, abra o relatório no Gerenciador de Relatórios e então navegue até a página Propriedades de Execução. Para obter mais informações, consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Você também pode definir as propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Para definir propriedades de execução de relatório, abra o relatório no Gerenciador de Relatórios e então navegue até a página Propriedades de Execução. Para obter mais informações, consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Você também pode definir as propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Modos de execução de relatório  
  É possível executar um relatório sob demanda ou como um instantâneo. A seção a seguir descreve cada tipo de abordagem.  
@@ -57,7 +57,7 @@ ms.locfileid: "47838574"
  [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceitos do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Como adicionar um instantâneo ao histórico de relatórios](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Como adicionar um instantâneo no histórico de relatório](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

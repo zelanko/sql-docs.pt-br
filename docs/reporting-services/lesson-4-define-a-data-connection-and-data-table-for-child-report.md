@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b160390718e62854fa1fbfb5aae1d12310420477
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031455"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho
 Depois que você criar o relatório pai, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório filho. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -61,7 +61,7 @@ Depois que você criar o relatório pai, a próxima etapa será criar uma conex�
     > [!WARNING]  
     > Lembre-se de desmarcar a opção **Criar métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)**  
   
-    Agora você concluiu a configuração de [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) do ADO.NET como uma fonte de dados do relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
+    Agora você concluiu a configuração de [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) do ADO.NET como uma fonte de dados do relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
   
 11. Salve o arquivo.  
   

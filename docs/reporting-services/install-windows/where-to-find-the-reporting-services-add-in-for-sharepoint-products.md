@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07cd33238f3c5250319e099d2efddc4ca7f2045e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624494"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051078"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Onde encontrar o suplemento Reporting Services para produtos do SharePoint
 
@@ -37,7 +38,7 @@ O suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoV
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Suplemento Reporting Services para produtos do SharePoint  
  Para baixar e instalar o suplemento, consulte o Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   [Suplemento Microsoft® SQL Server 2014 Reporting Services para Microsoft SharePoint](http://go.microsoft.com/fwlink/?LinkID=324852)  
+-   [Suplemento Microsoft® SQL Server 2014 Reporting Services para Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=324852)  
   
  A versão [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] do suplemento também está disponível no assistente de Instalação do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
   
@@ -52,15 +53,15 @@ O suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoV
   
 -   **Suplemento do SP1:**  [Suplemento Microsoft® SQL Server® 2012 SP1 Reporting Services para Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplemento do Reporting Services para produtos do SharePoint 2010
 
-Na versão do SQL Server 2016, o suplemento pode ser instalado como parte do assistente de instalação do SQL Server, na página Seleção de Recursos. Para baixar e instalar o suplemento separadamente, a versão mais atualizada desse arquivo está disponível online na página do Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento do Microsoft® SQL Server® 2012 Reporting Services para Tecnologias do Microsoft SharePoint 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
+Na versão do SQL Server 2016, o suplemento pode ser instalado como parte do assistente de instalação do SQL Server, na página Seleção de Recursos. Para baixar e instalar o suplemento separadamente, a versão mais atualizada desse arquivo está disponível online na página do Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento do Microsoft® SQL Server® 2012 Reporting Services para Tecnologias do Microsoft SharePoint 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Não é possível navegar em páginas do SharePoint em zonas não padrão depois de desinstalar o suplemento Reporting Services](http://support.microsoft.com/kb/2009212)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

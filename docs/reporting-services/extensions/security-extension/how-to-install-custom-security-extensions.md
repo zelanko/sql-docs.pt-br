@@ -8,12 +8,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020660"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Como instalar extensões de segurança personalizadas
 
@@ -122,4 +122,4 @@ O novo portal e o reportserver se comunicam usando APIs SOAP internas para algum
 [Configurar autenticação personalizada ou de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

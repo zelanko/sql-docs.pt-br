@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d5e213506cfbf94191a5f055b9cd21cc851c0b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54fe4e8786bac599ab5e71b5109d5838f4ae13cf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707794"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029025"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
 Saiba mais sobre as alterações no comportamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior.
@@ -31,10 +31,10 @@ Também descreve as principais alterações no produto que sabidamente interromp
 |-----------|-----------------|  
 |[Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Descreve recursos que existiam em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , mas que foram removidos em versões posteriores.|  
 |[Recursos preteridos do SQL Server Reporting Services no SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Descreve recursos que existem nesta versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para fins de compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do SQL Server.|  
-|[Alterações recentes no SQL Server Reporting Services no SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Alterações recentes no SQL Server Reporting Services do SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Descreve recursos que foram alterados no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Compatibilidade com versões anteriores | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
+ [Compatibilidade com versões anteriores | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

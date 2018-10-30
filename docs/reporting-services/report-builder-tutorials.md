@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9539992fdcabd16bdd3d6cd7601fea97c57a78d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031725"
 ---
 # <a name="report-builder-tutorials"></a>Tutoriais do Construtor de Relatórios
 
@@ -74,4 +74,4 @@ Siga as etapas deste tutorial para aprender como usar expressões para concatena
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: Criar um relatório de gráfico rápido offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

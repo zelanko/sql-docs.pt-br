@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031901"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Criar relatórios paginados do Reporting Services com o Designer de relatórios (SSRS)
 
 Use o Designer de Relatórios para criar relatórios paginados e soluções completas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O Designer de Relatórios fornece uma interface gráfica na qual você pode definir fontes de dados, conjuntos de dados e consultas, posições do layout do relatório para regiões de dados e campos e recursos interativos, como parâmetros e conjuntos de relatórios que funcionam em conjunto.  
 
-O Designer de Relatórios é um recurso do  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um ambiente do Microsoft Visual Studio para criação de soluções de business intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não é incluído com o SQL Server. Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+O Designer de Relatórios é um recurso do  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um ambiente do Microsoft Visual Studio para criação de soluções de business intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não é incluído com o SQL Server. Baixar o [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Benefícios dos projetos de relatório  
 Os projetos de relatório atuam como contêineres para recursos e definições de relatório. Use projetos para:  
@@ -69,7 +69,7 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
   
 -   **Adicionar um item existente.** Uma definição de relatório existente (.rdl) é aberta no Designer de Relatórios. A abertura de um relatório ou projeto em uma versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode atualizar o projeto automaticamente para a versão atual, e o relatório para o esquema atual. Para obter mais informações, consulte [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Importe um relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importe todos os relatórios de um banco de dados do Access (.mdb, .accdb) ou arquivo de projeto (.adp). O Designer de Relatórios converte cada relatório em um arquivo de banco de dados ou de projeto em RDL e salva-o no projeto de relatório. Nem todas as funcionalidades de um relatório do Access são transferidas para um arquivo de definição de relatório (.rdl). Para obter mais informações, consulte [Importar relatórios do Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) e [Recursos de relatórios do Access com suporte &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Importe um relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importe todos os relatórios de um banco de dados do Access (.mdb, .accdb) ou arquivo de projeto (.adp). O Designer de Relatórios converte cada relatório em um arquivo de banco de dados ou de projeto em RDL e salva-o no projeto de relatório. Nem todas as funcionalidades de um relatório do Access são transferidas para um arquivo de definição de relatório (.rdl). Para obter mais informações, consulte [Importar relatórios do Microsoft Access &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) e [Recursos de relatórios do Access com suporte &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Para usar o recurso de importação, você deve ter o Access 2002 ou uma versão posterior no mesmo computador que o Designer de Relatórios está instalado. A fonte de dados para os relatórios de Access deverá estar disponível quando os relatórios forem importados.  
@@ -180,9 +180,9 @@ Relatórios paginados são arquivos armazenados em um projeto de relatório. Os 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Baixe o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Baixe o SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services no SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Ferramentas de Design da Consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

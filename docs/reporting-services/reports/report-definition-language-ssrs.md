@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32b6a0b6748dbbd88c45c64ef3a3174d30d134a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028535"
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
   A linguagem RDL é uma representação XML de uma definição de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Uma definição de relatório contém informações de layout e recuperação de dados de um relatório. A linguagem RDL é composta por elementos XML que correspondem a uma gramática XML criada para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você pode adicionar suas próprias funções personalizadas para controlar valores de itens de relatório, estilos e formatação com o acesso a assemblies de código de arquivos de definição de relatório.  
@@ -36,12 +36,12 @@ ms.locfileid: "47833594"
 -   Um esquema extensível e aberto que dá suporte a namespaces adicionais e elementos personalizados.  
   
 ##  <a name="bkmk_RDL_Specifications"></a> Especificações de RDL  
- Para baixar as especificações de versões de esquema específicas, consulte [Especificação da linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Para baixar as especificações de versões de esquema específicas, consulte [Especificação da linguagem RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Definição de esquema XML RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é validado com o uso de um arquivo XML XSD (definição de esquema XML). O esquema define as regras para onde os elementos RDL podem ocorrer em um arquivo .rdl. Um elemento inclui seu tipo de dados e cardinalidade, isto é, o número de ocorrências que são permitidas. Um elemento pode ser simples ou complexo. Um elemento simples não tem elementos filhos ou atributos. Um elemento complexo tem filhos e, opcionalmente, atributos.  
   
- Por exemplo, o esquema inclui o elemento RDL **ReportParameters**, que é o tipo complexo **ReportParametersType**. Por convenção, um tipo complexo para um elemento é o nome do elemento seguido da palavra **Type**. Um elemento **ReportParameters** pode estar contido no elemento **Report** (um tipo complexo) e pode conter elementos **ReportParameter** . Um **ReportParameterType** é um tipo simples que pode ser somente um dos seguintes valores: **Boolean**, **DateTime**, **Integer**, **Float**ou **String**. Para obter mais informações sobre os tipos de dados de Esquema XML, consulte [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(em inglês).  
+ Por exemplo, o esquema inclui o elemento RDL **ReportParameters**, que é o tipo complexo **ReportParametersType**. Por convenção, um tipo complexo para um elemento é o nome do elemento seguido da palavra **Type**. Um elemento **ReportParameters** pode estar contido no elemento **Report** (um tipo complexo) e pode conter elementos **ReportParameter** . Um **ReportParameterType** é um tipo simples que pode ser somente um dos seguintes valores: **Boolean**, **DateTime**, **Integer**, **Float**ou **String**. Para obter mais informações sobre os tipos de dados de Esquema XML, consulte [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)(em inglês).  
   
  O RDL XSD está disponível no arquivo ReportDefinition.xsd, localizado na pasta Extras no CD-ROM do produto. Ele também está disponível no servidor de relatório por meio da seguinte URL: `http://servername/reportserver/reportdefinition.xsd`.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "47833594"
 |----------|-----------------|  
 |**Binary**|Uma propriedade com um valor binário codificado na base 64.|  
 |**Booliano**|Uma propriedade que define o valor do objeto como **true** ou **false** . A menos que seja especificado o contrário, o valor de um objeto Booliano opcional omitido é **False**.|  
-|**Date**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
+|**Data**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |**Enum**|Uma propriedade com um valor de texto de cadeia de caracteres que deve estar na lista de valores designados.|  
 |**Float**|Uma propriedade com um valor flutuante. O ponto (.) é usado como o separador decimal opcional.|  
 |**Integer**|Uma propriedade com um valor inteiro (int32).|  
 |**Idioma**|Uma propriedade com um valor de texto que contém linguagem e código de cultura, como "pt-br" para português do Brasil. O valor deve ser composto por uma linguagem específica ou neutra para qual a linguagem padrão possa ser definida no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].|  
 |**Nome**|Uma propriedade com um valor de texto de cadeia de caracteres. Os nomes devem ser exclusivos dentro do namespace do item. Caso não seja especificado, o namespace de um item é o objeto interno que contém o nome.|  
 |**NormalizedString**|Uma propriedade com um valor de texto de cadeia de caracteres que foi normalizado.|  
-|**Tamanho**|Um elemento de tamanho deve conter um número (com um caractere de período usado como um separador decimal opcional). O número deve ser seguido por um designador para uma unidade de comprimento de CSS como cm, mm, in, pc ou pt. Um espaço entre o número e o designador é opcional. Para obter mais informações sobre designadores de tamanho, consulte [Referência de Unidades de Comprimento de CSS](http://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> No RDL, o valor máximo de **Size** é de 160 polegadas. O tamanho mínimo é de 0 polegada.|  
+|**Tamanho**|Um elemento de tamanho deve conter um número (com um caractere de período usado como um separador decimal opcional). O número deve ser seguido por um designador para uma unidade de comprimento de CSS como cm, mm, in, pc ou pt. Um espaço entre o número e o designador é opcional. Para obter mais informações sobre designadores de tamanho, consulte [Referência de Unidades de Comprimento de CSS](https://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> No RDL, o valor máximo de **Size** é de 160 polegadas. O tamanho mínimo é de 0 polegada.|  
 |**String**|Uma propriedade com um valor de texto de cadeia de caracteres.|  
 |**UnsignedInt**|Uma propriedade com um valor inteiro não atribuído (uint32).|  
 |**Variante**|Uma propriedade com qualquer tipo de XML simples.|  
@@ -87,6 +87,6 @@ ms.locfileid: "47833594"
 ## <a name="see-also"></a>Consulte Também  
  [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Usando assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Itens de relatório personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  
+ [Itens de Relatório Personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   

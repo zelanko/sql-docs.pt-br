@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75a595c5286de0dd050887ae28b95db5b724accc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020250"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
@@ -51,7 +51,7 @@ ms.locfileid: "47778344"
 |---|**Grupo de nível de permissão:** por exemplo “Exibir Apenas” para o grupo “Visualizadores”.|  
 |**Tarefas:** por exemplo “Gerenciar Relatórios”.|**Permissões:** por exemplo, dentro do grupo “Exibir Apenas”, há permissões relacionadas à lista de exibir itens, exibir versões e exibir páginas de aplicativo.|  
   
- Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinar níveis de permissão e grupos no SharePoint 2013](http://technet.microsoft.com/library/cc262690.aspx).  
+ Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Comparar funções do modo nativo e grupos do SharePoint  
  A tabela a seguir compara as definições de função predefinidas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo com os grupos padrão do SharePoint. Se os grupos do SharePoint não corresponderem à função específica desejada, crie um grupo personalizado e atribua níveis de permissão no SharePoint.  

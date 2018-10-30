@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e7fe8ed24590c924a6691834104eaf0d4e018312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020260"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Criar um banco de dados de servidor de relatório do modo nativo
 
@@ -71,7 +71,7 @@ Para criar um banco de dados de servidor de relatório ou alterar as credenciais
   
 ### <a name="to-create-a-local-report-server-database"></a>Para criar um banco de dados de servidor de relatório local  
   
-1.  Inicie o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório para a qual você está criando o banco de dados. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Inicie o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório para a qual você está criando o banco de dados. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Na página Banco de dados, clique em **Alterar Banco de Dados**.  
   
@@ -151,4 +151,4 @@ A ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../in
 [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020640"
 ---
 # <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
   Uma assinatura controlada por dados fornece uma maneira de usar dados dinâmicos de assinatura recuperados de uma fonte de dados externa em tempo de execução. Uma assinatura controlada por dados também pode usar texto estático e valores padrão especificados pelo usuário quando a assinatura é definida. É possível usar assinaturas controladas por dados para fazer o seguinte:  
@@ -42,7 +42,7 @@ ms.locfileid: "47608320"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Requisitos para usar assinaturas controladas por dados  
  A funcionalidade de assinatura controlada por dados não está disponível em todas as edições. Também há limitações para os tipos de fontes de dados que podem ser usadas para recuperar dados de assinatura em tempo de execução. A lista a seguir fornece mais informações sobre os requisitos:  
   
--   Para saber mais sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à funcionalidade de assinatura controlada por dados, veja [Recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Para saber mais sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à funcionalidade de assinatura controlada por dados, veja [Recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Para obter dados de assinatura, escolha uma fonte de dados que possa fornecer informações de esquema para o servidor de relatório. Alguns exemplos de tipos de fonte de dados com suporte incluem dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pacotes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , fontes de dados ODBC e fontes de dados OLE DB. Para obter mais informações sobre requisitos de fonte de dados do assinante, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608320"
   
 ## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Página Criar Assinatura Controlada por Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [Página Criar Assinatura Controlada por Dados &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

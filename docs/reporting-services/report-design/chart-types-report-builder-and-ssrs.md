@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec5912fc9aff3777fe567461b98651d7e9a91a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744734"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030705"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Construtor de Relatórios e SSRS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "47744734"
   
  Você poderá alterar o tipo de gráfico depois de criá-lo. Para obter mais informações, consulte [Alterar um tipo de gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Exibir dados de taxa|Exibir dados de estoque|Exibir dados lineares|Exibir dados de vários valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -52,4 +52,4 @@ ms.locfileid: "47744734"
 [Pontos de dados vazios e nulos em gráficos](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [Adicionar um gráfico a um relatório](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

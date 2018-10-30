@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021150"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usando o controle ReportViewer do WinForms
   Para exibir relatórios que foram implantados em um servidor de relatório ou relatórios existentes no sistema de arquivos local, você pode usar o controle ReportViewer do WinForms para renderizá-los em um aplicativo do Windows.  
@@ -151,7 +151,7 @@ End Class
   
 3.  Navegue até o local em que instalou o projeto Exemplos de Relatórios do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Para baixar as amostras de relatório, acesse [Amostras de relatório do AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Para baixar as amostras de relatório, acesse [Amostras de relatório do AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Selecione o arquivo Sales Order Detail.rdl e clique no botão **Adicionar**.  
   

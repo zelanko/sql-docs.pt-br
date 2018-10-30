@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021080"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Carregar documentos em uma biblioteca do SharePoint (Reporting Services no modo do SharePoint)
 
@@ -43,7 +43,7 @@ Você pode carregar definições de relatório e modelos de relatório em uma bi
   
      Se a definição do relatório usar um arquivo de fonte de dados compartilhada (.rsds) para armazenar informações de conexão em uma fonte de dados externa, atualize os arquivos .rds e .rsds ao mesmo tempo. Para fazer isso, clique em **Carregar Vários Documentos**, especifique os dois arquivos e, em seguida, clique em **OK**.  
   
- Se você carregar um relatório que contém referências a fontes de dados compartilhadas, modelos de relatório ou sub-relatórios, as referências serão rompidas no relatório quando os arquivos forem carregados. Para obter mais informações sobre como redefinir as referências, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Se você carregar um relatório que contém referências a fontes de dados compartilhadas, modelos de relatório ou sub-relatórios, as referências serão rompidas no relatório quando os arquivos forem carregados. Para obter mais informações sobre como redefinir as referências, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  Ao ser carregado, o relatório é executado sob demanda quando aberto, recuperando dados ao vivo da fonte de dados. Você pode configurar o relatório para recuperar dados em uma agenda ou usar dados armazenados em cache. Para obter mais informações, consulte [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -55,4 +55,4 @@ Você pode carregar definições de relatório e modelos de relatório em uma bi
  [Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Conceder permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

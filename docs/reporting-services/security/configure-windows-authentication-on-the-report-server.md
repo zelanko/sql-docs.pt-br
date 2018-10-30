@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031605"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770894"
   
 -   Registre um SPN para o serviço Servidor de Relatório na conta do usuário de domínio. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Altere a conta de serviço para ser executada em uma conta interna, como Serviço de Rede. As contas internas mapeiam o SPN HTTP ao SPN do host, o qual é definido quando um computador se une à sua rede. Para obter mais informações, consulte [Configurar uma conta de serviço &#40; 	Gerenciador de Configurações do SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Altere a conta de serviço para ser executada em uma conta interna, como Serviço de Rede. As contas internas mapeiam o SPN HTTP ao SPN do host, o qual é definido quando um computador se une à sua rede. Para obter mais informações, consulte [Configurar uma conta de serviço &#40; 	Gerenciador de Configurações do SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Use NTLM. O NTLM geralmente funciona quando a autenticação Kerberos falha. Para usar NTLM, remova **RSWindowsNegotiate** do arquivo RSReportServer.config e verifique se somente **RSWindowsNTLM** está especificado. Se você optar por essa abordagem, poderá continuar usando uma conta de usuário de domínio para o serviço Servidor de Relatório, mesmo que não haja um SPN definido.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770894"
   
 -   Uma opção para converter o valor decimal para a forma hexadecimal é, para nós, a Calculadora do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A Calculadora do Windows oferece suporte a vários modos que mostram as opções 'Dec' e 'Hex'. Selecione a opção 'Dec', cole ou digite no valor decimal encontrado no arquivo de log e, em seguida, selecione a opção 'Hex'.  
   
--   Em seguida, consulte o tópico [Atributo de controle da conta de usuário](http://go.microsoft.com/fwlink/?LinkId=183366) para derivar o atributo para a conta de serviço.  
+-   Em seguida, consulte o tópico [Atributo de controle da conta de usuário](https://go.microsoft.com/fwlink/?LinkId=183366) para derivar o atributo para a conta de serviço.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Os SPNs configurados no Active Directory para a conta de serviço do Reporting Services.  
  Para registrar os SPNs no arquivo de log de rastreamento de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você pode habilitar o recurso de Proteção Estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] temporariamente.  
@@ -202,14 +202,14 @@ ms.locfileid: "47770894"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Para obter informações adicionais referentes ao Kerberos e a servidores de relatórios, consulte [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(em inglês).  
+-   Para obter informações adicionais referentes ao Kerberos e a servidores de relatórios, consulte [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)(em inglês).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [Configurar a autenticação personalizada ou de formulários no servidor de relatório](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Proteção estendida para autenticação com o Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Configurar autenticação personalizada ou de formulários no servidor de relatório](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

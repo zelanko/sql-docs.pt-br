@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020180"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651874"
   
  Para relatórios que contêm dados voláteis, o tamanho do relatório pode variar radicalmente de uma execução de relatório para outra. Nesse caso, você deve monitorar a fonte de dados para determinar como a volatilidade dos dados afeta o seu relatório e se é necessário seguir as etapas descritas neste tópico.  
   
- Para obter mais informações sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](http://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.com.  
+ Para obter mais informações sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendações de configuração  
  As recomendações para execução e renderização de relatório e o acesso a ele incluem os seguintes itens:  

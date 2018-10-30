@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733164"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100307"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmicos. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>**.  
@@ -53,7 +53,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 |-------------------|---------------------------------------|--------------------|  
 |Calcule valores de agregação para um conjunto de dados.|Propriedade Value de um espaço reservado dentro de uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Espaço Reservado, Geral**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concatene texto e expressões na mesma caixa de texto.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada em um cabeçalho ou rodapé de página. Use **Caixa de Diálogo de Propriedades de Espaço Reservado, Geral**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Calcule um valor de agregação para um conjunto de dados em outro escopo.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada em um grupo tablix. Use **Caixa de Diálogo de Propriedades de Espaço Reservado, Geral**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Calcule um valor de agregação para um conjunto de dados em outro escopo.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada em um grupo tablix. Use **Caixa de Diálogo de Propriedades de Espaço Reservado, Geral**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Formate os dados de uma caixa de texto de acordo com o valor.|Cor de um espaço reservado dentro de uma caixa de texto na linha de detalhes de um tablix. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Fonte**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcule um valor uma única vez para fazer referência a ele em todo o relatório.|Valor de uma variável de relatório. Use **Caixa de Diálogo Propriedades de Relatório, Variáveis**.|`=Variables!MyCalculation.Value`|  
 |Inclua valores específicos de mais de um campo de um conjunto de dados.|Equação de filtro para um grupo em um tablix. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|Para o tipo de dados, selecione **Booliano**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

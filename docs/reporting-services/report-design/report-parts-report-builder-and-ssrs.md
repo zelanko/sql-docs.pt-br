@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021940"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -107,7 +107,7 @@ ms.locfileid: "47849254"
  Sempre que você abre um relatório, o Construtor de Relatórios verifica se as instâncias de servidor de partes de relatório nesse relatório foram atualizadas no servidor. Também procura alterações nos itens dependentes das partes de relatório, como o conjunto de dados e os parâmetros. Se as partes de relatório publicadas ou suas dependências foram atualizados no servidor, uma barra de informações no relatório exibe o número que foi atualizado. Você pode optar por exibir e aceitar ou rejeitar as atualizações ou descartar a barra de informações. Se você escolher exibir as atualizações, verá uma miniatura da parte de relatório que foi modificada por último e quando. Você poderá então aceitar um ou todos os itens atualizados.  
   
 > [!NOTE]  
->  Você pode desabilitar a barra de informações e não ser informado se a parte de relatório tiver sido alterada. Você define esta opção quando adiciona a parte de relatório ao seu relatório. Mesmo que você tenha desabilitado a barra de informações, ainda poderá procurar atualizações. Para saber mais, confira [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Você pode desabilitar a barra de informações e não ser informado se a parte de relatório tiver sido alterada. Você define esta opção quando adiciona a parte de relatório ao seu relatório. Mesmo que você tenha desabilitado a barra de informações, ainda poderá procurar atualizações. Para mais informações, confira [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  O Construtor de Relatórios verifica se há diferenças entre a data da última atualização da parte de relatório no servidor e a data da última sincronização da parte de relatório com o servidor. Ele não verifica a data que você modificou a parte de relatório em seu relatório. Portanto, a parte de relatório em seu relatório e a parte de relatório no servidor podem ser bastante diferentes, mas quando o Construtor de Relatórios verificar se há atualizações, ele não localizará nenhuma.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "47849254"
   
  [Procurar partes de relatório e definir uma pasta padrão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Gerenciar partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
+ [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Gerenciando partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
   
   

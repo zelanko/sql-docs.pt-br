@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da188b4259d12b8c40cdd8a229a7f316a0bc3a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698794"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028405"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  
@@ -38,7 +38,7 @@ ms.locfileid: "47698794"
 -   **Fonte de dados externa** O local do qual se recupera dados de relatório, por exemplo, um banco de dados, um arquivo, um cubo ou um serviço Web.  
   
 > [!NOTE]  
->  Quando você não está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas com o Construtor de Relatórios. Você acessa os dados como um usuário único usando as credenciais de seu computador. Quando você está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas no servidor de relatório. Você acessa os dados como um de vários usuários que executam o relatório e usa as credenciais no servidor de relatório. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Quando você não está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas com o Construtor de Relatórios. Você acessa os dados como um usuário único usando as credenciais de seu computador. Quando você está conectado a um servidor de relatório, pode escolher as extensões de dados instaladas no servidor de relatório. Você acessa os dados como um de vários usuários que executam o relatório e usa as credenciais no servidor de relatório. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="ReportData"></a> Compreendendo os dados de relatório  
  Na forma mais simples, um relatório exibe dados de um conjunto de dados de relatório em uma região de dados na página do relatório, ou seja, em uma única tabela, gráfico, matriz ou outro tipo de região de dados de relatório. Os dados em um conjunto de dados de relatório provêm do primeiro conjunto de resultados retornado de um único comando de consulta que é executado com acesso somente leitura para uma fonte de dados externa. Cada região de dados é expandidas conforme necessário para exibir todos os dados do conjunto de dados.  
@@ -97,15 +97,15 @@ ms.locfileid: "47698794"
 |Tópico|Descrição|  
 |-----------|-----------------|  
 |[Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Fornece uma visão geral de como acessar dados de seu relatório.|  
-|[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Fornece informações sobre conexões de dados e fontes de dados.|  
+|[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Fornece informações sobre conexões de dados e fontes de dados.|  
 |[Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fornece informações sobre conjuntos de dados inseridos e compartilhados.|  
 |[Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.|  
-|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
-|[Visão geral das extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](http://go.microsoft.com/fwlink/?linkid=121312).|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
+|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
+|[Visão geral das extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](https://go.microsoft.com/fwlink/?linkid=121312).|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
   
   
 ## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Designers de Consultas &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021680"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "47617431"
   
 -   Para usar a entrega de email, o servidor de relatório deve ser configurado para uma conexão de gateway ou de servidor SMTP antes de criar a assinatura.  
   
--   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [Armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47617431"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> Para criar uma assinatura de compartilhamento de arquivo  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navegue até o relatório que você deseja assinar. Clique no menu de relatório e clique em **Assinar**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47617431"
   
 ###  <a name="bkmk_create_email_subscription"></a> Para criar uma assinatura de email  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navegue até o relatório que você deseja assinar. Clique no menu de relatório e clique em **Assinar**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47617431"
   
 4.  **Proprietário**: o proprietário do campo usa como padrão o usuário atual e não pode ser editado quando você cria a assinatura. No entanto, depois que a assinatura é salva, você pode alterar as propriedades da assinatura incluindo o proprietário e a descrição.  
   
-5.  **Entregue por**: selecione **Email**. Se **Email** não estiver disponível, isso indicará que o servidor de relatório não foi configurado para assinaturas de email. Consulte [Configurar um servidor de relatório para entrega de email (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Entregue por**: selecione **Email**. Se **Email** não estiver disponível, isso indicará que o servidor de relatório não foi configurado para assinaturas de email. Consulte [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **Para**: o nome do destinatário no campo Para: é autoendereçado usando sua conta de usuário de domínio. Verifique se o formato é [nome de usuário]@[domínio.com]As configurações do servidor de relatório determinam se o campo **Para** é autoendereçado com sua conta de usuário. Para obter informações sobre como alterar os parâmetros de configuração de endereços de email, consulte [Configurar um servidor de relatório para entrega de email (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **Para**: o nome do destinatário no campo Para: é autoendereçado usando sua conta de usuário de domínio. Verifique se o formato é [nome de usuário]@[domínio.com]As configurações do servidor de relatório determinam se o campo **Para** é autoendereçado com sua conta de usuário. Para obter informações sobre como alterar os parâmetros de configuração de endereços de email, consulte [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
@@ -163,7 +163,7 @@ ms.locfileid: "47617431"
 ##  <a name="bkmk_delete_subscription"></a> Para excluir uma assinatura  
  Para excluir uma assinatura”  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie o [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, clique em **Minhas Assinaturas** na barra de ferramentas e navegue até a assinatura que deseja modificar ou excluir.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "47617431"
 ## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Usar Minhas Assinaturas &#40;Servidor de Relatório no modo Nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usar Minhas Assinaturas &#40;Servidor de Relatório no Modo Nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

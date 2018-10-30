@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cbbc8331699121acaf526e257fd926542c894824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770784"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021520"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a web part do Visualizador de Relatórios
 
@@ -84,7 +84,7 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
 |Largura da Área de Parâmetros|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
 |Mapa do documento|Um controle de navegação definido em um relatório e usado para fornecer acesso com um único clique a seções específicas do relatório. Ele está disponível em relatórios HTML. O mapa do documento é exibido em uma área recolhível ao lado da área de exibição do relatório. Os valores válidos incluem **Displayed**, **Collapsed**e **Hidden**. Se um mapa do documento estiver definido para um relatório, a área será expandida por padrão, a menos que seja marcada como oculta ou recolhida nas propriedades da web part. Se o mapa do documento estiver recolhido, você poderá clicar na seta para expandi-lo.|  
 |Largura da Área de Mapa do Documento|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
-|Carregar Parâmetros|Recupera as propriedades dos parâmetros do relatório. Nem todos os relatórios têm parâmetros. Se o relatório não tiver parâmetros, nenhum valor será retornado. Se você estiver definindo propriedades de um relatório recém-carregado, poderá receber um erro indicando que a conexão da fonte de dados foi excluída. Se isso acontecer, redefina a conexão e termine de definir as propriedades dos parâmetros depois que a conexão for especificada. Para obter mais informações sobre como definir a conexão, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Para obter os melhores resultados, clique em **Aplicar** antes de clicar em Carregar Parâmetros.<br /><br /> Depois de carregar as propriedades dos parâmetros, você poderá defini-las da mesma maneira como faria nas páginas de propriedades de parâmetros do relatório. Para obter mais informações sobre como definir parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+|Carregar Parâmetros|Recupera as propriedades dos parâmetros do relatório. Nem todos os relatórios têm parâmetros. Se o relatório não tiver parâmetros, nenhum valor será retornado. Se você estiver definindo propriedades de um relatório recém-carregado, poderá receber um erro indicando que a conexão da fonte de dados foi excluída. Se isso acontecer, redefina a conexão e termine de definir as propriedades dos parâmetros depois que a conexão for especificada. Para obter mais informações sobre como definir a conexão, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Para obter os melhores resultados, clique em **Aplicar** antes de clicar em Carregar Parâmetros.<br /><br /> Depois de carregar as propriedades dos parâmetros, você poderá defini-las da mesma maneira como faria nas páginas de propriedades de parâmetros do relatório. Para obter mais informações sobre como definir parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
 ## <a name="customizing-the-toolbar"></a>Personalizando a barra de ferramentas
 
@@ -94,7 +94,7 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
 
 ## <a name="customizing-the-viewing-area"></a>Personalizando a área de exibição
 
- A área de exibição é usada para exibir relatórios. A área de exibição de relatório é compartilhada com as áreas Parâmetros e Credenciais, se elas forem usadas. Se forem necessárias credenciais, a área Credenciais será exibida ao lado de uma área de exibição de relatório em branco. A área Credenciais é fechada depois que o usuário fornecer credenciais e executar o relatório. Para personalizar o texto que pede aos usuários para definir credenciais, modifique as propriedades de conexão da fonte de dados. Para obter mais informações, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ A área de exibição é usada para exibir relatórios. A área de exibição de relatório é compartilhada com as áreas Parâmetros e Credenciais, se elas forem usadas. Se forem necessárias credenciais, a área Credenciais será exibida ao lado de uma área de exibição de relatório em branco. A área Credenciais é fechada depois que o usuário fornecer credenciais e executar o relatório. Para personalizar o texto que pede aos usuários para definir credenciais, modifique as propriedades de conexão da fonte de dados. Para obter mais informações, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  A área Parâmetros fornece campos para digitar valores antes de executar o relatório. Ela só é usada quando a definição de um relatório inclui parâmetros. Quando as áreas de Parâmetros ou Credenciais são exibidas, a exibição de relatório é ajustada para usar a largura restante da web part. Defina as propriedades na web part para personalizar a largura de Parâmetros. Também pode definir os rótulos exibidos ao lado dos parâmetros individuais na página. Para obter mais informações sobre como modificar rótulos de parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -103,4 +103,4 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
  [Web part do Visualizador de Relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Adicionar a web part do Visualizador de Relatórios a uma página da Web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

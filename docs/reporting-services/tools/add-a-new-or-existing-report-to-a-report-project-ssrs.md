@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d9586dd7777b306b7c25cf67124026ce8255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031135"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Adicionar um relatório novo ou existente a um projeto de relatório (SSRS)
   Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando o Assistente de Relatório ou acrescentando um novo relatório em branco ao projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
@@ -33,7 +33,7 @@ ms.locfileid: "47727044"
   
     -   **Selecionar uma fonte de dados.** A primeira etapa ao criar um relatório é definir uma fonte de dados. O Assistente de Relatório apresenta uma lista de todas as fontes de dados compartilhadas no projeto de relatório, além de uma opção para criar uma nova fonte de dados.  
   
-    -   **Criar uma consulta.** A próxima etapa é criar uma consulta. É possível digitar a cadeia de caracteres da consulta, gerar no Designer de Consulta ou importar uma consulta a partir de outro relatório. Para obter informações sobre Designers de Consulta, consulte [Designers de Consulta do Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+    -   **Criar uma consulta.** A próxima etapa é criar uma consulta. É possível digitar a cadeia de caracteres da consulta, gerar no Designer de Consulta ou importar uma consulta a partir de outro relatório. Para obter informações sobre Designers de Consulta, consulte [Designers de Consulta do Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
   
     -   **Escolher um tipo de relatório.** A próxima etapa é selecionar o tipo de relatório desejado. Você pode optar por um relatório tabular ou de matriz. Um relatório tabular tem um número fixo de colunas. Uma relatório de matriz ou de tabulação cruzada apresenta um número variável de colunas com base nos resultados da consulta. Um relatório de mapa exibe dados analíticos em relação a um plano de fundo geográfico.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47727044"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099907"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
@@ -56,7 +56,7 @@ ms.locfileid: "47643304"
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
+ **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Como as informações de conta são armazenadas  
  Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  
@@ -101,6 +101,6 @@ ms.locfileid: "47643304"
  As informações da conta serão removidas do arquivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

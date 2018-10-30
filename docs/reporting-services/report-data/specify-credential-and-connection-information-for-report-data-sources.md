@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031595"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
   Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados. Você pode especificar credenciais que usam a Autenticação do Windows, autenticação de banco de dados, nenhuma autenticação ou autenticação personalizada. Ao enviar uma solicitação de conexão pela rede, o servidor de relatório representará uma conta de usuário ou uma conta de execução autônoma. Para obter mais informações sobre o contexto de segurança sob o qual uma conexão é feita, consulte [Configuração de fontes de dados e conexões de rede](#DataSourceConfigurationConnections) mais adiante neste tópico.  
@@ -48,7 +48,7 @@ ms.locfileid: "47756404"
   
      Quando você salvar, publicar ou navegar em um servidor de relatório ou site do SharePoint pela primeira vez, talvez seja necessário inserir suas credenciais. As credenciais inseridas são usadas até a sessão do Construtor de Relatórios terminar. Se você optar por salvar as credenciais, elas serão armazenadas com segurança nas configurações de usuário de seu computador. Nas sessões subsequentes do Construtor de Relatórios, as credenciais salvas são usadas para se conectar ao mesmo servidor de relatório ou site do SharePoint. O administrador do servidor de relatório ou do SharePoint especifica o tipo de credencial a ser usado.  
   
--   As credenciais de fonte de dados inseridas na página [Caixa de diálogo Propriedades da Fonte de Dados, Credenciais &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de uma fonte de dados inserida.  
+-   As credenciais de fonte de dados inseridas na página [Caixa de diálogo Propriedades da Fonte de Dados, Credenciais &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de uma fonte de dados inserida.  
   
      Essas credenciais são usadas pelo servidor de relatório para fazer uma conexão de dados com a fonte de dados externa. Para alguns tipos de fontes de dados, as credenciais podem ser armazenadas com segurança no servidor de relatório. Essas credenciais permitem ao outros usuários executar o relatório sem fornecer credenciais para a conexão de dados subjacente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756404"
   
      Para fontes de dados compartilhadas, use a opção **Salvar minha senha** para salvar as credenciais localmente nas configurações de usuário de seu computador. O Construtor de Relatórios usa as credenciais salvas toda vez que uma conexão é feita com a fonte de dados externa correspondente.  
   
- Para obter mais informações, consulte [Caixa de diálogo Propriedades de Fonte de Dados, Geral &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) e [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Para obter mais informações, consulte [Caixa de diálogo Propriedades de Fonte de Dados, Geral &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) e [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Usando fontes de dados remotas  
  Se o relatório recuperar dados de um servidor de banco de dados remoto, verifique o seguinte:  

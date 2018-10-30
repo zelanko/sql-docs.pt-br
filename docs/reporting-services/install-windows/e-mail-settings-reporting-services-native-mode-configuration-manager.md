@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725074"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020390"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O Reporting Services inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.
@@ -25,7 +25,7 @@ A extensão de entrega de email do servidor de relatório não é configurada po
 
 ## <a name="configuration-requirements"></a>Requisitos de configuração
 
-- A entrega de email do servidor de relatório é implementada em CDO (Collaboration Data Objects) e requer um servidor SMTP local ou remoto ou um encaminhador SMTP. Não há suporte ao SMTP em todos os sistemas operacionais Windows. Se você estiver usando a edição com base em Itanium do Windows Server 2008, não haverá suporte ao SMTP. Para obter mais informações sobre as opções de configuração fornecidas por CDO, consulte [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) (em inglês) no MSDN.
+- A entrega de email do servidor de relatório é implementada em CDO (Collaboration Data Objects) e requer um servidor SMTP local ou remoto ou um encaminhador SMTP. Não há suporte ao SMTP em todos os sistemas operacionais Windows. Se você estiver usando a edição com base em Itanium do Windows Server 2008, não haverá suporte ao SMTP. Para obter mais informações sobre as opções de configuração fornecidas por CDO, consulte [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) (em inglês) no MSDN.
 
 A conta de autenticação configurada deve ter permissão no servidor SMTP para enviar email.
 

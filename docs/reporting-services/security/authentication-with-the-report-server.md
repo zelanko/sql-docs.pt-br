@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af92398373dbb3ff3afe8c05263ccf692937c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030215"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
 
@@ -35,7 +35,7 @@ ms.locfileid: "47676254"
 |RSWindowsNegotiate|Negotiate|Sim|Tenta usar Kerberos para a Autenticação Integrada do Windows primeiro, mas reverterá para NTLM se o Active Directory não puder conceder um tíquete para a solicitação do cliente ao servidor de relatório. Negotiate só reverterá para NTLM se a permissão não estiver disponível. Se a primeira tentativa resultar em um erro que não seja de permissão ausente, o servidor de relatório não fará uma segunda tentativa.|  
 |RSWindowsNTLM|NTLM|Sim|Usa NLTM para Autenticação Integrada do Windows.<br /><br /> As credenciais não serão delegadas ou representadas em outras solicitações. As solicitações subsequentes seguirão uma nova sequência de desafio/resposta. Dependendo das configurações de segurança de rede, talvez o usuário precise informar credenciais ou a solicitação de autenticação poderá ser processada de maneira transparente.|  
 |RSWindowsKerberos|Kerberos|não|Usa Kerberos para Autenticação Integrada do Windows. Você deve configurar o Kerberos por meio da configuração dos SPNs (nomes das entidades de serviço) para suas contas de serviço, o que exige privilégios de administrador de domínio. Se você configurar a delegação de identidade com o Kerberos, o token do usuário que está solicitando um relatório também poderá ser usado em uma conexão adicional com as fontes de dados externas que fornecem dados para relatórios.<br /><br /> Antes de especificar RSWindowsKerberos, certifique-se de que o navegador usado dá suporte a esse tipo de autenticação. Se você estiver usando o Microsoft Edge, ou Internet Explorer, a autenticação Kerberos só terá suporte por meio de Negotiate. O Microsoft Edge, ou Internet Explorer, não formulará uma solicitação de autenticação que especifique o Kerberos diretamente.|  
-|RSWindowsBasic|Basic|não|A autenticação Básica é definida no protocolo HTTP e só pode ser usada para autenticar solicitações HTTP no servidor de relatório.<br /><br /> As credenciais são transmitidas na solicitação HTTP em codificação base64. Se você usar a autenticação básica, use SSL para criptografar informações da conta de usuário antes de enviá-las pela rede. O SSL é um canal criptografado usado para enviar uma solicitação de conexão do cliente ao servidor de relatório por meio de uma conexão HTTP TCP/IP. Para obter mais informações, consulte o tópico sobre [Como usar SSL para criptografar dados confidenciais](http://go.microsoft.com/fwlink/?LinkId=71123) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|RSWindowsBasic|Basic|não|A autenticação Básica é definida no protocolo HTTP e só pode ser usada para autenticar solicitações HTTP no servidor de relatório.<br /><br /> As credenciais são transmitidas na solicitação HTTP em codificação base64. Se você usar a autenticação básica, use SSL para criptografar informações da conta de usuário antes de enviá-las pela rede. O SSL é um canal criptografado usado para enviar uma solicitação de conexão do cliente ao servidor de relatório por meio de uma conexão HTTP TCP/IP. Para obter mais informações, consulte o tópico sobre [Como usar SSL para criptografar dados confidenciais](https://go.microsoft.com/fwlink/?LinkId=71123) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
 |Personalizar|(Anônima)|não|A autenticação Anônima orienta o servidor de relatório a ignorar o cabeçalho de autenticação em uma solicitação HTTP. O servidor de relatório aceita todas as solicitações, mas chama uma autenticação do Forms [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personalizada especificada por você para autenticar o usuário.<br /><br /> Especifique **Personalizado** somente se estiver implantando um módulo de autenticação personalizada que processe todas as solicitações de autenticação no servidor de relatório. Você não pode usar o tipo de autenticação Personalizada com a extensão de Autenticação padrão do Windows.|  
   
 ## <a name="unsupported-authentication-methods"></a>Métodos de autenticação sem-suporte  
@@ -87,4 +87,4 @@ ms.locfileid: "47676254"
 [Autenticação no Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorização no Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

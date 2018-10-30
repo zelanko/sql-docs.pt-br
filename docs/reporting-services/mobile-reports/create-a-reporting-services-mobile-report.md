@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030190"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Criar um relatório móvel do Reporting Services
 Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server 2016 Reporting Services com rapidez que se ajustam à qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
   
-Na primeira vez que você criar um relatório móvel, instale o Publicador de Relatórios Móveis do SQL Server no computador local pelo portal da Web do Reporting Services. Ou então, você pode instalá-lo do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Depois da primeira vez, você poderá iniciá-lo no portal da Web ou localmente.   
+Na primeira vez que você criar um relatório móvel, instale o Publicador de Relatórios Móveis do SQL Server no computador local pelo portal da Web do Reporting Services. Ou então, você pode instalá-lo do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Depois da primeira vez, você poderá iniciá-lo no portal da Web ou localmente.   
     
 1. Na barra superior do portal da Web do Reporting Services, selecione **Novo** > **Relatório Móvel**.  
   

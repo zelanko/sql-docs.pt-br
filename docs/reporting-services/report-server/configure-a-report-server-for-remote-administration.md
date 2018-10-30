@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805074"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020330"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode configurar instâncias de servidor de relatório local ou remotamente. Para configurar uma instância remota do servidor de relatório, é possível usar a ferramenta Configuração do Reporting Services ou gravar código personalizado que use o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A ferramenta Configuração do Reporting Services fornece uma interface gráfica para o provedor WMI, de maneira que você possa configurar um servidor de relatório sem precisar gravar código. Ao iniciar a ferramenta, você pode especificar um servidor remoto para se conectar.  
@@ -39,7 +39,7 @@ ms.locfileid: "47805074"
   
  Algumas organizações têm políticas de grupo que impedem a administração remota do servidor em determinados sistemas operacionais ou para determinados usuários. Antes de começar a modificar as configurações do firewall, verifique com o administrador da rede se há restrições de administração remota.  
   
- Para obter mais informações, consulte [Conectando-se pelo Firewall do Windows](http://go.microsoft.com/fwlink/?LinkId=63615) na documentação do Platform SDK disponível no MSDN.  
+ Para obter mais informações, consulte [Conectando-se pelo Firewall do Windows](https://go.microsoft.com/fwlink/?LinkId=63615) na documentação do Platform SDK disponível no MSDN.  
   
 ## <a name="tasks"></a>Tarefas  
  As tarefas que habilitam a configuração remota do servidor de relatório incluem as seguintes:  

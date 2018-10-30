@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817494"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021240"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Fazer backup e restaurar aplicativos de serviço SharePoint do Reporting Services
 
@@ -71,9 +71,9 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
  Para obter mais informações, consulte os seguintes tópicos na documentação do SharePoint:  
   
- [Backup de um aplicativo de serviço (SharePoint Foundation 2010) na documentação do SharePoint](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Backup de um aplicativo de serviço (SharePoint Foundation 2010) na documentação do SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Backup de um aplicativo de serviço (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Backup de um aplicativo de serviço (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Verificar conta de execução e autenticação do banco de dados
 
@@ -125,7 +125,7 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
  Para obter mais informações, consulte os seguintes tópicos na documentação do SharePoint:  
   
- [Restauração de um aplicativo de serviço (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restauração de um aplicativo de serviço (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restauração de um aplicativo de serviço (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
 
@@ -161,4 +161,4 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
   
 6.  Selecione **OK**
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

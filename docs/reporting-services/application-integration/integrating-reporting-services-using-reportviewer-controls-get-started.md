@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 778ac08636656ad9b4598c0ac022fcc0a5e2284f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029465"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrando o Reporting Services usando os controles do Visualizador de Relatórios – Introdução
 
@@ -82,7 +82,7 @@ Certifique-se de atualizar todas as referências de assembly para a versão *15.
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
-  http://go.microsoft.com/fwlink/?LinkId=169433
+  https://go.microsoft.com/fwlink/?LinkId=169433
   -->
 <configuration>
   <system.web>
@@ -264,5 +264,5 @@ Informe a equipe sobre problemas nos [Fóruns do Reporting Services](https://soc
 ## <a name="see-also"></a>Confira também
 
 [Coleta de dados no controle do Visualizador de Relatórios](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

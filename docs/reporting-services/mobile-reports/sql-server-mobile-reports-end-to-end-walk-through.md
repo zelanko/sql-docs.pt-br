@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021170"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -32,17 +32,17 @@ Para acompanhar, você precisa destes produtos:
   
 * Para criar fontes de dados e KPIs e publicar relatórios móveis e conjuntos de dados, você precisa ter acesso a um [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Para [criar conjuntos de dados compartilhados](../install-windows/install-report-builder.md).  
-* Para criar relatórios móveis, [instale o Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Para criar relatórios móveis, [instale o Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  OU: banco de dados de exemplo do World Wide Importers, disponível na página [Amostras do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para exibir o resultado: 
-  *   [Inscreva-se no serviço do Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
+  *   [Inscreva-se no serviço do Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Baixe o aplicativo móvel do Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) em seu dispositivo móvel: iOS, telefone com Android ou dispositivo com Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Criar uma fonte de dados compartilhados  
   
-Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Consulte a [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Veja a [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Nova** > **Fonte de Dados**.  
   
@@ -63,7 +63,7 @@ Leia mais sobre as [fontes de dados compartilhadas no Reporting Services](../rep
    
 ## <a name="shared-dataset">Criar um conjunto de dados compartilhado</a>  
   
-Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](../install-windows/install-report-builder.md) ou o inicie no portal da Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
+Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](../install-windows/install-report-builder.md)ou o inicie em seu portal na Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Novo** > **Relatório Paginado** para começar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -133,7 +133,7 @@ Crie KPIs direitamente no portal da Web do [!INCLUDE[PRODUCT_NAME](../../include
     
 ## <a name="create-mobile-report">Criar um relatório móvel do Reporting Services</a>  
    
-Para criar um relatório móvel do Reporting Services, [instale o Publicador de Relatório do SQL Server Mobile](http://go.microsoft.com/fwlink/?LinkId=717766)ou o inicie no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Para criar um relatório móvel do Reporting Services, [instale o Publicador de Relatório do SQL Server Mobile](https://go.microsoft.com/fwlink/?LinkId=717766)ou o inicie no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Ao abrir pela primeira vez o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], você vê uma tela em branco na qual é possível criar relatórios móveis. Você pode começar criando primeiro os elementos visuais ou começar com seus dados. Se você criar os elementos visuais primeiro, o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] gerará automaticamente os dados simulados que estão vinculados ao relatório e será alterado dinamicamente à medida que você altera suas seleções visuais. Tente isso.   
   
@@ -259,7 +259,7 @@ Você pode salvar o relatório localmente ou em um portal da Web do [!INCLUDE[PR
   
 Para exibir seu relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , primeiro você precisa:
 
-*  [Inscrever-se no serviço do Power BI](http://go.microsoft.com/fwlink/?LinkID=513879), caso você ainda não tenha uma conta.
+*  [Inscrever-se no serviço do Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), caso você ainda não tenha uma conta.
 *  [Baixar o aplicativo móvel do Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) em seu dispositivo móvel.  
 
 ### <a name="view-your-mobile-report"></a>Exibir o relatório móvel

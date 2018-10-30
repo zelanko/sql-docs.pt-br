@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766b33607487a8dcc247402b16edd67ab86071ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a84d99a0b1da1257591714491424e6a634571f4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029625"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Minhas Configurações para integração do Power BI (portal Web)
 
@@ -42,8 +42,8 @@ Após entrar, será criado um novo token de segurança.  Seus blocos do painel c
 ## <a name="next-steps"></a>Próximas etapas
 
 [Integração do Servidor de Relatórios do Power BI](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
-[Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Fixar itens do Reporting Services nos dashboards do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710814"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021260"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos e barras de dados (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente embutidas com o texto.   
@@ -25,7 +25,7 @@ ms.locfileid: "47710814"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Como introdução rápida aos minigráficos, consulte [Tutorial: Adicionar um minigráfico ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) e os vídeos [Como criar um minigráfico em uma tabela](http://go.microsoft.com/fwlink/?LinkId=197092) e [Minigráficos, gráficos de barras e indicadores no Construtor de Relatórios](http://technet.microsoft.com/bi/video/ff877165) .  
+ Como introdução rápida aos minigráficos, consulte [Tutorial: Adicionar um minigráfico ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) e os vídeos [Como criar um minigráfico em uma tabela](https://go.microsoft.com/fwlink/?LinkId=197092) e [Minigráficos, gráficos de barras e indicadores no Construtor de Relatórios](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Você pode publicar minigráficos e barras de dados com suas tabelas, matrizes ou lista pai, separadamente de um relatório como uma parte de relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

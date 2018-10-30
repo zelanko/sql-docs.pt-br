@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 559bfe5a33697aad946c5859a598ceaa5bde4ff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031235"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  
@@ -50,7 +50,7 @@ ms.locfileid: "47768994"
 ##  <a name="bkmk_SupportedVersions"></a> Versões com suporte  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
   
  A tabela a seguir descreve as versões com suporte para criação e publicação de relatórios em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47768994"
 |Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema do 2008 R2 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema 2008 RDL|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] apenas|Atualiza o 2003 RDL e o 2005 RDL localmente para o esquema 2008 RDL.|  
   
- Para obter mais informações sobre como abrir relatórios em uma versão anterior do esquema de definição de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md). Para obter mais informações sobre esquemas de definição de relatório específicos, consulte [Especificação de linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Para obter mais informações sobre como abrir relatórios em uma versão anterior do esquema de definição de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md). Para obter mais informações sobre esquemas de definição de relatório específicos, consulte [Especificação de linguagem RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b5e541af99ac03562347a893d67de8ad0390940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029135"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.
@@ -35,13 +35,13 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Para obter mais informações sobre RDL e esquemas RDL, consulte o seguinte:  
   
--   [Esquemas XML do Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Esquemas XML do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Especificações da linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Especificações da linguagem RDL](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Linguagem RDL &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- Para obter mais informações sobre os controles ReportViewer, consulte [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ Para obter mais informações sobre os controles ReportViewer, consulte [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
  Um arquivo de definição de relatório pode ser implantado em um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] das seguintes maneiras:  
@@ -101,11 +101,11 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Para obter mais informações, consulte o seguinte:  
   
--   [Convertendo arquivos RDLC em arquivos RDL](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Convertendo arquivos RDLC em arquivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Adicionando e configurando controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Adicionando e configurando controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

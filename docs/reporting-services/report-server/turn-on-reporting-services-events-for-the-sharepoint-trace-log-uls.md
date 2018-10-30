@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651609"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020370"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Também há ferramentas que podem ser baixadas que permitirão a leitura de logs do ULS. Por exemplo, o [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponível no GitHub. 
   
- Para obter mais informações sobre como usar o PowerShell para exibir dados de log, consulte [Exibir logs de diagnóstico (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ Para obter mais informações sobre como usar o PowerShell para exibir dados de log, consulte [Exibir logs de diagnóstico (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Local do log de rastreamento  
  Os arquivos de log de rastreamento costumam estar localizados na pasta **c:\Arquivos de Programas\Common files\Microsoft Shared\Web Server Extensions\14\logs** , mas você pode verificar ou alterar o caminho na página **Log de Diagnóstico** da Administração Central do SharePoint.  
   
- Para obter mais informações e as etapas para configurar o log de diagnóstico em um servidor SharePoint na Administração Central do SharePoint 2010, consulte [Configurar definições do log de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ Para obter mais informações e as etapas para configurar o log de diagnóstico em um servidor SharePoint na Administração Central do SharePoint 2010, consulte [Configurar definições do log de diagnóstico (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -17,19 +17,19 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803754"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029205"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  
   
  Para especificar cadeias de caracteres de formato dentro de um item de relatório de caixa de texto, selecione o item que você deseja formatar, clique com o botão direito do mouse, selecione **Propriedades da Caixa de Texto**e clique em **Número**. É possível formatar células individuais em uma tabela ou região de dados de matriz da mesma forma, porque as células em uma tabela ou matriz são caixas de texto individuais.  
   
- Uma região de dados do gráfico, normalmente, mostra datas ao longo do eixo de categoria (x) e valores ao longo do eixo de valor (y). Para especificar a formatação em um gráfico, clique com o botão direito do mouse em um eixo e selecione **Propriedades do Eixo**. No eixo de valor, você pode especificar formatos apenas para números. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Uma região de dados do gráfico, normalmente, mostra datas ao longo do eixo de categoria (x) e valores ao longo do eixo de valor (y). Para especificar a formatação em um gráfico, clique com o botão direito do mouse em um eixo e selecione **Propriedades do Eixo**. No eixo de valor, você pode especificar formatos apenas para números. Para obter mais informações, consulte [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Para especificar formatação em uma região de dados de Medidor, clique com o botão direito do mouse na escala do medidor e selecione **Propriedades de Escala Radial** ou **Propriedades de Escala Linear**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "47803754"
   
 -   Por padrão, números são formatados para refletir as configurações culturais no computador cliente. Use cadeias de caracteres de formatação para especificar como os números são exibidos de forma que a formatação seja consistente, independentemente do local onde a pessoa que está exibindo o relatório está localizada.  
   
--   Os formatos fornecidos na página **Número** são um subconjunto das cadeias de caracteres de formatação numérica padrão do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para formatar um número ou data usando um formato personalizado que não seja mostrado na caixa de diálogo, você pode usar qualquer cadeia de caracteres de formatação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números e datas. Para obter mais informações sobre cadeias de caracteres de formato personalizadas, consulte o tópico [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) no MSDN.  
+-   Os formatos fornecidos na página **Número** são um subconjunto das cadeias de caracteres de formatação numérica padrão do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para formatar um número ou data usando um formato personalizado que não seja mostrado na caixa de diálogo, você pode usar qualquer cadeia de caracteres de formatação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números e datas. Para obter mais informações sobre cadeias de caracteres de formato personalizadas, consulte o tópico [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) no MSDN.  
   
 -   Se uma cadeia de caracteres de formato personalizada foi especificada, ela terá uma prioridade mais alta sobre as configurações padrão que são específicas à cultura. Por exemplo, suponha que você defina uma cadeia de caracteres de formato personalizada de "#, ###" mostrar o número 1234 como 1,234. Isso pode ter significados diferentes para usuários dos Estados Unidos e para usuários da Europa. Antes de especificar um formato personalizado, considere como o formato escolhido afetará os usuários de diferentes culturas que venham a exibir o relatório.  
   
 -   Se você especificar uma cadeia de caracteres de formato inválida, o texto formatado será interpretado como uma cadeia de caracteres literal que substituirá a formatação.  
   
--   Se estiver formatando uma mistura de números e caracteres na mesma caixa de texto, considere a possibilidade de usar um espaço reservado para formatar o número separadamente do restante do texto. Para obter mais informações, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format na caixa de texto, a cadeia de caracteres de formato será ignorada. Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format no gráfico ou no medidor, a cadeia de caracteres de formato especificada será interpretada como uma cadeia de caracteres e a formatação não será aplicada.  
+-   Se estiver formatando uma mistura de números e caracteres na mesma caixa de texto, considere a possibilidade de usar um espaço reservado para formatar o número separadamente do restante do texto. Para obter mais informações, consulte [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format na caixa de texto, a cadeia de caracteres de formato será ignorada. Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format no gráfico ou no medidor, a cadeia de caracteres de formato especificada será interpretada como uma cadeia de caracteres e a formatação não será aplicada.  
   
 -   Se você selecionar **Moeda** em **Categoria** e marcar a opção **Mostrar valores em**, poderá selecionar **Milhares**, **Milhões**ou **Bilhões** para exibir números usando formatos financeiros. Por exemplo, se o valor do campo for 1.789.905.394 e você selecionar **Bilhões** e especificar 2 casas decimais, o valor exibido no relatório será 1,78.  
   

@@ -7,21 +7,21 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 458db88f63ac2d27db03cace86593907ef67b3b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021320"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é um aplicativo autônomo, instalado no computador por você ou por um administrador. Você pode instalá-lo do Centro de Download da Microsoft, de um servidor de relatório do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Um administrador normalmente instala e configura o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permissão para baixar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do portal da Web e gerencia pastas e permissões para relatórios, partes de relatório e conjuntos de dados compartilhados salvos no servidor de relatório. Para obter mais informações sobre a administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Servidor de relatório do Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Um administrador normalmente instala e configura o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permissão para baixar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do portal da Web e gerencia pastas e permissões para relatórios, partes de relatório e conjuntos de dados compartilhados salvos no servidor de relatório. Para obter mais informações sobre a administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-from--a--web-portal-or-sharepoint-library"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um portal da Web ou biblioteca do SharePoint 
   
- Você pode iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter informações, veja [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md).  
+ Você pode iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] de um portal da web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou de um site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter informações, veja [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md).  
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>Site do SharePoint integrado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -36,22 +36,22 @@ ms.locfileid: "47662984"
   
 ## <a name="system-requirements"></a>Requisitos do sistema
   
- Consulte a seção **Requisitos de Sistema** da [página de download do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkID=734968) no Centro de Download da Microsoft.
+ Consulte a seção **Requisitos de Sistema** da [página de download do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=734968) no Centro de Download da Microsoft.
   
 ##  <a name="download"></a> Para instalar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do site de download  
   
-1.  Na [página do Construtor de Relatórios do Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968) , clique em **Download**.  
+1.  Na [página do Construtor de Relatórios do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) , clique em **Download**.  
   
-2.  Depois que o download de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] for concluído, clique em **Executar**.  
+2.  Depois que o download de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] for concluído, clique em  **Executar**.  
   
-     Isso inicia o Assistente do SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+     Isso inicia o Assistente do SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
 3.  Aceite os termos no contrato de licença e clique em **Avançar**.  
   
 4.  Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Avançar**.  
   
     > [!NOTE]  
-    >  Se você planeja trabalhar com o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] quando ele está conectado a um servidor de relatório, é conveniente fornecer a URL ao servidor nesse momento. Você também pode fazer isso da caixa de diálogo **Opções** em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+    >  Se você planeja trabalhar com o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] quando estiver conectado a um servidor de relatório, será conveniente fornecer a URL ao servidor nesse momento. Você também pode fazer isso da caixa de diálogo **Opções** em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 5.  Clique em **Instalar** para concluir a instalação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
@@ -71,9 +71,9 @@ ms.locfileid: "47662984"
   
  Se você quiser uma instalação completamente silenciosa, sem nenhuma interação com a interface do usuário, especifique a opção **/quiet** . Por padrão, o sinalizador de opção silenciosa suprime erros de instalação. Portanto, é recomendável incluir a opção **/l** que especifica o registro, quando você usar a opção silenciosa.   
   
-1.  Na [página do Construtor de Relatórios do Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968), clique em **Download**.  
+1.  Na [página do Construtor de Relatórios do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968), clique em **Download**.  
   
-2.  Depois que o download de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] for concluído, clique em **Salvar**.  
+2.  Depois que o download de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] for concluído, clique em  **Salvar**.  
   
 3.  No menu **Iniciar** , clique em **Executar**.  
   

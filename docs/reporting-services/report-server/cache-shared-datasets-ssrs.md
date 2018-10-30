@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021482"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  
@@ -51,7 +51,7 @@ ms.locfileid: "48905650"
   
  Enquanto os resultados da consulta para uma combinação de parâmetros específica estão no cache, cada relatório iniciado para processamento e que inclui uma referência ao conjunto de dados compartilhado com esses valores de parâmetros usará os dados armazenados em cache.  
   
- Você pode especificar por quanto tempo os dados devem ser mantidos no cache antes de expirarem. Para obter mais informações, consulte [Página cache, conjuntos de dados compartilhados &#40;Gerenciador de relatórios&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Você pode especificar por quanto tempo os dados devem ser mantidos no cache antes de expirarem. Para obter mais informações, consulte [Página cache, conjuntos de dados compartilhados &#40;Gerenciador de relatórios&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
 ## <a name="preloading-the-cache"></a>Pré-carregando o cache  
  Você pode pré-carregar o cache criando um plano de atualização de cache. Com um plano de atualização, você pode especificar com que frequência atualizar o cache usando uma agenda específica de item ou uma agenda compartilhada. Para evitar várias entradas no cache para o mesmo item, a agenda especificada deve permitir tempo de processamento suficiente para o processamento da consulta na fonte de dados externa. Por exemplo, se a consulta levar 20 minutos para ser executada, a agenda de atualização deverá ser maior que 20 minutos. Para obter mais informações, consulte [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "48905650"
   
 -   Você deve ter as permissões ReadPolicy e UpdatePolicy no conjunto de dados compartilhado.  
   
- Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condições que provocam a expiração do cache  
  As condições a seguir podem fazer com que um cache de conjunto de dados compartilhado se torne inválido.  

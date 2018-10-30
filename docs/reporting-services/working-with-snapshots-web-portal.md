@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039d1bc435103800151a29c790f19584f3721603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021020"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 
@@ -76,4 +76,4 @@ Marcar essa opção copiará um instantâneo de relatório gerado com base nas p
 [Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029615"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Criar, modificar e excluir instantâneos no histórico de relatório
   O histórico de relatórios é uma coleção de instantâneos de relatório. Você pode manter o histórico de relatórios adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios. O histórico de relatórios pode ser criado manualmente ou em uma agenda.  
@@ -26,7 +26,7 @@ ms.locfileid: "47710594"
  Os instantâneos do histórico de relatórios são identificados pela data e hora em que foram criados. A data e a hora são baseadas no momento em que a consulta foi executada.  
   
 ## <a name="creating-snapshots-in-report-history"></a>Criando instantâneos no histórico de relatórios  
- Os instantâneos podem ser criados manualmente ou em intervalos agendados para qualquer relatório que possa ser executado de modo autônomo. Para ser executado de modo autônomo, o relatório deve usar credenciais armazenadas ou nenhuma credencial. Além disso, se o relatório usar parâmetros, você deve especificar valores padrão a serem usados quando o relatório for executado. Você pode especificar credenciais armazenadas e valores de parâmetro nas páginas de propriedade do relatório. Para obter mais informações, consulte [Página de propriedades Parâmetros &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
+ Os instantâneos podem ser criados manualmente ou em intervalos agendados para qualquer relatório que possa ser executado de modo autônomo. Para ser executado de modo autônomo, o relatório deve usar credenciais armazenadas ou nenhuma credencial. Além disso, se o relatório usar parâmetros, você deve especificar valores padrão a serem usados quando o relatório for executado. Você pode especificar credenciais armazenadas e valores de parâmetro nas páginas de propriedade do relatório. Para obter mais informações, consulte [Página de propriedades Parâmetros &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Ao criar um instantâneo de relatório, os seguintes elementos são armazenados junto com o instantâneo no banco de dados do servidor de relatório:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "47710594"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar histórico de relatório &#40;Reporting Services no modo integrado do SharePoint &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [Limitar o histórico de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

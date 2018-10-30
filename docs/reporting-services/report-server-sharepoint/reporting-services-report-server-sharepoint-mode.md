@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029791"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800984"
 
  Para obter mais informações sobre como instalar e configurar, consulte o seguinte:  
   
--   [Instalar o modo do SharePoint do Reporting Services para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Instalar o modo do SharePoint do Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
 -   [Adicionar outro servidor de relatório a um farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800984"
   
 -   Todas as páginas de aplicativo, ferramentas, erros, avisos e mensagens originadas do Reporting Services serão exibidas no idioma usado pela instância do Reporting Services em um dos idiomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   As páginas de aplicativo abertas em um site do SharePoint, a web part do Visualizador de Relatórios e o Construtor de Relatórios serão exibidas em um dos idiomas com suporte no Suplemento Reporting Services. Para exibir a lista de idiomas com suporte, acesse [Downloads do SQL Server](http://msdn.microsoft.com/sql/downloads/) e localize a página de download do Suplemento SQL Server 2016 Reporting Services.  
+-   As páginas de aplicativo abertas em um site do SharePoint, a web part do Visualizador de Relatórios e o Construtor de Relatórios serão exibidas em um dos idiomas com suporte no Suplemento Reporting Services. Para exibir a lista de idiomas com suporte, acesse [Downloads do SQL Server](https://msdn.microsoft.com/sql/downloads/) e localize a página de download do Suplemento SQL Server 2016 Reporting Services.  
   
 -   Sites do SharePoint, Administração Central do SharePoint, ajuda online e mensagens estão disponíveis nos idiomas que possuem suporte nos produtos do Office Server.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800984"
   
 |**Tarefa**|**Link**|  
 |--------------|--------------|  
-|Etapas detalhadas para instalar e configurar o Reporting Services no modo do SharePoint.|[Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) e [Adicionar outro Servidor de Relatório a um farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Expanda a implantação do SharePoint do Reporting Services adicionando outros servidores de relatório.|[Adicionar outro Servidor de Relatório a um farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [Topologias de implantação para recursos de BI do SQL Server no SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Etapas detalhadas para instalar e configurar o Reporting Services no modo do SharePoint.|[Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) e [Adicionar outro Servidor de Relatório a um farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Expanda a implantação do SharePoint do Reporting Services adicionando outros servidores de relatório.|[Adicionar outro Servidor de Relatório a um farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [Topologias de implantação para recursos de BI do SQL Server no SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Adicione outros front-ends da Web do SharePoint que têm os componentes do Reporting Services instalados para exibição e itens de relatório.|[Adicionar ouro front-end da Web do Reporting Services a um farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure o email do servidor de relatório no SharePoint.|[Configurar o email para um aplicativo de serviço Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Informações recentes para esta versão, encontradas no TechNet Wiki.|[Dicas, truques e solução de problemas do SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Informações recentes para esta versão, encontradas no TechNet Wiki.|[Dicas, truques e solução de problemas do SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Web part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Teste: Configurando o SSRS 2012 para integração com o SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Teste: Configurando o SSRS 2012 para integração com o SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

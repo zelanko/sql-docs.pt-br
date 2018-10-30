@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021850"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder acesso ao usuário a um servidor de relatório
 
@@ -96,9 +96,9 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
 ## <a name="next-steps"></a>Próximas etapas
 
 [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Página Atribuição de Nova Função: Editar Atribuição de Função &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Página Atribuição de Nova Função: Editar Atribuição de Função &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Atribuições de função](../../reporting-services/security/role-assignments.md)   
 [Definições de função](../../reporting-services/security/role-definitions.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

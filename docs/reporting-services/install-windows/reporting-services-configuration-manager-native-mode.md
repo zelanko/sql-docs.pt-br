@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dbb43ba4b8595a02e2132bf1670bbe06884aee5
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029015"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
 
@@ -94,4 +94,4 @@ O Gerenciador de Configurações do Reporting Services é instalado automaticame
 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
 [Configurar e administrar um servidor de relatório](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

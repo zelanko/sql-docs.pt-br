@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28cea40552b79be184c8c600e6be48f2c81fecd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73a2539ad976de2a25361835b9c33b03a79fdf97
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031255"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields** .  
   
  As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns a várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome por meio da coleção interna de **Fields** . As propriedades personalizadas são específicas de cada provedor de dados e podem ser acessadas por meio da coleção interna de **Fields** apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
- Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](https://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabalhando com as propriedades de campo em um relatório  
  As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deverá arrastar o campo para o relatório e alterar a propriedade **Value** do campo para a propriedade que você quer usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  

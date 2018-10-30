@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020600"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Criando um componente de tempo de design de item de relatório personalizado
   Um componente em tempo de design de item de relatório personalizado é um controle que pode ser usado no ambiente do Designer de Relatórios do Visual Studio. O componente em tempo de design de item de relatório personalizado oferece uma superfície de design ativada que pode aceitar operações de arrastar e soltar, a integração ao pesquisador de propriedade [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e a capacidade de oferecer editores de propriedade personalizados.  
@@ -25,9 +25,9 @@ ms.locfileid: "47644854"
  As propriedades definidas usando o componente em tempo de design no ambiente de desenvolvimento são serializadas e desserializadas pelo ambiente de design de host e, depois, armazenadas como elementos no arquivo em linguagem RDL. Quando o relatório é executado pelo processador de relatório, as propriedades definidas usando o componente em tempo de design são passadas pelo processador de relatório para um componente em tempo de execução de item de relatório personalizado, que renderiza o item de relatório personalizado e o devolve ao processador de relatório.  
   
 > [!NOTE]  
->  O componente de item de relatório personalizado em tempo de design implementado como um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Este documento descreverá detalhes de implementação específicos do componente em tempo de design de item de relatório personalizado. Para obter mais informações sobre como desenvolver componentes usando o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consulte [Componentes do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) na biblioteca MSDN.  
+>  O componente de item de relatório personalizado em tempo de design implementado como um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Este documento descreverá detalhes de implementação específicos do componente em tempo de design de item de relatório personalizado. Para obter mais informações sobre como desenvolver componentes usando o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consulte [Componentes do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) na biblioteca MSDN.  
   
- Para obter uma amostra de um item de relatório personalizado totalmente implementado, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obter uma amostra de um item de relatório personalizado totalmente implementado, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementando um componente em tempo de design  
  A classe principal de um componente de item de relatório personalizado em tempo de design é herdada da classe **Microsoft.ReportDesigner.CustomReportItemDesigner**. Além dos atributos padrão usados para um controle [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a classe de componente deve definir um atributo **CustomReportItem**. Esse atributo deve corresponder ao nome do item de relatório personalizado conforme definido no arquivo reportserver.config. Para obter uma lista de atributos do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consulte Atributos na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -182,7 +182,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Usando adornos  
- As classes de item de relatório personalizado também podem implementar uma classe **Microsoft.ReportDesigner.Design.Adornment**. Um adorno permite que o controle de item de relatório personalizado forneça áreas fora do retângulo principal da superfície de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar. A classe **Adornment** definida no namespace **Microsoft.ReportDesigner** do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é uma implementação de passagem da classe <xref:System.Windows.Forms.Design.Behavior.Adorner> encontrada no Windows Forms. Para obter a documentação completa da classe **Adorner**, consulte [Visão geral do serviço de comportamento](http://go.microsoft.com/fwlink/?LinkId=116673) na biblioteca MSDN. Para obter um código de exemplo que implementa uma classe **Microsoft.ReportDesigner.Design.Adornment**, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ As classes de item de relatório personalizado também podem implementar uma classe **Microsoft.ReportDesigner.Design.Adornment**. Um adorno permite que o controle de item de relatório personalizado forneça áreas fora do retângulo principal da superfície de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar. A classe **Adornment** definida no namespace **Microsoft.ReportDesigner** do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é uma implementação de passagem da classe <xref:System.Windows.Forms.Design.Behavior.Adorner> encontrada no Windows Forms. Para obter a documentação completa da classe **Adorner**, consulte [Visão geral do serviço de comportamento](https://go.microsoft.com/fwlink/?LinkId=116673) na biblioteca MSDN. Para obter um código de exemplo que implementa uma classe **Microsoft.ReportDesigner.Design.Adornment**, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Para obter mais informações sobre como programar e usar o Windows Forms no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consulte estes tópicos no biblioteca MSDN:  
   
