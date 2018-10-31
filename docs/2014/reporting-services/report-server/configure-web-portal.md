@@ -72,7 +72,7 @@ ms.locfileid: "48184946"
   
 4.  Clique em **Aplicar**.  
   
-5.  Se você estiver usando o [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] ou o Windows Server 2008, talvez sejam necessárias algumas etapas adicionais antes de usar o Gerenciador de Relatórios. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  Se você estiver usando o [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] ou o Windows Server 2008, talvez sejam necessárias algumas etapas adicionais antes de usar o Gerenciador de Relatórios. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Configurar o Gerenciador de Relatórios para usar a URL de um servidor de relatório específico  
  Quando você configura as URLs na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o Gerenciador de Relatórios detecta e usa automaticamente todas as URLs novas e atualizadas do servidor de relatórios executado na mesma instância do servidor. Se a sua implantação exigir o uso de uma única URL estática para todas as solicitações do servidor de relatórios, você poderá especificar essa URL no arquivo RSReportServer.config.  

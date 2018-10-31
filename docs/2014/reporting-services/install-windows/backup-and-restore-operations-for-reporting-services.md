@@ -34,7 +34,7 @@ ms.locfileid: "48092477"
   
  As operações de backup e restauração são usadas com frequência para mover todo ou parte de uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Se estiver movendo apenas os bancos de dados do servidor de relatório, poderá usar o backup e restauração ou anexar e desanexar para realocar os bancos de dados em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Se estiver movendo apenas os bancos de dados do servidor de relatório, poderá usar o backup e restauração ou anexar e desanexar para realocar os bancos de dados em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Mover uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para um computador novo é chamado de migração. Quando você migra uma instalação, o Programa de Instalação é executado para instalar uma nova instância do servidor de relatório e, em seguida, os dados da instância são copiados para o novo computador. Para obter mais informações sobre como migrar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte os seguintes tópicos:  
   

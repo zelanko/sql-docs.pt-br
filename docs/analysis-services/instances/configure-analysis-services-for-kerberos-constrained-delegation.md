@@ -84,7 +84,7 @@ ms.locfileid: "34019613"
   
 4.  Na página Selecionar Usuários ou Computador, insira a conta usada para executar a instância do SQL Server que fornece dados aos bancos de dados modelo de tabela do Analysis Services. Clique em **OK** para aceitar a conta de serviço.  
   
-     Se você não puder selecionar a conta desejada, verifique se o SQL Server está em execução e tem um SPN registrado para essa conta. Para obter mais informações sobre os SPNs do mecanismo de banco de dados, consulte [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+     Se você não puder selecionar a conta desejada, verifique se o SQL Server está em execução e tem um SPN registrado para essa conta. Para obter mais informações sobre os SPNs do mecanismo de banco de dados, consulte [Registrar um nome de entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

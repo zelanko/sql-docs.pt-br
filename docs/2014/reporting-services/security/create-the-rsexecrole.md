@@ -187,7 +187,7 @@ ms.locfileid: "48171516"
 30. Repita para a tabela sysjobs. O RSExecRole deve obter permissões Selecionar para as duas tabelas.  
   
 ## <a name="move-the-report-server-database"></a>Mover o banco de dados do servidor de relatório  
- Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Se você estiver atualizando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], poderá atualizá-lo antes de ou depois de mover o banco de dados.  
   

@@ -88,7 +88,7 @@ Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opçã
   
 -   [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) nos Manuais Online do SQL Server.  
   
--   [The Services and Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) (O Guia de planejamento de segurança de serviços e contas de serviço) no MSDN.  
+-   [O Guia de planejamento de segurança de serviços e contas de serviço](https://go.microsoft.com/fwlink/?LinkId=69155) no MSDN.  
   
 ## <a name="updating-an-expired-password"></a>Atualizando uma senha expirada  
  Se o serviço Servidor de Relatório for executado em uma conta de domínio e a senha expirar antes de você atualizá-la no Reporting Services Configuration Manager, o serviço não será iniciado até que seja especificada uma nova senha.  

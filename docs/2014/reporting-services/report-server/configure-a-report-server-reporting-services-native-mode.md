@@ -55,7 +55,7 @@ ms.locfileid: "48104496"
   
  Se o Firewall do Windows estiver ativado, a porta que o servidor de relatório está configurado para usar provavelmente estará fechada. Uma indicação de que uma porta pode estar fechada é uma página em branco quando você tenta abrir o Gerenciador de Relatórios em um computador cliente remoto. Para obter informações sobre como configurar o firewall, consulte [configurar um Firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md).  
   
- Se estiver usando o Windows Vista ou o Windows Server 2008, etapas adicionais serão necessárias para abrir o Gerenciador de Relatórios localmente. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Se estiver usando o Windows Vista ou o Windows Server 2008, etapas adicionais serão necessárias para abrir o Gerenciador de Relatórios localmente. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  Verifique a instalação criando pastas, carregando itens e executando relatórios. Siga as instruções em [verificar uma instalação do Reporting Services](../install-windows/verify-a-reporting-services-installation.md) para verificar a instalação.  
   

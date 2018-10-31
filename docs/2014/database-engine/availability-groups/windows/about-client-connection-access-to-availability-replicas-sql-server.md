@@ -55,7 +55,7 @@ ms.locfileid: "48153647"
  Conexões somente de intenção de leitura  
  Bancos de dados secundários estão disponíveis apenas para a conexão para o qual o `Application Intent` propriedade de conexão é definida como `ReadOnly` (*conexões de intenção de leitura*).  
   
- Para obter mais informações sobre essa propriedade de conexão, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obter mais informações sobre essa propriedade de conexão, consulte [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Permitir qualquer conexão somente leitura  
  Todos os bancos de dados secundários estão disponíveis para conexões de acesso de leitura. Essa opção permite a conexão de clientes com versão inferior.  
@@ -71,7 +71,7 @@ ms.locfileid: "48153647"
  Permitir apenas conexões de leitura/gravação  
  Quando o `Application Intent` propriedade de conexão é definida como **ReadWrite** ou não está definida, a conexão é permitida. Conexões para o qual o `Application Intent` palavra-chave de cadeia de caracteres de conexão é definida como `ReadOnly` não são permitidas. Permitir apenas conexões de leitura/gravação pode ajudar a impedir que os clientes conectem uma carga de trabalho de intenção de leitura à réplica primária por engano.  
   
- Para obter mais informações sobre essa propriedade de conexão, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Para obter mais informações sobre essa propriedade de conexão, consulte [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Para obter mais informações, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
