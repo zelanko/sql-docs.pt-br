@@ -88,7 +88,7 @@ ms.locfileid: "47799884"
     > [!NOTE]  
     >  A opção **Usar indexação de texto completo** sempre está marcada e esmaecida porque, a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todos os bancos de dados de usuários são habilitados para texto completo.  
   
-6.  Para alterar os valores padrão dos arquivos de dados primários e de log de transação, na grade **Arquivos de banco de dados** , clique na célula apropriada e digite o novo valor. Para obter mais informações, consulte [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
+6.  Para alterar os valores padrão dos arquivos de dados primários e de log de transação, na grade **Arquivos de banco de dados** , clique na célula apropriada e digite o novo valor. Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 7.  Para alterar o agrupamento do banco de dados, selecione a página **Opções** e depois marque um agrupamento na lista.  
   
@@ -141,6 +141,6 @@ GO
  [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Adicionar arquivos de dados ou de log a um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

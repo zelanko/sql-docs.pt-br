@@ -42,7 +42,7 @@ ms.locfileid: "48181166"
 
   
 ##  <a name="ReportBorder"></a> Adicionando uma borda de relatório  
- É possível adicionar uma borda a um relatório adicionando bordas aos próprios cabeçalhos, rodapés e corpo do relatório, sem adicionar linhas ou retângulos. Para obter mais informações, consulte [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ É possível adicionar uma borda a um relatório adicionando bordas aos próprios cabeçalhos, rodapés e corpo do relatório, sem adicionar linhas ou retângulos. Para obter mais informações, consulte [Adicionar uma borda a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   

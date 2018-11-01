@@ -6,12 +6,12 @@ description: Encontre o conteúdo que ajudará você a instalar ou atualizar do 
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 6ca8f1acd90936c6f58a80543027731b6ada6451
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336165"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743141"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -288,6 +288,25 @@ ms.locfileid: "49336165"
                                                 <div class="cardText">
                                                     <h3>SSMA (Assistente de Migração do SQL Server)</h3>
                                                     <p>Automatiza a migração do banco de dados do Microsoft Access, do DB2, do MySQL, do Oracle e do SAP ASE para o SQL Server.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/install-sql-and-services/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>DEA (Assistente para Experimentos de Banco de Dados)</h3>
+                                                    <p>Auxilia na avaliação de uma versão de destino do SQL Server para uma carga de trabalho existente.</p>
                                                 </div>
                                             </div>
                                         </div>

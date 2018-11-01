@@ -34,7 +34,7 @@ ms.locfileid: "48148556"
   
 1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
-2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Crie um projeto RMO (Replication Management Objects) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, que iniciará o Agente de Mesclagem em sincronia, programaticamente. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48148556"
   
 1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura pull para a publicação. A publicação deve oferecer suporte para sincronização da Web ou Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados no manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -83,6 +83,6 @@ ms.locfileid: "48148556"
 11. Supondo que nenhum outro ponto de interrupção esteja definido e que os comandos tenham sido replicados, a execução para quando alcança o ponto de interrupção do manipulador de lógica de negócios.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
