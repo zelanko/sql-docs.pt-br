@@ -42,7 +42,7 @@ ms.locfileid: "48211006"
   
  Você deve ser membro do grupo de Administradores local no computador do servidor de relatório para criar uma atribuição de função. Você pode delegar essa responsabilidade atribuindo outros usuários à função **Gerenciador de Conteúdo** .  
   
- Para obter mais informações, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Criando uma atribuição de função no nível do sistema  
  Para criar ou gerenciar uma atribuição de função no nível do sistema, use o Gerenciador de Relatórios e abra a página Configurações de Site.  

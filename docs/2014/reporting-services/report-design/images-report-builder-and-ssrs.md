@@ -45,7 +45,7 @@ ms.locfileid: "48227136"
 ##  <a name="EmbedImages"></a> Inserindo imagens  
  Você pode inserir imagens em um relatório para que todos os dados de imagens sejam armazenados na definição de relatório. Quando você insere uma imagem, ela tem codificação MIME e é armazenada como texto na definição de relatório. Usar uma imagem inserida garante que ela esteja sempre disponível para o relatório, mas também aumenta o tamanho da definição de relatório.  
   
- Para obter mais informações sobre como inserir uma imagem, consulte [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como inserir uma imagem, consulte [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227136"
   
  Quando o relatório for executado no Construtor de Relatórios ou no Designer de Relatórios, a visualização usará as credenciais do usuário para exibir a imagem. Quando o relatório for executado no servidor de relatório, a imagem no relatório talvez não seja exibida se as credenciais do servidor não forem suficientes para acessá-la. Nesse caso, contate o administrador do sistema.  
   
- Para obter mais informações sobre como adicionar uma imagem externa a um relatório, consulte [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como adicionar uma imagem externa a um relatório, consulte [Adicionar uma imagem externa &#40;Construtor de Relatórios e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -66,12 +66,12 @@ ms.locfileid: "48227136"
 > [!NOTE]  
 >  Algumas extensões de renderização, como a extensão de renderização HTML, renderizam a imagem de plano de fundo do corpo do relatório no corpo, no cabeçalho da página e no rodapé da página. Você pode definir uma imagem de plano de fundo separada para o cabeçalho e rodapé da página, mas, se nenhuma imagem for definida, o relatório usará a imagem de plano de fundo do corpo. Outras extensões de renderização, como a extensão de renderização de Imagem, não renderizam a imagem de plano de fundo do corpo no cabeçalho e rodapé da página.  
   
- Para obter mais informações sobre como adicionar uma imagem de tela de fundo, consulte [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como adicionar uma imagem de tela de fundo, consulte [Adicionar uma imagem de tela de fundo &#40;Construtor de Relatórios e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Imagens vinculadas a dados  
- Você pode adicionar imagens armazenadas em um banco de dados ao seu relatório. Use o mesmo item de relatório de imagem como aquele usado para imagens estáticas, mas com um conjunto de propriedades que indica que a imagem está armazenada em um banco de dados. Para ver instruções sobre como trabalhar com imagens vinculadas a dados, consulte [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
+ Você pode adicionar imagens armazenadas em um banco de dados ao seu relatório. Use o mesmo item de relatório de imagem como aquele usado para imagens estáticas, mas com um conjunto de propriedades que indica que a imagem está armazenada em um banco de dados. Para ver instruções sobre como trabalhar com imagens vinculadas a dados, consulte [Adicionar uma imagem vinculada a dados &#40;Construtor de Relatórios e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   
