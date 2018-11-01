@@ -260,6 +260,8 @@ items:
       href: r/managing-and-monitoring-r-solutions.md
     - name: Monitorar o uso de relatórios do SSMS
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: Monitorar com o uso de DMVs
+      href: administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
     - name: Execução de script de escala
       href: administration/modify-user-account-pool.md
     - name: Usar a governança de recursos
@@ -270,8 +272,6 @@ items:
       href: r/extended-events-for-sql-server-r-services.md
     - name: Eventos estendidos PREDICT T-SQL
       href: xe-event-predict-tsql.md
-    - name: DMV (Exibições de Gerenciamento de Dados)
-      href: r/dmvs-for-sql-server-r-services.md
     - name: Funções de criação de perfil de código de R
       href: r/using-r-code-profiling-functions.md
 - name: Referência
@@ -325,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 33a789dc8cfb6d632e5d2251c1c1105f677e9d3f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806776"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743211"
