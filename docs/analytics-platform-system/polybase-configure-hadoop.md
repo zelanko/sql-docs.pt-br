@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460871"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236932"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar o PolyBase para acessar dados externos no Hadoop
 
@@ -200,5 +200,6 @@ No SQL Server Data Tools, as tabelas externas são exibidas em uma pasta separad
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre PoliyBase, consulte o [o que é PolyBase?](../relational-databases/polybase/polybase-guide.md). 
+Para ver de configurações de segurança do Hadoop [configurar a segurança do Hadoop](polybase-configure-hadoop-security.md).<br>
+Para saber mais sobre o PolyBase, confira [O que é o PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  

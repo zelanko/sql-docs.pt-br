@@ -10,12 +10,12 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 201c8f3ebfd87f4608f771d2009ed48f2987dbb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186356"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753443"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de data e hora
   Este exemplo mostra como inicializar as estruturas de dados de data/hora que foram adicionadas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Em seguida, prepara os valores de entrada, associa parâmetros e executa a consulta. Para obter mais informações sobre como usar esses tipos, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48186356"
   
  A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela usada por este exemplo.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -45,7 +45,7 @@ CREATE TABLE DateTimeTypes (datecol date, time2col time(7), datetime2col datetim
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -63,7 +63,7 @@ class direxec {
    HSTMT hstmt;   // Statement Handle  
    SQLHDESC hdesc;   // Descriptor handle  
    unsigned char szData[MAX_DATA];   // Returned Data Storage  
-   SDWORD cbData;   // Output Lenght of data  
+   SDWORD cbData;   // Output Length of data  
    unsigned char char_ds_name[SQL_MAX_DSN_LENGTH];   // Data Source Name  
   
    SQL_DATE_STRUCT date;   // date structure  
@@ -133,7 +133,7 @@ direxec::direxec() {
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-   // Allocate the enviroment handle  
+   // Allocate the environment handle  
    rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
    check_rc(rc);  
   
@@ -232,7 +232,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 USE tempdb  
 GO  
   

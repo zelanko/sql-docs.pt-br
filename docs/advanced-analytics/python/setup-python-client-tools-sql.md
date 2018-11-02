@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051148"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216620"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>Configurar um cliente de Python para uso com o SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Integração do Python está disponível começando no SQL Server 2017 ou posterior, quando você inclui a opção de Python em uma instalação de serviços do Machine Learning (no banco de dados). Para obter mais informações, consulte [instalar o SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+Integração do Python está disponível começando no SQL Server 2017 ou posterior, quando você inclui a opção de Python em um [instalação de serviços do Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md). 
 
-Neste artigo, saiba como configurar uma estação de trabalho de desenvolvimento do cliente para que você pode se conectar a um SQL Server remoto habilitado para integração do Python e aprendizado de máquina. No final, você terá as mesmas bibliotecas de Python, como aqueles no SQL Server além da habilidade para enviar cálculos de uma sessão local para uma sessão remota no SQL Server.
+Neste artigo, saiba como configurar uma estação de trabalho de desenvolvimento de cliente do Python para que você pode se conectar a um SQL Server remoto habilitado para integração do Python e aprendizado de máquina. Este exercício usa blocos de anotações do Jupyter para executar o código Python. Depois de concluir as etapas neste artigo, você terá as mesmas bibliotecas de Python, como aqueles no SQL Server. Você também saberá como enviar por push os cálculos de uma sessão local do Python para uma sessão remota do Python no SQL Server.
 
 > [!Tip]
-> Para uma demonstração em vídeo, consulte [executar R e Python remotamente no SQL Server de blocos de anotações do Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Para uma demonstração em vídeo dos exercícios neste artigo, consulte [executar R e Python remotamente no SQL Server de blocos de anotações do Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Uma alternativa para instalar apenas as bibliotecas de cliente está usando um servidor autônomo. Servidor como um cliente avançado usando um autônomo é uma opção que alguns clientes preferem mais trabalho do cenário de ponta a ponta. Se você tiver um [servidor autônomo](../install/sql-machine-learning-standalone-windows-install.md) como fornecido na instalação do SQL Server, você tem um servidor de Python que é completamente separado de uma instância do mecanismo de banco de dados do SQL Server. Um servidor standalon inclui a distribuição de base de código-fonte aberto do Anaconda mais as bibliotecas específicas da Microsoft. Você pode encontrar o executável do Python neste local: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Como validação de sua instalação do cliente avançado, abra uma [notebook Jupyter](#python-tools) para executar comandos que usam o Python.exe no servidor.
@@ -127,7 +127,7 @@ Se seu código exigir pacotes que não são instalados por padrão com o SQL Ser
 
 Antes de tentar esta próxima etapa, verifique se você tem permissões na instância do SQL Server e uma cadeia de conexão para o [banco de dados de exemplo de íris](../tutorials/demo-data-iris-in-sql.md). Se o banco de dados não existe e você tem permissões suficientes, você poderá [criar um banco de dados usando estas instruções embutidas](#create-iris-remotely).
 
-Substitua a cadeia de conexão com os valores válidos. O código de exemplo usa `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` , mas seu código deve especificar um servidor remoto, possivelmente com um nome de instância.
+Substitua a cadeia de conexão com os valores válidos. O código de exemplo usa `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` , mas seu código deve especificar um servidor remoto, possivelmente com um nome de instância e uma opção de credencial que é mapeado para um logon de usuário de banco de dados.
 
 ### <a name="define-a-function"></a>Definir uma função
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - usar RecoscalePy APIs para criar uma tabela e carregar os dados de íris
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - usar Revoscalepy APIs para criar uma tabela e carregar os dados de íris
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

@@ -1,7 +1,7 @@
 ---
 title: Agente de instantâneo de replicação | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0914e0c2abea1ab4dc15b5d3410f6d717403ef27
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087156"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237002"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
   O Replication Snapshot Agent é um arquivo executável que prepara arquivos de instantâneo contendo esquema e dados de tabelas publicadas e objetos do banco de dados, armazena os arquivos na pasta de instantâneo e registra trabalhos de sincronização no banco de dados de distribuição.  
@@ -132,6 +132,9 @@ ms.locfileid: "48087156"
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
+
+ > [!NOTE]  
+ >  Um certificado SSL válido é definido com um nome de domínio totalmente qualificado do SQL Server. Em ordem para o agente para se conectar com êxito ao definir - EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro de nome do Alias deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
   
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../security/security-overview-replication.md).  
   
@@ -194,12 +197,12 @@ ms.locfileid: "48087156"
 |**2**|Todas as mensagens de erro e mensagens de relatório de progresso são impressas, o que é útil na depuração.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parâmetro opcional que especifica se os objetos de tabela serão pré-buscada e armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que o SMO pré-busca operação leva considerável mais para ser executado. Se esse parâmetro não for usado, essa decisão é tomada em tempo de execução com base na porcentagem de tabelas que são adicionadas como artigos na publicação.  
+ Parâmetro opcional que especifica se será feita a pré-busca de objetos de tabela e se eles serão armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que a operação de pré-busca de SMO leva um tempo consideravelmente maior para ser executada. Se esse parâmetro não for usado, essa decisão será tomada no tempo de execução com base na porcentagem de tabelas adicionadas como artigos na publicação.  
   
 |Valor OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
-|**0**|Chamada ao método de pré-busca do componente do SMO é desativada.|  
-|**1**|Agente de instantâneo irá chamar o método de pré-busca para armazenar em cache algumas propriedades de tabela usando o SMO|  
+|**0**|A chamada ao método Pré-busca do componente de SMO está desativada.|  
+|**1**|O Agente de Instantâneo chamará o método Pré-busca para armazenar em cache algumas propriedades de tabela usando SMO|  
   
  **-PacketSize** *packet_size*  
  É o tamanho de pacote (em bytes) usado pelo Snapshot Agent na conexão com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O valor padrão é 8192 bytes.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169076"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743201"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gerenciar e integrar cargas de trabalho de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Se você subsequentemente determinar que as funções de biblioteca externa são
 
 > [!NOTE]
 > Para pacotes de R, direitos de administrador do servidor não são especificamente necessários para a instalação do pacote se você usar métodos alternativos. Ver [instalar pacotes R no SQL Server](install-additional-r-packages-on-sql-server.md) para obter detalhes.
+
+## <a name="monitoring-script-execution"></a>Monitorando a execução do script
+
+Scripts de R e Python que são executados no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] são iniciados com o [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interface. No entanto, o Launchpad não tem recursos controlados ou monitorados separadamente, pois ele é um serviço seguro fornecido pela Microsoft que gerencia os recursos adequadamente.
+
+Scripts externos executados sob o serviço Launchpad são gerenciados usando o [objeto de trabalho do Windows](/windows/desktop/ProcThread/job-objects). Um objeto de trabalho permite que grupos de processos sejam gerenciados como uma unidade. Cada objeto de trabalho é hierárquico e controla os atributos de todos os processos associados a ele. As operações realizadas em um objeto de trabalho afetam todos os processos associados ao objeto de trabalho.
+
+Portanto, se precisar encerrar um trabalho associado a um objeto, lembre-se de que todos os processos relacionados também serão encerrados. Se você estiver executando um script de R que é atribuído a um objeto de trabalho do Windows e esse script executa um trabalho ODBC relacionado que deve ser encerrado, o processo pai do script de R também será encerrado.
+
+Se você iniciar um script externo que usa processamento paralelo, um único objeto de trabalho do Windows gerencia todos os processos filho paralelos.
+
+Para determinar se um processo está em execução em um trabalho, use a função `IsProcessInJob`.
 
 ## <a name="next-steps"></a>Próximas etapas
 

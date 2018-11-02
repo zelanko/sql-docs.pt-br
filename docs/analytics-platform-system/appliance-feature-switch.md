@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70eed88b1224a712dcb8d1c76085fffc839155a5
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 0d2aadb0e7c0c56c69d89bc94e0ddaacef54e837
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311636"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236902"
 ---
 #<a name="appliance-feature-switches"></a>Opções de recursos do dispositivo
 O **comutador de recurso** página exibe informações sobre as opções de recursos que estão sendo introduzidas no Analytics Platform System AU7 e versões posteriores. Use esta página de configuração para atualizar ou ativar/desativar configurações no Analytics Platform System e os recursos. Alterações em valores de switch de recursos exigem uma reinicialização do serviço.
@@ -24,6 +24,9 @@ O **comutador de recurso** página exibe informações sobre as opções de recu
 
 ##<a name="autostatsenabled"></a>AutoStatsEnabled
 Controla o recurso de estatísticas automático. Essa opção é definida como true por padrão após a atualização para AU7. Qualquer banco de dados criado após a atualização herdará a criação automática e assíncrona de atualização de estatísticas. Para bancos de dados existentes, os administradores de banco de dados podem habilitar estatísticas automaticamente com [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Para obter mais informações sobre estatísticas, consulte [estatísticas](../relational-databases/statistics/statistics.md).
+
+##<a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+Permite que você escolha as configurações de maxdop maiores que 1 para operações insert/select. Opções para essa configuração são 0, 1, 2 e 4, com o padrão é 1.
 
 ##<a name="usecatalogqueries"></a>UseCatalogQueries
 Usando objetos de catálogo para algumas chamadas de metadados em vez de usar o SMO mostrou a melhoria de desempenho. Definido como true por padrão no CU7.1, essa opção controla esse comportamento. 

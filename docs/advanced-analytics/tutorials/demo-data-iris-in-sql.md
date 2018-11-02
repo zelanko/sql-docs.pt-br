@@ -1,5 +1,5 @@
 ---
-title: Conjunto de dados íris demonstração de tutoriais do SQL Server Python e R | Microsoft Docs
+title: Conjunto de dados íris demonstração de tutoriais do Python e R no SQL Server | Microsoft Docs
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806666"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216671"
 ---
-#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de íris para tutoriais do SQL Server Python e R
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dados de demonstração de íris para tutoriais do Python e R no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste exercício, crie um banco de dados do SQL Server para armazenar dados do [conjunto de dados de flor de íris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e modelos baseados nos mesmos dados. Dados íris estão incluídos nas distribuições do R e Python instaladas pelo SQL Server e são usados nos tutoriais de aprendizado de máquina para o SQL Server. 

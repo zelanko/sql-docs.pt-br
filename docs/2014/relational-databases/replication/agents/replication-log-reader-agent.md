@@ -1,7 +1,7 @@
 ---
 title: Agente de Leitor de Log de replicação | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202426"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226338"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
   O Replication Agente de Leitor de Log é um executável que monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição.  
@@ -101,7 +101,10 @@ ms.locfileid: "48202426"
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
-  
+
+ > [!NOTE]  
+ >  Um certificado SSL válido é definido com um nome de domínio totalmente qualificado do SQL Server. Em ordem para o agente para se conectar com êxito ao definir - EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro de nome do Alias deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
+ 
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../security/security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  

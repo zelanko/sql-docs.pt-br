@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643974"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965945"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de migração de dados
 
@@ -47,7 +47,6 @@ As instruções passo a passo a seguir o ajudam a executar sua primeira avaliaç
    Quando você está avaliando sua instância do SQL Server de origem para a migração para o SQL Server no local ou ao SQL Server hospedado em destinos de VM do Azure, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
 
     -   **Problemas de compatibilidade**
-
     -   **Recomendação de novos recursos**
 
     ![Selecione um tipo de relatório de avaliação para o destino do SQL Server](../dma/media/AssessmentTypes.png)
@@ -55,7 +54,6 @@ As instruções passo a passo a seguir o ajudam a executar sua primeira avaliaç
    Ao avaliar a instância do SQL Server de origem para migração para o banco de dados SQL, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
 
     -   **Verificar a compatibilidade do banco de dados**
-
     -   **Verificar paridade de recursos**
 
     ![Selecione o tipo de relatório de avaliação para o destino de banco de dados SQL](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ Você pode examinar os problemas de compatibilidade, analisando o objeto afetado
 
 Da mesma forma, você pode examinar a recomendação de recurso entre **desempenho**, **armazenamento**, e **segurança** áreas.
 
-Recomendações de recursos abrangem uma variedade de recursos, como o OLTP in-memory e Columnstore, Stretch Database, Always Encrypted, máscara de dados dinâmicos e Transparent Data Encryption.
+Recomendações de recursos abrangem uma variedade de recursos, como o OLTP in-memory, Columnstore, Stretch Database, Always Encrypted, máscara de dados dinâmicos e Transparent Data Encryption.
 
 ![Exibir recomendações de recurso](../dma/media/FeatureRecommendations.png)
 
-Para o banco de dados SQL Azure, as avaliações fornecem os problemas de bloqueio de migração e problemas de paridade de recurso. Examine os resultados para ambas as categorias, selecionando as opções específicas.
+Para o banco de dados SQL Azure, as avaliações fornecem os problemas de bloqueio de migração e problemas de paridade de recurso. Examine os resultados para ambas as categorias, selecionando as opções específicas.
 
 - O **paridade de recursos do SQL Server** categoria fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas atenuantes. Ele ajuda você a planejar esse esforço em seus projetos de migração.
 
   ![Exibir as informações de paridade de recursos do SQL Server](../dma/media/SQLFeatureParity.png)
 
-- O **problemas de compatibilidade** categoria fornece recursos de parcialmente compatíveis ou não bloqueiam a migração do SQL Server bancos de dados local para bancos de dados SQL do Azure. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
+- O **problemas de compatibilidade** categoria fornece recursos de parcialmente compatíveis ou não bloqueiam a migração do SQL Server bancos de dados local para bancos de dados SQL do Azure. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
 
   ![Problemas de compatibilidade do modo de exibição](../dma/media/CompatibilityIssues.png)
 
