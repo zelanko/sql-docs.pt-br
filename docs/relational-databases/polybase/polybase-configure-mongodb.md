@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a51842a1682b5e02db4ea216bddefbabbf0a7f56
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874304"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806736"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar o PolyBase para acessar dados externos no MongoDB
 
@@ -25,13 +25,11 @@ O artigo explica como usar o PolyBase em uma instância do SQL Server para consu
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](polybase-installation.md). O artigo sobre a instalação explica os pré-requisitos.
+Se você ainda não instalou o PolyBase, veja [Instalação do PolyBase](polybase-installation.md).
 
 ## <a name="configure-an-external-table"></a>Configurar uma tabela externa
 
 Para consultar os dados de uma fonte de dados do MongoDB, você precisa criar tabelas externas para fazer referência aos dados externos. Esta seção fornece código de exemplo para criar essas tabelas externas.
-
-É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 
 Estes objetos serão criados nesta seção:
 
@@ -40,52 +38,50 @@ Estes objetos serão criados nesta seção:
 - CREATE EXTERNAL TABLE (Transact-SQL)
 - CREATE STATISTICS (Transact-SQL)
 
-1.    Crie uma chave mestra no banco de dados. Isso é necessário para criptografar o segredo da credencial.
+1. Crie uma chave mestra no banco de dados, caso ainda não exista. Isso é necessário para criptografar o segredo da credencial.
 
-      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-      ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Argumentos
+    PASSWORD ='password'
 
-1.   Crie uma credencial com escopo de banco de dados.
+    É a senha usada para criptografar a chave mestra no banco de dados. password precisa atender aos requisitos da política de senha do Windows do computador que está hospedando a instância do SQL Server.
+
+1.   Crie uma credencial no escopo do banco de dados para acessar a origem do MongoDB.
 
      ```sql
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL MongoDBCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name 
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1.  Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique o local da fonte de dados externa e credenciais para a fonte de dados do MongoDB.
+1.  Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
      ```sql
-     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE MongoInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (
-    LOCATION = mongodb://MongoServer,
+    LOCATION = mongodb://<server>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = MongoDBCredentials
+      CREDENTIAL = credential_name
     );
      ```
 
-1. Crie esquemas para dados externos
-
-     ```sql
-     CREATE SCHEMA MongoDB;
-     GO
-     ```
-
-1.  Crie tabelas externas que representam dados armazenados no sistema [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) do MongoDB externo.
+1.  Crie tabelas externas que representem os dados armazenados no sistema do MongoDB externo [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
 
      ```sql
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-     CREATE EXTERNAL TABLE MongoDB.orders(
+     CREATE EXTERNAL TABLE customers(
      [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -94,19 +90,22 @@ Estes objetos serão criados nesta seção:
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-     LOCATION='TPCH..ORDERS',
-     DATA_SOURCE= MongoDBInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. Crie estatísticas em uma tabela externa para otimizar o desempenho.
+1. **Opcional:** criar estatísticas em uma tabela externa.
+
+    É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON MongoDB.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+
 ## <a name="flattening"></a>Nivelamento
- O nivelamento é habilitado para os dados aninhados e repetidos de coleções de documentos do MongoDB. O usuário deve habilitar a criação de uma tabela externa e explicitamente especificar um esquema relacional em coleções de documentos do MongoDB que podem ter dados repetidos e/ou aninhados. Habilitaremos a detecção de esquema automático em coleções de documentos do mongo em etapas futuras.
+ O nivelamento é habilitado para os dados aninhados e repetidos das coleções de documentos do MongoDB. O usuário precisa habilitar `create an external table` e especificar explicitamente um esquema relacional nas coleções de documentos do MongoDB que possam ter dados repetidos e/ou aninhados. Habilitaremos a detecção de esquema automático em coleções de documentos do mongo em etapas futuras.
 Os tipos de dados repetidos/aninhados do JSON serão nivelados da seguinte forma
 
 * Objetos: coleção de chave-valor não ordenada entre chaves (aninhada)
@@ -150,6 +149,10 @@ As classificações da matriz serão niveladas conforme abaixo:
 |135898560000 |Um |10|
 |1322006400000|Um |9|
 |1299715200000 |B |14|
+
+## <a name="cosmos-db-connection"></a>Conexão do Cosmos DB
+
+Usando a API do mongo do Cosmos DB e o conector do PolyBase do Mongo DB, você pode criar uma tabela externa de uma **instância do Cosmos DB**. Isso pode ser feito seguindo as mesmas etapas listadas acima. Verifique se as credenciais, o endereço do servidor, a porta e a cadeia de caracteres de localização no escopo do banco de dados refletem os do servidor do Cosmos DB. 
 
 ## <a name="next-steps"></a>Próximas etapas
 

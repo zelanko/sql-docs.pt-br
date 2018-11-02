@@ -11,12 +11,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ca462fb27e854b31ffd5096b256dc711e2d965c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2e3568a11bc40d8a508239a2505f86aa50a454a
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699724"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216690"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "47699724"
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        Para corrigir esse erro, emita novamente a instrução **BACKUP** com **BLOCKSIZE = 65536** especificada.  
+        Para corrigir esse erro, emita novamente a instrução **RESTORE** com **BLOCKSIZE = 65536** especificado.  
   
 -   Erro durante o backup devido a blobs que têm a concessão ativa neles: a atividade de backup com falha pode resultar em blobs com concessões ativas.  
   

@@ -33,18 +33,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f289beef87a16f518e993b80045cd98c5828b5d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730304"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991090"
 ---
 # <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida do banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O gerenciamento de ciclo de vida de banco de dados (DLM) é uma abordagem baseado em política que gerenciar ativos de dados e bancos de dados. O DLM não é um produto, mas uma abordagem abrangente para gerenciar o esquema de banco de dados, os dados e os metadados de um aplicativo de banco de dados. Uma abordagem ponderada e pró-ativa do DLM permite que uma organização gerencie recursos de dados de acordo com os níveis apropriadas de desempenho, proteção, disponibilidade e custo.  
   
- O DLM começa com a discussão sobre o design e a intenção do projeto, continua com o desenvolvimento, o teste, a compilação, a implantação, a manutenção, o monitoramento e as atividades de backup do banco de dados, e termina com o arquivamento dos dados. Este tópico fornece uma visão geral das fases do DLM, que começam com o desenvolvimento e o progresso do banco de dados ao longo das ações de compilação, implantação e monitoramento (Figura 1). Também são incluídas as atividades de gerenciamento de dados e as operações de portabilidade de dados, como importação/exportação, backup, migração e sincronização.  
+ O DLM começa com a discussão sobre o design e a intenção do projeto, continua com o desenvolvimento, o teste, a compilação, a implantação, a manutenção, o monitoramento e as atividades de backup do banco de dados, e termina com o arquivamento dos dados. Este tópico fornece uma visão geral das fases do DLM, que começam com o desenvolvimento e o progresso do banco de dados ao longo das ações de build, implantação e monitoramento. Também são incluídas as atividades de gerenciamento de dados e as operações de portabilidade de dados, como importação/exportação, backup, migração e sincronização.  
   
  Para ler o tópico completo, veja [DLM (Gerenciamento de Ciclo de Vida de Banco de Dados)](http://go.microsoft.com/fwlink/?LinkId=276949).  
   

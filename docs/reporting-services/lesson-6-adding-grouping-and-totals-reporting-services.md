@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720504"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051009"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
@@ -33,9 +33,9 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 4.  No painel **Dados do Relatório** , arraste o campo **Order** para o painel **Grupos de Linhas** . Coloque-o abaixo de Data e acima de **(Detalhes)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    Observe que o identificador de linha agora exibe dois colchetes ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), para mostrar dois grupos. A tabela também tem duas colunas **Pedido** .  
   
 5.  Exclua as colunas **Data** e **Pedido** originais à **direita** da linha dupla. Isso removerá os valores do registro individual para que apenas o valor do grupo seja exibido. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e clique em **Excluir Colunas**.  
   
@@ -84,7 +84,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Laranja**e clique em **OK**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Definir a cor da tela de fundo para laranja](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>Para adicionar um total geral a um relatório  
   
@@ -113,9 +113,9 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
 2.  Clique no menu **Projeto** e em **Propriedades do tutorial...**  
   
 3.  Em **TargetServerURL** , digite o nome do servidor de relatório, por exemplo   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.  
+    - `http://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.  
   
   
 4. Observe que TargetReportFolder é o tutorial, o nome do projeto.  Esse é o nome da pasta na qual o relatório será implantado nas próximas etapas.  
@@ -143,15 +143,15 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
     Navegue até a URL do portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Observação:** a URL do *portal* é "Reports", não a URL do *Servidor* de Relatório "Reportserver".  Por exemplo:   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
+    `http://<server name>/reports`.  
+    `http://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
   
 8.  Procure a pasta que contém o relatório. O nome padrão é *tutorial*, o nome do projeto ou o nome digitado no campo TargetReportFolder nas propriedades do projeto.   
 Clique no nome do relatório **Pedidos de Venda** para exibir o relatório renderizado no navegador.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Você concluiu com êxito o tutorial Criando um relatório de tabela básico.**  
+Você concluiu com êxito o tutorial Criando um relatório de tabela básico.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

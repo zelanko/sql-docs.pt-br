@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762364"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806716"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar o PolyBase para acessar dados externos no Hadoop
 
@@ -88,12 +88,15 @@ Para melhorar o desempenho de consulta, habilite a computação de aplicação p
 
 Para consultar os dados em sua fonte de dados do Hadoop, você precisa definir uma tabela externa para usar em consultas Transact-SQL. As etapas a seguir descrevem como configurar a tabela externa.
 
-1. Crie uma chave mestra no banco de dados. Isso é necessário para criptografar o segredo da credencial.
+1. Crie uma chave mestra no banco de dados, caso ainda não exista. Isso é necessário para criptografar o segredo da credencial.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Argumentos
+    PASSWORD ='password'
 
+    É a senha usada para criptografar a chave mestra no banco de dados. password precisa atender aos requisitos da política de senha do Windows do computador que está hospedando a instância do SQL Server.
 1. Crie uma credencial com escopo do banco de dados para clusters do Hadoop protegidos por Kerberos.
 
    ```sql
@@ -158,11 +161,11 @@ O PolyBase é adequado para três funções:
 - importar dados.  
 - exportar dados.  
 
-As consultas a seguir fornecem exemplo com dados de sensor de carro fictícios.
+As consultas a seguir fornecem exemplo com os dados de sensor de carro fictícios.
 
 ### <a name="ad-hoc-queries"></a>Consultas ad hoc  
 
-A seguinte consulta ad hoc une dados relacionais com dados do Hadoop. Ela seleciona clientes que dirigem mais rápido do que 35 km/h, unindo dados de cliente estruturados armazenados no SQL Server com dados de sensor de carro armazenados no Hadoop.  
+A seguinte consulta ad hoc une dados relacionais com os dados do Hadoop. Ela seleciona clientes que dirigem mais rápido do que 35 km/h, unindo dados estruturados do cliente armazenados no SQL Server com os dados de sensor de carro armazenados no Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -232,5 +235,5 @@ No SSMS, as tabelas externas são exibidas em uma pasta separada **Tabelas Exter
 
 Explore mais maneiras de usar e monitorar o PolyBase nos seguintes artigos:
 
-[Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+[Grupos de expansão do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
 [Solução de problemas do PolyBase](polybase-troubleshooting.md).  

@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031345"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Os recursos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a segu
 |Categoria|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e restauração|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua sendo uma opção preterida. As opções BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD serão descontinuadas.|Nenhum.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Níveis de compatibilidade|Atualização da versão 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando uma versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fica sem [suporte](http://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado será marcado como preterido. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade do banco de dados 100|108|  
+|Níveis de compatibilidade|Atualização da versão 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando uma versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fica sem [suporte](http://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado será marcado como preterido. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade do banco de dados 100|108|  
 |Objetos de banco de dados|Capacidade de retornar conjuntos de resultados de gatilhos|None|Retornando resultados de gatilho|12|  
 |Criptografia|A criptografia que usa o RC4 ou RC4_128 foi substituída e está programada para ser removida na próxima versão. A descriptografia do RC4 e RC4_128 não será substituída.|Usar outro algoritmo de criptografia, como AES.|Algoritmo de criptografia substituído|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -67,14 +67,14 @@ Os recursos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a segu
 |Categoria|Recurso substituído|Substituição|Nome do recurso|ID do recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Níveis de compatibilidade|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Níveis de compatibilidade|Nível de compatibilidade 110 e 120 do banco de dados.|Planeje atualizar o banco de dados e o aplicativo para uma versão futura.|Nível de compatibilidade 110 do banco de dados<br /><br /> Nível de compatibilidade 120 do banco de dados||  
+|Níveis de compatibilidade|Nível de compatibilidade 110 e 120 do banco de dados.|Planeje atualizar o banco de dados e o aplicativo para uma versão futura. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade 110 do banco de dados<br /><br /> Nível de compatibilidade 120 do banco de dados||  
 |XML|Geração de esquema XDR embutido|A diretiva XMLDATA para a opção FOR XML foi preterida. Use geração de XSD no caso dos modos RAW e AUTO. Não há substituição para a diretiva XMLDATA no modo EXPLICIT.|XMLDATA|181|  
 |Backup e restauração|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE ou LOG TO TAPE|235|  
 |Backup e restauração|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Backup e restauração|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
-|Agrupamentos|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Nenhum. Estes agrupamentos existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], mas não são visíveis por meio de fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
-|Agrupamentos|Híndi<br /><br /> Macedônio|Estes agrupamentos existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e superior, mas não são visíveis por meio de fn_helpcollations. Em vez disso, use Macedonian_FYROM_90 e Indic_General_90.|Híndi<br /><br /> Macedônio|190<br /><br /> 193|  
-|Agrupamentos|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
+|Ordenações|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Nenhum. Estas ordenações existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], mas não são visíveis por meio de fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
+|Ordenações|Híndi<br /><br /> Macedônio|Estas ordenações existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e superior, mas não são visíveis por meio de fn_helpcollations. Em vez disso, use Macedonian_FYROM_90 e Indic_General_90.|Híndi<br /><br /> Macedônio|190<br /><br /> 193|  
+|Ordenações|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
 |Configuração|Opção de banco de dados SET ANSI_NULLS OFF e ANSI_NULLS OFF<br /><br /> Opção de banco de dados SET ANSI_PADDING OFF e ANSI_PADDING OFF<br /><br /> Opção de banco de dados SET CONCAT_NULL_YIELDS_NULL OFF e CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS|Nenhum.<br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL sempre serão definidos como ON. SET OFFSETS não estarão disponíveis.|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |Tipos de dados|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |Tipos de dados|Sintaxe de**timestamp** para o tipo de dados **rowversion** |Sintaxe do tipo de dados**rowversion** |timestamp|158|  
@@ -176,6 +176,5 @@ Os recursos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a segu
   
 ## <a name="see-also"></a>Consulte Também  
  [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
   
 

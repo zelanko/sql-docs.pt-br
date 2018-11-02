@@ -1,5 +1,5 @@
 ---
-title: Agrupamentos | Microsoft Docs
+title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,17 +20,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f946b99567f93ee21a4eab5106e72265e8381d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702184"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960760"
 ---
-# <a name="collations"></a>Agrupamentos
+# <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  É uma cláusula que pode ser aplicada a uma definição de banco de dados ou de coluna para definir o agrupamento ou a uma expressão de cadeia de caracteres ao aplicar uma conversão de agrupamento.  
+Define uma ordenação de uma coluna de banco de dados ou de tabela ou uma operação de conversão de ordenação quando aplicado a uma expressão de cadeia de caracteres. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se ele não for especificado durante a criação do banco de dados, a ordenação padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuída ao banco de dados. Se ele não for especificado durante a criação da coluna de tabela, a ordenação padrão do banco de dados será atribuída à coluna.
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,75 +44,73 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>Argumentos  
  *collation_name*  
- É o nome do agrupamento a ser aplicado à expressão, definição de coluna ou de banco de dados. *collation_name* pode ser apenas um *Windows_collation_name* ou um *SQL_collation_name* especificado. *collation_name* deve ser um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
+ É o nome da ordenação a ser aplicado à expressão, definição de coluna ou de banco de dados. *collation_name* pode ser apenas um *Windows_collation_name* ou um *SQL_collation_name* especificado. *collation_name* deve ser um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
   
- *Windows_collation_name* é o nome de agrupamento de um [Nome de Agrupamento do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ *Windows_collation_name* é o nome de ordenação de um [Nome de Ordenação do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- *SQL_collation_name* é o nome de agrupamento de um [Nome de Agrupamento do SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
-  
- Ao aplicar um agrupamento no nível de definição do banco de dados, não é possível usar agrupamentos do Windows somente Unicode com a cláusula COLLATE.  
+ *SQL_collation_name* é o nome de ordenação de um [Nome de Ordenação do SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  **database_default**  
- Faz com que a cláusula COLLATE herde o agrupamento do banco de dados atual.  
+ Faz com que a cláusula COLLATE herde a ordenação do banco de dados atual.  
   
 ## <a name="remarks"></a>Remarks  
- A cláusula COLLATE pode ser especificada em vários níveis. Entre elas estão as seguintes:  
+A cláusula COLLATE pode ser especificada em vários níveis. Entre elas estão as seguintes:  
   
 1.  Criando ou alterando um banco de dados.  
   
-     É possível usar a cláusula COLLATE da instrução CREATE DATABASE ou ALTER DATABASE para especificar o agrupamento padrão do banco de dados. Também é possível especificar um agrupamento ao criar um banco de dados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se um agrupamento não for especificado, o banco de dados será atribuído ao agrupamento padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Você pode usar a cláusula COLLATE da instrução `CREATE DATABASE` ou `ALTER DATABASE` para especificar a ordenação padrão do banco de dados. Também é possível especificar uma ordenação ao criar um banco de dados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se uma ordenação não for especificada, o banco de dados será atribuído à ordenação padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Agrupamentos do Windows somente Unicode podem ser usados com a cláusula COLLATE somente para aplicar agrupamentos aos tipos de dados **nchar**, **nvarchar** e **ntext** em dados nos níveis de coluna e de expressão; não é possível usá-los com a cláusula COLLATE para alterar o agrupamento de uma instância de banco de dados ou de servidor.  
+    > As ordenações somente Unicode do Windows podem ser usadas com a cláusula COLLATE apenas para aplicar ordenações aos tipos de dados **nchar**, **nvarchar** e **ntext** em dados nos níveis de coluna e de expressão. Elas não podem ser usadas com a cláusula COLLATE para definir ou alterar a ordenação de uma instância de banco de dados ou de servidor.
   
 2.  Criando ou alterando uma coluna de tabela.  
   
-     Você pode especificar agrupamentos para cada coluna de cadeia de caracteres usando a cláusula COLLATE da instrução CREATE TABLE ou ALTER TABLE. Também é possível especificar um agrupamento ao criar uma tabela usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se um agrupamento não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados.  
+     Você pode especificar ordenações para cada coluna de cadeia de caracteres usando a cláusula COLLATE da instrução `CREATE TABLE` ou `ALTER TABLE`. Também é possível especificar uma ordenação ao criar uma tabela usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se uma ordenação não for especificada, a coluna será atribuída à ordenação padrão do banco de dados.  
   
-     Também é possível usar a opção `database_default` na cláusula COLLATE para especificar que uma coluna de uma tabela temporária usa o padrão de agrupamento do banco de dados de usuário atual para a conexão em vez de **tempdb**.  
+     Também é possível usar a opção `database_default` na cláusula COLLATE para especificar que uma coluna de uma tabela temporária use o padrão de ordenação do banco de dados de usuário atual para a conexão em vez de **tempdb**.  
   
-3.  Convertendo o agrupamento de uma expressão.  
+3.  Convertendo a ordenação de uma expressão.  
   
-     Você pode usar a cláusula COLLATE para aplicar uma expressão de caractere a um determinado agrupamento. Literais de caracteres e variáveis são atribuídos ao agrupamento padrão do banco de dados atual. Referências de coluna são atribuídas ao agrupamento de definição da coluna.  
+     Você pode usar a cláusula COLLATE para aplicar uma expressão de caractere a uma determinada ordenação. Literais de caracteres e variáveis são atribuídos à ordenação padrão do banco de dados atual. Referências de coluna são atribuídas à ordenação de definição da coluna.  
   
- O agrupamento de um identificador depende do nível em que está definido. Os identificadores de objetos no nível de instância, como logons e nomes de banco de dados, são atribuídos ao agrupamento padrão da instância. Os identificadores de objetos em um banco de dados, como tabelas, exibições e nomes de coluna, são atribuídos ao agrupamento padrão do banco de dados. Por exemplo, duas tabelas com nomes que diferem apenas em maiúsculas e minúsculas podem ser criadas em um banco de dados que possui agrupamento que diferencia maiúsculas e minúsculas, mas não podem ser criadas em um banco de dados com um agrupamento que não faz essa diferenciação. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+A ordenação de um identificador depende do nível em que está definido. Os identificadores de objetos no nível de instância, como logons e nomes de banco de dados, são atribuídos à ordenação padrão da instância. Os identificadores de objetos em um banco de dados, como tabelas, exibições e nomes de coluna, são atribuídos à ordenação padrão do banco de dados. Por exemplo, duas tabelas com nomes que diferem apenas em maiúsculas e minúsculas podem ser criadas em um banco de dados que possui ordenação que diferencia maiúsculas e minúsculas, mas não podem ser criadas em um banco de dados com uma ordenação que não faz essa diferenciação. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- Variáveis, rótulos GOTO, procedimentos armazenados temporários e tabelas temporárias podem ser criados quando o contexto de conexão é associado a um banco de dados e, em seguida, referenciado quando o contexto é alternado para outro banco de dados. Os identificadores para variáveis, os rótulos GOTO, os procedimentos armazenados temporários e as tabelas temporárias estão no agrupamento padrão da instância de servidor.  
+Variáveis, rótulos GOTO, procedimentos armazenados temporários e tabelas temporárias podem ser criados quando o contexto de conexão é associado a um banco de dados e, em seguida, referenciado quando o contexto é alternado para outro banco de dados. Os identificadores para variáveis, os rótulos GOTO, os procedimentos armazenados temporários e as tabelas temporárias estão na ordenação padrão da instância de servidor.  
   
- A cláusula COLLATE pode ser aplicada apenas aos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
+A cláusula COLLATE pode ser aplicada apenas aos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
   
- COLLATE usa *collate_name* para referenciar o nome do agrupamento do SQL Server ou do Windows a ser aplicado à expressão, definição de coluna ou definição de banco de dados. *collation_name* pode ser somente um *Windows_collation_name* ou *SQL_collation_name* especificado e o parâmetro deve conter um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
+COLLATE usa *collate_name* para referenciar o nome da ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Windows a ser aplicada à expressão, à definição de coluna ou à definição de banco de dados. *collation_name* pode ser somente um *Windows_collation_name* ou *SQL_collation_name* especificado e o parâmetro deve conter um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
   
- Geralmente, os agrupamentos são identificados por um nome de agrupamento, exceto na Instalação. Na Instalação, especifique o designador de agrupamento raiz (a localidade do agrupamento) para agrupamentos do Windows e, em seguida, especifique opções de classificação que diferenciam ou não maiúsculas e minúsculas ou caracteres com ou sem acentos.  
+Geralmente, as ordenações são identificadas por um nome de ordenação, exceto na Instalação. Na Instalação, especifique o designador de ordenação raiz (a localidade da ordenação) para ordenações do Windows e, em seguida, especifique opções de classificação que diferenciam ou não maiúsculas e minúsculas ou caracteres com ou sem acentos.  
   
- Execute a função do sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar uma lista de todos os nomes de agrupamentos válidos para agrupamentos do Windows e SQL Server:  
+Você pode executar a função de sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar uma lista de todos os nomes de ordenações válidos para ordenações do Windows e SQL Server:  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só pode aceitar páginas de código que tenham suporte no sistema operacional subjacente. Quando você executa uma ação que depende de agrupamentos, o agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo objeto referenciado deve usar uma página de código com suporte no sistema operacional executado no computador. Essas ações podem incluir o seguinte:  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só pode aceitar páginas de código que tenham suporte no sistema operacional subjacente. Quando você executa uma ação que depende de ordenações, a ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada pelo objeto referenciado deve usar uma página de código com suporte no sistema operacional executado no computador. Essas ações podem incluir o seguinte:  
   
--   Especificando um agrupamento padrão para um banco de dados ao criar ou alterar o banco de dados.  
+-   Especificando uma ordenação padrão para um banco de dados ao criar ou alterar o banco de dados.  
   
--   Especificando um agrupamento para uma coluna ao criar ou alterar uma tabela.  
+-   Especificando uma ordenação para uma coluna ao criar ou alterar uma tabela.  
   
--   Ao restaurar ou anexar um banco de dados, o agrupamento padrão do banco de dados e o agrupamento de qualquer coluna ou parâmetro **char**, **varchar** e **text** no banco de dados devem ser compatíveis com o sistema operacional.  
+-   Ao restaurar ou anexar um banco de dados, a ordenação padrão do banco de dados e a ordenação de qualquer coluna ou parâmetro **char**, **varchar** e **text** no banco de dados devem ser compatíveis com o sistema operacional.  
   
 > [!NOTE]
-> O agrupamento de servidor da Instância Gerenciada do Banco de Dados SQL do Azure é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterado.
+> A ordenação do servidor da Instância Gerenciada do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterada.
 
 > [!NOTE]
 > Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. A perda de dados durante traduções de página de código não é informada.  
   
 > [!NOTE]
-> Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código não compatível com o Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
+> Se a ordenação especificada ou a ordenação usada pelo objeto referenciado usar uma página de código não compatível com o Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-specifying-collation-during-a-select"></a>A. Especificando o agrupamento durante uma seleção  
- O exemplo a seguir cria uma tabela simples e insere 4 linhas. Depois, o exemplo aplica dois agrupamentos ao selecionar dados da tabela, demonstrando como `Chiapas` é classificado de forma diferente.  
+### <a name="a-specifying-collation-during-a-select"></a>A. Especificando a ordenação durante uma instrução SELECT  
+ O exemplo a seguir cria uma tabela simples e insere 4 linhas. Depois, o exemplo aplica duas ordenações ao selecionar dados da tabela, demonstrando como `Chiapas` é classificado de forma diferente.  
   
 ```sql  
 CREATE TABLE Locations  
@@ -156,12 +154,12 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. Exemplos adicionais  
- Para obter mais exemplos que usam **COLLATE**, confira [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples), exemplo **G. Criando um banco de dados e especificando um nome de agrupamento e opções** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando um agrupamento de coluna**.  
+ Para obter mais exemplos que usam **COLLATE**, confira [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples), exemplo **G. Criando um banco de dados e especificando um nome de ordenação e opções** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando uma ordenação de coluna**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Precedência de ordenação](../../t-sql/statements/collation-precedence-transact-sql.md)     
  [Constantes](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)     
  [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)     

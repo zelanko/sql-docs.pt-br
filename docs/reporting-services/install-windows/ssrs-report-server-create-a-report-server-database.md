@@ -1,17 +1,17 @@
 ---
 title: Criar um banco de dados de servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768234"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050890"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório
 
@@ -39,7 +39,7 @@ ms.locfileid: "47768234"
   
 -   Automaticamente: use o Assistente para Configuração do SQL Server, se você escolher a opção de instalação de configuração padrão. No Assistente de Instalação do SQL Server, é a opção **Instalar e configurar** na página Opções de Instalação do Servidor de Relatório. Caso escolha a opção **Instalar somente** , você deverá usar o Reporting Services Configuration Manager para criar o banco de dados.  
   
--   Manualmente: use a ferramenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Você deve criar manualmente o banco de dados do servidor de relatório se você estiver usando um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Para obter mais informações, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   Manualmente: use a ferramenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Você deve criar manualmente o banco de dados do servidor de relatório se você estiver usando um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Para obter mais informações, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  **Modo do SharePoint:** a página de opções de Instalação do Servidor de Relatório apenas tem uma opção **Instalar somente** para o modo do SharePoint. Esta opção instala todos os arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A próxima etapa é criar pelo menos um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de uma das seguintes maneiras:  
   
@@ -60,16 +60,16 @@ ms.locfileid: "47768234"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- A criação do banco de dados do servidor de relatório em um computador remoto requer que você configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você optar por usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , considere cuidadosamente quais credenciais o servidor de relatório deve usar para conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ A criação do banco de dados do servidor de relatório em um computador remoto requer que você configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você optar por usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere cuidadosamente quais credenciais o servidor de relatório deve usar para conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 >  O Servidor de Relatório e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório podem estar em domínios diferentes. Para implantação na Internet, é uma prática comum usar um servidor que esteja atrás de um firewall. Se estiver configurando um servidor de relatório para acesso à Internet, use as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está atrás do firewall e use IPSEC para proteger a conexão.  
   
 ## <a name="database-server-edition-requirements"></a>Requisitos de edição do servidor de banco de dados  
- Ao criar um banco de dados de servidor de relatório, esteja ciente de que nem todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se usadas para hospedar o banco de dados. Para obter mais informações, confira a seção “Requisitos das edições do servidor de banco de dados do servidor de relatório” de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Ao criar um banco de dados de servidor de relatório, esteja ciente de que nem todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se usadas para hospedar o banco de dados. Para obter mais informações, confira [Requisitos das edições do servidor de banco de dados do servidor de relatório](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) em [Recursos do Reporting Services compatíveis com as edições do SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Gerenciador de Configurações do Reporting Services](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Gerenciador de Configurações do Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

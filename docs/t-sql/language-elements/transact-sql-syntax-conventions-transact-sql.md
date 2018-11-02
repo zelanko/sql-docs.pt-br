@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7acbaa7d880abca786c995860dbc6d7068392619
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099897"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47605855"
 |{ } (chaves)|Itens de sintaxe exigidos. Não digite as chaves.|  
 |[**,**...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
 |[...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por espaços em branco.|  
-|;|Terminador de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o sinal de ponto-e-vírgula não seja obrigatório na maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
+|;|Terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o ponto e vírgula não seja necessário para a maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
 |\<label> ::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<label>.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo, \<grouping set>, e uma lista é uma coleção de conjuntos, por exemplo, \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Nomes de partes múltiplas  

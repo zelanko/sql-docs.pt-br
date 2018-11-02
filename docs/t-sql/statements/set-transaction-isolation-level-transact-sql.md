@@ -1,7 +1,7 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c3176c1fbd331310ba3389f6884df139806e9af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100277"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   O nível de isolamento READ COMMITTED com a opção de banco de dados READ_COMMITTED_SNAPSHOT definida como ON.  
   
--   O nível de isolamento SNAPSHOT.  
+-   O nível de isolamento SNAPSHOT. Para obter mais informações sobre isolamento de instantâneo, confira [Isolamento de instantâneo no SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Especifica que as instruções não podem ler dados que foram modificados, mas que ainda não foram confirmados por outras transações. Isso impede leituras sujas. Os dados podem ser alterados por outras transações entre instruções individuais dentro da transação atual, resultando em leituras não repetíveis ou dados fantasmas. Essa é a opção padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -81,10 +81,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Se READ_COMMITTED_SNAPSHOT estiver definido como OFF (o padrão), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará bloqueios compartilhados para impedir que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. O tipo de bloqueio compartilhado determina quando ele será liberado. Os bloqueios de linha são liberados antes que a próxima linha seja processada. Os bloqueios de página são liberados quando a próxima página é lida e bloqueios de tabela são liberados quando a instrução é finalizada.  
   
-    > [!NOTE]  
-    >  Se READ_COMMITTED_SNAPSHOT estiver definido como ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.  
-    >   
-    >  O isolamento de instantâneo oferece suporte a dados FILESTREAM. No modo de isolamento de instantâneos, os dados FILESTREAM lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente dos dados que existiam no início da transação.  
+-   Se READ_COMMITTED_SNAPSHOT estiver definido como ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.
+
+> [!IMPORTANT]  
+> Escolhendo um nível de isolamento da transação não afeta os bloqueios obtidos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que modifica e mantém tal bloqueio até que a transação seja concluída, sem considerar o conjunto de níveis de isolamento para a transação em questão. Além disso, uma atualização feita no nível de isolamento READ_COMMITTED usa bloqueios de atualização nas linhas de dados selecionadas, enquanto uma atualização feita no nível de isolamento SNAPSHOT usa versões de linha para selecionar as linhas a serem atualizadas. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações. Confira o [Guia de controle de versão de linha e bloqueio de transação](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obter mais informações.
+
+> [!NOTE]  
+>  O isolamento de instantâneo oferece suporte a dados FILESTREAM. No modo de isolamento de instantâneos, os dados FILESTREAM lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente dos dados que existiam no início da transação.  
   
  Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT for ON, você poderá usar a dica de tabela READCOMMITTEDLOCK para solicitar bloqueio compartilhado, em vez do controle de versão de linhas, para instruções individuais em transações em execução no nível de isolamento READ COMMITTED.  
   

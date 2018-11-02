@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874354"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806746"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -35,27 +35,28 @@ Para instalar uma versão de avaliação do SQL Server, vá para [avaliações d
 - Memória mínima: 4 GB  
    
 - Espaço mínimo no disco rígido: 2 GB  
+- **Recomendado:** mínimo de 16 GB de RAM
    
 - O TCP/IP deve estar habilitada para o Polybase para funcionar corretamente. O TCP/IP está habilitado por padrão em todas as edições do SQL Server, exceto nas edições Developer e Express do SQL Server. Para que o Polybase funcione corretamente nas edições Developer e Express, é necessário habilitar a conectividade TCP/IP (consulte [Habilitar ou Desabilitar um Protocolo de Rede do Servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
 
-- Uma fonte de dados externa, que é um blob do Azure ou um cluster Hadoop. Para obter as versões do Hadoop compatíveis, consulte [Configurar o PolyBase](#supported). 
-- Instalação do MSVC++ 2012  
+- MSVC++ 2012 
 
-> [!NOTE]
-> Se pretender usar a funcionalidade de pushdown de computação contra Hadoop, você precisará garantir que o cluster do Hadoop de destino tenha componentes principais do HDFS, Yarn/MapReduce com o servidor Jobhistory habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor JobHistory. A consulta falhará se não tiver um desses componentes.
+**Observação**  
 
-**Observações**  
+O PolyBase pode ser instalado apenas em uma instância SQL Server por computador.
 
-O PolyBase pode ser instalado apenas em uma instância SQL Server por computador.  
-   
+> **Importante**
+>
+> Se você pretende usar a funcionalidade de aplicação de computação no Hadoop, garanta que o cluster do Hadoop de destino tenha os componentes principais do HDFS, YARN/MapReduce com o servidor Jobhistory habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor JobHistory. A consulta falhará se não tiver um desses componentes.
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>Nó único ou grupo ScaleOut do PolyBase
 
-Antes de iniciar a instalação do PolyBase em suas Instâncias do SQL Server, é bom planejar se você deseja uma instalação de nó único ou um grupo de expansão do PolyBase. 
+Antes de iniciar a instalação do PolyBase em suas Instâncias do SQL Server, planeje se você desejará uma instalação de nó único ou um [grupo de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
-Para um grupo de expansão do PolyBase, você precisará garantir que: 
+Para um grupo de expansão do PolyBase, você precisará garantir que:
 
 - Todos os computadores estão no mesmo domínio.
-- A mesma conta de serviço e senha sejam usadas durante a instalação.
+- Use a mesma conta de serviço e senha durante a instalação do PolyBase.
 - As Instâncias do SQL Server podem se comunicar entre si pela rede.
 - As instâncias do SQL Server são todas da mesma versão do SQL Server.
 
@@ -63,7 +64,7 @@ Depois de instalar o PolyBase como um grupo autônomo ou de expansão, não é p
 
 ## <a name="install-using-the-installation-wizard"></a>Instalar usando o assistente de instalação  
    
-1. Execute a **Central de Instalação do SQL Server**. Insira a mídia de instalação do SQL Server e clique duas vezes em **Setup.exe**.  
+1. Execute o setup.exe do SQL Server.   
    
 2. Clique em **Instalação**, em **Nova instalação autônoma do SQL Server ou adicionar recursos**.  
    
@@ -71,10 +72,11 @@ Depois de instalar o PolyBase como um grupo autônomo ou de expansão, não é p
 
  ![Serviços do PolyBase](../../relational-databases/polybase/media/install-wizard.png "Serviços do PolyBase")  
    
-4. Na página Configuração do Servidor, configure o **Serviço de Mecanismo de PolyBase do SQL Server** e Serviço de Movimentação de Dados de PolyBase do Servidor para execução na mesma conta.  
+4. Na página Configuração do Servidor, defina o **Serviço Mecanismo PolyBase do SQL Server** e o Serviço Movimentação de Dados PolyBase do SQL Server para serem executados na mesma conta de domínio.  
    
-   > **IMPORTANTE:** Em um grupo de escala horizontal do PolyBase, o serviço de movimentação de dados e de mecanismo de PolyBase em todos os nós devem ser executados na mesma conta de domínio.  
-   > Consulte escala horizontal PolyBase.  
+ > **IMPORTANTE:** 
+>
+>Em um grupo de escala horizontal do PolyBase, o serviço de movimentação de dados e de mecanismo de PolyBase em todos os nós devem ser executados na mesma conta de domínio. Confira [Grupos de escala horizontal do PolyBase](#Enable)
    
 5. Na página **Configuração do PolyBase**, escolha uma das duas opções. Consulte [grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md) para obter mais informações.  
    
@@ -82,20 +84,16 @@ Depois de instalar o PolyBase como um grupo autônomo ou de expansão, não é p
    
      Escolha essa opção para usar a instância do SQL Server como um nó de cabeçalho autônomo.  
    
-   - Use a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase.  A seleção dessa opção abre o firewall para permitir conexões de entrada com o Mecanismo de Banco de Dados do SQL Server, Mecanismo de PolyBase do SQL Server, serviço de Movimentação de Dados de PolyBase do SQL Server e SQL Browser. O firewall é aberto para permitir conexões de entrada de outros nós em um grupo de escala horizontal de PolyBase.  
+   - Use a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase.  A seleção dessa opção abre o firewall para permitir conexões de entrada com o Mecanismo de Banco de Dados do SQL Server, o Mecanismo PolyBase do SQL Server, o serviço Movimentação de Dados PolyBase do SQL Server e o SQL Browser. O firewall é aberto para permitir conexões de entrada de outros nós em um grupo de escala horizontal de PolyBase.  
    
      Esta opção também habilita conexões de firewall do MSDTC (Coordenador de Transações Distribuídas da Microsoft) e modifica as configurações de registro do MSDTC.  
    
 6. Na **página Configuração do PolyBase**, especifique um intervalo de portas com pelo menos seis portas. A instalação do SQL Server alocará as primeiras seis portas disponíveis do intervalo.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **IMPORTANTE:**
   >
   > Após a instalação, é necessário [habilitar o recurso do PolyBase](#enable).
 
-::: moniker-end
 
 ##  <a name="installing"></a> Instalar usando um prompt de comando  
 
@@ -134,12 +132,9 @@ Use os valores nesta tabela para criar scripts de instalação. Os dois serviço
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 Após a instalação, é necessário [habilitar o recurso do PolyBase](#enable).
 
-::: moniker-end
+
 
 **Exemplo**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Habilitar o PolyBase
-
 
 Depois que você concluir a instalação, o Polybase deverá ser habilitado para acessar suas funcionalidades. conectar-se ao SQL Server 2019 CTP 2.0, você precisa habilitar o PolyBase após a instalação usando o seguinte comando Transact-SQL:
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 A instância, em seguida, precisa ser **reiniciada** 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>Notas de pós-instalação  
 
@@ -195,7 +185,7 @@ A instalação do PolyBase do SQL Server cria as seguintes regras de firewall no
 
 - PolyBase do SQL Server – Navegador do SQL – (UDP-In)  
    
-Durante a instalação, se você optar por usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase, essas regras serão habilitadas e o firewall será aberto para permitir conexões de entrada com o mecanismo de banco de dados do SQL Server, o mecanismo PolyBase do SQL Server, o serviço de movimentação de dados do SQL Server PolyBase e o navegador do SQL. No entanto, se o serviço de firewall no computador não estiver em execução durante a instalação, a instalação do SQL Server falhará ao habilitar essas regras. Nesse caso, você deve iniciar o serviço de Firewall no computador e habilitar pós-instalação essas regras.  
+Durante a instalação, se você escolher usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase, essas regras serão habilitadas e o firewall será aberto para permitir conexões de entrada com o Mecanismo de Banco de Dados do SQL Server, o Mecanismo PolyBase do SQL Server o serviço Movimentação de Dados PolyBase do SQL Server e o SQL Browser. No entanto, se o serviço de firewall no computador não estiver em execução durante a instalação, a instalação do SQL Server falhará ao habilitar essas regras. Nesse caso, você deve iniciar o serviço de Firewall no computador e habilitar pós-instalação essas regras.  
    
 #### <a name="to-enable-the-firewall-rules"></a>Para habilitar as regras de firewall  
 

@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830734"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150187"
 ---
 # <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ Para começar, veja: [Melhorando o desempenho da tabela temporária e da variáv
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
 - Um cliente foi capaz de melhorar o desempenho em 40%, simplesmente substituindo TVPs tradicionais por TVPs com otimização de memória: [ingestão de dados IoT de alta velocidade usando o OLTP in-memory no Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- A SentryOne melhorou significativamente a capacidade de ingestão de dados, com quase zero de latência em sua solução de monitoramento, trocando as tabelas no tempdb por tabelas OLTP in-memory como parte das melhorias de escalabilidade da empresa: [Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Provedor de soluções supera o limite máximo do desempenho com inovação no monitoramento de dados).
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extrair, Transformar e Carregar)
 
