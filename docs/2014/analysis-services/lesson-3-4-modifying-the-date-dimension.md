@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168156"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753573"
 ---
 # <a name="modifying-the-date-dimension"></a>Modificando a dimensão de data
   Na tarefa deste tópico, você criará uma hierarquia definida pelo usuário e alterará os nomes de membro exibidos nos atributos Date, Month, Calendar Quarter e Calendar Semester. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
@@ -86,7 +86,7 @@ ms.locfileid: "48168156"
   
 5.  Arraste o **Date Key** de atributos da **atributos** painel no  **\<novo nível >** célula a **hierarquias** painel , sob o **English Month Name** nível.  
   
-6.  No **hierarquias** painel, a barra de título do botão direito do mouse a **hierarquia** , clique em **Renomear**e, em seguida, digite `Calendar Date`.  
+6.  No **hierarquias** painel, a barra de título do botão direito do mouse a **hierarquia** hierarquia, clique em **Renomear**e, em seguida, digite `Calendar Date`.  
   
 7.  Usando o menu de contexto do botão direito do mouse no `Calendar Date` hierarquia, renomear o **English Month Name** nível a `Calendar Month`e, em seguida, renomeie o **Date Key** nível para `Date`.  
   

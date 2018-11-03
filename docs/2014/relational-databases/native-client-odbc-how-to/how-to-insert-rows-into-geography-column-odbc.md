@@ -10,12 +10,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae7a2aaed9c1555b890dca68cbfedf027e9e54f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137426"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753493"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Como inserir linhas em coluna de geografia (ODBC)
   Este exemplo insere duas linhas em uma tabela com uma coluna de geografia de WellKnownBinary (WKB) que usa duas associações diferentes (SQLCCHAR e SQLCBINARY). Em seguida, o exemplo seleciona uma linha daquela tabela e usa ::STAsText() para exibi-la. WKB é 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e o aplicativo imprime no console: POINT(56.4595 -2.9842).  
@@ -37,7 +37,7 @@ ms.locfileid: "48137426"
   
  A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela usada por este exemplo.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -48,7 +48,7 @@ CREATE TABLE SpatialSample (Name varchar(10), Geog Geography)
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -69,7 +69,7 @@ class direxec {
       HSTMT hstmt;   // Statement Handle  
       SQLHDESC hdesc;   // Descriptor handle  
       SQLCHAR szData[MAX_DATA];   // Returned Data Storage  
-      SDWORD cbData;   // Output Lenght of data   
+      SDWORD cbData;   // Output Length of data   
   
       SQLCHAR szConnStrOut[MAX_DATA + 1];  
       SWORD swStrLen;  
@@ -86,7 +86,7 @@ public:
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-      // Allocate the enviroment handle  
+      // Allocate the environment handle  
       rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
       check_rc(rc);  
   
@@ -211,7 +211,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use tempdb  
 GO  
   

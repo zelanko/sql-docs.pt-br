@@ -1,7 +1,7 @@
 ---
 title: DM external_script_requests | Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2016
+ms.date: 10/28/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,27 +19,26 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb5597a9163ac87e9f6c08421025340cf8263b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843464"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743182"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Retorna uma linha para cada conta de trabalho ativa que executa um script externo.
- 
   
 > [!NOTE] 
 >  
->  Essa DMV estará disponível somente se você tiver instalado e habilitado o recurso que dá suporte à execução de script externo. Para obter informações sobre como fazer isso para scripts do R, consulte [Configurar o SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+> Este modo de exibição de gerenciamento dinâmico (DMV) está disponível somente se você tiver instalado e habilitado o recurso que dá suporte à execução de script externo. Para obter mais informações, consulte [R Services no SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) e [serviços Machine Learning (R, Python) no SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**Identificador exclusivo**|ID do processo que enviou a solicitação de script externo. Isso corresponde à ID do processo recebida por [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|language|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. Atualmente, há suporte apenas para `R` .|  
+|language|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. |  
 |degree_of_parallelism|**int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
 |external_user_name|**nvarchar**|A conta de trabalho do Windows na qual o script foi executado.|  
   
@@ -54,12 +53,11 @@ Retorna uma linha para cada conta de trabalho ativa que executa um script extern
 
 Esta exibição pode ser filtrada usando o identificador de linguagem de script.
 
-A exibição também retorna a conta de trabalho na qual o script está sendo executado. Para obter informações sobre as contas de trabalho usadas pelos scripts do R, consulte [Modificar o pool de contas de usuário para o R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
+A exibição também retorna a conta de trabalho na qual o script está sendo executado. Para obter informações sobre contas de trabalho usadas pelos scripts externos, consulte as identidades usadas no processamento de seção (SQLRUserGroup) [visão geral de segurança para a estrutura de extensibilidade no SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
-O GUID retornado no campo **external_script_request_id** também representa o nome do arquivo do diretório seguro no qual os arquivos temporários são armazenados. Cada conta de trabalho, como MSSQLSERVER01, representa um único logon SQL ou usuário do Windows, e pode ser usado para executar várias solicitações de script. Por padrão, esses arquivos temporários são removidos após a conclusão do script solicitado. Se você precisar preservar esses arquivos por um período para fins de depuração, você poderá alterar o sinalizador de limpeza, conforme descrito neste tópico: [Configurar e gerenciar Extensões de Análise Avançada](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md).  
+O GUID retornado no campo **external_script_request_id** também representa o nome do arquivo do diretório seguro no qual os arquivos temporários são armazenados. Cada conta de trabalho, como MSSQLSERVER01, representa um único logon SQL ou usuário do Windows, e pode ser usado para executar várias solicitações de script. Por padrão, esses arquivos temporários são removidos após a conclusão do script solicitado.
  
 Essa DMV monitora apenas os processos ativos e não pode relatar scripts que já foram concluídos. Se você precisar controlar a duração de scripts, recomendamos que você adicione informações de tempo no script e capture-o como parte da execução do script.
-
 
 ## <a name="examples"></a>Exemplos  
   

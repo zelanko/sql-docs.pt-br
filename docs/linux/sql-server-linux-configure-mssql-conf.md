@@ -4,18 +4,18 @@ description: Este artigo descreve como usar a ferramenta mssql-conf para definir
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694664"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753583"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql-conf
 
@@ -29,12 +29,12 @@ ms.locfileid: "47694664"
 |||
 |---|---|
 | [Agente](#agent) | Habilitar o SQL Server Agent |
-| [Agrupamento](#collation) | Defina um novo agrupamento para o SQL Server no Linux. |
+| [Ordenação](#collation) | Defina um novo agrupamento para o SQL Server no Linux. |
 | [Comentários do cliente](#customerfeedback) | Escolha se o SQL Server envia comentários à Microsoft. |
 | [Perfil do Database Mail](#dbmail) | Defina o perfil de email do banco de dados padrão para o SQL Server no Linux. |
 | [Diretório de dados padrão](#datadir) | Altere o diretório padrão para novos arquivos de dados de banco de dados do SQL Server (. mdf). |
 | [Diretório de log padrão](#datadir) | Altera o diretório padrão para novos arquivos de log (. ldf) de banco de dados do SQL Server. |
-| [Diretório de arquivos de banco de dados mestre padrão](#masterdatabasedir) | Altera o diretório padrão para os arquivos de banco de dados mestre na instalação existente do SQL.|
+| [Diretório de banco de dados mestre padrão](#masterdatabasedir) | Altera o diretório padrão para os arquivos de log e banco de dados mestre.|
 | [Nome do arquivo de banco de dados mestre padrão](#masterdatabasename) | Altera o nome dos arquivos de banco de dados mestre. |
 | [Diretório de despejo padrão](#dumpdir) | Altere o diretório padrão para novos despejos de memória e outros arquivos de solução de problemas. |
 | [Diretório de log de erro padrão](#errorlogdir) | Altera o diretório padrão para novos arquivos de log de erros do SQL Server, rastreamento do Profiler padrão, XE de sessão de integridade do sistema e Hekaton sessão XE. |
@@ -57,7 +57,7 @@ ms.locfileid: "47694664"
 |||
 |---|---|
 | [Agente](#agent) | Habilitar o SQL Server Agent |
-| [Agrupamento](#collation) | Defina um novo agrupamento para o SQL Server no Linux. |
+| [Ordenação](#collation) | Defina um novo agrupamento para o SQL Server no Linux. |
 | [Comentários do cliente](#customerfeedback) | Escolha se o SQL Server envia comentários à Microsoft. |
 | [Perfil do Database Mail](#dbmail) | Defina o perfil de email do banco de dados padrão para o SQL Server no Linux. |
 | [Diretório de dados padrão](#datadir) | Altere o diretório padrão para novos arquivos de dados de banco de dados do SQL Server (. mdf). |
@@ -190,7 +190,7 @@ O **filelocation.defaultdatadir** e **filelocation.defaultlogdir** configuraçõ
 
 ## <a id="masterdatabasedir"></a> Alterar o local de diretório do arquivo de banco de dados mestre padrão
 
-O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Por padrão, esse local é /var/opt/mssql/data. 
+O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Por padrão, esse local é /var/opt/mssql/data.
 
 Para alterar essas configurações, use as seguintes etapas:
 
@@ -214,13 +214,16 @@ Para alterar essas configurações, use as seguintes etapas:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > Além de mover os dados mestre e os arquivos de log, isso também move o local padrão para todos os outros bancos de dados do sistema.
+
 1. Interrompa o serviço do SQL Server:
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Mova o Master. mdf e masterlog.ldf: 
+1. Mova o Master. mdf e masterlog.ldf:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ Para alterar essas configurações, use as seguintes etapas:
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> Se o SQL Server não é possível localizar os arquivos mdf e Mastlog no diretório especificado, uma cópia do modelo dos bancos de dados do sistema será automaticamente criada no diretório especificado e do SQL Server será inicializado com êxito. No entanto, metadados, como bancos de dados do usuário, logons de servidor, certificados de servidor, chaves de criptografia, trabalhos do SQL agent ou senha de logon de SA antiga não serão atualizado no novo banco de dados mestre. Você precisará parar o SQL Server e mover seu antigo Master. mdf e Mastlog para o novo local especificado e iniciar o SQL Server para continuar usando os metadados existentes. 
 
+   > [!NOTE]
+   > Se o SQL Server não é possível localizar os arquivos mdf e Mastlog no diretório especificado, uma cópia do modelo dos bancos de dados do sistema será automaticamente criada no diretório especificado e do SQL Server será inicializado com êxito. No entanto, metadados, como bancos de dados do usuário, logons de servidor, certificados de servidor, chaves de criptografia, trabalhos do SQL agent ou senha de logon de SA antiga não serão atualizado no novo banco de dados mestre. Você precisará parar o SQL Server e mover seu antigo Master. mdf e Mastlog para o novo local especificado e iniciar o SQL Server para continuar usando os metadados existentes.
+ 
+## <a id="masterdatabasename"></a> Alterar o nome dos arquivos de banco de dados mestre
 
-## <a id="masterdatabasename"></a> Altere o nome dos arquivos de banco de dados mestre.
+O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Você também pode usar isso para alterar o nome dos arquivos de log e banco de dados mestres. 
 
-O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Por padrão, esse local é /var/opt/mssql/data. Para alterar essas configurações, use as seguintes etapas:
+Para alterar essas configurações, use as seguintes etapas:
 
 1. Interrompa o serviço do SQL Server:
 
@@ -251,8 +255,11 @@ O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > Você só pode alterar o nome do banco de dados mestre e arquivos de log depois que o SQL Server foi iniciado com êxito. Antes da execução inicial, o SQL Server espera que os arquivos a ser denominado Master. mdf e Mastlog.
 
 1. Alterar o nome dos arquivos de dados e de log de banco de dados mestre 
 
@@ -266,8 +273,6 @@ O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações 
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Alterar o local do diretório de despejo padrão
 

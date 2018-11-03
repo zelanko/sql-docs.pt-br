@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019663"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753563"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lição 3-4-modificando a dimensão de data
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lição 3-4: modificando a dimensão de data
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Na tarefa deste tópico, você criará uma hierarquia definida pelo usuário e alterará os nomes de membro exibidos nos atributos Date, Month, Calendar Quarter e Calendar Semester. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
@@ -86,7 +86,7 @@ Você pode criar uma nova hierarquia arrastando um atributo do painel **Atributo
   
 5.  Arraste o atributo **Chave de Data** do painel **Atributos** até a célula **<new level>** do painel **Hierarquias** , sob o nível **Nome do Mês em Inglês** .  
   
-6.  No painel **Hierarquias** , clique com o botão direito do mouse na barra de título da hierarquia **Hierarquia** , clique em **Renomear**e digite **Calendar Date**.  
+6.  No **hierarquias** painel, a barra de título do botão direito do mouse a **hierarquia** hierarquia, clique em **Renomear**e, em seguida, digite **data do calendário**.  
   
 7.  Usando o menu de contexto que se clica com o botão direito do mouse, na hierarquia **Calendar Date** , renomeie o nível **English Month Name** como **Calendar Month**e o nível **Date Key** como **Date**.  
   

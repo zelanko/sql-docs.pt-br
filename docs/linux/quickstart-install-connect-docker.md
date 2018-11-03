@@ -4,7 +4,7 @@ description: Neste início rápido mostra como usar o Docker para executar o SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085282"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753543"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guia de início rápido: Imagens de contêiner executar o SQL Server com o Docker
 
@@ -44,8 +44,9 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
 ## <a id="requirements"></a> Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
-- Mínimo de 2 GB de espaço em disco
-- Mínimo de 2 GB de RAM
+- Docker **overlay2** driver de armazenamento. Esse é o padrão para a maioria dos usuários. Se você achar que você não estiver usando esse provedor de armazenamento e precisa alterar, consulte as instruções e avisos na [documentação do docker para a configuração overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Mínimo de 2 GB de espaço em disco.
+- Mínimo de 2 GB de RAM.
 - [Requisitos do sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so
