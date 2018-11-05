@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460311"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226258"
 ---
 # <a name="polybase-features-and-limitations"></a>Recursos e limitações do PolyBase
 
@@ -64,13 +64,9 @@ O PolyBase apresenta as seguintes limitações:
 
 - O tamanho máximo de linha possível, incluindo o comprimento total das colunas de comprimento variável, não pode exceder 32 KB no SQL Server ou 1 MB no SQL Data Warehouse do Azure.
 
-- O PolyBase não dá suporte aos tipos de dados de Hive 0,12 + (ou seja, Char(), VarChar())
-
 - Durante a exportação de dados em um Formato de Arquivo ORC do SQL Server ou do Azure SQL Data Warehouse, as colunas com excesso de texto podem ser limitadas a até 50 colunas, devido a erros de memória insuficiente do Java. Para solucionar esse problema, exporte apenas um subconjunto das colunas.
 
-- Não é possível ler ou gravar dados criptografados em repouso no Hadoop. Isso inclui a Criptografia Transparente ou as Zonas Criptografadas do HDFS.
-
-- O PolyBase não poderá se conectar a uma instância de Hortonworks se o KNOX estiver habilitado.
+- O PolyBase não poderá se conectar a uma instância de Hortonworks se o Knox estiver habilitado.
 
 - Se você estiver usando tabelas do Hive com transacional = true, o PolyBase não poderá acessar os dados no diretório da tabela do Hive.
 
@@ -80,10 +76,6 @@ O PolyBase apresenta as seguintes limitações:
 - [O PolyBase não é instalado durante a adição de um nó a um Cluster de Failover do SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- A autenticação de integração não é compatível. Somente o nome de usuário e a senha são compatíveis por enquanto.  
-
-- A criptografia é habilitada por padrão.
 
 ## <a name="next-steps"></a>Próximas etapas
 

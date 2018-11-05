@@ -17,12 +17,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e41301df0559ac7cbcfc75c9fb90967e7ddfc4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665601"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226378"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode processar inst
 - Execução em modo de lote
 
 ### <a name="row-mode-execution"></a>Execução em modo de linha
-*A execução em modo de linha* é um método de processamento de consulta usado com tabelas RDMBS tradicionais, nas quais os dados são armazenados em formato de linha. Quando uma consulta é executada e acessa dados em tabelas com armazenamento em linha, os operadores de árvore de execução e operadores filho leem cada linha necessária, em todas as colunas especificadas no esquema de tabela. De cada linha que é lida, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera então as colunas que são necessárias para o conjunto de resultados, conforme referenciado por uma instrução SELECT, um predicado JOIN ou um predicado de filtro.
+*A execução em modo de linha* é um método de processamento de consulta usado com tabelas RDMBS tradicionais, nas quais os dados são armazenados em formato de linha. Quando uma consulta é executada e acessa dados em tabelas com armazenamento em linha, os operadores de árvore de execução e os operadores filho leem cada linha necessária, em todas as colunas especificadas no esquema de tabela. De cada linha que é lida, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera então as colunas que são necessárias para o conjunto de resultados, conforme referenciado por uma instrução SELECT, um predicado JOIN ou um predicado de filtro.
 
 > [!NOTE]
 > A execução em modo de linha é muito eficiente para cenários OLTP, mas pode ser menos eficiente na verificação de grandes quantidades de dados, por exemplo, em cenários de Data Warehouse.

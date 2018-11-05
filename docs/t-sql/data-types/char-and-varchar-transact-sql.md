@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644004"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960790"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ As codificações multibyte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 Se você tiver sites compatíveis com vários idiomas:
 - A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], considere o uso de uma ordenação habilitada para UTF-8 para dar suporte a Unicode e minimizar os problemas de conversão de caracteres. 
-- Caso use uma versão inferior do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere o uso dos tipos de dados **nchar** ou **nvarchar** Unicode para minimizar os problemas de conversão de caracteres.   
+- Caso use uma versão inferior do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere usar os tipos de dados **nchar** ou **nvarchar** Unicode para minimizar problemas de conversão de caracteres.   
 
 Caso use **char** ou **varchar**, recomendamos que:
 - Use **char** quando os tamanhos das entradas de dados de coluna forem consistentes.  
@@ -64,12 +64,12 @@ Se SET ANSI_PADDING for OFF quando CREATE TABLE ou ALTER TABLE for executada, um
   
 > [!WARNING]
 > Cada coluna varchar(max) ou nvarchar(max) não nula requer 24 bytes de alocação fixa adicional que conta para o limite de linha de 8.060 bytes durante uma operação de classificação. Isso pode criar um limite implícito para o número de colunas varchar(max) ou nvarchar(max) não nulas que podem ser criadas em uma tabela.  
-Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.
+Nenhum erro especial é fornecido quando a tabela é criada (além do aviso comum de que o tamanho máximo da linha excede o máximo permitido de 8.060 bytes) ou no momento da inserção de dados. Esse tamanho de linha pode causar erros (por exemplo, o erro 512) durante algumas operações normais, como uma atualização de chave de índice clusterizado ou classificações do conjunto de colunas completo, que os usuários não podem prever até que uma operação seja executada.
   
 ##  <a name="_character"></a> Convertendo dados de caractere  
 Quando são convertidas expressões character a um tipo de dados character de um tamanho diferente, os valores muito longos para o novo tipo de dados são truncados. O tipo **uniqueidentifier** é considerado um tipo de caractere para fins de conversão de uma expressão de caractere e, portanto, está sujeito às regras de truncamento para conversão em um tipo de caractere. Consulte a seção de Exemplos a seguir.
   
-Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, a ordenação do valor de entrada é atribuída ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, a ordenação padrão do banco de dados atual será atribuída ao valor convertido. Em qualquer caso, você pode atribuir uma ordenação específica usando a cláusula [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+Quando uma expressão character é convertida em uma expressão character de um tipo de dados ou tamanho diferente, como de **char(5)** em **varchar(5)** ou **char(20)** para **char(15)**, a ordenação do valor de entrada é atribuída ao valor convertido. Se uma expressão noncharacter for convertida em um tipo de dados character, a ordenação padrão do banco de dados atual será atribuída ao valor convertido. Em qualquer caso, você pode atribuir uma ordenação específica usando a cláusula [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
 > Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. Como em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a perda de dados não é informada durante as conversões de página de código.  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Confira também
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
