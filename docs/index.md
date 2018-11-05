@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336265"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971047"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -255,7 +255,7 @@ ms.locfileid: "49336265"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Design do banco de dados</h3>
-                                                          <p><b>FileStream, Filetable, dados espaciais, exibições, gatilhos, grafos, números de sequência, procedimentos armazenados, controle de alterações </b> </p>
+                                                          <p><b>Fluxo de arquivos, Filetable, grafos, números de sequência, dados espaciais, procedimentos armazenados, gatilhos, controle de alterações, exibições </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336265"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Consultar dados</h3>
-                                                          <p><b>Cursores, sinônimos, scripts, uniões, funções definidas pelo usuário, pesquisa de texto completo </b></p>
+                                                          <p><b>Pesquisa de texto completo, junções, scripts, sinônimos, funções definidas pelo usuário</b></p>
                                                       </div>
                                                   </div>
                                               </div>
