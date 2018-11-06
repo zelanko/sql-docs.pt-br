@@ -1,7 +1,7 @@
 ---
 title: Agente de instantâneo de replicação | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6553c3531545a17b6a47ad88cb2fbeace845a1b6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: d15b66563af888e38734cc14a975fee4b19a6285
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169367"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237052"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,6 +133,9 @@ snapshot [ -?]
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
+
+ > [!NOTE]  
+ >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro ‘Alias Name’ deve ser o nome do servidor e o parâmetro ‘Server’ deve ser definido como o nome totalmente qualificado do SQL Server.
   
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   

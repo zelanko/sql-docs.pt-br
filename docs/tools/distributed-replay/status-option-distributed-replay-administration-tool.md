@@ -1,22 +1,20 @@
 ---
 title: Opção de status (ferramenta de administração do Distributed Replay) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 042c6910d3c8c4aa410768b1a2197719d4922937
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 3e7f3ec2d0dfd482b26dcb4f67922387094b1e74
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254342"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opção de status (ferramenta de administração do Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
