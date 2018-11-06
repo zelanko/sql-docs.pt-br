@@ -5,8 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12e9df07ba16f7fd2bfe1ec13f6bdc85167d53db
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748394"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033703"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|As sintaxes de recurso preterido ALTER LOGIN WITH SET CREDENCIAL ou ALTER LOGIN WITH NO CREDENTIAL foram encontradas. Em seu lugar, use as sintaxes ADD ou DROP CREDENCIAL. Ocorre uma vez por compilação.|  
-|Azeri_Cyrilllic_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Azeri_Latin_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
+|Azeri_Cyrilllic_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Azeri_Latin_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
 |BACKUP DATABASE ou LOG TO TAPE|O recurso preterido BACKUP { DATABASE &#124; LOG } TO TAPE ou BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape* foi encontrado.<br /><br /> Em seu lugar, use { DATABASE &#124; LOG } TO DISK ou BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*. Ocorre uma vez por uso.|  
 |BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|Os recursos preteridos BACKUP DATABASE WITH MEDIAPASSWORD ou BACKUP LOG WITH MEDIAPASSWORD foram encontrados. Não use WITH MEDIAPASSWORD.|  
 |BACKUP DATABASE ou LOG WITH PASSWORD|Os recursos preteridos BACKUP DATABASE WITH PASSWORD ou BACKUP LOG WITH PASSWORD foram encontrados. Não use WITH PASSWORD.|  
@@ -109,7 +108,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |FULLTEXTSERVICEPROPERTY('DataTimeout')|A propriedade DataTimeout da função FULLTEXTSERVICEPROPERTY foi encontrada. Evite usar esta propriedade.|  
 |FULLTEXTSERVICEPROPERTY('ResourceUsage')|A propriedade ResourceUsage da função FULLTEXTSERVICEPROPERTY foi encontrada. Evite usar esta propriedade.|  
 |GROUP BY ALL|O número total de vezes que a sintaxe GROUP BY ALL foi encontrada. Modifique a sintaxe para agrupar de acordo com tabelas específicas.|  
-|Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Indic_General_90.|  
+|Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
 |Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
@@ -118,9 +117,9 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |INSERT NULL em colunas TIMESTAMP|Um valor NULL foi inserido em uma coluna TIMESTAMP. Use um valor padrão. Ocorre uma vez por compilação.|  
 |INSERT_HINTS||  
-|Korean_Wansung_Unicode|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Lithuanian_Classic|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Macedônio|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Macedonian_FYROM_90.|  
+|Korean_Wansung_Unicode|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Lithuanian_Classic|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Macedônio|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|A sintaxe MODIFY FILEGROUP READONLY foi encontrada. Reescreva as instruções para usar a sintaxe READ_ONLY. Ocorre uma vez por compilação.|  
 |MODIFY FILEGROUP READWRITE|A sintaxe MODIFY FILEGROUP READWRITE foi encontrada. Reescreva as instruções para usar a sintaxe READ_WRITE. Ocorre uma vez por compilação.|  
 |Nome de coluna com mais de duas partes|Uma consulta usou um nome de 3 partes ou de 4 partes na lista de colunas. Altere a consulta para usar os nomes de 2 partes em conformidade com o padrão. Ocorre uma vez por compilação.|  
@@ -230,7 +229,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sp_srvrolepermission|O procedimento preterido sp_srvrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_unbindefault|O procedimento sp_unbindefault foi encontrado. Em vez disso, use a palavra-chave DEFAULT em instruções CREATE TABLE ou ALTER TABLE. Ocorre uma vez por compilação.|  
 |sp_unbindrule|O procedimento sp_unbindrule foi encontrado. Use restrições de verificação em vez de regras. Ocorre uma vez por compilação.|  
-|SQL_AltDiction_CP1253_CS_AS|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
+|SQL_AltDiction_CP1253_CS_AS|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
 |Literais de cadeia de caracteres como aliases de coluna|Foi encontrada sintaxe que contém uma cadeia de caracteres usada como um alias de coluna em uma instrução SELECT, como `'string' = expression`. Não use. Ocorre uma vez por compilação.|  
 |sys.sql_dependencies|Referências a sys.sql_dependencies foram encontradas. Use sys.sql_expression_dependencies em seu lugar. Ocorre uma vez por compilação.|  
 |sysaltfiles|Referências a sysaltfiles foram encontradas. Use sys.master_files em seu lugar. Ocorre uma vez por compilação.|  

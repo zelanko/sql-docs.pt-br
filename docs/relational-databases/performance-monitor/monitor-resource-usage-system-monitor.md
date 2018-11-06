@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -27,12 +26,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a27ba4d3572ae0d37ce39f610eda5219c480648d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 630de745f16e43a3ef470205713aec93fee80736
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609944"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030463"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "47609944"
   
 -   Exibir relatórios sobre a atividade atual ou criar relatórios a partir de arquivos de log existentes.  
   
--   Salvar gráficos, alertas, logs ou configurações de relatórios individuais ou toda a configuração do espaço de trabalho, para reutilização.  
+-   Salvar gráficos, alertas, logs ou configurações de relatórios individuais ou toda a configuração do workspace, para reutilização.  
   
     > [!NOTE]  
     >  O Monitor do Sistema substituiu o Monitor de Desempenho a partir do Windows NT 4.0. Você pode usar o Monitor do Sistema ou o Monitor de Desempenho para essas tarefas.  

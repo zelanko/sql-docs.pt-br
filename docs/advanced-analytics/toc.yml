@@ -87,13 +87,13 @@ items:
     - name: Aprender análise no banco de dados
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: Explorar e visualizar dados
+      - name: 1 – Visualizar dados
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Criar recursos de dados
+      - name: 2 – Criar recursos de dados
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Treinar e salvar o modelo
+      - name: 3 – Treinar e salvar em SQL
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Colocar o modelo em operação
+      - name: 4 – Prever resultados
         href: tutorials/sqldev-py6-operationalize-the-model.md
     - name: Criar um modelo usando revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md
@@ -325,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 33a789dc8cfb6d632e5d2251c1c1105f677e9d3f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 38a11ee71e6c69c0305258b8f307ac5c6beb3481
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743211"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030094"
