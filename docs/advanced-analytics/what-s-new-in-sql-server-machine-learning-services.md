@@ -3,18 +3,18 @@ title: O que&#39;s novos no SQL Server Machine Learning Services | Microsoft Doc
 description: Lançamentos de novos recursos para cada versão do SQL Server 2016 R Services, Microsoft R Server, serviços de aprendizado de máquina do SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712561"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269650"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,9 +103,9 @@ No Linux, SQL Server 2017 não tem integração de R ou Python, mas você pode u
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="azure-sql-database-roadmap"></a>Roteiro de banco de dados SQL do Azure
+## <a name="machine-learning-services-in-azure-sql-database"></a>Serviços no banco de dados SQL do Azure Machine Learning
 
-Atualmente, não há nenhum suporte para serviços Machine Learning (R e Python) no banco de dados SQL. Suporte está previsto, mas não há nenhuma data de lançamento projetada no momento.  
+Serviços de Machine Learning (com R) no banco de dados SQL está em visualização pública. Para obter mais informações, consulte [guia de início rápido: uso dos serviços Machine Learning (com R) no banco de dados do SQL do Azure (visualização)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
 
 ## <a name="next-steps"></a>Próximas etapas
 

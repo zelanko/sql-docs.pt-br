@@ -2,7 +2,7 @@
 title: Extensão de dados Studio SQL Server 2019 do Azure (visualização) | Microsoft Docs
 description: Extensão de 2019 Preview do SQL Server para o Studio de dados do Azure
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411163"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269809"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -30,9 +30,9 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18 de outubro de 2018|0.7.2
-   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18 de outubro de 2018 |0.7.2
-   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18 de outubro de 2018 |0.7.2
+   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038184)|6 de novembro de 2018 |0.8.0
+   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038178)|6 de novembro de 2018 |0.8.0
+   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038246)|6 de novembro de 2018 |0.8.0
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
@@ -42,6 +42,27 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
 1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o progresso na janela de saída, e pode levar vários minutos.
 
+## <a name="release-notes-v080"></a>Notas de versão (v0.8.0)
+*Blocos de anotações*:
+* Adicionando células antes / depois existente agora há suporte para células, clicando no botão de célula "Mais ações"
+* **Adicionar nova Conexão** opção foi adicionada para as conexões na lista suspensa "Anexar a"
+* Um **reinstalar as dependências do bloco de anotações** comando foi adicionado para ajudar com as atualizações de pacote do Python e resolver casos em que o install foi parado parada no meio fechando o aplicativo. Isso pode ser executado a partir da paleta de comandos (use `Ctrl/Cmd+Shift+P` e digite `Reinstall Notebook Dependencies`)
+* O pacote do python PROSA foi atualizado para a versão 1.1.0 e inclui uma série de correções de bugs. Use o **reinstalar as dependências do bloco de anotações** comando para este pacote de atualização
+* Um **limpar saída** agora há suporte para o comando clicando o **mais ações** botão da célula
+* Corrigido o seguinte problemas relatados pelo cliente:
+  * Sessão de notebook não pôde iniciar no Windows devido a problemas de caminho
+  * Não foi possível iniciar o bloco de anotações na pasta raiz de uma unidade, como C:\ ou D:\
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) não é possível editar os blocos de anotações criados a partir de anúncios no VS Code
+  * Link da interface do usuário do Spark agora funciona ao executar um kernel do Spark
+  * Renomeado de "Gerenciado por pacotes" para "Instalar pacotes"
+
+*Criar dados externos*:
+
+* Mensagens de erro podem ser copiados e foram separadas em um modo de exibição resumido e detalhado para o mais fácil
+* Layout de interface do usuário aprimorada e muito mais confiabilidade e tratamento de erros
+* Corrigido o seguinte problemas relatados pelo cliente:
+  * Tabelas com mapeamentos de coluna inválido são mostradas como desabilitados e um aviso explica o erro
+
 ## <a name="release-notes-v072"></a>Notas de versão (v0.7.2)
 * Gerenciador de recursos do Azure agora é interno ao estúdio de dados do Azure e foi removido dessa extensão. Agradecemos seus comentários sobre isso!
 * Desempenho aprimorado de blocos de anotações com o número de células de Markdown.
@@ -50,7 +71,7 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 * Suporte ao reinstalar as dependências do bloco de anotações. Isso é útil se o usuário fechou anteriormente Studio do Azure Data parcialmente por meio de instalação.
 * Cancelando a execução de célula no bloco de anotações de suporte.
 * Confiabilidade aprimorada ao usar o Assistente para criar dados externos, especificamente quando conexão ocorrem erros.
-* Bloquear o uso do Assistente para criar dados externos se o Polybase não está habilitado ou está em execução no servidor de destino.
+* Bloquear o uso do Assistente para criar dados externos se o PolyBase não está habilitado ou está em execução no servidor de destino.
 * Verificar ortografia e correções relacionadas ao SQL Server 2019 e criar dados externos de nomenclatura.
 * Removido um grande número de erros do console de depuração do estúdio de dados do Azure.
 
@@ -83,7 +104,7 @@ Para obter detalhes, consulte [Clusters de Big Data](../big-data-cluster/big-dat
 * Adicione as células de código ou markdown por meio de botões no cabeçalho de bloco de anotações. Remova as células com o ícone de Lixeira à esquerda de cada célula.
 * Executar as células com o botão Reproduzir para células de código e ativar/desativar a edição de markdown e visualizar com o ícone de olho
 
-## <a name="polybase-create-external-table-wizard"></a>O Polybase criar Assistente de tabela externa
+## <a name="polybase-create-external-table-wizard"></a>O PolyBase criar Assistente de tabela externa
 
 * De uma instância do SQL Server 2019 a *criar Assistente de tabela externa* pode ser aberto de três maneiras:
   * Clique com botão direito em um servidor, escolha **Manage**, clique na guia para o SQL Server 2019 (visualização) e escolha **Create External Table**.
@@ -106,3 +127,5 @@ Para obter detalhes, consulte [Clusters de Big Data](../big-data-cluster/big-dat
 
 * Se a senha não é salvo durante a criação de uma conexão, algumas ações como enviar trabalho do Spark podem não ter êxito.
 * Blocos de anotações ipynb existentes devem ser atualizados para a versão 4 ou superior para carregar conteúdo no visualizador.
+* Executando o **reinstalar as dependências do bloco de anotações** comando pode mostrar 2 tarefas na exibição de tarefas, um deles falha. Isso não causa falha na instalação
+* Escolhendo **adicionar nova Conexão** em um bloco de anotações e clicando em ' Cancelar ' fará com que **Selecionar Conexão** a serem mostrados, mesmo se você já estava conectado.

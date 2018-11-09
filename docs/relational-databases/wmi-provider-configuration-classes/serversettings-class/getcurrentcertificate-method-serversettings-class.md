@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - GetCurrentCertificate Method (ServerSettings Class)
@@ -19,12 +18,12 @@ ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dff8dcb895a3fdacedd300113e156b4bb537128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12f8883713db413fd8f4b8afd66629c6c8809eb4
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841114"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216254"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Método GetCurrentCertificate (classe ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ object.GetCurrentCertificate(SHA)
   
 ## <a name="parts"></a>Partes  
  *object*  
- Um **ServerSettings** que representa as configurações do servidor em uma instância do objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Um objeto **ServerSettings** que representa as configurações de servidor em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parâmetros  
   

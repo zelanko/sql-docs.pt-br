@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693544"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269441"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositórios para instalar e atualizar o SQL Server no Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693544"
 Este artigo descreve como configurar o repositório correto para atualizações e instalações do SQL Server 2017 e 2019 do SQL Server no Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 já está disponível! Para testá-la, use este artigo para configurar o novo **mssql-server-visualização** repositório. Em seguida, instale usando as instruções na [guia de instalação](sql-server-linux-setup.md).
+> Visualização do SQL Server 2019 agora está disponível! Para testá-la, use este artigo para configurar o novo **mssql-server-visualização** repositório. Em seguida, instale usando as instruções na [guia de instalação](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a>Repositórios
 
@@ -32,7 +32,7 @@ Quando você instala o SQL Server no Linux, você deve configurar um repositóri
 | Repositório | Nome | Description |
 |---|---|---|
 | **Visualização (2017)** | **mssql-server** | Repositório do SQL Server 2017 CTP e RC (Descontinuado). |
-| **Visualização (2019)** | **MSSQL-server-visualização** | Repositório de 2019 CTP do SQL Server e o RC. |
+| **Visualização (2019)** | **MSSQL-server-visualização** | Visualização do SQL Server 2019 e repositório RC. |
 | **CU** | **mssql-server-2017** | Repositório do SQL Server 2017 atualização cumulativa (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Repositório do SQL Server 2017 GDR somente para atualizações críticas. |
 

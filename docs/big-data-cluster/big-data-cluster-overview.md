@@ -4,19 +4,21 @@ description: Saiba mais sobre clusters de big data de 2019 do SQL Server (visual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 603e84f3f4e1e27052df6996ae06933ace585c0f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226278"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221702"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quais são os clusters do SQL Server 2019 grandes dados?
 
 Começando com [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clusters de grandes dados do SQL Server permitem que você implante clusters escalonáveis de contêineres do HDFS, Spark e do SQL Server em execução no Kubernetes. Esses componentes são executados lado a lado para que você possa ler, gravar e processar big data do Transact-SQL ou o Spark, permitindo que você facilmente combinar e analisar seus dados relacionais de alto valor com grandes volumes de dados grandes.
+
+Para obter mais informações sobre novos recursos e problemas conhecidos para a versão mais recente, consulte o [notas de versão](big-data-cluster-release-notes.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

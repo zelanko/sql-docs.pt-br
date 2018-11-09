@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833064"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269619"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Guia de início rápido: Instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833064"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Neste início rápido, você instala o SQL Server 2017 ou o SQL Server de 2019 CTP 2.0 no SUSE Linux Enterprise Server (SLES) v12 SP2. Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste início rápido, você instala o SQL Server 2017 ou visualização de 2019 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Neste início rápido, instale o SQL Server de 2019 CTP 2.0 no SUSE Linux Enterprise Server (SLES) v12 SP2. Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste início rápido, você pode instalar visualização de 2019 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Você se conectar com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ Para configurar o SQL Server em SLES, execute os seguintes comandos em um termin
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-Neste ponto, SQL Server 2019 CTP 2.0 está em execução no seu computador SLES e está pronto para uso!
+Neste ponto, a visualização de 2019 do SQL Server está em execução no seu computador SLES e está pronta para uso!
 
 ::: moniker-end
 

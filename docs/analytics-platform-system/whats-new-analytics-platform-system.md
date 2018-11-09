@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237072"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269749"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft® Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
@@ -137,7 +137,7 @@ APS AU6 dá suporte a esses aprimoramentos de compatibilidade do T-SQL.  Esses e
 
 **Tipos de dados**
 
-- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] e [VARBINARY(MAX)][]. Esses tipos de dados LOB têm um tamanho máximo de 2 GB. Para carregar esses objetos usam [utilitário bcp][]. O Polybase e dwloader não damos suporte a esses tipos de dados. 
+- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] e [VARBINARY(MAX)][]. Esses tipos de dados LOB têm um tamanho máximo de 2 GB. Para carregar esses objetos usam [utilitário bcp][]. O PolyBase e dwloader não damos suporte a esses tipos de dados. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] e tipos de dados DECIMAL.

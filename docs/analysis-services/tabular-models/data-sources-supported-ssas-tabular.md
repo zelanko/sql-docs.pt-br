@@ -1,6 +1,6 @@
 ---
 title: Fontes de dados com suporte em modelos do SQL Server Analysis Services tabulares 1200 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017524"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269679"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudi
 |||||  
 |-|-|-|-|  
 |Origem|Versões|Tipo de arquivo|Provedores|  
-|Bancos de dados do Access|Microsoft Access 2010 e posterior.|.accdb ou .mdb|Provedor OLE DB ACE 14|  
+|Bancos de dados do Access|Microsoft Access 2010 e posterior.|.accdb ou .mdb|Provedor OLE DB ACE 14 <sup> [1](#dnu)</sup>|  
 |Bancos de dados relacionais do SQL Server|SQL Server 2008 e posterior, o depósito de dados do SQL Server 2008 e posterior, o Azure banco de dados SQL do Azure SQL Data Warehouse, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. |(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i e posterior.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6 e posterior|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
@@ -39,14 +39,16 @@ Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudi
 |Bancos de dados relacionais IBM DB2|8.1|(não se aplica)|DB2OLEDB|  
 |Bancos de dados relacionais do Sybase Adaptive Server Enterprise (ASE)|15.0.2|(não se aplica)|Provedor OLE DB para Sybase|  
 |Outros bancos de dados relacionais|(não se aplica)|(não se aplica)|Provedor OLE DB para driver ODBC|  
-|Arquivos de texto|(não se aplica)|.txt, .tab, .csv|Provedor OLE DB ACE 14 para Microsoft Access|  
-|Arquivos do Microsoft Excel|Excel 2010 e posterior|.xlsx, xlsm, .xlsb, .xltx, .xltm|Provedor OLE DB ACE 14|  
+|Arquivos de texto|(não se aplica)|.txt, .tab, .csv|Provedor OLE DB ACE 14 <sup> [1](#dnu)</sup> |  
+|Arquivos do Microsoft Excel|Excel 2010 e posterior|.xlsx, xlsm, .xlsb, .xltx, .xltm|Provedor OLE DB ACE 14 <sup> [1](#dnu)</sup>|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho|Microsoft SQL Server 2008 Analysis Services e posterior|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (usado apenas com pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicadas em farms do SharePoint com o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalado)|  
 |Cubo do Analysis Services|Microsoft SQL Server 2008 Analysis Services e posterior|(não se aplica)|ASOLEDB 10|  
 |Alimentações de dados<br /><br /> (usado para importar dados de relatórios do Reporting Services, documentos do serviço Atom, Microsoft Azure Marketplace DataMarket e feed de dados único)|Formato Atom 1.0<br /><br /> Qualquer banco de dados ou documento exposto como um Serviço de dados do WCF (Windows Communication Foundation) (antes ADO.NET Data Services).|`.atomsvc` para um documento de serviço que define um ou mais feeds<br /><br /> .atom para um documento de feed da Web do Atom|Provedor de Feed de Dados Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provedor de dados do feed de dados do .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Arquivos de conexão de banco de dados do Office||.odc||  
-  
-  
+ 
+<a name="dnu">[1] </a> Using **ACE 14 OLE DB provider** para conectar-se aos tipos de dados de arquivo **não é recomendável**. Se for preciso manter seus modelos de nível de compatibilidade 1200 e inferior, exporte os dados para um tipo de arquivo csv, importar banco de dados SQL e, em seguida, conectar e importar do banco de dados. No entanto, recomenda-se você atualizar para o nível de compatibilidade 1400 (SQL Server 2017 e posterior) e usar **obter dados** no SSDT para selecionar e importar sua fonte de dados de arquivo. Obter usos dados estruturados conexões fonte de dados fornecidas pelo mecanismo de dados do Power Query, que são mais estáveis que as conexões de provedor de ACE 14 OLE DB.  
+
+
 ##  <a name="bkmk_supported_ds_dq"></a> Fontes de dados com suporte para modelos DirectQuery  
  O DirectQuery é uma alternativa para o modo de armazenamento na memória, roteando consultas e retornando os resultados diretamente em sistemas de dados de back-end em vez de armazenar todos os dados dentro do modelo (e na RAM depois que o modelo é carregado). Porque o Analysis Services tem que formular consultas na sintaxe de consulta de banco de dados nativo, um subconjunto menor de fontes de dados tem suporte para esse modo.  
   

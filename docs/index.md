@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 5ed3d7edbe277d8a39bbf9003810632a2c34a2c7
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971047"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272574"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -391,7 +391,7 @@ ms.locfileid: "50971047"
                                                         <h3>Análise de Dados</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                        </ul>
@@ -407,8 +407,8 @@ ms.locfileid: "50971047"
                                                   <div class="cardText">
                                                         <h3>IA e Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">Serviços de Machine Learning do SQL</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">Serviços de Machine Learning do SQL Server (R e Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

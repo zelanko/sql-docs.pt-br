@@ -2,7 +2,7 @@
 title: Notas de versão Data Studio do Azure | Microsoft Docs
 description: Notas de versão Data Studio do Azure
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
-ms.translationtype: MT
+ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237062"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269959"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de versão Data Studio do Azure
 
-**[Baixe a versão de outubro!](download.md)**
+**[Baixe a versão de novembro!](download.md)**
+
+## <a name="november-2018-november-release"></a>Novembro de 2018 (versão de novembro)
+
+Data de lançamento: 6 de novembro de 2018  
+versão: 1.2.4
+
+- Apresentando a extensão Idera
+- Atualizar para o [extensão de visualização do SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Introdução ao colar a extensão de plano
+- Apresentando a extensão de consultas de High Color, incluindo o tema do editor SSMS
+- Correções no SQL Server Agent, Profiler e importação de extensões
+- Corrigir o.Net Core fazendo com que o soquete KeepAlive problema quedas de conexões inativas no macOS
+- Serviço de ferramentas de atualização do SQL para.Net Core 2.2 Preview 3 (para eventual suporte do AAD)
+
+### <a name="bug-fixes"></a>Correções de bugs
+- Corrigir [emitir #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Conexão perdida para BD SQL do Azure
+- Corrigir [emitir #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): exceção de "Argumento inválido" expandindo o nó de banco de dados do OE
+- Corrigir [emitir #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): exibir mensagens de várias linhas corretamente nos resultados da consulta
+- Corrigir [emitir #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): nome do documento de corrigir a editar os dados quando o nome da tabela contém caracteres especiais
+- Corrigir [emitir #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): criados na extensão de log de alterações diz para verificar as notas de versão do VSCode para alterações
+- Corrigir [emitir #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): duplos/triplos ícones de tema de alto contraste
+- Corrigir [emitir #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): adicionar uma interface de linha de comando para se conectar a um SQL Server
+- Corrigir [emitir #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): adicionar suporte de tema do plano de consulta
+- ...
+
+Para obter informações detalhadas, consulte o [Log de alterações](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Outubro de 2018 (versão de outubro)
 
@@ -58,7 +84,7 @@ Versão de disponibilidade geral do estúdio de dados do Azure (anteriormente co
     - Use as bibliotecas de PROSA acelerador de código no bloco de anotações para saber os tipos de dados e formato de arquivo para a preparação de dados rápido.
   - Gerenciador de recursos do Azure
     - O modo de exibição do Gerenciador de recursos do Azure permite procurar pontos de extremidade relacionados a dados para suas contas do Azure e criar conexões para eles no Pesquisador de objetos. Nesta versão, servidores e bancos de dados SQL do Azure têm suporte.
-  - Assistente de tabela externa de criação de Polybase do SQL Server
+  - Assistente de tabela externa de criação de PolyBase do SQL Server
     - Crie uma tabela externa e suas estruturas de metadados de suporte com um assistente fácil de usar. Nesta versão, há suporte para servidores remotos do SQL Server e Oracle.
 - Grade de resultados melhorias no desempenho e experiência do usuário para um grande número de conjuntos de resultados de consulta.
 - Código de origem do Visual Studio Code é atualizada de 1.23 para 1.26.1 com Layout de grade e o melhor Editor de configurações (visualização).
