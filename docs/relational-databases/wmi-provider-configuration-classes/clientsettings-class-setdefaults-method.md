@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetDefaults Method (ClientSettings Class)
@@ -19,16 +18,16 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5f9bbff0853b3ba1b466b4a46c2c3ea016619614
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b9c411ccf96fe85043dea932221ce3212d1367f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774784"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217664"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings – Método SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Define todos os valores padrão para a instância das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir dados existentes.  
+  Define todos os valores padrão para a instância do cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a opção de substituir dados existentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,13 +38,13 @@ object.SetDefaults(OverwriteAll)
   
 ## <a name="parts"></a>Partes  
  *object*  
- Um **ClientSettings** objeto que representa um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do cliente.  
+ Um objeto **ClientSettings** que representa uma instância de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parâmetros  
   
 |Parâmetro|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **true** para substituir dados existentes, ou **false** , se os dados existentes não precisarem ser substituídos.|  
+|*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** para substituir dados existentes, ou **false** , se os dados existentes não precisarem ser substituídos.|  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  

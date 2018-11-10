@@ -36,15 +36,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 380edf145b882e6966b1317641c49d08f17dbfc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776804"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971087"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Essas funções convertem uma expressão de um tipo de dados em outro.  
 
@@ -217,10 +220,10 @@ Ao converter o tipo de dados **xml** explícita ou implicitamente em um tipo de 
 ## <a name="text-and-image-data-types"></a>Tipos de dados text e image
 Os tipos de dados **text** e **image** não dão suporte a conversão automática de tipo de dados. Você pode converter explicitamente os dados **text** em dados de caractere, e os dados **image** em **binary** ou **varbinary**, mas o tamanho máximo é de 8.000 bytes. Se você tentar uma conversão incorreta, por exemplo, tentar a conversão de uma expressão de caractere que inclui letras em um **int**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro.
   
-## <a name="output-collation"></a>Agrupamento da saída  
-Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem o mesmo agrupamento e o mesmo rótulo de agrupamento da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá o agrupamento padrão do banco de dados e um rótulo de agrupamento de padrão coercível. Para obter mais informações, consulte [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
+## <a name="output-collation"></a>Ordenação da saída  
+Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem a mesma ordenação e o mesmo rótulo de ordenação da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá a ordenação padrão do banco de dados e um rótulo de ordenação de padrão coercível. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Para atribuir um agrupamento diferente à saída, aplique a cláusula COLLATE à expressão do resultado da função CAST ou CONVERT. Por exemplo:
+Para atribuir uma ordenação diferente à saída, aplique a cláusula COLLATE à expressão do resultado da função CAST ou CONVERT. Por exemplo:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -324,14 +327,14 @@ A tabela a seguir lista os estilos para os quais a conversão de cadeia de carac
 <sup>1</sup> Com exceção dos estilos 20 e 21
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares alternativos)
-Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ao usar agrupamentos SC (caracteres suplementares), uma operação CAST de **nchar** ou **nvarchar** em um tipo **nchar** ou **nvarchar** de tamanho menor não será truncada dentro de um par alternativo. Em vez disso, a operação é truncada antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
+Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ao usar ordenações SC (caracteres suplementares), uma operação CAST de **nchar** ou **nvarchar** em um tipo **nchar** ou **nvarchar** de tamanho menor não será truncada dentro de um par alternativo. Em vez disso, a operação é truncada antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
 SELECT CAST (@x AS NVARCHAR(3));  
 ```  
   
-Ao usar agrupamentos SC, o comportamento de `CONVERT` é análogo ao comportamento de `CAST`.
+Ao usar ordenações SC, o comportamento de `CONVERT` é análogo ao comportamento de `CAST`.
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o estilo padrão das operações CAST e CONVERT nos tipos de dados **time** e **datetime2** é 121, exceto quando um dos tipos é usado em uma expressão de coluna computada. Para colunas computadas, o estilo padrão é 0. Esse comportamento afeta as colunas computadas quando são criadas, usadas em consultas que envolvam parametrização automática ou usadas em definições de restrição.

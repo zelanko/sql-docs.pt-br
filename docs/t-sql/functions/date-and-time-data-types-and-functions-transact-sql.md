@@ -21,15 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8e1f69d90c73aa7b8b6a6dbfba9f8f7092d2215
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60de5eb3816f6cc38eda9c92ff3b4681f8fe0e17
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806184"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970617"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>tipos de dados e funções de data e hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 As seções neste tópico abrangem todos os tipos e funções de data [!INCLUDE[tsql](../../includes/tsql-md.md)] e data e hora.
 -   [Tipos de dados de data e hora](#DateandTimeDataTypes)  

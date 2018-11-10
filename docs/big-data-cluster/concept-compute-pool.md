@@ -4,15 +4,15 @@ description: Este artigo descreve o pool de computação em um cluster de big da
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050789"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221792"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>O que é um pool de computação de clusters de grandes dados SQL?
 
@@ -23,7 +23,7 @@ Este artigo descreve a função do *pools de computação do SQL Server* em um c
 Um pool de computação é feito de um ou mais pods em execução no Kubernetes de computação. A criação automatizada e o gerenciamento desses pods é coordenada pelo [instância mestre do SQL Server](concept-master-instance.md). Cada pod contém um conjunto de serviços de base e uma instância do mecanismo de banco de dados do SQL Server.
 
 > [!NOTE]
-> CTP 2.0 dá suporte apenas um pool de computação único por cluster.
+> CTP 2.1 dá suporte apenas um pool de computação único por cluster.
 
 ## <a name="scale-out-groups"></a>Grupos de expansão
 

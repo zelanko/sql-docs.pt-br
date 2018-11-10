@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411786"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383761"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Exemplos de dados de retorno usando um conjunto de resultados 
   O exemplo a seguir mostra um procedimento armazenado que retorna os valores LastName e SalesYTD para todas as linhas SalesPerson que também aparecem na exibição vEmployee.
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>Exemplos de parâmetro de saída  
  O exemplo a seguir mostra um procedimento com parâmetros de entrada e de saída. O parâmetro `@SalesPerson` receberia um valor de entrada especificado pelo programa de chamada. A instrução SELECT usa o valor passado para o parâmetro de entrada para obter o valor `SalesYTD` correto. A instrução SELECT também atribui o valor ao parâmetro de saída `@SalesYTD` , que retorna o valor ao programa de chamada quando o procedimento sai.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  O exemplo a seguir chama o procedimento criado no primeiro exemplo e salva o valor de saída retornado do procedimento chamado na variável `@SalesYTD` , que é local para o programa de chamada.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  Primeiro, crie o procedimento que declara e, então, abra um cursor na tabela Moeda.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  A seguir, execute um lote que declare uma variável de cursor local, execute o procedimento para atribuir o cursor à variável local e depois busque as linhas do cursor.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,12 +177,12 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>Retornando dados usando um código de retorno  
  Um procedimento pode retornar um valor inteiro chamado de código de retorno para indicar o status de execução de um procedimento. Especifique o código de retorno de um procedimento usando a instrução RETURN. Assim como em parâmetros OUTPUT, você deve salvar o código de retorno em uma variável quando o procedimento é executado para usar o valor de código de retorno no programa de chamada. Por exemplo, a variável de atribuição `@result` do tipo de dados **int** é usada para armazenar o código de retorno do procedimento `my_proc`, como:  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Os códigos de retorno são geralmente usados em blocos de controle de fluxo em procedimentos para definir o valor de código de retorno para cada situação de erro possível. Você pode usar a função @@ERROR após uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar se ocorreu um erro durante a execução da instrução.  Antes da introdução do tratamento de erro TRY/CATCH/THROW no TSQL, era necessário que, às vezes, os códigos de retorno determinassem o êxito ou a falha dos procedimentos armazenados.  Os procedimentos armazenados devem sempre indicar falha com um erro (gerado com THROW/RAISERROR, se necessário) e não contar com um código de retorno para indicar a falha.  Além disso, você também deve evitar o uso de código de retorno para retornar dados de aplicativo.
+ Os códigos de retorno são geralmente usados em blocos de controle de fluxo em procedimentos para definir o valor de código de retorno para cada situação de erro possível. Você pode usar a função @@ERROR após uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar se ocorreu um erro durante a execução da instrução.  Antes da introdução do tratamento de erro TRY/CATCH/THROW no TSQL, era necessário que, às vezes, os códigos de retorno determinassem o êxito ou a falha dos procedimentos armazenados.  Os procedimentos armazenados devem sempre indicar falha com um erro (gerado com THROW/RAISERROR se necessário) e não contar com um código de retorno para indicar a falha.  Além disso, você também deve evitar o uso de código de retorno para retornar dados de aplicativo.
   
 ### <a name="examples-of-return-codes"></a>Exemplos de códigos de retorno  
  O exemplo a seguir mostra o procedimento `usp_GetSalesYTD` com tratamento de erros que define valores de código de retorno especiais para vários erros. A tabela a seguir mostra o valor de inteiro atribuído pelo procedimento a cada erro possível, e o significado correspondente de cada valor.  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|Erro ocorrido ao obter o valor de vendas.|  
 |4|Valor de vendas NULL encontrado para o vendedor.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  O exemplo a seguir cria um programa para controlar os códigos de retorno retornados do procedimento `usp_GetSalesYTD` .  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

@@ -11,18 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0ffdc0f6940caaffe8b50db57b5a694f38211aa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713904"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970777"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
   
-  Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [planejar e testar o Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [planejar e testar o Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados")  
   

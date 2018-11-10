@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777724"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971027"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Cria um índice relacional em uma tabela ou exibição. Também chamado de um índice rowstore porque é um índice de árvore B clusterizado ou não clusterizado. Você pode criar um índice rowstore antes que haja dados na tabela. Use um índice rowstore para melhorar o desempenho de consulta, especialmente quando as consultas forem selecionadas de colunas específicas ou exigirem que os valores sejam classificados em uma ordem específica.  
   
@@ -581,7 +585,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Os índices dão suporte a propriedades estendidas.  
   
 ## <a name="clustered-indexes"></a>Índices clusterizados  
- Criar um índice clusterizado em uma tabela (heap) ou descartar e recriar um índice clusterizado existente requer espaço de trabalho adicional disponível no banco de dados, para acomodar a classificação de dados e uma cópia temporária da tabela original ou dos dados do índice clusterizado existente. Para obter mais informações sobre índices clusterizados, veja [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md).  
+ Criar um índice clusterizado em uma tabela (heap) ou descartar e recriar um índice clusterizado existente requer workspace adicional disponível no banco de dados, para acomodar a classificação de dados e uma cópia temporária da tabela original ou dos dados do índice clusterizado existente. Para obter mais informações sobre índices clusterizados, veja [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md).  
   
 ## <a name="nonclustered-indexes"></a>Índices não clusterizados  
  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você pode criar um índice não clusterizado em uma tabela armazenada como um índice columnstore clusterizado. Se você primeiro criar um índice não clusterizado em uma tabela armazenada como um índice clusterizado ou heap, o índice persistirá se você depois converter a tabela em um índice columnstore clusterizado. Também não é necessário remover o índice não clusterizado ao recompilar o índice columnstore clusterizado.  
@@ -1067,7 +1071,7 @@ ALTER INDEX test_idx2 on test_table ABORT
 ### <a name="n-basic-syntax"></a>N. Sintaxe básica  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Criar, retomar, pausar e anular operações de índice retomável
 
-**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como uma versão prévia pública do recurso
+**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como uma versão prévia públicado recurso
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

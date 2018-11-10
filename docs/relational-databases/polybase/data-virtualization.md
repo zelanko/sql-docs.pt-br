@@ -9,83 +9,83 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dfd4460c51e4aeef8e9faff8479e7edf2678c35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 107603c3c6f15ea06ffcb8b273a5f7480ae93b86
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627314"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757971"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Usar o Assistente de tabela externa de dados com tabelas externas
+# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Usar o assistente de Tabela Externa de Dados com tabelas externas
 
-Um dos principais cenários para o SQL Server 2019 CTP 2.0 é a capacidade de virtualizar os dados.  Esse processo permite que os dados permaneçam em seu local original, no entanto, é possível **virtualizar** os dados em uma instância do SQL Server para que ela possa ser consultada lá como qualquer outra tabela no SQL Server. Isso minimizará a necessidade de processos de ETL. Isso é possível com o uso de conectores do Polybase. Para obter mais informações sobre a Virtualização de dados, consulte nosso documento de [Introdução ao PolyBase](polybase-guide.md).
+Um dos principais cenários para o SQL Server 2019 CTP 2.0 é a capacidade de virtualizar os dados. Esse processo permite que os dados se mantenham em sua localização original. É possível *virtualizar* os dados em uma instância do SQL Server para que ela possa ser consultada lá como qualquer outra tabela no SQL Server. Esse processo minimiza a necessidade de processos de ETL. Esse processo é possível com o uso de conectores do PolyBase. Para obter mais informações sobre virtualização de dados, confira [Introdução ao PolyBase](polybase-guide.md).
 
-## <a name="launch-the-external-table-wizard"></a>Inicializar o Assistente de tabela externa
+## <a name="start-the-external-table-wizard"></a>Inicializar o assistente de Tabela Externa
 
-Conecte-se à instância mestre usando o endereço IP / número da porta (31433) obtidos no final do script de implantação. Expanda seu nó **Bancos de Dados** no Pesquisador de Objetos. Em seguida, selecione um dos bancos de dados em que você deseja virtualizar os dados de/para uma instância do SQL Server existente. Clique com botão direito do mouse no Banco de dados e selecione **Criar tabela externa** no menu de contexto. Isso inicia o Assistente de virtualização de dados. Você também pode iniciar o Assistente de virtualização de dados na paleta de comandos pressionando Ctrl+Shift+P (no Windows) e Cmd+Shift+P (no Mac).
+Conecte-se à instância mestre usando o endereço IP ou número da porta (31433) obtidos no final do script de implantação. Expanda seu nó **Bancos de Dados** no Pesquisador de Objetos. Em seguida, selecione um dos bancos de dados no qual deseja virtualizar os dados de uma instância do SQL Server existente. Clique com o botão direito do mouse no banco de dados e selecione **Criar Tabela Externa** para iniciar o assistente de Virtualização de Dados. Você também pode iniciar o assistente de Virtualização de Dados na paleta de comandos. Use Ctrl + Shift + P no Windows ou use Cmd + Shift + P em um Mac.
 
-![Assistente de virtualização de dados](media/data-virtualization/virtualize-data-wizard.png)
+![Assistente de Virtualização de Dados](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selecionar uma fonte de dados
 
-se você tiver iniciado o assistente de um dos banco de dados, poderá ver que o menu suspenso de destino é preenchido automaticamente. Você também tem a opção de inserir ou alterar o Banco de dados de destino nessa tela. Os Tipos de fonte de dados externa compatíveis com o assistente são SQL Server e Oracle.
+Se você tiver iniciado o assistente de um dos bancos de dados, a caixa suspensa de destino será preenchida automaticamente. Você também tem a opção de inserir ou alterar o banco de dados de destino nessa página. Os tipos de fonte de dados externa compatíveis com o assistente são SQL Server e Oracle.
 
 > [!NOTE]
->O SQL Server é realçado por padrão
+>O SQL Server é realçado por padrão.
 
 
 ![Selecionar uma fonte de dados](media/data-virtualization/select-data-source.png)
 
-Clique em Avançar para prosseguir para a próxima etapa do assistente que define a Chave mestra de banco de dados.
+Selecione **Avançar** para continuar.
 
-## <a name="create-database-master-key"></a>Criar chave mestra de banco de dados
+## <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
-Nesta etapa, será solicitado que você crie uma chave mestra de banco de dados. É obrigatório criar a chave mestra, pois isso protege as credenciais usadas por uma Fonte de dados externa. Escolha uma senha forte para a chave mestra. Faça também o backup da chave mestra usando BACKUP MASTER KEY e armazene-o em um local externo seguro.
+Nesta etapa, você criará uma chave mestra de banco de dados. É necessário criar uma chave mestra. Uma chave mestra protege as credenciais usadas por uma fonte de dados externa. Escolha uma senha forte para a chave mestra. Além disso, faça o backup da chave mestra usando **BACKUP MASTER KEY**. Armazene o backup em uma localização externa segura.
 
 ![Criar uma chave mestra de banco de dados](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Se você já tiver uma chave mestra de banco de dados, os campos de entrada serão restringidos e você poderá ignorar esta etapa. Basta clicar em “Avançar” para prosseguir para a próxima página do assistente.
+> Caso já tenha uma chave mestra de banco de dados, os campos de entrada serão restritos e você poderá ignorar esta etapa. Selecione **Avançar** para continuar.
 
 > [!NOTE]
-> Se você não escolher uma senha forte, o assistente irá fazer isso na última etapa. Esse é um problema conhecido que será corrigido na versão futura, para que seja mais intuitivo.
+> Se você não escolher uma senha forte, o assistente fará isso na última etapa. Esse é um problema conhecido.
 
-## <a name="enter-the-external-data-source-credentials"></a>Digite as credenciais de fonte de dados externa
+## <a name="enter-external-data-source-credentials"></a>Insira as credenciais da fonte de dados externa
 
-Nesta etapa, insira sua fonte de dados externa e os detalhes de credenciais. Esta etapa cria um objeto de fonte de dados externa e, em seguida, usa as credenciais para o objeto de banco de dados para se conectar à fonte de dados. Forneça um nome para a Fonte de dados externa (exemplo: Teste) e forneça os detalhes da Conexão do SQL Server da fonte de dados externa – o Nome do servidor e o nome do Banco de dados nos quais você deseja que a fonte de dados externa seja criada nesse servidor.
+Nesta etapa, insira sua fonte de dados externa e os detalhes de credenciais para criar um objeto da fonte de dados externa. As credenciais são usadas pelo objeto de banco de dados para se conectar à fonte de dados. Digite um nome para a fonte de dados externa. Um exemplo é o Test. Forneça detalhes de conexão do SQL Server da fonte de dados externa. Insira o **Nome do servidor** e o **Nome do banco de dados** em que deseja que sua fonte de dados seja criada.
 
-A próxima etapa será Configurar a credencial, portanto, forneça um Nome de credencial, que é o nome da Credencial no escopo do banco de dados usada para armazenar com segurança as informações de entrada para a Fonte de dados externa que você está criando (exemplo: TestCred) e forneça o nome de usuário e a senha para se conectar à fonte de dados.
+A próxima etapa é configurar uma credencial. Insira um nome para a credencial. Esse nome é a credencial no escopo do banco de dados, usada para armazenar com segurança as informações de entrada para a fonte de dados externa que você criou. Um exemplo é o TestCred. Insira um nome de usuário e senha para se conectar à fonte de dados.
 
 ![Credenciais de fonte de dados externa](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Mapeamento da tabela de dados externos
 
-Na próxima janela, você poderá selecionar as tabelas das quais você deseja criar exibições externas. Selecionar os Bancos de dados pai incluirá também todas as tabelas filho. Quando as tabelas são selecionadas, uma tabela de mapeamento pode ser vista no lado direito. Aqui, você pode fazer alterações do “tipo” ou alterar o nome da própria tabela externa selecionada.
+Na próxima página, selecione as tabelas para criar modos de exibição externos. Ao selecionar os bancos de dados pai, as tabelas filho também são incluídas. Depois de selecionar tabelas, uma tabela de mapeamento será exibida à direita. Aqui, você poderá fazer alterações nos tipos. Você também poderá alterar o nome da tabela externa selecionada.
 
 ![Credenciais de fonte de dados externa](media/data-virtualization/data-table-mapping.png)
 
 > [!NOTE]
->Clicar duas vezes em outra tabela selecionada alterará a exibição de mapeamento.
+>Para alterar o modo de exibição de mapeamento, clique duas vezes em outra tabela selecionada.
 
 > [!IMPORTANT]
->O tipo foto ainda não é compatível com a ferramenta de Tabela externa. Criar uma exibição externa com um tipo foto nela gerará um erro após a criação da tabela. No entanto, a tabela ainda será criada.
+>O tipo foto não é compatível com a ferramenta de Tabela Externa. Caso crie um modo de exibição externo com um tipo de foto nele, um erro será exibido depois que a tabela for criada. Contudo, a tabela ainda será criada.
 
 ## <a name="summary"></a>Resumo
 
-Essa etapa fornece um resumo das suas seleções. Ela fornece o nome da Credencial com escopo de banco de dados e os objetos da Fonte de dados externa que serão criados no banco de dados de destino. Nesta etapa, você tem a opção de **“Gerar Script”** que gerará script em T-SQL a sintaxe para criar a fonte de dados externa ou **Criar** que criará o objeto da Fonte de dados externa.
+Essa etapa exibe um resumo das suas seleções. Ela fornece o nome da credencial com escopo de banco de dados e os objetos da fonte de dados externa criados no banco de dados de destino. Selecione **Gerar script** para gerar o script, no T-SQL, da sintaxe usada para criar a fonte de dados externa. Selecione **Criar** para criar o objeto da fonte de dados externa.
 
 ![Tela de resumo](media/data-virtualization/virtualize-data-summary.png)
 
-Se você clicar em “Criar”, poderá ver o objeto de Fonte de dados externa criado no Banco de dados de destino.
+Caso clique em **Criar**, você verá o objeto da fonte de dados externa criado no banco de dados de destino.
 
 ![Fontes de dados externas](media/data-virtualization/external-data-sources.png)
 
-Se você clicar em **Gerar Script**, verá a consulta T-SQL que está sendo gerada para criar o objeto de Fonte de dados externa.
+Caso clique em **Gerar Script**, verá a consulta T-SQL que está sendo gerada para criar o objeto da fonte de dados externa.
 
 ![Gerar script](media/data-virtualization/generated-script.png)
 
 > [!NOTE]
-> Gerar Script estará visível somente na última página do assistente. Atualmente, essa opção é mostrada em todas as páginas.
+> **Gerar script** estará visível somente na última página do assistente. Atualmente, essa opção é exibida em todas as páginas.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre o Cluster de Big Data do SQL Server e cenários relacionados, consulte [O que é o Cluster de Big Data do SQL Server?](../../big-data-cluster/big-data-cluster-overview.md).
+Para obter mais informações sobre os clusters de Big Data do SQL Server e os cenários relacionados, confira [O que são clusters de Big Data do SQL Server?](../../big-data-cluster/big-data-cluster-overview.md).

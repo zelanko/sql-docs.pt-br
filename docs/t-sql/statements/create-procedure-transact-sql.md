@@ -47,17 +47,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780804"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970687"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Cria um procedimento armazenado CLR (Common Language Runtime) ou [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], no SQL Data Warehouse do Azure e no Parallel Data Warehouse. Procedimentos armazenados são semelhantes a procedimentos em outras linguagens de programação no sentido de que podem:  
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Cria um procedimento armazenado CLR (Common Language Runtime) ou [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], no SQL Data Warehouse do Azure e no Parallel Data Warehouse. Procedimentos armazenados são semelhantes a procedimentos em outras linguagens de programação no sentido de que podem:  
   
 -   Aceitar parâmetros de entrada e retornar vários valores no formulário de parâmetros de saída para o procedimento de chamada ou lote.  
   

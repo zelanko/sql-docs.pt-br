@@ -18,23 +18,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ba3b9678cc511339bb6890ffe1854efcd193949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c0f046ad2f831cdff7136bd92059fd4a24bfce
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772104"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970427"
 ---
 # <a name="data-types-transact-sql"></a>Tipos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cada coluna, variável local, expressão e parâmetro tem um tipo de dados relacionado. O tipo de dados é um atributo que especifica o tipo de dados que o objeto pode manter: dados inteiros, dados de caractere, dados monetários, data e hora, cadeiasx de caracteres binárias etc.
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece um conjunto de tipos de dados do sistema que define todos os tipos de dados que podem ser usados com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode definir seus próprios tipos de dados no [!INCLUDE[tsql](../../includes/tsql-md.md)] ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os tipos de dados de alias têm como base os tipos de dados fornecidos pelo sistema. Para obter mais informações sobre tipos de dados de alias, veja [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). Os tipos definidos pelo usuário obtêm características dos métodos e operadores de uma classe criada com o uso de uma das linguagens de programação oferecidas por [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
   
-Quando duas expressões que possuem diferentes tipos de dados, agrupamentos, precisão, escala ou comprimento são combinadas por um operador, as características do resultado são determinadas pelo seguinte:
+Quando duas expressões que possuem diferentes tipos de dados, ordenações, precisão, escala ou comprimento são combinadas por um operador, as características do resultado são determinadas pelo seguinte:
 -   O tipo de dados do resultado é determinado pela aplicação das regras de precedência de tipos de dados em relação aos tipos de dados de expressões de entrada. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   O agrupamento do resultado é determinado pelas regras de precedência de agrupamento quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   A ordenação do resultado é determinada pelas regras de precedência de ordenação quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   A precisão, a escala e o tamanho do resultado dependem da precisão, da escala e do tamanho das expressões de entrada. Para obter mais informações, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece sinônimos de tipo de dados para compatibilidade com ISO. Para obter mais informações, consulte [Sinônimos de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
@@ -99,7 +102,7 @@ Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], com base em suas c
 |||  
 |-|-|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
-|[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[imagem](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>Outros tipos de dados
   
