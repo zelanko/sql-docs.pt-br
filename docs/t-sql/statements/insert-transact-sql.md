@@ -33,17 +33,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 743496bde8f92203232c76ee9dddfc19d98be8d3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 5e30c361bc000aaf82a057169e0daec8b9b976a6
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100497"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970717"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Adiciona uma ou mais linhas a uma tabela ou exibição no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter exemplos, confira [Exemplos](#InsertExamples).  
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Adiciona uma ou mais linhas a uma tabela ou exibição no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter exemplos, confira [Exemplos](#InsertExamples).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

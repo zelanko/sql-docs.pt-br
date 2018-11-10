@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991189"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269909"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
@@ -30,7 +30,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server em uma imagem de contêiner do Linux do SQL Server de 2019 CTP 2.0 em execução no Docker.
+Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server em uma imagem de contêiner do SQL Server versão prévia de 2019 Linux em execução no Docker.
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 1. Abra um terminal bash no Linux/Mac ou uma sessão do PowerShell com privilégios elevados no Windows.
 
-1. Extraia a imagem de contêiner do Linux do SQL Server de 2019 CTP 2.0 do Hub do Docker.
+1. Extrair a visualização do SQL Server 2019 imagem de contêiner do Linux de Hub do Docker.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   Este comando cria um contêiner do SQL Server de 2019 CTP 2.0 com a edição de desenvolvedor (padrão). Porta do SQL Server **1433** é exposta no host de porta **1401**. Opcional `-v sql1data:/var/opt/mssql` parâmetro cria um contêiner de volume de dados denominado **sql1ddata**. Isso é usado para manter os dados criados pelo SQL Server.
+   Este comando cria um contêiner de visualização de 2019 do SQL Server com a edição de desenvolvedor (padrão). Porta do SQL Server **1433** é exposta no host de porta **1401**. Opcional `-v sql1data:/var/opt/mssql` parâmetro cria um contêiner de volume de dados denominado **sql1ddata**. Isso é usado para manter os dados criados pelo SQL Server.
 
 1. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 
@@ -533,7 +533,7 @@ Neste tutorial, você aprendeu a fazer backup de um banco de dados no Windows e 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Neste tutorial, você aprendeu a fazer backup de um banco de dados no Windows e movê-lo para um servidor Linux executando o SQL Server de 2019 CTP 2.0. Você aprendeu como para:
+Neste tutorial, você aprendeu a fazer backup de um banco de dados no Windows e movê-lo para um servidor Linux executando o SQL Server 2019 preview. Você aprendeu como para:
 
 ::: moniker-end
 

@@ -23,17 +23,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d15805342b06baf55751d399eb64335084db76f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7059099beb306ad5ee74ce779a7861edc04d40d
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792644"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970867"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Substitui todas as ocorrências de um valor da cadeia de caracteres especificado por outro valor de cadeia de caracteres.  
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Substitui todas as ocorrências de um valor da cadeia de caracteres especificado por outro valor de cadeia de caracteres.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,9 +64,9 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max), REPLACE** truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente em um tipo de dados de valor grande.  
   
 ## <a name="remarks"></a>Remarks  
- REPLACE efetua comparações com base no agrupamento da entrada. Para fazer uma comparação em um agrupamento especificado, use [COLLATE](~/t-sql/statements/collations.md) para aplicar um agrupamento explícito à entrada.  
+ REPLACE efetua comparações com base na ordenação da entrada. Para fazer uma comparação em uma ordenação especificada, use [COLLATE](~/t-sql/statements/collations.md) para aplicar uma ordenação explícita à entrada.  
   
- 0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em REPLACE.  
+ 0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em REPLACE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir substitui a cadeia de caracteres `cde` em `abcdefghi` por `xxx`.  

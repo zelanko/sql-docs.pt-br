@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ebef54890df839f0608865ba7951221d17485e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1302a354255c6b98a46cd2c1aef234fe3f1c5f67
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194666"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029254"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
-  Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Gerenciando um domínio composto](../../2014/data-quality-services/managing-a-composite-domain.md).  
+  Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
   
 ##  <a name="Mapping"></a> Mapeando um domínio composto para os dados de origem  
  Há dois modos para mapear seus dados de origem para um domínio composto:  
@@ -28,7 +27,7 @@ ms.locfileid: "48194666"
   
     -   Se o domínio composto for mapeado para um serviço de dados de referência, os dados de origem serão enviados como tal para o serviço de dados de referência para correção e análise.  
   
-    -   Se o domínio composto não for mapeado para um serviço de dados de referência, a análise se baseará no método de análise definido no domínio composto. Para obter mais informações sobre como especificar um método de análise para domínios compostos, consulte [criar um domínio composto](../../2014/data-quality-services/create-a-composite-domain.md)  
+    -   Se o domínio composto não for mapeado para um serviço de dados de referência, a análise se baseará no método de análise definido no domínio composto. Para obter mais informações sobre como especificar um método de análise para domínios compostos, consulte [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)  
   
 -   Os dados de origem consistem em vários campos (digamos First Name, Middle Name e Last Name) que são mapeados para domínios individuais em um domínio composto.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48194666"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra “*\<Cross-Domain Rule Name>*”. Para obter mais informações sobre regras de domínio cruzado, consulte [criar uma regra de domínio cruzado](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra “*\<Cross-Domain Rule Name>*”. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  A regra do domínio cruzado definitiva não funcionará para domínios compostos que estão anexados ao serviço de dados de referência.  

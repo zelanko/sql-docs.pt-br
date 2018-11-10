@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
@@ -14,12 +13,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ce28a3beac3b133b9c0423974d9ae73c7c375e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c450b91f787cc82fc64f35a396ece8133791522f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060226"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033393"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
   Este tópico descreve como criar uma regra de domínio cruzado para um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio cruzado testa a relação entre valores de domínios únicos que são incluídos em um domínio composto. A regra de domínio cruzado deve se repetir em um domínio composto para que os valores do domínio sejam considerados precisos e em conformidade com os requisitos comerciais. Uma regra de domínio cruzado é usada para validar, corrigir e unificar valores de domínio.  
@@ -28,7 +27,7 @@ ms.locfileid: "48060226"
   
  Uma regra de domínio cruzado que tem condições definitivas aplicará a lógica de regras a sinônimos do valor nas condições, bem como os próprios valores. As condições definitivas das cláusulas If e Then são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio cruzado para um domínio composto: “Para ‘Cidade’, se Valor é igual a ‘Los Angeles’, então para ‘Estado’, Valor é igual a ‘CA’. “Se ‘Los Angeles’ e ‘LA’ forem sinônimos, esta regra retornará correto para ‘Los Angeles CA’ e ‘LA CA’ e com erro para ‘Los Angeles WA’ e ‘LA WA’.  
   
- Além de informar você sobre a validade de uma regra de domínio cruzado, a cláusula *Then* definitiva em uma regra de domínio cruzado, **Valor é igual a**, também corrige os dados durante a atividade de limpeza de dados. Para obter mais informações, consulte [correção de dados usando regras de domínio cruzado definitiva](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) na [limpar dados em um domínio composto](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
+ Além de informar você sobre a validade de uma regra de domínio cruzado, a cláusula *Then* definitiva em uma regra de domínio cruzado, **Valor é igual a**, também corrige os dados durante a atividade de limpeza de dados. Para obter mais informações, consulte [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) em [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  As regras de domínio cruzado são levadas em consideração depois de todas as regras simples que afetam apenas um domínio único. Apenas se um valor estiver de acordo com as regras de domínio único (caso elas existam), a regra de domínio cruzado será aplicada. O domínio composto e os domínios únicos nos quais uma regra é executada devem ser definidos para que a regra possa ser executada.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48060226"
     > [!NOTE]  
     >  O gerenciamento de domínio é executado em uma página do cliente Data Quality Services que contém cinco guias para operações de gerenciamento de domínio separadas. Não se trata de um processo controlado por assistente; qualquer operação de gerenciamento pode ser executada separadamente.  
   
-3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio composto para o qual você deseja criar uma regra de domínio ou crie um novo domínio composto. Se você precisa criar um novo domínio, consulte [criar um domínio composto](../../2014/data-quality-services/create-a-composite-domain.md).  
+3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio composto para o qual você deseja criar uma regra de domínio ou crie um novo domínio composto. Se você precisar criar um novo domínio, consulte [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
 4.  Clique na guia **Regras do CD** .  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48060226"
   
     6.  Depois que os testes forem concluídos, clique em **Fechar** na caixa de diálogo **Testar Regra de Domínio Composto** .  
   
-2.  Quando você tiver concluído suas regras de domínio cruzado, clique em **terminar** para concluir a atividade de gerenciamento de domínio, conforme descrito em [terminar a atividade de gerenciamento de domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+2.  Quando você concluído as regras de domínio cruzado, clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após a criação de uma regra de domínio cruzado  
  Após criar uma regra de domínio cruzado, você poderá executar outras tarefas de gerenciamento de domínio no domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  

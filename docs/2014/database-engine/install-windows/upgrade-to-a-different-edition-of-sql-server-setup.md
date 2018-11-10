@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088276"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019041"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Atualizar para outra edição do SQL Server 2014 (instalação)
   A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização de edição entre várias edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre os caminhos de atualização de edição com suporte, consulte [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md). Antes de você iniciar a atualização de edição de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos seguintes:  
@@ -74,7 +73,7 @@ ms.locfileid: "48088276"
   
  Além das etapas anteriores, pode ser necessário fazer o seguinte se você atualizou a partir do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]:  
   
--   Os usuários que foram provisionados no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] permanecem provisionados após a atualização. Especificamente, o grupo BUILTIN\Users permanece provisionado. Desabilite, remova ou provisione essas contas novamente, conforme necessário. Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Os usuários que foram provisionados no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] permanecem provisionados após a atualização. Especificamente, o grupo BUILTIN\Users permanece provisionado. Desabilite, remova ou provisione essas contas novamente, conforme necessário. Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   Os tamanhos e o modo de recuperação para os bancos de dados de sistemas model e tempdb permanecem inalterados após a atualização. Reconfigure essas configurações, conforme necessário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   

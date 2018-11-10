@@ -22,15 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf82d7899558349bd28e73f19f648d2f66323bdd
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703104"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971007"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Essa função pesquisa uma expressão de caractere dentro de uma segunda expressão de caractere, retornando a posição inicial da primeira expressão, se localizada.
   
@@ -62,14 +65,14 @@ Se a expressão *expressionToFind* ou *expressionToSearch* tiver um valor NULL, 
   
 Se CHARINDEX não encontrar *expressionToFind* em *expressionToSearch*, CHARINDEX retornará 0.
   
-CHARINDEX efetua comparações com base no agrupamento de entrada. Para fazer uma comparação em um agrupamento especificado, use COLLATE para aplicar um agrupamento explícito à entrada.
+CHARINDEX efetua comparações com base na ordenação de entrada. Para fazer uma comparação em uma ordenação especificada, use COLLATE para aplicar uma ordenação explícita à entrada.
   
 A posição inicial retornada é com base em 1, não com base em 0.
   
-0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em CHARINDEX.
+0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em CHARINDEX.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
-Ao usar agrupamentos de SC, *start_location* e o valor retornado contam pares substitutos como um caractere, e não dois. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+Ao usar ordenações de SC, *start_location* e o valor retornado contam pares substitutos como um caractere, e não dois. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
   
 ## <a name="examples"></a>Exemplos  
   
@@ -239,7 +242,7 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [+ &#40;Concatenação de cadeias de caracteres&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

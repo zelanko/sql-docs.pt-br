@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197239"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019021"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Atualizar o PowerPivot para SharePoint
   Este tópico resume as etapas necessárias para atualizar uma implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. As etapas específicas dependem da versão do SharePoint que seu ambiente estiver executando e inclui o suplemento PowerPivot para SharePoint (**spPowerPivot.msi**).  
@@ -48,9 +47,9 @@ ms.locfileid: "48197239"
   
  **SQL Server:**  
   
--   Se for a instalação existente do PowerPivot [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) é necessário para uma atualização para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se a instalação existente do PowerPivot for [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) será necessário para uma atualização para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Se for a instalação existente do PowerPivot [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) é necessário para uma atualização para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se a instalação existente do PowerPivot for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) será necessário para uma atualização para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010:**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48197239"
   
          Ou  
   
-         Sobre o **começar** , aponte para **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração**e, em seguida, clique em **PowerPivot para SharePoint 2013 Configuração muito**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
+         No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **Ferramenta de Configuração do PowerPivot para SharePoint 2013**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
   
     2.  Na inicialização, a ferramenta de configuração verifica o status da atualização da solução de farm do PowerPivot e das soluções de aplicativo Web PowerPivot. Se forem detectadas versões anteriores dessas soluções, você verá a mensagem “**Foram detectadas versões mais recentes dos arquivos da solução PowerPivot. Selecione a opção de atualização para atualizar o farm**.” Clique em **OK** para fechar a mensagem de validação do sistema.  
   
@@ -155,7 +154,7 @@ ms.locfileid: "48197239"
   
 7.  **Execute a ferramenta de configuração do PowerPivot** no primeiro servidor de aplicativo do SharePoint que executa o serviço do SQL Server Analysis Services (PowerPivot) para atualizar as soluções e serviços da Web no SharePoint. Você não pode usar a Administração Central para essa etapa.  
   
-    1.  Sobre o **iniciar** , aponte para **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração**e, em seguida, clique em **ferramenta de configuração do PowerPivot** . Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
+    1.  No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **Ferramenta de Configuração do PowerPivot**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
   
     2.  Na inicialização, a ferramenta de configuração verifica o status da atualização da solução de farm do PowerPivot e das soluções de aplicativo Web PowerPivot. Se forem detectadas versões anteriores dessas soluções, você verá a mensagem “Foram detectadas versões mais recentes dos arquivos da solução PowerPivot. Selecione a opção de atualização para atualizar o farm." Clique em **OK** para fechar a caixa de mensagens.  
   

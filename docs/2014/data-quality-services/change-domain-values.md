@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 086d66a1503c988c8962203681b58706ec5281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4162f2d0bd4662221fe8a9d32f3eb741155a302
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200526"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033353"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
   Este tópico descreve como alterar e aumentar os metadados em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Depois que você gerar conhecimento através de descoberta de conhecimento, importar conhecimento para a base de dados de conhecimento ou domínios, ou utilizar outra base de dados de conhecimento como base para a base de dados de conhecimento, poderá alterar os valores de dados interativamente. A geração de base de dados de conhecimento não só aproveita processos assistidos por computador, mas lhe fornece os meios para usar seu próprio conhecimento para verificar valores de dados e alterá-los da seguinte forma:  
@@ -86,7 +85,7 @@ ms.locfileid: "48200526"
   
     -   **Definir valores de domínio selecionados como um valor principal de seu grupo**: Para alterar o valor principal do grupo, selecione um valor no grupo que não esteja designado como o valor principal e clique no botão **Definir valores de domínio selecionados como um valor principal de seu grupo** . Isso definirá o valor principal como uma substituição para obter o outro valor. Essa operação funcionará apenas se você tiver definido dois ou mais valores de grupo e desejar alterar o valor principal a partir do valor designado pelo DQS. Observe que o valor principal é designado por uma linha azul com o valor em negrito.  
   
-7.  **Verificador Ortográfico**: Se um valor tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
+7.  **Verificador Ortográfico**: Se um valor tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Valores de Domínio** para habilitá-lo nessa página.  

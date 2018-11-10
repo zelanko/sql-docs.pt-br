@@ -4,15 +4,15 @@ description: Este artigo descreve a instância mestre em um cluster de big data 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051058"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221592"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>O que é o big data do SQL Server de instância mestre do cluster?
 
@@ -26,7 +26,7 @@ A instância mestre do SQL Server fornece um ponto de extremidade TDS acessível
 
 ## <a name="scale-out-query-management"></a>Gerenciamento de consulta de expansão
 
-A instância mestre do SQL Server contém o mecanismo de consulta de expansão que é usado para distribuir consultas entre instâncias do SQL Server em nós de [computação do pool de](concept-compute-pool.md). O mecanismo de consulta de expansão também fornece acesso por meio do Transact-SQL para todas as tabelas de Hive no cluster sem qualquer configuração adicional. (Suporte de tabelas do hive não está no CTP 2.0)
+A instância mestre do SQL Server contém o mecanismo de consulta de expansão que é usado para distribuir consultas entre instâncias do SQL Server em nós de [computação do pool de](concept-compute-pool.md). O mecanismo de consulta de expansão também fornece acesso por meio do Transact-SQL para todas as tabelas de Hive no cluster sem qualquer configuração adicional. (Suporte de tabelas do hive não está no CTP 2.1)
 
 ## <a name="metadata-and-user-databases"></a>Bancos de dados de usuário e metadados
 

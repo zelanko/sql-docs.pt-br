@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0906216a465b9261bf96b11626c1d7c874c84499
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cedf942ea765bacd773e5183da6f6e6ada78a06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090956"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032104"
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
   O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite executar operações de qualidade de dados usando uma ferramenta autônoma. Esse aplicativo permite criar bases de dados de conhecimento, criar e executar projetos de qualidade de dados e executar tarefas administrativas.  
   
- Administradores de dados, especialistas de dados ou profissionais de TI responsáveis por gerenciar ativos de dados e manter padrões altos de qualidade de dados podem usar o aplicativo cliente em uma das três funções: um Operador de KB do DQS que pode editar e executar um projeto de qualidade de dados; um Editor de KB do DQS que pode executar funções de projeto e criar e editar uma base de dados de conhecimento; e um Administrador do DQS que pode executar funções no projeto e na base de dados de conhecimento e administrar o sistema. Para obter mais informações, consulte [segurança do DQS](../../2014/data-quality-services/dqs-security.md).  
+ Administradores de dados, especialistas de dados ou profissionais de TI responsáveis por gerenciar ativos de dados e manter padrões altos de qualidade de dados podem usar o aplicativo cliente em uma das três funções: um Operador de KB do DQS que pode editar e executar um projeto de qualidade de dados; um Editor de KB do DQS que pode executar funções de projeto e criar e editar uma base de dados de conhecimento; e um Administrador do DQS que pode executar funções no projeto e na base de dados de conhecimento e administrar o sistema. Para obter mais informações, consulte [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
 ## <a name="installing-the-data-quality-client-application"></a>Instalando o aplicativo cliente Data Quality  
  O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] é instalado na instalação do SQL Server. Você pode instalar o aplicativo cliente no mesmo computador do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ou em um computador remoto. Para obter mais informações sobre como instalar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], consulte [Instalar o Data Quality Services](install-windows/install-data-quality-services.md).  

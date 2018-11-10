@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158963"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018181"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Criar, construir e consultar instâncias de geometria
-  O tipo de dados espaciais planares, `geometry`, representa dados em um sistema de coordenadas Euclidiano (plano). Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O tipo de dados espaciais planares, `geometry`, representa dados em um sistema de coordenadas euclidiano (plano). Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- O `geometry` tipo é predefinido e está disponível em cada banco de dados. Você pode criar colunas de tabela do tipo `geometry` e operar em `geometry` dados da mesma maneira como você usaria a outros tipos CLR.  
+ O tipo `geometry` é predefinido e está disponível em cada banco de dados. É possível criar colunas de tabelas do tipo `geometry` e operar com dados `geometry` da mesma maneira como outros tipos CLR são usados.  
   
  O tipo de dados de `geometry` (planar) que tem suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está de acordo com os Recursos Simples do Open Geospatial Consortium (OGC) para o SQL Specification versão 1.1.0.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158963"
 ##  <a name="creating"></a> Criando ou construindo uma nova instância de geometria  
   
 ###  <a name="existing"></a> Criando uma nova instância de geometria de uma instância existente  
- O `geometry` tipo de dados fornece vários métodos internos que você pode usar para criar um novo `geometry` instâncias baseiam em instâncias existentes.  
+ O tipo de dados `geometry` fornece vários métodos internos que podem ser usados para criar novas instâncias de `geometry` baseadas em instâncias existentes.  
   
  **Para criar um buffer em torno de uma geometria**  
  [STBuffer &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158963"
   
   
 ###  <a name="wkb"></a> Construindo uma instância de geometria da entrada binária conhecida  
- WKB é um formato binário especificado pelo Open geoespaciais Consortium (OGC) que permite que `geometry` dados a serem trocados entre um aplicativo cliente e um banco de dados SQL. As seguintes funções aceitam entrada WKB para construir geometrias:  
+ WKB é um formato binário especificado pelo Open Geospatial Consortium (OGC) que permite que dados de `geometry` sejam trocados entre um aplicativo cliente e um banco de dados SQL. As seguintes funções aceitam entrada WKB para construir geometrias:  
   
  **Para construir qualquer tipo de instância de geometria de entrada WKB**  
  [STGeomFromWKB &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158963"
   
   
 ##  <a name="returning"></a> Retornando texto conhecido e binário conhecido de uma instância de geometria  
- Você pode usar os seguintes métodos para retornar o formato WKT ou WKB de uma `geometry` instância:  
+ É possível usar os seguintes métodos para retornar o formato WKT ou WKB de uma instância de `geometry`:  
   
  **Para retornar a representação WKT de uma instância de geometria**  
  [STAsText &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158963"
  Todos os `geometry` instâncias têm várias propriedades que podem ser recuperados por meio de métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece. Os tópicos a seguir definem propriedades e comportamentos de tipos de geometria e os métodos de consulta de cada um.  
   
 ###  <a name="valid"></a> Informações de validade, tipo de instância e GeometryCollection  
- Uma vez um `geometry` instância é construída, você pode usar os métodos a seguir para determinar se ela está bem formada, retornar o tipo de instância ou, se ela for uma instância de coleção, retornar um determinado `geometry` instância.  
+ Quando uma instância de `geometry` é construída, é possível usar os seguintes métodos para determinar se ela está bem formada, para retornar o tipo da instância ou, se ela for uma instância de coleção, retornar uma instância de `geometry` específica.  
   
  **Para retornar o tipo de instância de uma geometria**  
  [STGeometryType &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158963"
   
   
 ###  <a name="dimension"></a> Dimensão  
- Um nonempty `geometry` instância pode ser 0, 1- ou 2-dimensional. Com dimensional zero `geometries`, como `Point` e `MultiPoint`, não têm nenhum comprimento ou área. Objetos unidimensionais, como `LineString, CircularString, CompoundCurve`, e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon`, `CurvePolygon` e `MultiPolygon`, têm área e comprimento. Instâncias vazias relatarão uma dimensão de -1 e uma `GeometryCollection` relatará uma área dependente dos tipos de seu conteúdo.  
+ Uma instância `geometry` não vazia pode ser zero, uni ou bidimensional. `geometries` de dimensão zero, como `Point` e `MultiPoint`, não têm nenhum comprimento ou área. Objetos unidimensionais, como `LineString, CircularString, CompoundCurve` e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon`, `CurvePolygon` e `MultiPolygon`, têm área e comprimento. Instâncias vazias relatarão uma dimensão de -1 e uma `GeometryCollection` relatará uma área dependente dos tipos de seu conteúdo.  
   
  **Para retornar a dimensão de uma instância**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158963"
   
   
 ###  <a name="empty"></a> Empty (vazio)  
- Uma *vazio* `geometry` instância não tem pontos. O comprimento de `LineString, CircularString`, `CompoundCurve`, e `MultiLineString` instâncias é zero. A área de vazio `Polygon`, `CurvePolygon`, e `MultiPolygon` instâncias é 0.  
+ Uma *vazio* `geometry` instância não tem pontos. O comprimento de instâncias `LineString, CircularString`, `CompoundCurve` e `MultiLineString` é zero. A área de instâncias de `Polygon`, `CurvePolygon` e `MultiPolygon` vazias é 0.  
   
  **Para determinar se uma instância está vazia**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- O limite de uma `Polygon` ou `MultiPolygon` instância é o conjunto de seus anéis.  
+ O limite de uma instância de `Polygon` ou `MultiPolygon` é o conjunto de seus anéis.  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Fechamento  
- Um *fechada* `geometry` instância é uma figura cujos pontos inicial e final são os mesmos. `Polygon` instâncias são consideradas fechadas. As instâncias `Point` não estão fechadas.  
+ Um *fechada* `geometry` instância é uma figura cujos pontos inicial e final são os mesmos. As instâncias `Polygon` são consideradas fechadas. As instâncias `Point` não estão fechadas.  
   
- Um anel é uma simples e fechada `LineString` instância.  
+ Um anel é uma instância de `LineString` simples e fechada.  
   
  **Para determinar se uma instância está fechada**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> Determinando relações entre instâncias de geometria  
- O `geometry` tipo de dados fornece vários métodos internos que você pode usar para determinar relações entre duas `geometry` instâncias.  
+ O tipo de dados `geometry` fornece vários métodos internos que podem ser usados para determinar relações entre duas instâncias de `geometry`.  
   
  **Para determinar se duas instâncias abrangem o mesmo conjunto de pontos**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

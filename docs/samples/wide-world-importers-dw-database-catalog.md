@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627105"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270159"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ Esses procedimentos são usados para configurar a amostra. Eles são usados para
 |Configuration_ApplyPartitionedColumnstoreIndexing|Aplica-se a índices de particionamento e o columnstore para tabelas de fatos.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica-se de particionamento, columnstore na memória e indexação.|
 |Configuration_EnableInMemory|Substitui as tabelas de preparo de integração com as tabelas com otimização de memória SCHEMA_ONLY para melhorar o desempenho de ETL.|
-|Configuration_ApplyPolybase|Configura uma fonte de dados externa, formato de arquivo e tabela.|
+|Configuration_ApplyPolyBase|Configura uma fonte de dados externa, formato de arquivo e tabela.|
 |Configuration_PopulateLargeSaleTable|Aplica as alterações do enterprise edition e, em seguida, preenche uma quantidade maior de dados para o ano de 2012 como histórico adicional.|
 |Configuration_ReseedETL|Remove os dados existentes e reinicia as sementes ETL. Isso permite a repopulação do banco de dados OLAP para corresponder as linhas atualizadas no banco de dados OLTP.|
 

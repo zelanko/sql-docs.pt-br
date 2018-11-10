@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f38d576bd3682a423cebec5609978cbdeefafe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193786"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018931"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerações para instalação do SQL Server usando SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep permite preparar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador e concluir a configuração posteriormente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep envolve um processo de duas etapas para obter uma instância autônoma configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As etapas incluem o seguinte:  
@@ -66,7 +65,7 @@ ms.locfileid: "48193786"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Gravador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são automaticamente preparados quando você prepara uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são concluídos quando você conclui a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando a etapa Concluir Imagem.  
   
- Para obter informações sobre edições com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Para obter informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com suporte, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  É possível executar uma atualização de edição durante a configuração de uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não tem suporte em edições Express do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

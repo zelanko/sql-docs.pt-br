@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,12 +15,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076046"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032463"
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
   Este tópico descreve como criar uma base de dados de conhecimento através da descoberta da base de dados de conhecimento. No processo de descoberta, o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analisa os dados em uma fonte de dados de exemplo através de um processo assistido por computador e adiciona o conhecimento obtido na base de dados de conhecimento. Esse conhecimento pode ser modificado e aprimorado na etapa **Gerenciar Valores de Domínio** da atividade de descoberta da base de dados de conhecimento ou na atividade de gerenciamento de domínio.  
@@ -67,12 +66,12 @@ ms.locfileid: "48076046"
   
 4.  Na tabela **Mapeamentos** , mapeie cada coluna de origem na qual deseja executar a descoberta de dados de conhecimento para um domínio da base de dados de conhecimento, da seguinte maneira:  
   
-    1.  Crie um mapeamento selecionando uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia e, em seguida, selecionando um domínio na lista suspensa da coluna **Domínio** na mesma linha, caso exista um domínio. Se não existir nenhum domínio, clique em **Criar um domínio** ou **Criar um domínio composto** para criar um domínio. Para obter mais informações, consulte [Criar uma regra de domínio](../../2014/data-quality-services/create-a-domain-rule.md) ou [Criar um domínio composto](../../2014/data-quality-services/create-a-composite-domain.md).  
+    1.  Crie um mapeamento selecionando uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia e, em seguida, selecionando um domínio na lista suspensa da coluna **Domínio** na mesma linha, caso exista um domínio. Se não existir nenhum domínio, clique em **Criar um domínio** ou **Criar um domínio composto** para criar um domínio. Para obter mais informações, consulte [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) ou [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
     2.  Repita a etapa anterior para cada mapeamento. Para alterar o número de linhas na tabela, clique em **Adicionar um mapeamento de coluna**ou selecione uma linha e clique em **Remover o mapeamento de coluna selecionado**. Se você clicar em **Remover o mapeamento de coluna selecionado** quando uma linha populada estiver selecionada, a linha selecionada será excluída mesmo que exista uma linha não populada.  
   
         > [!NOTE]  
-        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Clique em **Exibir/selecionar domínios compostos** para exibir os domínios compostos que foram definidos. Se nenhum domínio composto foi definido, o controle não estará disponível.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076046"
   
     -   **Definir valores de domínio selecionados como um valor principal de seu grupo**: altere o valor principal do grupo selecionando um valor no grupo que não esteja designado como valor principal e clicando no botão **Definir valores de domínio selecionados como um valor principal de seu grupo** .  
   
-6.  **Verificador Ortográfico**: se você tiver habilitado o Verificador Ortográfico na página Propriedades de Domínio, localize qualquer valor que tenha um sublinhado vermelho ondulado, a indicação de que o Verificador Ortográfico está sugerindo uma correção. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Verificador Ortográfico**: se você tiver habilitado o Verificador Ortográfico na página Propriedades de Domínio, localize qualquer valor que tenha um sublinhado vermelho ondulado, a indicação de que o Verificador Ortográfico está sugerindo uma correção. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Gerenciar Resultados de Descoberta de Dados** para habilitá-lo nessa página.  

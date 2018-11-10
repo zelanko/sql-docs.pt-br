@@ -1,11 +1,9 @@
 ---
 title: MultiLineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 053af2980857e1bde0ea4b3812b64a276ee9e171
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157256"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019051"
 ---
 # <a name="multilinestring"></a>MultiLineString
   Um `MultiLineString` é uma coleção de zero ou mais `geometry` ou **geographyLineString** instâncias.  
   
 ## <a name="multilinestring-instances"></a>Instâncias MultiLineString  
- A ilustração a seguir mostra exemplos de `MultiLineString` instâncias.  
+ A ilustração a seguir mostra exemplos de instâncias `MultiLineString`.  
   
  ![Exemplos de instâncias geométricas MultiLineString](../../database-engine/media/multilinestring.gif "Exemplos de instâncias geométricas MultiLineString")  
   
@@ -35,16 +33,16 @@ ms.locfileid: "48157256"
   
 -   A Figura 2 é uma instância `MultiLineString` simples porque apenas os pontos de extremidade da interseção de elementos `LineString` se cruzam. O limite são os dois pontos de extremidade que não se sobrepõem.  
   
--   A Figura 3 é uma instância `MultiLineString` não simples porque apenas o interior de um de seus elementos `LineString` se cruzam. O limite dessa `MultiLineString` instância é de quatro pontos de extremidade.  
+-   A Figura 3 é uma instância `MultiLineString` não simples porque apenas o interior de um de seus elementos `LineString` se cruzam. O limite dessa instância `MultiLineString` são os quatro pontos de extremidade.  
   
--   Figura 4 é um não simples, não fechada `MultiLineString` instância.  
+-   A Figura 4 é uma instância `MultiLineString` não simples, não fechada.  
   
--   A Figura 5 é uma instância `MultiLineString` simples, não fechada. Não é fechada porque seus `LineStrings` elementos não estão fechados. É simple porque nenhum dos interiores de qualquer um do `LineStrings` instâncias se cruzam.  
+-   A Figura 5 é uma instância `MultiLineString` simples, não fechada. Não é fechada porque seus `LineStrings` elementos não estão fechados. Ela é simples porque nenhum dos interiores de qualquer uma das instâncias `LineStrings` se cruzam.  
   
--   Figura 6 é uma simples e fechada `MultiLineString` instância. Ela é fechada porque todos os seus elementos não estão fechados. Ela é simples porque nenhum de seus elementos se cruzam nos interiores.  
+-   A Figura 6 é uma instância `MultiLineString` simples e fechada. Ela é fechada porque todos os seus elementos não estão fechados. Ela é simples porque nenhum de seus elementos se cruzam nos interiores.  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Para um `MultiLineString` instância para ser aceita, ela precisa estar vazia ou conter apenas `LineString` instâncias que são aceitos. Para obter mais informações sobre aceitas `LineString` instâncias, consulte [LineString](../spatial/linestring.md). Veja a seguir exemplos de instâncias `MultiLineString` aceitas.  
+ Para uma instância `MultiLineString` ser aceita, ela precisa estar vazia ou conter apenas instâncias `LineString` que sejam aceitos. Para obter mais informações sobre aceitas `LineString` instâncias, consulte [LineString](../spatial/linestring.md). Veja a seguir exemplos de instâncias `MultiLineString` aceitas.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -53,14 +51,14 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- O exemplo a seguir gera uma `System.FormatException` porque o segundo `LineString` instância não é válida.  
+ O exemplo a seguir gera um `System.FormatException` porque a segunda instância `LineString` não é válida.  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Para um `MultiLineString` instância seja válida, ela deve atender aos seguintes critérios:  
+ Para que uma instância `MultiLineString` seja válida, ela deve atender aos seguintes critérios:  
   
 1.  Todas as instâncias contendo a instância `MultiLineString` devem ser instâncias `LineString` válidas.  
   
@@ -76,7 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` não é válido porque a segunda `LineString` instância sobrepõe a primeira `LineString` instância em um intervalo. Elas se tocam em um número infinito de pontos.  
+ `@g4` não é válido porque a segunda instância `LineString` sobrepõe a primeira instância `LineString` em um intervalo. Elas se tocam em um número infinito de pontos.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância simples do `geometry``MultiLineString` , que contém dois elementos de `LineString` com o SRID 0.  

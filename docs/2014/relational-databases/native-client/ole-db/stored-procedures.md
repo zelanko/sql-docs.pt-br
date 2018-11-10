@@ -1,10 +1,9 @@
 ---
 title: Procedimentos armazenados | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-clien
+ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, stored procedures
@@ -15,12 +14,12 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 217baa6d3116f0297c95ffb16c2d157bc034cfcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082596"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018321"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
   Um procedimento armazenado ([procedimentos armazenados &#40;mecanismo de banco de dados&#41;](../../stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675564"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743221"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
 |**(A-ERR)**|Número de erro. Se o trabalho é executado por um alerta, o valor de número de erro substitui este token automaticamente na etapa de trabalho.|  
 |**(A-SEV)**|Severidade do erro. Se o trabalho é executado por um alerta, o valor de severidade do erro substitui este token automaticamente na etapa de trabalho.|  
 |**(A-MSG)**|Texto de mensagem. Se o trabalho é executado por um alerta, o valor de texto de mensagem substitui este token automaticamente na etapa de trabalho.|  
-|**(JOBNAME)**|O nome do trabalho.|  
-|**(STEPNAME)**|O nome da etapa.|  
+|**(JOBNAME)**|O nome do trabalho. Esse token só está disponível no SQL Server 2016 e posterior.|  
+|**(STEPNAME)**|O nome da etapa. Esse token só está disponível no SQL Server 2016 e posterior.|  
 |**(DATE)**|Data atual (em formato AAAAMMDD).|  
 |**(INST)**|Nome da instância. Para uma instância padrão, este token terá o nome da instância padrão: MSSQLSERVER.|  
 |**(JOBID)**|ID do trabalho.|  

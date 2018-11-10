@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679365"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018331"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID do logon de destino. Permite valor nulo. Retorna NULL se não aplicável.|  
 |target_database_principal_name|**sysname**|Usuário de destino da ação. Permite valor nulo. Retorna NULL se não aplicável.|  
 |server_instance_name|**sysname**|Nome da instância de servidor no qual a auditoria ocorreu. O formato servidor\instância padrão é usado.|  
-|database_name|**sysname**|O contexto do banco de dados no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias realizadas no nível de servidor.|  
-|schema_name|**sysname**|O contexto do esquema no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias realizadas fora de um esquema.|  
+|database_name|**sysname**|O contexto do banco de dados no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias que ocorrem no nível do servidor.|  
+|schema_name|**sysname**|O contexto do esquema no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias ocorrendo fora de um esquema.|  
 |object_name|**sysname**|O nome da entidade na qual a auditoria ocorreu. Isso inclui o seguinte:<br /> Objetos de servidor<br /> Bancos de dados<br /> Objetos de banco de dados<br /> Objetos de esquema<br /> Permite valor nulo. Retornará NULL se a entidade for o próprio Servidor ou se a auditoria não for realizada no nível de um objeto. Por exemplo, Autenticação.|  
 |instrução|**nvarchar(4000)**|Instrução TSQL, se existir. Permite valor nulo. Retorna NULL se não aplicável.|  
 |additional_information|**nvarchar(4000)**|Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escape de caracteres de xml inválido, como `'\<'`, `'>'`, `'/'`, `'_x'`. Eles serão de saída como `_xHHHH\_`. O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais.|  

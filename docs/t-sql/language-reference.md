@@ -16,15 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641654"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970757"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referência do Transact-SQL (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Este tópico fornece as noções básicas sobre como encontrar e utilizar os tópicos de referência do Microsoft Transact-SQL (T-SQL). O T-SQL é fundamental para a utilização dos serviços e produtos do Microsoft SQL. Todas as ferramentas e todos os aplicativos que se comunicam com um Banco de Dados SQL desempenham essa função ao enviar comandos do T-SQL.  
 

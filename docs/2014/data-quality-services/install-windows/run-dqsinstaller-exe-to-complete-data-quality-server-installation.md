@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df2436acdf9a7f039d8b3886c3f8f5a1e539bc5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dd8bb116523e653e27a10e708fb60e090b76232
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122466"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031823"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server
   Para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , você terá de executar o arquivo DQSInstaller.exe depois de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve como executar o DQSInstaller.exe na tela **Iniciar** , menu **Iniciar** , Windows Explorer ou Prompt de comando; você pode escolher qualquer uma das formas de executar o arquivo DQSInstaller.exe.  
@@ -43,10 +42,10 @@ ms.locfileid: "48122466"
   
     1.  O instalador cria um arquivo de log de instalação, DQS_install.log que contém informações sobre as ações executado em como executar o DQSInstaller.exe arquivo. Se você tiver instalado a instância padrão do SQL Server, o arquivo DQS_install.log estará disponível em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log.  
   
-    2.  O instalador usa o agrupamento do servidor padrão, SQL_Latin1_General_CP1_CI_AS, para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
+    2.  O instalador usa a ordenação do servidor padrão, SQL_Latin1_General_CP1_CI_AS, para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
   
         > [!IMPORTANT]  
-        >  Você poderá oferecer um valor de agrupamento do servidor diferente para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] apenas se estiver executando o DQSInstaller.exe do prompt de comando. Para obter mais informações, consulte [Executar o DQSInstaller.exe do prompt de comando](#CommandPrompt) mais adiante neste tópico.  
+        >  Você poderá oferecer um valor de ordenação do servidor diferente para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] apenas se estiver executando o DQSInstaller.exe do prompt de comando. Para obter mais informações, consulte [Executar o DQSInstaller.exe do prompt de comando](#CommandPrompt) mais adiante neste tópico.  
   
     3.  O instalador verifica se existem reinicializações pendentes no seu computador devido a qualquer atualização recém-instalada em seu computador. Se for encontrada uma reinicialização pendente, uma mensagem aparecerá para notificá-lo sobre o mesmo e você poderá optar por continuar ou anular a instalação pressionando Y ou N, respectivamente. É recomendável, em caso de reinicializações pendentes, anular a instalação, reiniciar o computador e executar o DQSInstaller.exe novamente.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48122466"
   
 |Parâmetro DQSInstaller.exe|Description|Sintaxe de exemplo|  
 |--------------------------------|-----------------|-------------------|  
-|-collation|O agrupamento do servidor a ser usado para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> O DQS oferece suporte apenas ao agrupamento sem diferenciação de maiúsculas e minúsculas. Se você especificar um agrupamento com diferenciação de maiúsculas e minúsculas, o instalador tentará usar a versão sem diferenciação de maiúsculas e minúsculas do agrupamento especificado. Se não houver versão sem diferenciação de maiúsculas e minúsculas, ou se o agrupamento não tiver suporte do SQL, haverá falha na instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .<br /><br /> Se um agrupamento de servidor não for especificado, o agrupamento padrão, SQL_Latin1_General_CP1_CI_AS, será usado.|`dqsinstaller.exe –collation <collation_name>`|  
+|-collation|A ordenação do servidor a ser usada para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> O DQS oferece suporte apenas à ordenação sem diferenciação de maiúsculas e minúsculas. Se você especificar uma ordenação com diferenciação de maiúsculas e minúsculas, o instalador tentará usar a versão sem diferenciação de maiúsculas e minúsculas da ordenação especificada. Se não houver versão sem diferenciação de maiúsculas e minúsculas, ou se a ordenação não tiver suporte do SQL, haverá falha na instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> Se uma ordenação do servidor não for especificada, a ordenação padrão, SQL_Latin1_General_CP1_CI_AS, será usada.|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|Ignora a recriação dos bancos de dados DQS (DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA) e atualiza somente os assemblies SQLCLR (SQL Common Language Runtime) usados pelo DQS no banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .<br /><br /> Para obter mais informações, veja [Atualizar assemblies SQLCLR após atualização do .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
 |-exportkbs|Exporte todas as bases de dados de conhecimento em um arquivo de backup DQS (.dqsb). Você também tem de especificar o caminho completo e o nome de arquivo onde deseja exportar todas as bases de dados de conhecimento.<br /><br /> Para obter mais informações, consulte [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> Por exemplo, `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|Importe todas as bases de dados de conhecimento de um arquivo de backup DQS (.dqsb) após concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Você também tem de especificar o caminho completo e o nome de arquivo de onde deseja importar todas as bases de dados de conhecimento.<br /><br /> Para obter mais informações, consulte [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> Por exemplo, `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
@@ -103,8 +102,8 @@ ms.locfileid: "48122466"
 -   Verifique se você pode acessar seus dados de origem para as operações do DQS e se pode exportar os dados processados para uma tabela em um banco de dados. Veja [Acessar dados para as operações do DQS](access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar o Data Quality Services](install-data-quality-services.md)   
- [Atualizar assemblies SQLCLR após atualizar o .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Install Data Quality Services](install-data-quality-services.md)   
+ [Atualizar assemblies SQLCLR após atualização do .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

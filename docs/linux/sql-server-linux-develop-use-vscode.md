@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686614"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033623"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Use o Visual Studio Code para criar e executar scripts Transact-SQL para o SQL Server
 
@@ -250,7 +250,7 @@ As etapas a seguir mostram como se conectar ao SQL Server com o VS Code.
 
 Em um cenário do mundo real, você pode criar um script que você precisa salvar e executar posterior (para administração ou como parte de um projeto de desenvolvimento maior). Nesse caso, você pode salvar o script com um **. SQL** extensão.
 
-Se você for novo no T-SQL, consulte [Tutorial: gravando instruções Transact-SQL] e o [referência de Transact-SQL (mecanismo de banco de dados)].
+Se você ainda não conhece bem o T-SQL, consulte [Tutorial: Gravando Instruções Transact-SQL] e [Referência de Transact-SQL (mecanismo de banco de dados)].
 
 Para obter mais informações sobre o uso ou que contribuem para a extensão mssql, consulte [wiki do projeto de extensão mssql].
 

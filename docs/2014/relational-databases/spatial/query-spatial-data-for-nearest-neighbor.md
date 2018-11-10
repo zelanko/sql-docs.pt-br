@@ -1,22 +1,20 @@
 ---
 title: Consultar dados espaciais do vizinho mais próximo | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164716"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018691"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
   Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Consulta de Vizinho Mais Próximo e índices espaciais  
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as cláusulas `TOP` e `ORDER BY` são usadas para realizar uma consulta de Vizinho Mais Próximo em colunas de dados espaciais. O `ORDER BY` cláusula contém uma chamada para o `STDistance()` método para o tipo de dados da coluna espacial. O `TOP` cláusula indica o número de objetos para retornar para a consulta.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as cláusulas `TOP` e `ORDER BY` são usadas para realizar uma consulta de Vizinho Mais Próximo em colunas de dados espaciais. A cláusula `ORDER BY` contém uma chamada ao método `STDistance()` para o tipo de dados de coluna espacial. A cláusula `TOP` indica o número de objetos a ser retornado para a consulta.  
   
  Os requisitos a seguir devem ser satisfeitos para uma consulta de Vizinho Mais Próximo para usar um índice espacial:  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  A cláusula `WHERE` deve conter um método `STDistance()`.  
   
-4.  Se houver vários predicados na cláusula `WHERE`, o predicado que contém o método `STDistance()` deve ser conectado por uma conjunção `AND` aos outros predicados. O `STDistance()` método não pode estar em uma parte opcional do `WHERE` cláusula.  
+4.  Se houver vários predicados na cláusula `WHERE`, o predicado que contém o método `STDistance()` deve ser conectado por uma conjunção `AND` aos outros predicados. O método `STDistance()` não pode estar em uma parte opcional da cláusula `WHERE`.  
   
 5.  A primeira expressão na cláusula `ORDER BY` deve usar o método `STDistance()`.  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- A consulta não tem um `WHERE` cláusula que usa `STDistance()` em uma forma especificada na seção de sintaxe, portanto, a consulta não é possível usar um índice espacial.  
+ A consulta não tem uma cláusula `WHERE` que usa `STDistance()` em uma forma especificada na seção de sintaxe; portanto, a consulta não pode usar um índice espacial.  
   
 ## <a name="see-also"></a>Consulte também  
  [Dados espaciais &#40;SQL Server&#41;](spatial-data-sql-server.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190956"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030866"
 ---
 # <a name="set-domain-properties"></a>Definir propriedades do domínio
   Este tópico descreve como definir propriedades de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -35,9 +34,9 @@ ms.locfileid: "48190956"
   
 ##  <a name="Set"></a> Definir propriedades do domínio  
   
-1.  Definir propriedades em um domínio existente abrindo uma base de Conhecimento na atividade de gerenciamento de domínio (consulte [abrir uma Base de dados de Conhecimento](../../2014/data-quality-services/open-a-knowledge-base.md)) e, em seguida, selecionando o domínio apropriado na **domínio** lista. A página Propriedades de Domínio será exibida por padrão.  
+1.  Defina as propriedades em um domínio existente abrindo uma base de dados de conhecimento na atividade Gerenciamento de Domínio (consulte [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)) e selecione o domínio apropriado na lista **Domínios** . A página Propriedades de Domínio será exibida por padrão.  
   
-2.  Definir propriedades em um novo domínio após criá-lo, conforme descrito em [criar um domínio](../../2014/data-quality-services/create-a-domain.md).  
+2.  Defina as propriedades em um novo domínio depois de criá-la conforme descrito em [Create a Domain](../../2014/data-quality-services/create-a-domain.md).  
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190956"
 ###  <a name="Speller"></a> Habilitar Verificador Ortográfico  
  Se o tipo de dados for **Cadeia de Caracteres**, clique para habilitar o verificador ortográfico do DQS para o domínio. O verificador ortográfico só funciona em domínios com um tipo de dados cadeia de caracteres. A caixa de seleção **Habilitar Verificador Ortográfico** habilita o verificador ortográfico apenas para o único domínio associado com a caixa de seleção. A caixa de seleção não se aplica a um domínio composto.  
   
- O verificador ortográfico propõe correções de sintaxe e validação em valores no domínio. Para obter mais informações, consulte [usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ O verificador ortográfico propõe correções de sintaxe e validação em valores no domínio. Para obter mais informações, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Desabilitar Algoritmos de Erro de Sintaxe  
  Se o tipo de dados for **Cadeia de Caracteres**, selecione para especificar que erros de sintaxe não sejam identificados pelo DQS no domínio durante a limpeza. Marque esta caixa de seleção quando a identificação de erros de sintaxe para esse domínio for irrelevante. Por exemplo, a identificação de erros de sintaxe pode não ter importância para um número de série. Este controle só está disponível para o tipo de dados cadeia de caracteres. O DQS não verificará se existem erros de sintaxe em tipos de dados que não sejam cadeia de caracteres.  

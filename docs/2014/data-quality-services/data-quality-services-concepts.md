@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170976"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032115"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170976"
   
  **Política de Correspondência**  
   
- Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
  **Serviços de Dados de Referência**  
   
  Você pode usar dados de referência para validar, corrigir e enriquecer seus dados, aproveitando os serviços de empresas que garantem a qualidade dos seus dados de referência. Você pode usar os serviços do Windows Azure Marketplace para se conectar a provedores de dados de referência ou pode usar uma conexão direta a um provedor. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Para obter mais informações sobre o gerenciamento de dados de Conhecimento no DQS, consulte [Bases de dados de conhecimento do DQS e domínios](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Para obter mais informações sobre o gerenciamento de conhecimento no DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Conceitos de projeto de qualidade de dados  
  O administrador de dados executa operações de qualidade de dados (limpeza e correspondência) usando um projeto de qualidade de dados no aplicativo do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -76,7 +75,7 @@ ms.locfileid: "48170976"
   
  A opção de Configuração permite que você:  
   
--   Defina configurações de serviço de dados de referência. Para obter mais informações, consulte [configurar DQS para usar dados de referência](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Defina configurações de serviço de dados de referência. Para obter mais informações, consulte [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Defina os valores de limites para atividades de limpeza e correspondência. Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -86,9 +85,9 @@ ms.locfileid: "48170976"
   
  **Segurança do DQS**  
   
- Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [segurança do DQS](../../2014/data-quality-services/dqs-security.md).  
+ Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Para obter mais informações sobre a administração do DQS, consulte [administração do DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Para obter mais informações sobre a administração do DQS, consulte [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

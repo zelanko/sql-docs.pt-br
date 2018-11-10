@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211276"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018971"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
   Iniciando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bancos de dados do sistema (mestre, modelo, MSDB e TempDB) e [!INCLUDE[ssDE](../../includes/ssde-md.md)] bancos de dados de usuário podem ser instalados com o servidor de arquivos do bloco de mensagens de servidor (SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

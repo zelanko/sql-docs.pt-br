@@ -1,11 +1,9 @@
 ---
 title: GeometryCollection | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea9758d3411c242ade8293a8a52f7c22bd845ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228886"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018511"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  Um `GeometryCollection` é uma coleção de zero ou mais `geometry` ou `geography` instâncias. Um `GeometryCollection` pode ficar vazio.  
+  Uma `GeometryCollection` é uma coleção de zero ou mais instâncias de `geometry` ou de `geography`. Uma `GeometryCollection` pode estar vazia.  
   
 ## <a name="geometrycollection-instances"></a>Instâncias de GeometryCollection  
   
@@ -35,14 +33,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- O exemplo a seguir gera uma `System.FormatException` porque o `LinesString` da instância no `GeometryCollection` instância não é aceito.  
+ O exemplo a seguir emite uma `System.FormatException` porque a instância de `LinesString` na instância de `GeometryCollection` não é aceita.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Uma instância de `GeometryCollection` é válida quando todas as instâncias que englobam a instância de `GeometryCollection` são válidas. A seguir mostra três válido `GeometryCollection` instâncias e uma instância que não é válida.  
+ Uma instância de `GeometryCollection` é válida quando todas as instâncias que englobam a instância de `GeometryCollection` são válidas. O exemplo a seguir mostra três instâncias de `GeometryCollection` válidas e uma instância que não é válida.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

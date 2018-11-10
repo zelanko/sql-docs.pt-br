@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798934"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031019"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
 
@@ -62,8 +62,8 @@ Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteç
 | |escala de leitura|Alta disponibilidade & </br> proteção de dados | proteção de dados
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. 
-|Interrupção de uma réplica secundária  | Primária é R / w. Nenhum failover automático se o principal falhar. |Primária é R / w. Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. 
+|Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. 
+|Interrupção de uma réplica secundária  | Primária é R / w. Nenhum failover automático se o principal falhar. |Primária é R / w. Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. 
 <sup>*</sup> Padrão
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de 
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w.| Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária.
-|Interrupção de uma réplica secundária  |Primária é R/W, executar exposto à perda de dados. |Primário não está disponível para transações de usuário até que a secundária se recuperar.
+|Interrupção de uma réplica secundária  |Primária é R/W, executar exposto à perda de dados. |Primário não está disponível para transações de usuário até que a secundária se recuperar.
 <sup>*</sup> Padrão
 
 >[!NOTE]
@@ -108,9 +108,9 @@ O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabel
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupção principal | Failover automático. A nova primária é R / w. | Failover automático. Novo primário não está disponível para transações de usuário. 
-|Interrupção da réplica secundária | Primária é R/W, executar exposto à perda de dados (se o principal falha e não pode ser recuperado). Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. Nenhuma réplica para fazer failover para se a primária falhar também. 
-|Interrupção de réplica somente configuração | Primária é R / w. Nenhum failover automático se a primária falha também. | Primária é R / w. Nenhum failover automático se a primária falha também. 
-|Secundário síncrono + configuração apenas paralisação de réplica| Primário não está disponível para transações de usuário. Nenhum failover automático. | Primário não está disponível para transações de usuário. Nenhuma réplica para o failover para se primário falhar também. 
+|Interrupção da réplica secundária | Primária é R/W, executar exposto à perda de dados (se o principal falha e não pode ser recuperado). Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. Nenhuma réplica para fazer failover para se a primária falhar também. 
+|Interrupção de réplica somente configuração | Primária é R / w. Nenhum failover automático se a primária falha também. | Primária é R / w. Nenhum failover automático se a primária falha também. 
+|Secundário síncrono + configuração apenas paralisação de réplica| Primário não está disponível para transações de usuário. Nenhum failover automático. | Primário não está disponível para transações de usuário. Nenhuma réplica para o failover para se primário falhar também. 
 <sup>*</sup> Padrão
 
 >[!NOTE]

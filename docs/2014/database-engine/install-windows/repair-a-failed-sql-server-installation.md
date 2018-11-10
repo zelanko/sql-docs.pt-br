@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98a50c345e3f62f083d1bef2b998cdf8d1bb97cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169476"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018072"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Descartar uma instalação do SQL Server 2014
   A operação de reparo pode ser usada nos seguintes cenários:  

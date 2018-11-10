@@ -19,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676374"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031263"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Consulte [Limites de recursos baseados em vCore](https://docs.microsoft.com/azur
   
 - Adição de grupos de arquivos  
 - Backup ou restauração de banco de dados.  
-- Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  
+- Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
 - Alteração do proprietário do banco de dados. **tempdb** pertence a **sa**.  
 - Criação de um instantâneo do banco de dados  
 - Descartando o banco de dados.  
@@ -202,6 +202,10 @@ GO
 - Quando houver vários arquivos de dados do **tempdb**, todos os arquivos aumentarão automaticamente ao mesmo tempo e na mesma quantidade, dependendo das configurações de aumento. O sinalizador de rastreamento 1117 já não é necessário.  
 - Além disso, todas as alocações em **tempdb** usam extensões uniformes. O [sinalizador de rastreamento 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) não é mais necessário.  
 - Para o grupo de arquivos primário, a propriedade AUTOGROW_ALL_FILES está ativada e não pode ser modificada. 
+
+Para obter mais informações sobre as melhorias no desempenho em tempdb, veja o artigo de blog a seguir:
+
+[TEMPDB – Arquivos, Sinalizadores de Rastreamento e Atualizações!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Planejamento da capacidade para o tempdb no SQL Server
  A determinação do tamanho apropriado para o tempdb em um ambiente de produção do SQL Server depende de muitos fatores. Conforme descrito anteriormente neste artigo, esses fatores incluem a carga de trabalho existente e os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizados. Recomendamos que você analise a carga de trabalho existente executando as seguintes tarefas em um ambiente de teste do SQL Server:
@@ -273,5 +277,5 @@ GO
  [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Trabalhando com tempdb no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Trabalhando com tempdb no SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
  [Solução de problemas de espaço em disco insuficiente no tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 

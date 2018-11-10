@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 250d45bd6acf2165f922e311931fd5a13f633d9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218986"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032803"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
   Este tópico descreve como criar logons do SQL Server com base em uma entidade do Windows e conceder as funções de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] no banco de dados DQS_MAIN.  
@@ -51,6 +50,6 @@ ms.locfileid: "48218986"
   
 ## <a name="see-also"></a>Consulte também  
  [Instalar o Data Quality Services](install-data-quality-services.md)   
- [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

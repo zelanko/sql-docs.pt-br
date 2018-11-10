@@ -1,11 +1,9 @@
 ---
 title: Ponto | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146866"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017983"
 ---
 # <a name="point"></a>Ponto
-  Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados espaciais, um `Point` é um dimensionais 0-objeto que representa um único local e pode conter valores Z (elevação) e M (medida).  
+  Em dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um `Point` é um objeto dimensional zero que representa um único local e pode conter valores Z (elevação) e M (medida).  
   
 ## <a name="geography-data-type"></a>Tipo de dados de geografia  
  O tipo de Ponto para o tipo de dados geography representa um único local em que *Lat* representa latitude e *Long* representa longitude. Os valores de latitude e longitude são medidos em graus. Valores para latitude sempre estão no intervalo [-90, 90] e os valores inseridos fora desse intervalo gerarão uma exceção. Os valores de longitude estão sempre no intervalo (-180, 180]; e os valores inseridos fora desse intervalo são ajustados para caberem nesse intervalo. Por exemplo, se 190 for inserido para longitude, ele será ajustado para o valor -170. *SRID* representa a ID de referência espacial da instância **geography** que você deseja retornar.  

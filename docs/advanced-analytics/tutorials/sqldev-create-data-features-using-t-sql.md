@@ -1,6 +1,6 @@
 ---
-title: Lição 2 recursos de dados crie usando funções T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
+title: Lição 2 recursos de dados de criar usando funções T-SQL (R no aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial que mostra como adicionar cálculos para procedimentos armazenados para uso em modelos de aprendizado de máquina do R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462092"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031493"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lição 2: Criar recursos de dados usando R e T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

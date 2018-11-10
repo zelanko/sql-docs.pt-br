@@ -1,11 +1,9 @@
 ---
 title: Visão geral de tipos de dados espaciais | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -16,17 +14,17 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af836875b6427663a7d6006243445d716ab4e862
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157716"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018201"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
   Há dois tipos de dados espaciais. O tipo de dados `geometry` oferece suporte a dados planares ou a dados euclidianos (planisfério). O tipo de dados `geometry` (planar) está de acordo com os Recursos Simples do Open Geospatial Consortium (OGC) para o SQL Specification versão 1.1.0 e compatível com o SQL MM (padrão ISO).  
   
- Além disso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a `geography` tipo de dados que armazena dados de elipsoidais (Terra redonda), como coordenadas de latitude e longitude GPS.  
+ Além disso, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao tipo de dados `geography` que armazena dados elipsoidais (globo), como coordenadas de latitude e longitude de GPS.  
   
 > [!IMPORTANT]  
 >  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo aprimoramentos nos tipos de dados espaciais, baixe o white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(Novos recursos espaciais no SQL Server codinome "Denali").  
@@ -34,7 +32,7 @@ ms.locfileid: "48157716"
 ##  <a name="objects"></a> Objetos de dados espaciais  
  Os tipos de dados `geometry` e `geography` oferecem suporte a dezesseis objetos de dados espaciais, ou tipos de instâncias. No entanto, apenas onze desses tipos de instâncias *podem ser instanciados*. É possível criar e trabalhar com essas instâncias (ou criar uma instância delas) em um banco de dados. Essas instâncias derivam determinadas propriedades de seus tipos de dados pai que as distingue como `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` ou como vários `geometry`ou `geography` instâncias em um `GeometryCollection`. O tipo `Geography` tem um tipo de instância adicional, `FullGlobe`.  
   
- A figura a seguir ilustra a `geometry` hierarquia na qual o `geometry` e `geography` baseiam-se os tipos de dados. Os tipos podem ser instanciados de `geometry` e `geography` são indicados em azul.  
+ A figura a seguir ilustra a hierarquia `geometry` na qual os tipos de dados `geometry` e `geography` se baseiam. Os tipos podem ser instanciados de `geometry` e `geography` são indicados em azul.  
   
  ![Hierarquia do tipo geometria](../../database-engine/media/geom-hierarchy.gif "hierarquia do tipo geometry")  
   
@@ -77,14 +75,14 @@ ms.locfileid: "48157716"
  Os segmentos de arco circular para tipos geometry são definidos no plano de coordenadas cartesianas XY (são ignorados valores Z). Os segmentos de arco circular para tipos geography são definidos por segmentos de curva em uma esfera de referência. Qualquer paralelo na esfera de referência pode ser definido por dois arcos circulares complementares, onde os pontos para ambos os arcos têm um ângulo de latitude constante.  
   
 ### <a name="measurements-in-spatial-data-types"></a>Medidas em tipos de dados espaciais  
- No sistema planar ou de terra plana, as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o `geometry` tipo de dados, a distância entre (2, 2) e (5, 6) é de 5 unidades, independentemente das unidades usadas.  
+ No sistema planar ou de terra plana, as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o tipo de dados de `geometry`, a distância entre (2, 2) e (5, 6) é de 5 unidades, independentemente das unidades usadas.  
   
- No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto, comprimentos e áreas são normalmente medidas em metros e metros quadrados, embora a medida possa depender de identificador de referência espacial (SRID) do `geography` instância. A unidade mais comuns de medida para o `geography` tipo de dados é em metros.  
+ No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto os comprimentos e áreas são normalmente medidos em metros e metros quadrados, embora a medida possa depender do SRID (spatial reference identifier) da instância de `geography`. A unidade de medida mais comum para o tipo de dados `geography` é em metros.  
   
 ### <a name="orientation-of-spatial-data"></a>Orientação de dados espaciais  
  No sistema de planar, a orientação de anel de um polígono não é um fator importante. Por exemplo, um polígono descrito por ((0, 0), (10, 0), (0, 20), (0, 0)) é o mesmo que um polígono descrito por ((0, 0), (0, 20), (10, 0), (0, 0)). Os Recursos Simples do OGC para SQL Specification não ditam uma ordenação de anel e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não impõe ordenação de anel.  
   
- Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o `geography` tipo de dados para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela regra à esquerda.  
+ Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o tipo de dados `geography` para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela regra à esquerda.  
   
  Quando o nível de compatibilidade for 100 ou abaixo na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o `geography` tipo de dados tem as seguintes restrições:  
   
@@ -107,7 +105,7 @@ ms.locfileid: "48157716"
   
   
 ##  <a name="circular"></a> Segmentos de arco circular  
- Três tipos instanciáveis podem adotar segmentos de arco circular: `CircularString`, `CompoundCurve`, e `CurvePolygon`.  Um segmento de arco circular é definido por três pontos em um plano bidimensional, e o terceiro ponto não pode ser igual ao primeiro.  
+ Três tipos instanciáveis podem adotar segmentos de arco circular: `CircularString`, `CompoundCurve` e `CurvePolygon`.  Um segmento de arco circular é definido por três pontos em um plano bidimensional, e o terceiro ponto não pode ser igual ao primeiro.  
   
  As figuras A e B mostram segmentos de arco circular típicos. Observe como cada um dos três pontos se situa no perímetro de um círculo.  
   
@@ -123,7 +121,7 @@ ms.locfileid: "48157716"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- Este exemplo mostra como armazenar os triângulos Isósceles anteriores usando um `LineString` instância e `CircularString` instância:  
+ Este exemplo mostra como armazenar os triângulos isósceles anteriores que usam uma instância `LineString` e uma `CircularString`:  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -158,10 +156,10 @@ LS LengthCS Length
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- Como a ilustração acima mostra, `CircularString` instâncias usam menos pontos para armazenar limites de curva com maior precisão que `LineString` instâncias. As instâncias `CircularString` são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias `LineString` são boas para armazenar limites que são lineares como um quarteirão de cidade.  
+ Como a ilustração acima mostra, as instâncias `CircularString` usam menos pontos para armazenar limites de curva com maior precisão que instâncias `LineString`. As instâncias `CircularString` são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias `LineString` são boas para armazenar limites que são lineares como um quarteirão de cidade.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparação de LineString e CompoundCurve  
- Os exemplos de código a seguir mostram como armazenar a mesma figura usando `LineString` e `CompoundCurve` instâncias:  
+ Os exemplos de código seguintes mostram como armazenar a mesma figura usando instâncias `LineString` e `CompoundCurve`:  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -171,13 +169,13 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  ou em  
   
- Nos exemplos anteriores, uma `LineString` instância ou um `CompoundCurve` instância poderia armazenar a figura.  O exemplo a seguir usa um `CompoundCurve` para armazenar uma fatia de pizza:  
+ Nos exemplos anteriores, uma instância `LineString` ou uma instância `CompoundCurve` poderiam armazenar a figura.  Este próximo exemplo usa uma `CompoundCurve` para armazenar uma fatia de pizza:  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
- Um `CompoundCurve` instância pode armazenar o segmento de arco circular (2 de 2, 3 1, 0 2) diretamente, enquanto um `LineString` instância precisaria converter a curva em vários segmentos de linha menores.  
+ Uma instância `CompoundCurve` pode armazenar o segmento de arco circular (2 2, 1 3, 0 2) diretamente, ao passo que uma instância `LineString` teria que converter a curva em vários segmentos de linha menores.  
   
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Comparação de CircularString e CompoundCurve  
  O exemplo de código a seguir mostra como a fatia de pizza pode ser armazenada em uma instância `CircularString`:  
@@ -194,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` instâncias permitem `LineString` e `CircularString` componentes para que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar um `CompoundCurve` para armazenar a mesma figura:  
+ As instâncias `CompoundCurve` permitem componentes `LineString` e `CircularString`, de forma que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar uma `CompoundCurve` para armazenar a mesma figura:  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -203,7 +201,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparação de Polygon e CurvePolygon  
- `CurvePolygon` as instâncias podem usar `CircularString` e `CompoundCurve` ao definir seus anéis exterior e interior.  `Polygon` instâncias não é possível usar os tipos de segmento de arco circular: `CircularString` e `CompoundCurve`.  
+ Instâncias `CurvePolygon` podem usar instâncias `CircularString` e `CompoundCurve` ao definir os seus anéis exteriores e interiores.  Instâncias `Polygon` não podem usar os tipos de segmento de arco circular: `CircularString` e `CompoundCurve`.  
   
   
 ## <a name="see-also"></a>Consulte também  

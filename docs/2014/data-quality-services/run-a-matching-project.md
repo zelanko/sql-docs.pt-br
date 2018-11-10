@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,19 +14,19 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091746"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031503"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  
   
  A correspondência é executada em três etapas: um processo de mapeamento no qual você identifica a fonte de dados e mapeia domínios para a fonte de dados, um processo de correspondência no qual você executa a análise de correspondência, e um processo de sobrevivência e exportação no qual você designa a regra de sobrevivência e exporta os resultados correspondentes. Cada um desses processos é executado em uma página separada do assistente da atividade de correspondência, permitindo que você percorra páginas diferentes, para executar o processo novamente e fechar um processo de correspondência específico e, depois, retornar ao mesmo estágio do processo. O DQS fornece estatísticas sobre a fonte de dados, as regras de correspondência e os resultados correspondentes que permitem a você tomar decisões conscientes sobre a correspondência e refinar o processo de correspondência.  
   
- Você deve se preparar para a correspondência, criando uma política de correspondência com uma ou mais regras de correspondência e executando a política em dados de exemplo. O processo de projeto de correspondência está separado do processo de política de correspondência, e uma base de dados de conhecimento não é populada com o conhecimento de correspondência obtido do projeto de correspondência. Para obter mais informações sobre como criar uma política de correspondência, consulte [criar uma política de correspondência](../../2014/data-quality-services/create-a-matching-policy.md).  
+ Você deve se preparar para a correspondência, criando uma política de correspondência com uma ou mais regras de correspondência e executando a política em dados de exemplo. O processo de projeto de correspondência está separado do processo de política de correspondência, e uma base de dados de conhecimento não é populada com o conhecimento de correspondência obtido do projeto de correspondência. Para obter mais informações sobre como criar uma política de correspondência, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

@@ -1,11 +1,9 @@
 ---
 title: Visão geral de índices espaciais | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113618"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018671"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a dados e índices espaciais. Um *índice espacial* é um tipo de índice estendido que permite indexar uma coluna espacial. Uma coluna espacial é uma coluna de uma tabela que contém tipo de dados espaciais, como `geometry` ou `geography`.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113618"
 >  As densidades da grade de um índice espacial são visíveis nas colunas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax e bounding_box_ymax da exibição dr catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>Esquema de mosaico de grade geográfica  
- Esse esquema de mosaico aplica-se apenas a um `geography` coluna. Esta seção resume os métodos que têm suporte do mosaico de grade geográfica e discute como o espaço geodésico é projetado em um plano que, em seguida, é decomposto em uma hierarquia de grade.  
+ Este esquema de mosaico aplica-se apenas a uma coluna de `geography`. Esta seção resume os métodos que têm suporte do mosaico de grade geográfica e discute como o espaço geodésico é projetado em um plano que, em seguida, é decomposto em uma hierarquia de grade.  
   
 > [!NOTE]  
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -223,7 +221,7 @@ ms.locfileid: "48113618"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Consultas que usam um índices espaciais  
- Índices espaciais só têm suporte em consultas que incluem um operador espacial indexado no `WHERE` cláusula. Por exemplo, a seguinte sintaxe:  
+ Os índices espaciais só têm suporte em consultas que incluem um operador espacial indexado na cláusula `WHERE`. Por exemplo, a seguinte sintaxe:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

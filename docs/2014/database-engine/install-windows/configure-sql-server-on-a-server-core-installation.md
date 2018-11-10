@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101726"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018431"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
   Este tópico abrange detalhes sobre a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Consulte as seguintes seções:  
@@ -28,11 +27,11 @@ ms.locfileid: "48101726"
   
 -   [Instalar atualizações do SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [Iniciar/parar o serviço do SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Iniciar/parar o SQL Server Service](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
--   [Habilitar grupos de disponibilidade AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
+-   [Habilitar Grupos de Disponibilidade AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Configurando o acesso remoto do SQL Server em execução no Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Configurando o Acesso Remoto do SQL Server em execução no Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -114,10 +113,10 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Você também pode usar serviços Net para iniciar e interromper serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="BKMK_EnableAlwaysON"></a> Habilitar Grupos de Disponibilidade AlwaysOn  
- Habilitar os Grupos de Disponibilidade AlwaysOn é pré-requisito para uma instância do servidor usar grupos de disponibilidade como uma solução de recuperação de desastres de alta disponibilidade. Para obter mais informações sobre como gerenciar grupos de disponibilidade AlwaysOn, consulte [habilitar e desabilitar grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Habilitar os Grupos de Disponibilidade AlwaysOn é pré-requisito para uma instância do servidor usar grupos de disponibilidade como uma solução de recuperação de desastres de alta disponibilidade. Para obter mais informações sobre como gerenciar os grupos de disponibilidade do AlwaysOn, veja [Habilitar e desabilitar grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager remotamente  
- Estas etapas devem ser realizadas em um computador executando a edição de cliente do [!INCLUDE[win7](../../includes/win7-md.md)] ou posterior, ou em outro servidor que tem o Shell gráfico de servidor instalado (ou seja, uma instalação completa do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou uma instalação do Windows Server 8 com o servidor Recurso Shell gráfico habilitado).  
+ Estas etapas devem ser realizadas em um computador que esteja executando a edição de cliente do [!INCLUDE[win7](../../includes/win7-md.md)] ou posterior ou em outro servidor com o Shell Gráfico de Servidor instalado (isto é, uma instalação completa do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou uma instalação do Windows Server 8 com o recurso Shell Gráfico de Servidor habilitado).  
   
 1.  Abra o gerenciamento de computador. Para abrir o Gerenciamento do Computador, siga um destes procedimentos:  
   

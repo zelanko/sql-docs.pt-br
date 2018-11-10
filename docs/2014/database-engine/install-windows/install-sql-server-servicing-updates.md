@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c6d4165cc0cdedbef073ba950366265f4699d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f369185b2d7d5e5d65fc98bca40ba66029ceaa8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087136"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018661"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Instalar atualizações de serviço do SQL Server 2014
   Este tópico fornece informações sobre como instalar atualizações para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta seção fornece informações sobre o seguinte:  
@@ -38,7 +37,7 @@ ms.locfileid: "48087136"
   
 -   Um compartilhamento de rede  
   
- Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode incluir uma atualização cumulativa, service pack ou service pack mais atualização cumulativa. Funcionalidade de atualização de produto é uma extensão do [funcionalidade de instalação integrada](http://go.microsoft.com/fwlink/?LinkId=219945) que estava disponível no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
+ Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode incluir uma atualização cumulativa, service pack ou service pack mais atualização cumulativa. A funcionalidade Atualização de Produto é uma extensão da [funcionalidade de instalação integrada](http://go.microsoft.com/fwlink/?LinkId=219945) que estava disponível no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>Instalando atualizações para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] depois que já tiver sido instalado  
  Em uma instância instalada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é recomendável que você aplique todas as atualizações disponíveis: versões de distribuição geral (GDR - atualizações críticas/de segurança), Service Packs (SP), bem como a mais recente disponível atualização cumulativa (CU).  

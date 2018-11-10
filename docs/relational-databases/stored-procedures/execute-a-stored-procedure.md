@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419271"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970307"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Há dois modos diferentes de executar um procedimento armazenado. A primeira e mais comum abordagem é fazer com que um aplicativo ou usuário chame o procedimento. A segunda abordagem é definir o procedimento para ser executado automaticamente quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for iniciada. Quando um procedimento é chamado por um aplicativo ou usuário, a palavra-chave EXECUTE ou EXEC do [!INCLUDE[tsql](../../includes/tsql-md.md)] é declarada explicitamente na chamada. Como alternativa, o procedimento poderá ser chamado e executado sem a palavra-chave se o for a primeira instrução do lote [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

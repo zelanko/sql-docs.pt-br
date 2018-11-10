@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753424"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966034"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Usando APPLY  
  Ambos os operandos à esquerda e à direita do operador APPLY são expressões de tabela. A principal diferença entre esses operandos é que *right_table_source* pode usar uma função com valor de tabela que usa uma coluna da *left_table_source* como um dos argumentos da função. A *left_table_source* pode incluir funções com valor de tabela, mas não pode conter argumentos que são colunas da *right_table_source*.  
   
- O operador APPLY funciona da seguinte maneira para criar a origem de tabela para a cláusula FROM:  
+O operador APPLY funciona da seguinte maneira para criar a origem de tabela para a cláusula FROM:  
   
 1.  Avalia *right_table_source* em cada linha da *left_table_source* para produzir conjuntos de linhas.  
   
-     Os valores na *right_table_source* dependem de *left_table_source*. *right_table_source* pode ser representada aproximadamente da seguinte maneira: `TVF(left_table_source.row)`, em que `TVF` é uma função com valor de tabela.  
+    Os valores na *right_table_source* dependem de *left_table_source*. *right_table_source* pode ser representada aproximadamente da seguinte maneira: `TVF(left_table_source.row)`, em que `TVF` é uma função com valor de tabela.  
   
 2.  Combina os conjuntos de resultados que são produzidos para cada linha na avaliação de *right_table_source* com a *left_table_source* executando uma operação UNION ALL.  
   
-     A lista de colunas produzida pelo resultado do operador APPLY é o conjunto de colunas da *left_table_source* combinado à lista de colunas da *right_table_source*.  
+    A lista de colunas produzida pelo resultado do operador APPLY é o conjunto de colunas da *left_table_source* combinado à lista de colunas da *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Usando PIVOT e UNPIVOT  
  A *pivot_column* e a *value_column* são colunas de agrupamento usadas pelo operador PIVOT. Este segue o seguinte processo para obter o conjunto de resultados de saída:  
@@ -437,7 +437,7 @@ ON (p.ProductID = v.ProductID);
     2.  *aggregate_function* é avaliada na *value_column* desse subgrupo e seu resultado é retornado como o valor da *output_column* correspondente. Se o subgrupo estiver vazio, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um valor nulo para essa *output_column*. Se a função de agregação for COUNT e o subgrupo estiver vazio, será retornado zero (0).  
 
 > [!NOTE]
-> Os identificadores de coluna na cláusula `UNPIVOT` seguem o agrupamento de catálogo. Para o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o agrupamento é sempre `SQL_Latin1_General_CP1_CI_AS`. Para bancos de dados parcialmente independentes do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], o agrupamento é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas, uma cláusula COLLATE (`COLLATE DATABASE_DEFAULT`) será necessária para evitar conflitos.   
+> Os identificadores de coluna na cláusula `UNPIVOT` seguem a ordenação de catálogo. Para o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], a ordenação é sempre `SQL_Latin1_General_CP1_CI_AS`. Para bancos de dados parcialmente independentes do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], a ordenação é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas, uma cláusula COLLATE (`COLLATE DATABASE_DEFAULT`) será necessária para evitar conflitos.   
   
  Para obter mais informações sobre PIVOT e UNPIVOT, incluindo exemplos, consulte [Usando PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. Usando APPLY  
- O seguinte exemplo presume que as tabelas com o esquema a seguir estão presentes no banco de dados:  
+O seguinte exemplo presume que as seguintes tabelas e função com valor de tabela estejam presentes no banco de dados:  
+
+|Object Name|Nomes de coluna|      
+|---|---|   
+|Departamentos|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+A função com valor de tabela `GetReports` retorna a lista de todos os funcionários que se reportam direta ou indiretamente ao `MgrID` especificado.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- Há também uma função com valor de tabela, `GetReports(MgrID)` que retorna a lista de todos os funcionários (`EmpID`, `EmpLastName`, `EmpSalary`) subordinados direta ou indiretamente ao `MgrID` especificado.  
-  
- O exemplo usa `APPLY` para retornar todos os departamentos e todos os funcionários do departamento. Se um departamento em particular não tiver funcionários, não haverá linhas retornadas para ele.  
+O exemplo usa `APPLY` para retornar todos os departamentos e todos os funcionários do departamento. Se um departamento em particular não tiver funcionários, não haverá linhas retornadas para ele.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Se desejar que a consulta gere linhas para os departamentos sem funcionários, o que irá gerar valores nulos para as colunas `EmpID`, `EmpLastName` e `EmpSalary`, use então `OUTER APPLY`.  
+Se desejar que a consulta gere linhas para os departamentos sem funcionários, o que irá gerar valores nulos para as colunas `EmpID`, `EmpLastName` e `EmpSalary`, use então `OUTER APPLY`.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. Usando CROSS APPLY  
- O exemplo a seguir recupera um instantâneo de todos os planos de consulta residindo no cache de plano, consultando a exibição de gerenciamento dinâmico `sys.dm_exec_cached_plans` para recuperar os identificadores de plano de todas as consultas no cache. Em seguida, o operador `CROSS APPLY` é especificado para transmitir o identificador de plano a `sys.dm_exec_query_plan`. A saída de plano de execução XML de cada plano atualmente no cache de plano está na coluna `query_plan` da tabela retornada.  
+O exemplo a seguir recupera um instantâneo de todos os planos de consulta residindo no cache de plano, consultando a exibição de gerenciamento dinâmico `sys.dm_exec_cached_plans` para recuperar os identificadores de plano de todas as consultas no cache. Em seguida, o operador `CROSS APPLY` é especificado para transmitir o identificador de plano a `sys.dm_exec_query_plan`. A saída de plano de execução XML de cada plano atualmente no cache de plano está na coluna `query_plan` da tabela retornada.  
   
 ```sql
 USE master;  

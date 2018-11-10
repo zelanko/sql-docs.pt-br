@@ -1,21 +1,21 @@
 ---
 title: Lição 4 resultados potenciais de previsão usando modelos do R (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
+description: Tutorial que mostra como colocar o script R inserido no SQL Server em procedimentos armazenados com funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/30/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462122"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032533"
 ---
-# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 4: Prever resultados possíveis, usando um modelo do R em um procedimento armazenado
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lição 4: Previsões de execução usando o R inserido em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
@@ -30,10 +30,10 @@ Primeiro, vamos ver como a pontuação funciona em geral.
 
 ## <a name="basic-scoring"></a>A pontuação básica
 
-O procedimento armazenado **PredictTip** ilustra a sintaxe básica para encapsular uma chamada de previsão em um procedimento armazenado.
+O procedimento armazenado **RxPredict** ilustra a sintaxe básica para encapsular uma chamada de rxPredict RevoScaleR em um procedimento armazenado.
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
 AS 
 BEGIN 
   
@@ -64,11 +64,11 @@ GO
   
 + O valor retornado pela `rxPredict` função é um **float** que representa a probabilidade de que o driver obtém uma dica de qualquer valor.
 
-## <a name="batch-scoring"></a>Pontuação do lote
+## <a name="batch-scoring-a-list-of-predictions"></a>(Uma lista das previsões) de pontuação em lote
 
-Agora vamos ver como funciona a pontuação de lote.
+Um cenário mais comum é gerar previsões para várias observações no modo de lote. Nesta etapa, vamos ver como funciona a pontuação do lote.
 
-1.  Vamos começar obtendo um conjunto menor de dados de entrada com o qual trabalharemos. Esta consulta cria uma lista das “10 primeiras” corridas com contagem de passageiros e outros recursos necessários para fazer uma previsão.
+1.  Comece obtendo um conjunto menor de trabalhar com dados de entrada. Esta consulta cria uma lista das “10 primeiras” corridas com contagem de passageiros e outros recursos necessários para fazer uma previsão.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,13 +93,11 @@ Agora vamos ver como funciona a pontuação de lote.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Essa consulta pode ser usada como entrada para o procedimento armazenado **PredictTipMode**, fornecido como parte do download.
-
-2. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipMode** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Criar um procedimento armazenado chamado **RxPredictBatchOutput** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -127,26 +125,28 @@ Agora vamos ver como funciona a pontuação de lote.
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[PredictTip] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
     ```
   
-4. O procedimento armazenado retorna uma série de valores que representam a previsão para cada uma das viagens 10 principais. No entanto, as primeiras corridas também são corridas de passageiro único com uma distância de corrida relativamente curta, para o qual o driver é improvável que receber uma gorjeta.
+O procedimento armazenado retorna uma série de valores que representam a previsão para cada uma das viagens 10 principais. No entanto, as primeiras corridas também são corridas de passageiro único com uma distância de corrida relativamente curta, para o qual o driver é improvável que receber uma gorjeta.
   
 
 > [!TIP]
 > 
 > Em vez de retornar apenas o "Sim – gorjeta" e "sem gorjeta" resultados, você pode também retornar a pontuação de probabilidade da previsão e, em seguida, aplicar uma cláusula WHERE para o _pontuação_ valores de coluna para categorizar a pontuação como "propenso a dar gorjeta" ou " improvável gorjeta", usando um valor de limite como 0,5 ou 0,7. Essa etapa não está incluída no procedimento armazenado, mas seria fácil de ser implementada.
 
-## <a name="single-row-scoring"></a>Uma única linha de pontuação
+## <a name="single-row-scoring-of-multiple-inputs"></a>Uma única linha de pontuação de várias entradas
 
-Às vezes, você deseja passar valores individuais de um aplicativo e obter um único resultado com base nesses valores. Por exemplo, você poderá definir uma planilha do Excel, um aplicativo Web ou um relatório do Reporting Services para chamar o procedimento armazenado e fornecer entradas digitadas ou selecionadas por usuários.
+Às vezes você deseja passar vários valores de entrada e obter uma única previsão com base nesses valores. Por exemplo, você poderia configurar uma planilha do Excel, um aplicativo web ou um relatório do Reporting Services para chamar o procedimento armazenado e fornecer entradas digitadas ou selecionadas por usuários desses aplicativos.
 
-Nesta seção, você aprenderá a criar previsões únicas usando um procedimento armazenado.
+Nesta seção, você aprenderá a criar previsões únicas usando um procedimento armazenado que recebe várias entradas, como contagem de passageiros, distância da corrida e assim por diante. O procedimento armazenado cria uma pontuação com base no modelo do R armazenado anteriormente.
+  
+Se você chamar o procedimento armazenado de um aplicativo externo, certifique-se de que os dados corresponde aos requisitos do modelo de R. Isso pode incluir a garantia de que os dados de entrada possam ser convertidos em um tipo de dados do R ou a validação do tipo e comprimento dos dados. 
 
-1. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipSingleMode**, que é incluído como parte do download.
+1. Criar um procedimento armazenado **RxPredictSingleRow**.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -165,19 +165,13 @@ Nesta seção, você aprenderá a criar previsões únicas usando um procediment
       WITH RESULT SETS ((Score float));  
     END
     ```
-  
-    - Esse procedimento armazenado usa vários valores únicos como entrada, como contagem de passageiros, distância da corrida e assim por diante.
-  
-        Se você chamar o procedimento armazenado de um aplicativo externo, certifique-se de que os dados corresponde aos requisitos do modelo de R. Isso pode incluir a garantia de que os dados de entrada possam ser convertidos em um tipo de dados do R ou a validação do tipo e comprimento dos dados. 
-  
-    -   O procedimento armazenado cria uma pontuação com base no modelo do R armazenado.
-  
+
 2. Experimente usá-lo, fornecendo os valores manualmente.
   
     Abra uma nova **consulta** janela e chame o procedimento armazenado, fornecendo valores para cada um dos parâmetros. Os parâmetros representam as colunas de recursos usadas pelo modelo e são necessários.
 
     ```
-    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
@@ -189,7 +183,7 @@ Nesta seção, você aprenderá a criar previsões únicas usando um procediment
     Ou, use este formulário mais curto com suporte para [parâmetros para um procedimento armazenado](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
-    EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. Os resultados indicam que a probabilidade de receber uma gorjeta é baixa (zero) dessas viagens 10 principais, como todos são corridas de passageiro único em uma distância relativamente curta.

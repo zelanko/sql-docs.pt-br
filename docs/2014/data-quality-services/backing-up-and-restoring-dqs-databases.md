@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9ff06a230ea00af78b98e561f3fe4ae69886b5ff
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119203"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029854"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Fazendo backup e restaurando banco de dados do DQS
   Este tópico descreve como fazer backup e restaurar os bancos de dados do DQS.  
@@ -25,7 +24,7 @@ ms.locfileid: "49119203"
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   Você deve saber ou se lembrar da senha para a chave mestra de banco de dados que você forneceu durante a instalação do servidor do DQS.  
+-   Você deve saber ou se lembrar da senha da chave mestra do banco de dados que forneceu durante a instalação do servidor DQS.  
   
 -   Verifique se não há nenhuma atividade ou processo em execução no DQS. Isso pode ser verificado com o uso da tela **Monitoramento de atividade** . Para obter informações detalhadas sobre como trabalhar nessa tela, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   

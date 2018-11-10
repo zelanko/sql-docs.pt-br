@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060566"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018311"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Atualizar para o SQL Server 2014 usando o Assistente de Instalação (instalação)
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma versão anterior, ou migrar bancos de dados existentes e parâmetros de configuração de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicá-los a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -125,7 +124,7 @@ ms.locfileid: "48060566"
   
 -   **Registre os servidores** — A atualização remove as configurações do Registro da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar, você deve registrar os servidores novamente.  
   
--   **Atualize as estatísticas** — Para ajudar a otimizar o desempenho de consultas, é recomendável atualizar as estatísticas em todos os bancos de dados após a atualização. Use o `sp_updatestats` procedimento armazenado para atualizar as estatísticas em tabelas definidas pelo usuário em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados.  
+-   **Atualize as estatísticas** — Para ajudar a otimizar o desempenho de consultas, é recomendável atualizar as estatísticas em todos os bancos de dados após a atualização. Use o procedimento armazenado `sp_updatestats` para atualizar as estatísticas das tabelas definidas pelo usuário nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** – Para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações sobre a configuração da área de superfície, consulte o arquivo leiame desta versão.  
   
