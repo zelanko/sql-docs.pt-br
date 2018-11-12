@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48096086"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permissões da Oracle
-  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
+  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  
