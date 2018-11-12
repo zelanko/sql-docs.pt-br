@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51032983"
