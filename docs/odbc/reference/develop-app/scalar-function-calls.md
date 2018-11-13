@@ -23,7 +23,7 @@ ms.locfileid: "47704294"
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
   
- **{fn***função escalar* **}**   
+ **{fn** *função escalar* **}**  
   
  em que *função escalar* é uma das funções listadas na [funções escalares do apêndice e:](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) na gramática do apêndice c: SQL.  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo solicitado. O **converter** função converte dados de um tipo de dados SQL para o tipo de dados SQL especificado. A sintaxe do **converter** é de função  
   
- **Converter (** *value_exp* **,** *data_type * * *)**  
+ **Converter(** *value_exp* **,** *data_type * * *)**  
   
  em que *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponda a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a seguinte instrução SQL usa o **converter** função para ter certeza de que a saída da **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
   
