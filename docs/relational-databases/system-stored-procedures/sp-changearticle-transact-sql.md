@@ -147,7 +147,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Instrução UPADTE a ser executada; caso contrário, será construída do log.|  
 |NULL|NULL|Retorna uma lista de propriedades de artigo que podem ser alteradas.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
