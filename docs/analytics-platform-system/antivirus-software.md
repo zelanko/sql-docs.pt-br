@@ -1,6 +1,6 @@
 ---
 title: Software antivírus - Analytics Platform System | Microsoft Docs
-description: Se seu data center requer o software antivírus, use estas diretrizes para instalar o software antivírus no sistema de plataforma de análise. É recomendável não instalar um software antivírus, a menos que seja um requisito sólido de seu data center.
+description: Se seu data center exige um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. É recomendável não instalar o software antivírus, a menos que ele é um requisito sólido de seu data center.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,31 +9,31 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5d9ff6848d2df43408613d41dc7a0e6f8c1b0b8c
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550037"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699106"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivírus para Analytics Platform System
-Se seu data center requer o software antivírus, use estas diretrizes para instalar o software antivírus no sistema de plataforma de análise. É recomendável não instalar um software antivírus, a menos que seja um requisito sólido de seu data center.  
+# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivírus para o Analytics Platform System
+Se seu data center exige um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. É recomendável não instalar o software antivírus, a menos que ele é um requisito sólido de seu data center.  
   
 > [!WARNING]  
-> É altamente recomendável que você avalie individualmente o risco de segurança para cada computador em Analytics Platform System como um todo, e que você selecione as ferramentas apropriadas para o nível de risco de segurança de cada computador. Além disso, é recomendável que, antes de implementar qualquer projeto de proteção contra vírus, você testar a todo o sistema sob uma carga completa para avaliar as alterações no desempenho e estabilidade.  
+> É altamente recomendável que você avalie o risco de segurança para cada computador e para o Analytics Platform System, como um todo individualmente, e que você selecione as ferramentas que são apropriadas para o nível de risco de segurança de cada computador. Além disso, é recomendável que, antes de implementar qualquer projeto de proteção contra vírus, você teste todo o sistema sob uma carga completa para avaliar as alterações de estabilidade e desempenho.  
 >   
-> Software de proteção contra vírus requer alguns recursos do sistema para executar. Você deve executar o teste antes e depois de instalar o software antivírus para determinar se há qualquer efeito no desempenho do sistema de plataforma de análise.  
+> Proteção contra vírus requer alguns recursos do sistema para executar. Você deve executar testes antes e depois de instalar o software antivírus para determinar se há qualquer efeito de desempenho sobre o Analytics Platform System.  
   
-Este tópico se baseia as orientações em [como escolher o software antivírus para execução em computadores que executam o SQL Server](http://support.microsoft.com/kb/309422) e [KB artigo 961804](http://support.microsoft.com/kb/961804/en-us).  
+Este tópico se baseia as diretrizes [como escolher o software antivírus seja executado em computadores que executam o SQL Server](https://support.microsoft.com/kb/309422) e [KB artigo 961804](https://support.microsoft.com/kb/961804/en-us).  
   
 ## <a name="exclusion-list-for-physical-hosts"></a>Lista de exclusões para Hosts físicos  
-Para instalar o software antivírus em hosts físicos, exclua a seguinte lista de diretórios e processos. Eles não devem ser verificados pelo software antivírus.  
+Para instalar o software antivírus em hosts físicos, exclua a seguinte lista de diretórios e os processos. Eles não devem ser verificados pelo software antivírus.  
   
 **Exclua esses diretórios:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - diretório de configuração de máquina Virtual  
+-   C:\programdata\microsoft\windows\hyper-v. - diretório de configuração de máquina Virtual  
   
--   Discos rígidos C:\Users\Public\Documents\Hyper-V\Virtual - diretório da unidade de disco rígido virtual padrão  
+-   Discos de rígidos C:\Users\Public\Documents\Hyper-V\Virtual - diretório padrão de unidade de disco rígido virtual  
   
 -   C:\clusterStorage - diretórios de unidade de disco rígido Virtual  
   
@@ -44,7 +44,7 @@ Para instalar o software antivírus em hosts físicos, exclua a seguinte lista d
 -   Processos de trabalho de máquina virtual (Vmwp.exe)  
   
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusões para máquinas virtuais (VMs)  
-Para instalar o software antivírus nas máquinas virtuais, exclua a seguinte lista de diretórios e arquivos. Eles não devem ser verificados pelo software antivírus.  
+Para instalar o software antivírus em VMs, exclua a seguinte lista de diretórios e arquivos. Eles não devem ser verificados pelo software antivírus.  
   
 ***PDW_region*-CTL01**  
   

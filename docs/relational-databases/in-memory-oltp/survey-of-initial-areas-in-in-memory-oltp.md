@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596124"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657605"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Pesquisa de áreas iniciais em OLTP in-memory
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ O presente artigo se concentra em OLTP e não em Análises. Para obter informaç
   
   
 > [!NOTE]
-> Um vídeo de dois minutos sobre os recursos In-Memory está disponível no [Banco de Dados SQL do Azure - Tecnologias In-Memory](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). O vídeo é de dezembro de 2015.  
+> Um vídeo de dois minutos sobre os recursos In-Memory está disponível no [Banco de Dados SQL do Azure - Tecnologias In-Memory](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). O vídeo é de dezembro de 2015.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ Uma UDF (função definida pelo usuário) compilada nativamente é executada mui
 Para dados de teste e explicação sobre o desempenho dos UDFs nativos, consulte:  
   
   - [Suavizar o impacto do RBAR com UDFs nativas compiladas no SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Postagem no blog [Natively Compiled User Defined Functions](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) (Funções definidas pelo usuário compiladas nativamente) por Gail Shaw, de janeiro de 2016.  
+  - Postagem no blog [Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) (Funções definidas pelo usuário compiladas nativamente) por Gail Shaw, de janeiro de 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ Consulte estes outros links que abordam considerações especiais para tabelas c
   - [Determinando se uma tabela ou um procedimento armazenado deve ser movido para OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - O relatório de análise de desempenho de transação no SQL Server Management Studio ajuda você a avaliar se o OLTP in-memory melhorará o desempenho do seu aplicativo de banco de dados.  
   - Use o [Orientador de Otimização de Memória](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) para ajudar você a migrar a tabela de banco de dados baseada em disco para o OLTP in-memory.   
-- [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Backup, restauração e recuperação de tabelas com otimização de memória](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - O armazenamento usado por tabelas com otimização de memória pode ser muito maior do que seu tamanho em memória e afeta o tamanho do backup do banco de dados.  
 - [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Incluem informações sobre a lógica de repetição no T-SQL, para transações em tabelas com otimização de memória.  

@@ -14,12 +14,12 @@ ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25d141b8ead8c08cc420b751e0c1762fecefd95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78857ad6fbb9bcef203af0473147cd69eed49701
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700543"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Exibir erros que ocorrem durante o preparo (Master Data Services)
 
@@ -55,6 +55,6 @@ ms.locfileid: "47765474"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
- [Solucionando problemas do processo de preparo (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [Solucionando problemas do processo de preparo (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

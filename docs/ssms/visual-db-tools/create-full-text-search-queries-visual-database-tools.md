@@ -15,16 +15,16 @@ ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896defe62b38458f25f25a8f440c1a85698a032d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f95edb2129432df62edf4db88c6d42b28e46bddd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608384"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701784"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>Criar consultas de pesquisa de texto completo (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Pesquisas de texto completo usam o predicado CONTAINS para localizar linhas que especificaram texto em uma determinada coluna. Pesquisas de texto completo somente são possíveis em colunas que têm índices de texto completo ativos. Se você tentar usar a cláusula CONTAINS em uma coluna que não tem um índice de texto completo ativo atualmente, receberá um erro. Para obter mais informações sobre índices de texto completo e a cláusula CONTAINS, consulte [Pesquisa de texto completo (SQL Server)](http://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) e [CONTAINS (Transact-SQL)](http://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84).  
+Pesquisas de texto completo usam o predicado CONTAINS para localizar linhas que especificaram texto em uma determinada coluna. Pesquisas de texto completo somente são possíveis em colunas que têm índices de texto completo ativos. Se você tentar usar a cláusula CONTAINS em uma coluna que não tem um índice de texto completo ativo atualmente, receberá um erro. Para obter mais informações sobre índices de texto completo e a cláusula CONTAINS, consulte [Pesquisa de texto completo (SQL Server)](https://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) e [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84).  
   
 ### <a name="to-create-a-full-text-search-query"></a>Para criar uma consulta de pesquisa de texto completo  
   

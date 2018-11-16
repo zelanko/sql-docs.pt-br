@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server]
@@ -18,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3451408079b501be902aa4de1a0535a154a54b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64b32a4b46ac1d86d358881b99d9988b902a4a47
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722414"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558759"
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "47722414"
 |---------------------|-----------------|  
 |[Banco de dados mestre](../../relational-databases/databases/master-database.md)|Registra toda a informações de nível de sistema por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Banco de dados msdb](../../relational-databases/databases/msdb-database.md)|É usado pelo SQL Server Agent para programar alertas e trabalhos.|  
-|[Banco de dados modelo](../../relational-databases/databases/model-database.md)|É usado como modelo de todos os bancos de dados criados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As modificações feitas no banco de dados **modelo** , como tamanho, agrupamento, modelo de recuperação, e outras opções de bancos de dados, são aplicadas a qualquer banco de dados criados em seguida.|  
+|[Banco de dados modelo](../../relational-databases/databases/model-database.md)|É usado como modelo de todos os bancos de dados criados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As modificações feitas no banco de dados **modelo**, como tamanho, ordenação, modelo de recuperação, e outras opções de bancos de dados, são aplicadas a qualquer banco de dados criados em seguida.|  
 |[Banco de dados de recursos](../../relational-databases/databases/resource-database.md)|É um banco de dados do tipo somente leitura que contém objetos de sistema incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os objetos de sistema são fisicamente persistentes no banco de dados **Recurso** , mas aparecem logicamente no esquema **sys** de todo banco de dados.|  
-|[Banco de dados tempdb](../../relational-databases/databases/tempdb-database.md)|É um espaço de trabalho para reter objetos temporários ou conjuntos de resultados intermediários.|  
+|[Banco de dados tempdb](../../relational-databases/databases/tempdb-database.md)|É um workspace para reter objetos temporários ou conjuntos de resultados intermediários.|  
 
 > [!IMPORTANT]
 > Para o servidor lógico do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber o conceito de servidor lógico e banco de dados mestre lógico, confira [O que é um servidor lógico do SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Para obter uma discussão sobre o tempdb no contexto do Banco de Dados SQL do Azure, confira [Banco de dados tempdb no Banco de Dados SQL do Azure](tempdb-database.md#tempdb-database-in-sql-database). Para a Instância Gerenciada do Banco de Dados SQL do Azure, Todos os bancos de dados do sistema se aplicam. Para saber mais sobre Instâncias Gerenciadas no Banco de Dados SQL, confira [O que é uma Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)

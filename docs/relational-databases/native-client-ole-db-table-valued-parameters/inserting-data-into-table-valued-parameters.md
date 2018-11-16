@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2634390c04510b1ce6a6708d13729b33487c600b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52420f4b1b5776119fb5a4827c90cf7cd546cc91
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682934"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662915"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserindo dados em parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider oferece suporte a dois modelos para o consumidor especificar dados para linhas de parâmetro com valor de tabela: um modelo de push e um modelo de pull. Uma amostra que apresenta o modelo de pull está disponível; confira [Amostras de programação do SQL Server Data](http://msftdpprodsamples.codeplex.com/).  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider oferece suporte a dois modelos para o consumidor especificar dados para linhas de parâmetro com valor de tabela: um modelo de push e um modelo de pull. Uma amostra que apresenta o modelo de pull está disponível; confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Uma coluna de parâmetro com valor de tabela deve ter valores não padrão em todas as linhas ou valores padrão em todas as linhas. Não é possível ter valores padrão em algumas linhas, mas não em outras. Dessa forma, em associações de parâmetro com valor de tabela, os únicos valores de status permitidos para os dados da coluna do conjunto de linhas do parâmetro com valor de tabela são DBSTATUS_S_ISNULL e DBSTATUS_S_OK. DBSTATUS_S_DEFAULT resultará em falha e o valor de status associado será definido como DBSTATUS_E_BADSTATUS.  

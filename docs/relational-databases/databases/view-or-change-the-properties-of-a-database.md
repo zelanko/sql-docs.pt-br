@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying databases
@@ -18,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c0ae0a9be78f4263ae084c8455a480e2140a528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd5438c72028e46578b699584a5affcd1bfba7c7
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686074"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560023"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Exibir ou alterar as propriedades de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "47686074"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para exibir várias propriedades do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Este exemplo retorna o número de identificação de banco de dados (`database_id`), se o banco de dados for somente leitura ou de leitura/gravação (`is_read_only`), o agrupamento do banco de dados (`collation_name`) e o nível de compatibilidade do banco de dados (`compatibility_level`).  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para exibir várias propriedades do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Este exemplo retorna o número de identificação de banco de dados (`database_id`), se o banco de dados for somente leitura ou de leitura/gravação (`is_read_only`), a ordenação do banco de dados (`collation_name`) e o nível de compatibilidade do banco de dados (`compatibility_level`).  
   
     ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  

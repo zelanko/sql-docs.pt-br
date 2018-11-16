@@ -11,18 +11,18 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b061b3e8c694e9c16c31462149819b8be632d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663455"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Ao fazer backup para o armazenamento do Microsoft Azure ou restaurar nele, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob não poderá ser gravado ou excluído até que a concessão seja liberada. Este tópico descreve como liberar (interromper) a concessão e excluir o blob. 
   
- Para obter mais informações sobre tipos de concessão, leia este [artigo](http://go.microsoft.com/fwlink/?LinkId=275664).  
+ Para obter mais informações sobre tipos de concessão, leia este [artigo](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
  Se a operação de backup falhar, o resultado poderá ser um arquivo de backup inválido. O arquivo de blob de backup pode ter também uma concessão ativa, impedindo que ele seja excluído ou substituído. Para excluir ou substituir esses blobs, primeiro a concessão deve ser liberada (interrompida). Se houver falhas de backup, recomendamos que você limpe as concessões e exclua os blobs. Você também pode limpar as concessões e excluir os blobs periodicamente como parte de suas tarefas de gerenciamento de armazenamento.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47752094"
   
 1.  **Identificar os blobs com concessões:** se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-2.  **Interromper a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](http://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+2.  **Interromper a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     >  O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  

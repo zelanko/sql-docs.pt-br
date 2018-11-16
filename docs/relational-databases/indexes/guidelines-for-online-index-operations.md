@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d899c0626ed1ac49f70ce83b80741e626bd7252b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906046"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668585"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
   
  Em razão do bloqueio S-lock ou Sch-M ser mantido na fase final da operação de índice, tome cuidado ao executar uma operação de índice online dentro de uma transação de usuário explicita, como no bloco BEGIN TRANSACTION...COMMIT. Fazer isso faz com que a fechadura seja mantida até o término da transação, impedindo portanto simultaneidade de usuário.  
   
- A recriação de índice online pode aumentar a fragmentação quando é permitido executá-la com as opções `MAX DOP > 1` e `ALLOW_PAGE_LOCKS = OFF` . Para obter mais informações, consulte [Como funciona: recriação de índice online - pode causar maior fragmentação](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+ A recriação de índice online pode aumentar a fragmentação quando é permitido executá-la com as opções `MAX DOP > 1` e `ALLOW_PAGE_LOCKS = OFF` . Para obter mais informações, consulte [Como funciona: recriação de índice online - pode causar maior fragmentação](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## <a name="transaction-log-considerations"></a>Considerações do log de transações  
  As operações de índice em larga escala, executadas offline ou online, podem gerar grandes cargas de dados que podem fazer com que o log de transações seja preenchido rapidamente. Para assegurar que a operação de índice possa ser revertida, o log de transações não pode ser truncado até que a operação de índice se complete. Durante a operação de índice, no entanto, poderá ser feito backup do log. Portanto, o log de transações deve ter espaço suficiente para armazenar as transações da operação de índice e quaisquer transações simultâneas de usuário pelo período da operação de índice. Para obter mais informações, consulte [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  

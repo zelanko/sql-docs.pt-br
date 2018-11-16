@@ -21,12 +21,12 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b55828992f748579351120bebe4e2043d377b9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3bd8688a2e9b66eab7187720d96d823f8d943c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699470"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668662"
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47699470"
   
 |Valor|Condição de falha|  
 |-----------|-----------------------|  
-|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço está inativo.<br /><br /> -A concessão do grupo de disponibilidade para se conectar ao cluster de failover WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço está inativo.<br /><br /> -A concessão do grupo de disponibilidade para se conectar ao cluster de failover WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não se conectar ao cluster e o usuário especificou **health_check_timeout** limite do grupo de disponibilidade é excedido.<br /><br /> -A réplica de disponibilidade está em estado de falha.|  
 |3|Especifica que um failover automático deve ser iniciado em erros internos críticos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como spinlocks órfãos, violações do acesso de gravação graves ou muito descarte.<br /><br /> Este é o valor padrão.|  
 |4|Especifica que um failover automático deve ser iniciado em caso de erros internos moderados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como uma condição de memória insuficiente persistente no pool de recursos interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229966"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641533"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   O `sqlcmd` utilitário permite que você insira [!INCLUDE[tsql](../includes/tsql-md.md)] instruções, procedimentos do sistema e arquivos de script no prompt de comando, na **Editor de consultas** no modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Trabalho do agente. Esse utilitário usa ODBC para executar lotes [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "48229966"
  Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não estiver especificado, o utilitário sqlcmd não terá suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [secundárias ativas: réplicas secundárias legíveis](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Sempre especifique `-M` ao se conectar ao ouvinte do grupo de disponibilidade de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] grupo de disponibilidade ou um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância de Cluster de Failover. `-M` proporciona a detecção mais rápida e a conexão com o servidor (atualmente) ativo. Se `–M` não for especificada, `-M` ficará desativada. Para obter mais informações sobre [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consulte [ouvintes do grupo de disponibilidade, conectividade de cliente e Failover de aplicativo &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [criação e configuração dos grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [secundárias ativas: réplicas secundárias legíveis ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Sempre especifique `-M` ao conectar-se ao ouvinte de um grupo de disponibilidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou de uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `-M` proporciona a detecção mais rápida e a conexão com o servidor (atualmente) ativo. Se `–M` não for especificada, `-M` ficará desativada. Para obter mais informações sobre [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consulte [ouvintes do grupo de disponibilidade, conectividade de cliente e Failover de aplicativo &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [criação e configuração dos grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [secundárias ativas: réplicas secundárias legíveis ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Essa opção é usada pelo cliente para solicitar uma conexão criptografada.  
@@ -182,7 +182,7 @@ ms.locfileid: "48229966"
   
 -   Assume-se que arquivos de entrada múltiplos tenham a mesma página de código. Arquivos de entrada Unicode e não Unicode podem ser misturados.  
   
- Insira `chcp` no prompt de comando para verificar a página de código de Cmd.exe.  
+ Digite `chcp` no prompt de comando para verificar a página de código de Cmd.exe.  
   
  **-i** *input_file*[**, * * * input_file2*...]  
  Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. Poderão ser especificados vários arquivos para serem lidos e processados em ordem. Não use espaço entre nomes de arquivos. `sqlcmd` verificará primeiramente se todos os arquivos especificados existem. Se um ou mais arquivos não existirem, o `sqlcmd` será encerrado. As opções -i e Q/-q são mutuamente exclusivas.  
@@ -499,7 +499,7 @@ ms.locfileid: "48229966"
  **:List**  
  Imprime o conteúdo do cache de instrução.  
   
- **Variables**  
+ **Variáveis**  
   **: Setvar** \< **var**> [ **"*`value`*"** ]  
  Define as variáveis de script do `sqlcmd`. Variáveis de script têm o seguinte formato: `$(VARNAME)`.  
   
@@ -707,7 +707,7 @@ ms.locfileid: "48229966"
   
  `GO`  
   
- Ao pressionar ENTER, o seguinte conjunto de resultados é reajustado.  
+ Quando você pressiona ENTER, o seguinte conjunto de resultados é retornado.  
   
  `BusinessEntityID FirstName    LastName`  
   

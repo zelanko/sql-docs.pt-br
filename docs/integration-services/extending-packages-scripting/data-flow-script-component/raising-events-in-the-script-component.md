@@ -13,12 +13,12 @@ ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8efead59cd24cbe2e556991b4a7699be980c544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c4ac1a5246ecf59e73b8b4bbe9f7621178fa3b5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713234"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640054"
 ---
 # <a name="raising-events-in-the-script-component"></a>Gerando eventos no componente Script
   Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. O componente Script pode gerar eventos chamando métodos na propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> da classe **ScriptMain**. Para obter mais informações sobre como pacotes [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] manipulam eventos, consulte [Manipuladores de Eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -45,6 +45,6 @@ ms.locfileid: "47713234"
   
 ## <a name="see-also"></a>Consulte Também  
  [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Adicionar um manipulador de eventos a um pacote](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

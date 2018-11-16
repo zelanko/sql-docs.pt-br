@@ -17,12 +17,12 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95bc574e5c0485ab785496268ad49d51abe64ed9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29e5210a44842d349ab76081f141d2d3d7152bb4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818355"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637813"
 ---
 # <a name="rebuild-index-task"></a>Tarefa Recriar Índice
   A tarefa Recriar Índice recria índices em tabelas e exibições de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre o gerenciamento de índices, consulte [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "47818355"
  [Tarefa Recriar Índice &#40;Plano de manutenção&#41;](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

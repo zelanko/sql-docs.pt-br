@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855224"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696835"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "47855224"
   
  **Download**  
   
--   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
   
 ##  <a name="improved-performance"></a>Desempenho aprimorado  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855224"
   
     ```  
   
-     Para saber mais, confira [URL Compression](http://www.iis.net/configreference/system.webserver/urlcompression)(Compactação de URL)  
+     Para saber mais, confira [URL Compression](https://www.iis.net/configreference/system.webserver/urlcompression)(Compactação de URL)  
   
 -   Os novos trabalhos do SQL Server Agent a seguir fazem a manutenção de índice e log.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855224"
   
  Um índice com mais de 30% de fragmentação é recriado online. Durante a recriação, o desempenho é afetado na operação CRUD na mesma tabela. Se a degradação do desempenho for uma preocupação, é recomendável executar o procedimento armazenado fora do horário comercial. Para obter mais informações sobre fragmentação de índice, consulte [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Para saber mais, confira essa postagem no Blog do Master Data Services, [Performance and Scale Improvement in SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375)(Melhoria de desempenho e escala no SQL Server 2016).  
+ Para saber mais, confira essa postagem no Blog do Master Data Services, [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)(Melhoria de desempenho e escala no SQL Server 2016).  
   
 ##  <a name="improved-security"></a>Segurança aprimorada  
   

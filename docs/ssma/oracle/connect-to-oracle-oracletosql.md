@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681104"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Conectar-se ao Oracle (OracleToSQL)
 Use o **conectar-se ao Oracle** caixa de diálogo para se conectar ao banco de dados Oracle que você deseja migrar.  
@@ -70,7 +70,7 @@ Se você usar o modo de cadeia de caracteres de Conexão, insira a cadeia de con
   
 Cadeias de caracteres de Conexão consistem em pares de nome e valor do parâmetro.  
   
--   Para informações de cadeia de caracteres de conexão OLE DB, consulte [Microsoft OLE DB Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) artigo na biblioteca MSDN.  
+-   Para informações de cadeia de caracteres de conexão OLE DB, consulte [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) artigo na biblioteca MSDN.  
   
 Para cadeias de caracteres de conexão do SSMA, sempre inclua o parâmetro de provedor. Além disso, certifique-se de que você inclua o parâmetro de porta ao conectar-se ao Oracle.  
   

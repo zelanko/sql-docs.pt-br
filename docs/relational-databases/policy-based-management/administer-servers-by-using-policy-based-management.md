@@ -5,8 +5,7 @@ ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d19ad0bba4792ab4fc088957570e532fec0c61e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f984cd0e2c01e9a4913387b8266ddc40202e0b13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671085"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
  Para as políticas com falha, o Pesquisador de Objetos indica um aviso de integridade crítica como um ícone vermelho ao lado do destino e dos nós superiores na árvore do Pesquisador de Objetos.  
   
-> **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="three-policy-based-management-components"></a>Três componentes do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
@@ -78,7 +77,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
  **Faceta do Gerenciamento Baseado em Políticas** Um conjunto de propriedades lógicas que modelam o comportamento ou as características de alguns tipos de destinos gerenciados. O número e as características das propriedades são incorporados à faceta e só podem ser adicionados ou removidos pelo criador da faceta. Um tipo de destino pode implementar uma ou mais facetas de gerenciamento, e uma faceta de gerenciamento pode ser implementada por um ou mais tipos de destino. Algumas propriedades de uma faceta só podem ser aplicadas a uma versão específica.  
   
  **Condição de Gerenciamento Baseado em Políticas**  
- Uma expressão booliana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação a uma faceta de gerenciamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta observar agrupamentos ao avaliar uma condição. Quando os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não correspondem exatamente a agrupamentos do Windows, teste sua condição para determinar como o algoritmo resolve conflitos.  
+ Uma expressão booliana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação a uma faceta de gerenciamento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta observar ordenações ao avaliar uma condição. Quando as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não correspondem exatamente às ordenações do Windows, teste sua condição para determinar como o algoritmo resolve conflitos.  
   
  **Política de Gerenciamento Baseado em Políticas**  
  Uma condição do Gerenciamento Baseado em Políticas e o comportamento esperado, como, por exemplo, modo de avaliação, filtros de destino e agenda. Uma política só pode conter uma condição. As políticas podem ser habilitadas ou desabilitadas. As políticas são armazenadas no banco de dados msdb.  

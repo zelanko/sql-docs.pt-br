@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7961b6daed4db42095e6d8a0856b3e99c6ca6041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849804"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673485"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funções em Valores Boolianos – função not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ fn:not($arg as item()*) as xs:boolean
  A consulta a seguir constrói um XML que contém IDs de modelos de produto para modelos de produto cujas descrições de catálogo não incluem o elemento <`Specifications`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
        <Product   
            ProductModelID="{ sql:column("ProductModelID") }"  
@@ -78,7 +77,7 @@ WHERE CatalogDescription.exist('
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in /AWMI:root/AWMI:Location[not(@MachineHours)]  
      return  
        <Location LocationID="{ $i/@LocationID }"   

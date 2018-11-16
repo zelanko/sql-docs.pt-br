@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852021"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600946"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852021"
   
 ||Recurso dependente|Hotfix|Link|  
 |------|-----------------------|------------|----------|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|O hotfix para o .NET 3.5 SP1 adiciona suporte a recursos do Cliente SQL para AlwaysOn de intenção de Leitura, somente leitura e multisubnetfailover. O hotfix precisa ser instalado em cada servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix para .NET 3.5 SP1 para adicionar suporte aos recursos AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|O hotfix para o .NET 3.5 SP1 adiciona suporte a recursos do Cliente SQL para AlwaysOn de intenção de Leitura, somente leitura e multisubnetfailover. O hotfix precisa ser instalado em cada servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix para .NET 3.5 SP1 para adicionar suporte aos recursos AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Lista de verificação: requisitos (sistema Windows)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852021"
 ###  <a name="PermissionsWindows"></a> Permissões (sistema Windows)  
  Para administrar um WSFC, o usuário deve ser um administrador do sistema em cada nó de cluster.  
   
- Para obter mais informações sobre a conta para administrar o cluster, veja [Apêndice A: Requisitos de cluster de failover](http://technet.microsoft.com/library/dd197454.aspx).  
+ Para obter mais informações sobre a conta para administrar o cluster, veja [Apêndice A: Requisitos de cluster de failover](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Tarefas relacionadas (sistema Windows)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852021"
   
 ##### <a name="related-content-powershell"></a>Conteúdo relacionado (PowerShell)  
   
--   [Clustering e alta disponibilidade](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Blog da equipe de Clustering de Failover e Balanceamento de Carga de Rede)  
+-   [Clustering e alta disponibilidade](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Blog da equipe de Clustering de Failover e Balanceamento de Carga de Rede)  
   
--   [Guia de Introdução ao Windows PowerShell em um cluster de failover](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Guia de Introdução ao Windows PowerShell em um cluster de failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandos de recursos de cluster e cmdlets equivalentes no Windows PowerShell](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandos de recursos de cluster e cmdlets equivalentes no Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Conteúdo relacionado (Windows System)  
   
--   [Definir configurações DNS em um cluster de failover multissite](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Definir configurações DNS em um cluster de failover multissite](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Registro de DNS com recurso de nome de rede](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Registro de DNS com recurso de nome de rede](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> Pré-requisitos e restrições da instância de SQL Server  
@@ -135,7 +135,7 @@ ms.locfileid: "48852021"
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você desejar um grupo de disponibilidade para funcionar com o Kerberos:<br /><br /> Todas as instâncias de servidor que hospedam uma réplica de disponibilidade para o grupo de disponibilidade deve usar a mesma conta de serviço do SQL Server.<br /><br /> O administrador de domínio precisa registrar um Nome de entidade de serviço (SPN) manualmente com Active Directory na conta de serviço do SQL Server para o nome de rede virtual (VNN) do ouvinte de grupo de disponibilidade. Se o SPN for registrado em uma conta diferente da conta de serviço do SQL Server, a autenticação falhará.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se você alterar a conta de serviço do SQL Server, o administrador de domínio precisará registrar de novo o SPN manualmente.|[Registrar um nome de entidade de serviço para conexões de Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve explicação:**<br /><br /> O Kerberos e os SPNs impõem a autenticação mútua. O SPN é mapeado para a conta do Windows que inicia os serviços do SQL Server. Se o SPN não estiver registrado corretamente ou se ele falhar, a camada de segurança do Windows não poderá determinar a conta associada ao SPN e a autenticação Kerberos não será utilizada.<br /><br /> <br /><br /> Observação: o NTLM não tem esse requisito.|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e requisitos para usar uma FCI (Instância de Cluster de Failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (mais adiante neste artigo)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada instância de servidor deve estar executando a mesma versão do SQL Server para participar de um Grupo de Disponibilidade Always On.|Edições e recursos compatíveis do [SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Todas as instâncias de servidor que hospedam réplicas de disponibilidade para um grupo de disponibilidade devem usar o mesmo agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Definir ou alterar o agrupamento do servidor](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Todas as instâncias de servidor que hospedam réplicas de disponibilidade para um grupo de disponibilidade devem usar a mesma ordenação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Definir ou alterar a ordenação do servidor](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Habilite o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor que hospedará uma réplica de disponibilidade para qualquer grupo de disponibilidade. Em determinado computador, você pode habilitar quantas instâncias de servidor desejar para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , desde que tenham suporte da instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se você destruir e recriar um WSFC, deverá desabilitar e reabilitar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster original.|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada instância de servidor exige um ponto de extremidade de espelhamento de banco de dados. Note que esse ponto de extremidade é compartilhado por todas as réplicas de disponibilidade e parceiros de espelhamento de banco de dados e testemunhas na instância de servidor.<br /><br /> Se uma instância de servidor selecionada para hospedar uma réplica de disponibilidade estiver sendo executada em uma conta de usuário de domínio e ainda não tiver um ponto de extremidade de espelhamento de banco de dados, o [Assistente de Novo Grupo de Disponibilidade](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (ou o [Assistente para Adicionar Réplica ao Grupo de Disponibilidade](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) poderá criar o ponto de extremidade e conceder a permissão CONNECT à conta de serviço da instância de servidor. No entanto, se o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou como uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade, e o assistente não poderá criar um ponto de extremidade de espelhamento de banco de dados na instância de servidor. Nesse caso, é recomendável criar manualmente os pontos de extremidade de espelhamento de banco de dados antes de iniciar o assistente.<br /><br /> <br /><br /> <b>\*\* Observação de Segurança \*\*</b> A segurança de transporte para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é a mesma do espelhamento de banco de dados.|[O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se algum banco de dados que utilize o FILESTREAM for adicionado a um grupo de disponibilidade, verifique se o FILESTREAM está habilitado em cada instância de servidor que hospedará uma réplica de disponibilidade do grupo de disponibilidade.|[Habilitar e configurar o FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
@@ -167,7 +167,7 @@ ms.locfileid: "48852021"
   
     -   Um backup em uma réplica secundária mantém um thread na réplica primária durante a operação de backup.  
   
- Para obter mais informações, veja [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (um blog dos engenheiros do CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
+ Para obter mais informações, veja [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (um blog dos engenheiros do CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 ###  <a name="PermissionsSI"></a> Permissões (instância de servidor)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852021"
   
 ###  <a name="RelatedContentSI"></a> Conteúdo relacionado (instância de servidor)  
   
--   [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Recomendações de conectividade de rede  
  É altamente recomendável usar os mesmos links de rede para a comunicação entre nós do WSFC e a comunicação entre réplicas de disponibilidade.  Usar links de rede separados pode causar comportamentos inesperados se algum dos links falhar (até mesmo com intermitência).  
@@ -210,7 +210,7 @@ ms.locfileid: "48852021"
 ###  <a name="RestrictionsFCI"></a> Restrições (FCIs)  
   
 > [!NOTE]  
-> As Instâncias de Cluster de Failover dão suporte a CSVs (Volumes Compartilhados Clusterizados). Para obter mais informações sobre CSV, consulte [Noções básicas sobre volumes compartilhados clusterizados em um cluster de failover](http://technet.microsoft.com/library/dd759255.aspx).  
+> As Instâncias de Cluster de Failover dão suporte a CSVs (Volumes Compartilhados Clusterizados). Para obter mais informações sobre CSV, consulte [Noções básicas sobre volumes compartilhados clusterizados em um cluster de failover](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **Os nós de cluster de uma FCI podem hospedar somente uma réplica de determinado grupo de disponibilidade:** se você adicionar uma réplica de disponibilidade a uma FCI, os nós do WSFC que são possíveis proprietários da FCI não poderão hospedar outra réplica para o mesmo grupo de disponibilidade.  Para evitar possíveis conflitos, é recomendável configurar os possíveis proprietários para a instância do cluster de failover. Isso evitará a possibilidade de que um único WSFC tente hospedar duas réplicas de disponibilidade para o mesmo grupo de disponibilidade.
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852021"
   
 -   [Clustering de failover e Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guia da arquitetura do AlwaysOn: Criando uma solução de alta disponibilidade e recuperação de desastres usando instâncias de cluster de failover e grupos de disponibilidade](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guia da arquitetura do AlwaysOn: Criando uma solução de alta disponibilidade e recuperação de desastres usando instâncias de cluster de failover e grupos de disponibilidade](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Pré-requisitos e restrições do grupo de disponibilidade  
  **Nesta seção:**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852021"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

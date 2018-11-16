@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 55b8f8482af66b714ae7842c267930479a4c8586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661214"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663605"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL
 O SQL Server e o Banco de Dados SQL do Azure têm funções nativas do JSON que permitem analisar documentos JSON usando a linguagem SQL padrão. Agora você pode armazenar documentos JSON no SQL Server ou no Banco de Dados SQL e consultar dados JSON em um banco de dados NoSQL. Este artigo descreve as opções para armazenar documentos JSON no SQL Server ou no Banco de Dados SQL.
@@ -84,7 +84,7 @@ FROM Website.Logs
 WHERE JSON_VALUE(log, '$.severity') = 'P4'
 ```
 
-Uma característica importante desse índice é o reconhecimento de agrupamento. Se a coluna NVARCHAR original tiver uma propriedade COLLATION (por exemplo, diferenciação de maiúsculas e minúsculas ou idioma japonês), o índice será organizado de acordo com as regras do idioma ou as regras de diferenciação de maiúsculas e minúsculas associadas com a coluna NVARCHAR. Esse reconhecimento de agrupamento poderá ser um recurso importante caso você esteja desenvolvendo aplicativos para mercados globais que precisam usar regras de idioma personalizadas durante o processamento de documentos JSON.
+Uma característica importante desse índice é o reconhecimento de ordenação. Se a coluna NVARCHAR original tiver uma propriedade COLLATION (por exemplo, diferenciação de maiúsculas e minúsculas ou idioma japonês), o índice será organizado de acordo com as regras do idioma ou as regras de diferenciação de maiúsculas e minúsculas associadas com a coluna NVARCHAR. Esse reconhecimento de ordenação poderá ser um recurso importante caso você esteja desenvolvendo aplicativos para mercados globais que precisam usar regras de idioma personalizadas durante o processamento de documentos JSON.
 
 ## <a name="large-tables--columnstore-format"></a>Tabelas grandes e formato columnstore
 
@@ -162,7 +162,7 @@ As funções nativas do JSON no SQL Server e no Banco de Dados SQL possibilitam 
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
+Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
 
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 

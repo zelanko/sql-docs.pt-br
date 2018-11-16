@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3509c90a4fb5e72eab74742afae302bcbfaeaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821330"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671315"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ As tabelas com otimização de memória normalmente podem ser carregadas na mem�
 -   Tabelas grandes com otimização de memória com um ou mais índices não clusterizados podem causar uma alta utilização da CPU. Ao contrário de um índice de hash cujo número de buckets é dimensionado no momento da criação, índices não clusterizados aumentam dinamicamente.  
   
 ## <a name="see-also"></a>Confira também  
- [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Backup, restauração e recuperação de tabelas com otimização de memória](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

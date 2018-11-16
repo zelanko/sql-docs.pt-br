@@ -20,12 +20,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795914"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638204"
 ---
 # <a name="merge-transformation"></a>Transformação Mesclar
   A Transformação Mesclagem combina dois conjuntos de dados classificados em um único conjunto de dados. As linhas de cada conjunto de dados estão inseridas na saída com base em valores de suas colunas-chave.  
@@ -60,7 +60,7 @@ ms.locfileid: "47795914"
   
  Para obter mais informações sobre as propriedades que podem ser definidas programaticamente, clique em um dos tópicos a seguir:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47795914"
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformação Unir Tudo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

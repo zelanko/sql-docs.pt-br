@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52db780f2e19862110b274b97c2ce616b1503301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636875"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640124"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
   O destino OLE DB carrega os dados em uma variedade de bancos de dados compatíveis com OLE DB usando uma tabela ou exibição de banco de dados ou um comando SQL. Por exemplo, a fonte OLE DB pode carregar dados em tabelas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "47636875"
 > [!NOTE]  
 >  A instrução CREATE TABLE gerada pela caixa de diálogo **Editor de Destino de OLE DB** pode requerer modificação dependendo do tipo de destino. Por exemplo, alguns destinos não suportam os tipos de dados que a instrução CREATE TABLE usa.  
   
- Esse destino usa um gerenciador de conexões OLE DB para conectar-se a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Esse destino usa um gerenciador de conexões OLE DB para conectar-se a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece o objeto de fonte de dados do qual você pode criar um gerenciador de conexões OLE DB, disponibilizando as fontes de dados e exibições da fonte de dados para o destino OLE DB.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47636875"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47636875"
 |------------|-----------------|  
 |Tabela ou exibição|Carregue dados em uma tabela ou exibição no destino OLE DB.|  
 |Tabela ou exibição - carregamento rápido|Carregue dados em uma tabela ou exibição no destino OLE DB e use a opção de carregamento rápido. Para obter mais informações sobre os modos de acesso aos dados de carregamento rápido que são otimizados para inserções em massa, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Variável do nome da tabela ou do nome de exibição - carregamento rápido|Especifique o nome da tabela ou exibição em uma variável e use a opção de carregamento rápido para carregar dados. Para obter mais informações sobre os modos de acesso aos dados de carregamento rápido que são otimizados para inserções em massa, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |Comando SQL|Carregue dados no destino OLE DB usando uma consulta SQL.|  
   

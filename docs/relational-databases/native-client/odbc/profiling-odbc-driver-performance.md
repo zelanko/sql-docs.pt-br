@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8b62db56319fd3d09d7c6afd14df2ee727bb4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854584"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659496"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Número de instruções SELECT processadas depois de SQL_PERF_START.|  
 |SQLSelectRows|Número de linhas selecionadas depois de SQL_PERF_START.|  
 |Transactions|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
-|SQLPrepares|Número de [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) chamadas depois de SQL_PERF_START.|  
+|SQLPrepares|Número de [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) chamadas depois de SQL_PERF_START.|  
 |ExecDirects|Número de **SQLExecDirect** chamadas depois de SQL_PERF_START.|  
 |SQLExecutes|Número de **SQLExecute** chamadas depois de SQL_PERF_START.|  
 |CursorOpens|Número de horas que o driver abriu um cursor de servidor depois de SQL_PERF_START.|  

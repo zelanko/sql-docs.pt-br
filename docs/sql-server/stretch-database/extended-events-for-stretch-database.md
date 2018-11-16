@@ -9,12 +9,12 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b778ab0bad4b86276114bb943b36cf78a7a2d73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1fd033b3a575a5841c062a938688a30c7fc2c44
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666004"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700554"
 ---
 # <a name="extended-events-for-stretch-database"></a>Eventos Estendidos para o Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "47666004"
 
 O Stretch Database fornece um conjunto de eventos estendidos para solução de problemas.  
   
-Para obter mais informações, veja [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md). Para obter informações sobre como iniciar uma sessão de eventos estendidos para solução de problemas, veja [Criar uma sessão de Eventos Estendidos](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
+Para obter mais informações, veja [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md). Para obter informações sobre como iniciar uma sessão de eventos estendidos para solução de problemas, veja [Criar uma sessão de Eventos Estendidos](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>Lista de eventos estendidos para o Stretch Database  
   

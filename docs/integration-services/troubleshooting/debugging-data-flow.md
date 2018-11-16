@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c965c86385141a589a2de9f815f73ad7f9b5990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854484"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638743"
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas de fluxos de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -210,7 +210,7 @@ order by source_component_name desc
 9. Na área Colunas para exibição, selecione as colunas a serem exibidas no visualizador de dados. Por padrão, todas as colunas disponíveis são selecionadas e relacionadas na lista **Colunas Exibidas** . Mova as colunas que não deseja usar para a lista **Coluna Não Usada** selecionando-as e clicando na seta para a esquerda.  
   
     > [!NOTE]  
-    >  Na grade, os valores que representam os tipos de dados DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET aparecem como cadeias de caracteres formatadas conforme o ISO 8601 e um separador de espaço substitui o separador **T** . Os valores que representam os tipos de dados DT_DATE e DT_FILETIME incluem sete dígitos para os segundos fracionários. Como o tipo de dados DT_FILETIME armazena somente três dígitos de segundos fracionários, a grade exibe zeros nos quatro dígitos restantes. Os valores que representam o tipo de dados DT_DBTIMESTAMP incluem três dígitos para os segundos fracionários. Para os valores que representam os tipos de dados DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, o número de dígitos para os segundos fracionários corresponde à escala especificada para o tipo de dados da coluna. Para obter mais informações sobre os formatos ISO 8601, consulte [Formatos de data e hora](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Na grade, os valores que representam os tipos de dados DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET aparecem como cadeias de caracteres formatadas conforme o ISO 8601 e um separador de espaço substitui o separador **T** . Os valores que representam os tipos de dados DT_DATE e DT_FILETIME incluem sete dígitos para os segundos fracionários. Como o tipo de dados DT_FILETIME armazena somente três dígitos de segundos fracionários, a grade exibe zeros nos quatro dígitos restantes. Os valores que representam o tipo de dados DT_DBTIMESTAMP incluem três dígitos para os segundos fracionários. Para os valores que representam os tipos de dados DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, o número de dígitos para os segundos fracionários corresponde à escala especificada para o tipo de dados da coluna. Para obter mais informações sobre os formatos ISO 8601, consulte [Formatos de data e hora](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Clique em **OK**.  
 
@@ -270,7 +270,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Habilitar o nível de log detalhado e adicionar toques de dados aumenta as operações de E/S executadas por sua solução de integração de dados. Consequentemente, recomendamos que você adicione toques de dados somente para fins de solução de problemas  
   
 ### <a name="video"></a>Vídeo  
- Esse [vídeo no TechNet](http://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
+ Esse [vídeo no TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
  
 ## <a name="see-also"></a>Consulte Também  
  [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  

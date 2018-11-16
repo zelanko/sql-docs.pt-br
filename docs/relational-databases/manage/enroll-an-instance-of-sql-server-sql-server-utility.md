@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df9d03fda22eae666d589e6cc3706e84aee6825d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033203"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681334"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "51033203"
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
- Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Connection_dialog"></a> Caixa de diálogo de conexão  
- Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
@@ -129,7 +129,7 @@ ms.locfileid: "51033203"
 |É necessário parar os conjuntos de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Pare os conjuntos de coleta pré-existentes na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o coletor de dados estiver desabilitado, habilite-o, pare os conjuntos de coleta em execução e execute novamente as regras de validação para a operação Criar UCP.<br /><br /> Para habilitar o coletor de dados:<br /><br /> No Pesquisador de Objetos, expanda o nó **Gerenciamento** .<br /><br /> Clique com o botão direito do mouse em **Coleta de Dados**e clique em **Habilitar Coleta de Dados**.<br /><br /> Para parar um conjunto de coleta:<br /><br /> No Pesquisador de Objetos, expanda o nó Gerenciamento, expanda **Coleta de Dados**e, em seguida, expanda **Conjuntos de Coleta de Dados do Sistema**.<br /><br /> Clique com o botão direito do mouse no conjunto de coleta a ser interrompido e clique em **Parar Conjunto de Coleta de Dados**.<br /><br /> Uma caixa de mensagem exibirá o resultado dessa ação, e um círculo vermelho no ícone do conjunto de coleta indicará que este foi interrompido.|  
 |O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
 |O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado no UCP.|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no UCP. Se a instância especificada do UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
-|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |A conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser uma conta de domínio do Windows válida no UCP.|Especifique uma conta de domínio do Windows válida. Para assegurar que a conta seja válida, faça logon na instância especificada do UCP usando a conta de domínio do Windows.|  
 |Se você selecionar a opção de conta proxy, a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser uma conta de domínio do Windows válida na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Especifique uma conta de domínio do Windows válida. Para assegurar que a conta seja válida, faça logon na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a conta de domínio do Windows.|  
 |A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser uma conta interna, como Serviço de Rede.|Reatribua a conta a uma conta de domínio do Windows. Para assegurar que a conta seja válida, faça logon na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a conta de domínio do Windows.|  
@@ -173,7 +173,7 @@ ms.locfileid: "51033203"
 >   
 >  Informações adicionais: não foi possível obter informações sobre o grupo/usuário '\<DomainName\AccountName>' do Windows NT, código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
 >   
->  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
 >  Não altere nenhuma propriedade do conjunto de coleta “Informações sobre o Utilitário” em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e não ative/desative a coleta de dados manualmente, pois ela é controlada por um trabalho de agente do utilitário.  
@@ -199,6 +199,6 @@ ms.locfileid: "51033203"
 ## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

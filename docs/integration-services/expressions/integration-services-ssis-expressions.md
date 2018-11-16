@@ -17,12 +17,12 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7658c6e3e209956e2e8bb187dda094ea029685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf578d21d7a6b67d1c72ee63f5516cd7b29db7d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650484"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638563"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
@@ -64,10 +64,10 @@ ms.locfileid: "47650484"
  As variáveis possuem escopo e a pasta **Variáveis** no construtor de expressão lista apenas as variáveis que estão no escopo e disponíveis para uso. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar uma expressão em um componente de fluxo de dados](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usar uma expressão em um componente de fluxo de dados](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+ Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

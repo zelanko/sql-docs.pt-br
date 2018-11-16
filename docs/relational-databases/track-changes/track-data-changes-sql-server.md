@@ -1,12 +1,10 @@
 ---
 title: Controlar alterações de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a668e59baa2b412a960447b1fe14c6adf596804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625375"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666405"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.locfileid: "47625375"
   
      Descreve o controle de alterações, fornece uma visão geral de alto nível sobre como o controle de alterações funciona e descreve como o controle de alterações interage com outros recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Microsoft Sync Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      Fornece a documentação completa do [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Na documentação do [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], o tópico "Como usar o controle de alterações do SQL Server" contém informações detalhadas e exemplos de código.  
   
@@ -178,7 +176,7 @@ ms.locfileid: "47625375"
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Tabelas da captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Exibições de gerenciamento dinâmico relacionadas à captura de dados de alterações &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Exibições de gerenciamento dinâmico relacionadas à captura de dados de alterações &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

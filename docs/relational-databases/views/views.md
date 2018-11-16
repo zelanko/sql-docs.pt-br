@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ea464ae0717f69df69af48063499cf3cc8a5c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9209682962a974e7a8ff6ef6419517416d399d8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718704"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661884"
 ---
 # <a name="views"></a>exibições
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718704"
  Uma exibição particionada associa dados particionados horizontalmente de um conjunto de tabelas membro em um ou mais servidores. Isso faz com que os dados pareçam ser provenientes de uma tabela. Uma exibição que associa tabelas membro na mesma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma exibição particionada local.  
   
  Exibições do sistema  
- Exibições do sistema expõem metadados de catálogo. Você pode usar exibições do sistema para retornar informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou os objetos definidos na instância. Por exemplo, você pode consultar a exibição de catálogo de sys.databases para retornar informações sobre os bancos de dados definidos pelo usuário disponível na instância. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ Exibições do sistema expõem metadados de catálogo. Você pode usar exibições do sistema para retornar informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou os objetos definidos na instância. Por exemplo, você pode consultar a exibição de catálogo de sys.databases para retornar informações sobre os bancos de dados definidos pelo usuário disponível na instância. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
 ## <a name="common-view-tasks"></a>Tarefas de exibição comuns  
  A tabela a seguir fornece links a tarefas comuns associadas à criação ou modificação de uma exibição.  

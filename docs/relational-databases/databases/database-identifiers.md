@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -23,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 890a00fe6203df89bf0c74875d306b072009215d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb86e584ea81e8ca8208f96283b2be6e43b36011
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813854"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558923"
 ---
 # <a name="database-identifiers"></a>Identificadores de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ CREATE TABLE TableX
   
  Essa tabela também tem uma restrição sem-nome. A restrição `PRIMARY KEY` não tem identificador.  
   
- O agrupamento de um identificador depende do nível em que está definido. Os identificadores de objetos no nível de instância, como logons e nomes de banco de dados, são atribuídos ao agrupamento padrão da instância. Os identificadores de objetos em um banco de dados, como tabelas, exibições e nomes de coluna, são atribuídos ao agrupamento padrão do banco de dados. Por exemplo, duas tabelas com nomes que se diferem apenas em maiúsculas e minúsculas podem ser criadas em um banco de dados que possui agrupamento que diferencia maiúsculas e minúsculas, mas não podem ser criadas em um banco de dados que tem agrupamento que não diferencia maiúsculas e minúsculas.  
+ A ordenação de um identificador depende do nível em que está definido. Os identificadores de objetos no nível de instância, como logons e nomes de banco de dados, são atribuídos à ordenação padrão da instância. Os identificadores de objetos em um banco de dados, como tabelas, exibições e nomes de coluna, são atribuídos à ordenação padrão do banco de dados. Por exemplo, duas tabelas com nomes que se diferem apenas em maiúsculas e minúsculas podem ser criadas em um banco de dados que possui ordenação que diferencia maiúsculas e minúsculas, mas não podem ser criadas em um banco de dados que tem ordenação que não diferencia maiúsculas e minúsculas.  
   
 > [!NOTE]  
 >  Os nomes de variáveis ou os parâmetros de funções e procedimentos armazenados devem obedecer às regras para identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

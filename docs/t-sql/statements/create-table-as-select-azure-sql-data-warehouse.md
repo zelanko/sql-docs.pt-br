@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e3e25cc061ab7b557047c962dc30f023769a9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c35eed3e73a80a2fcaf060e094c31938d0692414
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697224"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ Para obter detalhes, confira a [seção Argumentos](https://msdn.microsoft.com/l
 `column_name` [ ,...`n` ]   
  Os nomes de coluna não permitem as [opções de coluna](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mencionadas em CREATE TABLE.  Nesse caso, você pode fornecer uma lista opcional de um ou mais nomes de coluna para a nova tabela. As colunas na nova tabela usarão os nomes que você especificar. Quando você especificar nomes de coluna, o número de colunas na lista de colunas deverá corresponder ao número de colunas nos resultados de select. Se você não especificar nenhum nome de coluna, a nova tabela de destino usará os nomes de coluna nos resultados da instrução select. 
   
- Não é possível especificar nenhuma outra opções de coluna, como tipos de dados, agrupamento ou nulidade. Cada um desses atributos é derivado dos resultados da instrução `SELECT`. No entanto, você pode usar a instrução SELECT para alterar os atributos. Para obter um exemplo, confira [Usar CTAS para alterar os atributos da coluna](#ctas-change-column-attributes-bk).   
+ Não é possível especificar nenhuma outra opções de coluna, como tipos de dados, ordenação ou nulidade. Cada um desses atributos é derivado dos resultados da instrução `SELECT`. No entanto, você pode usar a instrução SELECT para alterar os atributos. Para obter um exemplo, confira [Usar CTAS para alterar os atributos da coluna](#ctas-change-column-attributes-bk).   
 
 <a name="table-distribution-options-bk"></a>
 
@@ -231,7 +231,7 @@ DROP TABLE FactInternetSales_old;
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. Usar CTAS para alterar atributos de coluna 
 Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse
 
-Este exemplo usa CTAS para alterar os tipos de dados, a nulidade e o agrupamento para várias colunas na tabela DimCustomer2.  
+Este exemplo usa CTAS para alterar os tipos de dados, a nulidade e a ordenação para várias colunas na tabela DimCustomer2.  
   
 ```  
 -- Original table 
@@ -831,7 +831,7 @@ Portanto, veja que manter a consistência de tipo e manter as propriedades de nu
  [CREATE TABLE &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b476cd8c1579ba519d8f045154be4bd7628badc6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032085"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602636"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Categoria|Recurso substituído|Substituição|Nome do recurso|ID do Recurso|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e restauração|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua sendo uma opção preterida. As opções BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD serão descontinuadas.|Nenhum.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Níveis de compatibilidade|Atualização da versão 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando uma versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fica sem [suporte](http://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado será marcado como preterido. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade do banco de dados 100|108|  
+|Níveis de compatibilidade|Atualização da versão 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando uma versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fica sem [suporte](https://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado será marcado como preterido. No entanto, continuaremos a dar suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nível de compatibilidade do banco de dados 100|108|  
 |Objetos de banco de dados|Capacidade de retornar conjuntos de resultados de gatilhos|None|Retornando resultados de gatilho|12|  
 |Criptografia|A criptografia que usa o RC4 ou RC4_128 foi substituída e está programada para ser removida na próxima versão. A descriptografia do RC4 e RC4_128 não será substituída.|Usar outro algoritmo de criptografia, como AES.|Algoritmo de criptografia substituído|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -123,7 +122,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Segurança|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Segurança|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Segurança|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Segurança|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Estes procedimentos armazenados retornam as informações que estavam corretas no [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. A saída não reflete as alterações na hierarquia de permissões que foram implementadas no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Para obter mais informações, consulte [Permissões de funções de servidor fixas](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Segurança|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Estes procedimentos armazenados retornam as informações que estavam corretas no [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. A saída não reflete as alterações na hierarquia de permissões que foram implementadas no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Para obter mais informações, consulte [Permissões de funções de servidor fixas](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Segurança|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Permissões específicas GRANT, DENY e REVOKE.|Permissão ALL|35|  
 |Segurança|Função intrínseca PERMISSIONS|Consulte sys.fn_my_permissions.|PERMISSIONS|170|  
 |Segurança|SETUSER|EXECUTE AS|SETUSER|165|  

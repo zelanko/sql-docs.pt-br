@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c693cf60054e03120b44ae30f631e407da8809b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659914"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669675"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47659914"
 |**counter_name**|**nchar(128)**|Nome do contador. Para obter mais informações sobre um contador, esse é o nome do tópico para selecionar na lista de contadores no [usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
 |**cntr_value**|**bigint**|Valor atual do contador.<br /><br /> **Observação:** para contadores por segundo, esse valor é cumulativo. O valor de taxa deve ser calculado pela amostragem do valor a intervalos de tempo curtos. A diferença entre qualquer dois valores de amostra sucessivos é igual à taxa para o intervalo de tempo usado.|  
-|**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Ver [tipos de contador de desempenho WMI](http://msdn2.microsoft.com/library/aa394569.aspx) no MSDN ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
+|**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Ver [tipos de contador de desempenho WMI](https://msdn2.microsoft.com/library/aa394569.aspx) no MSDN ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
 |**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="remarks"></a>Comentários  

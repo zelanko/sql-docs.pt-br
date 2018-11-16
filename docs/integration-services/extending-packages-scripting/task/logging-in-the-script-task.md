@@ -22,12 +22,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3e5480754ecc5f1c8230061500585a7a661fcf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720124"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640011"
 ---
 # <a name="logging-in-the-script-task"></a>Registrando a tarefa Script
   O uso de log em pacotes do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que você grave informações detalhadas sobre o progresso da execução, resultados e problemas, por meio do registro de eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. A tarefa Script pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> do objeto **Dts** para registrar dados definidos pelo usuário. Se o registro em log estiver habilitado e o evento **ScriptTaskLogEntry** for selecionado para o registro na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS**, uma única chamada ao método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> armazenará as informações do evento em todos os provedores de log configurados para a tarefa.  
@@ -95,9 +95,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644) (Registrando eventos personalizados para tarefas do Integration Services), em dougbert.com  
+-   Entrada de blog [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644) (Registrando eventos personalizados para tarefas do Integration Services), em dougbert.com  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registro em Log do SSIS &#40;Integration Services&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro em Log do Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

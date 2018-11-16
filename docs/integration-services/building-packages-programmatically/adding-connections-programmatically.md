@@ -25,12 +25,12 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c46c6b9b928c519748fb44cb1e78de0fceb5e68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6265e8db01c2b2baf26b7e0f9af4679dcec3b119
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699754"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642253"
 ---
 # <a name="adding-connections-programmatically"></a>Adicionando conexões programaticamente
   A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa conexões físicas com fontes de dados externas. A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola os detalhes de implementação da conexão do tempo de execução. Isso permite que o tempo de execução interaja com cada gerenciador de conexões de uma maneira consistente e previsível. Gerenciadores de conexões contêm um conjunto de propriedades de estoque que todas as conexões têm em comum, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Porém, as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> são, ordinariamente, as únicas propriedades necessárias para configurar um gerenciador de conexões. Ao contrário de outros paradigmas de programação em que as classes de conexão expõem métodos como **Open** ou **Connect** para estabelecer fisicamente uma conexão com a fonte de dados, o mecanismo de tempo de execução gerencia todas as conexões para o pacote enquanto ele é executado.  
@@ -208,10 +208,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artigo técnico, [Connection Strings](http://go.microsoft.com/fwlink/?LinkId=220743) (Cadeias de conexão), em carlprothman.  
+ Artigo técnico, [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743) (Cadeias de conexão), em carlprothman.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Criar Gerenciadores de Conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Criar Gerenciadores de Conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

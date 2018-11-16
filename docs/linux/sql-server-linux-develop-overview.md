@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 549e392cca7887230a8fb8e22296b8b3e1bb9833
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670876"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para o SQL Server no Linux
 
@@ -32,7 +32,7 @@ Você pode criar aplicativos que se conectam ao usam o SQL Server no Linux, de u
 
 A melhor maneira de começar e criar aplicativos com o SQL Server é experimentá-lo por conta própria.
 
-- Navegue até [tutoriais de Introdução](http://aka.ms/sqldev).
+- Navegue até [tutoriais de Introdução](https://aka.ms/sqldev).
 - Selecione seu idioma e plataforma de desenvolvimento.
 - Experimente os exemplos de código.
 

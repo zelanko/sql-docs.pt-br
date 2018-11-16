@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671192"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o plano de execução em formato XML para o lote especificado pelo identificador de plano. O plano especificado pelo identificador do plano pode estar em cache ou estar sendo executado.  
   
- O esquema XML para o plano de execução está publicado e disponível [este site da Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Ele fica disponível também no diretório em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
+ O esquema XML para o plano de execução está publicado e disponível [este site da Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Ele fica disponível também no diretório em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

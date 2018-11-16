@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ead1b1837f389d4c2a9d433b35caad7f0380ad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 955bbdf7932516623eb09f043bd7885455155e50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624504"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671895"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publicar um banco de dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47624504"
 >  A funcionalidade descrita neste tópico costumava ser fornecida pelo Assistente de Publicação do Banco de Dados. A funcionalidade de publicação foi adicionada ao Assistente para Gerar e Publicar Scripts; o Assistente de Publicação do Banco de Dados foi descontinuado.  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts  
- O Assistente para Gerar e Publicar Scripts pode ser usado para publicar um banco de dados ou objetos de banco de dados selecionados em um provedor de hospedagem Web. Um provedor de hospedagem Web do SQL Server é uma interface de conectividade com um serviço Web. O serviço Web é criado usando o projeto dos Serviços de Publicação de Banco de dados do Conjunto de Ferramentas de Hospedagem do SQL Server no CodePlex. O serviço Web permite que clientes do hoster da Web publiquem com facilidade seus bancos de dados para o serviço usando o Assistente para Gerar e Publicar Scripts. Para obter mais informações sobre como baixar o Conjunto de Ferramentas de Hospedagem do SQL Server, consulte [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)(em inglês).  
+ O Assistente para Gerar e Publicar Scripts pode ser usado para publicar um banco de dados ou objetos de banco de dados selecionados em um provedor de hospedagem Web. Um provedor de hospedagem Web do SQL Server é uma interface de conectividade com um serviço Web. O serviço Web é criado usando o projeto dos Serviços de Publicação de Banco de dados do Conjunto de Ferramentas de Hospedagem do SQL Server no CodePlex. O serviço Web permite que clientes do hoster da Web publiquem com facilidade seus bancos de dados para o serviço usando o Assistente para Gerar e Publicar Scripts. Para obter mais informações sobre como baixar o Conjunto de Ferramentas de Hospedagem do SQL Server, consulte [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)(em inglês).  
   
  O Assistente para Gerar e Publicar Scripts também pode ser usado para criar um script para transferir um banco de dados.  
   

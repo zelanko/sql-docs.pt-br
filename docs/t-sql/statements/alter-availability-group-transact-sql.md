@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 665fd5db9f42f79965c937a60bf3ebfdb729b217
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776954"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703944"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Nível|Condição de falha|  
 |-----------|-----------------------|  
-|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inativo.<br /><br /> A concessão do grupo de disponibilidade para conexão com o cluster WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inativo.<br /><br /> A concessão do grupo de disponibilidade para conexão com o cluster WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> A instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não se conecta ao cluster e o limite de HEALTH_CHECK_TIMEOUT especificado pelo usuário do grupo de disponibilidade é excedido.<br /><br /> A réplica de disponibilidade está em estado de falha.|  
 |3|Especifica que um failover automático deve ser iniciado em erros internos críticos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como spinlocks órfãos, violações do acesso de gravação graves ou muito descarte.<br /><br /> Esse é o comportamento padrão.|  
 |4|Especifica que um failover automático deve ser iniciado em caso de erros internos moderados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como uma condição de memória insuficiente persistente no pool de recursos interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -361,7 +361,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Para uma instância nomeada, você pode obter o número da porta consultando as colunas **port** e **type_desc** da exibição de gerenciamento dinâmico [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). A instância do servidor usa o ouvinte Transact-SQL (**type_desc='TSQL'**).  
   
- Para obter mais informações de como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, confira [Calculating read_only_routing_url for Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx) (Calculando a read_only_routing_url para Always On).  
+ Para obter mais informações de como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, confira [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx) (Calculando a read_only_routing_url para Always On).  
   
 > [!NOTE]  
 >  Para uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ouvinte do Transact-SQL deve ser configurado para usar uma porta específica. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -469,7 +469,7 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
  Nós recomendamos que você especifique uma cadeia de caracteres significativa. Por exemplo, para um grupo de disponibilidade denominado `AG1`, um nome de host de DNS significativo seria `ag1-listener`.  
   
 > [!IMPORTANT]  
->  O NetBIOS reconhece somente os primeiros 15 caracteres no dns_name. Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para obter informações sobre regras da nomenclatura de prefixos para nomes DNS, consulte [Atribuindo nomes de domínio](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  O NetBIOS reconhece somente os primeiros 15 caracteres no dns_name. Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para obter informações sobre regras da nomenclatura de prefixos para nomes DNS, consulte [Atribuindo nomes de domínio](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
  Une a um *grupo de disponibilidade distribuído*. Quando você cria um grupo de disponibilidade distribuído, o grupo de disponibilidade no cluster no qual ele é criado é o grupo de disponibilidade primário. O grupo de disponibilidade que se une ao grupo de disponibilidade distribuído é o grupo de disponibilidade secundário.  

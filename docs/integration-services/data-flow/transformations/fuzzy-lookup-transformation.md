@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782224"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638813"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
   A transformação Pesquisa Difusa executa tarefas de limpeza de dados, como padronização de dados, correção de dados e fornecimento de valores ausentes.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
+>  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
   
  A transformação Pesquisa Difusa difere da transformação Pesquisa no uso da correspondência difusa. A transformação Pesquisa usa uma junção por igualdade para localizar registros correspondentes na tabela de referência. Ela retorna registros com pelo menos um registro correspondente e retorna registros sem registros correspondentes. Por outro lado, a transformação Pesquisa Difusa usa a correspondência difusa para retornar uma ou mais correspondências aproximadas na tabela de referência.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782224"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782224"
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Pesquisa](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformação Agrupamento Difuso](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

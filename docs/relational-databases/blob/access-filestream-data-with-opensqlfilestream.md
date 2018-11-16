@@ -18,16 +18,16 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cf761fe98c7450578314f0f60b7d05c51407269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbca8d80adc2f37e441387d91701633f87e6a7c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818544"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672065"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Acessar dados do FILESTREAM com OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A API OpenSqlFilestream obtém um identificador de arquivo compatível com Win32 para um objeto binário grande (BLOB) FILESTREAM armazenado no sistema de arquivos. O identificador pode ser passado para qualquer uma das APIs do Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se você passar esse identificador para qualquer outra API do Win32, o erro ERROR_ACCESS_DENIED será retornado. O identificador deve ser fechado passando-o para a API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) do Win32 antes de a transação ser confirmada ou revertida. O não fechamento do identificador provocará vazamentos de recursos do servidor.  
+  A API OpenSqlFilestream obtém um identificador de arquivo compatível com Win32 para um objeto binário grande (BLOB) FILESTREAM armazenado no sistema de arquivos. O identificador pode ser passado para qualquer uma das APIs do Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se você passar esse identificador para qualquer outra API do Win32, o erro ERROR_ACCESS_DENIED será retornado. O identificador deve ser fechado passando-o para a API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) do Win32 antes de a transação ser confirmada ou revertida. O não fechamento do identificador provocará vazamentos de recursos do servidor.  
   
  Você deve executar todo o acesso ao contêiner de dados FILESTREAM em uma transação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções também podem ser executadas na mesma transação. Isso mantém consistência entre os dados do SQL e dados do BLOB do FILESTREAM.  
   
@@ -54,7 +54,7 @@ HANDLE OpenSqlFilestream (
  [in] É o caminho **nvarchar(max)** retornado pela função [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) . PathName deve ser chamado a partir do contexto de uma conta que tenha as permissões SELECT ou UPDATE do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na tabela e na coluna FILESTREAM.  
   
  *DesiredAccess*  
- [in] Define o modo usado para acessar dados BLOB do FILESTREAM. Esse valor é passado para a [Função DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527).  
+ [in] Define o modo usado para acessar dados BLOB do FILESTREAM. Esse valor é passado para a [Função DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
 |Nome|Valor|Significado|  
 |----------|-----------|-------------|  

@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 750d2ff9bae2caca15af2535b220b22781b65d4b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604556"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual forçado de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,15 +350,15 @@ ms.locfileid: "49120393"
   
      [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Blogs dos engenheiros do CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [White papers da Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
+     [White papers da equipe de consultoria do cliente do SQL Server](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

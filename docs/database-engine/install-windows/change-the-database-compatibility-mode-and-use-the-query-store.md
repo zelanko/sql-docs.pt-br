@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754914"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606766"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
@@ -39,7 +39,7 @@ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../
 > - Os níveis de compatibilidade dos bancos de dados tempdb, model, msdb e Resource são definidos para o nível de compatibilidade atual após o upgrade.   
 > - O banco de dados do sistema mestre retém o nível de compatibilidade anterior ao upgrade.    
   
-O processo de atualização para habilitar a nova funcionalidade do processador de consulta está relacionado ao modelo de manutenção pós-lançamento do produto.  Algumas dessas correções são liberadas sob o [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Clientes que precisam de correções podem optar por aceitar essas correções sem causar regressões inesperadas para outros clientes. O modelo de manutenção pós-lançamento para hotfixes do processador de consulta é documentado [aqui](http://support.microsoft.com/kb/974006). Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mudança para um novo nível de compatibilidade implica no sinalizador de rastreamento 4199 não ser mais necessário, porque essas correções agora estão habilitadas por padrão no último modo de compatibilidade. Portanto, como parte do processo de atualização, é importante validar que o 4199 não está habilitado quando o processo de atualização for concluído.  
+O processo de atualização para habilitar a nova funcionalidade do processador de consulta está relacionado ao modelo de manutenção pós-lançamento do produto.  Algumas dessas correções são liberadas sob o [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Clientes que precisam de correções podem optar por aceitar essas correções sem causar regressões inesperadas para outros clientes. O modelo de manutenção pós-lançamento para hotfixes do processador de consulta é documentado [aqui](https://support.microsoft.com/kb/974006). Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mudança para um novo nível de compatibilidade implica no sinalizador de rastreamento 4199 não ser mais necessário, porque essas correções agora estão habilitadas por padrão no último modo de compatibilidade. Portanto, como parte do processo de atualização, é importante validar que o 4199 não está habilitado quando o processo de atualização for concluído.  
 
 > [!NOTE]
 > No entanto, o sinalizador de rastreamento 4199 ainda é necessário para habilitar qualquer nova correção de processador de consulta lançada após o RTM, se aplicável.

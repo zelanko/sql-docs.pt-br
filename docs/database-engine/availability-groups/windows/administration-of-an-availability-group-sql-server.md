@@ -12,12 +12,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1026cc4a5cffccc4c0096266e069f334c09bba4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0266a8226ff99dfdbf839f21d988d91cfbf00a96
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818500"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600756"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administração de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,19 +118,19 @@ ms.locfileid: "47818500"
   
      [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Blogs dos engenheiros do CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White papers:**  
   
-     [White papers da Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
+     [White papers da equipe de consultoria do cliente do SQL Server](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

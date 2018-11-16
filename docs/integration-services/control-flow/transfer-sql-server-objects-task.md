@@ -17,12 +17,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826644"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640783"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
   A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfere um ou mais tipos de objetos para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, a tarefa pode copiar tabelas e procedimentos armazenados. Dependendo da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado como fonte, tipos diferentes de objetos estarão disponíveis para cópia. Por exemplo, só um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui esquemas e agregações definidos pelo usuário.  
@@ -82,7 +82,7 @@ ms.locfileid: "47826644"
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não informa progresso incremental da transferência do objeto; informa somente conclusão 0% e 100 % .  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Objetos do SQL inclui as seguintes entradas de log personalizadas:  
@@ -113,7 +113,7 @@ ms.locfileid: "47826644"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configuração programática da tarefa Transferir Objetos do SQL Server  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
@@ -183,7 +183,7 @@ ms.locfileid: "47826644"
 >  **CopySchema** só está disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **UseCollation**  
- Selecione se a transferência de objetos deve incluir o agrupamento especificado no servidor de origem.  
+ Selecione se a transferência de objetos deve incluir a ordenação especificada no servidor de origem.  
   
  **IncludeDependentObjects**  
  Selecione se a cópia dos objetos selecionados deve ser agrupada em cascata para incluir outros objetos que dependem deles para serem copiados.  
@@ -327,7 +327,7 @@ ms.locfileid: "47826644"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Objetos SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor da Tarefa Transferir Objetos do SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

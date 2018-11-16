@@ -20,12 +20,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1b44ed7bde897b97018731e99f9286c8a2e7b55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e6fa3edeeff19f7ddf9fde79114586ba7588324
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789795"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641313"
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
   O destino de Arquivo Simples grava dados em um arquivo de texto. O arquivo de texto pode ser em formato delimitado, de largura fixa, largura fixa com delimitador de linha ou com imperfeição à direita.  
@@ -47,7 +47,7 @@ ms.locfileid: "47789795"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de arquivo simples](../../integration-services/data-flow/flat-file-custom-properties.md)  
   

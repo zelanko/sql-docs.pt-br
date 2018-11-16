@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630114"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696814"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ Esta lição mostra como criar um banco de dados, criar uma tabela no banco de d
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] As instruções podem ser escritas e enviadas ao [!INCLUDE[ssDE](../includes/ssde-md.md)] das seguintes maneiras:  
   
--   Usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Este tutorial pressupõe que você esteja usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mas também é possível usar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, que está disponível como um download gratuito no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?linkid=67359).  
+-   Usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Este tutorial pressupõe que você esteja usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mas também é possível usar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, que está disponível como um download gratuito no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
   
 -   Usando o [utilitário sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -213,7 +213,7 @@ Para obter informações sobre algumas funções que você pode usar para trabal
 |||  
 |-|-|  
 |[Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Funções matemáticas &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funções de texto e imagem &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[Funções matemáticas &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funções de texto e imagem &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Criar exibições e procedimentos armazenados
 Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  

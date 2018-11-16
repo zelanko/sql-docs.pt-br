@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806826"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704084"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "49806826"
    > [!NOTE]
    > A dica QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n não substitui a configuração de estimativa de cardinalidade padrão ou herdada, se ela é forçada pela configuração do escopo do banco de dados, pelo sinalizador de rastreamento ou por outra dica de consulta, como QUERYTRACEON.   
    > Essa dica só afeta o comportamento do otimizador de consulta. Ele não afeta outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode depender do [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), como a disponibilidade de determinados recursos de banco de dados.  
-   > Para saber mais sobre essa dica, veja [Opção do Desenvolvedor: modelo de Execução de Consulta de Dicas](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Para saber mais sobre essa dica, veja [Opção do Desenvolvedor: modelo de Execução de Consulta de Dicas](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Permite a criação de perfil leve para a consulta. Quando uma consulta que contém essa nova dica é concluída, um novo Evento Estendido, query_plan_profile, é disparado. Esse evento estendido expõe as estatísticas de execução e o plano de execução real XML semelhante ao evento estendido query_post_execution_showplan, mas apenas para consultas que contêm a nova dica. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
@@ -296,7 +296,7 @@ ms.locfileid: "49806826"
   > Se você habilitar a coleta de evento estendido query_post_execution_showplan, isso adicionará a infraestrutura de criação de perfil padrão a cada consulta que esteja sendo executada no servidor e, portanto, poderá afetar o desempenho geral do servidor.      
   > Se você habilitar a coleção do evento estendido *query_thread_profile* para usar infraestrutura de criação de perfil leve, isso resultará em muito menos sobrecarga de desempenho, mas ainda afetará o desempenho geral do servidor.       
   > Se você habilitar o evento estendido de query_plan_profile, isso só habilitará a infraestrutura de criação de perfil leve para uma consulta executada com QUERY_PLAN_PROFILE, portanto, não afetará outras cargas de trabalho no servidor. Use essa dica para criar o perfil de uma consulta específica sem afetar outras partes da carga de trabalho do servidor.
-  > Para saber mais sobre a criação de perfil leve, veja [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Para saber mais sobre a criação de perfil leve, veja [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
  
 A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a exibição de gerenciamento dinâmico [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

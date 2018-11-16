@@ -25,12 +25,12 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f762d617dd2ae93a786f0c52b1200fee4bd36d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535dd25aa1d5f282261510100a0abb35518db8b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663854"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641603"
 ---
 # <a name="handling-events-programmatically"></a>Manipulando eventos programaticamente
   O tempo de execução [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece uma coleção de eventos que ocorrem antes, durante e depois da validação e execução de um pacote. Esses eventos podem ser capturados de duas formas. O primeiro método é através da implementação da interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> em uma classe e do fornecimento da classe como um parâmetro para os métodos **Execute** e **Validate** do pacote. O segundo método é através da criação de objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, que podem conter outros objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], tais como tarefas e loops, que são executados quando ocorre um evento em <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Essa seção descreve esses dois métodos e fornece exemplos de código para demonstrar o seu uso.  
@@ -250,6 +250,6 @@ End Module
   
 ## <a name="see-also"></a>Consulte Também  
  [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Adicionar um manipulador de eventos a um pacote](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

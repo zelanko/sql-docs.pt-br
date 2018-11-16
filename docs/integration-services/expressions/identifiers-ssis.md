@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651574"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638783"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -102,7 +102,7 @@ ms.locfileid: "47651574"
 ## <a name="unique-variable-names"></a>Nomes de variável exclusivos  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] aceita variáveis personalizadas e fornece um conjunto de variáveis de sistema. Por padrão, as variáveis personalizadas pertencem ao namespace **User** e as variáveis do sistema pertencem ao namespace **System** . Você pode criar namespaces adicionais para variáveis personalizadas e atualizar os nomes de namespace para se adequar às necessidades de seu aplicativo. O construtor de expressão lista variáveis em escopo em todos os namespaces.  
   
- Todas as variáveis têm escopo e pertencem a um namespace. Uma variável tem o escopo do pacote ou o escopo de um contêiner ou uma tarefa no pacote. O construtor de expressão no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lista só as variáveis em escopo. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Todas as variáveis têm escopo e pertencem a um namespace. Uma variável tem o escopo do pacote ou o escopo de um contêiner ou uma tarefa no pacote. O construtor de expressão no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lista só as variáveis em escopo. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  Variáveis usadas em expressões devem ter nomes exclusivos para o avaliador de expressão avaliar a expressão corretamente. Se um pacote usar várias variáveis com o mesmo nome, seus namespaces deverão ser diferentes. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um operador de resolução de namespace, que consiste em dois dois-pontos (::), para qualificar uma variável com seu namespace. Por exemplo, a expressão a seguir usa duas variáveis denominadas **Count**; uma que pertence ao namespace **User** e uma que pertence ao namespace **MyNamespace** .  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651574"
 ```  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
+ Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
   

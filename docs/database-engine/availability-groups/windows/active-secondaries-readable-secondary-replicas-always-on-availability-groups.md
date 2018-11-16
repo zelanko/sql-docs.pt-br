@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2aaca4afa75981ce56f68c4408f4dd9d820a4939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777184"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604706"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47777184"
   
 -   As cargas de trabalho somente leitura para tabelas baseadas em disco usam o controle de versão de linha para remover a contenção de bloqueio nos bancos de dados secundários. Todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente. Além disso, todas as dicas de bloqueio são ignoradas. Isso elimina a contenção do leitor/gravador.  
   
--   As cargas de trabalho somente leitura para tabelas duráveis com otimização de memória acessam os dados exatamente da mesma forma que são acessadas no banco de dados primário, usando procedimentos armazenados nativos ou interoperabilidade de SQL com as mesmas restrições de nível de isolamento da transação (veja [Níveis de isolamento no mecanismo de banco de dados](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). A carga de trabalho de relatório ou as consultas somente leitura que são executadas na réplica primária podem ser executadas na réplica secundária sem exigir nenhuma alteração. Da mesma maneira, uma carga de trabalho de relatório ou as consultas somente leitura que são executadas em uma réplica secundária podem ser executadas na réplica primária sem exigir nenhuma alteração.  De maneira semelhante a tabelas baseadas em disco, todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente.  
+-   As cargas de trabalho somente leitura para tabelas duráveis com otimização de memória acessam os dados exatamente da mesma forma que são acessadas no banco de dados primário, usando procedimentos armazenados nativos ou interoperabilidade de SQL com as mesmas restrições de nível de isolamento da transação (veja [Níveis de isolamento no mecanismo de banco de dados](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). A carga de trabalho de relatório ou as consultas somente leitura que são executadas na réplica primária podem ser executadas na réplica secundária sem exigir nenhuma alteração. Da mesma maneira, uma carga de trabalho de relatório ou as consultas somente leitura que são executadas em uma réplica secundária podem ser executadas na réplica primária sem exigir nenhuma alteração.  De maneira semelhante a tabelas baseadas em disco, todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente.  
   
 -   As operações DML são permitidas em variáveis de tabela para os tipos baseados em disco e em tabela com otimização de memória na réplica secundária.  
   
@@ -236,7 +236,7 @@ GO
     |Sim|não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
     |Sim|Sim|Versões de linha e sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -257,7 +257,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

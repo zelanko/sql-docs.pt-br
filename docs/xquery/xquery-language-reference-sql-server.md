@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672255"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Referência de linguagem Xquery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] dá suporte a um subconjunto da linguagem XQuery que é usada para consultar o **xml** tipo de dados. Essa implementação da XQuery está alinhada com o Working Draft de julho de 2004 da XQuery. Essa linguagem está sendo desenvolvida pela World Wide Web Consortium (W3C), com a participação de todos os principais fornecedores de banco de dados e também da Microsoft. Como as especificações da W3C podem passar por revisões futuras antes de se tornarem recomendações da W3C, essa implementação pode ser diferente da recomendação final. Este tópico descreve a semântica e a sintaxe do subconjunto da XQuery com suporte no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Para obter mais informações, consulte o [W3C XQuery 1.0 Language Specification](http://go.microsoft.com/fwlink/?LinkId=48846).  
+ Para obter mais informações, consulte o [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
  A XQuery é uma linguagem que pode consultar dados XML estruturados ou semiestruturados. Com o **xml** suporte é fornecido no tipo de dados a [!INCLUDE[ssDE](../includes/ssde-md.md)], documentos podem ser armazenados em um banco de dados e, em seguida, são consultados por meio do XQuery.  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  No exemplo a seguir, a consulta é especificada na coluna Instructions da **xml** tipo na tabela ProductModel no banco de dados AdventureWorks.  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  A organização dessa seção é baseada na especificação de working draft da XQuery da World Wide Web Consortium (W3C). Alguns dos diagramas fornecidos nesta seção foram obtidos nessa especificação. Esta seção compara a implementação XQuery da Microsoft com a especificação da W3C, descreve as diferenças entre a XQuery da Microsoft e da W3C e indica quais recursos da W3C não têm suporte. A especificação W3C está disponível em [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846).  
+>  A organização dessa seção é baseada na especificação de working draft da XQuery da World Wide Web Consortium (W3C). Alguns dos diagramas fornecidos nesta seção foram obtidos nessa especificação. Esta seção compara a implementação XQuery da Microsoft com a especificação da W3C, descreve as diferenças entre a XQuery da Microsoft e da W3C e indica quais recursos da W3C não têm suporte. A especificação W3C está disponível em [ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

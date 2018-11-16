@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a3dc1b725d0a0e66aa9034e71c0bd26d27a23aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da96a86f4e25f6397af5cbba3423bc31514f7ca7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702887"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,5 +90,5 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você poder�
     GO  
     ```  
   
-Para obter mais informações, veja [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
+Para obter mais informações, veja [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
   

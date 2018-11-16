@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684874"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665735"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como configurar uma assinatura para usar a sincronização da Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como configurar uma assinatura para usar a sincronização da Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como configurar uma Assinatura para usar a sincronização da Web (Programação Transact-SQL de replicação)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como configurar uma Assinatura para usar a sincronização da Web (Programação Transact-SQL de replicação)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Como configurar uma assinatura para usar sincronização da Web (programação RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Como configurar uma assinatura para usar sincronização da Web (programação RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  A sincronização da Web usa um computador que esteja executando o IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar assinaturas pull para publicações de mesclagem. As versões 5.0, 6.0 e 7.0 do IIS são compatíveis. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684874"
   
 4.  Clique em **OK**.  
   
- Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Um certificado deve ser associado a um site da Web antes que esse site possa usar o SSL. O SelfSSL associa o certificado automaticamente com o site da Web padrão. Se já tiver um certificado ou se instalar depois um certificado de uma CA, você deve associar explicitamente esse certificado ao site da Web que é usado para a sincronização da Web. Certifique-se de haver somente um certificado associado ao site da Web utilizado para sincronizar as assinaturas. Se houver vários certificados, o Assinante usará o primeiro site da Web disponível.  

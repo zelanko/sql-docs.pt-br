@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d05481a9946a411d9fc83156e81e0abcc232561
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671575"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
+  Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
   
 -   Aceitar parâmetros de entrada e retornar vários valores no formulário de parâmetros de saída para o programa de chamada.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "47709154"
 |Descreve como os parâmetros são usados em um procedimento armazenado.|[Parâmetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Procedimentos armazenados CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

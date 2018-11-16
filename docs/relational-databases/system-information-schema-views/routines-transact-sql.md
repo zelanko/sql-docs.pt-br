@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8022ec474810362b7a0742e014a1db620c28172e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857076"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673555"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47857076"
 |CHARACTER_OCTET_LENGTH|**int**|Comprimento máximo em bytes se o tipo de retorno for um tipo de caractere.<br /><br /> -1 para **xml** e dados de tipo de valor grande.|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
-|COLLATION_NAME|**nvarchar(** 128 **)**|Nome do agrupamento do valor de retorno. Para tipos não caractere, retorna NULL.|  
+|COLLATION_NAME|**nvarchar(** 128 **)**|Nome da ordenação do valor de retorno. Para tipos não caractere, retorna NULL.|  
 |CHARACTER_SET_CATALOG|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
 |CHARACTER_SET_SCHEMA|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
 |CHARACTER_SET_NAME|**nvarchar(** 128 **)**|O nome do conjunto de caracteres do valor de retorno. Para tipos não caractere, retorna NULL.|  
@@ -92,7 +92,7 @@ ms.locfileid: "47857076"
 |LAST_ALTERED|**datetime**|A última vez que a função foi modificada.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Exibições do esquema de informações &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

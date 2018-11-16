@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ae35c63bdcf5be1bda4dd85010828cb8485f9be4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 985c1117e5913c38769a1baddd50a09ac6978ab1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821124"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604806"
 ---
 # <a name="install-sql-server-servicing-updates"></a>Instalar as atualizações de manutenção do SQL Server
 
@@ -44,11 +44,11 @@ Instale as atualizações mais recentes do [!INCLUDE[ssNoVersion](../../includes
 Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode incluir uma atualização cumulativa, service pack ou service pack mais atualização cumulativa.  
   
 ## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>Instalando atualizações para o [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] depois que já tiver sido instalado  
-Em uma instância instalada do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], recomendamos que você aplique as últimas atualizações de segurança e atualizações críticas, incluindo GDRs (versões de distribuição geral), SPs (service packs) e CUs (atualizações cumulativas). Para obter mais informações, consulte o [Comunicado de março de 2016 sobre o ISM (Modelo de Manutenção Incremental) do SQL Server](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
+Em uma instância instalada do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], recomendamos que você aplique as últimas atualizações de segurança e atualizações críticas, incluindo GDRs (versões de distribuição geral), SPs (service packs) e CUs (atualizações cumulativas). Para obter mais informações, consulte o [Comunicado de março de 2016 sobre o ISM (Modelo de Manutenção Incremental) do SQL Server](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
 
 > [!NOTE]
 > A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], adotamos um ciclo de vida de manutenção base simplificado e previsível e os SPs (service packs) não estarão mais disponíveis. Somente os CUs (atualizações cumulativas) e os GDRs (versões de distribuição geral), quando necessário.
-> Para obter mais informações, consulte o [Comunicado de setembro de 2017 sobre o MSM (Modelo de Manutenção Moderna) para o SQL Server](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/).
+> Para obter mais informações, consulte o [Comunicado de setembro de 2017 sobre o MSM (Modelo de Manutenção Moderna) para o SQL Server](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/).
   
 As atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis com a atualização do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), o Windows Server Update Services (WSUS) e o Centro de Download da Microsoft. As atualizações de segurança e atualizações críticas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update e, para ver estas atualizações, você precisará optar pelo MU por meio do applet do Windows Update no Painel de Controle.  
   

@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dddc4c6234f97d5491b70fa6adf55fc1159f3535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670845"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657858"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Converter esquemas do DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados.  
@@ -147,7 +147,7 @@ Para cada item que não pôde ser convertido, você deve determinar o que você 
 -   Você pode excluir o objeto da migração. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados e o Gerenciador de metadados do DB2, desmarque a caixa de seleção próxima ao item antes de carregar os objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migração de dados do DB2.  
   
 ## <a name="next-step"></a>Próxima etapa  
-É a próxima etapa no processo de migração [carregar objetos convertidos no SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+É a próxima etapa no processo de migração [carregar objetos convertidos no SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## <a name="see-also"></a>Consulte também  
 [Migrando dados do DB2 para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

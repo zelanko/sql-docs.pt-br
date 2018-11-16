@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7bd94456b3e26aa8f8cae5728a3a9af3c3324254
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eeb22433523d9fef88ab5a32f429ce94aca5cbd0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028645"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813749"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50028645"
 ### <a name="header-section"></a>Seção de cabeçalho  
  O código XML a seguir mostra a seção de cabeçalho de um feed de dados.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="https://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50028645"
   
  As linhas de dados para regiões de dados aninhadas em geral são largas, principalmente se as tabelas aninhadas e as matrizes tiverem grupos e totais. Talvez você ache útil exportar o relatório para um feed de dados e exibir o feed de dados para verificar se os dados gerados correspondem ao esperado.  
   
- Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento de serviço Atom de exemplo, mostrado acima, inclui a URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
+ Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento de serviço Atom de exemplo, mostrado acima, inclui a URL `https://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
   
  Os nomes do item de relatório seguem o padrão de nomes de elemento RDL dos itens de relatório e, com frequência, não são intuitivos, nem fáceis de lembrar. Por exemplo, o nome padrão da primeira matriz posicionada em um relatório é Tablix 1. Os feeds de dados usam esses nomes.  
   

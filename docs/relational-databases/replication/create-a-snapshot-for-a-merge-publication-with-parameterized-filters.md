@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142822158f03c76c1c36f40fa937438c989ec3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666085"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47811794"
   
 #### <a name="to-generate-a-schema-snapshot"></a>Para gerar um instantâneo de esquema  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações** .  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47811794"
   
 3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para adicionar artigos à publicação. Esse procedimento armazenado deve ser executado uma vez para cada artigo na publicação. Ao usar filtros com parâmetros, você deve especificar um filtro de linha com parâmetros para um artigo usando o parâmetro **@subset_filterclause** . Para obter mais informações, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  No Publicador do banco de dados de publicação, execute [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando o valor de **@publication** da etapa 1. Observe o valor **snapshot_jobid** no conjunto de resultados.  
   
@@ -275,7 +275,7 @@ PAUSE
 >  Quando a filtragem de um artigo gerar partições não sobrepostas, exclusivas de cada assinatura (especificando um valor de F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription para P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption ao criar um artigo de mesclagem), os metadados serão limpos sempre que o Agente de Mesclagem Agent for executado. Isso significa que o instantâneo particionado irá expirar mais rapidamente. Ao usar essa opção, considere permitir que os Assinantes solicitem geração do instantâneo. Para obter mais informações, consulte a seção "Usando as opções de filtragem” apropriadas no tópico [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Para criar uma publicação que permita que os Assinantes inicializem geração e entrega de instantâneo  
   

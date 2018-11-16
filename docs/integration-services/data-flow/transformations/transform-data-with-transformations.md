@@ -15,12 +15,12 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6573534c2117192efcb3a40c848e72e0a39d0426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610747"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640253"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar dados com transformações
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui três tipos de componentes de fluxo de dados: fontes, transformações e destinos.  
@@ -45,7 +45,7 @@ ms.locfileid: "47610747"
   
  Você também pode gravar transformações personalizadas. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e [Desenvolvendo tipos específicos de componentes de fluxo de dados](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Depois de adicionar a transformação ao designer de fluxo de dados, mas antes de configurar a transformação, você conecta a transformação ao fluxo de dados conectando a saída de outra transformação ou fonte no fluxo de dados à entrada desta transformação. O conector entre dois componentes de fluxo de dados é chamado de caminho. Para obter mais informações sobre como conectar componentes e trabalhar com caminhos, consulte [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Depois de adicionar a transformação ao designer de fluxo de dados, mas antes de configurar a transformação, você conecta a transformação ao fluxo de dados conectando a saída de outra transformação ou fonte no fluxo de dados à entrada desta transformação. O conector entre dois componentes de fluxo de dados é chamado de caminho. Para obter mais informações sobre como conectar componentes e trabalhar com caminhos, consulte [Conectar componentes com caminhos](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Para adicionar uma transformação a um fluxo de dados  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47610747"
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
- [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Conectar componentes com caminhos](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Tratamento de erro em dados](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
   

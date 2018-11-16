@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681704"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657455"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681704"
   
  Há vários tipos de objetos de banco de dados gerenciados de integração CLR. Para obter informações gerais sobre esses objetos, consulte [criando objetos de banco de dados com a integração de Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Sempre que esses objetos são executados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um **AppDomain** sob o qual ele pode carregar e executar o código necessário. O nível de isolamento para um **AppDomain** é um **AppDomain** por banco de dados proprietário. Ou seja, todos os objetos CLR pertencentes a um usuário são sempre executados no mesmo **AppDomain** por banco de dados (se um usuário registra os objetos de banco de dados CLR em bancos de dados diferentes, o banco de dados CLR objetos serão executados em diferentes domínios de aplicativo). Uma **AppDomain** não será destruído depois que o código conclui a execução. Em vez disso, ele é colocado na memória para execuções futuras. Isso melhora o desempenho.  
   
- Para obter mais informações, consulte [domínios de aplicativo](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Para obter mais informações, consulte [domínios de aplicativo](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  

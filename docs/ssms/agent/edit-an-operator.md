@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c40154dcef9bada42c4f45d822a7be55a77a271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f153a2d66722ec8bc06389ad379cbe2faaf9af65
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828774"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701404"
 ---
 # <a name="edit-an-operator"></a>Editar um operador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -111,5 +111,5 @@ Somente membros da função de servidor fixa **sysadmin** podem editar operadore
     GO  
     ```  
   
-Para obter mais informações, consulte [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3).  
+Para obter mais informações, consulte [sp_update_operator (Transact-SQL)](https://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3).  
   

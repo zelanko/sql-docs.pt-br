@@ -14,12 +14,12 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b06376518361b0ab33d227e11a06654bfc3618f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d70f630f5dca16e1140ebe5846d49b14a9a626
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699534"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Gerenciar servidores com o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47657395"
 Os componentes de ferramentas do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] incluem os Servidores Registrados, o Pesquisador de Objetos, o Gerenciador de Soluções, o Explorador de Modelos, a página Detalhes do Pesquisador de Objetos e a janela de documentos. Para exibir uma ferramenta, no menu **Exibir** , clique no nome da ferramenta. Para exibir a ferramenta Editor de Consultas, clique no botão **Nova Consulta** na barra de ferramentas.  
   
 > [!IMPORTANT]  
-> O tráfego de rede entre o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não é criptografado por padrão. Não trabalhe com dados confidenciais (inclusive senhas) no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] a menos que você tenha definido uma conexão criptografada. Para obter mais informações, veja [Como habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
+> O tráfego de rede entre o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não é criptografado por padrão. Não trabalhe com dados confidenciais (inclusive senhas) no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] a menos que você tenha definido uma conexão criptografada. Para obter mais informações, veja [Como habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
   
 Use o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para:  
   
@@ -62,5 +62,5 @@ Para iniciar e parar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou
   
 ## <a name="see-also"></a>Consulte Também  
 [Usar o SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Como exibir propriedades do servidor (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[Como exibir propriedades do servidor (SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

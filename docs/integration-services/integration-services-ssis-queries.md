@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689514"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638733"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
   A tarefa Executar SQL, a origem OLE DB, o destino OLE DB e a transformação Pesquisa podem usar consultas de SQL. Na tarefa Executar SQL, as instruções SQL podem criar, atualizar e excluir objetos de banco de dados e dados; executar procedimentos armazenados e executar instruções SELECT. Na origem OLE DB e na transformação Pesquisa, as instruções SQL são normalmente instruções SELECT ou EXEC. Esta última normalmente executa procedimentos que retornam conjuntos de resultados.  
@@ -58,13 +58,13 @@ Você pode fornecer a instrução SQL das seguintes maneiras:
   
  Você também pode fornecer entrada direta digitando a consulta na caixa de diálogo de componente de tarefa ou fluxo de dados ou na janela Propriedades.  
   
- Para obter mais informações, consulte [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Para obter mais informações, consulte [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
 ## <a name="sql-in-files"></a>SQL em arquivos  
  A instrução SQL da tarefa Executar SQL também pode residir em um arquivo separado. Por exemplo, você pode escrever consultas usando ferramentas como o Editor de Consultas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvar a consulta em um arquivo e depois ler a consulta no arquivo ao executar um pacote. O arquivo pode conter apenas as instruções SQL para execução e comentários. Para usar uma instrução SQL armazenada em um arquivo, forneça uma conexão de arquivo que especifique o nome do arquivo e o local. Para obter mais informações, consulte [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL em variáveis  
- Se a origem da instrução SQL na tarefa Executar SQL for uma variável, forneça o nome da variável que contém a consulta. A propriedade Value da variável contém o texto de consulta. Você define a propriedade ValueType da variável como um tipo de dados String e digita ou copia a instrução SQL na propriedade Value. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Se a origem da instrução SQL na tarefa Executar SQL for uma variável, forneça o nome da variável que contém a consulta. A propriedade Value da variável contém o texto de consulta. Você define a propriedade ValueType da variável como um tipo de dados String e digita ou copia a instrução SQL na propriedade Value. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
 
 ## <a name="query-builder-dialog-box"></a>Caixa de diálogo Construtor de Consultas
 Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a ser usada na tarefa Executar SQL, na origem e no destino OLE DB e na transformação Pesquisa.  
@@ -83,7 +83,7 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
   
  Para saber mais sobre a linguagem Transact-SQL e sua consulta, consulte [Referência de Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- Você também pode usar variáveis em uma consulta para fornecer valores a um parâmetro de entrada, para capturar valores de parâmetros de saída e para armazenar códigos de retorno. Para saber mais sobre como usar variáveis nas consultas usadas por pacotes, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md), [Fonte OLE DB](../integration-services/data-flow/ole-db-source.md), e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Para saber mais sobre o uso de variáveis na Tarefa Executar DQL, consulte [Parâmetros e códigos de retorno na Tarefa Executar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Conjuntos de resultados na tarefa Executar SQL](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ Você também pode usar variáveis em uma consulta para fornecer valores a um parâmetro de entrada, para capturar valores de parâmetros de saída e para armazenar códigos de retorno. Para saber mais sobre como usar variáveis nas consultas usadas por pacotes, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md), [Fonte OLE DB](../integration-services/data-flow/ole-db-source.md), e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Para saber mais sobre o uso de variáveis na Tarefa Executar DQL, consulte [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Conjuntos de resultados na tarefa Executar SQL](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
   
  As transformações Pesquisa e Pesquisa Difusa também podem usar variáveis com parâmetros e códigos de retorno. As informações sobre a origem OLE DB também se aplicam a estas duas transformações.  
   

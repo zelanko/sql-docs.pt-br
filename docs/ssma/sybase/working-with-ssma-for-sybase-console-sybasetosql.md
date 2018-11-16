@@ -10,12 +10,12 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 75e37a0e54204c4aeb190e3ae4db7944d01c8f29
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099497"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663385"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhar com o Console do SSMA para Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), versão para Sybase Adaptive Server Enterprise (ASE), agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -39,5 +39,5 @@ Os tópicos abordados nesta seção incluem:
 |[Solução de problemas &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Fornece breves informações sobre como corrigir problemas de migração.|  
   
 ## <a name="see-also"></a>Consulte também  
-[Introdução ao SSMA para Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+[Introdução ao SSMA para Sybase Console(SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

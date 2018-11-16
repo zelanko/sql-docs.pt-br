@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030fc4262f41112eeca34c590eac00701e8ee876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781222"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661865"
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Por exemplo, um profissional de suporte de call center pode identificar os chama
 
 A finalidade do mascaramento de dados dinâmicos é limitar a exposição de dados confidenciais, impedindo que os usuários que não devem ter acesso a esses dados os visualizem. O mascaramento de dados dinâmicos não pretende impedir que usuários de banco de dados se conectem diretamente ao banco de dados e executem consultas abrangentes que exponham dados confidenciais. O mascaramento de dados dinâmicos é complementar aos outros recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoria, criptografia, segurança em nível de linha, etc.) e seu uso é altamente recomendável em conjunto com esses outros recursos, a fim de proteger melhor os dados confidenciais no banco de dados.  
   
-O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter informações adicionais sobre como configurar o mascaramento de dados dinâmicos usando o portal do Azure, veja [Introdução ao Mascaramento de Dados Dinâmicos de Bancos de Dados SQL (portal do Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], e é configurado usando comandos do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obter informações adicionais sobre como configurar o mascaramento de dados dinâmicos usando o portal do Azure, veja [Introdução ao Mascaramento de Dados Dinâmicos de Bancos de Dados SQL (portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos  
  Uma regra de mascaramento pode ser definida em uma coluna de tabela para ocultar os dados dessa coluna. Há quatro tipos de máscaras disponíveis.  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Introdução ao mascaramento de dados dinâmicos do Banco de Dados SQL (Versão Prévia do portal do Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Introdução ao mascaramento de dados dinâmicos do Banco de Dados SQL (Versão Prévia do portal do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

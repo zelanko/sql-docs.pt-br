@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718264"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639063"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  
@@ -102,7 +102,7 @@ ms.locfileid: "47718264"
   
 -   Não é possível usar a opção **/ConfigFile** para carregar as configurações que substituem as configurações especificadas no design.  
   
- Para obter mais informações sobre essas opções e sobre como o comportamento delas difere entre o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e versões anteriores, consulte [Alterações de comportamento dos recursos do Integration Services no SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+ Para obter mais informações sobre essas opções e sobre como o comportamento delas difere entre o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e versões anteriores, consulte [Alterações de comportamento dos recursos do Integration Services no SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 ### <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  Você também pode passar valores para um pacote filho configurando a tarefa Executar Pacote para mapear as variáveis de pacote pai ou parâmetros, ou parâmetros de projeto, para parâmetros de pacote filho. Para obter mais informações, consulte [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
- Não é necessário criar a variável no pacote pai antes de criar a configuração de pacote no pacote filho. É possível adicionar a variável ao pacote pai a qualquer momento, mas será preciso usar o nome exato da variável pai na configuração do pacote. Entretanto, antes de criar uma configuração da variável pai, é preciso que exista uma variável no pacote filho que possa ser atualizada pela configuração. Para obter mais informações sobre como adicionar e configurar variáveis, consulte [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+ Não é necessário criar a variável no pacote pai antes de criar a configuração de pacote no pacote filho. É possível adicionar a variável ao pacote pai a qualquer momento, mas será preciso usar o nome exato da variável pai na configuração do pacote. Entretanto, antes de criar uma configuração da variável pai, é preciso que exista uma variável no pacote filho que possa ser atualizada pela configuração. Para obter mais informações sobre como adicionar e configurar variáveis, consulte [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
  O escopo da variável no pacote pai que é usado na configuração da variável pai pode ser definido como a tarefa Executar Pacote, tanto para o contêiner que tenha a tarefa quanto para o pacote. Se várias variáveis tiverem o mesmo nome, será usada a variável que tiver o escopo mais próximo da tarefa Executar Pacote. O escopo mais próximo da tarefa Executar Pacote é a própria tarefa.  
   

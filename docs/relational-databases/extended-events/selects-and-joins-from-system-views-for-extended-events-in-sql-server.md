@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906146"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666825"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Para realizar a seleção com SELECT das exibições do sistema, a seguinte perm
 
 Esta seção corresponde e correlaciona três diferentes perspectivas tecnológicas na mesma sessão de eventos definida. A sessão foi definida e é visível no **Pesquisador de Objetos** do SQL Server Management Studio (SSMS.exe), mas a sessão não está em execução no momento.
 
-Todos os meses, é aconselhável [instalar a atualização mais recente do SSMS](http://msdn.microsoft.com/library/mt238290.aspx), para evitar falhas inesperadas.
+Todos os meses, é aconselhável [instalar a atualização mais recente do SSMS](https://msdn.microsoft.com/library/mt238290.aspx), para evitar falhas inesperadas.
 
 
 A documentação de referência sobre as exibições de catálogo para eventos estendidos está em [Exibições do catálogo de eventos estendidos (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).

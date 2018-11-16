@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e16a481b0f7b776386dc03fc2b201ae0708958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f718a4412afabd8544c944c31b7e686ebb96fcf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607116"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663245"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Mapeamento explícito de atributos e elementos XSD para tabelas e colunas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47607116"
  Nenhuma anotação é especificada para o **ContactID** atributo. Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  

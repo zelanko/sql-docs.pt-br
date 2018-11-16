@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667176"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768894"
 ## <a name="data-encryption-algorithm"></a>Algoritmo de criptografia de dados  
  O Always Encrypted usa o algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para criptografar dados no banco de dados.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** é derivado do projeto da especificação em [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). Ele usa um esquema de Criptografia Autenticada com Dados Associados, seguindo uma abordagem Criptografar depois MAC. Isto é, o texto não criptografado é criptografado primeiro e o MAC é gerado com base no texto cifrado resultante.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** é derivado do projeto da especificação em [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). Ele usa um esquema de Criptografia Autenticada com Dados Associados, seguindo uma abordagem Criptografar depois MAC. Isto é, o texto não criptografado é criptografado primeiro e o MAC é gerado com base no texto cifrado resultante.  
   
- Para ocultar padrões, o **AEAD_AES_256_CBC_HMAC_SHA_256** usa o modo de operação CBC (Encadeamento de Blocos de Criptografia), em que um valor inicial é alimentado no sistema chamado IV (vetor de inicialização). A descrição completa do modo CBC pode ser encontrada em [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ Para ocultar padrões, o **AEAD_AES_256_CBC_HMAC_SHA_256** usa o modo de operação CBC (Encadeamento de Blocos de Criptografia), em que um valor inicial é alimentado no sistema chamado IV (vetor de inicialização). A descrição completa do modo CBC pode ser encontrada em [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  O**AEAD_AES_256_CBC_HMAC_SHA_256** computa um valor de texto cifrado para determinado valor de texto não criptografado usando as etapas a seguir.  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/D (sem suporte)|  
   
 ## <a name="net-reference"></a>Referência do .NET  
- Para obter detalhes sobre os algoritmos abordados neste documento, confira os arquivos **SqlAeadAes256CbcHmac256Algorithm.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** na [Referência do .NET](http://referencesource.microsoft.com/).  
+ Para obter detalhes sobre os algoritmos abordados neste documento, confira os arquivos **SqlAeadAes256CbcHmac256Algorithm.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** na [Referência do .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

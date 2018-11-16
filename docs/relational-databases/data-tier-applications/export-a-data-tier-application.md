@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441742"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657075"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47441742"
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
@@ -120,7 +120,7 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
 ##  <a name="NetApp"></a> Usando um aplicativo .NET Framework  
  **Para exportar um DAC usando o método Export() em um aplicativo .NET Framework.**  
   
- Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC a ser exportado.  
   

@@ -1,5 +1,5 @@
 ---
-title: ALTERAR a instrução de CUBE (MDX) | Microsoft Docs
+title: Alterar instrução de CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698294"
 ---
-# <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX - ALTER CUBE
+# <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX – ALTER CUBE
 
 
-  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar o write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com o Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar o write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com o Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Observe que os write-backs de dimensão simultâneos podem resultar em um deadlock, onde o primeiro write-back é bloqueado de uma confirmação devido ao bloqueio compartilhado mantido pelo segundo write-back. Nenhum erro é gerado nessa situação, mas nenhuma operação pode avançar. Por fim, os dois write-backs expiram e as alterações são revertidas.  
   
@@ -109,16 +109,16 @@ CELL CALCULATION Calculation_Name
   
 ### <a name="arguments"></a>Argumentos  
  *Cube_Name*  
- Uma expressão de cadeia de caracteres válida fornecendo um nome de cubo.  
+ Uma expressão de cadeia de caracteres válida que fornece um nome de cubo.  
   
  *Member_Name*  
  Uma expressão de cadeia de caracteres válida que fornece um nome ou uma chave de membro.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentários  
  Se a cláusula WITH DESCENDANTS não for utilizada, os filhos de um membro descartado se tornam filhos do pai do membro descartado. Se a cláusula WITH DESCENDENTES for utilizada, todos os descendentes e suas linhas na tabela de dimensões também serão descartados.  
   
 > [!NOTE]  
->  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e cálculos de célula, consulte [a instrução DROP do membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [remover instrução SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e calculus de célula, consulte [a instrução DROP do membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [remover instrução SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Atualizando o membro de dimensão padrão  
  Essa cláusula atualiza o membro padrão de um cubo e é usada no script de cálculo MDX para definir um membro padrão. O membro padrão pode ser especificado para a dimensão de banco de dados, uma dimensão de cubo ou para o logon de um usuário. O membro padrão também pode ser alterado durante uma sessão.  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Uma linguagem MDX válida que retorna um único membro.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentários  
  A linguagem MDX especificada pode ser estática ou dinâmica.  
   
 ## <a name="moving-a-dimension-member"></a>Movendo um membro de dimensão  

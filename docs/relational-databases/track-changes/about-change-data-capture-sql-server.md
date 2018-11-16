@@ -1,12 +1,10 @@
 ---
 title: Sobre o Change Data Capture (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
@@ -16,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65b6c50f59af1e05331e3620aa15639c52b4202d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8df90ce7038506855a3dbba9c7376ae352342c3
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841669"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559203"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,17 +107,17 @@ ms.locfileid: "47841669"
   
  O Change Data Capture não funciona corretamente quando o serviço Mecanismo de Banco de Dados ou o serviço SQL Server Agent está sendo executado na conta NETWORK SERVICE. Isso pode resultar no erro 22832.  
  
-## <a name="working-with-database-and-table-collation-differences"></a>Trabalhando com as diferenças de agrupamento de banco de dados e de tabela
+## <a name="working-with-database-and-table-collation-differences"></a>Trabalhando com as diferenças de ordenação de banco de dados e de tabela
 
-É importante estar ciente de uma situação em que há diferentes agrupamentos entre o banco de dados e as colunas de uma tabela configurada para a captura de dados de alterações. A CDA usa um armazenamento provisório para popular tabelas laterais. Se uma tabela tiver colunas CHAR ou VARCHAR com agrupamentos diferentes do agrupamento de banco de dados e se essas colunas armazenarem caracteres não ASCII (como caracteres DBCS de byte duplo), a CDA não poderá persistir os dados alterados de maneira consistente com os dados nas tabelas base. Isso se deve ao fato de que as variáveis do armazenamento provisório não podem ter agrupamentos associados a elas.
+É importante estar ciente de uma situação em que há diferentes ordenações entre o banco de dados e as colunas de uma tabela configurada para a captura de dados de alterações. A CDA usa um armazenamento provisório para popular tabelas laterais. Se uma tabela tiver colunas CHAR ou VARCHAR com ordenações diferentes da ordenação de banco de dados e se essas colunas armazenarem caracteres não ASCII (como caracteres DBCS de byte duplo), a CDA não poderá persistir os dados alterados de maneira consistente com os dados nas tabelas base. Isso se deve ao fato de que as variáveis do armazenamento provisório não podem ter ordenações associadas a elas.
 
 Considere uma das seguintes abordagens para garantir que os dados capturados da alteração sejam consistentes com as tabelas base:
 
 - Use o tipo de dados NCHAR ou NVARCHAR para colunas que contêm dados não ASCII.
 
-- Ou use o mesmo agrupamento para colunas e para o banco de dados.
+- Ou use a mesma ordenação para colunas e para o banco de dados.
 
-Por exemplo, se você tiver um banco de dados que usa um agrupamento SQL_Latin1_General_CP1_CI_AS, considere a seguinte tabela:
+Por exemplo, se você tiver um banco de dados que usa uma ordenação SQL_Latin1_General_CP1_CI_AS, considere a seguinte tabela:
 
 ```tsql
 CREATE TABLE T1( 
@@ -127,7 +125,7 @@ CREATE TABLE T1(
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
 ```
 
-A CDA poderá não capturar os dados binários para a coluna C2, porque seu agrupamento é diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar esse problema:
+A CDA poderá não capturar os dados binários para a coluna C2, porque sua ordenação é diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar esse problema:
 
 ```tsql
 CREATE TABLE T1( 

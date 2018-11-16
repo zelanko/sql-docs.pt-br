@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a0a054becfb4c4c4c04d9eca8ce67da6c783f80
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 397bc5c7597aedc91c3f6382c505eca9d1cd887b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217824"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659245"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixar e instalar o SSDT (SQL Server Data Tools) para o Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,6 +139,6 @@ Depois de instalar o SSDT, trabalhe com esses tutoriais para aprender a criar ba
 
 ## <a name="see-also"></a>Consulte Também  
 [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Blog da equipe do SSDT](http://blogs.msdn.com/b/ssdt/)  
+[Blog da equipe do SSDT](https://blogs.msdn.com/b/ssdt/)  
 [Referência DACFx API](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

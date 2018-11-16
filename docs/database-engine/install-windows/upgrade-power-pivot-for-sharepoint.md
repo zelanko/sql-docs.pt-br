@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100197"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605416"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50100197"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- Para obter notas de versão, confira [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124)(Notas de versão do SQL Server 2016).  
+ Para obter notas de versão, confira [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124)(Notas de versão do SQL Server 2016).  
   
  **Neste artigo:**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50100197"
   
  **SharePoint 2010:**  
   
--   Se a instalação existente estiver executando o SharePoint 2010, instale o SharePoint 2010 Service Pack 2 antes de atualizar para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para obter mais informações, consulte [Service Pack 2 para Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672). Use o comando do PowerShell `(Get-SPfarm).BuildVersion.ToString()` para verificar a versão. Para fazer referência à versão de compilação até a data de lançamento, consulte [Números de compilação do SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   Se a instalação existente estiver executando o SharePoint 2010, instale o SharePoint 2010 Service Pack 2 antes de atualizar para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para obter mais informações, consulte [Service Pack 2 para Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use o comando do PowerShell `(Get-SPfarm).BuildVersion.ToString()` para verificar a versão. Para fazer referência à versão de compilação até a data de lançamento, consulte [Números de compilação do SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Atualizar um farm existente do SharePoint 2013  
  Para atualizar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantado no SharePoint 2013, faça o seguinte:  
@@ -92,7 +92,7 @@ ms.locfileid: "50100197"
   
 2.  Reinicie o servidor.  
   
-3.  Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) em cada servidor no farm do SharePoint 2013 para instalar os provedores de dados. A exceção são os servidores em que você executou o assistente de instalação do SQL Server, que também atualiza os provedores de dados. Para obter mais informações, consulte [Baixar o Microsoft SQL Server 2014 Power Pivot para Microsoft SharePoint 2013](https://www.microsoft.com/en-us/download/details.aspx?id=42300) e [Instalar ou desinstalar o suplemento Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) em cada servidor no farm do SharePoint 2013 para instalar os provedores de dados. A exceção são os servidores em que você executou o assistente de instalação do SQL Server, que também atualiza os provedores de dados. Para obter mais informações, consulte [Baixar o Microsoft SQL Server 2014 Power Pivot para Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) e [Instalar ou desinstalar o suplemento Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Execute o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013** em um dos servidores de aplicativos do SharePoint para configurar o farm do SharePoint com os arquivos atualizados da solução que o suplemento instalou. Você não pode usar a Administração Central do SharePoint para essa etapa. Para obter mais informações, consulte o seguinte:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100197"
   
  ![upgrade do Power Pivot para SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
   
-1.  Baixe o [Service Pack 2 para Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) e aplique-o em todos os servidores no farm. Verifique se a instalação do SharePoint SP2 foi bem-sucedida. Na Administração Central, na página Atualização e Migração, abra a página Verificar o status de instalação do produto e dos patches para exibir mensagens de status relacionadas ao SP2.  
+1.  Baixe o [Service Pack 2 para Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) e aplique-o em todos os servidores no farm. Verifique se a instalação do SharePoint SP2 foi bem-sucedida. Na Administração Central, na página Atualização e Migração, abra a página Verificar o status de instalação do produto e dos patches para exibir mensagens de status relacionadas ao SP2.  
   
 2.  Verifique se o serviço Administração do Windows do SharePoint 2010 está em execução.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "50100197"
   
          Clique em **Sim** para substituir as pastas de trabalho por versões mais recentes. Caso contrário, clique em **Não** para retornar à home page. Salve as pastas de trabalho em um local diferente para que você tenha uma cópia e retorne a essa etapa quando estiver pronto para continuar.  
   
-         Para saber mais sobre a personalização de pastas de trabalho usadas no painel, confira [Customizing the Power Pivot Management Dashboard](http://go.microsoft.com/fwlink/?linkID=229639)(Personalizando o Painel de Gerenciamento do Power Pivot).  
+         Para saber mais sobre a personalização de pastas de trabalho usadas no painel, confira [Customizing the Power Pivot Management Dashboard](https://go.microsoft.com/fwlink/?linkID=229639)(Personalizando o Painel de Gerenciamento do Power Pivot).  
   
     5.  Reveja as ações na lista de tarefas e exclua as que você não deseja que a ferramenta execute. Por padrão, todas as ações são incluídas. Para remover uma ação, selecione-a na lista de tarefas e desmarque a caixa de seleção **Inclua esta ação na lista de tarefas** na página Parâmetros.  
   
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |Verifique se o serviço está em execução em todos os computadores que executam o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.|[Iniciar ou parar um Power Pivot para SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |Verifique a ativação de recurso no nível de coleção de sites.|[Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |Verifique se pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] individuais estão sendo carregadas corretamente abrindo uma pasta de trabalho e clicando em filtros e segmentações de dados para iniciar uma consulta.|Verifique se há arquivos armazenados em cache na unidade de disco rígido. Um arquivo armazenado em cache confirma se o arquivo de dados foi carregado nesse servidor físico. Verifique se há arquivos armazenados em cache na pasta C:\Arquivos de Programas\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup.|  
-|Teste a atualização de dados em algumas pastas de trabalho que estão configuradas para atualização de dados.|O modo mais fácil de atualizar dados de teste é modificar uma agenda de atualização de dados, marcando a caixa de seleção **Também atualizar o mais rápido possível** para que a atualização de dados seja executada imediatamente. Esta etapa determinará se a atualização de dados teve êxito na pasta de trabalho atual. Repita estas etapas para outras pastas de trabalho frequentemente usadas para verificar se a atualização de dados funciona. Para obter mais informações sobre como agendar uma atualização de dados, confira [Agendar uma Atualização de Dados (Power Pivot para SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|Teste a atualização de dados em algumas pastas de trabalho que estão configuradas para atualização de dados.|O modo mais fácil de atualizar dados de teste é modificar uma agenda de atualização de dados, marcando a caixa de seleção **Também atualizar o mais rápido possível** para que a atualização de dados seja executada imediatamente. Esta etapa determinará se a atualização de dados teve êxito na pasta de trabalho atual. Repita estas etapas para outras pastas de trabalho frequentemente usadas para verificar se a atualização de dados funciona. Para obter mais informações sobre como agendar uma atualização de dados, confira [Agendar uma Atualização de Dados (Power Pivot para SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
 |Com o tempo, monitore os relatórios atualizados de dados no Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para confirmar se não há erros de atualização de dados.|[Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  Para obter mais informações sobre como definir as configurações e os recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , veja [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Para obter instruções passo a passo que explicam todas as tarefas de configuração de pós-instalação, confira [Configuração inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ Para obter instruções passo a passo que explicam todas as tarefas de configuração de pós-instalação, confira [Configuração inicial (Power Pivot para SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Instalação do Power Pivot para SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Instalação do Power Pivot para SharePoint 2010](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

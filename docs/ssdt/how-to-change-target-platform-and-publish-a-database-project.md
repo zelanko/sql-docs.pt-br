@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aea64fa39d5089da9e4a97eaffb86ae2a81fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668879"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Como: Alterar a plataforma de destino e publicar um projeto de banco de dados
 Você pode alterar a versão do SQL Server de destino do projeto de banco de dados SSDT (Ferramentas de dados do SQL Server) para qualquer instância com suporte do SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 ou SQL Azure). Ao fazer isso, você pode centralizar seu desenvolvimento de banco de dados em um único projeto, mas publicá-lo em várias instâncias do SQL Server de acordo com a necessidade.  
@@ -43,7 +43,7 @@ O SSDT também simplifica essa tarefa reconhecendo a plataforma de destino e det
   
 3.  Observe que o erro a seguir aparece no painel **Lista de Erros**: SQL70015: 'Esquema de particionamento e referência a grupo de arquivos' não tem suporte no SQL Azure.  
   
-    O SSDT valida automaticamente seu script com base na plataforma de destino. Neste caso, como o grupo de arquivos não tem suporte no SQL Azure, o SSDT retorna um erro. Para obter uma lista de instruções do Transact\-SQL sem suporte no SQL Azure, confira [Instruções Transact-SQL com suporte parcial (Banco de Dados SQL do Microsoft Azure)](http://msdn.microsoft.com/library/ee336267.aspx).  
+    O SSDT valida automaticamente seu script com base na plataforma de destino. Neste caso, como o grupo de arquivos não tem suporte no SQL Azure, o SSDT retorna um erro. Para obter uma lista de instruções do Transact\-SQL sem suporte no SQL Azure, confira [Instruções Transact-SQL com suporte parcial (Banco de Dados SQL do Microsoft Azure)](https://msdn.microsoft.com/library/ee336267.aspx).  
   
 4.  Remova a cláusula `ON` . Observe que o erro desaparece imediatamente da **Lista de Erros**.  
   

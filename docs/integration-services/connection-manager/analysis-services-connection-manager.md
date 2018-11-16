@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c1280a60cf7c53454ab77da6fed58fd09902748
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411756"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639163"
 ---
 # <a name="analysis-services-connection-manager"></a>Gerenciador de conexões do Analysis Services
   Um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] habilita um pacote para se conectar a um servidor que executa um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece acesso a dados de cubos e dimensões. Você só pode se conectar a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enquanto estiver desenvolvendo pacotes no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Em tempo de execução, os pacotes são conectados ao servidor e ao banco de dados em que foi implantado o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "50411756"
 -   Se estiver se conectando a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especifique o modo de autenticação.  
 
 > [!NOTE]    
->  Caso use o SSIS no ADF (Azure Data Factory) e queira se conectar à instância do AAS (Azure Analysis Services), você não poderá usar uma conta com a MFA (Autenticação Multifator) habilitada, mas deverá usar uma entidade de serviço. Veja [aqui](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-service-principal) como criar um, selecione **Usar um determinado nome de usuário e senha** para fazer logon servidor no seu gerenciador de conexões e insira sua ID/Chave de Aplicativo como Nome de Usuário/Senha. Por fim, você também deve instalar as bibliotecas de cliente necessárias em seu Azure-SSIS IR (Integration Runtime) por meio da instalação personalizada, confira o exemplo de **AAS** em [Personalizando o SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+>  Caso use o SSIS no ADF (Azure Data Factory) e queira se conectar à instância do AAS (Azure Analysis Services), você não poderá usar uma conta com a MFA (Autenticação Multifator) habilitada, mas deverá usar uma entidade de serviço. Veja [aqui](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) como criar um, selecione **Usar um determinado nome de usuário e senha** para fazer logon servidor no seu gerenciador de conexões e insira sua ID/Chave de Aplicativo como Nome de Usuário/Senha. Por fim, você também deve instalar as bibliotecas de cliente necessárias em seu Azure-SSIS IR (Integration Runtime) por meio da instalação personalizada, confira o exemplo de **AAS** em [Personalizando o SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
   
 -   Indique se a conexão criada a partir do gerenciador de conexões será retida em tempo de execução.  
   

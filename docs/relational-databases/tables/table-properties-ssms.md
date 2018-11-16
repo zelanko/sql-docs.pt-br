@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efcfa1d417a68428beb724c21f918f8af07dfffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676065"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47708524"
  Indica se o objeto foi criado com a opção de identificador entre aspas definida como ON. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Escalonamento de Bloqueios**  
- Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](http://msdn.microsoft.com/library/jj856598.aspx). Os valores possíveis são:  
+ Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](https://msdn.microsoft.com/library/jj856598.aspx). Os valores possíveis são:  
   
  AUTO  
  Essa opção permite que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecione a granularidade do escalonamento de bloqueios apropriado ao esquema da tabela.  
@@ -103,8 +103,8 @@ ms.locfileid: "47708524"
 ##  <a name="FileTable"></a> Página FileTable  
  Exibe as propriedades da tabela relacionada a FileTables. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
- **Agrupamento da colunas de nome FileTable**  
- O agrupamento aplicado à coluna **Name** em uma FileTable. A coluna **Name** contém nomes de arquivos e diretórios.  
+ **Ordenação da colunas de nome FileTable**  
+ A ordenação aplicada à coluna **Name** em uma FileTable. A coluna **Name** contém nomes de arquivos e diretórios.  
   
  **Nome de diretório da FileTable**  
  A pasta raiz da FileTable.  

@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 603564e6b742d9c5d23278c047365e4d0106d3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f66b2e167979e2395832c3a73dfb450efa0211e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705194"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701861"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Caixa de diálogo colunas de índice de texto completo (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Colunas com o tipo de dados **image** podem conter arquivos do Microsoft Office 
 Lista os idiomas disponíveis. Escolha o idioma da lista suspensa de idiomas que é apropriado para seus dados de coluna. Por exemplo, se você estiver usando um sistema operacional em inglês, mas quiser indexar uma coluna que contenha texto em alemão, escolha alemão na lista suspensa para melhorar o desempenho do índice.  
   
 **Semântica Estatística**  
-Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.  
   

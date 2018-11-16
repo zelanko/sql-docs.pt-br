@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703584"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835915"
 > [!IMPORTANT]  
 >  Para usar configurações de NodeWeight, é necessário aplicar o seguinte hotfix para todos os servidores no cluster WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes indicados para votação de quorum  
  Ao ativar ou desativar o voto de um nó WSFC específico, siga estas diretrizes:  
@@ -110,7 +110,7 @@ ms.locfileid: "47835915"
 >   
 >  -   O nó do cluster que hospeda a réplica primária não tem um voto  
 > -   Uma réplica secundária é configurada para failover automático e seu nó de cluster não tem um voto.  
-> -   O[KB2494036](http://support.microsoft.com/kb/2494036) não está instalado em todos os nós de cluster que hospedam réplicas de disponibilidade. Esse patch é necessário para adicionar ou remover votos para nós de cluster em implantações multissite. No entanto, em implantações de site único, ele geralmente não é necessário, e você pode ignorar o aviso sem nenhum problema.  
+> -   O[KB2494036](https://support.microsoft.com/kb/2494036) não está instalado em todos os nós de cluster que hospedam réplicas de disponibilidade. Esse patch é necessário para adicionar ou remover votos para nós de cluster em implantações multissite. No entanto, em implantações de site único, ele geralmente não é necessário, e você pode ignorar o aviso sem nenhum problema.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expõe várias DMVs (exibições de gerenciamento dinâmico) do sistema que podem ajudá-lo a gerenciar configurações relacionadas à configuração do cluster WSFC e à votação de quorum do nó.  
@@ -125,13 +125,13 @@ ms.locfileid: "47835915"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Verificação da configuração do voto de quorum nos assistentes de Grupo de Disponibilidade AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Tecnologias do Windows Server: clusters de failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologias do Windows Server: clusters de failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guia passo a passo do cluster de failover: configurando o quorum em um cluster de failover](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Guia passo a passo do cluster de failover: configurando o quorum em um cluster de failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

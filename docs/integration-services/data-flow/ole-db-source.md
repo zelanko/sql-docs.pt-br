@@ -19,12 +19,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7e61bde2da60e033d2d57d193eda750813d70f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723514"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639613"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +47,7 @@ ms.locfileid: "47723514"
   
  Se você usar uma consulta parametrizada, poderá mapear variáveis para parâmetros para especificar os valores de parâmetros individuais nas instruções SQL.  
   
- Essa origem usa um gerenciador de conexões OLE DB para se conectar a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Essa origem usa um gerenciador de conexões OLE DB para se conectar a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece o objeto de fonte de dados do qual você pode criar um gerenciador de conexões OLE DB, disponibilizando as fontes de dados para a origem de OLE DB.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47723514"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "47723514"
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo do Wiki, [SSIS with Oracle Connectors (SSIS com Conectores Oracle)](http://go.microsoft.com/fwlink/?LinkId=220670)em social.technet.microsoft.com.  
+ Artigo do Wiki, [SSIS with Oracle Connectors (SSIS com Conectores Oracle)](https://go.microsoft.com/fwlink/?LinkId=220670)em social.technet.microsoft.com.  
   
 ## <a name="ole-db-source-editor-connection-manager-page"></a>Editor de Origem OLE DB (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem OLE DB** para selecionar o gerenciador de conexões OLE DB para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -146,7 +146,7 @@ ms.locfileid: "47723514"
 |Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados OLE DB.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Comando SQL|Recupere os dados da fonte de dados OLE DB usando uma consulta SQL.|  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   

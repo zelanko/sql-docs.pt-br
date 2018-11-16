@@ -27,12 +27,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccf893e78afdd01a001a513bd266f60c3b8b607c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7675748ba110d19147750133bf3252ba3c29e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788544"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640933"
 ---
 # <a name="integration-services-tasks"></a>Tarefas do Integration Services
   As tarefas são elementos de fluxo de controle que definem unidades de trabalho que são executadas em um fluxo de controle de pacote. Um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é composto de uma ou mais tarefas. Se o pacote contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência.  
@@ -75,7 +75,7 @@ ms.locfileid: "47788544"
   
  Para obter mais informações sobre como adicionar uma tarefa a um pacote programaticamente, consulte [Adicionando tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Toda tarefa pode ser configurada individualmente usando as caixas de diálogo personalizadas de cada tarefa que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] oferece, ou a janela Propriedades incluída no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um pacote pode incluir várias tarefas do mesmo tipo, por exemplo, seis tarefas Execute SQL, e cada tarefa pode ser configurada de forma diferente. Para obter mais informações, consulte [Definir as propriedades de tarefas ou contêineres](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Toda tarefa pode ser configurada individualmente usando as caixas de diálogo personalizadas de cada tarefa que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] oferece, ou a janela Propriedades incluída no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um pacote pode incluir várias tarefas do mesmo tipo, por exemplo, seis tarefas Execute SQL, e cada tarefa pode ser configurada de forma diferente. Para obter mais informações, consulte [Definir as propriedades de tarefas ou contêineres](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="tasks-connections-and-groups"></a>Conexões e grupos de tarefas  
  Se a tarefa contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  

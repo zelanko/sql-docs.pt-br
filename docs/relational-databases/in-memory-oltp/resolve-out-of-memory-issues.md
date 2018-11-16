@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c8e06e7070491eb608dc315acae235465a802bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671677"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ GO
 > Confira o tópico [Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs) para obter mais informações.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
- Se você receber a mensagem de erro `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` no log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra porque um Administrador de Recursos está desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
+ Se você receber a mensagem de erro `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` no log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra porque um Administrador de Recursos está desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   
@@ -159,7 +159,7 @@ Se você seguir as práticas acima para um banco de dados com tabelas otimizadas
 Para solucionar isso, pré-aloque memória suficiente para o banco de dados a ser recuperado ou reinicie o banco de dados, não um valor mínimo que depende da memória dinâmica para fornecer a memória adicional quando for necessário.
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciando memória para OLTP na memória](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Gerenciando memória para OLTP na memória](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md)  

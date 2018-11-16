@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b24129d26523ec4bee866c96180c0907992099e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51a50d8798dc05ee012d7da9848e45a759b7d9cb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760264"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701394"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Alterar o nome de uma função de banco de dados  
  **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- O exemplo a seguir altera o nome da função `buyers` para `purchasing`.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
+ O exemplo a seguir altera o nome da função `buyers` para `purchasing`.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -130,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Adicionar ou remover membros da função  
  **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
+ Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 CREATE ROLE Sales;  

@@ -18,12 +18,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3b38ac06b9237c2212076aaf202f68f29e9a449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2945ebadf1a9637018a2e6cbbda7379efa6ef58
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613112"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638190"
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
   A tarefa Leitor de Dados do WMI executa consultas por meio da linguagem de consulta WMI (Instrumentação de Gerenciamento do Windows) que retorna informações de WMI sobre um sistema de computador. Pode-se utilizar o Leitor de Dados WMI para as seguintes finalidades:  
@@ -51,7 +51,7 @@ ms.locfileid: "47613112"
  A tarefa Leitor de Dados do WMI usa um gerenciador de conexões WMI para se conectar ao servidor do qual lê informações de WMI. Para obter mais informações, consulte [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
 ## <a name="wql-query"></a>Consulta WQL  
- WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](http://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](https://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
 >  As classes WMI variam entre versões de Windows.  
@@ -96,12 +96,12 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Leitor de Dados WMI** para nomear e descrever a tarefa Leitor de Dados WMI.  
   
-  Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+  Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
   
 ### <a name="options"></a>Opções  
  **Nome**  
@@ -116,7 +116,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Opções do WMI)
   Use a página **Opções do WMI** da caixa de diálogo **Editor da Tarefa Leitor de Dados do WMI** para especificar a origem da consulta da linguagem WQL e o destino do resultado da consulta.  
   
- Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+ Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
   
 ### <a name="static-options"></a>Opções estáticas  
  **WMIConnectionName**  
@@ -163,7 +163,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySource**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ### <a name="destinationtype-dynamic-options"></a>Opções dinâmicas de DestinationType  
   
@@ -177,7 +177,7 @@ Select * FROM Win32_QuickFixEngineering
  **Destino**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

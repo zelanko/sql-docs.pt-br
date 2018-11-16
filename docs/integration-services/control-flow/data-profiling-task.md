@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ac2b973c867e8c5edc4cd8b7eb42ecfee6b3fe0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906286"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640683"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -117,7 +117,7 @@ ms.locfileid: "48906286"
 |**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Query End<br /><br /> Concluir solicitação de computação|  
   
 ## <a name="output-and-its-schema"></a>Saída e seu esquema  
- A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
+ A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
   
  Com relação às informações sobre a qualidade de dados, o esquema pode ser útil para:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48906286"
   
 -   Construir ferramentas personalizadas que trabalhem com informações de qualidade de dados.  
   
- O namespace de destino é identificado no esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ O namespace de destino é identificado no esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Saída no fluxo de trabalho condicional de um pacote  
  Os componentes de criação de perfil de dados, não incluem funcionalidade interna pronta para implementar lógica condicional no fluxo de trabalho do pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , com base na saída da tarefa de Criação de Perfil de Dados. Porém, você pode adicionar facilmente esta lógica, com uma quantidade mínima de programação, em uma tarefa de Script. Este código poderia efetuar uma consulta XPath contra a saída da XML e salvar o resultado em uma variável de pacote. Restrições de precedência que conectam a tarefa Script a tarefas subsequentes, podem usar uma expressão para determinar o fluxo de trabalho. Por exemplo, a tarefa Script detecta que a porcentagem de valores nulos em uma coluna excede um certo limite. Quando esta condição for verdade, você poderia querer interromper o pacote e resolver o problema antes de continuar.  

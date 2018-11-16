@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ded8661bc23c2c54b6062418030aeba1978649f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50e9724459a60608c411e39e0f0224802fb6aed2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775876"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667505"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parâmetros com valor de tabela (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47775876"
  [Resumo de APIs de parâmetros com valor de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Lista as funções do ODBC com suporte a parâmetros com valor de tabela.  
   
- [Exemplos de programação de parâmetros com valor de tabela (ODBC)](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Descreve como executar tarefas comuns.  
   
 ## <a name="see-also"></a>Consulte também  

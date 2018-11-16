@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66e660070bc525e26797ffa6c784354743d5bbf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1f719308206f47c698eba5ec137d1acd53359
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784284"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605216"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Logons e trabalhos dos bancos de dados do grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47784284"
      Se qualquer um dos seus aplicativos usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Autenticação ou um logon local do Windows, consulte [Os logons dos aplicativos que usam a autenticação do SQL Server ou Logon local do Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), mais adiante neste tópico.  
   
     > [!NOTE]  
-    >  Um usuário de banco de dados para o qual o logon do SQL Server não está definido ou está definido incorretamente em uma instância do servidor não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. Se um usuário se tornar órfão em uma determinada instância de servidor, você poderá configurar os logons de usuários a qualquer momento. Para obter mais informações, consulte [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Um usuário de banco de dados para o qual o logon do SQL Server não está definido ou está definido incorretamente em uma instância do servidor não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. Se um usuário se tornar órfão em uma determinada instância de servidor, você poderá configurar os logons de usuários a qualquer momento. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Metadados adicionais**  
   
@@ -49,12 +49,12 @@ ms.locfileid: "47784284"
 ##  <a name="SSauthentication"></a> Os logons dos aplicativos que usam a autenticação do SQL Server ou Logon local do Windows  
  Se um aplicativo usar a autenticação do SQL Server ou um logon local do Windows, as SIDs incompatíveis poderão impedir que o logon do aplicativo seja resolvido em uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As SIDs incompatíveis fazem o logon se tornar um usuário órfão na instância do servidor remoto. Esse problema pode ocorrer quando um aplicativo se conectar a um banco de dados espelhado ou de envio de logs depois de um failover ou a um banco de dados de assinante de replicação que foi inicializado de um backup.  
   
- Para evitar esse problema, recomendamos que você tome medidas preventivas quando configurar esse aplicativo para usar um banco de dados que seja hospedado por uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A prevenção envolve transferir os logons e as senhas da instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como evitar esse problema, consulte o artigo 918992 —[Como transferir os logons e senhas entre instâncias do SQL Server](http://support.microsoft.com/kb/918992/)).  
+ Para evitar esse problema, recomendamos que você tome medidas preventivas quando configurar esse aplicativo para usar um banco de dados que seja hospedado por uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A prevenção envolve transferir os logons e as senhas da instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como evitar esse problema, consulte o artigo 918992 —[Como transferir os logons e senhas entre instâncias do SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  Esse problema afeta contas locais do windows em computadores diferentes. No entanto, esse problema não ocorre para contas de domínio porque o SID será o mesmo em cada computador.  
   
- Para obter mais informações, consulte [Usuários órfãos com espelhamento de banco de dados e envio de logs](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (um blog do mecanismo de banco de dados).  
+ Para obter mais informações, consulte [Usuários órfãos com espelhamento de banco de dados e envio de logs](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (um blog do mecanismo de banco de dados).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   

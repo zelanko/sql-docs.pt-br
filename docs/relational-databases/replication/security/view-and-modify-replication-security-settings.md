@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fd1780e5c6450b85ef3805f96d1613064a60138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e05fe32c6c08375ddd1b424ef3401b1bf684822
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671755"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -417,7 +417,7 @@ ms.locfileid: "47605394"
 ##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Para alterar todas as instâncias de uma senha armazenada em um servidor de replicação  
   
@@ -434,7 +434,7 @@ ms.locfileid: "47605394"
     -   *password* - o novo valor de senha.  
   
         > [!IMPORTANT]  
-        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
+        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
   
         > [!NOTE]  
         >  Só um membro da **sysadmin** função de servidor fixa pode chamar este método.  
@@ -468,7 +468,7 @@ ms.locfileid: "47605394"
   
 1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -491,7 +491,7 @@ ms.locfileid: "47605394"
   
 1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   

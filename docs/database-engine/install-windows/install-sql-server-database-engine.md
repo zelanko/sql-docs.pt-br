@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d688a977222960710c84a197ae47f8b48aafc3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636924"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605206"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
@@ -65,7 +65,7 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
 -   Componentes de documentação  
   
 > [!NOTE]  
->  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e o código de exemplo, consulte [Exemplos do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Consulte exemplos mais antigos no [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e o código de exemplo, consulte [Exemplos do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Consulte exemplos mais antigos no [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Confira também  
  [Edições e recursos com suporte do SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

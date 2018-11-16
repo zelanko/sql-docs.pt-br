@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a59b69bd421b1b20bb59d772e5b393915cd0c5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698184"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ Este tópico descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoV
   
 ### <a name="Restrictions"></a>Limitações e restrições  
   
--   Se a etapa de trabalho usar um comando do Analysis Services, a instrução de comando deverá ser o método **Execute** do XML for Analysis Services. A instrução não pode conter um envelope do protocolo SOAP completo nem o método **Discover** do XML for Analysis. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofereça suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não oferecem. Para obter mais informações sobre o XML for Analysis Services, consulte [Visão geral do XMLA (XML for Analysis)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   Se a etapa de trabalho usar um comando do Analysis Services, a instrução de comando deverá ser o método **Execute** do XML for Analysis Services. A instrução não pode conter um envelope do protocolo SOAP completo nem o método **Discover** do XML for Analysis. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofereça suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não oferecem. Para obter mais informações sobre o XML for Analysis Services, consulte [Visão geral do XMLA (XML for Analysis)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   Se a etapa de trabalho usar uma consulta do Analysis Services, a instrução de consulta deverá ser uma consulta MDX. Para obter mais informações sobre o MDX, consulte [Conceitos básicos da instrução MDX](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+-   Se a etapa de trabalho usar uma consulta do Analysis Services, a instrução de consulta deverá ser uma consulta MDX. Para obter mais informações sobre o MDX, consulte [Conceitos básicos da instrução MDX](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ### <a name="Security"></a>Segurança  
   
@@ -124,13 +124,13 @@ Este tópico descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoV
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  
@@ -146,7 +146,7 @@ Este tópico descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoV
     GO  
     ```  
   
-Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Para criar uma etapa de trabalho de consulta do Analysis Services  
   
@@ -173,10 +173,10 @@ Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](http://m
     GO  
     ```  
   
-Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 ## <a name="SMO"></a>Usando o SQL Server Management Objects  
 **Para criar uma etapa de trabalho de script PowerShell**  
   
-Use a classe **JobStep** com uma linguagem de programação à sua escolha, como XMLA ou MDX. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Use a classe **JobStep** com uma linguagem de programação à sua escolha, como XMLA ou MDX. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

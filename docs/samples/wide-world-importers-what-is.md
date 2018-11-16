@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832004"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670685"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Bancos de dados de exemplo Wide World Importers para Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ A empresa opera com um ano fiscal que inicia em 1º de novembro.
 
 A licença para o banco de dados de exemplo e o código de exemplo descrita aqui: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-O banco de dados de exemplo inclui dados públicos que foi carregados de data.gov e EarthData Natural. Os termos de uso estão aqui: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+O banco de dados de exemplo inclui dados públicos que foi carregados de data.gov e EarthData Natural. Os termos de uso estão aqui: [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

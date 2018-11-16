@@ -23,12 +23,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612199"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641817"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
@@ -147,8 +147,8 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
 
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)   
- [Transformar Dados com Transformações](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Transformar dados com transformações](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Conectar componentes com caminhos](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   

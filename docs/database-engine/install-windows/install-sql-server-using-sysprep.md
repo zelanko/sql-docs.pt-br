@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c319172feafb550ff79f8af1361c0b82f45bcff8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633074"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602536"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
 
@@ -36,7 +36,7 @@ Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e
 Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os requisitos de hardware e software, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
- A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o SysPrep dá suporte a instâncias clusterizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em instalações de linha de comando. Para saber mais, consulte [O que é Sysprep?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
+ A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o SysPrep dá suporte a instâncias clusterizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em instalações de linha de comando. Para saber mais, consulte [O que é Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
   
 ### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Para preparar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (autônomo)  
   
@@ -175,7 +175,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 11. Na página **Configuração do Servidor** — Contas de Serviço, especifique contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. 
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página. 
   
@@ -183,15 +183,15 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**. 
   
-12. Use a guia **Configuração do Servidor – Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do SQL Server – Agrupamento](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
+12. Use a guia **Configuração do Servidor – Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
   
 13. Use a página Configuração – Provisionamento de Conta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para especificar o seguinte:  
   
     - Modo de Segurança — selecione Autenticação do Windows ou Autenticação de Modo Misto para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
-         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — Você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — Você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
      Ao concluir a edição da lista, clique em **OK**. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**. 
   
@@ -200,11 +200,11 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
     > [!IMPORTANT]  
     >  Se você especificar diretórios de instalação diferentes do padrão, assegure que as pastas de instalação sejam exclusivas a esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487). 
+     Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487). 
   
-15. Use a página Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
+15. Use a página Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
   
-16. Use a página Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar o tipo de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a ser criada. Para obter mais informações sobre os modos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Opções de configuração do Reporting Services &#40;SSRS&#41;](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
+16. Use a página Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar o tipo de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a ser criada. Para obter mais informações sobre os modos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Opções de configuração do Reporting Services &#40;SSRS&#41;](https://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
   
 17. Na página **Relatório de Erros** , especifique as informações que deseja enviar à [!INCLUDE[msCoName](../../includes/msconame-md.md)] que ajudarão a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, as opções de relatório de erros estão habilitadas. 
   
@@ -250,7 +250,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 12. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Fechar**. 
   
-13. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações, consulte [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
+13. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
 ##  <a name="RemoveFeatures"></a> Remover recursos de uma instância preparada  
   
@@ -306,7 +306,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
 - [Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [O que é Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Como funciona o Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [O que é Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Como funciona o Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

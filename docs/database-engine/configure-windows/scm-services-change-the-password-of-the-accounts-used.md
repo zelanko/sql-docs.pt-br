@@ -20,18 +20,18 @@ ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb31e765b86a0555a6e2a63de51eac0a87ca918a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7860afbb60d0911c61c479bb19e2b39c5b1e75e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664366"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606566"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Serviços SCM – alterar a senha das contas utilizadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como alterar a senha das contas usadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] e pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent são executados em um computador como um serviço usando credenciais fornecidas inicialmente durante a instalação. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada na conta de domínio e a senha para aquela conta for alterada, a senha usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser atualizada para a senha nova. Se a senha não for atualizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá perder acesso a alguns recursos de domínio e se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parar, o serviço não será reinicializado até que a senha seja atualizada.  
   
- Para alterar senhas da Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , confira [Senha expirada](http://msdn.microsoft.com/library/9831b194-9ad5-47b0-8009-59c7aef4319b).  
+ Para alterar senhas da Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , confira [Senha expirada](https://msdn.microsoft.com/library/9831b194-9ad5-47b0-8009-59c7aef4319b).  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é a ferramenta criada e autorizada para alterar as configurações de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alterar um serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o aplicativo Gerenciador de Controle de Serviço do Windows (**services.msc**) nem sempre altera todas as configurações necessárias e pode impedir que o serviço funcione corretamente. No entanto, em um ambiente clusterizado, depois de alterar a senha no nó ativo usando o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deverá alterar a senha no nó passivo usando o Gerenciador de Controle de Serviços.  
@@ -76,6 +76,6 @@ ms.locfileid: "47664366"
      Em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a senha entra em vigor imediatamente, sem reinicializar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em uma instância clusterizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia usar o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, e exigir uma reinicialização.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
   

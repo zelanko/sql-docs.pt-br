@@ -14,12 +14,12 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb026260219ce3f3b258a640ac170280540bbdac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe7a90ac2d2d19a77aaad7e3b989907685c4a724
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640484"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603356"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algumas réplicas de disponibilidade são desconectadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47640484"
  Essa política acumula o estado de conexão de todas as réplicas de disponibilidade e verifica se há alguma réplica DISCONNECTED. O estado da política é não íntegro quando qualquer réplica de disponibilidade é DISCONNECTED. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
->  Nesta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [Algumas réplicas de disponibilidade são desconectadas](http://go.microsoft.com/fwlink/p/?LinkId=220855) no Wiki do TechNet.  
+>  Nesta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [Algumas réplicas de disponibilidade são desconectadas](https://go.microsoft.com/fwlink/p/?LinkId=220855) no Wiki do TechNet.  
   
 ## <a name="possible-causes"></a>Causas possíveis  
  Nesse grupo de disponibilidade, pelo menos uma réplica secundária não está conectada à réplica primária. O estado de conexão é DISCONNECTED.  

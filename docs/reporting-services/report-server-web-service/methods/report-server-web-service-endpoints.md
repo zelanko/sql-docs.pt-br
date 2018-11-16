@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: b4adc5d154dedbdf120e035d0cab90bd89e4d07f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119904"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814189"
 ---
 # <a name="report-server-web-service-endpoints"></a>Pontos de extremidade do serviço Web Servidor de Relatórios
   O serviço Web Servidor de Relatórios fornece vários pontos de extremidade para gerenciar um servidor de relatório como também executar relatórios e navegar neles.  
@@ -36,7 +36,7 @@ ms.locfileid: "49119904"
  Se o servidor de relatório estiver configurado para o modo nativo ou o modo integrado do SharePoint, o WSDL do ponto de extremidade de gerenciamento poderá ser acessado por meio de uma das seguintes URLs:  
   
 ```  
-http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
 ```  
   
  Para obter mais informações, consulte [Acessando a API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -47,13 +47,13 @@ http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl
  O WSDL para o ponto de extremidade de gerenciamento pode ser acessado através desta URL:  
   
 ```  
-http://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  Se o servidor de relatório for configurado para o modo de integração do SharePoint, o WSDL poderá ser acessado por meio da URL a seguir:  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  Para obter mais informações, consulte [Acessando a API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -71,15 +71,15 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  A seguir são apresentadas URLs de exemplo para referenciar os pontos de extremidade de proxy em um site do SharePoint.  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2af28be6f57531e6151b857a7b341b71f206b13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773854"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601671"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Políticas AlwaysOn para problemas operacionais – disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "47773854"
   
 -   [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
--   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

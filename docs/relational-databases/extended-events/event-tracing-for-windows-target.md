@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656946"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Antes de usar o Rastreamento de Eventos do Windows (ETW) como destino, é recomendável ter um conhecimento prático do ETW. O rastreamento ETW é usado junto com o recurso Eventos Estendidos ou como um consumidor de Eventos Estendidos. Os links externos a seguir fornecem um ponto de partida para a obtenção de informações gerais do ETW:  
   
--   [Eventos do Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Eventos do Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Melhore o ajuste de depuração e desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Melhore o ajuste de depuração e desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  O destino de ETW é um destino singleton, embora o destino pode ser adicionado a muitas sessões. Se um evento for gerado em muitas sessões, esse evento somente será propagado para o destino de ETW uma vez por ocorrência de evento. O mecanismo de Eventos Estendidos é limitado a uma única instância por processo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659184"
     > [!IMPORTANT]  
     >  O caminho do arquivo não pode ser alterado depois que a sessão for iniciada.  
   
--   Os arquivos em formato MOF estão em *\<your install path>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
+-   Os arquivos em formato MOF estão em *\<your install path>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
  Para adicionar o destino de ETW a uma sessão de Eventos Estendidos, você deve incluir a instrução a seguir ao criar ou alterar uma sessão de evento:  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  Para obter mais informações sobre um exemplo completo que mostra como usar o destino ETW, inclusive como exibir os dados, veja [Monitorar a atividade do sistema usando Eventos Estendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destinos de eventos estendidos do SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

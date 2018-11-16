@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820104"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642123"
 ---
 # <a name="ssis-designer"></a>Designer SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] é uma ferramenta gráfica que pode ser usada para criar e manter pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponível no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "47820104"
 ### <a name="event-handlers-tab"></a>Guia Manipuladores de Eventos  
  Você pode criar os eventos em um pacote na superfície de design da guia **Manipuladores de Eventos** . Na guia **Manipuladores de Eventos** , selecione o pacote ou o objeto do pacote para o qual deseja criar um manipulador de eventos e selecione o evento a ser associado ao manipulador de eventos. Um manipulador de eventos tem um fluxo de controle e fluxos de dados opcionais.  
   
- Para obter mais informações, consulte [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obter mais informações, consulte [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Guia Explorador de Pacotes  
  Os pacotes podem ser complexos, incluindo muitas tarefas, gerenciadores de conexões, variáveis e outros elementos. A exibição do explorador do pacote permite que você visualize uma lista completa de elementos de pacote.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820104"
 #### <a name="connection-managers-area"></a>Área Gerenciadores de Conexões  
  Você adiciona e modifica os gerenciadores de conexões que um pacote usa na área **Gerenciadores de conexões** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui gerenciadores de conexões para conexão a várias fontes de dados, como arquivos de texto, bancos de dados OLE DB e provedores .NET.  
   
- Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Guia Fluxo de Controle
 Use a guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar o fluxo de controle em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

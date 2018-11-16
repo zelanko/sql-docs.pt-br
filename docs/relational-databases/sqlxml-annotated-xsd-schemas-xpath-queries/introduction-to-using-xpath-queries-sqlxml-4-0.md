@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671635"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47778084"
   
  XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar tudo  **\<ordem >** nós com o **data** valor de atributo **"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
   
- XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação W3C XPath, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação W3C XPath, que está localizado em https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Estas são as principais diferenças entre a implementação da XPath do W3C e a implementação do SQLXML 4.0.  
   

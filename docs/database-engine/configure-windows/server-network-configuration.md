@@ -19,12 +19,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 441e329ce93ea0aa30a8a3ad0f2cbf587d7d196e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736624"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600276"
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "47736624"
  O suporte à Proteção Estendida para Autenticação usando associação de canal e associação de serviço está disponível para sistemas operacionais que dão suporte à Proteção Estendida. Para obter mais informações, veja [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="authenticating-by-using-kerberos"></a>Autenticando usando o Kerberos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à autenticação Kerberos. Para obter mais informações, veja [Registrar um nome da entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) e [Microsoft Kerberos Configuration Manager para SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à autenticação Kerberos. Para obter mais informações, veja [Registrar um nome da entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) e [Microsoft Kerberos Configuration Manager para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Registrando um SPN (Nome da Entidade de Serviço)  
- O serviço de autenticação Kerberos usa um SPN para autenticar um serviço. Para obter mais informações, veja [Registrar um nome de entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ O serviço de autenticação Kerberos usa um SPN para autenticar um serviço. Para obter mais informações, consulte [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  Também podem ser usados SPNs para fazer autenticação de cliente mais segura ao conectar-se com NTLM. Para obter mais informações, veja [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   

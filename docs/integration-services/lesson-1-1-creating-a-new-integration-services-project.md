@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d8fff1dbb0d7e44ad814c312be65efccaa731ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792465"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639690"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Lição 1-1 – criar um novo projeto do Integration Services
 A primeira etapa na criação de um pacote em [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Esse projeto inclui modelos para objetos — fontes de dados, exibições de fontes de dados e pacotes — usados em uma solução de transformação.  
@@ -26,7 +26,7 @@ Os pacotes que serão criados neste tutorial do [!INCLUDE[ssISnoversion](../incl
 > [!NOTE]  
 > Este tutorial requer o Microsoft SQL Server Data Tools.  
 >   
-> Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+> Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para criar um novo projeto Integration Services  
   

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a0ee12c52e61c9722c2c370f20385024a8e826
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598734"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677125"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,8 +138,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Para obter mais informações sobre como usar dados de caractere Unicode, veja [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usando um formato de arquivo com a opção de página de código  
-Se você criar um arquivo de formato usando o comando bcp (isto é, usando `bcp format`), as informações sobre o agrupamento/página de código serão gravadas no arquivo de formato.   
-O arquivo de formato de exemplo a seguir, para uma tabela com 5 colunas, inclui o agrupamento.  
+Se você criar um arquivo de formato usando o comando bcp (isto é, usando `bcp format`), as informações sobre a ordenação/página de código serão gravadas no arquivo de formato.   
+O arquivo de formato de exemplo a seguir, para uma tabela com 5 colunas, inclui a ordenação.  
   
 ```  
 13.0  
@@ -152,9 +152,9 @@ O arquivo de formato de exemplo a seguir, para uma tabela com 5 colunas, inclui 
   
 ```  
   
- Se você tentar importar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `bcp in –c –C65001 –f format_file` ...” ou “`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …”, as informações sobre agrupamento/página de código terão prioridade sobre a opção 65001.  
-Portanto, se você gerar um arquivo de formato, você deverá excluir manualmente as informações de agrupamento do arquivo de formato gerado antes de iniciar a importação de dados de volta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-A seguir, um exemplo do formato de arquivo sem as informações de agrupamento.  
+ Se você tentar importar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `bcp in –c –C65001 –f format_file` ...” ou “`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …”, as informações sobre ordenação/página de código terão prioridade sobre a opção 65001.  
+Portanto, se você gerar um arquivo de formato, você deverá excluir manualmente as informações de ordenação do arquivo de formato gerado antes de iniciar a importação de dados de volta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+A seguir, um exemplo do formato de arquivo sem as informações de ordenação.  
   
 ```  
 13.0  
@@ -183,7 +183,7 @@ A seguir, um exemplo do formato de arquivo sem as informações de agrupamento.
   
 -   B. Criando um arquivo de formato XML para dados nativos  
   
- Os exemplos usam a tabela `HumanResources.Department` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . A tabela `HumanResources.Department` contém quatro colunas: `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
+ Os exemplos usam a tabela `HumanResources.Department` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. A tabela `HumanResources.Department` contém quatro colunas: `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -210,7 +210,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -249,7 +249,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

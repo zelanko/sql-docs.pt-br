@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7257cd8018b63a126175fb74d5ad7f2f888a4856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701954"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668695"
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,10 +85,10 @@ INCLUDE(SalesOrderNumber,OrderDate)
   
 Nesse caso, o SQL Server não precisa ler dados adicionais da tabela `SalesOrderHeader`, pois tudo que ele precisa está incluído no índice JSON não clusterizado. Este tipo de índice é uma boa maneira de combinar dados JSON e de colunas em consultas e criar índices otimizados para sua carga de trabalho.  
   
-## <a name="json-indexes-are-collation-aware-indexes"></a>Os índices JSON são índices com reconhecimento de agrupamento  
-Um recurso importante do índices sobre dados JSON é que os índices têm reconhecimento de agrupamento. O resultado da função `JSON_VALUE` usada ao criar uma coluna computada é um valor de texto que herda seu agrupamento da expressão de entrada. Portanto, os valores no índice são ordenados usando as regras de agrupamento definidas nas colunas de origem.  
+## <a name="json-indexes-are-collation-aware-indexes"></a>Os índices JSON são índices com reconhecimento de ordenação  
+Um recurso importante dos índices sobre dados JSON é que os índices têm reconhecimento de ordenação. O resultado da função `JSON_VALUE` usada ao criar uma coluna computada é um valor de texto que herda sua ordenação da expressão de entrada. Portanto, os valores no índice são ordenados usando as regras de ordenação definidas nas colunas de origem.  
   
-Para demonstrar que os índices têm reconhecimento de agrupamento, o exemplo a seguir cria uma tabela de agrupamento simples com uma chave primária e conteúdo JSON.  
+Para demonstrar que os índices têm reconhecimento de ordenação, o exemplo a seguir cria uma tabela de ordenação simples com uma chave primária e conteúdo JSON.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -100,7 +100,7 @@ CREATE TABLE JsonCollection
  ) 
 ```  
   
-O comando anterior especifica o agrupamento Sérvio Cirílico para a coluna JSON. O exemplo a seguir preenche a tabela e cria um índice na propriedade de nome.  
+O comando anterior especifica a ordenação Sérvio Cirílico para a coluna JSON. O exemplo a seguir preenche a tabela e cria um índice na propriedade de nome.  
   
 ```sql  
 INSERT INTO JsonCollection
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-Os comandos anteriores criam um índice padrão na coluna computada `vName`, que representa o valor da propriedade JSON `$.name`. Na página de código Sérvio Cirílico, a ordem das letras é "А", "Б", "В", "Г", "Д", "Ђ", "Е" etc. A ordem dos itens no índice está em conformidade com as regras do Sérvio Cirílico, pois o resultado da função `JSON_VALUE` herda seu agrupamento da coluna de origem. O exemplo a seguir consulta esse agrupamento e classifica os resultados por nome.  
+Os comandos anteriores criam um índice padrão na coluna computada `vName`, que representa o valor da propriedade JSON `$.name`. Na página de código Sérvio Cirílico, a ordem das letras é "А", "Б", "В", "Г", "Д", "Ђ", "Е" etc. A ordem dos itens no índice está em conformidade com as regras do Sérvio Cirílico, pois o resultado da função `JSON_VALUE` herda sua ordenação da coluna de origem. O exemplo a seguir consulta esse agrupamento e classifica os resultados por nome.  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*
@@ -142,17 +142,17 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Embora a consulta tenha uma cláusula `ORDER BY`, o plano de execução não usa um operador Sort. O índice JSON já é ordenado de acordo com a regras do Sérvio Cirílico. Portanto, o SQL Server pode usar o índice não clusterizado nos quais os resultados já estão classificados.  
   
- No entanto, se alterar o agrupamento da expressão `ORDER BY` (por exemplo, se adicionar `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), você obterá um plano de execução de consulta diferente.  
+ No entanto, se alterar a ordenação da expressão `ORDER BY` (por exemplo, se adicionar `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), você obterá um plano de execução de consulta diferente.  
   
  ![Plano de execução](../../relational-databases/json/media/jsonindexblog3.png "Plano de execução")  
   
- Como a ordem dos valores no índice não segue as regras de agrupamento do Francês, o SQL Server não pode usar o índice para ordenar os resultados. Portanto, ele adiciona um operador Sor que classifica os resultados usando as regras de agrupamento do Francês.  
+ Como a ordem dos valores no índice não segue as regras de ordenação do Francês, o SQL Server não pode usar o índice para ordenar os resultados. Portanto, ele adiciona um operador Sor que classifica os resultados usando as regras de ordenação do Francês.  
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Saiba mais sobre JSON no SQL Server e no Banco de Dados SQL do Azure  
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
+Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
 
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 

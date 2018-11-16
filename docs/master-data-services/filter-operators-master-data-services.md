@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798028"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700364"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47798028"
 |**É menor ou igual a**|Retorna valores de atributo que são menores ou iguais aos critérios especificados. Por exemplo, para retornar valores de atributo que começam com o número **3** ou menor, digite **3**.|  
 |**Correspondências**|Usa um índice de pesquisa difuso para filtrar resultados.<br /><br /> Use o campo **Nível de Similaridade** para especificar a exatidão com a qual os valores de atributo devem corresponder aos critérios de filtragem especificados (com padrão de 30%).<br /><br /> Selecione uma das opções na caixa de listagem **Algoritmo** :<br /><br /> **Levenshtein**: uma distância baseada no número de edições (por exemplo, adições ou exclusões) necessárias para uma cadeia de caracteres corresponder a outra. Esse é o padrão. Não requer parâmetros adicionais.<br /><br /> **Jaccard**: um índice que funciona melhor ao tentar corresponder várias cadeias de caracteres. Essa pesquisa oferece suporte a um parâmetro adicional de tendência de retenção (veja abaixo).<br /><br /> **Jaro-Winkler**: uma distância que é mais bem usada para localizar nomes de pessoas duplicados. Esse método retorna mais resultados que qualquer outro método. Não oferece suporte para tendência de contenção.<br /><br /> **Subsequência Comum Mais Longa**: funciona com base em uma subsequência na qual as letras em um padrão aparecem em ordem, embora possam estar separadas (por exemplo, “MSR” é uma subsequência de “MaSteR”). Essa pesquisa oferece suporte a um parâmetro adicional de tendência de retenção (veja abaixo).<br /><br /> <br /><br /> Observações: para o algoritmo **Jaccard** ou **Subsequência Comum Mais longa** adicionar um **Tendência de Contenção**. Esse é um limite de comprimento fornecido em uma porcentagem decimal entre 0 e 1, com um padrão de 0,62. Um limite inferior aumentará o número de possíveis correspondências retornadas.|  
 |**Não corresponde**|Usa um índice de pesquisa difuso para filtrar resultados. Use o campo **Nível de Similaridade** para especificar a exatidão com a qual os valores de atributo não devem corresponder aos critérios de filtragem especificados.|  
-|**Contém o padrão**|Usa expressões regulares do .NET Framework para filtrar resultados em um padrão especificado. Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](http://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.|  
-|**Não contém o padrão**|Usa expressões regulares do .NET Framework para filtrar resultados que não correspondam a um padrão especificado. Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](http://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.|  
+|**Contém o padrão**|Usa expressões regulares do .NET Framework para filtrar resultados em um padrão especificado. Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.|  
+|**Não contém o padrão**|Usa expressões regulares do .NET Framework para filtrar resultados que não correspondam a um padrão especificado. Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.|  
 |**É NULO**|Retorna valores de atributo que são nulos. O campo **Critérios** é desabilitado quando você seleciona o operador **É NULO** .|  
 |**Não é NULO**|Retorna valores de atributo que não são nulos. O campo **Critérios** é desabilitado quando você seleciona o operador **Não é NULO** .|  
   

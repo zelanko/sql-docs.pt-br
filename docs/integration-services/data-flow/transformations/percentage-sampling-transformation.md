@@ -22,12 +22,12 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14292f4d5f1581d02881d565276422b09166de93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631474"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638073"
 ---
 # <a name="percentage-sampling-transformation"></a>transformação Amostragem Percentual
   A transformação Amostragem Percentual cria um conjunto de dados de exemplo, selecionando um percentual das linhas de entrada da transformação. O conjunto de dados de exemplo é uma seleção aleatória das linhas da entrada da transformação, para que o exemplo resultante seja representativo da entrada.  
@@ -52,7 +52,7 @@ ms.locfileid: "47631474"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

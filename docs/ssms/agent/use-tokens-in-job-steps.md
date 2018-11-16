@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743221"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703574"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
 ## <a name="updating-job-steps-to-use-macros"></a>Atualizando etapas de trabalho para usar macros  
 A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, as etapas de trabalho que contêm tokens sem macros de fuga passaram a falhar e a retornar uma mensagem de erro indicando que a etapa contém um ou mais tokens que devem ser atualizados com uma macro para que o trabalho possa ser executado.  
   
-Um script é fornecido com o artigo 915845 da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame_md.md)] : [Etapas de trabalho do SQL Server Agent que usam tokens falham no SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845). Você pode usar esse script para atualizar todas as suas etapas de trabalho que usam tokens com a macro **ESCAPE_NONE** . Após usar o script, recomendamos que você examine as etapas de trabalho que usam tokens o mais rápido possível e substitua a macro **ESCAPE_NONE** por uma macro de fuga apropriada ao contexto da etapa de trabalho.  
+Um script é fornecido com o artigo 915845 da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame_md.md)] : [Etapas de trabalho do SQL Server Agent que usam tokens falham no SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845). Você pode usar esse script para atualizar todas as suas etapas de trabalho que usam tokens com a macro **ESCAPE_NONE** . Após usar o script, recomendamos que você examine as etapas de trabalho que usam tokens o mais rápido possível e substitua a macro **ESCAPE_NONE** por uma macro de fuga apropriada ao contexto da etapa de trabalho.  
   
 A tabela a seguir descreve como a substituição de tokens é manipulada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para ativar ou desativar a substituição do token de alerta, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , marque ou desmarque a caixa de seleção **Substituir tokens de todas as respostas de trabalho aos alertas** .  
   

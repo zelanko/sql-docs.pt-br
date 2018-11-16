@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785014"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642003"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -46,7 +46,7 @@ ms.locfileid: "47785014"
 ## <a name="system-and-user-defined-variables"></a>Variáveis de sistema e definidas pelo usuário  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a dois tipos de variáveis: variáveis definidas pelo usuário e variáveis de sistema. As variáveis definidas pelo usuário são definidas por desenvolvedores de pacote e as variáveis de sistema são definidas pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você pode criar tantas variáveis definidas pelo usuário quantas forem exigidas por um pacote, mas não pode criar variáveis de sistema adicionais.  
   
- Todas as variáveis, as do sistema e as definidas pelo usuário, podem ser usadas nas associações de parâmetro que a tarefa Executar SQL usa para mapear variáveis para parâmetros em instruções SQL. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Todas as variáveis, as do sistema e as definidas pelo usuário, podem ser usadas nas associações de parâmetro que a tarefa Executar SQL usa para mapear variáveis para parâmetros em instruções SQL. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Os nomes das variáveis de sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
@@ -75,7 +75,7 @@ ms.locfileid: "47785014"
   
  Um conjunto diferente de variáveis de sistema está disponível para tipos de contêiner diferentes. Para obter mais informações sobre as variáveis de sistema usadas por pacotes e seus elementos, consulte [System Variables](../integration-services/system-variables.md).  
   
- Para obter mais informações sobre situações reais de uso de variáveis, consulte [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Para obter mais informações sobre situações reais de uso de variáveis, consulte [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="properties-of-variables"></a>Propriedades de variáveis  
  Você pode configurar variáveis definidas pelo usuário configurando as seguintes propriedades na janela **Variáveis** ou na janela **Propriedades** . Determinadas propriedades só estão disponíveis na janela Propriedades.  
@@ -96,7 +96,7 @@ ms.locfileid: "47785014"
  Especifica o nome da variável.  
   
  **Namespace**  
- O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece dois namespaces, **User** e **System**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece dois namespaces, **Usuário** e **Sistema**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
   
 **RaiseChangedEvent**  
  Quando a propriedade é definida como **True**, o evento **OnVariableValueChanged** é gerado quando o valor da variável é alterado.  
@@ -155,9 +155,9 @@ Uma variável tem opções para definir o valor da variável e o tipo de dados d
   
  **Expressões de Fluxo de Dados** Use variáveis para fornecer valores nas expressões que as transformações Coluna Derivada e Divisão Condicional usam para preencher colunas ou direcionar as linhas de dados para diferentes saídas de transformação. Por exemplo, a expressão, `@varSalutation + LastName`, junta o valor na variável `VarSalutation` e a coluna `LastName` . A expressão, `Income < @HighIncome`, direciona as linhas de dados nas quais o valor da coluna `Income` é menor que o valor na variável `HighIncome` para uma saída. Para obter mais informações, consulte [Transformação Coluna Derivada](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformação Divisão Condicional](../integration-services/data-flow/transformations/conditional-split-transformation.md) e [Expressões do Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Expressões de Restrição de Precedência** Fornece valores para usar em restrições de precedência para determinar se o executável de uma restrição executa. As expressões pode ser usadas junto com uma saída de execução (êxito, falha, conclusão) ou no lugar de uma saída de execução. Por exemplo, se a expressão, `@varMax > @varMin`, for avaliada como **true**, o executável será executado. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Expressões de Restrição de Precedência** Fornece valores para usar em restrições de precedência para determinar se o executável de uma restrição executa. As expressões pode ser usadas junto com uma saída de execução (êxito, falha, conclusão) ou no lugar de uma saída de execução. Por exemplo, se a expressão, `@varMax > @varMin`, for avaliada como **true**, o executável será executado. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Parâmetros e Códigos de Retorno** Fornecem valores para parâmetros de entrada ou armazenam os valores de parâmetros de saída e códigos de retorno. Isso é feito mapeando as variáveis para parâmetros e valores de retorno. Por exemplo, se você definir a variável `varProductId` como 23 e executar a instrução SQL, `SELECT * from Production.Product WHERE ProductID = ?`, a consulta recuperará o produto com um `ProductID` de 23. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parâmetros e Códigos de Retorno** Fornecem valores para parâmetros de entrada ou armazenam os valores de parâmetros de saída e códigos de retorno. Isso é feito mapeando as variáveis para parâmetros e valores de retorno. Por exemplo, se você definir a variável `varProductId` como 23 e executar a instrução SQL, `SELECT * from Production.Product WHERE ProductID = ?`, a consulta recuperará o produto com um `ProductID` de 23. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **Expressões Loop For** Fornece valores a serem usados na inicialização, avaliação e expressões de atribuição do Loop For. Por exemplo, se a variável `varCount` for 2 e a `varMaxCount` for 10, a expressão de inicialização será `@varCount`, a expressão de avaliação será  `@varCount < @varMaxCount`e a expressão de atribuição será `@varCount =@varCount +1`e o loop será repetido 8 vezes. Para obter mais informações, consulte [Contêiner Loop For](../integration-services/control-flow/for-loop-container.md).  
   
@@ -185,7 +185,7 @@ Uma variável tem opções para definir o valor da variável e o tipo de dados d
   
 6.  Se desejar, clique no ícone **Opções de Grade** , selecione as colunas adicionais a serem exibidas na caixa de diálogo **Opções de Grade Variáveis** e clique em **OK**.  
   
-7.  Como opção, define as propriedades de variáveis. Para obter mais informações, consulte [Definir as propriedades de uma variável definida pelo usuário](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Como opção, define as propriedades de variáveis. Para obter mais informações, consulte [Definir as propriedades de uma variável definida pelo usuário](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
   
 8.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 

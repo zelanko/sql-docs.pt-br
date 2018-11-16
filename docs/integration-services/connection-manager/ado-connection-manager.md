@@ -15,12 +15,12 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0930c08c5ab6b7c83640cb1ba4b0ea1a4ae3a0a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef4b6dfcba2038ecd420f9569541ef03ea59cfb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774304"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641343"
 ---
 # <a name="ado-connection-manager"></a>Gerenciador de conexões ADO
   Um gerenciador de conexões ADO permite a um pacote se conectar a ActiveX Data Objects (ADO), como um conjunto de registros. Este gerenciador de conexões é usado tipicamente em tarefas personalizadas escritas em uma versão anterior da linguagem, como o Microsoft Visual Basic 6.0, ou em tarefas personalizadas que são parte de uma aplicação existente que usa ADO para conectar em uma fonte de dados.  
@@ -32,7 +32,7 @@ ms.locfileid: "47774304"
   
 |Tipos de dados do SQL Server|Resultado|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|O pacote apresentará erros, a menos que use comandos com parâmetros SQL. Para utilizar comandos SQL parametrizados, use a tarefa Executar SQL em seu pacote. Para obter mais informações, consulte [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|O pacote apresentará erros, a menos que use comandos com parâmetros SQL. Para utilizar comandos SQL parametrizados, use a tarefa Executar SQL em seu pacote. Para obter mais informações, consulte [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
 |**datetime2**|O gerenciador de conexões ADO trunca o valor de milissegundo.|  
   
 > [!NOTE]  

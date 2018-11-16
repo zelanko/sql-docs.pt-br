@@ -17,12 +17,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4dc3bc656d0c71d0fc33a78ad9ed5016908582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6d56b9d109935db3adeafd4a3c11139109af8f7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728344"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640463"
 ---
 # <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
   A transformação Divisão Condicional pode rotear linhas de dados para saídas diferentes, dependendo do conteúdo dos dados. A implementação da transformação Divisão Condicional é semelhante a uma estrutura de decisão CASE em uma linguagem de programação. A transformação avalia expressões e, com base nos resultados, direciona a linha de dados para a saída especificada. Essa transformação também fornece uma saída padrão, de forma que, se uma linha não corresponder a nenhuma expressão, ela será direcionada para a saída padrão.  
@@ -56,7 +56,7 @@ ms.locfileid: "47728344"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47728344"
  Digite um nome para a saída padrão ou use o padrão.  
   
  **Configurar saída de erro**  
- Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   

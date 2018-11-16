@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7bbed133da510d27ddfb985a508184ba1cbd94e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681354"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47730524"
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /AWMI:root/AWMI:Location[1]/AWMI:step  
     ') as x  
 FROM Production.ProductModel  
@@ -47,7 +46,7 @@ WHERE ProductModelID=7
  Este é o resultado parcial:  
   
 ```  
-<AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
+<AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
 …  
 ```  
   
@@ -58,7 +57,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /root/Location[1]/step  
     ') as x  
 FROM Production.ProductModel  
@@ -68,18 +67,18 @@ where ProductModelID=7
  Este será o resultado  
   
 ```  
-<step xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
+<step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
 …  
 ```  
   
- Observe neste exemplo que o namespace definido, `"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, foi criado para anular o namespace padrão ou vazio. Por causa disso, você não tem mais um prefixo de namespace na expressão de caminho usada para a consulta. Você também não tem mais um prefixo de namespace nos nomes de elemento que aparecem nos resultados. Adicionalmente, o namespace padrão é aplicado a todos os elementos, mas não a seus atributos.  
+ Observe neste exemplo que o namespace definido, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, foi criado para anular o namespace padrão ou vazio. Por causa disso, você não tem mais um prefixo de namespace na expressão de caminho usada para a consulta. Você também não tem mais um prefixo de namespace nos nomes de elemento que aparecem nos resultados. Adicionalmente, o namespace padrão é aplicado a todos os elementos, mas não a seus atributos.  
   
 ### <a name="c-using-namespaces-in-xml-construction"></a>C. Usando namespaces na construção XML  
  Quando você definir novos namespaces, eles não só são trazidos no escopo para a consulta, mas para a construção. Por exemplo, na construção de XML, você pode definir um novo namespace usando a declaração “`declare namespace ...`” e depois usar esse namespace com qualquer elemento e atributo construído para que apareça nos resultados da consulta.  
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      declare namespace myNS="uri:SomeNamespace";<myNS:Result>  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -94,8 +93,8 @@ where ProductModelID=19
 ```  
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
-  <Summary xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+  <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   
      suspension, and traction for all terrain.</p1:p>  
@@ -107,7 +106,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <myNS:Result xmlns:myNS="uri:SomeNamespace">  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -121,7 +120,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       declare default element namespace "uri:SomeNamespace";<Result>  
           { /PD:ProductDescription/PD:Summary }  
        </Result>  
@@ -136,8 +135,8 @@ where ProductModelID=19
 ```  
   
       <Result xmlns="uri:SomeNamespace">  
-  <PD:Summary xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+  <PD:Summary xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
          Our top-of-the-line competition mountain bike. Performance-  
          enhancing options include the innovative HL Frame, super-smooth   
          front suspension, and traction for all terrain.</p1:p>  

@@ -14,12 +14,12 @@ ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5ab0683a2ce2c8a8ca42500f5405ddd874c0841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 135047f3774a1766969d12d3da36ee2c58431fe1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737150"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660035"
 ---
 # <a name="create-clr-triggers"></a>Criar gatilhos CLR
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47737150"
   
  A criação de um gatilho CLR (DML ou DDL) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engloba as seguintes etapas:  
   
--   Defina o gatilho como uma classe em uma linguagem com suporte para .NET Framework. Para mais informações sobre como programar gatilhos CLR, consulte [Gatilhos CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c). Em seguida, compile a classe para criar um assembly no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , usando o compilador de idioma apropriado.  
+-   Defina o gatilho como uma classe em uma linguagem com suporte para .NET Framework. Para mais informações sobre como programar gatilhos CLR, consulte [Gatilhos CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c). Em seguida, compile a classe para criar um assembly no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , usando o compilador de idioma apropriado.  
   
 -   Registrar o assembly no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a instrução CREATE ASSEMBLY. Para obter mais informações sobre assemblies no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Assemblies &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
   

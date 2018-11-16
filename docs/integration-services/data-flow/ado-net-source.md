@@ -22,22 +22,22 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ca0a56e3168e5493104cd54472516800d444078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125caa4360df6b789bd9f8f61b12d85552b4983e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665570"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638763"
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja **System.Object**.  
   
- É possível alterar o tipo de dados DT_NTEXT para o tipo de dados DT_WSTR ou alterar DT_WSTR para DT_NTEXT. Para alterar tipos de dados, defina a propriedade **DataType** na caixa de diálogo **Editor Avançado** da fonte ADO.NET. Para obter mais informações, consulte [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ É possível alterar o tipo de dados DT_NTEXT para o tipo de dados DT_WSTR ou alterar DT_WSTR para DT_NTEXT. Para alterar tipos de dados, defina a propriedade **DataType** na caixa de diálogo **Editor Avançado** da fonte ADO.NET. Para obter mais informações, consulte [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  O tipo de dados DT_NTEXT também pode ser convertido no tipo de dados DT_BYTES ou DT_STR usando uma transformação Conversão de Dados depois da origem do ADO NET. Para obter mais informações, consulte [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47665570"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas do ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   

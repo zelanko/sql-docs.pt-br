@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ce414e10afc316a478825441d41dc5601c043c3d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9ee167a46472f4abd4794f767ab4a8e992f4b12a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667905"
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de determinadas atividades executadas usando os comandos são gerados no Console do SSMA no nível da árvore de objeto.  
@@ -146,5 +146,5 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
 -   Falha-script  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (Sybasetosql)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executar o Console do SSMA (Sybasetosql)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

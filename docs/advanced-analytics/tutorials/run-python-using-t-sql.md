@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050888"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702945"
 ---
 # <a name="run-python-using-t-sql"></a>Executar Python usando T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ Por padrão, [sp_execute_external_script](../../relational-databases/system-stor
 
 Outros tipos de entrada podem ser passados como variáveis SQL: por exemplo, você pode passar um modelo treinado como uma variável, usando uma função de serialização, como [pickle](https://docs.python.org/3.0/library/pickle.html) ou [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para gravar o modelo um formato binário.
 
-O procedimento armazenado retorna um único Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) de estruturas de dados como saída, mas você também pode gerar modelos como variáveis e escalares. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
+O procedimento armazenado retorna um único Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) de estruturas de dados como saída, mas você também pode gerar modelos como variáveis e escalares. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
 
 Por enquanto, vamos examinar apenas o padrão variáveis de entrada e saídas de sp_execute_external_script: `InputDataSet` e `OutputDataSet`. 
 
@@ -313,7 +313,7 @@ Então, como você poderia expor o resultado de um cálculo como um quadro de da
 
 Ter convertido nossos resultados escalares matemática em uma estrutura tabular, ainda precisamos convertê-los em um formato que pode lidar com os do SQL Server. 
 
-1. Para converter uma série em um Frame, chame os pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) método.
+1. Para converter uma série em um Frame, chame os pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) método.
 
     ```sql
     execute sp_execute_external_script 

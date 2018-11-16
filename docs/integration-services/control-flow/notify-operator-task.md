@@ -17,12 +17,12 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 077e950192728b3d66e5ea596b46a0af3b037953
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cdb1e4a6efcc2a813343f0bc997fd9ce729b07e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691789"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639623"
 ---
 # <a name="notify-operator-task"></a>Tarefa de Notificação do Operador
   A tarefa de Notificação do Operador envia mensagens de notificação aos operadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Um operador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é um alias para uma pessoa ou para grupo que pode receber notificações eletrônicas. Para obter mais informações sobre operadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Operadores](../../ssms/agent/operators.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "47691789"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

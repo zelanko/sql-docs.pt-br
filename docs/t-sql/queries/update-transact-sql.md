@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776964"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704054"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,7 +162,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  É uma variável, valor literal, expressão ou uma instrução de subseleção (incluída com parênteses) que retorna um único valor. O valor retornado pela *expressão* substituirá o valor existente em *column_name* ou em *@variable*.  
   
 > [!NOTE]  
->  Ao referenciar os tipos de dados de caractere Unicode **nchar**, **nvarchar** e **ntext**, 'expression' deve ter a letra maiúscula 'N' como prefixo. Se N não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte a cadeia na página de código correspondente ao agrupamento padrão do banco de dados ou coluna. Qualquer caractere não localizado nessa página de código será perdido.  
+>  Ao referenciar os tipos de dados de caractere Unicode **nchar**, **nvarchar** e **ntext**, 'expression' deve ter a letra maiúscula 'N' como prefixo. Se N não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte a cadeia na página de código correspondente à ordenação padrão do banco de dados ou coluna. Qualquer caractere não localizado nessa página de código será perdido.  
   
  DEFAULT  
  Especifica que o valor padrão definido para a coluna deve substituir o valor existente na coluna. Isso também poderá ser usado para alterar a coluna para NULL se ela não tiver nenhum padrão e estiver definida para permitir valores nulos.  
@@ -339,7 +339,7 @@ GO
   
 Não é possível usar a cláusula **.** WRITE para atualizar uma coluna NULL nem para definir o valor de *column_name* como NULL.  
   
-*@Offset* e *@Length* são especificados em bytes para os tipos de dados **varbinary** e **varchar** e em caracteres para o tipo de dados **nvarchar**. Os deslocamentos apropriados são computados para agrupamentos de DBCS (conjunto de caracteres de dois bytes).  
+*@Offset* e *@Length* são especificados em bytes para os tipos de dados **varbinary** e **varchar** e em caracteres para o tipo de dados **nvarchar**. Os deslocamentos apropriados são computados para ordenações de DBCS (conjunto de caracteres de dois bytes).  
   
 Para obter melhor desempenho, é recomendável que os dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8040 bytes.  
   
@@ -1219,7 +1219,7 @@ DROP TABLE CTAS_acs
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Funções de texto e imagem &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Funções de texto e imagem &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

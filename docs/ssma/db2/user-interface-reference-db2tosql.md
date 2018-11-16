@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671665"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referência da Interface do usuário (DB2ToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2.  
@@ -31,7 +31,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Conectar-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use o **conectar-se ao DB2** caixa de diálogo para se conectar ao banco de dados DB2 que você deseja migrar.|  
 |[Conectar-se ao SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual você deseja migrar.|  
 |[Relatório de migração de dados &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Exibe os resultados da migração de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Configurações de migração de dados](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use o **configurações de migração de dados estendido** guia para criar consultas personalizadas para a migração de dados.|  
+|[Configurações de migração de dados](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use o **configurações de migração de dados estendido** guia para criar consultas personalizadas para a migração de dados.|  
 |[Editar mapeamento de tipo &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Use o **novo mapeamento de tipo** ou **editar mapeamento de tipo** caixas de diálogo para criar ou modificar o mapeamento de tipos de dados entre bancos de dados de origem e destino e objetos de banco de dados.|  
 |[Configurações globais do &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Use a página do Editor do **configurações globais** caixa de diálogo para configurar opções do editor de código.|  
 |[Configurações globais do &#40;caixas de diálogo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para definir configurações de aviso e de caixa de diálogo padrão.|  

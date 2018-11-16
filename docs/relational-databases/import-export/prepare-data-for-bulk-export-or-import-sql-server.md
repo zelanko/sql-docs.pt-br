@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d53226ef1522c7a540bac027df0c3e45fe4f25ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d6d10b1bc3345da8c626a3b4d6e842aafaf954
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664805"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparar dados para exportar ou importar em massa (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47825084"
   
      Para dados de importação em massa de um arquivo (.dbf) de tabela FoxPro ou Visual FoxPro do [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou de um arquivo de planilha (.xls) do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , você precisa converter os dados em um arquivo CSV, compatível com as restrições anteriores. A extensão de arquivo normalmente é .csv. Portanto, você pode usar o arquivo .csv como um arquivo de dados em uma operação de importação em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Em sistemas de 32 bits, é possível importar dados de CSV em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem otimizações de importação em massa usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) com o Provedor do OLE DB para Jet. O Jet trata arquivos de texto como tabelas, com o esquema definido por um arquivo schema.ini localizado no mesmo diretório da fonte de dados.  Para dados CSV, um dos parâmetros no arquivo schema.ini é "FORMAT=CSVDelimited". Para usar essa solução, você precisa compreender as operações do Jet Test IISAMm (sua sintaxe de cadeia de conexão, o uso de schema.ini, as opções de configuração de Registro, e assim por diante).  As melhores fontes dessas informações são a Ajuda do Microsoft Access e artigos da Base de Conhecimentos (KB). Para obter mais informações, consulte [Inicializando o driver da fonte de dados de texto](https://msdn.microsoft.com/library/office/ff834391.aspx), [Como usar uma consulta distribuída do SQL Server 7.0 com um servidor vinculado aos bancos de dados de acesso protegidos](http://go.microsoft.com/fwlink/?LinkId=128504), [COMO usar o Jet OLE DB Provider 4.0 para conectar aos bancos de dados ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)e [Como abrir arquivos de texto delimitados usando o Text II sam do Jet Provider](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     Em sistemas de 32 bits, é possível importar dados de CSV em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem otimizações de importação em massa usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) com o Provedor do OLE DB para Jet. O Jet trata arquivos de texto como tabelas, com o esquema definido por um arquivo schema.ini localizado no mesmo diretório da fonte de dados.  Para dados CSV, um dos parâmetros no arquivo schema.ini é "FORMAT=CSVDelimited". Para usar essa solução, você precisa compreender as operações do Jet Test IISAMm (sua sintaxe de cadeia de conexão, o uso de schema.ini, as opções de configuração de Registro, e assim por diante).  As melhores fontes dessas informações são a Ajuda do Microsoft Access e artigos da Base de Conhecimentos (KB). Para obter mais informações, consulte [Inicializando o driver da fonte de dados de texto](https://msdn.microsoft.com/library/office/ff834391.aspx), [Como usar uma consulta distribuída do SQL Server 7.0 com um servidor vinculado aos bancos de dados de acesso protegidos](https://go.microsoft.com/fwlink/?LinkId=128504), [COMO usar o Jet OLE DB Provider 4.0 para conectar aos bancos de dados ISAM](https://go.microsoft.com/fwlink/?LinkId=128505)e [Como abrir arquivos de texto delimitados usando o Text II sam do Jet Provider](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Além disso, a importação em massa de dados de um arquivo de dados para uma tabela exige o seguinte:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47825084"
 >  Não há suporte para a importação em massa de uma exibição particionada; tentativas de fazer importação de dados em massa em uma visão particionada falharão.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Como importar dados do Excel para o SQL Server](http://support.microsoft.com/kb/321686)  
+ [Como importar dados do Excel para o SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Histórico de alterações  
   

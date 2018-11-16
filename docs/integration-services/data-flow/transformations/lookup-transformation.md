@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730924"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639653"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730924"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](http://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
+-   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
   
--   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](http://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
+-   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](https://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
   
--   Entrada de blog, [Padrão de pesquisa: não diferencia maiúsculas e minúsculas](http://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
+-   Entrada de blog, [Padrão de pesquisa: não diferencia maiúsculas e minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
   
--   Exemplo [Transformação de Pesquisa](http://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
+-   Exemplo [Transformação de Pesquisa](https://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
   
-     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor da Transformação Pesquisa (página Geral)
   Use a página **Geral** da caixa de diálogo Editor da Transformação Pesquisa para selecionar o modo de cache, selecionar o tipo de conexão e especificar como lidar com as linhas com entradas sem-correspondência.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730924"
  Ao selecionar uma opção na caixa de listas **Especificar como lidar com linhas com entradas sem-correspondência** , as linhas serão tratadas como erros. A opção **Erro** na página **Saída de Erro** estará disponível.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730924"
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . Esta opção exibe até 200 linhas.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor da Transformação Pesquisa (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor da Transformação Pesquisa** para especificar a junção entre a tabela de origem e a tabela de referência, e para selecionar as colunas de pesquisa a partir da tabela de referência.  
@@ -272,11 +272,11 @@ ms.locfileid: "47730924"
  Mapeie colunas de entrada para parâmetros usando a caixa de diálogo **Definir Parâmetros da Consulta** .  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Transformação Pesquisa de Termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

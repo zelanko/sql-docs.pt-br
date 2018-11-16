@@ -16,12 +16,12 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c181dc687f2e00ff566ca37ca0de7583cab121e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 023d0f1e720965725438682ce7df8b035d43620f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721774"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666555"
 ---
 # <a name="manage-data-collection"></a>Gerenciar coleta de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "47721774"
   
 ## <a name="see-also"></a>Confira também  
  [Executar um procedimento armazenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Usar o SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
+ [Usar o SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   

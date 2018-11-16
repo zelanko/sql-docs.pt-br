@@ -11,12 +11,12 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6c5d95e970587625eb9a62f5cc86519466af049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795744"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638103"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Lição 6: Usando parâmetros com o modelo de implantação de projetos no SSIS
 O SQL Server 2012 apresenta um novo modelo de implantação em que você pode implantar seus projetos no servidor do Integration Services. O servidor do Integration Services permite gerenciar e executar pacotes e configurar valores de tempo de execução para pacotes.  
@@ -28,7 +28,7 @@ Usando o Assistente de Configuração de Projeto do Integration Services, você 
 Quando você executar o pacote novamente, o serviço Integration Services usará o parâmetro para popular o valor da variável e, por sua vez, a variável atualizará a propriedade Diretório. Assim, o pacote itera pelos arquivos na nova pasta de dados especificada pelo valor de parâmetro, em vez da pasta que foi definida no arquivo de configuração do pacote.  
   
 > [!IMPORTANT]  
-> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Considerações para instalar exemplos e bancos de dados de exemplo do SQL Server](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
+> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Considerações para instalar exemplos e bancos de dados de exemplo do SQL Server](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  

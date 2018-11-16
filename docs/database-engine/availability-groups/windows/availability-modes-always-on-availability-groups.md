@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04fa61023acadff4f97a887a5aa355951c08a7da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0c4ec35fa7f25e7ece372914bc7109d298817ca
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704564"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602886"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ Para obter mais informações sobre como investigar a latência de restauração
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

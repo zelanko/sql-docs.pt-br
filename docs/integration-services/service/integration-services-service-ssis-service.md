@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6d3b3253488f09b6a20b1de4745f6c97ed77515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef264a836b1081bdeba65fc09fce758b0faf897
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806504"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641803"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
   Os tópicos desta seção discutem o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para gerenciamento de pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Este serviço não é exigido para criar, salvar e executar pacotes do Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -187,7 +187,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +232,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -251,7 +251,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
  A chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** especifica o local e o nome do arquivo de configuração usado pelo serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. O valor padrão da chave do Registro é **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Você pode atualizar o valor da chave do Registro para usar um nome e local diferentes para o arquivo de configuração. Observe que o número de versão no caminho (120 para o SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) pode variar dependendo da versão do SQL Server.
   
 > [!CAUTION]  
->  A edição incorreta do Registro pode provocar problemas sérios que exigem a reinstalação do sistema operacional. [!INCLUDE[msCoName](../../includes/msconame-md.md)] não pode garantir que os problemas resultantes da edição incorreta do Registro podem ser resolvidos. Antes de editar o Registro, faça backup de todos os dados valiosos. Para obter informações sobre como fazer backup, restaurar e editar o Registro, consulte o artigo da Base de Dados de Conhecimento sobre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Descrição do Registro do Microsoft Windows](http://support.microsoft.com/kb/256986).  
+>  A edição incorreta do Registro pode provocar problemas sérios que exigem a reinstalação do sistema operacional. [!INCLUDE[msCoName](../../includes/msconame-md.md)] não pode garantir que os problemas resultantes da edição incorreta do Registro podem ser resolvidos. Antes de editar o Registro, faça backup de todos os dados valiosos. Para obter informações sobre como fazer backup, restaurar e editar o Registro, consulte o artigo da Base de Dados de Conhecimento sobre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Descrição do Registro do Microsoft Windows](https://support.microsoft.com/kb/256986).  
   
  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] carrega o arquivo de configuração quando o serviço é iniciado. Qualquer alteração na entrada do Registro exige que o serviço seja reiniciado.  
 
@@ -359,7 +359,7 @@ Para obter mais informações, consulte [Getting Cross Domain Kerberos and Deleg
 > [!IMPORTANT]  
 >  Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto.
   
- O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o protocolo DCOM. Para obter mais informações sobre como o protocolo DCOM funciona por meio de firewalls, consulte o artigo “[Usando COM distribuída com firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)”, na Biblioteca MSDN.  
+ O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o protocolo DCOM. Para obter mais informações sobre como o protocolo DCOM funciona por meio de firewalls, consulte o artigo “[Usando COM distribuída com firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)”, na Biblioteca MSDN.  
   
  Há muitos sistemas de firewall disponíveis. Se estiver executando um firewall diferente do firewall do Windows, consulte a documentação do firewall para obter informações específicas ao sistema utilizado.  
   

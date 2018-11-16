@@ -22,12 +22,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45839b56c650252cc01871dd764e56bd579a41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb86e0b92b34878573b44a6323094e536ff3dc40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682434"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637630"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
   No [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, o componente Script tem dois modos: modo de design de metadados e modo de design de código. Quando você abre o **Editor de Transformação Scripts**, o componente digita o modo de design de metadados no qual você configura metadados e define propriedades do componente. Depois de definir as propriedades do componente Script e configurar a entrada e as saídas em modo de design de metadados, você pode alternar para o modo de design de código para gravar seu script personalizado. Para obter mais informações sobre o modo de design de metadados e modo de design de código, consulte [Configurando o componente Script no Editor de Componentes de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -207,7 +207,7 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](http://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
+-   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](https://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar o componente de Script no Editor de Componentes de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  

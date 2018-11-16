@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018401"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668025"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** é um ti
 Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geometry** : qualquer anel de um polígono pode ser usado como anel externo.  
 
 Para obter mais informações sobre especificações do OCG, consulte o seguinte:  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segmentos de arco circular  
 Três tipos instanciáveis podem adotar segmentos de arco circular: **CircularString**, **CompoundCurve**e **CurvePolygon**.  Um segmento de arco circular é definido por três pontos em um plano bidimensional, e o terceiro ponto não pode ser igual ao primeiro.  
@@ -173,7 +173,7 @@ Instâncias**CurvePolygon** podem usar instâncias **CircularString** e **Compou
 ## <a name="see-also"></a>Consulte Também  
 - [Dados espaciais (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Referência de método de tipo de dados geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Referência de método de tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [Referência de método de tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;Tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;Tipo de dados geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

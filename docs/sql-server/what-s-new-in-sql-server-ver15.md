@@ -1,22 +1,20 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272614"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703904"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272614"
 O [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o SQL Server 2019. Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Experimente o SQL Server 2019!**
-- [![Baixar no Centro de Avaliação](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Baixar o SQL Server 2019 para instalar no Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Baixar o SQL Server 2019 para instalar no Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Instalar no Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Executar no SQL Server 2019 no Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -178,7 +176,7 @@ Esse recurso pode fornecer economia de armazenamento significativa dependendo do
 
   No caso de falha na criação de um índice, sem esse recurso, uma operação de criação de índice online deve ser executada novamente e a operação deve ser reiniciada desde o início.
 
-Com esta versão, estendemos a funcionalidade retomável adicionando o recurso à [recompilação de índice online retomável](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Com esta versão, estendemos a funcionalidade retomável adicionando o recurso à [recompilação de índice online retomável](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 Além disso, esse recurso pode ser definido como padrão para um banco de dados específico usando a [configuração padrão de escopo do banco de dados para operações de DDL online e retomáveis](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -264,7 +262,7 @@ Para substituir a configuração padrão, inclua a opção ONLINE ou RESUMABLE n
 
 Sem esse recurso, você precisa especificar as opções online e retomáveis diretamente na instrução DDL do índice, como criar e recompilar índice.
 
-Mais informações: para obter mais informações sobre operações retomáveis de índice, consulte [Criação de índice online retomável](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Mais informações: para obter mais informações sobre operações retomáveis de índice, consulte [Criação de índice online retomável](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Grupos de Disponibilidade Always On – mais réplicas síncronas (CTP 2.0)
 
@@ -331,7 +329,7 @@ Para obter informações detalhadas, consulte [Novidades dos Serviços do Machin
 
 A infraestrutura de criação de perfil com consulta leve (LWP) fornece dados de desempenho de consulta de maneira mais eficiente do que as tecnologias de criação de perfil padrão. A criação de perfil leve agora está habilitada por padrão. Ela foi introduzida no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. A criação de perfil leve oferece um mecanismo de coleção de estatísticas de execução de consulta com uma sobrecarga esperada de 2% da CPU, em comparação com uma sobrecarga de até 75% da CPU para o mecanismo de criação de perfil com consulta padrão. Em versões anteriores, ela ficava DESATIVADA por padrão. Os administradores de banco de dados podiam habilitá-la com o [sinalizador de rastreamento 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Para obter mais informações sobre a criação de perfil leve, consulte [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Para obter mais informações sobre a criação de perfil leve, consulte [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Novos conectores de PolyBase
 

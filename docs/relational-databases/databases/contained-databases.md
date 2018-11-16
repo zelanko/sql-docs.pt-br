@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -18,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afec1cde13ea1734fe0f7829f878715064f55641
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849184"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559013"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,13 +31,13 @@ ms.locfileid: "47849184"
   
 -   A maioria dos metadados que descrevem um banco de dados é mantida no banco de dados. (Além de, ou em vez de, manter os metadados no banco de dados mestre.)  
   
--   Todo os metadados são definidos usando o mesmo agrupamento.  
+-   Todo os metadados são definidos usando a mesma ordenação.  
   
 -   A autenticação de usuário pode ser executada pelo banco de dados, reduzindo a dependência dos bancos de dados dos logons da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   O ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMVs, XEvents etc.) relata e pode agir sobre as informações de contenção.  
   
- Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e agrupamento de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando as instruções **CREATE DATABASE** e **ALTER DATABASE** ou usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e ordenação de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando as instruções **CREATE DATABASE** e **ALTER DATABASE** ou usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="Concepts"></a> Conceitos de banco de dados parcialmente independente  
  Um banco de dados totalmente independente inclui todas as configurações e metadados necessários para definir o banco de dados e não tem nenhuma dependência de configuração da instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] onde o banco de dados está instalado. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], separar um banco de dados da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser demorado e exigir conhecimento detalhado da relação entre o banco de dados e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os bancos de dados parcialmente independentes facilitam a separação de um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros bancos de dados.  
@@ -102,7 +101,7 @@ ms.locfileid: "47849184"
 > [!IMPORTANT]  
 >  Como determinados objetos têm uma configuração de contenção padrão de **NONE**, essa exibição pode retornar falsos positivos.  
   
- O comportamento de bancos de dados parcialmente independentes difere muito distintamente do comportamento de bancos de dados dependentes em termos de agrupamento. Para obter mais informações sobre problemas de agrupamento, consulte [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
+ O comportamento de bancos de dados parcialmente independentes difere muito distintamente do comportamento de bancos de dados dependentes em termos de ordenação. Para obter mais informações sobre problemas de ordenação, consulte [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).  
   
 ##  <a name="benefits"></a> Benefícios do uso de bancos de dados parcialmente independentes  
  Há problemas e complicações associadas aos bancos de dados dependentes que podem ser resolvidos por meio de um banco de dados parcialmente independente.  
@@ -133,9 +132,9 @@ ms.locfileid: "47849184"
   
 -   Procedimentos numerados  
   
--   Objetos associados a esquema que dependem de funções internas com alterações de agrupamento  
+-   Objetos associados a esquema que dependem de funções internas com alterações de ordenação  
   
--   Alteração de associação resultante de alterações de agrupamento, inclusive referências a objetos, colunas, símbolos ou tipos.  
+-   Alteração de associação resultante de alterações de ordenação, inclusive referências a objetos, colunas, símbolos ou tipos.  
   
 -   Replicação, captura de dados de alteração e controle de alterações.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "47849184"
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos modificados &#40;Banco de Dados Contidos&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
+ [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  

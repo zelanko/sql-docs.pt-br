@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e4dd7fd0e9c7f68da18a82e0c1d625962992d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a22e03d88df83a7a967dc87246a6a6fe2cee1f64
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703505"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
   
 3.  Clique com o botão direito do mouse em **Proxies** e selecione **Novo Proxy**.  
   
-4.  Na página **Geral** da caixa de diálogo **Nova Conta Proxy** , especifique o nome do proxy, o nome da credencial e a descrição do novo proxy. Observe que primeiramente você deve criar uma credencial para poder criar um proxy do SQL Server Agent. Para obter mais informações sobre como criar uma credencial, consulte [Como criar uma credencial (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) e [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d).  
+4.  Na página **Geral** da caixa de diálogo **Nova Conta Proxy** , especifique o nome do proxy, o nome da credencial e a descrição do novo proxy. Observe que primeiramente você deve criar uma credencial para poder criar um proxy do SQL Server Agent. Para obter mais informações sobre como criar uma credencial, consulte [Como criar uma credencial (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) e [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d).  
   
 5.  Marque os subsistemas apropriados para esse proxy.  
   

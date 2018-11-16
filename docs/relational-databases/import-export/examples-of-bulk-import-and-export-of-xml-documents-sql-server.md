@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10ed333bd96a0667271f3f5653e9f81ba614d49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662574"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670595"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47662574"
 Para obter mais informações, consulte os tópicos a seguir.
 - [Importar e exportar dados em massa usando o utilitário bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Importar dados em massa usando BULK INSERT ou OPENROWSET(BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [Como importar o XML para o SQL Server com o componente Carregamento em Massa do XML.](https://support.microsoft.com/en-us/kb/316005)
+- [Como importar o XML para o SQL Server com o componente Carregamento em Massa do XML.](https://support.microsoft.com/kb/316005)
 - [Coleções de esquema XML (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Exemplos  
@@ -104,7 +104,7 @@ SELECT * FROM OPENROWSET(
   
 -   Especifique uma página de código na opção CODEPAGE da consulta que corresponda ao esquema de codificação usado na declaração XML.  
   
--   Faça a correspondência ou resolva as definições de agrupamento do banco de dados com um esquema de codificação XML não Unicode.  
+-   Faça a correspondência ou resolva as definições de ordenação do banco de dados com um esquema de codificação XML não Unicode.  
   
  [&#91;Início&#93;](#top)  
   

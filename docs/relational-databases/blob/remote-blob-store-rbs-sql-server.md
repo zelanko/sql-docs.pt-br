@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673595"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633134"
 ## <a name="rbs-requirements"></a>Requisitos de RBS  
  - O RBS requer o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise para o servidor de banco de dados principal no qual os metadados de BLOB são armazenados.  Porém, se você usar o provedor FILESTREAM fornecido, poderá armazenar os próprios BLOBs no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o RBS exige, no mínimo, a versão do driver ODBC 11 para o [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] e a versão do driver ODBC 13 para o [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Os drivers estão disponíveis em [Baixar o driver ODBC para SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
- O RBS inclui um provedor FILESTREAM que permite usar o RBS para armazenar BLOBs em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso deseje usar o RBS para armazenar BLOBs em uma solução de armazenamento diferente, utilize um provedor RBS de terceiros desenvolvido para essa solução de armazenamento ou desenvolva um provedor RBS personalizado usando a API do RBS. Um provedor de exemplo que armazena BLOBs no sistema de arquivos NTFS está disponível como um recurso de aprendizagem em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ O RBS inclui um provedor FILESTREAM que permite usar o RBS para armazenar BLOBs em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso deseje usar o RBS para armazenar BLOBs em uma solução de armazenamento diferente, utilize um provedor RBS de terceiros desenvolvido para essa solução de armazenamento ou desenvolva um provedor RBS personalizado usando a API do RBS. Um provedor de exemplo que armazena BLOBs no sistema de arquivos NTFS está disponível como um recurso de aprendizagem em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Segurança do RBS  
- O blog da equipe do SQL Remote Blob Storage é uma boa fonte de informações sobre esse recurso. O modelo de segurança do RBS é descrito na postagem em [Modelo de Segurança do RBS](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
+ O blog da equipe do SQL Remote Blob Storage é uma boa fonte de informações sobre esse recurso. O modelo de segurança do RBS é descrito na postagem em [Modelo de Segurança do RBS](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
   
 ### <a name="custom-providers"></a>Provedores personalizados  
  Quando você usa um provedor personalizado para armazenar BLOBs fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certifique-se de proteger os BLOBs armazenados com permissões e opções de criptografia apropriadas para a mídia de armazenamento usada pelo provedor personalizado.  
@@ -77,10 +77,10 @@ Se suas políticas de segurança exigem diferentes propriedades de chave (por ex
 ##  <a name="rbsresources"></a> Recursos do RBS  
   
  **Exemplos do RBS**  
- Os exemplos do RBS disponíveis em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
+ Os exemplos do RBS disponíveis em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
   
  **Blog do RBS**  
- O [blog do RBS](http://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
+ O [blog do RBS](https://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
   
 ##  <a name="Key_rotation"></a> Script de rotação de chaves  
  Este exemplo cria um procedimento armazenado denominado `sp_rotate_rbs_symmetric_credential_key` para substituir a chave simétrica do repositório de credenciais do RBS usada atualmente  

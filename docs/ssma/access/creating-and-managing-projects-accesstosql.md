@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663375"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Criando e gerenciando projetos (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados de acesso que você deseja migrar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure que receberá os dados, e os objetos migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de conexão e configurações do projeto.  
@@ -39,19 +39,19 @@ O SSMA contém várias opções de conversão e a sincronização de objetos de 
   
 3.  No painel esquerdo, clique em **conversão**.  
   
-4.  No painel direito, revise as opções. Para obter mais informações sobre essas opções, consulte [configurações do projeto (conversão)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  No painel direito, revise as opções. Para obter mais informações sobre essas opções, consulte [configurações do projeto (conversão)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
   
 5.  Altere as opções conforme necessário.  
   
 6.  Repita as etapas anteriores para o **migração**, **GUI**, e **mapeamento de tipo** páginas.  
   
-    -   Para obter informações sobre opções de migração, consulte [configurações do projeto (migração)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   Para obter informações sobre opções de migração, consulte [configurações do projeto (migração)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
-    -   Para obter informações sobre as opções de interface do usuário, consulte [configurações de projeto (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   Para obter informações sobre as opções de interface do usuário, consulte [configurações de projeto (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
-    -   Para obter mais informações sobre as configurações de mapeamento de tipo de dados, consulte [configurações do projeto (mapeamento de tipo)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   Para obter mais informações sobre as configurações de mapeamento de tipo de dados, consulte [configurações do projeto (mapeamento de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
-    -   Para obter informações sobre as configurações do SQL Azure, consulte [configurações do projeto (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   Para obter informações sobre as configurações do SQL Azure, consulte [configurações do projeto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
   
 **Observação** configurações do SQL Azure estará disponíveis somente quando você seleciona a migração para o SQL Azure durante a criação de um projeto.  
   

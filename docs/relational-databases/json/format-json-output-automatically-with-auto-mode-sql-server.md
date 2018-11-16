@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20b55e266e3cd64bdd96248c1c7e88fae1f49879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a68ced2ab6d6a8222ebb89ef97a3cd1fbabdb76f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714274"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659155"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Formatar saída JSON automaticamente com o Modo AUTO (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ FOR JSON PATH
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
+Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
 
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 

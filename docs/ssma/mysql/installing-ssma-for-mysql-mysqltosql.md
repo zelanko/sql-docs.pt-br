@@ -12,12 +12,12 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6191898b0dbd4c7269a3c741f2e6ace7927b665c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8d642f90aa7c4dffa990977d8e0cb84b5337c7f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776344"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670245"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Instalar o SSMA para MySQL (MySqlToSql)
 SQL Server SSMA (Migration Assistant) para MySQL consiste em um aplicativo cliente que você usa para realizar uma migração do MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Ele também contém um pacote de extensão que oferece suporte à migração de dados e o uso de funções de sistema do MySQL em seus bancos de dados migrados.  
@@ -33,7 +33,7 @@ Se você quiser atualizar para uma versão posterior do SSMA para MySQL, você d
 |-|-|  
 |**Tópico**|**Descrição**|  
 |[Instalar o SSMA para cliente do MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Fornece informações e instruções para instalar o cliente SSMA.|  
-|[Instalar os componentes do SSMA no SQL Server (MySQL para o SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fornece informações e instruções para instalar o pacote de extensão em instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Instalar os componentes do SSMA no SQL Server (MySQL para o SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fornece informações e instruções para instalar o pacote de extensão em instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Remover o SSMA para MySQL componentes &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Fornece instruções para desinstalar o programa cliente.|  
   
 ## <a name="see-also"></a>Consulte também  

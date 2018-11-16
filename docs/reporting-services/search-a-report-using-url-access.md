@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b5714f7d224410ce5eac704e11a9ef2dc3e49a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63f4c1c1ad925ee57def853c76f71ec52f9cb58
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759414"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813189"
 ---
 # <a name="search-a-report-using-url-access"></a>Pesquisar um relatório com acesso à URL
   Você pode pesquisar um relatório para obter um conjunto específico de texto usando o acesso de URL. Para pesquisar um relatório, defina o valor do parâmetro *rc:FindString* na URL igual ao texto para o qual você deseja pesquisar. Além disso, use os parâmetros *rc:StartFind* e *rc:EndFind* para estreitar sua pesquisa a páginas específicas dentro do relatório.  
@@ -26,7 +26,7 @@ ms.locfileid: "47759414"
  Este exemplo de acesso de URL procura a primeira ocorrência do texto "Mountain-400" no relatório de exemplo Catálogo de Produtos começando pela primeira página e terminando na página cinco:  
   
 ```  
-http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

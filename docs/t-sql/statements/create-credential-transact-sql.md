@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa3decb1f8abd44dc9e35f75de63ebae24a885e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608838"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704014"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Criando uma credencial usando um token SAS  
- **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Para obter um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, em seguida, criar uma credencial usando a assinatura de acesso compartilhado, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
@@ -168,6 +168,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [Assinaturas de Acesso Compartilhado](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [Assinaturas de Acesso Compartilhado](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765744"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640053"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
   Quando você está trabalhando no designer de fluxo de controle, a Caixa de Ferramentas do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lista as tarefas que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece para criar o fluxo de controle em um pacote. Para obter mais informações a Barra de Ferramentas, consulte [Caixa de Ferramentas do SSIS](../../integration-services/ssis-toolbox.md).  
@@ -96,9 +96,9 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
   
 4.  Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na tarefa ou no contêiner e clique em **Editar** para abrir o editor correspondente.  
   
-     Para obter informações sobre como configurar um contêiner Loop For, consulte [Para configurar um contêiner Loop For](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Para obter informações sobre como configurar um contêiner Loop For, consulte [Para configurar um contêiner Loop For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  O contêiner Sequência não tem um editor personalizado.  

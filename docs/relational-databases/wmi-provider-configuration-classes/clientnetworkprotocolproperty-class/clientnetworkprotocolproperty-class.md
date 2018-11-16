@@ -17,12 +17,12 @@ ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c0242e94b92b898e85499d9bff4d631efe2e7fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b74aedb873b28f5e6d0b3610226966b4fc0fddb1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702624"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658355"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Classe ClientNetworkProtocolProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "47702624"
 -   Definir os sinalizadores para a propriedade atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

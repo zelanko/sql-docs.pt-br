@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383821"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601956"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "49383821"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Por padrão, apenas membros do grupo de administradores local podem iniciar, interromper, pausar, retomar ou reiniciar um serviço. Para conceder a capacidade de gerenciar serviços a não administradores, consulte [Como conceder aos usuários direitos para gerenciar serviços no Windows Server 2003](http://support.microsoft.com/kb/325349). (O processo é semelhante em outras versões do Windows.)  
+ Por padrão, apenas membros do grupo de administradores local podem iniciar, interromper, pausar, retomar ou reiniciar um serviço. Para conceder a capacidade de gerenciar serviços a não administradores, consulte [Como conceder aos usuários direitos para gerenciar serviços no Windows Server 2003](https://support.microsoft.com/kb/325349). (O processo é semelhante em outras versões do Windows.)  
   
  Parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o comando **SHUTDOWN** do [!INCLUDE[tsql](../../includes/tsql-md.md)] requer a associação às funções de servidor fixas **sysadmin** ou **serveradmin** e não é transferível.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "49383821"
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Visão geral da documentação de instalação do SQL Server](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [Visão geral da documentação de instalação do SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Iniciar o SQL Server com a configuração mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639414"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665515"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   Se o esquema especificado não existir, a instrução **CREATE TABLE** falhará.  
   
--   Se a tabela especificada pelo parâmetro **HISTORY_TABLE** já existir, ela será validada em relação à tabela temporal recém-criada em termos de [consistência do esquema e consistência dos dados temporais](http://msdn.microsoft.com/library/dn935015.aspx). Se você especificar uma tabela de histórico inválido, a instrução **CREATE TABLE** falhará.  
+-   Se a tabela especificada pelo parâmetro **HISTORY_TABLE** já existir, ela será validada em relação à tabela temporal recém-criada em termos de [consistência do esquema e consistência dos dados temporais](https://msdn.microsoft.com/library/dn935015.aspx). Se você especificar uma tabela de histórico inválido, a instrução **CREATE TABLE** falhará.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Criação de uma tabela temporal com uma tabela de histórico definido pelo usuário  
  A criação de uma tabela temporal com tabela de histórico definido pelo usuário é uma opção conveniente quando o usuário deseja especificar a tabela de histórico com opções de armazenamento específicas e índices adicionais. No exemplo a seguir, uma tabela de histórico definido pelo usuário é criada com um esquema alinhado à tabela temporal que será criada. Um índice columnstore clusterizado e um índice rowstore não clusterizado adicional (árvore B) são criado para essa tabela de histórico definido pelo usuário com a função de pesquisas de ponto. Após a criação dessa tabela de histórico definido pelo usuário, a tabela temporal com controle da versão do sistema é criada especificando a tabela de histórico definido pelo usuário como a tabela de histórico padrão.  

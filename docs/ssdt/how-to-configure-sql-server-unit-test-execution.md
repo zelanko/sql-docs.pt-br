@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666755"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Como: Configurar a execução do teste de unidade do SQL Server
 Configurando o projeto de teste, você pode especificar várias configurações que determinam como os testes de unidade do SQL Server serão executados. Essas configurações são armazenados no arquivo app.config do projeto de teste. Se você editar esse arquivo diretamente, os novos valores aparecerão na caixa de diálogo Configuração de Teste.  
@@ -30,7 +30,7 @@ Essas configurações determinam como o teste se conectará ao banco de dados a 
 -   **Implantação do esquema**. Um projeto de banco de dados é uma representação offline do banco de dados. O projeto de banco de dados representa a estrutura dos objetos de banco de dados, mas não contém nenhum dado. Depois que você fizer alterações no esquema em um projeto de banco de dados, poderá testá-los em um banco de dados real. Na etapa de implantação do esquema, os objetos de banco de dados que você deseja testar serão copiados do projeto de banco de dados para o banco de dados no qual você executará os testes. Para saber mais sobre implantação de esquema, confira [Implantar um esquema de banco de dados](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Os testes não são executados na pasta de soluções, mas em uma pasta separada no disco rígido local. Embora seja possível configurar aspectos da implantação de teste, você normalmente não precisa configurá-los para os testes de unidade. Para saber mais sobre a implantação de teste, confira [Executar testes](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Os testes não são executados na pasta de soluções, mas em uma pasta separada no disco rígido local. Embora seja possível configurar aspectos da implantação de teste, você normalmente não precisa configurá-los para os testes de unidade. Para saber mais sobre a implantação de teste, confira [Executar testes](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Especificar cadeias de conexão  
   

@@ -20,12 +20,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854984"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640453"
 ---
 # <a name="xml-source"></a>Origem XML
   A origem XML lê um arquivo de dados XML e preenche as colunas na saída de origem com os dados.  
@@ -79,7 +79,7 @@ ms.locfileid: "47854984"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de origem XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47854984"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Localização do arquivo XML|Recupera dados de um arquivo XML.|  
-|Arquivo XML de variável|Especifica o nome de arquivo XML em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Arquivo XML de variável|Especifica o nome de arquivo XML em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Dados XML de variável|Recupera dados XML de uma variável.|  
   
  **Usar esquema embutido**  

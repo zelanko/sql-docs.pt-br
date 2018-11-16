@@ -20,12 +20,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fda41af4bbf9f6e0b98de5c543af99e732966d53
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821944"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640483"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "47821944"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

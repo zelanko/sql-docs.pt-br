@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e9539302dfa2bfdd13c55cd9d06544e5a55a6d5d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703934"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-Este documento Notas de versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
+Este documento Notas de versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](https://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
   
-Para obter informações sobre como iniciar e instalar o SQL Server 2012, consulte o Leiame do SQL Server 2012. O documento Leiame está disponível na mídia de instalação e na página de download [Leiame](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Você também pode encontrar mais informações em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) e nos [Fóruns do SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
+Para obter informações sobre como iniciar e instalar o SQL Server 2012, consulte o Leiame do SQL Server 2012. O documento Leiame está disponível na mídia de instalação e na página de download [Leiame](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Você também pode encontrar mais informações em [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) e nos [Fóruns do SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="Install"></a>1.0 Antes da instalação  
 Antes de instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], considere as seguintes informações.  
@@ -75,7 +75,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Pode haver falha na atualização do Cluster de failover do SQL Server 2008, 2008 R2 Analysis Services para SQL Server 2012 depois de renomear o nome da rede  
 **Problema:** depois de alterar o nome de rede de uma instância do cluster de failover de um Microsoft SQL Server 2008, ou 2008 R2 Analysis Services usando a ferramenta Administrador de Cluster do Windows, a operação de atualização poderá falhar.  
   
-**Solução alternativa:** para resolver esse problema, atualize a entrada ClusterName do Registro seguindo as instruções na seção de resolução desse [artigo da Base de Dados de Conhecimento](http://support.microsoft.com/kb/955784).  
+**Solução alternativa:** para resolver esse problema, atualize a entrada ClusterName do Registro seguindo as instruções na seção de resolução desse [artigo da Base de Dados de Conhecimento](https://support.microsoft.com/kb/955784).  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 Instalando o SQL Server 2012 no Windows Server 2008 R2 Server Core Service Pack 1  
 Você pode instalar o SQL Server no Windows Server 2008 R2 Server Core SP1 com as seguintes limitações:  
@@ -88,14 +88,14 @@ Você pode instalar o SQL Server no Windows Server 2008 R2 Server Core SP1 com a
   
 -   Não é possível instalar o Microsoft SQL Server 2012 lado a lado com versões anteriores do SQL Server em um computador executando o Windows Server 2008 R2 Server Core SP1.  
   
--   Nem todos os recursos do SQL Server 2012 têm suporte no sistema operacional Server Core. Para saber mais sobre os recursos com suporte e sobre a instalação do SQL Server 2012 no Server Core, veja [Instalar o SQL Server 2012 no Server Core](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
+-   Nem todos os recursos do SQL Server 2012 têm suporte no sistema operacional Server Core. Para saber mais sobre os recursos com suporte e sobre a instalação do SQL Server 2012 no Server Core, veja [Instalar o SQL Server 2012 no Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 A pesquisa semântica requer que você instale uma dependência adicional  
 **Problema:** a Pesquisa Semântica Estatística tem um pré-requisito adicional, o banco de dados de estatísticas semânticas de idiomas, que não é instalado pelo programa de Instalação do SQL Server.  
   
 **Solução alternativa:** para configurar o banco de dados de estatísticas semânticas de idioma como um pré-requisito para a indexação semântica, realize as seguintes tarefas:  
   
-1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) e execute o pacote do Windows Installer.  
+1.  Localize e execute o pacote do Windows Installer denominado SemanticLanguageDatabase.msi na mídia de instalação do SQL Server para extrair o banco de dados. Para o SQL Server 2012 Express, baixe o banco de dados de estatísticas semânticas de idioma do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://go.microsoft.com/fwlink/?LinkId=221787)) e execute o pacote do Windows Installer.  
   
 2.  Mova o banco de dados para uma pasta de dados apropriada. Se você deixar o banco de dados no local padrão, deverá alterar as permissões antes de anexá-lo com êxito.  
   
@@ -156,7 +156,7 @@ Os tópicos a seguir descrevem o comportamento de instalação de itens de pré-
   
         **Use o Gerenciamento e Manutenção de Imagens de Implantação (DISM.exe) para habilitar o .NET Framework 3.5 SP1:**  
   
-        Você também pode habilitar o .NET Framework 3.5 SP1 usando o Gerenciamento e Manutenção de Imagens de Implantação (DISM.exe). Para saber mais sobre como habilitar os recursos do Windows online, veja [Habilitar ou desabilitar os recursos do Windows online](http://technet.microsoft.com/library/dd744582(WS.10).aspx). Veja a seguir as instruções para habilitar o .NET Framework 3.5 SP1:  
+        Você também pode habilitar o .NET Framework 3.5 SP1 usando o Gerenciamento e Manutenção de Imagens de Implantação (DISM.exe). Para saber mais sobre como habilitar os recursos do Windows online, veja [Habilitar ou desabilitar os recursos do Windows online](https://technet.microsoft.com/library/dd744582(WS.10).aspx). Veja a seguir as instruções para habilitar o .NET Framework 3.5 SP1:  
   
         1.  No prompt de comando, digite o comando a seguir para listar todos os recursos disponíveis no sistema operacional.  
   
@@ -182,17 +182,17 @@ Os tópicos a seguir descrevem o comportamento de instalação de itens de pré-
   
 -   Para assegurar que o componente Visual Studio seja instalado corretamente, o SQL Server exigirá que você instale uma atualização. O SQL Server Setup verifica a presença dessa atualização e requer o download e a instalação da atualização antes de continuar com a instalação do SQL Server. Para evitar a interrupção durante a Instalação do SQL Server, você pode baixar e instalar a atualização conforme descrito abaixo, antes de executar a Instalação do SQL Server (ou pode instalar todas as atualizações para o .NET Framework 3.5 SP1 disponíveis no Windows Update):  
   
-    -   Se você instalar o SQL Server 2012 em um computador com o sistema operacional Windows Vista SP2 ou Windows Server 2008 SP2, poderá obter a atualização necessária [aqui](http://support.microsoft.com/?kbid=956250).  
+    -   Se você instalar o SQL Server 2012 em um computador com o sistema operacional Windows Vista SP2 ou Windows Server 2008 SP2, poderá obter a atualização necessária [aqui](https://support.microsoft.com/?kbid=956250).  
   
     -   Se você instalar o SQL Server 2012 em um computador com o sistema operacional Windows 7 SP1 ou Windows Server 2008 R2 SP1, essa atualização já estará instalada no computador.  
   
--   O Windows PowerShell 2.0 é um pré-requisito para a instalação de componentes do Mecanismo de Banco de Dados do SQL Server 2012 e do SQL Server Management Studio, mas o Windows PowerShell não é mais instalado pela Instalação do SQL Server. Se a instalação relatar que o PowerShell 2.0 não está presente no seu computador, você poderá habilitá-lo seguindo as instruções da página [Estrutura de gerenciamento do Windows](http://support.microsoft.com/kb/968929) . Como você obtém o Windows PowerShell 2.0 depende do sistema operacional em execução:  
+-   O Windows PowerShell 2.0 é um pré-requisito para a instalação de componentes do Mecanismo de Banco de Dados do SQL Server 2012 e do SQL Server Management Studio, mas o Windows PowerShell não é mais instalado pela Instalação do SQL Server. Se a instalação relatar que o PowerShell 2.0 não está presente no seu computador, você poderá habilitá-lo seguindo as instruções da página [Estrutura de gerenciamento do Windows](https://support.microsoft.com/kb/968929) . Como você obtém o Windows PowerShell 2.0 depende do sistema operacional em execução:  
   
     -   Windows Server 2008 – Windows PowerShell 1.0 é um recurso e pode ser adicionado. As versões do Windows PowerShell 2.0 são baixadas e instaladas (efetivamente como uma correção de sistema operacional).  
   
     -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 são instalados por padrão.  
   
--   Se você pretende usar os recursos do SQL Server 2012 em um ambiente do SharePoint, a atualização cumulativa de agosto do SharePoint Server 2010 Service Pack 1 (SP1) e do SharePoint será necessária. Você deve instalar o SP1, a [atualização cumulativa de agosto do SharePoint](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), e corrigir completamente o farm de servidores antes de adicionar os recursos do SQL Server 2012 ao farm. Esse requisito se aplica aos seguintes recursos do SQL Server 2012: uso de uma instância do Mecanismo de banco de dados como o servidor de banco de dados do farm, configuração do PowerPivot para SharePoint ou implantação do Reporting Services no modo do SharePoint.  
+-   Se você pretende usar os recursos do SQL Server 2012 em um ambiente do SharePoint, a atualização cumulativa de agosto do SharePoint Server 2010 Service Pack 1 (SP1) e do SharePoint será necessária. Você deve instalar o SP1, a [atualização cumulativa de agosto do SharePoint](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), e corrigir completamente o farm de servidores antes de adicionar os recursos do SQL Server 2012 ao farm. Esse requisito se aplica aos seguintes recursos do SQL Server 2012: uso de uma instância do Mecanismo de banco de dados como o servidor de banco de dados do farm, configuração do PowerPivot para SharePoint ou implantação do Reporting Services no modo do SharePoint.  
   
 ### <a name="18-supported-operating-systems-for-sql-server-2012"></a>1.8 Sistemas operacionais com suporte para o SQL Server 2012  
 Há suporte para o SQL Server 2012 nos sistemas operacionais Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1 e Windows 7 SP1.  
@@ -200,7 +200,7 @@ Há suporte para o SQL Server 2012 nos sistemas operacionais Windows Vista SP2, 
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 O Sync Framework não está incluído no pacote de instalação  
 **Problema:** o Sync Framework não está incluído no pacote de instalação do SQL Server 2012.  
   
-**Solução alternativa:** baixe a versão apropriada do Sync Framework [desta página do Centro de Download da Microsoft](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
+**Solução alternativa:** baixe a versão apropriada do Sync Framework [desta página do Centro de Download da Microsoft](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Se o Visual Studio 2010 Service Pack 1 for desinstalado, a instância do SQL Server 2012 deverá ser reparada para restaurar determinados componentes  
 **Problema:** a instalação do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] depende de alguns componentes do Visual Studio 2010 Service Pack 1. Se você desinstalar o Service Pack 1, alguns dos componentes compartilhados serão rebaixados para suas versões originais, e alguns outros componentes serão completamente removidos do computador.  
@@ -230,7 +230,7 @@ Para saber mais sobre como reparar uma instância do SQL Server, veja [Reparar u
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Solução alternativa:** repare sua instalação do .NET Framework 4 depois de atualizar seu sistema operacional. Para saber mais, veja [Como reparar uma instalação existente do .NET Framework](http://support.microsoft.com/kb/306160).  
+**Solução alternativa:** repare sua instalação do .NET Framework 4 depois de atualizar seu sistema operacional. Para saber mais, veja [Como reparar uma instalação existente do .NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 A atualização da edição do SQL Server exige reiniciar o computador  
 **Problema**: quando você faz a atualização de edição de uma instância do SQL Server 2012, algumas das funcionalidades associadas com a nova edição podem não ser ativadas imediatamente.  
@@ -313,7 +313,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 2.  Defina as ACLs de segurança da porta para IPv6 executando o seguinte de uma janela CMD do admin:  
   
     ```  
-    netsh http add urlacl url=http://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
+    netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
@@ -323,12 +323,12 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 O DQS não tem suporte em um cluster  
 **Problema:** não há suporte para o DQS em uma instalação de cluster do SQL Server. Se você estiver instalando uma instância de cluster do SQL Server, não deverá marcar as caixas de seleção **Data Quality Services** e **Cliente Data Quality** na página de **Seleção de Recursos** . Se estas caixas de seleção estiverem marcadas durante a instalação da instância de cluster (e você concluir a instalação do Data Quality Server executando o arquivo DQSInstaller.exe), o DQS será instalado neste nó, mas não estará disponível em nós adicionais quando você adicionar mais nós ao cluster e, consequentemente, não funcionará em nós adicionais.  
   
-**Solução alternativa:** instale a atualização cumulativa 1 do SQL Server 2012 para resolver este problema. Para obter instruções, consulte [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817).  
+**Solução alternativa:** instale a atualização cumulativa 1 do SQL Server 2012 para resolver este problema. Para obter instruções, consulte [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Para reinstalar o Data Quality Server, exclua os objetos DQS depois de desinstalar o Data Quality Server  
 **Problema:** se você desinstalar o servidor Data Quality Server, os objetos DQS (bancos de dados DQS, logons DQS e um procedimento armazenado DQS) não serão excluídos da instância do SQL Server.  
   
-**Solução alternativa:** para reinstalar o Data Quality Server no mesmo computador e na mesma instância do SQL Server, você deverá excluir manualmente os objetos DQS da instância do SQL Server. Além disso, você também deve excluir os arquivos de bancos de dados DQS (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) da pasta C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA no computador, antes de reinstalar o Data Quality Server. Caso contrário, a instalação do Data Quality Server falhará. Mova os arquivos de banco de dados, em vez de excluí-los, se você quiser preservar dados, como bases de dados de conhecimentos ou projetos de qualidade de dados. Para saber mais sobre como remover objetos DQS após a conclusão do processo de desinstalação, veja [Remover objetos do Data Quality Server](http://msdn.microsoft.com/library/hh231667.aspx).  
+**Solução alternativa:** para reinstalar o Data Quality Server no mesmo computador e na mesma instância do SQL Server, você deverá excluir manualmente os objetos DQS da instância do SQL Server. Além disso, você também deve excluir os arquivos de bancos de dados DQS (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) da pasta C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA no computador, antes de reinstalar o Data Quality Server. Caso contrário, a instalação do Data Quality Server falhará. Mova os arquivos de banco de dados, em vez de excluí-los, se você quiser preservar dados, como bases de dados de conhecimentos ou projetos de qualidade de dados. Para saber mais sobre como remover objetos DQS após a conclusão do processo de desinstalação, veja [Remover objetos do Data Quality Server](https://msdn.microsoft.com/library/hh231667.aspx).  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 A indicação de uma descoberta de conhecimento terminada ou atividade de limpeza interativa está atrasada  
 **Problema:** se um administrador terminar uma atividade na tela Monitoramento de Atividades, um usuário interativo que estiver executando a atividade de descoberta de conhecimento, gerenciamento de domínio ou limpeza interativa não receberá nenhuma indicação de que sua atividade terminou, até executar a operação seguinte.  
@@ -488,7 +488,7 @@ Problema: o Intellisense no SQL Server Management Studio (SSMS) e no SQL Server 
 **Solução alternativa:** não há  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Grupos de disponibilidade AlwaysOn  
-Antes de tentar criar um grupo de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753168) nos Manuais Online. Para obter uma introdução aos Grupos de Disponibilidade AlwaysOn, veja [Grupos de Disponibilidade AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753166)nos Manuais Online.  
+Antes de tentar criar um grupo de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753168) nos Manuais Online. Para obter uma introdução aos Grupos de Disponibilidade AlwaysOn, veja [Grupos de Disponibilidade AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753166)nos Manuais Online.  
   
 #### <a name="571-client-connectivity-for-alwayson-availability-groups"></a>5.7.1 Conectividade de cliente para grupos de disponibilidade AlwaysOn  
 **Atualizado em:** 13 de agosto de 2012  
@@ -507,9 +507,9 @@ A tabela a seguir resume o suporte de driver para Grupos de Disponibilidade Alwa
 |ADO .NET com .NET Framework 3.5 SP1 com patch de conectividade **\&#42;\&#42;**|Sim|Sim|Sim|Sim|Sim|  
 |Microsoft JDBC driver 4.0 para SQL Server|Sim|Sim|Sim|Sim|Sim|  
   
-**\&#42;** Baixe o patch de conectividade para ADO .NET com o .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Baixe o patch de conectividade para ADO .NET com o .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Baixe o patch de conectividade para ADO.NET com o .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Baixe o patch de conectividade para ADO.NET com o .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **Palavra-chave MultiSubnetFailover e recursos associados**  
   
@@ -570,10 +570,10 @@ Isso é devido a uma limitação no build CTP3. Os builds futuros não terão es
 **Solução alternativa:** use 'multisubnetfailover = true' na cadeia de conexão.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Falha ao criar novos ouvintes de grupo de disponibilidade devido a cotas do Active Directory  
-**Problema:** pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante. Para saber mais, veja [Como solucionar problemas da conta do serviço de cluster quando ela modifica objetos de computador](http://support.microsoft.com/kb/307532) e [Cotas do Active Directory](http://technet.microsoft.com/library/cc904295(WS.10).aspx).  
+**Problema:** pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante. Para saber mais, veja [Como solucionar problemas da conta do serviço de cluster quando ela modifica objetos de computador](https://support.microsoft.com/kb/307532) e [Cotas do Active Directory](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 Conflitos de NetBIOS porque os nomes dos ouvintes de grupo de disponibilidade usam um prefixo de 15 caracteres idênticos  
-Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para saber mais sobre regras da nomenclatura de prefixos para nomes DNS, veja [Atribuindo nomes de domínio](http://technet.microsoft.com/library/cc731265(WS.10).aspx)  
+Se você tiver dois clusters do WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes de grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, você obterá um erro relatando que o recurso Nome de Rede virtual não pôde ser colocado online. Para saber mais sobre regras da nomenclatura de prefixos para nomes DNS, veja [Atribuindo nomes de domínio](https://technet.microsoft.com/library/cc731265(WS.10).aspx)  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -607,10 +607,10 @@ O Serviço CDC para Oracle é um Serviço do Windows que examina os logs de tran
   
 3.  Instale o SQL Server 2012 com o recurso MDS no nó de cluster primário e, em seguida, instale o SQL Server 2012 com o recurso MDS em qualquer um dos nós de cluster adicionais.  
   
-Para saber mais sobre os problemas e obter informações sobre como realizar as etapas acima, consulte [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
+Para saber mais sobre os problemas e obter informações sobre como realizar as etapas acima, consulte [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467).  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 obrigatório  
-Para trabalhar no aplicativo Web do Master Data Manager o Silverlight 5.0 deverá estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096).  
+Para trabalhar no aplicativo Web do Master Data Manager o Silverlight 5.0 deverá estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -622,7 +622,7 @@ A conectividade do SQL Server 2012 Reporting Services para a Atualização 2 e s
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-O SQL Server 2012 inclui StreamInsight 2.0. O StreamInsight 2.0 exige uma licença do Microsoft SQL Server 2012 e o .NET Framework 4.0. Ele inclui vários aperfeiçoamentos feitos e algumas correções de bugs. Para saber mais, veja as [Notas de versão do Microsoft StreamInsight 2.0](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Para baixar o StreamInsight 2.0 separadamente, visite a [Página de download do Microsoft StreamInsight 2.0](http://go.microsoft.com/fwlink/?LinkId=241593) no Centro de Download da Microsoft.  
+O SQL Server 2012 inclui StreamInsight 2.0. O StreamInsight 2.0 exige uma licença do Microsoft SQL Server 2012 e o .NET Framework 4.0. Ele inclui vários aperfeiçoamentos feitos e algumas correções de bugs. Para saber mais, veja as [Notas de versão do Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Para baixar o StreamInsight 2.0 separadamente, visite a [Página de download do Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) no Centro de Download da Microsoft.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

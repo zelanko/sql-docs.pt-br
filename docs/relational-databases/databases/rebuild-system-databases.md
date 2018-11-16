@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -17,16 +16,16 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17e89b7093d9f28d87be58af881e3b71d836be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730234"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559185"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) , ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) ou [resource](../../relational-databases/databases/resource-database.md), ou para modificar a ordenação em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Neste tópico**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47730234"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
- Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se um agrupamento novo for especificado na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de agrupamento. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
+ Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se uma ordenação nova for especificada na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de ordenação. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  Execute as tarefas a seguir antes de recriar os bancos de dados do sistema para garantir que os bancos de dados possam ser restaurados para suas configurações atuais.  
@@ -62,7 +61,7 @@ ms.locfileid: "47730234"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Registre todos os pacotes de serviço e os hotfixes aplicados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao agrupamento atual. Você deve reaplicar essas atualizações depois de recriar os bancos de dados do sistema.  
+2.  Registre todos os pacotes de serviço e os hotfixes aplicados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à ordenação atual. Você deve reaplicar essas atualizações depois de recriar os bancos de dados do sistema.  
   
     ```  
     SELECT  
@@ -109,7 +108,7 @@ ms.locfileid: "47730234"
     |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa **sysadmin** . Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite **NT AUTHORITY\SYSTEM**.|  
     |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** . Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de Segurança \*\*** A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \*\*** A alteração do agrupamento no nível do servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> **\*\* Importante \*\*** A alteração da ordenação no nível do servidor não altera a ordenação de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NúmeroDeArquivos ]|Especifica o número de arquivos de dados tempdb. Esse valor pode ser aumentado para até 8 ou o número de núcleos, o que for maior.<br /><br /> Valor padrão: 8 ou o número de núcleos, o que for menor.|  
     |[ /SQLTEMPDBFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8|  
     |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64|  
@@ -128,7 +127,7 @@ ms.locfileid: "47730234"
 -   Restaure os backups completos mais recentes dos bancos de dados mestre, modelo e msdb. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Se você alterou o agrupamento do servidor, não restaure os bancos de dados do sistema. Fazer isso substituirá o novo agrupamento pela configuração do agrupamento anterior.  
+    >  Se você alterou a ordenação do servidor, não restaure os bancos de dados do sistema. Fazer isso substituirá a nova ordenação pela configuração da ordenação anterior.  
   
      Se um backup não estiver disponível ou se o backup restaurado não for atual, recrie todas as entradas ausentes. Por exemplo, recrie todas as entradas ausentes de seus bancos de dados de usuários, dispositivos de backup, logons, pontos de extremidade, etc. do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A melhor maneira de recriar entradas é executar os scripts originais que as criaram.  
   

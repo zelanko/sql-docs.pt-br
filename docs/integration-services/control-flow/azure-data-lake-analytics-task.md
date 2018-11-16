@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906076"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641743"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarefa do Azure Data Lake Analytics
 
@@ -58,7 +58,7 @@ A configuração de U-SQL tem duas configurações: **SourceType** e as opções
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Digite a consulta U-SQL a ser enviada diretamente na caixa de opção ou selecione o botão Procurar (...) para digitar a consulta U-SQL na caixa de diálogo **Digitar a consulta U-SQL**.|  
 |**SourceType = FileConnection**|Selecione um gerenciador de conexões de arquivo existente ou selecione <**Nova conexão...** > para criar uma nova conexão de arquivo. Para obter informações relacionadas, confira [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md) e [Editor do Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Selecione uma variável existente ou selecione \<**Nova variável...**> para criar uma nova variável. Para saber mais, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md) e [Adicionar Variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Selecione uma variável existente ou selecione \<**Nova variável...**> para criar uma nova variável. Para saber mais, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md) e [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Configuração do trabalho

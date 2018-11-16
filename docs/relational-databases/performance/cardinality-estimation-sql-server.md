@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667025"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de Consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> É recomendado instalar a versão mais recente do [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
+> É recomendado instalar a versão mais recente do [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
   
 Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**. O exemplo de código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em `C:\Temp\` (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], as informações detalhadas são exibidas de forma amigável.  
   
@@ -139,7 +139,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Para obter informações sobre eventos estendidos adaptados para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Para obter informações sobre eventos estendidos adaptados para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], veja [Eventos estendidos no Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Etapas para avaliar a versão da CE  
   
@@ -270,7 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
  [Dicas de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

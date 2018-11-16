@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30d6949d43e0ca3b652953c96625df031d8ddec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af912eebf1274b911c6b48405ba9001e18592916
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659632"
 ---
 # <a name="native-compilation-advisor"></a>Orientador de compilação nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47787794"
   
  Em um determinado procedimento armazenado interpretado, o NCA permite a identificação de todos os recursos que não têm suporte em módulos nativos. O NCA fornece links de documentação para soluções ou soluções alternativas.  
   
- Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Passo a passo usando o orientador de compilação nativa  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse no procedimento armazenado que você quer converter e selecione **Orientador de Compilação Nativa**. Isso exibirá a página de boas-vindas para o **Orientador de Compilação Nativa de Procedimento Armazenado**. Clique em **Avançar** para continuar.  

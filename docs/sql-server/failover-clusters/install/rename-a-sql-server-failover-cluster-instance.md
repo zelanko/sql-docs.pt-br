@@ -15,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57c76060f21e6b0b5569e1fa1b3e602be892211b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82df7aeacbaf2e7646b7252190c6daead4076615
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643224"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703654"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renomear uma instância do cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47643224"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:** verifique e execute as ações adicionais abaixo para o Serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:  
   
--   Corrija as configurações do Registro se o SQL Agent estiver configurado para encaminhamento de evento. Para obter mais informações, consulte [Designar um servidor de encaminhamento de eventos &#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
+-   Corrija as configurações do Registro se o SQL Agent estiver configurado para encaminhamento de evento. Para obter mais informações, consulte [Designar um servidor de encaminhamento de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
 -   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte os tópicos a seguir:  
   

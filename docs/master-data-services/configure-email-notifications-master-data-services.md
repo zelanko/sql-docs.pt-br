@@ -15,12 +15,12 @@ ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 271e981ec834fddb28f6f28fa67ab1fe1c45cf08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1206a6b259488c4058227ef52cebf9339570e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836014"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702966"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Configurar notificações por email (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "47836014"
   
 ## <a name="see-also"></a>Consulte Também  
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
- [Solução de problemas de notificações por email (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [Solucionando problemas de notificações por email (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

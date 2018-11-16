@@ -19,12 +19,12 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710134"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639743"
 ---
 # <a name="union-all-transformation"></a>transformação Unir Tudo
   A transformação Union All combina várias entradas em apenas uma saída. Por exemplo, as saídas provenientes de cinco origens de Arquivo Simples diferentes podem ser aplicadas à transformação Unir Tudo e combinadas em apenas uma saída.  
@@ -43,7 +43,7 @@ ms.locfileid: "47710134"
 ## <a name="configuration-of-the-union-all-transformation"></a>Configuração da transformação Unir Tudo  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas programaticamente, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Para obter mais informações sobre as propriedades que podem ser definidas programaticamente, consulte [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  Para obter mais informações sobre como definir propriedades, clique em um dos seguintes tópicos:  
   

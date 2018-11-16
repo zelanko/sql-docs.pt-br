@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 410350757e777cb5b463b810b1091bab704066fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83905f449377f02eef8098ff8afdcbf4618ce80f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720034"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670725"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Usar OPENJSON com um esquema explícito (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ DECLARE @json NVARCHAR(MAX) = '{
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
+Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
 
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 

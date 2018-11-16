@@ -22,12 +22,12 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515e27ccf0d61edef0f240751226c25ebd8a6977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78b71fea28e31ca6bba5c7c1aa3f65b89a3ed57e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625971"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640893"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Conectando a fontes de dados em uma tarefa personalizada
   As tarefas conectam-se a fontes de dados externas para recuperar ou salvar dados por meio de um gerenciador de conexões. Em tempo de design, um gerenciador de conexões representa uma conexão lógica e descreve informações chave como o nome do servidor e qualquer propriedade de autenticação. Em tempo de execução, as tarefas chamam o método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> do gerenciador de conexões para estabelecer a conexão física com a fonte de dados.  
@@ -138,6 +138,6 @@ End Function
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Criar Gerenciadores de Conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Criar Gerenciadores de Conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169266"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695558"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  Essa opção não está disponível em um banco de dados independente.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclui um tipo de mensagem e contrato específicos para notificações de eventos. Portanto, um serviço de inicialização do Service Broker não precisa ser criado porque já existe um serviço que especifica o seguinte nome de contrato: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclui um tipo de mensagem e contrato específicos para notificações de eventos. Portanto, um serviço de inicialização do Service Broker não precisa ser criado porque já existe um serviço que especifica o seguinte nome de contrato: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  O serviço de destino que recebe as notificações de eventos deve honrar esse contrato preexistente.  
   
@@ -144,7 +144,7 @@ GO
 --the event notifications contract.  
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
-([http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
+([https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
 GO  
 --Create a route on the service to define the address   
 --to which Service Broker sends messages for the service.  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684964"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675815"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Palavras-chave mapeiam com precisão até o agrupamento atual de eventos de Rastreamento do SQL.  
   
 ### <a name="targets"></a>Destinos  
- Destinos são consumidores de evento. Os destinos processam eventos de forma síncrona no thread que aciona o evento ou de forma assíncrona em um thread fornecido pelo sistema. Os Eventos Estendidos fornecem vários destinos que você pode usar conforme apropriado para direcionar a saída do evento. Para obter mais informações, consulte [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Destinos são consumidores de evento. Os destinos processam eventos de forma síncrona no thread que aciona o evento ou de forma assíncrona em um thread fornecido pelo sistema. Os Eventos Estendidos fornecem vários destinos que você pode usar conforme apropriado para direcionar a saída do evento. Para obter mais informações, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 ### <a name="actions"></a>Ações  
  Uma ação é uma resposta ou série de respostas de programa a um evento. As ações são associadas a um evento e cada evento pode ter um conjunto exclusivo de ações.  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Consulte Também  
  [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Mecanismo de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

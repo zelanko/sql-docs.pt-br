@@ -11,12 +11,12 @@ ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02f1851a2be9e6cd716c3d9b151378a8d84a2a32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 658826481c77368f4cb8118ae3fe839a06886d03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615934"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663315"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>Desenvolvimento de banco de dados orientado a projetos usando ferramentas de linha de comando
 O SQL Server Data Tools prova ferramentas de linha de comando que permitem vários cenários de desenvolvimento orientados a projeto.  
@@ -26,7 +26,7 @@ O SQL Server Data Tools prova ferramentas de linha de comando que permitem vári
 |||  
 |-|-|  
 |[SqlPackage.exe](../tools/sqlpackage.md)|Este tópico descreve o utilitário SQLPackage.exe, usado para as seguintes tarefas:<br /><br />-   Extrair um arquivo .dacpac de um banco de dados dinâmico do SQL Server.<br />-   Publicar um arquivo .dacpac em um banco de dados dinâmico do SQL Server para atualizar incrementalmente o esquema do banco de dados dinâmico para que corresponda ao .dacpac.<br />-   Comparar um arquivo .dacpac com um banco de dados dinâmico do SQL Server e gerar um script Transact\-SQL de atualização incremental sem atualizar o banco de dados dinâmico.<br />-   Comparar dois arquivos .dacpac para gerar um script Transact\-SQL de atualização incremental.<br />-   Gerar um relatório XML que resume as alterações da atualização incremental que ocorreriam se o banco de dados fosse atualizado incrementalmente.|  
-|[Usar o MSDeploy com o provedor do dbSqlPackage](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|Este tópico descreve o provedor da [Ferramenta de Implantação da Web](http://go.microsoft.com/fwlink/?LinkId=231798), denominado dbSqlPackage, incluído no SSDT, que funciona com a Ferramenta de Desenvolvimento da Web da Microsoft (MSDeploy.exe) do IIS (Serviços de Informações da Internet), usada para as seguintes tarefas:<br /><br />-   Extrair um arquivo .dacpac de um banco de dados remoto/local do SQL Server ou do SQL Azure.<br />-   Publicar um .dacpac em um banco de dados remoto/local do SQL Server ou do SQL Azure para atualizá-lo incrementalmente.<br />-   Publicar a partir de um banco de dados local do SQL Server em um banco de dados remoto do SQL Server ou do SQL Azure para atualizar o banco de dados remoto incrementalmente.<br />-   Comparar um .dacpac com um banco de dados remoto/local do SQL Server ou do SQL Azure para gerar um script Transact\-SQL de atualização incremental sem atualizar o banco de dados dinâmico.<br />-   Gerar um relatório XML que resume as alterações da atualização incremental que ocorreriam se o banco de dados fosse atualizado incrementalmente.|  
+|[Usar o MSDeploy com o provedor do dbSqlPackage](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|Este tópico descreve o provedor da [Ferramenta de Implantação da Web](https://go.microsoft.com/fwlink/?LinkId=231798), denominado dbSqlPackage, incluído no SSDT, que funciona com a Ferramenta de Desenvolvimento da Web da Microsoft (MSDeploy.exe) do IIS (Serviços de Informações da Internet), usada para as seguintes tarefas:<br /><br />-   Extrair um arquivo .dacpac de um banco de dados remoto/local do SQL Server ou do SQL Azure.<br />-   Publicar um .dacpac em um banco de dados remoto/local do SQL Server ou do SQL Azure para atualizá-lo incrementalmente.<br />-   Publicar a partir de um banco de dados local do SQL Server em um banco de dados remoto do SQL Server ou do SQL Azure para atualizar o banco de dados remoto incrementalmente.<br />-   Comparar um .dacpac com um banco de dados remoto/local do SQL Server ou do SQL Azure para gerar um script Transact\-SQL de atualização incremental sem atualizar o banco de dados dinâmico.<br />-   Gerar um relatório XML que resume as alterações da atualização incremental que ocorreriam se o banco de dados fosse atualizado incrementalmente.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 [Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)  

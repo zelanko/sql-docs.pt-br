@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb46770565c85b148028084026bb9d2f26a91afc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: da90014c17b0540a8bee4e691835361068227565
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030286"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814149"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Executar um arquivo de script do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os arquivos de script são executados no prompt de comando usando o ambiente de script do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RS.exe). O RS.exe possui diversos argumentos de prompt de comando disponíveis para uso. Para obter mais informações sobre as opções de prompt de comando, consulte [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Para obter mais exemplos de script, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -25,31 +25,31 @@ ms.locfileid: "50030286"
 -   Execute o Script.rss no ambiente de script designando o servidor de relatório de destino. O Windows Authentication é aplicado por padrão:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs –i Script.rss -s https://servername/reportserver  
     ```  
   
 -   Execute o Script.rss no ambiente de script especificando um nome de usuário e senha para autenticar as chamadas de serviço Web:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs –i Script.rss -s https://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   Execute o Script.rss no ambiente de script especificando um limite do servidor de 30 segundos:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs –i Script.rss -s https://servername/reportserver -l 30  
     ```  
   
 -   Execute o Script.rss no ambiente de script especificando uma variável de script global chamada *report*.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs –i Script.rss -s https://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   Execute o Script.rss no ambiente de script especificando que as operações de serviço Web no arquivo de script sejam executadas como um lote.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs –i Script.rss -s https://servername/reportserver -b  
     ```  
   
 ## <a name="see-also"></a>Consulte Também  

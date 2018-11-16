@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804654"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641143"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804654"
 ## <a name="samples-of-change-data-capture-packages"></a>Exemplos de pacotes do Change Data Capture  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece dois exemplos que demonstram como usar o Change Data Capture em pacotes. Para obter mais informações, consulte os tópicos a seguir:  
   
--   [Leiame_Exemplo do Change Data Capture para pacote de intervalo especificado](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Leiame_Exemplo do Change Data Capture para pacote de intervalo especificado](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Leiame_Exemplo do Change Data Capture desde o último pacote de solicitação](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Leiame_Exemplo do Change Data Capture desde o último pacote de solicitação](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804654"
 -   [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), em sqlblog.com  
+ Entrada de blog, [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), em sqlblog.com  
   
   

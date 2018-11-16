@@ -19,17 +19,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 493e6c7a6cb2f3de0d6e637ece3add31085a8bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742354"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640003"
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
   
- Você pode usar o destino do ADO NET para conectar-se ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar o destino do ADO NET para conectar-se ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Solucionando problemas do destino ADO NET  
  Você pode registrar as chamadas que o destino ADO NET faz para provedores de dados externos. É possível usar essa capacidade de registro para solucionar o problema de salvar os dados em fontes de dados externas que o destino ADO NET executa. Para registrar as chamadas que o destino ADO NET faz aos provedores de dados externos, habilite o registro de pacotes e selecione o evento **Diagnóstico** no nível de pacotes. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "47742354"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas do ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47742354"
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artigo técnico sobre o [Loading data to Windows Azure SQL Database the fast way](http://go.microsoft.com/fwlink/?LinkId=244333)(Carregando dados no Banco de Dados SQL do Microsoft Azure), em sqlcat.com  
+ Artigo técnico sobre o [Loading data to Windows Azure SQL Database the fast way](https://go.microsoft.com/fwlink/?LinkId=244333)(Carregando dados no Banco de Dados SQL do Microsoft Azure), em sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Editor de Destino ADO NET (Página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino ADO NET** para mapear as colunas de entrada nas colunas de destino.  

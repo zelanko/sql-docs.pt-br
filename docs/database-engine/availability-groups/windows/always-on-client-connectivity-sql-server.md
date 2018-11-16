@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee9f18e30c19ed1318f28bb4ae97bf137ec679c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 674eddc9d7485de281f70199629cf05fdfc4e044
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753860"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603306"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividade de cliente AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "47753860"
 |Microsoft JDBC driver 4.0 para SQL Server|Sim|Sim|Sim|Sim|Sim| 
 |Driver do Microsoft OLE DB para SQL Server|Sim|Sim|Sim|Sim|Sim| 
   
- *Baixe o patch de conectividade para ADO .NET com o .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+ *Baixe o patch de conectividade para ADO .NET com o .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
- **Baixe o patch de conectividade para ADO.NET com o .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+ **Baixe o patch de conectividade para ADO.NET com o .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- * Baixe o novo Microsoft OLE DB Driver para SQL Server: [https://www.microsoft.com/en-us/download/details.aspx?id=56730 ](https://www.microsoft.com/en-us/download/details.aspx?id=56730).  
+ * Baixe o novo Microsoft OLE DB Driver para SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730).  
 
 > [!IMPORTANT]  
 >  Para se conectar a um ouvinte de grupo de disponibilidade, um cliente deve usar uma cadeia de conexão TCP.  
@@ -69,10 +69,10 @@ ms.locfileid: "47753860"
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)   
+ [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)   
  [Blog da equipe do SQL Server AlwaysOn: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)   
- [Ocorre um atraso muito longo ao reconectar uma conexão IPsec de um computador que executa o Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 ou Windows Server 2008 R2](http://support.microsoft.com/kb/980915)   
- [O serviço de Cluster leva aproximadamente 30 segundos para fazer failover de endereços IP IPv6 no Windows Server 2008 R2](http://support.microsoft.com/kb/2578113)   
- [Operação de failover lenta se não existir nenhum roteador entre o cluster e um servidor de aplicativos](http://support.microsoft.com/kb/2582281)  
+ [Ocorre um atraso muito longo ao reconectar uma conexão IPsec de um computador que executa o Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 ou Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
+ [O serviço de Cluster leva aproximadamente 30 segundos para fazer failover de endereços IP IPv6 no Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
+ [Operação de failover lenta se não existir nenhum roteador entre o cluster e um servidor de aplicativos](https://support.microsoft.com/kb/2582281)  
   
   

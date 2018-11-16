@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677665"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparar bancos de dados de acesso para a migração (AccessToSQL)
 Antes de migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve determinar quais bancos de dados para migrar e certifique-se de que esses bancos de dados estão prontos para a migração.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>Determinando quando migrar para o SQL Server  
-O mecanismo de banco de dados Jet, que é usado como o mecanismo de banco de dados de acesso, é uma solução flexível e fácil de usar para gerenciamento de dados. No entanto, como bancos de dados ficam maiores e mais de missão crítica, muitos usuários consideram que precisam de maior desempenho, segurança ou disponibilidade. Para aplicativos que exigem uma plataforma mais robusta de dados, considere mover os bancos de dados subjacentes para esses aplicativos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como decidir quando migrar, consulte o [página de informações de migração](http://go.microsoft.com/fwlink/?LinkId=68571) sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site da Web.  
+O mecanismo de banco de dados Jet, que é usado como o mecanismo de banco de dados de acesso, é uma solução flexível e fácil de usar para gerenciamento de dados. No entanto, como bancos de dados ficam maiores e mais de missão crítica, muitos usuários consideram que precisam de maior desempenho, segurança ou disponibilidade. Para aplicativos que exigem uma plataforma mais robusta de dados, considere mover os bancos de dados subjacentes para esses aplicativos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como decidir quando migrar, consulte o [página de informações de migração](https://go.microsoft.com/fwlink/?LinkId=68571) sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site da Web.  
   
 Depois de migrar bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode continuar a usar o acesso usando tabelas vinculadas ou manualmente, você pode migrar seus aplicativos para o [!INCLUDE[msCoName](../../includes/msconame_md.md)] código baseado no .NET Framework que interage diretamente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

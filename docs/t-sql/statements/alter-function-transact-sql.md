@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81b5cb23eea083189cc61e50e63d6d550d21362
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700215"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -278,7 +278,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  Define o tipo de dados de tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados.  
   
@@ -343,9 +343,9 @@ Para obter uma lista de condições que devem ser atendidas antes de uma funçã
  Especifica o valor fornecido para a coluna quando um valor não for fornecido explicitamente durante uma inserção. *constant_expression* é uma constante, NULL ou um valor de função do sistema. Podem ser aplicadas definições DEFAULT a qualquer coluna, com exceção das que têm a propriedade IDENTITY. DEFAULT não pode ser especificado para funções CLR com valor de tabela.  
   
  COLLATE *collation_name*  
- Especifica o agrupamento da coluna. Se não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Para obter uma lista e mais informações, veja [Nome do agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome do agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Especifica a ordenação da coluna. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações, veja [Nome da ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome da ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- A cláusula COLLATE pode ser usada para alterar os agrupamentos somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
+ A cláusula COLLATE pode ser usada para alterar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
   
  COLLATE não pode ser especificado para funções CLR com valor de tabela.  
   

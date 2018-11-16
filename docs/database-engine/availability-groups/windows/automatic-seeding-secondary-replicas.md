@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f84f3171f1266bb79763d360818faf75519e6a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669404"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603616"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -265,7 +265,7 @@ A tabela a seguir lista os eventos estendidos relacionados à propagação autom
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On](http://technet.microsoft.com/library/dn135328.aspx)
+[Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On](https://technet.microsoft.com/library/dn135328.aspx)
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

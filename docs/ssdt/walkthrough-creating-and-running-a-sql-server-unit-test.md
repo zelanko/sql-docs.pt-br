@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855275"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666515"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e Executar um Teste de Unidade do SQL Server
 Neste passo a passo, você criará um teste de unidade do SQL Server que verifica o comportamento de vários procedimentos armazenados. Os testes de unidade do SQL Server são criados para facilitar a identificação de falhas no código que podem resultar em comportamento incorreto do aplicativo. Você pode executar testes de unidade do SQL Server e teste de aplicativo como parte de um pacote automatizado de testes.  
@@ -40,7 +40,7 @@ Neste passo a passo, você executará as seguintes tarefas:
 Depois que um dos testes de unidade detecta um erro em um procedimento armazenado, você corrige esse erro e executa o teste novamente.  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Para concluir esse passo a passo, você precisa se conectar a um servidor de banco de dados (ou banco de dados LocalDB) no qual tenha permissões para criar e implantar um banco de dados. Para saber mais, confira [Permissões necessárias para os recursos de banco de dados do Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Para concluir esse passo a passo, você precisa se conectar a um servidor de banco de dados (ou banco de dados LocalDB) no qual tenha permissões para criar e implantar um banco de dados. Para saber mais, confira [Permissões necessárias para os recursos de banco de dados do Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Criar um script que contenha um esquema de banco de dados  
   
@@ -968,7 +968,7 @@ Para criar e verificar um teste negativo, execute as seguintes tarefas:
     Você especifica que espera ver uma exceção específica. Se desejar, você pode especificar um número de erro. Se você não adicionar esse atributo, o teste de unidade apresentará falha e uma mensagem aparecerá na janela Resultados do Teste.  
   
     > [!IMPORTANT]  
-    > Atualmente, o Visual Studio 2012 não oferece suporte ao atributo ExpectedSqlException. Para obter informações para solucionar isso, consulte [Não foi possível executar o teste de unidade de banco de dados com "Falha esperada"](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Atualmente, o Visual Studio 2012 não oferece suporte ao atributo ExpectedSqlException. Para obter informações para solucionar isso, consulte [Não foi possível executar o teste de unidade de banco de dados com "Falha esperada"](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  No menu Arquivo, clique em Salvar SqlServerUnitTests1.cs.  
   

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d58b14506aedb9763a6a40111eef5eae26b3162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 789b63a29e061b11d261d2cfb89165d61b9cab27
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710694"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666235"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47710694"
 |**DELETE_RULE**|**varchar (** 11 **)**|A ação tomada quando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] viola a integridade referencial definida por esta restrição. Retorna uma destas opções: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se NO ACTION for especificado em ON DELETE para essa restrição, a exclusão da chave primária referenciada na restrição não será propagada para a chave estrangeira. Se essa exclusão de uma chave primária causar uma violação de integridade referencial porque pelo menos uma chave estrangeira contém o mesmo valor, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fará nenhuma alteração nas tabelas pai e de referência. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também gerará um erro.<br /><br /> Se CASCADE for especificado em ON DELETE para esta restrição, qualquer mudança para o valor de chave primária será propagado automaticamente para o valor da chave estrangeira.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Exibições do esquema de informações &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

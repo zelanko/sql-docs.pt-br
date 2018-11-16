@@ -44,8 +44,8 @@ Antes de criar o grupo de disponibilidade, você precisa:
    A exemplo a seguir mostra `/etc/hosts` no **node1** com adições para **node1**, **node2** e **node3**. Neste documento **node1** refere-se ao servidor que hospeda a réplica primária. E **node2** e **node3** se referir a servidores que hospedam as réplicas secundárias.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Para obter mais informações sobre essa sessão XE, consulte [AlwaysOn eventos estendidos](http://msdn.microsoft.com/library/dn135324.aspx).
+Para obter mais informações sobre essa sessão XE, consulte [AlwaysOn eventos estendidos](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Criar um certificado
 
@@ -166,6 +166,6 @@ A porta TCP no firewall deve estar aberta para a porta do ouvinte.
 >[!IMPORTANT]
 >Para a versão do SQL Server 2017, o único método de autenticação com suporte para o ponto de extremidade de espelhamento de banco de dados é `CERTIFICATE`. O `WINDOWS` opção será habilitada em uma versão futura.
 
-Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

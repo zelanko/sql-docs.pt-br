@@ -16,12 +16,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5f5e0b602ae51654159c60513c1bfdab98f2dc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818160"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640043"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
   O Enumerador Foreach De Variável enumera os itens em uma lista que é passada para ele em uma variável e executa as mesmas tarefas em cada item. Você pode usar o código personalizado em uma tarefa Script para preencher uma lista com esse propósito. Para obter mais informações sobre o enumerador, consulte [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -248,6 +248,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>Consulte Também  
  [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
- [Para configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdcda8e3cdd3101d5825ba24ed13d703be535f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672334"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702794"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
  Um buffer negativo remove todos os incluídos na distância especificada do limite da geometria.  
   
- O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que, tolerance = distance \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que, tolerance = distance \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemplos  
   

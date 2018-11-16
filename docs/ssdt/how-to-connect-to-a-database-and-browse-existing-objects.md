@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670455"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Como: Conecte-se a um Banco de Dados e Procure Objetos Existentes
 Uma tarefa muito comum para administradores de banco de dados e desenvolvedores é conectar a um banco de dados online, criar ou procurar seu esquema e consultar seus objetos. O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó **SQL Server** dedicado, sob o qual todas as instâncias conectadas do SQL Server e seus respectivos bancos de dados são agrupados em uma hierarquia semelhante ao SSMS. As instâncias conectadas do SQL Server podem ser uma instância local, como um SQL Server 2008 em execução, ou uma instância do SQL Azure externa.  
   
-O procedimento a seguir supõe que você já tem o banco de dados de exemplo AdventureWorks instalado. Use [CodePlex](http://msftdbprodsamples.codeplex.com/) para localizar e instalar bancos de dados de exemplo para diferentes versões do SQL Server. Se preferir, você também pode seguir as etapas e usar um banco de dados existente no seu servidor.  
+O procedimento a seguir supõe que você já tem o banco de dados de exemplo AdventureWorks instalado. Use [CodePlex](https://msftdbprodsamples.codeplex.com/) para localizar e instalar bancos de dados de exemplo para diferentes versões do SQL Server. Se preferir, você também pode seguir as etapas e usar um banco de dados existente no seu servidor.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Para conectar-se a uma instância de banco de dados  
   

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2c756ab4d875743664232ef918f9777829a516
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147679798418dceb7de94ec8dbcc8489ad6fda3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662957"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos do sistema do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47648664"
   
 -   Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu servidor.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige o Windows Installer 3.0. O Windows Installer 3.0 já está instalado nos sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para todas as outras plataformas, é preciso instalá-lo explicitamente. Para obter mais informações, consulte [Windows Installer 3.0 redistribuível](http://go.microsoft.com/fwlink/?LinkId=46459).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige o Windows Installer 3.0. O Windows Installer 3.0 já está instalado nos sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para todas as outras plataformas, é preciso instalá-lo explicitamente. Para obter mais informações, consulte [Windows Installer 3.0 redistribuível](https://go.microsoft.com/fwlink/?LinkId=46459).  
   
 > [!NOTE]  
 >  Certifique-se de que tenha efetuado logon com privilégios de administrador antes de instalar esse software.  

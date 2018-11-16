@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e86bec4983dd1f15f4c91fe4ee7a851f8264556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665426"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601886"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "47665426"
 
 Instale o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.   
   
-A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas. Isso ajuda a reduzir os requisitos de manutenção e gerenciamento e a superfície de ataque para essas funções de servidor. Para obter mais informações sobre o Server Core, consulte [Instalar o Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Para obter mais informações sobre o Server Core implementado no [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [Server Core para Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)).  
+A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas. Isso ajuda a reduzir os requisitos de manutenção e gerenciamento e a superfície de ataque para essas funções de servidor. Para obter mais informações sobre o Server Core, consulte [Instalar o Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Para obter mais informações sobre o Server Core implementado no [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [Server Core para Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)).  
   
  Para obter informações sobre os sistemas operacionais com suporte no momento, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -59,7 +59,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |Distributed Replay Controller|não||  
 |Distributed Replay Client|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
 |SDK de Conectividade de Cliente do SQL|Sim||  
-|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788)) e instale-a em um computador que executa o Server Core.|  
+|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788)) e instale-a em um computador que executa o Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|não||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|não||  
   
@@ -81,7 +81,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
  Independentemente do método de instalação, é necessário confirmar a aceitação dos termos da licença de software como indivíduo ou em nome de uma entidade, a menos que o uso do software seja governado por um contrato separado, como um contrato de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um contrato de terceiros com um ISV ou OEM.  
   
- Os termos da licença são exibidos para exame e aceitação na interface do usuário da Instalação. As instalações autônomas (usando o parâmetro /Q ou /QS) devem incluir o parâmetro /IACCEPTSQLSERVERLICENSETERMS. Você pode analisar as condições de licença separadamente em [Microsoft Software License Terms](http://go.microsoft.com/fwlink/?LinkId=148209)(em inglês).  
+ Os termos da licença são exibidos para exame e aceitação na interface do usuário da Instalação. As instalações autônomas (usando o parâmetro /Q ou /QS) devem incluir o parâmetro /IACCEPTSQLSERVERLICENSETERMS. Você pode analisar as condições de licença separadamente em [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209)(em inglês).  
   
 > [!NOTE]  
 >  Dependendo de como você recebeu o software (por exemplo, por meio de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), o uso do software pode estar sujeito a termos e condições adicionais.  
@@ -331,9 +331,9 @@ Se você fechar acidentalmente o prompt de comando, siga estas etapas para inici
  [Instalar o SQL Server usando um arquivo de configuração](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Instalar o Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Configurar uma instalação do Server Core do Windows Server 2016 com Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Cmdlets de cluster de failover no Windows PowerShell](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Instalar o Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
+ [Configurar uma instalação do Server Core do Windows Server 2016 com Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Cmdlets de cluster de failover no Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
 
   
   

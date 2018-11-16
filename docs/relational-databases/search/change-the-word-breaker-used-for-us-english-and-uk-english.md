@@ -12,16 +12,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8356953d9b148bb3cbfd1ce3a6a125b67b08e7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670866"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala uma nova versão (versão 14.0.4999.1038) do separador de palavras e lematizador para o idioma inglês, substituindo a versão anterior desses componentes (versão 12.0.6828.0). Para obter informações sobre o comportamento alterado dos novos componentes, veja [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Este tópico descreve como alternar da nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão. Para instalações em cluster, essas alterações devem ser feitas em todos os nós primários e passivos.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala uma nova versão (versão 14.0.4999.1038) do separador de palavras e lematizador para o idioma inglês, substituindo a versão anterior desses componentes (versão 12.0.6828.0). Para obter informações sobre o comportamento alterado dos novos componentes, veja [Alterações de comportamento na pesquisa de texto completo](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Este tópico descreve como alternar da nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão. Para instalações em cluster, essas alterações devem ser feitas em todos os nós primários e passivos.  
   
  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usavam separadores de palavras diferentes representados por CLSIDs distintos para o inglês dos EUA (LCID 1033) e o inglês do Reino Unido (LCID 2057). Nesta versão, ambos o LCIDs usam os mesmos componentes com os mesmos CLSIDs, como é mostrado na seguinte tabela:  
   
@@ -128,6 +128,6 @@ ms.locfileid: "47699415"
   
 ## <a name="see-also"></a>Consulte Também  
  [Reverter os separadores de palavras usados por pesquisa à versão anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Alterações de comportamento na pesquisa de texto completo](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

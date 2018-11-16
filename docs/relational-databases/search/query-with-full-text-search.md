@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d70480cc1acbfe6e8a4a9f6c80fc57a9c8cfbd8
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 4b597fffe92f7cfc8a0000ccdf2d34005c8f7164
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660575"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -342,6 +342,6 @@ Depois de aplicar determinada combinação de separador de palavras, dicionário
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Criar consultas de pesquisa de texto completo &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Criar consultas de pesquisa de texto completo &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [Melhorar o desempenho de consultas de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
  

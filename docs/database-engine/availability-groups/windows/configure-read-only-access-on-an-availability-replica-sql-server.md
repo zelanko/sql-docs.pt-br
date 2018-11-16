@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbd356ed065de775c6dfb9c156c7ffce748c43b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0225c5cf3e2b8109ac9d85e00133e9a1b8b79367
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794214"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602566"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar o acesso somente leitura em uma réplica de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -227,25 +227,25 @@ DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [AlwaysOn: Value Proposition of Readable Secondary (AlwaysOn: proposição de valor da secundária legível)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: Value Proposition of Readable Secondary (AlwaysOn: proposição de valor da secundária legível)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: Why there are two options to enable a secondary replica for read workload? (AlwaysOn: por que há duas opções para habilitar uma réplica secundária para a carga de trabalho de leitura?)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: Why there are two options to enable a secondary replica for read workload? (AlwaysOn: por que há duas opções para habilitar uma réplica secundária para a carga de trabalho de leitura?)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: Setting up Readable Seconary Replica (AlwaysOn: configurando a réplica secundária legível)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: Setting up Readable Seconary Replica (AlwaysOn: configurando a réplica secundária legível)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: I just enabled Readable Secondary but my query is blocked? (AlwaysOn: eu acabei de habilitar a réplica secundária legível, mas minha consulta está bloqueada?)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: I just enabled Readable Secondary but my query is blocked? (AlwaysOn: eu acabei de habilitar a réplica secundária legível, mas minha consulta está bloqueada?)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot (AlwaysOn: disponibilizando as estatísticas mais recentes na réplica secundária legível, no banco de dados somente leitura e no instantâneo do banco de dados)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot (AlwaysOn: disponibilizando as estatísticas mais recentes na réplica secundária legível, no banco de dados somente leitura e no instantâneo do banco de dados)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica (AlwaysOn: desafios das estatísticas no banco de dados somente leitura, no instantâneo do banco de dados e na réplica secundária)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica (AlwaysOn: desafios das estatísticas no banco de dados somente leitura, no instantâneo do banco de dados e na réplica secundária)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: Impact on the primary workload when you run reporting workload on the secondary replica (AlwaysOn: impacto na carga de trabalho primária quando você executar a carga de trabalho do relatório na réplica secundária)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: Impact on the primary workload when you run reporting workload on the secondary replica (AlwaysOn: impacto na carga de trabalho primária quando você executar a carga de trabalho do relatório na réplica secundária)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation (AlwaysOn: impacto do mapeamento da carga de trabalho do relatório na réplica secundária legível para o isolamento do instantâneo)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation (AlwaysOn: impacto do mapeamento da carga de trabalho do relatório na réplica secundária legível para o isolamento do instantâneo)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica (AlwaysOn: minimizando o bloqueio de thread REDO ao executar a carga de trabalho do relatório na réplica secundária)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica (AlwaysOn: minimizando o bloqueio de thread REDO ao executar a carga de trabalho do relatório na réplica secundária)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn: Readable Secondary and data latency (AlwaysOn: réplica secundária legível e latência de dados)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
+-   [AlwaysOn: Readable Secondary and data latency (AlwaysOn: réplica secundária legível e latência de dados)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

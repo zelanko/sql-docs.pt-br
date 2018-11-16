@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820334"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639133"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam conexões para executar diferentes tarefas e implementar recursos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -84,7 +84,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 |----------|-----------------|-----------|  
 |ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|CACHE|Lê dados do fluxo de dados ou de um arquivo de cache (.caw) e pode salvar esses dados em um arquivo de cache.|[Gerenciador de Conexões de Cache](../../integration-services/connection-manager/cache-connection-manager.md)|  
+|CACHE|Lê dados do fluxo de dados ou de um arquivo de cache (.caw) e pode salvar esses dados em um arquivo de cache.|[Gerenciador de conexões de cache](../../integration-services/connection-manager/cache-connection-manager.md)|  
 |DQS|Conecta-se a um servidor a um banco de dados do Data Quality Services no servidor.|[Gerenciador de Conexões de Limpeza DQS](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Conecta-se a um arquivo da pasta de trabalho do Excel.|[Gerenciador de conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Conecta-se a um arquivo ou uma pasta.|[Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)|  
@@ -110,9 +110,9 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
 |Tipo|Descrição|Tópico|  
 |----------|-----------------|-----------|  
-|ORACLE|Conecta-se a um servidor Oracle \<informações de versão\>.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Conecta-se a um servidor Teradata \<informações de versão\>.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Conecta-se a um servidor Oracle \<informações de versão\>.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Conecta-se a um servidor Teradata \<informações de versão\>.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gerenciadores de conexões personalizados  
  Também é possível escrever gerenciadores de conexões personalizados. Para obter mais informações, consulte [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -244,7 +244,7 @@ Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecio
   
 1.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse no gerenciador de conexões para o qual você deseja criar um parâmetro e clique em **Definir Parâmetros**.  
   
-2.  Configure os parâmetros na caixa de diálogo **Definir Parâmetros** . Para obter mais informações, consulte [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+2.  Configure os parâmetros na caixa de diálogo **Definir Parâmetros** . Para obter mais informações, consulte [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Excluir um gerenciador de conexões 
 ###  <a name="DeletePackageLevel"></a> Excluir um gerenciador de conexões de um pacote  
@@ -334,14 +334,14 @@ Todos os gerenciadores de conexões podem ser configurados usando a janela **Pro
 
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [Aproveite o Microsoft Connector para Oracle da Attunity para melhorar o desempenho do pacote](http://technet.microsoft.com/sqlserver/gg598963.aspx), em technet.microsoft.com  
+-   Vídeo, [Aproveite o Microsoft Connector para Oracle da Attunity para melhorar o desempenho do pacote](https://technet.microsoft.com/sqlserver/gg598963.aspx), em technet.microsoft.com  
   
--   Artigos do Wiki, [Conectividade de SSIS](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), em social.technet.microsoft.com  
+-   Artigos do Wiki, [Conectividade de SSIS](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), em social.technet.microsoft.com  
   
--   Entrada de blog, [Conectando ao MySQL a partir do SSIS](http://go.microsoft.com/fwlink/?LinkId=217669), em blogs.msdn.com.  
+-   Entrada de blog, [Conectando ao MySQL a partir do SSIS](https://go.microsoft.com/fwlink/?LinkId=217669), em blogs.msdn.com.  
   
--   Artigo técnico, [Extraindo e carregando dados do SharePoint nos SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=247826), em msdn.microsoft.com.  
+-   Artigo técnico, [Extraindo e carregando dados do SharePoint nos SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), em msdn.microsoft.com.  
   
--   Artigo técnico, [Você obtém a mensagem de erro "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" ao usar o gerenciador de conexões Oracle no SSIS](http://go.microsoft.com/fwlink/?LinkId=233696), em support.microsoft.com.  
+-   Artigo técnico, [Você obtém a mensagem de erro "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" ao usar o gerenciador de conexões Oracle no SSIS](https://go.microsoft.com/fwlink/?LinkId=233696), em support.microsoft.com.  
   
   

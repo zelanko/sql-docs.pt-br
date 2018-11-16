@@ -16,19 +16,19 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06d5b3cebcb46b00c9a08f79aa6bace9fabb81f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba7a8f577f9b05007e8b6b9a9477e1b3ffd6b441
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701815"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Remover tabelas de consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Você pode remover uma tabela — ou qualquer objeto com valor de tabela — da consulta  
   
 > [!NOTE]  
-> Removendo uma tabela ou objeto com valor de tabela não exclui nada do banco de dados; só remove isto da consulta atual. Para obter detalhes sobre como remover uma tabela de um banco de dados, consulte [Como excluir tabelas de um banco de dados (Visual Database Tools)](http://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Removendo uma tabela ou objeto com valor de tabela não exclui nada do banco de dados; só remove isto da consulta atual. Para obter detalhes sobre como remover uma tabela de um banco de dados, consulte [Como excluir tabelas de um banco de dados (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Para remover uma tabela ou objeto estruturado por tabela  
   

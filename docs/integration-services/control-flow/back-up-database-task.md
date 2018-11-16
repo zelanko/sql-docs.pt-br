@@ -19,12 +19,12 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 147b8c560495f9484832ee969316511472f64152
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cac1226a04e5262ff8bc42520095936e6a13c6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729404"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640653"
 ---
 # <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados
   A tarefa Backup de Banco de Dados executa vários tipos de backups de bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -51,6 +51,6 @@ ms.locfileid: "47729404"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

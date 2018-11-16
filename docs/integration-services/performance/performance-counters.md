@@ -17,12 +17,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d648c8b94efef60cab796f5d36dc9b31378a9e2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836304"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641153"
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  
@@ -70,11 +70,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Ferramenta, [SSIS Performance Visualization for Business Intelligence Development Studio (projeto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626), em codeplex.com.  
+-   Ferramenta, [SSIS Performance Visualization for Business Intelligence Development Studio (projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626), em codeplex.com.  
   
--   Vídeo, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497)(Medindo e compreendendo o desempenho de seus pacotes do SSIS na empresa), em msdn.microsoft.com.  
+-   Vídeo, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497) (Medindo e compreendendo o desempenho de seus pacotes do SSIS na empresa), em msdn.microsoft.com.  
   
--   Artigo de suporte, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319), em support.microsoft.com.  
+-   Artigo de suporte, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), em support.microsoft.com.  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>Adicionar um log para contadores de desempenho de fluxo de dados
   Este procedimento descreve como adicionar um log para os contadores de desempenho fornecidos pelo mecanismo de fluxo de dados.  

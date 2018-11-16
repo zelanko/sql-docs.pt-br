@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030006"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814009"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Conexões de dados, fontes de dados e cadeias de conexão (Construtor de Relatórios e SSRS)
 
@@ -97,7 +97,7 @@ ms.locfileid: "50030006"
  Cadeias de conexão são a representação de texto de propriedades de conexão para um provedor de dados. A tabela a seguir lista exemplos de cadeias de conexão para vários tipos de conexão de dados.  
  
  > [!NOTE]  
->  [Connectionstrings.com](http://www.connectionstrings.com/) é outro recurso para obter exemplos de cadeias de conexão. 
+>  [Connectionstrings.com](https://www.connectionstrings.com/) é outro recurso para obter exemplos de cadeias de conexão. 
   
 |**Data source**|**Exemplo**|**Descrição**|  
 |---------------------|-----------------|---------------------|  
@@ -108,18 +108,18 @@ ms.locfileid: "50030006"
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo de fonte de dados como **Microsoft SQL Server Parallel Data Warehouse**. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
-|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos. Para obter mais informações, consulte [Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
-|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo integrado do SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos.|  
+|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo nativo|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos. Para obter mais informações, consulte [Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
+|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo integrado do SharePoint|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Defina o tipo de fonte de dados como **OLE DB Provider for OLAP Services 8.0**.<br /><br /> É possível obter uma conexão mais rápida com fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se você definir a propriedade **ConnectTo** como **8.0**. Para definir essa propriedade, use a caixa de diálogo **Propriedades da Conexão** , guia **Propriedades Avançadas** .|  
 |Servidor do Oracle|`data source=myserver`|Defina o tipo de fonte de dados como **Oracle**. As ferramentas do cliente Oracle devem estar instaladas no computador de Designer de Relatórios e no servidor de relatório. Para obter mais informações, consulte [Tipo de conexão Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
-|Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
-|Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
+|Fonte de dados do SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
+|Fonte de dados do Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Fonte de dados do Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Defina o tipo de fonte de dados como **Teradata**. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos. Para obter mais informações, consulte [Tipo de conexão Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
 |Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
-|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
-|Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para o documento XML.|  
+|Fonte de dados XML, serviço Web|`data source=https://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
+|Fonte de dados XML, documento XML|`https://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para o documento XML.|  
 |Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados como **XML**. Os dados XML são inseridos na definição do relatório.|  
-|Lista do SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Definir o tipo de fonte de dados como **lista do SharePoint**.|  
+|Lista do SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Definir o tipo de fonte de dados como **lista do SharePoint**.|  
   
  Se não for possível conectar a um servidor de relatório que use **localhost**, verifique se o protocolo de rede TCP/IP está habilitado. Para obter mais informações, consulte [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   

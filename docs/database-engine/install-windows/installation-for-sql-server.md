@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c2044c56bdb1581f3d68af741198bcffa4ff6b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625664"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603576"
 ---
 # <a name="sql-server-installation"></a>Instalação do SQL Server
 
@@ -44,7 +44,7 @@ Você pode instalar cada componente individualmente ou selecionar uma combinaç�
 
 - [Edições e recursos com suporte do [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
 - [Edições e recursos com suporte do [!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-- [Recursos com suporte nas edições do [!INCLUDE[ss2014](../../includes/sssql14-md.md)]](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+- [Recursos com suporte nas edições do [!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## <a name="in-this-section"></a>Nesta seção  
 Independentemente de você usar o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o prompt de comando para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a Instalação envolve as seguintes etapas:  
@@ -59,7 +59,7 @@ Descreve como preparar seu computador para [!INCLUDE[ssNoVersion](../../includes
 [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md)  
  Descreve as opções de instalação para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-[Referência da interface de usuário da instalação do SQL Server](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
+[Referência da interface de usuário da instalação do SQL Server](https://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  Descreve as opções de instalação apresentadas pelo Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -75,12 +75,12 @@ Descreve como preparar seu computador para [!INCLUDE[ssNoVersion](../../includes
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos que são parte da plataforma Microsoft BI e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e vários aplicativos cliente usados para criação ou funcionamento com dados analíticos. Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="more-information"></a>Mais Informações
-[Instalar recursos de BI do SQL Server com o SharePoint &#40;Power Pivot e Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
+[Instalar recursos de BI do SQL Server com o SharePoint &#40;Power Pivot e Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  Esta seção explica como instalar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente do SharePoint. Ela identifica quais recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis para uma versão e uma edição específicas do SharePoint. Ela também inclui procedimentos de instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint e Reporting Services no modo do SharePoint.  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Instale o novo banco de dados de exemplo, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
-[Exemplos e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com/)  
+[Exemplos e bancos de dados de exemplo do SQL Server](https://sqlserversamples.codeplex.com/)  
  Descreve como instalar e configurar os exemplos e bancos de dados de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Confira o [Centro de Atualização do SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obter links e informações para todas as versões com suporte do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  

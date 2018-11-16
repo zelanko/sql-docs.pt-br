@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9e6c469e4cc90565cfc0864b4f03fee44d326f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747054"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670735"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "47747054"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  O serviço deve usar o contrato predefinido `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` como mostrado acima.  
+>  O serviço deve usar o contrato predefinido `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` como mostrado acima.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à notificação de consumidor na modificação do conjunto de linhas. O consumidor recebe uma notificação em cada fase da modificação do conjunto de linhas e em qualquer tentativa de alteração.  
@@ -117,7 +117,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Se SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS não forem NULOS, o cabeçalho do TDS das notificações de consulta que contém os três atributos definidos acima será enviado para o servidor toda vez que o comando for executado. Se um deles for nulo, o cabeçalho não será enviado e SQL_SUCCESS_WITH_INFO será retornado. A validação ocorre no [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, e **SqlExecute**, todos os que falham se os atributos não são válidos. De modo semelhante, quando esses atributos de notificação de consulta são definidos para versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ocorre uma falha na execução com SQL_SUCCESS_WITH_INFO.  
+ Se SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS não forem NULOS, o cabeçalho do TDS das notificações de consulta que contém os três atributos definidos acima será enviado para o servidor toda vez que o comando for executado. Se um deles for nulo, o cabeçalho não será enviado e SQL_SUCCESS_WITH_INFO será retornado. A validação ocorre no [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, e **SqlExecute**, todos os que falham se os atributos não são válidos. De modo semelhante, quando esses atributos de notificação de consulta são definidos para versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ocorre uma falha na execução com SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  A preparação de instruções nunca iniciará a assinatura; a assinatura pode ser iniciada com a execução da instrução.  

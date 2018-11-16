@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73752c57120544374edfc9790b07fe6a648779a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826294"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642225"
 ---
 # <a name="set-package-properties"></a>Definir as propriedades do pacote
   Ao criar um pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando a interface gráfica fornecida pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você define as propriedades do objeto do pacote na janela Propriedades.  
@@ -60,7 +60,7 @@ ms.locfileid: "47826294"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>Para definir as propriedades de pacote na janela Propriedades  
   
--   [Definir as propriedades de um pacote](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [Definir as propriedades de um pacote](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## <a name="properties-by-category"></a>Propriedades por Categoria  
  As tabelas a seguir listam as propriedades de pacote por categoria.  

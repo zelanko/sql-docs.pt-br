@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628824"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665575"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos com suporte do SQL Server 2017 no Linux
 
@@ -50,7 +50,7 @@ Para obter uma lista dos recursos do SQL Server não está disponíveis no Linux
 
 ### <a name="try-sql-server"></a>Experimente o SQL Server.    
     
-[Baixar o SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
+[Baixar o SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edições do[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
  A tabela a seguir descreve essas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -217,9 +217,9 @@ Para obter informações sobre os recursos do Integration Services (SSIS) com su
 ## <a name="next-steps"></a>Próximas etapas 
  [Edições e recursos com suporte do SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Edições e recursos com suporte do SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Edições e recursos com suporte do SQL Server 2014 - Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [Edições e recursos com suporte do SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Especificações de produto do SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
+ [Especificações de produto do SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 
   
   

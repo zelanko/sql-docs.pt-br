@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705554"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674155"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "47705554"
  Tem o seguinte esquema de mapeamento XSD  **\<cliente >**,  **\<Order >**, e  **\<OD >** elementos que mapeiam para o Tabelas Sales. Customer, Sales. SalesOrderHeader e SalesOrderDetail no banco de dados.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "47705554"
  O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o  **\<Student >**,  **\<curso >**, e  **\<registro >** elementos. O **IDREFS** atributos no esquema de mapeamento especificam a relação entre esses elementos. O **StudentIDList** atributo as  **\<curso >** elemento é um **IDREFS** atributo de tipo que se refere à coluna StudentID na tabela Enrollment. Da mesma forma, o **EnrolledIn** atributo as  **\<aluno >** elemento é um **IDREFS** atributo de tipo que se refere à coluna CourseID na inscrição tabela.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

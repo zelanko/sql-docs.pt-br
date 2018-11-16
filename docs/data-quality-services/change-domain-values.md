@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830844"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699914"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
@@ -90,7 +90,7 @@ ms.locfileid: "47830844"
   
     -   **Definir valores de domínio selecionados como um valor principal de seu grupo**: Para alterar o valor principal do grupo, selecione um valor no grupo que não esteja designado como o valor principal e clique no botão **Definir valores de domínio selecionados como um valor principal de seu grupo** . Isso definirá o valor principal como uma substituição para obter o outro valor. Essa operação funcionará apenas se você tiver definido dois ou mais valores de grupo e desejar alterar o valor principal a partir do valor designado pelo DQS. Observe que o valor principal é designado por uma linha azul com o valor em negrito.  
   
-7.  **Verificador Ortográfico**: Se um valor tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
+7.  **Verificador Ortográfico**: Se um valor tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Valores de Domínio** para habilitá-lo nessa página.  
@@ -103,7 +103,7 @@ ms.locfileid: "47830844"
   
 11. **Excluir valores de domínio selecionados**: Para remover um ou mais valores existentes do domínio, selecione os valores na tabela Valor e clique no ícone **Excluir valores de domínio selecionados** . A entrada DQS_NULL não pode ser excluída; portanto, se você escolher diversos valores para serem excluídos, e a entrada DQS_NULL for um deles, a operação falhará.  
   
-12. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após alterar valores de domínio  
  Após alterar valores de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  

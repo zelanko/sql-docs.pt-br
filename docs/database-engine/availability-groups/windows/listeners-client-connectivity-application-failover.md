@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662184"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603566"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Ouvintes, conectividade de cliente e failover de aplicativo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662184"
  Um ouvinte de grupo de disponibilidade é definido pelo seguinte:  
   
  Um nome DNS exclusivo  
- Isso também é conhecido como um VNN (nome de rede virtual). As regras de nomeação do Active Directory para nomes de host DNS se aplicam. Para obter mais informações, consulte o artigo da Base de Dados de Conhecimento [Convenções de nomenclatura no Active Directory para computadores, domínios, sites e unidades organizacionais](http://support.microsoft.com/kb/909264) .  
+ Isso também é conhecido como um VNN (nome de rede virtual). As regras de nomeação do Active Directory para nomes de host DNS se aplicam. Para obter mais informações, consulte o artigo da Base de Dados de Conhecimento [Convenções de nomenclatura no Active Directory para computadores, domínios, sites e unidades organizacionais](https://support.microsoft.com/kb/909264) .  
   
  Um ou mais endereços IP virtuais (VIPs)  
  VIPs são configurados para uma ou mais sub-redes para as quais o grupo de disponibilidade faz failover.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introdução ao ouvinte do grupo de disponibilidade](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (um blog da equipe do AlwaysOn do SQL Server)  
   

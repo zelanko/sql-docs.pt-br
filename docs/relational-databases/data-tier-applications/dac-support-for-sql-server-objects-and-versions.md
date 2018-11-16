@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 708ffe100c9dae44fb96134a47981b3353e2626d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793014"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672032"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Suporte de DAC para objetos e versões do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47793014"
 |Associações de função|SCHEMA|  
 |Estatísticas|STORED PROCEDURE: Transact-SQL|  
 |Sinônimos|TABLE: restrição de verificação|  
-|TABLE: agrupamento|TABLE: coluna, incluindo colunas computadas|  
+|TABLE: ordenação|TABLE: coluna, incluindo colunas computadas|  
 |TABLE: restrição, padrão|TABLE: restrição, chave estrangeira|  
 |TABLE: restrição, índice|TABLE: restrição, chave primária|  
 |TABLE: restrição, exclusiva|TRIGGER: DML|  
@@ -98,7 +98,7 @@ ms.locfileid: "47793014"
   
         -   Tipos de base DECIMAL/NUMERIC com precisão 38: os metadados de sql_variant “TotalBytes” são sempre definidos como 21.  
   
-    -   Todos os tipos de base de texto: o agrupamento padrão do banco de dados é aplicado a todo o texto.  
+    -   Todos os tipos de base de texto: a ordenação padrão do banco de dados é aplicada a todo o texto.  
   
     -   Tipos de base BINARY: a propriedade de comprimento máximo não é preservada.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "47793014"
 ##  <a name="Considerations"></a> Considerações adicionais para ações de implantação  
  Observe as seguintes considerações para ações da implantação de dados da Estrutura DAC:  
   
--   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log: **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote de DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote de DAC em um banco de dados. Para obter mais informações sobre os dados afetados e como solucionar essa limitação, confira** [este tópico](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log: **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote de DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote de DAC em um banco de dados. Para obter mais informações sobre os dados afetados e como solucionar essa limitação, confira** [este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Implantar/Publicar/Importar** – Nas ações que usam a Estrutura DAC para implantar um pacote em um banco de dados, como implantar ou publicar um arquivo .dacpac, e importar um arquivo .bacpac, essas limitações se aplicam. Os dados que resultam no banco de dados de destino não podem conter uma representação de fidelidade total dos dados no pacote. O log Implantar/Importar conterá uma mensagem, observada acima, para cada instância em que o problema for encontrado. A operação será bloqueada por erros – consulte a categoria 3 anterior - mas continuará com os outros avisos.  
   
-     Para obter mais informações sobre os dados que são afetados neste cenário e como solucionar essa limitação para ações de implantação/publicação/importação, confira [este tópico](http://go.microsoft.com/fwlink/?LinkId=267087).  
+     Para obter mais informações sobre os dados que são afetados neste cenário e como solucionar essa limitação para ações de implantação/publicação/importação, confira [este tópico](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
 -   **Soluções alternativas** – as operações de extração e de exportação gravarão arquivos de dados BCP de fidelidade total nos arquivos .dacpac ou .bacpac. Para evitar limitações, use o utilitário de linha de comando BCP.exe do SQL Server para implantar dados de fidelidade total em um banco de dados de destino de um pacote de DAC.  
   

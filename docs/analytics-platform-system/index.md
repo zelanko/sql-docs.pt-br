@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909736"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702444"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.  
@@ -51,6 +51,6 @@ Além de alcançar o desempenho de consulta inovador, o PDW facilita:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os benefícios do PDW, consulte o white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx) (Uma plataforma inovadora para soluções de Big Data e de data warehouse da próxima geração) no MSDN.  
+Para obter mais informações sobre os benefícios do PDW, consulte o white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://msdn.microsoft.com/library/dn520808.aspx) (Uma plataforma inovadora para soluções de Big Data e de data warehouse da próxima geração) no MSDN.  
   
 

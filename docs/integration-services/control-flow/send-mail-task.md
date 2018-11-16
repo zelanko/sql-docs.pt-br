@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682495"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641283"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
@@ -79,11 +79,11 @@ ms.locfileid: "47682495"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , clique em [Definir as propriedades de uma tarefa ou de um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , clique em [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
+-   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](https://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
   
 ## <a name="send-mail-task-editor-general-page"></a>Editor da Tarefa Enviar Email (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Enviar Email** para nomear e descrever a tarefa Enviar Email.  
@@ -158,7 +158,7 @@ ms.locfileid: "47682495"
  **MessageSource**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

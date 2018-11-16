@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deece034b6ef4f6159a34705b21e39d8279f36f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716284"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660475"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  É o identificador de um documento interno (DocId) que corresponde ao valor da chave. Um valor *docid* inválido não retorna nenhum resultado.  
   
  *key*  
- É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de texto completo](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
 >  Para obter informações sobre como usar um, dois ou três parâmetros, consulte "Comentários", posteriormente neste tópico.  
@@ -90,7 +90,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Exemplos  
   
 > [!NOTE]  
->  Os exemplos desta seção usam a `Production.ProductReview` tabela do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. Você pode criar esse índice executando o exemplo fornecido para o `ProductReview` na tabela [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Os exemplo desta seção usam a tabela `Production.ProductReview` do banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Você pode criar esse índice executando o exemplo fornecido para o `ProductReview` na tabela [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtendo todos os valores de Chave e DocId  
  O exemplo a seguir usa uma [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) instrução para criar uma variável local, `@table_id` e atribuir a ID do `ProductReview` tabela como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o *table_id* parâmetro.  

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ac4a9565c21fe00f8f1f744899563794e9335ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b665f3d20d223351b9da207d767cea0015fb94b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701948"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Criar um trabalho mestre do SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Este tópico descreve como criar um trabalho mestre do [!INCLUDE[msCoName](../..
 ## <a name="BeforeYouBegin"></a>Antes de começar  
   
 ### <a name="Restrictions"></a>Limitações e restrições  
-Alterações em trabalhos mestres do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devem ser propagadas para todos os servidores de destino envolvidos. Como os servidores de destino inicialmente não baixam um trabalho até que os destinos estejam especificados, a [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomenda que você conclua todas as etapas de trabalho e as agendas de um trabalho em particular antes de especificar servidores de destino. Caso contrário, você deve solicitar manualmente que os servidores de destino baixem o trabalho modificado novamente, executando o procedimento armazenado **sp_post_msx_operation** ou modificando o trabalho usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) ou [Modificar um trabalho](../../ssms/agent/modify-a-job.md).  
+Alterações em trabalhos mestres do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devem ser propagadas para todos os servidores de destino envolvidos. Como os servidores de destino inicialmente não baixam um trabalho até que os destinos estejam especificados, a [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomenda que você conclua todas as etapas de trabalho e as agendas de um trabalho em particular antes de especificar servidores de destino. Caso contrário, você deve solicitar manualmente que os servidores de destino baixem o trabalho modificado novamente, executando o procedimento armazenado **sp_post_msx_operation** ou modificando o trabalho usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) ou [Modificar um trabalho](../../ssms/agent/modify-a-job.md).  
   
 ### <a name="Security"></a>Segurança  
   
@@ -137,13 +137,13 @@ Se as etapas de trabalho que usam contas proxy falharem ao serem baixadas do ser
   
 Para obter mais informações, consulte:  
   
--   [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+-   [sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   
--   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
+-   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
--   [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
+-   [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
   
--   [sp_attach_schedule (Transact-SQL)](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [sp_attach_schedule (Transact-SQL)](https://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
   
--   [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
+-   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
   

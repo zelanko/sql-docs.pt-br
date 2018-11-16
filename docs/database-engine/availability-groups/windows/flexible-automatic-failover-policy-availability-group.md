@@ -15,12 +15,12 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bfdf7f9452e716c5b0e79270c620fdf5992ce94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbec09065f8aff8bbf5f490111821ced051ed0ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671654"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603596"
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>Política de failover automático flexível – grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47671654"
   
 |Nível|Condição de falha|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Valor de PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Um|Em servidor inativo. Especifica que um failover automático é iniciado quando uma destas condições ocorre:<br /><br /> O serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inativo.<br /><br /> A concessão do grupo de disponibilidade para conexão com o cluster WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Este é o nível menos restritivo.|1|**OnServerDown**|  
+|Um|Em servidor inativo. Especifica que um failover automático é iniciado quando uma destas condições ocorre:<br /><br /> O serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inativo.<br /><br /> A concessão do grupo de disponibilidade para conexão com o cluster WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Este é o nível menos restritivo.|1|**OnServerDown**|  
 |Dois|Em servidor sem resposta. Especifica que um failover automático é iniciado quando uma destas condições ocorre:<br /><br /> A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não se conecta ao cluster e o limite de tempo limite especificado pelo usuário do grupo de disponibilidade é excedido.<br /><br /> A réplica de disponibilidade está em estado de falha.|2|**OnServerUnresponsive**|  
 |Três|Em erros críticos do servidor. Especifica que um failover automático é iniciado em erros internos críticos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , como spinlocks órfãos, violações do acesso de gravação graves ou muito despejo.<br /><br /> Este é o nível padrão.|3|**OnCriticalServerError**|  
 |Quatro|Em erros moderados do servidor. Especifica que um failover automático é iniciado em caso de erros internos moderados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , como uma condição de memória insuficiente persistente no pool de recursos interno do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|**OnModerateServerError**|  
@@ -77,7 +77,7 @@ ms.locfileid: "47671654"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
