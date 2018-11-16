@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216804"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677895"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ Número de build: 14.0.61704.140
 - Tabular: uma variedade de aprimoramentos e correções de desempenho para análise de DAX e barra de fórmulas.
 - Tabular: o Gerenciador de Modelos de Tabela não estará visível se nenhum projeto Tabular do SSAS estiver aberto.
 - Multidimensionais: corrigido um problema em que a caixa de diálogo de processamento não era utilizável em computadores com alto DPI.
-- Tabular: correção de um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto. [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Tabular: corrigido um problema em que hierarquias não estavam sendo corretamente salvas no arquivo bim em um modelo 1103.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabular: correção de um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: corrigido um problema em que hierarquias não estavam sendo corretamente salvas no arquivo bim em um modelo 1103.[Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: corrigido um problema em que modo de workspace integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
 - Tabular: corrigido um problema em que clicar em qualquer coisa no modo de semisseleção (digitando uma expressão DAX mas clicando em uma medida, por exemplo) poderia causar falhas.
-- Tabela: Corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name de volta para "Model". [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabela: Corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name de volta para "Model". [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabular: correção de um problema em que selecionar uma hierarquia em TME deveria exibir propriedades mesmo se a exibição de diagrama não estivesse selecionada.
 - Tabular: corrigido um problema em que colar na barra de fórmula DAX colaria imagens ou outros tipos de conteúdo em vez de texto ao colar de determinados aplicativos.
 - Tabular: corrigido um problema em que alguns modelos antigos no 1103 não podiam ser abertos devido à presença de medidas com uma definição específica.
@@ -569,8 +569,8 @@ Número de build: 14.0.61704.140
 - Correção de um problema durante a criação de relatórios no SSDT em que o modo de exibição de árvore dos parâmetros, fontes de dados e conjuntos de dados eram recolhidos quando a maioria das alterações era feita 
 - Corrigido um problema em que Salvar deveria salvar a versão do RDL e não a versão mais recente.
 - Corrigido um problema em que o SSDT RS está fazendo backup de arquivos quando o backup é desativado, entre vários outros problemas.
-- Corrigido um problema no construtor de relatórios em que um erro seria exibido quando você clicasse em "Dividir Células". [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Corrigido um problema em que o cache pode gerar dados incorretos em um relatório. [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Corrigido um problema no construtor de relatórios em que um erro seria exibido quando você clicasse em "Dividir Células". [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Corrigido um problema em que o cache pode gerar dados incorretos em um relatório. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **Projetos do IS:**
 - Corrigido um problema em que a configuração run64bitruntime não permanecia.
@@ -582,7 +582,7 @@ Número de build: 14.0.61704.140
 
 **Projetos de bancos de dados:**
 - Implantação do DACPAC SSDT adiciona configuração novamente para IgnoreColumnOrder [item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- SSDT falha ao compilar se STRING_SPLIT for usado [item do Connect](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- SSDT falha ao compilar se STRING_SPLIT for usado [item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - Correção de problema em que DeploymentContributors tem acesso ao modelo público, mas o esquema de backup não foi inicializado [problema do Github](https://github.com/Microsoft/DACExtensions/issues/8)
 - Correção temporária de DacFx para o posicionamento de FILEGROUP
 - Correção do erro de "Referência não resolvida" para sinônimos externos. 
@@ -743,7 +743,7 @@ Número de build: 14.0.60812.0
     - **SSDT:**
         - Bug de conexão 1898001 [Foi corrigido um problema de descrição de coluna com limitação de 128 caracteres](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters).
         - Foi corrigido um problema em que a publicação de um banco de dados do VS não aplicava a propriedade DatabaseServiceObjective no XML de perfil de publicação.
-        - Bug de conexão 2900167 [Foi corrigido um problema de teste de unidade que deixava incorretamente arquivos temporários](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
+        - Bug de conexão 2900167 [Foi corrigido um problema de teste de unidade que deixava incorretamente arquivos temporários](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
         - Foi corrigido um problema em que a caixa de combinação Período de Retenção, em Configurações de Banco de Dados, ficava truncada.
         - Foi corrigido um problema de falta de verificação da senha antiga vazia nas propriedades do projeto CLR do SQL ao trocar de senha.
     - **DACFx:**

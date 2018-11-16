@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5d184b502fc3c1bac1eff8201d43bbe22d93aad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de205df81d6919d6529726e9de77ec65e0aac927
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766694"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698454"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47766694"
   
  0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 da circunferência da Terra)  
   
- O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro *tolerance*. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro *tolerance*. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  Esse método não é preciso.  
   

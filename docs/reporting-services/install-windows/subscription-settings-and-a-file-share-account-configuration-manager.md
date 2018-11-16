@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702614"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813109"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos (Gerenciador de Configurações)
   Use a página **Configurações de Assinatura** do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma conta de compartilhamento de arquivos para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivos. A conta de compartilhamento de arquivos permite que você use um único conjunto de credenciais em várias assinaturas que enviam relatórios para um compartilhamento de arquivos. Quando for o momento de alterar as credenciais, você configura a alteração da conta de compartilhamento de arquivos e não precisa atualizar cada assinatura individual.  
@@ -73,7 +73,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  
@@ -96,6 +96,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Consulte Também  
  [Entrega de compartilhamento de arquivos no Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

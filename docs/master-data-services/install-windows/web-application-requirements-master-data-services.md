@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851061"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696107"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47851061"
 -   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- Para trabalhar no aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [aqui](http://go.microsoft.com/fwlink/?LinkId=243096).  
+ Para trabalhar no aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [aqui](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ### <a name="role-and-role-services"></a>Função e serviços de função  
  No Windows Server 2012 ou no Windows Server 2012 R2, você pode usar o **Gerenciador do Servidor**, que está disponível no MMC (Console de Gerenciamento Microsoft), para instalar a função **Servidor Web (IIS)** e os serviços de função necessários.  
@@ -83,6 +83,6 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Página Configuração da Web &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Página Configuração da Web &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

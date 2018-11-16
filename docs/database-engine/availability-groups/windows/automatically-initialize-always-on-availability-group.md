@@ -10,12 +10,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72b1695a77fbf5d8d080a11abe65247f59fffe59
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 5ef4cee8a8f784af0eb8e51b9ac23dc16ecf63bf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336255"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605786"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -286,5 +286,5 @@ Antes de adicionar um banco de dados a um grupo de disponibilidade com propagaç
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Guia de solução de problemas e monitoramento dos grupos de disponibilidade AlwaysOn](http://technet.microsoft.com/library/dn135328.aspx)
+[Guia de solução de problemas e monitoramento dos grupos de disponibilidade AlwaysOn](https://technet.microsoft.com/library/dn135328.aspx)
 

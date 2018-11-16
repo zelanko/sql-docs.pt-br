@@ -28,22 +28,22 @@ helpviewer_keywords:
 - timer messages [Service Broker]
 - conversations [Service Broker], timers
 - starting timers [Service Broker]
-- http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
+- https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f042a38bf13c5c29fe75b525046eb1d1c9b527a5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: d21158a65edf2000d122850e0966d7ffb582a41f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699964"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Inicia um timer. Quando o tempo limite expirar, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] colocará uma mensagem do tipo `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` na fila local para a conversa.  
+  Inicia um timer. Quando o tempo limite expirar, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] colocará uma mensagem do tipo `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` na fila local para a conversa.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

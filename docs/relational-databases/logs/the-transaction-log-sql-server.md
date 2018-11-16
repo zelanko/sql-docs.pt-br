@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664684"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677295"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Depois de uma perda de hardware ou falha de disco que afeta os arquivos de banco
 Ao restaurar cada backup de log, o Mecanismo de Banco de Dados reaplica todas as modificações registradas no log para efetuar roll forward todas as transações. Quando o último backup de log é restaurado, o Mecanismo de Banco de Dados usa as informações de log para reverter todas as transações que não estavam completas naquele ponto. 
 
 ### <a name="supporting-transactional-replication"></a>Dando suporte à replicação transacional
-O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](http://msdn.microsoft.com/library/ms151706.aspx).
+O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](https://msdn.microsoft.com/library/ms151706.aspx).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Suporte a soluções de recuperação de desastres e alta disponibilidade
 As soluções do servidor em espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o espelhamento de banco de dados e o envio de logs dependem muito do log de transações. 
@@ -105,7 +105,7 @@ Para evitar a falta de espaço, a menos que o truncamento de log seja atrasado p
 |Valor log_reuse_wait|Valor log_reuse_wait_desc|Descrição|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Atualmente, há um ou mais [VLFs (arquivos de log virtuais)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) reutilizáveis.|  
-|1|CHECKPOINT|Não ocorreu nenhum ponto de verificação desde o último truncamento de log ou a parte inicial do log ainda não foi passou além de um [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Não ocorreu nenhum ponto de verificação desde o último truncamento de log ou a parte inicial do log ainda não foi passou além de um [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Um backup de log é necessário antes do truncamento do log de transações. (Modelos de recuperação completa e bulk-logged somente)<br /><br /> Quando o backup de log seguinte é concluído, parte do espaço do log poder se tornar reutilizável.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Um backup de dados ou uma restauração está em andamento (todos os modelos de recuperação).<br /><br /> Se um backup de dados estiver evitando o truncamento de log, a operação de backup pode ajudar a solucionar o problema imediatamente.|  
 |4|ACTIVE_TRANSACTION|Uma transação está ativa (todos os modelos de recuperação):<br /><br /> É possível haver uma transação de longa execução no início do backup de log. Nesse caso, a liberação de espaço pode exigir outro backup de log. Observe que transações demoradas impedem o truncamento de log em todos os modelos de recuperação, incluindo o modelo de recuperação simples, no qual o log de transações geralmente é truncado em cada ponto de verificação automático.<br /><br /> Uma transação é adiada. Uma *transação adiada* é efetivamente uma transação ativa cuja reversão é bloqueada por causa de algum recurso indisponível. Para obter informações sobre as causas de transações adiadas e como fazer com que elas saiam do estado adiado, consulte [Transações adiadas &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Transações demoradas também podem preencher o log de transações do tempdb. Tempdb é usado implicitamente por transações de usuário para objetos internos, como tabelas de trabalho para classificação, arquivos de trabalho para hashing, tabelas de trabalho do cursor e a controle de versão de linha. Mesmo que a transação do usuário inclua dados como somente leitura (consultas `SELECT`), objetos internos podem ser criados e usados em transações de usuário. Dessa forma, o log de transações de tempdb pode ser preenchido.|  
@@ -157,7 +157,7 @@ Quando a replicação transacional está habilitada, as operações SELECT INTO 
   
     -   Recompilação de novo heap [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (se aplicável). A desalocação de páginas de índice durante uma operação `DROP INDEX` **sempre** é totalmente registrada em log.
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Gerenciando o log de transações**  
   
 -   [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

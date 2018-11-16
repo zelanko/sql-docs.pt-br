@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828594"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641183"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -40,7 +40,7 @@ ms.locfileid: "47828594"
 ## <a name="installation"></a>Instalação  
  Esta seção descreve os procedimentos de instalação para os Componentes CDC para o Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- Os componentes CDC para SSIS são empacotados com o Microsoft® Change Data Capture Designer e Service para Oracle da Attunity para Microsoft SQL Server®. Este download é parte do SQL Server Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
+ Os componentes CDC para SSIS são empacotados com o Microsoft® Change Data Capture Designer e Service para Oracle da Attunity para Microsoft SQL Server®. Este download é parte do SQL Server Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ### <a name="version-support"></a>Suporte da versão
 
@@ -205,15 +205,15 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
 -   Entrada de blog, [CDC no SSIS para SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)em mattmasson.com.  
   
--   Entrada de blog sobre como configurar o serviço de CDC, [CDC para Oracle no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)em blogs.msdn.com.  
+-   Entrada de blog sobre como configurar o serviço de CDC, [CDC para Oracle no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)em blogs.msdn.com.  
   
--   Artigo técnico [Instalando o Change Data Capture do Microsoft SQL Server 2012 para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)em social.technet.microsoft.com.  
+-   Artigo técnico [Instalando o Change Data Capture do Microsoft SQL Server 2012 para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)em social.technet.microsoft.com.  
   
--   Artigo técnico [Solucionando problemas de configuração do Microsoft Change Data Capture para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)em social.technet.microsoft.com.  
+-   Artigo técnico [Solucionando problemas de configuração do Microsoft Change Data Capture para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)em social.technet.microsoft.com.  
   
--   Artigo técnico [Solucionando erros de instância CDC no Microsoft Change Data Capture para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)em social.technet.microsoft.com.  
+-   Artigo técnico [Solucionando erros de instância CDC no Microsoft Change Data Capture para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)em social.technet.microsoft.com.  
   
--   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
+-   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)  

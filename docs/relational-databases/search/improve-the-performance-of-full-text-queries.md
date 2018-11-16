@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d5e0cbabfc66d7a6da51d69b1290594f03c7cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701370"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677355"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Melhorar o desempenho de consultas de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47701370"
 -   Para aplicativos que contêm afirmações de relação seletiva, as consultas que usam predicados relacionais seletivos e predicados de texto completo não seletivos podem ter melhor desempenho quando escritas para usar o otimizador de consulta. Dessa forma, o otimizador de consulta pode decidir se poderá explorar o predicado ou a aplicação de intervalo para gerar um plano de consulta eficaz. Esta abordagem é mais simples e geralmente mais eficiente do que a indexação de dados relacionais como dados de texto completo.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- [Pesquisa de Texto Completo do SQL Server 2008: Operações internas e aprimoramentos](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Pesquisa de Texto Completo do SQL Server 2008: Operações internas e aprimoramentos](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

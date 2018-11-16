@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971087"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697454"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ Para uma **expression** de **binary(n)**, **char(n)**, **varchar(n)** ou *varbin
 Conversões implícitas não exigem a especificação da função CAST nem a função CONVERT. Conversões explícitas exigem a especificação da função CAST ou da função CONVERT. A ilustração a seguir mostra todas as conversões de tipo de dados explícitas e implícitas permitidas para tipos de dados fornecidos pelo sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso inclui **bigint**, **sql_variant** e **xml**. Não há nenhuma conversão implícita na atribuição do tipo de dados **sql_variant**, mas há uma conversão implícita em **sql_variant**.
   
 > [!TIP]  
->  O [Centro de Download da Microsoft](http://www.microsoft.com/download/details.aspx?id=35834) tem esse gráfico disponível para download como um arquivo PDF.  
+>  O [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=35834) tem esse gráfico disponível para download como um arquivo PDF.  
   
 ![Tabela de conversão de tipo de dados](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   

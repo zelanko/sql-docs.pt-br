@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c63400444157afbd481221797934259569dad976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0042c2f040304de461f50d1a2297e023e527f410
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766754"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698134"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrever um servidor de destino em um servidor mestre
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Criptografia SSL completa e validação de certificado encontram-se habilitadas,
   
 #### <a name="to-enlist-a-target-server"></a>Para inscrever um servidor de destino  
   
-1.  Use o procedimento armazenado **sp_msx_enlist** .  Para obter mais informações, veja [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
+1.  Use o procedimento armazenado **sp_msx_enlist** .  Para obter mais informações, veja [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  

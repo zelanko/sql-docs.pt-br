@@ -20,12 +20,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607334"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638923"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
   A transformação Agregação aplica funções de agregação, como Average, a valores de coluna e copia os resultados na saída da transformação. Além de funções de agregação, a transformação fornece a cláusula GROUP BY que você pode utilizar para especificar grupos a serem agregados.  
@@ -115,7 +115,7 @@ ms.locfileid: "47607334"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -178,7 +178,7 @@ ms.locfileid: "47607334"
 |**GroupBy**|Divide conjuntos de dados em grupos. Colunas que contêm qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, consulte GROUP BY.|  
 |**Sum**|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, consulte SUM.|  
 |**Médio**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
-|**Contagem**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
+|**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
 |**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
 |**Mínimo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
 |**Máximo**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  

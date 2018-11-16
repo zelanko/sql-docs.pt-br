@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7df1012ad723b01817de6b1c6cafb01b91ea781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669325"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Ser
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: exemplos do SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
+[TechNet WIKI: exemplos do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   

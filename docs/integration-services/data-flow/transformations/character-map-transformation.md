@@ -19,12 +19,12 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619374"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640433"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
   A transformação Mapa de Caracteres aplica funções de cadeia de caracteres, como a conversão de letra minúscula em maiúscula, em dados de caracteres. Essa transformação funciona apenas em dados de coluna com um tipo de dados de cadeia de caracteres.  
@@ -74,7 +74,7 @@ ms.locfileid: "47619374"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47619374"
  Digite um alias para cada coluna de saída. O padrão é **Copiar de** seguido do nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar opções de tratamento de erro para esta transformação.  
+ Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar opções de tratamento de erro para esta transformação.  
   
   

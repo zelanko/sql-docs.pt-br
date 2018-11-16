@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665615"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120443"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP In-Memory, confira a seguinte postagem no blog: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP In-Memory, confira a seguinte postagem no blog: [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalando a amostra do Na Memória OLTP baseada no AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
@@ -183,7 +183,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Os índices de HASH podem ser usados para otimizar mais a carga de trabalho. Eles são particularmente otimizados para pesquisas de ponto e inserções de linhas. No entanto, lembre-se de que eles não dão suporte a exames de intervalo, exames ordenados ou pesquisas nas colunas de chave de índice. Consequentemente, tome cuidado ao usar esses índices. Além disso, é necessário especificar o bucket_count na hora da criação. Normalmente, ele deve ser definido entre uma e duas vezes o número de valores de chave de índice, mas valores superestimados não costumam ser um problema.  
   
- Consulte os Manuais Online para obter mais detalhes sobre [diretrizes de índice](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e diretrizes para [escolher o bucket_count certo](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+ Consulte os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e diretrizes para [escolher o bucket_count certo](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
   
  Os índices nas tabelas migradas foram ajustados para a carga de trabalho de processamento de pedidos de vendas de demonstração. A carga de trabalho se baseia em inserções e pesquisas de ponto nas tabelas Sales.SalesOrderHeader_inmem e Sales.SalesOrderDetail_inmem, e ela também se baseia em pesquisas de ponto nas colunas de chave primária nas tabelas Production.Product_inmem e Sales.SpecialOffer_inmem.  
   
@@ -271,7 +271,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
     -   Atualize as informações de envio de um pedido de vendas específico. Isso também atualizará as informações de envio para todos os itens de linha do pedido de vendas.  
   
-    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Etapas da instalação:  
   
-1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Se houver uma caixa de diálogo indicando que alguns arquivos estão em uso, clique em “Continuar”  
   

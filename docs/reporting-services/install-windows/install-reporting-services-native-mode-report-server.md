@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029335"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813659"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 
@@ -85,15 +85,15 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
 |Parte|Descrição|  
 |----------|-----------------|  
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|  
-|Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `http://<computername>/reportserver`, `http://localhost/reportserver` ou `http://<IPAddress>/reportserver`.|  
+|Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `https://<computername>/reportserver`, `https://localhost/reportserver` ou `https://<IPAddress>/reportserver`.|  
 |Porta|A porta padrão é 80. Observe que, se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir um aplicativo Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma janela do navegador.|  
 |Diretório virtual|Por padrão, os diretórios virtuais são criados no formato ReportServer_\<*instance_name*> para o serviço Web Servidor de Relatórios e Reports_\<*instance_name*> para o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para o serviço Web Servidor de Relatórios, o diretório virtual padrão é **reportserver**. Para o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], o diretório virtual padrão é **reports**.|  
   
  Um exemplo de cadeia de caracteres de URL completa poderia ser como segue:  
   
--   `http://+:80/reportserver`, fornece acesso ao servidor de relatório.  
+-   `https://+:80/reportserver`, fornece acesso ao servidor de relatório.  
   
--   `http://+:80/reports`, fornece acesso ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
+-   `https://+:80/reports`, fornece acesso ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
 ##  <a name="bkmk_installwithwizard"></a> Instalar o modo nativo com o assistente de instalação do SQL Server  
  A lista a seguir descreve as etapas específicas e as opções do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você seleciona no Assistente de Instalação do SQL Server. A lista não descreve cada página que você verá no assistente de instalação, somente as páginas relacionadas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que fazem parte de uma instalação do modo nativo.  
@@ -130,9 +130,9 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 5.  Na página Configuração da instância, lembre-se de que, se você optar por configurar uma **Instância Nomeada**, será necessário usar o nome da instância em URLs quando você navegar para o Gerenciador de Relatórios e para o servidor de relatório em si. Se a instância tiver sido nomeada como "THESQLINSTANCE", as URLs terão aparência semelhante à seguinte:  
   
-    -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
+    -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
-    -   `http://[ServerName]/Reports_THESQLINSTANCE`  
+    -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
 6.  **Configuração de Servidor**: se você pretende usar o recurso de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , na página **Configuração de Servidor** , configure o tipo de Inicialização **Automático** do SQL Server Agent.   O padrão é manual.  
   
@@ -153,9 +153,9 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
     -   Abra o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e confirme que você pode conectar-se ao servidor de relatório.  
   
-    -   Abra seu navegador **com privilégios administrativos** e conecte-se ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por exemplo `http://localhost/Reports`.  
+    -   Abra seu navegador **com privilégios administrativos** e conecte-se ao [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por exemplo `https://localhost/Reports`.  
   
-    -   Abra seu navegador com privilégios administrativos e conecte-se à página do servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo,  `http://localhost/ReportServer`  
+    -   Abra seu navegador com privilégios administrativos e conecte-se à página do servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo,  `https://localhost/ReportServer`  
   
  Para obter mais informações, consulte a seção Nativa dos dois tópicos a seguir:  
   

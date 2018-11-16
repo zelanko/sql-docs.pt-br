@@ -19,12 +19,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a6d3345b1a6e8f7ffdebec05ae3f71d04cb8fe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690214"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639303"
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -52,7 +52,7 @@ ms.locfileid: "47690214"
   
  A caixa de diálogo **Editor Avançado** reflete todas as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas do Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47690214"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Comando SQL|Recupere os dados do arquivo do Excel usando uma consulta SQL. |  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   

@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 901361948eec7ae24e580f3873a10064f7b9873d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600464"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642033"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>Lição 6-1 – copiar o pacote da Lição 5
 Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição 5. Como alternativa, é possível adicionar o pacote concluído da Lição 5 incluído com o tutorial do projeto e copiá-lo. Você usará esta cópia nova ao longo de toda a lição 6.  
@@ -53,7 +53,7 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição
   
     Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   
-    1.  Navegue para os [Exemplos de Produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Clique na guia **DOWNLOADS** .  
   

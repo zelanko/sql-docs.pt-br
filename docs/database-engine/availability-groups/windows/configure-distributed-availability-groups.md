@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694495"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603992"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurar um grupo de disponibilidade distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  O **LISTENER_URL** especifica o ouvinte para cada grupo de disponibilidade, juntamente com o ponto de extremidade de espelhamento de banco de dados do grupo de disponibilidade. Neste exemplo, esse ponto de extremidade é a porta `5022` (não a porta `60173` usada para criar o ouvinte). Se você estiver usando um balanceador de carga, por exemplo, no Azure, [adicione uma regra de balanceamento de carga à porta do grupo de disponibilidade distribuído](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Adicione a regra à porta do ouvinte, além da porta da instância do SQL Server. 
+>  O **LISTENER_URL** especifica o ouvinte para cada grupo de disponibilidade, juntamente com o ponto de extremidade de espelhamento de banco de dados do grupo de disponibilidade. Neste exemplo, esse ponto de extremidade é a porta `5022` (não a porta `60173` usada para criar o ouvinte). Se você estiver usando um balanceador de carga, por exemplo, no Azure, [adicione uma regra de balanceamento de carga à porta do grupo de disponibilidade distribuído](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Adicione a regra à porta do ouvinte, além da porta da instância do SQL Server. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Ingressar o grupo de disponibilidade distribuído no segundo cluster  
  Em seguida, una o grupo de disponibilidade distribuída no segundo WSFC.  

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030415"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813019"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
 
@@ -46,7 +46,7 @@ Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatór
 
     ![Adicione a web part do Visualizador de Relatórios.](media/sharepoint-report-viewer-web-part.png)
 
-    Inicialmente, isso pode ser exibido com um erro. O erro ocorre porque a URL padrão do servidor de relatório é definida como *http://localhost* e pode não estar disponível nesse local.
+    Inicialmente, isso pode ser exibido com um erro. O erro ocorre porque a URL padrão do servidor de relatório é definida como *https://localhost* e pode não estar disponível nesse local.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurar a web part do Visualizador de Relatórios
 
@@ -56,7 +56,7 @@ Para configurar a web part para que ela aponte para o relatório específico, re
 
     ![Edite a página da Web por meio do menu suspenso da web part.](media/sharepoint-edit-web-part.png)
 
-2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Sua tabela deve ter a seguinte aparência *http://myrsserver/reportserver*.
+2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Sua tabela deve ter a seguinte aparência *https://myrsserver/reportserver*.
 
 3. Insira o caminho e o nome do relatório que deseja exibir na web part. Isso será semelhante a */AdventureWorks Sample Reports/Company Sales*. Neste exemplo, o relatório *Vendas da Empresa* está em uma pasta chamada *Relatórios de Exemplo do AdventureWorks*.
 

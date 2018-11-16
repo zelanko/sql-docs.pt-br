@@ -11,12 +11,12 @@ ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 789322fa4274c6819fe1f71ac7ae06056fce5a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785454"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681284"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  
@@ -54,7 +54,7 @@ Para alguns procedimentos deste tópico, o serviço Coordenador de Transações 
     > [!NOTE]  
     > Não é possível reverter uma transação depois que a instrução COMMIT TRANSACTION é executada.  
   
-    Para saber mais sobre como ROLLBACK TRANSACTION funciona com procedimentos armazenados e gatilhos, consulte esta página no site da Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
+    Para saber mais sobre como ROLLBACK TRANSACTION funciona com procedimentos armazenados e gatilhos, consulte esta página no site da Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Para criar uma transação para um único método de teste  
 Neste exemplo, você está usando uma transação de ambiente com o tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Por padrão, as conexões de execução e privilegiadas não usarão a transação de ambiente, porque as conexões foram criadas antes que o método seja executado. A SqlConnection tem um método [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), que associa uma conexão ativa a uma transação. Quando uma transação de ambiente é criada, ela é registrada como a transação atual, e você pode acessá-la através da propriedade [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). Neste exemplo, a transação é revertida quando a transação de ambiente é descartada. Para confirmar qualquer alteração feita durante a execução do teste de unidade, você deve chamar o método [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
@@ -171,7 +171,7 @@ Alguns procedimentos deste tópico usam os tipos do assembly System.Transactions
     O status do serviço deve ser atualizado para **Iniciado**. Agora você poderá executar testes de unidade que usam System.Transactions.  
   
 > [!IMPORTANT]  
-> O erro a seguir pode aparecer, mesmo se você tiver iniciado o serviço Controlador de Transação Distribuída: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Se esse erro aparecer, você deverá configurar o Controlador de Transação Distribuída para acesso à rede. Para saber mais, confira [Habilitar acesso do DTC à rede](http://go.microsoft.com/fwlink/?LinkId=193916).  
+> O erro a seguir pode aparecer, mesmo se você tiver iniciado o serviço Controlador de Transação Distribuída: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Se esse erro aparecer, você deverá configurar o Controlador de Transação Distribuída para acesso à rede. Para saber mais, confira [Habilitar acesso do DTC à rede](https://go.microsoft.com/fwlink/?LinkId=193916).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

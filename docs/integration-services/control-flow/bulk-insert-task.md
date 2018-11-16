@@ -19,12 +19,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1277c3ac24e434b9e51b58cd41a7cfb307bcf5ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be86ec99816b6d609400aeb1f703c4bbe2adc131
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728834"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641763"
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
   A tarefa Inserção em Massa fornece uma maneira eficiente de copiar grandes volumes de dados em uma tabela ou exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, suponha que a empresa armazena sua lista de produtos em milhões de linhas em um sistema de mainframe, mas o sistema de comércio eletrônico da empresa usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para preencher páginas da Web. Você deve atualizar a tabela de produtos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as noites com a lista principal de produtos do mainframe. Para atualizar a tabela, você salva a lista de produtos em um formato delimitado por guia e usa a tarefa de inserção em massa para copiar os dados diretamente na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -97,7 +97,7 @@ ms.locfileid: "47728834"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configuração programática da tarefa Inserção em Massa  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
@@ -105,15 +105,15 @@ ms.locfileid: "47728834"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=233693), em support.microsoft.com.  
+-   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Você pode receber o erro “Não é possível preparar a inserção em massa do SSIS para a inserção de dados” em sistemas habilitados para UAC), em support.microsoft.com.  
   
--   Artigo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
+-   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
   
--   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
+-   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
   
 ## <a name="bulk-insert-task-editor-connection-page"></a>Editor da Tarefa Inserção em Massa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para especificar a origem e o destino da operação de inserção em massa e o formato a ser usado.  

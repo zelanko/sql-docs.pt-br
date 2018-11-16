@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52829a433526e10b3170610a1f9281bfbd9a5796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699065"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados 
   
 Toda etapa de trabalho é executada em um contexto de segurança específico. Se a etapa de trabalho especificar um proxy, será executada no contexto de segurança da credencial para aquele proxy. Se a etapa de trabalho não especificar um proxy, ela será executada no contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Apenas membros da função de servidor fixa sysadmin podem criar trabalhos que não especifiquem um proxy explicitamente.  
   
-Como as etapas de trabalho são executadas no contexto de um usuário específico do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, esse usuário deve ter as permissões e a configuração necessárias para a execução da etapa de trabalho. Por exemplo, se você criar um trabalho que requeira uma letra de unidade ou um caminho UNC (convenção de nomenclatura universal), as etapas do trabalho poderão ser executadas em sua conta de usuário do Microsoft Windows durante o teste das tarefas. Porém, o usuário Windows da etapa de trabalho também deve ter as permissões necessárias, as configurações de letra de unidade ou o acesso à unidade necessária. Caso contrário, a etapa de trabalho falhará. Para evitar esse problema, assegure que o proxy de cada etapa de trabalho tenha as permissões necessárias para a tarefa executada pela etapa. Para obter mais informações, consulte [Segurança e proteção (Mecanismo de Banco de Dados)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
+Como as etapas de trabalho são executadas no contexto de um usuário específico do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, esse usuário deve ter as permissões e a configuração necessárias para a execução da etapa de trabalho. Por exemplo, se você criar um trabalho que requeira uma letra de unidade ou um caminho UNC (convenção de nomenclatura universal), as etapas do trabalho poderão ser executadas em sua conta de usuário do Microsoft Windows durante o teste das tarefas. Porém, o usuário Windows da etapa de trabalho também deve ter as permissões necessárias, as configurações de letra de unidade ou o acesso à unidade necessária. Caso contrário, a etapa de trabalho falhará. Para evitar esse problema, assegure que o proxy de cada etapa de trabalho tenha as permissões necessárias para a tarefa executada pela etapa. Para obter mais informações, consulte [Segurança e proteção (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Logs de etapas de trabalho  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent pode gravar a saída de algumas etapas de trabalho em um arquivo do sistema operacional ou na tabela sysjobstepslogs do banco de dados msdb. Os seguintes tipos de etapa de trabalho podem gravar a saída em ambos os destinos:  
   
 -   Programas executáveis e comandos de sistema operacional.  
   
--   Instruções[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tarefas.  
   
@@ -96,7 +96,7 @@ Ao criar uma etapa de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] , voc
   
 Opcionalmente, você pode abrir um arquivo [!INCLUDE[tsql](../../includes/tsql-md.md)] existente na forma de um comando para a etapa de trabalho.  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, consulte [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
 > Uma única etapa de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter vários lotes. [!INCLUDE[tsql](../../includes/tsql-md.md)] As etapas de trabalho podem conter comandos GO inseridos.  
@@ -108,7 +108,7 @@ Ao criar uma etapa de trabalho de script PowerShell, é necessário especificar 
   
 -   Um arquivo de script PowerShell existente a ser aberto.  
   
-O subsistema PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent abre uma sessão do PowerShell e carrega os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O script PowerShell usado como o comando de etapa de trabalho pode fazer referência ao provedor de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cmdlets. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+O subsistema PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent abre uma sessão do PowerShell e carrega os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O script PowerShell usado como o comando de etapa de trabalho pode fazer referência ao provedor de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cmdlets. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="activex-scripting-job-steps"></a>Etapas de trabalho de scripts ActiveX  
   
@@ -172,7 +172,7 @@ Ao criar uma etapa de trabalho de consulta do [!INCLUDE[ssASnoversion](../../inc
   
 -   Digitar a instrução a ser executada. A instrução deve ser uma consulta de linguagem MDX.  
   
-Para obter mais informações sobre o MDX, consulte [Conceitos básicos da instrução MDX](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+Para obter mais informações sobre o MDX, consulte [Conceitos básicos da instrução MDX](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## <a name="integration-services-packages"></a>Pacotes do Integration Services  
 Ao criar uma etapa de trabalho de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , é necessário fazer o seguinte:  
@@ -217,7 +217,7 @@ Para obter mais informações sobre como criar etapas de trabalho que executam p
 |Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Criar trabalhos](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

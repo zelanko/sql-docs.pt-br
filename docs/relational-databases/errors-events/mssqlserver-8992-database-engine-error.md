@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812834"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674005"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ Esse erro não pode ser reparado.  Se você não conseguir restaurar o banco de 
 Não faça atualizações manuais em tabelas do sistema. O SQL Server não oferece suporte a alterações manuais em bancos de dados do sistema. Se você atualizar uma tabela do sistema em um banco de dados do SQL Server, dois eventos (ID de evento 17659 e ID de evento 3859) serão registrados em log. Para obter mais informações, consulte o artigo KB 2688307, "ID de evento 17659 e ID de evento 3859 são registrados em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server".  
   
 ## <a name="see-also"></a>Consulte Também  
-[A ID de evento 17659 e a ID de evento 3859 são registradas em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+[A ID de evento 17659 e a ID de evento 3859 são registradas em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   

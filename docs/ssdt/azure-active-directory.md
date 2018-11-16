@@ -10,12 +10,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 94c198990d121d6f89ef92ad39fd52ad96188883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764434"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670605"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 
@@ -87,6 +87,6 @@ A imposição da MFA é fornecida pelo Microsoft Azure AD por meio dessa janela 
 [Autenticação multifator](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Autenticação do Azure Active Directory com o Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Blog da equipe do SSDT](http://blogs.msdn.com/b/ssdt/)  
+[Blog da equipe do SSDT](https://blogs.msdn.com/b/ssdt/)  
 [Referência DACFx API](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

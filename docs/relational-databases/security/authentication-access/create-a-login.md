@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675407"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630354"
   
     2.  Sob **Deste local**, clique em **Locais...** para abrir a caixa de diálogo **Locais** e selecionar um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
-    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Clique em **Avançado...** para mais opções de pesquisa avançadas. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Clique em **Avançado...** para mais opções de pesquisa avançadas. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Clique em **OK**.  
   

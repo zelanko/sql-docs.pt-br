@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120423"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703814"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ Cria uma ou mais partições da tabela. Essas são fatias horizontais da tabela 
 ### <a name="DataTypes"></a> Tipos de dados
 O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] é compatível com os tipos de dados mais usados. Abaixo há uma lista dos tipos de dados compatíveis, juntamente com seus detalhes e bytes de armazenamento. Para entender melhor os tipos de dados e como usá-los, confira [Tipos de dados para tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Para ver uma tabela de conversões de tipo de dados, confira a seção Conversões implícitas de [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
+Para ver uma tabela de conversões de tipo de dados, confira a seção Conversões implícitas de [CAST e CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
  O valor padrão de *n* é 7.  
@@ -291,7 +291,7 @@ Cada tabela definida pelo usuário é dividida em várias tabelas menores que s�
  
 Cada distribuição contém todas as partições da tabela. Por exemplo, se houver 60 distribuições e quatro partições de tabela, haverá 320 partições. Se a tabela for um índice columnstore clusterizado, haverá um índice columnstore por partição, ou seja, haverá 320 índices columnstore.
 
-É recomendável usar menos partições de tabela para garantir que cada índice columnstore tenha linhas suficientes para aproveitar os benefícios dos índices columnstore. Para obter mais diretrizes, confira [Particionando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [Indexando tabelas no SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+É recomendável usar menos partições de tabela para garantir que cada índice columnstore tenha linhas suficientes para aproveitar os benefícios dos índices columnstore. Para obter mais diretrizes, confira [Particionando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [Indexando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>Tabela rowstore (índice de heap ou clusterizado)  
@@ -304,7 +304,7 @@ Para converter uma tabela rowstore em uma tabela columnstore, remova todos os í
 
 Para obter mais informações, consulte estes tópicos:
 - [Resumo de recursos com versão dos índices columnstore](https://msdn.microsoft.com/library/dn934994/)
-- [Indexando tabelas no SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guia de Índices columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

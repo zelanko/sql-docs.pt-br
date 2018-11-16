@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719554"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672075"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719554"
 |Nome de política|Regra de prática recomendada|  
 |-----------------|------------------------|  
 |Algoritmo de Criptografia de Chave Assimétrica|[Intensidade da criptografia de chaves assimétricas](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Local do Arquivo de Backup e Dados|[Arquivos de backup devem estar em dispositivos separados dos arquivos de banco de dados](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Local do Arquivo de Backup e Dados|[Arquivos de backup devem estar em dispositivos separados dos arquivos de banco de dados](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Local do Arquivo de Dados e Log|[Colocar arquivos de dados e de log em unidades separadas](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Fechamento Automático do Banco de Dados|[Definir a opção do banco de dados AUTO_CLOSE como OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Redução Automática de Banco de Dados|[Definir a opção do banco de dados AUTO_SHRINK como OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Agrupamento de banco de dados|[Definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Ordenação de banco de dados|[Definir a ordenação de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Verificação de Página de Banco de Dados|[Definir a opção do banco de dados PAGE_VERIFY como CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Status da Página de Banco de Dados|[Verificar a integridade do banco de dados com páginas suspeitas](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Permissões de Convidado|[Permissões de convidado em bancos de dados de usuários](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

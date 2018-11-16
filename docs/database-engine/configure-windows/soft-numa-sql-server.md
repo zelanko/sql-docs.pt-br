@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614245"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605386"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ A instância A [!INCLUDE[ssDE](../../includes/ssde-md.md)] é configurada para u
   
  A instância A, que apresenta E/S significativa, agora tem dois threads de E/S e um thread de gravador lento. A instância B, que executa operações de processamento intenso, tem apenas um thread de E/S e um thread de gravador lento. Diferentes quantidades de memória podem ser atribuídas às instâncias, mas ao contrário do NUMA de hardware, ambas recebem memória do mesmo bloco de memória do sistema operacional e não há nenhuma afinidade do processador com a memória.  
   
- O thread de gravador lento é vinculado à exibição do SQLOS dos nós de memória NUMA físicos. Por isso, aquilo que o hardware apresentar como os nós NUMA físicos equivalerá ao número de threads de gravador lento criados. Para obter mais informações, consulte [Como funcionam NUMA de software, thread de término de E/S, trabalhadores de gravador lento e nós de memória](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ O thread de gravador lento é vinculado à exibição do SQLOS dos nós de memória NUMA físicos. Por isso, aquilo que o hardware apresentar como os nós NUMA físicos equivalerá ao número de threads de gravador lento criados. Para obter mais informações, consulte [Como funcionam NUMA de software, thread de término de E/S, trabalhadores de gravador lento e nós de memória](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > As chaves do Registro **Soft-NUMA** não são copiadas quando você atualiza uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

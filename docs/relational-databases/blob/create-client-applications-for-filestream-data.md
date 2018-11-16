@@ -13,12 +13,12 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a93a5574b33280323015fbc44498e3c7484c5d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0699d7d270536c81b254694be5fad273bbc207dc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752144"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671805"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Criar aplicativos clientes para dados FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47752144"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) retorna um token que representa a transação atual de uma sessão. Um aplicativo usa esse token para associar operações de fluxo contínuo do sistema de arquivos do FILESTREAM à transação.  
   
--   A [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) obtém um identificador de arquivo Win32. O aplicativo usa o identificador para transmitir os dados do FILESTREAM e, em seguida, pode passar o identificador para as seguintes APIs do Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se o aplicativo chamar qualquer outra API usando o identificador, um erro ERROR_ACCESS_DENIED será retornado. O aplicativo deve fechar o identificador usando [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
+-   A [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) obtém um identificador de arquivo Win32. O aplicativo usa o identificador para transmitir os dados do FILESTREAM e, em seguida, pode passar o identificador para as seguintes APIs do Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se o aplicativo chamar qualquer outra API usando o identificador, um erro ERROR_ACCESS_DENIED será retornado. O aplicativo deve fechar o identificador usando [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
  O acesso ao contêiner de dados All FILESTREAM é executado em uma transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser executadas na mesma transação para manter a consistência entre dados SQL e dados FILESTREAM.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47752144"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Obtendo um identificador de arquivo Win32  
- Para obter um identificador de arquivo do Win32, chame a API OpenSqlFilestream. Esta API é exportada do arquivo sqlncli.dll. O identificador retornado pode ser transmitido para qualquer uma das seguintes APIs do Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Os exemplos a seguir mostram como obter um identificador de arquivo Win32 e usá-lo para ler e gravar dados no FILESTREAM BLOB.  
+ Para obter um identificador de arquivo do Win32, chame a API OpenSqlFilestream. Esta API é exportada do arquivo sqlncli.dll. O identificador retornado pode ser transmitido para qualquer uma das seguintes APIs do Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Os exemplos a seguir mostram como obter um identificador de arquivo Win32 e usá-lo para ler e gravar dados no FILESTREAM BLOB.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   

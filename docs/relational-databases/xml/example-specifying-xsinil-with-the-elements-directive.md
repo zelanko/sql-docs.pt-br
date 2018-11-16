@@ -13,12 +13,12 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00d8cf6e8d7da94761415659e0ffd68b48562c92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b94f9f665b561b82195972ffafbd8a6aaf89f01
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824604"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677767"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Exemplo: Especificando XSINIL com a política ELEMENTS
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
  Este é o resultado parcial:  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <ProductID>1</ProductID>  
   <Name>Adjustable Race</Name>  
   <Color xsi:nil="true" />  

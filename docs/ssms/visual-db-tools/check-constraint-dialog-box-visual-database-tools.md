@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611754"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697614"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Restrição (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Remova a restrição selecionada da tabela. Para cancelar a adição de uma rest
 Expanda para mostrar o campo de propriedade **Expressão** .  
   
 **Expressão**  
-Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para obter mais informações, veja [Como trabalhar com restrições (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para obter mais informações, veja [Como trabalhar com restrições (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoria de identidade**  
 Expanda para mostrar propriedades para **Nome** e **Descrição**.  
@@ -65,6 +65,6 @@ Especifica se a restrição é imposta quando os dados são inseridos ou atualiz
 Indica se é para impor a restrição quando um agente de replicação executar uma inserção ou atualização nesta tabela.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como trabalhar com restrições (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Como trabalhar com restrições (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Índices – caixa de diálogo Chaves &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

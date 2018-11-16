@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798016"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639484"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar a origem dos pacotes com assinaturas digitais
   Um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser assinado com um certificado digital para identificar sua origem. Depois que o pacote for assinado com um certificado digital, você poderá configurar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para verificar a assinatura digital antes de carregar o pacote. Para que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verifique a assinatura, defina uma opção no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou no utilitário **dtexec** (dtexec.exe) ou defina um valor opcional do Registro.  
@@ -67,7 +67,7 @@ ms.locfileid: "47798016"
 |3|Bloquear assinaturas inválidas e não confiáveis e pacotes não assinados<br /><br /> Essa configuração também bloqueia assinaturas geradas automaticamente.|  
   
 > [!NOTE]  
->  A configuração recomendada para **BlockedSignatureStates** é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](http://go.microsoft.com/fwlink/?LinkId=51414)", na biblioteca do MSDN.  
+>  A configuração recomendada para **BlockedSignatureStates** é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](https://go.microsoft.com/fwlink/?LinkId=51414)", na biblioteca do MSDN.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar uma política de assinatura para pacotes  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798016"
   
     -   Obtenha um certificado de uma autoridade de certificação comercial pública que emite certificados.  
   
-    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](http://go.microsoft.com/fwlink/?LinkId=100755)” na biblioteca do MSDN.  
+    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](https://go.microsoft.com/fwlink/?LinkId=100755)” na biblioteca do MSDN.  
   
-    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)” na Biblioteca MSDN.  
+    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)” na Biblioteca MSDN.  
   
-     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)” na biblioteca do MSDN.  
+     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)” na biblioteca do MSDN.  
   
 -   Verifique se o certificado foi habilitado para assinatura de código. Para saber se um certificado está habilitado para assinatura de código, revise as propriedades do certificado no snap-in de Certificados.  
   

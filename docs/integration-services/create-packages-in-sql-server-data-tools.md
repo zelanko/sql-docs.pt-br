@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847054"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639703"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Copiar pacotes nas Ferramentas de Dados do SQL Server
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode criar um novo pacote usando um dos métodos a seguir:  
@@ -44,9 +44,9 @@ ms.locfileid: "47847054"
   
      O Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um pacote completo para uma importação ou exportação simples. Este assistente configura as conexões, a origem e o destino e adiciona as transformações de dados necessárias para permitir a execução imediata da importação ou exportação. Se preferir, você pode salvar o pacote para executá-lo novamente depois ou refinar e aprimorar o pacote no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Porém, se o pacote for salvo, você deverá adicioná-lo a um projeto existente do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] antes de alterar o pacote ou executá-lo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Os pacotes criados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] por meio do [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer são salvos no sistema de arquivos. Para salvar um pacote no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes, salve uma cópia do pacote. Para obter mais informações, consulte [Salvar uma cópia de um pacote](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ Os pacotes criados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] por meio do [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer são salvos no sistema de arquivos. Para salvar um pacote no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes, salve uma cópia do pacote. Para obter mais informações, consulte [Salvar uma cópia de um pacote](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
 
- Para obter um vídeo que demonstre como criar um pacote básico usando o modelo de pacote padrão, consulte [Criando um pacote básico (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ Para obter um vídeo que demonstre como criar um pacote básico usando o modelo de pacote padrão, consulte [Criando um pacote básico (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Obter o SQL Server Data Tools
 Para instalar o SSDT (SQL Server Data Tools), consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).

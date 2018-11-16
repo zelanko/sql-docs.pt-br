@@ -22,12 +22,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2e06d17fcea51da160b9d5c8d4002c5b3fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788694"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642103"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
   Em tempo de execução, os executáveis (pacotes e contêineres Loop Foreach, Loop For, de Sequência e de host da tarefa) geram eventos. Por exemplo, um evento OnError será gerado quando acontecer um erro. Você pode criar manipuladores de eventos personalizados para esses eventos a fim de estender a funcionalidade do pacote e fazer com que os pacotes sejam mais fáceis de administrar em tempo de execução. Os manipuladores de eventos podem executar tarefas como:  
@@ -84,7 +84,7 @@ ms.locfileid: "47788694"
 |**OnProgress**|Manipulador de eventos do evento **OnProgress** . Esse evento é gerado por um executável quando um progresso mensurável é feito pelo executável.|  
 |**OnQueryCancel**|Manipulador de eventos do evento **OnQueryCancel** . Esse evento é gerado por um executável para determinar se deve parar de ser executado.|  
 |**OnTaskFailed**|Manipulador de eventos do evento **OnTaskFailed** . Esse evento é gerado por uma tarefa quando ela falha.|  
-|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a propriedade **RaiseChangeEvent** da variável como **False**. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a propriedade **RaiseChangeEvent** da variável como **False**. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md).|  
 |**OnWarning**|Manipulador de eventos do evento **OnWarning** . Esse evento é gerado por um executável quando ocorre um aviso.|  
 
 ## <a name="add-an-event-handler-to-a-package"></a>Adicionar um manipulador de eventos a um pacote
@@ -96,7 +96,7 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
   
  Quando a guia **Manipuladores de Eventos** está ativa, os nós **Itens de Fluxo de Controle** e **Tarefas de Plano de Manutenção** da Caixa de Ferramentas no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] contêm a tarefa e contêineres para criar o fluxo de controle do manipulador de eventos. Os nós **Origens de Fluxo de Dados**, **Transformações**e **Destinos de Fluxos de Dados** contêm as fontes de dados, transformações e destinos para criar os fluxos de dados no manipulador de eventos. Para obter mais informações, consulte [Fluxo de Controle](../integration-services/control-flow/control-flow.md) e [Fluxo de Dados](../integration-services/data-flow/data-flow.md).  
   
- A guia **Manipuladores de Eventos** também inclui a área Gerenciadores de **Conexões** , em que você pode criar e modificar os gerenciadores de conexões que os manipuladores de eventos usam para conectar servidores e fontes de dados. Para obter mais informações, consulte [Criar gerenciadores de conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ A guia **Manipuladores de Eventos** também inclui a área Gerenciadores de **Conexões** , em que você pode criar e modificar os gerenciadores de conexões que os manipuladores de eventos usam para conectar servidores e fontes de dados. Para obter mais informações, consulte [Criar gerenciadores de conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Adicionar um manipulador de eventos na guia Manipuladores de Eventos  
   
@@ -125,11 +125,11 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
 ## <a name="set-the-properties-of-an-event-handler"></a>Definir as propriedades de um manipulador de eventos  
  Você pode definir as propriedades na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou programaticamente.  
   
- Para obter informações sobre como definir essas propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consulte [Definir as propriedades de uma tarefa ou de um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obter informações sobre como definir essas propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consulte [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obter informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obter informações sobre como adicionar um manipulador de eventos a um pacote, consulte [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obter informações sobre como adicionar um manipulador de eventos a um pacote, consulte [Adicionar um manipulador de eventos a um pacote](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   

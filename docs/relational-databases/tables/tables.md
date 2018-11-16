@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae4b7f0804b9cab8ac9c364be2337f6b7438025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647504"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664915"
 ---
 # <a name="tables"></a>Tabelas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47647504"
  As tabelas temporárias são armazenadas em **tempdb**. Há dois tipos de tabelas temporárias: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. As tabelas temporárias locais têm um único sinal numérico (#) como primeiro caractere no nome; elas são visíveis somente na conexão atual para o usuário e são excluídas quando o usuário se desconecta da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As tabelas temporárias globais têm dois sinais numéricos (##) como primeiros caracteres no nome; elas são visíveis a qualquer usuário após serem criadas e são excluídas quando todos os usuários que consultam a tabela se desconectam da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tabelas do sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tabelas largas  
  As tabelas largas usam [colunas esparsas](../../relational-databases/tables/use-sparse-columns.md) para aumentar para 30.000 o total de colunas que uma tabela pode ter. Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Uma tabela ampla definiu um [conjunto de colunas](../../relational-databases/tables/use-column-sets.md), que é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. O número de índices e estatísticas também é aumentado para 1.000 e 30.000, respectivamente. O tamanho máximo de uma linha de tabela larga é de 8.019 bytes. Portanto, a maior parte dos dados contidos em qualquer linha específica deve ser NULL. O número máximo de colunas não esparsas mais as colunas computadas de uma tabela larga continua sendo 1.024.  

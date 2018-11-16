@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a77bc4e35d1aaefe3c1d55fd4be8086a71d5dabb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf1113603800d232ccdc88aa6b436f8d8a0e6f6c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644114"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814199"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar um relatório com acesso à URL
   Opcionalmente, você pode especificar o formato no qual renderizará um relatório com o parâmetro de URL *rs:Format* .  Os formatos HTML 4.0 e HTM5 (extensão de renderização) realizarão a renderização no navegador e, para outros formatos, o navegador solicitará a gravação da saída de relatório em um arquivo local.  
@@ -24,19 +24,19 @@ ms.locfileid: "47644114"
  Por exemplo, para obter uma cópia em PDF de um relatório diretamente de um servidor de relatório de modo nativo:  
   
 ```  
-http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
   
  E, em um servidor de relatório no modo integrado do SharePoint:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
   
  Por exemplo, o seguinte comando de URL no seu navegador exporta um relatório PPTX de uma instância nomeada do servidor de relatório:  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  Os valores válidos desse parâmetro se baseiam nas extensões de renderização de relatório que estão instaladas no servidor de relatório que está sendo acessado. Extensões comuns são HTML4.0, MHTML, IMAGE, EXCELOPENXML (xlsx), WORDOPENXML (docx), CSV, PDF, XML e NULL. Se uma extensão de renderização especificada não estiver instalada no servidor de relatórios, o relatório não será renderizado, e um erro será gerado e exibido no pesquisador.  

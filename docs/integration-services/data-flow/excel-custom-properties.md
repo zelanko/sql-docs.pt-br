@@ -11,12 +11,12 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 241c9e197d11d261efd5ee5e104059658d9604bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5217d0b8e3bd9e786e8afa18b2561f5e154ca938
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819824"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639313"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
   **Propriedades personalizadas de fontes**  
@@ -62,7 +62,7 @@ ms.locfileid: "47819824"
  Para obter mais informações, consulte [Destino do Excel](../../integration-services/data-flow/excel-destination.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
  [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md)
   
   

@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce77499661b7b12c5acb010d9a639c2517bef94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697076"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673345"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "47697076"
  O assistente usa um arquivo morto BACPAC DAC (aplicativo da camada de dados) para implantar os dados e as definições dos objetos de banco de dados. Ele executa uma operação de exportação de DAC do banco de dados de origem, e uma importação de DAC para o destino.  
   
 ###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
- Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE. A exceção é que o agrupamento e o nível de compatibilidade do banco de dados estão definidos como valores do banco de dados de origem.  
+ Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE. A exceção é que a ordenação e o nível de compatibilidade do banco de dados estão definidos como valores do banco de dados de origem.  
   
  As opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  O assistente para **Implantar Banco de Dados** oferece suporte à implantação de um banco de dados:  
   
 -   De uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -127,7 +127,7 @@ ms.locfileid: "47697076"
 ## <a name="using-a-net-framework-application"></a>Usando um aplicativo .NET Framework  
  **Para implantar um banco de dados usando os métodos DacStoreExport() e Import() em um aplicativo .Net Framework.**  
   
- Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância ou o servidor que contém o banco de dados a ser implantado.  
   

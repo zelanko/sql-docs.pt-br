@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91f884a9c4a13afdeef1c68c6eba574623fe4c7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b39c390ef831a3c08c730bdef5075fa9f1a93e2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698144"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,5 +87,5 @@ Por padrão, os membros da função de servidor fixa **sysadmin** podem editar a
     GO  
     ```  
   
-Para obter mais informações, veja [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3).  
+Para obter mais informações, veja [sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3).  
   

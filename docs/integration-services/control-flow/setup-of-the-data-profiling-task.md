@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652374"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638773"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
@@ -98,7 +98,7 @@ ms.locfileid: "47652374"
   
 -   Para criar ferramentas personalizadas que trabalhem com informações de qualidade de dados.  
   
- O namespace de destino é identificado no esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ O namespace de destino é identificado no esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  

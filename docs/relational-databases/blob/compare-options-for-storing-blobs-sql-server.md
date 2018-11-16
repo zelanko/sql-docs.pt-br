@@ -11,12 +11,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b27249601e1dad8c3c855fc80f14e81d0694723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b874fa5fa15e765f087327bbf60a3be0d9561077
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770254"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671875"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opções de armazenamento de Blobs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47770254"
 |**Acesso relacional a atributos de arquivo**|não|não|**Sim**|  
   
 ##  <a name="CompareRBS"></a> Comparando FILESTREAM e repositório de BLOB remoto (RBS)  
- Para uma comparação destes dois recursos, consulte esta postagem de blog da equipe de RBS: [Comparação de recursos do Repositório de BLOB Remoto do SQL Server e do FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Para uma comparação destes dois recursos, consulte esta postagem de blog da equipe de RBS: [Comparação de recursos do Repositório de BLOB Remoto do SQL Server e do FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Mais informações  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699661"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Se você quiser aproveitar o nível de compatibilidade do banco de dados 140 para seu banco de dados geral, mas tiver motivo para preferir o modelo de **estimativa de cardinalidade** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], mapeando para o nível de compatibilidade do banco de dados 110, veja [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e, em especial, sua palavra-chave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
-> Para obter detalhes sobre como avaliar as diferenças de desempenho das consultas mais importantes, entre dois níveis de compatibilidade no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consulte [Melhor desempenho de consultas com o nível de compatibilidade 130 no Banco de Dados SQL do Azure](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Observe que este artigo se refere ao nível de compatibilidade 130 e ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a mesma metodologia se aplica à migração para o nível 140 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Para obter detalhes sobre como avaliar as diferenças de desempenho das consultas mais importantes, entre dois níveis de compatibilidade no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consulte [Melhor desempenho de consultas com o nível de compatibilidade 130 no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Observe que este artigo se refere ao nível de compatibilidade 130 e ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a mesma metodologia se aplica à migração para o nível 140 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Execute a consulta a seguir para determinar a versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] à qual você está conectado.  
   
@@ -116,7 +116,7 @@ Para um novo desenvolvimento ou quando um aplicativo existente exige o uso de no
 >
 > Para obter mais informações sobre as diferenças entre níveis de compatibilidade, veja as seções apropriadas mais adiante neste artigo. 
 
-Para atualizar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para a versão mais recente, mantendo o nível de compatibilidade do banco de dados que existia antes da atualização e seu status de capacidade de suporte, é recomendável executar a validação de área de superfície funcional estática do código do aplicativo no banco de dados, usando a ferramenta [AMD (Assistente de Migração de Dados da Microsoft)](http://www.microsoft.com/download/details.aspx?id=53595). A ausência de erros na saída da ferramenta AMD, sobre a funcionalidade ausente ou incompatível, protege o aplicativo de qualquer regressão funcional na nova versão de destino. Para obter mais informações sobre a ferramenta AMD, veja [aqui](http://blogs.msdn.microsoft.com/datamigration/dma).
+Para atualizar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para a versão mais recente, mantendo o nível de compatibilidade do banco de dados que existia antes da atualização e seu status de capacidade de suporte, é recomendável executar a validação de área de superfície funcional estática do código do aplicativo no banco de dados, usando a ferramenta [AMD (Assistente de Migração de Dados da Microsoft)](https://www.microsoft.com/download/details.aspx?id=53595). A ausência de erros na saída da ferramenta AMD, sobre a funcionalidade ausente ou incompatível, protege o aplicativo de qualquer regressão funcional na nova versão de destino. Para obter mais informações sobre a ferramenta AMD, veja [aqui](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE] 
 > O AMD é compatível com o nível de compatibilidade do banco de dados de 100 ou mais. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] como a versão de origem é excluído. 
@@ -217,7 +217,7 @@ As correções que estavam sob o sinalizador de rastreamento 4199 em versões an
 |A CTE (expressão de tabela comum) recursiva permite nomes de coluna duplicados.|Uma CTE recursiva não permite nomes de coluna duplicados.|  
 |Os gatilhos desabilitados serão habilitados se os gatilhos forem alterados.|A alteração de um gatilho não altera o estado (habilitado ou desabilitado) do gatilho.|  
 |A cláusula de tabela OUTPUT INTO ignora o `IDENTITY_INSERT SETTING = OFF` e permite a inserção de valores explícitos.|Não é possível inserir valores explícitos para uma coluna de identidade em uma tabela quando `IDENTITY_INSERT` é definido como OFF.|  
-|Quando a contenção do banco de dados é definida como parcial, a validação do campo `$action` na cláusula `OUTPUT` de uma instrução `MERGE` pode retornar um erro de agrupamento.|O agrupamento dos valores retornados pela cláusula `$action` de uma instrução `MERGE` é o agrupamento de banco de dados, em vez do agrupamento de servidor, e um erro de conflito de agrupamento não é retornado.|  
+|Quando a contenção do banco de dados é definida como parcial, a validação do campo `$action` na cláusula `OUTPUT` de uma instrução `MERGE` pode retornar um erro de ordenação.|A ordenação dos valores retornados pela cláusula `$action` de uma instrução `MERGE` é a ordenação de banco de dados, em vez da ordenação do servidor, e um erro de conflito de ordenação não é retornado.|  
 |Uma instrução `SELECT INTO` sempre criará uma operação de inserção de thread único.|Uma instrução `SELECT INTO` pode criar uma operação de inserção paralela. Ao inserir um número grande de linhas, a operação paralela pode melhorar o desempenho.|  
   
 ## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Diferenças entre níveis de compatibilidade inferiores e os níveis 110 e 120  

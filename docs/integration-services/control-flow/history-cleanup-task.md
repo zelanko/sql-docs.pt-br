@@ -16,12 +16,12 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9014d94c486221c00f6d705e4bda95f3f9e731f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab222a561f15c0eeaf9e887ddf88fe0d9cad4f82
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754376"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640953"
 ---
 # <a name="history-cleanup-task"></a>Tarefa Limpeza do Histórico
   A tarefa Limpeza do Histórico exclui entradas das seguintes tabelas de histórico do banco de dados msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "47754376"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

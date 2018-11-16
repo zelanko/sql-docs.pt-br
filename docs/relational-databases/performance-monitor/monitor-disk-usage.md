@@ -24,12 +24,12 @@ ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 054b05a708f7d47c0b4a5c984ab586a5d3aafc2e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 13d1a4539aabd51426c5756eccb72e849b07deb8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031549"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672225"
 ---
 # <a name="monitor-disk-usage"></a>Monitorar o uso do disco
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "51031549"
   
 -   Isolar a atividade de disco criada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Para obter mais informações, consulte [Monitorando o uso do disco](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ Para obter mais informações, consulte [Monitorando o uso do disco](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   
   

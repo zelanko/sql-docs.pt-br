@@ -18,12 +18,12 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 409fdd3fe05b4dc5b0baabe0d60e871efd028c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1dd1617ff0bcdd30782b5c7890f60aa30258f1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729994"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700944"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Retorna um objeto geométrico que representa a união de todos os valores de pon
   
  Um buffer negativo remove todos os pontos dentro da distância determinada do limite da instância de **geometry**.  
   
- O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro *tolerance*. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ O erro entre o buffer teórico e o calculado é max(tolerance, extents \* 1.E-7), em que a tolerância é o valor do parâmetro *tolerance*. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `Point` e usa `BufferWithTolerance()` para obter um buffer grosseiro à sua volta.  

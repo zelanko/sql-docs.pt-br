@@ -16,12 +16,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2fcf0678fdfb78a5866a06306d3dc057fc6622a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7a5538b4856fc64eb42acc0496690fc7733d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670764"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639513"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemplos de expressões avançadas do Integration Services
   Esta seção fornece exemplos de expressões avançadas que combinam múltiplos operadores e funções. Se uma expressão for usada em uma restrição precedente ou na transformação Divisão Condicional, ela deve ser avaliada como uma expressão Booleana. No entanto, essa restrição não se aplica a expressões usadas em expressões de propriedades, variáveis, na transformação Coluna Derivada ou no contêiner Loop For.  
@@ -101,9 +101,9 @@ ms.locfileid: "47670764"
     ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar uma expressão em um componente de fluxo de dados](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usar uma expressão em um componente de fluxo de dados](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
+ Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
   

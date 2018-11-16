@@ -12,12 +12,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a236afb02ee2cac24dee6fa4735a90bb28c3bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc31a6b98c12b948dd353ca7f7839f5a1fb0dc04
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630994"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696735"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
 
@@ -44,7 +44,7 @@ ms.locfileid: "47630994"
 -   O modelo de recuperação padrão do banco de dados DQS é definido como **Simples**. No modelo de recuperação Simples, as transações são registradas minimamente, e o truncamento de log acontece automaticamente depois que a transação é concluída para liberar espaço no log de transação (arquivo .ldf). Para obter informações detalhadas sobre o modelo de recuperação simples, consulte [Backups completos de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  -   No modelo de recuperação Simples, quando os registros de log permanecem ativos por muito tempo, (por exemplo, uma transação longa e demorada), o truncamento de log pode ser atrasado e, portanto, pode resultar no preenchimento do log de transação. Além disso, o truncamento do log não reduz o tamanho do arquivo de log físico (arquivo .ldf). Para reduzir o tamanho de um arquivo de log físico, você precisará reduzir o arquivo de log. Para obter informações sobre a solução de problemas do log de transações, consulte [O Log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou o artigo do Suporte da Microsoft em [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   No modelo de recuperação Simples, quando os registros de log permanecem ativos por muito tempo, (por exemplo, uma transação longa e demorada), o truncamento de log pode ser atrasado e, portanto, pode resultar no preenchimento do log de transação. Além disso, o truncamento do log não reduz o tamanho do arquivo de log físico (arquivo .ldf). Para reduzir o tamanho de um arquivo de log físico, você precisará reduzir o arquivo de log. Para obter informações sobre a solução de problemas do log de transações, consulte [O Log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou o artigo do Suporte da Microsoft em [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Você deve executar regularmente um backup completo ou diferencial dos bancos de dados DQS e deve fazer backup do log de transação assim como realizar a recuperação pontual de dados. Para obter mais informações, consulte [Backups completos de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Fazer backup de um log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Anexar/desanexar bancos de dados DQS  

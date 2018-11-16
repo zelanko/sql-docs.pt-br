@@ -22,12 +22,12 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6123d5e5b5944af3a3495e74541a454a035e91bb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695214"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,11 +84,11 @@ DEFAULT <xml_namespace_uri>
   
 -   O prefixo de namespace XML `xmlns` não pode ser declarado.  
   
--   O prefixo de namespace XML `xml` não pode ser substituído por um namespace diferente do URI de namespaces `'http://www.w3.org/XML/1998/namespace'`, e este URI não pode receber um prefixo diferente.  
+-   O prefixo de namespace XML `xml` não pode ser substituído por um namespace diferente do URI de namespaces `'https://www.w3.org/XML/1998/namespace'`, e este URI não pode receber um prefixo diferente.  
   
 -   O prefixo de namespace XML `xsi` não pode ser redeclarado quando a diretiva ELEMENTS XSINIL está sendo usada na consulta.  
   
--   Os valores de cadeia de caracteres URI são codificados de acordo com a página de código de agrupamento de banco de dados atual e são convertidos internamente em Unicode.  
+-   Os valores de cadeia de caracteres URI são codificados de acordo com a página de código de ordenação de banco de dados atual e são convertidos internamente em Unicode.  
   
 -   O URI de namespace de XML terá o espaço em branco reduzido segundo as regras de redução de espaço em branco XSD usadas para **xs:anyURI**. Além disso, observe que são executados definições de entidade ou cancelamentos de definição em valores URI de namespaces XML.  
   

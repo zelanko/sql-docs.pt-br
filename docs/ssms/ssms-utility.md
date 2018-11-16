@@ -17,12 +17,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b7eac4f10292107ab61aa165dd814fa6f630826
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49902e85a1d70fe39f74429999312c4f6263b04e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702814"
 ---
 # <a name="ssms-utility"></a>Utilitário de Ssms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,6 +146,6 @@ Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 
 
 ## <a name="see-also"></a>Consulte Também  
- [Usar o SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Usar o SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

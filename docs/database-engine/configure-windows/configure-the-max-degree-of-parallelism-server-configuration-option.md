@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49d65f5105cc5ae8569f6dd72158a0c900cac4ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846064"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606416"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,6 +112,6 @@ GO
  [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)   
  [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md)   
  [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md) [Opções Set Index](../../relational-databases/indexes/set-index-options.md)  
- [Recomendações e diretrizes para a opção de configuração “max degree of parallelism” no SQL Server](http://support.microsoft.com/help/2806535)
+ [Recomendações e diretrizes para a opção de configuração “max degree of parallelism” no SQL Server](https://support.microsoft.com/help/2806535)
   
   

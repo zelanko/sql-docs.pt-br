@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fc511cdfd383979ba3bcecd782ed4b481d6260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817404"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813809"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
@@ -59,18 +59,18 @@ reportpath
  A URL do serviço Web do servidor de relatório. No modo nativo, é a URL do serviço Web da instância do servidor de relatório configurada no Gerenciador de Configurações do Reporting Services (consulte [Configurar as URLs do Servidor de Relatório &#40; 	Gerenciador de Configurações do SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por exemplo:  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
->  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
+>  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
   
  *pathinfo*  
  O nome do caminho relativo do item no banco de dados do servidor de relatório no modo nativo ou a URL totalmente qualificada do item em um catálogo do SharePoint.  
@@ -84,7 +84,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  
@@ -118,7 +118,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 ## <a name="see-also"></a>Consulte Também  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [Referência de parâmetro de acesso à URL](../reporting-services/url-access-parameter-reference.md)   
+ [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)   
  [Integrando o Reporting Services usando o acesso à URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

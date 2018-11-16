@@ -14,12 +14,12 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 219a53e194e7ed64c072e66ba2686448903bfe2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58c8f0734db28e80fbc07f1826f1dc51ea9300e9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786676"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672045"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Nega o valor de avaliação de *PropertyExpression*, enumerando todos os objetos que não correspondem à condição especificada em *PropertyExpression*. Por exemplo, not(contains(\@Name, 'xyz')) enumera todos os objetos que não têm a cadeia de caracteres xyz em seus nomes.  
   
 ## <a name="remarks"></a>Remarks  
- Expressões de consulta são cadeias de caracteres que enumeram os nós em uma hierarquia de modelos SMO. Cada nó tem uma expressão de filtro que especifica os critérios de determinação dos objetos desse nó que são enumerados. As expressões de consultas são modeladas na linguagem de expressão XPath. As expressões de consulta implementam um pequeno subconjunto de expressões com suporte em XPath e também possuem algumas expressões que não são encontradas em XPath. As expressões Xpath são cadeias de caracteres que especificam um conjunto de critérios usados para enumerar uma ou mais marcas em um documento XML. Para obter mais informações sobre XPath, consulte [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
+ Expressões de consulta são cadeias de caracteres que enumeram os nós em uma hierarquia de modelos SMO. Cada nó tem uma expressão de filtro que especifica os critérios de determinação dos objetos desse nó que são enumerados. As expressões de consultas são modeladas na linguagem de expressão XPath. As expressões de consulta implementam um pequeno subconjunto de expressões com suporte em XPath e também possuem algumas expressões que não são encontradas em XPath. As expressões Xpath são cadeias de caracteres que especificam um conjunto de critérios usados para enumerar uma ou mais marcas em um documento XML. Para obter mais informações sobre XPath, consulte [W3C XPath Language](https://www.w3.org/TR/xpath20/).  
   
  As expressões de consulta devem iniciar com uma referência absoluta ao objeto Servidor. Não são permitidas expressões relativas com uma / à esquerda. A sequência de objetos especificados em uma expressão de consulta deve seguir a hierarquia dos objetos de coleção do modelo de objetos associado. Por exemplo, uma expressão de consulta que faz referência a objetos no namespace Microsoft.SqlServer.Management.Smo deve começar com um nó Servidor, seguido por um nó Banco de Dados e assim por diante.  
   

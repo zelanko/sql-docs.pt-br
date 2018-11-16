@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1c3b689a42b2c7a0a41fd4df71a6d78dc2a122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710684"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663285"
 ---
 # <a name="create-clr-functions"></a>Criar funções CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47710684"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>Acessando código nativo  
- Podem ser usadas funções CLR para acessar código nativo (não gerenciado), como código escrito em C ou C++, pelo uso de PInvoke de código gerenciado (veja [Chamando funções nativas com base no código gerenciado](http://go.microsoft.com/fwlink/?LinkID=181929) para obter detalhes). Isto pode permitir reutilizar o código herdado como CLR UDFs ou escrever UDFs de desempenho crítico em código nativo. Isto requer o uso de um assembly UNSAFE. Veja [Segurança de acesso a código da integração CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) para obter advertências sobre o uso de assemblies UNSAFE.  
+ Podem ser usadas funções CLR para acessar código nativo (não gerenciado), como código escrito em C ou C++, pelo uso de PInvoke de código gerenciado (veja [Chamando funções nativas com base no código gerenciado](https://go.microsoft.com/fwlink/?LinkID=181929) para obter detalhes). Isto pode permitir reutilizar o código herdado como CLR UDFs ou escrever UDFs de desempenho crítico em código nativo. Isto requer o uso de um assembly UNSAFE. Veja [Segurança de acesso a código da integração CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) para obter advertências sobre o uso de assemblies UNSAFE.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

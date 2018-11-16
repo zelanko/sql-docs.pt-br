@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd8ea5f24876e26b19b803d188489b425e434495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698744"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642203"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
   As variáveis são uma forma de definir valores e controlar processos dinamicamente em pacotes, contêineres, tarefas e manipuladores de eventos. As variáveis também podem ser usadas por restrições de precedência para controlar a direção do fluxo de dados para tarefas diferentes. As variáveis têm uma série de usos:  
@@ -37,15 +37,15 @@ ms.locfileid: "47698744"
   
 -   Popule valores de parâmetro para instruções Transact-SQL em tempo de execução.  
   
--   Controlar o fluxo de um loop Foreach. Para obter mais informações, consulte [Adicionar enumeração a um fluxo de controle](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Controlar o fluxo de um loop Foreach. Para obter mais informações, consulte [Adicionar enumeração a um fluxo de controle](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
   
--   Controlar uma restrição de precedência por seu uso em uma expressão. Uma restrição de precedência pode incluir variáveis na definição de restrição. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+-   Controlar uma restrição de precedência por seu uso em uma expressão. Uma restrição de precedência pode incluir variáveis na definição de restrição. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
--   Controlar a repetição condicional de um contêiner de Loop For. Para obter mais informações, consulte [Adicionar iteração a um fluxo de controle](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Controlar a repetição condicional de um contêiner de Loop For. Para obter mais informações, consulte [Adicionar iteração a um fluxo de controle](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
   
 -   Crie expressões que incluam valores de variáveis.  
   
--   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, contêineres **Loop Foreach**, contêineres **Loop For**, contêineres de **Sequência**, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, contêineres **Loop Foreach**, contêineres **Loop For**, contêineres de **Sequência**, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="scope"></a>Escopo  
  Cada contêiner tem sua própria coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Quando uma nova variável é criada, ela fica dentro do escopo de seu contêiner pai. Como o contêiner de pacote está no topo da hierarquia de contêineres, as variáveis com escopo de pacote funcionam como variáveis globais e ficam visíveis para todos os contêineres de pacote. A coleção de variáveis para o contêiner também pode ser acessada pelos filhos do contêiner através da coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, usando o nome da variável ou o índice da variável na coleção.  
@@ -231,6 +231,6 @@ End Module
   
 ## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

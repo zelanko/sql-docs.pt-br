@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706554"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659365"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,8 +26,8 @@ ms.locfileid: "47706554"
   Use esta página para exibir ou modificar opções para o banco de dados selecionado. Para obter mais informações sobre as opções disponíveis nessa página, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
 ## <a name="page-header"></a>Cabeçalho de página  
- **Agrupamento**  
- Especifique o agrupamento do banco de dados selecionando na lista. Para saber mais, veja [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
+ **Ordenação**  
+ Especifique a ordenação do banco de dados selecionando na lista. Para saber mais, veja [Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperação**  
  Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged**ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
@@ -83,7 +82,7 @@ ms.locfileid: "47706554"
  **Corte de Ano de Dois Dígitos**  
  Indica o número de ano mais alto que pode ser digitado como um ano de dois dígitos. O ano listado e os 99 anos anteriores podem ser digitados como um ano de dois dígitos. Todos os outros anos devem ser digitados como um ano de quatro dígitos.  
   
- Por exemplo, a configuração padrão de 2049 indica que a data digitada como ‘14/3/49’ será interpretada como 14 de março de 2049 e a data digitada como ‘14/3/50’ será interpretada como 14 de março de 1950. Para saber mais, veja [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Por exemplo, a configuração padrão de 2049 indica que a data digitada como ‘14/3/49’ será interpretada como 14 de março de 2049 e a data digitada como ‘14/3/50’ será interpretada como 14 de março de 1950. Para saber mais, veja [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Fechar Cursor Quando a Confirmação for Habilitada**  
@@ -96,10 +95,10 @@ ms.locfileid: "47706554"
  No SQL Server 2016 e no Banco de Dados SQL do Azure, há várias propriedades de configuração que podem ser definidas para o nível de banco de dados. Para obter mais informações sobre todas essas configurações, veja [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Estimativa de cardinalidade herdada**  
- Especifique o modelo de estimativa de cardinalidade do otimizador de consulta para o primário, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Especifique o modelo de estimativa de cardinalidade do otimizador de consulta para o primário, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 9481](https://support.microsoft.com/kb/2801413).  
   
  **Estimativa de cardinalidade herdada para secundário**  
- Especifique o modelo de estimativa de cardinalidade do otimizador de consulta para os secundários, se houver, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Especifique o modelo de estimativa de cardinalidade do otimizador de consulta para os secundários, se houver, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 9481](https://support.microsoft.com/kb/2801413).  
   
  **DOP Máximo**  
  Especifique a configuração padrão [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para o primário que deve ser usado para as instruções.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706554"
  Especifique a configuração padrão [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para os secundários, se houver, que devem ser usados para as instruções.  
   
  **Detecção de parâmetros**  
- Habilita ou desabilita o parâmetro de detecção no primário. Isso é equivalente ao [Sinalizador de Rastreamento 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Habilita ou desabilita o parâmetro de detecção no primário. Isso é equivalente ao [Sinalizador de Rastreamento 4136](https://support.microsoft.com/kb/980653).  
   
  **Detecção de Parâmetros para Secundário**  
- Habilita ou desabilita a detecção de parâmetros em secundários, se houver. Isso é equivalente ao [Sinalizador de Rastreamento 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Habilita ou desabilita a detecção de parâmetros em secundários, se houver. Isso é equivalente ao [Sinalizador de Rastreamento 4136](https://support.microsoft.com/kb/980653).  
   
  **Correções do otimizador de consulta**  
- Habilita ou desabilita os hotfixes de otimização da consulta primária, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Habilita ou desabilita os hotfixes de otimização da consulta primária, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 4199](https://support.microsoft.com/kb/974006).  
   
  **Correções do otimizador de consulta para secundário**  
- Habilita ou desabilita os hotfixes de otimização da consulta em secundários, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Habilita ou desabilita os hotfixes de otimização da consulta em secundários, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 4199](https://support.microsoft.com/kb/974006).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nome do Diretório FILESTREAM**  

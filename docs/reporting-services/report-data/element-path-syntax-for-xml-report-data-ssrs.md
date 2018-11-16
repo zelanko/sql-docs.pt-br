@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688344"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813799"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **Exemplo nº 2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>Documento XML: Customers.xml  
- Para tentar os exemplos de caminhos de elementos na seção anterior, você pode copiar esse XML e salvá-lo em uma URL acessível pelo Designer de Relatórios e, em seguida, usar o documento XML como uma fonte de dados: por exemplo, `http://localhost/Customers.xml`.  
+ Para tentar os exemplos de caminhos de elementos na seção anterior, você pode copiar esse XML e salvá-lo em uma URL acessível pelo Designer de Relatórios e, em seguida, usar o documento XML como uma fonte de dados: por exemplo, `https://localhost/Customers.xml`.  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

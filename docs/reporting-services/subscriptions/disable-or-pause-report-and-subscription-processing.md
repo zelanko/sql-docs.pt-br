@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6a632c7d5bb1579f7fdee84d390b47bf0c863e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 68cdbca9db8c1495569c8b3688215616fe2ba33f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030425"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814159"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura
   Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste tópico abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com os dois modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As tabelas a seguir resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com suporte:  
@@ -63,7 +63,7 @@ ms.locfileid: "50030425"
   
 ```  
 #disable specific subscription  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptionID = "subscription guid”;  
 $rs2010.DisableSubscription($subscriptionID);  
   
@@ -73,7 +73,7 @@ $rs2010.DisableSubscription($subscriptionID);
   
 ```  
 #list all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME /ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME /ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
 $subscriptions | select subscriptionid, report, status, path  
   
@@ -83,7 +83,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
 #list all disabled subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://uetestb03/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://uetestb03/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
 Write-Host "--- Disabled Subscriptions ---";  
 Write-Host "----------------------------------- ";  
@@ -94,7 +94,7 @@ $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.
   
 ```  
 #enable all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/") | Where-Object {$_.status -eq "disabled" } ;  
 ForEach ($subscription in $subscriptions)  
 {  
@@ -108,7 +108,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
 #DISABLE all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/") ;  
 ForEach ($subscription in $subscriptions)  
 {  

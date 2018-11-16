@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
@@ -16,12 +15,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ef572faf1ca8aab0691a18bca8321256867fe66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8b62b974951172924ac475c68a652e80ce444c4
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799884"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560255"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ ms.locfileid: "47799884"
   
 6.  Para alterar os valores padrão dos arquivos de dados primários e de log de transação, na grade **Arquivos de banco de dados** , clique na célula apropriada e digite o novo valor. Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
-7.  Para alterar o agrupamento do banco de dados, selecione a página **Opções** e depois marque um agrupamento na lista.  
+7.  Para alterar a ordenação do banco de dados, selecione a página **Opções** e depois marque uma ordenação na lista.  
   
 8.  Para alterar o modelo de recuperação, selecione a página **Opções** e marque um modelo de recuperação na lista.  
   

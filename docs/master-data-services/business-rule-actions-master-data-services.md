@@ -12,12 +12,12 @@ ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696594"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47694184"
 |---------------------|-----------------|  
 |**é necessário**|O atributo selecionado **é necessário**, o que significa que não pode ser nulo ou em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**não é válido**|O atributo selecionado **não é válido**.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
-|**deve conter o padrão**|O atributo selecionado **deve conter o padrão** que é especificado. Use expressões regulares do .NET Framework para especificar o padrão.<br /><br /> Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](http://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.<br /><br /> Esta ação é válida para valores de texto e link.|  
+|**deve conter o padrão**|O atributo selecionado **deve conter o padrão** que é especificado. Use expressões regulares do .NET Framework para especificar o padrão.<br /><br /> Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.<br /><br /> Esta ação é válida para valores de texto e link.|  
 |**deve ser exclusivo**|O atributo selecionado **deve ser exclusivo** , independentemente ou em combinação com os atributos definidos.<br /><br /> **Prática recomendada:** combine esta ação com uma condição obrigatória para assegurar a validade de campos de índice em sistemas de assinatura.<br /><br /> Esta ação é válida para valores de texto, número, data e link.<br /><br /> **OBSERVAÇÃO**: se o primeiro atributo for do tipo DateTime, ele não poderá ser usado em combinação com um atributo do tipo Numeric ou Text. Se o primeiro atributo for do tipo Numeric, ele não poderá ser usado em combinação com um atributo do tipo DateTime.|  
 |**deve ter um dos seguintes valores**|O atributo selecionado **deve ter um dos valores** especificados em uma lista.<br /><br /> Esta ação é válida para valores de texto.|  
 |**deve ser maior que**|O atributo selecionado **deve ser maior que** um atributo específico, um valor de atributo específico ou deve estar em branco.<br /><br /> Esta ação é válida para valores de texto, número e data.|  
@@ -71,7 +71,7 @@ ms.locfileid: "47694184"
   
 |Nome da ação|Descrição|  
 |-----------------|-----------------|  
-|**iniciar fluxo de trabalho**|Inicia um fluxo de trabalho externo. Os dados que fizeram com que essa ação ocorresse são passados para o fluxo de trabalho. Para obter mais informações, consulte [Integração do fluxo de trabalho do SharePoint com o Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
+|**iniciar fluxo de trabalho**|Inicia um fluxo de trabalho externo. Os dados que fizeram com que essa ação ocorresse são passados para o fluxo de trabalho. Para obter mais informações, consulte [Integração do fluxo de trabalho do SharePoint com o Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Condições de regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   

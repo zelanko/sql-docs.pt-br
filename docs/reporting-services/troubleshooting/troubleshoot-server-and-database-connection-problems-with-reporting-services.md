@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028835"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814309"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e servidor com o Reporting Services
 Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -34,7 +34,7 @@ Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as confi
 * Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do Gerenciador de Relatórios será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Uma conexão não pode ser feita. Verifique se o servidor está em execução.  
-Este erro é retornado pelo provedor ADOMD.NET. Há várias razões para a ocorrência desse erro. Se você tiver especificado o servidor como “localhost”, tente especificar o nome do servidor. Esse erro também poderá ocorrer se não for possível alocar a memória na nova conexão. Para saber mais, confira [o artigo 912017 da Base de Dados de Conhecimento — Mensagem de erro quando você se conectar a uma instância do SQL Server 2005 Analysis Services:](http://support.microsoft.com/kb/912017).  
+Este erro é retornado pelo provedor ADOMD.NET. Há várias razões para a ocorrência desse erro. Se você tiver especificado o servidor como “localhost”, tente especificar o nome do servidor. Esse erro também poderá ocorrer se não for possível alocar a memória na nova conexão. Para saber mais, confira [o artigo 912017 da Base de Dados de Conhecimento — Mensagem de erro quando você se conectar a uma instância do SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
   
 Se o erro também incluir "Nenhum host desse tipo é conhecido", isso indica que o servidor do Analysis Services não está disponível ou está recusando a conexão. Se o servidor do Analysis Services estiver instalado como uma instância nomeada em um computador remoto, talvez seja necessário executar o serviço SQL Server Browser para obter o número da porta usada pela instância em questão.  
   
@@ -59,7 +59,7 @@ Não é possível se conectar ao \<your server name>. O provedor WMI do Reportin
   
 Para resolver esse erro, reinstale o software. Em todos os outros casos, como solução temporária, você pode se conectar ao servidor de relatório pelo ponto de extremidade SOAP:  
   
-* Na caixa de diálogo **Conectar ao Servidor** no Management Studio, em **Nome do Servidor**, digite a URL do servidor de relatório. Por padrão, ela é `http://<your server name>/reportserver`. Ou se estiver usando o SQL Server 2008 Express com Advanced Services, ela será `http://<your server name>/reportserver$sqlexpress`.  
+* Na caixa de diálogo **Conectar ao Servidor** no Management Studio, em **Nome do Servidor**, digite a URL do servidor de relatório. Por padrão, ela é `https://<your server name>/reportserver`. Ou se estiver usando o SQL Server 2008 Express com Advanced Services, ela será `https://<your server name>/reportserver$sqlexpress`.  
   
 Para resolver o erro e conseguir se conectar usando o provedor de WMI, execute o programa de instalação para reparar o Reporting Services ou reinstale o Reporting Services.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021090"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814089"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021090"
   
  Os tópicos a seguir fornecem informações adicionais sobre como definir opções do Office e do Word.  
   
--   Mude o idioma de edição na caixa de diálogo **Preferências de Idioma do Microsoft Office** ou **Opções do Word** no Word. Para obter mais informações, consulte [Habilitar o uso de outros idiomas nos programas do Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Mude o idioma de edição na caixa de diálogo **Preferências de Idioma do Microsoft Office** ou **Opções do Word** no Word. Para obter mais informações, consulte [Habilitar o uso de outros idiomas nos programas do Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Adicione pacotes de idiomas do Office e altere o idioma de edição. Para obter mais informações, consulte [Habilitar o uso de outros idiomas nos programas do Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) e [Opções de idioma do Office](http://office.microsoft.com/language/).  
+-   Adicione pacotes de idiomas do Office e altere o idioma de edição. Para obter mais informações, consulte [Habilitar o uso de outros idiomas nos programas do Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) e [Opções de idioma do Office](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Quando você altera o idioma de edição na caixa de diálogo **Preferências de Idioma do Microsoft Office** ou **Opções do Word** no Word, a alteração se aplica a todos os programas do Office.  

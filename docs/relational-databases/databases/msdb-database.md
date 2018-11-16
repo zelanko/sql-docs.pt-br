@@ -5,8 +5,7 @@ ms.date: 11/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -17,12 +16,12 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81debaec491c03873fceac894268d2c1b00e7f39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecbe9589a1219920847adf9af9aa99c24672d94d
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647394"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560174"
 ---
 # <a name="msdb-database"></a>Banco de dados msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "47647394"
 ## <a name="restrictions"></a>Restrictions  
  As operações a seguir não podem ser executadas no banco de dados **msdb** :  
   
--   Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  
+-   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
 -   Descartando o banco de dados.  
   

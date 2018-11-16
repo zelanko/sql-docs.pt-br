@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697674"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instruções RESTORE – argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ CREDENTIAL
  Usado apenas ao restaurar um backup do serviço de Armazenamento de Blobs do Microsoft Azure.  
   
 > [!NOTE]  
->  Com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode apenas restaurar de um único dispositivo ao fazer uma restauração de uma URL. Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) e usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter mais informações, consulte [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  Com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode apenas restaurar de um único dispositivo ao fazer uma restauração de uma URL. Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) e usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter mais informações, consulte [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
  REPLACE  
  **Compatível com:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -397,7 +397,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios FILESTREAM no nível de banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade é feita sem diferenciar maiúsculas de minúsculas, independentemente das configurações de agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios FILESTREAM no nível de banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade é feita sem diferenciar maiúsculas de minúsculas, independentemente das configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##### <a name="monitoring-options"></a>Opções de monitoramento  
  Essas opções permitem monitorar a transferência de dados do dispositivo de backup.  

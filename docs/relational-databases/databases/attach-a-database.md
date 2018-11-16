@@ -5,8 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.attachdatabase.f1
@@ -17,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d915c790d506fbc2b9290ece5b9d03f7666c4ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f592d0a01b2c68565457fae52710ffb5d7b57730
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850944"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658286"
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47850944"
 Não recomendamos o uso de ações de desanexar e anexar para Backup e Recuperação. Não há backups de log de transações e é possível excluir arquivos acidentalmente.
   
 ###  <a name="Security"></a> Segurança  
- As permissões de acesso ao arquivo são definidas durante algumas operações de banco de dados, inclusive desanexar ou anexar um banco de dados. Para obter informações sobre permissões de arquivo definidas sempre que um banco de dados é desanexado e anexado, veja [Protegendo dados e arquivos de log](http://technet.microsoft.com/library/ms189128.aspx) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (ainda é uma leitura válida!) 
+ As permissões de acesso ao arquivo são definidas durante algumas operações de banco de dados, inclusive desanexar ou anexar um banco de dados. Para obter informações sobre permissões de arquivo definidas sempre que um banco de dados é desanexado e anexado, veja [Protegendo dados e arquivos de log](https://technet.microsoft.com/library/ms189128.aspx) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (ainda é uma leitura válida!) 
   
  Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados. Para saber mais sobre como anexar bancos de dados e informações sobre alterações que são feitas em metadados ao anexar um banco de dados, veja [Anexar e desanexar bancos de dados(SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   

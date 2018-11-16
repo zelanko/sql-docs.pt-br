@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020270"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813599"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios do modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo Nativo usa o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório. Se você tiver um arquivo de certificado (.cer) instalado em um repositório de certificados local no computador do servidor de relatório, poderá associá-lo a uma reserva de URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para dar suporte a conexões do servidor de relatório por meio de um canal criptografado.  
   
 > [!TIP]  
->  Se você estiver usando o modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte a documentação do SharePoint para obter mais informações. Por exemplo [Como habilitar o SSL em um aplicativo Web do SharePoint 2010 (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Se você estiver usando o modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte a documentação do SharePoint para obter mais informações. Por exemplo [Como habilitar o SSL em um aplicativo Web do SharePoint 2010 (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
   
  Como o IIS (Serviços de Informações da Internet) também usa HTTP SSL, existem problemas de interoperabilidade consideráveis que você deve considerar se executa o IIS e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador. Leia a seção Problemas de interoperabilidade com IIS para obter orientação sobre como lidar com esses problemas.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020270"
   
  As associações SSL são um recurso compartilhado no Microsoft Windows. As alterações feitas pelo Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou outras ferramentas como o Gerenciador do IIS podem afetar outros aplicativos no mesmo computador. É uma prática recomendada usar a mesma ferramenta para editar associações que você usou para criar as associações.  Por exemplo se você criou associações de SSL usando o Gerenciador de Configurações, então é recomendado que você use o Gerenciador de Configurações para gerenciar o ciclo de vida das associações. Se você usar o Gerenciador do IIS para criar associações, é recomendado usar o Gerenciador do IIS para gerenciar o ciclo de vida das associações. Se o IIS estiver instalado no computador antes de o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ser instalado, será uma prática recomendada revisar a configuração do SSL no IIS antes de configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Se você remover as associações do SSL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o Gerenciador de Configurações do Reporting Services, o SSL poderá não mais funcionar para sites em um servidor que está executando o IIS (Serviços de Informações da Internet) ou em outro servidor de HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] remove a chave do Registro a seguir. Quando esta chave do Registro é removida, a associação do SSL para o IIS também é removida. Sem esta associação, o SSL não é fornecido para o protocolo HTTP. Para diagnosticar este problema, use o Gerenciador do IIS ou o utilitário da linha de comando HTTPCFG.exe. Para resolver o problema, restaure a associação SSL para seus sites usando o Gerenciador do IIS. Para impedir este problema no futuro, use o Gerenciador do IIS para remover as associações SSL e em seguida use o Gerenciador do IIS para restaurar a associação para os sites desejados. Para saber mais, veja o artigo da base de dados de conhecimento [O SSL não funciona mais depois de remover uma associação SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
+ Se você remover as associações do SSL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o Gerenciador de Configurações do Reporting Services, o SSL poderá não mais funcionar para sites em um servidor que está executando o IIS (Serviços de Informações da Internet) ou em outro servidor de HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] remove a chave do Registro a seguir. Quando esta chave do Registro é removida, a associação do SSL para o IIS também é removida. Sem esta associação, o SSL não é fornecido para o protocolo HTTP. Para diagnosticar este problema, use o Gerenciador do IIS ou o utilitário da linha de comando HTTPCFG.exe. Para resolver o problema, restaure a associação SSL para seus sites usando o Gerenciador do IIS. Para impedir este problema no futuro, use o Gerenciador do IIS para remover as associações SSL e em seguida use o Gerenciador do IIS para restaurar a associação para os sites desejados. Para saber mais, veja o artigo da base de dados de conhecimento [O SSL não funciona mais depois de remover uma associação SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   

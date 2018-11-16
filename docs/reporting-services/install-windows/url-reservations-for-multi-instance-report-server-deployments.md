@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741254"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814059"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Reservas de URL para várias instâncias de implantações do Servidor de Relatório
   Se você instalar várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador, será preciso considerar como definirá as reservas de URL para cada instância. Em cada instância, o serviço Web do Servidor de Relatórios e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] devem ter, pelo menos, uma reserva de URL cada. O conjunto inteiro de reservas deve ser exclusivo em HTTP.SYS.  
@@ -26,8 +26,8 @@ ms.locfileid: "47741254"
   
 |Instância do SQL Server|Reserva de URL padrão|  
 |-------------------------|-----------------------------|  
-|Padrão (MSSQLServer)|`http://+:80/reportserver`|  
-|Nomeado (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|Padrão (MSSQLServer)|`https://+:80/reportserver`|  
+|Nomeado (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  Para a instância nomeada, o diretório virtual inclui o nome da instância. Tanto a instância padrão quanto a instância nomeada escutam na mesma porta, mas os nomes exclusivos de diretório virtual determinam qual servidor de relatório obterá a solicitação.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741254"
   
 |Instância padrão do Servidor de Relatório (MSSQLSERVER)|ReportServer_MyNamedInstance|Exclusividade|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|Cada instância escuta em uma porta diferente.|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Cada instância responde a nomes de servidores diferentes (nome de domínio totalmente qualificado e nome de máquina).|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|Cada instância escuta em uma porta diferente.|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|Cada instância responde a nomes de servidores diferentes (nome de domínio totalmente qualificado e nome de máquina).|  
   
 ## <a name="uniqueness-requirements"></a>Requisitos de exclusividade  
  As tecnologias subjacentes usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõem requisitos aos nomes exclusivos. HTTP.SYS exige que todas as URLs do repositório sejam exclusivas. Você pode variar a porta, o nome de host ou o nome de diretório virtual para criar uma URL exclusiva. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] exige que as identidades de aplicativo sejam exclusivas no mesmo processo. Esse requisito afeta os nomes do diretório virtual. Ele especifica que não é possível duplicar um nome de diretório virtual na mesma instância do servidor de relatório.  

@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623824"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669395"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 <sup>6</sup> Se as páginas bloqueadas no privilégio de memória (LPIM) forem concedidas (em 32 bits para suporte AWE ou em 64 bits por si só), também é recomendável a definição da memória máxima do servidor. Para obter mais informações sobre o LPIM, consulte [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> Versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podiam ser executadas em um sistema operacional de 32 bits. O acesso a mais de 4 GB (gigabytes) de memória em um sistema operacional de 32 bits exigiu que o recurso AWE (Address Windowing Extensions) gerenciasse a memória. Isso não é necessário quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em sistemas operacionais de 64 bits. Para saber mais sobre o AWE, consulte [Espaço de endereço de processo](http://msdn.microsoft.com/library/ms189334.aspx) e [Gerenciando memória para bancos de dados grandes](http://msdn.microsoft.com/library/ms191481.aspx) na documentação do [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
+> Versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podiam ser executadas em um sistema operacional de 32 bits. O acesso a mais de 4 GB (gigabytes) de memória em um sistema operacional de 32 bits exigiu que o recurso AWE (Address Windowing Extensions) gerenciasse a memória. Isso não é necessário quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em sistemas operacionais de 64 bits. Para saber mais sobre o AWE, consulte [Espaço de endereço de processo](https://msdn.microsoft.com/library/ms189334.aspx) e [Gerenciando memória para bancos de dados grandes](https://msdn.microsoft.com/library/ms191481.aspx) na documentação do [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
@@ -188,7 +187,7 @@ A lista a seguir descreve a quantidade aproximada de memória usada por diferent
 
 O **tamanho do pacote de rede** é o tamanho dos pacotes de TDS (esquema de dados de tabela) que são usados para comunicação entre os aplicativos e o Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.
 
-Quando vários conjuntos de resultados ativos estiverem habilitados, a conexão do usuário será de aproximadamente (3 + 3 \*número_de_conexões_lógicas) \* tamanho_do_pacote_de_rede + 94 KB
+Quando vários conjuntos de resultados ativos estiverem habilitados, a conexão do usuário será de aproximadamente (3 + 3 \*número_de_conexões_lógicas)\* tamanho_do_pacote_de_rede + 94 KB
 
 ## <a name="effects-of-min-memory-per-query"></a>Efeitos de min memory per query
 A opção de configuração *min memory per query* estabelece a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Isso também é conhecido como a concessão de memória mínima. O início da execução de todas as consultas deve aguardar até que a memória mínima solicitada possa ser protegida ou então até que o valor especificado na opção de configuração de servidor query wait seja excedido. O tipo de espera é acumulado neste cenário é RESOURCE_SEMAPHORE.

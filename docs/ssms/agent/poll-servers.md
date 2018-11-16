@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53cfad6dfea89953d5c88133f3966635728c0a5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec3a0957b7531b3b8cdac4256ad5bfaba4480765
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825784"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699514"
 ---
 # <a name="poll-servers"></a>Sondar servidores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Se você usar os seguintes itens, não será necessário postar operações expl
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Gerenciar eventos](../../ssms/agent/manage-events.md)  

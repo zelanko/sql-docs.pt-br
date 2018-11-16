@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ebd925e2bd796f4f9852d59c174009083971f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 425b2b1c9b6adabf2399566db95314d438dad666
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675215"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usar um arquivo de formato para importação em massa de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Este tópico ilustra o uso de um arquivo de formato operações de importação 
 ## Antes de começar<a name="begin"></a>
 * Para um arquivo de formato funcionar com um arquivo de dados de caractere Unicode, todos os campos de entrada devem ser cadeias de caracteres de texto Unicode (isto é, cadeias de caracteres Unicode de tamanho fixo ou terminadas por caractere).
 * Para exportar ou importar dados [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) em massa, use um dos tipos de dados a seguir em seu arquivo de formato:
-  * SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento)
+  * SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implicada pela ordenação)
   * SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode)
   * SQLBINARY ou SQLVARYBIN (os dados são enviados sem nenhuma conversão).
 * O Banco de Dados SQL do Azure e o Azure SQL Data Warehouse dão suporte apenas ao [bcp](../../tools/bcp-utility.md).  Para obter informações adicionais, consulte:
@@ -137,7 +137,7 @@ Notepad D:\BCP\myFirstImport.xml
 Seu arquivo de formato XML, `D:\BCP\myFirstImport.xml` , deve se assemelhar ao seguinte:
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>

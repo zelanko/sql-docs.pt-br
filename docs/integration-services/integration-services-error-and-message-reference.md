@@ -15,12 +15,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800734"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642403"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -230,8 +230,8 @@ ms.locfileid: "47800734"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|O arquivo, "%1", não pôde ser aberto para gravação. O arquivo pode ser somente leitura ou você não tem as permissões corretas.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|Nenhum conjunto de linhas de resultado está associado à execução dessa consulta. O resultado não está especificado corretamente.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|Não foram gerados arquivos de despejo de depuração corretamente. O hresult é 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|A URL especificada não é válida. Isso pode ocorrer quando a URL do servidor ou do proxy é nula, ou está em formato incorreto. Um formato de URL válido está na forma de http://ServerName:Port/ResourcePath ou https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|A URL %1 não é válida. Isso pode ocorrer quando se especifica um esquema diferente de http ou https, ou quando a URL está em um formato incorreto. Um formato de URL válido está na forma de http://ServerName:Port/ResourcePath ou https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|A URL especificada não é válida. Isso pode ocorrer quando a URL do servidor ou do proxy é nula, ou está em formato incorreto. Um formato de URL válido está na forma de https://ServerName:Port/ResourcePath ou https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|A URL %1 não é válida. Isso pode ocorrer quando se especifica um esquema diferente de http ou https, ou quando a URL está em um formato incorreto. Um formato de URL válido está na forma de https://ServerName:Port/ResourcePath ou https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Não é possível estabelecer conexão com o servidor %1. Esse erro pode ocorrer quando o servidor não existe, ou as configurações do proxy estão incorretas.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|A conexão com o servidor foi redefinida ou terminada. Tente novamente depois.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Falha na tentativa de logon para "%1". Esse erro ocorre quando as credenciais de logon fornecidas estão incorretas. Verifique as credenciais de logon.|  
@@ -1621,8 +1621,8 @@ ms.locfileid: "47800734"
 |0xC0208242|-1071611326|DTS_E_TXLOOKUP_TOOFEWREFERENCECOLUMNS|Os metadados de referência da transformação Pesquisa contêm poucas colunas. Verifique a propriedade SQLCommand. A instrução SELECT deve retornar pelo menos uma coluna.|  
 |0xC0208243|-1071611325|DTS_E_TXLOOKUP_MALLOCERR_REFERENCECOLUMNINFO|Não é possível alocar memória para uma matriz de estruturas ColumnInfo.|  
 |0xC0208244|-1071611324|DTS_E_TXLOOKUP_MALLOCERR_REFERENCECOLUMNPAIR|Não foi possível alocar memória para uma matriz de estruturas ColumnPair.|  
-|0xC0208245|-1071611323|DTS_E_TXLOOKUP_MALLOCERR_BUFFCOL|Não é possível alocar memória para uma matriz de estruturas BUFFCOL para a criação de um espaço de trabalho principal.|  
-|0xC0208246|-1071611322|DTS_E_TXLOOKUP_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho principal.|  
+|0xC0208245|-1071611323|DTS_E_TXLOOKUP_MALLOCERR_BUFFCOL|Não é possível alocar memória para uma matriz de estruturas BUFFCOL para a criação de um workspace principal.|  
+|0xC0208246|-1071611322|DTS_E_TXLOOKUP_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace principal.|  
 |0xC0208247|-1071611321|DTS_E_TXLOOKUP_HASHTABLE_MALLOCERR|Não é possível alocar memória para uma tabela de hash.|  
 |0xC0208248|-1071611320|DTS_E_TXLOOKUP_HASHNODEHEAP_CREATEERR|Não é possível alocar memória para criar um heap para nós de hash.|  
 |0xC0208249|-1071611319|DTS_E_TXLOOKUP_HASHNODEHEAP_MALLOCERR|Não é possível alocar memória para um heap de nó de hash.|  
@@ -1634,11 +1634,11 @@ ms.locfileid: "47800734"
 |0xC020824F|-1071611313|DTS_E_TXLOOKUP_OLEDBERR_BINDPARAMETERS|Ocorreu um erro OLE DB ao associar os parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208250|-1071611312|DTS_E_TXLOOKUP_OLEDBERR_CREATEBINDING|Ocorreu um erro OLE DB ao criar associações. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208251|-1071611311|DTS_E_TXLOOKUP_INVALID_CASE|Encontrado um caso inválido em uma instrução switch durante o tempo de execução.|  
-|0xC0208252|-1071611310|DTS_E_TXLOOKUP_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho principal. Houve falta de memória.|  
+|0xC0208252|-1071611310|DTS_E_TXLOOKUP_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace principal. Houve falta de memória.|  
 |0xC0208253|-1071611309|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMIROWSET|Ocorreu um erro OLE DB ao buscar um conjunto de linhas com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208254|-1071611308|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMSINGLEROW|Ocorreu um erro OLE DB ao buscar uma linha com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
-|0xC0208255|-1071611307|DTS_E_TXAGG_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho principal. Houve falta de memória.|  
-|0xC0208256|-1071611306|DTS_E_TXAGG_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho principal.|  
+|0xC0208255|-1071611307|DTS_E_TXAGG_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace principal. Houve falta de memória.|  
+|0xC0208256|-1071611306|DTS_E_TXAGG_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace principal.|  
 |0xC0208257|-1071611305|DTS_E_TXAGG_HASHTABLE_MALLOCERR|Não é possível alocar memória para a tabela de hash.|  
 |0xC0208258|-1071611304|DTS_E_TXAGG_HASHNODEHEAP_CREATEERR|Não é possível alocar memória para criar um heap para os nós de hash.|  
 |0xC0208259|-1071611303|DTS_E_TXAGG_HASHNODEHEAP_MALLOCERR|Não é possível alocar memória para o heap de nó de hash.|  
@@ -1646,8 +1646,8 @@ ms.locfileid: "47800734"
 |0xC020825B|-1071611301|DTS_E_TXAGG_CDNODEHEAP_MALLOCERR|Não é possível alocar memória para heap de nó CountDistinct.|  
 |0xC020825C|-1071611300|DTS_E_TXAGG_CDCHAINHEAP_CREATEERR|Não é possível alocar memória para criar um heap para cadeias CountDistinct.|  
 |0xC020825D|-1071611299|DTS_E_TXAGG_CDHASHTABLE_CREATEERR|Não é possível alocar memória para a tabela de hash CountDistinct.|  
-|0xC020825E|-1071611298|DTS_E_TXAGG_CDWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho CountDistinct.|  
-|0xC020825F|-1071611297|DTS_E_TXAGG_CDWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho CountDistinct.|  
+|0xC020825E|-1071611298|DTS_E_TXAGG_CDWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace CountDistinct.|  
+|0xC020825F|-1071611297|DTS_E_TXAGG_CDWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace CountDistinct.|  
 |0xC0208260|-1071611296|DTS_E_TXAGG_CDCOLLASSEARRAY_MALLOCERR|Não é possível alocar memória para uma matriz CountDistinct Collapse.|  
 |0xC0208261|-1071611295|DTS_E_TXAGG_CDCHAINHEAP_MALLOCERR|Não é possível alocar memória para cadeias CountDistinct.|  
 |0xC0208262|-1071611294|DTS_E_TXCOPYMAP_MISMATCHED_COLUMN_METADATA|As colunas com identificações de linhagem %1!d! e %2!d! possuem metadados que não coincidem. A coluna de entrada mapeada para uma coluna de saída para copymap não tem os mesmos metadados (tipo de dados, precisão, escala, comprimento ou página de código).|  
@@ -1732,7 +1732,7 @@ ms.locfileid: "47800734"
 |0xC0208337|-1071611081|DTS_E_TERMEXTRACTION_INCORRECTMAXLENOFTERM|O valor de Comprimento Máximo do Termo não deve ser inferior a '%1!d!'.|  
 |0xC0208338|-1071611080|DTS_E_TERMEXTRACTION_TOOFEWREFERENCECOLUMNS|Os metadados de referência de Extração de Termo contêm poucas colunas.|  
 |0xC0208339|-1071611079|DTS_E_TERMEXTRACTION_MALLOCERR_REFERENCECOLUMNINFO|Ocorreu um erro durante a alocação de memória.|  
-|0xC020833A|-1071611078|DTS_E_TERMEXTRACTION_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de espaço de trabalho.|  
+|0xC020833A|-1071611078|DTS_E_TERMEXTRACTION_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de workspace.|  
 |0xC020833B|-1071611077|DTS_E_TERMEXTRACTION_OLEDBERR_CREATEBINDING|Ocorreu um erro OLEDB durante a criação de associações.|  
 |0xC020833C|-1071611076|DTS_E_TERMEXTRACTION_OLEDBERR_GETIROWSET|Ocorreu um erro OLEDB durante a busca em conjuntos de linhas.|  
 |0xC020833D|-1071611075|DTS_E_TERMEXTRACTION_OLEDBERR_FILLBUFFER|Ocorreu um erro OLE DB ao popular o cache interno.|  
@@ -1746,7 +1746,7 @@ ms.locfileid: "47800734"
 |0xC0208345|-1071611067|DTS_E_TERMLOOKUP_UNABLETOLOCATEREFCOLUMN|Erro durante a localização da coluna de referência '%1'.|  
 |0xC0208346|-1071611066|DTS_E_TERMLOOKUP_TOOFEWREFERENCECOLUMNS|Os metadados de referência de Pesquisa de Termo contêm poucas colunas.|  
 |0xC0208347|-1071611065|DTS_E_TERMEXTRACTIONORLOOKUP_TESTOFFSETERROR|Ocorreu um erro durante a normalização das palavras.|  
-|0xC0208348|-1071611064|DTS_E_TERMLOOKUP_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de espaço de trabalho.|  
+|0xC0208348|-1071611064|DTS_E_TERMLOOKUP_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de workspace.|  
 |0xC0208349|-1071611063|DTS_E_TERMLOOKUP_OLEDBERR_CREATEBINDING|Ocorreu um erro OLEDB durante a criação de associações.|  
 |0xC020834A|-1071611062|DTS_E_TERMLOOKUP_OLEDBERR_GETIROWSET|Ocorreu um erro OLEDB durante a busca em conjuntos de linhas.|  
 |0xC020834B|-1071611061|DTS_E_TERMLOOKUP_OLEDBERR_FILLBUFFER|Ocorreu um erro OLE DB ao popular o cache interno.|  
@@ -1937,7 +1937,7 @@ ms.locfileid: "47800734"
 |0xC02090D1|-1071607599|DTS_E_XMLSRCUNABLETOGETXMLDATAVARIABLE|O %1 não pôde obter a variável especificada pela propriedade "%2".|  
 |0xC02090D2|-1071607598|DTS_E_NODATATABLEMATCHROWID|O %1 contém um RowsetID com um valor de %2 que não faz referência a uma tabela de dados no esquema.|  
 |0xC02090D6|-1071607594|DTS_E_TXAGG_BADKEYSVALUE|A propriedade %1 deve ficar vazia ou ter um número entre %2!u! e %3!u!. A propriedade Keys ou CountDistinctKeys tem um valor inválido. A propriedade deveria ser um número entre 0 e ULONG_MAX, inclusive, ou não deveria ser definida.|  
-|0xC02090D7|-1071607593|DTS_E_TXAGG_TOOMANYKEYS|O componente de agregação encontrou muitas combinações de chave distintas. Ele não pode acomodar mais que %1!u! valores de chave distintos. Existem mais valores de chave distintos que ULONG_MAX no espaço de trabalho principal.|  
+|0xC02090D7|-1071607593|DTS_E_TXAGG_TOOMANYKEYS|O componente de agregação encontrou muitas combinações de chave distintas. Ele não pode acomodar mais que %1!u! valores de chave distintos. Existem mais valores de chave distintos que ULONG_MAX no workspace principal.|  
 |0xC02090D8|-1071607592|DTS_E_TXAGG_TOOMANYCOUNTDISTINCTVALUES|O componente de agregação encontrou muitos valores distintos ao calcular a agregação de distinção de contagem. Ele não pode acomodar mais que %1!u! valores distintos. Existiam mais valores distintos que ULONG_MAX durante o cálculo da agregação de distinção de contagem.|  
 |0xC02090D9|-1071607591|DTS_E_FAILEDTOWRITETOTHEFILENAMECOLUMN|Falha na tentativa de gravar na coluna de nome do arquivo com o código de erro 0x%1!8.8X!.|  
 |0xC02090DC|-1071607588|DTS_E_FAILEDTOFINDERRORCOLUMN|Ocorreu um erro, mas não é possível determinar a coluna que causou o erro.|  
@@ -1964,7 +1964,7 @@ ms.locfileid: "47800734"
 |0xC0209296|-1071607146|DTS_E_TXSCD_TOOFEWREFERENCECOLUMNS|Os metadados de referência de pesquisa contêm poucas colunas.|  
 |0xC0209297|-1071607145|DTS_E_TXSCD_MALLOCERR_REFERENCECOLUMNINFO|Não é possível alocar memória.|  
 |0xC0209298|-1071607144|DTS_E_TXSCD_MALLOCERR_BUFFCOL|Não é possível alocar memória.|  
-|0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho.|  
+|0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace.|  
 |0xC020929A|-1071607142|DTS_E_DTPXMLDOMCREATEERROR|Não é possível criar uma instância de documento XML DOM, verifique se os binários MSXML estão instalados e registrados corretamente.|  
 |0xC020929B|-1071607141|DTS_E_DTPXMLDOMLOADERROR|Não é possível carregar os dados XML em um DOM local para processamento.|  
 |0xC020929C|-1071607140|DTS_E_RSTDESTBADVARIABLETYPE|O tipo da variável de tempo de execução "%1" está incorreto. O tipo da variável de tempo de execução deve ser Object.|  
@@ -2013,7 +2013,7 @@ ms.locfileid: "47800734"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|As informações de tipo de dados de esquema XML para "%1" no elemento "%2" foram alteradas.  Reinicialize os metadados para esse componente e revise os mapeamentos de coluna.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 não usado em junção ou cópia. Remova a coluna não usada da lista de colunas de entrada.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Falha na classificação devido a um estouro de pilha ao classificar um buffer de entrada.  Reduza a propriedade DefaultBufferMaxRows na Tarefa de Fluxo de Dados.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere alterar o PROVIDER na cadeia de conexão para %1 ou acesse http://www.microsoft.com/downloads para localizar e instalar o suporte para %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere alterar o PROVIDER na cadeia de conexão para %1 ou acesse https://www.microsoft.com/downloads para localizar e instalar o suporte para %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Falha ao inicializar o objeto de tarefa para a tarefa "%1!s!", tipo "%2!s!" devido ao erro 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Falha ao criar o Gerenciador de Categorias de Componentes COM devido ao erro 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|O componente %1!s! não inicializou devido ao erro 0x%2!8.8X! "%3!s!".|  
@@ -2243,7 +2243,7 @@ ms.locfileid: "47800734"
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 armazenou em cache um total de %2!d! linhas.|  
 |0x4020206D|1075847277|DTS_I_RAWSOURCENOCOLUMNS|O adaptador de origem bruto abriu um arquivo, mas o arquivo não contém nenhuma coluna. O adaptador não produzirá dados. Isso pode indicar que um arquivo está danificado, ou que não existem colunas e, portanto, não existem dados.|  
 |0x402020DA|1075847386|DTS_I_OLEDBINFORMATIONALMESSAGE|Uma mensagem informativa OLE DB está disponível.|  
-|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|É possível melhorar o desempenho da correspondência difusa se a junção exata FuzzyComparisonFlags na coluna de entrada "%1" for definida para corresponder com o agrupamento SQL para a coluna de tabela de referência "%2".  Além disso, nenhum sinalizador de dobra pode estar definido em FuzzyComparisonFlagsEx.|  
+|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|É possível melhorar o desempenho da correspondência difusa se a junção exata FuzzyComparisonFlags na coluna de entrada "%1" for definida para corresponder com a ordenação SQL para a coluna de tabela de referência "%2".  Além disso, nenhum sinalizador de dobra pode estar definido em FuzzyComparisonFlagsEx.|  
 |0x40208328|1075872552|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_INDEX_MISSING|É possível melhorar o desempenho da correspondência difusa se um índice for criado com base na tabela de referência entre todas as colunas de correspondência exata especificadas.|  
 |0x40208387|1075872647|DTS_I_DISPSNOTREVIEWED|As disposições de truncamento e erro não foram revisadas. Certifique-se de que esse componente esteja configurado para redirecionar as linhas para as saídas de erro, caso queira transformar posteriormente essas linhas.|  
 |0x402090DA|1075876058|DTS_I_TXAGG_WORKSPACE_REHASH|A transformação Agregação encontrou %1!d! combinações de chaves. É necessário refazer o hash dos dados porque o número de combinações de chave é superior ao esperado. O componente pode ser configurado para evitar o re-hash de dados, ajustando as propriedades Keys, KeyScale e AutoExtendFactor.|  

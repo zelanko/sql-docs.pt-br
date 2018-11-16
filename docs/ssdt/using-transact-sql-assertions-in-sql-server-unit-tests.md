@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716735"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671236"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
 Em um teste de unidade do SQL Server, um script de teste Transact\-SQL executa e retorna um resultado. Muitas vezes, os resultados são retornados como um conjunto de resultados. Você pode validar resultados usando condições de teste. Por exemplo, você pode usar uma condição de teste para verificar quantas linhas foram retornadas em um conjunto de resultados específico ou para verificar quanto tempo um teste específico levou para ser executado. Para saber mais sobre as condições de teste, confira [Usar as condições de teste em Testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -79,7 +79,7 @@ onde:
   
 @ErrorState é um número inteiro arbitrário de 1 a 127. Você pode usar esse número inteiro para fazer a distinção entre as ocorrências de um único erro gerado em locais diferentes no código.  
   
-Para saber mais, confira [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx). Confira um exemplo de como usar RAISERROR em um teste de unidade do SQL Server no tópico [Como gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Confira um exemplo de como usar RAISERROR em um teste de unidade do SQL Server no tópico [Como gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

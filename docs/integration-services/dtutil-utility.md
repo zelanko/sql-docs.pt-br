@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681894"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642213"
 ---
 # <a name="dtutil-utility"></a>utilitário dtutil
   O utilitário de prompt de comando **dtutil** é usado para gerenciar pacotes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário pode copiar, mover, excluir ou verificar a existência de um pacote. Essas ações podem ser desenvolvidas em qualquer pacote do [!INCLUDE[ssIS](../includes/ssis-md.md)] que esteja armazenado em um dos três locais: um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o Armazenamento de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] e o sistema de arquivos. Se o utilitário acessar um pacote armazenado em **msdb**, o prompt de comando poderá exigir um nome de usuário e uma senha. Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar Autenticação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o prompt de comando solicitará um nome de usuário e uma senha. Se o nome de usuário estiver ausente, o **dtutil** tentará fazer logon no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows. O tipo de armazenamento do pacote é identificado pelas opções **/SQL**, **/FILE**e **/DTS** .  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  O hash usado neste exemplo não é um hash real.  
   
- Para obter mais informações, consulte a seção CertMgr em [Assinando e verificando o código de verificação com Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100).  
+ Para obter mais informações, consulte a seção CertMgr em [Assinando e verificando o código de verificação com Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
   
 ### <a name="encrypt-examples"></a>Exemplos de criptografia  
  O exemplo a seguir criptografa o arquivo PackageToEncrypt.dtsx para o arquivo EncryptedPackage.dts usando criptografia completa de pacote, com uma senha. A senha usada para a criptografia é *EncPswd*.  

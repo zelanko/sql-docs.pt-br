@@ -11,25 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05386d70bb785aebd5093246b3545084517e7f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 143a1d793faa0d782cce8252a4236166d2eb0719
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693264"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702844"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Microsoft a identificar maneiras de aperfeiçoar o nosso software.  Você pode configurar ferramentas para aceitá-las ou recusá-las a qualquer momento.  
   
 > [!NOTE]  
-> Para obter uma explicação sobre as práticas de uso e coleta de dados de usuário para as versões do Microsoft SQL Server, confira esta [política de privacidade](http://go.microsoft.com/fwlink/?LinkID=868444).  
+> Para obter uma explicação sobre as práticas de uso e coleta de dados de usuário para as versões do Microsoft SQL Server, confira esta [política de privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Aceitar e recusar o Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools  
  O Programa de Aperfeiçoamento da Experiência do Usuário foi projetado para ajudar a Microsoft a aperfeiçoar seus produtos ao longo do tempo. Esse programa coleta informações sobre o hardware do computador e sobre como as pessoas usam nossos produtos, sem interromper as tarefas dos usuários no computador. As informações coletadas ajudam a Microsoft a identificar os recursos que devem ser melhorados. Neste documento, abordaremos como aceitar ou recusar o Programa de Aperfeiçoamento da Experiência do Usuário para SSDT (SQL Server Data Tools) para o Visual Studio 2017, Visual Studio 2015 e Visual Studio 2013.  
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Opção e controle do Programa de Aperfeiçoamento da Experiência do Usuário e o SQL Server Data Tools para Visual Studio 2017  
- O SSDT para Visual Studio 2017 é a ferramenta de modelagem de dados que acompanha o SQL Server 2017. Ele usa as opções do Programa de Aperfeiçoamento da Experiência do Usuário internas do Visual Studio 2017. Saiba mais sobre como enviar comentários por meio do Programa de Aperfeiçoamento da Experiência do Usuário no Visual Studio 2017 neste [documento da ajuda do Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
+ O SSDT para Visual Studio 2017 é a ferramenta de modelagem de dados que acompanha o SQL Server 2017. Ele usa as opções do Programa de Aperfeiçoamento da Experiência do Usuário internas do Visual Studio 2017. Saiba mais sobre como enviar comentários por meio do Programa de Aperfeiçoamento da Experiência do Usuário no Visual Studio 2017 neste [documento da ajuda do Visual Studio](https://www.visualstudio.com/docs/work/connect/give-feedback).  
   
  Para as versões prévias do SQL Server 2017, o Programa de Aperfeiçoamento da Experiência do Usuário é ativado por padrão. Para desativá-lo e ativá-lo novamente, siga as instruções abaixo.  
   
@@ -70,7 +70,7 @@ Valor = (DWORD)
 > [!CAUTION]  
 >  A edição incorreta do Registro poderá danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
   
- Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkID=868444).  
+ Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Opções e controle do Programa de Aperfeiçoamento da Experiência do Usuário e do SQL Server Data Tools para Visual Studio 2015  
  O SSDT para Visual Studio 2015 é a ferramenta de modelagem de dados que acompanha o SQL Server 2016. Ele usa as opções do Programa de Aperfeiçoamento da Experiência do Usuário internas do Visual Studio 2015. Saiba mais sobre como enviar comentários por meio do Programa de Aperfeiçoamento da Experiência do Usuário no Visual Studio 2015 neste [documento da ajuda do Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
@@ -112,7 +112,7 @@ Valor = (DWORD)
 > [!CAUTION]  
 >  A edição incorreta do Registro poderá danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
   
- Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkID=868444).  
+ Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Escolha e controle para o Programa de Aperfeiçoamento da Experiência do Usuário e o SQL Server Data Tools – BI (SSDT-BI)  
  Se estiver usando o SSDT-BI, você terá uma oportunidade de participar do Programa de Aperfeiçoamento da Experiência do Usuário durante a instalação. Posteriormente, você pode fazer alterações na configuração do Programa de Aperfeiçoamento da Experiência do Usuário para o SSDT-BI usando ferramentas de cliente ou editando as configurações do registro.  

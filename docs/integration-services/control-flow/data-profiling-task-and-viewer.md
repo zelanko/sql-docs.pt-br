@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831654"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641373"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tarefa e visualizador da tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados fornece a funcionalidade de criação de perfil de dados dentro do processo de extração, transformação e carga de dados. Usando a tarefa Criação de Perfil de Dados, você pode alcançar os seguintes benefícios:  
@@ -70,6 +70,6 @@ ms.locfileid: "47831654"
  A tarefa Criação de Perfil de Dados não tem recursos internos que lhe permitam usar lógica condicional para conectar essa tarefa a tarefas de downstream com base na saída do perfil. Porém, você pode adicionar facilmente esta lógica, com uma quantidade pequena de programação, em uma tarefa de Script. Por exemplo, a tarefa Script poderia executar uma consulta XPath contra o arquivo de saída da tarefa de Criação de Perfil de Dados. A consulta poderia determinar se a porcentagem de valores nulos em uma coluna particular excede certo limite. Se a porcentagem exceder o limite, você pode interromper o pacote e resolver o problema na fonte de dados antes de continuar. Para obter informações, consulte [Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Esquema do criador de perfil de dados](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Esquema do criador de perfil de dados](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f648feffc82ab9f39e3f0a46f744f6373990e7db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1618df076a60d75300ea406f80b9974e093f9229
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725064"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699624"
 ---
 # <a name="view-the-job-history"></a>View the Job History
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
     GO  
     ```  
   
-Para obter mais informações, consulte [sp_help_jobhistory (Transact-SQL)](http://msdn.microsoft.com/a944d44e-411b-4735-8ce4-73888d4262d7).  
+Para obter mais informações, consulte [sp_help_jobhistory (Transact-SQL)](https://msdn.microsoft.com/a944d44e-411b-4735-8ce4-73888d4262d7).  
   
 ## <a name="SMO"></a>Usando o SQL Server Management Objects  
 **Para exibir o log de histórico do trabalho**  
   
-Chame o método **EnumHistory** da classe **Job** usando uma linguagem de programação à sua escolha, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Chame o método **EnumHistory** da classe **Job** usando uma linguagem de programação à sua escolha, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

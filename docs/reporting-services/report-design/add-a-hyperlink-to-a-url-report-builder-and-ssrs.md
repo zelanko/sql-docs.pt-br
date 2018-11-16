@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737730"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814139"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
 Saiba como adicionar ações de hiperlink a caixas de texto, imagens, gráficos e medidores nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Links podem ir para outros relatórios, indicadores em um relatório ou URLs estáticas ou dinâmicas. 
@@ -73,9 +73,9 @@ Tente adicionar hiperlinks com os dados de exemplo no [Tutorial: Formatar texto 
   
 4.  Em **Selecionar URL**, digite ou selecione uma URL ou uma expressão avaliada como uma URL, ou clique na seta suspensa e no nome de um campo que contenha uma URL. 
 
-    Para um item publicado em um servidor de relatórios configurado para o modo nativo, use um caminho completo ou relativo. Por exemplo, `http://<servername>/images/image1.jpg`. 
+    Para um item publicado em um servidor de relatórios configurado para o modo nativo, use um caminho completo ou relativo. Por exemplo, `https://<servername>/images/image1.jpg`. 
     
-    Para um item publicado em um servidor de relatórios configurado para o modo integrado do SharePoint, use uma URL completamente qualificada. Por exemplo, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Para um item publicado em um servidor de relatórios configurado para o modo integrado do SharePoint, use uma URL completamente qualificada. Por exemplo, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

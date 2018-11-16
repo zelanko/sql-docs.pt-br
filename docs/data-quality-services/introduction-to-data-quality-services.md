@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640834"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700274"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640834"
   
 -   **Correspondência:** a identificação de duplicatas semânticas em um processo baseado em regras que lhe permite determinar o que constitui uma correspondência e eliminar a duplicação. Para obter mais informações, consulte [Data Matching](../data-quality-services/data-matching.md).  
   
--   **Serviços de Dados de Referência :** verificação da qualidade de seus dados usando os serviços de um provedor de dados de referência. Use os serviços de dados de referência do [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) para limpar, validar, corresponder e enriquecer os dados. Para obter mais informações, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+-   **Serviços de Dados de Referência :** verificação da qualidade de seus dados usando os serviços de um provedor de dados de referência. Use os serviços de dados de referência do [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) para limpar, validar, corresponder e enriquecer os dados. Para obter mais informações, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Criação de Perfil:** análise de uma fonte de dados para fornecer uma perspectiva da qualidade dos dados em todas as fases da descoberta de conhecimento, do gerenciamento de domínio, da correspondência e dos processos de limpeza de dados. Criação de Perfil é uma ferramenta avançada de uma solução de qualidade de dados do DQS. Você pode criar uma solução de qualidade de dados em que a criação de perfil seja tão importante quanto o gerenciamento de conhecimento, a correspondência ou a limpeza de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809695"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674115"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP na memória (otimização na memória)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
 |[Requisitos para usar tabelas com otimização de memória](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Aborda os requisitos de hardware e software, e as diretrizes para usar tabelas com otimização de memória.|  
 |[Exemplos de código do OLTP in-memory](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contém exemplos de código que mostram como criar e usar uma tabela com otimização de memória.|  
 |[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Apresenta tabelas com otimização de memória.|  
-|[Variáveis de tabela com otimização de memória](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Exemplo de código mostrando como usar uma variável de tabela com otimização de memória em vez de uma variável de tabela tradicional para reduzir o uso de tempdb.|  
-|[Índices em tabelas com otimização de memória](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Incorpora índices com otimização de memória.|  
+|[Variáveis de tabela com otimização de memória](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Exemplo de código mostrando como usar uma variável de tabela com otimização de memória em vez de uma variável de tabela tradicional para reduzir o uso de tempdb.|  
+|[Índices em tabelas com otimização de memória](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Incorpora índices com otimização de memória.|  
 |[Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Apresenta procedimentos armazenados compilados de modo nativo.|  
-|[Gerenciando memória para OLTP in-memory](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Compreendendo e gerenciando o uso de memória no sistema.|  
+|[Gerenciando memória para OLTP in-memory](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Compreendendo e gerenciando o uso de memória no sistema.|  
 |[Criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|A aborda os arquivos delta e de dados, que armazenam informações sobre transações em tabelas com otimização de memória.|  
-|[Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Discute backup, restauração e recuperação de tabelas com otimização de memória.|  
+|[Backup, restauração e recuperação de tabelas com otimização de memória](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Discute backup, restauração e recuperação de tabelas com otimização de memória.|  
 |[Suporte ao Transact-SQL para OLTP in-memory](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Discute o suporte do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Suporte de alta disponibilidade para bancos de dados do OLTP in-memory](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Discute grupos de disponibilidade e clustering de failover no [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Suporte ao SQL Server para OLTP in-memory](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Lista a sintaxe nova e atualizada, e os recursos que oferecem suporte a tabelas com otimização de memória.|  
@@ -79,13 +79,13 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
 
 -   [White paper técnico sobre as operações internas do OLTP in-memory no SQL Server](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [Comparação de recursos de Columnstore e OLTP in-memory do SQL Server](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [Comparação de recursos de Columnstore e OLTP in-memory do SQL Server](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   Novidades no OLTP in-memory no SQL Server 2016 [Parte 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) e [Parte 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Blog do OLTP in-memory](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [Blog do OLTP in-memory](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos de banco de dados](../../relational-databases/database-features.md)  

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2556b7c0e6c7bbbc4d25821a54a627263b3a3d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb50e72c96f69b58dcae48a30cd4b29994ba9e44
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819484"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697754"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ A tabela a seguir descreve as conversões de tipo de dados do [!INCLUDE[ssNoVers
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**, **smallmoney**|**Moeda**|  
-|**datetime**, **smalldatetime**|**Date**|  
+|**datetime**, **smalldatetime**|**Data**|  
 |Tudo definido como NULL|**Variant** definida como Null|  
   
 Todos os valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] únicos são convertidos em um valor [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] único, com a exceção dos valores **binary**, **varbinary** e **image**. Esses valores são convertidos em uma matriz **Byte()** unidimensional em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Essa matriz tem um intervalo de **Byte(** 0 to *length*1 **)** em que *length* é o número de bytes nos valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
@@ -109,7 +109,7 @@ Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbp
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**Moeda**|**money**|  
-|**Date**|**datetime**|  
+|**Data**|**datetime**|  
 |**String** com 4.000 caracteres ou menos|**varchar**/**nvarchar**|  
 |**String** com mais de 4.000 caracteres|**text**/**ntext**|  
 |Matriz **Byte()** unidimensional com 8.000 bytes ou menos|**varbinary**|  
@@ -119,6 +119,6 @@ Estas são as conversões de tipos de dados [!INCLUDE[vbprvb](../../includes/vbp
 [Procedimentos armazenados de Automação OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

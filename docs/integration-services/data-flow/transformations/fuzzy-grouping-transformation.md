@@ -29,18 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822214"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638893"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
   A transformação Agrupamento Difuso executa tarefas de limpeza de dados identificando linhas de dados que provavelmente sejam duplicatas e selecionando uma linha canônica de dados a ser usada na padronização dos dados.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  A transformação Agrupamento Difuso requer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar tabelas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] temporárias que o algoritmo de transformação necessita para executar seu trabalho. A conexão deve determinar um usuário que tenha permissão para criar tabelas no banco de dados.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47822214"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

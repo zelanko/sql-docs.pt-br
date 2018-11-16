@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674316"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813239"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674316"
  Especifica uma propriedade **Título** opcional para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
   
  Caminho  
- Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: `http://mySharePointWeb/MySite/MyDocLib`, em que `http://mySharePointWeb` indica o aplicativo Web, “MySite” é o site do SharePoint e “MyDocLib” é a biblioteca do SharePoint na qual o relatório será entregue.  
+ Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: `https://mySharePointWeb/MySite/MyDocLib`, em que `https://mySharePointWeb` indica o aplicativo Web, “MySite” é o site do SharePoint e “MyDocLib” é a biblioteca do SharePoint na qual o relatório será entregue.  
   
  Você não pode especificar uma página, um site nem uma lista. O contêiner de destino deve ser uma biblioteca no mesmo site ou farm.  
   

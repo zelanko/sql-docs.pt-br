@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794604"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662255"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794604"
  Você também pode usar a GUI para exibir a saída de ajuste gerada pelo utilitário de linha de comando **dta** .  
   
 > [!NOTE]  
->  Se você usar o utilitário de linha de comando **dta** e especificar que a saída deve ser gravada em um arquivo XML usando o argumento **-ox** , poderá abrir e exibir o arquivo de saída XML clicando em **Abrir Arquivo** no menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obter informações sobre o utilitário de linha de comando **dta** , consulte [Utilitário dta](../../tools/dta/dta-utility.md).  
+>  Se você usar o utilitário de linha de comando **dta** e especificar que a saída deve ser gravada em um arquivo XML usando o argumento **-ox** , poderá abrir e exibir o arquivo de saída XML clicando em **Abrir Arquivo** no menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obter informações sobre o utilitário de linha de comando **dta** , consulte [Utilitário dta](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para exibir as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794604"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
 6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no elemento de **Configuration** . Se quiser executar o Orientador de Otimização do Mecanismo de Banco de Dados novamente para verificar outra configuração hipotética baseada na saída, você poderá copiar e colar o conteúdo dos elementos **Configuration** do arquivo de saída em um arquivo de entrada XML novo ou no original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -310,7 +310,7 @@ ms.locfileid: "47794604"
  **Agendar para mais tarde**  
  Gera um script para as recomendações e salva as ações como um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- **Date**  
+ **Data**  
  Especifica a data em que você quer executar o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a fim de aplicar as recomendações.  
   
  **Time**  
@@ -322,7 +322,7 @@ ms.locfileid: "47794604"
  **Resumo do Ajuste**  
  Exibe um resumo das recomendações do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
- **Date**  
+ **Data**  
  Data em que o Orientador de Otimização do Mecanismo de Banco de Dados cria o relatório.  
   
  **Hora**  

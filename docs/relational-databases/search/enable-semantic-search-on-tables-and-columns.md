@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169307"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672465"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Adicionar um índice semântico usando o SQL Server Management Studio  
- Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
 ## <a name="alter-a-semantic-index"></a>Alterar um índice semântico
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Descartar um índice semântico usando o SQL Server Management Studio  
- Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   

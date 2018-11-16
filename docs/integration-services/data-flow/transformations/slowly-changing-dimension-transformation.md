@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820044"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638323"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  
@@ -90,7 +90,7 @@ ms.locfileid: "47820044"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -108,6 +108,6 @@ ms.locfileid: "47820044"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [Otimizando o Assistente de Dimensão Variável Lentamente](http://go.microsoft.com/fwlink/?LinkId=199481), em blogs.msdn.com.  
+-   Entrada de blog, [Otimizando o Assistente de Dimensão Variável Lentamente](https://go.microsoft.com/fwlink/?LinkId=199481), em blogs.msdn.com.  
   
   

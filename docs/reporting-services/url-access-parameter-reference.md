@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ec74bab3523b4e77c1b1c0c9355353c48490140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817535"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813719"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -48,13 +48,13 @@ ms.locfileid: "47817535"
      Para obter um exemplo no modo **Nativo** :  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      Para obter um exemplo no modo do **SharePoint** :  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* : define o valor de zoom do relatório como um percentual de número inteiro ou uma constante de cadeia de caracteres. Os valores de cadeia de caracteres padrão incluem **Page Width** e **Whole Page**. Esse parâmetro é ignorado pelas versões do Internet Explorer anteriores ao Internet Explorer 5.0 e todos os navegadores que não são da[!INCLUDE[msCoName](../includes/msconame-md.md)] . O valor padrão desse parâmetro é **100**.  
@@ -62,13 +62,13 @@ ms.locfileid: "47817535"
      Por exemplo, no modo **Nativo** :  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      Por exemplo, no modo do **SharePoint** .  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* : define a página do relatório a ser exibida. Qualquer valor maior que o número de páginas do relatório exibe a última página. Qualquer valor menor que **0** exibe a página 1 do relatório. O valor padrão desse parâmetro é **1**.  
@@ -76,13 +76,13 @@ ms.locfileid: "47817535"
      Por exemplo, no modo **Nativo** , para exibir a página 2 do relatório:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      Por exemplo, no modo do **SharePoint** , para exibir a página 2 do relatório:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*: pesquise um conjunto específico de texto em um relatório.  
@@ -90,13 +90,13 @@ ms.locfileid: "47817535"
      Para obter um exemplo no modo **Nativo** .  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      Por exemplo, no modo do **SharePoint** .  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* : especifica a última seção a ser pesquisada. O valor padrão desse parâmetro é a última página do relatório.  
@@ -104,7 +104,7 @@ ms.locfileid: "47817535"
      Para obter um exemplo no modo **Nativo** que pesquisa a primeira ocorrência do texto “Mountain-400” no relatório de exemplo Catálogo de Produtos começando pela primeira página e terminando na página cinco.  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* : define o número da última página a ser usada na pesquisa. Por exemplo, um valor **5** indica que a última página a ser pesquisada é a página 5 do relatório. O valor padrão é o número da página atual. Use esse parâmetro junto com o parâmetro *StartFind* . Consulte o exemplo acima.  
@@ -130,19 +130,19 @@ ms.locfileid: "47817535"
          Por exemplo, no modo **Nativo** .  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          Por exemplo, uma instância nomeada no modo **Nativo** .  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          Por exemplo, no modo do **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** O relatório é renderizado no navegador para que você possa exibi-lo.  
@@ -150,21 +150,21 @@ ms.locfileid: "47817535"
          Por exemplo, no modo **Nativo** :  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          Por exemplo, no modo do **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
-    -   **GetSharedDatasetDefinition** Exibe a definição XML associada a um conjunto de dados compartilhado. As propriedades do conjunto de dados compartilhado, inclusive a consulta, os parâmetros do conjunto de dados, os valores padrão, os filtros de conjunto de dados e as opções de dados, como agrupamento e diferenciação entre maiúsculas e minúsculas, são salvas na definição. É necessário ter a permissão **Ler Definição de Relatório** em um conjunto de dados compartilhado para usar esse valor.  
+    -   **GetSharedDatasetDefinition** Exibe a definição XML associada a um conjunto de dados compartilhado. As propriedades do conjunto de dados compartilhado, inclusive a consulta, os parâmetros do conjunto de dados, os valores padrão, os filtros de conjunto de dados e as opções de dados, como ordenação e diferenciação entre maiúsculas e minúsculas, são salvas na definição. É necessário ter a permissão **Ler Definição de Relatório** em um conjunto de dados compartilhado para usar esse valor.  
   
          Por exemplo, no modo **Nativo** .  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** Exibe as propriedades de determinada fonte de dados compartilhada como XML. Se houver suporte para XML em seu navegador e se você for um usuário autenticado com a permissão **Ler Conteúdo** na fonte de dados, a definição de fonte de dados será exibida.  
@@ -172,13 +172,13 @@ ms.locfileid: "47817535"
          Por exemplo, no modo **Nativo** .  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          Por exemplo, no modo do **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents** Renderizará um recurso e o exibirá em uma página HTML se o recurso for compatível com o navegador. Caso contrário, você será solicitado a abrir ou salvar o arquivo ou recurso em disco.  
@@ -186,13 +186,13 @@ ms.locfileid: "47817535"
          Por exemplo, no modo **Nativo** .  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          Por exemplo, no modo do **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** Exibe a definição XML associada a um item de relatório publicado. É necessário ter a permissão **Ler Conteúdo** em um item de relatório publicado para usar esse valor.  
@@ -229,13 +229,13 @@ ms.locfileid: "47817535"
      Por exemplo, para obter uma cópia em PDF de um relatório diretamente de um servidor de relatório no modo **Nativo** :  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      Por exemplo, para obter uma cópia em PDF de um relatório diretamente de um servidor de relatório no modo do **SharePoint** :  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   *ParameterLanguage*:  
@@ -244,7 +244,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo **Nativo** , para substituir o idioma do navegador e especificar um valor de cultura de-DE:  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* : renderiza um relatório com base em um instantâneo de histórico de relatório. Para obter mais informações, consulte [Renderizar um instantâneo de histórico de relatório usando o acesso à URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
@@ -252,7 +252,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo **Nativo** , recupere um instantâneo de histórico de relatórios datado de 2003-04-07 com um carimbo de data/hora de 13:40:02:  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   *PersistStreams*:  
@@ -289,7 +289,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo do **SharePoint** , para exibir apenas a paginação na barra de ferramentas.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*: controla a exibição do cabeçalho da Web Part Visualizador de Relatórios. O valor padrão é **Completo**. Os valores podem ser:  
@@ -303,7 +303,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo do **SharePoint** , para exibir apenas a navegação de trilha no cabeçalho.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*: controla a largura de exibição, em pixels, da área de parâmetro na Web Part Visualizador de Relatórios. O valor padrão é o mesmo do padrão da Web Part do Visualizador de Relatórios. O valor deve ser um inteiro não negativo.  
@@ -321,7 +321,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo do **SharePoint** , para recolher a área de prompt de parâmetros.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
 -   *DocMapMode*: controla como a área do mapa do documento da Web Part Visualizador de Relatórios é exibida na exibição de página inteira. O valor padrão é **Completo**. Os valores válidos são:  
@@ -337,7 +337,7 @@ ms.locfileid: "47817535"
      Por exemplo, no modo do **SharePoint** , para encaixar a barra de ferramentas na parte inferior.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
 -   *ToolBarItemsDisplayMode*: controla quais itens da barra de ferramentas são exibidos. Esse é um valor de enumeração de bit a bit. Para incluir um item de barra de ferramentas, adicione o valor do item ao valor total. Por exemplo: para nenhum menu Ações, use rv:ToolBarItemsDisplayMode=63 (ou 0x3F) que é 1+2+4+8+16+32; para itens de menu Ações apenas, use rv:ToolBarItemsDisplayMode=960 (ou 0x3C0). O valor padrão é **-1**, que inclui todos os itens da barra de ferramentas. Os valores válidos são:  
@@ -367,11 +367,11 @@ ms.locfileid: "47817535"
      Por exemplo, no modo do **SharePoint** , para exibir somente o botão **Voltar** , os controles de pesquisa de texto, os controles de navegação de página e o botão **Atualizar** .  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
  [Acesso à URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Exportar um relatório com acesso à URL](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
   
   

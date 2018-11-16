@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 692ae852147adcf8c51d2ca4c271a20f34baaba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a493772e014445a25b21078ce37ada5585e3226
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847274"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813909"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa o portal da Web para selecionar um relatório que será entregue aos destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
@@ -25,8 +25,8 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
 1.  Procure o portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com privilégios de administrador, por exemplo, clique com o botão direito do mouse no ícone do Internet Explorer e clique em **Executar como administrador**.  
  
 2.    Navegue até a URL do portal da Web.  Por exemplo:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports`
+    `https://<server name>/reports`.  
+    `https://localhost/reports`
  **Observação:** a URL do *portal* da Web é "Reports", não a URL do *Servidor* de Relatório "Reportserver".  
 3.  Navegue até a pasta que contém o relatório **Pedidos de Vendas** e, no menu de contexto do relatório, clique em **Gerenciar**.  
  

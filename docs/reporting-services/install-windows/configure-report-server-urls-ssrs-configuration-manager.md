@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609694"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813339"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as URLs são usadas para acessar o serviço Web do Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Antes de usar qualquer um dos aplicativos, você deve configurar, pelo menos, uma URL para o serviço Web e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece valores padrão para as URLs de ambos os aplicativos que funcionam bem na maioria dos cenários de implantação, incluindo implantações lado a lado com outros serviços Web e aplicativos.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609694"
 ## <a name="default-urls"></a>URLs padrão  
  Quando você acessa um servidor de relatório ou o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] por meio de sua respectiva URL, a URL deve incluir o nome do host, não o endereço IP. Em uma rede TCP/IP, o endereço IP será resolvido para um nome de host (ou o nome de rede do computador). Se você usou os valores padrão para configurar URLs, deverá poder acessar o serviço Web Servidor de Relatório usando URLs que especifiquem o nome do computador ou localhost como o nome do host:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  As configurações que disponibilizam essas URLs aparecem na tabela a seguir. Esta tabela mostra os valores padrão que habilitam uma conexão do servidor de relatório por meio de URLs que incluem um nome de host:  
   

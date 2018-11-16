@@ -21,12 +21,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07729e6ad2593b5d2b7627f8e768064bfc285245
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 91610d3bcef8cf2e8aee490ce2037b26ba0eadbb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033173"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670905"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "51033173"
   
 -   Esse procedimento deve ser executado por um usuário com permissões de sysadmin, as mesmas permissões necessárias para criar um UCP.  
   
--   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [Como remover uma instância do SQL Server do Utilitário do SQL Server](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [Como remover uma instância do SQL Server do Utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimento para remover um SQL Server UCP do Utilitário do SQL Server. Após a conclusão da operação, um UCP pode ser novamente criado na instância do SQL Server.  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Connection_dialog"></a> Caixa de diálogo de conexão  
- Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ter um banco de dados chamado “sysutility_mdw”.|A operação de criação de UCP criará um data warehouse de gerenciamento de utilitário chamado (UMDW) "sysutility_mdw". A operação exige que o nome não exista no computador no momento em que as regras de validação são executadas. Para continuar, você deve remover ou renomear qualquer banco de dados chamado "sysutility_mdw". Para obter mais informações sobre as operações de renomeação, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |É necessário parar os conjuntos de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Interrompa os conjuntos de coleta preexistentes enquanto o UCP é criado na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o coletor de dados estiver desabilitado, habilite-o, pare os conjuntos de coleta em execução e execute novamente as regras de validação para a operação Criar UCP.<br /><br /> Para habilitar o coletor de dados:<br /><br /> No Pesquisador de Objetos, expanda o nó **Gerenciamento** .<br /><br /> Clique com o botão direito do mouse em **Coleta de Dados**e clique em **Habilitar Coleta de Dados**.<br /><br /> Para parar um conjunto de coleta:<br /><br /> No Pesquisador de Objetos, expanda o nó Gerenciamento, expanda **Coleta de Dados**e, em seguida, expanda **Conjuntos de Coleta de Dados do Sistema**.<br /><br /> Clique com o botão direito do mouse no conjunto de coleta a ser interrompido e clique em **Parar Conjunto de Coleta de Dados**.<br /><br /> Uma caixa de mensagem exibirá o resultado dessa ação, e um círculo vermelho no ícone do conjunto de coleta indicará que este foi interrompido.|  
 |O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado na instância especificada. Se a instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser configurado para iniciar manualmente. Caso contrário, o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser configurado para iniciar automaticamente.|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Se a instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
-|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |A conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser uma conta interna, como Serviço de Rede.|Se a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for uma conta interna, como Serviço de Rede, reatribua a conta a uma conta de domínio do Windows que seja sysadmin.|  
 |Se você selecionar a opção de conta proxy, a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser uma conta de domínio do Windows válida.|Especifique uma conta de domínio do Windows válida. Para assegurar que a conta seja válida, faça logon na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a conta de domínio do Windows.|  
 |Se você selecionar a opção de conta de serviço, a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não poderá ser uma conta interna, como Serviço de Rede.|Se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for uma conta interna, como Serviço de Rede, reatribua a conta a uma conta de domínio do Windows.|  
@@ -229,6 +229,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

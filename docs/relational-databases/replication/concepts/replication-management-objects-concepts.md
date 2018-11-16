@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672625"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749656"
 >  Embora a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ofereça suporte à declaração explícita de transações durante a configuração de propriedades, tais transações poderão interferir em transações internas de replicação, poderão gerar resultados inesperados e não deverão ser usadas com RMO.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Habilitando o suporte do TLS 1.2 em componentes RMO 
- O suporte a TLS1.2 em componentes RMO no Windows 2012 e inferior pode ser habilitado com a instalação da atualização [KB 3140245](http://support.microsoft.com/help/3140245) e criação das chaves do Registro, conforme mencionado no artigo. No Windows 2012 R2 e versões posteriores, somente as chaves do Registro mencionadas no artigo acima precisam ser criadas.
+ O suporte a TLS1.2 em componentes RMO no Windows 2012 e inferior pode ser habilitado com a instalação da atualização [KB 3140245](https://support.microsoft.com/help/3140245) e criação das chaves do Registro, conforme mencionado no artigo. No Windows 2012 R2 e versões posteriores, somente as chaves do Registro mencionadas no artigo acima precisam ser criadas.
  
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra o cache de alterações de propriedade. As alterações feitas nos atributos de uma publicação transacional são armazenadas em cache até serem explicitamente enviadas ao servidor.  

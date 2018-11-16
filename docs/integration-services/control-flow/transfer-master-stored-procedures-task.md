@@ -17,12 +17,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a84a11092ab1cab6e252d16d010f991d8a865c0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddcdfc32fe38495779f95aae0da20bf314c34c17
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761704"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639643"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarefa Transferir Procedimentos Armazenados Mestres
   A tarefa Transferir Procedimentos Armazenados Mestres transfere um ou mais procedimentos armazenados definidos pelo usuário entre bancos de dados **mestre** em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir um procedimento armazenado do banco de dados **mestre** , o proprietário do procedimento deve ser dbo.  
@@ -48,7 +48,7 @@ ms.locfileid: "47761704"
  A tarefa Transferir Procedimentos Armazenados Mestres não informa o progresso incremental da transferência de logon; ela apenas informa 0% e 100% de conclusão.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução definido na propriedade **ExecutionValue** da tarefa retorna o número de procedimentos armazenados transferidos. Atribuindo uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Procedimentos Armazenados Mestres, as informações sobre a transferência de procedimentos armazenados podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução definido na propriedade **ExecutionValue** da tarefa retorna o número de procedimentos armazenados transferidos. Atribuindo uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Procedimentos Armazenados Mestres, as informações sobre a transferência de procedimentos armazenados podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Procedimentos Armazenados Mestres inclui as seguintes entradas de log personalizadas:  
@@ -78,7 +78,7 @@ ms.locfileid: "47761704"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (Página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Procedimentos Armazenados Mestres** para nomear e descrever a tarefa Transferir Procedimentos Armazenados Mestres.  

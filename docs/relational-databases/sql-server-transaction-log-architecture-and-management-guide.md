@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631864"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658065"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ Se os arquivos de log ficarem grandes, em diversos incrementos pequenos, eles te
 Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTER DATABASE`, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  O log de transações é um arquivo embrulhado. Por exemplo, considere um banco de dados com um arquivo de log físico dividido em quatro VLFs. Quando o banco de dados é criado, o arquivo de log lógico começa no início do arquivo de log físico. Novos registros de log são adicionados no final do log lógico e expandem para o final do log físico. O truncamento de logs libera quaisquer logs virtuais cujos registros apareçam todos na frente do número mínimo de sequência de recuperação do log (MinLSN). O *MinLSN* é o número de sequência de log do registro de log mais antigo que deve estar presente para o êxito de uma reversão de todo o banco de dados. O log de transações no banco de dados de exemplo pareceria semelhante ao apresentado na ilustração a seguir.  
   
@@ -143,12 +142,12 @@ Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTE
  Para poder criar o primeiro backup de log, você deve criar um backup completo, como um backup de banco de dados ou o primeiro de um conjunto de backups de arquivo. A restauração de um banco de dados usando apenas backups de arquivo pode tornar-se complexa. Portanto, recomendamos que, assim que possível, você inicie com um backup de banco de dados. Assim, é necessário fazer backup de log de transações regularmente. Isto não só minimiza a exposição à perda de trabalho, como também habilita o truncamento do log de transações. Normalmente, o log de transações é truncado após todos os backups de log convencionais.  
   
 > [!IMPORTANT]
-> Recomendamos fazer backups de log com frequência suficiente para dar suporte a seus requisitos empresariais, especificamente, a tolerância à perda de trabalho que pode ser causada por um armazenamento de log danificado. A frequência apropriada para fazer backups de log depende de tolerância à exposição à perda de trabalho, equilibrada por quantos backups de log é possível armazenar, administrar e, potencialmente, restaurar. Pense no [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup de log.
+> Recomendamos fazer backups de log com frequência suficiente para dar suporte a seus requisitos empresariais, especificamente, a tolerância à perda de trabalho que pode ser causada por um armazenamento de log danificado. A frequência apropriada para fazer backups de log depende de tolerância à exposição à perda de trabalho, equilibrada por quantos backups de log é possível armazenar, administrar e, potencialmente, restaurar. Pense no [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup de log.
 > Fazer um backup de log a cada 15 a 30 minutos deve ser o bastante. Se o seu negócio requer que você reduza ao mínimo a exposição à perda de trabalho, considere fazer backups de log com mais frequência. Backups de log mais frequentes têm a vantagem adicional de aumentar a frequência de truncamentos de log, resultando em arquivos de log menores.  
   
 > [!IMPORTANT]
 > Para limitar o número de backups de log que você precisa restaurar, é essencial fazer backup dos dados com frequência. Por exemplo, convém programar um backup de banco de dados completo por semana e backups de diferenciais de banco de dados diariamente.  
-> Mais uma vez, pense no [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup completo e diferencial de banco de dados.
+> Mais uma vez, pense no [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup completo e diferencial de banco de dados.
 
 Para obter mais informações sobre backups de log de transações, consulte [Backups de log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -253,7 +252,7 @@ Recomendamos a leitura dos artigos e manuais a seguir para obter mais informaç�
 [Configurar a opção de configuração do servidor do intervalo de recuperação](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Gerenciamento de log de transações do SQL Server, por Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Gerenciamento de log de transações do SQL Server, por Tony Davis e Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

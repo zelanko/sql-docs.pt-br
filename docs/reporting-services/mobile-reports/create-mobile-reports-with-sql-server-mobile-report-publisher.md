@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031625"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812589"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server
 Saiba mais sobre relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , otimizados para dispositivos móveis e conectados a dados locais, com uma variedade de visualizações de dados. 
 
 >[!NOTE]
->  Você precisa migrar o conteúdo do Datazen Server como painéis e KPIs para um servidor SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Experimente o [Assistente de migração do SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  Você precisa migrar o conteúdo do Datazen Server como painéis e KPIs para um servidor SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Experimente o [Assistente de migração do SQL Server para Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,10 +35,10 @@ Com [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], você pod
 Esses artigos ajudarão você a começar.
 -  Baixar o [Publicador de Relatórios Móveis do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Criar um relatório móvel do Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [Instruções passo a passo de ponta a ponta: criar relatórios móveis e KPIs no SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan)  
+-  [Instruções passo a passo de ponta a ponta: criar relatórios móveis e KPIs no SQL Server 2016 Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan)  
 - [Primeiro o design, ou primeiro os dados](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): decida se você quer criar seu relatório com dados simulados primeiro, ou começar com seus próprios dados.  
 - [Dados de relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): use os dados de conjuntos de dados compartilhados ou prepare os dados de pastas de trabalho do Excel para usar em seus relatórios móveis.
-- [Como funciona a atualização de dados em KPIs e relatórios móveis no Reporting Services](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan): leia sobre como configurar o cache para conjuntos de dados compartilhados para controlar com que frequência o dados são atualizados e acelerar o desempenho do relatório.
+- [Como funciona a atualização de dados em KPIs e relatórios móveis no Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan): leia sobre como configurar o cache para conjuntos de dados compartilhados para controlar com que frequência o dados são atualizados e acelerar o desempenho do relatório.
 - [Visualizações em relatórios móveis](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Medidores em relatórios móveis](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Mapas em relatórios móveis](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

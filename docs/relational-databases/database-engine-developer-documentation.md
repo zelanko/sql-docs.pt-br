@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597644"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668596"
 ---
 # <a name="database-engine-developer-documentation"></a>Documentação do desenvolvedor do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597644"
  [Programação do procedimento armazenado estendido do Mecanismo de Banco de Dados](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Descreve como usar procedimentos armazenados estendidos para criar suas próprias rotinas externas em uma linguagem de programação como o C.  
   
- [Programação do coletor de dados](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [Programação do coletor de dados](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Descreve o modelo de objeto Coletor de Dados.  
   
- [Programação da caixa de mensagem de exceção](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [Programação da caixa de mensagem de exceção](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Descreve como você pode usar a interface programática da caixa de mensagens de exceção em seus aplicativos de forma a fornecer mais controle sobre a experiência de mensagens, dar aos usuários a opção de salvar o conteúdo de mensagens de erro para referência posterior e obter ajuda com as mensagens.  
   
 ## <a name="see-also"></a>Consulte Também  

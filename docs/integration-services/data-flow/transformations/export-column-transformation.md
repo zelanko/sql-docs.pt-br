@@ -22,12 +22,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771604"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639593"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
   A transformação Exportar Coluna lê dados em um fluxo de dados e os insere em um arquivo. Por exemplo, se o fluxo de dados contiver informações de produtos, como uma imagem de cada produto, você poderá usar a transformação Exportar Coluna para salvar essas imagens em arquivos.  
@@ -66,7 +66,7 @@ ms.locfileid: "47771604"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

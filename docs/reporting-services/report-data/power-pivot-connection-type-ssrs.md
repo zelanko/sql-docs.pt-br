@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030845"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812659"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SharePoint.  
@@ -29,7 +29,7 @@ ms.locfileid: "50030845"
  Use o tipo de fonte de dados de relatório **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Cadeia de Conexão  
- A cadeia de conexão é a URL para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada no SharePoint na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou em outra biblioteca, por exemplo, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ A cadeia de conexão é a URL para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada no SharePoint na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou em outra biblioteca, por exemplo, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenciais  
  Especifique as credenciais que você precisa para acessar a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  

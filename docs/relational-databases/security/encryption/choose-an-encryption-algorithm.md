@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dee2105857392c1083baeca842d59c1c173f36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52336c3ec3ab0565177f94400fb8320808bc8c90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671706"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47670654"
 >   
 >  O uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não fornece um salt automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto, preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Para obter mais informações sobre os algoritmos de criptografia e sobre a tecnologia de criptografia, consulte [Conceitos de segurança de chave](http://go.microsoft.com/fwlink/?LinkId=62082) no Guia do desenvolvedor do .NET Framework do MSDN.  
+ Para obter mais informações sobre os algoritmos de criptografia e sobre a tecnologia de criptografia, consulte [Conceitos de segurança de chave](https://go.microsoft.com/fwlink/?LinkId=62082) no Guia do desenvolvedor do .NET Framework do MSDN.  
   
  **Esclarecimento em relação aos algoritmos DES:**  
   

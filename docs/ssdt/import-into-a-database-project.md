@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716044"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667095"
 ---
 # <a name="import-into-a-database-project"></a>Importar para um projeto de banco de dados
 Você pode usar Importar para popular um projeto com novos objetos de um banco de dados dinâmico ou um .dacpac, ou para atualizar objetos existentes no seu projeto com uma nova definição de um script. Há algumas diferenças de comportamento que devem ser observadas entre esses três caminhos, que são descritas a seguir.  
@@ -59,7 +59,7 @@ Todos os objetos da fonte de importação que ainda *não* existirem no projeto 
   
 O processo Importar do Script não incluirá scripts Pré/Pós-Implantação, variáveis SQLCMD ou arquivos RefactorLog. Esses e qualquer outra construção sem suporte que seja detectada na importação serão colocados em um arquivo **ScriptsIgnoredOnImport.sql** em uma pasta **Scripts** no seu projeto.  
   
-Para saber mais, confira o fórum da equipe do SSDT em [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
+Para saber mais, confira o fórum da equipe do SSDT em [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
   
 ## <a name="bkmk_import_encrypted"></a>Importar objetos criptografados  
 Ao importar objetos criptografados para um projeto de banco de dados, nem sempre será possível recuperar todo o corpo da definição de objeto do servidor. Assim, o comportamento de importação poderá ser diferente ao lidar com essa classe de objetos.  

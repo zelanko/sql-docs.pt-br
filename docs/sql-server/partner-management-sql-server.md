@@ -9,12 +9,12 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 95753150d4b8728b3e69f86a153cc307a0337a09
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: efb72426b1eceff0dbbf88676fb0aa9a83134cae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348577"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701834"
 ---
 # <a name="sql-server-managing-partners"></a>Parceiros de gerenciamento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [Parceiros pa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->
 
 <!--Press links-->
 <!--[idera_press]:-->

@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614434"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658066"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  As tabelas temporais com controle da versão do sistema para [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) são projetadas para fornecer uma solução econômica para cenários nos quais há a necessidade de [auditoria de dados e análise pontual](http://msdn.microsoft.com/library/mt631669.aspx) sobre os dados coletados com cargas de trabalho OLTP in-memory. Elas fornecem alta taxa de transferência transacional, simultaneidade livre de bloqueios e, ao mesmo tempo, a capacidade de armazenar grande quantidade de dados de histórico que podem ser consultados facilmente.  
+  As tabelas temporais com controle da versão do sistema para [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) são projetadas para fornecer uma solução econômica para cenários nos quais há a necessidade de [auditoria de dados e análise pontual](https://msdn.microsoft.com/library/mt631669.aspx) sobre os dados coletados com cargas de trabalho OLTP in-memory. Elas fornecem alta taxa de transferência transacional, simultaneidade livre de bloqueios e, ao mesmo tempo, a capacidade de armazenar grande quantidade de dados de histórico que podem ser consultados facilmente.  
   
 ## <a name="overview"></a>Visão geral  
  As tabelas temporais com controle da versão do sistema mantêm um histórico completo de alterações de dados e expõem extensões Transact-SQL convenientes para a análise pontual. Em um cenário típico, o histórico de dados é retido por um período muito longo (vários meses, até mesmo anos), embora não seja consultado regularmente.  

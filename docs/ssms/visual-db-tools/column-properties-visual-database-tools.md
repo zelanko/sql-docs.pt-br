@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438356f08fee5bc9ac20c4a5b2038e54e7a6ffa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815960"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698774"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Mostra o nome da fonte dos dados para a coluna selecionada. (Aplica-se somente a
 Expande para mostrar as propriedades restantes.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento de Identidade**  
 Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Exibe o nome da coluna. Para editar o nome, digite-o na caixa de texto.
 Mostra se o tipo de dados da coluna permite ou não valores nulos.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Valor Padrão ou Associação**  
 Mostra o padrão para essa coluna quando nenhum valor for especificado para essa coluna. A lista suspensa contém todos os padrões gerais definidos na fonte de dados. Para associar a coluna a um padrão geral, faça a seleção na lista suspensa. Alternativamente, para criar uma restrição padrão para a coluna, digite o valor padrão diretamente como texto.  
@@ -112,8 +112,8 @@ Mostra o número máximo de dígitos que podem aparecer à direita do ponto deci
 **Categoria do Designer de Tabelas**  
 Expande para mostrar as propriedades restantes.  
   
-**Agrupamento**  
-Mostra a configuração de agrupamento da coluna selecionada. Para alterar a configuração, clique em **Agrupamento** e, então, clique nas reticências **(…)** à direita do valor.  
+**Ordenação**  
+Mostra a configuração de ordenação da coluna selecionada. Para alterar a configuração, clique em **Ordenação** e, então, clique nas reticências **(…)** à direita do valor.  
   
 **Categoria Especificação de Coluna Computada**  
 Expande para mostrar propriedades para **Fórmula** e **É Persistido**. Se a coluna for computada, a fórmula também será exibida. Para editar a fórmula, expanda essa categoria e edite na propriedade **Fórmula** .  
@@ -143,7 +143,7 @@ Mostra que coluna é usada para definir o tipo de documento de uma coluna do tip
 Indica a linguagem usada para indexar a coluna.  
   
 **Semântica Estatística**  
-Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será definida como **Não** e não poderá ser modificada. Se você selecionar **Sim** na opção **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na coluna **Idioma** serão restringidos a esses para os quais o Modelo de Idioma Semântico oferece suporte.  
   

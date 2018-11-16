@@ -16,12 +16,12 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c781794fb548baa688596e613270c641eff9d481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37711d75b48118bd180307795d9fbaa3dfc4bf74
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765530"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638013"
 ---
 # <a name="group-or-ungroup-components"></a>Agrupa ou desagrupa componentes
   As guias **Fluxo de Controle**, **Fluxo de dados**e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
@@ -62,6 +62,6 @@ ms.locfileid: "47765530"
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

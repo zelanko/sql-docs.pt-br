@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803705"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607156"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
 
@@ -112,7 +112,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 14. Na página Configuração do Servidor — Contas de Serviço, as contas de serviço padrão são exibidas para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos que estão sendo atualizados.  
   
-     As informações de autenticação e de logon serão transferidas da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para que serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebam as permissões mínimas que têm para concluir suas tarefas. Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     As informações de autenticação e de logon serão transferidas da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para que serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebam as permissões mínimas que têm para concluir suas tarefas. Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -120,7 +120,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-15. Na página Opções de Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Na página Opções de Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. A janela Regras de Recurso avançará automaticamente se todas as regras passarem.  
   
@@ -143,6 +143,6 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 ## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilidade com versões anteriores_excluída](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

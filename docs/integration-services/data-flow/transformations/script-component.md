@@ -23,12 +23,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f87b80fb11261ee1d49326dfc29fe89fc2bdc94c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857034"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641173"
 ---
 # <a name="script-component"></a>Componente Script
   O componente Script hospeda o script e permite que um pacote inclua e execute um código de script personalizado. Você pode usar o componente Script em pacotes para as seguintes finalidades:  
@@ -101,7 +101,7 @@ ms.locfileid: "47857034"
 ### <a name="configuring-the-script-component-programmatically"></a>Configurando o componente Script programaticamente  
  Para obter mais informações sobre as propriedades que podem ser definidas na janela **Propriedades** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "47857034"
  **Inputs and outputs**  
  Selecione uma entrada ou uma saída à esquerda para exibir suas propriedades na tabela à direita. As propriedades disponíveis para edição variam de acordo com a seleção. Muitas das propriedades exibidas são somente leitura. Para obter mais informações sobre as propriedades individuais, consulte os tópicos abaixo.  
   
- [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

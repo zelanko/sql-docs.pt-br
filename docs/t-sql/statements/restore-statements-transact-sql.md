@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252153"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703664"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 Restaura backups do banco de dados SQL feitos usando o comando BACKUP. 
@@ -334,7 +334,7 @@ Durante uma restauração offline, se o banco de dados especificado estiver em u
   
 Para obter mais informações sobre a recuperação de banco de dados, consulte [Visão geral da restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
-As operações de restauração entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que o agrupamento do banco de dados tenha suporte no sistema operacional.  
+As operações de restauração entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que a ordenação do banco de dados tenha suporte no sistema operacional.  
   
 RESTORE pode ser reiniciado depois de um erro. Além disso, você pode instruir RESTORE a prosseguir, apesar dos erros, e ele restaura o máximo possível de dados (consulte a opção CONTINUE_AFTER_ERROR).  
   
@@ -365,7 +365,7 @@ Dados de texto completo são restaurados com outros dados do banco de dados dura
 A instrução RESTORE também pode ser usada para executar restaurações em locais alternados, restaurações diferenciais, restaurações de arquivos e grupos de arquivos e restaurações de arquivos e grupos de arquivos diferenciais de dados de texto completo. Além disso, RESTORE pode restaurar apenas arquivos de texto completo, assim como dados de banco de dados.  
   
 > [!NOTE] 
-> Catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ainda são tratados como arquivos de banco de dados. Nesse caso, o procedimento usado pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para fazer backup de catálogos de texto completo ainda se aplica, exceto pelo fato de que não é mais necessário pausar e retomar a operação de backup. Para obter mais informações, consulte [Fazendo backup e restaurando catálogos de texto completo](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ainda são tratados como arquivos de banco de dados. Nesse caso, o procedimento usado pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para fazer backup de catálogos de texto completo ainda se aplica, exceto pelo fato de que não é mais necessário pausar e retomar a operação de backup. Para obter mais informações, consulte [Fazendo backup e restaurando catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Metadados  
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui tabelas de histórico de backup e restauração que controlam a atividade de backup e restauração de cada instância de servidor. Quando uma restauração é executada, as tabelas de histórico de backup também são modificadas. Para obter informações sobre essas tabelas, consulte [Histórico de backup e informações de cabeçalho &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -745,7 +745,7 @@ FROM URL
 Especifica um ou mais dispositivos de backup colocados em URLs que serão usados para a operação de restauração. O formato da URL é usado para restaurar os backups do serviço de armazenamento do Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 É um espaço reservado que indica que até 64 dispositivos de backup podem ser especificados em uma lista separada por vírgulas.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e679b6c4a7b61e136ba1dcb864ab5bb6a05beb0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028485"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813629"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -24,7 +24,7 @@ ms.locfileid: "50028485"
  O exemplo de cadeia de conexão a seguir especifica uma fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] em um servidor que usa porta 13080 e XML no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) para Internet usando SOAP, conectando-se a um catálogo de exemplo:  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a309b4884d870d6d17a19f73144725077005f18a
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b181ab608b059890a74435e07f010e7633e965d4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099308"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696054"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Instalar os recursos do Business Intelligence do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "50099308"
 -   [Instalar o Reporting Services no modo do SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
 > [!NOTE]
-> SQL Server Data Tools (SSDT) não está incluso com o SQL Server 2016. [Baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
+> SQL Server Data Tools (SSDT) não está incluso com o SQL Server 2016. [Baixar o SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
   
 ## <a name="see-also"></a>Consulte Também  
- [Novidades no Reporting Services &#40;SSRS&#41;](http://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
+ [Novidades no Reporting Services &#40;SSRS&#41;](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Novidades do Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [Novidades no MDS &#40;Master Data Services&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)   

@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681964"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675065"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como: Criar condições de teste para o Designer de teste de unidade do SQL Server
 Você pode usar a classe extensível [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para criar novas condições de teste. Por exemplo, você pode criar uma nova condição de teste que verifica o número de colunas ou os valores em um conjunto de resultados.  
@@ -49,7 +49,7 @@ Este procedimento explica como criar uma condição de teste para aparecer no De
   
 10. Derive sua classe da classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Assine o assembly com um nome forte. Para saber mais, confira [Como assinar um assembly com um nome forte](http://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Assine o assembly com um nome forte. Para saber mais, confira [Como assinar um assembly com um nome forte](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Crie a biblioteca de classes.  
   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671395"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724884"
   
 -   Migre uma tabela e dados para a otimização de memória (se não há recursos sem suporte).  
     
- Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Passo a passo usando o orientador de otimização da memória  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que você deseja converter e selecione **Orientador de Otimização da Memória**. Isso exibirá a página de boas-vindas do **Orientador de Otimização da Memória da Tabela**.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724884"
   
  Se uma chave primária não existir e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
   
- Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar um agrupamento adequado. O OLTP na memória somente dá suporte a agrupamentos BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a agrupamentos com caracteres suplementares. Consulte [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obter informações sobre os agrupamentos com suporte e o impacto potencial de uma alteração no agrupamento.  
+ Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
   
  Você pode configurar os seguintes parâmetros para a chave primária:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724884"
   
 -   Um índice NONCLUSTERED. Esse tipo de índice é melhor para índices com muitas consultas de intervalo. Você pode configurar a ordem de classificação para cada coluna na lista **Coluna e ordem de classificação** .  
   
- Para entender o melhor tipo de índice para sua chave primária, consulte [Índices de hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Para entender o melhor tipo de índice para sua chave primária, consulte [Índices de hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Clique em **Avançar** depois de fazer suas escolhas de chave primária.  
   

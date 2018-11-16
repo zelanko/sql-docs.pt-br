@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100517"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701044"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se não estiver especificado, a ordenação padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuída ao banco de dados. Um nome de ordenação não pode ser especificado em um instantâneo do banco de dados.  
   
- Um nome de ordenação não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar a ordenação de um banco de dados anexado, acesse o [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Um nome de ordenação não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar a ordenação de um banco de dados anexado, acesse o [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &amp;#40;Transact-SQL&amp;#41;](~/t-sql/statements/collations.md).  
   
@@ -509,7 +509,7 @@ Alguns recursos de banco de dados dependem de recursos ou capacidades presentes 
  A não ser que FOR ATTACH seja especificado, cada novo banco de dados herda as configurações de opções do banco de dados modelo. Por exemplo, a opção de reduzir automaticamente do banco de dados é definida como **true** no banco de dados modelo e em todos os novos bancos de dados criados. Se você alterar as opções no banco de dados modelo, essas novas configurações de opções serão usadas em todos os novos bancos de dados criados. A alteração das operações no banco de dados modelo não afeta bancos de dados existentes. Se FOR ATTACH estiver especificado na instrução CREATE DATABASE, o novo banco de dados herdará as configurações de opções do banco de dados original.  
   
 ## <a name="viewing-database-information"></a>Exibindo informações do banco de dados  
- É possível usar exibições do catálogo, funções do sistema e procedimentos armazenados do sistema para retornar informações sobre bancos de dados, arquivos e grupos de arquivos. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ É possível usar exibições do catálogo, funções do sistema e procedimentos armazenados do sistema para retornar informações sobre bancos de dados, arquivos e grupos de arquivos. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE.  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e deve estar de acordo com a regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e deve estar de acordo com a regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se nenhum for especificado, a ordenação padrão, ou seja, o SQL_Latin1_General_CP1_CI_AS, será atribuída ao banco de dados.  
   
-Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ A seguinte sintaxe e as regras semânticas aplicam-se ao uso do argumento `AS CO
   
 - Os nomes do servidor de origem e do servidor para o destino de impressão podem ser iguais ou diferentes. Quando são o mesmo, esse parâmetro é opcional e o contexto do servidor da sessão atual é usado por padrão.  
   
-- Os nomes do banco de dados de origem e destino devem ser especificados, exclusivo e estarem em conformidade com as regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- Os nomes do banco de dados de origem e destino devem ser especificados, exclusivo e estarem em conformidade com as regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - A instrução `CREATE DATABASE` deve ser executada dentro do contexto do banco de dados mestre do servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] em que o novo banco de dados será criado. 
 - Depois de a cópia ser concluída, o banco de dados de destino deve ser gerenciado como um banco de dados independente. Você pode executar as instruções `ALTER DATABASE` e `DROP DATABASE` no novo banco de dados independentemente do banco de dados de origem. Você também pode copiar o novo banco de dados para outro novo banco de dados.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e deve estar de acordo com a regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+O nome do novo banco de dados. Este nome deve ser exclusivo no servidor SQL e deve estar de acordo com a regras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se nenhum for especificado, a ordenação padrão, ou seja, o SQL_Latin1_General_CP1_CI_AS, será atribuída ao banco de dados.  
   
-Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Argumentos  
 *database_name*  
-O nome do novo banco de dados. Esse nome deve ser exclusivo no servidor SQL, que pode hospedar os bancos de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], e ser compatível com as regras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+O nome do novo banco de dados. Esse nome deve ser exclusivo no servidor SQL, que pode hospedar os bancos de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], e ser compatível com as regras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obter mais informações, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Especifica a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se não for especificado, o banco de dados receberá a ordenação padrão, que é SQL_Latin1_General_CP1_CI_AS.  
   
-Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, consulte [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Especifica a camada de serviço do banco de dados. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use 'datawarehouse'.  

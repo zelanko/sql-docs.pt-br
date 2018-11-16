@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031355"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812679"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS)
   Você pode usar qualquer navegador da Web com suporte para exibir um relatório por meio de uma conexão direta com um servidor de relatório. Cada relatório tem um endereço URL em um servidor de relatórios. Você pode digitar o endereço da Web de um relatório para abri-lo em uma janela do navegador independentemente de um aplicativo da Web. O relatório é aberto no formato HTML e inclui a barra de ferramentas do relatório para que você possa navegar em páginas ou procurar valores de dados no relatório. Você pode definir parâmetros na URL para ocultar a barra de ferramentas ou selecionar o formato de saída do relatório.  
@@ -49,9 +49,9 @@ Pastas em um navegador
 ## <a name="typing-the-url-address-of-a-report"></a>Digitando o endereço URL de um relatório  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao acesso de URL a itens específicos em um servidor de relatório. A URL deve incluir um caminho totalmente qualificado para o relatório e comandos para renderizar o relatório. Se o relatório incluir parâmetros, você também terá que especificar qualquer valor exigido para abrir o relatório. Se estiver digitando uma URL para um relatório que inclui espaços no caminho, valores de parâmetro ou uma extensão de renderização, deverá incorporar os caracteres codificados da URL na URL para obter os resultados esperados. O exemplo a seguir ilustra uma URL de relatório que inclui a codificação para espaços no nome do caminho, parâmetros e uma extensão de renderização:  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- O limite máximo para uma URL no Internet Explorer é de 2.083 caracteres. Para obter mais informações, consulte [Comprimento máximo da URL no Internet Explorer](http://support.microsoft.com/kb/208427).  
+ O limite máximo para uma URL no Internet Explorer é de 2.083 caracteres. Para obter mais informações, consulte [Comprimento máximo da URL no Internet Explorer](https://support.microsoft.com/kb/208427).  
   
  Para obter mais informações sobre como acessar um relatório usando uma URL, incluindo informações sobre como a URL é construída, consulte “Acesso à URL” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   

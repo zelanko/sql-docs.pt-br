@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021790"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813149"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  
@@ -29,8 +29,8 @@ ms.locfileid: "50021790"
   
 |Tipo de documento XML|Exemplo de cadeia de conexão|  
 |-----------------------|-------------------------------|  
-|serviço Web|`http://adventure-works.com/results.aspx`|  
-|Documento XML|`http://localhost/XML/Customers.xml`|  
+|serviço Web|`https://adventure-works.com/results.aspx`|  
+|Documento XML|`https://localhost/XML/Customers.xml`|  
 |Documento XML inserido|*Empty (vazio)*|  
   
  Para obter mais exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

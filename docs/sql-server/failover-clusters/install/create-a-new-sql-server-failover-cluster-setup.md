@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738004"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697884"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738004"
   
  Para obter mais informações sobre a instalação remota, consulte [Atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Para obter mais informações sobre como instalar o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em um cluster de failover do Windows, consulte [Como criar clusters do SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Para obter mais informações sobre como instalar o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em um cluster de failover do Windows, consulte [Como criar clusters do SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de começar, examine os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -169,7 +169,7 @@ ms.locfileid: "47738004"
   
 17. Na página Configuração do Servidor — Contas de Serviço, especifique as contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "47738004"
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-18. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+18. Use a guia **Configuração do Servidor — Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 19. Use a página Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] — Provisionamento de Conta para especificar o seguinte:  
   
@@ -300,7 +300,7 @@ ms.locfileid: "47738004"
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-16. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+16. Use a guia **Configuração do Servidor — Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 17. Use **Configuração de Servidor - Filestream** para habilitar o FILESTREAM para a sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Clique em **Avançar** para continuar.  
   

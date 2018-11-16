@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5efe4c6b514df867cf01248e8e2087c98051e67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68764169a0e9021ec39eab1b147d2564928dcd38
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663635"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ Veja este exemplo que demonstra como a cláusula **FOR JSON** formata a saída J
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
+Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
 
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 

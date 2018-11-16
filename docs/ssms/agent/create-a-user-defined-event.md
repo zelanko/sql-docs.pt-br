@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c22367c1d1725b82a3a14b25477204e6ae04e2db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9557a8fb28d3d02462d466ac71c3e15dc3fcbfcd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756904"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695394"
 ---
 # <a name="create-a-user-defined-event"></a>Criar um evento definido pelo usuário
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,38 +53,38 @@ As seguintes tarefas proporcionam informações sobre como criar eventos definid
   
 -   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
+-   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Para criar um alerta com base em níveis de severidade**  
   
 -   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
+-   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Para definir uma resposta a um alerta**  
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 **Para criar uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](http://msdn.microsoft.com/54746d30-f944-40e5-a707-f2d9be0fb9eb)  
+-   [Transact-SQL](https://msdn.microsoft.com/54746d30-f944-40e5-a707-f2d9be0fb9eb)  
   
 **Para modificar uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](http://msdn.microsoft.com/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+-   [Transact-SQL](https://msdn.microsoft.com/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
   
 **Para excluir uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](http://msdn.microsoft.com/17287a15-cdde-43d1-bb18-9f920bc15db8)  
+-   [Transact-SQL](https://msdn.microsoft.com/17287a15-cdde-43d1-bb18-9f920bc15db8)  
   
 **Para desabilitar ou reativar um alerta**  
   
 -   [SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
+-   [Transact-SQL](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
 ## <a name="see-also"></a>Consulte Também  
-[sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
+[sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e30c361bc000aaf82a057169e0daec8b9b976a6
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970717"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704044"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1001,7 +1001,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Usando um rótulo e uma dica de consulta com a instrução INSERT  
- Esta consulta mostra a sintaxe básica de uso de um rótulo e uma dica de junção de consulta com a instrução INSERT. Depois que a consulta é enviada para o nó de Controle, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em execução nos nós de Computação, aplicará a estratégia de junção hash ao gerar o plano de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Esta consulta mostra a sintaxe básica de uso de um rótulo e uma dica de junção de consulta com a instrução INSERT. Depois que a consulta é enviada para o nó de Controle, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em execução nos nós de Computação, aplicará a estratégia de junção hash ao gerar o plano de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```sql
 -- Uses AdventureWorks  

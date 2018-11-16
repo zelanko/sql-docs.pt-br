@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685994"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664936"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ Em geral, um administrador de banco de dados cria um backup completo de banco de
 -   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito se acumularão muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Faça backups de log com frequência suficiente para dar suporte a seus requisitos empresariais, especificamente, a tolerância à perda de trabalho, que pode ser causada por um armazenamento de logs danificado. 
-   -   A frequência apropriada para fazer backups de log depende de tolerância à exposição à perda de trabalho, equilibrada por quantos backups de log é possível armazenar, administrar e, potencialmente, restaurar. Pense no [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup de log.
+   -   A frequência apropriada para fazer backups de log depende de tolerância à exposição à perda de trabalho, equilibrada por quantos backups de log é possível armazenar, administrar e, potencialmente, restaurar. Pense no [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup de log.
    -   Fazer um backup de log a cada 15 a 30 minutos deve ser o bastante. Se o seu negócio requer que você reduza ao mínimo a exposição à perda de trabalho, considere fazer backups de log com mais frequência. Backups de log mais frequentes têm a vantagem adicional de aumentar a frequência de truncamentos de log, resultando em arquivos de log menores.  
   
 > [!IMPORTANT]
 > Para limitar o número de backups de log que você precisa restaurar, é essencial fazer backup dos dados com frequência. Por exemplo, convém programar um backup de banco de dados completo por semana e backups de diferenciais de banco de dados diariamente.  
-> Mais uma vez, pense no [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup completo e diferencial de banco de dados.
+> Mais uma vez, pense no [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necessários ao implementar sua estratégia de recuperação e, especificamente, na cadência de backup completo e diferencial de banco de dados.
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar um backup de log de transações**  

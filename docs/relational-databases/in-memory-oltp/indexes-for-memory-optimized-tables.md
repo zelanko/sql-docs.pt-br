@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 394330d19904e61eb4a339468cd882f09240ff65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748924"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673015"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -211,10 +211,10 @@ A tabela a seguir lista todas as operações com suporte dos diferentes tipos de
 
 ## <a name="automatic-index-and-statistics-management"></a>Índice automático e gerenciamento de estatísticas
 
-Aproveite soluções como a [Desfragmentação de índice adaptável](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
+Aproveite soluções como a [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
 
 ## <a name="Additional_Reading"></a> Consulte também   
  [Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Índices não clusterizados para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Desfragmentação de índice adaptável](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  

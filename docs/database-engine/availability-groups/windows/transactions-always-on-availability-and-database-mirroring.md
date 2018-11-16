@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611024"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606836"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transações – grupos de disponibilidade e espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ Para configurar transações distribuídas em um grupo de disponibilidade, consu
 
 Obtenha mais informações em:
 
-- [Guia de Administração do DTC](http://msdn.microsoft.com/library/ms681291.aspx)
-- [Guia de Desenvolvedores do DTC](http://msdn.microsoft.com/library/ms679938.aspx)
-- [Referência de Programadores do DTC](http://msdn.microsoft.com/library/ms686108.aspx)
+- [Guia de Administração do DTC](https://msdn.microsoft.com/library/ms681291.aspx)
+- [Guia de Desenvolvedores do DTC](https://msdn.microsoft.com/library/ms679938.aspx)
+- [Referência de Programadores do DTC](https://msdn.microsoft.com/library/ms686108.aspx)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e anteriores: suporte para transações entre bancos de dados na mesma instância do SQL Server  
 
@@ -60,7 +60,7 @@ O SQL Server 2016 introduz a capacidade de usar transações distribuídas em qu
   
  Os seguintes requisitos devem ser atendidos:  
   
--   Os grupos de disponibilidade devem estar em execução no Windows Server 2012 R2 ou posteriores. Para o Windows Server 2012 R2, é necessário instalar a atualização na KB3090973 disponível em [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+-   Os grupos de disponibilidade devem estar em execução no Windows Server 2012 R2 ou posteriores. Para o Windows Server 2012 R2, é necessário instalar a atualização na KB3090973 disponível em [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
   
 -   Os grupos de disponibilidade devem ser criados com o comando **CREATE AVAILABILITY GROUP** e a cláusula **WITH DTC\_SUPPORT = PER_DB**. No momento, você não pode alterar um grupo de disponibilidade existente.  
 

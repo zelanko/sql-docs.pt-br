@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665120"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47856714"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Vídeo:** para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Vídeo:** para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>O que é uma tabela temporal com versão do sistema?  
  Uma tabela temporal com versão do sistema é um tipo de tabela de usuário criada para manter um histórico completo de alterações de dados e permitir uma análise fácil de pontos no tempo. Esse tipo de tabela temporal é conhecido como tabela temporal com versão do sistema porque o período de validade para cada linha é gerenciado pelo sistema (ou seja, o mecanismo de banco de dados).  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383281"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699625"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,8 +43,8 @@ Você pode usar as ferramentas [!INCLUDE[ssISnoversion](../includes/ssisnoversio
 Para saber mais sobre como instalar o SQL Server Integration Services com o SQL Server e sobre downloads adicionais que você pode desejar ou dos quais pode precisar, confira [Instalar o Integration Services](install-windows/install-integration-services.md).
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Recursos
--   [Obter ajuda no fórum do SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [Obter ajuda no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Obter ajuda no fórum do SSIS](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Obter ajuda no Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Seguir o blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
 -   [Relatar problemas e solicitar recursos](https://feedback.azure.com/forums/908035-sql-server)
 -   [Obter os documentos em seu computador](../sql-server/sql-server-help-installation.md)

@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 1ac9c72ecee9beee66ea190b3acf233a0e4bc753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668545"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 
@@ -201,8 +201,8 @@ GO
 ## <a name="related-external-resources"></a>Recursos externos relacionados
 
 - [DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Vídeo – SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Slide e demonstração – SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Slide e demonstração – SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
 - [SQL Server Tuning in capsule form (Ajuste do SQL Server em formato de cápsula) (filme – SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server Tuning in a nutshell (Ajuste do SQL Server em poucas palavras) (slides e demonstração – SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [SQL Server Tuning in a nutshell (Ajuste do SQL Server em poucas palavras) (slides e demonstração – SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
 - [Ajuste de desempenho com exibições de gerenciamento dinâmico do SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
 - [Os tipos de espera mais proeminentes do SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)

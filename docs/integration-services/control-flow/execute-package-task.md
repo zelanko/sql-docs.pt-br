@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 986d3bf99eb08279dab77ed12ff1b04dccce1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818118"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640673"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -63,7 +63,7 @@ ms.locfileid: "47818118"
  Por padrão, a propriedade ExecuteOutOfProcess da tarefa Executar Pacote é definida como **False**, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como **True**, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como **True**, não poderá depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Estendendo transações  
- A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
 ## <a name="propagating-logging-details"></a>Propagando detalhes de log  
  O pacote filho executado pela tarefa Executar Pacote pode ou não ser configurado para usar log, mas o pacote filho sempre encaminhará os detalhes de log ao pacote pai. Se a tarefa Executar Pacote for configurada para usar log, a tarefa registrará os detalhes de log a partir do pacote filho. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "47818118"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configurando a tarefa Executar Pacote programaticamente  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  

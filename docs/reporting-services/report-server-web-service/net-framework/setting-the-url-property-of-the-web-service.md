@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15fe8f3a4e7c386322973f22b6669a66570d2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9f156fed4f83bfb385f70198ba69feaa0883d8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625335"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812499"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Definindo a propriedade Url do serviço Web
   A qualquer momento em seus aplicativos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você pode modificar a URL base do serviço Web Servidor de Relatórios para a qual o aplicativo foi direcionado no momento. Para fazer isso, basta definir a propriedade **Url** do objeto de serviço. Por exemplo:  
@@ -28,13 +28,13 @@ ms.locfileid: "47625335"
 ```vb  
 Dim rs As New ReportingService2010()  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
 ```  
   
 ```csharp  
 ReportingService2010 service = new ReportingService2010();  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
 ```  
   
  O exemplo a seguir recupera uma definição de relatório de um servidor de relatório e usa essa definição para criar um relatório idêntico em um servidor de relatório diferente:  
@@ -48,7 +48,7 @@ Class Sample
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
       ' Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim reportName As String = "/SampleReports/Company Sales"  
       Dim reportDefinition As Byte() = Nothing  
@@ -57,7 +57,7 @@ Class Sample
          ' Get the report definition of a report on a source server  
          reportDefinition = rs.GetItemDefinition(reportName)  
          ' Set the base Web service URL of the destination server  
-         rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+         rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
          ' Create a copy of the report on the destination server  
          Dim warnings As Warning() = {}  
          rs.CreateCatalogItem("Report", "Company Sales Copy", "/", False, reportDefinition, Nothing, warnings)        
@@ -79,7 +79,7 @@ class Sample
       ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
       // Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/reportservice2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/reportservice2010.asmx";  
   
       string reportName = "/SampleReports/Company Sales";  
       byte[] reportDefinition = null;  
@@ -88,7 +88,7 @@ class Sample
       {  
          reportDefinition = rs.GetItemDefinition(reportName);  
          // Set the base Web service URL of the destination server  
-         rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+         rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
          // Create a copy of the report on the destination server  
          Warning[] warnings = {};  
          rs.CreateCatalogItem("Report", "Company Sales Copy", "/", false, reportDefinition, null, out warnings);  

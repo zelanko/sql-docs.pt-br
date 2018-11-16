@@ -12,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696396"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47753714"
   
 -   Leia [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   O Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta do Azure, [clique aqui](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   O Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta do Azure, [clique aqui](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   Ter as informações de conexão e o logon necessárias para criar um novo servidor do Azure ou para selecionar um servidor do Azure existente.  
   

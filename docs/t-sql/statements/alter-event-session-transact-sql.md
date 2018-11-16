@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696785"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Remove o evento identificado por *\<event_specifier>*. \<event_specifier> deve ser válido na sessão do evento.|  
 |ADD TARGET \<event_target_specifier>|Associa o destino identificado por \<event_target_specifier> à sessão de evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|É o nome do destino na sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *target_name* é a ação. As ações aparecem na exibição sys.dm_xe_objects como object_type “destino”.|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.<br /><br /> **OBSERVAÇÃO!** Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.<br /><br /> **OBSERVAÇÃO!** Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Remove o destino identificado por \<event_target_specifier>. \<event_target_specifier> deve ser válido na sessão do evento.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Especifica o modo de retenção do evento para usar em tratamento de perda de evento.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Um evento pode ser perdido da sessão. Um único evento será descartado somente quando todos os buffers de evento estiverem cheios. A perda de um único evento quando os buffers de evento estão cheios permite características de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitáveis, enquanto minimiza a perda de dados no fluxo de evento processado.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Buffers de evento cheios que contêm vários eventos podem ser perdidos da sessão. O número de eventos perdidos depende do tamanho de memória alocado à sessão, do particionamento da memória e do tamanho dos eventos no buffer. Essa opção minimiza o impacto do desempenho no servidor quando buffers de evento são rapidamente enchidos, mas grandes números de eventos podem ser perdidos da sessão.<br /><br /> NO_EVENT_LOSS<br /> Nenhuma perda de evento é permitida. Essa opção assegura que todos os eventos gerados sejam retidos. O uso dessa opção força todas as tarefas que acionam eventos a esperar até que haja espaço disponível em um buffer de evento. Isso pode causar problemas de desempenho detectáveis enquanto a sessão de evento está ativa. As conexões de usuário poderão parar enquanto esperam a liberação de eventos do buffer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Especifica a quantidade de tempo em que os eventos serão colocados no buffer de memória antes que sejam despachados para destinos de sessão de evento. O valor mínimo de latência é 1 segundo. No entanto, o valor 0 pode ser usado para especificar a latência INFINITE. Por padrão, este valor é definido como 30 segundos.<br /><br /> *seconds* SECONDS<br /> O tempo, em segundos, a esperar antes de liberar buffers para os destinos. *seconds* é um número inteiro.<br /><br /> **INFINITE**<br /> Libera buffers para os destinos somente quando eles estão cheios ou quando a sessão de evento é fechada.<br /><br /> **OBSERVAÇÃO!** MAX_DISPATCH_LATENCY = 0 SECONDS é equivalente a MAX_DISPATCH_LATENCY = INFINITE.|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Destinos de eventos estendidos do SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

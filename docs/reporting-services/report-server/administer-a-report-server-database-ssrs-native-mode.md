@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbada45cdf1112f757113491b16aa92fa4d5f359
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c49eadcdfb290f46bd523605c789f0f298653ca6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808144"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814219"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
   Uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. Por padrão, os bancos de dados são nomeados como ReportServer e ReportServerTempdb. O ReportServerTempdb é criado com o banco de dados primário do servidor de relatórios e é usado para armazenar dados temporários, informações de sessão e relatórios em cache.  
@@ -74,7 +74,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Sobre as versões de banco de dados  
- No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], não há informações explícitas sobre a versão do banco de dados disponíveis. No entanto, como as versões de banco de dados sempre são sincronizados com as versões de produto, você pode usar as informações de versão do produto para saber quando a versão de banco de dados foi alterada. As informações de versão do produto do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são indicadas pelas informações de versão do arquivo exibidas nos arquivos de log, nos cabeçalhos de todas as chamadas SOAP e ao conectar-se à URL do servidor de relatório (por exemplo, ao abrir um navegador em `http://localhost/reportserver`).  
+ No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], não há informações explícitas sobre a versão do banco de dados disponíveis. No entanto, como as versões de banco de dados sempre são sincronizados com as versões de produto, você pode usar as informações de versão do produto para saber quando a versão de banco de dados foi alterada. As informações de versão do produto do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são indicadas pelas informações de versão do arquivo exibidas nos arquivos de log, nos cabeçalhos de todas as chamadas SOAP e ao conectar-se à URL do servidor de relatório (por exemplo, ao abrir um navegador em `https://localhost/reportserver`).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
@@ -82,10 +82,10 @@ SET READ_COMMITTED_SNAPSHOT OFF
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Operações de backup e restauração do Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Operações de backup e restauração para o Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736884"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638963"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode** , use o valor numérico 2 em vez do nome amigável Desabilitada.  
@@ -581,7 +581,7 @@ ms.locfileid: "47736884"
 |Failure|1|  
 |Completion|2|  
   
- Propriedade**IsolationLevel** — definida usando valores da enumeração **IsolationLevel** do .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](http://go.microsoft.com/fwlink?LinkId=17313).  
+ Propriedade**IsolationLevel** — definida usando valores da enumeração **IsolationLevel** do .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  Propriedade**LoggingMode** — definida usando valores da enumeração **DTSLoggingMode** .  
   

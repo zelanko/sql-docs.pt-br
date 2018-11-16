@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -14,12 +13,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02027a0c8ea9c8aedefe62f60e23345a061c01b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c59f9b04ad4552280c586941e43e91aa25fd935
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665554"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558269"
 ---
 # <a name="modified-features-contained-database"></a>Recursos modificados (banco de dados independente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +38,22 @@ ms.locfileid: "47665554"
  A sintaxe CREATE DATABASE para um banco de dados independente difere da que é usada em um banco de dados dependente. Veja [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) para obter informações sobre novos requisitos de sintaxe e concessões.  
   
 ## <a name="temporary-tables"></a>Tabelas temporárias  
- São permitidas tabelas temporárias locais dentro de um banco de dados independente, mas o comportamento delas difere das usadas em bancos de dados dependentes. Em bancos de dados dependentes, os dados de tabelas temporárias são agrupados no agrupamento de **tempdb**. Em um banco de dados independente, os dados de tabelas temporárias são agrupados no agrupamento do banco de dados independente.  
+ São permitidas tabelas temporárias locais dentro de um banco de dados independente, mas o comportamento delas difere das usadas em bancos de dados dependentes. Em bancos de dados dependentes, os dados de tabelas temporárias são agrupados na ordenação de **tempdb**. Em um banco de dados independente, os dados de tabelas temporárias são agrupados na ordenação do banco de dados independente.  
   
- Todo os metadados associados a tabelas temporárias (por exemplo, nomes de tabelas e de colunas, índices, etc.) estarão no agrupamento de catálogo.  
+ Todo os metadados associados a tabelas temporárias (por exemplo, nomes de tabelas e de colunas, índices, etc.) estarão na ordenação de catálogo.  
   
  Podem não ser usadas restrições nomeadas em tabelas temporárias.  
   
  Tabelas temporárias podem não recorrer a tipos definidos pelo usuário, coleções de esquemas XML ou funções definidas pelo usuário.  
   
-## <a name="collation"></a>Agrupamento  
- No modelo de banco de dados dependente, há três tipos separados de agrupamento: agrupamento de Banco de Dados, agrupamento de Instância e agrupamento de tempdb. Bancos de dados independentes usam apenas dois agrupamentos, agrupamento de banco de dados e o novo agrupamento de catálogo. Veja [Agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais detalhes sobre o agrupamento de banco de dados independente.  
+## <a name="collation"></a>Ordenação  
+ No modelo de banco de dados dependente, há três tipos separados de ordenação: ordenação de banco de dados, ordenação de Instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
   
 ## <a name="user-options"></a>Opções de usuário  
  Ao habilitar bancos de dados independentes, é preciso definir a [Opção user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) como 0 para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
- [Agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)   
+ [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)   
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   
