@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.extendedproperties.f1
@@ -15,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b5311524f010fd18608b4aa6f1b985bb636233b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671865"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de banco de dados (página Propriedades Estendidas)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,8 +29,8 @@ ms.locfileid: "47672354"
  **Backup de banco de dados**  
  Exibe o nome do banco de dados selecionado. Esse campo é somente leitura.  
   
- **Agrupamento**  
- Exibe o agrupamento usado para o banco de dados selecionado. Esse campo é somente leitura.  
+ **Ordenação**  
+ Exibe a ordenação usada para o banco de dados selecionado. Esse campo é somente leitura.  
   
  **Propriedades**  
  Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
@@ -43,6 +42,6 @@ ms.locfileid: "47672354"
  Remove a propriedade estendida selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de propriedades estendidas &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
+ [Exibições de catálogo de propriedades estendidas &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   

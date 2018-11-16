@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031005"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657835"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Re
 O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
 
 > [!IMPORTANT]
-> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](http://support.microsoft.com/help/4340759) assim que possível. 
+> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](https://support.microsoft.com/help/4340759) assim que possível. 
 
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

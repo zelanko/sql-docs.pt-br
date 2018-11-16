@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827347"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675125"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Para atualizar com êxito a coluna, faça o seguinte:
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Seleção de criptografia determinística ou aleatória  
  O Mecanismo de Banco de dados nunca opera em dados de texto não criptografado armazenados em colunas criptografadas, mas ela ainda dá suporte a algumas consultas em dados criptografados, dependendo do tipo de criptografia para a coluna. O Sempre Criptografado dá suporte a dois tipos de criptografia: criptografia aleatória e criptografia determinística.  
   
-- A criptografia determinística sempre gera o mesmo valor criptografado para qualquer valor de texto sem formatação. Usar a criptografia determinística proporciona pesquisas de ponto, junções de igualdade, agrupamento e indexação em colunas criptografadas. No entanto, também pode permitir que usuários não autorizados estimem informações sobre valores criptografados examinando padrões na coluna criptografada, especialmente se houver um pequeno conjunto de valores possíveis criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.
+- A criptografia determinística sempre gera o mesmo valor criptografado para qualquer valor de texto sem formatação. Usar a criptografia determinística proporciona pesquisas de ponto, junções de igualdade, agrupamento e indexação em colunas criptografadas. No entanto, também pode permitir que usuários não autorizados estimem informações sobre valores criptografados examinando padrões na coluna criptografada, especialmente se houver um pequeno conjunto de valores possíveis criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.
 
 - A criptografia aleatória usa um método que criptografa os dados de uma maneira menos previsível. A criptografia aleatória é mais segura, mas impede o uso de pesquisas, agrupamento, indexação e junção em colunas criptografadas.
 
@@ -142,7 +142,7 @@ Use o [Assistente do Always Encrypted](../../../relational-databases/security/en
 
 -   Uma chave de criptografia de coluna pode ter até dois valores criptografados diferentes, cada um deles criptografado com uma chave mestra de coluna diferente. Isso facilita a rotação da chave mestra de coluna.  
   
--   A criptografia determinística exige que uma coluna tenha um dos [*agrupamentos* binary2](../../../relational-databases/collations/collation-and-unicode-support.md).  
+-   A criptografia determinística exige que uma coluna tenha uma das [*ordenações* binary2](../../../relational-databases/collations/collation-and-unicode-support.md).  
 
 -   Depois de alterar a definição de um objeto criptografado, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) para atualizar os metadados Always Encrypted para o objeto.
   
@@ -152,7 +152,7 @@ Não há suporte para o Always Encrypted nas colunas com as características aba
 - Colunas FILESTREAM  
 - Colunas com a propriedade IDENTITY  
 - Colunas com a propriedade ROWGUIDCOL.  
-- Colunas de cadeia de caracteres (varchar, char, etc.) com agrupamentos não bin2  
+- Colunas de cadeia de caracteres (varchar, char, etc.) com ordenações não bin2  
 - Colunas que são chaves para índices não clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)  
 - Colunas que são chaves para índices clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)  
 - Colunas que são chaves para índices de texto completo contendo colunas criptografadas, aleatórias e determinísticas  
@@ -187,7 +187,7 @@ Requisitos da ferramenta
 
 - O SQL Server Management Studio poderá descriptografar os resultados recuperados de colunas criptografadas se você se conectar à *configuração de criptografia de coluna = habilitada* na guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor** . Requer pelo menos o SQL Server Management Studio versão 17 para inserir, atualizar ou filtrar colunas criptografadas.
 
-- As conexões criptografadas do `sqlcmd` exigem, no mínimo, a versão 13.1, disponível no [Centro de Download](http://go.microsoft.com/fwlink/?LinkID=825643).
+- As conexões criptografadas do `sqlcmd` exigem, no mínimo, a versão 13.1, disponível no [Centro de Download](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Permissões de banco de dados  

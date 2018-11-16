@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771574"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638603"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
   O **Destino do Fluxo de Dados** é um componente de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), que permite que o **Provedor OLE DB para SSIS** consuma a saída de um pacote SSIS como um conjunto de resultados de tabelas. Você pode criar um servidor vinculado que use o Provedor OLE DB para SSIS e então execute uma consulta SQL no servidor vinculado para exibir os dados retornados pelo pacote SSIS.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  O Centro de Administração permite que você publique exibições em um banco de dados do SQL Server. Dessa forma, você pode usar o Assistente de Publicação de Pacote do SSIS para publicar um pacote do SSIS como uma exibição do SQL. Em seguida, você pode selecionar a exibição a ser incluída no feed OData no Centro de Administração do Power BI. Um administrador de dados pode consumir o feed do pacote do SSIS usando o suplemento Power Query para Excel.  
   
- Para obter instruções detalhadas, veja [Publicar pacotes do SSIS como fontes de feed OData](http://go.microsoft.com/fwlink/?LinkID=317367).  
+ Para obter instruções detalhadas, veja [Publicar pacotes do SSIS como fontes de feed OData](https://go.microsoft.com/fwlink/?LinkID=317367).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Semelhante à guia Colunas de Entrada, você pode alterar os nomes das colunas de saída nesta guia. No modo de exibição de árvore à esquerda, expanda **Entrada de Destino do Streaming de Dados** e expanda **Colunas de Entrada**. Clique no nome da coluna de entrada e altere o nome do nome da coluna de saída no painel à direita.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Publicar pacotes do SSIS como fontes de feed OData](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publicar pacotes do SSIS como fontes de feed OData](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

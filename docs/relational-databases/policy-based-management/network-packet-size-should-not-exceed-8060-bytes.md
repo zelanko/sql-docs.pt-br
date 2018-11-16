@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d7be00cfbd0e8c8401a81d11d57a6a6ff0c3fc9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b74d7122f6247d4aebfb4046cfe80cbce11897d7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668685"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>O tamanho do pacote de rede não dever exceder 8060 bytes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47614164"
  O tamanho do pacote de rede não dever exceder 8060 bytes  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
- [Artigo 903002 da Base de Dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=117749)  
+ [Artigo 903002 da Base de Dados de Conhecimento Microsoft](https://go.microsoft.com/fwlink/?linkid=117749)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
