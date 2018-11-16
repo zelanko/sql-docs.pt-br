@@ -14,12 +14,12 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2db82bb76ab58782682a612983bca3d7c4fccfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 616a272e9fab9a3bf448063082bfedfe5d7e33a5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701724"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600416"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
 O [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [salve](../../../ado/reference/ado-api/save-method.md) armazenamentos de método, ou *persistir*, um **Recordset** em um arquivo e o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)restaurações de método de **Recordset** desse arquivo.  
@@ -105,7 +105,7 @@ Set rs = nothing
   
  Uma nova propriedade no RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), aponta para a página. ASP que gera a **conjunto de registros**. Isso significa que um **conjunto de registros** objeto pode ser obtido sem RDS usando o lado do servidor [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto ou o usuário escrever um objeto comercial. Isso simplifica o modelo de programação do RDS significativamente.  
   
- Código do lado do servidor, chamado de http://server/directory/recordset.asp:  
+ Código do lado do servidor, chamado de https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -139,8 +139,8 @@ rs.Save response, adPersistADTG
 <BR>  
   
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
-    ID=DC1 HEIGHT=1 WIDTH = 1>  
-    <PARAM NAME="URL" VALUE="http://server/directory/recordset.asp">  
+    ID=DC1 HEIGHT=1 WIDTH = 1>  
+    <PARAM NAME="URL" VALUE="https://server/directory/recordset.asp">  
 </OBJECT>  
   
 </SCRIPT>  
@@ -153,11 +153,11 @@ rs.Save response, adPersistADTG
 ```  
 ...  
 function GetRs()   
-    {  
-    rs = CreateObject("ADODB.Recordset");  
-    rs.Open "http://server/directory/recordset.asp"  
-    DC1.SourceRecordset = rs;  
-    }  
+    {  
+    rs = CreateObject("ADODB.Recordset");  
+    rs.Open "https://server/directory/recordset.asp"  
+    DC1.SourceRecordset = rs;  
+    }  
 ...  
 ```  
   

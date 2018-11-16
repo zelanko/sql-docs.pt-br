@@ -1,5 +1,5 @@
 ---
-title: Processar partições de modelo de tabela | Microsoft Docs
+title: Processar partições de modelo Tabular | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ceaf64d4d1ef04f410be306c622ca78b3671d526
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039620"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640923"
 ---
 # <a name="process-tabular-model-partitions"></a>Processar partições de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "34039620"
   
 2.  Na caixa de diálogo **Partições** , em **Partições**, clique no botão Processar.  
   
-3.  Na caixa de diálogo **Processar Partições** , na caixa de listagem **Modo** , selecione um dos modos de processo a seguir:  
+3.  No **processar partições** na caixa de **modo** caixa de listagem, selecione um dos seguintes modos de processo:  
   
     |Modo|Description|  
     |----------|-----------------|  
     |**Processar Padrão**|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados para tabelas vazias e partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas.|  
     |**Processar Completo**|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  
-    |**Processar Dados**|Carregue os dados em uma partição ou uma tabela sem recriar hierarquias ou relações ou recalcular colunas calculadas e medidas.|  
+    |**Processar dados**|Carregue os dados em uma partição ou uma tabela sem recriar hierarquias ou relações ou recalcular colunas calculadas e medidas.|  
     |**Processar Limpeza**|Remove todos os dados de uma partição.|  
     |**Processar adição**|Atualize a partição incrementalmente com novos dados.|  
   

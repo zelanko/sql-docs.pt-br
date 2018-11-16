@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715454"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670815"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este documento explica como criar um cluster do grupo de disponibilidade de três nós para o SQL Server no Red Hat Enterprise Linux. Para alta disponibilidade, um grupo de disponibilidade no Linux exige três nós – veja [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior da [Pacemaker](http://clusterlabs.org/). 
+Este documento explica como criar um cluster do grupo de disponibilidade de três nós para o SQL Server no Red Hat Enterprise Linux. Para alta disponibilidade, um grupo de disponibilidade no Linux exige três nós – veja [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior da [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Acesso à documentação completa do Red Hat requer uma assinatura válida. 
 
-Para obter mais informações sobre a configuração de cluster, opções de agentes de recursos e gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obter mais informações sobre a configuração de cluster, opções de agentes de recursos e gerenciamento, visite [documentação de referência do RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server não é rigorosamente integrado com o Pacemaker no Linux quanto com o clustering de failover do Windows Server. Uma instância do SQL Server não está ciente do cluster. Pacemaker fornece orquestração de recurso de cluster. Além disso, o nome de rede virtual é específico ao clustering de failover do Windows Server - não há nenhum equivalente no Pacemaker. Exibições de gerenciamento dinâmico disponibilidade grupo (DMVs) que consultar informações de cluster retornam linhas vazias nos clusters do Pacemaker. Para criar um ouvinte para reconexão transparente após o failover, registre manualmente o nome do ouvinte no DNS com o IP usado para criar o recurso IP virtual. 
@@ -58,7 +58,7 @@ Para configurar a alta disponibilidade do RHEL, habilitar a assinatura de alta d
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Habilitar a assinatura de alta disponibilidade para RHEL
 
-Cada nó do cluster deve ter uma assinatura apropriada para RHEL e a alta disponibilidade adicionar. Examine os requisitos descritos em [como instalar pacotes de cluster de alta disponibilidade no Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Siga estas etapas para configurar a assinatura e repositórios:
+Cada nó do cluster deve ter uma assinatura apropriada para RHEL e a alta disponibilidade adicionar. Examine os requisitos descritos em [como instalar pacotes de cluster de alta disponibilidade no Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Siga estas etapas para configurar a assinatura e repositórios:
 
 1. Registre o sistema.
 
@@ -88,7 +88,7 @@ Cada nó do cluster deve ter uma assinatura apropriada para RHEL e a alta dispon
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Para obter mais informações, consulte [Pacemaker – o software livre, Cluster de alta disponibilidade](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Para obter mais informações, consulte [Pacemaker – o software livre, Cluster de alta disponibilidade](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Depois de configurar a assinatura, conclua as seguintes etapas para configurar o Pacemaker:
 
@@ -110,9 +110,9 @@ Isolamento de nível de nó garante que um nó não é executado todos os recurs
 
 Para obter informações sobre STONITH e isolamento, consulte os seguintes artigos:
 
-* [Clusters do pacemaker do zero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Isolamento e STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Complemento de alta disponibilidade do Red Hat com o Pacemaker: de isolamento](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Clusters do pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Isolamento e STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Complemento de alta disponibilidade do Red Hat com o Pacemaker: de isolamento](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Como o nível do nó de configuração de isolamento depende muito do seu ambiente, desabilite-o para este tutorial (ele pode ser configurado mais tarde). O script a seguir desabilita o isolamento de nível de nó:
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Para obter informações sobre as propriedades de cluster do Pacemaker, consulte [propriedades de Clusters do Pacemaker](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+Para obter informações sobre as propriedades de cluster do Pacemaker, consulte [propriedades de Clusters do Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Crie um logon do SQL Server para Pacemaker
 

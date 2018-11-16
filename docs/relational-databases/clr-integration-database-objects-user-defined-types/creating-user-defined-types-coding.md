@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795764"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661556"
 ---
 # <a name="creating-user-defined-types---coding"></a>Criar tipos definidos pelo usuário – Codificação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  O propósito do preenchimento é assegurar que a cultura seja totalmente separada do valor de moeda, para que quando uma UDT seja comparada com outra no código [!INCLUDE[tsql](../../includes/tsql-md.md)], os bytes de cultura sejam comparados com os bytes de cultura e os valores de byte da moeda, com os valores de byte da moeda.  
   
- Para o código completo a listagem para o **moeda** UDT, siga as orientações para instalar o CLR amostras em [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Para o código completo a listagem para o **moeda** UDT, siga as orientações para instalar o CLR amostras em [exemplos do mecanismo de banco de dados do SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Atributos Currency  
  O **moeda** UDT é definido com os seguintes atributos.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Para o código completo a listagem para o **moeda** UDT, consulte [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Para o código completo a listagem para o **moeda** UDT, consulte [exemplos do mecanismo de banco de dados do SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando um tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

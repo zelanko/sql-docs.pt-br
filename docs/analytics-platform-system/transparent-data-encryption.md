@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699429"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, para um cenário em que a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode simplesmente restaurar ou anexar o banco de dados e procurar os dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -207,7 +207,7 @@ A chave de criptografia de banco de dados (DEK) é protegida por certificados ar
   
 O sistema pode acessar as chaves sem a necessidade de intervenção humana (como fornecer uma senha). Se o certificado não estiver disponível, o sistema produzirá um erro explicando que não é possível descriptografar a DEK até que o certificado apropriado esteja disponível.  
   
-Ao mover um banco de dados de um dispositivo para outro, o certificado usado para proteger seu ' DEK deve ser restaurado primeiro no servidor de destino. Em seguida, o banco de dados pode ser restaurado como de costume. Para obter mais informações, consulte a documentação do SQL Server standard, em [mover um banco de dados protegido por TDE para outro SQL Server](http://technet.microsoft.com/library/ff773063.aspx).  
+Ao mover um banco de dados de um dispositivo para outro, o certificado usado para proteger seu ' DEK deve ser restaurado primeiro no servidor de destino. Em seguida, o banco de dados pode ser restaurado como de costume. Para obter mais informações, consulte a documentação do SQL Server standard, em [mover um banco de dados protegido por TDE para outro SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Certificados usados para criptografar os DEKs devem ser mantidos enquanto houver backups de banco de dados que usá-los. Backups do certificado devem incluir a chave privada do certificado, porque um certificado sem a chave privada não pode ser usado para a restauração de banco de dados. Esses backups de chave privada do certificado são armazenadas em um arquivo separado, protegido por senha que deve ser fornecida para restauração de certificado.  
   

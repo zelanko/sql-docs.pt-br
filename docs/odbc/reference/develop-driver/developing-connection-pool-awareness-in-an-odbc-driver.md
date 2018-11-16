@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661745"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer os serviços de pooling de conexão.  
@@ -68,7 +68,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
 ## <a name="the-connection-rating"></a>A classificação de Conexão  
  Em comparação com o estabelecimento de uma nova conexão, você pode obter um melhor desempenho, redefinindo algumas informações de conexão (por exemplo, o banco de dados) em uma conexão em pool. Portanto, você pode não querer o nome do banco de dados em seu conjunto de atributos de chave. Caso contrário, você pode ter um pool separado para cada banco de dados, que pode não ser bom em aplicativos de camada intermediária, em que os clientes usam várias cadeias de caracteres de conexão diferente.  
   
- Sempre que você reutilize uma conexão que tem alguma incompatibilidade do atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada é idêntica à solicitação de aplicativo (consulte a discussão sobre o atributo SQL_ATTR _DBC_INFO_TOKEN na [função SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59368)). No entanto, redefinir esses atributos pode diminuir o desempenho. Por exemplo, a redefinição de um banco de dados requer uma chamada de rede ao servidor. Portanto, reutilize uma conexão que é correspondida perfeitamente, se houver uma disponível.  
+ Sempre que você reutilize uma conexão que tem alguma incompatibilidade do atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada é idêntica à solicitação de aplicativo (consulte a discussão sobre o atributo SQL_ATTR _DBC_INFO_TOKEN na [função SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). No entanto, redefinir esses atributos pode diminuir o desempenho. Por exemplo, a redefinição de um banco de dados requer uma chamada de rede ao servidor. Portanto, reutilize uma conexão que é correspondida perfeitamente, se houver uma disponível.  
   
  Uma função de classificação no driver pode avaliar uma conexão existente com uma nova solicitação de conexão. Por exemplo, a função de classificação do driver pode determinar:  
   
@@ -109,7 +109,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  O Gerenciador de Driver **SQLAllocHandle** e **SQLFreeHandle** não aceitará esse novo tipo de identificador.  
   
- SQL_HANDLE_DBC_INFO_TOKEN podem conter informações confidenciais, como credenciais. Portanto, um driver com segurança deve limpar o buffer de memória (usando [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contém as informações confidenciais antes de liberar esse identificador com **SQLFreeHandle**. Sempre que o identificador de ambiente do aplicativo é fechado, todos os pools de conexão associada serão fechados.  
+ SQL_HANDLE_DBC_INFO_TOKEN podem conter informações confidenciais, como credenciais. Portanto, um driver com segurança deve limpar o buffer de memória (usando [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contém as informações confidenciais antes de liberar esse identificador com **SQLFreeHandle**. Sempre que o identificador de ambiente do aplicativo é fechado, todos os pools de conexão associada serão fechados.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>Pool de Conexão do Gerenciador de driver de algoritmo de classificação  
  Esta seção discute o algoritmo de classificação para o pool de conexão do Gerenciador de Driver. Os desenvolvedores de driver podem implementar o mesmo algoritmo para compatibilidade com versões anteriores. Esse algoritmo não pode ser melhor. Você deverá refinar esse algoritmo com base em sua implementação (caso contrário, há nenhum motivo para implementar esse recurso).  

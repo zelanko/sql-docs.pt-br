@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733414"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669085"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|Indica o nome de contêiner FILESTREAM|  
 |*num_collected_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram limpos (excluídos) pelo coletor de dados neste contêiner.|  
 |*num_marked_for_collection_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram marcados para coleta de lixo neste contêiner. Estes itens ainda não foram excluídos, mas podem ser elegíveis para exclusão após a fase de coleta de lixo.|  
-|*num_unprocessed_items*|Indica o número de itens FILESTREAM qualificados (arquivos ou diretórios) que não foram processados para coleta de lixo neste FILESTREAM. Itens podem não ser processados por várias razões, inclusive as seguintes:<br /><br /> Arquivos que precisam ser definidos porque não foi obtido o backup de log ou um ponto de verificação.<br /><br /> Arquivos no modelo de recuperação FULL ou BULK_LOGGED.<br /><br /> Há uma transação ativa de execução longa.<br /><br /> O trabalho de leitor de log de replicação não foi executada. Consulte o white paper [armazenamento de FILESTREAM no SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obter mais informações.|  
+|*num_unprocessed_items*|Indica o número de itens FILESTREAM qualificados (arquivos ou diretórios) que não foram processados para coleta de lixo neste FILESTREAM. Itens podem não ser processados por várias razões, inclusive as seguintes:<br /><br /> Arquivos que precisam ser definidos porque não foi obtido o backup de log ou um ponto de verificação.<br /><br /> Arquivos no modelo de recuperação FULL ou BULK_LOGGED.<br /><br /> Há uma transação ativa de execução longa.<br /><br /> O trabalho de leitor de log de replicação não foi executada. Consulte o white paper [armazenamento de FILESTREAM no SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) para obter mais informações.|  
 |*last_collected_xact_seqno*|Retorna o número de sequência de log correspondente (LSN) até onde os arquivos do contêiner FILESTREAM especificado foram coletados pelo coletor de lixo.|  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,6 +1,6 @@
 ---
-title: Gerenciamento de servidor do Analysis Services | Microsoft Docs
-ms.date: 05/02/2018
+title: Gerenciamento de servidor do SQL Server Analysis Services | Microsoft Docs
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,25 +9,28 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62c350b13db727b747fc4573b3bb634ac59256f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015973"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700434"
 ---
-# <a name="analysis-services-server-management"></a>Gerenciamento de servidor do Analysis Services
+# <a name="sql-server-analysis-services-server-management"></a>Gerenciamento de servidor do SQL Server Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+Para o Azure Analysis Services, consulte [gerenciar o Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
 
   Uma instância de servidor do Analysis Services é uma cópia do **msmdsrv.exe** executável que é executado como um serviço de sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  
   
- Cada instância é executada como serviço do Windows, Msmdsrv.exe, no contexto de segurança de uma conta de logon definida.  
+ Cada instância é executada como serviço Windows, Msmdsrv.exe, no contexto de segurança de uma conta de logon definida.  
   
 -   O nome do serviço da instância padrão é MSSQLServerOLAPService.  
   
--   O nome do serviço de cada instância nomeada do é MSOLAP$ InstanceName.  
+-   O nome de cada instância nomeada do serviço é MSOLAP$ InstanceName.  
   
 > [!NOTE]  
->  Se várias instâncias forem instaladas, o programa de instalação também instala um serviço de redirecionamento, que é integrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do navegador. O serviço de redirecionamento é responsável por direcionar os clientes à instância nomeada adequada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é executado no contexto de segurança da conta de Serviço Local, uma conta de usuário limitada usada pelo Windows para serviços que não acessam recursos fora do computador local.  
+>  Se várias instâncias estiverem instaladas, o programa de instalação também instala um serviço de redirecionamento, que é integrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço localizador. O serviço de redirecionamento é responsável por direcionar os clientes à instância nomeada adequada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é executado no contexto de segurança da conta de Serviço Local, uma conta de usuário limitada usada pelo Windows para serviços que não acessam recursos fora do computador local.  
   
  A expressão várias instâncias significa que você pode aumentar a escala instalando várias instâncias de servidor no mesmo hardware. Para o Analysis Services em particular, isso também significa que você pode dar suporte a diferentes modos de servidor tendo várias instâncias no mesmo servidor, cada uma configurada para ser executada em um modo específico.  
   
@@ -42,7 +45,7 @@ ms.locfileid: "34015973"
 > [!NOTE]  
 >  A exceção é o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A administração de servidor de uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre está dentro do contexto de um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] difere de outros modos de servidor porque sempre é de instância única e sempre gerenciado por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Embora seja possível se conectar ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administração de servidor, consulte [Power Pivot para SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="common-server-management-topics"></a>Tópicos de gerenciamento comuns do servidor  
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
@@ -50,12 +53,12 @@ ms.locfileid: "34015973"
 |[Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Descreve as propriedades de cadeia de conexão, as bibliotecas de cliente, as metodologias de autenticação, e as etapas para estabelecer ou limpar conexões.|  
 |[Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Descreve ferramentas e técnicas por monitorar uma instância de servidor, inclusive como usar o Desempenho do Sistema e o SQL Server Profiler.|  
 |[Alta Disponibilidade e Escalabilidade](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Descreve as técnicas mais usadas para fazer com que os bancos de dados do Analysis Services sejam de alta disponibilidade e escalonáveis. |  
-|[Cenários de globalização para o Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explica suporte a idioma e agrupamento, as etapas para alterar ambas as propriedades e dicas para definir e testar comportamentos de idioma e agrupamento.|  
+|[Cenários de globalização para o Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explica o suporte ao idioma e à ordenação, as etapas para alterar ambas as propriedades e dicas para definir e testar comportamentos de idioma e de ordenação.|  
 |[Operações de log no Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Descreve os logs e explica como configurá-los.|  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Comparando soluções tabulares e multidimensionais ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

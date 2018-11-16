@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752384"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600916"
 ---
 # <a name="ado-errors"></a>Erros ADO
 O **ErrorValueEnum** constante descreve os valores de erro ADO. Para obter uma lista completa das constantes enumeradas, incluindo valores, consulte [apêndice b: ADO erros](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Esta seção examinará alguns dos erros mais interessantes e explicar algumas situações específicas que podem gerá-los, ou soluções para corrigir o problema. Os dois os **ErrorValueEnum** constante e o número decimal positivo curto são listados.
@@ -64,7 +64,7 @@ O **ErrorValueEnum** constante descreve os valores de erro ADO. Para obter uma l
 |**3724**|**adErrCantConvertvalue**|Valor de dados não pode ser convertido por razões diferentes de estouro de dados ou de incompatibilidade de sinal. Por exemplo, a conversão pode ter truncado dados.|
 |**3725**|**adErrCantCreate**|Valor de dados não pode ser definido ou recuperado porque o tipo de dados do campo era desconhecido ou o provedor precisou recursos insuficientes para executar a operação.|
 |**3726**|**adErrColumnNotOnThisRow**|Registro não contém esse campo. Um nome de campo incorreto foi especificado ou um campo não está no **campos** coleção do registro atual foi referenciada.|
-|**3727**|**adErrURLDoesNotExist**|A URL de origem ou o pai da URL de destino não existe. Há um erro de digitação na URL de origem ou destino. Você pode ter `http://mysite/photo/myphoto.jpg` quando você realmente deve ter `http://mysite/photos/myphoto.jpg` em vez disso. O erro de digitação na URL do pai (nesse caso, *foto* em vez de *fotos*) causou o erro.|
+|**3727**|**adErrURLDoesNotExist**|A URL de origem ou o pai da URL de destino não existe. Há um erro de digitação na URL de origem ou destino. Você pode ter `https://mysite/photo/myphoto.jpg` quando você realmente deve ter `https://mysite/photos/myphoto.jpg` em vez disso. O erro de digitação na URL do pai (nesse caso, *foto* em vez de *fotos*) causou o erro.|
 |**3728**|**adErrTreePermissionDenied**|Permissões são insuficientes para acessar a árvore ou uma subárvore. O usuário chamado na cadeia de conexão não tem as permissões apropriadas.|
 |**3729**|**adErrInvalidURL**|URL contém caracteres inválidos. Verifique se que a URL foi digitada corretamente. A URL segue o esquema registrado para o provedor atual (por exemplo, o provedor de publicação de Internet está registrado para http).|
 |**3730**|**adErrResourceLocked**|O objeto representado por uma URL especificada é bloqueado por um ou mais processos. Aguarde até que o processo foi concluído e tente a operação novamente. O objeto que você está tentando acessar foi bloqueado por outro usuário ou por outro processo em seu aplicativo. Isso é mais probabilidade de surgirem em um ambiente multiusuário.|

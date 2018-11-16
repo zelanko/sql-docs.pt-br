@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662845"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  O nome do banco de dados para habilitar o backup gerenciado em um banco de dados específico.  
   
  @container_url  
- Uma URL que indica o local do backup. Quando @credential_name for NULL, essa URL é uma URL de SAS (assinatura) de acesso compartilhado para um contêiner de blob no armazenamento do Azure e os backups de usam o novo backup à funcionalidade de blob de bloco. Para obter mais informações, examine [Noções básicas sobre SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Quando @credential_name for especificado, em seguida, essa é uma URL de conta de armazenamento e os backups de usam o backup preterido para funcionalidade de blob de página.  
+ Uma URL que indica o local do backup. Quando @credential_name for NULL, essa URL é uma URL de SAS (assinatura) de acesso compartilhado para um contêiner de blob no armazenamento do Azure e os backups de usam o novo backup à funcionalidade de blob de bloco. Para obter mais informações, examine [Noções básicas sobre SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Quando @credential_name for especificado, em seguida, essa é uma URL de conta de armazenamento e os backups de usam o backup preterido para funcionalidade de blob de página.  
   
 > [!NOTE]  
 >  Apenas uma URL SAS tem suporte para esse parâmetro no momento.  

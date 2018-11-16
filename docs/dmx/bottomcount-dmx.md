@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843029"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602906"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Remarks  
- O valor que é fornecido pelo \<expressão de classificação > argumento determina a ordem de classificação crescente das linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas inferiores especificado no \<contagem > argumento será retornado.  
+## <a name="remarks"></a>Comentários  
+ O valor fornecido pelo \<expressão de classificação > argumento determina a ordem de classificação crescente das linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas mais baixas, que é especificado no \<contagem > argumento será retornado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma consulta de previsão no modelo de associação que você cria usando o [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ O exemplo a seguir cria uma consulta de previsão no modelo de associação que você compila usando o [Tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Para entender como funciona a BottomCount, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
+ Para entender como funciona o BottomCount, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -83,9 +83,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- O primeiro argumento para a função BottomCount é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada da chamada da função de previsão e usando o argumento INCLUDE_STATISTICS.  
+ O primeiro argumento para a função BottomCount é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada ao chamar a função Predict e usando o argumento INCLUDE_STATISTICS.  
   
- O segundo argumento para a função BottomCount é a coluna na tabela aninhada que você pode usar para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $SUPPORT porque os valores de suporte não são fracionários e, portanto, são mais fáceis de verificar.  
+ O segundo argumento para a função BottomCount é a coluna na tabela aninhada que você usa para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $SUPPORT porque os valores de suporte não são fracionários e, portanto, são mais fáceis de verificar.  
   
  O terceiro argumento para a função BottomCount Especifica o número de linhas. Para obter as três linhas com a menor classificação, ordenadas por $SUPPORT, digite 3.  
   
@@ -101,7 +101,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte também  
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  

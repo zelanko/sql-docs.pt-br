@@ -15,12 +15,12 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a05ec85e3fd22a6190df0e840bd69ca40fcde5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35c1fce22e700ddd7ca2e738449a7b8b4ce4a63a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695730"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601467"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chamar um procedimento armazenado com um comando
 Você pode usar um comando para chamar um procedimento armazenado. O exemplo de código no final deste tópico se refere a um procedimento armazenado no banco de dados de exemplo do Northwind, chamado CustOrdersOrders, que é definido da seguinte maneira.  
@@ -134,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Artigo da Base de dados de Conhecimento 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [Artigo da Base de dados de Conhecimento 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

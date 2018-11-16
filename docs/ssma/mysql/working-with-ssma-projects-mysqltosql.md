@@ -15,12 +15,12 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f29b13b47c6f52522606bb8bc4a1aeff6b642145
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661665"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhar com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para o SQL Server ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -54,7 +54,7 @@ O SSMA contém várias configurações para converter e carregamento de banco de
   
 -   Para obter informações sobre configurações de sincronização para o SQL Server, consulte [configurações do projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   Para obter informações sobre as configurações de interface gráfica do usuário, consulte [projeto configurações (GUI) (SSMA comuns)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   Para obter informações sobre as configurações de interface gráfica do usuário, consulte [projeto configurações (GUI) (SSMA comuns)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 -   Para obter informações sobre as configurações de mapeamento de tipo de dados, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   

@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d0a0f167f14910f657f6c65b9778b0aadde65b10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664205"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gerenciamento de senhas (AccessToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -122,5 +122,5 @@ O aplicativo de Console do SSMA permite que você exporte as senhas de banco de 
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (acesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Executar o Console do SSMA (acesso)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

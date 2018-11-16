@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658566"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Grupos de disponibilidade Always On para contêineres do SQL Server
 
-2019 do SQL Server dá suporte a grupos de disponibilidade em contêineres em um Kubernetes. Para grupos de disponibilidade, implante o SQL Server [Kubernetes operador](http://coreos.com/blog/introducing-operators.html) ao cluster Kubernetes. O operador ajuda o pacote, implantar e gerenciar o grupo de disponibilidade em um cluster.
+2019 do SQL Server dá suporte a grupos de disponibilidade em contêineres em um Kubernetes. Para grupos de disponibilidade, implante o SQL Server [Kubernetes operador](https://coreos.com/blog/introducing-operators.html) ao cluster Kubernetes. O operador ajuda o pacote, implantar e gerenciar o grupo de disponibilidade em um cluster.
 
 ![AG no contêiner do Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 Na imagem acima, um cluster de quatro nós kubernetes hospedar um grupo de disponibilidade com três réplicas. A solução inclui os seguintes componentes:
 
-* Um Kubernetes [ *implantação*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). A implantação inclui o operador e um mapa de configuração. Eles fornecem a imagem de contêiner, software e as instruções necessárias para implantar as instâncias do SQL Server para o grupo de disponibilidade.
+* Um Kubernetes [ *implantação*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). A implantação inclui o operador e um mapa de configuração. Eles fornecem a imagem de contêiner, software e as instruções necessárias para implantar as instâncias do SQL Server para o grupo de disponibilidade.
 
-* Três nós, cada uma hospedando um [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). O StatefulSet contém um [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Cada pod contém:
+* Três nós, cada uma hospedando um [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). O StatefulSet contém um [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Cada pod contém:
   * Um contêiner do SQL Server executando uma instância do SQL Server.
   * Um agente do grupo de disponibilidade. 
 
-* Duas [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) relacionadas ao grupo de disponibilidade. Os ConfigMaps fornecem informações sobre:
+* Duas [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) relacionadas ao grupo de disponibilidade. Os ConfigMaps fornecem informações sobre:
   * A implantação para o operador.
   * O grupo de disponibilidade.
 
- * [*Volumes persistentes* ](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) são partes de armazenamento. Um *declaração de volume persistente* (PVC) é uma solicitação de armazenamento por um usuário. Cada contêiner é afiliado a um PVC para o armazenamento de dados e de log. No serviço de Kubernetes do Azure (AKS), você [criar uma declaração de volume persistente](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) para provisionar automaticamente o armazenamento com base em uma classe de armazenamento.
+ * [*Volumes persistentes* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) são partes de armazenamento. Um *declaração de volume persistente* (PVC) é uma solicitação de armazenamento por um usuário. Cada contêiner é afiliado a um PVC para o armazenamento de dados e de log. No serviço de Kubernetes do Azure (AKS), você [criar uma declaração de volume persistente](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) para provisionar automaticamente o armazenamento com base em uma classe de armazenamento.
 
 
-Além disso, o cluster armazena [ *segredos* ](http://kubernetes.io/docs/concepts/configuration/secret/) para as senhas, certificados, chaves e outras informações confidenciais.
+Além disso, o cluster armazena [ *segredos* ](https://kubernetes.io/docs/concepts/configuration/secret/) para as senhas, certificados, chaves e outras informações confidenciais.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Implantar o grupo de disponibilidade no Kubernetes
 
@@ -74,11 +74,11 @@ O código para o operador, o supervisor de alta disponibilidade e o SQL Server �
 
 * `mssql-operator`
 
-    Esse processo é implantado como uma implantação de Kubernetes separada. Ele registra o [recurso personalizado de Kubernetes](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) chamado `SqlServer` (sqlservers.mssql.microsoft.com). Em seguida, ele escuta para esses recursos que está sendo criado ou atualizado no cluster Kubernetes. Para cada caso, ele cria ou atualiza os recursos de Kubernetes para a instância correspondente (por exemplo o StatefulSet ou `mssql-server-k8s-init-sql` trabalho).
+    Esse processo é implantado como uma implantação de Kubernetes separada. Ele registra o [recurso personalizado de Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) chamado `SqlServer` (sqlservers.mssql.microsoft.com). Em seguida, ele escuta para esses recursos que está sendo criado ou atualizado no cluster Kubernetes. Para cada caso, ele cria ou atualiza os recursos de Kubernetes para a instância correspondente (por exemplo o StatefulSet ou `mssql-server-k8s-init-sql` trabalho).
 
 * `mssql-server-k8s-health-agent`
 
-    Esse servidor web serve Kubernetes [testes de execução](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) para determinar a integridade de uma instância do SQL Server. Monitora a integridade da instância do SQL Server local por meio da chamada `sp_server_diagnostics` e comparar os resultados com a diretiva de monitor.
+    Esse servidor web serve Kubernetes [testes de execução](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) para determinar a integridade de uma instância do SQL Server. Monitora a integridade da instância do SQL Server local por meio da chamada `sp_server_diagnostics` e comparar os resultados com a diretiva de monitor.
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ O código para o operador, o supervisor de alta disponibilidade e o SQL Server �
 
 * `mssql-server-k8s-init-sql`
   
-    Este Kubernetes [trabalho](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) aplica uma configuração de estado desejado para uma instância do SQL Server. O trabalho é criado pelo operador sempre que um recurso do SQL Server é criado ou atualizado. Isso garante que a instância do SQL Server de destino correspondente ao recurso personalizado tem a configuração desejada, descrita no recurso.
+    Este Kubernetes [trabalho](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) aplica uma configuração de estado desejado para uma instância do SQL Server. O trabalho é criado pelo operador sempre que um recurso do SQL Server é criado ou atualizado. Isso garante que a instância do SQL Server de destino correspondente ao recurso personalizado tem a configuração desejada, descrita no recurso.
 
     Por exemplo, se qualquer uma das configurações a seguir são necessárias, ele conclui-las:
   * Atualizar a senha SA

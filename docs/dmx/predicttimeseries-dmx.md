@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040434"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602486"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Tipo de retorno  
  Um \< *expressão de tabela*>.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O algoritmo Time Series da [!INCLUDE[msCoName](../includes/msconame-md.md)] não suporta a previsão histórica ao usar a instrução PREDICTION JOIN para adicionar novos dados.  
   
  Em um PREDICTION JOIN, o processo de previsão sempre começa no período imediatamente após o final da série de treinamento original. Isso é verdadeiro mesmo se você adicionar novos dados. Portanto, o *n* parâmetro e *n início* valores de parâmetro devem ser um inteiro maior que 0.  
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   O terceiro exemplo mostra como usar o parâmetro EXTEND_MODEL_CASES para atualizar um modelo de mineração com dados novos.  
   
- Para saber mais sobre como trabalhar com modelos de série temporal, consulte o tutorial de mineração de dados, [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [DMX de previsão de série de tempo Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para saber mais sobre como trabalhar com modelos de série temporal, consulte o tutorial de mineração de dados, [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [DMX de previsão de série de tempo Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Você pode obter diferentes resultados do seu modelo. Os resultados dos exemplos a seguir são fornecidos somente para ilustrar o formato do resultado.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Exemplo 2: Adicionando novos dados e usando REPLACE_MODEL_CASES  
  Suponha que você acha que os dados estavam incorretos para uma região específica e deseja usar os padrões no modelo, mas ajustar as previsões para que correspondam aos novos dados. Ou, você pode achar que outra região tenha mais tendências confiáveis e desejar aplicar o modelo mais confiável aos dados de uma região diferente.  
   
- Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa desse cenário, consulte [previsões de série temporal avançadas &#40;Tutorial intermediário de mineração de dados&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa desse cenário, consulte [previsões de série temporal avançadas &#40;Tutorial intermediário de mineração de dados&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  A seguinte consulta PREDICTION JOIN ilustra a sintaxe para substituir dados e fazer novas previsões. Para os dados de substituição, o exemplo recupera o valor das colunas Amount e Quantity e multiplica cada um deles por dois:  
   
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retorna novas previsões para as três frações de tempo restantes com base no modelo recém-expandido.  
   
- A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: estendendo o modelo de série temporal](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: estendendo o modelo de série temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Além disso, observe que você não forneceu novos dados para a região do Pacífico. Portanto, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna novas previsões para todas as cinco frações de tempo.  
   

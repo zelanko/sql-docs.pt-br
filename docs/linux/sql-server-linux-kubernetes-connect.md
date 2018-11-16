@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356097"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671995"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Conectar-se a um SQL Server sempre no grupo de disponibilidade no Kubernetes
 
-Para se conectar às instâncias do SQL Server em contêineres em um cluster Kubernetes, crie uma [serviço de Balanceador de carga](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). O balanceador de carga é um ponto de extremidade. Ele contém um endereço IP e encaminha as solicitações para o endereço IP para o pod executando a instância do SQL Server.
+Para se conectar às instâncias do SQL Server em contêineres em um cluster Kubernetes, crie uma [serviço de Balanceador de carga](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). O balanceador de carga é um ponto de extremidade. Ele contém um endereço IP e encaminha as solicitações para o endereço IP para o pod executando a instância do SQL Server.
 
 Para se conectar a uma réplica do grupo de disponibilidade, crie um serviço para tipos diferentes de réplica. Você pode ver exemplos de serviços para diferentes tipos de réplicas em [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

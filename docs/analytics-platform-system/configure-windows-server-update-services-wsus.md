@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696935"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Essas instruções você percorrer as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual VMM do dispositivo.  
   
-Para obter mais informações sobre como configurar o WSUS, consulte o [guia de instalação de passo a passo do WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações do Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
+Para obter mais informações sobre como configurar o WSUS, consulte o [guia de instalação de passo a passo do WSUS](https://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações do Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
   
 > [!WARNING]  
 > Se você encontrar erros durante esse processo de configuração, pare e entre em contato com o suporte para obter assistência. Não ignorar erros ou continuar no processo depois de erros são recebidos.  
@@ -79,7 +79,7 @@ Para configurar o WSUS, você precisa:
   
 4.  Escolha o servidor upstream.  
   
-    Sobre o **escolher servidor Upstream** página do Assistente de configuração do WSUS, você selecionará como o WSUS no nó de gerenciamento de máquina Virtual se conectará a um servidor upstream para obter atualizações de software. As duas opções são sincronizar com o servidor upstream [Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349) ou sincronizar atualizações com outro servidor do Windows Server Update Services.  
+    Sobre o **escolher servidor Upstream** página do Assistente de configuração do WSUS, você selecionará como o WSUS no nó de gerenciamento de máquina Virtual se conectará a um servidor upstream para obter atualizações de software. As duas opções são sincronizar com o servidor upstream [Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349) ou sincronizar atualizações com outro servidor do Windows Server Update Services.  
   
     #### <a name="to-update-by-using-microsoft-update"></a>Atualizar usando o Microsoft Update  
   

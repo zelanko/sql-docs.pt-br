@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,20 +15,20 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd22d13a0fe656a7d176d6fb9fd2a97e3ce8d3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673516"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604636"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Visão geral do Microsoft OLE DB Provider simples
-O Microsoft OLE DB simples provedor OSP () permite que o ADO para acessar os dados para o qual um provedor tenha sido escrito usando o [Kit de ferramentas do OLE DB simples provedor (OSP)](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Provedores simples destinam-se para acessar fontes de dados que exigem suporte de OLE DB apenas fundamental, como matrizes na memória ou documentos XML.
+O Microsoft OLE DB simples provedor OSP () permite que o ADO para acessar os dados para o qual um provedor tenha sido escrito usando o [Kit de ferramentas do OLE DB simples provedor (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Provedores simples destinam-se para acessar fontes de dados que exigem suporte de OLE DB apenas fundamental, como matrizes na memória ou documentos XML.
 
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de caracteres de Conexão
  Para conectar o OLE DB simples DLL de provedor, defina as *provedor* argumento para o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para:
 
-```
+```vb
 MSDAOSP
 ```
 
@@ -39,7 +39,7 @@ MSDAOSP
 ## <a name="typical-connection-string"></a>Cadeia de caracteres de Conexão típica
  Uma cadeia de caracteres de conexão típica para esse provedor é:
 
-```
+```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
@@ -55,26 +55,26 @@ MSDAOSP
 
  O **Portfolio** arquivo usado no exemplo a seguir contém a árvore a seguir:
 
-```
+```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  O DSO XML usa uma heurística interna para converter os nós em uma árvore XML em capítulos hierárquico **conjunto de registros**.
 
  Usando esse heurística interna, a árvore XML é convertida em um nível de dois hierárquico **Recordset** da seguinte forma:
 
-```
+```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Observe que as marcas de portfólio e informações não são representadas no hierárquica **conjunto de registros**. Para obter uma explicação de como o DSO XML converte árvores XML hierárquicos **conjuntos de registros**, consulte as regras a seguir. A coluna $Text é abordada na seção a seguir.
@@ -100,7 +100,7 @@ Shares, Symbol, Price, $Text
 
  O código que é necessário para construir um **Recordset** é da seguinte maneira:
 
-```
+```vb
 Dim adoConn as ADODB.Connection
 Dim adoRS as ADODB.Recordset
 
@@ -108,15 +108,15 @@ Set adoRS = New ADODB.Connection
 Set adoRS = New ADODB.Recordset
 
 adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-adoRS.Open "http://WebServer/VRoot/portfolio.xml, adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
 >  O caminho do arquivo de dados pode ser especificado usando quatro diferentes convenções de nomenclatura.
 
-```
+```vb
 'HTTP://
-adoRS.Open "http://WebServer/VRoot/portfolio.xml", adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml", adoConn
 'FILE://
 adoRS.Open "file:/// C:\\Directory\\portfolio.xml", adoConn
 'UNC Path
@@ -137,14 +137,14 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   O XMLDSO adiciona uma coluna adicional de dados ($Text) a cada **Recordset** na hierarquia.
 
- Para obter mais informações sobre o provedor OLE DB simples, consulte [criação de um provedor simples](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Para obter mais informações sobre o provedor OLE DB simples, consulte [criação de um provedor simples](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
 
 ## <a name="code-example"></a>Exemplo de código
  O código de Visual Basic a seguir demonstra abrindo um arquivo XML arbitrário, construindo um hierárquica **conjunto de registros**e recursivamente escrever cada registro de cada **Recordset** para a janela de depuração.
 
  Aqui está um arquivo XML simples que contém as cotações de ações. O código a seguir usa esse arquivo para construir um nível de dois hierárquico **conjunto de registros**.
 
-```
+```xml
 <portfolio>
    <stock>
       <shares>100</shares>
@@ -152,7 +152,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$70.00</price>
       <info>
          <companyname>Microsoft Corporation</companyname>
-         <website>http://www.microsoft.com</website>
+         <website>https://www.microsoft.com</website>
       </info>
    </stock>
    <stock>
@@ -161,7 +161,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$107.00</price>
       <info>
          <companyname>Apple Computer, Inc.</companyname>
-         <website>http://www.apple.com</website>
+         <website>https://www.apple.com</website>
       </info>
    </stock>
    <stock>
@@ -170,7 +170,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$50.00</price>
       <info>
          <companyname>Dell Corporation</companyname>
-         <website>http://www.dell.com</website>
+         <website>https://www.dell.com</website>
       </info>
     </stock>
     <stock>
@@ -179,7 +179,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
        <price>$115.00</price>
        <info>
           <companyname>Intel Corporation</companyname>
-          <website>http://www.intel.com</website>
+          <website>https://www.intel.com</website>
        </info>
    </stock>
 </portfolio>
@@ -187,7 +187,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
  A seguir estão as dois subprocedimentos do Visual Basic. O primeiro cria o **conjunto de registros** e passa-o para o *WalkHier* quais recursivamente conduz toda a hierarquia, escrever cada procedimento sub **campo** em cada registro em cada **Recordset** para a janela de depuração.
 
-```
+```vb
 Private Sub BrowseHierRecordset()
 ' Add ADO 2.7 or later to Project/References
 ' No need to add MSXML2, ADO just passes the ProgID through to the OSP.
@@ -201,7 +201,7 @@ Private Sub BrowseHierRecordset()
     Set adoChildRS = ADODB.Recordset
 
     adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-    adoRS.Open "http://bwillett3/Kowalski/portfolio.xml", adoConn
+    adoRS.Open "https://bwillett3/Kowalski/portfolio.xml", adoConn
 
     Dim iLevel As Integer
     iLevel = 0

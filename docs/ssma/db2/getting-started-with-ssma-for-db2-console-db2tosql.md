@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728747"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668295"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introdução ao SSMA para DB2 Console (DB2ToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do DB2. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console do SSMA típica.  
@@ -42,9 +42,9 @@ Depois que o console é iniciado com êxito em seu sistema Windows, você pode u
   
 Recursos adicionais:  
   
-1.  [Gerenciamento de senhas](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) e exportar / importá-los em outros computadores da janela  
+1.  [Gerenciamento de senhas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) e exportar / importá-los em outros computadores da janela  
   
-2.  [Geração de relatórios](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) exibir o xml detalhado relatórios para avaliação /conversion e migração de dados de saída. Relatórios de erro detalhadas também podem ser gerados para os comandos de atualização e a sincronização.  
+2.  [Geração de relatórios](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) exibir o xml detalhado relatórios para avaliação /conversion e migração de dados de saída. Relatórios de erro detalhadas também podem ser gerados para os comandos de atualização e a sincronização.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenções de saída de Console do SSMA  
 Após executar os comandos de script do SSMA e opções, o programa do console exibe os resultados e mensagens (informações de erro, etc.) para o usuário no console ou se for necessário, redireciona para um arquivo de saída xml. Cada tipo de mensagem na saída é representado por uma cor exclusiva. Por exemplo, a mensagem de texto cor branca indica comandos do arquivo de script; a cor verde representa um prompt para entrada do usuário e assim por diante.  
@@ -63,5 +63,5 @@ Interpretação de cor da saída do console na tabela a seguir:
 |Ciano|Guia de início, término e o resultado de uma operação|  
   
 ## <a name="see-also"></a>Consulte também  
-[Instalar o SSMA para DB2](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[Instalar o SSMA para DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

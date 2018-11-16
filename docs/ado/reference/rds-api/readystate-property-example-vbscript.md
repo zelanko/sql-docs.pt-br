@@ -15,16 +15,16 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 47e545cf1b1f99859330f0f0ffbbc72aa3f9393c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb3da04956a0306453bbbeab057a381fc5d136ea
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826894"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607076"
 ---
 # <a name="readystate-property-example-vbscript"></a>Exemplo do método ReadyState (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  O exemplo a seguir mostra como ler o [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) propriedade do [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto em tempo de execução no código do VBScript. **ReadyState** é uma propriedade somente leitura.  
   
@@ -75,7 +75,7 @@ body {
 <!-- RDS.DataControl with parameters set at design time -->  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDS>  
    <PARAM NAME="SQL" VALUE="Select * from Orders">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Northwind">  
    <PARAM NAME="ExecuteOptions" VALUE="2">   
    <PARAM NAME="FetchOptions" VALUE="3">  

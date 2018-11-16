@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c52144d2cef297109c3c8aef1751690edf723cf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792464"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656966"
 ---
 # <a name="aggregate-functions---min"></a>Funções de Agregação – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  O resultado de **min ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic. Se a entrada estiver estaticamente vazia, o vazio será implícito e um erro estático será retornado.  
   
- O **min ()** função retorna um valor na sequência que é menor do que qualquer outro na sequência de entrada. Para valores xs:string, o agrupamento de ponto de código Unicode padrão está sendo usado. Se um valor XDT: untypedatomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
+ O **min ()** função retorna um valor na sequência que é menor do que qualquer outro na sequência de entrada. Para valores xs:string, a ordenação de ponto de código Unicode padrão está sendo usada. Se um valor XDT: untypedatomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
@@ -56,7 +55,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ```  
 select ProductModelID, Name, Instructions.query('  
   declare namespace AWMI=  
-    "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   for   $Location in /AWMI:root/AWMI:Location  
   where $Location/@LaborHours =  
           min( /AWMI:root/AWMI:Location/@LaborHours )  
@@ -93,7 +92,7 @@ ProductModelID   Name              Result
   
 -   Não há suporte para sequências que misturam tipos, atravessando os limites de tipo base.  
   
--   Não há suporte para opção sintática que fornece agrupamento.  
+-   Não há suporte para opção sintática que fornece ordenação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  

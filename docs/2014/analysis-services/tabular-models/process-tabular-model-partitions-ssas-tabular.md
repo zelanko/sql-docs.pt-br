@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130520"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638613"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Processar partições de modelo tabular (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As tarefas neste tópico descrevem como processar partições em um banco de dados modelo usando a caixa de diálogo **Processar Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48130520"
   
 2.  Na caixa de diálogo **Partições** , em **Partições**, clique no botão Processar.  
   
-3.  Na caixa de diálogo **Processar Partições** , na caixa de listagem **Modo** , selecione um dos modos de processo a seguir:  
+3.  No **processar partições** na caixa de **modo** caixa de listagem, selecione um dos seguintes modos de processo:  
   
     |Modo|Description|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130520"
 4.  Na coluna da caixa de seleção **Processar** , selecione as partições que você deseja processar com o modo selecionado e clique em **Ok**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições de modelo de tabela &#40;Tabular do SSAS&#41;](partitions-ssas-tabular.md)   
- [Criar e gerenciar partições de modelo de tabela &#40;Tabular do SSAS&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo de tabela &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)   
+ [Criar e gerenciar partições de modelos de tabela &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

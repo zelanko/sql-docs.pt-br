@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8b2e217f599112019e96f3e20b727456b9da607f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889472"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697564"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Introdução ao revoscalepy no aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ A documentação completa para essas APIs estarão disponível quando o produto 
 
 Você pode obter ajuda sobre qualquer função de Python, importando o módulo e, em seguida, chamar `help()`. Por exemplo, executando `help(revoscalepy)` em seu IDE do Python retorna uma lista de todas as funções no módulo revoscalepy, com suas assinaturas.
 
-Se você usar as ferramentas Python para Visual Studio, você pode usar o IntelliSense para obter ajuda de sintaxe e o argumento. Para obter mais informações, consulte [suporte do Python no Visual Studio](http://docs.microsoft.com/visualstudio/python/installation)e baixar a extensão que corresponde à sua versão do Visual Studio. Você pode usar o Python com o Visual Studio 2015 e 2017 ou versões anteriores.
+Se você usar as ferramentas Python para Visual Studio, você pode usar o IntelliSense para obter ajuda de sintaxe e o argumento. Para obter mais informações, consulte [suporte do Python no Visual Studio](https://docs.microsoft.com/visualstudio/python/installation)e baixar a extensão que corresponde à sua versão do Visual Studio. Você pode usar o Python com o Visual Studio 2015 e 2017 ou versões anteriores.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e3d242236074c652f2210580f657d99e205f5ed6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b907ca844c80dcdb0953776a5cfb73b57937ff3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991070"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599937"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Tutoriais DMX (Analysis Services - Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,18 +22,18 @@ ms.locfileid: "37991070"
   Os tutoriais a seguir apresentam o uso de instruções DMX  com estruturas e modelos de mineração de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tutorial DMX Comprador de bicicleta](http://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
+ [Tutorial DMX Comprador de bicicleta](https://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  Neste tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Em seguida, você utilizará esses modelos de mineração para criar previsões que determinem se um cliente provavelmente comprará um produto específico.  
   
- [Tutorial de DMX do Market Basket](http://msdn.microsoft.com/library/6e262a1d-c89e-4033-8368-46cf25168ef5)  
+ [Tutorial de DMX do Market Basket](https://msdn.microsoft.com/library/6e262a1d-c89e-4033-8368-46cf25168ef5)  
   
  Neste tutorial, você aprenderá a criar um modelo de mineração que prevê quais produtos tendem a ser adquiridos ao mesmo tempo. Este tutorial também demonstra o uso de tabelas aninhadas na mineração de dados.  
   
 ## <a name="reference"></a>Referência  
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)  
+ [Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](../dmx/dmx-statements-data-definition.md)  
   
  [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)  
   
@@ -44,6 +44,6 @@ ms.locfileid: "37991070"
   
 ## <a name="see-also"></a>Consulte também  
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Tutorial de mineração de dados básico](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
+ [Tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

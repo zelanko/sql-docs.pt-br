@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252004"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674187"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
@@ -33,11 +33,11 @@ Este tutorial demonstra como configurar uma instância do SQL Server altamente d
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Solução de HA no Kubernetes em execução no serviço Kubernetes do Azure
 
-Kubernetes 1.6 ou posterior tem suporte para [classes de armazenamento](http://kubernetes.io/docs/concepts/storage/storage-classes/), [declarações de volume persistente](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)e o [tipo de volume de disco do Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Você pode criar e gerenciar suas instâncias do SQL Server nativamente no Kubernetes. O exemplo neste artigo mostra como criar uma [implantação](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para atingir uma configuração de alta disponibilidade semelhante a uma instância de cluster de failover de disco compartilhado. Nessa configuração, o Kubernetes desempenha a função de orquestrador de cluster. Quando uma instância do SQL Server em um contêiner de falha, o orquestrador inicializa a outra instância do contêiner que anexa ao mesmo armazenamento persistente.
+Kubernetes 1.6 ou posterior tem suporte para [classes de armazenamento](https://kubernetes.io/docs/concepts/storage/storage-classes/), [declarações de volume persistente](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)e o [tipo de volume de disco do Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Você pode criar e gerenciar suas instâncias do SQL Server nativamente no Kubernetes. O exemplo neste artigo mostra como criar uma [implantação](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para atingir uma configuração de alta disponibilidade semelhante a uma instância de cluster de failover de disco compartilhado. Nessa configuração, o Kubernetes desempenha a função de orquestrador de cluster. Quando uma instância do SQL Server em um contêiner de falha, o orquestrador inicializa a outra instância do contêiner que anexa ao mesmo armazenamento persistente.
 
 ![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-No diagrama anterior, `mssql-server` é um contêiner em um [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). O Kubernetes orquestra os recursos do cluster. Um [conjunto de réplicas](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) garante que o pod é automaticamente recuperado após uma falha de nó. Aplicativos se conectam ao serviço. Nesse caso, o serviço representa um balanceador de carga que hospeda um endereço IP que permanece o mesmo após a falha do `mssql-server`.
+No diagrama anterior, `mssql-server` é um contêiner em um [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). O Kubernetes orquestra os recursos do cluster. Um [conjunto de réplicas](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) garante que o pod é automaticamente recuperado após uma falha de nó. Aplicativos se conectam ao serviço. Nesse caso, o serviço representa um balanceador de carga que hospeda um endereço IP que permanece o mesmo após a falha do `mssql-server`.
 
 No diagrama a seguir, o `mssql-server` contêiner falhou. Como o orquestrador Kubernetes garante a contagem correta de instâncias íntegras na réplica definida e inicia um novo contêiner de acordo com a configuração. O orquestrador inicia um pod de novo no mesmo nó, e `mssql-server` reconecta-se ao mesmo armazenamento persistente. O serviço se conecta ao criada novamente `mssql-server`.
 
@@ -52,7 +52,7 @@ No diagrama a seguir, o nó que hospeda o `mssql-server` contêiner falhou. O or
 * **Cluster do Kubernetes**
    - O tutorial requer um cluster Kubernetes. Usam as etapas [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) para gerenciar o cluster. 
 
-   - Ver [implantar um cluster do serviço de contêiner do Azure (AKS)](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) para criar e conectar-se a um cluster do Kubernetes de nó único no AKS com `kubectl`. 
+   - Ver [implantar um cluster do serviço de contêiner do Azure (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) para criar e conectar-se a um cluster do Kubernetes de nó único no AKS com `kubectl`. 
 
    >[!NOTE]
    >Para proteger contra falhas de nó, um cluster Kubernetes requer mais de um nó.
@@ -62,7 +62,7 @@ No diagrama a seguir, o nó que hospeda o `mssql-server` contêiner falhou. O or
 
 ## <a name="create-an-sa-password"></a>Criar uma senha de SA
 
-Crie uma senha de SA no cluster Kubernetes. Kubernetes podem gerenciar as informações de configuração confidenciais, como senhas, como [segredos](http://kubernetes.io/docs/concepts/configuration/secret/).
+Crie uma senha de SA no cluster Kubernetes. Kubernetes podem gerenciar as informações de configuração confidenciais, como senhas, como [segredos](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 O comando a seguir cria uma senha para a conta SA:
 
@@ -77,9 +77,9 @@ O comando a seguir cria uma senha para a conta SA:
 
 ## <a name="create-storage"></a>Criar armazenamento
 
-Configurar uma [volume persistente](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) e [declaração de volume persistente](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) no cluster Kubernetes. Conclua as seguintes etapas: 
+Configurar uma [volume persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) e [declaração de volume persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) no cluster Kubernetes. Conclua as seguintes etapas: 
 
-1. Criar um manifesto para definir a classe de armazenamento e o volume persistente declaração.  O manifesto especifica o provedor de armazenamento, parâmetros, e [recuperar política](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). O cluster Kubernetes usa esse manifesto para criar o armazenamento persistente. 
+1. Criar um manifesto para definir a classe de armazenamento e o volume persistente declaração.  O manifesto especifica o provedor de armazenamento, parâmetros, e [recuperar política](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). O cluster Kubernetes usa esse manifesto para criar o armazenamento persistente. 
 
    O exemplo a seguir yaml define uma classe de armazenamento e a declaração de volume persistente. O provedor de classe de armazenamento é `azure-disk`, porque não é esse cluster Kubernetes no Azure. O tipo de conta de armazenamento é `Standard_LRS`. A declaração de volume persistente é denominada `mssql-data`. Os metadados de declaração de volume persistente incluem uma anotação, conectando-o novamente para a classe de armazenamento. 
 
@@ -155,7 +155,7 @@ Configurar uma [volume persistente](http://kubernetes.io/docs/concepts/storage/p
 
 Neste exemplo, o contêiner que hospeda a instância do SQL Server é descrito como um objeto de implantação do Kubernetes. A implantação cria um conjunto de réplicas. O conjunto de réplicas cria o pod. 
 
-Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagem do Docker. As referências do manifestas a `mssql-server` declaração de volume persistente e o `mssql` segredo que já foram aplicados ao cluster Kubernetes. O manifesto também descreve uma [serviço](http://kubernetes.io/docs/concepts/services-networking/service/). Esse serviço é um balanceador de carga. O balanceador de carga garante que o endereço IP persista após a instância do SQL Server é recuperada. 
+Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagem do Docker. As referências do manifestas a `mssql-server` declaração de volume persistente e o `mssql` segredo que já foram aplicados ao cluster Kubernetes. O manifesto também descreve uma [serviço](https://kubernetes.io/docs/concepts/services-networking/service/). Esse serviço é um balanceador de carga. O balanceador de carga garante que o endereço IP persista após a instância do SQL Server é recuperada. 
 
 1. Crie um manifesto (um arquivo YAML) para descrever a implantação. O exemplo a seguir descreve uma implantação, incluindo um contêiner com base na imagem de contêiner do SQL Server.
 
@@ -212,7 +212,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
    * `value: "Developer"`: Define o contêiner para executar o SQL Server Developer edition. Edição de desenvolvedor não está licenciada para dados de produção. Se a implantação for para uso em produção, defina a edição apropriada (`Enterprise`, `Standard`, ou `Express`). 
 
       >[!NOTE]
-      >Para obter mais informações, consulte [como licenciar o SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
+      >Para obter mais informações, consulte [como licenciar o SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
    * `persistentVolumeClaim`: Esse valor requer uma entrada para `claimName:` que mapeia para o nome usado para a declaração de volume persistente. Este tutorial usa `mssql-data`. 
 
@@ -275,9 +275,9 @@ Se você tiver configurado o contêiner conforme descrito, você pode se conecta
 
 Você pode usar os seguintes aplicativos para se conectar à instância do SQL Server. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Neste tutorial, você aprendeu como implantar contêineres do SQL Server para um
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
->[Introdução ao Kubernetes](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Introdução ao Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f611fead43166972860436e7c3bc378ee8e44f38
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753910"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670255"
 ---
 # <a name="functions-on-string-values---contains"></a>Funções em Valores da Cadeia de Caracteres – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  Se o valor de *$arg1* ou *US $arg2* é a sequência vazia, o argumento é tratado como a cadeia de caracteres de comprimento zero.  
   
- A função contains() usa o agrupamento de ponto de código Unicode padrão do XQuery para a comparação de cadeias de caracteres.  
+ A função contains() usa a ordenação de ponto de código Unicode padrão do XQuery para a comparação de cadeias de caracteres.  
   
  O valor de subcadeia de caracteres especificado para *US $arg2* deve ser menor ou igual a 4000 caracteres. Se o valor especificado é maior que 4000 caracteres, ocorrerá uma condição de erro dinâmico e a função Contains () retorna uma sequência vazia em vez de um valor booleano **verdadeira** ou **falso**. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não gera erros dinâmicos em expressões XQuery.  
   
@@ -73,7 +72,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
 USE AdventureWorks  
 GO  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
       <Prod>  
          { /pd:ProductDescription/@ProductModelID }  
@@ -96,9 +95,9 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd=`  
   
- `"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
+ `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">`  
+ `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">`  
   
  `A TRUE multi-sport bike that offers streamlined riding and`  
   

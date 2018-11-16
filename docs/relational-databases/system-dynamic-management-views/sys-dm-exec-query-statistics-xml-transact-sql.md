@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675095"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Essa função do sistema funciona em ambos **standard** e **leve** infraestrutur
   
 **Lightweight** infraestrutura de criação de perfil de estatísticas estão disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pode ser habilitado:
   -  Globalmente usando o rastreamento de sinalizador 7412.
-  -  Usando o [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) evento estendido.
+  -  Usando o [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) evento estendido.
   
 > [!NOTE]
 > Uma vez habilitado pelo sinalizador de rastreamento 7412, criação de perfil leve será habilitada para qualquer consumidor das estatísticas de execução de consulta infraestrutura em vez de padrão de criação de perfil, como o DMV de criação de perfil [DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).

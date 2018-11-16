@@ -19,12 +19,12 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b61127c2844117b2d9c042b352129a1860e227c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663129"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47743184"
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Para Windows, retorna o número de versão. Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](/windows/desktop/SysInfo/operating-system-version). Não pode ser NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Para Windows, retorna o número do service pack. Não pode ser NULL. |  
-|**windows_sku**|**int**|Para Windows, retorna a ID do Windows estoque mantendo SKU (unidade). Para obter uma lista de IDs e descrições, consulte [função GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). É anulável. |  
-|**os_language_version**|**int**| Para Windows, retorna o identificador de localidade (LCID) do Windows do sistema operacional. Para obter uma lista de valores LCID e descrições, consulte [IDs de localidade atribuídas pela Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Não pode ser NULL.|  
+|**windows_sku**|**int**|Para Windows, retorna a ID do Windows estoque mantendo SKU (unidade). Para obter uma lista de IDs e descrições, consulte [função GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). É anulável. |  
+|**os_language_version**|**int**| Para Windows, retorna o identificador de localidade (LCID) do Windows do sistema operacional. Para obter uma lista de valores LCID e descrições, consulte [IDs de localidade atribuídas pela Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Não pode ser NULL.|  
   
   
 ## <a name="permissions"></a>Permissões  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: HT
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269959"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289916"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de versão Data Studio do Azure
 
@@ -26,7 +26,6 @@ ms.locfileid: "51269959"
 Data de lançamento: 6 de novembro de 2018  
 versão: 1.2.4
 
-- Apresentando a extensão Idera
 - Atualizar para o [extensão de visualização do SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - Introdução ao colar a extensão de plano
 - Apresentando a extensão de consultas de High Color, incluindo o tema do editor SSMS

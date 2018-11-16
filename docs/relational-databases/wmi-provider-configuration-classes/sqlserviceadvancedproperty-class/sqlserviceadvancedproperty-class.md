@@ -18,12 +18,12 @@ ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb62dee3cd772d3b4e4e699fc4ab340f7f36dbbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c76d14e4c3027d4b2b758755ae4dedcffad32f0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603634"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668225"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47603634"
   
  O [propriedade AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) faz referência a uma matriz de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) objetos.  
   
- O [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe representa as propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades que está associado a [SqlService classe](http://technet.microsoft.com/library/ms186497.aspx) classe. O [classe SqlServiceAdvancedProperty](http://technet.microsoft.com/library/ms182447.aspx) classe permite a representação de propriedades de cadeia de caracteres, numéricos ou booleanos. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
+ O [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe representa as propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades que está associado a [SqlService classe](https://technet.microsoft.com/library/ms186497.aspx) classe. O [classe SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) classe permite a representação de propriedades de cadeia de caracteres, numéricos ou booleanos. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando, parando e pausas serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando, parando e pausas serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

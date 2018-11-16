@@ -15,12 +15,12 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6554e76488cd83452c0ab1617c9bd65e9196c11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caf016190e585aa64ee24f81fdcc0c18a4dab93f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816364"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606476"
 ---
 # <a name="status-property-example-field-vb"></a>Exemplo da propriedade Status (Campo) (VB)
 O exemplo a seguir abre um documento de uma pasta de leitura/gravação usando o [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). O [Status](../../../ado/reference/ado-api/status-property-ado-field.md) propriedade de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto do [registro](../../../ado/reference/ado-api/record-object-ado.md) primeiro será definido como **adFieldPendingInsert**, e em seguida, ser atualizado para **adFieldOk**.  
@@ -38,7 +38,7 @@ Sub Main()
    Dim strCnxn As String  
   
    Set Cnxn = New ADODB.Connection  
-   strCnxn = "url=http://MyServer/"  
+   strCnxn = "url=https://MyServer/"  
    Cnxn.Open strCnxn  
   
    Set File = New ADODB.Record  

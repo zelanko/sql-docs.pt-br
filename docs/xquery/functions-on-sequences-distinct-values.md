@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 480183fb649589869645b3ffc98279b8c9722c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618024"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292392"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
   
  O resultado de **distinct-values()** recebe o tipo base dos tipos passados como xs: string no caso de XDT: untypedatomic, com a cardinalidade original. Se a entrada estiver estaticamente vazia, vazio será implícito e um erro estático será gerado.  
   
- Os valores de xs:string são comparados ao agrupamento de ponto de código Unicode padrão XQuery.  
+ Os valores de xs:string são comparados à ordenação de ponto de código Unicode padrão XQuery.  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
@@ -93,7 +92,7 @@ select @x.query('
   
 -   O **distinct-values()** não há suporte para a função nos valores xs: Duration.  
   
--   Não há suporte para opção sintática que fornece agrupamento.  
+-   Não há suporte para opção sintática que fornece ordenação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  

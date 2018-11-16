@@ -1,5 +1,5 @@
 ---
-title: Usando funções (aprendizado de máquina do SQL Server) da criação de perfil de código de R | Microsoft Docs
+title: Usando o código de R, criação de perfil de funções (aprendizado de máquina do SQL Server) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202168"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703964"
 ---
-# <a name="using-r-code-profiling-functions"></a>Usando funções de criação de perfil de código de R
+# <a name="using-r-code-profiling-functions"></a>Usar funções de criação de perfil de código de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Além de usar recursos do SQL Server e ferramentas para monitorar a execução do script R, você pode usar ferramentas de desempenho fornecidas por outros pacotes de R para obter mais informações sobre chamadas de função internas. Este tópico fornece uma lista de alguns recursos básicos para você começar. Para obter diretrizes, recomendamos o capítulo [Performance](http://adv-r.had.co.nz/Performance.html) (Desempenho) no livro "Advanced R" (R avançado), de Hadley Wickham.
+Além de usar recursos do SQL Server e ferramentas para monitorar a execução do script R, você pode usar ferramentas de desempenho fornecidas por outros pacotes de R para obter mais informações sobre chamadas de função internas. Este tópico fornece uma lista de alguns recursos básicos para você começar. Para obter diretrizes, recomendamos o capítulo sobre [desempenho](https://adv-r.had.co.nz/Performance.html) no livro "Advanced R", de Hadley Wickham.
 
 ## <a name="using-rprof"></a>Usando RPROF
 

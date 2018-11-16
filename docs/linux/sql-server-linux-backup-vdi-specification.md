@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660136"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente Linux VDI especificação de SDK
 
@@ -30,9 +30,9 @@ Este documento aborda as interfaces fornecidas pelo SQL Server no SDK de cliente
 - SQL Server no Linux não oferece suporte a instâncias nomeadas, para que as referências ao nome da instância foram removidas. 
 - A biblioteca compartilhada é implementada no libsqlvdi.so instalados em /opt/mssql/lib/libsqlvdi.so
 
-Este documento é um adendo ao **vbackup.chm** que fornece detalhes sobre a especificação de VDI do Windows. Baixe o [especificação de VDI Windows](http://www.microsoft.com/download/details.aspx?id=17282).
+Este documento é um adendo ao **vbackup.chm** que fornece detalhes sobre a especificação de VDI do Windows. Baixe o [especificação de VDI Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
-Revise também a solução de backup de VDI de exemplo na [repositório GitHub de exemplos do SQL Server](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Revise também a solução de backup de VDI de exemplo na [repositório GitHub de exemplos do SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## <a name="user-permissions-setup"></a>Configuração de permissões de usuário
 
@@ -195,7 +195,7 @@ Quando essa rotina deve bloquear a espera para um comando, o thread será deixad
 | |**pCmd** |Esse é o endereço de um comando retornado anteriormente de ClientVirtualDevice::GetCommand.
 | |**completionCode** |Este é um código de status que indica o status de conclusão. Esse parâmetro deve ser retornado para todos os comandos. O código retornado deve ser apropriado para o comando que está sendo executado. ERROR_SUCCESS é usado em todos os casos, a fim de denotar um comando executado com êxito. Para obter uma lista dos possíveis códigos, consulte o arquivo, vdierror.h. Uma lista típica de códigos de status para cada comando aparece no "Commands" neste documento.
 | |**bytesTransferred** |Isso é o número de bytes transferidos com êxito. Isso é retornado apenas para a transferência de dados, comandos de leitura e gravação.
-| |**posição** |Esta é uma resposta ao comando GetPosition apenas.
+| |**position** |Esta é uma resposta ao comando GetPosition apenas.
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |

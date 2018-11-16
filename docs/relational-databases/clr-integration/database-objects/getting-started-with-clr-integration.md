@@ -25,12 +25,12 @@ ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 862472365ceb729f7a93715caf65c0a3d90abe7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661285"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 ```  
   
 ## <a name="see-also"></a>Confira também  
- [Procedimentos armazenados CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensões específicas do SQL Server em processo para o ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Depurando objetos de banco de dados CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [Segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  

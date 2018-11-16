@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a039375adbaf9c9d5a5de02b0fb0ecf4b3b6a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097447"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559366"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Visão geral de grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico apresenta os conceitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que são centrais para configurar e gerenciar um ou mais grupos de disponibilidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter um resumo dos benefícios oferecidos pelos grupos de disponibilidade e uma visão geral da terminologia do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "48097447"
   
  A ilustração a seguir mostra um grupo de disponibilidade que contém uma réplica primária e quatro réplicas secundárias. Até oito réplicas secundárias têm suporte, incluindo uma réplica primária e duas réplicas secundárias de confirmação síncrona.  
   
- ![Grupo de disponibilidade com cinco réplicas](../../media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
+ ![Grupo de disponibilidade com cinco réplicas](../../media/aoag-agintrofigure.gif "Availability group with five replicas")  
   
   
 ##  <a name="AvDbs"></a> Availability Databases  

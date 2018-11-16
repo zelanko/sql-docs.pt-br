@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663266"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633474"
 |percent_complete|**int**|O percentual da operação que foi concluído. Valores não são contínuos e os valores válidos estão listados abaixo. Não nulo.<br/><br/>0 = a operação não foi iniciada<br/>50 = operação em andamento<br/>100 = operação concluída|  
 |error_code|**int**|Código indicando o erro que ocorreu durante uma operação com falha. Se o valor for 0, indica que a operação foi concluída com êxito.|  
 |error_desc|**nvarchar(2048)**|Descrição do erro que ocorreu durante uma operação com falha.|  
-|error_severity|**int**|Nível de severidade do erro que ocorreu durante uma operação com falha. Para obter mais informações sobre severidades de erro, consulte [severidade de erro de mecanismo de banco de dados](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Nível de severidade do erro que ocorreu durante uma operação com falha. Para obter mais informações sobre severidades de erro, consulte [severidade de erro de mecanismo de banco de dados](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Reservado para uso futuro. A compatibilidade futura não está garantida.|  
 |start_time|**datetime**|O carimbo de data/hora do início da operação.|  
 |last_modify_time|**datetime**|Carimbo de data/hora quando o registro foi modificado pela última vez para uma operação demorada. No caso de operações concluídas bem-sucedidas, este campo exibe o carimbo de data/hora quando a operação foi concluída.|  

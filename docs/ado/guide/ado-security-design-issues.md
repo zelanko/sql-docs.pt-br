@@ -1,7 +1,7 @@
 ---
 title: Problemas de Design de segurança ADO | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c961c24f0ffcbb3f0cbafabce2988edb6c8d607
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716364"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293122"
 ---
 # <a name="ado-security-design-features"></a>Recursos de Design de segurança do ADO
 As seções a seguir descrevem os recursos de design de segurança no ActiveX Data Objects (ADO) 2.8 e posterior. Essas alterações foram feitas no ADO 2.8 para melhorar a segurança. ADO 6.0, que está incluído no Windows DAC 6.0 no Windows Vista, é funcionalmente equivalente ao ADO 2.8, que foi incluído no MDAC 2.8 no Windows XP e Windows Server 2003. Este tópico fornece informações sobre como proteger melhor seus aplicativos no ADO 2.8 ou posterior.
@@ -32,7 +32,7 @@ As seções a seguir descrevem os recursos de design de segurança no ActiveX Da
 ### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>Caixa de mensagem de aviso de segurança aprimorada e revisado agora é usada para alertar os usuários
  Para ADO 2.7 e anterior, a seguinte mensagem de aviso será exibida quando uma página da Web com script tenta executar código em ADO em um provedor de não confiável:
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -41,7 +41,7 @@ box.
 
  Para ADO 2.8 e posterior, a mensagem anterior não aparece mais. Em vez disso, a seguinte mensagem será exibida neste contexto:
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -87,7 +87,7 @@ Website, click OK, otherwise click Cancel.
 
  No caso em que um aviso de segurança agora é exibido, a caixa de mensagem informa aos usuários:
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

@@ -17,12 +17,12 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601674"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603646"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Exemplo de CopyRecord, CopyTo e SaveToFile exemplo dos métodos (VB)
 Este exemplo demonstra como criar cópias de um arquivo usando [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objetos. Uma cópia é feita para uma pasta da Web para publicação na Internet. Incluem outras propriedades e métodos mostrados [tipo Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **abra**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [registro aberto](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -32,7 +32,7 @@ Este exemplo demonstra como criar cópias de um arquivo usando [Stream](../../..
   
 'Note:  
 ' This sample requires that "C:\checkmrk.wmf" and  
-' "http://MyServer/mywmf.wmf" exist.  
+' "https://MyServer/mywmf.wmf" exist.  
   
 Option Explicit  
   
@@ -54,10 +54,10 @@ Private Sub Form_Load()
     ' Initialize path and URL strings  
     strPicturePath = "C:\checkmrk.wmf"  
     strStreamPath = "C:\mywmf.wmf"  
-    strStreamURL = "URL=http://MyServer/mywmf.wmf"  
+    strStreamURL = "URL=https://MyServer/mywmf.wmf"  
     strStream2Path = "C:\checkmrk2.wmf"  
     strRecordPath = "C:\mywmf.wmf"  
-    strRecordURL = "http://MyServer/mywmf2.wmf"  
+    strRecordURL = "https://MyServer/mywmf2.wmf"  
   
     ' Load the file into the stream  
     objStream.Open  

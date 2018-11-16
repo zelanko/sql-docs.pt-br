@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc084a4fc2d5448efce8721c426ce78a4bb18a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655514"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606666"
 ---
 # <a name="open-method-ado-recordset"></a>Método Open (Conjunto de registros ADO)
 Abre um cursor em uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Usando o **aberto** método em um **conjunto de registros** objeto abre um cursor que representa os registros de uma tabela base, os resultados de uma consulta ou salvo anteriormente **conjunto de registros**.  
   
- Usar a opção *fonte* argumento para especificar uma fonte de dados usando um dos seguintes: um **comando** variável de objeto, uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *origem* é um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.rst"), um caminho relativo ("... \file.RST"), ou uma URL ("http://files/file.rst").  
+ Usar a opção *fonte* argumento para especificar uma fonte de dados usando um dos seguintes: um **comando** variável de objeto, uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *origem* é um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.rst"), um caminho relativo ("... \file.RST"), ou uma URL ("https://files/file.rst").  
   
  Não é uma boa ideia usar o *fonte* argumento do **abrir** método para executar uma consulta de ação que não retorna registros porque não há nenhuma maneira fácil de determinar se a chamada foi bem-sucedida. O **Recordset** retornado por como uma consulta será fechada. Para executar uma consulta que retorna registros, como uma instrução SQL INSERT, chame o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método de um **comando** objeto ou o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto em vez disso.  
   

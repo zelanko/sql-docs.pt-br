@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0831d34da78e107e3830a4cc04d1b1014f33f912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110d613f8b2e9f4fed1788a614b71041710edac4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823364"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662935"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O Gerenciador de Driver ODBC retorna todas as cadeias de caracteres de especificação do atributo **SQLDrivers** . Para obter mais informações sobre a definição de valores e da cadeia de caracteres do atributo, consulte o [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink/?LinkId=4173), ou você pode exibir [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+  O Gerenciador de Driver ODBC retorna todas as cadeias de caracteres de especificação do atributo **SQLDrivers** . Para obter mais informações sobre a definição de valores e da cadeia de caracteres do atributo, consulte o [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173), ou você pode exibir [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="see-also"></a>Consulte também  
- [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

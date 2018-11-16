@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164383"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639863"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a página **Partições** da caixa de diálogo **Restaurar Banco de Dados** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar o local de restauração de partições locais e para especificar se deseja restaurar partições remotas e arquivos de backup remotos para uso ao restaurar partições remotas.  
@@ -29,7 +29,7 @@ ms.locfileid: "48164383"
 > [!NOTE]  
 >  Após restaurar um banco de dados existente, o usuário que o restaurou poderá perder o acesso ao banco de dados restaurado. Essa perda de acesso pode ocorrer se, no momento da execução do backup, o usuário não for membro da função de servidor, nem membro da função de banco de dados com permissões de Controle total (Administrador).  
   
- **Para exibir a página partições na caixa de diálogo restaurar banco de dados**  
+ **Para exibir a página de partições na caixa de diálogo restaurar banco de dados**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou em um banco de dados em **Pesquisador de Objetos**, clique em **Restaurar**e, em **Selecionar uma página**, clique em **Partições**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164383"
 |**...**|Clique para exibir a caixa de diálogo **Partições Remotas – Configurações Avançadas** e modificar opções avançadas, como a cadeia de conexão da fonte de dados, para restaurar a partição remota. Para obter mais informações sobre a caixa de diálogo **Partições Remotas – Configurações Avançadas**, consulte [Caixa de diálogo Partições Remotas – Configurações Avançadas &#40;Analysis Services – Dados Multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Restaurar a caixa de diálogo banco de dados &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Caixa de diálogo Restaurar Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Geral &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695894"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512701"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento de grafo com o SQL Server e banco de dados SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695894"
 
 
 ## <a name="what-is-a-graph-database"></a>O que é um banco de dados do gráfico?  
-Um banco de dados do gráfico é uma coleção de nós (ou vértices) e bordas (ou relações). Um nó representa uma entidade (por exemplo, uma pessoa ou organização) e uma borda representa uma relação entre os dois nós que ele se conecta (por exemplo, curtidas ou amigos). Nós e bordas podem ter propriedades associadas a eles. Aqui estão alguns recursos que tornam a um banco de dados do gráfico exclusivo:  
+Um banco de dados do grafo é uma coleção de nós (ou vértices) e bordas (ou relações). Um nó representa uma entidade (por exemplo, uma pessoa ou organização) e uma borda representa uma relação entre os dois nós que ela conecta (por exemplo, curtidas ou amigos). Nós e bordas podem ter propriedades associadas a eles. Aqui estão alguns recursos que tornam a um banco de dados do gráfico exclusivo:  
 -   Bordas ou as relações são entidades de primeira classe em um banco de dados do gráfico e podem ter atributos ou propriedades associadas com eles. 
 -   Uma única borda com flexibilidade pode se conectar a vários nós em um banco de dados do gráfico.
 -   Você pode expressar consultas de navegação com saltos múltiplos e correspondência de padrões com facilidade.

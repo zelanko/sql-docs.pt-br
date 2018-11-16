@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b51d695a923b6db1661e6e15605a1f05d08178
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099859"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293152"
 ---
 # <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,15 +155,18 @@ Agora que você criou, treinado e salvo de um modelo, passar para a próxima eta
 
 Neste exercício, você aprendeu a criar procedimentos armazenados dedicados para tarefas diferentes, onde cada procedimento armazenado usado o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar um processo de Python. Entradas para o processo de Python são passadas ao script sp_execute_external como parâmetros. O próprio script de Python e a variáveis de dados em um banco de dados do SQL Server são passadas como entradas.
 
+Em geral, você só deve planejar usando o SSMS com o código do Python bem acabado ou código Python simples que retorna a saída com base em linha. Como uma ferramenta, o SSMS dá suporte a linguagens como T-SQL de consulta e retorna conjuntos de linhas bidimensionais. Se seu código gera a saída do visual como um gráfico disperso ou histograma, você precisa de um aplicativo de ferramenta ou do usuário final que pode renderizar a imagem.
+
 Para alguns desenvolvedores de Python que são usados para escrever script completo manipular uma variedade de operações, organizar tarefas em procedimentos separados pode parecer desnecessário. Mas, treinamento e pontuação têm diferentes casos de uso. Separando-os, você pode colocar cada tarefa na agenda diferente e permissões no escopo para a operação.
 
 Da mesma forma, você também pode aproveitar recursos de obtenção de recursos do SQL Server, como o processamento paralelo, governança de recursos, ou escrevendo em seu script para usar algoritmos em [revoscalepy](../python/what-is-revoscalepy.md) ou [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) que suporte de streaming e a execução paralela. Separando o treinamento e pontuação, você pode direcionar otimizações para cargas de trabalho específicas.
 
 Uma vantagem final é que os processos podem ser modificados usando parâmetros. Neste exercício, o código do Python que criou o modelo (chamado "Bayesiana ingênua" neste exemplo) foi passado como entrada para um segundo procedimento armazenado que chamar o modelo em um processo de pontuação. Este exercício usa apenas um modelo, mas você pode imaginar como parametrizar o modelo em uma tarefa de pontuação seria tornar esse script mais úteis.
 
-
 ## <a name="next-steps"></a>Próximas etapas
 
-Tutoriais anteriores se concentrou em execução local. No entanto, você também pode executar código Python em uma estação de trabalho do cliente, usando o SQL Server como o contexto de computação remota. Para obter mais informações sobre como configurar uma estação de trabalho cliente que se conecta ao SQL Server, consulte [configurar as ferramentas de cliente do Python](../python/setup-python-client-tools-sql.md).
+Se você for novo no Python de desenvolvedor SQL, examine as etapas e ferramentas para trabalhar com o código do Python localmente, com a capacidade de mudar a execução de sessões locais para uma instância remota do SQL Server.
 
-+ [Criar um modelo de revoscalepy de um cliente do Python](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [Configurar uma estação de trabalho de cliente do Python](../python/setup-python-client-tools-sql.md).
+

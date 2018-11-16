@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3a190475a6feb48c3f8a4027e2ec1059d1d5d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623494"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600106"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
@@ -33,7 +33,7 @@ O formato de persistência XML no ADO usa os seguintes namespaces de quatro.
 |rs|Refere-se aos elementos de recipiente de namespace e atributos específicos para as propriedades do conjunto de registros ADO e atributos.|  
 |z|Refere-se ao esquema do conjunto de linhas atual.|  
   
- Um cliente não deve adicionar suas próprias marcas para esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com:rowset" e, em seguida, escrever algo como "rs: MyOwnTag." Para obter mais informações sobre namespaces, consulte a [Namespaces W3C na recomendação XML](http://www.w3.org/TR/REC-xml-names/).  
+ Um cliente não deve adicionar suas próprias marcas para esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com:rowset" e, em seguida, escrever algo como "rs: MyOwnTag." Para obter mais informações sobre namespaces, consulte a [Namespaces W3C na recomendação XML](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  A ID para a marca de esquema deve ser "RowsetSchema", e o namespace usado para consultar o esquema do conjunto de linhas atual deve apontar para "#RowsetSchema".  

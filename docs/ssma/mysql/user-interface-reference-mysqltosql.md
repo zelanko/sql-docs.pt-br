@@ -10,12 +10,12 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 07ce12d67eca0719c8062cdb6568e618baf592d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608364"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671336"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referência da interface do usuário (MySQLToSQL)
 Esta seção inclui tópicos de ajuda para o SQL Server SSMA (Migration Assistant) para MySQL.  
@@ -29,15 +29,15 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Seleção de objetos avançada &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Use o **avançado objeto selecione** caixa de diálogo para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Use o relatório para exibir os resultados da conversão de objetos do MySQL para sintaxe Transact-SQL e estimar o tempo e a complexidade de uma migração para o SQL Server.|  
 |[Conectar-se ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Use o **conectar-se ao MySQL** caixa de diálogo para se conectar ao banco de dados MySQL que você deseja migrar.|  
-|[Conectar-se ao SQL Server](http://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do SQL Server ao qual você deseja migrar.|  
+|[Conectar-se ao SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do SQL Server ao qual você deseja migrar.|  
 |[Conectar-se ao banco de dados SQL do Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Use o **conectar-se ao SQL Azure** caixa de diálogo para se conectar à instância do SQL Azure para o qual você deseja migrar.|  
-|[Configurações de conversão (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Use o **configurações** guia para definir as configurações de nível de nó.|  
+|[Configurações de conversão (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Use o **configurações** guia para definir as configurações de nível de nó.|  
 |[Relatório de migração de dados &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Exibe os resultados da migração de dados do MySQL para o SQL Server ou SQL Azure.|  
 |[Configurações de migração de dados](data-migration-settings-mysqltosql.md)|Use o **configurações de migração de dados estendido** guia para criar consultas personalizadas para a migração de dados.|  
 |[Editar mapeamento de tipo &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Use o **editar mapeamento de tipo** caixa de diálogo para criar ou modificar o mapeamento de tipos de dados entre bancos de dados de origem e destino e objetos de banco de dados.|  
 |[Configurações globais do &#40;Editor&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Use a página do Editor do **configurações globais** caixa de diálogo para configurar opções do editor de código.|  
 |[Configurações globais do &#40;caixas de diálogo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para definir configurações de aviso e de caixa de diálogo padrão.|  
-|[Configurações globais (registro em log)](http://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Use a página de registro em log da **configurações globais** caixa de diálogo para configurar o log.|  
+|[Configurações globais (registro em log)](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Use a página de registro em log da **configurações globais** caixa de diálogo para configurar o log.|  
 |[Configurações globais do &#40;janela de saída&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Use o **configurações globais** caixa de diálogo para definir preferências para o SSMA para interface de usuário do MySQL.|  
 |[Novo projeto &#40;SSMA&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Use o **novo projeto** caixa de diálogo para criar um novo SSMA para MySQL de projeto.|  
 |[Configurações do projeto &#40;conversão&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Use a página de conversão do **configurações do projeto** caixa de diálogo para especificar como o SSMA para MySQL converte funções e variáveis globais.|  

@@ -14,12 +14,12 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13a05a0eee4dc8f36b74ca707a6dc18e57389280
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a7df105a383cb7a647df1f26dbfc7793ae376df5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099207"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660155"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Gerenciamento de senhas (SybaseToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -132,5 +132,5 @@ Exemplo:
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (Sybasetosql)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executar o Console do SSMA (Sybasetosql)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

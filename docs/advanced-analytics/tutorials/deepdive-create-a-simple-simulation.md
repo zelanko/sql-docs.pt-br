@@ -1,5 +1,5 @@
 ---
-title: Criar uma simulação simple (SQL e R mergulho profundo) | Microsoft Docs
+title: Criar uma simulação simples (SQL e R aprofundamento) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202878"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698234"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Criar uma simulação simple (SQL e R mergulho profundo)
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Criar uma simulação simples (SQL e R aprofundamento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo é a última etapa no tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este artigo é a etapa final do tutorial de aprofundamento de ciência de dados, sobre como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Até agora você estava usando funções de R são projetadas especificamente para mover dados entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e contexto de computação local. No entanto, suponha que você escreva uma função personalizada do R e deseje executá-la no contexto do servidor?
+Até agora você já usa funções do R que são projetadas especificamente para mover dados entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e contexto de computação local. No entanto, suponha que você escreva uma função personalizada do R e deseje executá-la no contexto do servidor?
 
-Você pode chamar uma função arbitrária no contexto do computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usando a função [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . Você também pode usar **rxExec** explicitamente distribuem o trabalho entre núcleos em um único servidor.
+Você pode chamar uma função arbitrária no contexto do computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usando a função [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . Você também pode usar **rxExec** para distribuir o trabalho explicitamente entre os núcleos em um único servidor.
 
-Nesta lição, você pode usar o servidor remoto para criar um simples de simulação. A simulação não exige dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; o exemplo demonstra apenas como criar uma função personalizada e chamá-la usando a função **rxExec** .
+Nesta lição, você pode usar o servidor remoto para criar uma simulação simples. A simulação não exige dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; o exemplo demonstra apenas como criar uma função personalizada e chamá-la usando a função **rxExec** .
 
-Para obter um exemplo mais complexo do uso de **rxExec**, consulte este artigo: [paralelismo grãos grandes com foreach e rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Para obter um exemplo mais complexo do uso **rxExec**, consulte este artigo: [paralelismo grãos grandes com foreach e rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-custom-function"></a>Criar a função personalizada
+## <a name="create-the-custom-function"></a>Crie a função personalizada
 
 Um jogo de casino comum consiste em jogar um par de dados, com estas regras:
 
@@ -65,7 +65,7 @@ O jogo é facilmente simulado no R, com a criação de uma função personalizad
     }
     ```
   
-2.  Para simular um jogo único de dados, execute a função.
+2.  Para simular um jogo de dados simples, execute a função.
   
     ```R
     rollDice()
@@ -73,13 +73,13 @@ O jogo é facilmente simulado no R, com a criação de uma função personalizad
   
     Você ganhou ou perdeu?
   
-Agora vamos ver como você pode usar **rxExec** para executar a função várias vezes, para criar uma simulação que ajuda a determinar a probabilidade de uma boa ideia.
+Agora vamos ver como você pode usar **rxExec** para executar a função várias vezes, para criar uma simulação que ajuda a determinar a probabilidade de uma vitória.
 
 ## <a name="create-the-simulation"></a>Criar a simulação
 
-Para executar uma função arbitrária no contexto do computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , chame a função **rxExec** . Embora **rxExec** também dá suporte à execução distribuída de uma função em paralelo em nós ou núcleos em um contexto de servidor, aqui ele executa a função personalizados no computador do SQL Server.
+Para executar uma função arbitrária no contexto do computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , chame a função **rxExec** . Embora **rxExec** também dá suporte à execução distribuída de uma função em paralelo entre os nós ou núcleos em um contexto de servidor, aqui ela execuções de função seu personalizado no computador do SQL Server.
 
-1. Chame a função personalizada como um argumento para **rxExec**, junto com outros parâmetros que modificam a simulação.
+1. Chame a função personalizada como um argumento para **rxExec**, juntamente com outros parâmetros que modificam a simulação.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -102,7 +102,7 @@ Para executar uma função arbitrária no contexto do computador do [!INCLUDE[ss
   
     Os resultados devem ser parecidos com este:
   
-     *Perda Win* *12 8*
+     *Derrota vitória* *12 8*
 
 ## <a name="conclusions"></a>Conclusões
 
@@ -115,19 +115,19 @@ Neste tutorial, você se tornou proficiente nestas tarefas:
 -   Passar modelos, dados e plotagens entre a estação de trabalho e o servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 
-Se você quiser fazer experiências com essas técnicas usando um conjunto de dados maior de 10 milhões de observações, os arquivos de dados estão disponíveis no site da Revolution analytics: [índice de conjuntos de dados](http://packages.revolutionanalytics.com/datasets)
+Se você quiser experimentar essas técnicas usando um conjunto de dados maior de 10 milhões de observações, os arquivos de dados estão disponíveis no site da Revolution analytics: [índice dos conjuntos de dados](https://packages.revolutionanalytics.com/datasets)
 
-Para usar novamente este passo a passo com os arquivos de dados maior, baixa os dados e, em seguida, modificar cada uma das fontes de dados da seguinte maneira:
+Para usar novamente este passo a passo com os arquivos de dados maiores, baixar os dados e, em seguida, modifique cada uma das fontes de dados da seguinte maneira:
 
-1. Modificar as variáveis `ccFraudCsv` e `ccScoreCsv` para apontar para os novos arquivos de dados
-2. Alterar o nome da tabela referenciada em *sqlFraudTable* para `ccFraud10`
-3. Alterar o nome da tabela referenciada em *sqlScoreTable* para `ccFraudScore10`
+1. Modifique as variáveis `ccFraudCsv` e `ccScoreCsv` para apontar para os novos arquivos de dados
+2. Altere o nome da tabela referenciada em *sqlFraudTable* para `ccFraud10`
+3. Altere o nome da tabela referenciada em *sqlScoreTable* para `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Exemplos adicionais
 
-Agora que você conheça o uso de funções de RevoScaler para passar e transformar dados e contextos de computação, consulte estes tutoriais:
+Agora que você já dominou o uso de contextos de computação e funções de RevoScaler para passar e transformar dados, confira estes tutoriais:
 
-[Tutoriais de R para serviços de aprendizado de máquina](machine-learning-services-tutorials.md)
+[Tutoriais de R para serviços de Machine Learning](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>Etapa anterior
 
 [Mover dados entre o SQL Server e o arquivo XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

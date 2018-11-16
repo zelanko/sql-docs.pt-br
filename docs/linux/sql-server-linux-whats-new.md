@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659197"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>O que há de novo para o SQL Server no Linux
 
@@ -26,7 +26,7 @@ Este artigo descreve os principais recursos e serviços disponíveis para o SQL 
 Visualização de 2019 do SQL Server foi lançada. Este artigo não cobre versões de visualização do SQL Server de 2019. Para saber mais sobre visualização de 2019 do SQL Server, consulte [quais são as novidades na visualização de 2019 do SQL Server para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Além desses recursos neste artigo, as atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão CU mais recente, consulte [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
+> Além desses recursos neste artigo, as atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão CU mais recente, consulte [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
 

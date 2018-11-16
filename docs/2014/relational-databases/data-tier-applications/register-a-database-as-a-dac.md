@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067056"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814069"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **registrar Data-tier Application Wizard** ou um Windows script do PowerShell para compilar uma definição de DAC (aplicativo) de camada de dados que descreve os objetos no banco de dados existente e registre a definição do DAC na `msdb` banco de dados do sistema (**mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -76,7 +76,7 @@ ms.locfileid: "48067056"
 ##  <a name="Set_properties"></a> Página Definir Propriedades  
  Use essa página para especificar propriedades no nível do DAC, como o nome e a versão do aplicativo.  
   
- **Nome do aplicativo.** - Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
+ **Nome do aplicativo.** -Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo é foi preenchida com o nome do banco de dados.  
   
  **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada na `msdb` do banco de dados e pode ser exibida posteriormente na **aplicativos da camada de dados** nó no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -163,6 +163,6 @@ $registerunit.Register()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)  
+ [Aplicativos da camada de dados](data-tier-applications.md)  
   
   

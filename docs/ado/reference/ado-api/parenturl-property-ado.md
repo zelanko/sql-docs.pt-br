@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822104"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603016"
 ---
 # <a name="parenturl-property-ado"></a>Propriedade ParentURL (ADO)
 Indica uma cadeia de caracteres de URL absoluta que aponta para o pai [registro](../../../ado/reference/ado-api/record-object-ado.md) atual **registro** objeto.  
@@ -35,13 +35,13 @@ Indica uma cadeia de caracteres de URL absoluta que aponta para o pai [registro]
  Suponha que o "segundo" é uma pasta é contida em "primeiro". Abra o **registro** objeto usando a sintaxe a seguir:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- Agora, o valor de `the` **ParentURL** é de propriedade `"http://first"`, o mesmo que **ActiveConnection**.  
+ Agora, o valor de `the` **ParentURL** é de propriedade `"https://first"`, o mesmo que **ActiveConnection**.  
   
- O código-fonte também pode ser uma URL absoluta, como `"http://first/second"`. O **ParentURL** propriedade é então `"http://first"`, o nível acima `"second"`.  
+ O código-fonte também pode ser uma URL absoluta, como `"https://first/second"`. O **ParentURL** propriedade é então `"https://first"`, o nível acima `"second"`.  
   
  Essa propriedade pode ser um valor nulo se:  
   

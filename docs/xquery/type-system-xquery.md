@@ -5,8 +5,7 @@ ms.date: 08/10/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -25,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 18294a9ecfea469d0f7a2c85dd4ce22ddf419fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668656"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery é uma linguagem com rigidez de tipos para esquemas digitados, e uma linguagem fraca em tipos para dados não digitados. Os tipos predefinidos de XQuery incluem o seguinte:  
   
--   Tipos internos de esquema XML na **http://www.w3.org/2001/XMLSchema** namespace.  
+-   Tipos internos de esquema XML na **https://www.w3.org/2001/XMLSchema** namespace.  
   
--   Tipos definidos na **http://www.w3.org/2004/07/xpath-datatypes** namespace.  
+-   Tipos definidos na **https://www.w3.org/2004/07/xpath-datatypes** namespace.  
   
  Este tópico também descreve o seguinte:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "47675474"
   
 ```  
 SELECT Instructions.query('  
-   DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    data(/AWMI:root[1]/AWMI:Location[@LocationID=10][1]/@LotSize)[1] instance of xs:decimal  
 ') AS Result  
 FROM Production.ProductModel  
@@ -66,7 +65,7 @@ WHERE ProductModelID=7
  Essas informações digitadas são fornecidas pela coleção de esquemas XML associada à coluna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipos definidos no namespace XPath Data Types  
- Os tipos definidos na **http://www.w3.org/2004/07/xpath-datatypes** namespace têm um prefixo predefinido de **xdt**. O seguinte se aplica a esses tipos:  
+ Os tipos definidos na **https://www.w3.org/2004/07/xpath-datatypes** namespace têm um prefixo predefinido de **xdt**. O seguinte se aplica a esses tipos:  
   
 -   Você não pode usar esses tipos ao criar uma coleção de esquemas XML. Esses tipos são usados no sistema de tipos XQuery e são usados para [XQuery e digitação estática](../xquery/xquery-and-static-typing.md). Você pode converter os tipos atômicos, por exemplo, **XDT: untypedatomic**, no **xdt** namespace.  
   
@@ -111,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  
@@ -138,7 +137,7 @@ SELECT @x.query('string(/root[1]) + 3')
   
 ```  
 SELECT Instructions.query('   
-DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
              sum(data(//AWMI:Location/@LaborHours))   
 ') AS Result   
 FROM Production.ProductModel   

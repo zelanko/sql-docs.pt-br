@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701454"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673475"
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ OLTP de importadores mundiais instruções de instalação e configuração do b
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (ou superior) ou [banco de dados SQL](https://azure.microsoft.com/services/sql-database/). Para a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou superior) ou [banco de dados SQL](https://azure.microsoft.com/services/sql-database/). Para a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
 
 ## <a name="download"></a>Download
 
 A versão mais recente do exemplo:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Baixe o exemplo WideWorldImporters banco de dados backup/bacpac que corresponde à sua edição do SQL Server ou banco de dados SQL.
 
@@ -90,5 +90,5 @@ Aplica-se a: banco de dados SQL do Azure
 
 Segurança em nível de linha não está habilitada por padrão no download de WideWorldImporters bacpac. Para habilitar a segurança em nível de linha no banco de dados, execute o seguinte procedimento armazenado:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 
