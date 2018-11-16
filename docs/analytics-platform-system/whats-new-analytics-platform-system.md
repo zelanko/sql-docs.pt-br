@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269749"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700354"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft® Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
@@ -70,7 +70,7 @@ from cte;
 Ler, importar e exportar tipos de dados de data usando o PolyBase dá suporte a datas antes de 1970-01-01 e depois 2038-01-20 para tipos de arquivo ORC e Parquet.
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Adaptador de destino do SSIS para SQL Server 2017 como destino
-Novo adaptador de destino SSIS APS que dá suporte ao SQL Server 2017 como destino de implantação pode ser baixado do [site de download](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+Novo adaptador de destino SSIS APS que dá suporte ao SQL Server 2017 como destino de implantação pode ser baixado do [site de download](https://www.microsoft.com/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -111,7 +111,7 @@ Apresenta o comutador de recurso no APS AU7 [Configuration Manager](launch-the-c
 ### <a name="known-issues"></a>Problemas conhecidos
 Com o software AU7 APS, uma atualização do BIOS da Intel é fornecida que corrige um problema descrito como *ataques de canal lateral de execução especulativa*. Os ataques tem como objetivo para explorar o que é chamado *vulnerabilidades Spectre e Meltdown*. Embora empacotado junto com os pontos de acesso, a atualização do BIOS é instalada manualmente e não como parte da instalação de software AU7 APS.
 
-Microsoft recomenda que todos os clientes instalem a atualização do BIOS. Microsoft mediu o efeito de Kernel Virtual endereço sombreamento (KVAS), o Kernel página tabela de indireção (kpti) e e mitigação de previsão de ramificação indireta (IBP) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontrada uma redução significativa no algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho de habilitar a atualização do BIOS antes de implantá-los em um ambiente de produção. Consulte o guia do SQL Server [aqui](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft recomenda que todos os clientes instalem a atualização do BIOS. Microsoft mediu o efeito de Kernel Virtual endereço sombreamento (KVAS), o Kernel página tabela de indireção (kpti) e e mitigação de previsão de ramificação indireta (IBP) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontrada uma redução significativa no algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho de habilitar a atualização do BIOS antes de implantá-los em um ambiente de produção. Consulte o guia do SQL Server [aqui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

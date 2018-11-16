@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707885"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639020"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  
@@ -82,7 +82,7 @@ ms.locfileid: "47707885"
   
     3.  **Considerar a captura de dados de contagem de linhas**. Considere a criação de tabelas separadas para as informações de contagem de linhas, onde cada instância de execução de pacote possa ser identificada por ExecutionID. Use a transformação Contagem de Linhas para salvar a contagem de linhas em uma série de variáveis em pontos críticos no fluxo de dados. Após o término do fluxo de dados, use uma tarefa Executar SQL para inserir as séries de valores em uma linha na tabela para análise e geração de relatório posterior.  
   
-     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(Projeto REAL: práticas de design ETL de Business Intelligence).  
+     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Projeto REAL: práticas de design ETL de Business Intelligence).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solucionar problemas de execução de pacotes por meio de arquivos de despejo de depuração  
  No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. Para obter mais informações, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "47707885"
      A propriedade **DelayValidation** pode ser definida em uma tarefa de Fluxo de Dados, mas não em componentes de fluxo de dados individuais. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como **false**. Entretanto, quando o valor dessa propriedade for **false**, o componente não reconhecerá as alterações para o metadados de fontes de dados externas. Ao definir como **true**, a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> poderá ajudar a evitar os problemas de bloqueio causados por bloqueios no banco de dados, especialmente quando o pacote estiver usando as transações.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Solucionar problemas de permissões em tempo de execução  
- Se você encontrar erros ao tentar executar os pacotes implantados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, as contas usadas pelo Agent poderão não ter as permissões necessárias. Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado ao chamar o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](http://support.microsoft.com/kb/918760). Para obter mais informações sobre como executar pacotes por meio de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ Se você encontrar erros ao tentar executar os pacotes implantados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, as contas usadas pelo Agent poderão não ter as permissões necessárias. Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado ao chamar o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760). Para obter mais informações sobre como executar pacotes por meio de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Para se conectar a fontes de dados do Excel ou do Access, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent requer uma conta com permissão para ler, gravar, criar e excluir arquivos temporários na pasta especificada pelas variáveis de ambiente TEMP e TMP.  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707885"
  [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](http://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  
+ Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -33,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665005"
 ---
 # <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida do banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "49991090"
   
  O DLM começa com a discussão sobre o design e a intenção do projeto, continua com o desenvolvimento, o teste, a compilação, a implantação, a manutenção, o monitoramento e as atividades de backup do banco de dados, e termina com o arquivamento dos dados. Este tópico fornece uma visão geral das fases do DLM, que começam com o desenvolvimento e o progresso do banco de dados ao longo das ações de build, implantação e monitoramento. Também são incluídas as atividades de gerenciamento de dados e as operações de portabilidade de dados, como importação/exportação, backup, migração e sincronização.  
   
- Para ler o tópico completo, veja [DLM (Gerenciamento de Ciclo de Vida de Banco de Dados)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ Para ler o tópico completo, veja [DLM (Gerenciamento de Ciclo de Vida de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Página inicial do Microsoft Azure](http://www.windowsazure.com/)   
- [Centro de desenvolvedores do Microsoft Azure](http://www.windowsazure.com/develop/overview/)   
- [Centro de gerenciamento do Microsoft Azure](http://www.windowsazure.com/manage/overview/)   
- [Blog da equipe do Windows Azure](http://www.windowsazure.com/community/blog/)   
- [Opções de suporte do Microsoft Azure](http://www.windowsazure.com/support/contact/)  
+ [Página inicial do Microsoft Azure](https://www.windowsazure.com/)   
+ [Centro de desenvolvedores do Microsoft Azure](https://www.windowsazure.com/develop/overview/)   
+ [Centro de gerenciamento do Microsoft Azure](https://www.windowsazure.com/manage/overview/)   
+ [Blog da equipe do Windows Azure](https://www.windowsazure.com/community/blog/)   
+ [Opções de suporte do Microsoft Azure](https://www.windowsazure.com/support/contact/)  
   
   
