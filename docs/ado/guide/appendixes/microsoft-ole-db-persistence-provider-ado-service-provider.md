@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b7ffeec1ca14aa57876ea14cbfdb536d9207c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630774"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350001"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência OLE DB da Microsoft
 O Microsoft OLE DB provedor de persistência permite que você salve uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo de objeto e restaurá-lo mais tarde **Recordset** objeto do arquivo. Informações de esquema, dados e as alterações pendentes são preservados.
@@ -30,7 +30,7 @@ O Microsoft OLE DB provedor de persistência permite que você salve uma [conjun
 ## <a name="provider-keyword"></a>Palavra-chave do provedor
  Para invocar esse provedor, especifique a seguinte palavra-chave e valor na cadeia de conexão.
 
-```
+```vb
 "Provider=MSPersist"
 ```
 

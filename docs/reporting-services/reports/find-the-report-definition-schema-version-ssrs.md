@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eff18cf56e606aa8cea96bd8828a7daaca27c0f4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031545"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813949"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Localizar a versão do esquema de definição de relatório (SSRS)
 
@@ -30,11 +30,11 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
      O elemento Relatório XML especifica o namespace do esquema. Por exemplo, o elemento Relatório a seguir especifica o namespace do Designer de Relatórios e o namespace da definição de relatório.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     O namespace de definição de relatório é especificado pela seguinte URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
+     O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como identificar a versão do esquema RDL de um Designer de Relatórios  
   
@@ -53,17 +53,17 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
      O elemento Relatório XML especifica o namespace do esquema. Por exemplo, o elemento Relatório a seguir especifica o namespace do Designer de Relatórios e o namespace da definição de relatório.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     O namespace de definição de relatório é especificado pela seguinte URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como identificar a versão do esquema RDL no Servidor de Relatórios  
   
 -   No Gerenciador de Relatórios, digite a URL para o servidor de relatório: Por exemplo, a URL a seguir especifica um servidor de relatório no computador local:  
   
-     `http://localhost/reportserver/reportdefinition.xsd`  
+     `https://localhost/reportserver/reportdefinition.xsd`  
   
      O arquivo .xsd é aberto no navegador.  
   
@@ -71,13 +71,13 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     O namespace de definição de relatório é especificado pela seguinte URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
 
 ## <a name="next-steps"></a>Próximas etapas
 

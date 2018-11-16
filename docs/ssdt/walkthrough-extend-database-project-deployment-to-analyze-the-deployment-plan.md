@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ac77271546fc6119f60fb218bb8c0d3c96c5a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664625"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Passo a passo: estenda a implantação do projeto de banco de dados para analisar o plano de implantação
 Você pode criar colaboradores de implantação para executar ações personalizadas ao implantar um projeto SQL. Você pode criar um DeploymentPlanModifier ou um DeploymentPlanExecutor. Use um DeploymentPlanModifier para alterar o plano antes de ser executado e um DeploymentPlanExecutor para realizar operações enquanto o plano está sendo executado. Neste passo a passo, você cria um DeploymentPlanExecutor chamado DeploymentUpdateReportContributor que cria um relatório das ações executadas quando você implanta um projeto de banco de dados. Como esse colaborador de compilação aceita um parâmetro para controlar se o relatório é gerado, você deverá executar uma etapa necessária adicional.  
@@ -46,7 +46,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
 -   Criar um projeto de biblioteca de classe e adicionar as referências necessárias.  
   
--   Definir uma classe denominada DeploymentUpdateReportContributor que herda de [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Definir uma classe denominada DeploymentUpdateReportContributor que herda de [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
   
 -   Substitua o método OnExecute.  
   
@@ -105,7 +105,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
     ```  
   
-    Agora você definiu o colaborador de implantação que herda de DeploymentPlanExecutor. Durante os processos de compilação e implantação, os colaboradores personalizados são carregados de um diretório de extensão padrão. Os colaboradores do executor do plano de implantação são identificados por um atributo [ExportDeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
+    Agora você definiu o colaborador de implantação que herda de DeploymentPlanExecutor. Durante os processos de compilação e implantação, os colaboradores personalizados são carregados de um diretório de extensão padrão. Os colaboradores do executor do plano de implantação são identificados por um atributo [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
   
     Esse atributo é necessário para que os colaboradores possam ser descobertos. Ela deve parecer com o seguinte:  
   
@@ -249,9 +249,9 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
             }  
     ```  
   
-    No método OnExecute é passado um objeto [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que fornece acesso a todos os argumentos especificados, o modelo de banco de dados de origem e destino, as propriedades de compilação e os arquivos de extensão. Neste exemplo, recebemos o modelo e chamamos as funções auxiliares para gerar informações sobre o modelo. Usamos o método auxiliar PublishMessage na classe base para relatar todos os erros que ocorrem.  
+    No método OnExecute é passado um objeto [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que fornece acesso a todos os argumentos especificados, o modelo de banco de dados de origem e destino, as propriedades de compilação e os arquivos de extensão. Neste exemplo, recebemos o modelo e chamamos as funções auxiliares para gerar informações sobre o modelo. Usamos o método auxiliar PublishMessage na classe base para relatar todos os erros que ocorrem.  
   
-    Os tipos e métodos adicionais de interesse incluem: [TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) e [SqlDeploymentOptions](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Os tipos e métodos adicionais de interesse incluem: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) e [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Em seguida, você define a classe auxiliar que obtém mais detalhes do plano de implantação.  
   
@@ -524,11 +524,11 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
     |**Área de código**|**Tipos úteis**|  
     |-----------------|--------------------|  
-    |Membros de classe|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Membros de classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Método WriteReport|XmlWriter e XmlWriterSettings|  
-    |Método ReportPlanOperations|Os tipos de interesse incluem o seguinte: [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Há várias outras etapas – consulte a documentação da API para obter uma lista completa de etapas.|  
-    |GetElementCategory|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |Método ReportPlanOperations|Os tipos de interesse incluem o seguinte: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Há várias outras etapas – consulte a documentação da API para obter uma lista completa de etapas.|  
+    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
     Em seguida, crie a biblioteca de classe.  
   
@@ -593,7 +593,7 @@ O segundo método é criar um arquivo de destino que contém argumentos necessá
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
   
-    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+    <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
     <DeploymentContributors>$(DeploymentContributors);MyDeploymentContributor.DeploymentUpdateReportContributor</DeploymentContributors>  
     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments); DeploymentUpdateReportContributor.GenerateUpdateReport=true;</ContributorArguments>  
@@ -738,10 +738,10 @@ Seu projeto pode ser publicado ou implantado normalmente dentro do Visual Studio
     Ao analisar o plano de implantação como ele é executado, você poderá relatar todas as informações que estão contidas na implantação e poderá realizar as ações adicionais com base nas etapas desse plano.  
   
 ## <a name="next-steps"></a>Next Steps  
-Você pode criar ferramentas adicionais para executar o processamento dos arquivos XML de saída. Isso é apenas um exemplo de um [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Você também pode criar um [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para modificar um plano de implantação antes de ser executado.  
+Você pode criar ferramentas adicionais para executar o processamento dos arquivos XML de saída. Isso é apenas um exemplo de um [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Você também pode criar um [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para modificar um plano de implantação antes de ser executado.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Passo a passo: estender a compilação do projeto de banco de dados para gerar as estatísticas do modelo](http://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Passo a passo: estender a implantação do projeto de banco de dados para modificar o plano de implantação](http://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Personalizar a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação](http://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
+[Passo a passo: estender a compilação do projeto de banco de dados para gerar as estatísticas do modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Passo a passo: estender a implantação do projeto de banco de dados para modificar o plano de implantação](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Personalizar a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

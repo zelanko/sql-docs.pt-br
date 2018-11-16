@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856104"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638003"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
@@ -34,7 +34,7 @@ ms.locfileid: "47856104"
     > [!NOTE]  
     >  Embora uma instrução MERGE normalmente precise de uma tabela de preparação nesse caso, o desempenho da instrução MERGE, em geral, ultrapassa o desempenho da pesquisa de linha por linha executada pela transformação Pesquisa. A instrução MERGE também é útil quando o tamanho grande de uma tabela de pesquisa testa a memória disponível para a transformação Pesquisa armazenar a tabela de referência em cache.  
   
- Para um componente de destino de exemplo que oferece suporte ao uso da instrução MERGE, consulte o exemplo da comunidade CodePlex, [Destino MERGE](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ Para um componente de destino de exemplo que oferece suporte ao uso da instrução MERGE, consulte o exemplo da comunidade CodePlex, [Destino MERGE](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## <a name="using-merge"></a>Usando MERGE  
  Normalmente, você usa a instrução MERGE quando deseja aplicar alterações que incluem inserções, atualizações e exclusões de uma tabela para outra. Antes do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], este processo precisava de uma transformação Pesquisa e de várias transformações Comando OLE DB. A transformação Pesquisa executava uma pesquisa em linha por linha para determinar se cada linha era nova ou tinha sido alterada. Em seguida, as transformações Comando OLE DB executavam as operações INSERT, UPDATE e DELETE necessárias. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], uma única instrução MERGE pode substituir a transformação Pesquisa e as transformações Comando OLE DB correspondentes.  

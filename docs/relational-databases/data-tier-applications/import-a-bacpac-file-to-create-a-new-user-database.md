@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82537145f6604ea89589278084107a79012d85c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673665"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "43812522"
  Se você importar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC importado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle do utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   
 ## <a name="database-options-and-settings"></a>Opções e configurações de banco de dados  
- Por padrão, o banco de dados criado durante a importação terá todas as configurações padrão da instrução CREATE DATABASE; a única diferença é que o agrupamento de banco de dados e o nível de compatibilidade são definidos como os valores estabelecidos no arquivo de exportação do DAC. Um arquivo de exportação do DAC usa os valores do banco de dados original.  
+ Por padrão, o banco de dados criado durante a importação terá todas as configurações padrão da instrução CREATE DATABASE; a única diferença é que a ordenação de banco de dados e o nível de compatibilidade são definidos como os valores estabelecidos no arquivo de exportação do DAC. Um arquivo de exportação do DAC usa os valores do banco de dados original.  
   
  Algumas opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de importação. Propriedades físicas, como número de grupos de arquivos ou números e tamanhos de arquivos, não podem ser alteradas como parte do processo de importação. Após a importação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados. Para obter mais informações, consulte [Databases](../../relational-databases/databases/databases.md).  
   
@@ -144,8 +144,8 @@ ms.locfileid: "43812522"
  Clique em **Fechar** para fechar o assistente.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Importar um arquivo BACPAC para criar um novo banco de dados SQL do Azure](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+[Importar um arquivo BACPAC para criar um novo banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

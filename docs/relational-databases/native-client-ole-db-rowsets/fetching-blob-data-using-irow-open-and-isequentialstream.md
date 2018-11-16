@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9462f144cf578aad6e8e704bf5ebf5cd46a66f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb50644c6a23e08dd566f0781902c0d5bdb88d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598604"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658485"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Buscando dados de BLOB usando IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Os dados grandes podem ser associados ou recuperados por meio da interface **ISequentialStream**. No caso das colunas associadas, o sinalizador de status indicará se os dados estiverem truncados definindo DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Consulte também  
- [Buscando dados BLOB usando IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Buscando dados BLOB usando IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

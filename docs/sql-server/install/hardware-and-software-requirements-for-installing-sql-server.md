@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00f555c060c348573eb6af8b98e90d506b8179ea
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 829af3ab6638b0334b574aff84770acfa4b6e81b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702334"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware e software para a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,9 +66,9 @@ O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o
   
 **Experimente:**  
   
--   Baixar o SQL Server do [**Centro de Avaliação**.](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+-   Baixar o SQL Server do [**Centro de Avaliação**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   Criar uma Máquina Virtual com o [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) já instalado.  
+-   Criar uma Máquina Virtual com o [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) já instalado.  
   
 **As seguintes considerações se aplicam a todas as edições:**  
   
@@ -86,14 +86,14 @@ O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arquivos de suporte à instalação  
   
--   Para saber os requisitos mínimos da versão para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em [!INCLUDE[win8srv](../../includes/win8srv-md.md)] ou em [!INCLUDE[win8](../../includes/win8-md.md)], consulte [Instalando o SQL Server no Windows Server 2012 ou no Windows 8](http://support.microsoft.com/kb/2681562) (http://support.microsoft.com/kb/2681562)).  
+-   Para saber os requisitos mínimos da versão para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em [!INCLUDE[win8srv](../../includes/win8srv-md.md)] ou em [!INCLUDE[win8](../../includes/win8-md.md)], consulte [Instalando o SQL Server no Windows Server 2012 ou no Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562)).  
   
 ##  <a name="hwswr"></a> Requisitos de Hardware e Software  
 Os seguintes requisitos se aplicam a todas as instalações:  
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|.NET Framework|O RC1[!INCLUDE[sql2016](../../includes/sssql15-md.md)] e posteriores exigem o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para o Mecanismo de Banco de Dados, Master Data Services ou Replicação. A instalação [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] instala automaticamente o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Você também pode instalar o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] manualmente por meio do [Microsoft .NET Framework 4.6 (Instalador da Web) para Windows](http://support.microsoft.com/kb/3045560).<br/><br/>O [!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] requer o .NET Framework 4.6.2. Disponível no [Centro de Download](http://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Para obter mais informações, recomendações e diretrizes sobre o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte o [Guia de implantação do .NET Framework para desenvolvedores](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], e [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] exigem o [KB2919355](http://support.microsoft.com/kb/2919355) antes de instalar o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|O RC1[!INCLUDE[sql2016](../../includes/sssql15-md.md)] e posteriores exigem o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para o Mecanismo de Banco de Dados, Master Data Services ou Replicação. A instalação [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] instala automaticamente o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Você também pode instalar o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] manualmente por meio do [Microsoft .NET Framework 4.6 (Instalador da Web) para Windows](https://support.microsoft.com/kb/3045560).<br/><br/>O [!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] requer o .NET Framework 4.6.2. Disponível no [Centro de Download](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Para obter mais informações, recomendações e diretrizes sobre o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte o [Guia de implantação do .NET Framework para desenvolvedores](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], e [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] exigem o [KB2919355](https://support.microsoft.com/kb/2919355) antes de instalar o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Software de rede|Os sistemas operacionais com suporte para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] têm software de rede interno. As instâncias nomeadas e padrão de uma instalação autônoma dão suporte aos seguintes protocolos de rede: memória compartilhada, pipes nomeados, TCP/IP e VIA.<br/><br/> **Observação**: o protocolo VIA não tem suporte em clusters de failover. Os clientes ou aplicativos em execução no mesmo nó do cluster de failover que a instância do SQL Server podem usar o protocolo de Memória Compartilhada para se conectar ao SQL Server usando seu endereço de pipe local. No entanto, esse tipo de conexão não tem reconhecimento de cluster e falhará após um failover da instância. Portanto, ela não é recomendada e só deve ser usada em cenários muito específicos.<br/><br/> **Importante:** o protocolo VIA foi preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obter mais informações sobre protocolos de rede e bibliotecas de rede, consulte [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disco rígido|O[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requer no mínimo 6 GB de espaço disponível no disco rígido.<br/><br/> Os requisitos de espaço em disco variam de acordo com os componentes do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] instalados. Para obter mais informações, consulte [Requisitos de espaço em disco rígido](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) posteriormente neste artigo. Para obter mais informações sobre tipos de armazenamento de arquivos de dados com suporte, consulte [Tipos de armazenamento para arquivos de dados](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Unidade|É necessária uma unidade de DVD, conforme apropriado, para a instalação a partir de disco.|  
@@ -251,6 +251,6 @@ Os seguintes requisitos se aplicam a todas as instalações:
 ## <a name="see-also"></a>Consulte Também  
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [Especificações do produto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+ [Especificações do produto para SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
   
   

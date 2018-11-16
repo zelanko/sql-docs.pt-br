@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169047"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703644"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -168,13 +168,13 @@ SET <optionspec>
 -   2 – Erros e avisos  
   
 SQLDUMPEREDUMPFLAGS  
- Determina o tipo de arquivos de despejo gerados pelo utilitário SQLDumper do SQL Server. A configuração padrão é 0. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Determina o tipo de arquivos de despejo gerados pelo utilitário SQLDumper do SQL Server. A configuração padrão é 0. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- O local onde o utilitário SQLDumper armazena os arquivos de despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ O local onde o utilitário SQLDumper armazena os arquivos de despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- O valor do tempo limite em milissegundos para o utilitário SQLDumper gerar um despejo no caso de uma falha do SQL Server. O valor padrão é 0, o que indica que não há nenhum tempo limite para a conclusão do despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ O valor do tempo limite em milissegundos para o utilitário SQLDumper gerar um despejo no caso de uma falha do SQL Server. O valor padrão é 0, o que indica que não há nenhum tempo limite para a conclusão do despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  As condições sob as quais a instância do cluster de failover do SQL Server deve apresentar uma falha ou reiniciar. O valor padrão é 3, o que indica que o recurso do SQL Server apresentará failover ou reiniciará em erros críticos do servidor. Para obter mais informações sobre este e outros níveis de condição de falha, veja [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  

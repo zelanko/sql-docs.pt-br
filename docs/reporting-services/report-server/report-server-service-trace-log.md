@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031065"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813789"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
   O log de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um arquivo de texto ASCII que contém informações detalhadas de operações do serviço Servidor de Relatório.  As informações nos arquivos incluem operações executadas pelo serviço Web Servidor de Relatórios, portal da Web e processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento serão úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Por exemplo, ao solucionar problemas com assinaturas.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031065"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Para obter mais informações, consulte o [Artigo 913046 da Base de Dados de Conhecimento](http://support.microsoft.com/?kbid=913046) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Para obter mais informações, consulte o [Artigo 913046 da Base de Dados de Conhecimento](https://support.microsoft.com/?kbid=913046) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ##  <a name="bkmk_log_file_fields"></a> Campos do arquivo de log  
  Os campos a seguir podem ser localizados em um log de rastreamento:  

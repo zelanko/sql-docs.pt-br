@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6117efa06effea24fda8fac4c1567bbe8a6c390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697764"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664825"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47697764"
   
  **SQLColumns** pode ser executado em um cursor de servidor estático. Uma tentativa de executar **SQLColumns** em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *linked_server_name*.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte ao relatório de informações de tabelas em servidores vinculados, aceitando um nome de duas partes para o parâmetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
  Para ODBC 2. *x* aplicativos que não usam curingas nos *TableName*, **SQLColumns** retorna informações sobre quaisquer tabelas cujo nomes correspondem ao *TableName*e são de propriedade do usuário atual. Se o usuário atual não possuir nenhuma tabela cujo nome corresponda a *TableName* parâmetro, **SQLColumns** retorna informações sobre quaisquer tabelas pertencentes a outros usuários onde o nome da tabela corresponde a  *TableName* parâmetro. Para ODBC 2. *x* aplicativos que usam curingas **SQLColumns** retorna todas as tabelas cujo nomes correspondem ao *TableName*. Para ODBC 3. *x* applications **SQLColumns** retorna todas as tabelas cujo nomes correspondem ao *TableName* independentemente do proprietário ou se os caracteres curinga é usada.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47697764"
  Para obter mais informações sobre colunas esparsas no ODBC, consulte [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [Função SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

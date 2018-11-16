@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839554"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812949"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839554"
  Usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o ponto de extremidade do proxy de URL não tem suporte. Um ponto de extremidade de proxy inclui um número da porta, por exemplo, `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL para um site ou subsite de servidor do SharePoint  
- Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome do site é exibido imediatamente após o nome do servidor, por exemplo, `http://*servername/site*` ou `http://*servername/site/subsite*`.  
+ Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome do site é exibido imediatamente após o nome do servidor, por exemplo, `https://*servername/site*` ou `https://*servername/site/subsite*`.  
   
- Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Espaços de trabalho**. A lista dos sites aparece nesta seção.  
+ Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Workspaces**. A lista dos sites aparece nesta seção.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL para uma biblioteca do SharePoint  
  Ao implantar um relatório ou um item relacionado à biblioteca do SharePoint, você deve usar uma URL para biblioteca do SharePoint. A URL usada para uma biblioteca difere dependendo da versão do SharePoint que você está usando.  
   
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], a biblioteca é exibida após o nome do servidor, por exemplo, `http://*servername/*Shared Documents`.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], a biblioteca é exibida após o nome do servidor, por exemplo, `https://*servername/*Shared Documents`.  
   
- No [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou no [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], a biblioteca aparece depois do site e do subsite. Por exemplo, `http://*servername/site/*Documents`.  
+ No [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou no [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], a biblioteca aparece depois do site e do subsite. Por exemplo, `https://*servername/site/*Documents`.  
   
  Para localizar as informações de caminho para uma nova biblioteca do SharePoint ou para um site desconhecido, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar seus relatórios. Se a biblioteca estiver vazia, carregue qualquer arquivo. Clique com o botão direito do mouse no arquivo e selecione **Propriedades** para abrir a janela **Propriedades** . O endereço do arquivo contém os valores da URL necessários para a publicação.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>URLs completamente qualificados para os itens em um site do SharePoint  
- Os itens armazenados em uma biblioteca do SharePoint são sempre endereçados por meio de uma URL totalmente qualificada que começa com o aplicativo Web (`http://*server*`) como o nó raiz e termina com o nome do arquivo que está sendo referenciado.  
+ Os itens armazenados em uma biblioteca do SharePoint são sempre endereçados por meio de uma URL totalmente qualificada que começa com o aplicativo Web (`https://*server*`) como o nó raiz e termina com o nome do arquivo que está sendo referenciado.  
   
  Os nomes de arquivo na URL devem incluir uma extensão de nome de arquivo.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839554"
  Para especificar relatórios detalhados, inclua a URL em uma expressão. Por exemplo, para especificar o relatório denominado SalesDetails como um relatório detalhado, na caixa de texto ou no texto do espaço reservado Ação para, defina ReportName para a seguinte expressão:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Nomes reservados nos sites do SharePoint  
@@ -94,11 +94,11 @@ ms.locfileid: "47839554"
   
 |Destino|Exemplo de URL|  
 |------------|-----------------|  
-|Um servidor do SharePoint.|`http://TestServer`|  
-|Um site ou subsite do servidor do SharePoint.|`http://TestServer/toplevelsite/subsite`|  
-|O relatório de exemplo de vendas da empresa em **Documentos Compartilhados** em uma implantação do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] ou do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|O relatório de exemplo Company Sales na pasta **Documents/Doc** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|O relatório de exemplo de vendas da empresa na **Central de Relatórios** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Um servidor do SharePoint.|`https://TestServer`|  
+|Um site ou subsite do servidor do SharePoint.|`https://TestServer/toplevelsite/subsite`|  
+|O relatório de exemplo de vendas da empresa em **Documentos Compartilhados** em uma implantação do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] ou do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|O relatório de exemplo Company Sales na pasta **Documents/Doc** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|O relatório de exemplo de vendas da empresa na **Central de Relatórios** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Publicando de uma ferramenta de criação para uma biblioteca do SharePoint  
  Quando você usa a ferramenta de criação de relatório para publicar relatórios e arquivos relacionados em uma biblioteca, os arquivos são validados antes de serem adicionados. Se você carregar os relatórios e os arquivos relacionados, usando a ação **Carregar** na biblioteca do SharePoint, nenhuma validação ocorrerá. Você não saberá se o arquivo é válido até acessar o relatório, gerenciando, editando ou executando-o.  

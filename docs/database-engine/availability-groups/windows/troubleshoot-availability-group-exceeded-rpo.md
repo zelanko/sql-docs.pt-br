@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722497"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602861"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solução de problemas: o grupo de disponibilidade excedeu o RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722497"
   
  Além disso, é útil verificar os dois objetos de desempenho, `SQL Server:Availability Replica > Flow Control Time (ms/sec)` e `SQL Server:Availability Replica > Flow Control/sec`. A multiplicação desses dois valores mostra quanto tempo, no último segundo, foi gasto aguardando a limpeza do controle de fluxo. Quanto maior o tempo de espera do controle de fluxo, menor será a taxa de envio.  
   
- As métricas a seguir são úteis para diagnosticar a taxa de transferência e latência da rede. Você pode usar outras ferramentas do Windows, como **ping.exe** e [Monitor de Rede](http://www.microsoft.com/download/details.aspx?id=4865) para avaliar a utilização e a latência da rede.  
+ As métricas a seguir são úteis para diagnosticar a taxa de transferência e latência da rede. Você pode usar outras ferramentas do Windows, como **ping.exe** e [Monitor de Rede](https://www.microsoft.com/download/details.aspx?id=4865) para avaliar a utilização e a latência da rede.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ Para corrigir esse problema, tente atualizar a largura de banda da sua rede ou r
  A perda de dados é evitada assim que o bloco de log é protegido no arquivo de log. Portanto, é fundamental isolar o arquivo de log do arquivo de dados. Se o arquivo de log e o arquivo de dados forem mapeados para o mesmo disco rígido, a carga de trabalho de relatório, com leituras intensivas no arquivo de dados, consumirá os mesmos recursos de E/S necessários para a operação de proteção de log. A proteção de log lenta pode se transformar em confirmação lenta na réplica primária, o que poderá causar a ativação excessiva do controle de fluxo e de tempos de espera longos de controle de fluxo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico e resolução  
- Se você verificou que a rede não está apresentando problemas de alta latência ou de baixa taxa de transferência, será necessário investigar contenções de E/S na réplica secundária. As consultas em [SQL Server: minimizar E/S de disco](http://technet.microsoft.com/magazine/jj643251.aspx) são úteis na identificação de contenções. Os exemplos desse artigo são derivados abaixo para sua conveniência.  
+ Se você verificou que a rede não está apresentando problemas de alta latência ou de baixa taxa de transferência, será necessário investigar contenções de E/S na réplica secundária. As consultas em [SQL Server: minimizar E/S de disco](https://technet.microsoft.com/magazine/jj643251.aspx) são úteis na identificação de contenções. Os exemplos desse artigo são derivados abaixo para sua conveniência.  
   
  O script a seguir permite que você veja o número de leituras e gravações em cada arquivo de dados e de log para cada banco de dados de disponibilidade em execução em uma instância do SQL Server. Ele está classificado por tempo médio de parada de E/S, em milissegundos. Observe que os números são cumulativos desde a última vez em que a instância do servidor foi iniciada. Então, você deve calcular a diferença entre as duas medidas após algum tempo decorrido.  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Se você identificou um gargalo de E/S e colocou o arquivo de log e o arquivo de dados no mesmo disco rígido, a primeira coisa a ser feita é colocar o arquivo de dados e o arquivo de log em discos separados. Essa melhor prática impede que a carga de trabalho de relatório interfira no caminho de transferência de log da réplica primária para o buffer de log e sua capacidade de proteger a transação na réplica secundária.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

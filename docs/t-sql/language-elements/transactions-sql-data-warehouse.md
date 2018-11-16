@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616287"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696798"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se um erro que não seja de instrução de tempo de execução impedir que uma transação explícita seja concluída com sucesso, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] reverterá a transação e liberará todos os recursos mantidos pela transação automaticamente. Por exemplo, se a conexão de rede do cliente com uma instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] for interrompida ou o cliente fizer logoff do aplicativo, todas as transações não confirmadas para a conexão serão revertidas quando a rede notificar a instância sobre a interrupção.  
   
- Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Uma sessão só pode executar uma única transação em um determinado momento. Não há compatibilidade com pontos de salvamento e transações aninhadas.  

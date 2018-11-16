@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6c423333401e9c6a85e94c6e27c49d355d1af6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657545"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47790294"
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>Para criar um instantâneo no Management Studio  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -161,7 +161,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  O Agente de Instantâneo gera instantâneos depois da criação da publicação. É possível gerar esses instantâneos de forma programada usando o RMO (Replication Management Objects) e o acesso de código direto para as funcionalidades do agente de replicação. Os objetos usados dependem do tipo de replicação. O Snapshot Agent pode ser iniciado usando o objeto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> ou usando de forma assíncrona o trabalho do agente. Depois da geração do instantâneo inicial, ele é transferido para o Assinante, onde é aplicado quando a assinatura é sincronizada pela primeira vez. Será necessário executar novamente o agente sempre que o instantâneo existente não mais contiver dados válidos e atualizados. Para obter mais informações, consulte [Maintain Publications](../../relational-databases/replication/publish/maintain-publications.md) (Manter publicações).  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Para gerar o instantâneo inicial de uma publicação de instantâneo ou transacional por meio da iniciação do trabalho do Snapshot Agent (assíncrono)  
   

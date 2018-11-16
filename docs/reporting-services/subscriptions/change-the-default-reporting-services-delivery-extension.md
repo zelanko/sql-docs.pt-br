@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66e98f21d426bc2b9d570990d72703b6cb059391
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b5de95f97dc6ba0b8adb1cc0ad37f3ad08e59c1e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100037"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813089"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Alterar a extensão de entrega padrão do Reporting Services
   Você pode modificar as definições de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para alterar a extensão de entrega padrão que aparece na lista **Entregue por** de uma página de definição de assinatura. Por exemplo, você pode modificar a configuração de modo que quando os usuários criem uma nova assinatura, a entrega de compartilhamento de arquivos seja selecionada por padrão, em vez da entrega de email. Você também pode alterar a ordem em que as extensões de entrega são listadas na interface do usuário.  
@@ -122,7 +122,7 @@ https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
 
 ...is redirected to the following Docs link, for SQL Server 2014...
 
-https://docs.microsoft.com/en-us/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
+https://docs.microsoft.com/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
 
 ...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
 the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).

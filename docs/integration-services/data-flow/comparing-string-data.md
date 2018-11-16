@@ -17,12 +17,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd726cfefd1a1e80ba5b96f651e3a1b13057c174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b63ddac2aa39095703b1428deab61232837ed9e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821615"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638393"
 ---
 # <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
   Comparações de cadeia de caracteres são uma parte importante de muitas das transformações realizadas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e as comparações de cadeia de caracteres também são usadas na avaliação de expressões em variáveis e expressões de propriedade. Por exemplo, a transformação de Classificação compara valores em um conjunto de dados para classificar dados em ordem crescente ou decrescente.  
@@ -52,7 +52,7 @@ ms.locfileid: "47821615"
   
  Os dados de cadeias de caracteres que têm o tipo DT_STR são convertidos em Unicode por meio do uso da página de código da coluna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a páginas de código no nível de coluna, e cada coluna pode ser convertida por meio de uma página de código diferente.  
   
- Na maioria dos casos, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode identificar a página de código correta da origem de dados. Por exemplo, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é possível definir um agrupamento nos níveis do banco de dados e da coluna. A página de código é derivada de um agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que pode ser um agrupamento do Windows ou do SQL.  
+ Na maioria dos casos, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode identificar a página de código correta da origem de dados. Por exemplo, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é possível definir uma ordenação nos níveis do banco de dados e da coluna. A página de código é derivada de uma ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que pode ser uma ordenação do Windows ou do SQL.  
   
  Se o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornecer uma página de código inesperada ou se o pacote acessar uma origem de dados usando um provedor que não fornece informações suficientes para determinar a página de código correta, você poderá especificar uma página de código padrão na origem OLE DB e no destino OLE DB. As páginas de código padrão são usadas em vez das páginas de código fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47821615"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
- [Análise rápida](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Análise padrão](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Análise rápida](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Análise padrão](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

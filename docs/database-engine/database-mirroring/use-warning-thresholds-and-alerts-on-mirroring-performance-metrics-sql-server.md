@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609266"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600996"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609266"
   
  Quando você define alertas em eventos de espelhamento de banco de dados, recomendamos que defina limites de aviso e alertas em ambas as instâncias do servidor parceiro. Eventos individuais são gerados no servidor principal ou no servidor espelho, mas cada parceiro pode executar qualquer uma dessas funções a qualquer momento. Para garantir que um alerta continue operando depois de um failover, o alerta deve ser definido em ambos os parceiros.  
   
- Para obter mais informações, consulte o white paper sobre alertas em eventos de espelhamento de banco de dados neste site do [SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). Esse white paper contém informações sobre como configurar alertas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, os eventos WMI de espelhamento de banco de dados e scripts de exemplo.  
+ Para obter mais informações, consulte o white paper sobre alertas em eventos de espelhamento de banco de dados neste site do [SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). Esse white paper contém informações sobre como configurar alertas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, os eventos WMI de espelhamento de banco de dados e scripts de exemplo.  
   
 > [!IMPORTANT]  
 >  Para todas a sessões de espelhamento, é altamente recomendável que você configure o banco de dados para enviar um alerta em qualquer evento de alteração de estado. A menos que uma alteração de estado seja esperada como resultado de uma alteração de configuração manual, algo ocorreu que pode comprometer seus dados. Para ajudar a proteger seus dados, identifique e repare a causa de uma alteração de estado imprevista.  

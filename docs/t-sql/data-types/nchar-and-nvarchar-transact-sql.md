@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696724"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de dados de caractere que sejam de comprimento fixo, **nchar** ou de comprimento variável, **nvarchar**. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quando uma ordenação habilitada por [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) é usada, esses tipos de dados armazenam o intervalo completo de dados de caractere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usam a codificação de caracteres [UTF-16 ](http://www.wikipedia.org/wiki/UTF-16). Se uma ordenação não SC for especificada, então esses tipos de dados armazenarão somente o subconjunto de dados de caractere compatíveis com a codificação de caracteres [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
+Tipos de dados de caractere que sejam de comprimento fixo, **nchar** ou de comprimento variável, **nvarchar**. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quando uma ordenação habilitada por [Caractere Suplementar (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) é usada, esses tipos de dados armazenam o intervalo completo de dados de caractere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usam a codificação de caracteres [UTF-16 ](https://www.wikipedia.org/wiki/UTF-16). Se uma ordenação não SC for especificada, então esses tipos de dados armazenarão somente o subconjunto de dados de caractere compatíveis com a codificação de caracteres [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
   
 ## <a name="arguments"></a>Argumentos  
 **nchar** [ ( n ) ]  
-Dados de cadeia de caracteres de comprimento fixo. *n* define o tamanho da cadeia de caracteres em pares-byte e deve ser um valor entre 1 a 4.000. O tamanho do armazenamento é duas vezes *n* bytes. Para a codificação [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), o tamanho de armazenamento é duas vezes *n* bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para a codificação UTF-16, o tamanho de armazenamento ainda é duas vezes *n* bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n* porque os Caracteres Suplementares usam dois pares-byte (também chamados de [par alternativo](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Os sinônimos ISO para **nchar** são **char nacional** e **caractere nacional**.
+Dados de cadeia de caracteres de comprimento fixo. *n* define o tamanho da cadeia de caracteres em pares-byte e deve ser um valor entre 1 a 4.000. O tamanho do armazenamento é duas vezes *n* bytes. Para a codificação [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), o tamanho de armazenamento é duas vezes *n* bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para a codificação UTF-16, o tamanho de armazenamento ainda é duas vezes *n* bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n* porque os Caracteres Suplementares usam dois pares-byte (também chamados de [par alternativo](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Os sinônimos ISO para **nchar** são **char nacional** e **caractere nacional**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Dados de cadeia de caracteres de comprimento variável. *n* define o tamanho da cadeia de caracteres em pares-byte e pode ser um valor entre 1 a 4.000. **max** indica que o tamanho de armazenamento máximo é de 2^30-1 caracteres (2 GB). O tamanho do armazenamento é duas vezes *n* bytes + 2 bytes. Para a codificação [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), o tamanho de armazenamento é duas vezes *n* bytes + 2 bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para a codificação UTF-16, o tamanho de armazenamento ainda é duas vezes *n* bytes + 2 bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n* porque os Caracteres Suplementares usam dois pares-byte (também chamados de [par alternativo](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Os sinônimos ISO para **nvarchar** são **national char varying** e **national character varying**.
+Dados de cadeia de caracteres de comprimento variável. *n* define o tamanho da cadeia de caracteres em pares-byte e pode ser um valor entre 1 a 4.000. **max** indica que o tamanho de armazenamento máximo é de 2^30-1 caracteres (2 GB). O tamanho do armazenamento é duas vezes *n* bytes + 2 bytes. Para a codificação [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), o tamanho de armazenamento é duas vezes *n* bytes + 2 bytes e a quantidade de caracteres que pode ser armazenada também é *n*. Para a codificação UTF-16, o tamanho de armazenamento ainda é duas vezes *n* bytes + 2 bytes, mas a quantidade de caracteres que pode ser armazenada pode ser menor que *n* porque os Caracteres Suplementares usam dois pares-byte (também chamados de [par alternativo](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Os sinônimos ISO para **nvarchar** são **national char varying** e **national character varying**.
   
 ## <a name="remarks"></a>Remarks  
 Quando *n* não é especificado em uma definição de dados ou instrução de declaração de variável, o tamanho padrão é 1. Quando *n* não é especificado com a função CAST, o tamanho padrão é 30.
@@ -64,7 +64,7 @@ Para obter informações sobre como converter dados de caractere, consulte [char
 ## <a name="see-also"></a>Confira também
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

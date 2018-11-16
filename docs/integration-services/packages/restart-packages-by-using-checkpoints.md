@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703194"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637733"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
@@ -43,7 +43,7 @@ ms.locfileid: "47703194"
 > [!NOTE]  
 >  O uso de pontos de verificação e transações no mesmo pacote pode gerar resultados inesperados. Por exemplo, quando um pacote falha e é reiniciado em um ponto de verificação, o pacote pode repetir uma transação que já tenha sido confirmada com êxito.  
   
- Os dados do ponto de verificação não são salvos para os contêineres Loop For e Loop Foreach. Quando um pacote é reinicializado, os contêineres Loop For e Loop Foreach e seus contêineres filho são executados novamente. Se um contêiner filho no loop executar com êxito, ele não será registrado no arquivo de ponto de verificação, ao invés disso ele será executado novamente. Para obter mais informações e uma solução alternativa, consulte [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Os dados do ponto de verificação não são salvos para os contêineres Loop For e Loop Foreach. Quando um pacote é reinicializado, os contêineres Loop For e Loop Foreach e seus contêineres filho são executados novamente. Se um contêiner filho no loop executar com êxito, ele não será registrado no arquivo de ponto de verificação, ao invés disso ele será executado novamente. Para obter mais informações e uma solução alternativa, consulte [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Se o pacote for reiniciado as configurações do pacote não serão recarregadas, ao invés disso o pacote usará as informações de configuração gravadas no arquivo de ponto de verificação. Isto assegura que o pacote usará as mesmas configurações existentes no momento que falhou quando for executado novamente.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703194"
     
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](http://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
+-   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](https://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
   
--   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
+-   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  

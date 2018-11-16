@@ -1,23 +1,21 @@
 ---
 title: Notas sobre a versão do SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703854"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas sobre a versão a versão prévia do SQL Server 2019
 
@@ -33,7 +31,7 @@ Este artigo descreve as limitações e os problemas conhecidos para as versões 
 > - Atualizar uma instância existente do SQL Server de qualquer versão
 
 **Experimente[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
-- [![Baixar do Centro de Avaliação](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Baixe o [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] para instalação no Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Baixar do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Baixe o [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] para instalação no Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Instalar no Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Executar no SQL Server 2019 no Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -45,12 +43,12 @@ O [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 está disponí
 Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 - Fóruns
-  - [Comentários do SQL Server](http://aka.ms/sqlfeedback)
+  - [Comentários do SQL Server](https://aka.ms/sqlfeedback)
   - [Introdução ao SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server, documentação](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- Ou envie um tweet para [@SQLServer](http://twitter.com/SQLServer) com [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+- Ou envie um tweet para [@SQLServer](https://twitter.com/SQLServer) com [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
 ### <a name="documentation-ctp-21"></a>Documentação (CTP 2.1)
 
@@ -69,7 +67,7 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
     - [Linux – requisitos do sistema](../linux/sql-server-linux-setup.md#system)
   - **Software**
     - Windows Server 2016 ou posterior. Para ver os requisitos adicionais, consulte [Requisitos para instalação do SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-    - Microsoft .NET Framework 4.6.2. Disponível no [Centro de Download](http://www.microsoft.com/download/details.aspx?id=53344).
+    - Microsoft .NET Framework 4.6.2. Disponível no [Centro de Download](https://www.microsoft.com/download/details.aspx?id=53344).
     - Para Linux, consulte [Linux – plataformas compatíveis](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### <a name="floating-point-results"></a>Resultados de ponto flutuante

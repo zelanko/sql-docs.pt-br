@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617705"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673285"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617705"
  Como observado anteriormente, em alguns casos, descartar um artigo exige descartar assinaturas, recriá-las e, então, sincronizá-las. Para obter mais informações, consulte [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md) e [Sincronizar dados](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou superior e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou superior dão suporte a remover tabelas usando o comando DLL **DROP TABLE** para artigos que participam da Replicação Transacional. Se a publicação der suporte para DROP TABLE DDL, a operação de DROP TABLE removerá a tabela da publicação e do banco de dados. O agente do leitor de log lançará um comando de limpeza para o banco de dados de distribuição da tabela removida e fará a limpeza dos metadados do publicador. Se o leitor de log não tiver processado todos os registros de log que fazem referência à tabela removida, ele ignorará novos comandos associados à tabela removida. Registros já processados serão entregues ao banco de dados de distribuição. Eles poderão ser aplicados ao banco de dados do Assinante se o Agente de Distribuição processá-los antes que o Leitor de Log limpar os artigos obsoletos (removidos). A configuração **padrão** para todas as publicações de replicação transacional é não dar suporte a DLL de DROP TABLE. O artigo [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) apresenta mais detalhes sobre essa melhoria.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou superior e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou superior dão suporte a remover tabelas usando o comando DLL **DROP TABLE** para artigos que participam da Replicação Transacional. Se a publicação der suporte para DROP TABLE DDL, a operação de DROP TABLE removerá a tabela da publicação e do banco de dados. O agente do leitor de log lançará um comando de limpeza para o banco de dados de distribuição da tabela removida e fará a limpeza dos metadados do publicador. Se o leitor de log não tiver processado todos os registros de log que fazem referência à tabela removida, ele ignorará novos comandos associados à tabela removida. Registros já processados serão entregues ao banco de dados de distribuição. Eles poderão ser aplicados ao banco de dados do Assinante se o Agente de Distribuição processá-los antes que o Leitor de Log limpar os artigos obsoletos (removidos). A configuração **padrão** para todas as publicações de replicação transacional é não dar suporte a DLL de DROP TABLE. O artigo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) apresenta mais detalhes sobre essa melhoria.
 
   
 ## <a name="see-also"></a>Consulte Também  

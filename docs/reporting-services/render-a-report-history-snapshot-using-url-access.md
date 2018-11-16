@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e13765e67b1e14cd676d371fdeb0a3f8e6a896fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 054f885cc970060b042532ea91ff561853000d1b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795184"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812849"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Renderizar instantâneo de histórico de relatório com o acesso à URL
   Você pode renderizar um relatório com base em um instantâneo de histórico de relatório fornecendo o parâmetro *rs:Snapshot* e definindo seu valor como uma ID de instantâneo válida. O valor do parâmetro está no formato AAAA-MM-DDTHH:MM:SS, com base no padrão ISO (Organização Internacional de Padronização) 8601.  
@@ -30,7 +30,7 @@ ms.locfileid: "47795184"
  O exemplo a seguir mostra uma URL que recupera um instantâneo de histórico de relatório:  
   
 ```  
-http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

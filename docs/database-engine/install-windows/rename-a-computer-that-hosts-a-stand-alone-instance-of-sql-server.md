@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85b9c9ab90cfbda1a291cd2516ed2f72a826460e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a65464ddc36d48a047c1b92e3acf2912a0e3baf4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621484"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601616"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renomear um computador que hospeda uma instância autônoma do SQL Server
 
@@ -111,7 +111,7 @@ As etapas a seguir não podem ser usadas para renomear uma instância do [!INCLU
   
  **Configurações de servidor vinculado** – As configurações de servidor vinculado serão afetadas pela operação de renomeação de computador. Use **sp_addlinkedserver** ou **sp_setnetname** para atualizar referências de nome do computador. Para obter mais informações, veja [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Nomes de alias de cliente** – Os aliases de cliente que usam pipes nomeados serão afetados pela operação de renomeação do computador. Por exemplo, se foi criado um alias "PROD_SRVR" para apontar para SRVR1 que usa o protocolo de pipes nomeados, o nome do pipe será `\\SRVR1\pipe\sql\query`. Depois que o computador for renomeado, o caminho do pipe nomeado deixará de ser válido. Para obter mais informações sobre pipes nomeados, veja o tópico [Criando uma cadeia de conexão válida usando pipes nomeados](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Nomes de alias de cliente** – Os aliases de cliente que usam pipes nomeados serão afetados pela operação de renomeação do computador. Por exemplo, se foi criado um alias "PROD_SRVR" para apontar para SRVR1 que usa o protocolo de pipes nomeados, o nome do pipe será `\\SRVR1\pipe\sql\query`. Depois que o computador for renomeado, o caminho do pipe nomeado deixará de ser válido. Para obter mais informações sobre pipes nomeados, veja o tópico [Criando uma cadeia de conexão válida usando pipes nomeados](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md)  

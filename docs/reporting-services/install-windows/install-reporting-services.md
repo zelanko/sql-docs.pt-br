@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028185"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812969"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalar o SQL Server Reporting Services (2017 e posterior)
 
@@ -98,15 +98,15 @@ As reservas de URL são compostas de um prefixo, nome de host, porta e diretóri
 |Parte|Descrição|
 |----------|-----------------|
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usam o prefixo HTTPS.|
-|Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceita qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `http://<computername>/reportserver`, `http://localhost/reportserver` ou `http://<IPAddress>/reportserver.`|
+|Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceita qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `https://<computername>/reportserver`, `https://localhost/reportserver` ou `https://<IPAddress>/reportserver.`|
 |Porta|A porta padrão é 80. Se você usar qualquer porta que não seja a 80, precisará adicioná-la explicitamente à URL quando abrir o portal da Web em uma janela do navegador.|
 |Diretório virtual|Por padrão, os diretórios virtuais são criados no formato de ReportServer para o serviço Web Servidor de Relatórios e Reports para o portal da Web. Para o serviço Web Servidor de Relatórios, o diretório virtual padrão é **reportserver**. Para o portal da Web, o diretório virtual padrão é **reports**.|
 
 Um exemplo de cadeia de caracteres de URL completa poderia ser como segue:
 
-- `http://+:80/reportserver`, fornece acesso ao servidor de relatório.
+- `https://+:80/reportserver`, fornece acesso ao servidor de relatório.
 
-- `http://+:80/reports`, fornece acesso ao portal da Web.
+- `https://+:80/reports`, fornece acesso ao portal da Web.
 
 ## <a name="firewall"></a>Firewall
 

@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661117"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
 >  Não há suporte para pausar o Orientador de Otimização do Mecanismo de Banco de Dados. Se você clicar no botão de barra de ferramentas **Iniciar Análise** depois de clicar no botão **Parar Análise** ou **Parar Análise (com Recomendações)** , o Orientador de Otimização do Mecanismo de Banco de Dados iniciará uma nova sessão de ajuste.  
   
 ###  <a name="dta"></a> Usar o utilitário dta  
- O utilitário [dta utility](../../tools/dta/dta-utility.md) fornece um arquivo executável de prompt de comando que pode ser usado para ajustar bancos de dados. Ele permite usar a funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em scripts e arquivos em lote. O utilitário **dta** assume entradas de cache de plano, arquivos de rastreamento, tabelas de rastreamento e scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabalho. Ele ainda aceita entrada XML compatível com o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados, que está disponível no [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100).  
+ O utilitário [dta utility](../../tools/dta/dta-utility.md) fornece um arquivo executável de prompt de comando que pode ser usado para ajustar bancos de dados. Ele permite usar a funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em scripts e arquivos em lote. O utilitário **dta** assume entradas de cache de plano, arquivos de rastreamento, tabelas de rastreamento e scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabalho. Ele ainda aceita entrada XML compatível com o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados, que está disponível no [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Antes de começar a ajustar uma carga de trabalho com o utilitário **dta** , considere o seguinte:  
   
@@ -313,7 +313,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
  C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também está disponível online neste [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também está disponível online neste [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Esse URL abre uma página em que estão disponíveis vários esquemas XML do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Role a página para baixo até atingir a linha do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

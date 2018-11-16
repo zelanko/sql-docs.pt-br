@@ -12,12 +12,12 @@ ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79d6a85fe715cf60ff3ccc3aaefcb3d126238bb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f996df18335b0444e2efe530870d952634c3e82
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724614"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677325"
 ---
 # <a name="mssqlserver2570"></a>MSSQLSERVER_2570
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47724614"
 O valor de coluna contido na coluna especificada está fora do intervalo de valores possíveis para o tipo de dados da coluna.  
   
 ## <a name="user-action"></a>Ação do usuário  
-O erro não é reparável. Atualize a coluna com um valor que esteja dentro do intervalo para o tipo de dados da coluna e execute o comando novamente.  Para obter mais informações, consulte o artigo [923247](http://support.microsoft.com/kb/923247) da Base de Dados de Conhecimento.  
+O erro não é reparável. Atualize a coluna com um valor que esteja dentro do intervalo para o tipo de dados da coluna e execute o comando novamente.  Para obter mais informações, consulte o artigo [923247](https://support.microsoft.com/kb/923247) da Base de Dados de Conhecimento.  
   
 ## <a name="see-also"></a>Consulte Também  
 [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  

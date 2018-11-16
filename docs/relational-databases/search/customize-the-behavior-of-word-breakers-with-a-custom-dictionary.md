@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd6c83e02b15fcf126e5b3d078237c07d758cf3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6f2fc2b6b0ca88642b4a30ac87c007c8a59c0393
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032444"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658885"
 ---
 # <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>Personalizar o comportamento de separadores de palavras com um dicionário personalizado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "51032444"
   
  Para obter mais informações, consulte o seguinte artigo do SharePoint:  
   
- [Crie um dicionário personalizado (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Crie um dicionário personalizado (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
   
  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], coloque arquivos de dicionário personalizados na seguinte pasta:  
   

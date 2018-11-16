@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c39ecc5693297070d47afc9b989de795eb9af2c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676544"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657506"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Configuração e instalação de AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ Baixe o AdventureWorks links e instruções de instalação.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) ou [banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/). Para a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) ou [banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/). Para a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
  
 ## <a name="github-links"></a>Links do GitHub

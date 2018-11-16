@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb9b740867fd4a43a1182f380b3098688a6b518
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60fa7513c999c1f93d7066de14997902b3cd251e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830914"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664995"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Localizando mais informações sobre o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47830914"
 
   Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outros tipos de programação de acesso a dados, consulte os seguintes recursos online:  
   
- [Central de Desenvolvedores de Armazenamento e Acesso a Dados](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Central de Desenvolvedores de Armazenamento e Acesso a Dados](https://go.microsoft.com/fwlink?linkid=4173)  
  Este site fornece artigos técnicos, código de exemplo e outros recursos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outras tecnologias de acesso a dados.  
   
- [Blog de Acesso a Dados](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog de Acesso a Dados](https://go.microsoft.com/fwlink/?LinkId=48617)  
  Este site de blog fornece informações sobre tecnologias de acesso a dados e permite que você interaja diretamente com membros da equipe de produto.  
   
- [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
  Este site contém a documentação mais recente do SDK do Windows Data Access Components (Windows DAC). O Windows DAC é a versão do Data Access Components (chamado de MDAC em versões anteriores) que está incluída no Windows Vista e no Windows Server 2008.  
   
  O SDK do Windows DAC inclui a documentação para ActiveX Data Objects (ADO), OLE DB e Open Database Connectivity (ODBC).  

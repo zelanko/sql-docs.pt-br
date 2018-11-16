@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696774"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  Uma permissão implícita também pode ser herdada de uma permissão de cobertura ou pai. Por exemplo, a permissão **UPDATE** em uma tabela pode ser herdada pela presença da permissão **UPDATE** no esquema que contém a tabela ou da permissão **CONTROL** na tabela.  
   
 ### <a name="ownership-chaining"></a>Encadeamento de propriedade  
- Quando vários objetos de banco de dados acessam uns aos outros sequencialmente, essa sequência é conhecida como *cadeia*. Embora essas cadeias não existam independentemente, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se desvia de links em uma cadeia, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avalia as permissões nos objetos do cliente de forma diferente do que faria se estivesse acessando os objetos separadamente. O encadeamento de propriedade tem implicações importantes para o gerenciamento de segurança. Para obter mais informações sobre cadeias de propriedade, confira [Cadeias de propriedade](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Tutorial: cadeias de propriedade e alternância de contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quando vários objetos de banco de dados acessam uns aos outros sequencialmente, essa sequência é conhecida como *cadeia*. Embora essas cadeias não existam independentemente, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se desvia de links em uma cadeia, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avalia as permissões nos objetos do cliente de forma diferente do que faria se estivesse acessando os objetos separadamente. O encadeamento de propriedade tem implicações importantes para o gerenciamento de segurança. Para obter mais informações sobre cadeias de propriedade, confira [Cadeias de propriedade](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Tutorial: cadeias de propriedade e alternância de contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Lista de permissões  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFRENCES  
   
- Para obter uma definição de cada tipo de permissão, confira [Permissões (Mecanismo de Banco de Dados)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Para obter uma definição de cada tipo de permissão, confira [Permissões (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Gráfico de permissões  
  Todas as permissões são representadas graficamente neste cartaz. Essa é a maneira mais fácil de ver a hierarquia aninhada de permissões. Por exemplo a permissão **ALTER ON LOGIN** pode ser concedida sozinha, mas também estará incluída se um logon receber a permissão a **CONTROL** nesse logon ou se um logon receber a permissão **ALTER ANY LOGIN**.  
   
  ![Cartaz de permissões de segurança do APS](../../t-sql/statements/media/aps-security-perms-poster.png "Cartaz de permissões de segurança do APS")  
   
- Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site Yammer do APS (ou solicite enviando um email para **apsdoc@microsoft.com**.  
+ Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site Yammer do APS (ou solicite enviando um email para **apsdoc@microsoft.com**.  
   
 ## <a name="default-permissions"></a>Permissões padrão  
  A lista a seguir descreve as permissões padrão:  

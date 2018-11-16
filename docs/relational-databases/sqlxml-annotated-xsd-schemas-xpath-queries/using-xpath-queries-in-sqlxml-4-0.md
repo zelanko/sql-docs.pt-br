@@ -17,19 +17,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ee4cadc90f8723dbbc7cc9db03b6c24d608d77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d38631798857e11695eeefb891c605ea255930d1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670444"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658205"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Usando consultas XPath no SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O suporte do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a esquemas XSD anotados permite criar exibições XML dos dados relacionais armazenados no banco de dados. Você pode usar um subconjunto da linguagem XPath para consultar as exibições XML criadas por um esquema XSD anotado.  
   
 > [!NOTE]  
->  Para entender as consultas XPath no SQLXML 4.0, é necessário estar familiarizado com as exibições XML e os conceitos relacionados, como modelos e esquemas de mapeamento. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obter mais informações sobre XPath, consulte o padrão XPath definido pelo World Wide Web Consortium (W3C) em http://www.w3.org/TR/xpath.  
+>  Para entender as consultas XPath no SQLXML 4.0, é necessário estar familiarizado com as exibições XML e os conceitos relacionados, como modelos e esquemas de mapeamento. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obter mais informações sobre XPath, consulte o padrão XPath definido pelo World Wide Web Consortium (W3C) em https://www.w3.org/TR/xpath.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução ao uso de consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  

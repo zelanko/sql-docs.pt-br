@@ -16,12 +16,12 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 096b8cdc93f09056dbd52d792a93884008cc3525
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ccaac651915cb79814999c1e3ffd0e37aeb715
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739424"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641933"
 ---
 # <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas
   A tarefa Atualizar Estatísticas atualiza informações sobre a distribuição de valores de chaves para um ou mais grupos de estatísticas (coleções) na tabela ou na exibição indexada especificada. Para obter mais informações, consulte [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "47739424"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

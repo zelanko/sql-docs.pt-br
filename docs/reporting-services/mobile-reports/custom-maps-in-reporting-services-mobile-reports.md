@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a25999826655f4ad48992ffa4705f86c9422650
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3786fcf92c767905c6295dffc8a24e7a86d2cbe
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776884"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813939"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
 Os mapas geográficos no Publicador de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
@@ -25,30 +25,30 @@ Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto
   
 Os nomes dos arquivos de base devem corresponder (por exemplo, *canada.shp* e *canada.dbf*). Os metadados devem incluir o campo *NAME* com o valor do nome da forma correspondente (chave) a ser usado ao preencher o mapa com os dados.  
   
-> **Observação**: os dois arquivos de mapa juntos, o SHP e DBF, não podem ser maiores do que 512 KB. Se os arquivos de mapa forem muito grandes, use uma ferramenta como [http://mapshaper.org/](http://mapshaper.org/) para reduzir seu tamanho.  
+> **Observação**: os dois arquivos de mapa juntos, o SHP e DBF, não podem ser maiores do que 512 KB. Se os arquivos de mapa forem muito grandes, use uma ferramenta como [https://mapshaper.org/](https://mapshaper.org/) para reduzir seu tamanho.  
   
 Consulte como [Adicionar mapas personalizados a relatórios móveis](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md).  
   
 ## <a name="technical-information"></a>Informações técnicas  
   
-- A especificação oficial: [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- O arquivo shapefile da Wikipedia: [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- A especificação oficial: [https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
+- O arquivo shapefile da Wikipedia: [https://en.wikipedia.org/wiki/Shapefile](https://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>Criando e editando geometria de mapa  
   
 Criar e editar shapefiles é um processo complexo que está além do escopo deste documento. Aqui estão alguns recursos e aplicativos para ajudá-lo a começar:  
   
-- ArcGIS: [http://www.arcgis.com/](http://www.arcgis.com/)  
-- Plug-in MAPublisher para Adobe Illustrator: [http://www.avenza.com/mapublisher](http://www.avenza.com/mapublisher)  
-- QuantumGIS (gratuito): [http://www.qgis.org/](http://www.qgis.org/)  
-- Manco ShapeFile Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
+- ArcGIS: [https://www.arcgis.com/](https://www.arcgis.com/)  
+- Plug-in MAPublisher para Adobe Illustrator: [https://www.avenza.com/mapublisher](https://www.avenza.com/mapublisher)  
+- QuantumGIS (gratuito): [https://www.qgis.org/](https://www.qgis.org/)  
+- Manco ShapeFile Editor: [https://www.mancosoftware.com/ShapeFileEditor](https://www.mancosoftware.com/ShapeFileEditor)  
   
 ## <a name="existing-shapefiles"></a>Shapefiles existentes  
   
 Muitos shapefiles existentes podem ser baixados da Web, de sites como estes:  
   
-- Diva-GIS: [http://www.diva-gis.org/Data](http://www.diva-gis.org/Data)  
-- OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
+- Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data)  
+- OpenStreetMap: [https://openstreetmapdata.com/data](https://openstreetmapdata.com/data)  
   
 ### <a name="see-also"></a>Confira também  
 - [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653034"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811769"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
   
@@ -29,7 +29,7 @@ O nome do servidor de relatório não foi especificado corretamente
   
 Quando você implanta o relatório em um servidor de relatório no modo nativo, um erro comum é especificar o nome da pasta de relatórios, em vez do nome do servidor de relatório.   
   
-Verifique se a URL do servidor de relatório é o endereço do servidor de relatório (por exemplo, `http://localhost/reportserver`), e não o endereço do diretório virtual Gerenciador de Relatórios (por exemplo, `http://localhost/reports`). Caso tenha especificado um número de porta para o servidor de relatório diferente do número da porta padrão 80, deverá especificá-lo no endereço do servidor de relatório (por exemplo, `http://localhost:81/reportserver`).   
+Verifique se a URL do servidor de relatório é o endereço do servidor de relatório (por exemplo, `https://localhost/reportserver`), e não o endereço do diretório virtual Gerenciador de Relatórios (por exemplo, `https://localhost/reports`). Caso tenha especificado um número de porta para o servidor de relatório diferente do número da porta padrão 80, deverá especificá-lo no endereço do servidor de relatório (por exemplo, `https://localhost:81/reportserver`).   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Nada acontece quando alterno itens no meu relatório publicado.  
   Quando você exibe um relatório na visualização local, pode alternar os itens no relatório e mostrá-los ou ocultá-los. Quando você exibe o mesmo relatório após publicá-lo no servidor de relatório, o recurso de alternância de itens não funciona mais.   

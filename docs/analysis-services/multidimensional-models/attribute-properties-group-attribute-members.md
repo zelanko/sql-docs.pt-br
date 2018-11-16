@@ -1,5 +1,5 @@
 ---
-title: Grupo de membros de atributo (diferenciação) | Microsoft Docs
+title: Agrupar membros de atributo (diferenciação) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021753"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813709"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Propriedades de atributo - membros do grupo de atributo
+# <a name="attribute-properties---group-attribute-members"></a>Propriedades do atributo – Agrupar membros do atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "34021753"
 |Configuração**DiscretizationMethod** |Description|  
 |--------------------------------------|-----------------|  
 |**Nenhuma**|Exibe os membros.|  
-|**Automatic**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
+|**Automático**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
 |**EqualAreas**|Tenta dividir os membros do atributo em grupos com o mesmo número de membros.|  
 |**Clusters**|Tenta dividir os membros do atributo em grupos por meio de amostragem dos dados de treinamento, inicializando um número aleatório de pontos e executando várias interações do algoritmo de clustering Expectation Maximization (EM).<br /><br /> Esse método é útil pois funciona com qualquer curva de distribuição, mas é mais dispendioso em termos de tempo de processamento.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34021753"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -98,6 +98,6 @@ ms.locfileid: "34021753"
 -   Se a tabela de dimensões de uma dimensão que contém grupos de membros for atualizada e, na sequência, a dimensão for totalmente processada, será gerado um novo conjunto de grupos de membros. Os nomes e os filhos dos novos grupos de membros podem ser diferentes dos anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

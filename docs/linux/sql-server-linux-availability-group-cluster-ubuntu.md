@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740325"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658372"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o Cluster do Ubuntu e recursos do grupo de disponibilidade
 
@@ -134,7 +134,7 @@ O comando a seguir cria um cluster de três nós. Antes de executar o script, su
 
 ## <a name="configure-fencing-stonith"></a>Configurar o isolamento (STONITH)
 
-Fornecedores de cluster do pacemaker exigem STONITH esteja habilitado e um dispositivo de isolamento configurado para uma configuração de cluster com suporte. Quando o cluster resource manager não pode determinar o estado de um nó ou de um recurso em um nó, o isolamento é usado para colocar o cluster em um estado conhecido novamente. Isolamento de nível de recurso principalmente garante que não há nenhum dano de dados em caso de interrupção por meio da configuração de um recurso. Você pode usar o isolamento de nível de recurso, por exemplo, o link de comunicação com o DRBD (distribuído replicado o dispositivo de bloco) para marcar o disco em um nó como desatualizado quando fica inativo. Isolamento de nível de nó garante que um nó não é executado todos os recursos. Isso é feito redefinindo o nó e a implementação do Pacemaker dele é chamada de STONITH (o que significa "acertar o outro nó no cabeçalho"). Pacemaker dá suporte a uma grande variedade de dispositivos de isolamento, por exemplo, no-break ou gerenciamento de placas de interface para servidores. Para obter mais informações, consulte [Clusters do Pacemaker do zero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [isolamento e Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Fornecedores de cluster do pacemaker exigem STONITH esteja habilitado e um dispositivo de isolamento configurado para uma configuração de cluster com suporte. Quando o cluster resource manager não pode determinar o estado de um nó ou de um recurso em um nó, o isolamento é usado para colocar o cluster em um estado conhecido novamente. Isolamento de nível de recurso principalmente garante que não há nenhum dano de dados em caso de interrupção por meio da configuração de um recurso. Você pode usar o isolamento de nível de recurso, por exemplo, o link de comunicação com o DRBD (distribuído replicado o dispositivo de bloco) para marcar o disco em um nó como desatualizado quando fica inativo. Isolamento de nível de nó garante que um nó não é executado todos os recursos. Isso é feito redefinindo o nó e a implementação do Pacemaker dele é chamada de STONITH (o que significa "acertar o outro nó no cabeçalho"). Pacemaker dá suporte a uma grande variedade de dispositivos de isolamento, por exemplo, no-break ou gerenciamento de placas de interface para servidores. Para obter mais informações, consulte [Clusters do Pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [isolamento e Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 Porque o nível do nó de configuração de isolamento depende muito do seu ambiente, podemos desabilitá-lo para este tutorial (ele pode ser configurado em um momento posterior). Execute o seguinte script no nó primário: 
 

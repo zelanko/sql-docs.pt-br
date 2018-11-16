@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031935"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813099"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Pré-requisitos para tutoriais (Construtor de Relatórios)
 
@@ -29,9 +29,9 @@ Você deve ter os seguintes pré-requisitos para concluir os tutoriais do Constr
   
     Em um servidor de relatório, selecione **Novo** > **Relatório Paginado**.
   
-    Em um servidor de relatório no modo integrado do SharePoint, na guia **Documentos** , selecione **Novo Documento**e, na lista suspensa, selecione **Relatório do Construtor de Relatórios**. Por exemplo, `http://<servername>/sites/mySite/reports`. O administrador do SharePoint deve habilitar o recurso Relatório do Construtor de Relatórios para cada biblioteca de documentos.  
+    Em um servidor de relatório no modo integrado do SharePoint, na guia **Documentos** , selecione **Novo Documento**e, na lista suspensa, selecione **Relatório do Construtor de Relatórios**. Por exemplo, `https://<servername>/sites/mySite/reports`. O administrador do SharePoint deve habilitar o recurso Relatório do Construtor de Relatórios para cada biblioteca de documentos.  
   
--   A URL de um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou de um site do SharePoint integrado a um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . É necessário ter permissão para salvar e exibir relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatório e modelos. Por padrão, a URL de um servidor de relatório é `http://<servername>/reportserver`. Por padrão, a URL de um site do SharePoint é `http://<sitename>` ou `http://<server>/site`.  
+-   A URL de um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou de um site do SharePoint integrado a um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . É necessário ter permissão para salvar e exibir relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatório e modelos. Por padrão, a URL de um servidor de relatório é `https://<servername>/reportserver`. Por padrão, a URL de um site do SharePoint é `https://<sitename>` ou `https://<server>/site`.  
   
 -   O nome de uma instância do SQL Server e credenciais suficientes para acesso somente leitura a qualquer banco de dados. As consultas de conjunto de dados nos tutoriais usam dados literais, mas cada consulta deve ser processada por uma instância do SQL Server para retornar os metadados necessários para um conjunto de dados de relatório. Por exemplo, a seguinte cadeia de conexão especifica apenas um servidor: `data source=<servername>`. Você deve ter acesso de leitura ao banco de dados padrão atribuído a você pelo administrador do sistema que concede permissão para acessar o servidor. Também é possível especificar um banco de dados, conforme mostrado na seguinte cadeia de conexão: `data source=<servername>;initial catalog=<database>`.  
   

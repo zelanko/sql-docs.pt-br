@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677245"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)
 SQL Server SSMA (Migration Assistant) para MySQL permite converter esquemas de banco de dados MySQL para esquemas SQL Server ou SQL do Azure, carregar os esquemas resultantes no SQL Server ou o Azure SQL DB e migrar dados do MySQL para o SQL Server ou SQL do Azure rapidamente.  
@@ -73,7 +73,7 @@ SQL Server ou do Gerenciador de metadados de banco de dados de SQL do Azure most
   
 Você pode usar esse gerenciador de metadados para selecionar objetos de banco de dados MySQL convertidos e, em seguida, sincronizar esses objetos com a instância do SQL Server ou SQL do Azure.  
   
-Para obter mais informações, consulte [sincronização (MySQL para o SQL Server / Azure SQL DB)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Para obter mais informações, consulte [sincronização (MySQL para o SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadados  
 À direita de cada Gerenciador de metadados são guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do MySQL, as nove guias serão exibidas: **tabela**, **SQL**, **mapeamento de tipo**, **dados**,  **As configurações**, **mapeamento de conjunto de caracteres**, **modos SQL**, **propriedades**, e **relatório**. O **relatório** guia contém informações somente depois de criar um relatório que contém o objeto selecionado. Se você selecionar uma tabela no Gerenciador de metadados do SQL Server, aparecerá a três guias: **tabela**, **SQL** e **dados**.  

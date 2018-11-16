@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672615"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Isolamento de instantâneo e isolamentos de instantâneo de leitura confirmada  
- Use o SI (isolamento de instantâneo) para garantir a consistência transacional, e os RCSI (isolamentos de instantâneo de leitura confirmada) para garantir a consistência no nível da instrução para consultas em índices columnstore. Isso permite que as consultas sejam executadas sem bloquear os gravadores de dados. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas. Para saber mais, confira [Isolamento de instantâneo no SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) no MSDN.  
+ Use o SI (isolamento de instantâneo) para garantir a consistência transacional, e os RCSI (isolamentos de instantâneo de leitura confirmada) para garantir a consistência no nível da instrução para consultas em índices columnstore. Isso permite que as consultas sejam executadas sem bloquear os gravadores de dados. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas. Para saber mais, confira [Isolamento de instantâneo no SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) no MSDN.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Diretrizes de design dos Índices columnstore](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

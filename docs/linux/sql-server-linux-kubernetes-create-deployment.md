@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bc5acc2ee6f81dbdf1ce16a98fb7f75bbf6f121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594554"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659085"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Criar script de implantação para o SQL Server sempre no grupo de disponibilidade
 
@@ -206,7 +206,7 @@ O exemplo a seguir cria os manifestos para um grupo de disponibilidade em namesp
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-Depois que o script for concluído, o operador de Kubernetes cria o armazenamento, as instâncias do SQL Server, os serviços do balanceador de carga. Você pode monitorar a implantação com [painel do Kubernetes](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+Depois que o script for concluído, o operador de Kubernetes cria o armazenamento, as instâncias do SQL Server, os serviços do balanceador de carga. Você pode monitorar a implantação com [painel do Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
 
 Depois que o Kubernetes cria os contêineres do SQL Server:
 

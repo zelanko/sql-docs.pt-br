@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcea20d707eb04922efc9a12fb81335ef48f9378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654244"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673825"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Ao identificar uma consulta com desempenho abaixo do ideal, sua ação depender�
   
 -   Criando índices ausentes nas tabelas referenciadas por consultas caras.  
   
--   Aplicando política de filtragem para segurança no nível de linha. Para obter mais detalhes, consulte [Otimizando a segurança em nível de linha com o Repositório de Consultas](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Aplicando política de filtragem para segurança no nível de linha. Para obter mais detalhes, consulte [Otimizando a segurança em nível de linha com o Repositório de Consultas](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
 -   Adicionando controle de versão do sistema temporal a tabelas que são frequentemente modificadas pelos seus aplicativos OLTP.  
   

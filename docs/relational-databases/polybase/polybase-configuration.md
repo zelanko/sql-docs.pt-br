@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0e505f0010240b9376dff412e3ed43bfc9dca9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2debe3a48e0af3ce24cbd1c3ea7795c2573c4429
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656815"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
 
@@ -112,7 +112,7 @@ Observe que adicionamos a propriedade mapreduce.application.classpath. No CDH 5.
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>
@@ -149,7 +149,7 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC:
 1. Localize o diretório de configuração do Hadoop no caminho de instalação do SQL Server. Normalmente, o caminho é:  
 
    ```  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf  
    ```  
 
 2. Localize o valor de configuração do lado do Hadoop nas chaves de configuração listadas na tabela. (No computador do Hadoop, localize os arquivos no diretório da configuração do Hadoop.)  

@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 835a81f2b02af1d6afd75d414f811048541f0a41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2cbf1dfaef9b5985cff5764f3855d23029fd29f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659374"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659355"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -207,7 +207,7 @@ ms.locfileid: "47659374"
 |LENGTH **="**_n_**"**|Esse atributo define o comprimento de uma instância de um tipo de dados de comprimento fixo.<br /><br /> O valor de *n* deve ser um inteiro positivo.|Opcional, a menos que exigido pelo valor xsi:type|  
 |PREFIX_LENGTH **="**_p_**"**|Esse atributo define o comprimento do prefixo para uma representação de dados binária. O valor PREFIX_LENGTH, *p*, deve ser um dos seguintes: 1, 2, 4 ou 8.|Opcional, a menos que exigido pelo valor xsi:type|  
 |MAX_LENGTH **="**_m_**"**|Esse atributo é o número máximo de bytes que pode ser armazenado em um determinado campo. Sem uma tabela de destino, o comprimento máximo da coluna é conhecido. O atributo MAX_LENGTH restringe o comprimento máximo de uma coluna de caracteres de saída, limitando o armazenamento alocado para o valor da coluna. Isso é especialmente conveniente ao usar a opção BULK da função OPENROWSET em uma cláusula SELECT FROM.<br /><br /> O valor de *m* deve ser um inteiro positivo. Por padrão, o comprimento máximo é 8.000 caracteres para uma coluna **char** e 4.000 caracteres para uma coluna **nchar** .|Opcional|  
-|COLLATION **="**_collationName_**"**|COLLATION só é permitido para campos de caracteres. Para obter uma lista dos nomes de agrupamento do SQL, veja [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Opcional|  
+|COLLATION **="**_collationName_**"**|COLLATION só é permitido para campos de caracteres. Para obter uma lista dos nomes de ordenação do SQL, veja [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Opcional|  
 |TERMINATOR **= "**_terminator_**"**|Esse atributo especifica o terminador de um campo de dados. O terminador pode ser qualquer caractere. O terminador deve ser um caractere exclusivo que não faça parte dos dados.<br /><br /> Por padrão, o terminador de campo é o caractere de tabulação (representado como \t). Para representar uma marca de parágrafo, use \r\n.|Usado somente com um xsi:type de dados de caracteres, que requer esse atributo|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valores de Xsi:type do elemento \<FIELD>  
@@ -278,7 +278,7 @@ ms.locfileid: "47659374"
 |Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
+>  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pela ordenação), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
   
  Para obter mais informações sobre os tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -319,7 +319,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -364,8 +364,8 @@ for(int i=0;i<ColumnList.Count;i++)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -400,8 +400,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -435,8 +435,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -467,8 +467,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -509,8 +509,8 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -528,8 +528,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  

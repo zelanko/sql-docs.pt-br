@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -20,12 +19,12 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755914"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673515"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47755914"
   
     -   Qualquer namespace definido usando WITH XMLNAMESPACES. Para obter mais informações, consulte [adicionar Namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (pd) que associa ao namespace (`http://someURI`). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
+    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (pd) que associa ao namespace (`https://someURI`). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -72,7 +71,7 @@ ms.locfileid: "47755914"
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -86,10 +85,10 @@ ms.locfileid: "47755914"
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -134,10 +133,10 @@ ms.locfileid: "47755914"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  
@@ -168,7 +167,7 @@ ms.locfileid: "47755914"
   
 -   O sinalizador estático do XQuery não é fornecido.  
   
--   O agrupamento associado a **xml** tipo de dados é usado. Este agrupamento sempre é definido como agrupamento Unicode Codepoint.  
+-   O agrupamento associado a **xml** tipo de dados é usado. Esta ordenação sempre é definida como ordenação Unicode Codepoint.  
   
 ## <a name="dynamic-context"></a>Contexto dinâmico  
  O contexto dinâmico refere-se a informações que devem estar disponíveis no momento que a expressão é executada. Além do contexto estático, as informações a seguir são inicializadas como parte do contexto dinâmico:  

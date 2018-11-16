@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806012"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639113"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Métodos de tempo de design de um componente de fluxo de dados
   Antes da execução, diz-se que a tarefa de fluxo de dados está em um estado de tempo de design, quando sofre alterações incrementais. As alterações podem incluir a adição ou remoção de componentes, a adição ou remoção dos objetos do caminho que conectam componentes e as alterações nos metadados dos componentes. Quando ocorrem alterações em metadados, o componente pode monitorar e reagir às alterações. Por exemplo, um componente pode desabilitar certas alterações ou fazer alterações adicionais em resposta a uma alteração. Em tempo de design, o designer interage com um componente através da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> em tempo de design.  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Para obter mais informações, consulte "Conversão do tipo generalizada" e "Implementando um conversor de tipo" na [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Para obter mais informações, consulte "Conversão do tipo generalizada" e "Implementando um conversor de tipo" na [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  Você pode especificar uma caixa de diálogo do editor personalizado para o valor da sua propriedade personalizada usando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>, conforme demonstrado no exemplo a seguir. Em primeiro lugar, é preciso criar um editor do tipo personalizado que herde do **System.Drawing.Design.UITypeEditor**, caso você não consiga localizar uma classe de editor do tipo de interface do usuário existente adequada às suas necessidades.  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Para obter mais informações, consulte "Implementando um editor do tipo de interface do usuário" na [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Para obter mais informações, consulte "Implementando um editor do tipo de interface do usuário" na [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos de tempo de execução de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

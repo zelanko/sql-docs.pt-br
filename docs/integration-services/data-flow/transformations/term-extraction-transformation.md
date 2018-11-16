@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730244"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638943"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -177,7 +177,7 @@ ms.locfileid: "47730244"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -197,7 +197,7 @@ ms.locfileid: "47730244"
  Forneça um nome para a coluna de saída que conterá a pontuação de cada termo extraído.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de Transformação Extração de Termos (guia Exclusão)
   Use a guia **Exclusão** da caixa de diálogo do **Editor de Transformação Extração de Termos** para definir uma conexão com uma tabela de exclusão e especificar as colunas que contêm termos de exclusão.  
@@ -219,7 +219,7 @@ ms.locfileid: "47730244"
  Selecione a coluna na tabela ou exibição que contém os termos de exclusão.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de Transformação Extração de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação de Extração de Termos** para especificar propriedades de extração, como frequência, comprimento e se devem ser extraídas palavras ou frases.  
@@ -250,7 +250,7 @@ ms.locfileid: "47730244"
  Especifique se a extração deve ser feita diferenciando maiúsculas e minúsculas. O padrão é **False**.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   

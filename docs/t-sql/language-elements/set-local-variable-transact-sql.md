@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759694"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697320"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  O operador de atribuição composto pode ser usado em qualquer lugar onde haja uma atribuição com uma expressão à direita do operador, incluindo variáveis, e uma instrução SET e uma instrução UPDATE, SELECT e RECEIVE.  
   
- Não use uma variável em uma instrução SELECT para concatenar valores (ou seja, para computar valores agregados). Resultados inesperados de consulta podem ocorrer. Isso ocorre porque todas as expressões na lista SELECT (incluindo atribuições) não têm garantia de serem executadas exatamente uma vez para cada linha de saída. Para obter mais informações, consulte o [este artigo da base de dados](http://support.microsoft.com/kb/287515).  
+ Não use uma variável em uma instrução SELECT para concatenar valores (ou seja, para computar valores agregados). Resultados inesperados de consulta podem ocorrer. Isso ocorre porque todas as expressões na lista SELECT (incluindo atribuições) não têm garantia de serem executadas exatamente uma vez para cada linha de saída. Para obter mais informações, consulte o [este artigo da base de dados](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função public. Todos os usuários podem usar SET **@***local_variable*.  

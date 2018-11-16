@@ -18,12 +18,12 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.openlocfilehash: 13ebffbaf9d80374f735f3cae147df74c2643f20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533cdfe3b83b8b759129a27a6dc1699298dd3f13
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743174"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602946"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuração de servidor de conformidade de critérios comuns habilitada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ A opção de conformidade de critérios comuns habilita os seguintes elementos n
 |A habilidade para exibir estatísticas de logon|Depois que a opção conformidade de critérios comuns habilitada é ativada, a auditoria de logon é habilitada. Sempre que um usuário fizer um logon bem-sucedido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as informações sobre a hora do último logon com êxito e do último logon sem êxito e o número de tentativas entre o último logon bem-sucedido e o logon atual são disponibilizadas. Essas estatísticas de logon podem ser exibidas com uma consulta à exibição de gerenciamento dinâmico [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) .|  
 |Essa coluna `GRANT` não deve substituir a tabela `DENY`|Depois que a opção common criteria compliance enabled for habilitada, um nível de tabela `DENY` terá precedência sobre um nível de coluna `GRANT`. Quando a opção não for habilitada, um nível de coluna `GRANT` terá precedência sobre um nível de tabela `DENY`.|  
   
- A opção habilitada para a conformidade de critérios comuns é uma opção avançada. Os critérios comuns somente são avaliados e certificados para as edições Enterprise e Datacenter. Para obter o status mais recente da certificação de critérios comuns, consulte o site da Web [Microsoft SQL Server Common Criteria (Critérios comuns do Microsoft SQL Server)](http://go.microsoft.com/fwlink/?LinkId=616319) .  
+ A opção habilitada para a conformidade de critérios comuns é uma opção avançada. Os critérios comuns somente são avaliados e certificados para as edições Enterprise e Datacenter. Para obter o status mais recente da certificação de critérios comuns, consulte o site da Web [Microsoft SQL Server Common Criteria (Critérios comuns do Microsoft SQL Server)](https://go.microsoft.com/fwlink/?LinkId=616319) .  
   
 > [!IMPORTANT]  
->  Além de habilitar a opção common criteria compliance enabled, também é necessário baixar e executar um script que conclui a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conformidade com o EAL4+ (nível de garantia de avaliação 4+) de Critérios Comuns. Você pode fazer download deste script no site [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) .  
+>  Além de habilitar a opção common criteria compliance enabled, também é necessário baixar e executar um script que conclui a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conformidade com o EAL4+ (nível de garantia de avaliação 4+) de Critérios Comuns. Você pode fazer download deste script no site [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) .  
   
  Se você estiver usando o procedimento armazenado do sistema `sp_configure` para alterar a configuração, poderá alterar a opção common criteria compliance enabled somente quando a opção show advanced options for definida como 1. A configuração terá efeito depois que o servidor for reiniciado. Os valores possíveis são 0 e 1:  
   

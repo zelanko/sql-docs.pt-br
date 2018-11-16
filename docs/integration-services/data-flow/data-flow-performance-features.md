@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605824"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642373"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605824"
  Se tiver criado várias agregações em um fluxo de dados, considere a criação de várias agregações que usam uma transformação Agregação em vez de criar várias transformações. Esse procedimento melhora o desempenho quando uma agregação for um subconjunto de outra agregação porque a transformação pode otimizar o armazenamento interno e analisar os dados de entrada apenas uma vez. Por exemplo, se uma agregação usa uma cláusula GROUP BY e uma agregação AVG, combiná-las em uma transformação pode melhorar o desempenho. Entretanto, executar várias agregações dentro de uma transformação Agregação serializa as operações de agregação e pode não melhorar o desempenho quando várias agregações devem ser computadas de forma independente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
- Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
+ Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
   
 #### <a name="lookup-transformation"></a>transformação Pesquisa  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605824"
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
   
- Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para obter exemplos e informações a respeito desse procedimento, consulte a seção "Cenário de dimensão exclusiva" no white paper [Projeto REAL: Práticas recomendadas ETL de criação no Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para obter exemplos e informações a respeito desse procedimento, consulte a seção "Cenário de dimensão exclusiva" no white paper [Projeto REAL: Práticas recomendadas ETL de criação no Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
@@ -171,38 +171,38 @@ ms.locfileid: "47605824"
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](http://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
+-   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](https://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](http://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
+-   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
   
--   Artigo técnico sobre como [aumentar o rendimento dos pipelines dividindo transformações síncronas em várias tarefas](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), em sqlcat.com  
+-   Artigo técnico sobre como [aumentar o rendimento dos pipelines dividindo transformações síncronas em várias tarefas](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), em sqlcat.com  
   
--   Artigo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=220816), em msdn.microsoft.com.  
+-   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), em msdn.microsoft.com.  
   
--   Artigo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](http://go.microsoft.com/fwlink/?LinkId=220817), em msdn.microsoft.com.  
+-   Artigo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](https://go.microsoft.com/fwlink/?LinkId=220817), em msdn.microsoft.com.  
   
--   Artigo técnico, [Top 10 SQL Server Integration Services Best Practices](http://go.microsoft.com/fwlink/?LinkId=220818), em sqlcat.com.  
+-   Artigo técnico, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), em sqlcat.com.  
   
--   Artigo técnico e exemplo, [The “Balanced Data Distributor” for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), em sqlcat.com.  
+-   Artigo técnico e exemplo, [The “Balanced Data Distributor” for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), em sqlcat.com.  
   
--   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](http://go.microsoft.com/fwlink/?LinkId=238156), no blogs.msdn.com.  
+-   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), no blogs.msdn.com.  
   
  **Vídeos**  
   
--   Série de vídeos, [Design e ajuste para desempenho dos seus pacotes SSIS no Enterprise (Série de vídeo do SQL)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Série de vídeos, [Design e ajuste para desempenho dos seus pacotes SSIS no Enterprise (Série de vídeo do SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vídeo, [Ajustando seu fluxo de dados de pacotes SSIS na empresa (vídeo do SQL Server)](http://technet.microsoft.com/sqlserver/ff686901.aspx), em technet.microsoft.com  
+-   Vídeo, [Ajustando seu fluxo de dados de pacotes SSIS na empresa (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), em technet.microsoft.com  
   
--   Vídeo, [Noções básicas sobre buffers de fluxo de dados SSIS (vídeo do SQL Server)](http://technet.microsoft.com/sqlserver/ff686905.aspx), em technet.microsoft.com  
+-   Vídeo, [Noções básicas sobre buffers de fluxo de dados SSIS (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), em technet.microsoft.com  
   
--   Vídeo, [Padrões de design de desempenho do Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), em channel9.msdn.com.  
+-   Vídeo, [Padrões de design de desempenho do Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), em channel9.msdn.com.  
   
--   Apresentação, [Como a TI da Microsoft aproveita os aprimoramentos do mecanismo de fluxo de dados SSIS do SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=217660), em sqlcat.com.  
+-   Apresentação, [Como a TI da Microsoft aproveita os aprimoramentos do mecanismo de fluxo de dados SSIS do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=217660), em sqlcat.com.  
   
--   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
+-   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

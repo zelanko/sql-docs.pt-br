@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419261"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677906"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas do SQL Server no Linux
 
@@ -118,9 +118,9 @@ Procure os despejos de memória no diretório de log no Linux. Verifique se há 
 Para despejos de núcleo 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-Para despejos de memória do SQL 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ Há muitos fatores que afetam o desempenho, incluindo design de banco de dados, 
 
 2. Erro: Nome do host deve ter 15 caracteres ou menos.
 
-   Isso é um problema conhecido que ocorre sempre que o nome do computador que está tentando instalar o pacote Debian do SQL Server é mais de 15 caracteres. Atualmente, não há nenhuma solução alternativa diferente de alterar o nome da máquina. É uma maneira de fazer isso editando o arquivo de nome de host e reiniciar a máquina. O seguinte [guia de site](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explica isso em detalhes.
+   Isso é um problema conhecido que ocorre sempre que o nome do computador que está tentando instalar o pacote Debian do SQL Server é mais de 15 caracteres. Atualmente, não há nenhuma solução alternativa diferente de alterar o nome da máquina. É uma maneira de fazer isso editando o arquivo de nome de host e reiniciar a máquina. O seguinte [guia de site](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explica isso em detalhes.
 
 3. Redefinindo a senha de administração (SA) do sistema.
 
@@ -239,7 +239,7 @@ Há muitos fatores que afetam o desempenho, incluindo design de banco de dados, 
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Recursos: [caracteres especiais](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   Recursos: [caracteres especiais](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

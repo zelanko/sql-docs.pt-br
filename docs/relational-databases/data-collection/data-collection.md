@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596784"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662335"
 ---
 # <a name="data-collection"></a>Coleta de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596784"
   
  O coletor de dados permite ajustar o escopo da coleta de dados para se adéquem a seus ambientes de teste e de produção. O coletor de dados também usa o data warehouse, um banco de dados relacional que permite gerenciar os dados coletados configurando diferentes períodos de retenção dos dados.  
   
- O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  A ilustração a seguir mostra como o coletor de dados se adapta à estratégia geral de coleta e gerenciamento de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596784"
   
 -   Contas Proxy  
   
- Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
  O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   

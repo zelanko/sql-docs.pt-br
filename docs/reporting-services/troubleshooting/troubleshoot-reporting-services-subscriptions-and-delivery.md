@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604304"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812720"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Solucionar problemas de assinaturas e entrega do Reporting Services
   
@@ -67,7 +67,7 @@ Assinaturas podem falhar sob estas condições.
 * As configurações de credencial foram alteradas de valores armazenados para valores integrados ou solicitados.  
 * O nome de um parâmetro ou tipo de dados foi alterado na definição do relatório e o relatório foi republicado. Se uma assinatura incluir um parâmetro que não seja mais válido, ela se tornará inativa.  
   
-Para obter mais informações, consulte a [Solução de problemas e erros com o Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)no TechNet Wiki.  
+Para obter mais informações, consulte a [Solução de problemas e erros com o Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)no TechNet Wiki.  
   
   
     

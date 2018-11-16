@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735684"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665565"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Para fazer isso, primeiro crie a função CLR de streaming. O tipo de dados **xml** é exposto como um SqlXml de classe gerenciada no ADO.NET e dá suporte ao método **CreateReader()** que retorna um XmlReader.  
   
 > [!NOTE]  
->  O código de exemplo nesta seção usa XPathDocument e XPathNavigator. Isso força você a carregar todos os documentos XML na memória. Se estiver usando código semelhante em seu aplicativo para processar vários documentos XML grandes, esse código não será escalável. Em vez disso, mantenha as alocações de memória pequenas e use interfaces de streaming sempre que possível. Para obter mais informações sobre o desempenho, veja [Arquitetura da integração CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  O código de exemplo nesta seção usa XPathDocument e XPathNavigator. Isso força você a carregar todos os documentos XML na memória. Se estiver usando código semelhante em seu aplicativo para processar vários documentos XML grandes, esse código não será escalável. Em vez disso, mantenha as alocações de memória pequenas e use interfaces de streaming sempre que possível. Para obter mais informações sobre o desempenho, veja [Arquitetura da integração CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
   
 ```  
 public class c_streaming_xml_tvf {  

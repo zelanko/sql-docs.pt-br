@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703654"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604336"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 #### <a name="try-it-out"></a>Experimente
 
-- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
+- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
 
 - Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
 > [!NOTE]
-> Para obter as notas de versão atuais, veja [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> Para obter as notas de versão atuais, confira [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` sintaxe agora está disponível para [procedimentos](../t-sql/statements/create-procedure-transact-sql.md), [exibições](../t-sql/statements/create-view-transact-sql.md)e [funções](../t-sql/statements/create-function-transact-sql.md)e [gatilhos](../t-sql/statements/create-trigger-transact-sql.md).
@@ -163,7 +162,7 @@ Há vários elementos do Transact-SQL que não tinham suporte em tabelas com oti
   - Somente gatilhos AFTER têm suporte. Gatilhos INSTEADOF não têm suporte.
   - Qualquer gatilho em uma tabela com otimização de memória deve usar WITH NATIVE_COMPILATION.
 
-- Suporte completo para todas as páginas de código do SQL Server e agrupamentos com índices e outros artefatos em tabelas com otimização de memória e módulos compilados nativamente do T-SQL.
+- Suporte completo para todas as páginas de código do SQL Server e ordenações com índices e outros artefatos em tabelas com otimização de memória e módulos compilados nativamente do T-SQL.
 
 
 - Suporte para [Alteração de tabelas com otimização de memória](../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md):
@@ -441,17 +440,17 @@ Baixar o [SSMS (SQL Server Management Studio) mais recente](../ssms/download-sql
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dá suporte à ADAL (Active Directory Authentication Library), que está em desenvolvimento para conexão com o Microsoft Azure. Isso substitui a autenticação baseada em certificado, usada no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - A instalação[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige a instalação do .NET 4.6 como um pré-requisito. O .NET 4.6 será instalado automaticamente pela instalação quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for instalado.
 - Uma nova opção de grade de resultados da consulta dá suporte a manter o Retorno de Carro/Alimentação de Linha (caracteres de nova linha) ao copiar ou salvar o texto da grade de resultados. Defina-a no menu Ferramentas/Opções.
-- O SQL Server Management Tools não é mais instalado por meio da árvore de recursos principal; para obter detalhes, veja [Instalar o SQL Server Management Tools com o SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- O SQL Server Management Tools não é mais instalado por meio da árvore de recursos principal; para obter detalhes, veja [Instalar o SQL Server Management Tools com o SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
 - A instalação[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige a instalação do .NET 4.6.1 como um pré-requisito. O .NET 4.6.1 será instalado automaticamente pela instalação quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for instalado.
 
 ### <a name="upgrade-advisor"></a>Supervisor de Atualização
 O Supervisor de Atualização do SQL Server 2016 Preview é uma ferramenta autônoma que permite aos usuários de versões anteriores executar um conjunto de regras de atualização em seu banco de dados do SQL Server para identificar alterações de comportamento, alterações mais recentes e recursos preteridos, bem como fornecer ajuda com a adoção de novos recursos, como o Stretch Database.
 
- Você pode baixar o Supervisor de Atualização Preview [aqui](https://www.microsoft.com/en-us/download/details.aspx?id=48119) ou instalá-lo usando o Web Platform Installer.
+ Você pode baixar o Supervisor de Atualização Preview [aqui](https://www.microsoft.com/download/details.aspx?id=48119) ou instalá-lo usando o Web Platform Installer.
 
 ## <a name="see-also"></a>Consulte Também
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
+[Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Instalar as Ferramentas de Gerenciamento do SQL Server com SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Instalar as Ferramentas de Gerenciamento do SQL Server com SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
