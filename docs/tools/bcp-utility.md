@@ -5,8 +5,7 @@ ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383841"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675375"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Para obter a versão mais recente do utilitário bcp, consulte [14.0 de utilitários de linha de comando do Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Para obter a versão mais recente do utilitário bcp, consulte [14.0 de utilitários de linha de comando do Microsoft para SQL Server ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Para usar o bcp no Linux, confira [instalar o sqlcmd e bcp no Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -184,7 +183,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- Essa opção é usada pelo cliente para conectar-se com o Banco de Dados SQL do Azure ou com o SQL Data Warehouse do Azure para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. A opção -G exige [versão 14.0.3008.27 ou posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute bcp -v. Para obter mais informações, consulte [Use autenticação do Azure Active Directory para autenticação com o banco de dados SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Essa opção é usada pelo cliente para conectar-se com o Banco de Dados SQL do Azure ou com o SQL Data Warehouse do Azure para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. A opção -G exige [versão 14.0.3008.27 ou posterior](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute bcp -v. Para obter mais informações, consulte [Use autenticação do Azure Active Directory para autenticação com o banco de dados SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!TIP]
 >  Para verificar se sua versão do bcp inclui suporte para o tipo de autenticação de diretório Active Directory do Azure (AAD) **bcp--** (bcp\<espaço >\<dash >\<dash >) e verifique se que você vê - G na lista de argumentos disponíveis.
@@ -384,7 +383,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
 ## Comentários<a name="remarks"></a>
  O utilitário **bcp** 13.0 é instalado quando você instala as ferramentas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, talvez você esteja usando o cliente **bcp** anterior em vez do cliente **bcp** 13.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** no Prompt de Comando do Windows. Para obter mais informações sobre como definir o caminho de comando na variável de ambiente PATH, consulte a Ajuda do Windows.  
  
-O utilitário bcp também pode ser baixado separadamente do [Feature Pack do Microsoft SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52676).  Selecione `ENU\x64\MsSqlCmdLnUtils.msi` ou `ENU\x86\MsSqlCmdLnUtils.msi`.
+O utilitário bcp também pode ser baixado separadamente do [Feature Pack do Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).  Selecione `ENU\x64\MsSqlCmdLnUtils.msi` ou `ENU\x86\MsSqlCmdLnUtils.msi`.
 
   
  Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  

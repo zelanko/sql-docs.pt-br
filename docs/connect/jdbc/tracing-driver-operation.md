@@ -11,12 +11,12 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32dc6e7c3f40517bc82aaa67e58a938651fe2161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682514"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605776"
 ---
 # <a name="tracing-driver-operation"></a>Operação de rastreamento de driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47682514"
   O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com o uso de rastreamento (ou log) para ajudar a resolver problemas com o driver JDBC quando ele é usado em seu aplicativo. Para habilitar o uso de rastreamento, o driver JDBC usa as APIs de log no java.util.logging, que fornece um conjunto de classes para criar objetos Logger e LogRecord.  
   
 > [!NOTE]  
->  Para o componente nativo (sqljdbc_xa.dll) que está incluído com o driver JDBC, o rastreamento é habilitado pela estrutura de Diagnósticos Internos (BID). Para obter mais informações sobre BID, consulte [Rastreamento do acesso a dados no SQL Server](http://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Para o componente nativo (sqljdbc_xa.dll) que está incluído com o driver JDBC, o rastreamento é habilitado pela estrutura de Diagnósticos Internos (BID). Para obter mais informações sobre BID, consulte [Rastreamento do acesso a dados no SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
  Quando você desenvolve seu aplicativo, pode fazer chamadas para objetos Logger, que, por sua vez, criam objetos LogRecord, que serão então passados aos objetos Handler para processamento. Agente de log e o manipulador de ambos os níveis de log de uso de objetos e, opcionalmente, filtros de log, para regular quais LogRecords são processados. Quando as operações de log estiverem concluídas, os objetos Handler poderão usar objetos Formatter como opção para publicar as informações de log.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47682514"
 |TDS.Channel|Esta categoria rastreia ações do canal de comunicação TCP com SQL Server. As mensagens registradas incluem abertura e fechamento de soquete, além de leituras e gravações. Elas também rastreiam mensagens relacionadas a estabelecer uma conexão de Protocolo SSL (SSL) com SQL Server.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINE, FINER ou FINEST.|  
 |TDS.Writer|Esta categoria rastreia gravações no canal de TDS. Observe que somente o comprimento das gravações é rastreado, não o conteúdo. Esta categoria também rastreia problemas quando um sinal de atenção é enviado ao servidor para cancelar a execução de uma instrução.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
 |TDS.Reader|Esta categoria rastreia determinadas operações de leitura do canal de TDS no nível FINEST. No nível FINEST, o rastreamento pode ser detalhado. Nos níveis WARNING e SEVERE, esta categoria rastreia quando o driver recebe um protocolo TDS inválido do SQL Server antes de o driver fechar a conexão.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINER e FINEST.|  
-|TDS.Command|Esta categoria rastreia transições de estado de baixo nível e outras informações associadas à execução de comandos TDS, como execuções de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], buscas do cursor ResultSet, confirmações e assim por diante.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
+|TDS.Command|Esta categoria rastreia transições de estado de baixo nível e outras informações associadas à execução de comandos TDS, como, por exemplo, execuções de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], buscas do cursor ResultSet, confirmações e assim por diante.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
 |TDS.TOKEN|Esta categoria registra somente os tokens dentro dos pacotes TDS e é menos detalhada que a categoria TDS.DATA. Ela só poderá ser habilitada definindo o nível de log como FINEST.<br /><br /> No nível FINEST, esta categoria rastreia tokens de TDS à medida que eles são processados na resposta. No nível SEVERE, esta categoria rastreia quando um token de TDS inválido é encontrado.|  
 |SQLServerDatabaseMetaData|Registra mensagens em log na classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Os aplicativos podem definir o nível de log como FINE.|  
 |SQLServerResultSetMetaData|Registra mensagens em log na classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Os aplicativos podem definir o nível de log como FINE.|  

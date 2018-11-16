@@ -11,12 +11,12 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24bf2d56bda17378dcc45a464fd46f95c9664936
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9edff1e2afead8dcec3a23fa2d89c4eb8c6a1ef2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790444"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602846"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -48,8 +48,8 @@ Esta documentação para o Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
 -   [Como usar a resolução IP de rede transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>Comunidade  
-- [Blog da equipe do Microsoft ODBC Driver For SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Blog da equipe do Microsoft ODBC Driver For SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>Consulte Também  
 - [Sobre o SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   

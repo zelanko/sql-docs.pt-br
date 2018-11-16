@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6f74eb71dc9d70b59689a4ebc7b72c0b988a851b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c671ff9f1f4996401d31aac2788ccf9c8a52f3fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635584"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603826"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Executar o procedimento armazenado com RPC e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47635584"
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados do parâmetro de saída ficarão disponíveis quando **IMultipleResults::GetResult** retornar DB_S_NORESULT ou quando a interface **IMultipleResults** for completamente liberada, o que ocorrer primeiro.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para processar códigos de retorno e parâmetros de saída  
   
@@ -52,11 +52,11 @@ ms.locfileid: "47635584"
 ## <a name="example"></a>Exemplo  
  O exemplo mostra o processamento de um conjunto de linhas, de um código de retorno e de um parâmetro de saída. Conjuntos de resultados não são processados. Este exemplo não tem suporte em IA64.  
   
- Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
+ Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   

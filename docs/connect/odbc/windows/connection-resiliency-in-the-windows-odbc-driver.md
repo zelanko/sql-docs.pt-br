@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726375"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600856"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726375"
 > [!IMPORTANT]  
 >  O recurso de resiliência de conexão tem suporte em versões de servidor do Banco de Dados SQL do Microsoft Azure e do SQL Server 2014 (e posteriores).  
   
- Para obter informações adicionais sobre a resiliência de conexão ociosa, confira [Artigo técnico – Resiliência de conexão ociosa](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Para obter informações adicionais sobre a resiliência de conexão ociosa, confira [Artigo técnico – Resiliência de conexão ociosa](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Para controlar o comportamento de reconexão, o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows tem duas opções:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726375"
   
      Você pode modificar o número de repetições de conexão ao:  
   
-    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Contagem de Repetições de Conexão**.  
+    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Contagem de Repetições de Conexão** .  
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryCount** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47726375"
   
      Você pode modificar o intervalo de repetição de conexão ao:  
   
-    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Intervalo de Repetição de Conexão**.  
+    -   Definir ou modificar uma fonte de dados que use o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o controle de **Intervalo de Repetição de Conexão** .  
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryInterval** .  
   

@@ -10,39 +10,39 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613073"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602181"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Os recursos de programação do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em macOS e Linux são baseados em ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é baseado em ODBC no Windows Data Access Components ([Referência do Programador de ODBC](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+Os recursos de programação do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em macOS e Linux são baseados em ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é baseado em ODBC no Windows Data Access Components ([Referência do Programador de ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Um aplicativo ODBC pode usar Multiple Active Result Sets (MARS) e outras [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos específicos, incluindo `/usr/local/include/msodbcsql.h` após a inclusão dos cabeçalhos de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Em seguida, use os mesmos nomes simbólicos para os itens específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você usaria em seus aplicativos ODBC do Windows.
 
 ## <a name="available-features"></a>Recursos disponíveis  
-As seguintes seções da documentação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) são válidas ao usar o driver ODBC em macOS e Linux:  
+As seguintes seções da documentação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) são válidas ao usar o driver ODBC em macOS e Linux:  
 
--   [Comunicando-se com o SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Comunicando-se com o SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Suporte de tempo limite de conexão e consulta](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Cursores](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Aprimoramentos de data/hora (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [Executando consultas (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Aprimoramentos de data/hora (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [Executando consultas (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Tratando de erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Autenticação Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Tipos de dados CLR grandes definidos pelo usuário (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
--   [Executando transações (ODBC) (exceto transações distribuídas)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [Processando resultados (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Tipos de dados CLR grandes definidos pelo usuário (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Executando transações (ODBC) (exceto transações distribuídas)](https://msdn.microsoft.com/library/ms131706.aspx)  
+-   [Processando resultados (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Executando procedimentos armazenados](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Suporte a colunas esparsas (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
+-   [Suporte a colunas esparsas (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [Criptografia SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Parâmetros com valor de tabela](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 e UTF-16 para a API de comando e dados](http://msdn.microsoft.com/library/ff878241.aspx)
+-   [UTF-8 e UTF-16 para a API de comando e dados](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Usando funções de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Recursos sem suporte
@@ -58,7 +58,7 @@ Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em m
 -   Transações distribuídas (não há suporte para o atributo SQL_ATTR_ENLIST_IN_DTC)  
 -   Espelhamento de banco de dados  
 -   FILESTREAM  
--   Criação de perfil de desempenho do driver ODBC, discutido em [SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=234099), e dos seguintes atributos de conexão relacionados ao desempenho:  
+-   Criação de perfil de desempenho do driver ODBC, discutido em [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), e dos seguintes atributos de conexão relacionados ao desempenho:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em m
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect  
--   Tipos de intervalo de C, como SQL_C_INTERVAL_YEAR_TO_MONTH (documentado em [Identificadores e descritores de tipo de dados](http://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   Tipos de intervalo de C, como SQL_C_INTERVAL_YEAR_TO_MONTH (documentado em [Identificadores e descritores de tipo de dados](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   O valor SQL_CUR_USE_ODBC do atributo SQL_ATTR_ODBC_CURSORS da função SQLSetConnectAttr.
 
 ## <a name="character-set-support"></a>Suporte a conjunto de caracteres

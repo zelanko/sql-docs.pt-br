@@ -11,12 +11,12 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56bc5ff638f03b633d9238ccc1f84c6ebbc0a4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab2eaab547e582df30375a4caadbc96a11f4396
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613584"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603076"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,5 +57,5 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

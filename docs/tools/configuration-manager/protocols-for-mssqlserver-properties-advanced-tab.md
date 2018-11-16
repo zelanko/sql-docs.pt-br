@@ -12,21 +12,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: edf8eb62d316ea19009884fe7c4518064ad0aa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25573848ea6aa4a3bfb11c01fad9c9b72b04e5e3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650924"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660495"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protocolos para propriedades de MSSQLSERVER (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use a guia **Avançado** na caixa de diálogo **Protocolos para Propriedades de MSSQLSERVER** para configurar a **Proteção Estendida para Autenticação** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A**Proteção Estendida** é um recurso dos componentes de rede implementado pelo sistema operacional. A**Proteção Estendida** está disponível no Windows 7 e no Windows Server 2008 R2 e está incluída em service packs de sistemas operacionais anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**. Alguns benefícios da **Proteção Estendida** exigem a seleção de **Forçar Criptografia** na guia **Sinalizadores** .  
   
 > [!IMPORTANT]  
->  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte o artigo [Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkId=178431)na Base de Dados de Conhecimento.  
+>  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte o artigo [Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkId=178431)na Base de Dados de Conhecimento.  
   
- Para obter mais informações sobre como configurar outros serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma descrição completa da **Proteção Estendida**, consulte informações mais recentes em [Microsoft.com](http://go.microsoft.com/fwlink/?LinkId=177752).  
+ Para obter mais informações sobre como configurar outros serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma descrição completa da **Proteção Estendida**, consulte informações mais recentes em [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).  
   
  A**Proteção Estendida** tem suporte completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client a partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Não há suporte para a **Proteção Estendida** para outros provedores de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualmente.  
   

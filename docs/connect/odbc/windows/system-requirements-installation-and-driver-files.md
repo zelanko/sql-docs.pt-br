@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084923"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600956"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos do sistema, instalação e arquivos de driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Ferramentas de linha de comando: sqlcmd.exe e bcp.exe
 
-O `bcp.exe` e `sqlcmd.exe` ferramentas para uso com o driver pode ser baixado em [11 de utilitários de linha de comando da Microsoft para SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [13 de utilitários de linha de comando Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), ou [Utilitários de linha de comando do Microsoft 13.1 para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). O driver é um pré-requisito para instalar `sqlcmd.exe` e `bcp.exe`.
+O `bcp.exe` e `sqlcmd.exe` ferramentas para uso com o driver pode ser baixado em [11 de utilitários de linha de comando da Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [13 de utilitários de linha de comando Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), ou [Utilitários de linha de comando do Microsoft 13.1 para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). O driver é um pré-requisito para instalar `sqlcmd.exe` e `bcp.exe`.
   
 `bcp.exe` e `sqlcmd.exe` estão instalados na `110\Tools` subpasta `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` para a versão 11, e `130\Tools` para 13 e 13.1.
 

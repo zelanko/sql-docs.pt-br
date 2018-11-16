@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
@@ -16,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600705"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666965"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ sqlps
   
 -   Usar os caminhos de provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Por padrão, o utilitário **sqlps** é executado com a política de execução de scripts definida como **Restrita**. Isso impede a execução de quaisquer scripts do PowerShell. Você pode usar o cmdlet **Set-ExecutionPolicy** a fim de habilitar a execução de scripts assinados ou de qualquer script. Execute apenas scripts de fontes confiáveis e proteja todos os arquivos de entrada e saída usando as permissões NTFS adequadas. Para obter mais informações sobre como habilitar scripts do PowerShell, consulte [Running Windows PowerShell Scripts](http://go.microsoft.com/fwlink/?LinkId=103166)(a página pode estar em inglês).  
+ Por padrão, o utilitário **sqlps** é executado com a política de execução de scripts definida como **Restrita**. Isso impede a execução de quaisquer scripts do PowerShell. Você pode usar o cmdlet **Set-ExecutionPolicy** a fim de habilitar a execução de scripts assinados ou de qualquer script. Execute apenas scripts de fontes confiáveis e proteja todos os arquivos de entrada e saída usando as permissões NTFS adequadas. Para obter mais informações sobre como habilitar scripts do PowerShell, consulte [Running Windows PowerShell Scripts](https://go.microsoft.com/fwlink/?LinkId=103166)(a página pode estar em inglês).  
   
  A versão do utilitário **sqlps** no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] foi implementada como um minishell do Windows PowerShell 1.0. Os minishells têm determinadas restrições, como não permitir que os usuários carreguem snap-ins diferentes dos carregados pelo minishell. Essas restrições não se aplicam à versão [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e superiores do utilitário, que foi alterado para usar o módulo **sqlps** .  
   

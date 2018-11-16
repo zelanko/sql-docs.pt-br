@@ -11,21 +11,21 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682564"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601966"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Recursos internacionais do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Os recursos de internacionalização do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluem o seguinte:  
+  Os recursos de internacionalização de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluem o seguinte:  
   
 -   Suporte para uma experiência completamente localizada nos mesmos idiomas que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Suporte para as conversões da linguagem Java para dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com distinção de localidade  
+-   Suporte para as conversões de linguagem Java para os dados confidenciais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locais  
   
 -   Suporte a idiomas internacionais, independentemente do sistema operacional  
   
@@ -52,13 +52,13 @@ ms.locfileid: "47682564"
 ## <a name="formatting-issues"></a>Problemas de formatação  
  Para data, hora e moedas, toda a formatação com os dados localizados é realizada no nível da linguagem Java usando o objeto Locale; e os vários métodos de formatação para tipos de dados **Date**, **Calendar** e **Number**. Em casos raros em que o JDBC Driver precisar passar dados que fazem distinção de localidade em um formato localizado, o formatador correto é usado com a localidade padrão da JVM.  
   
-## <a name="collation-support"></a>Suporte a agrupamentos  
- O JDBC Driver 3.0 é compatível com todos os agrupamentos compatíveis com [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e os novos agrupamentos ou novas versões dos nomes de agrupamento do Windows apresentadas no [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
+## <a name="collation-support"></a>Suporte a ordenações  
+ O JDBC Driver 3.0 é compatível com todas as ordenações compatíveis com [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e as novas ordenações ou novas versões dos nomes de ordenação do Windows apresentadas no [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Para saber mais sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](http://go.microsoft.com/fwlink/?LinkId=131366) e [Nomes de agrupamento do Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre as ordenações, consulte [Suporte a ordenações e a Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) e [Nomes de ordenação do Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Usando nomes de domínio internacionais (IDN)  
- O JDBC Driver 6.0 para o SQL Server dá suporte ao uso de nomes de domínio internacionalizados (IDNs) e pode converter um serverName Unicode para compatível com codificação ASCII (Punycode) quando solicitado durante a conexão.  Se os IDNs forem armazenados no sistema de nome de domínio (DNS) como cadeias de caracteres ASCII no formato Punycode (especificado pela RFC 3490), habilite a conversão do nome do servidor Unicode definindo a propriedade serverNameAsACE como true.  Caso contrário, se o serviço DNS é configurado para permitir o uso de caracteres Unicode, defina a propriedade de serverNameAsACE como falso (padrão).  Para versões anteriores do driver JDBC, também é possível converter o serverName em Punycode usando os métodos [IDN.toASCII do Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de definir essa propriedade para uma conexão.  
+ O JDBC Driver 6.0 para o SQL Server dá suporte ao uso de nomes de domínio internacionalizados (IDNs) e pode converter um serverName Unicode para compatível com codificação ASCII (Punycode) quando solicitado durante a conexão.  Se os IDNs forem armazenados no sistema de nome de domínio (DNS) como cadeias de caracteres ASCII no formato Punycode (especificado pela RFC 3490), habilite a conversão do nome do servidor Unicode definindo a propriedade serverNameAsACE como true.  Caso contrário, se o serviço DNS é configurado para permitir o uso de caracteres Unicode, defina a propriedade de serverNameAsACE como falso (padrão).  Para versões anteriores do driver JDBC, também é possível converter o serverName em Punycode usando os métodos [IDN.toASCII do Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de definir essa propriedade para uma conexão.  
   
 > [!NOTE]  
 >  A maioria dos softwares de resolvedor escritos para plataformas não Windows baseia-se nos padrões da Internet DSN e, portanto, é mais provável usar o formato Punycode IDNs, enquanto um servidor DNS baseados no Windows em uma rede privada pode ser configurado para permitir o uso de caracteres UTF-8 em uma base por servidor.  Para saber mais detalhes, consulte [Suporte a caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  

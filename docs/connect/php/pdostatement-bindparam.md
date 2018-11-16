@@ -11,12 +11,12 @@ ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9471c0c86edd9ff5a8357b797014036bd60fec83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647639"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606356"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,7 +122,7 @@ Este exemplo de código mostra como usar um parâmetro de entrada/saída.
 ```  
 
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](https://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  
@@ -146,5 +146,5 @@ $stmt->execute();
 ## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

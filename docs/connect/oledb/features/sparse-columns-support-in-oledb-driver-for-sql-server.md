@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718304"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606256"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Suporte a colunas esparsas no OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718304"
   
  Para obter mais informações sobre o suporte a colunas esparsas no Driver do OLE DB para SQL Server [suporte a colunas esparsas &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
   
- Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, confira [Amostras de programação do SQL Server Data](http://msftdpprodsamples.codeplex.com/).  
+ Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>Cenários de usuário para colunas esparsas e o Driver do OLE DB para SQL Server  
  A tabela a seguir resume os cenários comuns para o Driver do OLE DB para usuários do SQL Server com colunas esparsas:  

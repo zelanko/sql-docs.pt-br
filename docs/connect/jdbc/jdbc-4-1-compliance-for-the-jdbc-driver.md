@@ -11,12 +11,12 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5cdf9c694323c345525752c733afc6a49482ac0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bcd06eba29bdc46b0a81f29c974590697b76c73
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722874"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599886"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.1 com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "47722874"
   
 |Novo método|Descrição|Implementação do JDBC Driver|  
 |----------------|-----------------|--------------------------------|  
-|void abort(Executor executor)|Encerra uma conexão aberta com o SQL Server.|Implementados conforme descrito na interface do java.sql.Connection. Para ver mais detalhes, confira [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|void setSchema(String schema)|Define o esquema para a conexão atual.|O SQL Server não dá suporte a esquema de configuração para a sessão atual. O driver silenciosamente registra uma mensagem de aviso se esse método for chamado. Para ver mais detalhes, confira [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|Cadeia de caracteres getSchema()|Retorna o nome do esquema para a conexão atual.|Uma vez que o SQL Server não dá suporte a esquema de configuração para a conexão atual, o driver retorna o esquema padrão do usuário. Para ver mais detalhes, confira [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void abort(Executor executor)|Encerra uma conexão aberta com o SQL Server.|Implementados conforme descrito na interface do java.sql.Connection. Para ver mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void setSchema(String schema)|Define o esquema para a conexão atual.|O SQL Server não dá suporte a esquema de configuração para a sessão atual. O driver silenciosamente registra uma mensagem de aviso se esse método for chamado. Para ver mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|Cadeia de caracteres getSchema()|Retorna o nome do esquema para a conexão atual.|Uma vez que o SQL Server não dá suporte a esquema de configuração para a conexão atual, o driver retorna o esquema padrão do usuário. Para ver mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
   
  **classe SQLServerDatabaseMetaData**  
   
 |Novo método|Descrição|Implementação do JDBC Driver|  
 |----------------|-----------------|--------------------------------|  
-|Boolean generatedKeyAlwaysReturned()|Retorna true já que o driver dá suporte a recuperação de chaves geradas|Implementados conforme descrito em java.sql. Interface DatabaseMetaData. Para ver mais detalhes, confira [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
-|ResultSet getPseudoColumns (catálogo de cadeia de caracteres, cadeia de caracteres schemaPattern, cadeia de caracteres tableNamePattern, cadeia de caracteres columnNamePattern)|Recupera uma descrição das colunas pseudo/oculta|Retorna um resultado vazio definido, já que o SQL Server não tem uma noção formal de pseudo colunas. Para ver mais detalhes, confira [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|Boolean generatedKeyAlwaysReturned()|Retorna true já que o driver dá suporte a recuperação de chaves geradas|Implementados conforme descrito em java.sql. Interface DatabaseMetaData. Para ver mais detalhes, confira [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|ResultSet getPseudoColumns (catálogo de cadeia de caracteres, cadeia de caracteres schemaPattern, cadeia de caracteres tableNamePattern, cadeia de caracteres columnNamePattern)|Recupera uma descrição das colunas pseudo/oculta|Retorna um resultado vazio definido, já que o SQL Server não tem uma noção formal de pseudo colunas. Para ver mais detalhes, confira [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
   
  **Classe SQLServerStatement**  
   
 |Novo método|Descrição|Implementação do JDBC Driver|  
 |----------------|-----------------|--------------------------------|  
-|void closeOnCompletion()|Especifica se esta instrução será fechada quando todos os seus conjuntos de resultados dependentes forem fechados.|Implementado conforme descrito na interface java.sql.Statement. Para ver mais detalhes, confira [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
-|Boolean isCloseOnCompletion()|Retorna um valor que indica se esta instrução será fechada quando todos os seus conjuntos de resultados dependentes forem fechados.|Implementado conforme descrito na interface java.sql.Statement. Para ver mais detalhes, confira [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|void closeOnCompletion()|Especifica se esta instrução será fechada quando todos os seus conjuntos de resultados dependentes forem fechados.|Implementado conforme descrito na interface java.sql.Statement. Para ver mais detalhes, confira [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|Boolean isCloseOnCompletion()|Retorna um valor que indica se esta instrução será fechada quando todos os seus conjuntos de resultados dependentes forem fechados.|Implementado conforme descrito na interface java.sql.Statement. Para ver mais detalhes, confira [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
   
  A especificação do API da Conectividade do Banco de Dados Java 4.1 tem suporte pelo Microsoft JDBC Driver 4.2 para SQL Server, com os seguintes recursos.  
   

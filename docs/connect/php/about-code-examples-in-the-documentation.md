@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605814"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606736"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Sobre exemplos de código na documentação
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ Há vários pontos a observar quando você executar os exemplos de código na do
   
 -   Quase todos os exemplos pressupõem que o SQL Server 2008 ou posterior e o banco de dados AdventureWorks estejam instalados no computador local.  
   
-    Para obter informações sobre como baixar as edições gratuitas e as versões de avaliação do SQL Server, consulte [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193).  
+    Para obter informações sobre como baixar as edições gratuitas e as versões de avaliação do SQL Server, consulte [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
     Para obter informações sobre como baixar e instalar o banco de dados AdventureWorks, consulte a [página do AdventureWorks no repositório Github de exemplos do SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
--   Quase todos os exemplos de código nesta documentação destinam-se à execução na linha de comando, que permite o teste automatizado de todos os exemplos de código. Para obter informações sobre como executar o PHP na linha de comando, consulte [Using PHP from the command line](http://php.net/manual/en/features.commandline.php).  
+-   Quase todos os exemplos de código nesta documentação destinam-se à execução na linha de comando, que permite o teste automatizado de todos os exemplos de código. Para obter informações sobre como executar o PHP na linha de comando, consulte [Using PHP from the command line](https://php.net/manual/en/features.commandline.php).  
   
 -   Embora os exemplos sejam criados para execução na linha de comando, todos eles podem ser executados por meio de invocação em um navegador sem fazer nenhuma alteração no script. Para formatar a saída perfeitamente, substitua cada "\n" por "\<\/br >" em cada exemplo antes de invocá-lo em um navegador.  
   

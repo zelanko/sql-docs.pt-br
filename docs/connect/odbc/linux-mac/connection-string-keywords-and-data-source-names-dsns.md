@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805304"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603936"
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -68,14 +68,14 @@ Você pode usar o protocolo SSL para criptografar conexões com o [!INCLUDE[ssNo
 
 Habilitar a criptografia aumenta a segurança, mas reduz o desempenho.
 
-Para obter mais informações, consulte [criptografando conexões com o SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) e [usando criptografia sem validação](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Para obter mais informações, consulte [criptografando conexões com o SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) e [usando criptografia sem validação](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Independentemente das configurações para **Encrypt** e **TrustServerCertificate**, as credenciais de logon do servidor (nome de usuário e senha) sempre são criptografadas. A tabela a seguir mostra o efeito das configurações de **Encrypt** e **TrustServerCertificate** .  
 
 ||**TrustServerCertificate = não**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
-|**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em um CN (nome comum) da entidade ou o SAN (nome alternativo da entidade) em um certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
+|**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em um Nome Comum da Entidade (CN) ou o Nome Alternativo da Entidade (SAN) em um certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Subject Common Name|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
 
 Por padrão, conexões criptografadas sempre verificam o certificado do servidor. No entanto, se você se conectar a um servidor que tenha um certificado autoassinado, também adicionar o `TrustServerCertificate` opção para ignorar a verificação do certificado em relação à lista de autoridades de certificação confiável:  
 

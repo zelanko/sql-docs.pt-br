@@ -11,17 +11,17 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f8557d34acd3de425f4d6932eca95fbe6e2d334
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc9e6673076cdbd071f2357ce1bd5c4d10c2092
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784934"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602506"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows:  
+  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows:  
   
 -   Independentemente das propriedades de conexão, as conexões que usam `SQLDriverConnect` entram em um pool separado das conexões que usam `SQLConnect`.
 - Ao usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o pool de conexões com reconhecimento de driver, o driver não usa o contexto de segurança do usuário do Windows do thread atual para separar as conexões no pool. Ou seja, se as conexões forem equivalentes em seus parâmetros para cenários de representação do Windows com Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiverem usando as mesmas credenciais de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para se conectar ao back-end, diferentes usuários do Windows poderão potencialmente usar o mesmo pool de conexões. Ao usar a Autenticação do Windows e o pool de conexões com reconhecimento de driver, o driver usa o contexto de segurança do usuário do Windows para separar as conexões no pool. Ou seja, para cenários de representação do Windows, diferentes usuários do Windows não compartilharão conexões mesmo se elas usarem os mesmos parâmetros.

@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765524"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602276"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -36,8 +36,8 @@ O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use
 * [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>Comunidade  
-* [Fórum de provedores gerenciados do ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [Fórum de conjunto de dados do ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [Fórum de provedores gerenciados do ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
+* [Fórum de conjunto de dados do ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>Mais exemplos  
 * [Exemplos de código do ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  

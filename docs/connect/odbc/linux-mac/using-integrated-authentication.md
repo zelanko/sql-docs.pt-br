@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810137"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604356"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +57,7 @@ Verifique se está usando o `kinit` ou PAM (módulo de autenticação conectáve
 
 Quando um aplicativo é executado como um serviço, porque as credenciais do Kerberos expiram por padrão, renove as credenciais para garantir a disponibilidade contínua do serviço. O driver ODBC não renova as credenciais em si; Verifique se há um `cron` trabalho ou script executado periodicamente para renovar as credenciais antes da expiração. Para evitar a exigência de senha para cada renovação, você pode usar um arquivo keytab.  
   
-Detalhes sobre formas de aplicar o Kerberos em serviços no Linux são fornecidos em[Kerberos Configuration and Use](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) .
+Detalhes sobre formas de aplicar o Kerberos em serviços no Linux são fornecidos em[Kerberos Configuration and Use](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) .
   
 ## <a name="tracking-access-to-a-database"></a>Acompanhando o acesso a um banco de dados
 
@@ -67,13 +67,13 @@ O logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a co
   
 Para auditar atividades no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em nome dos usuários além da conta do sistema, o aplicativo deve usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Para melhorar o desempenho do aplicativo, um aplicativo pode usar o pool de conexões com Autenticação Integrada e auditoria. No entanto, a combinação do pool de conexões, da Autenticação Integrada e da auditoria gera um risco de segurança, pois o gerenciador do driver unixODBC permite que diferentes usuários reutilizem conexões em pool. Para obter mais informações, consulte [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
+Para melhorar o desempenho do aplicativo, um aplicativo pode usar o pool de conexões com Autenticação Integrada e auditoria. No entanto, a combinação do pool de conexões, da Autenticação Integrada e da auditoria gera um risco de segurança, pois o gerenciador do driver unixODBC permite que diferentes usuários reutilizem conexões em pool. Para obter mais informações, consulte [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Antes da reutilização, um aplicativo deve redefinir conexões em pool executando `sp_reset_connection`.  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Usando o Active Directory para gerenciar identidades de usuário
 
-Um administrador de sistema de aplicativos não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Ver [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
+Um administrador de sistema do aplicativo não precisa gerenciar conjuntos separados de credenciais de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar o Active Directory como um centro de distribuição de chaves (KDC) para Autenticação Integrada. Ver [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) para obter mais informações.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Usando servidor vinculado e consultas distribuídas
 
@@ -83,7 +83,7 @@ Os desenvolvedores podem implantar um aplicativo que usa um servidor vinculado o
   
 -   O servidor de aplicativos é autenticado como um banco de dados diferente e se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autentica-se como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como um usuário de banco de dados para outro banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Depois que a autenticação integrada for configurada, as credenciais serão passadas para o servidor vinculado.  
   
@@ -126,7 +126,7 @@ A hora no computador Linux ou macOS e a hora no Centro de distribuição de chav
 
 Se a autenticação Kerberos falhar, o driver ODBC do Linux ou macOS não usará autenticação NTLM.  
 
-Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, consulte [autenticar clientes Linux com Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [as práticas recomendadas para integrar o OS X com o Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obter mais informações sobre como configurar o Kerberos, consulte o [MIT Kerberos documentação](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Para obter mais informações sobre a autenticação de computadores Linux ou macOS com o Active Directory, consulte [autenticar clientes Linux com Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [as práticas recomendadas para integrar o OS X com o Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obter mais informações sobre como configurar o Kerberos, consulte o [MIT Kerberos documentação](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Consulte Também  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)

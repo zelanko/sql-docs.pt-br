@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745314"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677605"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "47745314"
 ##  <a name="PreprocessConfig"></a> Arquivo de configuração de pré-processamento: DReplay.exe.preprocess.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de pré-processamento, ela carregará as configurações de pré-processamento do arquivo de configuração de pré-processamento, `DReplay.exe.preprocess.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações de como usar a opção de pré-processamento da ferramenta de administração, confira [Opção de pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações sobre como usar a opção de pré-processamento da ferramenta de administração, veja [Opção de Pré-processamento &#40;Ferramenta de Administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de pré-processamento padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
@@ -111,7 +110,7 @@ ms.locfileid: "47745314"
 ##  <a name="ReplayConfig"></a> Arquivo de configuração de reprodução: DReplay.exe.replay.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de reprodução do evento, ela carregará as configurações de reprodução do arquivo de configuração de reprodução, `DReplay.exe.replay.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações de como usar a opção de reprodução da ferramenta de administração, confira [Opção de reprodução &#40;ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações sobre como usar a opção de reprodução da ferramenta de administração, veja [Opção de Reprodução &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de reprodução padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
@@ -168,8 +167,8 @@ ms.locfileid: "47745314"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possível problema durante a execução com a sincronização de modo de sequenciamento
  Você pode encontrar um sintoma em que a funcionalidade de reprodução parece "parada", ou eventos de repetições muito lentamente. Esse fenômeno pode ocorrer se o rastreamento está sendo reproduzido se baseia em dados de e/ou eventos que não existem no banco de dados restaurado do destino. 
- 
- Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
+ 
+Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
  
  Se você precisar usar o modo de sincronização e desejos para evitar esse comportamento, faça o seguinte:
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745314"
 ## <a name="see-also"></a>Consulte Também  
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usando o Distributed Replay para teste de carga do SQL Server – Parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Fórum do SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

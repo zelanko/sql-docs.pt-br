@@ -11,12 +11,12 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66d64917b83e23739ad35e8629b028904a300060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01d0c92b32b4cb8975cf8bf8d6537f81df62073d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707684"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604885"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -85,5 +85,5 @@ Este exemplo mostra como definir o atributo PDO::ATTR_ERRMODE.
 ## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

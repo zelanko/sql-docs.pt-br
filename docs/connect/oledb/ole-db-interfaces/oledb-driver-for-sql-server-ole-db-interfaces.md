@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e3fc010dfa8dfd24c216fc5074efd0dca2ad85d3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032294"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606936"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Interfaces do Driver do OLE DB para SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51032294"
   
  A referência de programação do OLE DB Driver for SQL Server não documenta todas as interfaces e métodos OLE DB, apenas aqueles que exibem um comportamento específico do provedor ao usar o OLE DB Driver for SQL Server.  
   
- Para obter uma descrição completa das principais interfaces e métodos OLE DB, confira [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Para obter uma descrição completa das principais interfaces e métodos OLE DB, confira [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764054"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606816"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Etapa 3: prova de conceito conectando-se ao SQL usando pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ Este exemplo deve ser considerado uma prova de conceito apenas.  O código de ex
   
 ## <a name="step-1--connect"></a>Etapa 1: conectar-se  
   
-O [pymssql](http://pymssql.org/en/latest/ref/pymssql.html) função é usada para se conectar ao banco de dados SQL.  
+O [pymssql](https://pymssql.org/en/latest/ref/pymssql.html) função é usada para se conectar ao banco de dados SQL.  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ O [pymssql](http://pymssql.org/en/latest/ref/pymssql.html) função é usada par
   
 ## <a name="step-2--execute-query"></a>Etapa 2: Executar consulta  
   
-O [cursor](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de [fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+O [cursor](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de [fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python

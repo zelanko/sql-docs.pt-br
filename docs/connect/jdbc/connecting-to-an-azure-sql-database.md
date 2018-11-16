@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b2ca0e8f8dc0eb393feefcf9817d0aeab53e57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667394"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602206"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 
@@ -33,7 +33,7 @@ Este artigo aborda os problemas ocorridos no uso do [!INCLUDE[jdbcNoVersion](../
 ## <a name="details"></a>Detalhes
 
 Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve se conectar ao banco de dados mestre para chamar **sqlserverdatabasemetadata. GetCatalogs**.  
-O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **Sqlserverdatabasemetadata. GetCatalogs** usar a exibição de sys. Databases para obter os catálogos. Consulte a discussão de permissões no [sys. Databases (banco de dados do SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) entender **sqlserverdatabasemetadata. GetCatalogs** comportamento em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **Sqlserverdatabasemetadata. GetCatalogs** usar a exibição de sys. Databases para obter os catálogos. Consulte a discussão de permissões no [sys. Databases (banco de dados do SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) entender **sqlserverdatabasemetadata. GetCatalogs** comportamento em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Conexões removidas
 

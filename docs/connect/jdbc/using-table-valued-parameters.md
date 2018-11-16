@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598384"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603526"
 ---
 # <a name="using-table-valued-parameters"></a>Como usar parâmetros com valor de tabela
 
@@ -35,9 +35,9 @@ Valores de coluna em parâmetros com valor de tabela podem ser acessados usando 
   
 | Recurso                                                                                                             | Descrição                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parâmetros com valor de tabela (mecanismo de banco de dados)](http://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server | Descreve como criar e usar parâmetros com valor de tabela                             |
-| [Tipos de tabela definidos pelo usuário](http://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server                  | Descreve os tipos de tabela definido pelo usuário que são usados para declarar parâmetros com valor de tabela |
-| O [mecanismo de banco de dados do Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=120507) seção do CodePlex        | Contém exemplos que demonstram como usar a funcionalidade e recursos do SQL Server  |
+| [Parâmetros com valor de tabela (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server | Descreve como criar e usar parâmetros com valor de tabela                             |
+| [Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server                  | Descreve os tipos de tabela definido pelo usuário que são usados para declarar parâmetros com valor de tabela |
+| O [mecanismo de banco de dados do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) seção do CodePlex        | Contém exemplos que demonstram como usar a funcionalidade e recursos do SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passando várias linhas em versões anteriores do SQL Server  
 
@@ -53,7 +53,7 @@ Antes de parâmetros com valor de tabela foram introduzidos no SQL Server 2008, 
   
 ## <a name="creating-table-valued-parameter-types"></a>Criando tipos de parâmetro com valor de tabela  
 
-Parâmetros com valor de tabela são baseados nas estruturas de tabela fortemente tipadas que são definidas usando o Transact-SQL `CREATE TYPE` instruções. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](http://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
+Parâmetros com valor de tabela são baseados nas estruturas de tabela fortemente tipadas que são definidas usando o Transact-SQL `CREATE TYPE` instruções. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ Os métodos a seguir foram adicionados a essa classe para dar suporte à passage
 
 | Nome                                                                                                    | Descrição                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| público setStructured void final (parameterIndex int, cadeia de caracteres tvpName, SQLServerDataTable tvpDataTbale)    | Popula um parâmetro com valor de tabela com uma tabela de dados. parameterIndex é o índice do parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpDataTable é o objeto de tabela de dados de origem.                                                                                                          |
+| público setStructured void final (parameterIndex int, cadeia de caracteres tvpName, SQLServerDataTable tvpDataTable)    | Popula um parâmetro com valor de tabela com uma tabela de dados. parameterIndex é o índice do parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpDataTable é o objeto de tabela de dados de origem.                                                                                                          |
 | público setStructured void final (parameterIndex int, cadeia de caracteres tvpName, tvpResultSet do conjunto de resultados)             | Popula um parâmetro com valor de tabela com um conjunto de resultados recuperado da tabela de outro. parameterIndex é o índice do parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpResultSet é o objeto de conjunto de resultados de origem.                                                                               |
 | público setStructured void final (parameterIndex int, cadeia de caracteres tvpName, ISQLServerDataRecord tvpDataRecord) | Popula um parâmetro com valor de tabela com um objeto ISQLServerDataRecord. ISQLServerDataRecord é usado para transmissão de dados e o usuário decide como usá-lo. parameterIndex é o índice do parâmetro, tvpName é o nome do parâmetro com valor de tabela e tvpDataRecord é um objeto ISQLServerDataRecord. |
   

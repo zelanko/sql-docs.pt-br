@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2e144ae53a0809d459ea70123951c5f559bb60ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1729dd568024ef2297111f69a42882f5b6aaf67
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660416"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de Cliente – Propriedades de Memória Compartilhada (guia Protocolo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47761404"
  Os valores possíveis são **Sim** e **Não**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Escolhendo um protocolo de rede](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

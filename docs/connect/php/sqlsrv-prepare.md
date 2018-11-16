@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a293ff4bd2eae7f1e54914c805e4e180ce17fb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669514"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602916"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ Quando você prepara uma instrução que usa variáveis como parâmetros, as var
   
 A combinação de **sqlsrv_prepare** e **sqlsrv_execute** separa a preparação e a execução da instrução em duas chamadas de função e pode ser usada para executar consultas parametrizadas. Essa função é ideal para executar uma instrução várias vezes com valores de parâmetros diferentes para cada execução.  
   
-Para obter estratégias alternativas para gravar e ler grandes quantidades de informações, veja [Lotes de instruções SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) e [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
+Para obter estratégias alternativas para gravar e ler grandes quantidades de informações, consulte [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) e [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 Para obter mais informações, consulte [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
@@ -219,7 +219,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](https://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  

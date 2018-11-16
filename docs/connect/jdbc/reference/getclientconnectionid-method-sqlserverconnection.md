@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6954248b747cfd08789fa6f2e73ebc1e4befba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730014"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600726"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Método getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** funciona independentemente de qual versão do servidor você se conectar, mas os logs de eventos estendidos e entrada de erros de buffer de anéis de conectividade não estarão presentes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 e versões anteriores.  
   
- Você também pode localizar a ID de conexão no log de eventos estendidos para verificar se a falha foi no servidor, caso o evento estendido para registro da ID de conexão tiver sido habilitado. Também é possível localizar a ID de conexão no buffer de anéis da conexão ([Solução de problemas de conectividade no SQL Server 2008 com o buffer de anéis de conectividade](http://go.microsoft.com/fwlink/?LinkId=207752)) para saber mais sobre certos erros de conexão. Se a ID de conexão não estiver no buffer de anéis da conexão, você pode presumir que houve erro de rede.  
+ Você também pode localizar a ID de conexão no log de eventos estendidos para verificar se a falha foi no servidor, caso o evento estendido para registro da ID de conexão tiver sido habilitado. Também é possível localizar a ID de conexão no buffer de anéis da conexão ([Solução de problemas de conectividade no SQL Server 2008 com o buffer de anéis de conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) para saber mais sobre certos erros de conexão. Se a ID de conexão não estiver no buffer de anéis da conexão, você pode presumir que houve erro de rede.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

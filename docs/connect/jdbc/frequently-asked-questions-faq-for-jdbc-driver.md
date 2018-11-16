@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613414"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603086"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes (FAQ) para o JDBC Driver
 
@@ -105,25 +105,25 @@ A tabela a seguir lista as opções de autenticação disponíveis. Uma autentic
 Sim. O driver oferece suporte ao uso de endereços IPv6. Use a coleção de propriedades de conexão e a propriedade de cadeia de caracteres de conexão serverName. Confira mais informações em [Como construir a URL de conexão](../../connect/jdbc/building-the-connection-url.md).
 
 **O que é o buffer adaptável?**  
-O buffer adaptável é introduzido a partir do Microsoft SQL Server 2005 JDBC Driver versão 1.2. Ele é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. O recurso de buffer adaptável do Microsoft SQL Server JDBC Driver oferece uma propriedade de cadeia de caracteres de conexão, responseBuffering, que pode ser definida como "adaptive" ou "full". Na versão 1.2, o modo de buffer é "cheio" por padrão e o aplicativo deve configurar o modo de buffer adaptável explicitamente. A partir do driver JDBC versão 2.0, o comportamento padrão do driver é "adaptive". Além disso, o aplicativo não precisa solicitar o comportamento adaptável explicitamente para obter o comportamento de buffer adaptável. Confira mais informações em [Como usar um buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md) e no post de blog [O que é buffer de resposta adaptativa e por que devo usá-lo?](http://go.microsoft.com/fwlink/?LinkId=111575).
+O buffer adaptável é introduzido a partir do Microsoft SQL Server 2005 JDBC Driver versão 1.2. Ele é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. O recurso de buffer adaptável do Microsoft SQL Server JDBC Driver oferece uma propriedade de cadeia de caracteres de conexão, responseBuffering, que pode ser definida como "adaptive" ou "full". Na versão 1.2, o modo de buffer é "cheio" por padrão e o aplicativo deve configurar o modo de buffer adaptável explicitamente. A partir do driver JDBC versão 2.0, o comportamento padrão do driver é "adaptive". Além disso, o aplicativo não precisa solicitar o comportamento adaptável explicitamente para obter o comportamento de buffer adaptável. Confira mais informações em [Como usar um buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md) e no post de blog [O que é buffer de resposta adaptativa e por que devo usá-lo?](https://go.microsoft.com/fwlink/?LinkId=111575).
 
 **O driver dá suporte ao pool de conexões?**  
-O driver dá suporte ao pool de conexões da Plataforma Java, Edição Enterprise 5 (Java EE 5). O driver JDBC implementa as interfaces do JDBC 3.0 necessárias para permitir que o driver participe de qualquer implementação de pool de conexões disponibilizada pelos fornecedores de servidores de aplicativos em middleware. O driver participa das conexões em pool nesses ambientes. Confira mais informações em [Como usar o pool de conexões](../../connect/jdbc/using-connection-pooling.md). O driver não fornece sua própria implementação do pool. Em vez disso, ele utiliza servidores de aplicativos Java de terceiros.
+O driver dá suporte ao pool de conexões da Plataforma Java, Edição Enterprise 5 (Java EE 5). O driver JDBC implementa as interfaces do JDBC 3.0 necessárias para permitir que o driver participe de qualquer implementação de pool de conexões disponibilizada pelos fornecedores de servidores de aplicativos em middleware. O driver participa das conexões em pool nesses ambientes. Para obter mais informações, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). O driver não fornece sua própria implementação do pool. Em vez disso, ele utiliza servidores de aplicativos Java de terceiros.
 
 **O driver tem suporte disponível?**  
-Há diversas opções de suporte disponíveis. Você pode postar a pergunta ou emitir para nossos [repositório GitHub](https://github.com/microsoft/mssql-jdbc) que é monitorado pela Microsoft. [Fóruns](http://go.microsoft.com/fwlink/?LinkID=246673) são monitorados pela Microsoft, MVPs e pela comunidade. Entre em contato com o Suporte ao Cliente Microsoft. A equipe de desenvolvimento pode pedir que você reproduza o problema fora de qualquer servidor de aplicativos de terceiros. Se o problema não puder ser reproduzido fora do ambiente de hospedagem do contêiner Java, você precisará acionar os terceiros envolvidos para que a equipe possa continuar a ajudá-lo. A equipe pode também solicitar que você reproduza o problema em um sistema operacional como Windows, portanto, o problema pode ser melhor suporte.
+Há diversas opções de suporte disponíveis. Você pode postar a pergunta ou emitir para nossos [repositório GitHub](https://github.com/microsoft/mssql-jdbc) que é monitorado pela Microsoft. [Fóruns](https://go.microsoft.com/fwlink/?LinkID=246673) são monitorados pela Microsoft, MVPs e pela comunidade. Entre em contato com o Suporte ao Cliente Microsoft. A equipe de desenvolvimento pode pedir que você reproduza o problema fora de qualquer servidor de aplicativos de terceiros. Se o problema não puder ser reproduzido fora do ambiente de hospedagem do contêiner Java, você precisará acionar os terceiros envolvidos para que a equipe possa continuar a ajudá-lo. A equipe pode também solicitar que você reproduza o problema em um sistema operacional como Windows, portanto, o problema pode ser melhor suporte.
 
 **O driver é certificado para uso com qualquer servidor de aplicativos de terceiros?**
 O driver foi testado com todos os principais servidores de aplicativos, inclusive IBM WebSphere e SAP NetWeaver.
 
 **Como habilitar o rastreamento?**  
-O driver dá suporte ao uso de rastreamento (ou registro em log) para ajudar a resolver problemas com o driver JDBC usado em seu aplicativo. Para habilitar o uso de rastreamento do JAR do lado do cliente, o driver JDBC usa as APIs de registro em log em java.util.logging. Para obter mais informações, veja [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md). Para o rastreamento XA do lado do servidor, consulte [Rastreamento do acesso a dados no SQL Server](http://go.microsoft.com/fwlink/?LinkId=248705).
+O driver dá suporte ao uso de rastreamento (ou registro em log) para ajudar a resolver problemas com o driver JDBC usado em seu aplicativo. Para habilitar o uso de rastreamento do JAR do lado do cliente, o driver JDBC usa as APIs de registro em log em java.util.logging. Para obter mais informações, veja [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md). Para o rastreamento XA do lado do servidor, consulte [Rastreamento do acesso a dados no SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705).
 
 **Onde posso baixar as versões mais antigas do driver, como o driver SQL Server 2000 JDBC driver, o driver 2005 e o driver 1.0, 1.1 ou 1.2?**  
 Essas versões de driver não estão disponíveis para download, pois não têm mais suporte. Estamos aperfeiçoando continuamente o suporte à conectividade com Java. Portanto, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.
 
 **Estou usando o JRE 1.4. Qual driver é compatível com o JRE 1.4?**  
-Os clientes que estão usando produtos SAP e precisam do suporte ao JRE 1.4 podem entrar em contato com o [SAPService Marketplace](http://service.sap.com/) para obter o Microsoft JDBC Driver 1.2.
+Os clientes que estão usando produtos SAP e precisam do suporte ao JRE 1.4 podem entrar em contato com o [SAPService Marketplace](https://service.sap.com/) para obter o Microsoft JDBC Driver 1.2.
 
 **O driver pode se comunicar usando algoritmos validados pelos FIPS?**  
 O Microsoft JDBC Driver não contém nenhum algoritmo de criptografia. Se o cliente utilizar sistema operacional, aplicativos e algoritmos JVM considerados aceitáveis de acordo com os Federal Information Processing Standards (FIPS) e configurar o driver para usar esses algoritmos, o driver usa somente os algoritmos designados para comunicação.

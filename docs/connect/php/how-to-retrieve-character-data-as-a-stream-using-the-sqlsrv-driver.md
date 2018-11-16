@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754654"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600376"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Como recuperar dados de caractere como um fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ A recuperação de dados como um fluxo só está disponível no driver SQLSRV do
 O driver SQLSRV aproveita os fluxos do PHP para recuperar grandes quantidades de dados do servidor. O exemplo neste tópico demonstra como recuperar dados de caractere como um fluxo.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera uma linha da tabela *Production.ProductReview* do banco de dados AdventureWorks. O campo *Comments* da linha retornada é recuperado como um fluxo e exibido usando a função [fpassthru](http://php.net/manual/function.fpassthru.php) do PHP.  
+O exemplo a seguir recupera uma linha da tabela *Production.ProductReview* do banco de dados AdventureWorks. O campo *Comments* da linha retornada é recuperado como um fluxo e exibido usando a função [fpassthru](https://php.net/manual/function.fpassthru.php) do PHP.  
   
 A recuperação de dados como um fluxo é efetuada usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de retorno especificado como um fluxo de caractere. O tipo de retorno é especificado usando a constante **SQLSRV_PHPTYPE_STREAM**. Para obter informações sobre constantes **sqlsrv**, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

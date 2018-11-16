@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778254"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604696"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Ruby
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver Ruby para SQL Server.    
@@ -27,7 +27,7 @@ Observe que o Driver Ruby usa o protocolo TDS, que é habilitado por padrão no 
 ## <a name="windows"></a>Windows  
   
 1.  **Baixe o instalador do Ruby**  
-Se seu computador não tiver Ruby instale-o. Para novos usuários do ruby, é recomendável que você use os instaladores de Ruby 2.2. x. Eles fornecem uma linguagem estável e uma lista extensa de pacotes (gems) que são compatíveis e atualizado. Acesse o [página de download Ruby](http://rubyinstaller.org/downloads/) e baixar o instalador apropriado 2.1. x. Para exemplo, se você estiver usando um computador de 64 bits, baixe o instalador do Ruby 2.1.6 (x64).   
+Se seu computador não tiver Ruby instale-o. Para novos usuários do ruby, é recomendável que você use os instaladores de Ruby 2.2. x. Eles fornecem uma linguagem estável e uma lista extensa de pacotes (gems) que são compatíveis e atualizado. Acesse o [página de download Ruby](https://rubyinstaller.org/downloads/) e baixar o instalador apropriado 2.1. x. Para exemplo, se você estiver usando um computador de 64 bits, baixe o instalador do Ruby 2.1.6 (x64).   
   
 2.  **Instale o Ruby**  
 Depois que o instalador for baixado, faça o seguinte:  

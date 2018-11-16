@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728524"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600466"
 ---
 # <a name="support-for-localdb"></a>Suporte ao LocalDB
 
@@ -60,7 +60,7 @@ Em suma, o LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Quando em execução no IIS, você precisa ser executado com a conta correta para obter os mesmos resultados que quando você executa na linha de comando; consulte [usando LocalDB com o IIS completo, parte 2: propriedade de instância](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obter mais informações.)
+Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Quando em execução no IIS, você precisa ser executado com a conta correta para obter os mesmos resultados que quando você executa na linha de comando; consulte [usando LocalDB com o IIS completo, parte 2: propriedade de instância](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obter mais informações.)
 
 Estas são as cadeias de conexão de exemplo usando o driver SQLSRV que se conectam a um banco de dados em um instância chamada myInstance nomeado de LocalDB:
 

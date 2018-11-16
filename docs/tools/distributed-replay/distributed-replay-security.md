@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677745"
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717024"
   
     3.  Pressione ENTER.  
   
-2.  **Configurar permissões DCOM no computador inteiro**: conceda as permissões DCOM correspondentes no computador inteiro para cada conta listada na tabela a seguir. Para obter mais informações sobre como definir permissões no computador inteiro, veja [Lista de verificação: Gerenciar aplicativos DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurar permissões DCOM no computador inteiro**: conceda as permissões DCOM correspondentes no computador inteiro para cada conta listada na tabela a seguir. Para obter mais informações sobre como definir permissões no computador inteiro, veja [Lista de verificação: Gerenciar aplicativos DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurar permissões DCOM específicas do aplicativo**: conceda as permissões DCOM correspondentes específicas do aplicativo para cada conta listada na tabela a seguir. O nome do aplicativo DCOM para o serviço do controlador é **DReplayController**. Para obter mais informações sobre como definir permissões específicas do aplicativo, veja [Lista de verificação: Gerenciar aplicativos DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurar permissões DCOM específicas do aplicativo**: conceda as permissões DCOM correspondentes específicas do aplicativo para cada conta listada na tabela a seguir. O nome do aplicativo DCOM para o serviço do controlador é **DReplayController**. Para obter mais informações sobre como definir permissões específicas do aplicativo, veja [Lista de verificação: Gerenciar aplicativos DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  A seguinte tabela descreve quais permissões DCOM são necessárias para a conta de usuário interativa da ferramenta de administração e para as contas de serviço cliente:  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,19 +19,19 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625184"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293082"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O utilitário**sqlmaint** executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Em vez disso, use o recurso de plano de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre planos de manutenção, veja [Planos de manutenção](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Em vez disso, use o recurso de plano de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações sobre planos de manutenção, veja [Planos de manutenção](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746844"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600296"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de versão para o Microsoft ODBC Driver for SQL Server em Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -111,10 +111,10 @@ O Ubuntu agora tem suporte, juntamente com o Red Hat e o SUSE. Cada plataforma t
 **Suporte a TLS 1.2**: O Microsoft ODBC Driver 13.0 for SQL Server no Linux agora dá suporte a TLS 1.2 quando proteger as comunicações com o SQL Server são usadas.
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Novidades do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Linux  
-O driver ODBC no SUSE Linux (visualização) oferece suporte para o SUSE Linux Enterprise 11 Service Pack 2 de 64 bits. Para obter mais informações, veja [Requisitos do sistema](../../../connect/odbc/linux-mac/system-requirements.md).  
+O driver ODBC no SUSE Linux (visualização) oferece suporte para o SUSE Linux Enterprise 11 Service Pack 2 de 64 bits. Para obter mais informações, consulte [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
 
 O driver ODBC no Linux é compatível com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obter mais informações, consulte [Driver ODBC no suporte do Linux para alta disponibilidade, recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Para obter mais informações, consulte [How to: Connect to Windows Azure SQL Database Using ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
+O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Para obter mais informações, consulte [How to: Connect to Windows Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 O `-l` opção (tempo limite de logon) foi adicionada ao `bcp`. Para obter mais informações, veja [Como conectar-se com **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

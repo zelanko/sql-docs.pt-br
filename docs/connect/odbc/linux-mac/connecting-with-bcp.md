@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682634"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600156"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O utilitário [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
+O utilitário [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
   
 - O terminador de campo é um tab (“\t”).  
   

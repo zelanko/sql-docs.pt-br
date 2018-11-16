@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798194"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602806"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quando usar o OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Driver do OLE DB para SQL Server é uma tecnologia que você pode usar para acessar dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  Para obter uma discussão sobre as diferentes tecnologias de acesso a dados, confira [Roteiro das tecnologias de acesso a dados](http://go.microsoft.com/fwlink/?LinkID=179186)  
+  Driver do OLE DB para SQL Server é uma tecnologia que você pode usar para acessar dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  Para obter uma discussão sobre as diferentes tecnologias de acesso a dados, confira [Roteiro das tecnologias de acesso a dados](https://go.microsoft.com/fwlink/?LinkID=179186)  
   
  Ao decidir se você usará o OLE DB Driver for SQL Server como a tecnologia de acesso a dados de seu aplicativo, você deverá considerar vários fatores.  
   

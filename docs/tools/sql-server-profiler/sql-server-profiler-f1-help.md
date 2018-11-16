@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667435"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastr
 |---|---
 |Coluna**Eventos** |Especifique os eventos do rastreamento marcando ou desmarcando a caixa de seleção na coluna de eventos. Os**Eventos** são organizados por categoria de evento. As classes de evento especificadas no modelo são selecionadas automaticamente. Para obter mais informações, confira [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Colunas de dados|Especifique as colunas de dados do rastreamento marcando a caixa correspondente ao evento e a coluna de dados necessária. Por padrão, todas as colunas de dados pertinentes são marcadas para cada evento incluído no rastreamento.  
-|Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** . Para obter mais informações, consulte [SQL Server Profiler - Editar Filtro](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** . Para obter mais informações, consulte [SQL Server Profiler - Editar Filtro](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Por padrão, somente as linhas selecionadas na grade **Seleção de Eventos** são exibidas. Desmarque essa caixa para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** .  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Por padrão, somente colunas de dados selecionadas são exibidas. Desmarque essa caixa para ocultar todas as colunas de dados não selecionadas na grade **Seleção de Eventos** .  
 |**Filtros de coluna**|Abre a caixa de diálogo **Editar Filtro** . Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
@@ -179,7 +179,7 @@ Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opçõ
 |---|---
 |**Carregar todos os arquivos de substituição em sequência, sem avisar**|Carrega automaticamente os arquivos de substituição quando um arquivo de rastreamento é aberto. Se mais de um arquivo foi criado durante o rastreamento, selecionar esta opção carregará automaticamente todos os arquivos de substituição.  
 |**Perguntar antes de carregar arquivos de substituição**|O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pergunta antes de adicionar um arquivo de substituição quando um arquivo de rastreamento é aberto.  
-|**Nunca carregar arquivos de substituição subsequentes**|O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nunca carrega arquivos de substituição subsequentes quando um arquivo de rastreamento é aberto.  
+|**Nunca carregar arquivos de substituição subsequentes**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nunca carrega arquivos de substituição posteriores quando um arquivo de rastreamento é aberto.  
 ### <a name="replay-options"></a>Opções de reprodução  
 |Item|Descrição
 |---|---

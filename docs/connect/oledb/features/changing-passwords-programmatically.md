@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 89d674e075e8a05697328f60c6bb47a40e82ebf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775426"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605887"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47775426"
   Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], Driver do OLE DB para SQL Server pode suportar manipulando a expiração de senha programaticamente por meio do Driver do OLE DB e, por meio de alterações para o **logon do SQL Server** caixas de diálogo.  
   
 > [!NOTE]  
->  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
+>  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de erro de logon do SQL Server  
  Quando não é possível estabelecer uma conexão devido a problemas de autenticação, um dos seguintes códigos de erro do SQL Server estará disponível para o aplicativo, de forma a auxiliar no diagnóstico e na recuperação.  

@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e56d57cb3df19df1cbf09811ebfebca66efe51b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677574"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600226"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Recursos do Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ O Azure Active Directory permite que os usuários, DBAs e programadores de aplic
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 para SQL Server no Windows  
 
-O ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contém toda a funcionalidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client fornecida no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Para obter mais informações, veja [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client se baseia o driver ODBC fornecido com o sistema operacional Windows. Para obter mais informações, consulte [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)(SDL do Windows Data Access Components).  
+O ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contém toda a funcionalidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client fornecida no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Para obter mais informações, consulte [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client se baseia o driver ODBC fornecido com o sistema operacional Windows. Para obter mais informações, consulte [Windows Data Access Components SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx)(SDL do Windows Data Access Components).  
   
 Esta versão do ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contém os seguintes recursos novos:  
   
@@ -41,10 +41,10 @@ Esta versão do ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnover
 A opção –l especifica o número de segundos antes que um logon do `bcp.exe` no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp.exe` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito. Um tempo limite de logon de menos de (aproximadamente) 10 segundos não é confiável.  
   
 ### <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver  
-O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obter mais informações, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obter mais informações, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)  
-O ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para a [execução assíncrona (método de notificação)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para encontrar um exemplo de uso, veja [Amostra de execução assíncrona &#40;método de notificação&#41](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+O ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para a [execução assíncrona (método de notificação)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para encontrar um exemplo de uso, veja [Amostra de execução assíncrona &#40;método de notificação&#41](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resiliência da conexão
 Para garantir que os aplicativos permaneçam conectados a um Banco de Dados SQL do Microsoft Azure, o driver ODBC no Windows pode restaurar conexões ociosas. Para obter mais informações, consulte [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  

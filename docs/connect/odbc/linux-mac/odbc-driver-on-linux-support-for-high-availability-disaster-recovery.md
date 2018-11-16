@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687034"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600096"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e no macOS – compatibilidade com alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Os drivers ODBC para Linux e macOS suporte [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para saber mais sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Criação e configuração de grupos de disponibilidade (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Criação e configuração de grupos de disponibilidade (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 Você pode especificar o ouvinte de um determinado grupo de disponibilidade na cadeia de conexão. Se um aplicativo do ODBC no Linux ou macOS estiver conectado a um banco de dados em um grupo de disponibilidade que executa failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.
 

@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798894"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600446"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usando a autenticação integrada do Kerberos para se conectar ao SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Começando com o [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], um aplicativo pode usar a propriedade de conexão **authenticationScheme** para indicar que deseja se conectar a um banco de dados usando a autenticação integrada Kerberos tipo 4. Ver [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md) para obter mais informações sobre propriedades de conexão. Para obter mais informações sobre Kerberos, consulte [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).
+Começando com o [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], um aplicativo pode usar a propriedade de conexão **authenticationScheme** para indicar que deseja se conectar a um banco de dados usando a autenticação integrada Kerberos tipo 4. Ver [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md) para obter mais informações sobre propriedades de conexão. Para obter mais informações sobre Kerberos, consulte [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
 
 Ao usar a autenticação integrada com o Java **Krb5LoginModule**, você pode configurar o módulo usando a [Classe Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -31,7 +31,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguin
 - **useDefaultCcache = true**
 - **moduleBanner = false**
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguintes propriedades para todas as outras VMs Java:
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguintes propriedades para todas as outras Java VMs:
 
 - **useTicketCache = true**
 - **doNotPrompt = true**
@@ -54,7 +54,7 @@ Um novo agente foi adicionado para oferecer suporte à autenticação Kerberos: 
 
 As seguintes diretrizes ajudarão você a configurar o Kerberos:
 
-1. Definir **AllowTgtSessionKey** como 1 no registro do Windows. Para obter mais informações, veja o artigo sobre [Entradas de Registro do protocolo Kerberos e chaves de configuração do KDC no Windows Server 2003](http://support.microsoft.com/kb/837361).
+1. Definir **AllowTgtSessionKey** como 1 no registro do Windows. Para obter mais informações, veja o artigo sobre [Entradas de Registro do protocolo Kerberos e chaves de configuração do KDC no Windows Server 2003](https://support.microsoft.com/kb/837361).
 2. Verifique se a configuração Kerberos (krb5.conf nos ambientes UNIX) indica o realm e KDC corretos para o seu ambiente.
 3. Inicialize o cache TGT usando kinit ou logging no domínio.
 4. Quando um aplicativo que usa **authenticationScheme=JavaKerberos** é executado nos sistemas operacionais Windows Vista ou Windows 7, você deve usar uma conta de usuário padrão. No entanto, se você executar o aplicativo na conta de um administrador, o aplicativo deverá ser executado com privilégios de administrador.
@@ -72,9 +72,9 @@ Por exemplo, o SPN pode parecer com: "MSSQLSvc/some-server.zzz.corp.contoso.com:
 
 Para obter mais informações sobre SPNs (nomes de entidade de serviço), consulte:
 
-- [Como usar a autenticação Kerberos no SQL Server](http://support.microsoft.com/kb/319723)
+- [Como usar a autenticação Kerberos no SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Uso de Kerberos com SQL Server](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [Uso de Kerberos com SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > Antes da versão 6.2 do JDBC driver para uso adequado de Cross Realm Kerberos, você precisará definir explicitamente o **serverSpn**.

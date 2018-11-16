@@ -11,17 +11,17 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0095293db694c746dac1749b35d9de29c5fbd592
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809834"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599455"
 ---
 # <a name="handling-errors-and-warnings"></a>Manipulando erros e avisos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Se estiver usando o driver PDO_SQLSRV, você poderá encontrar mais informações sobre erros e tratamento de erro no site do [PDO](http://php.net/manual/book.pdo.php).  
+Se estiver usando o driver PDO_SQLSRV, você poderá encontrar mais informações sobre erros e tratamento de erro no site do [PDO](https://php.net/manual/book.pdo.php).  
   
 Os tópicos nesta seção fornecem informações sobre o tratamento de erros e avisos com o driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   

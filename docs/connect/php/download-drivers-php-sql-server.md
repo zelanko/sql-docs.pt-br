@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8819415108993d4e25a2bbfe899f2fabd6d104d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f946aa354ddde07db6abd5797982c1621bf24dbb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847334"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605242"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Baixar os Microsoft Drivers for PHP for SQL Server
 
@@ -25,10 +25,10 @@ ms.locfileid: "47847334"
 
 As seguintes versões de drivers para PHP no Windows estão disponíveis para download:
 
-- [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
-- [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
-- [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Microsoft Drivers 4.0, 3.2, 3.1 e 3.0 para PHP para SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
+- [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
+- [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
+- [Microsoft Drivers 4.0, 3.2, 3.1 e 3.0 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=20098)
 
 ## <a name="linux-and-macos"></a>Linux e macOS
 

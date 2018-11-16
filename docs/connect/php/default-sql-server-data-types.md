@@ -14,12 +14,12 @@ ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f3259d713fd846e59020b2551d5598f77b7d5d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ccdf7ffa8b5eaf01108ca0492b9b5db9ecc042
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704374"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599857"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de dados do SQL Server padrão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ Quando dados forem enviados para o servidor, os [!INCLUDE[ssDriverPHP](../../inc
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
 
-[Tipos do PHP](http://php.net/manual/language.types.php)
+[Tipos do PHP](https://php.net/manual/language.types.php)
 
 [Tipos de dados (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

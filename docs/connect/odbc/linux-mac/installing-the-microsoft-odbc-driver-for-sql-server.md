@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736474"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600796"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -369,12 +369,12 @@ Se você preferir/exigem o [!INCLUDE[msCoName](../../../includes/msconame_md.md)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Por sua vez, cada um desses pacotes tem suas próprias dependências, que pode ou não podem estar presentes no sistema. Para uma solução geral para esse problema, consulte a documentação do Gerenciador de pacotes da distribuição: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), e [SUSE](https://en.opensuse.org/Portal:Zypper)
+Por sua vez, cada um desses pacotes tem suas próprias dependências, que pode ou não podem estar presentes no sistema. Para uma solução geral para esse problema, consulte a documentação do Gerenciador de pacotes da distribuição: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), e [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 Também é comum para baixar manualmente todos os pacotes dependentes e colocá-los juntos no computador de instalação, instale manualmente cada pacote por sua vez, com o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] pacote ODBC Driver 13.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - Baixe o versão mais recente `msodbcsql` `.rpm` aqui: http://packages.microsoft.com/rhel/7/prod/
+  - Baixe o versão mais recente `msodbcsql` `.rpm` aqui: https://packages.microsoft.com/rhel/7/prod/
   - Instalar as dependências e o driver
   
 ```
@@ -383,7 +383,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Baixe o versão mais recente `msodbcsql` `.deb` aqui: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Baixe o versão mais recente `msodbcsql` `.deb` aqui: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Instalar as dependências e o driver 
 
 ```
@@ -392,7 +392,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Baixe o versão mais recente `msodbcsql` `.rpm` aqui: http://packages.microsoft.com/sles/12/prod/
+- Baixe o versão mais recente `msodbcsql` `.rpm` aqui: https://packages.microsoft.com/sles/12/prod/
 - Instalar as dependências e o driver
 
 ```
@@ -436,7 +436,7 @@ A instalação coloca o driver em `/opt/microsoft/msodbcsql/11.0.2270.0`. O driv
   
 Para verificar se o driver Microsoft ODBC em Linux foi registrado com êxito, execute o seguinte comando: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) exibe um exemplo de código que se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o driver ODBC no Linux.  
+[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) exibe um exemplo de código que se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o driver ODBC no Linux.  
   
 **Desinstalando**  
   
@@ -488,15 +488,15 @@ Há mais de um Gerenciador de Driver instalado e o seu aplicativo está usando o
   
 Para obter mais informações sobre como resolver falhas de conexão, consulte:  
   
--   [Etapas para solucionar problemas de conectividade do SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Etapas para solucionar problemas de conectividade do SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [Solução de problema de conectividade do SQL Server 2005 – Parte I](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [Solução de problema de conectividade do SQL Server 2005 – Parte I](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Solução de problema de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Solução de problema de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [Solução de problemas de autenticação do SQL Server](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [Solução de problemas de autenticação do SQL Server](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Detalhes do erro (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Detalhes do erro (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     O número do erro especificado na URL (11001) deve ser alterado para coincidir com o erro que você vê.  
   

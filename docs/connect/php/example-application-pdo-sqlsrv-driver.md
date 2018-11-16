@@ -11,12 +11,12 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f867277822d834324bb0f1a40b6b162beeb33421
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651974"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606406"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Aplicativo de exemplo (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que 
 1.  Instale os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, consulte [introdução com o Microsoft Drivers for PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Copie o código mencionado posteriormente neste documento em dois arquivos: adventureworks_demo.php e photo.php.  
 3.  Coloque os arquivos adventureworks_demo.php e photo.php.no diretório raiz do servidor Web.  
-4.  Execute o aplicativo iniciando http://localhost/adventureworks_demo.php do seu navegador.  
+4.  Execute o aplicativo iniciando https://localhost/adventureworks_demo.php do seu navegador.  
   
 ## <a name="requirements"></a>Requisitos  
 Para executar o aplicativo de exemplo AdventureWorks Product Reviews, as condições a seguir devem ser atendidas em seu computador:  

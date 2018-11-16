@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f09e7899d3723e646f285dbc599a30556f6df039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a99b2d366368a88925344cc54470bef7ba25152a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778074"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671565"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "47778074"
 ```  
   
 <DTAXML   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
 ```  
@@ -42,8 +41,8 @@ ms.locfileid: "47778074"
   
 |attribute|Descrição|  
 |---------------|-----------------|  
-|**xmlns:xsi**|Obrigatórios. Identifica o namespace da instância do esquema XML. Os atributos deste espaço para namespace são usados como referência ao esquema que é utilizado para validar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Valor obrigatório: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|**xmlns**|Obrigatórios. Identifica o namespace do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Se você editar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados usando o editor de XML no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esse valor será usado pela Ajuda de F1 e pela Ajuda Dinâmica para localizar possíveis tópicos de referência nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor obrigatório:<br /><br /> do[Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](http://go.microsoft.com/fwlink/?LinkId=43100) |  
+|**xmlns:xsi**|Obrigatórios. Identifica o namespace da instância do esquema XML. Os atributos deste espaço para namespace são usados como referência ao esquema que é utilizado para validar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Valor obrigatório: [https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns**|Obrigatórios. Identifica o namespace do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Se você editar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados usando o editor de XML no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esse valor será usado pela Ajuda de F1 e pela Ajuda Dinâmica para localizar possíveis tópicos de referência nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor obrigatório:<br /><br /> do[Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?LinkId=43100) |  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
@@ -58,10 +57,10 @@ ms.locfileid: "47778074"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|None|  
-|**Elementos filho**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento **DTAOutput** (consulte [Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](http://schemas.microsoft.com/sqlserver/) para obter informações)|  
+|**Elementos filho**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento **DTAOutput** (consulte [Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](https://schemas.microsoft.com/sqlserver/) para obter informações)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre namespaces XML, consulte [Namespaces em um documento XML](http://go.microsoft.com/fwlink/?LinkId=7341) na Biblioteca MSDN do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Para obter mais informações sobre namespaces XML, consulte [Namespaces em um documento XML](https://go.microsoft.com/fwlink/?LinkId=7341) na Biblioteca MSDN do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="example"></a>Exemplo  
  Para obter exemplos de elementos **DTAXML** típicos, consulte [Exemplos de arquivo de entrada XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  

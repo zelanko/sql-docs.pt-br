@@ -11,12 +11,12 @@ ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b129f1d46635cfc275ef66e06ba0612c75b3c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c56756335848acf6daf53b90d083119b191d6c3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732474"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601976"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,5 +71,5 @@ print $stmt->rowCount();
 ## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

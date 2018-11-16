@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 994011062b36f028157c3f70b3f2ed3c335d526f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f09f9e2f9ad166edb764aa33a8b20623e11cf08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612904"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600666"
 ---
 # <a name="return-codes"></a>Códigos de retorno
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47612904"
 
   No nível mais básico, uma função de membro tem êxito ou falha. Em um nível um pouco mais preciso, uma função pode ser bem-sucedida, mas talvez seu êxito não seja o desejado pelo desenvolvedor do aplicativo.  
   
- Para obter mais informações sobre códigos de retorno do OLE DB, confira [Códigos de retorno (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Para obter mais informações sobre códigos de retorno do OLE DB, confira [Códigos de retorno (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Quando um Driver OLE DB para a função de membro do SQL Server Retorna S_OK, a função foi bem-sucedida.  
   

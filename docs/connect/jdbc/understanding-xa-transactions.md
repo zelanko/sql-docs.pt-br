@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851971"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605646"
 ---
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 
@@ -45,7 +45,7 @@ As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas
 
 - Ao usar transações XA junto com o Coordenador de Transações Distribuídas (MS DTC), talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
   
-     O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma ID de transação global (GTRID) são mapeadas para uma única ID de transação do MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     O hotfix fornecido em [MSDTC e transações firmemente acopladas](https://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma ID de transação global (GTRID) são mapeadas para uma única ID de transação do MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA firmemente acopladas que têm IDs de transação de branch XA (BQUAL) diferentes, mas a mesma ID de transação global (GTRID) e ID de formato (FormatID). Para usar esse recurso, você deve definir a [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro de sinalizadores do método XAResource.start:  
   
@@ -98,7 +98,7 @@ Você pode configurar os componentes de transações distribuídas do driver JDB
     > [!NOTE]  
     > Se você estiver usando transações XA com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, use o arquivo sqljdbc_xa.dll na pasta x86, mesmo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteja instalado em um processador x64. Se estiver usando transações XA com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits no processador x64, use o arquivo sqljdbc_xa.dll na pasta x64.  
   
-2. Execute o script do banco de dados xa_install.sql em cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas. Esse script instala os procedimentos armazenados estendidos que são chamados por sqljdbc_xa.dll. Esses procedimentos armazenados estendidos implementam o suporte a transações distribuídas e XA para o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Você precisará executar o script como administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2. Execute o banco de dados script xa_install.sql em cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participará de transações distribuídas. Esse script instala os procedimentos armazenados estendidos que são chamados por sqljdbc_xa.dll. Esses procedimentos armazenados estendidos implementam o suporte a transações distribuídas e XA para o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Você precisará executar o script como administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3. Para conceder permissões para um usuário específico participar de transações distribuídas com o driver JDBC, adicione o usuário à função SqlJDBCXAUser.  
   
@@ -117,7 +117,7 @@ Há três maneiras de verificar qual versão de sqljdbc_xa.dll está instalada n
 ### <a name="BKMK_ServerSide"></a> Configurando as definições de tempo limite do servidor para reversão automática de transações não preparadas  
 
 > [!WARNING]  
-> Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Há duas configurações de Registro (valores DWORD) para controlar o comportamento de tempo limite de transações distribuídas:  
   

@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605504"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603746"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Drivers da Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605504"
 Este tópico discute as constantes definidas pelos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Constantes do driver PDO_SQLSRV  
-As constantes listadas no [site de PDO](http://php.net/manual/book.pdo.php) são válidas nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+As constantes listadas no [site de PDO](https://php.net/manual/book.pdo.php) são válidas nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 A seguir está a descrição das constantes específicas da Microsoft no driver PDO_SQLSRV.  
   
@@ -132,7 +132,7 @@ A lista a seguir contém as constantes para especificar a direção do parâmetr
 |SQLSRV_PARAM_OUT|Indica um parâmetro de saída.|  
   
 ### <a name="phptype-constants"></a>Constantes PHPTYPE  
-A tabela a seguir apresenta as constantes usadas para descrever tipos de dados do PHP. Para obter informações sobre tipos de dados do PHP, veja [Tipos do PHP](http://php.net/manual/en/language.types.php).  
+A tabela a seguir apresenta as constantes usadas para descrever tipos de dados do PHP. Para obter informações sobre tipos de dados do PHP, consulte [Tipos do PHP](https://php.net/manual/en/language.types.php).  
   
 |Constante SQLSRV|Tipo de dados do PHP|  
 |-------------------|-----------------|  

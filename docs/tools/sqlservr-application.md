@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -24,12 +23,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4ff327c1962d4440df32badb234c715a64ac00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656906"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Na maioria dos casos, o programa sqlservr.exe é usado somente para solução de problemas ou manutenção importante. Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado do prompt de comando sqlservr.exe, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não inicia como um serviço e, desse modo, você pode interromper o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando comandos **net** . Os usuários podem conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostram o status do serviço, para que o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique corretamente que o serviço está interrompido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode se conectar ao servidor, mas ele também indica que o serviço está interrompido.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
- Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
+ Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md)  

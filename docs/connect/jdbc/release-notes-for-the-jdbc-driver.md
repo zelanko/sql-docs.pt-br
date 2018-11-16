@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f24089803b59e86a4fc8f8b98cd7822a11ba6c2e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737254"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600767"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de versão do JDBC Driver
 
@@ -139,7 +139,7 @@ O Microsoft JDBC Driver 6.2 para SQL Server é totalmente compatível com as esp
 >
 > Outro aprimoramento para atualizar a versão de biblioteca dependente do Azure Key Vault para 1.0.0 foi feito, e os jars novo (versão 6.2.2) foram lançadas em 19 de outubro de 2017.
 >
-> Baixar as atualizações mais recentes no JDBC Driver 6.2 na [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), e [Central do Maven](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.2 jars de versão. Veja as notas de versão para [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obter mais detalhes.
+> Baixar as atualizações mais recentes no JDBC Driver 6.2 na [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), e [Central do Maven](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.2 jars de versão. Veja as notas de versão para [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obter mais detalhes.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Suporte do Azure Active Directory (AAD) para Linux
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6ebcd45f6c115a6b27262166122a37653474a3f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae488cfeabc3d506bc53b455f0df6149c537765d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605276"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47787385"
 
   Do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] em diante, o suporte para SPNs (nomes das entidades de serviço) foi estendido para habilitar a autenticação mútua em todos os protocolos. Em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas havia suporte para SPNs no Kerberos via TCP quando o SPN padrão da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] era registrado no Active Directory.  
   
- Os SPNs são usados pelo protocolo de autenticação para determinar a conta na qual uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada. Se a conta da instância for conhecida, autenticação Kerberos poderá ser usada para fornecer autenticação mútua pelo cliente e servidor. Se a conta de instância não for conhecida, a autenticação NTLM, que só fornece autenticação do cliente pelo servidor, será usada. Atualmente, o OLE DB Driver for SQL Server executa a pesquisa de autenticação, derivando o SPN das propriedades de nome da instância e conexão de rede. As instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentarão registrar os SPNs na inicialização, ou eles podem ser registrados manualmente. Porém, o registro falhará se houver direitos de acesso insuficientes para a conta que tenta registrar os SPNs.  
+ Os SPNs são usados pelo protocolo de autenticação para determinar a conta em que uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada. Se a conta da instância for conhecida, autenticação Kerberos poderá ser usada para fornecer autenticação mútua pelo cliente e servidor. Se a conta de instância não for conhecida, a autenticação NTLM, que só fornece autenticação do cliente pelo servidor, será usada. Atualmente, o OLE DB Driver for SQL Server executa a pesquisa de autenticação, derivando o SPN das propriedades de nome da instância e conexão de rede. As instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentarão registrar os SPNs na inicialização, ou eles podem ser registrados manualmente. Porém, o registro falhará se houver direitos de acesso insuficientes para a conta que tenta registrar os SPNs.  
   
  As contas de domínio e computador são registradas automaticamente no Active Directory. Elas podem ser usadas como SPNs ou os administradores podem definir seus próprios SPNs. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] torna a autenticação segura mais gerenciável e confiável, permitindo que os clientes especifiquem diretamente o SPN a ser usado.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "47787385"
 >  Um SPN especificado por um aplicativo cliente é usado somente quando uma conexão é feita com a segurança integrada pelo Windows.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** é uma ferramenta de diagnóstico que ajuda a solucionar problemas de Kerberos relativos à conectividade com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** é uma ferramenta de diagnóstico que ajuda a solucionar problemas de Kerberos relativos à conectividade com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Para obter mais informações sobre Kerberos, consulte os artigos a seguir:  
   
--   [Suplemento técnico do Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Suplemento técnico do Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
--   [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
 ## <a name="usage"></a>Uso  
  A tabela a seguir descreve os cenários mais comuns nos quais os aplicativos cliente podem habilitar a autenticação segura.  
@@ -79,9 +79,9 @@ ms.locfileid: "47787385"
   
 -   Segurança: o SPN especificado divulga informações que estão protegidas?  
   
--   Confiabilidade: para permitir o uso de SPNs padrão, a conta de serviço na qual a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada precisa ter privilégios suficientes para atualizar o Active Directory no KDC.  
+-   Confiabilidade: para permitir o uso de SPNs padrão, a conta de serviço em que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
   
--   Conveniência e transparência de local: como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
+-   Conveniência e transparência de local: como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
   
 ## <a name="specifying-the-spn"></a>Especificando o SPN  
  Você pode especificar um SPN em caixas de diálogo e em código. Esta seção discute como você pode especificar um SPN.  
@@ -94,7 +94,7 @@ ms.locfileid: "47787385"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado.<br /><br /> *fqdn* é um nome de domínio totalmente qualificado.|  
 |MSSQLSvc/*fqdn*:*port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado.<br /><br /> *port* é um número de porta TCP.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado.<br /><br /> *InstanceName* é um nome de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*fqdn*:*InstanceName*|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado.<br /><br /> *InstanceName* é um nome de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|O SPN que mapeia para contas internas do computador que são automaticamente registradas pelo Windows.|  
 |*Username*@*Domain*|Especificação direta de uma conta de domínio.<br /><br /> *Username* é um nome de conta de usuário do Windows.<br /><br /> *Domain* é um nome de domínio ou nome de domínio totalmente qualificado do Windows.|  
 |*MachineName*$@*Domain*|Especificação direta de uma conta de computador.<br /><br /> (Se o servidor ao qual você está se conectando estiver sendo executado em contas LOCAL SYSTEM ou NETWORK SERVICE, para obter autenticação Kerberos, o **ServerSPN** poderá estar no formato *MachineName*$@*Domain* .)|  
@@ -105,7 +105,7 @@ ms.locfileid: "47787385"
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, consulte [Exemplos de programabilidade de dados do SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, consulte [Exemplos de programabilidade de dados do SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do OLE DB Driver for SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
