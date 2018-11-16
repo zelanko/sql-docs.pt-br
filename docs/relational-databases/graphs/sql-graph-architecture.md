@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830644"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512801"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura de grafo do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Saiba como o SQL Graph foi projetado. Conhecer os conceitos básicos tornará ma
 Os usuários podem criar um gráfico por banco de dados. Um gráfico é uma coleção de tabelas de nó e de borda. Tabelas de borda ou nó podem ser criadas em qualquer esquema no banco de dados, mas todos eles pertencem a um gráfico lógico. Uma tabela de nó é uma coleção de tipo semelhante de nós. Por exemplo, uma tabela de nó Person contém todos os nós da pessoa que pertencem a um gráfico. Da mesma forma, uma tabela de borda é uma coleção de tipo semelhante das bordas. Por exemplo, uma tabela de borda Friends contém todas as bordas que se conectam a uma pessoa para outra pessoa. Como nós e bordas são armazenadas em tabelas, a maioria das operações com suporte em tabelas regulares têm suporte em tabelas de nó ou borda. 
  
  
-![arquitetura do gráfico de SQL](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitetura de banco de dados do SQL Graph")   
+![arquitetura do gráfico de SQL](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitetura de banco de dados do SQL Graph")   
 
 Figura 1: arquitetura de banco de dados do SQL Graph
  
@@ -57,7 +56,7 @@ Semelhante à `$node_id` coluna, é recomendável que os usuários criem um índ
 
 Figura 2 mostra como o nó e tabelas de borda são armazenadas no banco de dados. 
 
-![tabelas de pessoa-amigos](../../relational-databases/graphs/media/person-friends-tables.png "tabelas de borda de nó Person e seus amigos")   
+![tabelas de pessoa-amigos](../../relational-databases/graphs/media/person-friends-tables.png "tabelas de borda de nó Person e seus amigos")   
 
 Figura 2: Representação de tabela de nó e de borda
 
@@ -110,10 +109,10 @@ Colunas implícitas em uma tabela de borda
 |graph_id_\<hex&lt;1}{2&gt;hex_string&lt;2 > |bigint |1  |interno `graph_id` coluna  |
 |$edge_id_\<hex&lt;1}{2&gt;hex_string&lt;2 > |NVARCHAR   |0  |externo `edge_id` coluna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno do nó `object_id`  |
-|from_id_\<hex&lt;1}{2&gt;hex_string&lt;2 >  |bigint |1  |Interno do nó `graph_id`  |
+|from_id_\<hex&lt;1}{2&gt;hex_string&lt;2 >  |bigint |1  |interno do nó `graph_id`  |
 |$from_id_\<hex&lt;1}{2&gt;hex_string&lt;2 > |NVARCHAR   |0  |externa do nó `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |internos para nó `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Internos para nó `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |internos para nó `graph_id`  |
 |$to_id_\<hex&lt;1}{2&gt;hex_string&lt;2 >   |NVARCHAR   |0  |externos ao nó `node_id`  |
  
 ### <a name="system-functions"></a>Funções de sistema

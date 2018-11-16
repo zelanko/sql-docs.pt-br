@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383731"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670615"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o Cluster SLES para o grupo de disponibilidade do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SUSE Linux Enterprise Server (SLES) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade no Linux exige três nós – veja [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no SUSE [alta disponibilidade de extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior da [Pacemaker](http://clusterlabs.org/). 
+Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SUSE Linux Enterprise Server (SLES) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade no Linux exige três nós – veja [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no SUSE [alta disponibilidade de extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior da [Pacemaker](https://clusterlabs.org/). 
 
 Para obter mais informações sobre a configuração de cluster, opções de recurso do agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -79,7 +79,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Para obter mais informações, consulte o [guia de administração do SLES - seção diversos](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Para obter mais informações, consulte o [guia de administração do SLES - seção diversos](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Crie um logon do SQL Server para Pacemaker
@@ -104,7 +104,7 @@ Em servidores Linux, configure o grupo de disponibilidade e, em seguida, configu
 
 ## <a name="set-up-the-first-node"></a>Configurar o primeiro nó
 
-   Consulte [instruções de instalação do SLES](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Consulte [instruções de instalação do SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Faça logon como `root` para a máquina física ou virtual que deseja usar como nó de cluster.
 2. Inicie o script de inicialização, executando:
@@ -220,7 +220,7 @@ Isolamento de nível de recurso principalmente garante que não há nenhum dano 
 
 Isolamento de nível de nó garante que um nó não é executado todos os recursos. Isso é feito redefinindo o nó e a implementação do Pacemaker dele é chamada de STONITH (o que significa "acertar o outro nó no cabeçalho"). Pacemaker dá suporte a uma grande variedade de dispositivos, como uma fonte de alimentação ininterrupta fornecimento ou gerenciamento de placas de interface para servidores de isolamento.
 
-Para obter mais informações, consulte [Clusters do Pacemaker do zero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [isolamento e Stonith](http://clusterlabs.org/doc/crm_fencing.html) e [documentação HA do SUSE: isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obter mais informações, consulte [Clusters do Pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [isolamento e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentação HA do SUSE: isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 No momento da inicialização de cluster, o STONITH será desabilitado se nenhuma configuração é detectada. Ele pode ser habilitado mais tarde executando o seguinte comando:
 

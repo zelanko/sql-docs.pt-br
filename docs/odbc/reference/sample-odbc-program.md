@@ -11,12 +11,12 @@ ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e42efde20dfea3cfd1ee8e85bcef5a234b9430b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a031a71fd482eadb9d27861d436b7245017ee8e9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657585"
 ---
 # <a name="sample-odbc-program"></a>Programa ODBC de exemplo
-O [exemplo de código do ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) solicitará um nome de fonte de dados ODBC.  Você será solicitado a inserir uma consulta e o exemplo exibirá os resultados da consulta.
+O [exemplo de código do ODBC](https://go.microsoft.com/fwlink/?LinkId=244831) solicitará um nome de fonte de dados ODBC.  Você será solicitado a inserir uma consulta e o exemplo exibirá os resultados da consulta.

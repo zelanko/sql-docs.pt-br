@@ -10,12 +10,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743814"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662275"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Concluir a preparação do caso de teste (OracleToSQL)
 A página do assistente final exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nesta página você pode definir o teste de opções de execução.  
@@ -54,7 +54,7 @@ Define o modo de gravação para tabelas auxiliares criadas durante a execução
   
 -   Se você selecionar **peça ao usuário se a falha na comparação de tabela**, o usuário pode selecionar a ação necessária, se ocorrer um erro.  
   
-Clique o **terminar** botão para salvar o caso de teste preparado em [usando repositórios de teste (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Clique o **terminar** botão para salvar o caso de teste preparado em [usando repositórios de teste (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## <a name="see-also"></a>Consulte também  
 [Usando repositórios de teste &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

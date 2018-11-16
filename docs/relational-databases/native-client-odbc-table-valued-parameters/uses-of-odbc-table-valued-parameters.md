@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673105"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Usos de parâmetros ODBC com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766564"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>Parâmetro com valor de tabela com buffers de várias linhas totalmente associados (Enviar dados como um RVP com todos os valores na memória)  
  Quando usados com buffers de várias linhas totalmente associados, todos os valores de parâmetro ficam disponíveis na memória. Por exemplo, isto é típico de uma transação de OLTP na qual os parâmetros com valor de tabela podem ser empacotados em um único procedimento armazenado. Sem parâmetros com valor de tabela, isso envolveria gerar um lote de várias instruções complexas dinamicamente ou fazer várias chamadas para o servidor.  
   
- O parâmetro com valor de tabela em si está associado usando [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) junto com os outros parâmetros. Depois que todos os parâmetros de associação, o aplicativo define o atributo de foco do parâmetro, SQL_SOPT_SS_PARAM_FOCUS, cada parâmetro com valor de tabela e chama SQLBindParameter para as colunas do parâmetro com valor de tabela.  
+ O parâmetro com valor de tabela em si está associado usando [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) junto com os outros parâmetros. Depois que todos os parâmetros de associação, o aplicativo define o atributo de foco do parâmetro, SQL_SOPT_SS_PARAM_FOCUS, cada parâmetro com valor de tabela e chama SQLBindParameter para as colunas do parâmetro com valor de tabela.  
   
  O tipo de servidor para um parâmetro com valor de tabela é um novo tipo específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o SQL_SS_TABLE. O tipo de C que associa para SQL_SS_TABLE sempre deve ser SQL_C_DEFAULT. Nenhum dado é transferido para o parâmetro associado ao parâmetro com valor de tabela. Ele é usado para transmitir metadados de tabela e controlar a maneira de transmitir dados nas colunas constituintes do parâmetro com valor de tabela.  
   

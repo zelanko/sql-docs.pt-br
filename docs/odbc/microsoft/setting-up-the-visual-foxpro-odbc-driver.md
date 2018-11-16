@@ -15,15 +15,15 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f358d1944de362dc65aba8c470bbb7911ce2103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089af95e914c844c6fc6220146ab4a635db2b4ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818371"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663335"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Configurar o driver ODBC do Visual FoxPro
-Para obter informações sobre como baixar e instalar o driver ODBC do Visual FoxPro, consulte [Driver ODBC do Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) nos Downloads do MSDN.  
+Para obter informações sobre como baixar e instalar o driver ODBC do Visual FoxPro, consulte [Driver ODBC do Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318) nos Downloads do MSDN.  
   
  Você pode usar o programa de instalação de Driver de ODBC do Visual FoxPro do Microsoft para fazer o seguinte:  
   

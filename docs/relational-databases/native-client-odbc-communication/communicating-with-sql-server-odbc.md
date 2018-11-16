@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e24660402f2278f1d71f0729281e0009029936da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e78f822b064e54dffccb6acd35771ae7083958
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707130"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673135"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Comunicando-se com o SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47707130"
   
  Um aplicativo pode se conectar a qualquer número de fontes de dados. O aplicativo pode usar uma combinação de drivers e fontes de dados, o mesmo driver e uma combinação de fontes de dados ou inclusive o mesmo driver e várias conexões com a mesma fonte de dados.  
   
- Você pode baixar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC amostras do [Downloads do SQL Server](http://go.microsoft.com/fwlink/?LinkId=62796) página no MSDN.  
+ Você pode baixar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC amostras do [Downloads do SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) página no MSDN.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

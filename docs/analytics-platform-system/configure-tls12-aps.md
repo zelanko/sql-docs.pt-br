@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 638633a84721532ad05a52126aa7bcfd3f2bb6b7
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697854"
 ---
 # <a name="configure-tls-12-in-aps"></a>Configurar o TLS 1.2 no APS
 
@@ -22,7 +22,7 @@ Para proteger pontos de acesso para usar somente o TLS 1.2, você terá que desa
 
 > [!WARNING]
 > Esta seção, método ou tarefa contêm as etapas que indicam como modificar o Registro. No entanto, problemas graves podem ocorrer se você modificar o Registro incorretamente que pode causar perda de dados e exigir a reinstalação do sistema operacional. É altamente recomendável fazer backup do registro antes de modificá-lo. Em seguida, restaure o Registro se ocorrer algum problema. Para obter mais informações sobre como fazer backup e restaurar o registro, clique no número abaixo para ler o artigo da Base de dados de Conhecimento Microsoft:<br>
-[322756](https://support.microsoft.com/en-us/help/322756) como fazer backup e restaurar o registro no Windows
+[322756](https://support.microsoft.com/help/322756) como fazer backup e restaurar o registro no Windows
 
 **Desative:**
 ```

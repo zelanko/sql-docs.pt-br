@@ -18,12 +18,12 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bb9df709b3fba5a5cded97aaa0d4206d1bbfeb74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92a36de1c91add065db9ba418b7370e7ed36da93
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738624"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668955"
 ---
 # <a name="sqlservice-class"></a>Classe SqlService
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "47738624"
 -   Verifique as propriedades do serviço.  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

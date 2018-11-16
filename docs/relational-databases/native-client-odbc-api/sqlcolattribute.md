@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80e78d486ff0b87a2cf187a134beb029774f9171
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb59a18dfd0a2952f3c5f23be9d0c12d9c35fd3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773144"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657436"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Você pode usar **SQLColAttribute** para recuperar um atributo de uma coluna de conjunto de resultados para instruções ODBC preparadas ou executadas. Chamando **SQLColAttribute** em instruções preparadas causa uma ida e volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recebe os dados de coluna do conjunto de resultados como parte da execução da instrução, por isso a chamada **SQLColAttribute** após a conclusão da **SQLExecute** ou  **SQLExecDirect** não envolve uma ida e volta do servidor.  
+  Você pode usar **SQLColAttribute** para recuperar um atributo de uma coluna de conjunto de resultados para instruções ODBC preparadas ou executadas. A chamada de **SQLColAttribute** em instruções preparadas causa uma viagem de ida e volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client recebe os dados da coluna de conjunto de resultados como parte da execução da instrução, por isso a chamada de **SQLColAttribute** após a conclusão de **SQLExecute** ou **SQLExecDirect** não envolve uma viagem de ida e volta do servidor.  
   
 > [!NOTE]  
->  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Identificador de campo|Description|  
 |----------------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "47773144"
   
  Para todas as versões, os atributos de coluna são informados somente para o primeiro conjunto de resultados quando vários conjuntos são gerados por um lote preparado de instruções SQL.  
   
- Os seguintes atributos de coluna são extensões expostas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client retorna todos os valores de *NumericAttrPtr* parâmetro. Os valores são retornados como SDWORD (signed long) com exceção de SQL_CA_SS_COMPUTE_BYLIST, que é um ponteiro para uma matriz de WORD.  
+ Os atributos de coluna a seguir são extensões expostas pelo driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna todos os valores no parâmetro *NumericAttrPtr* . Os valores são retornados como SDWORD (signed long) com exceção de SQL_CA_SS_COMPUTE_BYLIST, que é um ponteiro para uma matriz de WORD.  
   
 |Identificador de campo|Valor retornado|  
 |----------------------|--------------------|  
@@ -98,7 +98,7 @@ ms.locfileid: "47773144"
  O identificador do campo de descritor SQL_DESC_TYPE_NAME existente é usado para indicar o nome do UDT. O campo SQL_DESC_TYPE para uma coluna de tipo UDT é SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Suporte do SQLColAttribute a recursos aprimorados de data e hora  
- Para obter os valores retornados para tipos de data/hora, consulte a seção "Informações retornadas em campos IRD" [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para obter os valores retornados para tipos de data/hora, consulte a seção sobre informações retornadas em campos IRD em [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47773144"
  Para obter mais informações, consulte [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Função SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Detalhes de implementação de API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   

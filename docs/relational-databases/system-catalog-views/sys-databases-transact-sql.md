@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673725"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47733714"
 |**owner_sid**|**varbinary(85)**|SID (Identificador de Segurança) do proprietário externo do banco de dados, como registrado para o servidor. Para obter informações sobre quem pode possuir um banco de dados, consulte o **ALTER AUTHORIZATION para bancos de dados** seção [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
 |**create_date**|**datetime**|Data em que o banco de dados foi criado ou renomeado. Para **tempdb**, esse valor é alterado sempre que o servidor for reiniciado.|  
 |**compatibility_level**|**tinyint**|Inteiro que corresponde à versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual o comportamento é compatível:<br /> **Valor** : **aplica-se a**<br /> 70: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
-|**collation_name**|**sysname**|Agrupamento do banco de dados. Funciona como o agrupamento padrão no banco de dados.<br /> NULL = banco de dados não está online ou AUTO_CLOSE está definida como ON e o banco de dados está fechado.|  
+|**collation_name**|**sysname**|Ordenação do banco de dados. Funciona como a ordenação padrão no banco de dados.<br /> NULL = banco de dados não está online ou AUTO_CLOSE está definida como ON e o banco de dados está fechado.|  
 |**user_access**|**tinyint**|Configuração de acesso do usuário:<br /> 0 = MULTI_USER especificado<br /> 1 = SINGLE_USER especificado<br /> 2 = RESTRICTED_USER especificado|  
 |**user_access_desc**|**nvarchar(60)**|Descrição da configuração do acesso do usuário.|  
 |**is_read_only**|**bit**|1 = O banco de dados é READ_ONLY<br /> 0 = O banco de dados é READ_WRITE|  
@@ -83,7 +83,7 @@ ms.locfileid: "47733714"
 |**is_db_chaining_on**|**bit**|1 = O encadeamento de propriedades de bancos de dados está ON<br /> 0 = O encadeamento de propriedades de bancos de dados está OFF|  
 |**is_parameterization_forced**|**bit**|1 = A parametrização é FORCED<br /> 0 = A parametrização é SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = O banco de dados tem uma chave mestra criptografada<br /> 0 = O banco de dados não tem uma chave mestra criptografada|  
-|**is_query_store_on**|**bit**|1 = a consulta de repositório é habilitado para este banco de dados. Verifique [database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para exibir o status do repositório de consulta.<br /> 0 = a consulta de repositório não está habilitado<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = a consulta de repositório é habilitado para este banco de dados. Verifique [database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para exibir o status do repositório de consulta.<br /> 0 = a consulta de repositório não está habilitado<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = O banco de dados é um banco de dados de publicação em uma topologia de replicação transacional ou de instantâneo<br /> 0 = Não é um banco de dados de publicação|  
 |**is_subscribed**|**bit**|Esta coluna não é usada. Sempre retornará 0, independentemente do status de assinante do banco de dados.|  
 |**is_merge_published**|**bit**|1 = O banco de dados é um banco de dados de publicação em uma topologia de replicação de mesclagem<br /> 0 = Não é um banco de dados de publicação em uma topologia de replicação de mesclagem|  

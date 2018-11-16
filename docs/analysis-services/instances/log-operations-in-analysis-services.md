@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018603"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701634"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "34018603"
   
 -   [Dicas e práticas recomendadas](#bkmk_tips)  
   
-> [!NOTE]  
->  Se você estiver procurando informações sobre o registro em log, talvez também esteja interessado no rastreamento de operações que mostram o processamento e caminhos de execução de consulta. Objetos de rastreamento para rastreamento ad hoc e persistente (como a auditoria de acesso de cubo), bem como recomendações sobre como usar melhor o Flight Recorder, SQL Server Profiler e xEvents, podem ser encontrados usando os links nesta página: [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Local e tipos de logs  
  O Analysis Services fornece os logs descritos abaixo.  
@@ -46,7 +44,7 @@ ms.locfileid: "34018603"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
 |Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|não|  
-|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|não|  
+|Arquivos SQLDmp\<guid > mdmp|Falhas e exceções|Solução de problemas detalhada|não|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -99,7 +97,7 @@ ms.locfileid: "34018603"
 ##  <a name="bkmk_querylog"></a> Logs de consulta  
  O log de consulta é um nome um tanto inapropriado, pois ele não registra a atividade de consulta MDX ou DAX dos usuários. Em vez disso, ele coleta dados sobre consultas geradas pelo Analysis Services, que são subsequentemente utilizadas como entrada de dados no Assistente de Otimização com Base no Uso. Os dados coletados no log de consultas não se destina à análise direta. Especificamente, os conjuntos de dados são descritos em matrizes de bits, com um zero ou um que indica as partes do conjunto de dados incluídas na consulta. Novamente, esses dados destinam-se ao assistente.  
   
- Para monitorar e solucionar problemas de consulta, muitos desenvolvedores e administradores usam uma ferramenta da comunidade, **ASTrace**, para monitorar consultas. Você também pode usar o SQL Server Profiler, xEvents ou um rastreamento do Analysis Services. Consulte [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) para ver links com mais informações sobre rastreamento.  
+ Para monitorar e solucionar problemas de consulta, muitos desenvolvedores e administradores usam uma ferramenta da comunidade, **ASTrace**, para monitorar consultas. Você também pode usar o SQL Server Profiler, xEvents ou um rastreamento do Analysis Services.
   
  Quando você deve usar o log de consulta? É recomendável habilitar o log de consulta como parte de um exercício de ajuste de desempenho de consulta que inclui o Assistente de Otimização com Base no Uso. O log de consultas não existe até você habilitar o recurso, criar as estruturas de dados para dar suporte a ele e definir as propriedades usadas pelo Analysis Services para localizar e preencher o log.  
   
@@ -128,7 +126,7 @@ ms.locfileid: "34018603"
 ##  <a name="bkmk_mdmp"></a> Arquivos de minidespejo (.mdmp)  
  Arquivos de despejo capturam dados usados para analisar eventos extraordinários. O Analysis Services gera minidespejos (.mdmp) automaticamente em resposta a uma falha do servidor, exceções e alguns erros de configuração. O recurso está habilitado, mas não envia automaticamente relatórios de falha.  
   
- Relatórios de falha são configurados por meio da seção Exceção no arquivo Msmdsrv.ini. Essas configurações controlam a criação do arquivo de despejo de memória. O trecho de código a seguir mostra os valores padrão:  
+ Relatórios de falha são configurados por meio da seção Exceção no arquivo Msmdsrv.ini. Essas configurações controlam a criação do arquivo de despejo de memória. O snippet a seguir mostra os valores padrão:  
   
 ```  
 <Exception>  
@@ -152,7 +150,7 @@ ms.locfileid: "34018603"
   
  A definição de configuração tem mais probabilidade de ser modificada é a **CreateAndSendCrashReports** usada para determinar se um arquivo de despejo de memória será gerado.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|Desativa o arquivo de despejo de memória. Todas as outras configurações na seção Exceção são ignoradas.|  
 |1|(Padrão) Habilita, mas não envia o arquivo de despejo de memória.|  

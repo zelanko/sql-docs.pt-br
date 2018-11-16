@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674105"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Em seguida, uma série de tarefas de fluxo de dados carrega cada dimensão. Em s
 
 ## <a name="download"></a>Download
 
-Para obter a versão mais recente da amostra, consulte [todo o mundo-importadores versão](http://go.microsoft.com/fwlink/?LinkID=800630). Baixe o *ETL.ispac diária* arquivo de pacote do Integration Services.
+Para obter a versão mais recente da amostra, consulte [todo o mundo-importadores versão](https://go.microsoft.com/fwlink/?LinkID=800630). Baixe o *ETL.ispac diária* arquivo de pacote do Integration Services.
 
 Para o código-fonte recriar o banco de dados de exemplo, consulte [world-wide-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 

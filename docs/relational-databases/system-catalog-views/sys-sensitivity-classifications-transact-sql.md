@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 53f99419e70b7ebd97f19cc7245b226b20a7f7a4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0fb7b7719ce53fe4f20863cb3f44c9483bc6b472
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808632"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660345"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Retorna uma linha para cada item classificado no banco de dados.
 |**information_type_id**|**sysname**|Uma ID associada com o tipo de informação, que pode ser usado por um sistema de proteção de informações, como proteção de informações do Azure (AIP)|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 - Essa exibição fornece visibilidade sobre o estado de classificação do banco de dados. Ele pode ser usado para gerenciar as classificações de banco de dados, bem como para geração de relatórios.
 - Há suporte para a classificação no momento, somente de colunas de banco de dados. Consequentemente:
@@ -79,4 +79,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Introdução à Proteção de Informações do SQL](http://aka.ms/sqlip)
+[Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)

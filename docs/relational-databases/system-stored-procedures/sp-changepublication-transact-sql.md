@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689724"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670165"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Na atualização de Assinantes, se ocorrer um conflito a assinatura deverá ser reiniciada. Essa propriedade só poderá ser alterada se não houver assinaturas ativas. Sem suporte para Publicadores Oracle.|  
 ||**sub wins**|Política de resolução de conflito para atualização de Assinantes onde o Assinante vence o conflito. Essa propriedade só poderá ser alterada se não houver assinaturas ativas. Sem suporte para Publicadores Oracle.|  
 |**conflict_retention**||**int** que especifica o período de retenção de conflito, em dias. A retenção padrão é 14 dias. **0** significa que nenhuma limpeza de conflito é necessária. Sem suporte para Publicadores Oracle.|  
-|**Descrição**||Entrada opcional que descreve a publicação.|  
+|**description**||Entrada opcional que descreve a publicação.|  
 |**enabled_for_het_sub**|**true**|Permite que a publicação dê suporte a Assinantes que não são do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** não pode ser alterado quando existem assinaturas na publicação. Talvez você precise executar [procedimentos armazenados de replicação (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) estar em conformidade com os seguintes requisitos antes de definir **enabled_for_het_sub** como true:<br /> - **allow_queued_tran** deve ser **falso**.<br /> - **allow_sync_tran** deve ser **falso**.<br /> Alterando **enabled_for_het_sub** à **verdadeiro** podem alterar configurações de publicação existentes. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|A publicação não dá suporte a Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|A publicação é habilitada para a Internet, e o FTP (File Transfer Protocol) pode ser usado para transferir os arquivos de instantâneo a um assinante. Os arquivos de sincronização da publicação são colocados no seguinte diretório: C:\Arquivos de Programas\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* não pode ser NULL. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -116,11 +116,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultâneas**|Usa saída de programa de cópia em massa do modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 ||**concurrent_c**|Usa saída de programa de cópia em massa do modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 |**TaskID**||Essa propriedade foi preterida e não tem mais suporte.|  
-|**allow_drop**|**true**|Habilita `DROP TABLE` DLL de suporte para artigos que fazem parte da replicação transacional. Versão mínima com suporte: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou superior e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou superior. Referência adicional: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Habilita `DROP TABLE` DLL de suporte para artigos que fazem parte da replicação transacional. Versão mínima com suporte: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou superior e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou superior. Referência adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Desabilita `DROP TABLE` DLL de suporte para artigos que fazem parte da replicação transacional. Esse é o **padrão** valor para essa propriedade.|
 |**NULO** (padrão)||Retorna a lista de valores com suporte para *propriedade*.|  
   
-[  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+[ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   - **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválido. Se houver assinaturas existentes que exigem um novo instantâneo, esse valor dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.   

@@ -13,12 +13,12 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cbe616fb2aae8387d000520ead5586abca2db961
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c9515b1ea4260d7e6843c9f3c1c0777e300c392
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099389"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656836"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Gerenciamento de senhas (MySQLToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -131,5 +131,5 @@ Exemplo:
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o Console do SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executar o Console do SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

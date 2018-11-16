@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3618504d0db8003df7787778d84d62990c83b8fb
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701335"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de NYC para tutoriais do SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo explica como configurar um banco de dados de exemplo consiste em dados públicos a partir de [táxi de Nova York e Limusines comissão](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados nos tutoriais de várias R e Python para análise no banco de dados no SQL Server. Para fazer o código de exemplo executado mais rápido, criamos uma amostragem representativa de 1% dos dados. Em seu sistema, o arquivo de backup do banco de dados é um pouco mais de 90 MB, fornecendo 1.7 milhões de linhas na tabela de dados primário.
+Este artigo explica como configurar um banco de dados de exemplo consiste em dados públicos a partir de [táxi de Nova York e Limusines comissão](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados nos tutoriais de várias R e Python para análise no banco de dados no SQL Server. Para fazer o código de exemplo executado mais rápido, criamos uma amostragem representativa de 1% dos dados. Em seu sistema, o arquivo de backup do banco de dados é um pouco mais de 90 MB, fornecendo 1.7 milhões de linhas na tabela de dados primário.
 
 Para concluir este exercício, você deve ter [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou outra ferramenta que pode restaurar um arquivo de backup do banco de dados e executar consultas T-SQL.
 

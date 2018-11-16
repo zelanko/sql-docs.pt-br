@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032983"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560373"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Análise do Python no banco de dados para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Se você for um programador SQL novo Python ou o desenvolvedor Python novidade n
 
 + [Lição 1: Explorar e visualizar os dados usando o Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Lição 2: Criar dados de recursos usando funções personalizadas do SQL](sqldev-py4-create-data-features-using-t-sql.md)
++ [Lição 2: Criar recursos de dados usando funções personalizadas do SQL](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Lição 3: Treinar e salvar um modelo de Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741875"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702364"
 ---
-# <a name="mdx-data-manipulation---update-cube"></a>Manipulação de dados MDX - UPDATE CUBE
+# <a name="mdx-data-manipulation---update-cube"></a>Manipulação de dados MDX – UPDATE CUBE
 
 
-  A instrução UPDATE CUBE é usada para fazer write-back de dados para qualquer célula em um cubo que é agregado a seu pai usando a agregação SUM. Para obter mais explicações e um exemplo, consulte "Compreendendo alocações" nesta postagem de blog: [criando um aplicativo de write-back com o Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+  A instrução UPDATE CUBE é usada para fazer write-back de dados para qualquer célula em um cubo que é agregado a seu pai usando a agregação SUM. Para obter mais explicações e exemplos, consulte "Compreendendo alocações" nesta postagem no blog: [criando um aplicativo de write-back com o Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,21 +53,21 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Uma expressão numérica MDX válida que retorna um valor decimal entre 0 e 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você pode atualizar o valor de uma célula folha ou célula não folha especificada em um cubo, alocando opcionalmente o valor para uma célula não folha especificada em células folha dependentes. A célula especificada pela expressão de tupla pode ser qualquer célula válida no espaço multidimensional (ou seja, a célula não tem de ser uma célula folha). No entanto, a célula deve ser agregada com a [soma](../mdx/sum-mdx.md) função de agregação e não deve incluir um membro calculado na tupla que é usada para identificar a célula.  
   
- Pode ser útil considerar a **UPDATE CUBE** instrução como uma sub-rotina que irá gerar automaticamente uma série de operações de write-back de células individuais para células folha e não-folha que acumularão em uma determinada soma.  
+ Ele pode ser útil considerar a **UPDATE CUBE** instrução como uma sub-rotina que irá gerar automaticamente uma série de operações de write-back de células individuais para células de folha e não-folha que acumularão em uma determinada soma.  
   
  A seguir está uma descrição dos métodos de alocação.  
   
- **USE_EQUAL_ALLOCATION:** toda a célula folha que contribui para a célula atualizada receberá um valor igual com base na seguinte expressão.  
+ **USE_EQUAL_ALLOCATION:** toda a célula folha que contribui para a célula atualizada será atribuída um valor igual com base na expressão abaixo.  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:** toda a célula folha que contribui para a célula atualizada será alterada de acordo com a expressão a seguir.  
+ **USE_EQUAL_INCREMENT:** toda a célula folha que contribui para a célula atualizada será modificada de acordo com a expressão a seguir.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -75,13 +75,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** toda a célula folha que contribui para a célula atualizada receberá um valor igual baseia-se a expressão a seguir.  
+ **USE_WEIGHTED_ALLOCATION:** toda a célula folha que contribui para a célula atualizada será atribuída um valor igual que baseia-se a expressão a seguir.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** toda a célula folha que contribui para a célula atualizada será alterada de acordo com a expressão a seguir.  
+ **USE_WEIGHTED_INCREMENT:** toda a célula folha que contribui para a célula atualizada será modificada de acordo com a expressão a seguir.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -99,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  O aplicativo cliente deve considerar a alocação de todas as dimensões simultaneamente a fim de evitar possíveis resultados inesperados, inclusive valores de rollup incorretos ou dados inconsistentes.  
   
- Cada **UPDATE CUBE** alocação deve ser considerada atômica para propósitos transacionais. Isso significa que se qualquer uma das operações de alocação falhar por alguma razão, como um erro em uma fórmula ou uma violação de segurança, toda a operação UPDATE CUBE falhará. Antes que os cálculos das operações de alocação individuais sejam processados, um instantâneo dos dados é considerado para garantir que os cálculos resultantes sejam corretos.  
+ Cada **UPDATE CUBE** alocação deve ser considerada atômica para fins transacionais. Isso significa que se qualquer uma das operações de alocação falhar por alguma razão, como um erro em uma fórmula ou uma violação de segurança, toda a operação UPDATE CUBE falhará. Antes que os cálculos das operações de alocação individuais sejam processados, um instantâneo dos dados é considerado para garantir que os cálculos resultantes sejam corretos.  
   
 > [!CAUTION]  
 >  Quando usado em uma medida que contenha inteiros, o método USE_WEIGHTED_ALLOCATION pode produzir resultados imprecisos decorrentes de alterações de arredondamento incremental.  
@@ -109,6 +109,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Instruções de manipulação de dados MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

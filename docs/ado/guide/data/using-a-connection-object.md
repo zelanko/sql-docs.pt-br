@@ -13,12 +13,12 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710144"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606166"
 ---
 # <a name="using-a-connection-object"></a>Usar um objeto Connection
 Antes de abrir um **Conexão** do objeto, você deve definir certas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantida pela *ConnectionString* parâmetro do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no **Conexão** objeto, ou pelo [ConnectionString propriedade](../../../ado/reference/ado-api/connectionstring-property-ado.md) sobre o **Conexão** objeto. Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  Você também pode especificar um nome de fonte de dados ODBC (DSN) ou um arquivo de dados UDL (Link) em uma cadeia de conexão. Para obter mais informações sobre DSNs, consulte [gerenciar fontes de dados](../../../odbc/admin/managing-data-sources.md) na referência do programador de ODBC. Para obter mais informações sobre o UDL, consulte [visão geral da API de Link de dados](http://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) na referência do OLE DB do programador.  
+>  Você também pode especificar um nome de fonte de dados ODBC (DSN) ou um arquivo de dados UDL (Link) em uma cadeia de conexão. Para obter mais informações sobre DSNs, consulte [gerenciar fontes de dados](../../../odbc/admin/managing-data-sources.md) na referência do programador de ODBC. Para obter mais informações sobre o UDL, consulte [visão geral da API de Link de dados](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) na referência do OLE DB do programador.  
   
  Normalmente, você estabelece uma conexão por meio da chamada a **Connection** método com um número apropriado um *cadeia de caracteres de conexão* como seu parâmetro. Um exemplo é mostrado no seguinte trecho de código do Visual Basic:  
   

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: HT
+ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221652"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700370"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações do SQL Server 2019 (visualização)
 
@@ -27,11 +27,13 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Para um ambiente de AKS, para uma experiência ideal ao validar cenários básicos, recomendamos VMs de agente de pelo menos três (além de mestre), com pelo menos 4 vCPUs e 32 GB de memória cada. Infraestrutura do Azure oferece várias opções de tamanho para VMs, consulte [aqui](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) para seleções na região em que você planeja implantar.
+- Para um ambiente de AKS, para uma experiência ideal ao validar cenários básicos, recomendamos VMs de agente de pelo menos três (além de mestre), com pelo menos 4 vCPUs e 32 GB de memória cada. Infraestrutura do Azure oferece várias opções de tamanho para VMs, consulte [aqui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) para seleções na região em que você planeja implantar.
   
 - Nesta seção requer que você esteja executando a CLI do Azure versão 2.0.4 ou posterior. Se você precisar instalar ou atualizar, consulte [instalar o Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Executar `az --version` para localizar a versão, se necessário.
 
-- Instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) com um mínimo de versão 1.10 para servidor e cliente. Se você quiser instalar uma versão específica no cliente kubectl, consulte [instalar kubectl binário por meio de rotação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para o AKS, você precisará usar `--kubernetes-version` parâmetro para especificar uma versão diferente do padrão.
+- Instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) com um mínimo de versão 1.10. Se você quiser instalar uma versão específica no cliente kubectl, consulte [instalar kubectl binário por meio de rotação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+
+- Versão mínima do mesmo 1,10 aplica-se ao servidor do Kubernetes. Para o AKS, você precisará usar `--kubernetes-version` parâmetro para especificar uma versão diferente do padrão.
 
 > [!NOTE]
 Observe que a versão de cliente/servidor que é distorção com suporte é + /-1 versão secundária. A documentação do Kubernetes afirma que "um cliente deve ser distorcida não mais de uma versão secundária do mestre, mas pode levar o mestre por até uma versão secundária. Por exemplo, um mestre v1.3 deve funcionar com a versão 1.1, v 1.2 e nós v1.3 e deve funcionar com v1.2, v1.3 e v1.4 clientes." Para obter mais informações, consulte [Kubernetes suporte para versões e componente distorção](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -82,7 +84,7 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
     --kubernetes-version 1.10.8
     ```
 
-    Você pode aumentar ou diminuir a contagem de agentes padrão alterando o `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja ter.
+    Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja ter, que ele não inclui o nó mestre do Kubernetes. Portanto, no exemplo acima, haverá **4** VMs de tamanho **Standard_E4s_v3** usada para o cluster do AKS: **1** para o mestre e **3** para o nós de agente.
 
     Após alguns minutos, o comando for concluído e retorna informações formatadas em JSON sobre o cluster.
 

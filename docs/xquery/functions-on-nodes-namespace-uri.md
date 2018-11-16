@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667166"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em Nós – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      namespace-uri(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -76,16 +75,16 @@ WHERE ProductModelID=7
  Este é o resultado:  
   
 ```  
-http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
+https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usando um namespace-uri() sem argumento em um predicado  
- A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `http://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** for especificada sem um argumento de função e usa o nó de contexto.  
+ A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `https://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** for especificada sem um argumento de função e usa o nó de contexto.  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-   /p1:ProductDescription//*[namespace-uri() = "http://www.adventure-works.com/schemas/OtherFeatures"]  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   /p1:ProductDescription//*[namespace-uri() = "https://www.adventure-works.com/schemas/OtherFeatures"]  
 ') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -94,13 +93,13 @@ WHERE ProductModelID=19
  Este é um resultado parcial:  
   
 ```  
-<p1:wheel xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
-<p2:saddle xmlns:p2="http://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+<p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
+<p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
+  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 …  
 ```  
   
- Você pode alterar o namespace URI na consulta anterior para `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Você receberá todas as crianças de nó do elemento <`ProductDescription`> cuja parte do namespace URI do QName expandido seja `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Você receberá todas as crianças de nó do elemento <`ProductDescription`> cuja parte do namespace URI do QName expandido seja `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
@@ -108,7 +107,7 @@ WHERE ProductModelID=19
 -   O **namespace-uri()** função retorna instâncias do tipo xs: String em vez de xs: anyURI.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções em nós](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funções em nós](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Função local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

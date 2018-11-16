@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657744"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558444"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurar o RDS no Windows 2000
 Se você tiver dificuldade para obtenção de RDS para funcionar corretamente após a atualização para o Windows 2000, siga estas etapas para solucionar o problema:  
   
-1.  Certifique-se de que o serviço de publicação na World Wide Web está em execução primeiro, navegando até http:// servidor usando o Internet Explorer. Se você não pode acessar o servidor Web dessa maneira, abra um prompt de comando e digite o comando a seguir, "NET iniciar W3SVC".  
+1.  Certifique-se de que o serviço de publicação na World Wide Web está sendo executado primeiro, navegar para https:// server usando o Internet Explorer. Se você não pode acessar o servidor Web dessa maneira, abra um prompt de comando e digite o comando a seguir, "NET iniciar W3SVC".  
   
 2.  No menu Iniciar, selecione Executar. Digite msdfmap.ini e, em seguida, clique em Okey para abrir o arquivo msdfmap.ini no bloco de notas. Verifique a seção [conectar padrão] e se o parâmetro de acesso é definido como NOACCESS, alterá-lo como somente leitura.  
   
@@ -38,7 +38,7 @@ Se você tiver dificuldade para obtenção de RDS para funcionar corretamente ap
  Certifique-se de reinicializar o servidor se as alterações não são exibidos resolver o problema primeiro.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565). Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows. Migrar aplicativos que usam o RDS para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565). Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows. Migrar aplicativos que usam o RDS para [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

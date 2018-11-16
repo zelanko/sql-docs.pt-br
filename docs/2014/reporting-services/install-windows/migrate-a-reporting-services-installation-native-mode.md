@@ -1,32 +1,23 @@
 ---
 title: Migrar uma instalação do Reporting Services (Modo Nativo) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082886"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604056"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
+
   Este tópico contém instruções passo a passo sobre como migrar uma das seguintes versões com suporte de uma implantação de modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082886"
   
  Há restrições nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospedam o banco de dados do servidor de relatório. Revise o tópico a seguir se você estiver reutilizando um banco de dados do servidor de relatório criado em uma instalação anterior.  
   
--   [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Nome fixo do banco de dados  
  Você não pode renomear o banco de dados de servidor de relatório. A identidade do banco de dados é registrada em procedimentos armazenados do servidor de relatório quando o banco de dados é criado. A renomeação dos bancos de dados primário ou temporário do servidor de relatório ocasiona erros quando os procedimentos são executados, invalidando a instalação do servidor de relatório.  
@@ -101,7 +92,7 @@ ms.locfileid: "48082886"
   
 -   O Gerenciador de Relatórios e o SQL Server Management Studio foram reformulados para remover recursos sobrepostos. Cada ferramenta é compatível com um conjunto distinto de tarefas; as ferramentas não são mais intercambiáveis.  
   
--   Os filtros ISAPI não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
+-   Os filtros ISAPI não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
   
 -   As restrições de endereço IP não têm suporte no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores. Se você usa restrições de endereço IP, deve remodelar sua solução de relatório antes da migração ou usar uma tecnologia, como um firewall, um roteador ou a conversão de endereço de rede (NAT), para configurar endereços que tem restrições de acesso ao servidor de relatório.  
   
@@ -228,7 +219,7 @@ ms.locfileid: "48082886"
   
 5.  Se você instalou o servidor de relatório em um novo computador e está usando o Firewall do Windows, verifique se a porta TCP em que o servidor de relatório escuta está aberta. Por padrão, essa porta é a 80. Para obter instruções, veja [Configurar um firewall para acesso ao servidor de relatório](../report-server/configure-a-firewall-for-report-server-access.md).  
   
-6.  Se você desejar administrar localmente seu servidor de relatório de modo nativo, configure o sistema operacional para permitir a administração local com o Gerenciador de Relatórios. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+6.  Se você desejar administrar localmente seu servidor de relatório de modo nativo, configure o sistema operacional para permitir a administração local com o Gerenciador de Relatórios. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_copy_custom_config"></a> Copiar parâmetros de configuração personalizados para o arquivo RSReportServer.config  
  Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config na instalação anterior, deverá fazer as mesmas modificações no novo arquivo RSReportServer.config. A lista a seguir resume alguns dos motivos pelos quais você pode ter modificado o arquivo de configuração anterior e apresenta links para informações adicionais sobre como definir as mesmas configurações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -246,7 +237,7 @@ ms.locfileid: "48082886"
   
 1.  Teste os diretórios virtuais do servidor de relatório e do Gerenciador de Relatórios abrindo um navegador e digitando a URL. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](verify-a-reporting-services-installation.md).  
   
-2.  Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando processa e renderiza relatórios, mas não substitui construções do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] por novos elementos RDL. Para obter mais informações sobre como os relatórios existentes são executados em um servidor de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], veja [Atualizar relatórios](upgrade-reports.md).  
+2.  Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando processa e renderiza relatórios, mas não substitui construções do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] por novos elementos RDL. Para obter mais informações sobre como os relatórios existentes são executados em um servidor de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , veja [Atualizar relatórios](upgrade-reports.md).  
   
 ##  <a name="bkmk_remove_unused"></a> Remover programas e arquivos que não são usados  
  Depois de migrar o servidor de relatório com êxito para uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é recomendável executar as etapas descritas a seguir para remover programas e arquivos que não são mais necessários.  

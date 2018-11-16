@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60850daf93756d71441bb5b764513530e812fcfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15add88f6a244b81b13bf9f63d4a53381fe091eb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665955"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47768286"
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
 |SQL_CATALOG_TERM|"database"|  
 |SQL_CATALOG_USAGE|SQL_CU_DML_STATEMENTS SQL_CU_PROCEDURE_INVOCATION SQL_CU_TABLE_DEFINITION|  
-|SQL_COLLATION_SEQ|A sequência de agrupamentos atribuída atualmente para a conexão e o servidor.|  
+|SQL_COLLATION_SEQ|A sequência de ordenações atribuída atualmente para a conexão e o servidor.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
 |SQL_CONVERT_BIGINT|Nenhum suporte para conversão do tipo de dados ODBC SQL_BIGINT. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a driver de ODBC do Native Client a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** tipo de dados ODBC tipo SQL_DECIMAL. Consulte SQL_CONVERT_DECIMAL abaixo.|  
@@ -212,7 +212,7 @@ ms.locfileid: "47768286"
 |SQL_USER_NAME|O nome de usuário atual.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLGetInfo](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [Função SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

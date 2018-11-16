@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852856"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667777"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852856"
   
 |*ValuePtr* valor|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Padrão. Depois de chamar [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), a preparação da instrução é adiada até **SQLExecute** é chamado ou a operação de metapropriedade (**SQLDescribeCol** ou **SQLDescribeParam**) é executado.|  
+|SQL_DP_ON|Padrão. Depois de chamar [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), a preparação da instrução é adiada até **SQLExecute** é chamado ou a operação de metapropriedade (**SQLDescribeCol** ou **SQLDescribeParam**) é executado.|  
 |SQL_DP_OFF|A instrução será preparada assim **SQLPrepare** é executado.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852856"
  Se a função de um catálogo diferente SQLTables, SQLColumns ou SQLPrimaryKeys é chamada quando SQL_SOPT_SS_NAME_SCOPE tiver um valor diferente de SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR será retornado. Um registro de diagnóstico é gerado com SQLSTATE HY010 e a mensagem "Erro de sequência de função (SQL_SOPT_SS_NAME_SCOPE não está definido como SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Função SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

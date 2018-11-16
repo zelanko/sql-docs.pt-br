@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661256"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -31,20 +31,20 @@ Este documento descreve como realizar as seguintes tarefas para o SQL Server em 
 
 ## <a name="architecture-description"></a>Descrição de arquitetura
 
-A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior da [Pacemaker](http://clusterlabs.org/). Corosync e Pacemaker coordenam as comunicações de cluster e gerenciamento de recursos. Instância do SQL Server está ativa em um nó ou em outro.
+A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior da [Pacemaker](https://clusterlabs.org/). Corosync e Pacemaker coordenam as comunicações de cluster e gerenciamento de recursos. Instância do SQL Server está ativa em um nó ou em outro.
 
 O diagrama a seguir ilustra os componentes em um cluster do Linux com o SQL Server. 
 
 ![Red Hat Enterprise Linux 7 compartilhado de Cluster de disco do SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obter mais informações sobre a configuração de cluster, opções de agentes de recursos e gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obter mais informações sobre a configuração de cluster, opções de agentes de recursos e gerenciamento, visite [documentação de referência do RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Cluster de failover manualmente
 
-O `resource move` comando cria uma restrição de forçar o recurso para iniciar no nó de destino.  Depois de executar o `move` comando, executando recursos `clear` removerá a restrição, portanto, é possível mover o recurso novamente ou fazer com que o recurso de failover automaticamente. 
+O `resource move` comando cria uma restrição de forçar o recurso para iniciar no nó de destino.  Depois de executar o `move` comando, executando recursos `clear` removerá a restrição, portanto, é possível mover o recurso novamente ou fazer com que o recurso de failover automaticamente. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 Exiba o status atual do cluster:
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 Exibir o status em tempo real do cluster e recursos:
@@ -183,7 +183,7 @@ Exibir os logs de agente de recursos no `/var/log/cluster/corosync.log`
     O exemplo a seguir adiciona um nó chamado **vm3** ao cluster.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ Exibir os logs de agente de recursos no `/var/log/cluster/corosync.log`
 Para remover um nó de um cluster que execute o seguinte comando:
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Alterar a frequência do intervalo de monitoramento de recursos do sqlservr
@@ -226,7 +226,7 @@ Um exemplo de uma saída de quorum Íntegro pacemaker seria:
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ Verifique os itens a seguir, quando um nó está offline.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* [Desde o início do cluster](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guia do Pacemaker
+* [Desde o início do cluster](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guia do Pacemaker
 
 ## <a name="next-steps"></a>Próximas etapas
 

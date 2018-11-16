@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147861"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697005"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
  O DBCC para Analysis Services será executado em qualquer banco de dados do Analysis Services em qualquer nível de compatibilidade, desde que o banco de dados esteja em execução em uma instância do SQL Server 2016. Verifique se que você está usando a sintaxe de comando correta para cada tipo de banco de dados.  
   
 > [!NOTE]  
->  Se você estiver familiarizado com [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), você perceberá rapidamente que o DBCC no Analysis Services tem um escopo muito mais estreito. O DBCC no Analysis Services é um único comando que reporta exclusivamente sobre dados corrompidos entre o banco de dados ou em objetos individuais. Se você tiver outras tarefas em mente, como coleta de informações, tente usar scripts do PowerShell do AMO ou XMLA. Consulte [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) para obter links com mais informações.  
+>  Se você estiver familiarizado com [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), você perceberá rapidamente que o DBCC no Analysis Services tem um escopo muito mais estreito. O DBCC no Analysis Services é um único comando que reporta exclusivamente sobre dados corrompidos entre o banco de dados ou em objetos individuais. Se você tiver outras tarefas em mente, como coleta de informações, tente usar scripts do PowerShell do AMO ou XMLA.
   
 ## <a name="permission-requirements"></a>Requisitos de permissão  
  Você deve ser um administrador do servidor ou do banco de dados do Analysis Services (um membro da função de servidor) para executar o comando. Consulte [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) ou [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter instruções.  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>Consulte também  
  [Processar banco de dados, tabela ou partição &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

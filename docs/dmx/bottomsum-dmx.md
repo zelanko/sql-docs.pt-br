@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6a6356e70aa6694e04a9112e44a22825f0dc7a52
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 5c4a4cfd4919218233d1c8ce2f41f4569c7f7302
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842779"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602786"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Remarks  
- O **BottomSum** função retorna as linhas mais baixas em ordem crescente de classificação. A classificação baseia-se no valor avaliado do \<expressão de classificação > argumento para cada linha, de modo que a soma da \<expressão de classificação > valores é pelo menos o total dado especificado pelo \<soma > argumento. **BottomSum** retorna o menor número de elementos possível embora ainda assim atenda o valor de soma especificado.  
+## <a name="remarks"></a>Comentários  
+ O **BottomSum** função retorna as linhas mais baixas em ordem crescente de classificação. A classificação baseia-se no valor avaliado do \<expressão de classificação > argumento para cada linha, de modo que a soma do \<expressão de classificação > valores é pelo menos o total dado especificado pelo \<soma > argumento. **BottomSum** retorna o menor número de elementos possível embora ainda assim atenda o valor de soma especificado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma consulta de previsão no modelo de associação que você cria usando o [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ O exemplo a seguir cria uma consulta de previsão no modelo de associação que você compila usando o [Tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Para entender como funciona a BottomSum, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
+ Para entender como funciona o BottomSum, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- O primeiro argumento para a função BottomSum é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada da chamada da função de previsão e usando o argumento INCLUDE_STATISTICS.  
+ O primeiro argumento para a função BottomSum é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada ao chamar a função Predict e usando o argumento INCLUDE_STATISTICS.  
   
- O segundo argumento para a função BottomSum é a coluna na tabela aninhada que você pode usar para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $PROBABILITY para retornar linhas que totalizam pelo menos 50% de probabilidade.  
+ O segundo argumento para a função BottomSum é a coluna na tabela aninhada que você usa para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $PROBABILITY para retornar linhas que totalizam pelo menos 50% de probabilidade.  
   
- O terceiro argumento para a função BottomSum Especifica a soma de destino, como um duplo. Para obter as linhas dos produtos de menor contagem que totalizam até 10 por cento de probabilidade, digite .1.  
+ O terceiro argumento para a função BottomSum Especifica a soma de destino, como um double. Para obter as linhas dos produtos de menor contagem que totalizam até 10 por cento de probabilidade, digite .1.  
   
  Resultados do exemplo:  
   
@@ -100,7 +100,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte também  
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
   
   

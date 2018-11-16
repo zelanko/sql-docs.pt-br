@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613144"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560293"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
@@ -33,7 +33,7 @@ O aplicativo de catálogo de endereços inclui os seguintes botões de comando:
 -   Um **Cancelar alterações** botão para descartar as alterações.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Botão Localizar  
  Clicar a **localizar** botão ativa o procedimento de VBScript Find_OnClick Sub, que compila e envia a consulta SQL. Clicar nesse botão popula a grade de dados.  
@@ -45,7 +45,7 @@ O aplicativo de catálogo de endereços inclui os seguintes botões de comando:
   
  Por exemplo, se o **Sobrenome** caixa contido a entrada "Berge" e o **título** caixa contido a entrada de "Gerente de programas", a instrução SQL (valor de `myQuery`) leria:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>Preparar e enviar a consulta  
  A última parte do procedimento Sub Find_OnClick consiste em duas instruções. A primeira instrução atribui a [SQL](../../../ado/reference/rds-api/sql-property.md) propriedade do [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. DataControl** objeto (`DC1`) para consultar o banco de dados e, em seguida, exibir os novos resultados da consulta na grade.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>Botão de perfil de atualização  
  Clicar a **atualizar o perfil** botão ativa o procedimento de VBScript Update_OnClick Sub, que executa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [atualizar](../../../ado/reference/rds-api/refresh-method-rds.md) métodos.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>Botão Cancelar alterações  
  Clicando em **Cancelar alterações** ativa o procedimento de VBScript Cancel_OnClick Sub, que executa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método.  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

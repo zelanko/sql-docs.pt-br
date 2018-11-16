@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717569"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673985"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,9 +111,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Tamanho de registro médio em bytes.<br /><br /> Para um índice, o tamanho de registro médio aplica-se ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o tamanho de registro médio na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o tamanho de registro médio na unidade de alocação completa.<br /><br /> NULL quando *modo* = LIMITED.|  
 |forwarded_record_count|**bigint**|Número de registros em um heap com ponteiros encaminhados a outro local de dados. (Esse estado ocorre durante uma atualização, quando não há espaço suficiente para armazenar a nova linha no local original.)<br /><br /> NULL para qualquer unidade de alocação diferente das unidades de alocação IN_ROW_DATA de um heap.<br /><br /> NULL para heaps quando *modo* = LIMITED.|  
 |compressed_page_count|**bigint**|O número total de páginas compactadas.<br /><br /> Para heaps, as páginas alocadas recentemente não são compactadas com PAGE. Um heap é compactado com PAGE em duas condições especiais: quando os dados são importados em massa ou quando um heap é reconstruído. Operações DML típicas que causam alocações de página não terão compactação PAGE. Reconstrua um heap quando o valor compressed_page_count aumentar ultrapassando o limite desejado.<br /><br /> Para tabelas que têm um índice clusterizado, o valor compressed_page_count indica a eficiência da compactação PAGE.|  
-|hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente índices columnstore, essa é a ID para um conjunto de linhas que rastreia dados de columnstore interno para uma partição. Os conjuntos de linhas são armazenadas como dados heaps ou binário árvores. Eles têm a mesma ID de índice que o índice de columnstore do pai. Para obter mais informações, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULO se|  
-|column_store_delete_buffer_state|TINYINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERANDO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
-|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NÃO é válido-o índice de pai não é um índice columnstore.<br /><br /> Abra – Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM – Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO – buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO – linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO – esse buffer de exclusão está pronto para uso.|  
+|hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente índices columnstore, essa é a ID para um conjunto de linhas que rastreia dados de columnstore interno para uma partição. Os conjuntos de linhas são armazenadas como dados heaps ou binário árvores. Eles têm a mesma ID de índice que o índice de columnstore do pai. Para obter mais informações, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULO se|  
+|column_store_delete_buffer_state|TINYINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERANDO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
+|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NÃO é válido-o índice de pai não é um índice columnstore.<br /><br /> Abra – Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM – Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO – buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO – linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO – esse buffer de exclusão está pronto para uso.|  
   
 ## <a name="remarks"></a>Comentários  
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  
@@ -197,7 +197,7 @@ GO
   
 -   Usar ALTER INDEX REBUILD, a substituição de DBCC DBREINDEX, para reconstruir o índice online ou offline. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- A fragmentação sozinha não é uma razão suficiente para reorganizar ou reconstruir um índice. O efeito principal da fragmentação é que ela reduz a velocidade da taxa de transferência read-ahead da página durante os exames de índice. O resultado é tempos de resposta mais lentos. Se a carga de trabalho da consulta em uma tabela ou índice fragmentado não envolver exames porque a carga de trabalho é composta por pesquisas singleton, a remoção da fragmentação poderá não ter efeito algum. Para obter mais informações, consulte este [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=31012).  
+ A fragmentação sozinha não é uma razão suficiente para reorganizar ou reconstruir um índice. O efeito principal da fragmentação é que ela reduz a velocidade da taxa de transferência read-ahead da página durante os exames de índice. O resultado é tempos de resposta mais lentos. Se a carga de trabalho da consulta em uma tabela ou índice fragmentado não envolver exames porque a carga de trabalho é composta por pesquisas singleton, a remoção da fragmentação poderá não ter efeito algum. Para obter mais informações, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=31012).  
   
 > [!NOTE]  
 >  Executar DBCC SHRINKFILE ou DBCC SHRINKDATABASE poderá apresentar fragmentação se um índice for movido parcial ou completamente durante a operação de redução. Assim, se for necessário executar uma operação de redução, você deverá fazer isso antes da remoção da fragmentação.  
@@ -431,7 +431,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 
