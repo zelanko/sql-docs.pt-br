@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673567"
 ---
 # <a name="always-encrypted-wizard"></a>Assistente de Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Use o **Assistente de Sempre Criptografado** para ajudar a proteger dados confid
  
  - Para ver uma explicação passo a passo completa que mostra como configurar o Always Encrypted com o assistente e usá-lo em um aplicativo cliente, confira [Tutorial do Banco de Dados SQL: Proteger dados confidenciais com o Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
- - Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Sempre Criptografado). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(Assistente de Criptografia do SSMS – Habilitando o Sempre Criptografado em algumas etapas simples).  
+ - Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Sempre Criptografado). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(Assistente de Criptografia do SSMS – Habilitando o Sempre Criptografado em algumas etapas simples).  
  
  - **Permissões:** para consultar colunas criptografadas e selecionar chaves usando este assistente, é necessário ter as permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Para criar novas chaves, você também deve ter as permissões `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
@@ -63,7 +63,7 @@ Use o **Assistente de Sempre Criptografado** para ajudar a proteger dados confid
  
  ## <a name="always-encrypted-terms"></a>Termos do Always Encrypted  
  
- - **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. O uso de criptografia determinística permite agrupamento, filtragem por igualdade e junção de tabelas com base em valores criptografados, mas também poderia habilitar usuários não autorizados para estimar informações sobre valores criptografados examinando padrões na coluna criptografada. Esse problema aumenta quando há um pequeno conjunto de possíveis valores criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
+ - **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. O uso de criptografia determinística permite agrupamento, filtragem por igualdade e junção de tabelas com base em valores criptografados, mas também poderia habilitar usuários não autorizados para estimar informações sobre valores criptografados examinando padrões na coluna criptografada. Esse problema aumenta quando há um pequeno conjunto de possíveis valores criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
  
  - **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. Criptografia aleatória é mais segura, mas impede pesquisas de igualdade, agrupamento, indexação e junção em colunas criptografadas.  
 

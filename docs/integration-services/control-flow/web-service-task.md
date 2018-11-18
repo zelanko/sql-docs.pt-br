@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757544"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642343"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
@@ -38,7 +38,7 @@ ms.locfileid: "47757544"
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- O gerenciador de conexões HTTP pode apontar para um site da Web ou para um arquivo WSDL (Web Service Description Language). O URL do gerenciador de conexões HTTP que aponta para um arquivo WSDL inclui o parâmetro `?WSDL` : por exemplo, `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ O gerenciador de conexões HTTP pode apontar para um site da Web ou para um arquivo WSDL (Web Service Description Language). O URL do gerenciador de conexões HTTP que aponta para um arquivo WSDL inclui o parâmetro `?WSDL` : por exemplo, `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  O arquivo WSDL deve estar disponível localmente para configurar a tarefa Serviço da Web usando a caixa de diálogo **Editor da Tarefa Serviço da Web** que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757544"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuração programática da tarefa Serviço Web  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique em um dos tópicos a seguir:  
@@ -178,7 +178,7 @@ ms.locfileid: "47757544"
  **Variável**  
  Selecione uma variável na lista ou clique em \<**Nova Variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
+ Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  

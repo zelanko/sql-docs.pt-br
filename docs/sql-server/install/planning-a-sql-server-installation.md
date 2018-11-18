@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701914"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planejando uma instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713174"
   
  Independentemente do método de instalação, é necessário confirmar a aceitação dos termos da licença de software como indivíduo ou em nome de uma entidade, a menos que o uso do software seja governado por um contrato separado, como um contrato de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um contrato de terceiros com um ISV ou OEM.  
   
- Os termos da licença são exibidos para exame e aceitação na interface do usuário da Instalação. As instalações autônomas (usando os parâmetros `/Q` ou `/QS`) devem incluir o parâmetro `/IAcceptSQLServerLicenseTerms`. Baixe e leia os termos de licença separadamente em [Informações e termos de licença do Microsoft SQL Server](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para os termos de licenciamento por volume, consulte [Termos de licenciamento e documentação](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para as versões anteriores do SQL Server, consulte [Termos de Licença para Software Microsoft](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Os termos da licença são exibidos para exame e aceitação na interface do usuário da Instalação. As instalações autônomas (usando os parâmetros `/Q` ou `/QS`) devem incluir o parâmetro `/IAcceptSQLServerLicenseTerms`. Baixe e leia os termos de licença separadamente em [Informações e termos de licença do Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para os termos de licenciamento por volume, consulte [Termos de licenciamento e documentação](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para as versões anteriores do SQL Server, consulte [Termos de Licença para Software Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Dependendo de como você recebeu o software (por exemplo, por meio de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), o uso do software pode estar sujeito a termos e condições adicionais.  

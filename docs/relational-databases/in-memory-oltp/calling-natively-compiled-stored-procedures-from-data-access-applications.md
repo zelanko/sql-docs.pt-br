@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722674"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657775"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Crie um banco de dados de exemplo com um grupo de arquivos de dados com otimização de memória. Para obter informações sobre como criar um banco de dados com um grupo de arquivos de dados com otimização de memória, veja [Criando uma tabela com otimização de memória e um procedimento armazenado compilado de modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Crie uma fonte de dados ODBC chamada PrepExecSample que aponte para o banco de dados. Use o driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Você também pode modificar a amostra e usar o [Microsoft ODBC Driver para SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Crie uma fonte de dados ODBC chamada PrepExecSample que aponte para o banco de dados. Use o driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Você também pode modificar a amostra e usar o [Microsoft ODBC Driver para SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Execute o script [!INCLUDE[tsql](../../includes/tsql-md.md)] (abaixo) no banco de dados de exemplo.  
   

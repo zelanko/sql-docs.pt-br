@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773754"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670135"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usando MSDeploy com o provedor do dbSqlPackage
 O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com bancos de dados do SQL Server/SQL Azure. O **DbSqlPackage** dá suporte às seguintes ações:  
@@ -29,10 +29,10 @@ O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com banc
   
 -   **Script**: cria um script Transact\-SQL equivalente ao script executado pela ação Publish.  
   
-Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
+Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
   
 > [!IMPORTANT]  
-> O recurso de provedor dbSqlPackage será removido na próxima versão principal do Visual Studio. Para obter informações sobre como fazer a publicação do banco de dados com a Implantação da Web, consulte o [provedor dbDacFx para obter a publicação de banco de dados Incremental](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+> O recurso de provedor dbSqlPackage será removido na próxima versão principal do Visual Studio. Para obter informações sobre como fazer a publicação do banco de dados com a Implantação da Web, consulte o [provedor dbDacFx para obter a publicação de banco de dados Incremental](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Sintaxe da linha de comando  
 **MSDeploy** com o provedor **dbSqlPackage** usa uma linha de comando do seguinte formato:  
@@ -93,7 +93,7 @@ Os parâmetros de **Destino** a seguir estão disponíveis para todas as operaç
 |**BlockOnPossibleDataLoss={ True &#124; False}**|**Verdadeiro**|Especifica se o episódio de publicação será terminado se a operação de publicação puder provocar perda de dados.|  
 |**BlockWhenDriftDetected={ True &#124; False}**|**Verdadeiro**|Especifica se deve bloquear a atualização de um banco de dados cujo esquema não mais corresponda seu registro ou não esteja registrado.|  
 |**CommentOutSetVarDeclarations= {True &#124; False}**|**Falso**|Especifica se as declarações da variável **SETVAR** são comentadas no script de publicação gerado. Você pode optar por fazer isso se planejar usar uma ferramenta como **SQLCMD.EXE** para especificar os valores na linha de comando ao publicar.|  
-|**CompareUsingTargetCollation={ True &#124; False}**|**Falso**|Essa configuração dita como o agrupamento do banco de dados é tratado durante a implantação; por padrão, o agrupamento do banco de dados de destino será atualizado se não corresponder ao agrupamento especificado pela origem.  Quando essa opção estiver configurada, o agrupamento do banco de dados de destino (ou do servidor) deverá ser usado.|  
+|**CompareUsingTargetCollation={ True &#124; False}**|**Falso**|Essa configuração dita como a ordenação do banco de dados é tratada durante a implantação; por padrão, a ordenação do banco de dados de destino será atualizada se não corresponder à ordenação especificada pela origem.  Quando essa opção estiver configurada, a ordenação do banco de dados de destino (ou do servidor) deverá ser usada.|  
 |**CreateNewDatabase={ True &#124; False}**|**Falso**|Especifica se o banco de dados de destino deve ser atualizado ou removido e recriado quando um banco de dados é publicado.|  
 |**DeployDatabaseInSingleUserMode={ True &#124; False}**|**Falso**|Se for **True**, o banco de dados será definido como o Modo de Usuário Único antes da implantação.|  
 |**DisableAndReenableDdlTriggers={True &#124; False}**|**Verdadeiro**|Especifica se os gatilhos da DDL (linguagem de definição de dados) são desabilitados no início do processo de publicação e reabilitados no final da ação de publicação.|  
@@ -109,7 +109,7 @@ Os parâmetros de **Destino** a seguir estão disponíveis para todas as operaç
 |**GenerateSmartDefaults={True &#124; False}**|**Falso**|Especifica se o **SqlPackage.exe** fornece automaticamente um valor padrão quando atualiza uma tabela que contém dados com uma coluna que não permite valores nulos.|  
 |**IgnoreAnsiNulls= {True &#124; False}**|**Falso**|Especifica se as diferenças na configuração do **ANSI NULLS** devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**IgnoreAuthorizer= {True &#124; False}**|**Falso**|Especifica se as diferenças no Autorizador devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
-|**IgnoreColumnCollation= {True &#124; False}**|**Falso**|Especifica se as diferenças no agrupamento de colunas devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
+|**IgnoreColumnCollation= {True &#124; False}**|**Falso**|Especifica se as diferenças na ordenação de colunas devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**IgnoreComments= {True &#124; False}**|**Falso**|Especifica se as diferenças na ordem de comentários devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**IgnoreCryptographicProviderFile= {True &#124; False}**|**Verdadeiro**|Especifica se as diferenças no caminho do arquivo de um provedor criptográfico devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**IgnoreDdlTriggerOrder= {True &#124; False}**|**Falso**|Especifica se as diferenças na ordem de gatilhos DDL (linguagem de definição de dados) devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
@@ -151,7 +151,7 @@ Os parâmetros de **Destino** a seguir estão disponíveis para todas as operaç
 |**NoAlterStatementsToChangeClrTypes={True &#124; False}**|**Falso**|Especifica se a publicação sempre deverá cancelar e recriar um assembly se houver uma diferença em vez de emitir uma instrução ALTER ASSEMBLY.|  
 |**PopulateFilesOnFilegroups= {True &#124; False}**|**Verdadeiro**|Especifica se um novo arquivo também é criado quando você cria um novo **FileGroup** no banco de dados de destino.|  
 |**RegisterDataTierApplication={True &#124; False}**|**Falso**|Especifica se o esquema está registrado com o servidor de banco de dados.|  
-|**ScriptDatabaseCollation {True &#124; False}**|**Falso**|Especifica se as diferenças no agrupamento de banco de dados devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
+|**ScriptDatabaseCollation {True &#124; False}**|**Falso**|Especifica se as diferenças na ordenação de banco de dados devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**ScriptDatabaseCompatibility= {True &#124; False}**|**Verdadeiro**|Especifica se as diferenças na compatibilidade de banco de dados devem ser ignoradas ou atualizadas quando você publica em um banco de dados.|  
 |**ScriptDatabaseOptions= {True &#124; False}**|**Verdadeiro**|Especifica se as propriedades do banco de dados de destino devem ser definidas ou atualizadas quando você publica em um banco de dados.|  
 |**ScriptFileSize={True &#124; False}**|**Falso**|Controla se o tamanho é especificado ao adicionar um arquivo a um grupo de arquivos.|  
@@ -161,7 +161,7 @@ Os parâmetros de **Destino** a seguir estão disponíveis para todas as operaç
 |**Storage={File&#124;Memory}**|**Memória**|Especifica como os elementos são armazenados ao criar o modelo de banco de dados. Por razões de desempenho, o padrão é **Memória**. Para bancos de dados muito grandes, é necessário realizar armazenamento de backup de arquivos.|  
 |**TreatVerificationErrorsAsWarnings= {True &#124; False}**|**Falso**|Especifica se os erros que ocorrem durante a verificação de publicação como avisos devem ser tratados. A verificação é executada em relação ao plano de implantação gerado antes de o plano ser executado em relação ao banco de dados de destino. A verificação do plano detecta problemas, como a perda de objetos apenas de destino (por exemplo, índices), que devem ser cancelados para fazer uma alteração. A verificação também detecta situações onde existem dependências (como tabelas ou exibições) devido a uma referência a um projeto composto, mas não existem no banco de dados de destino. Você pode optar por tratar erros de verificação como avisos para obter uma lista completa de problemas, em vez de permitir que a ação de publicação seja interrompida quando ocorre o primeiro erro.|  
 |**UnmodifiableObjectWarnings= {True &#124; False}**|**Verdadeiro**|Especifica se devem ser gerados avisos quando diferenças forem localizadas em objetos que não podem ser modificados (por exemplo, se o tamanho ou os caminhos de arquivo forem diferentes para um arquivo).|  
-|**VerifyCollationCompatibility={True &#124; False}**|**Verdadeiro**|Especifica se a compatibilidade de agrupamento é verificada.|  
+|**VerifyCollationCompatibility={True &#124; False}**|**Verdadeiro**|Especifica se a compatibilidade de ordenação é verificada.|  
 |**VerifyDeployment={True &#124; False}**|**Verdadeiro**|Especifica se devem ser executadas verificações antes da publicação, que interromperão a ação de publicação se estiverem presentes problemas que possam bloquear uma publicação bem-sucedida. Por exemplo, sua ação de publicação poderá ser interrompida se você obtiver erros durante a publicação porque chaves estrangeiras no banco de dados de destino não existem no projeto de banco de dados.|  
   
 > [!NOTE]  

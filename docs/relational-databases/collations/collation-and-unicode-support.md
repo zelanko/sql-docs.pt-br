@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636475"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661715"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Uma ordenação especifica os padrões de bit que representam cada caractere em 
     
 Os resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] podem variar quando a instrução for executada no contexto de diferentes bancos de dados que tenham configurações de ordenação diferentes. Se possível, use uma ordenação padronizada para sua organização. Deste modo, não será preciso especificar a ordenação explicitamente em todo caractere ou expressão Unicode. Se você deve trabalhar com objetos que tenham configurações de ordenação e página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-As opções associadas a uma ordenação fazem distinção de maiúsculas e minúsculas, de acentos, de caracteres Kana, de largura e de seletor de variação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz uma opção adicional para codificação [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Estas opções são especificadas através de sua anexação ao nome de ordenação. Por exemplo, esta ordenação `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres Kana e de largura e é codificado em UTF-8. Como outro exemplo, essa ordenação `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` não diferencia maiúsculas de minúsculas, não diferencia acentos, mas faz distinção de caracteres Kana, de largura e de seletor de variação e usa codificação não Unicode. A tabela a seguir descreve o comportamento associado com estas diversas opções.    
+As opções associadas a uma ordenação fazem distinção de maiúsculas e minúsculas, de acentos, de caracteres Kana, de largura e de seletor de variação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz uma opção adicional para codificação [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Estas opções são especificadas através de sua anexação ao nome de ordenação. Por exemplo, esta ordenação `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres Kana e de largura e é codificado em UTF-8. Como outro exemplo, essa ordenação `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` não diferencia maiúsculas de minúsculas, não diferencia acentos, mas faz distinção de caracteres Kana, de largura e de seletor de variação e usa codificação não Unicode. A tabela a seguir descreve o comportamento associado com estas diversas opções.    
     
 |Opção|Descrição|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ As opções associadas a uma ordenação fazem distinção de maiúsculas e min�
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não for selecionada, a ordenação não fará diferenciação de acentos. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar a não diferenciação de acentos especificando _AI.|    
 |Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se esta opção não for selecionada, a ordenação não fará diferenciação de Kana. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que caracteres hiragana e katakana são iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de Kana.|    
 |Width-sensitive (_WS)|Faz distinção entre caracteres de largura inteira e de meia largura. Se esta opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considerará as representações de largura inteira e de meia largura do mesmo caractere como iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de largura.|    
-|Distinção de seletor de variação (_VSS) | Distingue entre vários seletores de variação ideográficos em ordenações em japonês Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção _VSS não for selecionada, a ordenação não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o SQL Server considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(Banco de dados de variação ideográfica Unicode). <br/><br/> Não há suporte para ordenações de Diferenciação do seletor de variação (_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (_AS), Diferenciação de caracteres Kana (_KS) e Diferenciação de largura (_WS). Os mecanismos de XML e CLR do SQL Server não dão suporte a Seletores de variação (_VSS).
+|Distinção de seletor de variação (_VSS) | Distingue entre vários seletores de variação ideográficos em ordenações em japonês Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção _VSS não for selecionada, a ordenação não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o SQL Server considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Banco de dados de variação ideográfica Unicode). <br/><br/> Não há suporte para ordenações de Diferenciação do seletor de variação (_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (_AS), Diferenciação de caracteres Kana (_KS) e Diferenciação de largura (_WS). Os mecanismos de XML e CLR do SQL Server não dão suporte a Seletores de variação (_VSS).
 |UTF-8 (_UTF8)|Permite que dados codificados em UTF-8 sejam armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se essa opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o formato de codificação não Unicode padrão para os tipos de dados aplicáveis.| 
     
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de ordenação:    
@@ -80,10 +80,10 @@ Os dados classificados de ordenações primárias na sequência de valores codif
 Existem dois tipos de ordenações primárias no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as ordenações **BIN** mais antigas e as ordenações **BIN2** mais novas. Em uma ordenação **BIN2**, todos os caracteres são classificados de acordo com seus pontos de código. Em uma ordenação **BIN**, apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)    
     
 #### <a name="sql-server-collations"></a>ordenações do SQL Server    
-As ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+Os agrupamentos (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
-> Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificadas para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:    
+> Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os agrupamentos (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificados para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:    
 >     
 > -   Seu código de aplicativo depende do comportamento de ordenações anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > -   Você deve armazenar dados de caractere que refletem vários idiomas.    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Localidade    
-Uma localidade é um conjunto de informações associadas a um local ou a uma cultura. Essas informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. As ordenações podem ser associadas a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Uma localidade é um conjunto de informações associadas a um local ou a uma cultura. Essas informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. As ordenações podem ser associadas a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Uma página de código é um conjunto de caracteres ordenado de um determinado script no qual um índice numérico ou valor de ponto de código é associado a cada caractere. Uma página de códigos do Windows geralmente é referenciada como um *conjunto de caracteres* ou um *charset*. As páginas de código são usadas para oferecer suporte aos conjuntos de caracteres e layouts de teclado usados por diferentes localidades de sistema do Windows.     
@@ -121,7 +121,7 @@ Uma localidade é um conjunto de informações associadas a um local ou a uma cu
  A ordem de classificação especifica como os valores de dados são classificados. Isso afeta os resultados da comparação de dados. Os dados são classificados com o uso de ordenações e podem ser otimizados com o uso de índices.    
     
 ##  <a name="Unicode_Defn"></a> Suporte de Unicode    
-O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (UTF-16) (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). Como alternativa, a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). 
+O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (UTF-16) (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). Como alternativa, começando com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). 
 
 > [!NOTE]
 > O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] não altera o comportamento de tipos de dados Unicode existentes anteriormente (UTF-16) (**nchar**, **nvarchar** e **ntext**).   
@@ -134,24 +134,24 @@ Quando você move dados de um servidor para um cliente, a ordenação do servido
     
 Você também pode tentar usar uma ordenação diferente para os dados no servidor. Escolha uma ordenação que mapeia para uma página de código no cliente.    
     
-Para usar as ordenações UTF-16 disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para melhorar a pesquisa e classificação de alguns caracteres Unicode (somente ordenações do Windows), selecione uma das as ordenações \_SC (caracteres suplementares) ou uma das as ordenações da versão 140.    
+Para usar os agrupamentos UTF-16 disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para melhorar a pesquisa e classificação de alguns caracteres Unicode (somente agrupamentos do Windows), selecione um dos agrupamentos \_SC (caracteres suplementares) ou um dos agrupamentos da versão 140.    
  
-Para usar as as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] para aprimorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), você precisa selecionar as ordenações habilitadas para codificação UTF-8 (\_UTF8).
+Para usar os agrupamentos UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] para aprimorar a pesquisa e a classificação de alguns caracteres Unicode (somente agrupamentos do Windows), você precisa selecionar agrupamentos habilitados para codificação UTF-8 (\_UTF8).
  
 -   O sinalizador de UTF8 pode ser aplicado a:    
    
     -   Ordenações da versão 90 
     
         > [!NOTE]
-        > Somente quando caracteres suplementares (\_SC) ou ordenações com diferenciação de seletor de variação (\_VSS) já existem nesta versão.
+        > Somente quando caracteres suplementares (\_SC) ou agrupamentos com diferenciação de seletor de variação (\_VSS) já existem nesta versão.
     
     -   Ordenações da versão 100    
     
-    -   Ordenações da versão 140    
+    -   Agrupamentos da versão 140    
     
 -   O sinalizador de UTF8 não pode ser aplicado a:    
     
-    -   Ordenações da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
+    -   Agrupamentos da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
     
     -   As ordenações primárias BIN ou BIN2    
     
@@ -177,9 +177,9 @@ A tabela a seguir fornece informações sobre como usar dados multilíngues com 
 ##  <a name="Supplementary_Characters"></a> Caracteres complementares    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece tipos de dados como **nchar** e **nvarchar** para armazenar dados Unicode (UTF-16) em qualquer ordenação, bem como tipos de dados como **char** e **varchar** para armazenar dados Unicode (UTF-8) em ordenações habilitadas para UTF-8 (\_UTF8). Esses tipos de dados codificam texto em um formato chamado *UTF-16* e *UTF-8*, respectivamente. O Consórcio Unicode aloca para cada caractere um ponto de código exclusivo, que é um valor no intervalo de 0x0000 a 0x10FFFF. Os caracteres mais frequentemente usados têm valores de código que se ajustam em uma palavra de 8 bits ou de 16 bits na memória e no disco, mas caracteres com valores de código maiores que 0xFFFF exigem de duas a quatro palavras de 8 bits consecutivas (UTF-8) ou duas palavras de 16 bits consecutivas (UTF-16). Esses caracteres são chamados de *caracteres suplementares* e as palavras de 8 bits ou 16 bits consecutivas adicionais são chamadas de *pares alternativos*.    
     
-Introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], uma nova família de ordenações de \_SC (caracteres suplementares) pode ser usada com os tipos de dados **nchar**, **nvarchar** e **sql_variant**. Por exemplo: `Latin1_General_100_CI_AS_SC` ou, ao usar uma ordenação de japonês, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
+Introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], uma nova família de agrupamentos de \_SC (caracteres suplementares) pode ser usada com os tipos de dados **nchar**, **nvarchar** e **sql_variant**. Por exemplo: `Latin1_General_100_CI_AS_SC` ou, ao usar uma ordenação de japonês, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende o suporte a caracteres suplementares para os tipos de dados **char** e **varchar** com as novas ordenações habilitadas para UTF-8 (\_UTF8).   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende o suporte a caracteres suplementares para os tipos de dados **char** e **varchar** com os novos agrupamentos habilitados para UTF-8 (\_UTF8).   
 
 A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todas as novas ordenações dão suporte a caracteres suplementares automaticamente.
 
@@ -235,7 +235,7 @@ Aplicativos de banco de dados que interagem com o [!INCLUDE[ssNoVersion](../../i
  
 A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para novas famílias de ordenação em japonês, com as permutações de várias opções (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Para listar essas ordenações, consulte o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
+Para listar esses agrupamentos, você pode consultar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
 ```sql 
 SELECT Name, Description FROM fn_helpcollations()  
@@ -258,10 +258,10 @@ Essas ordenações têm suporte em índices de Mecanismo de Banco de Dados, tabe
 |Descreve como alterar o idioma de mensagens de erro e preferências de como data, hora e dados de moeda são usados e exibidos.|[Definir um idioma de sessão](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Conteúdo relacionado    
-[Práticas recomendadas para alteração em ordenações do SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[Práticas recomendadas para alteração em ordenações do SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-["Práticas recomendadas para migração para Unicode no SQL Server"](http://go.microsoft.com/fwlink/?LinkId=113890) – deixou de receber manutenção   
-[Site de consórcio Unicode](http://go.microsoft.com/fwlink/?LinkId=48619)    
+["Práticas recomendadas para migração para Unicode no SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890) – deixou de receber manutenção   
+[Site de consórcio Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>Consulte Também    
 [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)     

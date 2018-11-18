@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797341"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669855"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como: Executar testes de unidade do SQL Server no Team Foundation Build
 Você pode usar o Team Foundation Build para executar os testes de unidade do SQL Server como parte de um teste de verificação da compilação (BVT). Você pode configurar os testes de unidade para implantar o banco de dados, gerar dados de teste e executar os testes selecionados. Se você não estiver familiarizado com o Team Foundation Build, analise as seguintes informações antes de seguir os procedimentos deste tópico:  
   
 -   [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Como configurar e executar testes agendados depois de criar seu aplicativo](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Como configurar e executar testes agendados depois de criar seu aplicativo](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Criar uma definição de build básica](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Criar uma definição de build básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Antes de executar esses procedimentos, primeiro você deve configurar o ambiente de trabalho realizando as seguintes tarefas:  
   
@@ -215,22 +215,22 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 1.  Conecte-se a um computador que esteja executando o Team Foundation Build.  
   
-    Para saber mais, confira [Usar o Source Control Explorer](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Para saber mais, confira [Usar o Source Control Explorer](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  Se sua solução ainda não estiver no controle do código-fonte, adicione-a a ele.  
   
-    Para saber mais, confira [Adicionar um projeto ou solução ao controle de versão](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Para saber mais, confira [Adicionar um projeto ou solução ao controle de versão](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Clique em **Exibir** e clique em **Check-ins Pendentes**.  
   
 4.  Faça check-in de todos os arquivos da solução.  
   
-    Para saber mais, confira [Fazer check-in das alterações pendentes](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Para saber mais, confira [Fazer check-in das alterações pendentes](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > Você poderia ter um processo de equipe específico que determinasse como os testes automatizados são criados e gerenciados. Por exemplo, o processo pode exigir que você verifique a compilação localmente antes de fazer check-in desse código junto com os testes que serão executados nele.  
   
-    Em **Gerenciador de Soluções**, um ícone de cadeado aparece ao lado de cada arquivo para indicar que ele foi verificado. Para saber mais, confira [Propriedades de pasta e arquivo de controle de versão do modo de exibição](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Em **Gerenciador de Soluções**, um ícone de cadeado aparece ao lado de cada arquivo para indicar que ele foi verificado. Para saber mais, confira [Propriedades de pasta e arquivo de controle de versão do modo de exibição](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     Os testes estão disponíveis para o Team Foundation Build. Agora você pode criar uma definição de compilação que contenha os testes a serem executados.  
   
@@ -280,11 +280,11 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 3.  Confirme se os valores nos campos **Definição de build**, **Agente de build** e **Pasta de descarte deste build** são apropriados e clique em **Enfileirar**.  
   
-    A guia **Enfileirado** de **Gerenciador de Compilações** é exibida. Para saber mais, confira [Gerenciar e exibir compilações concluídas (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Gerenciar suas compilações no Gerenciador de Compilações (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    A guia **Enfileirado** de **Gerenciador de Compilações** é exibida. Para saber mais, confira [Gerenciar e exibir compilações concluídas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Gerenciar suas compilações no Gerenciador de Compilações (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Criar uma definição de build básica](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Enfileirar um build](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitorar o andamento de uma compilação em execução](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Criar uma definição de build básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Enfileirar um build](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Monitorar o andamento de uma compilação em execução](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

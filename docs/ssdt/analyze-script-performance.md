@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836204"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675045"
 ---
 # <a name="analyze-script-performance"></a>Analisar o desempenho do script
 Você pode usar as ferramentas fornecidas pelo SQL Server Data Tools para determinar se pode melhorar o desempenho de sua consulta, procedimentos armazenados ou scripts. Por exemplo, ao monitorar estatísticas de cliente como os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas. Essas estatísticas podem incluir o tempo de execução do cliente, o perfil de consulta e pacotes/bytes enviados e recebidos.  
@@ -32,7 +32,7 @@ Para ativar/desativar a coleta de estatísticas do cliente, quando o Editor Tran
   
 Se você ativou as estatísticas de cliente, a guia **Estatísticas** será exibida ao lado da guia **Mensagem** após a execução da consulta. Se você desativou as estatísticas de cliente, a guia **Estatísticas** não será exibida. São listadas estatísticas de execuções de consulta sucessivas junto com os valores médios.  
   
-Para saber mais sobre as estatísticas coletadas, consulte o artigo sobre o [painel de estatísticas de janelas de consulta](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e a [seção de estatísticas do cliente nesse tópico](http://msdn.microsoft.com/library/aa833205.aspx).  
+Para saber mais sobre as estatísticas coletadas, consulte o artigo sobre o [painel de estatísticas de janelas de consulta](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e a [seção de estatísticas do cliente nesse tópico](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## <a name="using-execution-plans"></a>Utilizando planos de execução  
 Os planos de execução exibem como o mecanismo de banco de dados navega nas tabelas e como usa os índices para acessar ou processar os dados para uma consulta ou outra instrução DML, como uma atualização. Essa abordagem gráfica é muito útil para entender as características de desempenho de uma consulta.  
@@ -41,7 +41,7 @@ Abra um script Transact\-SQL que contenha as consultas que você deseja analisar
   
 Depois de o script ter sido analisado ou executado, clique na guia **Plano de execução** para ver uma representação gráfica da saída do plano de execução.  
   
-A saída do plano de execução gráfica é lida da direita para a esquerda e de cima para baixo. Cada consulta no lote analisado é exibida, inclusive o custo de cada consulta, como uma porcentagem do custo total do lote. Para exibir mais informações como o custo e a operação para cada etapa, passe o mouse sobre os [ícones dos operadores lógicos e físicos](http://msdn.microsoft.com/library/ms175913.aspx) no plano gráfico.  
+A saída do plano de execução gráfica é lida da direita para a esquerda e de cima para baixo. Cada consulta no lote analisado é exibida, inclusive o custo de cada consulta, como uma porcentagem do custo total do lote. Para exibir mais informações como o custo e a operação para cada etapa, passe o mouse sobre os [ícones dos operadores lógicos e físicos](https://msdn.microsoft.com/library/ms175913.aspx) no plano gráfico.  
   
 Para alterar a exibição do plano de execução, clique com o botão direito do mouse no **Plano de execução** e selecione **Ampliar**, **Reduzir**, **Zoom Personalizado** ou **Ajustar Nível de Zoom**. **Ampliar** e **Reduzir** permitem ampliar ou reduzir o plano de execução com valores fixos. **Zoom personalizado** permite que você defina sua própria ampliação da exibição, como ampliar em 80 por cento.  **Ajustar nível de zoom** ajusta o plano de execução de acordo com o painel de resultados.  
   
@@ -52,5 +52,5 @@ Você pode usar Análise de Código para descobrir problemas potenciais em seus 
   
 Para usar a Análise de Código manualmente, clique com o botão direito do mouse no seu projeto no **Gerenciador de Soluções** e selecione **Executar Análise de Código**. Os avisos da análise de código são listados na janela **Lista de Erros** . Você pode clicar duas vezes em um aviso para navegar para o código-fonte que contém o problema e você pode exibir informações adicionais e possíveis correções para um aviso usando o menu contextual **Mostrar Ajuda para erros**.  
   
-Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](http://msdn.microsoft.com/library/dd172133.aspx)(a página pode estar em inglês).  
+Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](https://msdn.microsoft.com/library/dd172133.aspx)(a página pode estar em inglês).  
   

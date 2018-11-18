@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656141"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621794"
    
  O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atua como uma ponte entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o Cofre de Chaves do Azure, portanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode aproveitar a escalabilidade, alto desempenho e alta disponibilidade do serviço de Cofre de Chaves do Azure. A imagem a seguir representa como a hierarquia de chave funciona na arquitetura do provedor EKM com o Cofre de Chaves do Azure e o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-  O Cofre de Chaves do Azure pode ser usado com instalações do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Máquinas Virtuais do Azure do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e para servidores locais. O serviço de chave de cofre também fornece a opção de usar rigidamente módulos de segurança de hardware (HSM) monitorados e controlados para um nível mais alto de proteção para as chaves de criptografia assimétrica. Para obter mais informações sobre o cofre de chaves, consulte [Cofre de Chaves do Azure](http://go.microsoft.com/fwlink/?LinkId=521401).  
+  O Cofre de Chaves do Azure pode ser usado com instalações do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Máquinas Virtuais do Azure do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e para servidores locais. O serviço de chave de cofre também fornece a opção de usar rigidamente módulos de segurança de hardware (HSM) monitorados e controlados para um nível mais alto de proteção para as chaves de criptografia assimétrica. Para obter mais informações sobre o cofre de chaves, consulte [Cofre de Chaves do Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  A imagem a seguir resume o fluxo do processo de EKM usando o cofre da chave. (Os números de etapa do processo na imagem não devem corresponder aos números de etapa de instalação que seguem a imagem.)  
   

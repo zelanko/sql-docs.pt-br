@@ -5,8 +5,7 @@ ms.date: 10/27/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration"
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8995d5a8ddf863374459f8c49f941a7d2b0dc5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9e043f66817b1c45b56d6c04b1a093c7435c633
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787914"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350480"
 ---
 # <a name="database-properties-general-page"></a>Propriedades de Banco de Dados (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +53,8 @@ ms.locfileid: "47787914"
  **Número de Usuários**  
  Exibe o número de usuários configurados para o banco de dados.  
   
- **Nome do Agrupamento**  
- Exibe o agrupamento usado para o banco de dados. O agrupamento pode ser alterado na página **Opções** .  
+ **Nome da Ordenação**  
+ Exibe a ordenação usada para o banco de dados. A ordenação pode ser alterada na página **Opções**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -33,12 +33,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 526d91118fc7daee18bfa6ec0305bef07825c5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e38cf3dd4e18019a3656be584e799d5a1ee40ff3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663744"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698735"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47663744"
 Uma constante, também conhecida como uma literal ou um valor escalar, é um símbolo que representa um valor de dados específico. O formato de uma constante depende do tipo de dados do valor que representa.
   
 ## <a name="character-string-constants"></a>Constantes de cadeia de caracteres
-As constantes de cadeias de caracteres são incluídas entre aspas simples e incluem caracteres alfanuméricos (a-z, A-Z e 0-9) e caracteres especiais, como ponto de exclamação (!), arroba (@) e sinal numérico (#). Às constantes de cadeias de caracteres é atribuído o agrupamento padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar um agrupamento. As cadeias de caracteres digitadas por usuários são avaliadas pela página de código do computador e são convertidas na página de código padrão do banco de dados, se isso for necessário.
+As constantes de cadeias de caracteres são incluídas entre aspas simples e incluem caracteres alfanuméricos (a-z, A-Z e 0-9) e caracteres especiais, como ponto de exclamação (!), arroba (@) e sinal numérico (#). Às constantes de cadeias de caracteres é atribuída a ordenação padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar uma ordenação. As cadeias de caracteres digitadas por usuários são avaliadas pela página de código do computador e são convertidas na página de código padrão do banco de dados, se isso for necessário.
   
 Se a opção QUOTED_IDENTIFIER foi definida como OFF para uma conexão, as cadeias de caracteres também podem ser incluídas entre aspas duplas, mas o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider e o driver ODBC usam automaticamente SET QUOTED_IDENTIFIER ON. Recomenda-se usar aspas simples.
   
@@ -64,15 +64,15 @@ Os seguintes são exemplos de cadeias de caracteres:
   
 As cadeias de caracteres vazias são representadas como duas aspas simples sem nada entre elas. No modo de compatibilidade 6.x, uma cadeia de caracteres vazia é tratada como um único espaço.
   
-As constantes de cadeia de caracteres oferecem suporte a agrupamentos avançados.
+As constantes de cadeia de caracteres oferecem suporte a ordenações avançadas.
   
 > [!NOTE]  
 >  As constantes de caractere maiores que 8.000 bytes são tipadas como dados **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Cadeias de caracteres Unicode
-As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de caracteres, mas são precedidas por um identificador N (N significa National Language no padrão SQL-92). O prefixo N deve ser maiúsculo. Por exemplo, 'Michél' é uma constante de caracteres, enquanto N'Michél' é uma constante Unicode. As constantes Unicode são interpretadas como dados Unicode e não são avaliadas com o uso de uma página de código. As constantes Unicode têm um agrupamento. Esse agrupamento controla principalmente comparações e diferenciação de maiúsculas e minúsculas. Às constantes Unicode é atribuído o agrupamento padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar um agrupamento. Os dados Unicode são armazenados usando 2 bytes por caractere, em vez de 1 byte por caractere para dados de caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de caracteres, mas são precedidas por um identificador N (N significa National Language no padrão SQL-92). O prefixo N deve ser maiúsculo. Por exemplo, 'Michél' é uma constante de caracteres, enquanto N'Michél' é uma constante Unicode. As constantes Unicode são interpretadas como dados Unicode e não são avaliadas com o uso de uma página de código. As constantes Unicode têm uma ordenação. Esse ordenação controla principalmente comparações e diferenciação de maiúsculas e minúsculas. Às constantes Unicode é atribuída a ordenação padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar uma ordenação. Os dados Unicode são armazenados usando 2 bytes por caractere, em vez de 1 byte por caractere para dados de caractere. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
   
-As constantes da cadeira de caracteres Unicode oferecem suporte a agrupamentos avançados.
+As constantes da cadeira de caracteres Unicode oferecem suporte a ordenações avançados.
   
 > [!NOTE]  
 >  As constantes Unicode maiores que 8.000 bytes são tipadas como dados **nvarchar(max)**.  
@@ -199,8 +199,8 @@ Expressões **money** com sinal:
 +$423456.99
 ```
   
-## <a name="enhanced-collations"></a>Agrupamentos avançados  
-O SQL Server oferece suporte a constantes de cadeias de caractere e Unicode que aceitam agrupamentos avançados. Para obter mais informações, consulte a cláusula [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+## <a name="enhanced-collations"></a>Ordenações avançadas  
+O SQL Server oferece suporte a constantes de cadeias de caractere e Unicode que aceitam ordenações avançadas. Para obter mais informações, consulte a cláusula [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 ## <a name="see-also"></a>Confira também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

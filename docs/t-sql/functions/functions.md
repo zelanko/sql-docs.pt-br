@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772546"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701314"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,24 +60,24 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
 |[Funções de cursor](cursor-functions-transact-sql.md)|Retornam informações sobre cursores.|  
 |[Tipos de dados e funções de data e hora](date-and-time-data-types-and-functions-transact-sql.md)|Executam operações em uma data e valores de entrada de hora e retornam valores de cadeia de caracteres, numéricos ou de data e hora.|  
 |[Funções JSON](json-functions-transact-sql.md)|Validam, consultam ou alteram dados JSON.|  
-|[Funções lógicas](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Executam operações lógicas.|  
+|[Funções lógicas](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Executam operações lógicas.|  
 |[Funções matemáticas](mathematical-functions-transact-sql.md)|Executam cálculos baseados em valores de entrada fornecidos como parâmetros às funções e retorna valores numéricos.|  
 |[Funções de metadados](metadata-functions-transact-sql.md)|Retornam informações sobre o banco de dados e objetos de banco de dados.|  
 |[Funções de segurança](security-functions-transact-sql.md)|Retornam informações sobre usuários e funções.|  
 |[Funções de cadeia de caracteres](string-functions-transact-sql.md)|Executam operações em um valor de entrada de cadeia de caracteres (**char** ou **varchar**) e retornam uma cadeia de caracteres ou um valor numérico.|  
 |[Funções do Sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Executam operações e informações de retorno sobre valores, objetos e configurações em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funções estatísticas do sistema](system-statistical-functions-transact-sql.md)|Retornam informações estatísticas sobre o sistema.|  
-|[Funções de texto e imagem](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Executam operações em valores de entrada de texto ou imagem ou colunas e retornam informações sobre o valor.|  
+|[Funções de texto e imagem](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Executam operações em valores de entrada de texto ou imagem ou colunas e retornam informações sobre o valor.|  
   
 ## <a name="function-determinism"></a>Determinismo de função  
  As funções internas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são determinísticas ou não determinísticas. As funções são determinísticas quando retornam sempre o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada. As funções são não determinísticas quando podem retornar resultados diferentes sempre que são chamadas, mesmo com o mesmo conjunto específico de valores de entrada. Para obter mais informações, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
   
-## <a name="function-collation"></a>Agrupamento de funções  
- As funções que usam uma entrada de cadeia de caracteres e retornam uma saída de cadeia de caracteres usam o agrupamento da cadeia de caracteres de entrada para a saída.  
+## <a name="function-collation"></a>Ordenação de funções  
+ As funções que usam uma entrada de cadeia de caracteres e retornam uma saída de cadeia de caracteres usam a ordenação da cadeia de caracteres de entrada para a saída.  
   
- As funções que usam entradas de não caracteres e retornam uma cadeia de caracteres usam o agrupamento padrão do banco de dados atual para a saída.  
+ As funções que usam entradas de não caracteres e retornam uma cadeia de caracteres usam a ordenação padrão do banco de dados atual para a saída.  
   
- As funções que usam várias entradas de cadeia de caracteres e retornam uma cadeia de caracteres usam as regras de precedência de agrupamento para definir o agrupamento da cadeia de caracteres de saída. Para obter mais informações, consulte [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ As funções que usam várias entradas de cadeia de caracteres e retornam uma cadeia de caracteres usam as regras de precedência de ordenação para definir a ordenação da cadeia de caracteres de saída. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

@@ -15,19 +15,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dc9d6b5c66e161f29b1914e9c01a956c0546adb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6cf384434915fd0f83dc20d6bfbfd0f6c24788c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735110"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673755"
 ---
 # <a name="sql-server-guides"></a>Guias do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Os guias a seguir estão disponíveis. Eles abordam conceitos gerais e se aplicam a todas as versões do SQL Server, salvo indicação em contrário no respectivo guia. 
 
-[Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On](http://msdn.microsoft.com/library/dn135328)  
+[Guia de solução de problemas e monitoramento dos grupos de disponibilidade Always On](https://msdn.microsoft.com/library/dn135328)  
 [Guia de Arquitetura e Design de Índice](../relational-databases/sql-server-index-design-guide.md)  
 [Guia de arquitetura de gerenciamento de memória](../relational-databases/memory-management-architecture-guide.md)  
 [Guia de arquitetura de página e extensões](../relational-databases/pages-and-extents-architecture-guide.md)  

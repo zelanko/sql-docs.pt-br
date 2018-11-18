@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787424"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659055"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Como: Abrir um teste de unidade do SQL Server a ser editado
 Após criar um teste de unidade do SQL Server, use o **Designer de Teste de Unidade do SQL Server** para adicionar instruções Transact\-SQL e condições de teste. Os testes criados por meio do designer geram código do Visual C# ou do Visual Basic. Esse é código executado quando o teste é executado.  
   
-Se você estiver satisfeito com seu teste, execute-o dessa forma. Se você quiser adicionar mais funcionalidade a esse teste de unidade, edite o código. Esse código reside em um arquivo .cs ou .vb no projeto de teste. Para saber mais, confira [Arquivos de teste de unidade SQL Server](../ssdt/sql-server-unit-test-files.md). Você também pode personalizar os testes criando novas condições de teste. Para saber mais, confira [Como criar condições de teste para o Designer de teste de unidade do banco de dados (Visual Studio 2010).](http://msdn.microsoft.com/library/aa833409(VS.100).aspx)  
+Se você estiver satisfeito com seu teste, execute-o dessa forma. Se você quiser adicionar mais funcionalidade a esse teste de unidade, edite o código. Esse código reside em um arquivo .cs ou .vb no projeto de teste. Para saber mais, confira [Arquivos de teste de unidade SQL Server](../ssdt/sql-server-unit-test-files.md). Você também pode personalizar os testes criando novas condições de teste. Para saber mais, confira [Como criar condições de teste para o Designer de teste de unidade do banco de dados (Visual Studio 2010).](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)  
   
 > [!NOTE]  
 > Se você excluir um método de teste editando o arquivo .cs ou .vb, o método de teste ainda aparecerá no **Designer de Teste de Unidade do SQL Server**. Isso acontece porque o método InitializeComponent da classe de teste ainda contém variáveis de membro para esse teste. Embora o teste seja exibido no designer, você não poderá executá-lo porque seu código não está mais presente. Para regenerar o método de teste em questão, edite o Transact\-SQL no editor e salve o arquivo de teste .cs ou .vb ou recompile o projeto de teste.  

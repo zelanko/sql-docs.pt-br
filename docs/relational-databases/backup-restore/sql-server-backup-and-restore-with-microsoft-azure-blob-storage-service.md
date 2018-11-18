@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805444"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660117"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Fazer backup para o gráfico de blobs do Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Fazer backup para o gráfico de blobs do Azure")  
   
- Este tópico descreve como fazer backups e restaurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [serviço de armazenamento de Blobs do Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Ele também fornece um resumo dos benefícios do uso do Serviço Blob do Microsoft Azure para armazenar backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Este tópico descreve como fazer backups e restaurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [serviço de armazenamento de Blobs do Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Ele também fornece um resumo dos benefícios do uso do Serviço Blob do Microsoft Azure para armazenar backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O SQL Server dá suporte ao armazenamento de backups no serviço de armazenamento de Blobs do Microsoft Azure, das seguintes maneiras:  
   
 -   **Gerencie os backups para o Microsoft Azure:** usando os mesmos métodos usados para fazer backup em DISCO e FITA, agora você pode fazer backup para o armazenamento do Microsoft Azure especificando a URL como o destino do backup. Você pode usar esse recurso para fazer backup ou configurar manualmente sua própria estratégia de backup, como faria em um armazenamento local ou em outras opções fora do local. Esse recurso também é conhecido como **Backup do SQL Server para URL**. Para obter mais informações, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esse recurso está disponível no SQL Server 2012 SP1 CU2 ou posterior. Esse recurso foi aprimorado no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para fornecer melhor desempenho e funcionalidade com o uso de blobs de bloco, assinaturas de acesso compartilhado e distribuição.  
   
     > [!NOTE]  
-    >  Para as versões do SQL Server anteriores ao SQL Server 2012 SP1 CU2, você pode usar o suplemento Ferramenta de Backup do SQL Server para o Microsoft Azure para criar backups no armazenamento do Microsoft Azure com rapidez e facilidade. Para obter mais informações, consulte [centro de download](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  Para as versões do SQL Server anteriores ao SQL Server 2012 SP1 CU2, você pode usar o suplemento Ferramenta de Backup do SQL Server para o Microsoft Azure para criar backups no armazenamento do Microsoft Azure com rapidez e facilidade. Para obter mais informações, consulte [centro de download](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Backups de instantâneo de arquivo de arquivos de banco de dados no Armazenamento de Blogs do Azure** Com o uso de instantâneos do Azure, os Backups de Instantâneo de Arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem backups e restaurações instantâneos de arquivos de banco de dados armazenados por meio do serviço de armazenamento de Blobs do Azure. Essa funcionalidade permite que você simplifique as políticas de backup e restauração, e dá suporte à recuperação pontual. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Esse recurso está disponível no SQL Server 2016 ou posterior.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805444"
 ##  <a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
  Compreender os custos de armazenamento do Microsoft Azure habilita você a fazer uma previsão do custo da criação e do armazenamento de backups no Microsoft Azure.  
   
- A [calculadora de preços do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  
+ A [calculadora de preços do Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  
   
- **Armazenamento:** os encargos baseiam-se no espaço usado, e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Armazenamento:** os encargos baseiam-se no espaço usado, e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Transferências de dados:** as transferências de dados de entrada para o Microsoft Azure são gratuitas. As transferências de saída são cobradas de acordo com o uso da largura de banda e calculadas com base em uma escala graduada específica de região. Para obter mais detalhes, consulte a seção [Transferências de dados](http://go.microsoft.com/fwlink/?LinkId=277061) do artigo Detalhes do preço.  
+ **Transferências de dados:** as transferências de dados de entrada para o Microsoft Azure são gratuitas. As transferências de saída são cobradas de acordo com o uso da largura de banda e calculadas com base em uma escala graduada específica de região. Para obter mais detalhes, consulte a seção [Transferências de dados](https://go.microsoft.com/fwlink/?LinkId=277061) do artigo Detalhes do preço.  
   
 ## <a name="see-also"></a>Consulte Também  
 

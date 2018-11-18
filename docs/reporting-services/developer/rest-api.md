@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028226"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812740"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desenvolver com as APIs REST para o Reporting Services
 
@@ -46,7 +46,7 @@ Um par de solicitação/resposta da API REST pode ser separado em cinco componen
 
 * Campos de **cabeçalho da mensagem de resposta** HTTP:
 
-    * Um [código de status HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), que varia de códigos de sucesso 2xx a códigos de erro 4xx ou 5xx. Como alternativa, um código de status definido pelo serviço pode ser retornado, conforme indicado na documentação da API.
+    * Um [código de status HTTP](https://www.w3.org/Protocols/HTTP/HTRESP.html), que varia de códigos de sucesso 2xx a códigos de erro 4xx ou 5xx. Como alternativa, um código de status definido pelo serviço pode ser retornado, conforme indicado na documentação da API.
     * Campos de cabeçalho adicionais opcionais, conforme necessário, para dar suporte à resposta da solicitação, como um cabeçalho de resposta `Content-type`.
 
 * Campos opcionais de **corpo da mensagem de resposta** HTTP:
@@ -59,7 +59,7 @@ Uma API REST moderna necessita de uma documentação de API moderna. A API REST 
 
 ## <a name="testing-api-calls"></a>Testando chamadas à API
 
-Uma ferramenta para testar as mensagens de solicitação/resposta HTTP é o [Fiddler](http://www.telerik.com/fiddler). O Fiddler é um proxy Web de depuração gratuito que pode interceptar as solicitações REST, facilitando o diagnóstico de mensagens de solicitação/resposta HTTP.
+Uma ferramenta para testar as mensagens de solicitação/resposta HTTP é o [Fiddler](https://www.telerik.com/fiddler). O Fiddler é um proxy Web de depuração gratuito que pode interceptar as solicitações REST, facilitando o diagnóstico de mensagens de solicitação/resposta HTTP.
 
 ## <a name="next-steps"></a>Próximas etapas
 

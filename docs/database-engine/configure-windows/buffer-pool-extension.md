@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658194"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606886"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658194"
  Os termos a seguir são aplicáveis ao recurso de extensão do pool de buffers.  
   
  SSD (unidade de estado sólido)  
- As unidades de estado sólido armazenam dados na memória (RAM) de maneira persistente. Para obter mais informações, consulte [esta definição](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ As unidades de estado sólido armazenam dados na memória (RAM) de maneira persistente. Para obter mais informações, consulte [esta definição](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Buffer  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um buffer é uma página de 8 KB na memória, o mesmo tamanho de uma página de dados ou índice. Portanto, o cache do buffer é dividido em páginas de 8 KB. Uma página permanece no cache do buffer até que o gerenciador de buffer precise da área de buffer para ler mais dados. Os dados serão gravados no disco apenas se forem modificados. Essas páginas modificadas na memória são conhecidas como páginas sujas. Uma página está limpa quando equivale à sua imagem de banco de dados no disco. Os dados podem ser modificados no cache do buffer várias vezes antes de serem gravados no disco.  

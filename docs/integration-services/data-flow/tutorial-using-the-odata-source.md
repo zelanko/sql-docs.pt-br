@@ -11,15 +11,15 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716344"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637753"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usando o OData Source
-  Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (http://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  
+  Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (https://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Criar um projeto do Integration Services  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47716344"
   
 5.  Clique em **Novo…** para adicionar um novo Gerenciador de Conexões OData.  
   
-6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa URL pode ser igual àquela do documento do serviço ou à de um feed ou entidade específica. Para os fins deste tutorial, insira a URL para o documento de serviço: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa URL pode ser igual àquela do documento do serviço ou à de um feed ou entidade específica. Para os fins deste tutorial, insira a URL para o documento de serviço: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Verifique se a **Autenticação do Windows** está selecionada como **autenticação** a ser usada para acessar o serviço OData. A**Autenticação do Windows** está selecionada por padrão.  
   

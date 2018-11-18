@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753794"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642353"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
   Se o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ou posterior estiver atualmente instalado no computador, você poderá atualizar para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "47753794"
 > -   Tarefa Executar Pacote DTS 2000  
 > -   Exame de pacotes DTS do Supervisor de Atualização  
 >   
->  Para obter informações sobre outros recursos descontinuados, consulte [Funcionalidade do Integration Services descontinuada no SQL Server 2016](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  Para obter informações sobre outros recursos descontinuados, consulte [Funcionalidade do Integration Services descontinuada no SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>atualizando o Integration Services  
  Você pode fazer a atualização usando um dos seguintes métodos:  
@@ -145,6 +145,6 @@ ms.locfileid: "47753794"
 -   Não é possível usar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em computadores com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para executar pacotes do [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] armazenados na instância atualizada do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Fazendo com que aplicativos e extensões de SSIS personalizados existentes funcionem no Denali](http://go.microsoft.com/fwlink/?LinkId=238157), em blogs.msdn.com.  
+ Entrada de blog, [Fazendo com que aplicativos e extensões de SSIS personalizados existentes funcionem no Denali](https://go.microsoft.com/fwlink/?LinkId=238157), em blogs.msdn.com.  
   
   

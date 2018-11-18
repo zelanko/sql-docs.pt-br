@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688584"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681274"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Criando e definindo testes de unidade do SQL Server
 Você pode executar testes de unidade do SQL Server para verificar se as alterações feitas em um ou mais objetos de banco de dados de um esquema interromperam a funcionalidade existente em um aplicativo de banco de dados. Esses testes complementam os testes de unidade criados pelos desenvolvedores de software. Você deve executar os dois tipos de teste para verificar o comportamento do aplicativo.  
@@ -46,7 +46,7 @@ Na tabela a seguir, é possível localizar descrições de tarefas comuns que of
 [Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Depois que você criar os testes de unidade do SQL Server, poderá executá-los na janela Modo de Teste, no Designer de Teste de Unidade do SQL Server ou usando o Team Foundation Build.  
   
-[Cenário: definir condições de teste personalizadas para testes de unidade do banco de dados](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Cenário: definir condições de teste personalizadas para testes de unidade do banco de dados](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 Você pode criar uma condição de teste personalizada para testar um comportamento que as condições de teste padrão não podem verificar.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664744"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674845"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Monitore o uso do espaço de log usando [sys.dm_db_log_space_usage](../../relati
 Para obter informações sobre o tamanho do arquivo de log atual, seu tamanho máximo e a opção de crescimento automático para o arquivo, você também pode usar as colunas **size**, **max_size** e **growth** para esse arquivo de log em [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Evite sobrecarregar o disco de log. Verifique se o armazenamento de log pode suportar os requisitos de [IOPS](http://wikipedia.org/wiki/IOPS) e baixa latência da carga transacional. 
+> Evite sobrecarregar o disco de log. Verifique se o armazenamento de log pode suportar os requisitos de [IOPS](https://wikipedia.org/wiki/IOPS) e baixa latência da carga transacional. 
   
 ##  <a name="ShrinkSize"></a> Reduzir o tamanho do arquivo de log  
  Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Isso será útil se você souber que um arquivo de log de transações contém espaço não utilizado. É possível reduzir um arquivo de log somente enquanto o banco de dados estiver online e se, pelo menos, um [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) estiver livre. Em alguns casos, talvez não seja possível reduzir o log antes do próximo truncamento de log.  
@@ -101,9 +101,9 @@ Estas são algumas recomendações gerais ao trabalhar com arquivos de log de tr
       |A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
       |Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 10%. Arquivos de log 10%.|  
 
--   Um pequeno incremento de aumento pode gerar um número excessivo de [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequenos e pode reduzir o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   Um pequeno incremento de aumento pode gerar um número excessivo de [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequenos e pode reduzir o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Um grande incremento de aumento pode gerar um número pequeno de [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) grandes e também pode afetar o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   Um grande incremento de aumento pode gerar um número pequeno de [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) grandes e também pode afetar o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Mesmo com o aumento automático habilitado, você pode receber uma mensagem informando que o log de transações está cheio, caso ele não possa aumentar rápido o suficiente para atender às necessidades da consulta. Para obter mais informações sobre como alterar o incremento de aumento, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

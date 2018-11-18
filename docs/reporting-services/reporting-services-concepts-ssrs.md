@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031885"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814299"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "50031885"
  Os itens de servidor de relatório incluem relatórios móveis e paginados, KPIs, fontes de dados compartilhadas, conjuntos de dados compartilhados e outros itens que você pode publicar, carregar ou salvar em um servidor de relatório. Organize os itens na estrutura hierárquica de pastas do servidor de relatório em um servidor de relatório nativo ou em bibliotecas de conteúdo do SharePoint em um site do SharePoint. Para obter mais informações, consulte [Gerenciamento de conteúdo do Servidor de Relatório &#40;modo nativo do SSRS&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>Pastas
- Em um servidor de relatório nativo, as pastas fornecem a estrutura de navegação hierárquica e o caminho de todos os itens endereçáveis armazenados em um servidor de relatório. Você usa a hierarquia de pastas e as permissões de site e de pastas para ajudar a controlar o acesso a itens de servidor de relatório, conhecido como *segurança em nível de item*. Por padrão, as atribuições de função que você define para pastas específicas são herdadas por pastas filho na hierarquia de pastas. Se você atribuir funções específicas a uma pasta, as regras de herança não serão mais aplicadas. A estrutura de pastas consiste em um nó raiz denominado **Página Inicial**e em pastas reservadas que dão suporte ao recurso opcional **Meus Relatórios** . Em um navegador, o nó raiz é o nome do diretório virtual do servidor de relatório; por exemplo, `http://myreportserver/reports`. Para obter mais informações, consulte [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ Em um servidor de relatório nativo, as pastas fornecem a estrutura de navegação hierárquica e o caminho de todos os itens endereçáveis armazenados em um servidor de relatório. Você usa a hierarquia de pastas e as permissões de site e de pastas para ajudar a controlar o acesso a itens de servidor de relatório, conhecido como *segurança em nível de item*. Por padrão, as atribuições de função que você define para pastas específicas são herdadas por pastas filho na hierarquia de pastas. Se você atribuir funções específicas a uma pasta, as regras de herança não serão mais aplicadas. A estrutura de pastas consiste em um nó raiz denominado **Página Inicial**e em pastas reservadas que dão suporte ao recurso opcional **Meus Relatórios** . Em um navegador, o nó raiz é o nome do diretório virtual do servidor de relatório; por exemplo, `https://myreportserver/reports`. Para obter mais informações, consulte [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  Em um site do SharePoint, use pastas do SharePoint em bibliotecas de documentos e bibliotecas de conteúdo organizar os itens.  
   

@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f06d186ba77c1b65c6ef683a069e718b42c1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656384"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602956"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Use o Assistente para Adicionar Réplica do Azure (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47656384"
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
--   Você deve ter um ambiente de TI híbrido onde sua sub-rede local tenha um VPN de site a site com o Windows Azure. Para obter mais informações, veja [Configurar um VPN de site a site no Portal de Gerenciamento](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Você deve ter um ambiente de TI híbrido onde sua sub-rede local tenha um VPN de site a site com o Windows Azure. Para obter mais informações, veja [Configurar um VPN de site a site no Portal de Gerenciamento](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Seu grupo de disponibilidade deve conter réplicas de disponibilidade locais.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47656384"
   
 1.  Primeiro, baixe o certificado de gerenciamento para a sua assinatura do Windows Azure. Clique em **Download** para abrir a página de entrada.  
   
-2.  Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato de um endereço de email, como HYPERLINK “mailto:patc@contoso.com” patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, veja [Perguntas Frequentes sobre a Conta Institucional Microsoft](http://technet.microsoft.com/jj592903) e [Solucionando problemas de logon com sua conta organizacional](https://support.microsoft.com/kb/2756852).  
+2.  Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato de um endereço de email, como HYPERLINK “mailto:patc@contoso.com” patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, veja [Perguntas Frequentes sobre a Conta Institucional Microsoft](https://technet.microsoft.com/jj592903) e [Solucionando problemas de logon com sua conta organizacional](https://support.microsoft.com/kb/2756852).  
   
 3.  Em seguida, conecte-se à sua assinatura clicando em **Conectar**. Quando você estiver conectado, as listas suspensas serão populadas com seus parâmetros do Microsoft Azure, como **Rede Virtual** e **Sub-Rede de Rede Virtual**.  
   

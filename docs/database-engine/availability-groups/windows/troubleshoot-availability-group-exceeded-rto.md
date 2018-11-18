@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724214"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606866"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solução de problemas: o grupo de disponibilidade excedeu o RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Após um failover automático ou um failover manual planejado sem perda de dados em um grupo de disponibilidade, você descobre que o tempo de failover excedeu o RTO (objetivo de tempo de recuperação). Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático) usando o método em [Monitorar o desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md), você descobre que ele excede o RTO.  
   
- Se o failover automático ainda não foi concluído, veja [Solução de problemas de failover automático em ambientes de Always On do SQL Server 2012](http://support.microsoft.com/kb/2833707).  
+ Se o failover automático ainda não foi concluído, veja [Solução de problemas de failover automático em ambientes de Always On do SQL Server 2012](https://support.microsoft.com/kb/2833707).  
   
  As seções a seguir descrevem as causas comuns de um tempo de failover que excede o RTO.  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  Se o thread refazer estiver realmente atrasado, será necessário investigar a causa raiz da degradação do desempenho na réplica secundária. Se houver uma contenção de E/S com a carga de trabalho de relatório, você poderá usar o [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar os ciclos de CPU que são usados pela carga de trabalho de relatório para controlar indiretamente os ciclos de E/S executados, até certo ponto. Por exemplo, se sua carga de trabalho de relatório estiver consumindo 10% da CPU, mas a carga de trabalho estiver associada a E/S, você poderá usar o Resource Governor para limitar o uso de recursos de CPU a 5% a fim de limitar a carga de trabalho de leitura, minimizando o impacto na E/S.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

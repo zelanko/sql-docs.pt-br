@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9234f5c413abe2344132473c047b20c5addc5d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89e7093dfa3b749d0f6ed021a461414a10f2910e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793065"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657167"
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools – Termos de Licença
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 &nbsp;&nbsp;**a.    Item de Relatório de Mapa do SQL Server Reporting Services.** O software pode incluir recursos que recuperam conteúdo como mapas, imagens e outros dados através da interface de programação do aplicativo Bing Maps (a “API do Bing Maps”), ou marca sucessora. O propósito destes recursos é criar relatórios que exibam dados na superfície de mapas e imagens aéreas e híbridas. Se esses recursos estiverem incluídos, você poderá usá-los para criar e exibir documentos dinâmicos ou estáticos. Isso pode ser feito somente em conjunto com e através de métodos e meios de acesso integrado no software. Você não poderá, de outra forma, copiar, armazenar, arquivar ou criar um banco de dados de conteúdo disponível através da APIs do Bing Maps. Você não poderá usar o seguinte para nenhuma finalidade, mesmo se estiver disponível através das APIs do Bing Maps:  
 * as APIs do Bing Maps fornece orientação baseada em sensor/roteamento ou  
 * usar Dados de Tráfego de Estrada ou Imagens Vista de pássaro (ou metadados associados).  
-O uso do Bing Maps também é regido pelos Termos de Uso do Usuário final do Bing Maps disponíveis em http://go.microsoft.com/?linkid=9710837 e pela Política de Privacidade do Bing Maps disponível em http://go.microsoft.com/fwlink/?LinkID=248686.  
+O uso do Bing Maps também é regido pelos Termos de Uso do Usuário final do Bing Maps disponíveis em https://go.microsoft.com/?linkid=9710837 e pela Política de Privacidade do Bing Maps disponível em https://go.microsoft.com/fwlink/?LinkID=248686.  
   
 &nbsp;&nbsp;**b.**  Este software é projetado para permitir que os usuários do SSIS (SQL Server Integration Services) (a) movam dados entre armazenamentos de dados locais e serviços online da Microsoft e (b) dispararem certas ações em serviços online da Microsoft. Para fazer isso, o software usa protocolos de Internet para (i) enviar dados para esses serviços, incluindo seus próprios dados conforme designado por você e também dados sobre a configuração do software e (ii) solicitar dados a esses serviços, incluindo seus próprios dados conforme designado por você e também dados sobre a natureza e a configuração dos seus serviços online da Microsoft. Após você configurar o software para se comunicar com esses serviços, talvez você não receba avisos separados quando o software se conectar a tais serviços.  
   

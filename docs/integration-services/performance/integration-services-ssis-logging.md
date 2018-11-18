@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799096"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641253"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -233,7 +233,7 @@ ms.locfileid: "47799096"
   
     -   Para o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], use um Gerenciador de conexões de arquivo.  
   
-    -   Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use um gerenciador de conexões OLE DB. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use um gerenciador de conexões OLE DB. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
     -   Para o Log de Eventos de Windows, não faça nada. [!INCLUDE[ssIS](../../includes/ssis-md.md)] cria o log automaticamente.  
   
@@ -679,4 +679,4 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 -   [Eventos registrados em log por um pacote do Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Ferramenta DTLoggedExec para log completo e detalhado (Projeto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Ferramenta DTLoggedExec para log completo e detalhado (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
