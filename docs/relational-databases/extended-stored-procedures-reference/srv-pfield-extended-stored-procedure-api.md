@@ -20,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 40e297f748654e809647fb65e7c3b656228b2f64
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030785"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667925"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,6 +87,6 @@ len
  Um ponteiro para uma cadeia de caracteres terminada por caractere nulo que contém o valor atual do campo especificado na estrutura SRV_PROC. Se o campo for vazio, um ponteiro válido para uma cadeia de caracteres vazia será retornado e *len* conterá 0. Se o campo for desconhecido, NULL será retornado e *len* conterá o valor -1.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre análise e teste de segurança, consulte a [ 	Central de Desenvolvedores de Segurança](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre análise e teste de segurança, consulte a [ 	Central de Desenvolvedores de Segurança](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
   
