@@ -3,14 +3,14 @@ items:
   href: index.md
 - name: Extensões de aprendizado de máquina (R, Python)
   items:
-  - name: Serviços de Machine Learning (R, Python)
+  - name: What's New
+    href: what-s-new-in-sql-server-machine-learning-services.md
+  - name: Serviços de ML do SQL (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
   - name: Servidor autônomo
     href: r/r-server-standalone.md
-  - name: What's New
-    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Extensão de Java
   items:
   - name: Executar o código Java em SQL
@@ -25,13 +25,13 @@ items:
   items:
   - name: Diferenças no SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
-  - name: Serviços de Machine Learning (R, Python)
+  - name: Instalar Serviços de ML (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: R Services
+  - name: Instalar Serviços R
     href: install/sql-r-services-windows-install.md
-  - name: Servidor autônomo (R, Python)
+  - name: Instalar servidor autônomo (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
-  - name: Modelos previamente treinados
+  - name: Instalar modelos pré-treinados
     href: install/sql-pretrained-models-install.md
   - name: Instalação offline (sem Internet)
     href: install/sql-ml-component-install-without-internet-access.md
@@ -42,9 +42,9 @@ items:
     href: install/sql-ml-component-commandline-install.md
   - name: Atualizar R e Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Configurar ferramentas R
+  - name: Configurar um cliente R
     href: r/set-up-a-data-science-client.md
-  - name: Configurar ferramentas Python
+  - name: Configurar um cliente Python
     href: python/setup-python-client-tools-sql.md
   - name: Configurar um servidor virtual
     href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
@@ -324,10 +324,10 @@ items:
     - name: SQL Server
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
-      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 38a11ee71e6c69c0305258b8f307ac5c6beb3481
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
+ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697894"

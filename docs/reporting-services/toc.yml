@@ -11,26 +11,26 @@ items:
     href: reporting-services-concepts-ssrs.md
   - name: Recursos e tarefas do Reporting Services
     href: reporting-services-features-and-tasks-ssrs.md
-  - name: Compatibilidade com versões anteriores
+  - name: Backward Compatibility
     href: reporting-services-backward-compatibility.md
     items:
     - name: Recursos preteridos
       href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2016
+    - name: Funcionalidade descontinuada no SSRS no SQL Server 2016
       href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Alterações recentes do SQL Server Reporting Services no SQL Server 2016
+    - name: Alterações que causam falha no SSRS no SQL Server 2016
       href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016
       href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Planejamento
   items:
-  - name: Escolhendo ferramentas de BI (Business Intelligence) da Microsoft para análise e relatório
+  - name: Escolha das ferramentas de BI para análise e relatório
     href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Suporte ao navegador para Reporting Services e Power View
     href: browser-support-for-reporting-services-and-power-view.md
-  - name: Planejar a criação e implantação de relatórios | Reporting Services
+  - name: Planejar a criação e a implantação de relatório
     href: plan-for-report-design-and-report-deployment-reporting-services.md
-  - name: Recursos do Reporting Services com suporte nas edições do SQL Server 2016
+  - name: Recursos do Reporting Services nas edições do SQL Server
     href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Instalar
   href: ../reporting-services/install-windows/install-reporting-services.md
@@ -39,17 +39,17 @@ items:
   items:
   - name: Identidade visual do portal da Web
     href: branding-the-web-portal.md
-  - name: Como trabalhar com conjuntos de dados compartilhados (portal da Web)
+  - name: Working with shared datasets (Trabalhando com conjuntos de dados compartilhados)
     href: work-with-shared-datasets-web-portal.md
-  - name: Trabalhando com relatórios paginados (portal da Web)
+  - name: Como trabalhar com relatórios paginados
     href: working-with-paginated-reports-web-portal.md
-  - name: Trabalhando com instantâneos (portal da Web)
+  - name: Como trabalhar com instantâneos
     href: working-with-snapshots-web-portal.md
-  - name: Trabalhando com assinaturas (portal da web)
+  - name: Como trabalhar com assinaturas
     href: working-with-subscriptions-web-portal.md
-  - name: Trabalhando com KPIs no Reporting Services
+  - name: Como trabalhar com KPIs
     href: working-with-kpis-in-reporting-services.md
-  - name: Minhas Configurações para integração do Power BI (portal Web)
+  - name: Minhas Configurações para integração do Power BI
     href: my-settings-for-power-bi-integration-web-portal.md
 - name: Servidor de relatório
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
@@ -76,7 +76,7 @@ items:
 - name: Alertas de dados (SharePoint)
   href: reporting-services-data-alerts.md
   items:
-  - name: Designer de Alertas de Dados
+  - name: Editar um Alerta de Dados no Designer de Alertas
     href: data-alert-designer.md
   - name: Gerenciador de Alertas de Dados para Usuários do SharePoint
     href: data-alert-manager-for-sharepoint-users.md
@@ -84,7 +84,7 @@ items:
     href: data-alert-manager-for-alerting-administrators.md
   - name: Mensagens de alertas de dados
     href: data-alert-messages.md
-  - name: Criar um alerta de dados no Designer de Alertas de Dados
+  - name: Criar um Alerta de Dados no Designer de Alertas de Dados
     href: create-a-data-alert-in-data-alert-designer.md
   - name: Editar um alerta de dados no Designer de Alertas
     href: edit-a-data-alert-in-alert-designer.md
@@ -104,7 +104,7 @@ items:
   items:
   - name: Acessar itens do Servidor de Relatório usando o acesso à URL
     href: access-report-server-items-using-url-access.md
-  - name: Transmitir um parâmetro de relatório em uma URL
+  - name: Pass a Report Parameter Within a URL
     href: pass-a-report-parameter-within-a-url.md
   - name: Referência de parâmetro de acesso de URL
     href: url-access-parameter-reference.md
@@ -152,13 +152,13 @@ items:
       href: csv-device-information-settings.md
     - name: Configurações das informações do dispositivo do Excel
       href: excel-device-information-settings.md
-    - name: 'Configurações de informações do dispositivo HTML '
+    - name: Configurações de informações do dispositivo HTML
       href: html-device-information-settings.md
     - name: Configurações das informações do dispositivo do Image
       href: image-device-information-settings.md
     - name: Configurações das informações do dispositivo MHTML
       href: mhtml-device-information-settings.md
-    - name: 'Configurações de informações do dispositivo PDF '
+    - name: Configurações de informações do dispositivo PDF
       href: pdf-device-information-settings.md
     - name: Configurações de informações do dispositivo PPTX
       href: pptx-device-information-settings.md
@@ -184,18 +184,18 @@ items:
       href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
     - name: 'Lição 4: Adicionando uma tabela ao relatório'
       href: lesson-4-adding-a-table-to-the-report-reporting-services.md
-    - name: 'Lição 5: Formatando um relatório'
+    - name: 'Lesson 5: Formatting a Report'
       href: lesson-5-formatting-a-report-reporting-services.md
-    - name: 'Lição 6: Adicionando agrupamentos e totais'
+    - name: 'Lesson 6: Adding Grouping and Totals'
       href: lesson-6-adding-grouping-and-totals-reporting-services.md
   - name: Criar uma assinatura controlada por dados (Tutorial do SSRS)
     href: create-a-data-driven-subscription-ssrs-tutorial.md
     items:
     - name: 'Lição 1: Criando um banco de dados do assinante de exemplo'
       href: lesson-1-creating-a-sample-subscriber-database.md
-    - name: 'Lição 2: Modificando as propriedades da fonte de dados do relatório'
+    - name: 'Lesson 2: Modifying the Report Data Source Properties'
       href: lesson-2-modifying-the-report-data-source-properties.md
-    - name: 'Lição 3: Definindo uma assinatura controlada por dados'
+    - name: 'Lesson 3: Defining a Data-Driven Subscription'
       href: lesson-3-defining-a-data-driven-subscription.md
   - name: Criar um relatório detalhado (RDLC) com parâmetros usando o Visualizador de Relatórios (Tutorial do SSRS)
     href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -210,13 +210,13 @@ items:
       href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
     - name: 'Lição 5: Criar o relatório filho usando o Assistente de Relatório'
       href: lesson-5-design-the-child-report-using-the-report-wizard.md
-    - name: 'Lição 6: Adicionar um controle ReportViewer ao aplicativo'
+    - name: 'Lição 6: adicionar um controle ReportViewer ao aplicativo'
       href: lesson-6-add-a-reportviewer-control-to-the-application.md
     - name: 'Lição 7: Adicionar ação de detalhamento ao relatório pai'
       href: lesson-7-add-drillthrough-action-on-parent-report.md
     - name: 'Lição 8: Criar um filtro de dados'
       href: lesson-8-create-a-data-filter.md
-    - name: 'Lição 9: Criar e executar o aplicativo'
+    - name: 'Lesson 9: Build and Run the Application'
       href: lesson-9-build-and-run-the-application.md
   - name: Tutoriais do Construtor de Relatórios
     href: report-builder-tutorials.md
@@ -251,9 +251,9 @@ items:
       href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 'Tutorial: Apresentando expressões'
       href: tutorial-introducing-expressions.md
-ms.openlocfilehash: 3846d92e32ce762f767407c535a58ebbe2e6bd7f
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899746"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350580"
