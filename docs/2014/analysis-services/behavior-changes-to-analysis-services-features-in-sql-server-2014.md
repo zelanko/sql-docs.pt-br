@@ -22,7 +22,7 @@ ms.locfileid: "50145831"
   Este tópico descreve as alterações de comportamento do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implementações multidimensionais, tabulares, de mineração de dados e [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . As alterações de comportamento afetam a maneira como os recursos funcionam ou interagem na versão atual em comparação com as versões anteriores do SQL Server.  
   
 > [!NOTE]  
->  Em contraste, uma alteração significativa é aquela que impede a execução de um modelo de dados ou aplicativo integrado com [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  Em contraste, uma alteração significativa é aquela que impede a execução de um modelo de dados ou aplicativo integrado com [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Alterações recentes em recursos do Analysis Services no SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  Neste tópico:  
   
