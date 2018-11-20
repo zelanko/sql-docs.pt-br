@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051218"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629619"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/AccessToken:**|**/at**|{string}| Especifica o token de acesso da autenticação com base em token a ser utilizado quando se conectar ao banco de dados de destino. |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{Interativo&#124;ClientIdSecret}|Especifica o método de autenticação que é usado para acessar o Azure Key Vault |
 |**/ClientId:**|**/CID**|{string}|Especifica a ID do Cliente a ser usada na autenticação no Azure Key Vault, quando necessário |
+|**/ DeployScriptPath:**|**/DSP**|{string}|Especifica um caminho de arquivo opcional para o script de implantação de saída. Nas implantações do Azure, se houver comandos TSQL para criar ou banco de dados mestre para modificar, um script será gravado no mesmo caminho, mas com "Filename_Master.sql" como o nome do arquivo de saída. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Especifica um caminho de arquivo opcional para o arquivo de xml de relatório de implantação de saída. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Especifica se o log de diagnósticos é emitido como saída para o console. Usa False como padrão. |
 |**/ DiagnosticsFile:**|**/df**|{string}|Especifica um arquivo para armazenar logs de diagnóstico. |
 |**/ MaxParallelism:**|**/mp**|{int}| Especifica o grau de paralelismo para operações simultâneas que são executadas em um banco de dados. O valor padrão é 8. |
@@ -476,6 +478,8 @@ Uma ação de script do **SqlPackage.exe** cria um script de atualização incre
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Especifica a ação a ser executada. |
 |**/AccessToken:**|**/at**|{string}| Especifica o token de acesso da autenticação com base em token a ser utilizado quando se conectar ao banco de dados de destino. |
+|**/ DeployScriptPath:**|**/DSP**|{string}|Especifica um caminho de arquivo opcional para o script de implantação de saída. Nas implantações do Azure, se houver comandos TSQL para criar ou banco de dados mestre para modificar, um script será gravado no mesmo caminho, mas com "Filename_Master.sql" como o nome do arquivo de saída. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Especifica um caminho de arquivo opcional para o arquivo de xml de relatório de implantação de saída. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Especifica se o log de diagnósticos é emitido como saída para o console. Usa False como padrão. |
 |**/ DiagnosticsFile:**|**/df**|{string}|Especifica um arquivo para armazenar logs de diagnóstico. |
 |**/ MaxParallelism:**|**/mp**|{int}| Especifica o grau de paralelismo para operações simultâneas que são executadas em um banco de dados. O valor padrão é 8. |
