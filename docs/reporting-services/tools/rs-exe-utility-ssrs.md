@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30457df56828e9a2c197b44126555c63f17c40f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681934"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813039"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -56,7 +56,7 @@ rs {-?}
  (Obrigatório) Especifica o arquivo .rss a ser executado. Esse valor pode ser um parente ou caminho totalmente qualificado para o arquivo .rss.  
   
  **-s** *serverURL*  
- (Obrigatório) Especifica o nome do servidor Web e nome do diretório virtual do servidor de relatório no qual executar o arquivo. Um exemplo de uma URL de servidor de relatório é `http://examplewebserver/reportserver`. O prefixo http:// ou https:// no início do nome do servidor é opcional. Se você omitir o prefixo, o host de script do servidor de relatório tentará usar https primeiro e depois usará http se https não funcionar.  
+ (Obrigatório) Especifica o nome do servidor Web e nome do diretório virtual do servidor de relatório no qual executar o arquivo. Um exemplo de uma URL de servidor de relatório é `https://examplewebserver/reportserver`. O prefixo https:// no início do nome do servidor é opcional. Se você omitir o prefixo, o host de script do servidor de relatório tentará usar https primeiro e depois usará http se https não funcionar.  
   
  **-u** [*domain*\\]*username*  
  (Opcional) Especifica uma conta do usuário usada para conexão com o servidor de relatório. Se **-u** e **-p** forem omitidos, a conta do usuário do Windows atual será usada.  
@@ -88,7 +88,7 @@ rs {-?}
   
  O argumento **–v** é especificado na linha de comando e é usado para definir o valor de uma variável global definida no script no tempo de execução. Por exemplo, se seu script contiver uma variável nomeada *parentFolder*, você poderá especificar um nome para aquela pasta na linha de comando:  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **-v a=**"**1**" **-v b=**"**2**" resulta em uma variável chamada **a** com valor de "**1**" e variável **b** com valor de "**2**".  
   
@@ -104,7 +104,7 @@ rs {-?}
  O exemplo a seguir ilustra como especificar o arquivo de script que contém o script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e os métodos do serviço Web que você quer executar.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  Para obter um exemplo detalhado, consulte [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

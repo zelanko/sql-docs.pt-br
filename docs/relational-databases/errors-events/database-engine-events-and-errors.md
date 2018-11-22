@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e80daf389baedb35dc7416c95096fe346854dfe9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384171"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678065"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. 
@@ -1035,10 +1035,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2117    |   16  |   não  |   Não é possível %S_MSG INSTEAD OF o gatilho '%.*ls' em %S_MSG '%.* ls' porque %S_MSG tem uma coluna de FILESTREAM.  |
 |   2201    |   16  |   não  |   %sA derivação de "anySimpleType" por restrição não é permitida, e a derivação por restrição de um tipo derivado de "anySimpleType" por extensão será permitida apenas se nenhuma faceta de restrição for especificada. |
 |   2202    |   16  |   não  |   %sOcorreu um erro durante a compilação da consulta. Para obter informações mais detalhadas sobre o erro, a consulta deve ser executada por um usuário com permissões EXECUTE na coleção de esquemas xml usadas na consulta.    |
-|   2203    |   16  |   não  |   %sSomente 'http://www.w3.org/2001/XMLSchema#decimal?', 'http://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*' permitidas como predicados, encontrado: '%ls' |
-|   2204    |   16  |   não  |   %sSomente 'http://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*' permitidas em condições e com operadores lógicos, encontrado: '%ls'   |
+|   2203    |   16  |   não  |   %sSomente 'https://www.w3.org/2001/XMLSchema#decimal?', 'https://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*' permitidas como predicados, encontrado: '%ls'   |
+|   2204    |   16  |   não  |   %sSomente 'https://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*' permitidas em condições e com operadores lógicos, encontrado: '%ls'  |
 |   2205    |   16  |   não  |   %s"%ls" era esperado.   |
-|   2206    |   16  |   não  |   %sO prefixo de namespace 'xml' só pode ser associado ao URI 'http://www.w3.org/XML/1998/namespace' e esse URI não pode ser usado com outros prefixos.    |
+|   2206    |   16  |   não  |   %sO prefixo de namespace 'xml' só pode ser associado ao URI 'https://www.w3.org/XML/1998/namespace' e esse URI não pode ser usado com outros prefixos.   |
 |   2207    |   16  |   não  |   %sSomente nós de não documentos podem ser inseridos. Encontrado "%ls". |
 |   2208    |   16  |   não  |   %sO URI que começa com '%ls' é muito longo. O tamanho máximo permitido é %d caracteres.  |
 |   2209    |   16  |   não  |   %sErro de sintaxe próximo a '%ls'   |
@@ -1121,7 +1121,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2309    |   16  |   não  |   %sO valor "%ls" não é um número válido. |
 |   2310    |   16  |   não  |   %sAtributo "%ls" declarado mais de uma vez.   |
 |   2311    |   16  |   não  |   %sAtributo "%ls" declarado mais de uma vez em "%ls".  |
-|   2312    |   16  |   não  |   %sO valor do atributo '%ls' não está de acordo com a definição de tipo 'http://www.w3.org/2001/XMLSchema#%ls': '%ls'.   |
+|   2312    |   16  |   não  |   %sO valor do atributo '%ls' não está de acordo com a definição de tipo 'https://www.w3.org/2001/XMLSchema#%ls': '%ls'.  |
 |   2313    |   16  |   não  |   %sO atributo "%ls" não pode ter um valor de "%ls". |
 |   2314    |   16  |   não  |   %sO atributo "%ls" não pode ter um valor negativo. |
 |   2315    |   16  |   não  |   %O atributo "%ls" deve ter um valor de cadeia de caracteres.   |
@@ -3044,7 +3044,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   6869    |   16  |   não  |   Tentativa de redefinir prefixo de namespace '%.*ls'    |
 |   6870    |   16  |   não  |   O prefixo '%.*ls' usado na cláusula WITH XMLNAMESPACES contém um identificador XML inválido. '%c'(0x%04X) é o primeiro caractere com defeito.  |
 |   6871    |   16  |   não  |   O prefixo '%.*ls' usado em WITH XMLNAMESPACES é reservado e não pode ser usado como um prefixo definido pelo usuário.  |
-|   6872    |   16  |   não  |   O prefixo de namespace XML 'xml' 'só pode ser associado ao URI http://www.w3.org/XML/1998/namespace. Esse URI não pode ser usado com outros prefixos.   |
+|   6872    |   16  |   não  |   O prefixo de namespace XML 'xml' 'só pode ser associado ao URI https://www.w3.org/XML/1998/namespace. Esse URI não pode ser usado com outros prefixos.  |
 |   6873    |   16  |   não  |   Não há suporte para a redefinição do prefixo de namespace XML 'xsi' com a opção ELEMENTS XSINIL de FOR XML. |
 |   6874    |   16  |   não  |   Não é permitido URI vazio na cláusula WITH XMLNAMESPACES.  |
 |   6875    |   16  |   não  |   O URI '%.*ls' usado em WITH XMLNAMESPACES é inválido. '%c'(0x%04X) é o primeiro caractere com defeito.    |
@@ -3423,7 +3423,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   7802    |   16  |   não  |   Não há suporte para as funções que têm um tipo de retorno de "%.*ls" na invocação de SOAP.   |
 |   7803    |   15  |   não  |   A cláusula %.*ls não pode ser usada na instrução %.* ls.    |
 |   7804    |   15  |   não  |   %.*ls e %.* ls não podem compartilhar o mesmo valor.   |
-|   7805    |   16  |   não  |   O parâmetro SITE não pode ser prefixado por um esquema como 'http://'. O valores válidos para SITE incluem {'*' | '+' | 'site_name'}.  |
+|   7805    |   16  |   não  |   O parâmetro SITE não pode ser prefixado por um esquema como 'https://'. O valores válidos para SITE incluem {'*' | '+' | 'site_name'}. |
 |   7806    |   16  |   não  |   A URL especificada pelo ponto de extremidade de '%.*ls' já está registrada para receber solicitações ou está reservada para uso de outro serviço.  |
 |   7807    |   16  |   não  |   Erro ('0x%x') durante tentativa de registrar o ponto de extremidade '%.*ls'.   |
 |   7808    |   10  |   não  |   Não foi possível cancelar o registro do ponto de extremidade '%.*ls'. |
@@ -4176,11 +4176,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9304    |   16  |   não  |   %sEsta versão do servidor oferece suporte somente a XQuery versão '1.0'.    |
 |   9305    |   16  |   não  |   %sSuporte apenas a nomes de tipos seguidos por '?' como destino de 'instância de'. |
 |   9306    |   16  |   não  |   %sO destino de 'substituir valor de' não pode ser um tipo de união, encontrado '%ls'. |
-|   9308    |   16  |   não  |   %sO argumento de '%ls' deve ser de um único tipo primitivo numérico ou 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'. Encontrado argumento do tipo '%ls.  |
-|   9309    |   16  |   não  |   %sO destino de 'replace value of' não pode ser 'http://www.w3.org/2001/XMLSchema#anySimpleType', encontrado '%ls'. |
+|   9308    |   16  |   não  |   %sO argumento de '%ls' deve ser de um único tipo primitivo numérico ou 'https://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'. Encontrado argumento do tipo '%ls. |
+|   9309    |   16  |   não  |   %sO destino de 'replace value of' não pode ser 'https://www.w3.org/2001/XMLSchema#anySimpleType', encontrado '%ls'.    |
 |   9310    |   16  |   não  |   %sA cláusula 'com' de 'substituir valor de' não pode conter XML construído.   |
 |   9311    |   16  |   não  |   %sSequências heterogêneas não são permitidas em '%ls', encontrada '%ls' e '%ls'.  |
-|   9312    |   16  |   não  |   %s'%ls' não é compatível com o tipo simples ou elementos 'http://www.w3.org/2001/XMLSchema#anyType', encontrado '%ls'.   |
+|   9312    |   16  |   não  |   %s'%ls' não é compatível com o tipo simples ou elementos 'https://www.w3.org/2001/XMLSchema#anyType', encontrado '%ls'.  |
 |   9313    |   16  |   não  |   %sEsta versão do servidor não oferece suporte a expressões múltiplas ou a expressões misturadas com cadeias de caracteres em um construtor de atributos.   |
 |   9314    |   16  |   não  |   %sNão é possível atomizar ou aplicar implicitamente 'fn:data()' a elementos de conteúdo complexo, encontrado o tipo '%ls' no tipo '%ls' inferido.  |
 |   9315    |   16  |   não  |   %sHá suporte somente para expressões constantes na expressão de nome dos construtores de elementos e de atributos computados.   |
@@ -4200,7 +4200,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9330    |   16  |   não  |   %sSomente tipos comparáveis são permitidos em '%.ls', encontrado '%.ls'.  |
 |   9331    |   16  |   não  |   %sErro de sintaxe próximo a '%ls', esperado '%ls' ou '%ls'. |
 |   9332    |   16  |   não  |   %sErro de sintaxe próximo a '%ls', esperado 'onde', '(estável) classificar por' ou 'retornar'.   |
-|   9333    |   16  |   não  |   Não há suporte para %s'//' seguido de eixos 'self', 'parent' ou 'descendant-or-self' quando encontra elementos 'http://www.w3.org/2001/XMLSchema#anyType' ou de tipo simples, encontrado '%ls'.  |
+|   9333    |   16  |   não  |   Não há suporte para %s'//' seguido de eixos 'self', 'parent' ou 'descendant-or-self' quando encontra elementos 'https://www.w3.org/2001/XMLSchema#anyType' ou de tipo simples, encontrado '%ls'. |
 |   9334    |   16  |   não  |   %sO atributo 'form' não pode ser especificado em uma definição de atributo ou elemento local que tenha o atributo 'ref'. Local: '%ls'.    |
 |   9335    |   16  |   não  |   %sNão há suporte para a sintaxe XQuery '%ls'. |
 |   9336    |   16  |   não  |   %sNão há suporte para a sintaxe do esquema XML '%ls'. |
@@ -4270,10 +4270,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9461    |   16  |   não  |   XML %ls começando com '%.*ls' tem %d caracteres de comprimento, o que excede o limite. O tamanho máximo permitido é %d caracteres.  |
 |   9462    |   16  |   não  |   Análise XML: linha %d, caractere %d, nem todas as partes do valor foram lidas  |
 |   9463    |   16  |   não  |   Análise XML: linha %d, caractere %d, xml:space com valor diferente do legal |
-|   9464    |   16  |   não  |   Análise XML: linha %d, caractere %d, o prefixo de namespace XML 'xml' só pode ser associado ao URI http://www.w3.org/XML/1998/namespace. Esse URI não pode ser usado com outros prefixos.   |
+|   9464    |   16  |   não  |   Análise XML: linha %d, caractere %d, o prefixo de namespace XML 'xml' só pode ser associado ao URI https://www.w3.org/XML/1998/namespace. Esse URI não pode ser usado com outros prefixos.  |
 |   9465    |   16  |   não  |   Análise XML: linha %d, caractere %d, o prefixo de namespace XML 'xmlns' está reservado para uso pelo XML.    |
-|   9466    |   16  |   não  |   Análise XML: linha %d, caractere %d, o URI do namespace XML (http://www.w3.org/XML/1998/namespace)) deve ser atribuído apenas ao prefixo 'xml'.   |
-|   9467    |   16  |   não  |   Análise XML: linha %d, caractere %d, o URI de namespace xmlns (http://www.w3.org/2000/xmlns/)) está reservado e não deve ser usado.   |
+|   9466    |   16  |   não  |   Análise XML: linha %d, caractere %d, o URI do namespace XML (https://www.w3.org/XML/1998/namespace)) deve ser atribuído apenas ao prefixo 'xml'.  |
+|   9467    |   16  |   não  |   Análise XML: linha %d, caractere %d, o URI de namespace xmlns (https://www.w3.org/2000/xmlns/)) está reservado e não deve ser usado.  |
 |   9480    |   16  |   não  |   Análise XML: linha %d, caractere %d, xml sem-suporte |
 |   9500    |   16  |   não  |   O tipo de dados '%.*ls' usado no método VALUE é inválido.  |
 |   9501    |   16  |   não  |   XQuery: não é possível resolver sql:variable('%.*ls'). A variável deve ser declarada como TSQL escalar.   |
@@ -8894,7 +8894,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   33024   |   16  |   não  |   O provedor de criptografia %S_MSG '%ls' na dll é diferente do guid gravado no catálogo do sistema para o provedor com a id %d.   |
 |   33025   |   16  |   não  |   Propriedade de provedor de criptografia inválida: %S_MSG.   |
 |   33026   |   16  |   não  |   O provedor de criptografia com o guid '%ls' já existe.  |
-|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   Falha ao carregar o provedor criptográfico '%.*ls' devido a uma assinatura inválida de Authenticode ou a um caminho de arquivo inválido. Verifique as mensagens anteriores à procura de outras falhas.    |
+|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   Falha ao carregar o provedor criptográfico '%.*ls' devido a uma assinatura inválida de Authenticode ou a um caminho de arquivo inválido. Verifique as mensagens anteriores à procura de outras falhas.    |
 |   33027   |   16  |   não  |   Não é possível carregar a biblioteca '%.*ls'. Consulte o log de erros para obter mais informações. |
 |   [33028](mssqlserver-33028-database-engine-error.md) |   16  |   não  |   Não é possível abrir a sessão para %S_MSG '%.*ls'. Código de erro do provedor: %d. (%S_MSG)   |
 |   33029   |   16  |   não  |   Não é possível inicializar o provedor de criptografia. Código de erro do provedor: %d. (%S_MSG) |
@@ -9069,7 +9069,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="see-also"></a>Consulte Também
 [Compreendendo os erros do Mecanismo de Banco de Dados](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[Causa e resolução de erros do Mecanismo de Banco de Dados](http://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
+[Causa e resolução de erros do Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
   
   

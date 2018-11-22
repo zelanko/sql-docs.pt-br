@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791732"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560403"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemplos de acesso em massa a dados no Armazenamento de Blobs do Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791732"
 As instruções `BULK INSERT` e `OPENROWSET` podem acessar diretamente um arquivo no armazenamento de blobs do Azure. Os exemplos a seguir usam dados de um arquivo CSV (valores separados por vírgula) (denominado `inv-2017-01-19.csv`), armazenado em um contêiner (chamado `Week3`), armazenado em uma conta de armazenamento (chamada `newinvoices`). O caminho para o arquivo de formato pode ser usado, mas não está incluído nesses exemplos. 
 
 O acesso em massa para o armazenamento de blobs do Azure do SQL Server requer, no mínimo, [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+
+>  [!IMPORTANT]
+>  Todos os caminhos para o contêiner e os arquivos de blob são `CASE SENSITIVE`. Se não estiver correto, poderá retornar um erro como "Não é possível carregar em massa. O arquivo "file.csv" não existe ou você não tem direitos de acesso ao arquivo".
+"
+
 
 ## <a name="create-the-credential"></a>Criar credencial   
    

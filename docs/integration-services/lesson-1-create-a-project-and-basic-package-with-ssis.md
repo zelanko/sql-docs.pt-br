@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384071"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642073"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
 
-Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
+Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte única de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava estes dados em uma cópia da tabela de fatos **FactCurrencyRate** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
   
 > [!IMPORTANT]  
-> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Amostras de produto do Reporting Services no CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex (Amostras de produto do Reporting Services no CodePlex)](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="understanding-the-package-requirements"></a>Compreendendo os requisitos de pacote  
 Este tutorial requer o Microsoft SQL Server Data Tools.  
   
-Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 Antes de criar um pacote, você precisa ter um bom conhecimento da formatação usada tanto na fonte de dados quanto no destino. Depois de entender estes dois formatos de dados, você estará pronto para definir as transformações necessárias para mapear a fonte de dados ao destino.  
   
@@ -51,7 +51,7 @@ Aqui está um exemplo dos dados de origem contidos no arquivo SampleCurrencyData
 Quando estiver trabalhando com dados de fonte de arquivo simples, é importante entender como o gerenciador de conexões de Arquivo Simples interpreta os dados de arquivo simples. Se a fonte do arquivo simples for Unicode, o gerenciador de conexões de Arquivo Simples definirá todas as colunas como [DT_WSTR] com uma largura padrão de coluna de 50. Se a fonte de arquivo simples for codificada por ANSI, as colunas estarão definidas como [DT_STR] com uma largura de coluna de 50. Você provavelmente terá que alterar esses padrões para tornar os tipos de coluna de cadeia de caracteres mais apropriados para seus dados. Para fazer isso, você precisará olhar o tipo de dados do destino onde os dados serão gravados, e, então, escolher o tipo correto dentro do gerenciador de conexões de Arquivo Simples.  
   
 ### <a name="looking-at-the-destination"></a>Olhando o destino  
-O destino final dos dados de origem é a tabela de fatos **FactCurrency** no **AdventureWorksDW**. A tabela de fatos **FactCurrency** tem quatro colunas e relacionamentos com duas tabelas de dimensões, como mostrado na tabela a seguir.  
+O destino final dos dados de origem é uma cópia da tabela de fatos **FactCurrencyRate** no **AdventureWorksDW**. A tabela de fatos **FactCurrencyRate** tem quatro colunas e tem relações com duas tabelas dimensionais, como mostrado na tabela a seguir.  
   
 |Nome da coluna|Tipo de dados|Tabela de pesquisa|Coluna de Pesquisa|  
 |---------------|-------------|----------------|-----------------|  
@@ -65,10 +65,10 @@ Uma análise dos formatos de dados de origem e destino indicam que as pesquisas 
   
 |Coluna de Arquivos Simples|Nome da tabela|Nome da coluna|Tipo de Dados|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Data|  
-|3|FactCurrency|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  

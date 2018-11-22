@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031693"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813209"
 ---
 # <a name="configure-the-web-portal"></a>Configurar o portal da Web
 
@@ -80,7 +80,7 @@ Crie um pacote de marca personalizada para alterar as cores usadas no portal da 
 
 2. Abra o Internet Explorer.
 
-3. Insira a URL do portal da Web. Por padrão, considera-se http://\<**your-server-name**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será http://\<**your-server-name**>/reports\<**_instancename**>.
+3. Insira a URL do portal da Web. Por padrão, considera-se https://\<**nome-do-seu-servidor**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será https://\<**nome-do-seu-servidor**>/reports\<**_nomedainstância**>.
 
 4. Selecione **Configurações de Site**.
 

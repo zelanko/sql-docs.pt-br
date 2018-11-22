@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864284"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704064"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cria uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR (Common Language Runtime) que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor de retorno pode ser um valor escalar (único) ou uma tabela. Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
+> [!div class="nextstepaction"]
+> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Cria uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR (Common Language Runtime) que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor de retorno pode ser um valor escalar (único) ou uma tabela. Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
   
 -   Em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], como SELECT  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados. A tabela sempre é colocada no grupo de arquivos primário.  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   O usuário que executou a instrução CREATE FUNCTION tem permissão REFERENCES nos objetos do banco de dados referidos pela função.  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- Especifica o atributo **OnNULLCall** de uma função de valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+Especifica o atributo **OnNULLCall** de uma função de valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
   
- Se RETURNS NULL ON NULL INPUT estiver especificado em uma função CLR, isso indicará que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá retornar NULL quando qualquer um dos argumentos recebidos for NULL, sem realmente invocar o corpo da função. Se o método de uma função CLR especificado em \<method_specifier> já tiver um atributo personalizado que indica RETURNS NULL ON NULL INPUT, mas a instrução CREATE FUNCTION indicar CALLED ON NULL INPUT, a instrução CREATE FUNCTION terá precedência. O atributo **OnNULLCall** não pode ser especificado para funções com valor de tabela CLR. 
+Se RETURNS NULL ON NULL INPUT estiver especificado em uma função CLR, isso indicará que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá retornar NULL quando qualquer um dos argumentos recebidos for NULL, sem realmente invocar o corpo da função. Se o método de uma função CLR especificado em \<method_specifier> já tiver um atributo personalizado que indica RETURNS NULL ON NULL INPUT, mas a instrução CREATE FUNCTION indicar CALLED ON NULL INPUT, a instrução CREATE FUNCTION terá precedência. O atributo **OnNULLCall** não pode ser especificado para funções com valor de tabela CLR. 
   
- Cláusula EXECUTE AS  
- Especifica o contexto de segurança sob o qual a função definida pelo usuário é executada. Portanto, é possível controlar a conta de usuário usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para validar permissões em quaisquer objetos do banco de dados referidos pela função.  
+Cláusula EXECUTE AS  
+Especifica o contexto de segurança sob o qual a função definida pelo usuário é executada. Portanto, é possível controlar a conta de usuário usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para validar permissões em quaisquer objetos do banco de dados referidos pela função.  
   
 > [!NOTE]  
->  EXECUTE AS não pode ser especificada para funções definidas pelo usuário embutidas.  
+>  EXECUTE AS não pode ser especificada para funções com valor de tabela embutida.
   
  Para obter mais informações, veja [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+
+INLINE = { ON | OFF }  
+Especifica se este UDF escalar deve ser embutido ou não. Essa cláusula só se aplica a funções escalares definidas pelo usuário. A cláusula `INLINE` não é obrigatória. Se a cláusula `INLINE` não for especificada, será automaticamente definida como ON/OFF com base em se a UDF pode ser embutida. Se `INLINE=ON` for especificado, mas a UDF não puder ser embutida, será gerado um erro. Para saber mais, confira [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Embutimento de UDF escalar).
   
  **\< column_definition >::=** 
   
@@ -445,9 +452,9 @@ RETURNS return_data_type
  Especifica o valor fornecido para a coluna quando um valor não for fornecido explicitamente durante uma inserção. *constant_expression* é uma constante, NULL ou um valor de função do sistema. Podem ser aplicadas definições DEFAULT a qualquer coluna, com exceção das que têm a propriedade IDENTITY. DEFAULT não pode ser especificado para funções CLR com valor de tabela.  
   
  COLLATE *collation_name*  
- Especifica o agrupamento da coluna. Se não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Para obter uma lista e mais informações sobre agrupamentos, consulte [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Especifica a ordenação da coluna. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações sobre ordenações, consulte [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- A cláusula COLLATE pode ser usada para alterar os agrupamentos somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
+ A cláusula COLLATE pode ser usada para alterar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
   
  COLLATE não pode ser especificado para funções CLR com valor de tabela.  
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|A função acessa dados do sistema (catálogos ou tabelas virtuais do sistema) na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||  
 |**UserDataAccess**|A função acessa dados de usuário na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Inclui tabelas definidas pelo usuário e tabelas temporárias, mas não variáveis de tabela.|  
   
- As propriedades de precisão e determinismo de funções [!INCLUDE[tsql](../../includes/tsql-md.md)] são automaticamente determinadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O acesso a dados e as propriedades de determinismo de funções CLR podem ser especificadas pelo usuário. Para obter mais informações, consulte [Visão geral dos atributos personalizados da integração de CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
+ As propriedades de precisão e determinismo de funções [!INCLUDE[tsql](../../includes/tsql-md.md)] são automaticamente determinadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O acesso a dados e as propriedades de determinismo de funções CLR podem ser especificadas pelo usuário. Para obter mais informações, consulte [Visão geral dos atributos personalizados da integração de CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
  Para exibir os valores atuais dessas propriedades, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
@@ -629,7 +636,7 @@ RETURNS return_data_type
   
 -   Você deve garantir que os resultados sejam sempre ordenados na ordem especificada. Se os resultados não estiverem na ordem especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro quando a consulta for executada.  
   
--   Se uma cláusula ORDER estiver especificada, a saída da função com valor de tabela deverá ser ordenada de acordo com o agrupamento da coluna (explícito ou implícito). Por exemplo, se o agrupamento da coluna for chinês (especificado no DDL para a função com valor de tabela ou obtido do agrupamento do banco de dados), os resultados retornados deverão ser ordenados de acordo com as regras de classificação do chinês.  
+-   Se uma cláusula ORDER estiver especificada, a saída da função com valor de tabela deverá ser ordenada de acordo com a ordenação da coluna (explícita ou implícita). Por exemplo, se a ordenação da coluna for de chinês (especificado no DDL para a função com valor de tabela ou obtido da ordenação do banco de dados), os resultados retornados deverão ser ordenados de acordo com as regras de classificação do chinês.  
   
 -   A cláusula ORDER, se especificada, é sempre verificada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao retornar resultados, quer ela seja usada ou não pelo processador de consultas para executar otimizações adicionais. Use a cláusula ORDER apenas se você souber que ela é útil para o processador de consultas.  
   

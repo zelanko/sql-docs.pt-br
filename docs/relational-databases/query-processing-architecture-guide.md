@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226378"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701474"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não escolhe apenas o plano de execução com o menor custo de recurso, ele escolhe o plano que retorna resultados o mais rápido possível ao usuário com um custo razoável em recursos. Por exemplo, o processamento de uma consulta em paralelo normalmente usa mais recursos que o processamento em série, mas completa a consulta de forma mais rápida. O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará um plano de execução paralelo para retornar os resultados se a carga do servidor não for afetada adversamente.
 
-O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se baseia nas estatísticas de distribuição ao estimar os custos de recurso de métodos diferentes para extrair informações de uma tabela ou um índice. São mantidas estatísticas de distribuição para colunas e índices. Elas indicam a seletividade dos valores em um índice ou uma coluna específica. Por exemplo, em uma tabela que representa carros, muitos carros têm o mesmo fabricante, mas cada carro tem um VIN (número de identificação de veículo) exclusivo. Um índice no VIN é mais seletivo que um índice no fabricante. Se as estatísticas de índice não forem atuais, o otimizador de consulta poderá não fazer a melhor escolha para o estado atual da tabela. Para saber mais sobre como manter as estatísticas de índice atualizadas, confira [Estatísticas](../relational-databases/statistics/statistics.md). 
+O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se baseia nas estatísticas de distribuição ao estimar os custos de recurso de métodos diferentes para extrair informações de uma tabela ou um índice. As estatísticas de distribuição são mantidas para colunas e índices, além de reter as informações sobre a densidade<sup>1</sup> dos dados subjacentes. Isso é usado para indicar a seletividade dos valores em um índice ou uma coluna específica. Por exemplo, em uma tabela que representa carros, muitos carros têm o mesmo fabricante, mas cada carro tem um VIN (número de identificação de veículo) exclusivo. Um índice no VIN é mais seletivo que um índice no fabricante, porque o VIN tem densidade menor que o fabricante. Se as estatísticas de índice não forem atuais, o otimizador de consulta poderá não fazer a melhor escolha para o estado atual da tabela. Para saber mais sobre densidades, confira [Estatísticas](../relational-databases/statistics/statistics.md#density). 
+
+<sup>1</sup> A densidade define a distribuição de valores únicos que existem nos dados ou o número médio de valores duplicados para uma determinada coluna. Conforme a densidade diminui, aumenta a seletividade de um valor.
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é importante porque ele habilita o servidor de banco de dados a ajustar dinamicamente conforme as alterações das condições no banco de dados sem exigir a entrada de um programador ou administrador de banco de dados. Isso habilita os programadores a se concentrarem na descrição do resultado final da consulta. Eles podem confiar que o Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um plano de execução eficiente para o estado do banco de dados toda vez que a instrução for executada.
 
@@ -138,11 +139,11 @@ As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 As etapas básicas descritas para o processamento de uma instrução `SELECT` se aplicam a outras instruções SQL, como `INSERT`, `UPDATE`e `DELETE`. As instruções`UPDATE` e `DELETE` devem ser direcionadas ao conjunto de linhas a ser modificado ou excluído. O processo de identificação dessas linhas é o mesmo processo usado para identificar as linhas de origem que contribuem para o conjunto de resultados de uma instrução `SELECT` . Ambas as instruções `UPDATE` e `INSERT` podem conter instruções SELECT inseridas que fornecem os valores de dados a serem atualizados ou inseridos.
 
-Até as instruções DDL (Linguagem de Definição de Dados), como `CREATE PROCEDURE` ou `ALTER TABL`, são resolvidas no final para uma série de operações relacionais nas tabelas de catálogo de sistema e, algumas vezes, (como `ALTER TABLE ADD COLUMN`) nas tabelas de dados.
+Até as instruções DDL (linguagem de definição de dados), como `CREATE PROCEDURE` ou `ALTER TABLE`, são resolvidas no final para uma série de operações relacionais nas tabelas de catálogo de sistema e, algumas vezes, (como `ALTER TABLE ADD COLUMN`) nas tabelas de dados.
 
 ### <a name="worktables"></a>Tabelas de trabalho
 
-Talvez o mecanismo relacional precise criar uma tabela de trabalho para executar uma operação lógica especificada em uma instrução SQL. As tabelas de trabalho são tabelas internas usadas para manter resultados intermediários. As tabelas de trabalho são geradas para determinadas consultas `GROUP BY`, `ORDER BY`ou `UNION` . Por exemplo, se uma cláusula `ORDER BY` fizer referência a colunas que não são abordadas por nenhum índice, o mecanismo relacional pode precisar gerar uma tabela de trabalho para classificar o conjunto de resultados na ordem solicitada. Algumas vezes as tabelas de trabalho também são usadas como spools que mantêm temporariamente o resultado da execução de uma parte de um plano de consulta. As tabelas de trabalho são criadas em `tempdb` e são eliminadas automaticamente quando não são mais necessárias.
+Talvez o mecanismo relacional precise criar uma tabela de trabalho para executar uma operação lógica especificada em uma instrução SQL. As tabelas de trabalho são tabelas internas usadas para manter resultados intermediários. As tabelas de trabalho são geradas para determinadas consultas `GROUP BY`, `ORDER BY`ou `UNION` . Por exemplo, se uma cláusula `ORDER BY` fizer referência a colunas que não são abordadas por nenhum índice, o mecanismo relacional pode precisar gerar uma tabela de trabalho para classificar o conjunto de resultados na ordem solicitada. Algumas vezes as tabelas de trabalho também são usadas como spools que mantêm temporariamente o resultado da execução de uma parte de um plano de consulta. As tabelas de trabalho são criadas em tempdb e são eliminadas automaticamente quando não são mais necessárias.
 
 ### <a name="view-resolution"></a>Resolução de exibição
 
@@ -698,7 +699,7 @@ Você pode usar a opção de configuração de servidor [grau máximo de paralel
 
 A configuração da opção de grau máximo de paralelismo como 0 (padrão) permite que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. Embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] defina um destino de tempo de execução de 64 processadores lógicos quando a opção MAXDOP é definida como 0, um valor diferente pode ser definido manualmente se necessário. Configurar MAXDOP como 0 para consultas e índices permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralela. MAXDOP não é um valor de imposto para todas as consultas em paralelo, mas sim um destino provisório para todas as consultas qualificadas para paralelismo. Isso significa que, se não houver threads de trabalho disponíveis suficientes no tempo de execução, uma consulta poderá ser executada com um grau menor de paralelismo que a opção da configuração de servidor MAXDOP.
 
-Consulte este [artigo do Suporte da Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
+Consulte este [artigo do Suporte da Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
 
 ### <a name="parallel-query-example"></a>Exemplo de consulta paralela
 
@@ -1019,7 +1020,7 @@ Para melhorar o desempenho das consultas que acessam uma grande quantidade de da
 * Usar um servidor com processadores rápidos e o máximo possível de núcleos de processador, para se beneficiar da capacidade de processamento de consultas paralelas.
 * Verificar se o servidor tem largura de banda suficiente do controlador de E/S. 
 * Criar um índice clusterizado em todas as tabelas particionadas grandes para beneficiar-se de otimizações de exames da árvore B.
-* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
+* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
 
 ### <a name="example"></a>Exemplo
 

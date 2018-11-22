@@ -1,12 +1,10 @@
 ---
 title: Validação pós-migração e guia de otimização | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662944"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658515"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ Ao migrar de versões mais antigas do [!INCLUDE[ssNoVersion](../includes/ssnover
 
 Isso ocorre porque, começando com o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], todas as alterações do Otimizador de Consulta são associadas para o [nível de compatibilidade do banco de dados](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) mais recente, portanto, os planos não são alterados diretamente no ponto de atualização, mas sim quando um usuário altera a opção de banco de dados `COMPATIBILITY_LEVEL` para a mais recente. Esse recurso, em combinação com o Repositório de Consultas, fornece um excelente nível de controle sobre o desempenho da consulta no processo de atualização. 
 
-Para obter mais informações sobre as alterações do Otimizador de Consulta introduzidas no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consulte [Otimizando seus planos de consulta com o estimador de cardinalidade do SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
+Para obter mais informações sobre as alterações do Otimizador de Consulta introduzidas no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consulte [Otimizando seus planos de consulta com o estimador de cardinalidade do SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx).
 
 ### <a name="steps-to-resolve"></a>Etapas para resolver
 
@@ -53,7 +51,7 @@ Para obter mais informações sobre este tópico, consulte [Manter a estabilidad
 **Aplica-se a:** migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário. 
+> Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existir na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário. 
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila os planos de consulta em procedimentos armazenados usando a detecção de parâmetros de entrada na primeira compilação, gerando um plano parametrizado, reutilizável e otimizado para distribuição de dados de entrada. Mesmo se não forem procedimentos armazenados, a maioria das instruções que gera planos triviais será parametrizada. Depois que o primeiro plano é armazenado em cache, qualquer execução futura é mapeada para um plano previamente armazenado em cache.
 Um possível problema surge quando essa primeira compilação pode não ter usado os conjuntos de parâmetros mais comuns para a carga de trabalho normal. Para parâmetros diferentes, o mesmo plano de execução se torna ineficaz. Para obter mais informações sobre este tópico, consulte [Detecção de parâmetro](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -81,7 +79,7 @@ Um possível problema surge quando essa primeira compilação pode não ter usad
 
 1.  Aproveite o plano de execução gráfica para todas as referências de índice ausentes.
 2.  Sugestões de indexação geradas pelo [Orientador de Otimização do Mecanismo de Banco de Dados](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Aproveite o [DMV de índices ausentes](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou por meio do [Painel de Desempenho do SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+3.  Aproveite o [DMV de índices ausentes](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou por meio do [Painel de Desempenho do SQL Server](https://www.microsoft.com/download/details.aspx?id=29063).
 4.  Utilize scripts pré-existentes que podem usar DMVs existentes para fornecer insights sobre qualquer índice ausente, duplicado, redundante, raramente usado e nunca utilizado, mas também se alguma referência de índice é sugerida/embutida no código em procedimentos existentes e funções no banco de dados. 
 
 > [!TIP] 

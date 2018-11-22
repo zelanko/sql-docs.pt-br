@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051009"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813669"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
@@ -115,7 +115,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
 3.  Em **TargetServerURL** , digite o nome do servidor de relatório, por exemplo   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.  
+    - `https://localhost/reportserver` funcionará se você estiver criando o relatório no servidor de relatório.  
   
   
 4. Observe que TargetReportFolder é o tutorial, o nome do projeto.  Esse é o nome da pasta na qual o relatório será implantado nas próximas etapas.  
@@ -129,7 +129,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
     > Ignorando 'Sales Orders.rdl'. O item está atualizado.  
     > Compilação concluída – 0 erros, 0 avisos  
     > ------ Implantação iniciada: Projeto: tutorial, Configuração: Debug ------  
-    > Implantando em http://[nome do servidor]/reportserver  
+    > Implantando em https://[nome do servidor]/reportserver  
     > Implantando relatório '/tutorial/Sales Orders'.  
     > Implantação concluída -- 0 erros, 0 avisos  
     > ========== Compilação: 1 com êxito ou atualizados, 0 com falha, 0 ignorados ==========  
@@ -143,8 +143,8 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
     Navegue até a URL do portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Observação:** a URL do *portal* é "Reports", não a URL do *Servidor* de Relatório "Reportserver".  Por exemplo:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
   
 8.  Procure a pasta que contém o relatório. O nome padrão é *tutorial*, o nome do projeto ou o nome digitado no campo TargetReportFolder nas propriedades do projeto.   
 Clique no nome do relatório **Pedidos de Venda** para exibir o relatório renderizado no navegador.  

@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692124"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638654"
 ---
 # <a name="odata-source"></a>Origem do OData
 Use o componente OData Source em um pacote do SSIS para consumir os dados do serviço do OData (Protocolo Open Data).
@@ -38,13 +38,13 @@ O componente oferece suporte para os protocolos OData v3 e v4.
 
 O OData Source inclui suporte para as seguintes fontes de dados:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
--   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: http://\<server>/_vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: https://\<server>/_vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Tipos de dados com suporte
 
 A fonte OData dá suporte aos seguintes tipos de dados simples: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string e TimeSpan.
 
-Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a página `http://<OData feed endpoint>/$metadata`.
+Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a página `https://<OData feed endpoint>/$metadata`.
 
 > [!IMPORTANT]
 > O componente OData Source não é compatível com tipos complexos, como itens de múltipla escolha, nas listas do SharePoint.

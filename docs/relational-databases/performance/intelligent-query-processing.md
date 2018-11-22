@@ -2,7 +2,7 @@
 title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030933"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660948"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 A família de recursos **Processamento de consulta inteligente** inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação.
 
-![Recursos de processamento de consulta inteligente](./media/2_IQPFeatureFamily.png)
+![Recursos de processamento de consulta inteligente](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Processamento de consulta adaptável
 A família de recursos de processamento de consulta adaptável inclui aprimoramentos do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Esses aprimoramentos incluem: uniões adaptáveis do modo de lote, comentários de concessão de memória e execução intercalada para funções com valor de tabela e várias instruções.
@@ -54,6 +54,14 @@ A compilação adiada de variável da tabela melhora a qualidade do plano e o de
 Com a compilação adiada de variável de tabela, a compilação de uma instrução que faz referência a uma variável de tabela é adiada até a primeira execução real da instrução. Esse comportamento de compilação adiada é idêntico ao comportamento das tabelas temporárias, e essa alteração resulta no uso de cardinalidade real, em vez do palpite original de uma linha. Para habilitar a versão prévia da compilação adiada de variável de tabela no Banco de Dados SQL do Azure, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
 
 Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
+> [!NOTE]
+> O embutimento de UDF escalar é a versão prévia pública do recurso.  
+
+O inlining do UDF escalar transforma automaticamente funções definidas pelo usuário (UDF) escalares em expressões relacionais e as insere na consulta SQL de chamada, melhorando o desempenho de cargas de trabalho que aproveitam UDFs escalares. O inlining do UDF escalar possibilita a otimização baseada em custo de operações em UDFs e resulta em planos eficientes que são orientados ao conjunto e paralelos, em vez de planos de execução seriais ineficientes e iterativos. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
+
+Para saber mais, confira [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (Embutimento de UDF escalar).
 
 ## <a name="approximate-query-processing"></a>Processamento de consulta aproximada
 > [!NOTE]

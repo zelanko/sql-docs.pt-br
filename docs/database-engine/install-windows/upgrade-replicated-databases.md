@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c92626c8ef9e24436c323819ca50c211aead9ffb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699734"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668415"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
 
@@ -30,34 +30,39 @@ ms.locfileid: "47699734"
   
   O [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
   
--   Um Distribuidor pode ser de qualquer versão, desde que ela seja maior ou igual à do Publicador (em muitos casos, o Distribuidor tem a mesma instância que o Publicador).  
-  
--   Um Publicador pode ser de qualquer versão, contanto que ela seja menor ou igual à versão do Distribuidor.  
-  
--   A versão de assinante depende do tipo de publicação:  
-  
-    -   Um Assinante de uma publicação transacional pode ser de qualquer uma das duas versões do Publicador. Por exemplo: um Publicador do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pode ter Assinantes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ; e um Editor do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pode ter Assinantes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e do  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
-  
-    -   Um Assinante de uma publicação de mesclagem pode ser de qualquer versão menor ou igual à do Publicador.  
-  
+-   Um Distribuidor pode ser de qualquer versão, desde que ela seja maior ou igual à do Publicador (em muitos casos, o Distribuidor tem a mesma instância que o Publicador).    
+-   Um Publicador pode ser de qualquer versão, contanto que ela seja menor ou igual à versão do Distribuidor.    
+-   A versão de assinante depende do tipo de publicação:    
+    - Um Assinante de uma publicação transacional pode ser de qualquer uma das duas versões do Publicador. Por exemplo: um publicador do SQL Server 2012 (11.x) pode ter assinantes do SQL Server 2014 (12.x) e SQL Server 2016 (13.x); e um publicador do SQL Server 2016 (13.x) pode ter assinantes do SQL Server 2014 (12.x) e SQL Server 2012 (11.x).     
+    - Um assinante de uma publicação de mesclagem pode ser todas as versões iguais ou anteriores à versão do publicador com suporte, de acordo com o ciclo de vida de suporte das versões.  
+ 
+O caminho de atualização para o SQL Server é diferente dependendo do padrão de implantação. O SQL Server oferece dois caminhos de atualização em geral:
+- Lado a lado: implantar um ambiente paralelo e mover bancos de dados juntamente com os objetos de nível de instância associada, como logons, trabalhos, etc. para o novo ambiente. 
+- Atualização in-loco: permitir que a mídia de instalação do SQL Server atualize a instalação do SQL Server existente, substituindo os bits do SQL Server e atualizando os objetos de banco de dados. Para ambientes que executam Grupos de Disponibilidade AlwaysOn ou Instâncias do Cluster de Failover, uma atualização in-loco é combinada com uma [atualização sem interrupção](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar o tempo de inatividade. 
+
+Uma abordagem comum que tem sido adotada para atualizações lado a lado de topologias de replicação é mover os pares publicador-assinante em partes para o novo ambiente lado a lado em vez de uma movimentação de toda a topologia. Essa abordagem em fases ajuda a controlar o tempo de inatividade e a minimizar o impacto a uma determinada medida para o negócio dependente de replicação.  
+
+
 > [!NOTE]  
->  Esse artigo está disponível na documentação de Ajuda da instalação e nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os links do artigo que aparecem em negrito na documentação da Ajuda da instalação se referem a artigos que só estão disponíveis nos Manuais Online. **Crie uma estratégia de upgrade para o Publicador, o Assinante e o Distribuidor usando as opções descritas nesta [postagem](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+> **Para obter informações mais detalhadas com relação à atualização da topologia de replicação para o SQL 2016, confira a postagem no blog [Atualizando uma topologia de replicação para o SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+
+ >[!WARNING]
+ > A atualização de uma topologia de replicação é um processo de várias etapas. Recomendamos tentar uma atualização de uma réplica de sua topologia de replicação em um ambiente de teste antes de executar a atualização no ambiente de produção real. Isso ajudará a corrigir qualquer documentação operacional necessária para lidar com a atualização facilmente sem incorrer em tempos de inatividade caros e longos durante o processo de atualização real. Vimos clientes reduzirem o tempo de inatividade significativamente com o uso dos Grupos de Disponibilidade Always On e/ou Instâncias do Cluster de Failover do SQL Server para seus ambientes de produção ao atualizar sua topologia de replicação. Além disso, recomendamos fazer backups de todos os bancos de dados, incluindo MSDB, bancos de dados Mestre, de Distribuição e os bancos de dados do usuário que participam da replicação antes de tentar a atualização.
+
+
+## <a name="replication-matrix"></a>Matriz de replicação
+
+[!INCLUDE[repl matrix](../../includes/replication-compat-matrix.md)]
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Executar o Log Reader Agent para replicação transacional antes da atualização  
  Antes de fazer upgrade para o [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], você deve verificar se todas as transações confirmadas das tabelas publicadas foram processadas pelo Agente de Leitor de Log. Para isso, execute as seguintes etapas para cada banco de dados que contém publicações transacionais:  
   
-1.  Verifique se o Log Reader Agent está executando para o banco de dados. Por padrão, o agente é executado continuamente.  
-  
+1.  Verifique se o Log Reader Agent está executando para o banco de dados. Por padrão, o agente é executado continuamente.    
 2.  Interrompa a atividade de usuário em tabelas publicadas.  
-  
 3.  Conceda um tempo para que o Log Reader Agent copie transações para o banco de dados de distribuição e, depois, interrompa o agente.  
-  
-4.  Execute [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) para verificar se todas as transações foram processadas. O conjunto de resultados deste procedimento deve ser vazio.  
-  
-5.  Execute [sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) para fechar a conexão de sp_replcmds.  
-  
-6.  Faça o upgrade do servidor para a última versão do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
-  
+4.  Execute [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) para verificar se todas as transações foram processadas. O conjunto de resultados deste procedimento deve ser vazio.   
+5.  Execute [sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) para fechar a conexão de sp_replcmds.   
+6.  Execute a atualização do servidor para a última versão do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].   
 7.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e o Log Reader Agent se eles não iniciarem automaticamente depois da atualização.  
   
 ## <a name="run-agents-for-merge-replication-after-upgrade"></a>Executar agentes para replicação de mesclagem após a atualização  
@@ -67,25 +72,59 @@ ms.locfileid: "47699734"
   
  Execute os agentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor ou da linha de comando. Para obter mais informações sobre como executar o Agente de Instantâneo, consulte os seguintes artigos:  
   
--   [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
-  
--   [Iniciar e interromper um Agente de Replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
-  
--   [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
-  
+-   [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
+-   [Iniciar e interromper um Agente de Replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
+-   [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
 -   [Conceitos dos executáveis do Replication Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Para obter mais informações sobre como executar o Agente de Mesclagem, consulte os seguintes artigos:  
-  
--   [Sincronizar uma assinatura pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
+
+Para obter mais informações sobre como executar o Agente de Mesclagem, consulte os seguintes artigos:
+-   [Sincronizar uma assinatura pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)
 -   [Sincronizar uma assinatura push](../../relational-databases/replication/synchronize-a-push-subscription.md)  
   
- Depois de atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma topologia que utiliza a replicação de mesclagem, altere o nível de compatibilidade de publicação de qualquer publicação caso queira usar novos recursos.  
+
+Depois de atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma topologia que utiliza a replicação de mesclagem, altere o nível de compatibilidade de publicação de qualquer publicação caso queira usar novos recursos.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Atualizando as edições Standard, Workgroup ou Express  
- Antes de fazer upgrade de uma edição do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] para outra, verifique se há suporte para a funcionalidade atualmente utilizada na edição para a qual deseja fazer upgrade. Para obter mais informações, consulte a seção sobre Replicação em [Edições e recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md).  
-  
+Antes de fazer upgrade de uma edição do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] para outra, verifique se há suporte para a funcionalidade atualmente utilizada na edição para a qual deseja fazer upgrade. Para obter mais informações, consulte a seção sobre Replicação em [Edições e recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+
+## <a name="steps-to-upgrade-a-replication-topology"></a>Etapas para atualizar uma topologia de replicação
+Essas etapas descrevem a ordem na qual os servidores em uma topologia de replicação devem ser atualizados. As mesmas etapas serão aplicáveis se você estiver executando uma replicação transacional ou de mesclagem. No entanto, essas etapas não abrangem a replicação Ponto a Ponto, assinaturas de atualização enfileiradas nem assinaturas de atualização imediatas. 
+
+### <a name="in-place-upgrade"></a>Atualização in-loco 
+1. Atualize o distribuidor. 
+2. Atualize o publicador e o assinante. Eles podem ser atualizados em qualquer ordem. 
+
+ >[!NOTE]
+ > Para o SQL 2008 e 2008 R2, a atualização do publicador e do assinante deve ser feita ao mesmo tempo para alinhar-se à matriz de topologia de replicação. Um publicador ou assinante do SQL 2008 ou 2008R2 não pode ter um publicador nem um assinante do SQL 2016 (ou superior). Se não for possível atualizar ao mesmo tempo, use uma atualização intermediária para atualizar as instâncias do SQL para SQL 2014 e, em seguida, atualize-as novamente para o SQL 2016 (ou superior).  
+
+### <a name="side-by-side-upgrade"></a>Atualização lado a lado
+1. Atualize o distribuidor.
+1. Reconfigure a [distribuição](../../relational-databases/replication/configure-distribution.md) na nova instância do SQL Server.
+1. Atualize o publicador.
+1. Atualize o assinante.
+1. Reconfigure todos os pares publicador-assinante, incluindo a reinicialização do assinante. 
+
+
+## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Etapas para a migração lado a lado do distribuidor para o Windows Server 2012 R2
+Se estiver planejando atualizar a instância do SQL Server para o SQL 2016 (ou superior) e seu sistema operacional atual for o Windows 2008 (ou 2008 R2), será necessário realizar uma atualização lado a lado do sistema operacional para o Windows Server 2012 R2 ou posterior. O motivo dessa atualização intermediária do sistema operacional é que o SQL Server 2016 não pode ser instalado em um Windows Server 2008/2008 R2 e o Windows Server 2008/20008 R2 não permite atualizações in-loco para Clusters de failover. As etapas a seguir podem ser executadas de uma instância autônoma do SQL Server ou em uma dentro de uma FCI (Instância do Cluster de Failover) Always On.
+
+1. Configure uma nova instância do SQL Server (autônoma ou Cluster de Failover Always On), uma edição e uma versão como seu distribuidor no Windows Server 2012 R2/2016 com um cluster do Windows diferente um nome do FCI do SQL Server ou nome do host autônomo. Será necessário manter a mesma estrutura de diretório que a do distribuidor antigo para garantir que os executáveis dos agentes de replicação, pastas de replicação e caminhos do arquivo de banco de dados sejam encontrados no mesmo caminho no novo ambiente. Isso reduzirá quaisquer etapas de pós-migração/atualização necessárias.
+1. Certifique-se de que sua replicação está sincronizada e, em seguida, desligue todos os agentes de replicação. 
+1. Desligue a instância atual do Distribuidor do SQL Server. Se for uma instância autônoma, desligue o servidor. Se for um FCI do SQL, coloque toda a função do SQL Server offline no gerenciador de cluster, incluindo o nome da rede. 
+1. Remova a DNS e as entradas do objeto de computador do AD do ambiente antigo (instância de distribuidor atual). 
+1. Altere o nome do host do novo servidor para coincidir com o do servidor antigo.
+    1. Se for um FCI do SQL, renomeie o novo FCI do SQL com o mesmo nome do servidor virtual que o da instância antiga. 
+1. Copie os arquivos de banco de dados da instância anterior usando o redirecionamento SAN, cópia de armazenamento ou cópia de arquivo. 
+1. Coloque a nova instância do SQL Server online. 
+1. Reinicie todos os agentes de replicação e verifique se eles estão sendo executados com êxito.
+1. Valide se a replicação está funcionando conforme esperado. 
+1. Use a mídia de instalação do SQL Server para executar uma atualização in-loco de sua instância do SQL Server para a nova versão do SQL Server. 
+
+
+  >[!NOTE]
+  > Para reduzir o tempo de inatividade, recomendamos que você execute a *migração lado a lado* do distribuidor como uma atividade e a *atualização in-loco no SQL Server 2016* como outra atividade. Isso permitirá que você adote uma abordagem em fases, reduza o risco e minimize o tempo de inatividade.
+
 ## <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.  
  A opção de sincronização da Web para replicação de mesclagem requer que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) seja copiado para o diretório virtual do servidor IIS (Serviços de Informações da Internet) usado para sincronização. Quando você configura a sincronização da Web, o arquivo é copiado para o diretório virtual pelo Assistente para Configuração da Sincronização da Web. Se você atualizar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados no servidor IIS, deverá copiar replisapi.dll manualmente do diretório COM para o diretório virtual no servidor IIS. Para obter mais informações sobre como configurar a sincronização da Web, veja [Configurar sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
@@ -98,5 +137,4 @@ ms.locfileid: "47699734"
  [Novidades &#40;Replicação&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  
+ [Atualizando uma topologia de replicação para o SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

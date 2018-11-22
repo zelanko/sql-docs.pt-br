@@ -1,5 +1,5 @@
 ---
-title: Definir ou alterar o agrupamento de banco de dados | Microsoft Docs
+title: Definir ou alterar a ordenação de banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b9a1a8be87c54858c760f4b53d30a83799ec84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767074"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571322"
 ---
-# <a name="set-or-change-the-database-collation"></a>Definir ou alterar o agrupamento de banco de dados
+# <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este tópico descreve como definir e alterar o agrupamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhum agrupamento for especificado, será usado o agrupamento do servidor.  
+  Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
  
 > [!NOTE]
-> Você não pode alterar o agrupamento de um Banco de Dados SQL do Azure depois que ele é criado.
+> A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
  **Neste tópico**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47767074"
   
      [Segurança](#Security)  
   
--   **Para definir ou alterar o agrupamento de banco de dados**  
+-   **Para definir ou alterar a ordenação de banco de dados**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,23 +48,25 @@ ms.locfileid: "47767074"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   Os agrupamentos somente Unicode do Windows podem ser usados somente com a cláusula COLLATE para aplicar agrupamentos aos tipos de dados **nchar**, **nvarchar**e **ntext** em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar o agrupamento de uma instância de banco de dados ou de servidor.  
+-   As ordenações somente Unicode do Windows podem ser usadas somente com a cláusula COLLATE para aplicar ordenações aos tipos de dados **nchar**, **nvarchar**e **ntext** em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar a ordenação de uma instância de banco de dados ou de servidor.  
   
--   Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código sem suporte no Windows, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibirá um erro.  
+-   Se a ordenação especificada ou a ordenação usada pelo objeto referenciado usar uma página de código sem suporte no Windows, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibirá um erro.  
+
+-   A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Você pode encontrar os nomes de agrupamento com suporte no [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)ou pode usar a função do sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+-   Você pode encontrar os nomes de ordenação com suporte no [Windows Collation Name &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [SQL Server Collation Name &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ou pode usar a função do sistema [sys.fn_helpcollations &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Ao alterar o agrupamento de banco de dados, você altera o seguinte:  
+-   Ao alterar a ordenação de banco de dados, você altera o seguinte:  
   
-    -   Qualquer coluna **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** nas tabelas do sistema são alteradas para o novo agrupamento.  
+    -   Qualquer coluna **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** nas tabelas do sistema são alteradas para a nova ordenação.  
   
-    -   Todos os parâmetros **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para o novo agrupamento.  
+    -   Todos os parâmetros **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para a nova ordenação.  
   
-    -   Os tipos de dados do sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para o novo agrupamento padrão.  
+    -   Os tipos de dados do sistema **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para a nova ordenação padrão.  
   
--   Você pode alterar o agrupamento de qualquer novo objeto que seja criado em um banco de dados de usuário, usando a cláusula COLLATE da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Essa instrução não altera o agrupamento das colunas em nenhuma tabela existente definida pelo usuário. Essas podem ser alteradas usando-se a cláusula COLLATE de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+-   Você pode alterar a ordenação de qualquer novo objeto que seja criado em um banco de dados de usuário, usando a cláusula COLLATE da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Essa instrução não altera a ordenação das colunas em nenhuma tabela existente definida pelo usuário. Essas podem ser alteradas usando-se a cláusula COLLATE de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -77,25 +79,25 @@ ms.locfileid: "47767074"
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### <a name="to-set-or-change-the-database-collation"></a>Para definir ou alterar o agrupamento de banco de dados  
+#### <a name="to-set-or-change-the-database-collation"></a>Para definir ou alterar a ordenação de banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
-2.  Se você estiver criando um novo banco de dados, clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**. Se você não desejar o agrupamento padrão, clique na página **Opções** e selecione um agrupamento na lista suspensa **Agrupamento** .  
+2.  Se você estiver criando um novo banco de dados, clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**. Se você não desejar a ordenação padrão, clique na página **Opções** e selecione uma ordenação na lista suspensa **Ordenação**.  
   
-     De maneira alternativa, se o banco de dados já existir, clique com o botão direito do mouse no banco de dados desejado e clique em **Propriedades**. Clique na página **Opções** e selecione um agrupamento na lista suspensa **Agrupamento** .  
+     De maneira alternativa, se o banco de dados já existir, clique com o botão direito do mouse no banco de dados desejado e clique em **Propriedades**. Clique na página **Opções** e selecione uma ordenação na lista suspensa **Ordenação**.  
   
 3.  Quando terminar, clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
-#### <a name="to-set-the-database-collation"></a>Para definir o agrupamento de banco de dados  
+#### <a name="to-set-the-database-collation"></a>Para definir a ordenação de banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](~/t-sql/statements/collations.md) para especificar um nome de agrupamento. O exemplo cria o banco de dados `MyOptionsTest` que usa o agrupamento `Latin1_General_100_CS_AS_SC` . Depois de criar o banco de dados, execute a instrução `SELECT` para verificar a configuração.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](~/t-sql/statements/collations.md) para especificar um nome de ordenação. O exemplo cria o banco de dados `MyOptionsTest` que usa a ordenação `Latin1_General_100_CS_AS_SC`. Depois de criar o banco de dados, execute a instrução `SELECT` para verificar a configuração.  
   
 ```sql  
 USE master;  
@@ -115,13 +117,13 @@ GO
   
 ```  
   
-#### <a name="to-change-the-database-collation"></a>Para alterar o agrupamento de banco de dados  
+#### <a name="to-change-the-database-collation"></a>Para alterar a ordenação de banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](~/t-sql/statements/collations.md) em uma instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para alterar o nome do agrupamento. Execute a instrução `SELECT` para verificar a alteração.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar a cláusula [COLLATE](~/t-sql/statements/collations.md) em uma instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para alterar o nome da ordenação. Execute a instrução `SELECT` para verificar a alteração.  
   
 ```sql  
 USE master;  
@@ -139,13 +141,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)   
- [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)   
+ [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)   
+ [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

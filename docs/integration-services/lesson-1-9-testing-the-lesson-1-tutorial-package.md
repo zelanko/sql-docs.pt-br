@@ -11,12 +11,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769486"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629539"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lição 1-9 – testar o pacote de tutoriais da Lição 1
 Nesta lição, você executou as seguintes tarefas:  
@@ -44,7 +44,7 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
 1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
   
-    O pacote será executado, resultando em 1097 linhas adicionadas à tabela de fatos **FactCurrency** no **AdventureWorksDW2012**.  
+    O pacote será executado, resultando na adição bem-sucedida de 1097 linhas à tabela de fatos **NewFactCurrencyRate** em **AdventureWorksDW2012**.  
   
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 515a98fba15d6531ce106d2c47bb0a62d1a84572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847224"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270179"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -38,7 +38,7 @@ Primeiramente, é necessário entender o protocolo Kerberos em um alto nível. H
 1. O recurso protegido (HDFS, MR2, YARN, histórico de trabalhos etc.)
 1. Centro de distribuição de chaves (conhecido como um controlador de domínio no Active Directory)
 
-Cada um dos recursos protegidos do Hadoop é registrado pelo **Centro de Distribuição de Chaves (KDC)** com um **Nome da Entidade de Serviço (SPN)** único, como parte do processo de “kerberização” do cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **Tíquete de Concessão de Tíquete (TGT)**, para solicitar outro tíquete temporário, chamado **Tíquete de Serviço (ST)** ao KDC no SPN específico que se deseja acessar.  
+Cada um dos recursos protegidos do Hadoop é registrado pelo **KDC (Centro de Distribuição de Chaves)** com um **SPN (Nome da Entidade de Serviço)** exclusivo, como parte do processo de "Kerberização" do cluster Hadoop. A meta é que o cliente obtenha um tíquete de usuário temporário, chamado **tgt (Tíquete de Concessão de Tíquete)**, para solicitar outro tíquete temporário, chamado **ST (Tíquete de Serviço)** ao KDC no SPN específico que se deseja acessar.  
 
 No PolyBase, quando uma autenticação é solicitada em qualquer recurso protegido por Kerberos, o handshake com quatro viagens de ida e volta a seguir ocorre:
 
@@ -64,11 +64,11 @@ O PolyBase tem vários XMLs de configuração que contém as propriedades do clu
 
 Esses arquivos estão localizados em:
 
-\\[System Drive\\]:{install path}\\{instance}\\{name}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
+\\[Unidade do Sistema\\]:{caminho de instalação}\\{instância}\\{nome}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
 
-Por exemplo, o padrão do SQL Server 2016 seria "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf".
+Por exemplo, o padrão do SQL Server 2016 seria "C:\\Arquivos de Programas\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf".
 
-Atualize um dos arquivos de configuração do PolyBase, o **core-site.xml**, com as três propriedades abaixo e com os valores definidos de acordo com o ambiente:
+Atualize um dos arquivos de configuração do PolyBase, o  **core-site.xml**, com as três propriedades abaixo e com os valores definidos de acordo com o ambiente:
 
 ```xml
 <property>
@@ -90,7 +90,7 @@ Posteriormente, será necessário atualizar os outros XMLs se você quiser reali
 A ferramenta é executada independentemente do SQL Server, portanto, ela não precisa estar em execução ou ser reiniciada se as XMLs de configuração forem atualizadas. Para executar a ferramenta, execute os comandos a seguir no host com o SQL Server instalado:
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -102,7 +102,7 @@ A ferramenta é executada independentemente do SQL Server, portanto, ela não pr
 | *Porta do nó de nome* | A porta do nó de nome. Refere-se ao argumento "LOCATION" no CREATE EXTERNAL DATA SOURCE T-SQL. Normalmente é 8020. |
 | *Entidade de Serviço* | A entidade de serviço do administrador para o KDC. Deve corresponder ao que é usado como argumento "IDENTITY" no CREATE DATABASE SCOPED CREDENTIAL T-SQL.|
 | *Senha do serviço* | Em vez de digitar a senha no console, armazene-a em um arquivo e passe o caminho do arquivo aqui. Os conteúdos do arquivo devem corresponder ao que é usado como argumento "SECRET" no CREATE DATABASE SCOPED CREDENTIAL T-SQL. |
-| *Caminho do arquivo HDFS remoto (opcional) * | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
+| *Caminho do arquivo HDFS remoto (opcional) * | O caminho de um arquivo existente a ser acessado. Se não estiver especificado, a raiz "/" será usada. |
 
 ## <a name="example"></a>Exemplo
 
@@ -210,12 +210,11 @@ Se a ferramenta foi executada e as propriedades de arquivo do caminho de destino
 
 ## <a name="debugging-tips"></a>Dicas de depuração
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o cluster Hadoop tiver sido devidamente “kerberizado”, deverá haver um SPN para cada um dos vários serviços disponíveis no cluster (por exemplo, nn, dn, rm, yarn, spnego etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
+Todos os SPNs registrados com o KDC, incluindo os administradores, podem ser exibidos por meio da execução de **kadmin.local** > (logon do administrador) > **listprincs** no host do KDC ou em qualquer cliente do KDC. Se o cluster Hadoop tiver sido devidamente “kerberizado”, deverá haver um SPN para cada um dos vários serviços disponíveis no cluster (por exemplo, nn, dn, rm, yarn, spnego etc.) Os arquivos keytab correspondentes (substitutos para senhas) podem ser vistos em **/etc/security/keytabs**, por padrão. Eles são criptografados usando a chave privada do KDC.  
 
-Também considere usar a ferramenta [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para verificar as credenciais de administrador no KDC localmente. Um exemplo de uso seria: *kinit identity@MYREALM.COM*. Um prompt de senha indica que a identidade existe.  
-Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que inclui todas as solicitações de tíquetes, bem como o IP do cliente que fez a solicitação. Deve haver duas solicitações de IP do computador do SQL Server no qual a ferramenta foi executada: primeiro para o TGT do Servidor de Autenticação, como **AS\_REQ**, seguido por um **TGS\_REQ** para o ST do Servidor de Concessão de Tíquetes.
+Também considere usar a ferramenta [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para verificar as credenciais de administrador no KDC localmente. Um exemplo de uso seria:  *kinit identity@MYREALM.COM*. Um prompt de senha indica que a identidade existe.  Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que inclui todas as solicitações de tíquetes, bem como o IP do cliente que fez a solicitação. Deve haver duas solicitações de IP do computador do SQL Server no qual a ferramenta foi executada: primeiro para o TGT do Servidor de Autenticação, como **AS\_REQ**, seguido por um **TGS\_REQ** para o ST do Servidor de Concessão de Tíquetes.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -225,11 +224,11 @@ Os logs do KDC estão disponíveis em **/var/log/krb5kdc.log** por padrão, que 
 
 ### <a name="active-directory"></a>Active Directory 
 
-No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle > Usuários e Computadores do Active Directory > *MyRealm* > *MyOrganizationalUnit*. Se o cluster Hadoop tiver sido devidamente “kerberizado”, deverá haver um SPN para cada um dos vários serviços disponíveis (por exemplo, nn, dn, rm, yarn, spnego etc.)
+No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle > Usuários e Computadores do Active Directory > *MyRealm* > *MyOrganizationalUnit*. Se o cluster Hadoop tiver sido devidamente “kerberizado”, deverá haver um SPN para cada um dos vários serviços disponíveis (por exemplo, nn, dn, rm, yarn, spnego etc.)
 
 ## <a name="see-also"></a>Confira também
 
 [Integrar o PolyBase com o Cloudera usando a Autenticação do Active Directory](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Guia do Cloudera para a Configuração do Kerberos para CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Guia do Hortonworks para a Configuração do Kerberos para HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[Solução de problemas do PolyBase](polybase-troubleshooting.md)
+[Solucionando problemas do PolyBase](polybase-troubleshooting.md)

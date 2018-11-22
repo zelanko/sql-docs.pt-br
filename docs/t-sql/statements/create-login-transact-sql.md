@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461081"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704134"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ Especifica o nome de uma chave assimétrica a ser associada a este logon. Esta c
 >  CHECK_EXPIRATION e CHECK_POLICY serão aplicados apenas no Windows Server 2003 e posteriores. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md). 
   
 - Os logons criados a partir de certificados ou chaves assimétricas só são usados para assinatura de código. Eles não podem ser usados para a conexão com o SQL Server. Você pode criar um logon a partir de um certificado ou chave assimétrica somente quando o certificado ou a chave já existirem em master. 
-- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor. 
 - O [modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md) do servidor deve corresponder ao tipo de logon para permitir o acesso.
 - Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -294,7 +294,7 @@ Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQ
   
 ## <a name="remarks"></a>Remarks  
 - As senhas diferenciam maiúsculas de minúsculas.
-- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor. 
 - O [modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md) do servidor deve corresponder ao tipo de logon para permitir o acesso.
     - Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -326,8 +326,8 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 Depois de criar um logon, ele poderá se conectar ao Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
   
 - Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon nesse banco de dados. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
-- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
+- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
@@ -412,7 +412,7 @@ Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQ
   
 ## <a name="remarks"></a>Remarks  
 - As senhas diferenciam maiúsculas de minúsculas.
-- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor. 
 - O [modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md) do servidor deve corresponder ao tipo de logon para permitir o acesso.
     - Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -444,8 +444,8 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 Depois de criar um logon, ele poderá se conectar ao Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
   
 - Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon nesse banco de dados. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
-- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
+- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
@@ -530,7 +530,7 @@ As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pel
   
 ## <a name="remarks"></a>Remarks  
 - As senhas diferenciam maiúsculas de minúsculas.
-- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor. 
 - O [modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md) do servidor deve corresponder ao tipo de logon para permitir o acesso.
     - Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -557,8 +557,8 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 Após criar um logon, ele poderá se conectar ao SQL Data Warehouse, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
   
 - Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
-- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o uso a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](grant-transact-sql.md). Para obter mais informações, consulte [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Funções de não administrador), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e a instrução [GRANT](grant-transact-sql.md).
+- Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** … Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md). 
   
@@ -667,7 +667,7 @@ Especifica que o logon seja mapeado para um logon do Windows.
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION e CHECK_POLICY serão aplicados apenas no Windows Server 2003 e posteriores. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md). 
   
-- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor. 
 - Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 

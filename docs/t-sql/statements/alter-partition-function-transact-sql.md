@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709734"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637863"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  Um grupo de arquivos deve existir online e ser marcado pelo esquema de partição que usa a função de partição como NEXT USED para reter a nova partição. Os grupos de arquivos são alocados em partições em uma instrução CREATE PARTITION SCHEME. Se uma instrução CREATE PARTITION SCHEME alocar mais grupos de arquivos que o necessário (são criadas menos partições na instrução CREATE PARTITION FUNCTION do que grupos de arquivos para retê-las), haverá grupos de arquivos não atribuídos e um deles será marcado como NEXT USED pelo esquema de partição. Esse grupo de arquivos irá reter a nova partição. Se não houver nenhum grupo de arquivos marcado como NEXT USED pelo esquema de partição, será necessário usar ALTER PARTITION SCHEME para adicionar um grupo de arquivos, ou designar um existente, para reter a nova partição. Um grupo de arquivos que já retém partições pode ser designado para reter partições adicionais. Como uma função de partição pode participar de mais de um esquema de partição, todos os esquemas de partição que usarem a função de partição à qual você está adicionando as partições deverão ter um grupo de arquivos NEXT USED. Caso contrário, ALTER PARTITION FUNCTION falhará com um erro que exibe o esquema ou os esquemas de partição que não possuem um grupo de arquivos NEXT USED.  
   
- Se você criar todas as partições no mesmo grupo de arquivos, esse grupo de arquivos será inicialmente designado a ser o grupo de arquivos NEXT USED automaticamente. Entretanto, após a execução de uma operação de divisão, não existe mais um grupo de arquivos NEXT USED designado. Você deve atribuir explicitamente o NEXT USED como grupo de arquivos usando ALTER PARITION SCHEME; caso contrário, uma operação de divisão subsequente falhará.  
+ Se você criar todas as partições no mesmo grupo de arquivos, esse grupo de arquivos será inicialmente designado a ser o grupo de arquivos NEXT USED automaticamente. Entretanto, após a execução de uma operação de divisão, não existe mais um grupo de arquivos NEXT USED designado. É necessário atribuir explicitamente o NEXT USED como grupo de arquivos usando ALTER PARITION SCHEME; caso contrário, uma operação de divisão subsequente falhará.  
   
 > [!NOTE]  
 >  Limitações com índice columnstore: somente partições vazias podem ser divididas quando existe um índice columnstore na tabela. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   Execute uma sequência de instruções ALTER PARTITION FUNCTION.  
   
- Todos os grupos de arquivos que são afetados por ALTER PARTITION FUNCTION devem estar online.  
+ Todos os grupos de arquivos afetados por ALTER PARTITION FUNCTION devem estar online.  
   
  ALTER PARTITION FUNCTION falha quando há um índice clusterizado desabilitado em qualquer tabela que usa a função de partição.  
   

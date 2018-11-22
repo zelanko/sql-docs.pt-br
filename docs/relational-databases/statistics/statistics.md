@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0180124c5904c6ea1020ad92337a566d8418651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697385"
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47791474"
   
 ##  <a name="DefinitionQOStatistics"></a> Componentes e conceitos  
 ### <a name="statistics"></a>Estatísticas  
- As estatísticas de otimização de consulta são BLOBs (objetos binários grandes) que contêm informações estatísticas sobre a distribuição de valores em uma ou mais colunas de uma tabela ou exibição indexada. O otimizador de consulta usa essas estatísticas para estimar a *cardinalidade* ou o número de linhas no resultado de consulta. Essas *estimativas de cardinalidade* permitem ao otimizador de consulta criar um plano de consulta de alta qualidade. Por exemplo, dependendo dos predicados, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador Index Seek em vez de o operador Index Scan, que utiliza mais recursos, melhorando com isso o desempenho das consultas.  
+ As estatísticas de otimização de consulta são BLOBs (objetos binários grandes) que contêm informações estatísticas sobre a distribuição de valores em uma ou mais colunas de uma tabela ou exibição indexada. O otimizador de consulta usa essas estatísticas para estimar a *cardinalidade* ou o número de linhas no resultado de consulta. Essas *estimativas de cardinalidade* permitem ao otimizador de consulta criar um plano de consulta de alta qualidade. Por exemplo, dependendo dos predicados, o Otimizador de Consulta pode usar estimativas de cardinalidade para escolher o operador Index Seek em vez de o operador Index Scan, que utiliza mais recursos, melhorando com isso o desempenho das consultas.  
   
  Cada objeto de estatísticas é criado em uma lista de uma ou mais colunas de tabela e inclui um *histograma* que exibe a distribuição de valores na primeira coluna. Os objetos de estatísticas em várias colunas também armazenam informações estatísticas sobre a correlação de valores entre as colunas. Essas estatísticas de correlação, ou *densidades*, são derivadas do número de linhas distintas de valores de coluna. 
 
@@ -45,7 +45,7 @@ ms.locfileid: "47791474"
 Um **histograma** mede a frequência de ocorrência de cada valor distinto em um conjunto de dados. O otimizador de consulta calcula um histograma com base nos valores de coluna na primeira coluna de chave do objeto de estatísticas, selecionando os valores de coluna por amostragem estatística das linhas ou pela execução de uma verificação completa de todas as linhas na tabela ou na exibição. Se o histograma for criado com base em um conjunto amostrado de linhas, os totais armazenados para o número de linhas e o número de valores distintos são estimativas e não precisam ser números inteiros.
 
 > [!NOTE]
-> Os histogramas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são criados apenas para uma única coluna – a primeira coluna do conjunto de colunas de chave do objeto de estatísticas.
+> <a name="frequency"></a> Os histogramas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são criados apenas para uma única coluna – a primeira coluna do conjunto de colunas de chave do objeto de estatísticas.
   
 Para criar o histograma, o otimizador de consulta classifica os valores de colunas, calcula o número de valores que correspondem a cada valor de coluna distinta e agrega os valores de colunas em um máximo de 200 etapas de histograma contíguas. Cada etapa do histograma inclui uma gama de valores de coluna seguidos por um valor de coluna de limite superior. O intervalo inclui todos os possíveis valores de coluna entre valores de limite, excluindo-se os próprios valores de limite em si. O mais baixo dos valores de coluna classificados é o valor do limite superior da primeira etapa do histograma.
 
@@ -70,12 +70,12 @@ Para cada etapa do histograma acima:
 -   As linhas pontilhadas representam os valores amostrados usados para estimar o número total de valores distintos no intervalo (*distinct_range_rows*) e o número total de valores no intervalo (*range_rows*). O otimizador de consulta usa *range_rows* e *distinct_range_rows* para calcular *average_range_rows* e não armazena os valores amostrados.   
   
 #### <a name="density"></a>Vetor de densidade  
-**Densidade** são informações sobre o número de duplicatas em determinada coluna ou em uma combinação de colunas e ele é calculada como 1/(número de valores distintos). O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. 
+**Densidade** são informações sobre o número de duplicatas em determinada coluna ou em uma combinação de colunas e ele é calculada como 1/(número de valores distintos). O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. Conforme a densidade diminui, aumenta a seletividade de um valor. Por exemplo, em uma tabela que representa carros, muitos carros têm o mesmo fabricante, mas cada carro tem um VIN (número de identificação de veículo) exclusivo. Um índice no VIN é mais seletivo que um índice no fabricante, porque o VIN tem densidade menor que o fabricante. 
 
 > [!NOTE]
 > Frequência são informações sobre a ocorrência de cada valor distinto na primeira coluna de chave do objeto de estatísticas e é calculada como a contagem de linhas * densidade. Uma frequência máxima igual a 1 pode ser encontrada em colunas com valores exclusivos.
 
-Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, a densidade será calculada em cada um dos prefixos de coluna a seguir.
+O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, a densidade será calculada em cada um dos prefixos de coluna a seguir.
   
 |Prefixo de coluna|Densidade calculada em|  
 |---|---|
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Se a cardinalidade da tabela era de 500 ou menos quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 modificações.
     * Se a cardinalidade da tabela era inferior a 500 quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 + 20% de modificações.
 
-* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1.000 * 2.000.000) = 44.721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1000 * 2000000) = 44721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!IMPORTANT]
 > Começando com o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use o [sinalizador de rastreamento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela.
@@ -121,7 +121,7 @@ O otimizador de consulta procura estatísticas desatualizadas antes de compilar 
   
 A opção AUTO_UPDATE_STATISTICS se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Essa opção também se aplica a estatísticas filtradas.  
  
-Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](http://support.microsoft.com/help/2754171).
+Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](https://support.microsoft.com/help/2754171).
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  A opção de atualização de estatísticas assíncrona, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se o otimizador de consulta usa atualizações de estatísticas síncronas ou assíncronas. Por padrão, a opção de atualização de estatísticas assíncrona está desativada e o otimizador de consulta atualiza estatísticas de forma síncrona. A opção AUTO_UPDATE_STATISTICS_ASYNC se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
@@ -273,7 +273,7 @@ Somente o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar e
 
 ### <a name="automatic-index-and-statistics-management"></a>Índice automático e gerenciamento de estatísticas
 
-Aproveite soluções como a [Desfragmentação de índice adaptável](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
+Aproveite soluções como a [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
   
 ##  <a name="DesignStatistics"></a> Consultas que usam estatísticas de modo eficiente  
  Algumas implementações de consulta, como variáveis locais e expressões complexas no predicado de consulta, podem gerar planos de consulta de qualidade inferior. O cumprimento das diretrizes de design de consulta para o uso eficiente de estatísticas pode ajudar a evitar esse problema. Para obter mais informações sobre predicados de consulta, veja [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -383,10 +383,10 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)   
- [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](http://support.microsoft.com/help/2754171)   
+ [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](https://support.microsoft.com/help/2754171)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Desfragmentação de índice adaptável](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

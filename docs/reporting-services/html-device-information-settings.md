@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614774"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813679"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -44,7 +44,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
 |**ReplacementRoot(\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot(\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
 |**Seção**|O número da página do relatório para renderizar. Um valor **0** indica que todas as seções do relatório serão renderizadas. O valor padrão é **1**.|  
-|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **http://\<servername>/resources/companyimages**).|  
+|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **https://\<nomedoservidor>/resources/companyimages**).|  
 |**StyleStream**|Indica se os estilos e scripts são criados como um fluxo separado em vez de no documento. O valor padrão é **false**.|  
 |**Barra de Ferramentas**|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é **true**. Se o valor desse parâmetro for **false**, todas as demais opções (menos o mapa do documento) serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. Entretanto, a configuração de informações de dispositivo **Toolbar** afeta o modo como o relatório é exibido ao usar o método de SOAP **Render** . Se o valor desse parâmetro for **true** ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório será renderizada. Se o valor for **false**, o relatório HTML inteiro será renderizado como uma única página HTML.|  
 |**UserAgent**|A cadeia de caracteres **user-agent** do navegador que faz a solicitação, a qual é encontrada na solicitação HTTP.|  
@@ -53,7 +53,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
   
 ## <a name="see-also"></a>Consulte Também  
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

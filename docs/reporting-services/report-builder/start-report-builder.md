@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030605"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814259"
 ---
 # <a name="start-report-builder"></a>Iniciar o Construtor de Relatórios
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030605"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Para iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  No navegador da Web, digite a URL do servidor de relatório na barra de endereços. Por padrão, a URL é http://\<*servername*>/reports.  
+1.  No navegador da Web, digite a URL do servidor de relatório na barra de endereços. Por padrão, a URL é https://\<*nomedoservidor*>/reports.  
   
 2.  Na barra superior do portal da Web, selecione **Novo** > **Relatório Paginado**.  
   

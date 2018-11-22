@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663346"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817585"
   
 -   Você deve ter uma assinatura do Azure  
   
--   Instale a versão mais recente do [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/), (5.2.0 ou superior).  
+-   Instale a versão mais recente do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/), (5.2.0 ou superior).  
 
 -   Criar um locatário do Azure Active Directory  
 
@@ -239,10 +239,13 @@ Versão do SQL Server  |Link de instalação redistribuível
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Parte III: instalar o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Baixe o Conector do SQL Server no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=521700). (Isso deve ser feito pelo administrador do computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
+ Baixe o Conector do SQL Server no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Isso deve ser feito pelo administrador do computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
 
 > [!NOTE]  
 >  Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em ambientes de produção. Atualize para a versão 1.0.1.0 ou posterior visitando o [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e usando as instruções da página [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) em "Atualização do Conector do SQL Server".
+
+> [!NOTE]  
+> Há uma alteração da falha na versão 1.0.5.0, em termos do algoritmo de impressão digital. Você pode enfrentar falhas de restauração do banco de dados após atualizar para a versão 1.0.5.0. Veja o artigo KB [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

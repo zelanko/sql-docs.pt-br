@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252193"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814349"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 
@@ -658,7 +658,7 @@ FULL
 O acesso não transacional completo a dados FILESTREAM em FileTables está habilitado.  
   
 DIRECTORY_NAME = *\<directory_name>*  
-Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretório no nível do banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.  
+Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretório no nível do banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.  
   
 **\<HADR_options> ::=**  
   
@@ -668,7 +668,7 @@ Veja [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sq
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controla se o banco de dados pode criar páginas iniciais usando uma extensão mista para as primeiras oito páginas de uma tabela ou índice.  
  
@@ -682,7 +682,7 @@ Essa configuração está ON para todos os bancos de dados do sistema. **tempdb*
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Controla a opção de parametrização.  
+Controla a opção de parametrização. Para saber mais sobre parametrização, confira o [Guia da arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ A configuração atual dessa opção pode ser determinada examinando-se a coluna
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.  
+Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas. Para obter mais informações, confira [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Habilita o repositório de consultas.  
   
 OFF  
-Desabilita o repositório de consultas.  Este é o valor padrão.   
+Desabilita o repositório de consultas. Este é o valor padrão.   
   
 CLEAR  
 Remove o conteúdo do repositório de consultas.  
@@ -809,7 +809,7 @@ Quando a falha em uma página interrompida ou soma de verificação é detectada
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repetirá mais quatro vezes qualquer leitura que falhe com uma soma de verificação, página interrompida ou outro erro de E/S. Se a leitura tiver êxito em qualquer uma das novas tentativas, uma mensagem será gravada no log de erros e o comando que disparou a leitura continuará. Se as novas tentativas falharem, o comando falhará com a mensagem de erro 824.  
   
-Para obter mais informações sobre mensagens de erro 823, 824 e 825, veja [Como solucionar uma mensagem de erro 823 no SQL Server](http://support.microsoft.com/help/2015755), [Como solucionar a mensagem de erro 824 no SQL Server](http://support.microsoft.com/help/2015756) e [Como solucionar a mensagem de erro 825 &#40;repetição de leitura&#41; no SQL Server](http://support.microsoft.com/help/2015757).
+Para obter mais informações sobre mensagens de erro 823, 824 e 825, veja [Como solucionar uma mensagem de erro 823 no SQL Server](https://support.microsoft.com/help/2015755), [Como solucionar a mensagem de erro 824 no SQL Server](https://support.microsoft.com/help/2015756) e [Como solucionar a mensagem de erro 825 &#40;repetição de leitura&#41; no SQL Server](https://support.microsoft.com/help/2015757).
   
 A configuração atual dessa opção pode ser determinada examinando a coluna *page_verify_option* na exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou a propriedade *IsTornPageDetectionEnabled* da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -866,7 +866,7 @@ NEW_BROKER
 Especifica que o banco de dados deve receber um novo identificador do Broker. Como o banco de dados é considerado como um novo Service Broker, todas as conversas existentes nele são imediatamente removidas sem produzir mensagens de caixa de diálogo de término. Qualquer rota que referencia o antigo identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser recriada novamente com o novo identificador.  
   
 ERROR_BROKER_CONVERSATIONS  
-Especifica que a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Isso preserva o identificador [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para o banco de dados. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina todas as conversas no banco de dados com um erro. Isso permite que os aplicativos executem a limpeza regular das conversas existentes.  
+Especifica que a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Isso preserva o identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para o banco de dados. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina todas as conversas no banco de dados com um erro. Isso permite que os aplicativos executem a limpeza regular das conversas existentes.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1154,12 +1154,12 @@ O cache de procedimento também é liberado nos seguintes cenários.
 - Você restaura um backup de banco de dados.  
 -   Você desanexa um banco de dados.  
   
-A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-setting-options-on-a-database"></a>A. Configurando opções em um banco de dados  
-O exemplo a seguir define o modelo de recuperação e as opções de verificação de página de dados para o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir define o modelo de recuperação e as opções de verificação de página de dados para o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE master;  
@@ -1193,7 +1193,7 @@ GO
 ```  
   
 ### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. Habilitando o isolamento de instantâneo em um banco de dados  
-O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1982,7 +1982,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados  
-O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2023,7 +2023,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2684,7 +2684,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados  
-O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2725,7 +2725,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

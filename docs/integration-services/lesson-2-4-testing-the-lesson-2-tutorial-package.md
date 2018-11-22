@@ -11,12 +11,12 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 314e79b0cf5a35a27d93fc3a6906bdb9fbe01abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745724"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629509"
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lição 2-4 – testar o pacote de tutoriais da Lição 2
 Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar através da coleção de 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo é encontrado e corresponde aos critérios de nome de arquivo especificado, o contêiner Loop Foreach popula a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, e uma conexão é criada para o novo arquivo simples. O contêiner Loop Foreach, então, executa a tarefa de fluxo de dados não modificados em relação aos dados no novo arquivo simples, antes de se conectar ao próximo arquivo na pasta.  
@@ -24,7 +24,7 @@ Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples ag
 Use o procedimento a seguir para testar a nova funcionalidade de loop que você adicionou ao seu pacote.  
   
 > [!NOTE]  
-> Se você tiver executado o pacote da lição 1, precisará excluir os registros de dbo.FactCurrency no AdventureWorksDW2012 antes de executar o pacote dessa lição, ou o pacote falhará com erros que indicam uma violação de restrição de chave primária. Você receberá os mesmos erros se executar o pacote selecionando Depurar/Iniciar Depuração (ou pressione F5) porque as lições 1 e 2 serão executadas. A lição 2 tentará inserir os registros já inseridos na lição 1.  
+> Se você tiver executado o pacote da lição 1, precisará excluir os registros de dbo.NewFactCurrencyRate no AdventureWorksDW2012 antes de executar o pacote dessa lição ou o pacote falhará com erros que indicam uma violação de restrição de chave primária. Você receberá os mesmos erros se executar o pacote selecionando Depurar/Iniciar Depuração (ou pressione F5) porque as lições 1 e 2 serão executadas. A lição 2 tentará inserir os registros já inseridos na lição 1.  
   
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
 Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados do pacote da Lição 2 contêm os objetos mostrados nos diagramas a seguir. O fluxo de dados deve ser idêntico ao fluxo de dados na Lição 1.  

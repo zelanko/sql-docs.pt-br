@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252133"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571465"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -59,12 +59,12 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ## <a name="overview"></a>Visão geral
 
-No SQL Server, essa instrução modifica um banco de dados ou os arquivos e grupos de arquivos associados ao banco de dados. Adiciona ou remove arquivos e grupos de arquivos de um banco de dados, altera os atributos de um banco de dados ou seus arquivos e grupos de arquivos, altera o agrupamento de banco de dados e define opções de banco de dados. Instantâneos de banco de dados não podem ser modificados. Para modificar opções de banco de dados associadas à replicação, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+No SQL Server, essa instrução modifica um banco de dados ou os arquivos e grupos de arquivos associados ao banco de dados. Adiciona ou remove arquivos e grupos de arquivos de um banco de dados, altera os atributos de um banco de dados ou seus arquivos e grupos de arquivos, altera a ordenação de banco de dados e define opções de banco de dados. Instantâneos de banco de dados não podem ser modificados. Para modificar opções de banco de dados associadas à replicação, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
 
 Devido à sua extensão, a sintaxe ALTER DATABASE está separada em vários artigos.  
 
 ALTER DATABASE  
-O artigo atual fornece a sintaxe e as informações relacionadas para alterar o nome e o agrupamento de um banco de dados.  
+O artigo atual fornece a sintaxe e as informações relacionadas para alterar o nome e a ordenação de um banco de dados.  
   
 [Opções de arquivo e grupo de arquivos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 Fornece a sintaxe e informações relacionadas para adicionar e remover arquivos e grupos de arquivos de um banco de dados e para alterar os atributos dos arquivos e grupos de arquivos.  
@@ -142,11 +142,14 @@ MODIFY NAME **=***new_database_name*
 Renomeia o banco de dados com o nome especificado como *novo_nome_do_banco_de_dados*.  
   
 COLLATE *collation_name*  
-Especifica o agrupamento do banco de dados. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não especificado, o banco de dados será atribuído ao agrupamento da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifica a ordenação do banco de dados. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se não especificado, ao banco de dados será atribuída a ordenação da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-Durante a criação de bancos de dados com itens diferentes do agrupamento padrão, os dados no banco de dados sempre respeitam o agrupamento especificado. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ao criar um banco de dados independente, as informações do catálogo interno serão mantidas por meio do agrupamento padrão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC**.  
+Durante a criação de bancos de dados com itens diferentes da ordenação padrão, os dados no banco de dados sempre respeitam a ordenação especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ao criar um banco de dados independente, as informações do catálogo interno serão mantidas por meio da ordenação padrão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC**.  
   
-Para saber mais sobre nomes de agrupamentos Windows e SQL, confira [COLLATE](~/t-sql/statements/collations.md).  
+Para saber mais sobre nomes de ordenações Windows e SQL, confira [COLLATE](~/t-sql/statements/collations.md).  
   
 **\<delayed_durability_option> ::=**  
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -188,13 +191,13 @@ O cache de procedimento também é liberado nos seguintes cenários:
 - Você restaura um backup de banco de dados.  
 - Você desanexa um banco de dados.  
   
-## <a name="changing-the-database-collation"></a>Alterando o agrupamento de banco de dados  
-Antes de aplicar um agrupamento diferente a um banco de dados, certifique-se de que existam as seguintes condições:  
+## <a name="changing-the-database-collation"></a>Alterando a ordenação de banco de dados  
+Antes de aplicar uma ordenação diferente a um banco de dados, certifique-se de que existam as seguintes condições:  
   
 - Você é o único usuário que está utilizando o banco de dados no momento.  
-- Nenhum objeto associado ao esquema depende do agrupamento do banco de dados.  
+- Nenhum objeto associado ao esquema depende da ordenação do banco de dados.  
   
-  Se os objetos a seguir, que dependem do agrupamento de banco de dados, existirem no banco de dados, a instrução ALTER DATABASE*database_name*COLLATE falhará. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro para cada objeto que bloqueia a ação de ALTER:  
+  Se os objetos a seguir, que dependem da ordenação de banco de dados, existirem no banco de dados, a instrução ALTER DATABASE*database_name*COLLATE falhará. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro para cada objeto que bloqueia a ação de ALTER:  
   
   - Funções definidas pelo usuário e exibições criadas com SCHEMABINDING.  
   
@@ -202,11 +205,11 @@ Antes de aplicar um agrupamento diferente a um banco de dados, certifique-se de 
   
   - Restrições CHECK.  
   
-  - Funções com valor de tabela que retornam tabelas com colunas de caracteres com agrupamentos herdados do agrupamento de banco de dados padrão.  
+  - Funções com valor de tabela que retornam tabelas com colunas de caracteres com ordenações herdadas da ordenação de banco de dados padrão.  
   
-    Informações de dependência de entidades não associadas a esquema são automaticamente atualizadas quando o agrupamento de banco de dados é alterado.  
+    Informações de dependência de entidades não associadas a esquema são automaticamente atualizadas quando a ordenação de banco de dados é alterada.  
   
-Alterar o agrupamento de banco de dados não cria duplicatas entre nenhum nome de sistema para os objetos de banco de dados. Se nomes duplicados resultarem do agrupamento alterados, os namespaces a seguir poderão provocar falha de alteração de agrupamento de banco de dados:  
+Alterar a ordenação de banco de dados não cria duplicatas entre nenhum nome de sistema para os objetos de banco de dados. Se nomes duplicados resultarem da ordenação alterada, os namespaces a seguir poderão provocar falha de alteração de ordenação de banco de dados:  
   
 - Nomes de objeto, como procedimentos, tabelas, gatilhos ou exibições.  
 - Nomes de esquema.  
@@ -216,7 +219,7 @@ Alterar o agrupamento de banco de dados não cria duplicatas entre nenhum nome d
 - Nomes de coluna ou parâmetro dentro de um objeto.  
 - Nomes de índice dentro de uma tabela.  
   
-Nomes duplicados resultantes do novo agrupamento provocarão falha na ação de alteração e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro especificando o namespace onde a duplicata foi encontrada.  
+Nomes duplicados resultantes da nova ordenação provocarão falha na ação de alteração e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro especificando o namespace onde a duplicata foi encontrada.  
   
 ## <a name="viewing-database-information"></a>Exibindo informações do banco de dados  
 É possível usar exibições do catálogo, funções do sistema e procedimentos armazenados do sistema para retornar informações sobre bancos de dados, arquivos e grupos de arquivos.  
@@ -237,8 +240,8 @@ Modify Name = Northwind ;
 GO  
 ```  
   
-### <a name="b-changing-the-collation-of-a-database"></a>B. Alterando o agrupamento de um banco de dados  
-O exemplo a seguir cria um banco de dados denominado `testdb` com o agrupamento `SQL_Latin1_General_CP1_CI_A`S e, em seguida, altera o agrupamento do banco de dados `testdb` para `COLLATE French_CI_AI`.  
+### <a name="b-changing-the-collation-of-a-database"></a>B. Alterando a ordenação de um banco de dados  
+O exemplo a seguir cria um banco de dados denominado `testdb` com a ordenação `SQL_Latin1_General_CP1_CI_A`S e, em seguida, altera a ordenação do banco de dados `testdb` para `COLLATE French_CI_AI`.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -290,7 +293,7 @@ No Banco de Dados Azure SQL, use esta instrução para modificar um banco de dad
 Devido à sua extensão, a sintaxe ALTER DATABASE está separada em vários artigos.  
 
 ALTER DATABASE  
-O artigo atual fornece a sintaxe e as informações relacionadas para alterar o nome e o agrupamento de um banco de dados.  
+O artigo atual fornece a sintaxe e as informações relacionadas para alterar o nome e a ordenação de um banco de dados.  
   
 [Opções de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 Fornece a sintaxe para alterar os atributos de um banco de dados usando as opções SET de ALTER DATABASE.  
@@ -838,7 +841,7 @@ A instrução ALTER DATABASE precisa ser executada no modo de confirmação auto
   
 A instrução ALTER DATABASE não pode fazer parte de uma transação definida pelo usuário.
 
-Você não pode alterar o agrupamento de banco de dados.  
+Você não pode alterar a ordenação de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
 Antes de executar esses exemplos, verifique se o banco de dados que você está alterando não é o banco de dados atual. O banco de dados atual deve ser um banco de dados diferente daquele que você está alterando, portanto **ALTER deve ser executado enquanto você está conectado ao banco de dados mestre**.  

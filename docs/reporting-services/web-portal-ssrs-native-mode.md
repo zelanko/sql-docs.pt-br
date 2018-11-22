@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021889"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814329"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portal da Web (Modo Nativo do SSRS)
 
@@ -75,9 +75,9 @@ Para iniciar o portal da Web em um navegador, faça o seguinte:
 
 2. Na barra de endereços do navegador da Web, digite a URL do portal da Web.
 
-    Por padrão, a URL é *http://[NomeDoComputador]/relatórios*.
+    Por padrão, a URL é *https://[NomeDoComputador]/reports*.
 
-    O servidor de relatório pode estar configurado para usar uma porta específica. Por exemplo *http://[NomeDoComputador]:80/relatórios* ou *http://[NomeDoComputador]:8080/relatórios*.
+    O servidor de relatório pode estar configurado para usar uma porta específica. Por exemplo *https://[NomeDoComputador]:80/reports* ou *https://[NomeDoComputador]:8080/reports*.
 
 ## <a name="grouping-by-categories"></a>Agrupando por categorias
 

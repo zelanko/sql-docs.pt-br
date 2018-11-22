@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029495"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813819"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -29,9 +29,9 @@ Para obter informações sobre o Servidor de Relatórios do Power BI, consulte [
 Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+## <a name="sql-server-2019-preview-reporting-services"></a>Versão prévia do SQL Server 2019 Reporting Services
 
-O SQL Server vNext CTP 2.0 Reporting Services não está disponível para versão prévia. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)]O Reporting Services não está disponível para CTP 2.1. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -147,7 +147,7 @@ Para obter mais informações, consulte:
  Você também pode selecionar o formato PPTX para saída de assinatura e usar o acesso à URL do Servidor de Relatório para renderizar e exportar um relatório. Por exemplo, o seguinte comando de URL no seu navegador exporta um relatório de uma instância nomeada do servidor de relatório.  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  Para saber mais, confira [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  

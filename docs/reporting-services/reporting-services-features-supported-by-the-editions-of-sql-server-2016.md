@@ -1,6 +1,6 @@
 ---
-title: Recursos do Reporting Services compatíveis com as edições do SQL Server 2016 | Microsoft Docs
-ms.date: 05/30/2017
+title: Recursos do Reporting Services com suporte nas edições do SQL Server | Microsoft Docs
+ms.date: 11/01/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
@@ -8,70 +8,71 @@ ms.topic: conceptual
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a57f466df8b404455234dde9635448b1a9ebb86
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad0d24d2674b092d82615f8674a0a5a378fbc7a2
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031886"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350530"
 ---
-# <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Reporting Services com suporte nas edições do SQL Server 2016
+# <a name="reporting-services-features-supported-by-the-editions-of-sql-server"></a>Recursos do Reporting Services com suporte nas edições do SQL Server
 
-Esse tópico fornece detalhes dos recursos que têm suporte nas diferentes edições do SQL Server 2016.  
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
+Esse tópico apresenta detalhes dos recursos do Reporting Services que têm suporte nas diferentes edições do SQL Server. A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.  
   
- A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.  
-  
- Para obter as notas de versão mais recentes, confira [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). Para obter as últimas informações sobre as novidades, consulte [Novidades no SSRS (Reporting Services)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ Para obter as notas sobre a versão do SQL Server mais recentes, confira [Notas sobre a versão do SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). Para obter as últimas informações sobre as novidades, consulte [Novidades no SSRS (Reporting Services)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
     
- **Experimente o SQL Server 2016!**    
+ **Experimentar o SQL Server 2017**    
     
- > [![Baixar no Centro de Avaliação](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Baixar o SQL Server 2016 no Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Baixar o SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
     
-> ![A máquina virtual pequena do Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma máquina virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Máquina Virtual do Azure pequena](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2017 já instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
-Para saber quais recursos têm suporte nas edições Evaluation e Developer, consulte SQL Server Enterprise Edition.
-
-Para navegar até a tabela de uma tecnologia do SQL Server, clique no respectivo link:  
-
--   [Reporting Services](#SSRS)  
-  
--   [Clientes de Business Intelligence](#BIC)  
+Para saber quais recursos têm suporte nas edições Evaluation e Developer, confira a coluna SQL Server Enterprise Edition.
 
 ##  <a name="SSRS"></a> Reporting Services  
   
-|Nome do recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Relatórios móveis e KPIs|Sim||||||Sim|  
-|Banco de dados de catálogo com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard ou superior|Standard ou superior|Web|Express|||Standard ou superior|  
-|Fonte de dados com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Todas as edições do   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web|Express|||Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
-|Servidor de relatório|Sim|Sim|Sim|Sim|||Sim|  
-|Designer de Relatórios|Sim|Sim|Sim|Sim|||Sim|  
-|Portal da Web do Designer de Relatórios|Sim|Sim|Sim|Sim|||Sim|  
-|Segurança baseada em função|Sim|Sim|Sim|Sim|||Sim|  
-|Exportar para Excel, Power Point, Word, PDF e imagens|Sim|Sim|Sim|Sim|||Sim|  
-|Gráficos e medidores aprimorados|Sim|Sim|Sim|Sim|||Sim|  
-|Fixar itens de relatório em [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]painéis|Sim|Sim|Sim|Sim|||Sim|  
-|Autenticação personalizada|Sim|Sim|Sim|Sim|||Sim|  
-|Relatar como feeds de dados|Sim|Sim|Sim|Sim|||Sim|  
-|Suporte a modelo|Sim|Sim|Sim||||Sim|  
-|Criar funções personalizadas para segurança baseada em função|Sim|Sim|||||Sim|  
-|Segurança de item de modelo|Sim|Sim|||||Sim|  
-|Clickthrough infinito|Sim|Sim|||||Sim|  
-|Biblioteca de componentes compartilhados|Sim|Sim|||||Sim|  
-|Agendamento e assinaturas de email e compartilhamento de arquivos|Sim|Sim|||||Sim|  
-|Histórico de relatórios, execução de instantâneos e armazenamento em cache|Sim|Sim|||||Sim|  
-|Integração do SharePoint|Sim|Sim|||||Sim|  
-|Suporte de fonte de dados remota e não SQL<sup>1</sup>|Sim|Sim|||||Sim|  
-|Extensibilidade RDCE de fonte de dados, entrega e renderização|Sim|Sim|||||Sim|  
-|Identidade visual personalizada|Sim||||||Sim|  
-|Assinatura de relatórios controladas por dados|Sim||||||Sim|  
-|Implantação em expansão (Web farms)|Sim||||||Sim|  
-|Alerta<sup>2</sup>|Sim||||||Sim|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Sim||||||Sim|  
+|Nome do recurso|Enterprise|Standard|Web|Express with Advanced Services|Desenvolvedor|  
+|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|Relatórios móveis e KPIs|Sim||||Sim|  
+|Banco de dados de catálogo com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard ou superior|Standard ou superior|Web|Express|Standard ou superior|  
+|Fonte de dados com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Todas as edições do   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web|Express|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|Servidor de relatório|Sim|Sim|Sim|Sim|Sim|  
+|Designer de Relatórios|Sim|Sim|Sim|Sim|Sim|  
+|Portal da Web do Designer de Relatórios|Sim|Sim|Sim|Sim|Sim|  
+|Segurança baseada em função|Sim|Sim|Sim|Sim|Sim|  
+|Exportar para Excel, Power Point, Word, PDF e imagens|Sim|Sim|Sim|Sim|Sim|  
+|Gráficos e medidores aprimorados|Sim|Sim|Sim|Sim|Sim|  
+|Fixar itens de relatório em [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]painéis|Sim|Sim|Sim|Sim|Sim|  
+|Autenticação personalizada|Sim|Sim|Sim|Sim|Sim|  
+|Relatar como feeds de dados|Sim|Sim|Sim|Sim|Sim|  
+|Suporte a modelo|Sim|Sim|Sim||Sim|  
+|Criar funções personalizadas para segurança baseada em função|Sim|Sim|||Sim|  
+|Segurança de item de modelo|Sim|Sim|||Sim|  
+|Clickthrough infinito|Sim|Sim|||Sim|  
+|Biblioteca de componentes compartilhados|Sim|Sim|||Sim|  
+|Agendamento e assinaturas de email e compartilhamento de arquivos|Sim|Sim|||Sim|  
+|Histórico de relatórios, execução de instantâneos e armazenamento em cache|Sim|Sim|||Sim|  
+|Integração do SharePoint|Sim|Sim|||Sim|  
+|Suporte de fonte de dados remota e não SQL<sup>1</sup>|Sim|Sim|||Sim|  
+|Extensibilidade RDCE de fonte de dados, entrega e renderização|Sim|Sim|||Sim|  
+|Identidade visual personalizada|Sim||||Sim|  
+|Assinatura de relatórios controladas por dados|Sim||||Sim|  
+|Implantação em expansão (Web farms)|Sim||||Sim|  
+|Alerta<sup>2</sup> (SSRS 2016) |Sim||||Sim|  
+| Power View<sup>2</sup> (SSRS 2016) |Sim||||Sim| 
+|Comentários<sup>3</sup> |Sim|Sim|Sim|Sim|Sim|  
+ 
   
- <sup>1</sup> Para obter mais informações sobre as fontes de dados com suporte no SSRS (SQL Server 2016 Reporting Services), consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> Para obter mais informações sobre as fontes de dados com suporte no SSRS (SQL Server Reporting Services), confira [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Exige o Reporting Services no modo do SharePoint. Para obter mais informações, veja [Instalar o Reporting Services no modo do SharePoint](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ <sup>2</sup> Exige o Reporting Services 2016 no modo do SharePoint. Para obter mais informações, veja [Instalar o Reporting Services no modo do SharePoint](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Do Reporting Services 2017 em diante, a integração do Reporting Services com o SharePoint não está mais disponível. 
+
+<sup>3</sup> Apenas no Servidor de Relatórios do Power BI e no Reporting Services 2017 e posterior.
+
+> [!NOTE]
+> SQL Server Express com Tools e SQL Server Express não dão suporte a SQL Server Reporting Services.
   
 ## <a name="report-server-database-server-edition-requirements"></a>Requisitos das edições do servidor de banco de dados do servidor de relatório  
  Na criação de um banco de dados de servidor de relatório, nem todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem ser usadas para hospedar o banco de dados. A tabela a seguir mostra quais edições do [!INCLUDE[ssDE](../includes/ssde-md.md)] podem ser usadas para edições específicas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -87,11 +88,11 @@ Para navegar até a tabela de uma tecnologia do SQL Server, clique no respectivo
 ##  <a name="BIC"></a> Clientes de Business Intelligence  
  Os aplicativos cliente de software a seguir estão disponíveis no Centro de Download da Microsoft e são fornecidos para ajudar a criar documentos de Business Intelligence executados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando esses documentos forem hospedados em um ambiente de servidor, use uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que dê suporte para esse tipo de documento. A tabela a seguir identifica qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém os recursos de servidor necessários para hospedar os documentos criados nesses aplicativos cliente.  
   
-|Nome da ferramenta|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl e .rds)|Sim|Sim|||||Sim|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Sim||||||Sim|  
-|Aplicativos do Power BI para dispositivos móveis (iOS, Windows 10, Android) (.rsmobile)|Sim||||||Sim|  
+|Nome da ferramenta|Enterprise|Standard|Web|Express with Advanced Services|Desenvolvedor|  
+|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl e .rds)|Sim|Sim|Sim|Sim|Sim|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Sim||||Sim|  
+|Aplicativos do Power BI para dispositivos móveis (iOS, Windows 10, Android) (.rsmobile)|Sim||||Sim|  
   
 > [!NOTE]  
 > 1.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, essas ferramentas podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -100,8 +101,7 @@ Para navegar até a tabela de uma tecnologia do SQL Server, clique no respectivo
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[Especificações do produto para SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
-[Instalação do SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+[Recursos com suporte nas edições do SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)  
+[Planejar uma instalação do SQL Server](../sql-server/install/planning-a-sql-server-installation.md) 
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

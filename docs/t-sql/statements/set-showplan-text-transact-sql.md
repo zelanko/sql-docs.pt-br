@@ -27,12 +27,12 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834784"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558663"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Quando SET STATISTICS TEXT estiver ON (acionado), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações de execução para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], sem executá-las. Depois que essa opção estiver definida como ON, as informações do plano de execução sobre todas as instruções [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsequentes serão retornadas, até que a opção esteja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada enquanto SET SHOWPLAN_TEXT estiver como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna uma mensagem de erro de uma instrução SELECT subsequente envolvendo essa mesma tabela, informando ao usuário que a tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_TEXT for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa instruções sem gerar um relatório com informações do plano de execução.  
   
- SET SHOWPLAN_TEXT tem como objetivo retornar uma saída legível para aplicativos de prompt de comando do Microsoft Win32, como o utilitário **osql**. SET SHOWPLAN_ALL retorna uma saída mais detalhada, que deve ser usada com programas projetados para manipulá-la.  
+ SET SHOWPLAN_TEXT tem como objetivo retornar uma saída legível para aplicativos de prompt de comando do Microsoft Win32, como o utilitário **sqlcmd**. SET SHOWPLAN_ALL retorna uma saída mais detalhada, que deve ser usada com programas projetados para manipulá-la.  
   
  SET SHOWPLAN_TEXT e SET SHOWPLAN_ALL não devem ser especificados em um procedimento armazenado. Elas devem ser as únicas instruções em um lote.  
   

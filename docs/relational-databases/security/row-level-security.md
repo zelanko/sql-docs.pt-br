@@ -1,7 +1,7 @@
 ---
 title: Segurança em nível de linha | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2017
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,29 +17,31 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e4dd2499261fc28f97796d865fa71709bc663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814674"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672411"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Gráfico de segurança em nível de linha](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de segurança em nível de linha")  
   
- Segurança em nível de linha permite aos clientes controlar o acesso às linhas em uma tabela de banco de dados com base nas características do usuário executando uma consulta (por exemplo, associação a grupo ou contexto de execução).  
+ A segurança em nível de linha permite aos clientes controlar o acesso às linhas em uma tabela de banco de dados com base nas características do usuário executando uma consulta (por exemplo, associação a grupo ou contexto de execução).  
   
- O RLS (nível de linha de segurança) simplifica o design e a codificação de segurança em seu aplicativo. O RLS permite a você implementar restrições de acesso a linhas de dados. Por exemplo, garantindo que os funcionários possam acessar somente as linhas de dados que são relevantes para seu departamento ou restringir o acesso do cliente a somente aos dados relevantes para a empresa desse cliente.  
+ O RLS (nível de linha de segurança) simplifica o design e a codificação de segurança em seu aplicativo. O RLS ajuda a implementar restrições de acesso a linhas de dados. Por exemplo, é possível garantir que os funcionários possam acessar somente as linhas de dados relevantes para seu departamento ou restringir o acesso do cliente a somente aos dados relevantes para a empresa desse cliente.  
   
  A lógica de restrição de acesso é localizado na camada de banco de dados, em vez de longe dos dados em outra camada de aplicativo. O sistema de banco de dados aplica as restrições de acesso toda vez que há tentativa de acesso a dados a partir de qualquer camada. Isso torna o sistema de segurança mais robusto e confiável, reduzindo a área de superfície do seu sistema de segurança.  
   
  Implemente a RLS usando a instrução [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e predicados criados como [funções com valor de tabela embutida](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obter](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obter](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> O SQL Data Warehouse do Azure só dá suporte para predicados de filtro. Os predicados de bloqueio não têm suporte no SQL Data Warehouse do Azure no momento.
 
 ##  <a name="Description"></a> Descrição  
  A RLS permite dois tipos de predicado de segurança.  
@@ -50,7 +52,7 @@ ms.locfileid: "47814674"
   
  O acesso aos dados no nível de linha em uma tabela é restrito por um predicado de segurança definido como uma função com valor de tabela embutida. A função é então invocada e imposta por uma política de segurança. Para predicados de filtro, não há nenhuma indicação ao aplicativo de que as linhas tenham sido filtradas no conjunto de resultados; se todas as linhas forem filtradas, um conjunto de null será retornado. Para predicados de bloqueio, todas as operações que violem o predicado falharão com um erro.  
   
- Os predicados de filtro são aplicados durante a leitura de dados da tabela base e ela afeta todas as operações get: **SELECT**, **DELETE** (ou seja, o usuário não pode excluir linhas que são filtradas) e **UPDATE** (ou seja, o usuário não pode atualizar as linhas que são filtradas, embora seja possível atualizar as linhas de modo que sejam filtradas subsequentemente). Os predicados de bloqueio afetam todas as operações de gravação.  
+ Os predicados de filtro são aplicados durante a leitura de dados da tabela base e ela afeta todas as operações get: **SELECT**, **DELETE** (ou seja, o usuário não pode excluir linhas filtradas) e **UPDATE** (ou seja, o usuário não pode atualizar as linhas filtradas, embora seja possível atualizar as linhas de modo que sejam filtradas posteriormente). Os predicados de bloqueio afetam todas as operações de gravação.  
   
 -   Os predicados AFTER INSERT e AFTER UPDATE podem impedir que os usuários atualizem linhas para valores que violem o predicado.  
   
@@ -76,13 +78,13 @@ ms.locfileid: "47814674"
   
  Os predicados de filtro apresentam o seguinte comportamento:  
   
--   Defina uma política de segurança que filtra as linhas de uma tabela. O aplicativo não fica ciente de que todas as linhas foram filtradas para as operações **SELECT**, **UPDATE**e **DELETE** , incluindo situações em que todas as linhas tiverem sido filtradas. O aplicativo pode **INSERT** quaisquer linhas, independentemente de estas serem ou não filtradas futuramente, durante qualquer outra operação.  
+-   Defina uma política de segurança que filtra as linhas de uma tabela. O aplicativo não fica ciente de que todas as linhas foram filtradas para as operações **SELECT**, **UPDATE**e **DELETE**, incluindo situações em que todas as linhas tiverem sido filtradas. O aplicativo pode efetuar **INSERT** de quaisquer linhas, independentemente de estas serem ou não filtradas futuramente, durante qualquer outra operação.  
   
  Os predicados de bloqueio apresentam o seguinte comportamento:  
   
 -   Os predicados de bloqueio para UPDATE são divididos em operações distintas para BEFORE e AFTER. Consequentemente, não é possível, por exemplo, impedir os usuários de atualizar uma linha para ter um valor maior que o atual. Se esse tipo de lógica for necessário, você deverá usar gatilhos com as tabelas intermediárias DELETED e INSERTED para fazer referência a valores novos e antigos juntos.  
   
--   O otimizador não verificará um predicado de bloqueio AFTER UPDATE se nenhuma das colunas usadas pela função de predicado tiver sido alterada. Por exemplo, Alice não deve poder alterar um salário para acima de 100.000, mas deve poder alterar o endereço de um funcionário cujo salário já seja superior a 100.000 (e, desse modo, já viola o predicado).  
+-   O otimizador não verificará um predicado de bloqueio AFTER UPDATE se nenhuma das colunas usadas pela função de predicado tiver sido alterada. Por exemplo, Alice não deve poder alterar um salário para acima de 100.000, mas deve poder alterar o endereço de um funcionário cujo salário já seja superior a 100.000 (porque isso já viola o predicado).  
   
 -   Nenhuma mudança foi feita nas APIs em massa, incluindo BULK INSERT. Isso significa que os predicados de bloqueio AFTER INSERT serão aplicados às operações de inserção em massa, assim como seriam em operações de inserção regular.  
   
@@ -94,11 +96,11 @@ ms.locfileid: "47814674"
   
 -   Um banco pode criar uma política para restringir o acesso a linhas de dados financeiros com base na divisão de negócios do funcionário, ou com base na função desempenhada pelo funcionário na empresa.  
   
--   Um aplicativo multilocatário pode criar uma política para impor uma separação lógica entre as linhas de dados de cada locatário e as linhas referentes a todos os outros locatários. Eficiência é obtida pelo armazenamento de dados para vários locatários em uma única tabela. Obviamente, cada locatário pode ver somente as linhas com seus próprios dados.  
+-   Um aplicativo multilocatário pode criar uma política para impor uma separação lógica entre as linhas de dados de cada locatário e as linhas referentes a todos os outros locatários. Eficiência é obtida pelo armazenamento de dados para vários locatários em uma única tabela. Cada locatário pode ver somente as linhas com seus próprios dados.  
   
  Os predicados de filtro RLS são funcionalmente equivalentes a acrescentar uma cláusula **WHERE** . O predicado pode ser tão sofisticado como ditam as práticas comerciais, ou a cláusula pode ser tão simples quanto `WHERE TenantId = 42`.  
   
- Em termos mais formais, o RLS introduz o controle de acesso baseado em predicado. Ele apresenta uma avaliação centralizada, flexível e baseada em predicado que pode levar em consideração metadados ou quaisquer outros critérios que o administrador determina conforme apropriado. O predicado é usado como critério para determinar se o usuário tem acesso apropriado aos dados com base em atributos de usuário. Controle de acesso baseado em rótulos pode ser implementado usando o controle de acesso baseado em predicado.  
+ Em termos mais formais, o RLS introduz o controle de acesso baseado em predicado. Ele apresenta uma avaliação centralizada, flexível e baseada em predicado que pode levar em consideração metadados ou quaisquer outros critérios que o administrador determina conforme apropriado. O predicado é usado como critério para determinar se o usuário tem acesso apropriado aos dados com base nos atributos de usuário. Controle de acesso baseado em rótulos pode ser implementado usando o controle de acesso baseado em predicado.  
   
   
 ##  <a name="Permissions"></a> Permissões  
@@ -121,11 +123,11 @@ ms.locfileid: "47814674"
   
 -   É altamente recomendável criar um esquema separado para os objetos RLS (função de predicado e política de segurança).  
   
--   A permissão **ALTER ANY SECURITY POLICY** é destinada a usuários altamente privilegiados (como um gerente de políticas de segurança). O Gerenciador de políticas de segurança não exige permissão **SELECT** nas tabelas que ele protege.  
+-   A permissão **ALTER ANY SECURITY POLICY** é destinada a usuários altamente privilegiados (como um gerente de políticas de segurança). O gerenciador de políticas de segurança não exige a permissão **SELECT** nas tabelas que protege.  
   
 -   Evite conversões de tipo em funções de predicado para evitar possíveis erros de tempo de execução.  
   
--   Evite a recursão no predicado funções sempre que possível para evitar a degradação do desempenho. O otimizador de consulta tentará detectar recursões diretas, mas não há garantia de que encontrará recursões indiretas (isto é, onde uma segunda função chama a função de predicado).  
+-   Evite a recursão no predicado funções sempre que possível para evitar a degradação do desempenho. O otimizador de consulta tentará detectar recursões diretas, mas não há garantia de que encontrará recursões indiretas (isto é, quando uma segunda função chama a função de predicado).  
   
 -   Evite usar junções de tabelas em excesso em funções de predicado, para maximizar o desempenho.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "47814674"
    
   
 ##  <a name="SecNote"></a> Observação de segurança: ataques de canal lateral  
- **Gerenciador de políticas de segurança mal-intencionado:** é importante observar que um gerenciador de políticas de segurança mal-intencionado com permissões suficientes para criar uma política de segurança sobre uma coluna confidencial e que tenha permissão para criar ou alterar funções com valor de tabela embutida poderá pactuar com outro usuário que tenha permissões SELECT em uma tabela para realizar a exfiltração de dados pela criação maliciosa de funções com valor de tabela embutida, concebidas para utilizar ataques de canal lateral com o objetivo de inferir dados. Esses ataques exigiriam a colusão (ou excesso de permissões concedidas a um usuário mal-intencionado) e provavelmente demandariam várias iterações de modificação da política (exigindo permissão para remover o predicado, para que pudessem então quebrar a ligação do esquema), modificando as funções embutidas com valor de tabela e repetidamente executando instruções SELECT na tabela de destino. É altamente recomendável limitar as permissões conforme necessário e monitorar quaisquer atividades suspeitas, como mudança constante de políticas e funções embutidas com valor de tabela relacionadas à segurança de nível de linha.  
+ **Gerenciador de políticas de segurança mal-intencionado:** é importante observar que um gerenciador de políticas de segurança mal-intencionado com permissões suficientes para criar uma política de segurança sobre uma coluna confidencial e que tenha permissão para criar ou alterar funções com valor de tabela embutida poderá pactuar com outro usuário que tenha permissões de seleção em uma tabela para realizar a exfiltração de dados pela criação maliciosa de funções com valor de tabela embutida, concebidas para usar ataques de canal lateral com o objetivo de inferir dados. Esses ataques exigiriam a colusão (ou excesso de permissões concedidas a um usuário mal-intencionado) e provavelmente demandariam várias iterações de modificação da política (exigindo permissão para remover o predicado, para que pudessem então quebrar a associação do esquema), modificando as funções com valor de tabela embutida e repetidamente executando instruções de seleção na tabela de destino. É altamente recomendável limitar as permissões conforme necessário e monitorar quaisquer atividades suspeitas, como mudança constante de políticas e funções com valor de tabela embutida relacionadas com a segurança de nível de linha.  
   
  **Consultas cuidadosamente concebidas:** é possível causar vazamento de informações pelo uso de consultas concebidas cuidadosamente. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
    
@@ -149,17 +151,17 @@ ms.locfileid: "47814674"
 ##  <a name="Limitations"></a> Compatibilidade entre recursos  
  De modo geral, a segurança no nível de linha funcionará conforme o esperado entre os recursos. No entanto, há algumas exceções. Esta seção documenta várias observações e limitações para o uso da segurança em nível de linha com determinados recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** relata estatísticas de dados não filtrados e, portanto, pode perder informações que, de outra forma, estariam protegidas por uma política de segurança. Por esse motivo, para exibir um objeto estatístico de uma tabela com uma política de segurança no nível de linha, o usuário deve ter ser proprietário da tabela ou deve ser um membro da função de servidor fixa de sysadmin, da função de banco de dados fixa db_owner ou da função de banco de dados fixa db_ddladmin.  
+-   **DBCC SHOW_STATISTICS** relata estatísticas de dados não filtrados e pode perder informações que, de outra forma, estariam protegidas por uma política de segurança. Por esse motivo, para exibir um objeto estatístico de uma tabela com uma política de segurança no nível de linha, o usuário deve ter ser proprietário da tabela ou deve ser um membro da função de servidor fixa de sysadmin, da função de banco de dados fixa db_owner ou da função de banco de dados fixa db_ddladmin.  
   
 -   **Filestream** A RLS não é compatível com Filestream.  
   
--   **Polybase** A RLS não é compatível com o Polybase.  
+-   **PolyBase** A RLS não é compatível com o PolyBase.  
   
 -   **Tabelas com Otimização de Memória**A função com valor de tabela embutida usada como um predicado de segurança em uma tabela com otimização de memória deve ser definida usando a opção `WITH NATIVE_COMPILATION` . Com essa opção, os recursos de linguagem não permitidos pelas tabelas com otimização de memória serão banidos e o erro apropriado será emitido no momento da criação. Para obter mais informações, veja a seção **Segurança em nível de linha em tabelas com otimização de memória** em [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Exibições indexadas** De modo geral, as políticas de segurança podem ser criadas sobre as exibições, e as exibições podem ser criadas sobre as tabelas que são associadas pelas políticas de segurança. No entanto, as exibições indexadas não podem ser criadas sobre as tabelas que têm uma política de segurança, pois as pesquisas de linha pelo índice contornariam a política.  
   
--   **Captura de Dados de Alteração** A Captura de Dados de Alteração pode perder linhas inteiras que devem ser filtradas para membros do **db_owner** ou para usuários que são membros da função “gating” especificada quando a CDC é habilitada para uma tabela (observação: você pode definir explicitamente isso para **NULL** a fim de permitir que todos os usuários acessem os dados alterados). Na verdade, **db_owner** e os membros dessa função gating poderão ver todas as alterações nos dados de uma tabela, mesmo se houver uma política de segurança na tabela.  
+-   **Captura de Dados de Alterações** A Captura de Dados de Alterações pode perder linhas inteiras que devem ser filtradas para membros do **db_owner** ou para usuários que são membros da função “gating” especificada quando a CDC é habilitada para uma tabela (observação: você pode definir essa função explicitamente para **NULL** a fim de permitir que todos os usuários acessem os dados alterados). Na verdade, **db_owner** e os membros dessa função gating poderão ver todas as alterações nos dados de uma tabela, mesmo se houver uma política de segurança na tabela.  
   
 -   **Controle de Alterações** O Controle de Alterações pode deixar vazar a chave primária de linhas que deve ser filtrada para usuários com as permissões **SELECT** e **VIEW CHANGE TRACKING** . Os valores de dados reais não vazam; apenas o fato de que a coluna A foi atualizada/inserida/excluída para a linha com a chave primária B. Isso será um problema se a chave primária contiver um elemento confidencial, como um Número de Seguro Social. No entanto, na prática, esse **CHANGETABLE** é quase sempre unido à tabela original para obtenção de dados mais recentes.  
   
@@ -175,10 +177,13 @@ ms.locfileid: "47814674"
 ##  <a name="CodeExamples"></a> Exemplos  
   
 ###  <a name="Typical"></a> A. Cenário para usuários que se autenticam no banco de dados  
- Esse pequeno exemplo cria três usuários, cria e preenche uma tabela com 6 linhas e cria também uma função de valor de tabela embutida, e uma política de segurança para essa tabela. O exemplo mostra como as instruções select são filtrados para os diversos usuários.  
+ Esse pequeno exemplo cria três usuários, cria e preenche uma tabela com seis linhas e cria também uma função com valor de tabela embutida e uma política de segurança para essa tabela. O exemplo mostra como as instruções select são filtrados para os diversos usuários.  
   
  Crie três contas de usuário que demonstrem os diferentes recursos de acesso.  
-  
+
+> [!NOTE]
+> O SQL Data Warehouse do Azure não dá suporte para EXECUTE AS USER. Dessa maneira, é necessário usar CREATE LOGIN para cada usuário com antecedência. Posteriormente, você fará logon como o usuário apropriado para testar esse comportamento.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -197,7 +202,7 @@ CREATE TABLE Sales
     );  
 ```  
   
- Preencha a tabela com 6 linhas de dados, mostrando 3 pedidos para cada representante de vendas.  
+ Preencha a tabela com seis linhas de dados, mostrando três pedidos para cada representante de vendas.  
   
 ```  
 INSERT Sales VALUES   
@@ -219,7 +224,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Crie um novo esquema e uma função de valor de tabela embutida. A função retorna 1 quando uma linha da coluna do representante de vendas é o mesmo que o usuário que executa a consulta (`@SalesRep = USER_NAME()`) ou se o usuário executando a consulta for o gerente (`USER_NAME() = 'Manager'`).  
+ Crie um novo esquema e uma função com valor de tabela embutida. A função retorna 1 quando uma linha da coluna do representante de vendas é o mesmo que o usuário que executa a consulta (`@SalesRep = USER_NAME()`) ou se o usuário executando a consulta for o gerente (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -233,6 +238,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> O SQL Data Warehouse do Azure não dá suporte para USER_NAME(), portanto, use SYSTEM_USER.
+
  Crie uma política de segurança adicionando a função como um predicado de filtro. O estado deve ser definido como ON para habilitar a política.  
   
 ```  
@@ -257,8 +265,10 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
- O gerente deve ver todas as 6 linhas. Os usuários Vendas1 e Vendas2 deverão ver apenas suas próprias vendas.  
+> [!NOTE]
+> O SQL Data Warehouse do Azure não dá suporte para EXECUTE AS USER. Desse modo, faça logon como o usuário apropriado para testar o comportamento acima.
+
+ O gerente deve ver todas as seis linhas. Os usuários Vendas1 e Vendas2 deverão ver apenas suas próprias vendas.  
   
  Altere a política de segurança para desabilitar a política específica.  
   
@@ -267,11 +277,14 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```  
   
- Agora os usuários Vendas1 e Vendas2 podem ver todas as 6 linhas.  
+ Agora, os usuários Vendas1 e Vendas2 podem ver todas as seis linhas.  
   
   
 ###  <a name="MidTier"></a> B. Cenário para usuários que se conectam ao banco de dados por meio de um aplicativo de camada intermediária  
- Este exemplo mostra como um aplicativo de camada intermediária pode implementar a filtragem de conexão, onde os usuários do aplicativo (ou locatários) compartilham o mesmo usuário de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o aplicativo). O aplicativo define a ID do usuário do aplicativo atual em [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) depois de se conectar ao banco de dados e, em seguida, as políticas de segurança filtram de modo transparente as linhas que não devem ficar visíveis para essa ID, além de impedir o usuário de inserir linhas para a ID de usuário incorreta. Não é necessária nenhuma outra alteração no aplicativo.  
+> [!NOTE]
+> Este exemplo não é aplicável ao SQL Data Warehouse do Azure, pois SESSION_CONTEXT e os predicados de bloqueio não têm suporte no momento.
+
+Este exemplo mostra como um aplicativo de camada intermediária pode implementar a filtragem de conexão, onde os usuários do aplicativo (ou locatários) compartilham o mesmo usuário de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o aplicativo). O aplicativo define a ID do usuário do aplicativo atual em [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) depois de se conectar ao banco de dados e, em seguida, as políticas de segurança filtram de modo transparente as linhas que não devem ficar visíveis para essa ID, além de impedir o usuário de inserir linhas para a ID de usuário incorreta. Não é necessária nenhuma outra alteração de aplicativo.  
   
  Crie uma tabela simples para armazenar dados.  
   
@@ -284,7 +297,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Preencha a tabela com 6 linhas de dados mostrando 3 pedidos para cada usuário do aplicativo.  
+ Preencha a tabela com seis linhas de dados, mostrando três pedidos para cada usuário do aplicativo.  
   
 ```  
 INSERT Sales VALUES   
@@ -307,8 +320,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Crie um novo esquema e função de predicado, que usarão a ID de usuário do aplicativo armazenada em **SESSION_CONTEXT** para filtrar as linhas.  
-  
+ Crie um novo esquema e função de predicado, que usarão a ID de usuário do aplicativo armazenada em **SESSION_CONTEXT** para filtrar as linhas.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

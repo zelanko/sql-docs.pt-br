@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252203"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699334"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazen
 > O dispositivo de disco NUL descartará todas as informações enviadas para ele e apenas deve ser usado para teste. Isso não se destina ao uso em produção.
   
 > [!IMPORTANT]  
-> Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], somente é possível fazer backup em um único dispositivo durante o backup em uma URL. Para fazer backup em vários dispositivos ao fazer backup em uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e usar tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], somente é possível fazer backup em um único dispositivo durante o backup em uma URL. Para fazer backup em vários dispositivos ao fazer backup em uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e usar tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **A URL aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Especifica um conjunto de até três 
 Essa opção está disponível somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Para que MIRROR TO = DISK, BACKUP determine automaticamente o tamanho do bloco apropriado para dispositivos de disco. Para obter mais informações sobre tamanho de bloco, consulte "BLOCKSIZE", mais adiante nesta tabela.  
+> Para que MIRROR TO = DISK, BACKUP determine automaticamente o tamanho do bloco apropriado para dispositivos de disco, com base no tamanho do setor do disco. Se o disco MIRROR TO for formatado com um tamanho de setor diferente que o disco especificado como o dispositivo de backup principal, o comando de backup falhará.  Para espelhar os backups em dispositivos que têm diferentes tamanhos de setor, o parâmetro BLOCKSIZE deve ser especificado e definido como o maior tamanho de setor entre todos os dispositivos de destino.  Para saber mais sobre o tamanho de bloco, confira "BLOCKSIZE", mais adiante neste tópico.  
   
 \<backup_device> Consulte "\<backup_device>", anteriormente nesta seção.
   
@@ -470,7 +470,7 @@ Especifica o número total de buffers de E/S a ser usado para a operação de ba
 O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
+> Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
 
@@ -723,10 +723,10 @@ Backups de banco de dados ou de log podem ser anexados a qualquer dispositivo de
   
 A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
-Operações de backup entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que o agrupamento do banco de dados tenha suporte no sistema operacional.  
+Operações de backup entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que a ordenação do banco de dados tenha suporte no sistema operacional.  
  
 Ao usar a compactação de backup com bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) com um único arquivo de dados, é recomendável usar uma `MAXTRANSFERSIZE` configuração **maior que 65.536 (64 KB)**.   
-Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], isto permite um algoritmo de compactação otimizada para bancos de dados criptografados com TDE que primeiro descriptografa uma página, compacta-a e, em seguida, criptografa-a novamente. Se você estiver usando `MAXTRANSFERSIZE = 65536` (64 KB), a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], isto permite um algoritmo de compactação otimizada para bancos de dados criptografados com TDE que primeiro descriptografa uma página, compacta-a e, em seguida, criptografa-a novamente. Se você estiver usando `MAXTRANSFERSIZE = 65536` (64 KB), a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
 > Há alguns casos em que o padrão `MAXTRANSFERSIZE` é maior que 64 K:
@@ -1003,7 +1003,7 @@ TO URL
 Especifica a URL a ser usada para a operação de backup. O formato da URL é usado para criar backups no serviço de armazenamento do Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Para fazer backup em vários dispositivos ao fazer backup em uma URL, é necessário usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Para fazer backup em vários dispositivos ao fazer backup em uma URL, é necessário usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 É um espaço reservado que indica que até 64 dispositivos de backup podem ser especificados em uma lista separada por vírgulas.  
@@ -1068,7 +1068,7 @@ Especifica o número total de buffers de E/S a ser usado para a operação de ba
 O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
+> Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
 

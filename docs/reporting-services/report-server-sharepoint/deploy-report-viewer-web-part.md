@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030615"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813169"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
@@ -79,7 +79,7 @@ Esta seção mostra como implantar o pacote de solução no farm do SharePoint. 
 
     ![Configurações de site no ícone de engrenagem.](media/sharepoint-site-settings.png)
 
-    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você pode acessar frequentemente um site do SharePoint inserindo *http://<computer name>* para abrir o conjunto de sites raiz.
+    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você pode acessar frequentemente um site do SharePoint inserindo *https://<computer name>* para abrir o conjunto de sites raiz.
 
 3. Em **Administração do Conjunto de Sites**, selecione **Recursos do conjunto de sites**.
 
@@ -119,7 +119,7 @@ O cancelamento da solução não remove a web part do Visualizador de Relatório
 
     ![Configurações de site no ícone de engrenagem.](media/sharepoint-site-settings.png)
 
-    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você pode acessar frequentemente um site do SharePoint inserindo *http://<computer name>* para abrir o conjunto de sites raiz.
+    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você pode acessar frequentemente um site do SharePoint inserindo *https://<computer name>* para abrir o conjunto de sites raiz.
 
 2. Em **Galerias de Web Designer**, selecione **web parts**.
 

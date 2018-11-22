@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237112"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605976"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,9 +180,9 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
   
      Uma conta de serviço gerenciado de grupo é uma MSA para vários servidores. O Windows gerencia uma conta de serviço para os serviços executados em um grupo de servidores. O Active Directory atualiza automaticamente a senha da conta de serviço gerenciado de grupo sem reiniciar os serviços. Você pode configurar os serviços do SQL Server para usar uma entidade da conta de serviço gerenciado de grupo. Começando no SQL Server 2014, o SQL Server dá suporte a contas de serviço gerenciado de grupo para instâncias autônomas, e o SQL Server 2016 e posteriores a instâncias de cluster de failover e grupos de disponibilidade.  
   
-    Para usar uma conta de serviço gerenciado de grupo para o SQL Server 2014 ou posterior, o sistema operacional precisa ser o Windows Server 2012 R2 ou posterior. Servidores com o Windows Server 2012 R2 requerem que o [KB 2998082](http://support.microsoft.com/kb/2998082) seja aplicado de forma que os serviços possam fazer logon sem interrupção imediatamente após uma alteração de senha.  
+    Para usar uma conta de serviço gerenciado de grupo para o SQL Server 2014 ou posterior, o sistema operacional precisa ser o Windows Server 2012 R2 ou posterior. Servidores com o Windows Server 2012 R2 requerem que o [KB 2998082](https://support.microsoft.com/kb/2998082) seja aplicado de forma que os serviços possam fazer logon sem interrupção imediatamente após uma alteração de senha.  
   
-    Para obter mais informações, consulte [Group Managed Service Accounts (Contas de serviço gerenciado de grupo)](http://technet.microsoft.com/library/hh831782.aspx)  
+    Para obter mais informações, consulte [Group Managed Service Accounts (Contas de serviço gerenciado de grupo)](https://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  A conta de serviço gerenciado de grupo deve ser criada no Active Directory pelo administrador de domínio antes que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa usá-la para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -203,7 +203,7 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na instância padrão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- Para obter mais informações sobre Contas de Serviço Gerenciado e Contas Virtuais, consulte a seção **Managed service account and virtual account concepts** (Conceitos de conta de serviço gerenciado e conta virtual) do [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) (Guia passo a passo de contas de serviço) e [Managed Service Accounts Frequently Asked Questions (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)(Perguntas frequentes sobre contas de serviço gerenciado).  
+ Para obter mais informações sobre Contas de Serviço Gerenciado e Contas Virtuais, consulte a seção **Managed service account and virtual account concepts** (Conceitos de conta de serviço gerenciado e conta virtual) do [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) (Guia passo a passo de contas de serviço) e [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)(Perguntas frequentes sobre contas de serviço gerenciado).  
   
  **Observação de segurança:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use um [MSA](#MSA) ou [virtual account](#VA_Desc) quando possível. Quando a MSA e as contas virtuais não forem possíveis, use uma conta de usuário específica de baixo privilégio ou uma conta de domínio em vez de uma conta compartilhada para os serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use contas separadas para serviços diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não conceda permissões adicionais à conta de serviço ou a grupos de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões serão concedidas por meio da associação de grupo ou diretamente a um SID de serviço, onde um SID de serviço tiver suporte.  
   
@@ -283,7 +283,7 @@ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] habilita o SID por servi�
  Dependendo da configuração do serviço, a conta de serviço para um serviço ou SID de serviço é adicionada como um membro do grupo de serviços durante a instalação ou atualização.
   
 ###  <a name="Windows"></a> Privilégios e direitos do Windows  
- A conta atribuída para iniciar um serviço precisa da **permissão Iniciar, parar e pausar** para o serviço. O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente essa permissão.  Primeiro instale as Ferramentas de Administração de Servidor Remoto. Consulte o artigo sobre as [Ferramentas de Administração de Servidor Remoto para Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ A conta atribuída para iniciar um serviço precisa da **permissão Iniciar, parar e pausar** para o serviço. O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente essa permissão.  Primeiro instale as Ferramentas de Administração de Servidor Remoto. Consulte o artigo sobre as [Ferramentas de Administração de Servidor Remoto para Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  A tabela a seguir mostra as permissões que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicita para os SIDs por serviço ou para os grupos locais do Windows usados pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   

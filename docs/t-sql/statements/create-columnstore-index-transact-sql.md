@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336295"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699404"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 **Índices columnstore não clusterizados:**
 -   Não pode ter mais de 1024 colunas.
 -   Não pode ser criado como um índice baseado em restrição. É possível ter restrições exclusivas, restrições de chave primária e restrições de chave estrangeira em uma tabela com um índice columnstore. As restrições sempre são impostas com um índice de repositório de linha. As restrições não podem ser impostas com um índice columnstore (clusterizado ou não clusterizado).
--   Não pode ser criado em uma exibição ou exibição indexada.  
 -   Não pode incluir uma coluna esparsa.  
 -   Não pode ser alterado usando a instrução **ALTER INDEX**. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  
 -   Ele não pode ser criado usando a palavra-chave **INCLUDE**.  
 -   Não é possível incluir as palavras-chave **ASC** ou **DESC** para classificar o índice. Os índices columnstore são ordenados de acordo com os algoritmos de compactação. A classificação eliminará muitos dos benefícios de desempenho.  
 -   Não é possível incluir colunas de LOB (objeto grande) do tipo nvarchar(max), varchar(max) e varbinary(max) em índices de repositório de colunas não clusterizados. Somente índices columnstore clusterizados são compatíveis com tipos LOB, começando com a versão [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o Banco de Dados SQL do Azure configurado na camada Premium, na camada Standard (S3 e posterior) e em todas as camadas de ofertas de vCore. Observe que as versões anteriores não são compatíveis com os tipos LOB em índices columnstore clusterizados e não clusterizados.
+
+
+> [!NOTE]  
+> Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, é possível criar um índice columnstore não clusterizado em uma exibição indexada.  
 
 
  **Os índices columnstore não podem ser combinados com os seguintes recursos:**  
@@ -392,6 +395,7 @@ Estas limitações se aplicam apenas ao [!INCLUDE[ssSQL14](../../includes/sssql1
 -   Captura de dados de alterações. Não é possível usar a captura de dados de alterações em NCCI (índices columnstore não clusterizado) porque eles são somente leitura. Mas funciona para CCI (índices columnstore clusterizados).  
 -   Secundário legível. Não é possível acessar um CCI (índice columnstore clusterizado) de um secundário legível de um grupo de disponibilidade Always On legível.  É possível acessar um NCCI (índice columnstore não clusterizado) de um secundário legível.  
 -   MARS (conjunto de resultados ativos múltiplos). O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa o MARS para conexões somente leitura com tabelas que contenham um índice columnstore. No entanto, o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não é compatível com o MARS para operações de DML (linguagem de manipulação de dados) simultâneas em uma tabela com um índice columnstore. Quando isso ocorre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encerra as conexões e anula as transações.  
+-  Os índices columnstore não clusterizados não podem ser criados em uma exibição ou exibição indexada.
   
  Para obter informações sobre os benefícios de desempenho e as limitações dos índices columnstore, confira [Visão geral de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Converter uma tabela columnstore novamente em um heap rowstore  
- Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
+ Use [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

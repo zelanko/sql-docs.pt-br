@@ -13,12 +13,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 204e8d3e85c76edac6ccc56e8fd3a5b51975bd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681454"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813199"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "47681454"
   
 10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http:*//server/reportserver* ou https:*//server/reportserver)*. Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios.  
   
-     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, http://*servername*, http://*servername*/*site* ou http://*servername*/*site*/*subsite*).  
+     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, https://*nomedoservidor*, https://*nomedoservidor*/*site* ou https://*nomedoservidor*/*site*/*subsite*).  
   
 ### <a name="to-set-configuration-manager-properties"></a>Para definir as propriedades do Gerenciador de Configuração  
   

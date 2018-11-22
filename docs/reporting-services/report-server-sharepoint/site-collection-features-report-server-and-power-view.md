@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021180"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812273"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021180"
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
- Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **http://[my server name]/sites/[site collection name]**, precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
+ Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **https://[nome do meu servidor]/sites/[nome da coleção de sites]**, precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
   
  Quando não houver nenhum conjunto de sites raiz, o suplemento Reporting Services registrará uma mensagem semelhante à mostrada a seguir.  
   

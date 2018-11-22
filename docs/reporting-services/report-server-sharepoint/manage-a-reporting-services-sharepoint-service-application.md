@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021670"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813999"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gerenciar um aplicativo de serviço do SharePoint no Reporting Services
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021670"
 |Configuração|Comentários|  
 |-------------|--------------|  
 |Habilitar Download do Construtor de Relatórios|O padrão é TRUE.<br /><br /> Especifica se os clientes podem ver o botão para baixar o aplicativo de construtor de relatórios.|  
-|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o Construtor de Relatórios 3.0 como um aplicativo ClickOnce, insira o seguinte valor: http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o Construtor de Relatórios 3.0 como um aplicativo ClickOnce, insira o seguinte valor: https://\<nomedocomputador>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar Impressão de Cliente|O padrão é TRUE.<br /><br /> Especifica se os usuários podem baixar o controle do cliente, que fornece opções de impressão.|  
 |Editar Tempo Limite da Sessão|O padrão é 7200 segundos.|  
 |Editar Limite de Cache de Sessão|O padrão é 5.|  
