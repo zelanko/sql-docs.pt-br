@@ -1,7 +1,7 @@
 ---
 title: Ferramentas do SQL e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292972"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190986"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Ferramentas do SQL e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Estas são as principais ferramentas de linha de comando:
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** é um utilitário de linha de comando que automatiza várias tarefas de desenvolvimento de banco de dados. macOS e Linux em versões do sqlpackage está atualmente em visualização. | Windows, macOS e Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** fornece cmdlets para trabalhar com SQL| Windows, macOS e Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**Sqlcmd** utilitário permite que você insira instruções Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando. | Windows, macOS e Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.|Windows, macOS e Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.|Windows, macOS e Linux|
 |[**MSSQL-scripter (visualização)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL scripter** é uma experiência de linha de comando multiplataforma para scripts de bancos de dados do SQL Server|Windows, macOS e Linux|
 |[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configura o SQL Server em execução no Linux.|Linux|
 

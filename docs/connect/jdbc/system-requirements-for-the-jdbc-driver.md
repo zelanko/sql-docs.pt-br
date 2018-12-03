@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afced2ca67c104b0bb01ccfe57fee2e309cc1b08
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724294"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410163"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47724294"
   
  A partir do Microsoft JDBC Driver 4.1 para o SQL Server, o Sun Java SE Development Kit (JDK) 7.0 e Java Runtime Environment (JRE) 7.0 têm suporte.  
   
- Começando com o [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o suporte para o JDBC driver para a API da Especificação do JDBC (Java Database Connectivity) foi estendido para incluir a API do JDBC 4.0. A API do JDBC 4.0 foi introduzida como parte do Sun Java SE Development Kit (JDK) 6.0 e do JRE (Java Runtime Environment) 6.0. O JDBC 4.0 é um superconjunto da API do JDBC 3.0.  
+ A partir do [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o suporte ao driver JDBC para a API da Especificação do JDBC (Java Database Connectivity) foi estendido para incluir a API do JDBC 4.0. A API do JDBC 4.0 foi introduzida como parte do Sun Java SE Development Kit (JDK) 6.0 e do JRE (Java Runtime Environment) 6.0. O JDBC 4.0 é um superconjunto da API do JDBC 3.0.  
   
  Quando você implanta o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nos sistemas operacionais Windows e UNIX, deve usar os pacotes de instalação *sqljdbc_\<version>_enu.exe* e *sqljdbc_\<version>_enu.tar.gz*, respectivamente. Para obter mais informações sobre como implantar o Driver JDBC, consulte [Implantando o Driver JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) tópico.  
   
@@ -146,9 +146,9 @@ O JDBC Driver 6.4 também está disponível no repositório Maven Central e pode
  O driver JDBC foi desenvolvido para funcionar em qualquer sistema operacional que ofereça suporte ao uso de uma JVM (Máquina Virtual Java). Porém, só os sistemas operacionais Sun Solaris, SUSE Linux e Windows foram testados oficialmente.  
   
 ## <a name="supported-languages"></a>Idiomas com suporte  
- O driver JDBC dá suporte a todos os agrupamentos de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os agrupamentos com suporte pelo driver JDBC, consulte [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ O driver JDBC dá suporte a todas as ordenações de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os agrupamentos com suporte pelo driver JDBC, consulte [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Para obter mais informações sobre agrupamentos, consulte "Trabalhando com agrupamentos" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre ordenações, consulte "Trabalhando com ordenações" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

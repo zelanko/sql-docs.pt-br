@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510707"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ Para os provedores de repositório de chaves previamente registrado, você não 
 Todos esses provedores de repositório de chaves são descritos mais detalhadamente nas seções a seguir. Você só precisa implementar um provedor de repositório de chaves para usar o Always Encrypted.
 
 ### <a name="using-azure-key-vault-provider"></a>Usando o provedor do Cofre de Chaves do Azure
-O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se o seu aplicativo está hospedado no Azure). O Microsoft JDBC Driver para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no cofre de chaves do Azure. O nome deste provedor é AZURE_KEY_VAULT. Para usar o provedor de armazenamento do Azure Key Vault, um desenvolvedor de aplicativo precisa para criar o cofre e as chaves no cofre de chaves do Azure e criar um registro de aplicativo no Azure Active Directory. O aplicativo registrado deve ser concedido obter, descriptografar, criptografar e verifique se, Wrap Key e Unwrap Key permissões nas políticas de acesso definidas para o Cofre de chaves criado para uso com o sempre criptografado. Para obter mais informações sobre como configurar o Cofre de chaves e crie uma chave mestra de coluna, consulte [Azure Key Vault – passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [Criando chaves mestras de coluna no Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se o seu aplicativo está hospedado no Azure). O Microsoft JDBC Driver para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no cofre de chaves do Azure. O nome deste provedor é AZURE_KEY_VAULT. Para usar o provedor de armazenamento do Azure Key Vault, um desenvolvedor de aplicativo precisa para criar o cofre e as chaves no cofre de chaves do Azure e criar um registro de aplicativo no Azure Active Directory. O aplicativo registrado deve ser concedido obter, descriptografar, criptografar e verifique se, Wrap Key e Unwrap Key permissões nas políticas de acesso definidas para o Cofre de chaves criado para uso com o sempre criptografado. Para obter mais informações sobre como configurar o Cofre de chaves e crie uma chave mestra de coluna, consulte [Azure Key Vault - passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [Criando chaves mestras de coluna no Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 Para os exemplos nesta página, se você tiver criado um cofre de chaves do Azure com base em uma chave mestra de coluna e a chave de criptografia de coluna usando o SQL Server Management Studio, o script T-SQL para recriá-los pode parecer semelhante a este exemplo com seu próprio específico **KEY_ CAMINHO** e **ENCRYPTED_VALUE**:
 
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Para obter um exemplo de como incluir essas dependências em um projeto Maven, consulte [baixar ADAL4J AKV dependências e com o Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso do Provedor do Repositório de Certificados do Windows
-O SQLServerColumnEncryptionCertificateStoreProvider pode ser usado para armazenar chaves mestras de coluna no Repositório de Certificados do Windows. Use o assistente Always Encrypted SQL Server Management Studio (SSMS) ou outras ferramentas com suporte para criar definições de chave da chave mestra de coluna e a criptografia de coluna no banco de dados. O mesmo assistente pode ser usado para gerar um certificado autoassinado na Store de certificado do Windows que pode ser usado como uma chave mestra de coluna para os dados sempre criptografados. Para obter mais informações sobre a chave mestra de coluna e a sintaxe de T-SQL de chave da criptografia de coluna, consulte [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [criar chave de criptografia de coluna](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivamente.
+O SQLServerColumnEncryptionCertificateStoreProvider pode ser usado para armazenar chaves mestras de coluna no Repositório de Certificados do Windows. Use o assistente Always Encrypted SQL Server Management Studio (SSMS) ou outras ferramentas com suporte para criar definições de chave da chave mestra de coluna e a criptografia de coluna no banco de dados. O mesmo assistente pode ser usado para gerar um certificado autoassinado na Store de certificado do Windows que pode ser usado como uma chave mestra de coluna para os dados sempre criptografados. Para obter mais informações sobre a chave mestra de coluna e a sintaxe de T-SQL de chave da criptografia de coluna, consulte [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivamente.
 
 O nome da SQLServerColumnEncryptionCertificateStoreProvider é MSSQL_CERTIFICATE_STORE e pode ser consultado por API GetName () do objeto de provedor. Ele é registrado automaticamente pelo driver e pode ser usado diretamente sem qualquer alteração de aplicativo.
 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

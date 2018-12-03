@@ -11,12 +11,12 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b101070aaaef8a0e287bf02d943359d9fca8de67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398420"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Suporte a JDBC driver para alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

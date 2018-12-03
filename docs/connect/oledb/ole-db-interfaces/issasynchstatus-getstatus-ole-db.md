@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c8b7efac3068cc95af65e13db1492f935871bf66
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505072"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  A operação cujo status assíncrono está sendo solicitado. O seguinte valor deve ser usado:  
   
- DBASYNCHOP_OPEN – o consumidor solicita informações sobre a abertura ou população assíncrona de um conjunto de linhas ou sobre a inicialização assíncrona de um objeto de fonte de dados. Se o provedor for compatível com OLE DB 2.5 e der suporte a associação direta de URL, o consumidor solicitará informações sobre a abertura ou população assíncrona de uma fonte de dados, conjunto de linhas, linha ou objeto de fluxo.  
+ DBASYNCHOP_OPEN – o consumidor solicita informações sobre a abertura ou população assíncrona de um conjunto de linhas ou sobre a inicialização assíncrona de um objeto de fonte de dados. Se o provedor estiver em conformidade com OLE DB 2.5 e der suporte a associação direta de URL, o consumidor solicitará informações sobre a abertura ou população assíncrona de uma fonte de dados, conjunto de linhas, linha ou objeto de fluxo.  
   
  *pulProgress*[out]  
  Um ponteiro de memória no qual retornar o progresso atual da operação assíncrona em relação ao valor máximo esperado do parâmetro *pulProgressMax* . Para obter mais informações sobre o significado de *pulProgress*, consulte a descrição de *peAsynchPhase*.  

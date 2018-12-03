@@ -31,12 +31,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 100959bccc140374f2cc954c6d2fd3624fe93fea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672274"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391453"
 ---
 # <a name="using-xml-data-types"></a>Usando tipos de dados XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

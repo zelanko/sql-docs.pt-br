@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604356"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419067"
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

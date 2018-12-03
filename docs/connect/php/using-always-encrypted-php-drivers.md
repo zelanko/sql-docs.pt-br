@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695674"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403421"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Usando o Always Encrypted com o PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 Os exemplos a seguir demonstram a filtragem de dados com base em valores criptografados e recuperando dados de texto sem formatação de colunas criptografadas usando os drivers SQLSRV e PDO_SQLSRV. Observe os seguintes pontos:
  -   O valor usado na cláusula WHERE a ser filtrado na coluna SSN precisa ser passado como um parâmetro using bind para que o driver possa criptografá-lo de modo transparente antes de enviá-lo ao servidor.
  -   Ao executar uma consulta com parâmetros associados, os drivers PHP determina automaticamente o tipo SQL para o usuário, a menos que o usuário especifica explicitamente o tipo SQL usando o driver SQLSRV.
- -   Todos os valores impressos pelo programa são em texto não criptografado, já que o driver de modo transparente descriptografa os dados recuperados das colunas SSN e BirthDate.
+ -   Todos os valores impressos pelo programa estarão em texto não criptografado, já que o driver descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
  
 Observação: Consultas só podem executar comparações de igualdade em colunas criptografadas se a criptografia é determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

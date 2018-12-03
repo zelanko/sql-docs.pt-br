@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512538"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conectando com sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ O utilitário [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) está dis
 Os comandos a seguir mostram como usar a autenticação do Windows (Kerberos) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticação, respectivamente:
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>Opções Disponíveis
@@ -184,7 +184,7 @@ Na linha de comando, combine `a.sql` e `b.sql` em `c.sql` usando os seguintes co
   
 Execute `sqlcmd` e use `c.sql` como arquivo de entrada:  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - -z *senha* alterar a senha.  
   
@@ -224,7 +224,7 @@ Em um DSN, apenas a entrada DRIVER é necessária, mas para se conectar a um ser
 
 Se a mesma opção for especificada tanto no DSN quanto na linha de comando do `sqlcmd` ou do `bcp`, a opção de linha de comando substituirá o valor usado no DSN. Por exemplo, se o DSN tiver uma entrada DATABASE e a linha de comando do `sqlcmd` incluir **-d**, o valor passado para **-d** será usado. Se **Trusted_Connection=yes** for especificado no DSN, a autenticação Kerberos será usada e o nome de usuário (**–U**) e a senha (**–P**), se fornecidos, serão ignorados.
 
-Os scripts existentes que invocam `isql` podem ser modificados para usar `sqlcmd` com a definição do seguinte alias: `alias isql="sqlcmd –D"`.  
+Os scripts existentes que invocam `isql` podem ser modificados para usar `sqlcmd` com a definição do seguinte alias: `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

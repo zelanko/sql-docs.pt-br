@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506828"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -367,7 +367,7 @@ O driver dá suporte à autenticação no Azure Key Vault usando os seguintes ti
 
 - Nome de usuário/senha – com esse método, as credenciais são o nome de um usuário do Active Directory do Azure e sua senha.
 
-- ID/segredo do cliente – com esse método, as credenciais são uma ID de cliente do aplicativo e um segredo do aplicativo.
+- ID/segredo do cliente - com esse método, as credenciais são uma ID de cliente do aplicativo e um segredo do aplicativo.
 
 Para permitir que o driver usar CMKs armazenadas no AKV para criptografia de coluna, use as seguintes palavras chave conexão-apenas cadeias de caracteres:
 

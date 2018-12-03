@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050848"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413735"
 ---
 # <a name="sqlpackage-release-notes"></a>Notas de versão do sqlpackage
 
@@ -76,20 +76,22 @@ A versão inclui as seguintes correções:
 - Adicionado /DiagnosticsFile:"C:\Temp\sqlpackage.log" o parâmetro de linha de comando para especificar um caminho de arquivo para salvar as informações de diagnóstico.
 - Adicionado o parâmetro de linha de comando /Diagnostics para registrar informações de diagnóstico no console.
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>sqlpackage no macOS e Linux 0.0.1 (visualização)
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>sqlpackage no macOS e Linux .NET Core (visualização)
 
-Data do lançamento: 9 de maio de 2018  
-Build: 15.0.4057.1
+Data de lançamento: 15 de novembro de 2018  
+Compilação
 
-Esta versão contém a compilação de visualização de plataforma cruzada do sqlpackage que tem como alvo o .NET Core 2.0 e pode executar no macOS e Linux. 
+Esta versão contém a compilação de visualização de plataforma cruzada do sqlpackage que tem como alvo o .NET Core 2.1 e pode executar no macOS e Linux. 
+
+A versão inclui as seguintes correções:
+
+- Movido para o .NET Core 2.1 
+- Suporte para tipos de CLR UDT, incluindo os tipos de SQL CLR UDT: SqlHierarchyId, SqlGeometry e SqlGeography.
 
 Esta versão é uma visualização prévia com problemas conhecidos a seguir:
 
 - O parâmetro /p:CommandTimeout é difícil codificado como 120.
 - Não há suporte para os colaboradores de compilação e implantação.
-  - Será corrigido após a mudança para o .NET Core 2.1 onde System.ComponentModel.Composition.dll tem suporte.
-  - Precisa lidar com caminhos diferencia maiusculas de minúsculas.
-- Tipos de SQL CLR UDT não têm suporte, incluindo tipos de UDT do CLR do SQL Server: SqlHierarchyId, SqlGeometry e SqlGeography.
 - Não há suporte para arquivos. dacpac e. bacpac mais antigos que usam a serialização de dados json.
 - .Dacpacs referenciado (por exemplo, master.dacpac) podem não ser resolvidas devido a problemas com sistemas de arquivos diferencia maiusculas de minúsculas.
   - Uma solução alternativa é colocar em maiusculas do nome do arquivo de referência (por exemplo, mestre. BACPAC).

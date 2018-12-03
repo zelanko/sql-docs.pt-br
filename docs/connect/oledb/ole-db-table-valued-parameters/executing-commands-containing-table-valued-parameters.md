@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 539c9ffd8d7447761a2331d4895aec0f1de2544d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466f2b5b8b84519d8b4d9c98ad324b3e4187ac61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634234"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396685"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Executando comandos que contêm parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47634234"
 ## <a name="table-valued-parameter-specification"></a>Especificação de parâmetros com valor de tabela  
  O consumidor pode especificar o tipo do parâmetro com valor de tabela. Estas informações incluem o nome do tipo de parâmetro com valor de tabela. Elas também incluem o nome do esquema, se o tipo de tabela definido pelo usuário para o parâmetro com valor de tabela não está no esquema padrão atual para a conexão. Dependendo do suporte do servidor, o consumidor também pode especificar informações de metadados opcionais, como a ordenação de colunas, e pode indicar que todas as linhas de determinadas colunas tenham os valores padrão.  
   
- Para especificar um parâmetro com valor de tabela, o consumidor chama ISSCommandWithParamter::SetParameterInfo e, opcionalmente, chama isscommandwithparameters:: SetParameterProperties. Para um parâmetro com valor de tabela, o campo *pwszDataSourceType* na estrutura DBPARAMBINDINFO tem um valor DBTYPE_TABLE. O campo *ulParamSize* é definido como ~0 para indicar que esse tamanho é desconhecido. Propriedades específicas para parâmetros com valor de tabela, como o nome do esquema, nome do tipo, ordem de coluna e colunas padrão, podem ser definidas por meio de isscommandwithparameters:: SetParameterProperties.  
+ Para especificar um parâmetro com valor de tabela, o consumidor chama ISSCommandWithParameter::SetParameterInfo e, opcionalmente, chama isscommandwithparameters:: SetParameterProperties. Para um parâmetro com valor de tabela, o campo *pwszDataSourceType* na estrutura DBPARAMBINDINFO tem um valor DBTYPE_TABLE. O campo *ulParamSize* é definido como ~0 para indicar que esse tamanho é desconhecido. Propriedades específicas para parâmetros com valor de tabela, como o nome do esquema, nome do tipo, ordem de coluna e colunas padrão, podem ser definidas por meio de isscommandwithparameters:: SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Associação de parâmetros com valor de tabela  
  Um parâmetro com valor de tabela pode ser qualquer objeto de conjunto de linhas. O provedor faz a leitura a partir deste objeto enquanto envia parâmetros com valor de tabela ao servidor durante a execução.  
