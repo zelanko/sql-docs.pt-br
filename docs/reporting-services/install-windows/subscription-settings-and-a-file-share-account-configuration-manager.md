@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813109"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402100"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos (Gerenciador de Configurações)
   Use a página **Configurações de Assinatura** do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma conta de compartilhamento de arquivos para servidores de relatório no modo nativo e assinaturas de compartilhamento de arquivos. A conta de compartilhamento de arquivos permite que você use um único conjunto de credenciais em várias assinaturas que enviam relatórios para um compartilhamento de arquivos. Quando for o momento de alterar as credenciais, você configura a alteração da conta de compartilhamento de arquivos e não precisa atualizar cada assinatura individual.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813109"
 > [!IMPORTANT]
 > O conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] controla o envio de assinaturas e interage com a conta usada para assinaturas de compartilhamento de arquivos. Recursos de segurança do Windows restringem combinações de 1) a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e 2) a conta usada para contas de compartilhamento de arquivos. Por exemplo, se uma conta interna do sistema operacional for usada para a conta de compartilhamento de arquivos, a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deve ser outra conta de serviço com permissões de representação. Se uma conta de compartilhamento de arquivos explícita e uma senha foram configuradas, a conta de compartilhamento de arquivos exigirá o direito de fazer logon no computador que executa o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se a conta de compartilhamento de arquivos não tiver as permissões necessárias, as assinaturas que usam essa conta receberão uma mensagem de erro similar a:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Exemplo do PowerShell para auditar o uso da conta de compartilhamento de arquivos  
  Execute o seguinte script do Windows PowerShell para listar todas as assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuradas para usar a **Conta de compartilhamento de arquivos**. Atualize o `SERVERNAME` para obter um valor apropriado para seu servidor de relatórios.  

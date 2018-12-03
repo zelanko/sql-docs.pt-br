@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799334"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530528"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  As funções XACT_STATE e @@TRANCOUNT podem ambas ser usadas para detectar se a solicitação atual tem uma transação de usuário ativa. @@TRANCOUNT não pode ser usado para determinar se essa transação foi classificada como uma transação não confirmável. XACT_STATE não pode ser usado para determinar se há transações aninhadas.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `XACT_STATE` no bloco `CATCH` de uma construção `TRY…CATCH` para determinar se uma transação será confirmada ou revertida. Como `SET XACT_ABORT` é `ON`, o erro de violação de restrição faz a transação entrar em um estado não confirmável.  
+ O exemplo a seguir usa `XACT_STATE` no bloco `CATCH` de uma construção `TRY...CATCH` para determinar se uma transação será confirmada ou revertida. Como `SET XACT_ABORT` é `ON`, o erro de violação de restrição faz a transação entrar em um estado não confirmável.  
   
 ```  
 USE AdventureWorks2012;  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509523"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de poder usar o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou o serviço Web Servidor de Relatório, é necessário configurar, pelo menos, uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813349"
   
     -   Em um prompt de comando, digite o seguinte comando para retornar uma lista de portas TCP que estão sendo usadas:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Examine o artigo de Suporte da Microsoft, [Informações sobre atribuições de porta TCP/IP](https://support.microsoft.com/kb/174904), para ler sobre atribuições de porta TCP e as diferenças entre Portas Bem Conhecidas (0 a 1023), Portas Registradas (1024 a 49151) e Portas Dinâmicas ou Privadas (49152 a 65535).  
   

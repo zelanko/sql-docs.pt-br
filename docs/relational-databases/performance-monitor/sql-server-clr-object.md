@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:CLR
@@ -14,12 +14,12 @@ ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8210b0d0290879e659376ad2ea851c62b2ee2ae9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e3d0ec47c784e73c26f484ee2eab38a752caa0c0
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033163"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158596"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, objeto CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

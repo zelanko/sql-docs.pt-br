@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514555"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,13 +78,13 @@ ms.locfileid: "47629504"
   
 -   Os índices columnstore oferecem suporte ao nível RCSI (isolamento do instantâneo confirmado) e ao SI (isolamento de instantâneo). Isso permite consultas de análise consistente transacionais sem qualquer bloqueio.  
   
--   O columnstore oferece suporte à desfragmentação de índice por meio da remoção de linhas excluídas, sem a necessidade de recriar explicitamente o índice. A instrução `ALTER INDEX … REORGANIZE` remove do columnstore as linhas excluídas, com base em uma política definida internamente, como uma operação online  
+-   O columnstore oferece suporte à desfragmentação de índice por meio da remoção de linhas excluídas, sem a necessidade de recriar explicitamente o índice. A instrução `ALTER INDEX ... REORGANIZE` remove do columnstore as linhas excluídas, com base em uma política definida internamente, como uma operação online  
   
 -   Os índices columnstore podem ser acessados em uma réplica secundária legível do AlwaysOn. Você pode melhorar o desempenho da análise operacional descarregando as consultas de análise para uma réplica secundária do AlwaysOn.  
   
 -   Para melhorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calcula as funções de agregação `MIN`, `MAX`, `SUM`, `COUNT` e `AVG` durante as verificações de tabela, quando o tipo de dados usa, no máximo, 8 bytes e não é do tipo cadeia de caracteres. Há suporte para aplicação agregada com ou sem a cláusula Group By tanto para índices columnstore clusterizados quanto para índices columnstore não clusterizados.  
   
--   A aplicação de predicado acelera as consultas que comparam cadeias de caracteres do tipo [v]archar ou n[v]archar. Isso se aplica aos operadores de comparação comuns e inclui operadores como LIKE, que usam filtros de bitmap. Isso funciona com todos os agrupamentos com suporte do SQL Server.  
+-   A aplicação de predicado acelera as consultas que comparam cadeias de caracteres do tipo [v]archar ou n[v]archar. Isso se aplica aos operadores de comparação comuns e inclui operadores como LIKE, que usam filtros de bitmap. Isso funciona com todas as ordenações com suporte do SQL Server.  
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Desempenho do nível de compatibilidade do banco de dados 130  
   

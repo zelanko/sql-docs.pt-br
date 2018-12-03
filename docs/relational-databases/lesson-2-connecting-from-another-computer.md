@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520520"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,10 +124,10 @@ Quando o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , confirme **Mecanismo de Banco de Dados** na caixa **Tipo de Servidor** .  
   
-3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:***<nome_do_computador>*. Em nosso exemplo de uma instância nomeada, digite **tcp:***<nome_do_computador>***,49172**.  
+3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:**_<computer_name>_. Em nosso exemplo de uma instância nomeada, digite **tcp:**_<computer_name>_**,49172**.  
   
     > [!NOTE]  
-    > Se você omitir **tcp:** da caixa **Nome do servidor** , o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
+    > Se você omitir **tcp:** da caixa **Nome do servidor**, o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
   
 4.  Na caixa **Autenticação** , confirme **Autenticação do Windows**e clique em **Conectar**.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 88af4571f126098ecdda1eff8978112459d917e9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560084"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512239"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Criando um usuário que duplica um logon  
  Se um usuário de banco de dados independente com senha for criado com o mesmo nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectar especificando o banco de dados independente como catálogo inicial, o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá se conectar. A conexão será avaliada como a entidade do usuário com senha no banco de dados independente em vez de como um usuário baseado no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso pode provocar uma negação intencional ou acidental do serviço para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE***\<database>*. Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
+-   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE**_\<bancodedados>_. Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
   
 -   Como uma prática recomendada, não crie usuários de banco de dados independente com senhas que tenham o mesmo nome que logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

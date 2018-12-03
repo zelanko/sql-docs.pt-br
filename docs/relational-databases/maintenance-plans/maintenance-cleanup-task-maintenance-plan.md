@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11602dcd1274690e7b77ca285c50269e83b6ca23
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215794"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532108"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarefa de limpeza de manutenção (plano de manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51215794"
  **Selecione ou digite um nome de servidor**  
  Selecione um servidor com o qual se conectar ao executar esta tarefa.  
   
- **…**  
+ **...**  
  Selecione para exibir a lista de servidores disponíveis.  
   
  **Digite as informações para fazer logon no servidor**  

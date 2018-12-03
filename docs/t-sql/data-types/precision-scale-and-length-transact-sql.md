@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507258"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisão, escala e comprimento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ As expressões de operandos são indicadas como expressão e1, com precisão p1 
   
 \* A precisão e a escala de resultado têm um máximo absoluto de 38. Se a precisão de resultado for maior que 38, ela será reduzida a 38, e a escala correspondente será reduzida para tentar evitar que alguma parte do resultado seja truncada. Em alguns casos, como multiplicação ou divisão, o fator de escala não será reduzido para manter a precisão decimal, embora o erro de estouro possa ser gerado.
 
-Em operações de adição e subtração, precisamos de `max(p1 – s1, p2 – s2)` casas para armazenar parte integral do número decimal. Se não houver espaço suficiente para armazená-los ou seja, `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, a escala será reduzida para fornecer espaço suficiente para a parte integral. A escala resultante será `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, portanto, a parte fracionária poderá ser arredondada para se ajustar à escala resultante.
+Em operações de adição e subtração, precisamos de `max(p1 - s1, p2 - s2)` casas para armazenar parte integral do número decimal. Se não houver espaço suficiente para armazená-los ou seja, `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, a escala será reduzida para fornecer espaço suficiente para a parte integral. A escala resultante será `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, portanto, a parte fracionária poderá ser arredondada para se ajustar à escala resultante.
 
 Em operações de multiplicação e divisão, precisamos de `precision - scale` casa para armazenar a parte integral do resultado. A escala pode ser reduzida usando as seguintes regras:
-1.  A escala resultante será reduzida a `min(scale, 38 – (precision-scale))` se a parte integral for menor que 32, pois ela não pode ser maior que `38 – (precision-scale)`. Nesse caso, o resultado pode ser arredondado.
+1.  A escala resultante será reduzida a `min(scale, 38 - (precision-scale))` se a parte integral for menor que 32, pois ela não pode ser maior que `38 - (precision-scale)`. Nesse caso, o resultado pode ser arredondado.
 1. A escala não será alterada se for inferior a 6 e se a parte integral for maior do que 32. Nesse caso, o erro de estouro poderá ser gerado se ela não couber em decimal(38, scale) 
 1. A escala será definida como 6 se for maior do que 6 e se a parte integral for maior do que 32. Nesse caso, tanto a parte integral quanto a escala seriam reduzidas e o tipo resultante seria decimal (38,6). O resultado pode ser arredondado para até 6 decimais ou um erro de estouro será gerado se parte integral não couber dentro 32 dígitos.
 
@@ -76,7 +76,7 @@ A expressão a seguir retorna o resultado `0.00000090000000000` sem arredondamen
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 Neste caso, a precisão é de 61 e escala é de 40.
-Aparte integral (escala de precisão = 21) é menor que 32, portanto, isso é caso (1) nas regras de multiplicação e a escala é calculada como `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. O tipo de resultado é `decimal(38,17)`.
+Aparte integral (escala de precisão = 21) é menor que 32, portanto, isso é caso (1) nas regras de multiplicação e a escala é calculada como `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. O tipo de resultado é `decimal(38,17)`.
 
 A expressão a seguir retorna o resultado `0.000001` para caber em `decimal(38,6)`:
 ```sql

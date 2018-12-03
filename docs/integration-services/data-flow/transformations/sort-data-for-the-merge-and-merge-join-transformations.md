@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503238"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
@@ -31,20 +31,20 @@ ms.locfileid: "47641630"
   
 -   No fluxo de dados, insira uma transformação Classificação antes da transformação Mesclagem ou Junção de Mesclagem.  
   
- Se os dados forem dados de cadeia de caracteres, as transformações Mesclagem e Junção de Mesclagem esperarão que os valores da cadeia de caracteres tenham sido classificados com o uso do agrupamento do Windows. Para fornecer valores de cadeia de caracteres às transformações Mesclagem e Junção de Mesclagem classificadas com o uso do agrupamento do Windows, use o procedimento a seguir.  
+ Se os dados forem dados de cadeia de caracteres, as transformações Mesclagem e Junção de Mesclagem esperarão que os valores da cadeia de caracteres tenham sido classificados com o uso da ordenação do Windows. Para fornecer valores de cadeia de caracteres às transformações Mesclagem e Junção de Mesclagem classificadas com o uso da ordenação do Windows, use o procedimento a seguir.  
   
-#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>Para fornecer valores da cadeia de caracteres que são classificados usando agrupamento de Windows  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>Para fornecer valores da cadeia de caracteres que são classificados usando ordenação do Windows  
   
 -   Use uma transformação Classificação para classificar os dados.  
   
-     A transformação Classificação usa o agrupamento do Windows para classificar valores de cadeia de caracteres.  
+     A transformação Classificação usa a ordenação do Windows para classificar valores de cadeia de caracteres.  
   
-     — ou —  
+     -ou-  
   
 -   Use o operador CAST Transact-SQL para converter os valores **varchar** em valores **nvarchar** pela primeira vez, use a cláusula ORDER BY Transact-SQL para classificar os dados.  
   
     > [!IMPORTANT]  
-    >  Não é possível usar a cláusula ORDER BY sozinha porque ela utiliza um agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para classificar valores de cadeia de caracteres. O uso do agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode resultar em uma ordem de classificação diferente do agrupamento do Windows, o que pode fazer com que a transformação Mesclar ou Junção de Mesclagem produza resultados inesperados.  
+    >  Não é possível usar a cláusula ORDER BY sozinha porque ela utiliza uma ordenação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para classificar valores de cadeia de caracteres. O uso da ordenação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode resultar em uma ordem de classificação diferente da ordenação do Windows, o que pode fazer com que a transformação Mesclar ou Junção de Mesclagem produza resultados inesperados.  
   
 ## <a name="setting-sort-options-on-the-data"></a>Definindo opções de classificação nos dados  
  Há duas propriedades de classificação importantes que devem ser definidas para a transformação de origem ou upstream que fornece dados às transformações Mesclar e Junção de Mesclagem:  

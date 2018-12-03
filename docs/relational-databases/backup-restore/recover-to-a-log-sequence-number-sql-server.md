@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694774"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540290"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694774"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
  Usando uma instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
   
--   Use a cláusula WITH STOPATMARK **='** lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK **='** lsn:_<lsn_number>_**'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e inclui o registro de log no roll forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'**, em que lsn:*\<lsnNumber>* é uma sequência que determina que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e exclui o registro de log do roll forward.  
   

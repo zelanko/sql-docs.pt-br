@@ -3,26 +3,24 @@ title: 'Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL S
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571375"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302839"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +55,7 @@ Você pode criar uma política de acesso armazenado e uma assinatura de acesso c
 -   Conta de armazenamento  
 -   Contêiner de blobs do Azure   
 -   Política do SAS    
+
 Esse script começa declarando diversas variáveis para especificar os nomes dos recursos acima e os nomes dos seguintes valores de entrada necessários:  
   
 -   Um nome de prefixo usado na nomeação de outros objetos de recurso    

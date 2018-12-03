@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f44eb8ff2f35942660b8fd773962f2fda8cc9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b87bd6357b51803ff9535483b9991099b903e1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527502"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formatos de dados para importar ou exportar em massa (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47753564"
   
 |Operação|Nativo|Unicode nativo|Caractere|Caractere unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum caractere estendido ou DBCS (conjunto de caracteres de dois bytes). A menos que um arquivo de formato seja usado, essas tabelas devem ser definidas identicamente.|Sim*|—|—|—|  
-|Para colunas **sql_variant** , recomenda-se usar o formato de dados nativos que, ao contrário dos formatos Unicode e de caractere, preservam os metadados de cada valor **sql_variant** .|Sim|—|—|—|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém caracteres estendidos ou DBCS.|—|Sim|—|—|  
-|Importação de dados em massa de um arquivo de texto gerado por outro programa.|—|—|Sim|—|  
-|Exportação de dados em massa para um arquivo de texto que será usado em outro programa.|—|—|Sim|—|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém dados unicode e não contém nenhum caractere estendido ou DBCS.|—|—|—|Sim|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum caractere estendido ou DBCS (conjunto de caracteres de dois bytes). A menos que um arquivo de formato seja usado, essas tabelas devem ser definidas identicamente.|Sim*|-|-|-|  
+|Para colunas **sql_variant** , recomenda-se usar o formato de dados nativos que, ao contrário dos formatos Unicode e de caractere, preservam os metadados de cada valor **sql_variant** .|Sim|-|-|-|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém caracteres estendidos ou DBCS.|-|Sim|-|-|  
+|Importação de dados em massa de um arquivo de texto gerado por outro programa.|-|-|Sim|-|  
+|Exportação de dados em massa para um arquivo de texto que será usado em outro programa.|-|-|Sim|-|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém dados unicode e não contém nenhum caractere estendido ou DBCS.|-|-|-|Sim|  
   
  \* Método mais rápido para a exportação de dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao usar **bcp**.  
   

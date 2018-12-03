@@ -12,12 +12,12 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211e8016beb1850df83135520987140bb5af242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a783a386f625a6ca02c6a88dd2378963cc3cce27
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796254"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406583"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Preparando procedimento armazenado (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "47796254"
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Obrigatório|O nome da versão. Pode ou não diferenciar maiúsculas de minúsculas, dependendo de sua configuração de agrupamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**VersionName**<br /><br /> Obrigatório|O nome da versão. Pode ou não diferenciar maiúsculas de minúsculas, dependendo de sua configuração de ordenação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**LogFlag**<br /><br /> Obrigatório|Determina se as transações são registradas em log durante o processo de preparo. Os valores possíveis são:<br /><br /> **0**: não registrar transações em log.<br /><br /> **1**: registrar transações em log.<br /><br /> <br /><br /> Para obter mais informações sobre transações, consulte [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Necessário, exceto pelo serviço Web|O valor **BatchTag** conforme especificado na tabela de preparo.|  
 |**Batch_ID**<br /><br /> Necessário apenas pelo serviço Web|O valor **Batch_ID** , conforme especificado na tabela de preparo.|  
@@ -56,7 +56,7 @@ EXEC[stg].[udp_name_Leaf]
       @VersionName = N'VERSION_1',  
 @LogFlag = 1,  
 @BatchTag = N'batch1'  
-      @UserName=N’domain\user’  
+      @UserName=N'domain\user'  
   
 GO  
   

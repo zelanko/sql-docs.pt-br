@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600521"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617666"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600521"
 |Conexão a uma instância nomeada, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Conectando à instância padrão através de nome, forçando uma conexão TCP.|tcp:APPHOST|  
 |Conectando à instância nomeada através de nome, forçando uma conexão TCP.|tcp:APPHOST\SQLEXPRESS|  
-|Conectando a uma instância padrão especificando um nome de pipe nomeado.|\\\APPHOST\pipe\unit\app|  
+|Conectando a uma instância padrão especificando um nome de pipe nomeado.|\\\APPHOST\pipe\SQL\query|  
 |Conectando a uma instância nomeada especificando um nome de pipe nomeado.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Conectando à instância padrão através de nome, forçando uma conexão de pipes nomeados.|np:APPHOST|  
 |Conectando à instância nomeada através de nome, forçando uma conexão de pipes nomeados.|np:APPHOST\SQLEXPRESS|  

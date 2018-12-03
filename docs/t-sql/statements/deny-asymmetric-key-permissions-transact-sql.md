@@ -20,12 +20,12 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cabcdc95bbdf748774a0435715ae93241cdb33ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7ad315244d6a236285abdd6784237856c3d442f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810634"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511431"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>Permissões de chave assimétrica DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  Especifica uma permissão que pode ser negada em uma chave assimétrica. Listada abaixo.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Especifica a chave assimétrica na qual a permissão está sendo negada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

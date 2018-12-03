@@ -17,12 +17,12 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 160e2ae131870a0d1f5800adb5d3e380340d81c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b24367de294b3a28542577b6bd6c833f5c4e06b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531859"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>Permissões de assembly DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Especifica uma permissão que pode ser negada em um assembly. Listada abaixo.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Especifica o assembly no qual a permissão está sendo negada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

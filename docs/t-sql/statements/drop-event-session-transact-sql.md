@@ -19,12 +19,12 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d0bca5ece051f8c208c9985e1601c5491e4413b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1edffab8e94c9ee171b3be4203d08b23df83452
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692894"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404441"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "47692894"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```    
 DROP EVENT SESSION event_session_name  
 ON SERVER  
 ```  
@@ -49,14 +48,14 @@ ON SERVER
  Quando você descartar uma sessão de evento, todas as informações de configuração, como parâmetros de destinos e sessão, serão completamente removidas.  
   
 ## <a name="permissions"></a>Permissões  
- Exige a permissão ALTER ANY EVENT SESSION.  
+ Requer a permissão `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como descartar uma sessão de evento.  
+O exemplo a seguir mostra como descartar uma sessão de evento.  
   
-```  
-DROP EVENT SESSION evt_spin_lock_diagnosis  
-ON SERVER;  
+```sql  
+DROP EVENT SESSION evt_spin_lock_diagnosis ON SERVER;
+GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

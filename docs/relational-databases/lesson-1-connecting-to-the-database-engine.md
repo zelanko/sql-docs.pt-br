@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571206"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302679"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Esta lição contém as seguintes tarefas:
 - [Autorizando conexões adicionais](#additional) 
 
 ## <a name="tools">Ferramentas para introdução</a> 
- -O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é enviado com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
+- O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] transporta com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
 
 ### <a name="basic-tools"></a>Ferramentas básicas
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é a principal ferramenta para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)] . Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . O SSMS está disponível como download gratuito no [Centro de Download da Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). A versão mais recente pode ser usada com versões mais antigas do [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
@@ -45,10 +45,10 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar o SQL Server Configuration Manager  
 - Nas versões atuais do Windows, na página **Iniciar** , digite **Configuration Manager**e clique em **SQL Server *versão* Configuration Manager**.   
- --   Quando estiver usando versões mais antigas do Windows, no menu **Iniciar**, aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
- -  
+- Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+
 ## <a name="connect"></a>Conectando-se ao Management Studio  
- -É fácil se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] por meio de ferramentas executadas no mesmo computador se você sabe o nome da instância e está se conectando como um membro do grupo local de Administradores no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+- É fácil se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] por meio de ferramentas executadas no mesmo computador se você sabe o nome da instância e está se conectando como um membro do grupo de Administradores local no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
 > Este tópico aborda a conexão a um SQL Server local. Para se conectar ao Banco de Dados SQL do Azure, consulte [Conectar-se ao banco de dados SQL com o SQL Server Management Studio e executar uma consulta T-SQL de exemplo](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  

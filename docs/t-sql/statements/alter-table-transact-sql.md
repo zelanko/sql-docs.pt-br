@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503649"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ A alteração online de coluna permite que as estatísticas automáticas e criad
   
 -   A `WAIT_AT_LOW_PRIORITY` opção não pode ser usada com a alteração online de coluna.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` não é compatível para a coluna de alteração online.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` não é compatível para a coluna de alteração online.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` não é afetado pela coluna de alteração online.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` não é afetado pela coluna de alteração online.  
   
 -   A alteração online de coluna não dá suporte à alteração de uma tabela onde o controle de alterações está habilitado ou é um publicador de replicação de mesclagem.  
   
@@ -1008,7 +1008,7 @@ Descartará condicionalmente a coluna ou restrição somente se ela já existir.
  É possível alterar o comprimento, a precisão ou a escala de uma coluna, especificando um novo tamanho para o tipo de dados da coluna na cláusula ALTER COLUMN. Se dados existirem na coluna, o novo tamanho não poderá ser menor do que o tamanho máximo dos dados. Além disso, a coluna não pode ser definida em um índice, a menos que a coluna seja um tipo de dados **varchar**, **nvarchar** ou **varbinary** e o índice não seja o resultado de uma restrição PRIMARY KEY. Consulte o exemplo P.  
   
 ## <a name="locks-and-alter-table"></a>Bloqueios e ALTER TABLE  
- As alterações especificadas em ALTER TABLE são implementadas imediatamente. Se as alterações requererem modificações das linhas na tabela, ALTER TABLE atualizará as linhas. ALTER TABLE adquire um bloqueio de modificação de esquema (SCH-M) na tabela para se certificar de que nenhuma outra conexão referencie nem mesmo os metadados da tabela durante a alteração, exceto as operações de índice online que exigem um bloqueio SCH-M muito curto no final. Em uma operação `ALTER TABLE…SWITCH`, o bloqueio é adquirido em tabelas de origem e de destino. As modificações feitas na tabela são registradas e completamente recuperáveis. As alterações que afetam todas as linhas em tabelas muito grandes, como descartar uma coluna ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adicionar uma coluna NOT NULL com um valor padrão, podem demorar muito tempo para serem concluídas e gerar muitos registros de log. Essas instruções ALTER TABLE devem ser executadas com o mesmo cuidado de outras instruções INSERT, UPDATE ou DELETE que podem afetar várias linhas.  
+ As alterações especificadas em ALTER TABLE são implementadas imediatamente. Se as alterações requererem modificações das linhas na tabela, ALTER TABLE atualizará as linhas. ALTER TABLE adquire um bloqueio de modificação de esquema (SCH-M) na tabela para se certificar de que nenhuma outra conexão referencie nem mesmo os metadados da tabela durante a alteração, exceto as operações de índice online que exigem um bloqueio SCH-M muito curto no final. Em uma operação `ALTER TABLE...SWITCH`, o bloqueio é adquirido em tabelas de origem e de destino. As modificações feitas na tabela são registradas e completamente recuperáveis. As alterações que afetam todas as linhas em tabelas muito grandes, como descartar uma coluna ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adicionar uma coluna NOT NULL com um valor padrão, podem demorar muito tempo para serem concluídas e gerar muitos registros de log. Essas instruções ALTER TABLE devem ser executadas com o mesmo cuidado de outras instruções INSERT, UPDATE ou DELETE que podem afetar várias linhas.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Adicionando colunas NOT NULL como uma operação online  
  Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, a adição de uma coluna NOT NULL com um valor padrão é uma operação online quando o valor padrão é uma *constante de tempo de execução*. Isso significa que a operação é concluída quase instantaneamente, independentemente do número de linhas na tabela. Isso ocorre porque as linhas existentes na tabela não são atualizadas durante a operação; em vez disso, o valor padrão é armazenado somente nos metadados da tabela e o valor é pesquisado conforme necessário em consultas que acessam essas linhas. Esse comportamento é automático; nenhuma sintaxe adicional é necessária para implementar a operação online, além da sintaxe ADD COLUMN. Uma constante de tempo de execução é uma expressão que gera o mesmo valor no tempo de execução para cada linha na tabela, independentemente de seu determinismo. Por exemplo, a expressão constante "Meus dados temporários" ou a função do sistema GETUTCDATETIME() são constantes de tempo de execução. Por outro lado, as funções `NEWID()` ou `NEWSEQUENTIALID()` não são constantes de tempo de execução porque é gerado um valor exclusivo para cada linha da tabela. A adição de uma coluna NOT NULL com um valor padrão que não é uma constante de tempo de execução é sempre executada offline e um bloqueio exclusivo (SCH-M) é adquirido para a duração da operação.  

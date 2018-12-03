@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560503"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403241"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Independentemente de você optar por **Mover** ou **Copiar**, **Desanexar e Anex
      > **OBSERVAÇÃO** É possível iniciar o Assistente para Copiar Banco de Dados em qualquer banco de dados.  Você pode usar o Assistente para Copiar Banco de Dados por meio do servidor de origem ou de destino.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Mova o banco de dados usando o método desanexar e anexar para uma instância em um servidor físico diferente.  Um logon e um trabalho do SQL Server Agent também serão movidos.**  
-O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamado `contoso\Jennie` e um trabalho do SQL Server Agent denominado `Jennie’s Report` de uma instância de 2008 do SQL Server no `Server1` para uma instância de 2016 do SQL Server no `Server2`.  `Jennie’s Report` usa o banco de dados `Sales` .  `Sales` ainda não existir no servidor de destino, `Server2`.  `Server1` será reatribuída a uma equipe diferente após a movimentação do banco de dados.
+O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamado `contoso\Jennie` e um trabalho do SQL Server Agent denominado `Jennie's Report` de uma instância de 2008 do SQL Server no `Server1` para uma instância de 2016 do SQL Server no `Server2`.  `Jennie's Report` usa o banco de dados `Sales` .  `Sales` ainda não existir no servidor de destino, `Server2`.  `Server1` será reatribuída a uma equipe diferente após a movimentação do banco de dados.
   
 6.  Conforme observado em [Limitações e restrições](#Restrictions)acima, um banco de dados shell precisa ser criado no servidor de destino durante a transferência de um trabalho do SQL Server Agent que faz referência a um banco de dados que ainda não existe no servidor de destino.  Crie um banco de dados shell chamado `Sales` no servidor de destino. 
 
@@ -322,7 +322,7 @@ O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamad
   
 9.  Página**Configurar Banco de Dados de Destino** : o **Assistente** identificou que `Sales` já existe no servidor de destino, que foi criado na **Etapa 6** acima, e acrescentou `_new` ao nome do **Banco de dados de destino** .  Exclua `_new` da caixa de texto **Banco de dados de destino** .  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
   
-10. Página**Selecionar Objetos do Servidor** : no painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Logons de nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:**.  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie’s Report`.  Clique em **OK**.  Clique em **Avançar**.  
+10. Página**Selecionar Objetos do Servidor** : no painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Logons de nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:**.  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie's Report`.  Clique em **OK**.  Clique em **Avançar**.  
   
 11. Página**Local dos arquivos de banco de dados de origem** : clique no botão de reticências de **Compartilhamento de arquivos no servidor de origem** e navegue até o local da Pasta especificado.  Por exemplo, para o local da Pasta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` em **Compartilhamento de arquivos no servidor de origem**.  Clique em **Avançar**.
   
@@ -354,7 +354,7 @@ O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamad
 Como `Server1` será movido para uma equipe diferente e a operação **Move** não será repetida, considere a execução das seguintes etapas:
      -    Exclua o pacote SSIS `SalesFromServer1toServer2_Move` no `Server2`.
      -    Excluindo um trabalho `SalesFromServer1toServer2_Move` do SQL Server Agent no `Server2`.
-     -    Excluindo um trabalho `Jennie’s Report` do SQL Server Agent no `Server1`.
+     -    Excluindo um trabalho `Jennie's Report` do SQL Server Agent no `Server1`.
      -    Removendo o logon `contoso\Jennie` no `Server1`.
 
 

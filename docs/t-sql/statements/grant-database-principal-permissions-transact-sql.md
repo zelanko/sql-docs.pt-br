@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac987ef327b021665ae797aa3f14aad6446fcc4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b899bc08ebdff746792cd8070ca966ca6f6edb84
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807711"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947640"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -169,7 +169,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Concessão da permissão CONTROL em um usuário para outro usuário  
- O exemplo a seguir concede a permissão `CONTROL` no usuário `AdventureWorks2012` `Wanida` para o usuário `RolandX`.  
+ O exemplo a seguir concede a permissão `CONTROL` no usuário `AdventureWorks2012``Wanida` para o usuário `RolandX`.  
   
 ```  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -186,7 +186,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Concessão da permissão IMPERSONATE em um usuário para uma função de aplicativo  
- O exemplo a seguir concede permissão no usuário `IMPERSONATE` `HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
+ O exemplo a seguir concede permissão no usuário `IMPERSONATE``HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

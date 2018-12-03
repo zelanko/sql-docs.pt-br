@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509219"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
   Você pode configurar a transformação Pesquisa para usar o modo cache parcial ou sem-cache:  
@@ -61,11 +61,11 @@ ms.locfileid: "47628654"
   
     -   Clique em **Use os resultados de uma consulta SQL**e crie uma consulta na janela **Comando SQL** .  
   
-         — ou —  
+         -ou-  
   
          Clique em **Criar Consulta** para criar uma consulta usando as ferramentas gráficas que o **Construtor de Consultas** fornece.  
   
-         — ou —  
+         -ou-  
   
          Clique em **Procurar** para importar uma instrução SQL de um arquivo.  
   

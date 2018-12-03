@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537920"
 ---
 # <a name="remote-servers"></a>Servidores remotos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612445"
 >  Quando possível, use a Autenticação do Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemplo de segurança de servidor remoto  
- Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive***,* chamado **Joe**.  
+ Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive**_,_ chamado **Joe**.  
   
  O exemplo de código do Transact-SQL a seguir configura `serverSend` para executar RPCs em `serverReceive`.  
   

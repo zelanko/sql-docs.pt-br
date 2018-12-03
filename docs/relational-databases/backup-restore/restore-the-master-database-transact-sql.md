@@ -13,12 +13,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a99c6f0f1e583afe023823ab2e46e3d142a5e7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502202"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47633784"
  O exemplo a seguir restaura o banco de dados `master` na instância do servidor padrão. O exemplo assume que a instância do servidor já está sendo executada no modo de usuário único. O exemplo inicia o `sqlcmd` e executa uma instrução `RESTORE DATABASE` que restaura um backup de banco de dados completo de `master` de um dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S***\<ComputerName>*\\*\<InstanceName>*.  
+>  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S**_\<ComputerName>_\\*\<InstanceName>*.  
   
 ```  
   

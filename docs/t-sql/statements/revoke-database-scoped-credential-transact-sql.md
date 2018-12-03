@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae01b16fd8c5c2694bd7816f220650471f0de3cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ed8697108ee88989e74721922731883538e9c0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661774"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507525"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>Credencial REVOKE no escopo do banco de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica uma permissão que pode ser revogada em uma credencial no escopo do banco de dados. Listada abaixo.  
   
- ON CERTIFICATE **::***credential_name*  
+ ON CERTIFICATE **::**_credential_name_  
  Especifica a credencial no escopo do banco de dados na qual a permissão está sendo revogada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

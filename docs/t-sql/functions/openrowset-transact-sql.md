@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838494"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509961"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, o da
 > CODEPAGE não é uma opção compatível com o Linux.
 
 > [!NOTE]  
->  Recomendamos a especificação de um nome de agrupamento para cada coluna em um arquivo de formato, exceto quando você desejar que a opção 65001 tenha prioridade sobre a especificação de agrupamento/página de código.  
+>  Recomendamos a especificação de um nome de ordenação para cada coluna em um arquivo de formato, exceto quando você desejar que a opção 65001 tenha prioridade sobre a especificação de ordenação/página de código.  
   
 |Valor de CODEPAGE|Descrição|  
 |--------------------|-----------------|  
@@ -201,10 +201,10 @@ Começando pelo [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], o `error
 >  Recomendamos importar apenas os dados XML que usam a opção SINGLE_BLOB, em vez de SINGLE_CLOB e SINGLE_NCLOB, porque só SINGLE_BLOB oferece suporte a todas as conversões de codificação do Windows.  
   
  SINGLE_CLOB  
- A leitura de *data_file* como ASCII retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **varchar(max)**, usando o agrupamento do banco de dados atual.  
+ A leitura de *data_file* como ASCII retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **varchar(max)**, usando a ordenação do banco de dados atual.  
   
  SINGLE_NCLOB  
- A leitura de *data_file* como UNICODE retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **nvarchar(max)**, usando o agrupamento do banco de dados atual.  
+ A leitura de *data_file* como UNICODE retorna o conteúdo como um conjunto de linhas de linha e coluna únicas do tipo **nvarchar(max)**, usando a ordenação do banco de dados atual.  
 
 ### <a name="input-file-format-options"></a>Opções de formato de arquivo de entrada
   
@@ -253,7 +253,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
 >    Mensagem 491, Nível 16, Estado 1, Linha 20    
 >    Um nome de correlação deve ser especificado para o conjunto de linhas em massa na cláusula from.    
   
--   Uma instrução `SELECT...FROM OPENROWSET(BULK...)` consulta diretamente os dados em um arquivo, sem importá-los para uma tabela. As instruções `SELECT…FROM OPENROWSET(BULK...)` também podem listar aliases de colunas em massa, usando um formato de arquivo para especificar nomes de coluna, além de tipos de dados.  
+-   Uma instrução `SELECT...FROM OPENROWSET(BULK...)` consulta diretamente os dados em um arquivo, sem importá-los para uma tabela. As instruções `SELECT...FROM OPENROWSET(BULK...)` também podem listar aliases de colunas em massa, usando um formato de arquivo para especificar nomes de coluna, além de tipos de dados.  
   
 -   O uso de `OPENROWSET(BULK...)` como uma tabela de origem em uma instrução `INSERT` ou `MERGE` importa dados em massa de um arquivo de dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
@@ -275,7 +275,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
   
 |Tipo de dados|Efeito|  
 |---------------|------------|  
-|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento.|  
+|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pela ordenação.|  
 |SQLNCHAR ou SQLNVARCHAR|Os dados são enviados como Unicode.|  
 |SQLBINARY ou SQLVARYBIN|Os dados são enviados sem qualquer conversão.|  
   
