@@ -13,12 +13,12 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527533"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

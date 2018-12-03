@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520206"
 ---
 # <a name="understanding-data-type-conversions"></a>Entendendo conversões de tipo de dados
 
@@ -107,7 +107,7 @@ Há três categorias de conversões que têm suporte pelos métodos setObject do
 
 - **Sem perda (x)**: conversões para casos numéricos em que o tipo setter é o mesmo ou menor do que o tipo de servidor subjacente. Por exemplo, ao chamar setBigDecimal em uma coluna **decimal** do servidor subjacente, nenhuma conversão é necessária. Para casos de numérico para caractere, o tipo de dados Java **numeric** é convertido para uma **String**. Por exemplo, chamar setDouble com um valor de "53" em uma coluna de varchar (50) gerará um valor de caractere "53" na coluna de destino.
 
-- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A precisão sempre é truncada — nunca arredondada — e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
+- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A precisão sempre é truncada (nunca arredondada) e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
 
 - **Dependente de dados (z)**: as conversões de um Java **cadeia de caracteres** tipo subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende do tipo de dados das seguintes condições: O driver envia a **cadeia de caracteres** valor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa conversões, se necessário. Se a propriedade de conexão sendStringParametersAsUnicode for definida como true e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **imagem**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitirá converter **nvarchar** em **imagem** e gerará um SQLServerException. Se sendStringParametersAsUnicode for definido como false e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for  **a imagem**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permitirá a conversão de **varchar** em **imagem** e não gerará uma exceção.
 

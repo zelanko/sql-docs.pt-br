@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536646"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Como usar o Azure Active Directory com o Driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ A caixa de diálogo prompt exibida pelo SQLDriverConnect quando ele solicita as 
 Essas opções correspondem aos mesmos cinco disponíveis na configuração do DSN acima de interface do usuário.
 
 ### <a name="example-connection-strings"></a>Cadeias de conexão de exemplo
-1. Autenticação do SQL Server – sintaxe herdada. Certificado do servidor não for validado, e a criptografia é usada somente se o servidor de aplicá-la. O nome de usuário e a senha é passada na cadeia de conexão.
+1. Autenticação do SQL Server - sintaxe herdada. Certificado do servidor não for validado, e a criptografia é usada somente se o servidor de aplicá-la. O nome de usuário e a senha é passada na cadeia de conexão.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. Autenticação do SQL – nova sintaxe. O cliente solicita criptografia (o valor padrão de `Encrypt` está `true`) e o certificado do servidor obtém validado, independentemente da configuração de criptografia (a menos que `TrustServerCertificate` é definido como `true`). O nome de usuário e a senha é passada na cadeia de conexão.
+2. Autenticação do SQL - nova sintaxe. O cliente solicita criptografia (o valor padrão de `Encrypt` está `true`) e o certificado do servidor obtém validado, independentemente da configuração de criptografia (a menos que `TrustServerCertificate` é definido como `true`). O nome de usuário e a senha é passada na cadeia de conexão.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. Autenticação do Windows (Kerberos no Linux e macOS) integrada usando o SSPI (para SQL Server ou SQL IaaS) – sintaxe atual. Certificado do servidor não for validado, a menos que a criptografia é usada. 
+3. Autenticação do Windows (Kerberos no Linux e macOS) integrada usando o SSPI (para SQL Server ou SQL IaaS) - sintaxe atual. Certificado do servidor não for validado, a menos que a criptografia é usada. 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Somente o driver do Windows_.) Autenticação do Windows integrada usando o SSPI (se o banco de dados de destino estiver no SQL Server ou SQL IaaS) – a nova sintaxe. O cliente solicita criptografia (o valor padrão de `Encrypt` está `true`) e o certificado do servidor obtém validado, independentemente da configuração de criptografia (a menos que `TrustServerCertificate` é definido como `true`). 
+4. (_Somente o driver do Windows_.) Autenticação do Windows integrada usando o SSPI (se o banco de dados de destino estiver no SQL Server ou SQL IaaS) - nova sintaxe. O cliente solicita criptografia (o valor padrão de `Encrypt` está `true`) e o certificado do servidor obtém validado, independentemente da configuração de criptografia (a menos que `TrustServerCertificate` é definido como `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. Autenticação de nome de usuário e senha do AAD (se o banco de dados de destino está no BD SQL do Azure). Obtém Validar certificado do servidor, independentemente da configuração de criptografia (a menos que `TrustServerCertificate` é definido como `true`). O nome de usuário e a senha é passada na cadeia de conexão. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
