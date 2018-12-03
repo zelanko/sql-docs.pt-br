@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.newdqproject.f1
@@ -17,12 +16,12 @@ ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 213de190546d58b16a13e226b4f2e08737b8ce31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787210"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616807"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
 

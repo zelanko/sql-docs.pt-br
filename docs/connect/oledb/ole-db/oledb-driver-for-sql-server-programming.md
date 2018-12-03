@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535129"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programação no OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47810764"
   
  Driver do OLE DB para SQL Server fornece suporte de OLE DB para aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O Driver do OLE DB para SQL Server é um provedor de 2.0 – conformidade de versão do OLE DB.  
+ O Driver do OLE DB para SQL Server é um provedor compatível com 2.0 de versão do OLE DB.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47810764"
   
 -   [Suporte a FILESTREAM](../../oledb/features/filestream-support.md)  
   
--   [Transações](../../oledb/ole-db-transactions/transactions.md)  
+-   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [Erros](../../oledb/ole-db-errors/errors.md)  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543504"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -226,7 +226,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
   
-1.  O usuário emite uma instrução **EXEC***usp_myproc*.  
+1.  O usuário emite uma instrução **EXEC**_usp_myproc_ .  
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   

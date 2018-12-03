@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635434"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537597"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635434"
   
 -   No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute a seguinte consulta:  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635434"
     -   A coluna Rastreamento do SQL é mapeada para um dos campos de dados associados ao evento de Eventos Estendidos.  
   
         > [!NOTE]  
-        >  Cada evento dos Eventos Estendidos tem um conjunto padrão de campos de dados que são incluídos automaticamente no conjunto de resultados.  
+        > Cada evento dos Eventos Estendidos tem um conjunto padrão de campos de dados que são incluídos automaticamente no conjunto de resultados.  
   
     -   A coluna de ação não tem um equivalente significativo dos Eventos Estendidos. Um exemplo disso é a coluna EventClass no Rastreamento do SQL. Essa coluna não é necessária nos Eventos Estendidos porque o nome do evento atende ao mesmo objetivo.  
   

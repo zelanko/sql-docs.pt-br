@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545470"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  As alterações feitas por instruções e blocos atômicos são intercalados são isoladas uns dos outros. Por exemplo, se uma instrução ou bloco atômico faz algumas alterações e, em seguida, gera a execução para outra instrução, a nova instrução não verão as alterações feitas pela primeira instrução. Além disso, quando a primeira instrução retoma a execução, ele não verá as alterações feitas por quaisquer outras instruções. Instruções só verá as alterações que são terminadas e confirmadas antes que a instrução se inicia.  
   
- Uma nova transação de usuário pode ser iniciada dentro da transação do usuário atual usando a instrução BEGIN TRANSACTION – isso é suportado apenas no modo de interoperabilidade para que BEGIN TRANSACTION só pode ser chamado em uma instrução T-SQL e não de dentro de um nativamente armazenado procedimento. Você pode criar uma consulta salva em uma transação usando SAVE TRANSACTION ou uma chamada à API a transação do ponto. Save(save_point_name) para reverter ao ponto de salvamento. Esse recurso também é habilitado somente de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
+ Uma nova transação de usuário pode ser iniciada dentro da transação do usuário atual usando a instrução BEGIN TRANSACTION - isso é suportado apenas no modo de interoperabilidade para que BEGIN TRANSACTION só pode ser chamado em uma instrução T-SQL e não de dentro de um nativamente armazenado procedimento. Você pode criar uma consulta salva em uma transação usando SAVE TRANSACTION ou uma chamada à API a transação do ponto. Save(save_point_name) para reverter ao ponto de salvamento. Esse recurso também é habilitado somente de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
   
  **Índices columnstore e MARS**  
   
