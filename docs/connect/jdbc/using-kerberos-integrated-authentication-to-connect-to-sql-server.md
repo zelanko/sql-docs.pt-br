@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396149"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usando a autenticação integrada do Kerberos para se conectar ao SQL Server
 
@@ -31,7 +31,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguin
 - **useDefaultCcache = true**
 - **moduleBanner = false**
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguintes propriedades para todas as outras Java VMs:
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguintes propriedades para todas as outras VMs Java:
 
 - **useTicketCache = true**
 - **doNotPrompt = true**
