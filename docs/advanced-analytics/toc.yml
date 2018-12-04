@@ -71,7 +71,7 @@ items:
 - name: Tutoriais
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: data
+  - name: Dados de exemplo
     items:
     - name: Conjunto de dados Airline
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -84,64 +84,60 @@ items:
     items:
     - name: Treinar e usar seu primeiro modelo
       href: tutorials/train-score-using-python-in-tsql.md
+    - name: Criar um modelo Python usando revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: Aprender análise no banco de dados
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 – Visualizar dados
+      - name: 1 – Exploração
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 – Criar recursos de dados
+      - name: 2 – Engenharia de recursos
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 – Treinar e salvar em SQL
+      - name: 3 – Treinar e implantar
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 – Prever resultados
+      - name: 4 – Previsões
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: Criar um modelo usando revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: Criar modelos baseados em partição
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Aprender análise no banco de dados
+    - name: Análise interna no banco de dados para desenvolvedores de SQL
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 – Visualizar dados
+      - name: 1 – Exploração
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 – Criar recursos de dados
+      - name: 2 – Engenharia de recursos
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 – Treinar e salvar em SQL
+      - name: 3 – Treinar e implantar
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 – Prever resultados
+      - name: 4 – Previsões
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: Passo a passo de ponta a ponta sobre a ciência de dados
+    - name: Análise interna no banco de dados para cientistas de dados
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: Preparar dados
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: Explorar os dados usando SQL
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: Resumir os dados usando R
+      - name: 1 – Exploração
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: Criar grafos e gráficos
+      - name: 2 – Grafos e gráficos
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-      - name: Criar recursos de dados
+      - name: 3 – Engenharia de recursos
         href: tutorials/walkthrough-create-data-features.md
-      - name: Criar e salvar o modelo
+      - name: 4 – Criar e salvar o modelo
         href: tutorials/walkthrough-build-and-save-the-model.md
-      - name: Implantar e usar o modelo
+      - name: 5 – Implantar e usar o modelo
         href: tutorials/walkthrough-deploy-and-use-the-model.md
-    - name: Aprofundamento com RevoScaleR
+    - name: Aprofundamento no RevoScaleR
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: Criar banco de dados e permissões
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: Criar objetos de dados usando RxSqlServerData
+      - name: Criar um objeto RxSqlServerData
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: Consultar e modificar dados
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: Definir um contexto de computação
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: Criar e executar scripts do R
+      - name: Calcular estatísticas de resumo
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: Visualizar dados
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -151,18 +147,16 @@ items:
         href: tutorials/deepdive-score-new-data.md
       - name: Transformar dados
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: Carregar dados na memória usando rxImport
+      - name: Carregar dados usando rxImport
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: Criar uma tabela usando rxDataStep
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: Executar análise de agrupamento usando rxDataStep
+      - name: Executar análise de agrupamento
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: Analisar dados no contexto de computação local
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: Mover dados entre o SQL Server e o arquivo XDF
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: Criar uma simulação simples
-        href: tutorials/deepdive-create-a-simple-simulation.md
+      - name: Enviar R personalizado usando rxExec
+        href: tutorials/r-tutorial-custom-r-functions.md
 - name: Exemplos
   href: https://github.com/Microsoft/sql-server-samples
 - name: Soluções
@@ -296,13 +290,13 @@ items:
       href: python/what-is-revoscalepy.md
 - name: Recursos
   items:
-  - name: Problemas conhecidos
-    href: known-issues-for-sql-server-machine-learning-services.md
   - name: Notas de versão
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: Solução de problemas
     href: machine-learning-troubleshooting-faq.md
     items:
+    - name: Problemas conhecidos
+      href: known-issues-for-sql-server-machine-learning-services.md
     - name: Coleta de dados
       href: data-collection-ml-troubleshooting-process.md
     - name: Instalar e atualizar erros
@@ -325,9 +319,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
+ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697894"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52717189"

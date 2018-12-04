@@ -132,20 +132,26 @@ items:
         href: ../relational-databases/sql-trace/sql-trace.md
     - name: Ajustar
       items:
+      - name: Assistente para Experimentos de Banco de Dados
+        href: https://www.microsoft.com/download/details.aspx?id=54090
       - name: OLTP in-memory +
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
       - name: Índices +
         href: ../relational-databases/indexes/indexes.md
       - name: Partições +
         href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+      - name: Centro de Desempenho +
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Ferramentas para Monitoramento e Ajuste de Desempenho
+        href: ../relational-databases/performance/performance-monitoring-and-tuning-tools.md
       - name: Resource Governor +
         href: ../relational-databases/resource-governor/resource-governor.md
-      - name: Operadores de plano de execução
+      - name: Referência de operadores físicos e lógicos de plano de execução
         href: showplan-logical-and-physical-operators-reference.md
       - name: Estatística +
         href: ../relational-databases/statistics/statistics.md
-      - name: Desempenho +
-        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Ajustando o Banco de Dados usando a carga de trabalho do Repositório de Consultas
+        href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
   - name: PolyBase +
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Consultar dados
@@ -204,9 +210,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: Exibições do sistema +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 8c23236b2dad073616d1d3a5ee82f475bde0119a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439748"

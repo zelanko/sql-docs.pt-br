@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ed7ba4a6b5b2f69c51f06a4dbf2947d97981c38f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419094"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.  
@@ -32,14 +32,14 @@ O Analytics Platform System não é apenas rápido e escalonável, ele foi proje
   
 ## <a name="parallel-data-warehouse-software-designed-for-massively-parallel-processing"></a>Parallel Data Warehouse, software projetado para o processamento paralelo em massa
   
-Use o PDW como o componente de data warehouse relacional central de suas soluções de business intelligence de ponta a ponta. Com o design de MPP (processamento paralelo em massa) do PDW, as consultas normalmente são concluídas 50 vezes mais rápido do que os data warehouses tradicionais criados em sistemas de gerenciamento de banco de dados de SMP (multiproccessamento simétrico).  
+Use o PDW como o componente de data warehouse relacional central de suas soluções de business intelligence de ponta a ponta. Com o design de MPP (processamento paralelo em massa) do PDW, as consultas normalmente são concluídas 50 vezes mais rapidamente do que os data warehouses tradicionais criados em sistemas de gerenciamento de banco de dados de SMP (multiproccessamento simétrico).  
   
 > [!NOTE]  
 > 50 vezes mais rápido significa que as consultas são concluídas em minutos em vez de horas, em segundos em vez de minutos. Com esse desempenho inovador, os analistas de negócios podem gerar resultados mais amplos mais rápido e podem facilmente executar consultas ad hoc ou fazer drill down nos detalhes. Como resultado, seus negócios podem tomar decisões melhores mais rápido.  
   
 Além de alcançar o desempenho de consulta inovador, o PDW facilita:  
   
--   O aumento do data warehouse para qualquer lugar de alguns terabytes até 6 petabytes de dados em um único dispositivo adicionando “unidades de escala” ao sistema existente  
+-   Adicione “unidades de escala” ao sistema existente para aumentar de alguns terabytes até 6 petabytes de dados em seu data warehouse em um único dispositivo  
   
 -   A confiança de que seus dados estarão disponíveis quando você precisar deles devido à alta redundância e à alta disponibilidade incorporadas  
   
