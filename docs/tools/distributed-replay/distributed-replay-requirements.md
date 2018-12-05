@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527646"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51666275"
   
 -   Um único arquivo de rastreamento que tem a extensão `.trc` .  
   
--   Um conjunto de arquivos de rastreamento de substituição que siga a convenção de nomenclatura de substituição de arquivo, por exemplo: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`... `<TraceFile>_n.trc`.  
+-   Um conjunto de arquivos de rastreamento de substituição que siga a convenção de nomenclatura de substituição de arquivo, por exemplo: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, ... `<TraceFile>_n.trc`.  
   
 ### <a name="input-trace-events-and-columns"></a>Eventos e colunas de rastreamento de entrada  
  Os dados de rastreamento de entrada devem conter eventos e colunas específicos a serem reproduzidos pelo Distributed Replay. O modelo **TSQL_Replay** no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contém todas as colunas e eventos necessários, além de informações extras. Para obter mais informações sobre esse modelo, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  

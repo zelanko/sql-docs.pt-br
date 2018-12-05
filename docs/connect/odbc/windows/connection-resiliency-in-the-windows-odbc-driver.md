@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545294"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600856"
 > [!IMPORTANT]  
 >  O recurso de resiliência de conexão tem suporte em versões de servidor do Banco de Dados SQL do Microsoft Azure e do SQL Server 2014 (e posteriores).  
   
- Para obter informações adicionais sobre a resiliência de conexão ociosa, confira [Artigo técnico – Resiliência de conexão ociosa](https://go.microsoft.com/fwlink/?LinkId=393996).  
+ Para saber mais sobre a resiliência de conexão ociosa, veja [Artigo técnico – Resiliência de conexão ociosa](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Para controlar o comportamento de reconexão, o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows tem duas opções:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51600856"
   
 -   Intervalo de repetição de conexão.  
   
-     O intervalo de repetição de conexão especifica o número de segundos entre cada tentativa de conexão. Os valores válidos são de 1 a 60. O tempo total para reconectar não pode exceder o tempo limite da conexão (SQL_ATTR_QUERY_TIMEOUT em SQLSetStmtAttr). O valor padrão é 10 segundos.  
+     O intervalo de repetição de conexão especifica o número de segundos entre cada tentativa de conexão. Os valores válidos são 1 a 60. O tempo total para reconectar não pode exceder o tempo limite da conexão (SQL_ATTR_QUERY_TIMEOUT em SQLSetStmtAttr). O valor padrão é 10 segundos.  
   
      Você pode modificar o intervalo de repetição de conexão ao:  
   

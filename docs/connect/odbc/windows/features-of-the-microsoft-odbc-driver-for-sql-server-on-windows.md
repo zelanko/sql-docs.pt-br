@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536638"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Recursos do Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -36,9 +36,9 @@ O ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] c
   
 Esta versão do ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contém os seguintes recursos novos:  
   
-### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opção – l de BCP.exe para especificar um tempo limite de logon
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>BCP.exe -l opção para especificar um tempo limite de logon
  
-A opção –l especifica o número de segundos antes que um logon do `bcp.exe` no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp.exe` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito. Um tempo limite de logon de menos de (aproximadamente) 10 segundos não é confiável.  
+A opção -l especifica o número de segundos antes que um logon `bcp.exe` em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp.exe` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito. Um tempo limite de logon de menos de (aproximadamente) 10 segundos não é confiável.  
   
 ### <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver  
 O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obter mais informações, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
@@ -53,7 +53,7 @@ Para garantir que os aplicativos permaneçam conectados a um Banco de Dados SQL 
 
 Na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, o `-y0` opção obter `sqlcmd.exe` causou a saída seja truncada em 1 MB se a largura da exibição era 0.
   
-Começando com o ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], não há nenhum limite à quantidade de dados recuperados em uma única coluna quando `–y0` é especificado. O `sqlcmd.exe` agora envia colunas como fluxos de até 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] máximo para o tipo de dados).  
+Começando com o ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], não há nenhum limite à quantidade de dados recuperados em uma única coluna quando `-y0` é especificado. O `sqlcmd.exe` agora envia colunas como fluxos de até 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] máximo para o tipo de dados).  
   
 Outra diferença é que especificar ambos `-h` e `-y0` agora produz um erro relatando que as opções são incompatíveis. `-h`, que especifica o número de linhas a imprimir entre cabeçalhos de coluna e nunca foi compatível com `-y0`, foi ignorado, embora nenhum cabeçalho tenha sido impresso.
   

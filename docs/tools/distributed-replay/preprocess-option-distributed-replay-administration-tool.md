@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65a214e1280dd47609bbef326f082dbf87357cf9
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502709"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,13 +77,13 @@ dreplay preprocess [-m controller] -i input_trace_file
  Neste exemplo, o estágio de pré-processamento é iniciado com todas as configurações padrão. O valor `localhost` indica que o serviço do controlador está em execução no mesmo computador que a ferramenta de administração. O parâmetro *input_trace_file* especifica o local dos dados de rastreamento de entrada, `c:\mytrace.trc`. Como não há filtragem de arquivo de rastreamento envolvida, o parâmetro **-c** deve ser especificado.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  Neste exemplo, o estágio de pré-processamento é iniciado e um arquivo de configuração de pré-processamento modificado é especificado. Ao contrário do exemplo anterior, o parâmetro **-c** é usado para apontar para o arquivo de configuração modificado, caso tenha armazenado esse arquivo em um local diferente. Por exemplo:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  No arquivo de configuração de pré-processamento modificado, é adicionada uma condição de filtro que filtra sessões de sistema durante reprodução distribuída. O filtro é adicionado modificando o elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento, `DReplay.exe.preprocess.config`.  

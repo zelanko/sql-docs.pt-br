@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509048"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ A cláusula GROUP BY é compatível com todos os recursos de GROUP BY incluídos
   
 -   Conjuntos de agrupamentos não são permitidos na cláusula GROUP BY, a menos que sejam parte de uma lista de GROUPING SETS explícita. Por exemplo, `GROUP BY Column1, (Column2, ...ColumnN`) é permitido no padrão, mas não no Transact-SQL.  O Transact-SQL é compatível com `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` e `GROUP BY Column1, Column2, ... ColumnN`, que são semanticamente equivalentes. Esses são semanticamente equivalentes ao exemplo `GROUP BY` anterior. Isso é para evitar a possibilidade de que `GROUP BY Column1, (Column2, ...ColumnN`) seja ser interpretado incorretamente como `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, que não são semanticamente equivalentes.  
   
--   Conjuntos de agrupamentos não são permitidos em conjuntos de agrupamentos. Por exemplo, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` é permitido no padrão SQL-2006, mas não no Transact-SQL. O Transact-SQL permite `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` ou `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, que são semanticamente equivalentes ao primeiro exemplo de GROUP BY e têm uma sintaxe mais clara.  
+-   Conjuntos de agrupamentos não são permitidos em conjuntos de agrupamentos. Por exemplo, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` é permitido no padrão SQL-2006, mas não no Transact-SQL. O Transact-SQL permite `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` ou `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, que são semanticamente equivalentes ao primeiro exemplo de GROUP BY e têm uma sintaxe mais clara.  
   
 -   GROUP BY [ALL/DISTINCT] só é permitido em uma cláusula GROUP BY simples que contém expressões de coluna. Ele não é permitido com as construções GROUPING SETS, ROLLUP, CUBE, WITH CUBE ou WITH ROLLUP. ALL é o padrão e está implícito. Ele também só é permitido na sintaxe compatível com versões anteriores.
   
