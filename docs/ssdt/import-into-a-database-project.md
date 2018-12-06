@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400389"
 ---
 # <a name="import-into-a-database-project"></a>Importar para um projeto de banco de dados
 Você pode usar Importar para popular um projeto com novos objetos de um banco de dados dinâmico ou um .dacpac, ou para atualizar objetos existentes no seu projeto com uma nova definição de um script. Há algumas diferenças de comportamento que devem ser observadas entre esses três caminhos, que são descritas a seguir.  

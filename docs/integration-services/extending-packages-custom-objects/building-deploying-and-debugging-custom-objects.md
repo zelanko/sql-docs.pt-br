@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502876"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
   Depois de escrever o código de um objeto personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve compilar o assembly, implantá-lo e integrá-lo ao Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] para disponibilizar seu uso em pacotes, além de testá-lo e depurá-lo.  
@@ -62,7 +62,7 @@ ms.locfileid: "47826524"
 ##  <a name="building"></a> Compilando o assembly  
  Depois de assinar o projeto, você deve compilar ou recompilar o projeto ou a solução usando os comandos disponíveis no menu **Compilar** do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sua solução pode conter um projeto separado para uma interface do usuário personalizada, que também deve ser assinada com um nome forte e pode ser compilada ao mesmo tempo.  
   
- O método mais conveniente para efetuar as próximas duas etapas – implantação e instalação do assembly no cache de assembly global – é gerar o script dessas etapas como um evento pós-compilação em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Os eventos de build estão disponíveis na página **Compilar** de Propriedades do Projeto para um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e na página **Eventos de Build** para um projeto em C#. O caminho completo é obrigatório para utilitários de prompt de comando, como **gacutil.exe**. São necessárias aspas nos caminhos que contêm espaços e nas macros, como $ (TargetPath) que se expande para caminhos que contêm espaços.  
+ O método mais conveniente para realizar as próximas duas etapas – implantação e instalação do assembly no cache de assembly global – é gerar o script dessas etapas como um evento pós-build em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Os eventos de build estão disponíveis na página **Compilar** de Propriedades do Projeto para um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e na página **Eventos de Build** para um projeto em C#. O caminho completo é obrigatório para utilitários de prompt de comando, como **gacutil.exe**. São necessárias aspas nos caminhos que contêm espaços e nas macros, como $ (TargetPath) que se expande para caminhos que contêm espaços.  
   
  Eis um exemplo de uma linha de comando de evento pós-compilação para um provedor de log personalizado:  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270179"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521454"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -136,11 +136,11 @@ O PolyBase **não** oferece suporte a relações de confiança entre o AD e o MI
  0020: 1F A0 03 02 01 02 A1 18 30 16 1B 06 6B 72 62 74 ........0...krbt 
  0030: 67 74 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D gt..CONTOSO.COM 
  0040: A3 82 01 08 30 82 01 04 A0 03 02 01 10 A1 03 02 ....0........... 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0140: 67 6D F6 41 6C EB E0 C3 3A B2 BD B1 gm.Al...:... 
  Client Principal = admin_user@CONTOSO.COM 
  Server Principal = krbtgt/CONTOSO.COM@CONTOSO.COM 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  [2017-04-25 21:34:34,500] INFO 1639[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
 ```
 
@@ -178,7 +178,7 @@ Um segundo despejo hexadecimal indica que o SQL Server utilizou o TGT com êxito
  0050: 15 73 68 61 73 74 61 2D 68 64 70 32 35 2D 30 30 .hadoop-hdp25-00 
  0060: 2E 6C 6F 63 61 6C A3 82 01 1A 30 82 01 16 A0 03 .local....0..... 
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
  0250: C4 . 
 ```
@@ -204,7 +204,7 @@ Se a ferramenta foi executada e as propriedades de arquivo do caminho de destino
 |javax.security.auth.login.LoginException<br>Cliente não encontrado no banco de dados do Kerberos (6) – CLIENT_NOT_FOUND |    O administrador de Entidade de Serviço fornecido não existe no realm especificado em core-site.xml.|
 | javax.security.auth.login.LoginException<br> Houve uma falha na soma de verificação |    O administrador de Entidade de Serviço existe, mas a senha está incorreta. |
 | Nome de configuração nativa: C:\Windows\krb5.ini<br>Carregado da configuração nativa | Não é uma exceção, mas indica que o krb5LoginModule do Java detectou configurações de cliente personalizadas no computador. Verifique as configurações de cliente personalizadas que podem estar causando o problema. |
-| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Nome da entidade de segurança ilegal admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: nenhuma regra foi aplicada a admin_user@CONTOSO.COM | Adicione a propriedade "hadoop.security.auth_to_local" ao core-site.xml com as regras apropriadas por cluster Hadoop. |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Nome da entidade de segurança ilegal admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: nenhuma regra foi aplicada a admin_user@CONTOSO.COM | Adicione a propriedade “hadoop.security.auth_to_local” ao core-site.xml com as regras apropriadas por cluster Hadoop. |
 | java.net.ConnectException<br>A tentativa de acessar o sistema de arquivos externo no URI: hdfs://10.193.27.230:8020<br>Houve uma falha na chamada de IAAS16981207/10.107.0.245 to 10.193.27.230:8020 na exceção de conexão | A autenticação do KDC foi bem-sucedida, mas não conseguiu acessar o nó de nome do Hadoop. Verifique o IP e a porta do nó de nome. Verifique se que o firewall está desabilitado no Hadoop. |
 | java.io.FileNotFoundException<br>O arquivo não existe: /test/data.csv |    A autenticação foi bem-sucedida, mas o local especificado não existe. Verifique o caminho ou teste com a raiz "/" primeiro. |
 
@@ -229,6 +229,6 @@ No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle >
 ## <a name="see-also"></a>Confira também
 
 [Integrar o PolyBase com o Cloudera usando a Autenticação do Active Directory](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
-[Guia do Cloudera para a Configuração do Kerberos para CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
-[Guia do Hortonworks para a Configuração do Kerberos para HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
+[Guia do Cloudera para a configuração do Kerberos para CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
+[Guia do Hortonworks para a configuração do Kerberos para HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [Solucionando problemas do PolyBase](polybase-troubleshooting.md)

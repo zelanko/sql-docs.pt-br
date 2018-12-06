@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513677"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar um grupo de disponibilidade para transações distribuídas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] dá suporte a todas as t
 Para garantir as transações distribuídas, o grupo de disponibilidade deve ser configurado para registrar bancos de dados como gerenciadores de recursos de transação distribuída.  
 
 >[!NOTE]
->O [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 e posteriores dão suporte completo para transações distribuídas em grupos de disponibilidade. Nas versões do [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] anteriores ao Service Pack 2, não há suporte para as transações distribuídas entre bancos de dados (ou seja, transação usando bancos de dados na mesma instância do SQL Server) que envolvem um banco de dados em um grupo de disponibilidade. O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] não tem essa limitação. 
+>O [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 e posteriores dão suporte completo para transações distribuídas em grupos de disponibilidade. Nas versões do [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] anteriores ao Service Pack 2, não há compatibilidade com as transações distribuídas entre bancos de dados (ou seja, transação usando bancos de dados na mesma instância do SQL Server) que envolvem um banco de dados em um grupo de disponibilidade. O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] não tem essa limitação. 
 >
 >No [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], as etapas de configuração são as mesmas do [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -192,4 +192,4 @@ Para obter mais informações sobre como resolver transações incertas, consult
 
 [Dando suporte a transações XA](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[Como funciona: Sessão/SPID (–2) para transações do DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[Como funciona: Sessão/SPID (-2) para transações do DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

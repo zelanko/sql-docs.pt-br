@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411513"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ Para executar uma atualização sem interrupção de um grupo de disponibilidade
 
 >[!IMPORTANT]
 >- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
->- **Recomendação**: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Depois de tudo for sincronizado, salve uma captura de tela dos estados de cada réplica. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas, se algo der errado. 
+>- **Recomendação**: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Depois de tudo for sincronizado, salve uma captura de tela dos estados de cada réplica. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Diagrama de exemplo de uma atualização sem interrupção de um grupo de disponibilidade distribuído
@@ -223,7 +223,7 @@ Se uma terceira réplica existisse em cada grupo de disponibilidade, ela seria a
 
 >[!IMPORTANT]
 >- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
->- Recomendação: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Após tudo ser sincronizado, tire uma captura de tela e salve-a. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas, se algo der errado. 
+>- Recomendação: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Após tudo ser sincronizado, tire uma captura de tela e salve-a. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Etapas especiais para replicação ou captura de dados de alteração

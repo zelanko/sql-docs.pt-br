@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c9cceb220a5ccf5aac86c7bf52540e835adcf19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b6add721ab292799b0de72aff3dc4e8d0cd218f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657214"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504309"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar dados de formato de caractere e nativo de versões anteriores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,8 +54,8 @@ ms.locfileid: "47657214"
   
  **UDT indica um tipo definido pelo usuário.  
   
-## <a name="exporting-using-v-80"></a>Exportar usando – V 80  
- Quando você exporta dados em massa usando a opção **–V80** , **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML e dados UDT no modo nativo são armazenados com um prefixo de 4 bytes, como dados **text**, **image**e **ntext** , em vez de um prefixo de 8 bytes que é o padrão para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
+## <a name="exporting-using--v-80"></a>Exportar usando – V 80  
+ Quando você exporta dados em massa usando a opção **-V80**, dados **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML e UDT no modo nativo são armazenados com um prefixo de 4 bytes, como dados de **texto**, **imagem** e **ntext**, em vez de com um prefixo de 8 bytes, que é o padrão para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
 ## <a name="copying-date-values"></a>Copiando valores de dados  
  O**bcp** usa a API de cópia em massa do ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  

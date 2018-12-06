@@ -13,12 +13,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 323a630d1c3178f079319e00069e311b054f982a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833184"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505263"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas de parâmetros (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Onde você pode utilizar parâmetros  
-Você pode utilizar parâmetros como espaços reservados para valores literais – tanto para valores de texto quanto numéricos. Geralmente, os parâmetros são utilizados como espaços reservados em critérios de pesquisa para linhas individuais ou para grupos (ou seja, nas cláusulas WHERE ou HAVING de uma instrução SQL).  
+Você pode usar parâmetros como espaços reservados para valores literais – tanto para valores de texto quanto numéricos. Geralmente, os parâmetros são utilizados como espaços reservados em critérios de pesquisa para linhas individuais ou para grupos (ou seja, nas cláusulas WHERE ou HAVING de uma instrução SQL).  
   
 Você pode utilizar parâmetros como espaços reservados em expressões. Por exemplo, você pode querer calcular preços com desconto fornecendo um valor de desconto diferente a cada vez que executar uma consulta. Para fazer isso, você poderá especificar a seguinte expressão:  
   

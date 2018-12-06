@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d223ce438087e4fdc017f09b9cdcabfde4a7fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b29230d0224ecae384626d9d78ea5c60f37ac226
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599128"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394789"
 ---
 # <a name="validate-a-sql-server-installation"></a>Validar uma instalação do SQL Server
 
@@ -32,7 +32,7 @@ ms.locfileid: "47599128"
   
  O relatório de descoberta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é salvo em %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<last Setup Session\>.  
   
- Você também pode gerar o relatório de descoberta através da linha de comando. Execute “Setup.exe /Action=RunDiscovery” em um prompt de comando. Se você adicionar “/q” à linha de comando acima, nenhuma interface do usuário será mostrada, mas o relatório ainda será criado em %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<last Setup Session\>.  
+ Você também pode gerar o relatório de descoberta através da linha de comando. Execute "Setup.exe /Action=RunDiscovery" em um prompt de comando. Se você adicionar "/q" à linha de comando acima, nenhuma interface do usuário será mostrada, mas o relatório ainda será criado em %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<última Sessão de Configuração\>.  
   
 ## <a name="see-also"></a>Confira também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

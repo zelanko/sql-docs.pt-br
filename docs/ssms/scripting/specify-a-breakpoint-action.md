@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642625"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398829"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51642625"
   
     4.  $FUNCTION retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $FUNCTION retornará o nome do arquivo de script que está sendo editado.  
   
-    5.  $PID e $PNAME retornam a ID e o nome do processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados onde o [!INCLUDE[tsql](../../includes/tsql-md.md)] está em execução. $PID retorna a mesma ID que SERVERPROPERTY(‘ProcessID’), exceto pelo fato de que $PID é um valor hexadecimal enquanto SERVERPROPERTY(‘ProcessID’) é um valor decimal.  
+    5.  $PID e $PNAME retornam a ID e o nome do processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados onde o [!INCLUDE[tsql](../../includes/tsql-md.md)] está em execução. $PID retorna a mesma ID que SERVERPROPERTY('ProcessID'), exceto pelo fato de que $PID é um valor hexadecimal enquanto SERVERPROPERTY('ProcessID') é um valor decimal.  
   
     6.  $TID e $TNAME retornam a ID e o nome do thread do sistema operacional que está executando o lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] . O thread é associado ao processo que executa a instância do Mecanismo de Banco de Dados. $TID retorna o mesmo valor que SELECT kpid FROM sys.sysprocesses, WHERE spid = @@SPID; porém, $TID é um valor hexadecimal, enquanto kpid é um valor decimal.  
   

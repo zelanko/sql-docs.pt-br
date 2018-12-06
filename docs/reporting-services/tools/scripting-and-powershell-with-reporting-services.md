@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da1568dfbdee3c772c583569d04d31cba65f6458
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f9bee1c43bd086f3d32f514f4f2b51c5986b5f38
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028655"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414673"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell com o Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a uma ampla variedade de cenários de desenvolvimento e gerenciamento por meio de script, incluindo o utilitário de linha de comando rs.exe, os cmdlets do PowerShell para servidores de relatório no modo SharePoint e aproveitando o modelo de objeto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do PowerShell para os modos nativo e SharePoint.  
@@ -52,7 +52,7 @@ ms.locfileid: "50028655"
   
 -   [Utilize o PowerShell para criar uma VM do Azure com um servidor de relatório no modo nativo](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
--   Consulte a seção "Acessar as classes WMI usando o PowerShell" em [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   Veja a seção "Acessar as classes WMI usando o PowerShell" em [Acessar o Provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 
 ## <a name="rsexe-scripting-samples"></a>Exemplos de script RS.exe  

@@ -13,12 +13,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503464"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47772004"
 > [!NOTE]  
 >  A maioria das edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] só dão suporte ao espelhamento de banco de dados síncrono ("somente segurança completa"). Para obter informações sobre as edições que dão suporte completo ao espelhamento de banco de dados, consulte “Alta disponibilidade (AlwaysOn)” em [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
- Quando a segurança de transação está definida como OFF, a sessão de espelhamento de banco de dados opera de maneira assíncrona. A operação assíncrona dá suporte apenas a um modo de operação — modo de alto desempenho. Esse modo aumenta desempenho às custas de alta disponibilidade. O modo de alto desempenho usa apenas o servidor principal e o servidor espelho. Problemas no servidor espelho nunca causam impacto no servidor principal. Com a perda do servidor principal, o banco de dados espelho fica marcado como DESCONECTADO, mas está disponível em espera passiva.  
+ Quando a segurança de transação está definida como OFF, a sessão de espelhamento de banco de dados opera de maneira assíncrona. A operação assíncrona permite apenas a um modo de operação, o modo de alto desempenho. Esse modo aumenta desempenho às custas de alta disponibilidade. O modo de alto desempenho usa apenas o servidor principal e o servidor espelho. Problemas no servidor espelho nunca causam impacto no servidor principal. Com a perda do servidor principal, o banco de dados espelho fica marcado como DESCONECTADO, mas está disponível em espera passiva.  
   
  O modo de alto desempenho oferece suporte apenas a uma forma de troca de função: serviço forçado (com possível perda de dados), que usa o servidor espelho como um servidor em espera passiva. O serviço forçado é uma das possíveis respostas à falha do servidor principal. Como a perda de dados é possível, devem ser consideradas outras alternativas antes de forçar serviço ao espelho. Para obter mais informações, consulte [Respondendo à falha do principal](#WhenPrincipalFails), mais adiante neste tópico.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47772004"
   
  Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. A testemunha simplesmente oferece suporte a failover automático verificando se o servidor principal está funcionando. O servidor espelho apenas iniciará o failover automático se o espelho e a testemunha permanecerem conectados um ao outro depois de serem desconectados do servidor principal.  
   
- Quando uma testemunha é definida, a sessão exige *quorum*— uma relação entre pelo menos duas instâncias de servidor que permite disponibilizar o banco de dados. Para obter mais informações, veja [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md) e [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Quando uma testemunha é definida, a sessão exige *quorum* – uma relação entre pelo menos duas instâncias de servidor que permita disponibilizar o banco de dados. Para obter mais informações, veja [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md) e [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  O failover automático exige as seguintes condições:  
   

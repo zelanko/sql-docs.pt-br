@@ -20,12 +20,12 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b75a298bf86bd1a87308e8136b531c323307e4d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f8073ee3b527602d8d9d750923547b8fc5259d75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514097"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "43811342"
   
 2.  Expanda o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no nó do banco de dados do qual o DAC é extraído, aponte para **Tarefas**e selecione **Extrair Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no nó do banco de dados do qual o DAC é extraído, aponte para **Tarefas** e selecione **Extrair Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   

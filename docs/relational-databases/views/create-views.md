@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28e84b82a069515330e58ea5a15fd321ce77a11b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514639"
 ---
 # <a name="create-views"></a>Criar exibições
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51660245"
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados em que você deseja criar a nova exibição.  
   
-2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição…**.  
+2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição...**.  
   
 3.  Na caixa de diálogo **Adicionar Tabela** , selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: Tabelas, Exibições, Funções e Sinônimos.  
   

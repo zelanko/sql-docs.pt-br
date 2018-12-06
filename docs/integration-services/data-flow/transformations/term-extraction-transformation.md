@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507468"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -57,7 +57,7 @@ ms.locfileid: "51638943"
 ## <a name="exclusion-terms"></a>Exclusão de termos  
  Além disso, a transformação Extração de Termos pode referir-se a uma coluna em uma tabela que contenha termos de exclusão, significando termos que a transformação não deve considerar ao extrair termos de um conjunto de dados. Isso é útil quando um conjunto de termos já foi identificado como inconsequente em um negócio específico e na indústria, porque o termo ocorre com uma frequência tão alta que se torna uma palavra de ruído. Por exemplo, ao extrair termos de um conjunto de dados que contém informações de apoio ao cliente sobre uma marca específica de carros, a própria marca poderá ser excluída porque a marca é mencionada com muita frequência e significativa. Portanto, os valores na lista de exclusão devem ser personalizados conforme o conjunto de dados com o qual está trabalhando.  
   
- Quando você acrescenta um termo à lista de exclusão, todos os termos - palavras ou frases nominais - que contenham o termo são também excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados*então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados*e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
+ Quando você adiciona um termo à lista de exclusões, todos os termos, como palavras ou frases nominais, que contêm o termo também são excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados*então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados*e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
   
  A tabela de referência deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do Access. A transformação Extração de Termos utiliza uma conexão OLE DB separada para conectar-se à tabela de referência. Para obter mais informações, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51638943"
   
 -   Caracteres 0x0d de quebra de linha ASCII (retorno de carro) e 0x0a (avanço de linha). Para usar esse caractere como um limite de orações, deve haver dois ou mais caracteres de quebra de linha consecutivos.  
   
--   Hífens (-). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
+-   Hifens (-). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
   
 -   Sublinhado (_). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638943"
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   Os caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+-   Os caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  

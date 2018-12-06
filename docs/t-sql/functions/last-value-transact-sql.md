@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e268c036ffb1805c968017a566b2e319507490e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f145386e82132316484beb6757c47007d8144f11
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839725"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391921"
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -103,7 +103,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Usando FIRST_VALUE e LAST_VALUE em uma expressão computada  
  O exemplo a seguir usa as funções FIRST_VALUE e LAST_VALUE em expressões computadas para mostrar a diferença entre os valores de cota de vendas para o trimestre atual e o primeiro e último trimestre do ano respectivamente para um determinado número de funcionários. A função FIRST_VALUE retorna o valor da cota de vendas do primeiro trimestre do ano e subtrai do valor da cota de vendas do trimestre atual. Ele é retornado na coluna derivada intitulada DifferenceFromFirstQuarter. Durante o primeiro trimestre de um ano, o valor da coluna de DifferenceFromFirstQuarter é 0. A função LAST_VALUE retorna o valor da cota de vendas do último trimestre do ano, e o subtrai do valor da cota de vendas para o trimestre atual. Ele é retornado na coluna derivada intitulada DifferenceFromLastQuarter. Para o último trimestre do ano, o valor da coluna de DifferenceFromLastQuarter é 0.  
   
- A cláusula "RANGE BETWEEN CURRENT ROW AND  UNBOUNDED FOLLOWING" é necessária neste exemplo para os valores diferentes de zero a serem retornados na coluna DifferenceFromLastQuarter, conforme mostrado abaixo. O intervalo padrão é "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". Neste exemplo, usar aquele intervalo padrão (ou não incluir um intervalo, resultando no padrão que está sendo usado) resultaria em zeros retornados na coluna de DifferenceFromLastQuarter. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ A cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" é necessária neste exemplo para os valores diferentes de zero a serem retornados na coluna DifferenceFromLastQuarter, conforme mostrado abaixo. O intervalo padrão é "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". Neste exemplo, usar aquele intervalo padrão (ou não incluir um intervalo, resultando no padrão que está sendo usado) resultaria em zeros retornados na coluna de DifferenceFromLastQuarter. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

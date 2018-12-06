@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628424"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391539"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 |-------------------------|-------------------------|  
 |Compactação de dados para tabelas com otimização de memória.|Você pode usar o recurso de compactação de dados para ajudar a compactar os dados dentro de um banco de dados e ajudar reduzir o tamanho do banco de dados. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |O particionamento de tabelas com otimização de memória, índices de HASH e índices não clusterizados.|Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).|  
-| Replicação | As configurações de replicação, ao contrário da replicação transacional para tabelas com otimização de memória em assinantes, são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória.<br /><br />Se houver um grupo de arquivos com otimização de memória, não haverá suporte para replicação com sync_mode=’database snapshot’.<br /><br />Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
+| Replicação | As configurações de replicação, ao contrário da replicação transacional para tabelas com otimização de memória em assinantes, são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória.<br /><br />Se houver um grupo de arquivos com otimização de memória, não haverá suporte para replicação com sync_mode='database snapshot'.<br /><br />Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Espelhamento|Não há suporte para o espelhamento de banco de dados para bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA. Para obter mais informações sobre espelhamento, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar log|A recompilação do log, tanto ao anexar quanto ao ALTERAR O BANCO DE DADOS, não tem suporte para bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
 |Servidor vinculado|Você não pode acessar servidores vinculados na mesma consulta ou transação como tabelas com otimização de memória. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  

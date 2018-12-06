@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 45508c91bc75eb42be8cbd7c2c807c81e75c8075
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 6eb56d90c86397de22926f84083b26d754ca1eff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508439"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Portal da Web (Construtor de Relatórios e SSRS)
   O Gerenciador de Relatórios é uma ferramenta com base na Web que inclui recursos para exibir e gerenciar relatórios. Faz parte de uma instalação do servidor de relatórios. Para abrir o Gerenciador de Relatórios, digite uma URL do Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obter mais informações sobre como uma URL do Gerenciador de Relatórios deve ser configurada no servidor de relatório, contate o administrador de sistema. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -48,7 +48,7 @@ Faixa de Opções do Gerenciador de Relatórios
   
 -   Para procurar por itens no Gerenciador de Relatórios, digite uma cadeia de caracteres de pesquisa na caixa de texto **Pesquisar** na parte superior da página. **(2)** na imagem anterior. As pesquisas começam no nó superior na hierarquia da pasta e continua até cada ramificação. Se você não tiver permissão para acessar uma ramificação específica, essa ramificação será ignorada. Isso se aplica às pastas Meus Relatórios que pertencem a outros usuários e a outras pastas que geralmente não estão disponíveis. Somente os relatórios e itens para os quais você tem permissão para exibir são incluídos nos resultados da pesquisa.  
   
--   Para procurar por um item por nome ou descrição, especifique toda ou parte do texto que deseja coincidir. A cadeia de caracteres de pesquisa não faz distinção entre maiúsculas e minúsculas. Você não pode usar os operadores de pesquisa como símbolos de mais (+) ou menos (-) para exigir ou excluir critérios de pesquisa.  
+-   Para procurar por um item por nome ou descrição, especifique toda ou parte do texto que deseja coincidir. A cadeia de caracteres de pesquisa não faz distinção entre maiúsculas e minúsculas. Você não pode usar os operadores de pesquisa, como símbolos de mais (+) ou menos (-), para exigir ou excluir critérios de pesquisa.  
   
 -   Para procurar um texto específico em um relatório, use a barra de ferramentas na parte superior do relatório.  
   

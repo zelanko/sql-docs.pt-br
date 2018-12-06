@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515118"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "51813719"
   
 -   *Stylesheet*: especifica uma folha de estilos a ser aplicada ao Visualizador de HTML.  
   
--   Configuração de Informações sobre o Dispositivo: especifica uma configuração de informações de dispositivo no formulário de `rc:tag=value`, em que *tag* é o nome de uma configuração de informações de dispositivo específicas da extensão de renderização usada atualmente (consulte a descrição do parâmetro *Format* ). Por exemplo, você pode usar a configuração de informações sobre o dispositivo *OutputFormat* para que a extensão de renderização de IMAGE renderize o relatório em uma imagem JPEG usando os seguintes parâmetros na cadeia de caracteres de acesso à URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obter mais informações sobre todas as configurações de informações sobre o dispositivo específicas da extensão, consulte [Configurações de informações sobre o dispositivo para extensões de renderização &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Configuração de Informações sobre o Dispositivo: especifica uma configuração de informações de dispositivo no formulário de `rc:tag=value`, em que *tag* é o nome de uma configuração de informações de dispositivo específicas da extensão de renderização usada atualmente (consulte a descrição do parâmetro *Format* ). Por exemplo, você pode usar a configuração de informações sobre o dispositivo *OutputFormat* para que a extensão de renderização de IMAGE renderize o relatório em uma imagem JPEG usando os seguintes parâmetros na cadeia de caracteres de acesso à URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obter mais informações sobre todas as configurações de informações sobre o dispositivo específicas da extensão, consulte [Configurações de informações sobre o dispositivo para extensões de renderização &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandos do servidor de relatório (rs:)  
  Os comandos do servidor de relatório são prefixados com *rs:* e são usados para se destinar ao servidor de relatório:  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813406"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417277"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -142,7 +142,7 @@ ms.locfileid: "51813406"
   
 7.  Na **URL do Gerenciador de Relatórios**, digite uma URL para uma instância do Gerenciador de Relatórios associada ao servidor de relatório de modo nativo que deseja acessar. Por padrão, uma URL do Gerenciador de Relatórios tem a seguinte sintaxe: **https://\<nomedoservidor>/reports**.  
   
-8.  Em **Caminho do Relatório**, especifique uma barra invertida, seguida pelo caminho da pasta e o nome do relatório. **Not** inclua o nome do servidor nem o diretório virtual do Gerenciador de Relatórios. Por exemplo, para abrir o relatório de Vendas de Empresa na pasta do Aventure Works, especifique **/Adventure Works/Vendas da Empresa**. Veja a seguir outro exemplo no qual o relatório 'Produtos' está na pasta raiz **/Produtos**no servidor de relatório.  
+8.  Em **Caminho do Relatório**, especifique uma barra invertida, seguida pelo caminho da pasta e o nome do relatório. **Not** inclua o nome do servidor nem o diretório virtual do Gerenciador de Relatórios. Por exemplo, para abrir o relatório de 'Vendas de Empresa' na pasta do Aventure Works, especifique **/Adventure Works/Vendas da Empresa**. Veja a seguir outro exemplo no qual o relatório 'Produtos' está na pasta raiz **/Produtos**no servidor de relatório.  
   
 9. Clique em **OK**.  
   

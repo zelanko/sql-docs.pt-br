@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518334"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Cria um índice relacional em uma tabela ou exibição. Também chamado de um índice rowstore porque é um índice de árvore B clusterizado ou não clusterizado. Você pode criar um índice rowstore antes que haja dados na tabela. Use um índice rowstore para melhorar o desempenho de consulta, especialmente quando as consultas forem selecionadas de colunas específicas ou exigirem que os valores sejam classificados em uma ordem específica.  
@@ -731,7 +730,7 @@ As diretrizes a seguir se aplicam a operações de índice retomável:
 - Para pausar imediatamente a operação de índice, você pode interromper (Ctrl-C) o comando em andamento, executar o comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE ou executar o comando KILL `<session_id>`. Depois que o comando for colocado em pausa, ele poderá ser retomado usando o comando [ALTER INDEX](alter-index-transact-sql.md). 
 - Executar novamente a instrução CREATE INDEX original para o índice retomável retoma automaticamente uma operação de criação de índice em pausa.
 - A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável. 
-- O comando DDL com RESUMABLE=ON não pode ser executado em uma transação explícita (não pode fazer parte do bloco TRAN … COMMIT).
+- O comando DDL com RESUMABLE=ON não pode ser executado em uma transação explícita (não pode fazer parte do bloco TRAN ... COMMIT).
 - Para retomar/anular uma recompilação/criação de índice, use a sintaxe [ALTER INDEX](alter-index-transact-sql.md) T-SQL
 
 > [!NOTE]

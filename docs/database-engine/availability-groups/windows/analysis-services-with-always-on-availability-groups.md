@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635014"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395449"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635014"
   
 3.  Modifique o script, substituindo espaços reservados por valores que são válidos para sua implantação:  
   
-    -   Substitua ‘Computer01’ pelo nome da instância do servidor que hospeda a réplica primária.  
+    -   Substitua 'Computer01' pelo nome da instância do servidor que hospeda a réplica primária.  
   
-    -   Substitua ‘Computer02’ pelo nome da instância do servidor que hospeda a réplica secundária.  
+    -   Substitua 'Computer02' pelo nome da instância do servidor que hospeda a réplica secundária.  
   
-    -   Substitua 'contoso.com' pelo nome de seu domínio, ou omita-o do script se todos os computadores estiverem no mesmo domínio. Mantenha o número da porta se o ouvinte estiver usando a porta padrão. A porta que é usada de fato pelo ouvinte é listada na página de propriedades no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Substitua 'contoso.com' pelo nome de seu domínio ou omita-o do script se todos os computadores estiverem no mesmo domínio. Mantenha o número da porta se o ouvinte estiver usando a porta padrão. A porta que é usada de fato pelo ouvinte é listada na página de propriedades no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Execute o script.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "47635014"
 ##  <a name="bkmk_whathappens"></a> O que acontece depois que um failover ocorre  
  Durante um failover, uma réplica secundária faz a transição para a função primária e a réplica primária antiga faz a transição para a réplica secundária. Todas as conexões de cliente são finalizadas, a propriedade do ouvinte de grupo de disponibilidade é movida com a função de réplica primária para uma nova instância do SQL Server e o ponto de extremidade do ouvinte é associado aos endereços IP virtuais da nova instância e a portas TCP. Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Se o failover ocorrer durante o processamento, o seguinte erro ocorrerá no Analysis Services no arquivo de log ou na janela de saída: erro de OLE DB ou de ODBC: falha de link de comunicação; 08S01; Provedor de TPC: uma conexão existente foi fechada forçosamente pelo host remoto. ; 08S01."  
+ Se o failover ocorrer durante o processamento, o seguinte erro ocorrerá no Analysis Services no arquivo de log ou na janela de Saída: "erro de OLE DB ou de ODBC: falha de link de comunicação; 08S01; Provedor de TPC: uma conexão existente foi fechada forçosamente pelo host remoto. ; 08S01."  
   
  Este erro deverá ser resolvido se você aguardar um minuto e tentar novamente. Se o grupo de disponibilidade for configurado corretamente para a réplica secundária legível, o processando será retomado na nova réplica secundária quando você tentar novamente processar.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47635014"
 ##  <a name="bkmk_writeback"></a> Write-back ao usar um banco de dados de disponibilidade AlwaysOn  
  Writeback é um recurso do Analysis Services que oferece suporte à análise E-Se no Excel. Ele também costuma ser usado para orçar e prever tarefas em aplicativos personalizados.  
   
- O suporte ao writeback exige uma conexão de cliente READWRITE. No Excel, se você tentar fazer o write-back em uma conexão somente leitura, o seguinte erro ocorrerá: "Não foi possível recuperar dados da fonte de dados externa." "Não foi possível recuperar dados da fonte de dados externa."  
+ O suporte ao writeback exige uma conexão de cliente READWRITE. No Excel, se você tentar fazer o write-back em uma conexão somente leitura, o seguinte erro ocorrerá: "Não foi possível recuperar dados da fonte de dados externa". "Não foi possível recuperar dados da fonte de dados externa."  
   
  Se você configurou uma conexão para sempre acessar uma réplica secundária legível, configure uma nova conexão que usa uma conexão READWRITE para a réplica primária.  
   

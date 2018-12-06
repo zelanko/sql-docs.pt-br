@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703584"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404091"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51703584"
   
  Nenhum nó individual em um cluster WSFC pode determinar definitivamente se o cluster como um todo é íntegro ou não íntegro.  A qualquer momento, da perspectiva de cada nó, alguns dos outros nós podem aparecer offline ou talvez pareça que estão em processo de failover ou não respondentes devido a uma falha de comunicação de rede.  Uma função chave do voto de quorum é determinar se o estado aparente de cada nó no cluster WSFC é de fato o estado real desses nós.  
   
- Para todos os modelos de quorum, exceto ‘Somente Disco’, a efetividade de um voto de quorum depende das comunicações confiáveis entre todos os nós de votação no cluster. As comunicações de rede entre os nós na mesma sub-rede física devem ser consideradas confiáveis; o voto de quorum deve ser confiável.  
+ Para todos os modelos de quorum, exceto 'Somente Disco', a efetividade de um voto de quorum depende das comunicações confiáveis entre todos os nós de votação no cluster. As comunicações de rede entre os nós na mesma sub-rede física devem ser consideradas confiáveis; o voto de quorum deve ser confiável.  
   
  No entanto, se um nó em outra sub-rede for visto como não respondente em um voto de quorum, mas na verdade estiver online e, de outra forma, íntegro, isso ocorre muito provavelmente devido a uma falha de comunicação de rede entre sub-redes.  Dependendo da topologia de cluster, do modo de quorum e da configuração da política de failover, essa falha de comunicação de rede pode criar efetivamente mais de um conjunto (ou subconjunto) de nós de votação.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "51703584"
 >  [KB2494036](https://support.microsoft.com/kb/2494036): há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes indicados para votação de quorum  
- Ao ativar ou desativar o voto de um nó WSFC específico, siga estas diretrizes:  
+ Ao habilitar ou desabilitar o voto de um nó WSFC específico, siga estas diretrizes:  
   
 -   **Nenhum voto, por padrão.** Assuma que cada nó não deve votar sem justificativa explícita.  
   

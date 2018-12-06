@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518615"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51671677"
 |-----------|--------------|  
 |[Resolver falhas de restauração de banco de dados devido a OOM](#bkmk_resolveRecoveryFailures)|O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”.|  
 |[Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho](#bkmk_recoverFromOOM)|O que fazer se você desconfiar que os problemas de pouca memória estão comprometendo o desempenho.|  
-|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. …” quando a memória disponível é suficiente para a operação.|
+|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. ...” quando a memória disponível é suficiente para a operação.|
 |[Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs)|O que deve ser levado em consideração ao usar o OLTP in-memory em um ambiente virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
@@ -79,7 +79,7 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
 2.  [Realizar a ação corretiva](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para resolver problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. O DAC é disponibilizado pelo utilitário `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para solucionar problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. O DAC é disponibilizado pelo utilitário `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obter orientações sobre como usar o DAC por meio do SSMS ou do `sqlcmd`, consulte [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
@@ -153,7 +153,7 @@ Algumas práticas recomendadas para virtualizar e gerenciar o SQL Server precisa
 -  Se você usar a opção min server memory, será melhor atribuir somente a quantidade de memória necessária para que uma parcela suficiente de memória permaneça em outros processos (impedindo a paginação).
 -  Não defina o valor de pré-alocação de memória muito alto. Caso contrário, outros processos podem não obter memória suficiente no momento em que a exigirem e isso pode levar à paginação de memória.
 
-Se você seguir as práticas acima para um banco de dados com tabelas otimizadas pela memória, uma tentativa de restaurar e recuperar um banco de dados poderá resultar no banco de dados ficando em um estado de "Recuperação Pendente", mesmo se você tiver memória suficiente para recuperá-lo. A razão para isso é que, ao iniciar, o OLTP in-memory traz os dados para a memória de maneira mais agressiva do que a alocação de memória dinâmica faz ao alocar a memória no banco de dados.
+Se você seguir as práticas acima para um banco de dados com tabelas otimizadas pela memória, uma tentativa de restaurar e recuperar um banco de dados poderá resultar no banco de dados ficando em um estado de “Recuperação Pendente”, mesmo se você tiver memória suficiente para recuperá-lo. A razão para isso é que, ao iniciar, o OLTP in-memory traz os dados para a memória de maneira mais agressiva do que a alocação de memória dinâmica faz ao alocar a memória no banco de dados.
 
 ### <a name="resolution"></a>Resolução
 Para solucionar isso, pré-aloque memória suficiente para o banco de dados a ser recuperado ou reinicie o banco de dados, não um valor mínimo que depende da memória dinâmica para fornecer a memória adicional quando for necessário.

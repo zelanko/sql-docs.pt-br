@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418660"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "51604946"
   
 -   **Modo do SharePoint:** Use as páginas de configuração do SharePoint dentro das bibliotecas de documentos para relatórios que já estão publicados em um servidor do SharePoint.  
   
--   **Design de relatórios:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando você está criando novos relatórios. Consulte a seção 'Design de relatórios' neste tópico ou em mais informações.  
+-   **Design de relatórios:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando você está criando novos relatórios. Confira a seção 'Design de relatórios' neste tópico ou em mais informações.  
   
  **Recursos adicionais:**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51604946"
   
 -   A localização geográfica e a distância entre as réplicas primárias e secundárias. Por exemplo, o atraso será geralmente maior se as réplicas secundárias estiverem em um data center diferente do que se estivessem no mesmo prédio que a réplica primária.  
   
--   Configuração do modo de disponibilidade para cada réplica. O modo de disponibilidade determina se a réplica primária espera para confirmar transações em um banco de dados até que uma réplica secundária tenha gravado a transação em disco. Para obter mais informações, confira a seção “Modos de disponibilidade” de [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+-   Configuração do modo de disponibilidade para cada réplica. O modo de disponibilidade determina se a réplica primária espera para confirmar transações em um banco de dados até que uma réplica secundária tenha gravado a transação em disco. Para obter mais informações, confira a seção "Modos de disponibilidade" de [Visão geral dos grupos de disponibilidade Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  Ao usar uma réplica secundária somente leitura como uma fonte de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , é importante verificar se a latência de atualização de dados atende as necessidades dos usuários de relatório.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "51604946"
   
 -   **Réplica primária:** configure os bancos de dados do servidor de relatório para fazerem parte de um único grupo de disponibilidade e para criarem uma réplica primária que inclui todos os bancos de dados do servidor de relatório.  
   
--   **Réplicas secundárias:** crie uma ou mais réplicas secundárias. A abordagem comum para copiar os bancos de dados da réplica primária para a réplica secundária é restaurar os bancos de dados para cada réplica secundária usando 'RESTORE WITH NORECOVERY.' Para obter mais informações sobre como criar réplicas secundárias e verificar se a sincronização de dados está funcionando, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Réplicas secundárias:** crie uma ou mais réplicas secundárias. A abordagem comum para copiar os bancos de dados da réplica primária para a réplica secundária é restaurar os bancos de dados para cada réplica secundária usando 'RESTORE WITH NORECOVERY'. Para obter mais informações sobre como criar réplicas secundárias e verificar se a sincronização de dados está funcionando, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Credenciais de Servidor de relatório:** você precisa criar as credenciais de servidor de relatório apropriados nas réplicas secundárias que você criou na réplica primária. As etapas exatas dependem de que tipo de autenticação você está usando em seu ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; conta de serviço do Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], conta de usuário do Windows ou autenticação do SQL Server. Para obter mais informações, veja [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

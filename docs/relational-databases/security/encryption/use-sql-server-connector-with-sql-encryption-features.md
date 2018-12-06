@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653794"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401079"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     
     Para restaurar um backup de banco de dados criptografado com TDE, a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primeiro deve ter uma cópia da chave de cofre de chaves assimétrica usada para criptografia. Isso poderia ser feito assim:  
     
-    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do cofre de chaves** que recebeu originalmente.
+    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
     
     - Aplique as etapas 1 e 2 na instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     
@@ -282,6 +282,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Manutenção e solução de problemas do conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

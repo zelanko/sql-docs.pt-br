@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664424"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302899"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Ao restaurar um banco de dados de outra instância, considere as informações d
     
 Para restaurar um banco de dados criptografado, você precisa ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, não é possível restaurar o banco de dados. Você deverá manter o certificado usado para criptografar a chave de criptografia do banco de dados durante o tempo que precisar salvar o backup. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).    
     
-Se você restaurar um banco de dados de versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse banco de dados será atualizado automaticamente para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+Se você restaurar um banco de dados de versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse banco de dados será atualizado automaticamente para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Isso impede que o banco de dados seja usado com uma versão anterior da [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. No entanto, isso se relaciona com a atualização dos metadados e não afeta o [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da definição da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação será até dez vezes mais demorada.     
     
@@ -49,7 +49,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
 
 ## <a name="examples"></a>Exemplos
     
-### <a name="a-restore-a-full-database-backup"></a>**A. Restaurar um backup de banco de dados completo**    
+### <a name="a-restore-a-full-database-backup"></a>A. Restaurar um backup de banco de dados completo   
     
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
     
@@ -61,7 +61,8 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
          Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .    
     
-    > **OBSERVAÇÃO:** se o backup foi feito de um servidor diferente, o servidor de destino não terá as informações de histórico de backup do banco de dados especificado. Nesse caso, selecione **Dispositivo** para especificar manualmente o arquivo ou o dispositivo a ser restaurado. 
+        > [!NOTE]
+        > Se o backup foi obtido de um servidor diferente, o servidor de destino não terá informações de histórico de backup para o banco de dados especificado. Nesse caso, selecione **Dispositivo** para especificar manualmente o arquivo ou o dispositivo a ser restaurado. 
     
     -   **Dispositivo**    
     
@@ -95,7 +96,8 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
          Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.    
     
-        > **OBSERVAÇÃO:** essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.    
+         > [!NOTE]
+         > Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.    
      
 4.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado. Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .    
     
@@ -124,141 +126,118 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
         -   **RESTORE WITH STANDBY** deixa o banco de dados no modo somente leitura. Ele desfaz as transações não confirmadas, mas salva as ações de desfazer em um arquivo em espera para que os efeitos da recuperação possam ser revertidos.    
     
     3.  **Faça backup da parte final do log antes da restauração.** Nem todos os cenários de restauração exigem um backup da parte final do log.  Para obter mais informações, veja **Cenários que exigem um backup da parte final do log** de [Backups da parte final do log (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    
     4.  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.    
-    
     5.  Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.    
     
-     Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)).    
+Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;Página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>**B. Restaurar um backup anterior de disco sobre um banco de dados existente**    
-O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o banco de dados existente `Sales` .
+### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. Restaurar um backup anterior de disco sobre um banco de dados existente
+O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o banco de dados existente `Sales`.
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
-    
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
-
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-
-4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
-
+4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
-
 6.  Clique em **Opções** no painel **Selecionar uma página** .
+7.  Na seção **Opções de restauração**, marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
 
-7.  Na seção **Opções de restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+    > [!NOTE]
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: o conjunto de backup mantém um backup de um banco de dados diferente do banco de dados “`Sales`” existente. (Microsoft.SqlServer.SmoExtended)”
 
-    > **OBSERVAÇÃO:** não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: o conjunto de backup mantém um backup de um banco de dados diferente do banco de dados ‘`Sales`’ existente. (Microsoft.SqlServer.SmoExtended)”
+8.  Na seção **Backup da parte final do log**, desmarque a opção **Fazer backup da parte final do log antes da restauração**.
 
-8.  Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
+    > [!NOTE]
+    > Nem todos os cenários de restauração exigem um backup da parte final do log. Você não precisará de um backup da parte final do log se o ponto de recuperação estiver em um backup de log anterior. Além disso, um backup da parte final do log será desnecessário se você estiver movendo ou substituindo um banco de dados e não precisar restaurá-lo para um momento determinado após o seu backup mais recente. Para obter mais informações, veja [Backups da parte final do log (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
-    > **OBSERVAÇÃO:** nem todos os cenários de restauração exigem um backup da parte final do log. Você não precisará de um backup da parte final do log se o ponto de recuperação estiver em um backup de log anterior. Além disso, um backup da parte final do log será desnecessário se você estiver movendo ou substituindo um banco de dados e não precisar restaurá-lo para um momento determinado após o seu backup mais recente.  Para obter mais informações, veja [Backups da parte final do log (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
-Essa opção não está disponível em bancos de dados no modelo de recuperação SIMPLES.
+    Essa opção não está disponível em bancos de dados no modelo de recuperação SIMPLES.
 
-9.  Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
+9.  Na seção **Conexões de servidor**, marque a opção **Fechar conexões existentes com o banco de dados de destino**.
 
-    > **OBSERVAÇÃO:** não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: não foi possível obter acesso exclusivo, pois o banco de dados está em uso. (Microsoft.SqlServer.SmoExtended)”
+    > [!NOTE]
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: não foi possível obter acesso exclusivo, pois o banco de dados está em uso”. (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>**C.  Restaurar um backup de disco anterior com um novo nome de banco de dados no local em que o banco de dados original ainda existe**
+### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  Restaurar um backup anterior de disco com um novo nome de banco de dados no local em que o banco de dados original ainda existe
 O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um novo banco de dados chamado `SalesTest`.  O banco de dados original, `Sales`, ainda existe no servidor.
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
-    
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
-
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-
-4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
-
+4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
-
-6.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado.  Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .
-
+6.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado. Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .
 7.  Clique em **Opções** no painel **Selecionar uma página** .
-
 8.  Na seção **Backup da parte final do log** , desmarque a opção “**Fazer backup da parte final do log antes da restauração**”.
 
-    > **IMPORTANTE:** Não desmarcar essa opção resultará na alteração do estado de restauração do banco de dados existente, `Sales`.
+    > [!IMPORTANT]
+    > Não desmarcar essa opção resultará na alteração do estado de restauração do banco de dados existente, `Sales`.
 
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-    > **OBSERVAÇÃO:** se você receber a seguinte mensagem de erro: “System.Data.SqlClient.SqlError: não foi feito o backup da parte final do log do banco de dados ‘`Sales`’. Use BACKUP LOG WITH NORECOVERY para fazer backup do log se este contiver trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.  
-Em seguida, é provável que você não inseriu o novo nome do banco de dados da Etapa 6 acima.  Normalmente a restauração evita a substituição acidental de um banco de dados por um banco de dados diferente.  Se o banco de dados especificado em uma instrução RESTORE já existir no servidor atual e a GUID de família do banco de dados especificado for diferente da GUID de família do banco de dados registrado no conjunto de backup, o banco de dados não será restaurado. Essa é uma proteção importante.
+    > [!NOTE]
+    > Se você receber a seguinte mensagem de erro:      
+    > "System.Data.SqlClient.SqlError: não foi feito backup do final do log do banco de dados "`Sales`". Use `BACKUP LOG WITH NORECOVERY` para fazer backup do log se ele contiver trabalho que você não deseja perder. Use a cláusula `WITH REPLACE` ou `WITH STOPAT` da instrução `RESTORE` para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.      
+    > Em seguida, é provável que você não inseriu o novo nome do banco de dados da Etapa 6 acima. Normalmente a restauração evita a substituição acidental de um banco de dados por um banco de dados diferente. Se o banco de dados especificado em uma instrução `RESTORE` já existir no servidor atual e a GUID de família do banco de dados especificado for diferente da GUID de família do banco de dados registrado no conjunto de backup, o banco de dados não será restaurado. Essa é uma proteção importante.
 
-### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>**D.  Restaurar backups anteriores de disco para um ponto específico**
-O exemplo a seguir restaura um banco de dados para seu estado às 1h23min17s em 30 de maio de 2016 e mostra uma operação de restauração que envolve vários backups de log.  Atualmente, o banco de dados não existe no servidor.
+### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurar backups anteriores de disco em um ponto específico
+O exemplo a seguir restaura um banco de dados para seu estado de `1:23:17 PM` em `May 30, 2016` e mostra uma operação de restauração que envolve vários backups de log. Atualmente, o banco de dados não existe no servidor.
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
-    
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
-
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-
 4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup completo e todos os backups de log de transações relevantes.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
-
 5.  Clique em **OK** para retornar à página **Geral** .
-
 6.  Na seção **Destino** , clique em **Linha do tempo** para acessar a caixa de diálogo **Linha do Tempo de Backup** para selecionar manualmente um ponto específico para interromper a ação de recuperação.
-
-7.  Selecione **Data e hora específicas**.
-8.  Altere o **Intervalo da linha do tempo** para **Hora** na caixa suspensa (opcional).
+7.  Selecione **Data e hora específicas**.  
+8.  Altere o **Intervalo da linha do tempo** para **Hora** na caixa suspensa (opcional).  
 9.  Mova o controle deslizante para o tempo desejado.
-
 10. Clique em **OK** para retornar à página Geral.
-
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Restaurar um backup do serviço de Armazenamento do Microsoft Azure**
-#### <a name="common-steps"></a>**Etapas comuns**
+### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  Restaurar um backup do serviço de armazenamento do Microsoft Azure
+
+#### <a name="common-steps"></a>Etapas comuns
 Os dois exemplos a seguir executam uma restauração de `Sales` de um backup localizado no serviço de armazenamento do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as seis primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 7**.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
-
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
-
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-
-4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
+4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .    
 5.  Selecione **URL** na lista suspensa **Tipo de mídia de backup:** .
-
 6.  Clique em **Adicionar** e a caixa de diálogo **Selecione um Local do Arquivo de Backup** será aberta.
 
-    #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1.   Restaurar um backup distribuído sobre um banco de dados e em uma assinatura de acesso compartilhado existentes.**
-    Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista.  Uma assinatura de acesso compartilhado associada à política de acesso armazenado foi criada para o contêiner `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Basicamente, as etapas são as mesmas que seriam usadas se já existisse uma credencial do SQL Server.  Atualmente, o banco de dados `Sales` existe no servidor.  Os arquivos de backup são `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.  
+#### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Restaure um backup distribuído em um banco de dados e em uma assinatura de acesso compartilhado existentes.
+Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista.  Uma assinatura de acesso compartilhado associada à política de acesso armazenado foi criada para o contêiner `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Basicamente, as etapas são as mesmas que seriam usadas se já existisse uma credencial do SQL Server.  Atualmente, o banco de dados `Sales` existe no servidor.  Os arquivos de backup são `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.  
 *  
-    7.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    
-    8.  Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
-       9.   Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
-    10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    
-    11. Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
-    12. Clique em **OK**.
-    13. Clique em **OK** para retornar à página **Geral** .
-    14. Clique em **Opções** no painel **Selecionar uma página** .
-    15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
-    16. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
-    17. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
-    18. Clique em **OK**.
+7.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+8.  Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
+9.  Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
+10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+11. Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
+12. Clique em **OK**.
+13. Clique em **OK** para retornar à página **Geral** .
+14. Clique em **Opções** no painel **Selecionar uma página** .
+15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+16. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
+17. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
+18. Clique em **OK**.
 
-    #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   Não há uma assinatura de acesso compartilhado**
-    Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
-    7.  Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
-    
-    8.  Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
-    9.  Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
-    10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    11. Selecione o arquivo de backup e clique em **OK**.
-    12. Clique em **OK** para retornar à página **Geral** .
-    13. Clique em **OK**.
+#### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Não há uma assinatura de acesso compartilhado
+Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
+7.  Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
+8.  Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
+9.  Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
+10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+11. Selecione o arquivo de backup e clique em **OK**.
+12. Clique em **OK** para retornar à página **Geral** .
+13. Clique em **OK**.
 
-#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Restaurar o backup local no Armazenamento do Microsoft Azure (URL)**
+#### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurar o backup local no armazenamento do Microsoft Azure (URL)
 O banco de dados `Sales` será restaurado para o contêiner de armazenamento do Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` de um backup localizado em `E:\MSSQL\BAK`.  A credencial do SQL Server para o contêiner do Azure já foi criada.  Uma credencial do SQL Server para o contêiner de destino já deve existir, pois não pode ser criada por meio da tarefa **Restaurar** .  Atualmente, o banco de dados `Sales` não existe no servidor.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
-
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
@@ -270,7 +249,6 @@ O banco de dados `Sales` será restaurado para o contêiner de armazenamento do 
 10. Marque a caixa de seleção **Relocar todos os arquivos para a pasta**.
 11. Insira o contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, nas caixas de texto de **Pasta do arquivo de dados:** e **Pasta do arquivo de log:**.
 12. Clique em **OK**.
-
 
 ## <a name="see-also"></a>Consulte Também    
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     

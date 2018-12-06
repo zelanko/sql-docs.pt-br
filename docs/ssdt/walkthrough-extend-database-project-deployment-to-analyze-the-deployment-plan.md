@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512606"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Passo a passo: estenda a implantação do projeto de banco de dados para analisar o plano de implantação
 Você pode criar colaboradores de implantação para executar ações personalizadas ao implantar um projeto SQL. Você pode criar um DeploymentPlanModifier ou um DeploymentPlanExecutor. Use um DeploymentPlanModifier para alterar o plano antes de ser executado e um DeploymentPlanExecutor para realizar operações enquanto o plano está sendo executado. Neste passo a passo, você cria um DeploymentPlanExecutor chamado DeploymentUpdateReportContributor que cria um relatório das ações executadas quando você implanta um projeto de banco de dados. Como esse colaborador de compilação aceita um parâmetro para controlar se o relatório é gerado, você deverá executar uma etapa necessária adicional.  
@@ -92,7 +92,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
     ```  
   
-    Nesse caso, o primeiro parâmetro para o atributo deve ser um identificador exclusivo – isso será usado para identificar seu colaborador em arquivos de projeto. Uma prática recomendada é combinar o namespace da biblioteca (neste passo a passo, MyDeploymentContributor) com o nome de classe (neste passo a passo, DeploymentUpdateReportContributor) para produzir o identificador.  
+    Nesse caso, o primeiro parâmetro para o atributo deve ser um identificador exclusivo – isso será usado para identificar seu colaborador em arquivos de projeto. Uma melhor prática é combinar o namespace da biblioteca (neste passo a passo, MyDeploymentContributor) com o nome de classe (neste passo a passo, DeploymentUpdateReportContributor) para produzir o identificador.  
   
 3.  Em seguida, adicione o seguinte membro que você usará para habilitar esse provedor para aceitar um parâmetro de linha de comando:  
   
@@ -586,7 +586,7 @@ O segundo método é criar um arquivo de destino que contém argumentos necessá
   
 1.  Navegue para %Arquivos de programas%\MSBuild.  
   
-2.  Crie uma nova pasta “MyContributors” onde os arquivos de destino serão armazenados.  
+2.  Crie uma nova pasta “MyContributors” na qual os arquivos de destino serão armazenados.  
   
 3.  Crie um novo arquivo “MyContributors.targets” dentro desse diretório, adicione o seguinte texto e salve o arquivo:  
   
@@ -613,7 +613,7 @@ Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para 
 > Você sempre deve atualizar a propriedade “DeploymentContributors” para especificar sua ID de colaborador. Esta é a mesma ID usada no atributo “ExportDeploymentPlanExecutor” no seu arquivo de origem de colaborador. Sem isso, seu colaborador não será executado ao criar o projeto. A propriedade “ContributorArguments” precisará ser atualizada somente se você tiver os argumentos necessários para seu colaborador ser executado.  
   
 ### <a name="deploy-the-database-project"></a>Implantar o projeto de banco de dados  
-Seu projeto pode ser publicado ou implantado normalmente dentro do Visual Studio. Basta abrir uma solução que contém o projeto do SQL e escolher a opção "Publicar..." no menu de contexto (clicando com o botão direito do mouse) no projeto ou usar F5 para uma implantação de depuração para o LocalDB. Neste exemplo, usaremos a caixa de diálogo "Publicar..." para gerar um script de implantação.  
+Seu projeto pode ser publicado ou implantado normalmente dentro do Visual Studio. Basta abrir uma solução contendo seu projeto SQL e escolher a opção “Publicar...” no menu de contexto do projeto aberto ao clicar com o botão direito do mouse ou usar F5 para uma implantação de depuração para o LocalDB. Neste exemplo, usaremos a caixa de diálogo “Publish...” para gerar um script de implantação.  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Para implantar o projeto SQL e gerar um relatório de implantação  
   

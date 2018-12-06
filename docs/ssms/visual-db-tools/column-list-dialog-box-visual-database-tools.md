@@ -13,18 +13,18 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61ce02c05248eb5041c54abe1106109843d97507
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515377"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ao escrever consultas, pode ser útil exibir a lista de colunas disponíveis nos objetos com valores de tabela selecionados.  
   
-Para acessar essa caixa de diálogo, no menu **Designer de Consultas** , no Painel Diagrama, clique com o botão direito do mouse no cabeçalho do objeto com valor de tabela e, em seguida, clique em **Propriedades**. Na janela **Propriedades** , clique no campo **Lista de Colunas** . Em seguida, clique nas reticências **(…)** à direita do campo.  
+Para acessar essa caixa de diálogo, no menu **Designer de Consultas** , no Painel Diagrama, clique com o botão direito do mouse no cabeçalho do objeto com valor de tabela e, em seguida, clique em **Propriedades**. Na janela **Propriedades** , clique no campo **Lista de Colunas** . Em seguida, clique nas reticências **(...)** à direita do campo.  
   
 +Essa caixa de diálogo fornece a lista de colunas do objeto com valor de tabela selecionado e de propriedades básicas, como tipos de dados e se as colunas permitem valores nulos.  
   

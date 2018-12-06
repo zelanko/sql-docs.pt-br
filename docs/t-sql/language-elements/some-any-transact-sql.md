@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ea622a882d0c9ff45680c0ee5b975a08c780ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511618"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (*scalar_expression ***,*** x*) e quando *x* for um valor no conjunto de uma única coluna; caso contrário retornará **FALSE**.  
+ SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (_scalar_expression_**,**_x_) e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
  SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  

@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 33eb48be31cccdc96f8a38d008c7d1ebfa865981
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516131"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  É o nome da coluna incluída no índice de texto completo. Somente colunas do **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** e **varbinary(max)** podem ser indexadas para pesquisa de texto completo. Para especificar várias colunas, repita a cláusula *column_name* da seguinte forma:  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  Especifica o nome de uma coluna de tabela, *type_column_name*, usada para manter o tipo de um documento para um documento **varbinary(max)** ou **image** . Essa coluna, conhecida como coluna de tipo, contém uma extensão de arquivo fornecida pelo usuário (.doc, .pdf, .xls e assim por diante). A coluna de tipo deve ser do tipo **char**, **nchar**, **varchar**, ou **nvarchar**.  
@@ -121,7 +121,7 @@ CREATE FULLTEXT INDEX ON table_name
  Especifica se as alterações (atualizações, exclusões ou inserções) feitas nas colunas da tabela que estão cobertas pelo índice de texto completo serão propagadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o índice de texto completo. As alterações de dados por meio de WRITETEXT e UPDATETEXT não são refletidas no índice de texto completo e não são coletadas com o controle de alterações.  
   
  MANUAL  
- Especifica que as alterações controladas devem ser propagadas manualmente chamando-se a instrução ALTER FULLTEXT INDEX … Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] START UPDATE POPULATION (*preenchimento manual*). É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
+ Especifica que as alterações controladas devem ser propagadas manualmente chamando-se a instrução ALTER FULLTEXT INDEX ... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] START UPDATE POPULATION (*preenchimento manual*). É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
  **AUTO**  
  Especifica que as alterações controladas serão propagadas automaticamente conforme os dados forem modificados na tabela base (*preenchimento automático*). Embora sejam propagadas automaticamente, talvez essas alterações não se reflitam imediatamente no índice de texto completo. AUTO é o padrão.  

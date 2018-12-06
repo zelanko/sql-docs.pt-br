@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502613"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
@@ -137,7 +137,7 @@ ms.locfileid: "51642343"
  Selecione na lista um método Web a ser executado pela tarefa.  
   
  **WebMethodDocumentation**  
- Digite uma descrição do método Web ou clique no botão Procurar **(...)** e digite a descrição na caixa de diálogo **Documentação do Método Web** .  
+ Digite uma descrição do método Web ou clique no botão Procurar **(...)** e digite a descrição na caixa de diálogo **Documentação do Método Web**.  
   
  **Nome**  
  Lista os nomes das entradas no método Web.  
@@ -170,13 +170,13 @@ ms.locfileid: "51642343"
   
 #### <a name="outputtype--file-connection"></a>OutputType = File Connection  
  **File**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova Conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova Variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

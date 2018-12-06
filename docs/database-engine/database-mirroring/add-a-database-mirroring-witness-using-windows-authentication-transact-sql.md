@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507098"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168880"
   
      em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3 – o nome do sistema testemunha, e a porta usada pelo ponto de extremidade do espelhamento de banco de dados da testemunha é `7022`:  
+     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3 (o nome do sistema testemunha) e a porta usada pelo ponto de extremidade de espelhamento do banco de dados da testemunha é `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

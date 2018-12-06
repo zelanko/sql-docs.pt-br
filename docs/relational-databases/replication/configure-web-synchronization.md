@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18f27adad094effd34ab3778f54ac5d362dd4534
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834624"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519344"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "47834624"
   
 -   Se você reproduzir grandes volumes de dados, talvez tenha que ajustar o tamanho do lote do Agente de Mesclagem.  
   
- O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros **DownloadGenerationsPerBatch** e –**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros **DownloadGenerationsPerBatch** e -**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volumes de dados, especifique um número pequeno para cada um dos parâmetros para envio em lote. É recomendável começar com um valor de 10 e ajustá-lo com base nas necessidades e no desempenho do aplicativo. Normalmente, esses parâmetros são especificados em um perfil de agente. Para obter mais informações sobre perfis, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393969"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
@@ -56,7 +56,7 @@ ms.locfileid: "51638003"
  Todas as semanas, o banco de dados gera uma tabela WeeklyChanges que contém as alterações de preço da semana e os novos livros que foram adicionados durante a semana. Usando uma única instrução MERGE, você pode aplicar as alterações da tabela WeeklyChanges na tabela DimBook. A instrução MERGE insere novas linhas para os livros adicionados recentemente e atualiza a coluna IsCurrent para 0 nas linhas dos livros existentes cujo preço foi alterado. A instrução MERGE também insere novas linhas para os livros cujo preço foi alterado e, para essas novas linhas, define o valor da coluna IsCurrent como 1.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Mesclar uma tabela com dados novos em uma tabela antiga  
- O banco de dados define as propriedades de um objeto usando um “esquema aberto”, isto é, uma tabela que contém pares nome-valor para cada propriedade. A tabela Properties tem três colunas: EntityID, PropertyID e Value. Uma tabela NewProperties que é uma versão mais nova da tabela deve ser sincronizada com a tabela Properties. Para sincronizar essas duas tabelas, você pode usar uma única instrução MERGE para executar as seguintes operações:  
+ O banco de dados define as propriedades de um objeto usando um "esquema aberto", ou seja, uma tabela que contém pares nome-valor para cada propriedade. A tabela Properties tem três colunas: EntityID, PropertyID e Value. Uma tabela NewProperties que é uma versão mais nova da tabela deve ser sincronizada com a tabela Properties. Para sincronizar essas duas tabelas, você pode usar uma única instrução MERGE para executar as seguintes operações:  
   
 -   Exclua propriedades da tabela Properties se elas não existirem na tabela NewProperties.  
   

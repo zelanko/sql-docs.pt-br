@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506558"
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
   A transformação Comando OLE DB executa uma instrução SQL para cada linha do fluxo de dados. Por exemplo, você pode executar uma instrução SQL que insira, atualize ou exclua linhas em uma tabela de banco de dados.  
@@ -61,13 +61,13 @@ ms.locfileid: "47799866"
   
 3.  Clique na guia **Fluxo de Dados** e, na **Caixa de Ferramentas**, arraste a transformação Comando OLE DB para a superfície de design.  
   
-4.  Conecte a transformação Comando OLE DB ao fluxo de dados, arrastando um conector – a seta verde ou vermelha – de uma origem de dados ou uma transformação anterior para a transformação Comando OLE DB.  
+4.  Conecte a transformação Comando OLE DB ao fluxo de dados arrastando um conector (a seta verde ou vermelha) de uma fonte de dados ou de uma transformação anterior para a transformação Comando OLE DB.  
   
 5.  Com o botão direito do mouse, clique no componente e selecione Editar ou Mostrar **Editor Avançado**.  
   
 6.  Na guia **Gerenciadores de Conexões** , selecione um gerenciador de conexões OLE DB na lista **Gerenciador de Conexões** . Para obter mais informações, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)** , na caixa **SqlCommand** .  
+7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)** na caixa **SqlCommand**.  
   
 8.  No **Editor de Valores de Cadeias de Caracteres**, digite a instrução SQL parametrizada, com o uso de um ponto de interrogação (?) como o marcador para cada parâmetro.  
   

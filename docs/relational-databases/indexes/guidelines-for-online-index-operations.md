@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0fc7beced0f0858a8b431628c9ad6178c9f81342
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412153"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a 
 Você pode definir opções padrão para online ou retomáveis em um nível de banco de dados, definindo as opções de configuração com escopo do banco de dados ELEVATE_ONLINE ou ELEVATE_RESUMABLE. Com essas opções padrão, você pode evitar a execução acidental de uma operação que deixa a tabela do banco de dados offline. Ambas as opções farão com que o mecanismo eleve automaticamente determinadas operações para execução online ou retomável.  
 Você pode definir qualquer uma das opções como FAIL_UNSUPPORTED, WHEN_SUPPORTED ou OFF usando o comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Você pode definir valores diferentes para online e retomável. 
 
-ELEVATE_ONLINE e ELEVATE_RESUMABLE são aplicáveis somente a instruções DDL que dão suporte à sintaxe online e retomável respectivamente. Por exemplo, se você tenta criar um índice XML com ELEVATE_ONLINE=FAIL_UNSUPORTED, a operação é executada offline, pois os índices XML não são suporte à sintaxe ONLINE=. As opções somente afetam as instruções DDL enviadas sem especificar uma opção ONLINE ou RESUMABLE. Por exemplo, ao enviar uma instrução com ONLINE=OFF ou RESUMABLE=OFF, o usuário pode substituir uma configuração FAIL_UNSUPPORTED e executar uma instrução offline e/ou de modo não retomável. 
+ELEVATE_ONLINE e ELEVATE_RESUMABLE são aplicáveis somente a instruções DDL que dão suporte à sintaxe online e retomável respectivamente. Por exemplo, se você tentar criar um índice XML com ELEVATE_ONLINE=FAIL_UNSUPORTED, a operação será executada offline, pois os índices XML não dão suporte à sintaxe ONLINE=. As opções somente afetam as instruções DDL enviadas sem especificar uma opção ONLINE ou RESUMABLE. Por exemplo, ao enviar uma instrução com ONLINE=OFF ou RESUMABLE=OFF, o usuário pode substituir uma configuração FAIL_UNSUPPORTED e executar uma instrução offline e/ou de modo não retomável. 
  
 > [!NOTE]
 > ELEVATE_ONLINE e ELEVATE_RESUMABLE não se aplicam a operações de índice XML. 

@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397049"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51677855"
  Você pode especificar um agendamento de backup personalizado usando o procedimento armazenado do sistema [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Se você não especificar uma agenda personalizada, o tipo de backups agendados e a frequência de backup serão determinados com base na carga de trabalho do banco de dados. As configurações de período de retenção são usadas para determinar o tempo durante o qual o arquivo de backup deverá ser mantido no armazenamento e a capacidade de recuperar o banco de dados para um determinado momento no período de retenção.  
   
 ### <a name="backup-file-naming-conventions"></a>Convenções de nomenclatura do arquivo de backup  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa o contêiner que você especificar, para que você tenha controle sobre o nome do contêiner. Para os arquivos de backup, os bancos de dados que não são de disponibilidade são nomeados por meio da seguinte convenção: o nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o ‘-‘ e o carimbo de data/hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa o contêiner que você especificar, para que você tenha controle sobre o nome do contêiner. Para os arquivos de backup, os bancos de dados que não são de disponibilidade são nomeados por meio da seguinte convenção: o nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o '-' e o carimbo de data/hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
   
 ### <a name="full-database-backup"></a>Backup de banco de dados Completo  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa um backup completo do banco de dados se qualquer uma das seguintes afirmações for verdadeira.  

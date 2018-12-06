@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710284"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302879"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Lição 4-3 – adicionar redirecionamento de fluxo de erro
 Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
@@ -51,7 +51,7 @@ Para aumentar a utilidade da saída de erro, antes de o pacote gravar as linhas 
   
 9. Na propriedade **Name** , digite **ErrorDescription** e defina a propriedade **DataType** como **Cadeia de caracteres Unicode [DT_WSTR]**.  
   
-10. Na página **Script** , verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)**.  
+10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos).**  
   
 11. Clique em **Editar Script** para abrir o VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método **Input0_ProcessInputRow** , digite ou cole o código a seguir.  
   

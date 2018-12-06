@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680481"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515079"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47680481"
   
 7.  Na grade principal, em **(Geral)**, selecione **Tipo** e escolha **Índice** na lista.  
   
-8.  Selecione **Colunas**e clique no botão reticências **(…)**.  
+8.  Selecione **Colunas** e clique no botão reticências **(...)**.  
   
 9. Na caixa de diálogo **Colunas de Índice** , em **Nome da Coluna**, selecione as colunas que você deseja indexar. Você pode selecionar até 16 colunas. Para um desempenho ideal, selecione somente uma ou duas colunas por índice. Para cada coluna selecionada, indique se o índice organiza os valores dessa coluna em ordem crescente ou decrescente.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680481"
   
 3.  Expanda a tabela na qual você deseja criar um índice exclusivo.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Marque a caixa de seleção **Exclusivo** .  
   
-7.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+7.  Na guia **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 8.  Na caixa de diálogo **Selecionar Colunas de**_table\_name_, marque as caixas de seleção das colunas da tabela ou das colunas a serem adicionadas ao índice exclusivo.  
   

@@ -15,12 +15,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20e04541e352e3df79b8ad03b2fa54940a875987
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800484"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398770"
 ---
 # <a name="create-a-model-master-data-services"></a>Criar um modelo (Master Data Services)
 

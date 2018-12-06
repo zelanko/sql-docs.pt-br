@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505764"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lição 5-2 – configurar e habilitar configurações de pacote
 Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contém definições de configuração da propriedade **Directory** do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
@@ -40,11 +40,11 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor do Loop Foreach**, clique em **Expressões**e clique no botão de reticências **(…)**.  
+8.  Na página **Coleção** do **Editor de Loop Foreach**, clique em **Expressões** e, em seguida, clique no botão de reticências **(…)**.  
   
 9. No **Editor de Expressões de Propriedades**, clique na lista **Propriedade** e selecione **Diretório**.  
   
-10. Na caixa **Expressão** , clique no botão de reticências **(…)**.  
+10. Na caixa **Expressão**, clique no botão de reticências **(…)**.  
   
 11. No **Construtor de Expressões**, expanda a pasta Variáveis e arraste a variável **User::varFolderName** até a caixa **Expressão** .  
   
@@ -88,7 +88,7 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 16. Clique em **Fechar**.  
   
-17. O assistente cria um arquivo de configuração, chamado SSISTutorial.dtsConfig, que contém as definições de configuração do**valor** da variável que, por sua vez, define a propriedade **Directory** do enumerador.  
+17. O assistente cria um arquivo de configuração, chamado SSISTutorial.dtsConfig, que contém as definições de configuração do **Valor** da variável que, por sua vez, define a propriedade **Diretório** do enumerador.  
   
     > [!NOTE]  
     > Um arquivo de configuração geralmente contém informações complexas sobre as propriedades do pacote, mas, para este tutorial, a única informação de configuração deveria ser  

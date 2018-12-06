@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512124"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -374,7 +374,7 @@ veja [Exemplos](#Examples) mais no final deste tópico para muitos outros exempl
   
 -   Utilize transações explícitas usando BEGIN/COMMIT TRANSACTION e mantenha as transações o mais curtas possível. Transações maiores indicam bloqueio de registro mais longo e um maior potencial para deadlock.  
   
--   Use o recurso TRY…CATCH do [!INCLUDE[tsql](../../includes/tsql-md.md)] para tratamento de erros em um procedimento. TRY…CATCH pode encapsular um bloco inteiro de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso cria menos sobrecarga de desempenho e também torna o relatório de erros mais preciso com muito menos programação.  
+-   Use o recurso TRY...CATCH do [!INCLUDE[tsql](../../includes/tsql-md.md)] para tratamento de erro em um procedimento. TRY...CATCH pode encapsular um bloco inteiro de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso cria menos sobrecarga de desempenho e também torna o relatório de erros mais preciso com muito menos programação.  
   
 -   Use a palavra-chave DEFAULT em todas as colunas de tabela que sejam referenciadas pelas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE ou ALTER TABLE no corpo do procedimento. Isso impede a passagem de NULL para colunas que não permitam valores nulos.  
   
@@ -498,7 +498,7 @@ GO
 |[Sintaxe básica](#BasicSyntax)|CREATE PROCEDURE|  
 |[Transmitindo parâmetros](#Parameters)|@parameter <br> &nbsp;&nbsp; • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • tipo de parâmetro com valor de tabela <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modificando dados usando um procedimento armazenado](#Modify)|UPDATE|  
-|[Tratamento de erro](#Error)|TRY…CATCH|  
+|[Tratamento de erro](#Error)|TRY...CATCH|  
 |[Ofuscando a definição do procedimento](#Encrypt)|WITH ENCRYPTION|  
 |[Forçando a recompilação do procedimento](#Recompile)|WITH RECOMPILE|  
 |[Configurando o contexto de segurança](#Security)|EXECUTE AS|  
@@ -797,8 +797,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Tratamento de erro  
  Os exemplos desta seção demonstram métodos para tratar erros que podem ocorrer durante a execução do procedimento armazenado.  
   
-#### <a name="j-using-trycatch"></a>J. Usando TRY…CATCH  
- O exemplo a seguir usa a construção TRY…CATCH para retornar informações de erros obtidos durante a execução de um procedimento armazenado.  
+#### <a name="j-using-trycatch"></a>J. Usando TRY...CATCH  
+ O exemplo a seguir usa o constructo TRY...CATCH para retornar informações de erros obtidos durante a execução de um procedimento armazenado.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5cf1431ab35afc336fb18ac5546d00336f97c1bc
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 3e4a4805ee3cb706a20659919e28c09c84787934
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518358"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ distrib [-?]
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
  
  > [!NOTE]  
- >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro ‘Alias Name’ deve ser o nome do servidor e o parâmetro ‘Server’ deve ser definido como o nome totalmente qualificado do SQL Server.
+ >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
 
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
@@ -207,7 +207,7 @@ distrib [-?]
  Se não houver nenhuma transação replicada disponível na origem, o agente informará uma mensagem de não transação ao Distributor. Essa opção especifica quanto tempo o agente espera antes de informar outro mensagem de não transação. O agente sempre informa uma mensagem de não transação quando detecta que não há transações disponíveis na origem após transações replicadas de processamento anterior. O padrão é 60 segundos.  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- Especifica o tamanho mínimo, em bytes, para dados de objeto binário grande acima do qual os dados serão associados como um fluxo. Você deve especificar **–UseOledbStreaming** para usar esse parâmetro. Os valores podem variar de 400 a 1048576 bytes, com um padrão de 16384 bytes.  
+ Especifica o tamanho mínimo, em bytes, para dados de objeto binário grande acima do qual os dados serão associados como um fluxo. Você deve especificar **-UseOledbStreaming** para usar esse parâmetro. Os valores podem variar de 400 a 1048576 bytes, com um padrão de 16384 bytes.  
   
  **-Output** *output_path_and_file_name*  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
@@ -276,7 +276,7 @@ distrib [-?]
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push, um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. Confira o parâmetro **–MessageInterval** anterior.  
   
  **-UseDTS**  
  Deve ser especificado como um parâmetro para uma publicação que permite transformação de dados.  

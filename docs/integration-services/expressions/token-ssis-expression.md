@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396944"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (expressão SSIS)
   Retorna um token (subcadeia de caracteres) de uma cadeia de caracteres com base nos delimitadores especificados, que separam os tokens na cadeia de caracteres, e o número do token que denota qual token deve ser retornado.  
@@ -64,7 +64,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 TOKEN("a little white dog"," ",1)  
 ```  
   
- No exemplo a seguir, a função TOKEN retorna "dog". A cadeia de caracteres delimitadores neste exemplo contém cinco delimitadores. A cadeia de caracteres de entrada contém quatro tokens: “a”, “little”, “white”, “dog”.  
+ No exemplo a seguir, a função TOKEN retorna "dog". A cadeia de caracteres delimitadores neste exemplo contém cinco delimitadores. A cadeia de caracteres de entrada contém quatro tokens: "a", "little", "white", "dog".  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- No exemplo a seguir, a função TOKEN retorna o nome do arquivo do caminho especificado. Por exemplo, se o valor de User::Path for "c:\arquivos de programas\data\myfile.txt", a função TOKEN retornará "myfile.txt." A função TOKENCOUNT retorna 4 e a função TOKEN função retorna o 4º token, "myfile.txt".  
+ No exemplo a seguir, a função TOKEN retorna o nome do arquivo do caminho especificado. Por exemplo, se o valor de User::Path for "c:\program files\data\myfile.txt", a função TOKEN retornará "myfile.txt". A função TOKENCOUNT retorna 4 e a função TOKEN função retorna o 4º token, "myfile.txt".  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

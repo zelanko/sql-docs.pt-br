@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396910"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn
 
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  Configurar **in-doubt xact resolution** 
-Esse script vai configurar a opção **in-doubt xact resolution** de configuração do servidor como “presume commit” para as transações incertas.  Execute o script T-SQL a seguir no SSMS (SQL Server Management Studio) para `SQLNODE1`, no **modo SQLCMD**.
+Esse script vai configurar a opção **in-doubt xact resolution** de configuração do servidor como "presume commit" para as transações incertas.  Execute o script T-SQL a seguir no SSMS (SQL Server Management Studio) para `SQLNODE1`, no **modo SQLCMD**.
 
 ```sql  
 /*******************************************************************
@@ -587,4 +587,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> A instrução `USE AG1` deve ser executada para garantir que o contexto do banco de dados é definido como `AG1`.  Caso contrário, você receberá a seguinte mensagem de erro: “Contexto de transação em uso por outra sessão”
+> A instrução `USE AG1` deve ser executada para garantir que o contexto do banco de dados é definido como `AG1`.  Caso contrário, você receberá a seguinte mensagem de erro: "Contexto de transação em uso por outra sessão."

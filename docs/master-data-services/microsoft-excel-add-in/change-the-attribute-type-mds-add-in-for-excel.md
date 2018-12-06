@@ -11,12 +11,12 @@ ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e59151d342d73bc3ea45ab1c778cf8fe5b2ed01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792614"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398109"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Alterar o tipo de atributo (suplemento MDS para Excel)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47792614"
   
 -   Você precisa ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Gerenciador** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Deve haver um modelo, entidade e atributo existente.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "47792614"
   
 -   Altera o tipo de dados do atributo.  
   
--   Gera uma cópia do atributo com o sufixo “_old” que contém os valores anteriores. Isso é chamado de atributo preterido.  
+-   Gera uma cópia do atributo com o sufixo "_old" que contém os valores anteriores. Isso é chamado de atributo preterido.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   
- [Criar um modelo &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
+ [Criando um modelo &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e864e1a5d3eb605fc7db462b1a685ce2e44e4ea5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506409"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -88,25 +88,25 @@ WITH
 GO
 
 
-
-
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -158,7 +158,7 @@ Exemplo: `LOCATION = 'hdfs://10.10.10.10:8020'`
 Para o Armazenamento de Blobs do Azure com Hadoop, especifica o URI para conectar-se ao Armazenamento de Blobs do Azure.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]: especifica o protocolo para o Armazenamento de Blobs do Azure. [s] é opcional e especifica uma conexão SSL segura. Os dados enviados do SQL Server são criptografados com segurança pelo protocolo SSL. É altamente recomendável usar 'wasbs' em vez de 'wasb'. Observe que o local pode usar asv[s] em vez de wasb[s]. A sintaxe de asv[s] foi preterida e será removida em uma versão futura.  
-contêiner: especifica o nome do contêiner de Armazenamento de Blobs do Azure. Para especificar o contêiner raiz da conta de armazenamento do domínio, use o nome de domínio em vez do nome do contêiner. Os contêineres raiz são somente leitura, portanto, os dados não podem ser gravados no contêiner.  
+contêiner: especifica o nome do contêiner de Armazenamento de Blobs do Azure. Para especificar o contêiner raiz de uma conta de armazenamento do domínio, use o nome de domínio em vez do nome do contêiner. Os contêineres raiz são somente leitura, portanto, os dados não podem ser gravados no contêiner.  
 account_name: o FQDN (nome de domínio totalmente qualificado) da conta de Armazenamento do Azure.  
 Exemplo: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -233,7 +233,7 @@ Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usa
   
  Quando não for especificado, o envio de computação por push para o Hadoop estará desabilitado para consultas do PolyBase.  
  
-Se a porta não for especificada, o valor padrão será determinado usando a definição atual da configuração 'conectividade do hadoop'.
+Se a porta não for especificada, o valor padrão será determinado usando a definição atual da configuração 'conectividade do Hadoop'.
 
 |Conectividade do Hadoop|Porta do Gerenciador de Recursos padrão|
 |-------------------|-----------------------------|
@@ -498,7 +498,7 @@ Use a seguinte fonte de dados para operações em massa com [BULK INSERT](../../
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

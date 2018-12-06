@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb665581f6a85e073e900c18547ee20406a7582
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700745"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407713"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Exibir configurações de NodeWeight de quorum de cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51700745"
 2.  Consulte a exibição [sys].[dm_hadr_cluster_members].  
   
 ### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
- O exemplo a seguir consulta uma exibição de sistema para retornar valores para todos os nós no cluster dessa instância.  
+ O exemplo a seguir consulta um modo de exibição do sistema para retornar valores para todos os nós no cluster dessa instância.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -73,7 +73,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Gere as propriedades de nó de cluster em um formato legível.  
   
 ### <a name="example-powershell"></a>Exemplo (Powershell)  
- O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado “Cluster001”.  
+ O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado "Cluster001".  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Usar **cluster.exe** para retornar o status do nó e valores de NodeWeight  
   
 ### <a name="example-clusterexe"></a>Exemplo (Cluster.exe)  
- O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado “Cluster001”.  
+ O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado "Cluster001".  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  

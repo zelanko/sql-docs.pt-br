@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ca5faedafdd1eaedb110eacff43af85af6593fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648084"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505728"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "47648084"
      Mostra se todas as colunas são retornadas pela exibição selecionada. Isso é definido no momento em que a exibição é criada.  
   
      **Comentário SQL**  
-     Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique na descrição e então clique nas reticências **(...)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
+     Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique nela e, em seguida, clique nas reticências **(…)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
   
      **Especificação de Top**  
      Expande para mostrar as propriedades **Top**, **Expression**, **Percent**e **With Ties** .  

@@ -1,7 +1,7 @@
 ---
 title: Rastreamento do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439798"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use Eventos Estendidos.  
-  
+> [!IMPORTANT]
+> Rastreamento do SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estão preteridos. O namespace *Microsoft.SqlServer.Management.Trace* que contém os objetos Trace e Replay do Microsoft SQL Server também foi preterido. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Em vez disso, use Eventos Estendidos. Para obter mais informações sobre [eventos estendidos](../../relational-databases/extended-events/extended-events.md), confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Benefícios do Rastreamento do SQL  
- O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece procedimentos armazenados do sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar rastreamentos em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Esses procedimentos armazenados do sistema podem ser usados nos seus próprios aplicativos para criar rastreamentos manualmente em vez de usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Isso lhe permite escrever aplicativos personalizados específicos às necessidades de sua empresa.  
+O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece procedimentos armazenados do sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar rastreamentos em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Esses procedimentos armazenados do sistema podem ser usados nos seus próprios aplicativos para criar rastreamentos manualmente em vez de usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Isso lhe permite escrever aplicativos personalizados específicos às necessidades de sua empresa.  
   
 ## <a name="sql-trace-architecture"></a>Arquitetura do Rastreamento do SQL  
- As Origens do Evento podem ser quaisquer origens que produzam o evento de rastreamento, tais como lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou então eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como deadlocks. Para obter mais informações sobre eventos, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Quando ocorre um evento, se a classe de evento estiver incluída na definição de um rastreamento, serão coletadas informações sobre o evento. Se houver filtros definidos para a classe de evento na definição do rastreamento, eles serão aplicados e as informações do evento serão transmitidas a uma fila. Da fila, as informações do rastreamento serão gravadas em um arquivo ou poderão ser usadas pelo SMO em aplicativos, tais como o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. O diagrama a seguir mostra como o Rastreamento do SQL coleta eventos durante um rastreamento.  
+As Origens do Evento podem ser quaisquer origens que produzam o evento de rastreamento, tais como lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou então eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como deadlocks. Para obter mais informações sobre eventos, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Quando ocorre um evento, se a classe de evento estiver incluída na definição de um rastreamento, serão coletadas informações sobre o evento. Se houver filtros definidos para a classe de evento na definição do rastreamento, eles serão aplicados e as informações do evento serão transmitidas a uma fila. Da fila, as informações do rastreamento serão gravadas em um arquivo ou poderão ser usadas pelo SMO em aplicativos, tais como o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. O diagrama a seguir mostra como o Rastreamento do SQL coleta eventos durante um rastreamento.  
   
- ![Processo de rastreamento de eventos do Mecanismo de Banco de Dados](../../relational-databases/sql-trace/media/tracarch.gif "Processo de rastreamento de eventos do Mecanismo de Banco de Dados")  
+![Processo de rastreamento de eventos do Mecanismo de Banco de Dados](../../relational-databases/sql-trace/media/tracarch.gif "Processo de rastreamento de eventos do Mecanismo de Banco de Dados")  
   
 ## <a name="sql-trace-terminology"></a>Terminologia do Rastreamento do SQL  
- Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.  
+Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.  
   
  **Evento**  
  A ocorrência de uma ação dentro de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571445"
  No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], uma tabela criada quando um rastreamento é salvo em uma tabela.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Use colunas de dados para descrever eventos retornados  
- O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descrever os eventos retornados por sua execução. A tabela a seguir descreve as colunas de dados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que são as mesmas usadas pelo Rastreamento do SQL, e indica as colunas selecionadas por padrão.  
+O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descrever os eventos retornados por sua execução. A tabela a seguir descreve as colunas de dados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que são as mesmas usadas pelo Rastreamento do SQL, e indica as colunas selecionadas por padrão.  
   
 |Coluna de dados|Número da coluna|Descrição|  
 |-----------------|-------------------|-----------------|  

@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661725"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393069"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Solucionar problemas comuns com JSON no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WHERE [key] = 'color'
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON requer o nível de compatibilidade 130  
  **Pergunta.** Estou tentando executar OPENJSON no SQL Server 2016 e estou recebendo o erro a seguir.  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **Resposta.** A função OPENJSON está disponível somente no nível de compatibilidade 130. Se o nível de compatibilidade do seu banco de dados for inferior a 130, a função OPENJSON será ocultada. Outras funções JSON estão disponíveis em todos os níveis de compatibilidade.  
  

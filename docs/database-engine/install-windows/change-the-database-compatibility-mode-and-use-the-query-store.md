@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606766"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405221"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
@@ -30,7 +30,7 @@ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../
   
 - Uma vez que a atualização é uma operação unidirecional (não é possível fazer downgrade do formato de arquivo), há valor em separar a habilitação de novos recursos para uma operação separada dentro do banco de dados. É possível reverter uma configuração para um nível de compatibilidade do banco de dados anterior.  O novo modelo reduz o número de itens que devem ocorrer durante uma janela de interrupção.  
   
-- Alterações no processador de consulta podem ter efeitos complexos. Até mesmo uma alteração “boa” para o sistema pode ser ótima para a maioria das cargas de trabalho – ela pode causar uma regressão inaceitável em uma consulta importante para outros. Separar essa lógica do processo de atualização permite que determinados recursos, assim como o Repositório de Consultas, façam rapidamente a mitigação das escolhas de plano ou até mesmo evitem-nas completamente em servidores de produção.  
+- Alterações no processador de consulta podem ter efeitos complexos. Até mesmo uma alteração "boa" para o sistema pode ser ótima para a maioria das cargas de trabalho – ela pode causar uma regressão inaceitável em uma consulta importante para outros. Separar essa lógica do processo de atualização permite que determinados recursos, assim como o Repositório de Consultas, façam rapidamente a mitigação das escolhas de plano ou até mesmo evitem-nas completamente em servidores de produção.  
   
 > [!IMPORTANT]  
 > Os comportamentos a seguir são esperadas para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quando um banco de dados for anexado ou restaurado e após uma atualização in-loco:

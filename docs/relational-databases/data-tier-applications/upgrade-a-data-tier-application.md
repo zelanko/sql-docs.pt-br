@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514044"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "43814042"
   
 -   **Ignorar Perda de Dados** – Se **True**, a atualização continuará mesmo que algumas das operações resultem na perda de dados. Se **False**, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não estiver presente no esquema do novo DAC, a tabela será removida se **True** for especificado. A configuração padrão é **True**.  
   
--   **Bloquear Alterações** - Se **True**, a atualização será finalizada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se **False**, a atualização continuará mesmo que sejam detectadas alterações. A configuração padrão é **False**.  
+-   **Bloquear Alterações** – Se **True**, a atualização será finalizada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se **False**, a atualização continuará mesmo que sejam detectadas alterações. A configuração padrão é **False**.  
   
--   **Reversão em Falha** - Se **True**, a atualização será incluída em uma transação. Se forem encontrados erros, haverá uma tentativa de reversão. Se **False**, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é **False**.  
+-   **Reversão em Falha** – Se **True**, a atualização será incluída em uma transação. Se forem encontrados erros, haverá uma tentativa de reversão. Se **False**, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é **False**.  
   
--   **Ignorar a Validação da Política** - Se **True**, a política de seleção de servidor de DAC não será avaliada. Se **False**, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é **False**.  
+-   **Ignorar a Validação da Política** – Se **True**, a política de seleção de servidor de DAC não será avaliada. Se **False**, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é **False**.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Só podem ser executados uprades de DAC em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
@@ -83,7 +83,7 @@ ms.locfileid: "43814042"
   
 2.  Expanda os nós **Gerenciamento** e **Aplicativos da Camada de Dados** .  
   
-3.  Clique com o botão direito do mouse no nó do DAC a ser atualizado e selecione **Atualizar Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no nó do DAC a ser atualizado e selecione **Atualizar Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -193,13 +193,13 @@ ms.locfileid: "43814042"
   
  **As ações a seguir serão usadas para atualizar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A coluna **Ação** exibe as ações, tais como instruções Transact-SQL, que serão executadas para realizar a atualização. A coluna **Perda de Dados** conterá um aviso se a ação associada puder excluir dados.  
   
- **Atualizar** - atualiza a lista de ações.  
+ **Atualizar** – Atualiza a lista de ações.  
   
- **Salvar Relatório de Ação** - salva o conteúdo da janela de ação em um arquivo HTML.  
+ **Salvar Relatório de Ação** – Salva o conteúdo da janela de ação em um arquivo HTML.  
   
  **Continuar, apesar da possível perda de alterações** – Especifique que você entende que alguns dos objetos ou dados no banco de dados atual não estarão presentes no novo banco de dados e que está disposto a continuar com a atualização. Somente selecione este botão se você tiver analisado o relatório de alterações e entender as etapas que deve executar para transferir manualmente os objetos ou os dados necessários no novo banco de dados. Se você não tiver certeza, clique no botão **Salvar Relatório de Ação** para salvar o relatório de alterações e no botão **Salvar Scripts** para salvar o script Transact-SQL. Depois, clique em **Cancelar**. Analise o relatório e o script. Em seguida, planeje como transferir os objetos e os dados necessários após a conclusão da atualização. Reinicie o assistente.  
   
- **Salvar Scripts** – salva as instruções Transact-SQL que serão usadas para executar a atualização em um arquivo de texto.  
+ **Salvar Scripts** – Salva as instruções Transact-SQL que serão usadas para executar a atualização em um arquivo de texto.  
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   

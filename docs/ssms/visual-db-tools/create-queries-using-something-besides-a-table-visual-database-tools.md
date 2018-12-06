@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504078"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ FROM sales
 Para obter mais informações sobre como adicionar um modo de exibição a uma consulta, veja [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md).  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>Usando uma consulta no lugar de uma tabela  
-Você pode selecionar linhas de uma consulta. Por exemplo, suponha você já escreveu uma consulta que recupera títulos e identificadores dos livros com coautoria – os livros com mais de um autor. O SQL pode ter esta aparência:  
+Você pode selecionar linhas de uma consulta. Por exemplo, suponha você já escreveu uma consulta que recupera títulos e identificadores dos livros de coautoria, ou seja, livros com mais de um autor. O SQL pode ter esta aparência:  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ Para obter mais informações sobre como adicionar uma consulta a uma consulta, 
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Usando uma função definida pelo usuário no lugar de uma tabela  
 No SQL Server 2000 ou superior, você pode criar uma função definida pelo usuário que retorna uma tabela. Tais funções são úteis para executar lógica complexa ou de procedimento.  
   
-Por exemplo, suponha que a tabela de funcionários contenha uma coluna adicional, employee.manager_emp_id, e que exista uma chave estrangeira de manager_emp_id a employee.emp_id. Dentro de cada linha da tabela de funcionários, a coluna manager_emp_id indica o chefe do funcionário. Mais precisamente, indica a emp_id do chefe do funcionário. Você pode criar uma função definida pelo usuário que retorna a tabela contendo uma linha para cada funcionário que trabalha em uma determinada hierarquia organizacional de gerenciamento de alto nível. Você poderia chamar a função fn_GetWholeTeam e projetar isto para aceitar uma variável de entrada – a emp_id do administrador cuja equipe você quer recuperar.  
+Por exemplo, suponha que a tabela de funcionários contenha uma coluna adicional, employee.manager_emp_id, e que exista uma chave estrangeira de manager_emp_id a employee.emp_id. Dentro de cada linha da tabela de funcionários, a coluna manager_emp_id indica o chefe do funcionário. Mais precisamente, indica a emp_id do chefe do funcionário. Você pode criar uma função definida pelo usuário que retorna a tabela contendo uma linha para cada funcionário que trabalha em uma determinada hierarquia organizacional de gerenciamento de alto nível. Você pode chamar a função fn_GetWholeTeam e projetá-la para aceitar uma variável de entrada, ou seja, a emp_id do administrador cuja equipe você quer recuperar.  
   
 Você pode escrever uma consulta que use a função fn_GetWholeTeam como uma fonte de dados. O SQL resultante pode ter esta aparência:  
   

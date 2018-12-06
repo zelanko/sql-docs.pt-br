@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511656"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
 
@@ -82,9 +82,9 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ### <a name="rules-and-clauses"></a>Regras e cláusulas  
  O escopo das alterações de dados e nas regras de alerta definem as alterações de dados que acionam o alerta. Escopo das alterações de dados:  
   
--   **Todos os dados têm**— pelo menos um valor atende às regras especificadas pela condição.  
+-   **Todos os dados têm**– pelo menos um valor atende às regras especificadas pela condição.  
   
--   **Nenhum dado tem**— valores que atendem às regras especificadas pela condição.  
+-   **Nenhum dado tem**– nenhum valor nos dados atende às regras especificadas pela condição.  
   
  Uma regra contém zero, uma ou várias cláusulas. Várias regras são combinadas pelo operador lógico AND. Uma regra poderá incluir várias cláusulas combinadas pelo operador OR se a coluna tiver o tipo de dados de cadeia de caracteres. O conteúdo a seguir mostra as regras básicas que usam somente uma cláusula, várias regras combinadas que usam o operador AND, várias regras com uma ou mais cláusulas OR.  
   
@@ -153,13 +153,13 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ### <a name="schedule-settings"></a>Configurações da agenda  
  A agenda definida para o alerta de dados define o padrão de recorrência para enviar a mensagem de alerta de dados, e quando iniciar e parar de enviar as mensagens de alerta. Os padrões são: uma vez, por minuto, diariamente e semanalmente. Embora um alerta tenha apenas uma agenda, é possível criar padrões complexos de recorrência que atendam à maioria das necessidades de negócios com o uso desses intervalos. Os seguintes são exemplos de padrões de recorrência comuns para uso em agendas:  
   
--   **Diariamente a cada 10 dias** — envia alertas uma vez por dia, a cada 10 dias.  
+-   **Diariamente a cada 10 dias** – envia alertas uma vez por dia, a cada 10 dias.  
   
--   **Semanalmente a cada 2 semanas na segunda-feira** — envia alertas a cada duas semanas apenas nas segundas-feiras.  
+-   **Semanalmente a cada 2 semanas na segunda-feira** – envia alertas a cada duas semanas apenas nas segundas-feiras.  
   
--   **Por hora a cada 12 horas** — envia alertas a cada 12 horas.  
+-   **Por hora a cada 12 horas** – envia alertas a cada 12 horas.  
   
--   **Por minuto a cada 30 minutos** — envia alertas a cada 30 minutos.  
+-   **Por minuto a cada 30 minutos** – envia alertas a cada 30 minutos.  
   
  O padrão de recorrência especifica quando o alerta é enviado. Se as regras forem atendidas durante o intervalo especificado pelo padrão, o alerta só será enviado após o fim do intervalo.  
   

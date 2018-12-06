@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412083"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020680"
   
 ## <a name="set-database-timeout"></a>Definir tempo limite de banco de dados
   
-*  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, consulte a seção "Obter e definir Propriedades do banco de dados do aplicativo de serviço de relatório" [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+*  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, confira a seção "Obter e definir Propriedades do banco de dados do aplicativo de serviço de relatório" de [Cmdlets do PowerShell para o modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
 

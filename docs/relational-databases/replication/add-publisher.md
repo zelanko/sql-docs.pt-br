@@ -15,12 +15,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fe9784b5d15b50403508142f934e3c09b3e7c5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513919"
 ---
 # <a name="add-publisher"></a>Adicionar Publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "47748824"
  **Adicionar**  
  Clique para selecionar um tipo de Publicador a ser adicionado que inicia a caixa de diálogo **Conectar ao Servidor** . As opções são:  
   
--   **Adicionar Editor SQL Server…**  
+-   **Adicionar Editor SQL Server...**  
   
      Conectar-se ao Editor usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Adicionar Editor Oracle…**  
+-   **Adicionar Editor Oracle...**  
   
      Conecte-se ao Distribuidor da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com Editor Oracle usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Especificar um Distribuidor e Adicionar seus Publicadores…**  
+-   **Especificar um Distribuidor e Adicionar seus Publicadores...**  
   
      Conecte-se ao Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associado a um ou mais Publicadores usando a caixa de diálogo **Conectar ao Servidor** .  
   

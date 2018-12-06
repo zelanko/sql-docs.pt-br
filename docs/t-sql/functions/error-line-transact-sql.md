@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515868"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Essa função retorna o número de linha da ocorrência de um erro que fez com que o bloco CATCH de um constructo TRY…CATCH fosse executado.  
+Essa função retorna o número de linha da ocorrência de um erro que fez com que o bloco CATCH de um constructo TRY...CATCH fosse executado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Uma chamada a `ERROR_LINE` pode ocorrer em qualquer lugar dentro do escopo de um
   
 `ERROR_LINE` retorna o número de linha em que o erro ocorreu. Isso acontece independentemente da localização da chamada `ERROR_LINE` dentro do escopo do bloco CATCH e independentemente do número de chamadas para `ERROR_LINE`. Isso contrasta com funções como @@ERROR. @@ERROR retorna um número de erro na instrução imediatamente após aquela que causa um erro ou na primeira instrução de um bloco CATCH.  
   
-Em blocos CATCH aninhados, `ERROR_LINE` retorna o número de linha do erro específico ao escopo do bloco CATCH no qual ele é referenciado. Por exemplo, o bloco CATCH de uma construção TRY...CATCH poderia ter uma construção TRY...CATCH aninhada. Dentro do bloco CATCH aninhado, `ERROR_LINE` retorna o número de linha do erro que invocou o bloco CATCH aninhado. Se `ERROR_LINE` for executado em um bloco CATCH externo, ele retornará o número de linha do erro que invocou aquele bloco CATCH específico.  
+Em blocos CATCH aninhados, `ERROR_LINE` retorna o número de linha do erro específico ao escopo do bloco CATCH no qual ele é referenciado. Por exemplo, o bloco CATCH de um constructo TRY...CATCH poderia ter um constructo TRY...CATCH aninhado. Dentro do bloco CATCH aninhado, `ERROR_LINE` retorna o número de linha do erro que invocou o bloco CATCH aninhado. Se `ERROR_LINE` for executado em um bloco CATCH externo, ele retornará o número de linha do erro que invocou aquele bloco CATCH específico.  
   
 ## <a name="examples"></a>Exemplos  
   

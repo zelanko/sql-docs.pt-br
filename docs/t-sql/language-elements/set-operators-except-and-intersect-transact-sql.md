@@ -24,12 +24,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d5a61f368c1ff522b0748de94af8d3f49a6acf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e3b60a01a114ab24be3dc76237134b3cbf34363
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396380"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Operadores de conjunto – EXCEPT e INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47720324"
  Retorna qualquer valor distinto retornado pela consulta à esquerda e à direita do operador INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
- Quando os tipos de dados de colunas comparáveis retornadas pelas consultas à direita e à esquerda dos operadores EXCEPT ou INTERSECT são tipos de dados de caractere com agrupamentos diferentes, a comparação necessária é executada de acordo com as regras de [precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md). Se essa conversão não puder ser executada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
+ Quando os tipos de dados de colunas comparáveis retornadas pelas consultas à direita e à esquerda dos operadores EXCEPT ou INTERSECT são tipos de dados de caractere com ordenações diferentes, a comparação necessária é executada de acordo com as regras de [precedência de ordenação](../../t-sql/statements/collation-precedence-transact-sql.md). Se essa conversão não puder ser executada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
   
  Ao comparar valores de colunas para determinar linhas DISTINTAS, dois valores NULL são considerados iguais.  
   

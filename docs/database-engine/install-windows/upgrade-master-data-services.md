@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600736"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405121"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
 
@@ -150,7 +150,7 @@ ms.locfileid: "51600736"
 3.  Atualize o esquema de banco de dados do MDS, crie um aplicativo Web e associe o novo aplicativo Web com o banco de dados do MDS atualizado. Para obter instruções, confira as etapas 2 a 4 em [Atualizar sem a atualização do Mecanismo de Banco de Dados](#noengine)  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- **Problema:** ao abrir o aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mensagem de erro “a versão de cliente não é compatível com a versão de banco de dados” é exibida.  
+ **Problema:** ao abrir o aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mensagem de erro "a versão de cliente não é compatível com a versão de banco de dados" é exibida.  
   
  **Solução:** esse problema ocorre quando um aplicativo Web do Master Data Manager do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tenta acessar um banco de dados que foi atualizado para o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Use um ou um aplicativo Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   

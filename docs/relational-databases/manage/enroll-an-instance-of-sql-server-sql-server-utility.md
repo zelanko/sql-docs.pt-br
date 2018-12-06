@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681334"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509788"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +89,12 @@ ms.locfileid: "51681334"
 -   [Inscrevendo a instância do SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
- Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas**e selecione **Adicionar Instância Gerenciada...**.  
+ Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...**.  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
- Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, clique em **Avançar**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "51681334"
 >  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
->  Não altere nenhuma propriedade do conjunto de coleta “Informações sobre o Utilitário” em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e não ative/desative a coleta de dados manualmente, pois ela é controlada por um trabalho de agente do utilitário.  
+>  Não altere nenhuma propriedade do conjunto de coleta “Informações sobre o Utilitário” em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não habilite/desabilite a coleta de dados manualmente, pois ela é controlada por um trabalho do agente do utilitário.  
   
  Depois de concluir as etapas do Assistente para Inscrever Instância, clique no nó **Instâncias Gerenciadas** no painel **Navegação do Gerenciador do Utilitário** do SSMS. As instâncias inscritas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas na exibição de lista no painel **conteúdo do Gerenciador do Utilitário** .  
   

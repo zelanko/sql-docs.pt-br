@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: aa2b5df78043d202d87cc01849aa9a9d10911b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031235"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397126"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  
@@ -39,7 +39,7 @@ ms.locfileid: "50031235"
   
 -   OutputPath é uma propriedade de build que identifica o caminho de pastas para armazenar a definição de relatório usada na verificação de build, na implantação e na visualização de relatórios.  
   
--   ErrorLevel é uma propriedade de build que identifica a severidade dos problemas de build relatados como erros. Problemas com níveis de severidade menor ou igual ao valor ErrorLevel são relatados como erros; caso contrário, os problemas são relatados como avisos. Para obter mais informações, consulte a seção “Validação de relatório e níveis de erro” em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel é uma propriedade de build que identifica a severidade dos problemas de build relatados como erros. Problemas com níveis de severidade menor ou igual ao valor ErrorLevel são relatados como erros; caso contrário, os problemas são relatados como avisos. Para obter mais informações, confira a seção "Validação de relatório e níveis de erro" em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion é uma propriedade de implantação que identifica a versão esperada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalado no servidor de relatório de destino especificado na propriedade TargetServerURL.  
   

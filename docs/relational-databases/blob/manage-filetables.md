@@ -14,12 +14,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a444079d45ea75de7cb5b57bed05f96877e41e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1d2d1dbd025db3a72251435133149cdc80275f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703995"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411773"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ GO
   
  Muitas ferramentas e operações administrativas, (inclusive backup, backup de log e replicação transacional) leem dados transacionalmente consistentes lendo os logs de transações. Neste momento, eles leem quaisquer dados FILESTREAM atualizados como parte de uma transação. Quando o acesso não transacional não está habilitado no nível de banco de dados, essas ferramentas e operações funcionam com total consistência transacional.  
   
- Entretanto, quando o acesso completo não transacional estiver habilitado, uma FileTable poderá conter dados que foram atualizados mais recentemente (por meio de uma atualização não transacional) do que a transação que a ferramenta ou o processo está lendo no log de transação. Isso significa que uma operação de restauração pontual em uma transação específica pode conter dados FILESTREAM mais recentes do que aquela transação. Esse é o comportamento esperado quando são permitidas atualizações não transacionais em FileTables.  
+ Entretanto, quando o acesso completo não transacional estiver habilitado, uma FileTable poderá conter dados que foram atualizados mais recentemente (por meio de uma atualização não transacional) do que a transação que a ferramenta ou o processo está lendo no log de transação. Isso significa que uma operação de restauração de "ponto no tempo" em uma transação específica pode conter dados FILESTREAM mais recentes do que aquela transação. Esse é o comportamento esperado quando são permitidas atualizações não transacionais em FileTables.  
   
 ##  <a name="Monitor"></a> Recursos do SQL Server Profiler e FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler pode capturar as operações Abrir Arquivo e Fechar Arquivo do Windows no rastreamento gerado para arquivos que são armazenados em um FileTable.  

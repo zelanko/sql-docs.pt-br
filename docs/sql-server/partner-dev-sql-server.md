@@ -10,12 +10,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: bc5ac40cd1131db2dd83a121177c1288fb01d1c4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699605"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416217"
 ---
 # <a name="sql-server-development-partners"></a>Parceiros de desenvolvimento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ Para obter suporte sobre como desenvolver soluções de banco de dados do SQL Se
 | Partner (parceiro) | Descrição | Links |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL é um ambiente de desenvolvimento integrado inteligente de SQL que permite aos desenvolvedores de banco de dados e administradores de banco de dados a criação de código SQL de alto desempenho em todas as plataformas de banco de dados principais, incluindo o SQL Server, de uma única interface.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>A Click2Cloud Inc. permite que a comunidade de desenvolvedores tenha flexibilidade na escolha de linguagens de programação, estruturas e serviços com o uso do conjunto de ferramentas adequado. Com o uso do kit de ferramentas da Click2Cloud, os desenvolvedores podem criar contêineres de 'SQL no Linux' e anexá-los a um aplicativo, enquanto permitem a arquitetura segura e multilocatária. Os contêineres podem ser implantados de forma independente em qualquer plataforma de contêiner baseada em nuvem.|[Marketplace][click2cloud_marketplace]<br>[Site][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>A Click2Cloud Inc. permite que a comunidade de desenvolvedores tenha flexibilidade na escolha de linguagens de programação, estruturas e serviços com o uso do conjunto de ferramentas adequado. Com o uso do kit de ferramentas da Click2Cloud, os desenvolvedores podem criar contêineres de 'SQL no Linux' e anexá-los a um aplicativo, enquanto ainda permitem a arquitetura segura e multilocatário. Os contêineres podem ser implantados de forma independente em qualquer plataforma de contêiner baseada em nuvem.|[Marketplace][click2cloud_marketplace]<br>[Site][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube] |
 ## <a name="next-steps"></a>Próximas etapas
 Para saber mais sobre alguns dos nossos outros parceiros, consulte [Parceiros para alta disponibilidade e recuperação de desastre][hadr_partners], [parceiros de gerenciamento][management_partners] e [parceiros de monitoramento][monitor_partners].
 

@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697584"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510715"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Quando um índice está bastante fragmentado, as opções a seguir são disponib
 -   Descartar e recriar um índice clusterizado.  
      Recriar um índice clusterizado reorganiza os dados e gera páginas de dados cheias. O nível de preenchimento pode ser configurado usando a opção FILLFACTOR em CREATE INDEX. As desvantagens desse método são que o índice fica offline durante o ciclo de descarte ou recriação e que a operação é atômica. Se a criação de índice for suspensa, o índice não será recriado.  
 -   Reordenar as páginas de nível folha do índice em uma ordem lógica.  
-     Use ALTER INDEX.REORGANIZE para reordenar as páginas de nível folha do índice em uma ordem lógica. Por essa operação ser online, o índice estará disponível quando a instrução estiver em execução. A operação também pode ser interrompida sem perda de trabalho concluído. A desvantagem desse método é que ele não reorganiza muito bem os dados como uma operação de recriação ou descarte de índice clusterizado.  
+     Use ALTER INDEX...REORGANIZE para reordenar as páginas no nível da folha do índice em uma ordem lógica. Por essa operação ser online, o índice estará disponível quando a instrução estiver em execução. A operação também pode ser interrompida sem perda de trabalho concluído. A desvantagem desse método é que ele não reorganiza muito bem os dados como uma operação de recriação ou descarte de índice clusterizado.  
 -   Reconstruir o índice.  
      Use ALTER INDEX com REBUILD para reconstruir o índice. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

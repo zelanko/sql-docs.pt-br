@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514124"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam conexões para executar diferentes tarefas e implementar recursos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -159,7 +159,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
     -   Clique no tipo de gerenciador de conexões que será adicionado ao pacote.  
   
-         — ou —  
+         -ou-  
   
     -   Se o tipo que deseja adicionar não estiver listado, clique em **Nova Conexão** para abrir a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** , selecione um tipo de gerenciador de conexões e clique em **OK**.  
   
@@ -226,7 +226,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 4.  Como opção, clique com o botão direito do mouse no gerenciador de conexões na janela **Gerenciador de Soluções** no nó **Gerenciadores de Conexões** ou na guia **Gerenciadores de Conexões** da janela **Designer SSIS** , clique em **Renomear**e modifique o nome padrão do gerenciador de conexões.  
   
     > [!NOTE]  
-    >  Na guia **Gerenciadores de Conexões** da janela **Designer SSIS** , você não poderá substituir o prefixo **(projeto)** do nome do gerenciador de conexões. Isso ocorre por design.  
+    >  Na guia **Gerenciadores de Conexões** da janela **Designer SSIS**, você não poderá substituir o prefixo **(projeto)** do nome do gerenciador de conexões. Isso ocorre por design.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Caixa de diálogo Adicionar Gerenciador de Conexões SSIS
 Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecionar o tipo de conexão a adicionar a um pacote.  

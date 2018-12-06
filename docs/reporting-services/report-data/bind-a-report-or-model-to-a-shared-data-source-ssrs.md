@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031335"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507456"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associar um relatório a uma fonte de dados compartilhada (SSRS)
   Em algumas situações, por exemplo, quando você move um relatório de um servidor de teste para um servidor de produção, talvez seja necessário salvar o arquivo no computador local e carregá-lo em um servidor de relatório diferente. Ao carregar o relatório no novo servidor, você precisa associá-lo novamente a uma fonte de dados compartilhados que está armazenada no novo servidor de relatório. Se o relatório não for associado novamente, ele não funcionará corretamente quando for acessado do novo servidor de relatório.  
@@ -50,7 +50,7 @@ ms.locfileid: "50031335"
   
 5.  Na área **Tipo de Conexão** , verifique se a opção **Fonte de dados compartilhada** está selecionada.  
   
-6.  Na área **Vínculo da Fonte de Dados** , clique no botão de reticências (...).  
+6.  Na área **Vínculo da Fonte de Dados**, clique no botão de reticências (...).  
   
 7.  Localize a fonte de dados que deseja usar.  
   

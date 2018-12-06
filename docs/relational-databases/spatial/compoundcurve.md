@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511840"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Isso produz a seguinte saída: 12,566370… que é o equivalente a 4∏. A instância `CompoundCurve` do exemplo armazena um círculo com raio 2. Os dois exemplos de código anteriores não precisavam usar uma `CompoundCurve`. Teria sido mais simples usar uma instância `LineString` no primeiro exemplo e uma instância `CircularString` no segundo exemplo. Porém, o próximo exemplo mostra onde uma `CompoundCurve` oferece uma alternativa melhor.  
+ Isso produz a seguinte saída: 12,566370... que é o equivalente de 4∏. A instância `CompoundCurve` do exemplo armazena um círculo com raio 2. Os dois exemplos de código anteriores não precisavam usar uma `CompoundCurve`. Teria sido mais simples usar uma instância `LineString` no primeiro exemplo e uma instância `CircularString` no segundo exemplo. Porém, o próximo exemplo mostra onde uma `CompoundCurve` oferece uma alternativa melhor.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Usando uma CompoundCurve para armazenar um semicírculo  
  O exemplo a seguir usa uma instância `CompoundCurve` para armazenar um semicírculo.  
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  A saída é a seguinte:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  O perímetro de Circle Two é aproximadamente 4∏, que é o valor real do perímetro. Porém, o perímetro de Circle One é significativamente inexato. A instância `CompoundCurve` de Circle One armazena um segmento de arco circular (ABC) e dois segmentos de linha (CD, DA). A instância `CompoundCurve` deve armazenar dois segmentos de arco circular (ABC, CDA) para definir um círculo. Uma instância `LineString` define o segundo conjunto de pontos (4 2, 2 4, 0 2) na instância `CompoundCurve` de Circle One. Você deve declarar uma instância `CircularString` explicitamente dentro de uma `CompoundCurve`.  

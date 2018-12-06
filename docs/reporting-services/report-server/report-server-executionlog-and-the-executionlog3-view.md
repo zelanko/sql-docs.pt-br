@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808754"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414094"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
@@ -26,7 +26,7 @@ ms.locfileid: "47808754"
 ##  <a name="bkmk_top"></a> Exibindo as informações do log  
  A execução do servidor de relatório registra dados sobre execução de relatório em uma tabela de banco de dados interna. As informações da tabela estão disponíveis nas exibições do SQL Server.  
   
- O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições “2” e “3” foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
+ O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições "2" e "3" foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
   
  Neste tópico:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47808754"
   
  **Para habilitar o log de execução:**  
   
-1.  Inicie o SQL Server Management Studio com privilégios administrativos. Por exemplo, clique com o botão direito do mouse no ícone do Management Studio e clique em ‘Executar como administrador’.  
+1.  Inicie o SQL Server Management Studio com privilégios administrativos. Por exemplo, clique com o botão direito do mouse no ícone do Management Studio e clique em 'Executar como administrador'.  
   
 2.  Conecte-se ao servidor de relatório desejado.  
   
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
-|ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado ”test”, que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath “/test”.<br /><br /> Um relatório chamado “test”, salvo na pasta “samples” do Gerenciador de Relatórios, terá o ReportPath “/Samples/test/”|  
+|ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado "test", que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath "/test".<br /><br /> Um relatório chamado "test", salvo na pasta "samples" do Gerenciador de Relatórios, terá o ReportPath "/Samples/test/"|  
 |UserName|Identificador do usuário.|  
 |ExecutionID||  
 |RequestType|Tipo de solicitação (usuário ou sistema).|  

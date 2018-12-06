@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505293"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
  O procedimento armazenado do sistema sp_helprotect relata as permissões em um protegível no nível de banco de dados.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- A instrução **GRANT** ... **WITH GRANT OPTION** especifica que a entidade de segurança que recebe a permissão recebe a capacidade de conceder a permissão especificada para outras contas de segurança. Quando a entidade de segurança que recebe a permissão é uma função ou um grupo do Windows, a cláusula **AS** deve ser usada quando a permissão de objeto precisa ser concedida a usuários que não são os membros do grupo ou da função. Como apenas um usuário, em vez de um grupo ou uma função, pode executar uma instrução **GRANT**, um membro específico do grupo ou um função deve usar a cláusula **AS** para invocar a função ou a associação ao grupo explicitamente ao conceder a permissão. O exemplo a seguir mostra como **WITH GRANT OPTION** é usado quando concedido a uma função ou um grupo do Windows.  
+ O **GRANT**... **WITH GRANT OPTION** especifica que a entidade de segurança que recebe a permissão recebe a capacidade de conceder a permissão especificada para outras contas de segurança. Quando a entidade de segurança que recebe a permissão é uma função ou um grupo do Windows, a cláusula **AS** deve ser usada quando a permissão de objeto precisa ser concedida a usuários que não são os membros do grupo ou da função. Como apenas um usuário, em vez de um grupo ou uma função, pode executar uma instrução **GRANT**, um membro específico do grupo ou um função deve usar a cláusula **AS** para invocar a função ou a associação ao grupo explicitamente ao conceder a permissão. O exemplo a seguir mostra como **WITH GRANT OPTION** é usado quando concedido a uma função ou um grupo do Windows.  
   
 ```  
 -- Execute the following as a database owner  

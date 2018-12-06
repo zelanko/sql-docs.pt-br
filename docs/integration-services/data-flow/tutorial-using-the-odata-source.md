@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513001"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usando o OData Source
   Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (https://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  
@@ -43,7 +43,7 @@ ms.locfileid: "51637753"
   
 4.  Clique duas vezes no componente **OData Source** para iniciar a caixa de diálogo **Editor do OData Source**.  
   
-5.  Clique em **Novo…** para adicionar um novo Gerenciador de Conexões OData.  
+5.  Clique em **Novo...** para adicionar um novo Gerenciador de Conexões OData.  
   
 6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa URL pode ser igual àquela do documento do serviço ou à de um feed ou entidade específica. Para os fins deste tutorial, insira a URL para o documento de serviço: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   

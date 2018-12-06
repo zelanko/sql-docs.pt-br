@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505934"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -240,11 +240,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Especifique os arquivos a enumerar.  
   
 > [!NOTE]  
->  Use caracteres curinga (*) para especificar os arquivos a serem incluídos na coleção. Por exemplo, para incluir arquivos com nomes que contêm "abc", use o seguinte filtro: \*abc\*.  
+>  Use caracteres curinga (*) para especificar os arquivos a serem incluídos na coleção. Por exemplo, para incluir arquivos com nomes que contenham "abc", use o seguinte filtro: \*abc\*.  
 >   
 >  Quando você especifica uma extensão de nome de arquivo, o enumerador também retorna os arquivos que têm a mesma extensão com caracteres adicionais acrescentados. (É o mesmo comportamento do comando **dir** no sistema operacional, que também compara nomes de arquivos 8.3 para fins de compatibilidade com versões anteriores.) Este comportamento do enumerador poderia causar resultados inesperados. Por exemplo, você deseja enumerar somente arquivos do Excel 2003 e especifica "*.xls". Todavia, o enumerador também retorna arquivos do Excel 2007 porque esses arquivos têm a extensão ".xlsx".  
 >   
->  Você pode usar uma expressão para especificar os arquivos a serem incluídos em uma coleção, expandindo **Expressões** na página **Coleção** , selecionando a propriedade **FileSpec** e clicando no botão de reticências (…) para adicionar a expressão de propriedade.  
+>  Você pode usar uma expressão para especificar os arquivos a serem incluídos em uma coleção expandindo **Expressões** na página **Coleção**, selecionando a propriedade **FileSpec** e clicando no botão de reticências (…) para adicionar a expressão de propriedade.  
   
  **Totalmente qualificado**  
  Selecione para recuperar o caminho totalmente qualificado de nomes de arquivo. Se forem especificados caracteres curinga na opção Arquivos, os caminhos totalmente qualificados que retornarem corresponderão ao filtro.  
@@ -347,7 +347,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **DocumentSource**  
- Se **DocumentSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
+ Se **DocumentSourceType** estiver definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
  Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   

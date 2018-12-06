@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de4452bcf7d1600f49ecc28f0a66ae15ef0a602d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c81da7beaedbb7374154db2c35985b8c9955a376
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813379"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396849"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gerenciar os proprietários da assinatura e executar a assinatura – PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -337,7 +337,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  Para obter mais informações sobre o arquivo de configuração, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
- O script inclui a lógica de atraso “`Start-Sleep -s 6`” para que haja tempo após o evento ser acionado e para que o status atualizado fique disponível com o método ListSubscription.  
+ O script inclui a lógica de atraso "`Start-Sleep -s 6`" para que haja tempo após o evento ser acionado e para que o status atualizado fique disponível com o método ListSubscription.  
   
  **Sintaxe do modo Nativo:**  
   

@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507714"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -82,16 +82,16 @@ ms.locfileid: "51640733"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Um valor entre 1 e 100 que especifica a porcentagem para a extensão da memória durante a agregação. O valor padrão dessa propriedade é **25**.|  
 |CountDistinctKeys|Integer|Um valor que especifica o número exato de contagens diferentes que a agregação pode gravar. Se um valor de CountDistinctScale for especificado, o valor em CountDistinctKeys terá precedência.|  
-|CountDistinctScale|Inteiro (enumeração)|Um valor que descreve o número aproximado de valores distintos em uma coluna que a agregação pode contar. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de CountDistinctScale foi usado. O uso da opção **Não Especificado** (0) pode afetar o desempenho em grandes conjuntos de dados.|  
+|CountDistinctScale|Inteiro (enumeração)|Um valor que descreve o número aproximado de valores distintos em uma coluna que a agregação pode contar. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) – indica até 500 mil valores de chave<br /><br /> **Médio** (2) – indica até 5 milhões de valores de chave<br /><br /> **Alto** (3) – indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) – indica que nenhum valor de CountDistinctScale foi usado. O uso da opção **Não Especificado** (0) pode afetar o desempenho em grandes conjuntos de dados.|  
 |Chaves|Integer|Um valor que especifica o número exato de chaves Agrupar por que a agregação pode gravar. Se um valor de KeyScalevalue for especificado, o valor em Keys terá preferência.|  
-|KeyScale|Inteiro (enumeração)|Um valor que descreve aproximadamente quantos valores de chave Agrupar por podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave.<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de KeyScale foi usado.|  
+|KeyScale|Inteiro (enumeração)|Um valor que descreve aproximadamente quantos valores de chave Agrupar por podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) – indica até 500 mil valores de chave.<br /><br /> **Médio** (2) – indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) – indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) – indica que nenhum valor de KeyScale foi usado.|  
   
  A tabela a seguir descreve as propriedades personalizadas da saída da transformação Agregação. Todas as propriedades são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Chaves|Integer|Um valor que especifica o número exato de chaves Agrupar por que pode ser gravado pela agregação. Se um valor de KeyScale for especificado, o valor em Keys terá preferência.|  
-|KeyScale|Inteiro (enumeração)|Um valor que descreve aproximadamente quantos valores de chave Agrupar por podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave.<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de KeyScale foi usado.|  
+|KeyScale|Inteiro (enumeração)|Um valor que descreve aproximadamente quantos valores de chave Agrupar por podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) – indica até 500 mil valores de chave,<br /><br /> **Médio** (2) – indica até 5 milhões de valores de chave,<br /><br /> **Alto** (3) – indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) – indica que nenhum valor de KeyScale foi usado.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Agregação. Todas as propriedades são de leitura/gravação.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51640733"
 |AggregationComparisonFlags|Integer|Um valor que especifica como a transformação Agregação compara dados de cadeia de caracteres em uma coluna. Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |AggregationType|Inteiro (enumeração)|Um valor que especifica a operação de agregação a ser executada na coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Agrupar por** (0)<br /><br /> **Contagem** (1)<br /><br /> **Contagem total** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Soma** (4)<br /><br /> **Médio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Máximo** (6)|  
 |CountDistinctKeys|Integer|Quando o tipo de agregação é **Contar distintos**, um valor que especifica o número exato de chaves que a agregação pode gravar. Se um valor de CountDistinctScale for especificado, o valor em CountDistinctKeys terá precedência.|  
-|CountDistinctScale|Inteiro (enumeração)|Quando o tipo de agregação é **Contar distintos**, um valor que especifica o número aproximado de valores de chave que podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave.<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de CountDistinctScale foi usado.|  
+|CountDistinctScale|Inteiro (enumeração)|Quando o tipo de agregação é **Contar distintos**, um valor que especifica o número aproximado de valores de chave que podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) – indica até 500 mil valores de chave,<br /><br /> **Médio** (2) – indica até 5 milhões de valores de chave,<br /><br /> **Alto** (3) – indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) – indica que nenhum valor de CountDistinctScale foi usado.|  
 |IsBig|Booliano|Um valor que indica se a coluna contém um valor superior a 4 bilhões ou com mais precisão que um valor de precisão dupla de ponto flutuante. O valor pode ser 0 ou 1. 0 indica que IsBig é **Falso** e a coluna não contém um valor grande ou preciso. O valor padrão desta propriedade é 1.|  
   
  A entrada e as colunas de entrada da transformação Agregação não têm nenhuma propriedade personalizada.  
@@ -272,7 +272,7 @@ ms.locfileid: "51640733"
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Inteiro (enumeração)|Um valor que especifica se a transformação executa uma correspondência difusa ou uma correspondência exata. Os valores válidos são **Exato** e **Difuso**. O valor padrão para esta propriedade é **Difuso**.|  
 |FuzzyComparisonFlags|Inteiro (enumeração)|Um valor que especifica como a transformação compara os dados de cadeia de caracteres em uma coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Para obter mais informações, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|LeadingTrailingNumeralsSignificant|Inteiro (enumeração)|Um valor que especifica o significado de numerais. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **NumeralsNotSpecial** (0) — use se os números não forem significativos.<br /><br /> **LeadingNumeralsSignificant** (1) — use se os números à esquerda forem significativos.<br /><br /> **TrailingNumeralsSignificant** (2) — use se os números à direita forem significativos.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) — use se os números à direita e à esquerda forem significativos.|  
+|LeadingTrailingNumeralsSignificant|Inteiro (enumeração)|Um valor que especifica o significado de numerais. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **NumeralsNotSpecial** (0) – use se os numerais não forem significativos.<br /><br /> **LeadingNumeralsSignificant** (1) – use se os numerais à esquerda forem significativos.<br /><br /> **TrailingNumeralsSignificant** (2) – use se os numerais à direita forem significativos.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) – use se os numerais à direita e à esquerda forem significativos.|  
 |MinSimilarity|Double|O limite de similaridade usado para a junção na coluna, especificado como um valor entre 0 e 1. Somente linhas superiores ao limite são classificadas como correspondências.|  
 |ToBeCleaned|Booliano|Um valor que especifica se a coluna é usada para identificar duplicatas; ou seja, se é uma coluna na qual está ocorrendo agrupamento. O valor padrão dessa propriedade é **False**.|  
   

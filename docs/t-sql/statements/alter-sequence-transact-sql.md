@@ -19,12 +19,12 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0b85a5127a71b19e090ccc9bff1f018cc803b1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685376"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420367"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  O próximo valor que será retornado pelo objeto de sequência. Se fornecido, o valor de RESTART WITH deverá ser um inteiro menor ou igual ao valor máximo e maior ou igual ao valor mínimo do objeto de sequência. Se o valor de WITH for omitido, a numeração da sequência reiniciará com base nas opções CREATE SEQUENCE originais.  
   
  INCREMENT BY \<constant>  
- O valor usado para incrementar (ou diminuir, se negativo) o valor base do objeto de sequência de cada chamada para a função NEXT VALUE FOR. Se o incremento for um valor negativo, o objeto de sequência será decrescente; caso contrário, será crescente. O incremento não pode ser 0.  
+ O valor usado para incrementar (ou diminuir se negativo) o valor base do objeto de sequência de cada chamada para a função NEXT VALUE FOR. Se o incremento for um valor negativo, o objeto de sequência será decrescente; caso contrário, será crescente. O incremento não pode ser 0.  
   
  [ MINVALUE \<constant> | NO MINVALUE ]  
  Especifica os limites do objeto de sequência. Se NO MINVALUE for especificado, o valor mínimo possível do tipo de dados de sequência será usado.  

@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506237"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando **dtexecui** em um prompt de comando, é uma alternativa à execução de pacotes por meio da ferramenta de prompt de comando **DTExec** .  
@@ -99,7 +99,7 @@ ms.locfileid: "49169106"
 >  Quando possível, use a Autenticação do Windows.  
   
  **Pacote**  
- Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote SSIS** .  
+ Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote do SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origem do pacote = Sistema de arquivos  
  **Pacote**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169106"
  Esta opção não estará disponível quando você executar um pacote armazenado no **Repositório de Pacotes SSIS**.  
   
  **Pacote**  
- Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote SSIS** .  
+ Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote do SSIS**.  
   
 ## <a name="configurations-page"></a>Página Configurações  
  Use a página **Configurações** da caixa de diálogo **Utilitário de Execução de Pacotes** para selecionar os arquivos de configuração a serem carregados no momento da execução e para especificar a ordem em que serão carregados.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169106"
  Liste o arquivo de ponto de verificação que será usado pelo pacote se você ativar os pontos de verificação do pacote.  
   
  **Procurar**  
- Clique no botão Procurar **(…)** para localizar o arquivo de ponto de verificação usando a caixa de diálogo **Abrir** se você habilitar os pontos de verificação do pacote. Se algum arquivo de ponto de verificação já tiver sido especificado, ele será substituído pelo arquivo selecionado.  
+ Se você habilitar os pontos de verificação do pacote, clique no botão Procurar **(…)** para localizar o arquivo de ponto de verificação usando a caixa de diálogo **Abrir**. Se algum arquivo de ponto de verificação já tiver sido especificado, ele será substituído pelo arquivo selecionado.  
   
  **Substituir opções de reinicialização**  
  Indique se as opções de reinicialização serão substituídas se você ativar os pontos de verificação do pacote.  

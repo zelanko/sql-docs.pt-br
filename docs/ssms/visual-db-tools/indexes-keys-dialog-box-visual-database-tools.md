@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518376"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Exclua a chave ou o índice selecionado na lista **Índice ou Chave Exclusiva/Pr
 Quando expandida, mostra as propriedades de **Colunas**, **É Exclusivo**e **Tipo**.  
   
 **Colunas**  
-Lista as ordens de classificação escolhidas para as colunas na chave ou índice e fornece acesso a uma caixa de diálogo em que as ordens de classificação podem ser definidas. Para exibir a caixa de diálogo, clique em **Colunas** e depois clique no botão de reticências (…) que aparece à direita do campo de propriedade.  
+Lista as ordens de classificação escolhidas para as colunas na chave ou índice e fornece acesso a uma caixa de diálogo em que as ordens de classificação podem ser definidas. Para exibir a caixa de diálogo, clique em **Colunas** e depois clique no botão de reticências (...) que aparece à direita do campo de propriedade.  
   
 **É Exclusivo**  
 Indica se os dados digitados no índice ou na chave precisam ser exclusivos. Não está disponível em índices XML.  
@@ -57,7 +57,7 @@ Quando expandida, mostra os campos de propriedade de **Nome** e **Descrição**.
 Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
 **Descrição**  
-Fornece um local para a descrição da chave ou do índice. Para redigir uma descrição mais detalhada, clique em **Descrição** e depois clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
 **Categoria do Designer de Tabelas**  
 Quando expandida, mostra as informações para **Criar como Clusterizado**.  

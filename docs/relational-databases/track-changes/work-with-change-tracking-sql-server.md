@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad1d14ef3d727aab417a9b755aeff56fb3d2687d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514151"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "51559223"
 ### <a name="about-the-change-tracking-functions"></a>Sobre as funções de controle de alterações  
  Os aplicativos podem usar as funções a seguir para obter as alterações feitas em um banco de dados e as informações sobre as alterações:  
   
- Função CHANGETABLE(CHANGES…)  
+ Função CHANGETABLE(CHANGES ...)  
  Esta função de conjunto de linhas é usada para consultar informações de alteração. A função consulta os dados armazenados nas tabelas internas de controle de alterações e retorna um conjunto de resultados que contém as chaves primárias de linhas, que foram alteradas, junto com outras informações de alterações como a operação, as colunas atualizadas e a versão da linha.  
   
- A função CHANGETABLE(CHANGES…) usa uma última versão de sincronização como um argumento. A última versão de sincronização é obtida por meio da variável `@last_synchronization_version` . A semântica da última versão de sincronização é a seguinte:  
+ A função CHANGETABLE(CHANGES ...) usa uma última versão de sincronização como um argumento. A última versão de sincronização é obtida por meio da variável `@last_synchronization_version` . A semântica da última versão de sincronização é a seguinte:  
   
 -   O cliente de chamada obteve e tem conhecimento de todas as alterações até, e inclusive, a última versão de sincronização.  
   
--   A função CHANGETABLE(CHANGES…) retornará todas as alterações ocorridas depois da última versão de sincronização.  
+-   A função CHANGETABLE(CHANGES ...) retornará todas as alterações ocorridas depois da última versão de sincronização.  
   
-     A ilustração a seguir mostra como a função CHANGETABLE(CHANGES…) é usada para obter alterações.  
+     A ilustração a seguir mostra como a função CHANGETABLE(CHANGES ...) é usada para obter alterações.  
   
      ![Exemplo de saída da consulta de controle de alterações](../../relational-databases/track-changes/media/queryoutput.gif "Exemplo de saída da consulta de controle de alterações")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51559223"
  Esta função é usada para obter a versão mínima válida que o cliente pode ter e também obter os resultados válidos de CHANGETABLE(). O cliente deverá comparar a última versão de sincronização com o valor retornado por essa função. Se a última versão de sincronização for menor que a versão retornada por essa função, o cliente não poderá obter os resultados válidos de CHANGETABLE() e deverá reinicializar os dados.  
   
 ### <a name="obtaining-initial-data"></a>Obtendo dados iniciais  
- Antes que um aplicativo possa obter as alterações pela primeira vez, ele deverá enviar uma consulta para obter os dados iniciais e a versão de sincronização. O aplicativo deve obter os dados adequados diretamente da tabela e usar a função CHANGE_TRACKING_CURRENT_VERSION() para obter a versão inicial. Essa versão passará para CHANGETABLE(CHANGES…) na primeira vez em que as alterações forem obtidas.  
+ Antes que um aplicativo possa obter as alterações pela primeira vez, ele deverá enviar uma consulta para obter os dados iniciais e a versão de sincronização. O aplicativo deve obter os dados adequados diretamente da tabela e usar a função CHANGE_TRACKING_CURRENT_VERSION() para obter a versão inicial. Essa versão passará para CHANGETABLE(CHANGES ...) na primeira vez em que as alterações forem obtidas.  
   
  O exemplo a seguir mostra como obter a versão de sincronização inicial, bem como o conjunto de dados inicial.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51559223"
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Usando as funções de controle de alterações para obter alterações  
- Para obter as linhas alteradas de uma tabela e as informações sobre as alterações, use a função CHANGETABLE(CHANGES…). Por exemplo, a consulta a seguir obtém as alterações da tabela `SalesLT.Product` .  
+ Para obter as linhas alteradas de uma tabela e as informações sobre as alterações, use a função CHANGETABLE(CHANGES...). Por exemplo, a consulta a seguir obtém as alterações da tabela `SalesLT.Product` .  
   
 ```sql  
 SELECT  
@@ -87,7 +87,7 @@ FROM
   
 ```  
   
- Geralmente, um cliente optará por obter os últimos dados de uma linha em vez de apenas as chaves primárias da linha. Além disso, um aplicativo juntaria os resultados de CHANGETABLE(CHANGES…) com os dados na tabela do usuário. Por exemplo, a consulta a seguir une as linhas da tabela `SalesLT.Product` para obter os valores das colunas `Name` e `ListPrice` . Observe o uso da função `OUTER JOIN`. Ela é obrigatória para garantir que as informações de alteração sejam retornadas para essas linhas que foram excluídas da tabela do usuário.  
+ Geralmente, um cliente optará por obter os últimos dados de uma linha em vez de apenas as chaves primárias da linha. Além disso, um aplicativo juntaria os resultados de CHANGETABLE(CHANGES ...) com os dados na tabela do usuário. Por exemplo, a consulta a seguir une as linhas da tabela `SalesLT.Product` para obter os valores das colunas `Name` e `ListPrice` . Observe o uso da função `OUTER JOIN`. Ela é obrigatória para garantir que as informações de alteração sejam retornadas para essas linhas que foram excluídas da tabela do usuário.  
   
 ```sql  
 SELECT  
@@ -108,7 +108,7 @@ ON
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
- Quando um aplicativo obtiver alterações, ele deverá usar CHANGETABLE(CHANGES…) e CHANGE_TRACKING_CURRENT_VERSION(), como mostra o exemplo a seguir.  
+ Quando um aplicativo obtiver alterações, ele deverá usar CHANGETABLE(CHANGES...) e CHANGE_TRACKING_CURRENT_VERSION(), como mostra o exemplo a seguir.  
   
 ```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
@@ -133,7 +133,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>Validando a última versão sincronizada  
  As informações sobre as alterações são mantidas por um período limitado. A duração desse tempo e controlada pelo parâmetro CHANGE_RETENTION que pode ser especificado como parte de ALTER DATABASE.  
   
- Tenha em mente que o tempo especificado em CHANGE_RETENTION determina a frequência com que todos os aplicativos solicitarão alterações do banco de dados. Se o valor de *last_synchronization_version* em um aplicativo for anterior ao valor da versão de sincronização mínima válida para uma tabela, esse aplicativo não poderá executar a enumeração de alteração válida. Isso ocorre porque algumas informações de alteração podem ser apagadas. Antes que um aplicativo possa obter as alterações usando a função CHANGETABLE(CHANGES…), ele deve validar o valor de *last_synchronization_version* para passá-lo para CHANGETABLE(CHANGES…). Se o valor de *last_synchronization_version* não for válido, esse aplicativo deverá reinicializar todos os dados.  
+ Tenha em mente que o tempo especificado em CHANGE_RETENTION determina a frequência com que todos os aplicativos solicitarão alterações do banco de dados. Se o valor de *last_synchronization_version* em um aplicativo for anterior ao valor da versão de sincronização mínima válida para uma tabela, esse aplicativo não poderá executar a enumeração de alteração válida. Isso ocorre porque algumas informações de alteração podem ser apagadas. Antes que um aplicativo possa obter as alterações usando a função CHANGETABLE(CHANGES...), ele deve validar o valor de *last_synchronization_version* para passá-lo para CHANGETABLE(CHANGES ...). Se o valor de *last_synchronization_version* não for válido, esse aplicativo deverá reinicializar todos os dados.  
   
  O exemplo a seguir mostra como verificar a validade do valor de `last_synchronization_version` para cada tabela.  
   
@@ -163,7 +163,7 @@ END
 ### <a name="using-column-tracking"></a>Usando o rastreamento de coluna  
  O rastreamento de coluna permite que os aplicativos obtenham dados apenas das colunas que foram alteradas em vez de toda a linha. Por exemplo, considere o cenário no qual uma tabela tem uma ou mais colunas extensas, mas que raramente têm alterações, e outras colunas com alterações frequentes. Com o rastreamento de coluna, um aplicativo pode determinar se apenas uma linha foi alterada e se seria preciso sincronizar todos os dados da coluna maior. Entretanto, por meio do rastreamento de coluna, um aplicativo poderá determinar se os dados da coluna grande foram alterados e sincronizar apenas os dados, caso tenham sido alterados.  
   
- As informações de rastreamento de coluna são exibidas na coluna SYS_CHANGE_COLUMNS que é retornada pela função CHANGETABLE(CHANGES…).  
+ As informações de acompanhamento de coluna são exibidas na coluna SYS_CHANGE_COLUMNS que é retornada pela função CHANGETABLE(CHANGES ...).  
   
  O rastreamento de coluna pode ser usado de forma que NULL seja retornado para uma coluna que não tenha sido alterada. Se a coluna puder ser alterada para NULL, outra coluna deverá ser retornada para indicar se a coluna foi alterada.  
   
@@ -204,15 +204,15 @@ ON
   
 2.  Obter a versão que pode ser usada para obter a alteração na próxima vez por meio de CHANGE_TRACKING_CURRENT_VERSION().  
   
-3.  Obtenha as alterações da tabela Sales usando CHANGETABLE(CHANGES…).  
+3.  Obtenha as alterações da tabela Sales usando CHANGETABLE(CHANGES ...).  
   
-4.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES…).  
+4.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES ...).  
   
  Dois processos estão ocorrendo no banco de dados que podem afetar os resultados retornados pelas etapas anteriores:  
   
 -   O processo de limpeza é executado em segundo plano e remove as informações de controle de alterações anteriores ao período de retenção especificado.  
   
-     A limpeza é um processo interno e em segundo plano que usa um período de retenção especificado quando você configura o controle de alterações para o banco de dados. O problema é que o processo de limpeza pode ocorrer na hora em que a última versão de sincronização foi validada e quando a chamada para CHANGETABLE(CHANGES…) for feita. Uma última versão de sincronização que acabou de ser validada pode não ser mais válida no momento em que as alterações forem obtidas. Portanto, talvez sejam retornados resultados incorretos.  
+     A limpeza é um processo interno e em segundo plano que usa um período de retenção especificado quando você configura o controle de alterações para o banco de dados. O problema é que o processo de limpeza pode ocorrer na hora em que a última versão de sincronização foi validada e quando a chamada para CHANGETABLE(CHANGES...) for feita. Uma última versão de sincronização que acabou de ser validada pode não ser mais válida no momento em que as alterações forem obtidas. Portanto, talvez sejam retornados resultados incorretos.  
   
 -   Operações de DML contínuas ocorrem nas tabelas Sales e SalesOrders, como as operações a seguir:  
   
@@ -233,17 +233,17 @@ ON
   
 3.  Obtenha a versão a ser usada na próxima vez por meio de CHANGE_TRACKING_CURRENT_VERSION().  
   
-4.  Obtenha as alterações da tabela Sales usando CHANGETABLE(CHANGES…).  
+4.  Obtenha as alterações da tabela Sales usando CHANGETABLE(CHANGES ...)  
   
-5.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES…).  
+5.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES ...)  
   
 6.  Confirme a transação.  
   
  Alguns pontos a serem lembrados, uma vez que todas as etapas para obter alterações estão em uma transação de instantâneo:  
   
--   Se a limpeza ocorrer depois que a última versão de sincronização for validada, os resultados da função CHANGETABLE(CHANGES…) ainda serão válidos, pois as operações de exclusão executadas pela limpeza não serão visíveis dentro da transação.  
+-   Se a limpeza ocorrer depois que a última versão de sincronização for validada, os resultados da função CHANGETABLE(CHANGES ...) ainda serão válidos, pois as operações de exclusão executadas pela limpeza não serão visíveis dentro da transação.  
   
--   Todas as alterações realizadas nas tabelas Sales ou SalesOrders depois que a versão de sincronização tiver sido obtida não estarão visíveis e as chamadas para CHANGETABLE(CHANGES…) nunca retornarão alterações com uma versão posterior àquela retornada pela função CHANGE_TRACKING_CURRENT_VERSION(). A consistência entre as tabelas Sales e SalesOrders também será mantida porque as transações que foram confirmadas no período entre as chamadas para CHANGETABLE(CHANGES…) não estarão visíveis.  
+-   Todas as alterações realizadas nas tabelas Sales ou SalesOrders depois que a versão de sincronização tiver sido obtida não estarão visíveis e as chamadas para CHANGETABLE(CHANGES ...) nunca retornarão alterações com uma versão posterior àquela retornada pela função CHANGE_TRACKING_CURRENT_VERSION(). A consistência entre as tabelas Sales e SalesOrders também será mantida porque as transações que foram confirmadas no período entre as chamadas para CHANGETABLE(CHANGES ...) não estarão visíveis.  
   
  O exemplo a seguir mostra como o isolamento de instantâneo é habilitado para um banco de dados.  
   
@@ -303,7 +303,7 @@ COMMIT TRAN
   
  Para executar as operações anteriores, um aplicativo de sincronização pode usar as funções a seguir:  
   
--   CHANGETABLE(VERSION…)  
+-   CHANGETABLE(VERSION...)  
   
      Quando um aplicativo estiver fazendo alterações, poderá usar esta função para verificar conflitos. A função obtém as últimas informações de controle de alterações por uma linha especificada em uma tabela de alteração rastreada. As informações do controle de alterações incluem a versão da última vez que a linha foi alterada. Essa informação permite que um aplicativo determine se a linha foi alterada, depois da última vez que o aplicativo foi sincronizado.  
   
@@ -314,7 +314,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>Verificando conflitos  
  Em um cenário de sincronização de duas vias, o aplicativo cliente deve determinar se uma linha não foi atualizada desde que o aplicativo obteve as últimas alterações.  
   
- O exemplo a seguir mostra como usar a função CHANGETABLE(VERSION …) para verificar conflitos do modo mais eficiente, sem uma consulta separada. No exemplo, `CHANGETABLE(VERSION …)` determina o `SYS_CHANGE_VERSION` para a linha especificada por `@product id`. `CHANGETABLE(CHANGES …)` pode obter as mesmas informações, mas isso seria menos eficiente. Se o valor de `SYS_CHANGE_VERSION` para a linha for maior que o valor de `@last_sync_version`, haverá um conflito. Se houver um conflito, a linha não será atualizada. A verificação `ISNULL()` é necessária porque não poderia haver nenhuma informações de alteração disponível para a linha. Nenhuma informação de alteração existiria se a linha não tivesse sido atualizada, visto que o controle de alteração estava habilitado ou a informação de alteração foi limpa.  
+ O exemplo a seguir mostra como usar a função CHANGETABLE(VERSION ...) para verificar conflitos do modo mais eficiente, sem uma consulta separada. No exemplo, `CHANGETABLE(VERSION ...)` determina o `SYS_CHANGE_VERSION` para a linha especificada por `@product id`. `CHANGETABLE(CHANGES ...)` pode obter as mesmas informações, mas isso seria menos eficiente. Se o valor de `SYS_CHANGE_VERSION` para a linha for maior que o valor de `@last_sync_version`, haverá um conflito. Se houver um conflito, a linha não será atualizada. A verificação `ISNULL()` é necessária porque não poderia haver nenhuma informações de alteração disponível para a linha. Nenhuma informação de alteração existiria se a linha não tivesse sido atualizada, visto que o controle de alteração estava habilitado ou a informação de alteração foi limpa.  
   
 ```sql  
 -- Assumption: @last_sync_version has been validated.  
@@ -358,7 +358,7 @@ END
 ```  
   
 ### <a name="setting-context-information"></a>Configurando informações de contexto  
- Usando a cláusula WITH CHANGE_TRACKING_CONTEXT, um aplicativo pode armazenar informações de contexto junto com as informações de alteração. Essas informações podem ser obtidas na coluna SYS_CHANGE_CONTEXT que é retornada por CHANGETABLE(CHANGES …).  
+ Usando a cláusula WITH CHANGE_TRACKING_CONTEXT, um aplicativo pode armazenar informações de contexto junto com as informações de alteração. Essas informações podem ser obtidas na coluna SYS_CHANGE_CONTEXT que é retornada por CHANGETABLE(CHANGES ...).  
   
  Informações de contexto são normalmente usadas para identificar a origem das alterações. Se a origem da alteração puder ser identificada, aquela informação poderá ser usada por um repositório de dados para evitar a obtenção de alterações quando ele for novamente sincronizado.  
   
@@ -392,9 +392,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

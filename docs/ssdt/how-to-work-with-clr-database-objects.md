@@ -13,12 +13,12 @@ ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f339b8c73a2bed5a36f61fd1afea7f01afc433dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396879"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Como trabalhar com objetos de banco de dados CLR
 Além da linguagem de programação Transact\-SQL, você pode usar as linguagens .NET Framework para criar objetos de banco de dados que recuperam e atualizam dados. Objetos de banco de dados que são gravados em código gerenciado são chamados objetos de banco de dados CLR (Common Language Runtime) do SQL Server. Para obter uma explicação das vantagens de usar objetos de banco de dados CLR hospedados no SQL Server e também para saber como escolher entre o Transact\-SQL e o CLR, confira [Vantagens da integração CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantagens de usar código gerenciado para criar objetos de bancos de dados](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
@@ -27,7 +27,7 @@ Para criar um objeto de banco de dados CLR usando o SQL Server Data Tools, crie 
   
 As páginas de propriedades CLR e Compilação CLR contêm muitas configurações para usar objetos de bancos de dados CLR em seu projeto. Especificamente, a página de propriedades CLR tem uma configuração de nível de permissão para definir permissões no assembly CLR. Ela também tem a configuração "Gerar DDL" para controlar se a DDL dos objetos de banco de dados CLR adicionados ao projeto é gerada. A página de propriedades Compilação CLR contém todas as opções do compilador que você pode definir para configurar a compilação de código CLR no projeto. Para acessar essas páginas de propriedades, clique com o botão direito do mouse no projeto em **Gerenciador de Soluções** e selecione **Propriedades**.  
   
-Para habilitar a depuração de objetos de banco de dados CLR, abra o **Pesquisador de Objetos do SQL Server**. Clique com o botão direito do mouse no servidor que contém os artefatos do banco de dados CLR que você deseja depurar e escolha **Permitir Depuração SQL/CLR**. Uma caixa de mensagem é exibida com o aviso: 'Observe que durante a depuração, todos os threads gerenciados no servidor serão interrompidos. Deseja habilitar a depuração SQL CLR neste servidor?' Quando você estiver depurando objetos de banco de dados CLR, a interrupção da execução interromperá todos os threads no servidor, afetando outros usuários. Por esse motivo, você não deve depurar aplicativos para objetos de banco de dados CLR em um servidor de produção. Você também deve observar que, depois de iniciar a depuração, será tarde demais para alterar as configurações no **Pesquisador de Objetos do SQL Server**. As alterações feitas no **Pesquisador de Objetos do SQL Server** não entrarão em vigor até que a próxima sessão de depuração seja iniciada.  
+Para habilitar a depuração de objetos de banco de dados CLR, abra o **Pesquisador de Objetos do SQL Server**. Clique com o botão direito do mouse no servidor que contém os artefatos do banco de dados CLR que você deseja depurar e escolha **Permitir Depuração SQL/CLR**. Uma caixa de mensagem é exibida com o aviso: 'Observe que durante a depuração, todos os threads gerenciados no servidor serão interrompidos. Deseja habilitar a depuração SQL CLR neste servidor?". Quando você estiver depurando objetos de banco de dados CLR, a interrupção da execução interromperá todos os threads no servidor, afetando outros usuários. Por esse motivo, você não deve depurar aplicativos para objetos de banco de dados CLR em um servidor de produção. Você também deve observar que, depois de iniciar a depuração, será tarde demais para alterar as configurações no **Pesquisador de Objetos do SQL Server**. As alterações feitas no **Pesquisador de Objetos do SQL Server** não entrarão em vigor até que a próxima sessão de depuração seja iniciada.  
   
 Para saber mais sobre os requisitos de compilação de objetos de banco de dados CLR, consulte [Criar objetos de banco de dados com a integração CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
   
@@ -83,7 +83,7 @@ Para saber mais sobre os requisitos de compilação de objetos de banco de dados
   
 1.  No **Pesquisador de Objetos do SQL Server**, navegue até o banco de dados local onde você implantou seu projeto.  
   
-2.  Por padrão, a integração CLR é desabilitada no SQL Server. Para usar objetos CLR, você deve habilitar a integração CLR. Para fazer isso, use a opção “clr habilitado” do procedimento armazenado sp_configure. Para saber mais, confira o [tópico da opção de clr habilitado](../relational-databases/clr-integration/clr-integration-enabling.md).  
+2.  Por padrão, a integração CLR é desabilitada no SQL Server. Para usar objetos CLR, você deve habilitar a integração CLR. Para fazer isso, use a opção "clr habilitado" do procedimento armazenado sp_configure. Para saber mais, confira o [tópico da opção de clr habilitado](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Clique com o botão direito do mouse no banco de dados e selecione **Nova Consulta**. No painel de consulta, cole o código a seguir e pressione o botão **Executar Consulta**.  
   

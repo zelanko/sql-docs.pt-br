@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399279"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, o portal da Web do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo examinará o Gerenciador de Relatórios e a experiência do novo portal da Web.  
@@ -103,7 +103,7 @@ ms.locfileid: "47678934"
 |------------|-------------|  
 |Base|O nó raiz da hierarquia de pastas.|  
 |Usuários|Esta pasta aparece quando você habilita o recurso Meus Relatórios. Ela contém subpastas para todos os usuários que usam o recurso Meus Relatórios e está acessível somente para administradores do servidor de relatórios. Cada nome de subpasta corresponde ao nome do usuário.|  
-|Meus Relatórios|Fornece uma área de trabalho pessoal para cada usuário.|  
+|Meus Relatórios|Fornece um workspace pessoal para cada usuário.|  
   
 ### <a name="creating-folders"></a>Criando pastas  
  Você pode criar uma pasta em qualquer pasta disponível na hierarquia.  
@@ -123,7 +123,7 @@ ms.locfileid: "47678934"
  A visibilidade de um item em uma pasta depende das atribuições de função (isto é, da permissão para exibir um item) e das opções de exibição habilitadas para uma pasta. No Gerenciador de Relatórios, você pode definir a página Conteúdo para exibição de lista ou de detalhes. Em alguns casos, um relatório ou item pode estar oculto na exibição de lista. Não se esqueça de exibir uma pasta em detalhes antes de excluir seu conteúdo.  
   
 ##  <a name="bkmk_Resources"></a> Recursos  
- Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, confira [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Adicionando e exibindo um recurso  
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
@@ -152,7 +152,7 @@ ms.locfileid: "47678934"
  Para obter mais informações, consulte [Atualizar um recurso &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Meus Relatórios  
- A pasta Meus Relatórios é um espaço de trabalho pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
+ A pasta Meus Relatórios é um workspace pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
   
  Tecnicamente, a pasta Meus Relatórios mapeia o nome de uma pasta virtual que cada usuário vê (Meus Relatórios) para uma pasta Pastas dos Usuários mestre e uma subpasta exclusiva baseada no nome de usuário. Quando um usuário acessa sua pasta Meus Relatórios, na realidade, ele é redirecionado para sua subpasta em Pastas dos Usuários. Cada subpasta armazena os relatórios e itens que um usuário adiciona à sua pasta Meus Relatórios. No portal da Web, você não verá Meus Relatórios no nível raiz. Será necessário aprofundar na pasta Usuários.  
   

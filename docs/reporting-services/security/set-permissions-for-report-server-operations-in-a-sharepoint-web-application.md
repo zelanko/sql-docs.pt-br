@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ba1339184654094e1cd5d8ad249d43dcd645ca1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a67d5c746a3fcce92709bf0457d52e4248a84b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393999"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint
   Para um servidor de relatório executado no modo integrado do SharePoint, as configurações de segurança no site do SharePoint determinam como exibir e gerenciar os relatórios, modelos de relatório e fontes de dados compartilhadas. Se você estiver usando os grupos, níveis de permissão e atribuições de permissão do SharePoint padrão, será possível trabalhar com relatórios e outros documentos usando as configurações de segurança atuais.  
@@ -49,7 +49,7 @@ ms.locfileid: "47699709"
   
  Se você estiver usando níveis de permissão predefinidos, nenhuma ação será necessária porque as permissões anteriores já estarão incluídas em Controle Total, Criação, Colaboração, Leitura e Acesso Limitado. No entanto, se você estiver usando níveis de permissão personalizados ou se estiver editando as permissões atribuídas a um usuário ou grupo específico, adicione a permissão manualmente.  
   
- A permissão "Procurar Informações sobre o Usuário" permite que o servidor de relatório retorne informações sobre o criador do item e o último usuário que o modificou. Sem essa permissão, o servidor de relatório retornará os erros a seguir. Para operações de procura, o erro é: “O Report Server encontrou um erro de SharePoint. ---> System.UnauthorizedAccessException: Access is denied.” Para operações de publicação, o erro é: “As permissões concedidas ao usuário '\<domain>\\<user\>' não são suficientes para realizar esta operação”.  
+ A permissão "Procurar Informações sobre o Usuário" permite que o servidor de relatório retorne informações sobre o criador do item e o último usuário que o modificou. Sem essa permissão, o servidor de relatório retornará os erros a seguir. Para operações de procura, o erro é: "O Report Server encontrou um erro de SharePoint. ---> System.UnauthorizedAccessException: acesso negado." Para operações de publicação, o erro é: "As permissões concedidas ao usuário '\<domínio>\\<usuário\>' não são suficientes para realizar esta operação".  
   
 ##  <a name="permissionReports"></a> Permissões para exibir e gerenciar relatórios  
  As permissões de definição são estabelecidas através de permissões de Lista na biblioteca que contém o relatório, mas é possível definir permissões em relatórios individuais, se você desejar restringir o acesso. A tabela a seguir fornece uma lista de tarefas e as permissões que oferecem suporte a cada uma.  

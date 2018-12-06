@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503621"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47822444"
 |Recurso|Índice filtrado|Os índices filtrados não têm suporte com tabelas com otimização de memória. Omita a cláusula **WHERE** da especificação de índice.|  
 |Recurso|Colunas incluídas|Especificar colunas incluídas não é necessário para tabelas com otimização de memória. Todas as colunas da tabela com otimização de memória são incluídas implicitamente em cada índice com otimização de memória.|  
 |Operação|DROP INDEX|Não há suporte para o descarte de índices nas tabelas com otimização de memória. Você pode excluir índices usando ALTER TABLE.<br /><br /> Para obter mais informações, veja [Alterando tabelas com otimização de memória](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
-|Opção de índice|*Opção de índice*|Há suporte para apenas uma opção de índice – BUCKET_COUNT para índices de HASH.|  
+|Opção de índice|*Opção de índice*|Há suporte para apenas uma opção de índice, o BUCKET_COUNT, para índices de HASH.|  
   
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash não clusterizados  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice de hash não clusterizado, bem como a ação corretiva para resolver o erro.  

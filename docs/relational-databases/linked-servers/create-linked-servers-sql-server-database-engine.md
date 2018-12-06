@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512921"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391240"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51512921"
   
 3.  Na área **Tipo de servidor**, selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
   
-4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio onde os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon** . Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
+4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio em que os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon**. Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
   
      **Logon local**  
      Especifique o logon local que pode se conectar ao servidor vinculado. O logon local pode ser um logon que usa a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon de Autenticação do Windows. Use essa lista para restringir a conexão a logons específicos ou permitir alguns logons para serem conectados como um logon diferente.  

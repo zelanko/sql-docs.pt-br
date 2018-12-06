@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594835"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516980"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
 Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, bem como variáveis e campos calculados.  
@@ -22,7 +22,7 @@ Use o designer de consultas no Designer de Relatórios para criar o conjunto de 
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir uma consulta Transact-SQL a fim de obter dados de relatório  
   
-1.  No painel **Dados do Relatório** , clique em **Novo**e em **Conjunto de Dados...**. A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
+1.  No painel **Dados do Relatório**, clique em **Novo** e em **Conjunto de Dados...**. A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
   
 2.  Na caixa **Nome** , digite **AdventureWorksDataset**.  
   

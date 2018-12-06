@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cec2923a408a857c5cdd6440e022c9314f1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658774"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511925"
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47658774"
 }  
 [ COLLATE Windows_collation_name ]  
   
--- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+-- Scalar Expression in a DECLARE, SET, IF...ELSE, or WHILE statement  
 <scalar_expression> ::=  
 {  
     constant   
@@ -86,7 +86,7 @@ ms.locfileid: "47658774"
 |----------|----------------|  
 |*constant*|É um símbolo que representa um valor de dados único e específico. Para obter mais informações, consulte [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|É uma unidade de sintaxe de [!INCLUDE[tsql](../../includes/tsql-md.md)] que fornece um serviço específico e retorna um único valor. *scalar_function* podem ser funções escalares internas, como as funções SUM, GETDATE ou CAST ou funções escalares definidas pelo usuário.|  
-|[ *table_name***.** ]|É o nome ou alias de uma tabela.|  
+|[ _table_name_**.** ]|É o nome ou alias de uma tabela.|  
 |*column*|É o nome de uma coluna. Somente o nome da coluna é permitido em uma expressão.|  
 |*variable*|É o nome de uma variável ou parâmetro. Para obter mais informações, consulte [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *expressão* **)**|É qualquer expressão válida conforme definido neste tópico. Os parênteses são operadores de agrupamento que verificam se todos os operadores na expressão entre parênteses são avaliados antes de a expressão resultante ser combinada com outra.|  
@@ -97,13 +97,13 @@ ms.locfileid: "47658774"
 |*aggregate_windowed_function*|É qualquer função de agregação [!INCLUDE[tsql](../../includes/tsql-md.md)] com a cláusula OVER. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Resultados da expressão  
- Em uma expressão simples composta de uma única constante, variável, função escalar ou nome de coluna: o tipo de dados, agrupamento, precisão, escala e valor da expressão é o tipo de dados, agrupamento, precisão, escala e valor do elemento referenciado.  
+ Em uma expressão simples composta de uma única constante, variável, função escalar ou nome de coluna: o tipo de dados, ordenação, precisão, escala e valor da expressão é o tipo de dados, ordenação, precisão, escala e valor do elemento referenciado.  
   
  Quando duas expressões são combinadas usando operadores lógicos ou de comparação, o tipo de dados resultante é booliano e o valor é um dos seguintes: TRUE, FALSE ou UNKNOWN. Para obter mais informações sobre tipos de dados boolianos, confira [Operadores de comparação &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
   
  Quando duas expressões são combinadas usando operadores aritméticos, bit a bit ou de cadeia de caracteres, o operador determina o tipo de dados resultante.  
   
- Expressões complexas compostas de muitos símbolos e operadores são avaliadas como um único resultado avaliado. O tipo de dados, o agrupamento, a precisão, a escala e o valor da expressão resultante são determinados pela combinação das expressões de componentes, duas de cada vez, até o resultado final ser alcançado. A sequência na qual as expressões são combinadas é definida pela precedência dos operadores na expressão.  
+ Expressões complexas compostas de muitos símbolos e operadores são avaliadas como um único resultado avaliado. O tipo de dados, a ordenação, a precisão, a escala e o valor da expressão resultante são determinados pela combinação das expressões de componentes, duas de cada vez, até o resultado final ser alcançado. A sequência na qual as expressões são combinadas é definida pela precedência dos operadores na expressão.  
   
 ## <a name="remarks"></a>Remarks  
  Duas expressões podem ser combinadas por um operador se o operador oferecer suporte para os tipos de dados das duas e pelo menos uma destas condições for verdadeira:  
@@ -116,7 +116,7 @@ ms.locfileid: "47658774"
   
  Se não houver nenhuma conversão implícita ou explícita com suporte, as duas expressões não poderão ser combinadas.  
   
- O agrupamento de qualquer expressão avaliada como uma cadeia de caracteres é definido seguindo as regras de precedência de agrupamento. Para obter mais informações, consulte [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ A ordenação de qualquer expressão avaliada como uma cadeia de caracteres é definida seguindo as regras de precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
  Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um único resultado. As expressões em uma lista de seleção [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nessa regra: a expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
   

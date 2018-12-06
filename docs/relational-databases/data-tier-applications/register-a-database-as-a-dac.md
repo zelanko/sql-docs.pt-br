@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513230"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813989"
   
 2.  Expanda o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no banco de dados a ser registrado, aponte para **Tarefas**e selecione **Registrar como Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no banco de dados a ser registrado, aponte para **Tarefas** e selecione **Registrar como Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813989"
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Verificando**  *SchemaName* **.** *ObjectName* **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. *SchemaName ***.*** ObjectName* identifica qual objeto está sendo verificado no momento.  
+ **Verificando**  *SchemaName* **.** *ObjectName* **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_**.**_ObjectName_ identifica qual objeto está sendo verificado no momento.  
   
  **< Anterior** - Retorna para a página **Definir propriedades** para alterar suas entradas.  
   

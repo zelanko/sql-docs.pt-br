@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516025"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -102,7 +102,7 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 > [!IMPORTANT]  
 > O recurso de verificação de Transact-SQL estendida será removido da próxima versão do recurso de SQL Server Data Tools e da próxima versão principal do Visual Studio.  
   
-A Verificação Estendida Transact-SQL é um recurso do sistema de projetos de banco de dados que permite aos desenvolvedores enviar o projeto de banco de dados ao Serviço do Compilador Transact-SQL durante a compilação a fim de validar o código em relação ao analisador e interpretador do Mecanismo do SQL Server.  
+A Verificação Estendida Transact-SQL é um recurso do sistema de projetos de banco de dados que permite aos desenvolvedores enviar o projeto de banco de dados ao Serviço de Compilador Transact-SQL durante o build a fim de validar o código em relação ao analisador e interpretador do Mecanismo do SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Serviço do Compilador Transact-SQL  
 O Serviço do Compilador Transact-SQL é um componente baseado no Mecanismo de Banco de Dados do Microsoft SQL Server 2012. Esse serviço pode validar a sintaxe e a semântica das instruções DDL com a mesma fidelidade que um Mecanismo de Banco de Dados do Microsoft SQL Server 2012. E significa que o Serviço do Compilador não tem suporte para a sintaxe ou recursos que foram substituídos no Microsoft SQL Server 2012. Para obter mais informações sobre recursos preteridos, veja [Funcionalidade do Mecanismo de Banco de Dados Descontinuada no SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
@@ -147,7 +147,7 @@ O recurso de Verificação Estendida também pode ser usado durante o desenvolvi
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em um arquivo .sql.  
   
     > [!NOTE]  
-    > Para desabilitar o recurso Verificação Transact\-SQL Estendida no nível do arquivo, a propriedade **Ação de Compilação** do arquivo deve ser definida como **Compilar**.  
+    > Para desabilitar o recurso Verificação Estendida Transact\-SQL no nível do arquivo, a propriedade **Ação de Build** do arquivo deve ser definida como **Compilar**.  
   
 2.  Em **Propriedades**, altere a propriedade **Verificação Estendida T-SQL** para **False**.  
   
@@ -162,7 +162,7 @@ Para obter informações sobre as opções de Assembly, consulte [Caixa de diál
 Para obter informações sobre como assinar, consulte a seção **Assinatura do Assembly** do tópico [Página de assinatura, Project Designer](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>Build SQLCLR e SQLCLR  
-As páginas de propriedades de **SQLCLR** e **Compilação SQLCLR** contêm muitas configurações para usar objetos SQL CLR em seu projeto. Especificamente, a página de propriedades de **SQLCLR** tem uma configuração de nível de permissão para definir permissões no assembly do SQLCLR. Também tem um parâmetro "Gerar DDL" para controlar se o DDL (Dynamic Data Language) é gerado para os objetos SQLCLR adicionados ao projeto. A página de propriedades de **Compilação** contém todas as opções de compilador que podem ser definidas para configurar a compilação de código SQLCLR no projeto.  
+As páginas de propriedades de **SQLCLR** e **Compilação SQLCLR** contêm muitas configurações para usar objetos SQL CLR em seu projeto. Especificamente, a página de propriedades de **SQLCLR** tem uma configuração de nível de permissão para definir permissões no assembly do SQLCLR. Também tem uma configuração "Gerar DDL" para controlar se o DDL (Dynamic Data Language) é gerado para os objetos SQLCLR adicionados ao projeto. A página de propriedades de **Compilação** contém todas as opções de compilador que podem ser definidas para configurar a compilação de código SQLCLR no projeto.  
   
 A página de propriedades **Compilação SQLCLR** contém configurações avançadas de compilação para compilar seus objetos SQL CLR. São fornecidas diferentes opções com base na linguagem (VB ou C#) usada para codificar os objetos SQL CLR.  
   

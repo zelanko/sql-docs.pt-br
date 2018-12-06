@@ -14,12 +14,12 @@ ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea0b09960617a8e23e69380b6a26092bae380242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcda3ca21d6c8151cc74e5e4272e6a4f94916534
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515115"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Caixa de diálogo Conectar-se a um Banco de Dados do Master Data Services
 

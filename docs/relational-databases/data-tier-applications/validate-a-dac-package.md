@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518676"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810102"
   
  **Exiba um DAC no SQL Server Developer Tools**  
   
-1.  Abra o menu **Arquivo** , selecione **Novo**e, em seguida, selecione **Projeto…**.  
+1.  Abra o menu **Arquivo**, selecione **Novo** e, em seguida, selecione **Projeto...**.  
   
 2.  Selecione o modelo de projeto **SQL Server** e especifique um **Nome**, um **Local**e um **Nome de solução**.  
   
-3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó e selecione **Propriedades…**.  
+3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Propriedades...**.  
   
 4.  Na guia **Configurações de Projeto** , na seção **Tipos de Saída** , marque a caixa de seleção **Aplicativo da Camada de Dados (arquivo .dacpac)** e feche a caixa de diálogo de propriedades.  
   
-5.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Importar Aplicativo da Camada de Dados…**.  
+5.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Importar Aplicativo da Camada de Dados...**.  
   
 6.  Use o **Gerenciador de Soluções** para abrir todos os arquivos no DAC, como a política de seleção de servidor e os scripts de pré e pós-implantação.  
   

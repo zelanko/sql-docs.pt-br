@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505833"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar a política de failover automático flexível
 
@@ -86,7 +86,7 @@ ms.locfileid: "47599304"
   
          A relação destes valores inteiros para os níveis de condição de falha é a seguinte:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nível|Automático é o failover iniciado em caso de…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nível|Automático é o failover iniciado em caso de...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Um|Em servidor inativo. O serviço SQL Server é interrompido devido a um failover ou a uma reinicialização.|  
         |2|Dois|Em servidor sem resposta. Qualquer condição de valor inferior é atendida, o serviço SQL Server está conectado ao cluster e o tempo limite de verificação de integridade é excedido, ou a réplica primária atual está em um estado de falha.|  
@@ -114,7 +114,7 @@ ms.locfileid: "47599304"
   
     -   Para definir o nível de condição de failover, use o parâmetro **FailureConditionLevel***level*, em que *level* é um dos seguintes valores:  
   
-        |Valor|Nível|Automático é o failover iniciado em caso de…|  
+        |Valor|Nível|Automático é o failover iniciado em caso de...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|Um|Em servidor inativo. O serviço SQL Server é interrompido devido a um failover ou a uma reinicialização.|  
         |**OnServerUnresponsive**|Dois|Em servidor sem resposta. Qualquer condição de valor inferior é atendida, o serviço SQL Server está conectado ao cluster e o tempo limite de verificação de integridade é excedido, ou a réplica primária atual está em um estado de falha.|  

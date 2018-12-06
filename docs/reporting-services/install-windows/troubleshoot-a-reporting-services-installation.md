@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814019"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391659"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar um problema da instalação do Reporting Services
 
@@ -75,7 +75,7 @@ ms.locfileid: "51814019"
  ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Solução de problemas com instalações no modo do SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> O serviço do SQL Server Reporting Services não é exibido na Administração Central do SharePoint após a instalação do SQL Server 2016 SSRS no modo do SharePoint  
- **Descrição:** se, depois de instalar com sucesso o SQL Server 2016 Reporting Services no modo do SharePoint e o Suplemento SQL Server 2016 Reporting Services para SharePoint 2013/2016, “SQL Server Reporting Services” não for exibido nos dois seguintes menus, isso significa que o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi registrado:  
+ **Descrição:** se, depois de instalar com sucesso o SQL Server 2016 Reporting Services no modo do SharePoint e o Suplemento SQL Server 2016 Reporting Services para SharePoint 2013/2016, "SQL Server Reporting Services" não for exibido nos dois seguintes menus, isso significa que o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi registrado:  
   
 -   Página Administração Central do SharePoint 2013/2016 -> “Gerenciamento de Aplicativo” -> “Gerenciar Serviços no Servidor”  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51814019"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verifique se o status do Serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é exibido como “**Iniciado**” na página: Administração Central do SharePoint 2013/2016 -> “**Gerenciamento de Aplicativo**” -> “**Gerenciar Serviços no Servidor**”  
+2.  Verifique se o status do Serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é exibido como “**Iniciado**” na página: Administração Central do SharePoint 2013/2016 -> "**Gerenciamento de Aplicativo**" -> "**Gerenciar Serviços no Servidor**"  
   
  ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Solução de problemas com instalações no modo do SharePoint](#bkmk_tshoot_sharepoint)  
   

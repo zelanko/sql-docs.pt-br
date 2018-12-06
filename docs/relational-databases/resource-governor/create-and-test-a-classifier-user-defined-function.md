@@ -15,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53884f814f60ff208dd066daf6c396a819e0a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e086006cf53efe9a462fe9d21ff36377915c92b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724434"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398319"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47724434"
     go  
     ```  
   
-4.  Crie a função de classificador que usa as funções e os valores de hora que podem ser avaliados em relação aos tempos na tabela de consulta. Para obter informações sobre como usar Tabelas de pesquisa em uma função de classificador, consulte "Práticas recomendadas para usar Tabelas de pesquisa em uma função de classificador", neste tópico.  
+4.  Crie a função de classificador que usa as funções e os valores de hora que podem ser avaliados em relação aos tempos na tabela de consulta. Para obter informações sobre como usar Tabelas de pesquisa em uma função de classificador, confira "Práticas recomendadas para usar Tabelas de pesquisa em uma função de classificador", neste tópico.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduziu um conjunto expandido de tipos e funções de dados de data e hora. Para obter mais informações, veja [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  

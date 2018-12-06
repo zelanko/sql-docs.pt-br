@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809634"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413303"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Ao usar formato de caractere Unicode, considere o seguinte:
 
 * Por padrão, o [utilitário bcp](../../tools/bcp-utility.md) separa os campos dos dados de caractere com o caractere de guia e termina os registros com o caractere de nova linha.  Para obter informações sobre como especificar terminadores alternativos, consulte [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Os dados de [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) que são armazenados em um arquivo de dados no formato de caractere Unicode operam da mesma maneira que operam em um arquivo de dados no formato de caractere, com a exceção de que os dados são armazenados como [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) em vez de dados [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Para obter mais informações sobre formato de caractere, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Os dados de [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) que são armazenados em um arquivo de dados no formato de caractere Unicode operam da mesma maneira que operam em um arquivo de dados no formato de caractere, com a exceção de que os dados são armazenados como [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) em vez de dados [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Para obter mais informações sobre formato de caractere, consulte [Suporte a ordenação e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Considerações especiais para o formato de caractere Unicode, bcp e um arquivo de formato<a name="special_considerations"></a>
 Os arquivos de dados em formato de caractere Unicode seguem as convenções para arquivos Unicode.  Os primeiros dois bytes do arquivo são números hexadecimais, 0xFFFE.  Esses bytes servem como marcas de ordem do byte (BOM), especificando se o byte de ordem alta é armazenado em primeiro ou por último no arquivo.  O [utilitário bcp](../../tools/bcp-utility.md) pode interpretar incorretamente o BOM e fazer com que parte de seu processo de importação falhe; você pode receber uma mensagem de erro semelhante da seguinte maneira:
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Usando bcp e formato de caractere Unicode para importar dados com um arquivo de formato não XML**<a name="bcp_widechar_import_fmt"></a>
-Opções **-w** e **-f** switches e **IN** comme.  Uma solução alternativa precisará ser usada, já que este exemplo envolve bcp, um arquivo de formato, caractere Unicode, e o primeiro campo de dados no arquivo de dados é não caractere.  Consulte [Considerações especiais para o formato de caractere Unicode, bcp e um arquivo de formato](#special_considerations), acima.  O arquivo de dados `myWidechar.bcp` será alterado adicionando um registro adicional como um registro "fictício", em seguida, será ignorado com a opção `-F 2` .
+Opções **-w** e **-f** switches e **IN** comme.  Uma solução alternativa precisará ser usada, já que este exemplo envolve bcp, um arquivo de formato, caractere Unicode, e o primeiro campo de dados no arquivo de dados é não caractere.  Consulte [Considerações especiais para o formato de caractere Unicode, bcp e um arquivo de formato](#special_considerations), acima.  O arquivo de dados `myWidechar.bcp` será alterado adicionando um registro adicional como um registro "fictício", em seguida, será ignorado com a opção `-F 2`.
 
 No prompt de comando, digite os seguintes comandos e siga as etapas de modificação:
 ```
@@ -243,6 +243,6 @@ Para usar formatos de dados para importação ou exportação em massa
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

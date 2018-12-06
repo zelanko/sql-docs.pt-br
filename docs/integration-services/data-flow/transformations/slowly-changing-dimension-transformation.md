@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638323"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414533"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  
@@ -69,7 +69,7 @@ ms.locfileid: "51638323"
 |------------|-----------------|----------------------------|  
 |**Saída de Atualizações de Atributos de Alteração**|O registro na tabela de pesquisa é atualizado. Esta saída é usada para linhas de atributos de alteração.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução UPDATE.|  
 |**Saída de Atributos Fixos**|Os valores em linhas que não devem ser alterados não correspondem a valores na tabela de pesquisa. Esta saída é usada para linhas de atributos fixos.|Nenhum fluxo de dados padrão é criado. Se a transformação está configurada para continuar depois de encontrar alterações em colunas de atributo fixo, você deve criar um fluxo de dados que capture essas linhas.|  
-|**Saída de Inserções de Atributos Históricos**|A tabela de pesquisa contém pelo menos uma linha correspondente. A linha marcada como "atual" deve ser marcada agora como "expirada." Esta saída é usada para linhas de atributos históricos.|As transformações Colunas Derivadas criam colunas para a linha expirada e os indicadores de linha atuais. Uma transformação Comando OLE DB atualiza o registro que deve ser marcado agora como "expirado." A linha com os valores da nova coluna é direcionada para a Nova Saída, na qual a linha é inserida e marcada como "atual".|  
+|**Saída de Inserções de Atributos Históricos**|A tabela de pesquisa contém pelo menos uma linha correspondente. A linha marcada como "atual" deve ser marcada agora como "expirada". Esta saída é usada para linhas de atributos históricos.|As transformações Colunas Derivadas criam colunas para a linha expirada e os indicadores de linha atuais. Uma transformação Comando OLE DB atualiza o registro que deve ser marcado agora como "expirado." A linha com os valores da nova coluna é direcionada para a Nova Saída, na qual a linha é inserida e marcada como "atual".|  
 |**Saída de Atualizações de Membro Deduzido**|Linhas para membros de dimensão deduzidos são inseridas. Esta saída é usada para linhas de membro deduzido.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução SQL UPDATE.|  
 |**Nova Saída**|A tabela de pesquisa não contém linhas correspondentes. A linha é adicionada à tabela de dimensão. Esta saída é usada para novas linhas e alterações em linhas de atributos históricos.|Uma transformação Coluna Derivada define o indicador da linha atual e um destino de OLE DB insere a linha.|  
 |**Saída Inalterada**|Os valores na tabela de pesquisa correspondem aos valores de linha. Esta saída é usada para linhas inalteradas.|Nenhum fluxo de dados padrão é criado porque a transformação Dimensão de Alteração Lenta não executa nenhum trabalho. Se você quiser capturar estas linhas, deverá criar um fluxo de dados para esta saída.|  

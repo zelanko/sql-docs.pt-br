@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507929"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51671395"
   
 -   Migre uma tabela e dados para a otimização de memória (se não há recursos sem suporte).  
     
- Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre as metodologias de migração, confira [OLTP In-Memory – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in-memory – padrões comuns de carga de trabalho e considerações de migração).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Passo a passo usando o orientador de otimização da memória  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que você deseja converter e selecione **Orientador de Otimização da Memória**. Isso exibirá a página de boas-vindas do **Orientador de Otimização da Memória da Tabela**.  
@@ -97,7 +97,7 @@ ms.locfileid: "51671395"
 ### <a name="review-primary-key-conversion"></a>Examinar conversão de chaves primárias  
  A tela seguinte é **Examinar Conversão de Chaves Primárias**. O Orientador de Otimização da Memória detectará se há uma ou mais chaves primárias na tabela, e populará a lista de colunas com base nos metadados de chave primária. Caso contrário, se desejar migrar para uma tabela com otimização de memória durável, você deverá criar uma chave primária.  
   
- Se uma chave primária não existir e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
+ Se não existir uma chave primária e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
   
  Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "51671395"
 ### <a name="review-index-conversion"></a>Examinar conversão de índice  
  A próxima página é **Examinar conversão de índice**. O Orientador de Otimização da Memória detectará se há um ou mais índices na tabela, e populará a lista de colunas e tipo de dados. Os parâmetros que você pode configurar na página **Examinar conversão de índice** são semelhantes à página anterior, **Examinar conversão de chaves primárias** .  
   
- Se a tabela somente tiver uma chave primária e estiver sendo migrada para uma tabela durável, esta tela não aparecerá.  
+ Se a tabela tiver somente uma chave primária e estiver sendo migrada para uma tabela durável, esta tela não aparecerá.  
   
  Depois de tomar uma decisão para cada índice na tabela, clique em **Avançar**.  
   

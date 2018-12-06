@@ -1,7 +1,7 @@
 ---
 title: Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252143"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403551"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
 
@@ -145,7 +145,7 @@ Remove a descrição de arquivo lógico de uma instância do [!INCLUDE[ssNoVersi
 É o nome lógico usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo.  
   
 > [!WARNING]  
-> A remoção de um arquivo de banco de dados que tem backups de FILE_SNAPSHOT associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> A remoção de um arquivo de banco de dados que tem backups de `FILE_SNAPSHOT` associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Especifica o arquivo que deve ser modificado. Apenas uma propriedade \<filespec> pode ser alterada por vez. NAME sempre deve ser especificado em \<filespec> para identificar o arquivo a ser modificado. Se SIZE for especificado, o novo tamanho deverá ser maior que o tamanho do arquivo atual.  
@@ -171,7 +171,7 @@ Para um grupo de arquivos FILESTREAM, NAME pode ser modificado online. FILENAME 
 Você pode definir um arquivo FILESTREAM como OFFLINE. Quando um arquivo FILESTREAM estiver offline, seu grupo de arquivos pai será internamente marcado como offline; portanto, haverá falha em todo acesso aos dados FILESTREAM naquele grupo de arquivos.  
   
 > [!NOTE]  
->  \<add_or_modify_files> As opções não estão disponíveis em um Banco de Dados Independente.
+> \<add_or_modify_files> As opções não estão disponíveis em um Banco de Dados Independente.
   
 **\<filespec>::=**  
   
@@ -195,7 +195,8 @@ Especifica o nome do arquivo (físico) do sistema operacional.
 ' *os_file_name* '  
 Para um grupo de arquivos padrão (ROWS), esse é o caminho e o nome do arquivo usado pelo sistema operacional quando você cria o arquivo. O arquivo deve residir no servidor no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. O caminho especificado deve existir antes da execução da instrução ALTER DATABASE.  
   
-Os parâmetros SIZE, MAXSIZE e FILEGROWTH não podem ser definidos quando um caminho UNC está especificado para o arquivo.  
+> [!NOTE]
+> Os parâmetros SIZE, MAXSIZE e FILEGROWTH não podem ser definidos quando um caminho UNC está especificado para o arquivo.  
   
 > [!NOTE]  
 > Bancos de dados do sistema não podem residir em diretórios de compartilhamento UNC.  
@@ -205,16 +206,20 @@ Arquivos de dados não devem ser colocados em sistemas de arquivos compactados, 
 Se o arquivo estiver em uma partição bruta, *os_file_name* deverá especificar apenas a letra da unidade de uma partição bruta existente. Apenas um arquivo de dados pode ser colocado em cada partição bruta.  
   
 **'** *filestream_path* **'**  
-Para um grupo de arquivos FILESTREAM, FILENAME faz referência a um caminho onde dados FILESTREAM serão armazenados. O caminho até a última pasta deve existir e a última pasta não deve existir. Por exemplo, se você especificar o caminho C:\MyFiles\MyFilestreamData, C:\MyFiles deve existir antes da execução de ALTER DATABASE, mas a pasta MyFilestreamData não deve existir.  
+Para um grupo de arquivos FILESTREAM, FILENAME faz referência a um caminho onde dados FILESTREAM serão armazenados. O caminho até a última pasta deve existir e a última pasta não deve existir. Por exemplo, se você especificar o caminho `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` deverá existir antes de você executar ALTER DATABASE, mas a pasta `MyFilestreamData` não deverá existir.  
   
-As propriedades SIZE e FILEGROWTH não se aplicam a um grupo de arquivos FILESTREAM.  
+> [!NOTE]
+> As propriedades SIZE e FILEGROWTH não se aplicam a um grupo de arquivos FILESTREAM.  
   
 **'** *memory_optimized_data_path* **'**  
-Para um grupo de arquivos com otimização de memória, FILENAME refere-se a um caminho em que os dados com otimização de memória serão armazenados. O caminho até a última pasta deve existir e a última pasta não deve existir. Por exemplo, se você especificar o caminho C:\MyFiles\MyData, C:\MyFiles deverá existir antes da execução de ALTER DATABASE, mas a pasta MyData não deverá existir.  
+Para um grupo de arquivos com otimização de memória, FILENAME refere-se a um caminho em que os dados com otimização de memória serão armazenados. O caminho até a última pasta deve existir e a última pasta não deve existir. Por exemplo, se você especificar o caminho `C:\MyFiles\MyData`, `C:\MyFiles` deverá existir antes de você executar ALTER DATABASE, mas a pasta `MyData` não deverá existir.  
   
 O grupo de arquivos e o arquivo (`<filespec>`) devem ser criados na mesma instrução.  
   
-As propriedades SIZE, MAXSIZE e FILEGROWTH não se aplicam a um grupo de arquivos com otimização de memória.  
+> [!NOTE]
+> As propriedades SIZE e FILEGROWTH não se aplicam a um grupo de arquivos MEMORY_OPTIMIZED_DATA.  
+
+Para obter mais informações sobre grupos de arquivos otimizados para memória, confira [O grupo de arquivos otimizados para memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
   
 SIZE *size*  
 Especifica o tamanho do arquivo. SIZE não se aplica a grupos de arquivos FILESTREAM.  
@@ -227,6 +232,11 @@ Quando especificado com ADD FILE, *size* é o tamanho inicial do arquivo. Quando
 Quando o *tamanho* do arquivo primário não é informado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o tamanho do arquivo primário no **modelo** de banco de dados. Quando um arquivo de dados ou arquivo de log secundário for especificado, mas *size* não for, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] torna o arquivo em um arquivo de 1 MB.  
   
 Os sufixos KB, MB, GB e TB podem ser usados para especificar quilobytes, megabytes, gigabytes ou terabytes. O padrão é MB. Especifique um número inteiro e não inclua um decimal. Para especificar uma fração de um megabyte, converta o valor em kilobytes multiplicando o número por 1024. Por exemplo, especifique 1536 KB em vez de 1,5 MB (1,5 x 1024 = 1536).  
+
+> [!NOTE] 
+> `SIZE` não pode ser definido:
+> - Quando um caminho UNC está especificado para o arquivo  
+> - Para grupos de arquivos `FILESTREAM` e `MEMORY_OPTIMIZED_DATA`   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 Especifica o tamanho máximo do arquivo até o qual o arquivo pode aumentar.  
@@ -236,6 +246,9 @@ Especifica o tamanho máximo do arquivo até o qual o arquivo pode aumentar.
   
 UNLIMITED  
 Especifica que o arquivo crescerá até que o disco esteja cheio. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um arquivo de log especificado com crescimento ilimitado tem um tamanho máximo de 2 TB, e um arquivo de dados tem um tamanho máximo de 16 TB. Não há nenhum tamanho máximo quando essa opção é especificada para um contêiner FILESTREAM. Ele continua crescendo até que o disco esteja cheio.  
+
+> [!NOTE] 
+> `MAXSIZE` não pode ser definido quando um caminho UNC está especificado para o arquivo.
   
 FILEGROWTH *growth_increment*  
 Especifica o incremento de crescimento automático do arquivo. A configuração de FILEGROWTH de um arquivo não pode exceder a configuração de MAXSIZE. FILEGROWTH não se aplica a grupos de arquivos FILESTREAM.  
@@ -254,12 +267,17 @@ Se FILEGROWTH não é especificado, os valores padrão são:
 |A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dados 64 MB. Arquivos de log 64 MB.|  
 |A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
 |Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 10%. Arquivos de log 10%.|  
-  
+
+> [!NOTE] 
+> `FILEGROWTH` não pode ser definido:
+> - Quando um caminho UNC está especificado para o arquivo  
+> - Para grupos de arquivos `FILESTREAM` e `MEMORY_OPTIMIZED_DATA`   
+
 OFFLINE  
 Define o arquivo como offline e torna todos os objetos no grupo de arquivos inacessíveis.  
   
 > [!CAUTION]  
->  Só use essa opção quando o arquivo estiver corrompido e puder ser restaurado. Um arquivo definido como OFFLINE só pode ser definido como online por meio da restauração do arquivo do backup. Para obter mais informações sobre como restaurar um único arquivo, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+> Só use essa opção quando o arquivo estiver corrompido e puder ser restaurado. Um arquivo definido como OFFLINE só pode ser definido como online por meio da restauração do arquivo do backup. Para obter mais informações sobre como restaurar um único arquivo, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
 > As opções \<filespec> não estão disponíveis em um Banco de Dados Independente.  
@@ -278,21 +296,13 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-Especifica que o grupo de arquivos armazena dados com otimização de memória no sistema de arquivos. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos MEMORY_OPTIMIZED_DATA é permitido por banco de dados. Para criar tabelas com otimização de memória, o grupo de arquivos não pode estar vazio. Deve haver pelo menos um arquivo. *filegroup_name* se refere a um caminho. O caminho até a última pasta deve existir e a última pasta não deve existir.  
-  
-O exemplo a seguir cria um grupo de arquivos que é adicionado a um banco de dados denominado xtp_db e adiciona um arquivo ao grupo de arquivos. O grupo de arquivos armazena dados memory_optimized.  
-  
-```sql  
-ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
-GO  
-ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
-```  
-  
+Especifica que o grupo de arquivos armazena dados com otimização de memória no sistema de arquivos. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos `MEMORY_OPTIMIZED_DATA` é permitido por banco de dados. Para criar tabelas com otimização de memória, o grupo de arquivos não pode estar vazio. Deve haver pelo menos um arquivo. *filegroup_name* se refere a um caminho. O caminho até a última pasta deve existir e a última pasta não deve existir.  
+ 
 REMOVE FILEGROUP *filegroup_name*  
 Remove um grupo de arquivos do banco de dados. O grupo de arquivos não pode ser removido, a menos que esteja vazio. Remova todos os arquivos do grupo de arquivos primeiro. Para obter mais informações, consulte "REMOVE FILE *logical_file_name*", anteriormente neste tópico.  
   
 > [!NOTE]  
-> A menos que o Coletor de Lixo de FILESTREAM tenha removido todos os arquivos de um contêiner FILESTREAM, haverá falha e um erro será retornado na operação ALTER DATABASE REMOVE FILE para remover um contêiner FILESTREAM. Consulte a seção "Remover contêiner FILESTREAM" em Comentários posteriormente neste tópico.  
+> A menos que o Coletor de Lixo de FILESTREAM tenha removido todos os arquivos de um contêiner FILESTREAM, haverá falha e um erro será retornado na operação `ALTER DATABASE REMOVE FILE` para remover um contêiner FILESTREAM. Veja a seção [Remover um contêiner FILESTREAM](#removing-a-filestream-container) mais adiante neste tópico.  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica o grupo de arquivos definindo o status como READ_ONLY ou READ_WRITE, transformando o grupo de arquivos no grupo de arquivos padrão para o banco de dados ou alterando o nome do grupo de arquivos.  
   
@@ -327,21 +337,21 @@ READ_ONLY | READONLY
 Especifica que o grupo de arquivos é somente leitura. Não são permitidas atualizações nos objetos. O grupo de arquivos primário não pode ser somente leitura. Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.  
   
 Como um banco de dados somente leitura não permite modificações de dados:  
-  
 - A recuperação automática é ignorada na inicialização do sistema.  
 - Não é possível reduzir o banco de dados.  
 - Não ocorrem bloqueios em bancos de dados somente leitura. Isso pode acelerar o desempenho das consultas.  
   
 > [!NOTE]  
->  A palavra-chave READONLY será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar READONLY em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam atualmente. Em vez disso, use READ_ONLY.  
+> A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam `READONLY` atualmente. Em vez disso, use `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Especifica que o grupo é READ_WRITE. As atualizações são habilitadas para os objetos no grupo de arquivos. Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.  
   
 > [!NOTE]  
->  A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar.  
+> A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar.  
   
-O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.  
+> [!TIP]
+> O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.  
   
 ## <a name="remarks"></a>Remarks  
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -352,7 +362,15 @@ Um máximo de 32.767 arquivos e 32.767 grupos de arquivos pode ser especificado 
   
 Começando pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o estado de um arquivo de banco de dados (por exemplo, online ou offline) é mantido independentemente do estado do banco de dados. Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md). 
 - O estado dos arquivos dentro de um grupo de arquivos determina a disponibilidade de todo o grupo. Para que um grupo de arquivos fique disponível, todos os seus arquivos devem estar online. 
-- Se um grupo de arquivos estiver offline, qualquer tentativa de acessá-lo por meio de uma instrução SQL falhará com erro. Quando você cria planos de consulta para instruções `SELECT`, o otimizador de consulta evita índices não clusterizados e exibições indexadas que residem em grupos de arquivos offline. Isso permite que essas instruções tenham êxito. Porém, se o grupo de arquivos offline contiver o heap ou índice clusterizado da tabela de destino, as instruções `SELECT` falharão. Além disso, qualquer instrução `INSERT`, `UPDATE` ou `DELETE` que modifica uma tabela com um índice em um grupo de arquivos offline falhará.  
+- Se um grupo de arquivos estiver offline, qualquer tentativa de acessá-lo por meio de uma instrução SQL falhará com erro. Quando você cria planos de consulta para instruções `SELECT`, o otimizador de consulta evita índices não clusterizados e exibições indexadas que residem em grupos de arquivos offline. Isso permite que essas instruções tenham êxito. Porém, se o grupo de arquivos offline contiver o heap ou índice clusterizado da tabela de destino, as instruções `SELECT` falharão. Além disso, qualquer instrução `INSERT`, `UPDATE` ou `DELETE` que modifica uma tabela com um índice em um grupo de arquivos offline falhará. 
+
+Os parâmetros SIZE, MAXSIZE e FILEGROWTH não podem ser definidos quando um caminho UNC está especificado para o arquivo. 
+
+Os parâmetros SIZE e FILEGROWTH não podem ser definidos para grupos de arquivos otimizados para memória. 
+
+A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam READONLY no momento. Em vez disso, use `READ_ONLY` . 
+
+A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar. 
   
 ## <a name="moving-files"></a>Movendo arquivos  
 Você pode mover dados do sistema ou definidos pelo usuário e arquivos de log especificando o novo local em FILENAME. Isso pode ser útil nos seguintes cenários:  
@@ -373,7 +391,7 @@ Por padrão, arquivos de dados e de log são inicializados por meio do preenchim
   
 Arquivos de dados podem ser inicializados instantaneamente. Isso permite uma execução rápida dessas operações de arquivo. Para obter mais informações, consulte [Inicialização de arquivos de bancos de dados](../../relational-databases/databases/database-instant-file-initialization.md). 
   
-## <a name="removing-a-filestream-container"></a>Removendo um contêiner FILESTREAM  
+## <a name="removing-a-filestream-container"></a> Removendo um contêiner FILESTREAM  
 Embora o contêiner FILESTREAM possa ter sido esvaziado por meio da operação "DBCC SHRINKFILE", o banco de dados ainda pode precisar manter referências aos arquivos excluídos por várias razões de manutenção do sistema. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) executará o Coletor de Lixo de FILESTREAM para remover esses arquivos quando for seguro fazê-lo. A menos que o Coletor de Lixo de FILESTREAM tenha removido todos os arquivos de um contêiner FILESTREAM, a operação ALTER DATABASE REMOVE FILE não poderá remover um contêiner FILESTREAM e um erro será retornado. O processo a seguir é recomendado para remover um contêiner FILESTREAM.  
   
 1. Execute [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) com a opção EMPTYFILE para mover o conteúdo ativo desse contêiner para outros contêineres.  
@@ -408,7 +426,6 @@ ADD FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Adicionando um grupo de arquivos com dois arquivos a um banco de dados  
@@ -438,7 +455,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;  
 GO  
-  
 ```  
   
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. Adicionando dois arquivos de log a um banco de dados  
@@ -464,7 +480,6 @@ ADD LOG FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="d-removing-a-file-from-a-database"></a>D. Removendo um arquivo de um banco de dados  
@@ -586,8 +601,7 @@ GO
 O exemplo a seguir adiciona um `FILEGROUP` que contém a cláusula `FILESTREAM` ao banco de dados `FileStreamPhotoDB`.  
   
 ```sql  
---Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
---the FileStreamPhotoDB database.  
+--Create and add a FILEGROUP that CONTAINS the FILESTREAM clause.  
 ALTER DATABASE FileStreamPhotoDB  
 ADD FILEGROUP TodaysPhotoShoot  
 CONTAINS FILESTREAM;  
@@ -602,7 +616,27 @@ ADD FILE
 )  
 TO FILEGROUP TodaysPhotoShoot;  
 GO  
-```      
+```     
+
+O exemplo a seguir adiciona um `FILEGROUP` que contém a cláusula `MEMORY_OPTIMIZED_DATA` ao banco de dados `xtp_db`. O grupo de arquivos armazena dados otimizados para memória.  
+  
+```sql 
+--Create and add a FILEGROUP that CONTAINS the MEMORY_OPTIMIZED_DATA clause.
+ALTER DATABASE xtp_db 
+ADD FILEGROUP xtp_fg 
+CONTAINS MEMORY_OPTIMIZED_DATA;  
+GO  
+
+--Add a file for storing memory optimized data to FILEGROUP
+ALTER DATABASE xtp_db 
+ADD FILE 
+(
+    NAME='xtp_mod', 
+    FILENAME='d:\data\xtp_mod'
+) 
+TO FILEGROUP xtp_fg;  
+GO
+```  
         
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Alterar um grupo de arquivos para que, quando um arquivo no grupo de arquivos atinja o limite de aumento automático, todos os arquivos no grupo de arquivos aumentem
  O exemplo a seguir gera as instruções `ALTER DATABASE` necessárias para modificar grupos de arquivos de leitura/gravação com a configuração `AUTOGROW_ALL_FILES`.  
@@ -1057,6 +1091,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
- 
-::: moniker-end
+[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[O grupo de arquivos com otimização de memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+

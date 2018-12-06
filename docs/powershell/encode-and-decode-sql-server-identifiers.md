@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13c981282065d8d18e1eb8be19157e0f9d691ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415874"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar e decodificar identificadores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Os caracteres não suportados em nomes de caminho do Windows PowerShell podem se
   
  O cmdlet **Encode-SqlName** usa um identificador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada. Ele produz uma cadeia de caracteres com todos os caracteres não suportados pela linguagem Windows PowerShell codificada com "%xx". O cmdlet **Decode-SqlName** usa um identificador codificado do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada e retorna o identificador original.  
   
-##  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+##  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Os cmdlets **Encode-Sqlname** e **Decode-Sqlname** só codificam ou decodificam os caracteres permitidos nos identificadores delimitados do SQL Server, mas não têm suporte em caminhos do PowerShell. Estes são os caracteres codificados pelo **Encode-SqlName** e decodificados pelo **Decode-SqlName**:  
   
 |||||||||||||  
@@ -68,7 +68,7 @@ Set-Location (Encode-SqlName "Table:Test")
  Use o cmdlet **Decode-Sqlname** para substituir as codificações hexadecimais pelos caracteres representados pela codificação.  
   
 ### <a name="examples-decoding"></a>Exemplos (decodificação)  
- Este exemplo retorna “Table:Test”:  
+ Este exemplo retorna "Table:Test":  
   
 ```  
 Decode-SqlName "Table%3ATest"  
@@ -76,7 +76,7 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>Consulte Também  
  [Identificadores do SQL Server no PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

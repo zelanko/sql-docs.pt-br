@@ -14,12 +14,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d13838dc09757cecc03fd3520ad327546a85e10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d494a687462617dbb66e3d631c30d7ae6dca4960
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411973"
 ---
 # <a name="package-properties-dialog-box"></a>Caixa de diálogo Propriedades do Pacote
   Use a caixa de diálogo **Propriedades do Pacote** para exibir propriedades de pacotes individuais armazenados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

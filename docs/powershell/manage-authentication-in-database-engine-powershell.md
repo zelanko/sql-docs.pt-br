@@ -10,17 +10,17 @@ ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0848c39935553b2171a5d3ca4b7ceb4b24e8f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a589502fd502b49e82d6458f163bccac45345b64
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502466"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Por padrão, os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao conectar a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Você pode usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **–Username** e **–Password** para **Invoke-Sqlcmd**.  
+Por padrão, os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao conectar a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. É possível usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **-Username** e **-Password** para **Invoke-Sqlcmd**.  
   
 > [!NOTE]
 > Há dois módulos do SQL Server PowerShell; **SqlServer** e **SQLPS**. O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o módulo do **SqlServer**. O módulo do **SqlServer** contém versões atualizadas dos cmdlets no **SQLPS** e também inclui novos cmdlets para dar suporte aos recursos mais recentes do SQL.  
@@ -74,7 +74,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Autenticação de SQL Server usando Invoke-Sqlcmd  
  **Para usar Invoke-Sqlcmd com a Autenticação do SQL Server**  
   
-1.  Use o parâmetro **–Username** para especificar uma ID de logon e o parâmetro **–Password** para especificar a senha associada.  
+1.  Use o parâmetro **-Username** para especificar uma ID de logon e o parâmetro **-Password** para especificar a senha associada.  
   
 ### <a name="example-invoke-sqlcmd"></a>Exemplo (Invoke-Sqlcmd)  
  Este exemplo usa o cmdlet do host de leitura para solicitar ao usuário uma senha e, depois, conecta usando a Autenticação do SQL Server.  
@@ -83,12 +83,12 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
  [cmdlet Invoke-Sqlcmd](invoke-sqlcmd-cmdlet.md)  
   
   

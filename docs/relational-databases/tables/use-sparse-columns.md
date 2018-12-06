@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520975"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47648094"
   
 -   As exibições do catálogo para uma tabela que tenha colunas esparsas são as mesmas que para uma tabela típica. A exibição do catálogo sys.columns contém uma linha para cada coluna na tabela e inclui um conjunto de colunas, se houver um definido.  
   
--   Colunas esparsas são uma propriedade da camada de armazenamento, não a tabela lógica. Portanto, uma instrução SELECT…INTO não copia sobre a propriedade de coluna esparsa em uma nova tabela.  
+-   Colunas esparsas são uma propriedade da camada de armazenamento, não a tabela lógica. Portanto, uma instrução SELECT...INTO não copia sobre a propriedade de coluna esparsa em uma nova tabela.  
   
 -   A função COLUMNS_UPDATED retorna um valor **varbinary** para indicar todas as colunas atualizadas durante uma ação DML. Os bits retornados pela função COLUMNS_UPDATED são os seguintes:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47648094"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  
   
- Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\*(o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8.037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
+ Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\*(o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrições para o uso de colunas esparsas  
  As colunas esparsas podem ser de qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem se comportar como qualquer outra coluna com as seguintes restrições:  

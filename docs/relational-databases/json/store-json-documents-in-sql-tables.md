@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502777"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL
 O SQL Server e o Banco de Dados SQL do Azure têm funções nativas do JSON que permitem analisar documentos JSON usando a linguagem SQL padrão. Agora você pode armazenar documentos JSON no SQL Server ou no Banco de Dados SQL e consultar dados JSON em um banco de dados NoSQL. Este artigo descreve as opções para armazenar documentos JSON no SQL Server ou no Banco de Dados SQL.
@@ -48,17 +48,17 @@ Sempre que alguém insere ou atualiza um documento na tabela, essa restrição v
 Ao armazenar seus documentos JSON na tabela, use a linguagem Transact-SQL padrão para consultar os documentos. Por exemplo:
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 É uma grande vantagem poder usar *qualquer* função T-SQL e cláusula de consulta para consultar documentos JSON. O SQL Server e o Banco de Dados SQL não introduzem nenhuma restrição nas consultas que podem ser usadas para analisar documentos JSON. Você pode extrair valores de um documento JSON com a função `JSON_VALUE` e usá-la na consulta como qualquer outro valor.
 
-Essa capacidade de usar consulta T-SQL avançada é a principal diferença entre o SQL Server e o Banco de Dados SQL e os bancos de dados NoSQL clássicos – no Transact-SQL, provavelmente, você terá qualquer função necessária para processar dados JSON.
+Essa capacidade de usar a sintaxe de consulta T-SQL avançada é a principal diferença entre o SQL Server e o Banco de Dados SQL e os bancos de dados NoSQL clássicos – no Transact-SQL, provavelmente, você terá qualquer função necessária para processar dados JSON.
 
 ## <a name="indexes"></a>Índices
 

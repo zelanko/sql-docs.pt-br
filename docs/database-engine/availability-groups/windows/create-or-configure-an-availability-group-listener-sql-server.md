@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ad05cbe7415aed8c821664082fcd557d48f3582f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 680c7e782a37ab9fe5e0096fff71d805239dc4e4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397830"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51600896"
   
     ```  
     ALTER AVAILABILITY GROUP MyAg2   
-          ADD LISTENER ‘MyAg2ListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+          ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
   
     ```  
@@ -279,7 +279,7 @@ ms.locfileid: "51600896"
   
      **Contras**: metade das conexões de cliente demorarão mais de 20 segundos.  
   
--   Se você tiver permissão para manipular os recursos de cluster, a abordagem mais recomendada é definir o nome de rede do ouvinte do grupo de disponibilidade como `RegisterAllProvidersIP=0`. Para obter mais informações, consulte "Configuração de RegisterAllProvidersIP”, mais adiante nesta seção.  
+-   Se você tiver permissão para manipular os recursos de cluster, a abordagem mais recomendada é definir o nome de rede do ouvinte do grupo de disponibilidade como `RegisterAllProvidersIP=0`. Para obter mais informações, confira "Configuração de RegisterAllProvidersIP", mais adiante nesta seção.  
   
      **Prós:** você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   

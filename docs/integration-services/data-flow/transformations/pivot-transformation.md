@@ -19,12 +19,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a136d62eb71b4551478e4247c498555cad0fafe
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 003b04c5fddfc83abee45f76faa7b683e4ee1848
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516069"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
   A transformação Dinâmica transforma um conjunto de dados normalizado em um conjunto menos normalizado, em uma versão mais compacta, tornando dinâmicos os dados de entrada em um valor de coluna. Por exemplo, um conjunto de dados **Orders** normalizado que lista nome de cliente, produto e quantidade adquirida normalmente tem várias linhas para qualquer cliente que tenha comprado diversos produtos, sendo que cada linha daquele cliente apresenta detalhes do pedido para um produto diferente. Ao dinamizar o conjunto de dados na coluna de produto, a transformação dinâmica pode produzir um conjunto de dados com uma única linha por cliente. Aquela única linha lista todas as compras realizadas pelo cliente, com os nomes de produto mostrados como nomes de coluna, e a quantidade exibida como um valor na coluna de produto. Como nem todo cliente compra todos os produtos, muitas colunas podem conter valores nulos.  
@@ -98,7 +98,7 @@ ms.locfileid: "51641013"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Tubo de pneu de estrada|35920.50|  
-|2004|Garrafa de Água – 30 oz.|2805.00|  
+|2004|Garrafa de Água – 887 ml|2805.00|  
 |2002|Pneu de Passeio|62364.225|  
   
  A tabela a seguir mostra um conjunto de dados depois de os dados serem dinamizados na coluna **Ano** .  
@@ -107,7 +107,7 @@ ms.locfileid: "51641013"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Tubo de pneu de estrada|3592.05|35920.50|89801.25|  
-|Garrafa de Água – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Garrafa de Água – 887 ml|*NULL*|*NULL*|2805.00|  
 |Pneu de Passeio|62364.225|375051.60|1041810.00|  
   
  Para dinamizar os dados na coluna **Ano** , como mostrado acima, as opções a seguir são definidas na caixa de diálogo **Dinâmica** .  

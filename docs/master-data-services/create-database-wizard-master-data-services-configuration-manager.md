@@ -14,12 +14,12 @@ ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6cce05ab1b3511dca7258dd1ec5dfc61e965715b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0e58f0756cdd2d6564e4ef1c352f330e4c06bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510675"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Assistente para Criar Banco de Dados (Gerenciador de Configuração do Master Data Services)
 
@@ -39,13 +39,13 @@ ms.locfileid: "47787186"
 |**Testar Conexão**|Verifique se a conta de usuário especificada pode se conectar à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e se a conta tem permissão para criar um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] nessa instância. Se você não clicar em **Testar Conexão**, a conexão será testada quando você clicar em **Avançar**.|  
   
 ## <a name="database"></a>banco de dados  
- Especifique um nome de banco de dados e as opções de agrupamento para o novo banco de dados. Os agrupamentos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. Para obter mais informações sobre agrupamento de banco de dados, consulte [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
+ Especifique um nome de banco de dados e as opções de ordenação para o novo banco de dados. As ordenações em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações utilizadas com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. Para obter mais informações sobre ordenação de banco de dados, consulte [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 |Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Nome do banco de dados**|Especifique um nome para o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
-|**Agrupamento padrão do SQL Server**|Selecione para usar a configuração de agrupamento atual do banco de dados da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada para o novo banco de dados.|  
-|**Agrupamento do Windows**|Especifique as configurações de agrupamento do Windows para uso com o novo banco de dados. Os agrupamentos do Windows definem regras para armazenar dados de caractere com base em uma localidade do Windows associada. Para obter mais informações sobre agrupamentos do Windows e as opções associadas, consulte [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Observação: a lista **Agrupamento do Windows** e as opções associadas são habilitadas apenas depois de você desmarcar a caixa **Agrupamento padrão do SQL Server** .|  
+|**Ordenação padrão do SQL Server**|Selecione para usar a configuração de ordenação atual do banco de dados da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada para o novo banco de dados.|  
+|**Ordenação do Windows**|Especifique as configurações de ordenação do Windows para uso com o novo banco de dados. As ordenações do Windows definem regras para armazenar dados de caractere com base em uma localidade do Windows associada. Para obter mais informações sobre ordenações do Windows e as opções associadas, consulte [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Observação: a lista **Ordenação do Windows** e as opções associadas são habilitadas apenas depois de você desmarcar a caixa **Ordenação padrão do SQL Server**.|  
   
 ## <a name="administrator-account"></a>Conta Administrador  
   

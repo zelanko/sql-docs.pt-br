@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520234"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697574"
   
 1.  Abra um Gerenciador de Cluster de Failover e conecte-se ao nó de cluster que você deseja forçar online.  
   
-2.  No painel **Ações** , clique em **Forçar Início do Cluster**e em **Sim – forçar a inicialização do cluster**.  
+2.  No painel **Ações**, clique em **Forçar Início do Cluster** e em **Sim – Forçar a inicialização do cluster**.  
   
 3.  No painel esquerdo, na árvore **Gerenciador de Cluster de Failover** , clique no nome do cluster.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697574"
   
 3.  Use `Stop-ClusterNode` para assegurar que o serviço de cluster seja interrompido.  
   
-4.  Use `Start-ClusterNode` com `–FixQuorum` para forçar o serviço de cluster a ser iniciado.  
+4.  Use `Start-ClusterNode` com `-FixQuorum` para forçar o serviço de cluster a ser iniciado.  
   
-5.  Use `Get-ClusterNode` com `–Propery NodeWieght = 1` para definir o valor que garanta que o nó é um membro votante do quorum.  
+5.  Use `Get-ClusterNode` com `-Propery NodeWieght = 1` para definir o valor que garanta que o nó é um membro votante do quorum.  
   
 6.  Gere as propriedades de nó de cluster em um formato legível.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697574"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

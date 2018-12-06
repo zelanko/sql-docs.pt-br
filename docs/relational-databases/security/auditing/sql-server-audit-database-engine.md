@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670557"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510699"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "51670557"
   
 -   Administrador de Auditoria – Leitura/Gravação  
   
--   Leitor de Auditoria - Leitura  
+-   Leitor de Auditoria – Leitura  
   
  É recomendável gerar relatórios de auditoria de uma instância separada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como uma instância do [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], a qual apenas Administradores de Auditoria ou Leitores de Auditoria tenham acesso. Ao usar uma instância separada do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para relatório, você pode ajudar a impedir que usuários não autorizados obtenham acesso ao registro de auditoria.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670557"
  Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) e [Criar uma especificação de auditoria de banco de dados e de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Considerações  
- No caso de falha durante o início da auditoria, o servidor não será iniciado. Nesse caso, é possível iniciar o servidor usando a opção **–f** na linha de comando.  
+ No caso de falha durante o início da auditoria, o servidor não será iniciado. Nesse caso, é possível iniciar o servidor usando a opção **-f** na linha de comando.  
   
- Quando uma falha na auditoria faz com que o servidor seja desligado ou não seja iniciado devido à especificação de ON_FAILURE=SHUTDOWN para a auditoria, o evento MSG_AUDIT_FORCED_SHUTDOWN é gravado no log. Como o desligamento ocorrerá quando configuração for encontrada pela primeira vez, o evento será gravado uma vez. Esse evento será gravado após a mensagem de falha da auditoria provocar o desligamento. Um administrador pode ignorar os desligamentos induzidos por auditoria iniciando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no modo de usuário único usando o sinalizador **–m** . Se você iniciar no modo de Usuário Único, desatualizará qualquer auditoria em que ON_FAILURE=SHUTDOWN estiver especificado para execução naquela sessão como ON_FAILURE=CONTINUE. Quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for iniciado pelo sinalizador **–m** , a mensagem MSG_AUDIT_SHUTDOWN_BYPASSED será gravada no log de erros.  
+ Quando uma falha na auditoria faz com que o servidor seja desligado ou não seja iniciado devido à especificação de ON_FAILURE=SHUTDOWN para a auditoria, o evento MSG_AUDIT_FORCED_SHUTDOWN é gravado no log. Como o desligamento ocorrerá quando configuração for encontrada pela primeira vez, o evento será gravado uma vez. Esse evento será gravado após a mensagem de falha da auditoria provocar o desligamento. Um administrador pode ignorar os desligamentos induzidos por auditoria iniciando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no modo de usuário único usando o sinalizador **-m**. Se você iniciar no modo de Usuário Único, desatualizará qualquer auditoria em que ON_FAILURE=SHUTDOWN estiver especificado para execução naquela sessão como ON_FAILURE=CONTINUE. Quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for iniciado pelo sinalizador **-m**, a mensagem MSG_AUDIT_SHUTDOWN_BYPASSED será gravada no log de erros.  
   
  Para obter mais informações sobre as opções de inicialização do serviço, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   

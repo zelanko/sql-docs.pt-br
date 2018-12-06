@@ -14,12 +14,12 @@ ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 64a3c2b613dfb13c10103f1663c55c58d653c306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf87200aff98c95d96dab65d8af8a7fab20bcce4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673514"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419137"
 ---
 # <a name="edit-model-master-data-services"></a>Editar Modelo (Master Data Services)
 

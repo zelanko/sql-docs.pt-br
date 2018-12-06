@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: af6208fa360a646e68a814a6e0509f1130055424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716944"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413783"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -108,7 +108,7 @@ FROM <backup_device>
 |**FirstLSN**|**numeric(25,0)**|Número de sequência do primeiro registro de log no conjunto de backup.|  
 |**LastLSN**|**numeric(25,0)**|Número de sequência de log do próximo registro de log após o conjunto de backup.|  
 |**CheckpointLSN**|**numeric(25,0)**|Número de sequência de log do ponto de verificação mais recente no momento em que o backup foi criado.|  
-|**DatabaseBackupLSN**|**numeric(25,0)**|Número de sequência de log do backup de banco de dados completo mais recente.<br /><br /> **DatabaseBackupLSN** é o “início do ponto de verificação” disparado quando o backup é iniciado. Esse LSN coincidirá com o **FirstLSN** se o backup for feito quando o banco de dados estiver ocioso e nenhuma replicação for configurada.|  
+|**DatabaseBackupLSN**|**numeric(25,0)**|Número de sequência de log do backup de banco de dados completo mais recente.<br /><br /> **DatabaseBackupLSN** é o "início do ponto de verificação" disparado quando o backup é iniciado. Esse LSN coincidirá com o **FirstLSN** se o backup for feito quando o banco de dados estiver ocioso e nenhuma replicação for configurada.|  
 |**BackupStartDate**|**datetime**|Date e hora em que a operação de backup começou.|  
 |**BackupFinishDate**|**datetime**|Data e hora em que a operação de backup foi concluída.|  
 |**SortOrder**|**smallint**|Ordem de classificação do servidor. Esta coluna só é válida para backups de banco de dados. Fornecido para compatibilidade com versões anteriores.|  
@@ -124,7 +124,7 @@ FROM <backup_device>
 |**Sinalizadores**|**int**|Significados dos bits dos sinalizadores individuais se definidos como **1**:<br /><br /> **1** = O backup de log contém operações bulk-logged.<br /><br /> **2** = Backup de instantâneo.<br /><br /> **4** = O banco de dados era somente leitura quando foi copiado em backup.<br /><br /> **8** = O banco de dados estava em modo de usuário único quando foi copiado em backup.<br /><br /> **16** = O backup contém somas de verificação de backup.<br /><br /> **32** = O banco de dados foi danificado durante seu backup, mas foi solicitada a continuação da operação, apesar dos erros.<br /><br /> **64** = Backup da parte final do log.<br /><br /> **128** = Backup da parte final do log com metadados incompletos.<br /><br /> **256** = Backup da parte final do log com NORECOVERY.<br /><br /> **Importante:** recomendamos que, em vez de **Sinalizadores**, você use colunas boolianas individuais (listadas abaixo que começam com **HasBulkLoggedData** e terminam com **IsCopyOnly**).|  
 |**BindingID**|**uniqueidentifier**|ID de associação do banco de dados. Isso corresponde a **sys.database_recovery_status****database_guid**. Quando o banco de dados é restaurado, um valor novo é atribuído. Consulte também **FamilyGUID** (abaixo).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID do ponto de bifurcação da recuperação final. Essa coluna corresponde a **last_recovery_fork_guid** na tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Em backups de dados, **RecoveryForkID** é igual a **FirstRecoveryForkID**.|  
-|**Agrupamento**|**nvarchar(128)**|Agrupamento usado pelo banco de dados.|  
+|**Ordenação**|**nvarchar(128)**|Ordenação usada pelo banco de dados.|  
 |**FamilyGUID**|**uniqueidentifier**|ID do banco de dados original quando criado. Esse valor fica igual quando o banco de dados é restaurado.|  
 |**HasBulkLoggedData**|**bit**|**1** = Backup de log que contém operações bulk-logged.|  
 |**IsSnapshot**|**bit**|**1** = Backup de instantâneo.|  

@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 838fd86c8293554eb1c6d546b789c1dc60a2a658
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 07a13b9a2d6cf54922e0e2ca5d718909a61fd831
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502990"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 
@@ -74,7 +74,7 @@ ms.locfileid: "48906446"
   
 2.  Para compactar um índice, expanda a tabela que contém o índice que você deseja compactar e expanda a pasta **Índices** .  
   
-3.  Clique com o botão direito do mouse na tabela ou índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação…**.  
+3.  Clique com o botão direito do mouse na tabela ou no índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação...**.  
   
 4.  No Assistente de Compactação de Dados, na página **Bem-vindo ao Assistente de Compactação de Dados** , clique em **Avançar**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48906446"
   
      Se você selecionar **Agenda**, clique em **Alterar agenda**.  
   
-    1.  Na caixa de diálogo **Nova Agenda de Trabalho** , na caixa **Nome** , digite o nome da agenda de trabalho.  
+    1.  Na caixa de diálogo **Nova Agenda de Trabalho**, na caixa **Nome**, digite o nome da agenda de trabalho.  
   
     2.  Na lista **Tipo de Agenda** , selecione o tipo de agenda:  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48906446"
   
             -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
-                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
+                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
                 -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
@@ -195,10 +195,10 @@ ms.locfileid: "48906446"
      Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
-     Copia os resultados do relatório de progresso do assistente na área de transferência.  
+     Copia os resultados do relatório de progresso do assistente na Área de transferência.  
   
      **Enviar Relatório como Email**  
-     Copia os resultados do relatório de progresso do assistente em uma mensagem de email.  
+     Copia os resultados do relatório de progresso do assistente para uma mensagem de email.  
   
      Quando terminar, clique em **Fechar**.  
   

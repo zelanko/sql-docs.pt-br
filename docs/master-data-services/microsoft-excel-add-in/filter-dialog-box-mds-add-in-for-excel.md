@@ -11,12 +11,12 @@ ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4516be4acd8512feee743e986eea9fd554e4089e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808654"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403891"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Caixa de diálogo Filtrar (Suplemento do MDS para Excel)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47808654"
   
 |Nome do controle|Descrição|  
 |------------------|-----------------|  
-|attribute|Exibe um atributo pelo qual você deseja filtrar. Se nenhum atributo for listado, significa que eles não foram adicionados.<br /><br /> Observação: você pode filtrar por atributos que não planeja mostrar na planilha.|  
+|attribute|Exibe um atributo pelo qual você deseja filtrar. Se nenhum atributo está listado, é porque eles não foram adicionados.<br /><br /> Observação: você pode filtrar por atributos que não planeja mostrar na planilha.|  
 |Operador|Exibe operadores que correspondem ao tipo de atributo que foi selecionado. Para obter mais informações, consulte [Operadores de filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Critérios|O critério pelo qual você deseja filtrar.|  
 |Resumo da Atualização|Ao trabalhar com conjuntos de dados grandes, clique para atualizar a seção **Resumo** com detalhes da quantidade de dados que serão carregados.|  

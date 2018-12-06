@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dc31c1bdfc9dfb8c48630ae14958cfed64ab0f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e1b6f54763bd4c454dfebb61bf8e8ef3d0c7b63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511907"
 ---
 # <a name="database-engine-error-severities"></a>Severidade dos erros do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,17 @@ ms.locfileid: "47739514"
   
  O RAISERROR pode ser usado para gerar mensagens de erro definidas pelo usuário com severidade de 1 a 25. O RAISERROR pode se referir a uma mensagem de erro definida pelo usuário armazenada na exibição do catálogo **sys.messages** ou criar uma mensagem dinamicamente. Quando a mensagem de erro definida pelo usuário em **sys.messages** é usada durante a geração de um erro, a severidade especificada pelo RAISERROR substitui a severidade especificada em **sys.messages**. Para obter mais informações, consulte [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
-## <a name="error-severity-and-trycatch"></a>Severidade do erro e TRY...CATCH  
- Uma construção TRY...CATCH pega todos os erros de execução com severidade acima de 10 que não encerram a conexão do banco de dados.  
+## <a name="error-severity-and-trycatch"></a>Gravidade do erro e TRY...CATCH  
+ Um constructo TRY...CATCH pega todos os erros de execução com gravidade acima de 10 que não encerram a conexão de banco de dados.  
   
- Erros com severidade de 0 a 10 são mensagens informativas e não fazem a execução saltar do bloco CATCH de uma construção TRY...CATCH.  
+ Erros com gravidade de 0 a 10 são mensagens informativas e não fazem a execução pular do bloco CATCH de um constructo TRY...CATCH.  
   
  Erros que encerram a conexão do banco de dados, normalmente com severidade de 20 a 25, não são controlados pelo bloco CATCH porque a execução é anulada quando a conexão é encerrada.  
   
  Para obter mais informações, veja [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="retrieving-error-severity"></a>recuperando a severidade dos erros  
- A função do sistema ERROR_SEVERITY pode ser usada para recuperar a severidade do erro que fez o bloco CATCH de uma construção TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
+ A função do sistema ERROR_SEVERITY pode ser usada para recuperar a gravidade do erro que fez o bloco CATCH de um constructo TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Compreendendo os erros do Mecanismo de Banco de Dados](../../relational-databases/errors-events/understanding-database-engine-errors.md)   

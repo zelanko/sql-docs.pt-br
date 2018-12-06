@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810424"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403441"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modificando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### <a name="updating-the-current-table-from-the-history-table"></a>Atualizando a tabela atual da tabela de histórico  
- Você pode usar **UPDATE** na tabela atual para reverter o estado real da linha para um estado válido em um ponto específico no passado (reversão para uma “última versão de linha boa conhecida”). O exemplo a seguir mostra a reversão para os valores na tabela de histórico em 25-04-2015 onde o DeptID = 10.  
+ Você pode usar **UPDATE** na tabela atual para reverter o estado real da linha para um estado válido em um ponto específico no passado (reversão para uma "última versão de linha boa conhecida"). O exemplo a seguir mostra a reversão para os valores na tabela de histórico em 25-04-2015 onde o DeptID = 10.  
   
 ```  
 UPDATE Department   

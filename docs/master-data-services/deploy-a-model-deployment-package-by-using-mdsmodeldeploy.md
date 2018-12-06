@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656764"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398191"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
 
@@ -43,7 +43,7 @@ ms.locfileid: "47656764"
   
 -   Você deve ser um administrador no ambiente onde está implantando o modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Se estiver atualizando um modelo com dados, a versão que está sendo implantada não poderá ser **Bloqueada** nem **Confirmada**.  
+-   Se estiver atualizando um modelo com os dados, a versão que está sendo implantada não poderá ser **Bloqueada** nem **Confirmada**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Para implantar um pacote de implantação de modelo  
   

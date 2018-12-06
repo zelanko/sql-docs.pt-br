@@ -7,18 +7,18 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397697"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Você pode alterar a aparência do portal da Web criando uma identidade visual para o seu negócio. Isso é feito por meio de um pacote de marca. O pacote de marca foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilo em cascata) para criá-lo.  
+Você pode alterar a aparência do portal da Web criando uma identidade visual para o seu negócio. Isso é feito por meio de um pacote de marca. O pacote de marca foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilos em cascata) para criá-lo.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -104,7 +104,7 @@ Na primeira vez que você se conecta a um servidor com o Publicador de Relatóri
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-Assim, você pode usar esse tema para todos os relatórios móveis que criar, mesmo se eles não forem para o mesmo servidor no qual seu tema está implantado.   
+Assim, você poderá usar esse tema para todos os relatórios móveis que criar, mesmo se eles não forem para o mesmo servidor no qual seu tema está implantado.   
   
 ### <a name="using-a-logo"></a>Como usar um logotipo
   

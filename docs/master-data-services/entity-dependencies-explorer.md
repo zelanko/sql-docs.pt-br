@@ -14,12 +14,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49528d0fda3bbbe9798a4a7bdce2cbdd5b7369f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820005"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416667"
 ---
 # <a name="entity-dependencies-explorer"></a>Gerenciador de dependências de entidade
 
@@ -42,7 +42,7 @@ Uma entidade pode ser diretamente consumida por mais de uma entidade. No exemplo
   
 ![MDS_EntityDependencies_Entity_Node.jpg](../master-data-services/media/mds-entitydependencies-entity-node-jpg.jpg)  
   
-Esses nós de árvore de contêiner têm um ícone de grade à esquerda do nome da entidade e o texto é colorido por profundidade do nível de hierarquia. O exemplo acima mostra que a sub-região "CDSR {Canadá}" tem uma referência de DBA para a região "CDR {Canadá}", que faz referência a área "CDA {Canadá}", que referencia a BigArea “NAm {N. America}”.  
+Esses nós de árvore de contêiner têm um ícone de grade à esquerda do nome da entidade e o texto é colorido por profundidade do nível de hierarquia. O exemplo acima mostra que a sub-região "CDSR {Canadá}" tem uma referência de DBA para a região "CDR {Canadá}", que faz referência a área "CDA {Canadá}", que referencia a BigArea "NAm {N. America}".  
   
 A exibição é totalmente editável, assim como na página Gerenciador de Hierarquias. Relações pai-filho podem ser modificadas na árvore por membros filho de recortar e colar ou arrastar-soltar, de um pai para outro. Outros valores de atributo de membro podem ser modificados no painel de detalhes à direita da árvore.   
   

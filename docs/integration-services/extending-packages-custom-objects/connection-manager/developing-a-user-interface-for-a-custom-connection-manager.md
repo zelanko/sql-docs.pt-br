@@ -14,17 +14,17 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae1f86ce6127a963256bfb88f00621af1fb2cb14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 963c6f24cd5aea9e84544b1b3d0e05045f8aa588
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511337"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
   Depois de ter substituído a implementação das propriedades e dos métodos da classe de base para fornecer sua funcionalidade personalizada, talvez você queira criar uma interface do usuário personalizada para seu gerenciador de conexões. Se você não criar uma interface de usuário personalizada, os usuários poderão configurar seu gerenciador de conexões somente utilizando a janela Propriedades.  
   
- Em um projeto ou assembly de interface de usuário personalizado, você normalmente tem duas classes – uma classe que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> e o formulário do Windows exibido para reunir informações do usuário.  
+ Em um projeto ou assembly de interface do usuário personalizado, você normalmente tem duas classes – uma classe que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> e o formulário do Windows exibido para reunir informações do usuário.  
   
 > [!IMPORTANT]  
 >  Depois de assinar e criar sua interface do usuário personalizada e instalá-la no cache de assembly global, conforme descrito em [Codificar um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), lembre-se de fornecer o nome totalmente qualificado desta classe na propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  

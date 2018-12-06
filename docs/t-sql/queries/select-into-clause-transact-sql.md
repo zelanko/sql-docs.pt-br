@@ -30,17 +30,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509011"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT – Cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SELECT…INTO cria uma tabela nova no grupo de arquivos padrão e insere nela as linhas resultantes da consulta. Para exibir a sintaxe completa de SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+SELECT…INTO cria uma tabela no grupo de arquivos padrão e insere nela as linhas resultantes da consulta. Para exibir a sintaxe completa de SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +86,7 @@ Se alguma dessas condições for verdadeira, a coluna será criada como NOT NULL
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Não é possível especificar uma variável de tabela ou um parâmetro com valor de tabela como a nova tabela.  
   
- Você não pode usar `SELECT…INTO` para criar uma tabela particionada, mesmo quando a tabela de origem está particionada. `SELECT...INTO` não usa o esquema de partição da tabela de origem; em vez disso, a nova tabela é criada no grupo de arquivos padrão. Para inserir linhas em uma tabela particionada, crie primeiro a tabela particionada e depois use a instrução `INSERT INTO...SELECT...FROM`.  
+ Você não pode usar `SELECT...INTO` para criar uma tabela particionada, mesmo quando a tabela de origem está particionada. `SELECT...INTO` não usa o esquema de partição da tabela de origem; em vez disso, a nova tabela é criada no grupo de arquivos padrão. Para inserir linhas em uma tabela particionada, crie primeiro a tabela particionada e depois use a instrução `INSERT INTO...SELECT...FROM`.  
   
  Índices, restrições e gatilhos definidos na tabela de origem não são transferidos para a nova tabela, nem podem ser especificados na instrução `SELECT...INTO`. Se esses objetos forem obrigatórios, você poderá criá-los depois de executar a instrução `SELECT...INTO`.  
   
@@ -232,7 +232,7 @@ O exemplo a seguir demonstra a criação de uma nova tabela como uma cópia de o
  **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>Consulte Também  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814169"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409533"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produto: SQL Server Reporting Services**  
   
-2.  **Categoria:** Eventos relacionados ao servidor terão os caracteres "Servidor de Relatório" no início do nome. Por exemplo “Tempo de Execução de Alerta do Servidor de Relatório”. Esses eventos também são registrados em log para os arquivos de log do servidor de relatório.  
+2.  **Categoria:** Eventos relacionados ao servidor terão os caracteres "Servidor de Relatório" no início do nome. Por exemplo "Tempo de Execução de Alerta do Servidor de Relatório". Esses eventos também são registrados em log para os arquivos de log do servidor de relatório.  
   
-3.  **Categoria:** eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo “Proxy de Aplicativo de Serviço” Tempo de Execução de Alerta do Servidor de Relatório”. As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
+3.  **Categoria:** eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo "Proxy de Aplicativo de Serviço" Tempo de Execução de Alerta do Servidor de Relatório". As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
   
 ##  <a name="bkmk_list"></a> Lista de eventos do SQL Server Reporting Services  
  Esta tabela é uma lista dos eventos na categoria SQL Server Reporting Services:  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |Serviço compartilhado|Entradas de exemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acesso de MediumGranting a bancos de dados de conteúdo.<br /><br /> Instâncias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Alteração de conta de serviço MediumProcessing para ReportingWebServiceApplication<br /><br /> Permissões de banco de dados MediumSetting|  
   
 ##  <a name="bkmk_powershell"></a> Exiba um arquivo de log com o PowerShell  
- ![Conteúdo relacionado do PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado do PowerShell")Você pode usar o PowerShell para retornar uma lista de eventos relacionados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de um arquivo de log de ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm “**sql server reporting services**”:  
+ ![Conteúdo relacionado do PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado do PowerShell")Você pode usar o PowerShell para retornar uma lista de eventos relacionados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de um arquivo de log de ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm "**sql server reporting services**":  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  Também há ferramentas que podem ser baixadas que permitirão a leitura de logs do ULS. Por exemplo, o [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponível no GitHub. 

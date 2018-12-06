@@ -13,12 +13,12 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 644a789343b68e6808b5d1bf61f8c5768d01c70c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 27d94b747eb1a12a4318e41fe6b4200074a2fc42
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512663"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Introdução aos Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ Este tópico apresenta as etapas para configurar instâncias do [!INCLUDE[ssCurr
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   **Vídeo—Introdução ao AlwaysOn:**  [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+-   **Vídeo – Introdução ao Always On:** [Microsoft SQL Server codinome "Denali" Série Always On, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
--   **Vídeo—Um mergulho no AlwaysOn:**  [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **Vídeo – Um mergulho no Always On:** [Microsoft SQL Server codinome "Denali" Série Always On, Parte 2: Criando uma solução de alta disponibilidade crítica usando Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  [Guia de soluções Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

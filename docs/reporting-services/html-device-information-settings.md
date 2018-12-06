@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813679"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403631"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  

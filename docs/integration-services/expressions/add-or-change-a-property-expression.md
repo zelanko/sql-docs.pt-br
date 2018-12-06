@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505976"
 ---
 # <a name="add-or-change-a-property-expression"></a>Adicionar ou alterar uma expressão de propriedade
   Você pode criar expressões de propriedade para pacotes, tarefas contêineres Loop Foreach, contêineres Loop For, contêineres de Sequência, manipuladores de eventos, gerenciadores de conexões de nível de pacote e projeto, e provedores de logs.  
@@ -38,15 +38,15 @@ ms.locfileid: "47754354"
   
     -   Clique com o botão direito do mouse no item e clique em **Propriedades**.  
   
-3.  Clique na caixa **Expressões** e clique nas reticências (...).  
+3.  Clique na caixa **Expressões** e, em seguida, clique nas reticências (...).  
   
 4.  No **Editor de Propriedades de Expressões**, selecione uma propriedade na lista **Propriedade** e execute um dos seguintes procedimentos:  
   
     -   Digite ou altere a expressão de propriedade diretamente na coluna **Expressão** e clique em **OK**.  
   
-         — ou —  
+         -ou-  
   
-    -   Clique nas reticências (…) na linha de expressão da propriedade para abrir o **Construtor de Expressões**.  
+    -   Clique nas reticências (...) na linha de expressão da propriedade para abrir o **Construtor de Expressões**.  
   
 5.  (Opcional) No **Construtor de Expressões**, execute qualquer uma das seguintes tarefas:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47754354"
  [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](../../integration-services/integration-services-ssis-event-handlers.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   

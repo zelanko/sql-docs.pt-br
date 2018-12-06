@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/24/2018
-ms.openlocfilehash: 42ca036f069d5c7014e14a4c3ccb0d1e9d298a2b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 557dd30f14bf990cdfce2dd5e2de153bec3a72c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390279"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operações de backup e restauração para o Reporting Services
 
@@ -48,7 +48,7 @@ ms.locfileid: "50030115"
 >  Se o servidor de relatório estiver no modo do SharePoint, haverá bancos de dados adicionais com os quais se preocupar, incluindo bancos de dados de configuração do SharePoint e o banco de dados de alertas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No modo do SharePoint, três bancos de dados são criados para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Os bancos de dados **reportserver**, **reportservertempdb**e **dataalerting** . Para obter mais informações, consulte [Fazer backup e restaurar aplicativos de serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>Fazendo backup das chaves de criptografia  
- Você deve fazer backup das chaves de criptografia ao configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pela primeira vez. Você também deve fazer backup das chaves sempre que alterar a identidade das contas de serviço ou renomear o computador. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de relatório do modo do SharePoint, consulte a seção “Gerenciamento de chaves” de [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)(Gerenciar um aplicativo de serviço SharePoint do Reporting Services).  
+ Você deve fazer backup das chaves de criptografia ao configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pela primeira vez. Você também deve fazer backup das chaves sempre que alterar a identidade das contas de serviço ou renomear o computador. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de relatório do modo do SharePoint, confira a seção "Gerenciamento de chaves" de [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)(Gerenciar um aplicativo de serviço SharePoint do Reporting Services).  
   
 ## <a name="backing-up-the-configuration-files"></a>Fazendo backup dos arquivos de configuração  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa arquivos de configuração para armazenar as configurações do aplicativo. Você deve fazer backup dos arquivos quando configurar o servidor pela primeira vez e depois de implantar quaisquer extensões personalizadas. Os arquivos dos quais deve ser feito backup incluem:  

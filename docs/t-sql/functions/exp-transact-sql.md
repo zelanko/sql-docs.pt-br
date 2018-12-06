@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7be8b0b19fea7373a9df50f4f7f05d6dc5ee6989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3725fccd59dea96571a3f5b1b50338ec2adb2dee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508519"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ EXP ( float_expression )
  **float**  
   
 ## <a name="remarks"></a>Remarks  
- A constante **e** (2,718281...) é a base de logaritmos naturais.  
+ A constante **e** (2,718281...) é a base dos logaritmos naturais.  
   
  O expoente de um número é a constante **e** elevada à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
   

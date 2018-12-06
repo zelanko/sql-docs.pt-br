@@ -18,12 +18,12 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f4d5e1a419d9a194532902e0df259eccc35590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838534"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519159"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  É uma constante, uma variável ou uma expressão. A expressão não pode conter uma instrução EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Construtores de valor de tabela podem ser usados de uma das duas maneiras: diretamente na lista VALUES de uma instrução INSERT … VALUES ou como uma tabela derivada em qualquer lugar em que tabelas derivadas sejam permitidas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais linhas do que o limite permite, use um dos seguintes métodos:  
+ Construtores de valor de tabela podem ser usados de uma das duas maneiras: diretamente na lista VALUES de uma instrução INSERT ... VALUES ou como uma tabela derivada em qualquer lugar em que tabelas derivadas sejam permitidas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais linhas do que o limite permite, use um dos seguintes métodos:  
   
 -   Crie várias instruções INSERT  
   

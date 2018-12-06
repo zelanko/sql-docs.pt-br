@@ -13,12 +13,12 @@ ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6ebccd038bd2dc96f540e17c9ad67a135ec6ceb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651644"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400599"
 ---
 # <a name="add-database-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência de Banco de Dados
 Este tópico descreve os procedimentos que você pode executar na caixa de diálogo **Adicionar Referência de Banco de Dados**.  
@@ -42,7 +42,7 @@ Selecione **Banco de dados do sistema** se você pretende selecionar um dos banc
   
 Selecione **Aplicativo da Camada de Dados (.dacpac)** para referenciar um banco de dados em um DACPAC, e procure o diretório com o arquivo DACPAC.  
   
-## <a name="selecting-the-databases-relative-location"></a>Selecionando o local relativo do banco de dados  
+## <a name="selecting-the-databases-relative-location"></a>Selecionando a localização relativa do banco de dados  
 Depois de selecionar o banco de dados que deseja referenciar, você pode especificar o local esperado de um objeto de banco de dados, relativo ao projeto de referência.  
   
 As referências podem ser resolvidas para objetos em um dos seguintes locais:  

@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517669"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,16 +245,16 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Para modificar o número de eventos a serem usados para análise, especifique a opção **–n** . O exemplo a seguir aumenta o número de entradas de cache para 2.000.  
+2.  Para modificar o número de eventos a serem usados para análise, especifique a opção **-n**. O exemplo a seguir aumenta o número de entradas de cache para 2.000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Para analisar eventos para todos os bancos de dados na instância, especifique a opção **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Para ajustar um banco de dados usando uma carga de trabalho e configurações padrão do utilitário dta  

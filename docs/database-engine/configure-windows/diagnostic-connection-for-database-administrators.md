@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514701"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770124"
   
 -   Inicialmente, o DAC tenta se conectar ao banco de dados padrão associado ao logon. Após uma conexão bem-sucedida, você pode se conectar ao banco de dados mestre. Se o banco de dados padrão estiver offline ou não estiver disponível, a conexão retornará o erro 4060. Entretanto, ela terá êxito se você substituir o banco de dados padrão para se conectar ao banco de dados mestre em vez de usar o seguinte comando:  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      Recomendamos que você se conecte ao banco de dados mestre com o DAC porque esse mestre estará com certeza disponível se a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] for iniciada.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47770124"
   
  A porta DAC é atribuída dinamicamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a inicialização. Ao conectar-se à instância padrão, o DAC evita usar uma solicitação do Protocolo de Resolução (SSRP) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao serviço SQL Server Browser. Primeiro ele se conecta usando a porta TCP 1434. Se isso falhar, ele faz uma chamada ao SSRP para obter a porta. Se o navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver escutando as solicitações de SSRP, a solicitação de conexão retornará um erro. Consulte o log de erros para localizar o número da porta que o DAC está escutando. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for configurado para aceitar conexões de administração remotas, o DAC deverá ser iniciado com um número de porta explícito:  
   
- **sqlcmd –S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:***\<server>,\<port>*  
   
  O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lista o número da porta para o DAC, que, por padrão, é 1434. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para aceitar apenas conexões DAC locais, conecte usando o adaptador de loopback com o seguinte comando:  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  Durante a conexão com o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] com o DAC, você também deve especificar o nome do banco de dados na cadeia de conexão usando a opção -d.  
@@ -105,7 +105,7 @@ ms.locfileid: "47770124"
 ## <a name="example"></a>Exemplo  
  Neste exemplo, um administrador nota que o servidor `URAN123` não está respondendo e deseja diagnosticar o problema. Para isso, o usuário ativa o utilitário de prompt de comando `sqlcmd` e se conecta ao servidor `URAN123` usando `-A` para indicar o DAC.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  Agora o administrador pode executar consultas para diagnosticar o problema e possivelmente encerrar as sessões sem-resposta.  
   

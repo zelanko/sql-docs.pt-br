@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518508"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "50021450"
 
   Este tópico é uma visão geral das opções de atualização e migração do SQL Server Reporting Services. Há duas abordagens gerais para fazer upgrade de uma implantação do SQL Server Reporting Services:  
   
--   **Atualizar:** você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e instâncias onde elas estão instalados atualmente. Isto é geralmente chamado de atualização "no local". A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, consulte a seção 'Migração de nativo para SharePoint' mais adiante neste documento.  
+-   **Atualizar:** você atualiza os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos servidores e instâncias onde elas estão instalados atualmente. Isto é geralmente chamado de atualização “no local”. A atualização in-loco não tem suporte de um modo de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para outro. Por exemplo, você não pode atualizar um servidor de relatório de modo nativo para um servidor de relatório no modo do SharePoint. Você pode migrar seus itens de relatório de um modo para outro. Para obter mais informações, confira a seção 'Migração do modo nativo para o SharePoint' mais adiante neste documento.  
   
 -   **Migrar**: Você instala e configura um novo ambiente do SharePoint, copia seus itens de relatório e recursos para o novo ambiente, e configura o novo ambiente para usar o conteúdo existente. Uma forma de nível inferior de migração é copiar os bancos de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], arquivos de configuração e, se estiver usando o modo do SharePoint, os bancos de dados de conteúdo do SharePoint.  
     
@@ -189,7 +189,7 @@ ms.locfileid: "50021450"
   
 -   Instale a versão do SQL Server Reporting Services do suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para SharePoint em cada front-end da Web no farm. Você pode instalar o suplemento usando o assistente de instalação do SQL Server Reporting Services ou baixando o suplemento.  
   
--   Execute a instalação do SQL Server Reporting Services para atualizar do modo do SharePoint em cada “servidor de relatório”. O assistente de instalação do SQL Server instalará o Serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e criará um novo aplicativo de Serviço. 
+-   Execute a instalação do SQL Server Reporting Services para atualizar do modo do SharePoint em cada ‘servidor de relatório’. O assistente de instalação do SQL Server instalará o Serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e criará um novo aplicativo de Serviço. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Considerações para uma migração  

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503491"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ O SQL Server 2014 SP2 contém rollups de hotfixes lançados para a Atualização
 |Clonagem de banco de dados|Use o novo comando DBCC para solucionar os problemas de bancos de dados de produção existentes por meio da clonagem do esquema, metadados e estatísticas, mas sem os dados. Os bancos de dados clonados não se destinam ao uso em ambientes de produção.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |Adições de DMF|Novo sys.dm_db_incremental_stats_properties de DMF expõe informações por partição para estatísticas incrementais.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
 |DMF para recuperar o buffer de entrada no SQL Server|Um novo DMF para recuperar o buffer de entrada para uma sessão/solicitação (sys.dm_exec_input_buffer) agora está disponível. Isso é funcionalmente equivalente ao DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
-|Suporte de DROP DDL para replicação|Permite que uma tabela que está incluída como um artigo na publicação de replicação transacional seja descartada do banco de dados e da publicação.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|Suporte de DROP DDL para replicação|Permite que uma tabela incluída como um artigo na publicação de replicação transacional seja descartada do banco de dados e da publicação.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |Privilégio IFI para a conta de serviço do SQL|Determine se a IFI (Inicialização Instantânea de Arquivo) está em vigor na inicialização do serviço SQL Server.|[Inicialização de arquivo de bancos de dados](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Concessões de memória – Tratando problemas|Você pode aproveitar as dicas de diagnóstico ao executar consultas limitando suas concessões de memória para evitar a contenção de memória.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |Criação de perfil por operador leve para execução de consulta |Otimiza a coleta de estatísticas de execução de consulta por operador como o número real de linhas.|[Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
@@ -58,8 +58,8 @@ O SQL Server 2014 SP2 contém rollups de hotfixes lançados para a Atualização
 
 Além disso, observe as seguintes correções:
 - Agora a pilha de chamadas Xevent inclui nomes de módulo e deslocamento, em vez de endereços absolutos.
-- Melhoria na correlação entre XE e DMV – Query_hash e query_plan_hash são usados para identificar uma consulta com exclusividade. O DMV define-os como varbinary(8), enquanto XEvent define-os como UINT64. Como o SQL Server não tem “bigint sem sinal”, a conversão nem sempre funciona. Essa melhoria introduz novas colunas de ação/filtro de XEvent equivalentes a query_hash e a query_plan_hash, exceto quando elas estão definidas como INT64. Essa correção ajuda a correlacionar consultas entre XE e DMVs.
-- Suporte para UTF-8 em BULK INSERT e BCP – Suporte para exportação e importação de dados codificados no conjunto de caracteres UTF-8 agora está habilitado em BULK INSERT e BCP.
+- Melhoria na correlação entre XE e DMVs de diagnóstico – query_hash e query_plan_hash são usados para identificar uma consulta com exclusividade. O DMV define-os como varbinary(8), enquanto XEvent define-os como UINT64. Como o SQL Server não tem “bigint sem sinal”, a conversão nem sempre funciona. Essa melhoria introduz novas colunas de ação/filtro de XEvent equivalentes a query_hash e a query_plan_hash, exceto quando elas estão definidas como INT64. Essa correção ajuda a correlacionar consultas entre XE e DMVs.
+- Suporte para UTF-8 em BULK INSERT e BCP – o suporte para exportação e importação de dados codificados no conjunto de caracteres UTF-8 agora está habilitado em BULK INSERT e BCP.
 
 ### <a name="download-pages-and-more-information-for-sp2"></a>Páginas de download e mais informações para o SP2
 
@@ -82,7 +82,7 @@ O SQL Server 2014 SP1 contém correções fornecidas no SQL Server 2014 Atualiza
 ### <a name="download-pages-and-more-information-for-sp1"></a>Páginas de download e mais informações para o SP1
 
 - [Baixar o Service Pack 1 para Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
-- [O SQL Server 2014 Service Pack 1 foi lançado – Atualizado](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [O SQL Server 2014 Service Pack 1 foi lançado – atualizado](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -292,7 +292,7 @@ Se você já tiver o problema com valores de instance_id incompatíveis, a únic
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>O servidor de relatório do Modo Nativo do SQL Server 2012 Reporting Services não pode ser executado lado a lado com componentes do SQL Server 2014 Reporting Services SharePoint  
-**Problema:** o serviço do Windows do modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] “SQL Server Reporting Services” (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
+**Problema:** o ‘SQL Server Reporting Services’ do serviço Windows no modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (ReportingServicesService.exe) falha ao iniciar quando há componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint instalados no mesmo servidor.  
   
 **Solução alternativa:** Desinstalar os componentes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint e reiniciar o serviço do Microsoft SQL Server 2012 Reporting Services do Windows.  
   
@@ -359,7 +359,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 **Solução alternativa:**  
   
-1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, consulte a seção "Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -374,7 +374,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 **Solução alternativa:**  
   
-1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, consulte a seção "Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -389,7 +389,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 **Solução alternativa:**  
   
-1.  No Microsoft Excel, desmarque as propriedades avançadas personalizadas. Consulte a seção “Solução alternativa” do seguinte artigo da base de dados de conhecimento [KB 2927748](https://support.microsoft.com/kb/2927748).  
+1.  No Microsoft Excel, desmarque as propriedades avançadas personalizadas. Confira a seção “Solução alternativa” do seguinte artigo da base de dados de conhecimento [KB 2927748](https://support.microsoft.com/kb/2927748).  
   
 **Mais Informações:**  
   

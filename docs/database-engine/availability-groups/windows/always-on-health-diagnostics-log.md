@@ -10,12 +10,12 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87bb360140f71cca4739f48bba9b5c309104bcf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695110"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404992"
 ---
 # <a name="always-on-availability-groups-health-diagnostics-log"></a>Log de diagnóstico de integridade de Grupos de Disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407343"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>SSIS (Integration Services) em um cluster
   Clusterizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é recomendável, porque o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é um serviço clusterizado ou que reconheça clusters e não dá suporte ao failover de um nó de cluster para outro. Portanto, em um ambiente clusterizado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve ser instalado e iniciado como um serviço autônomo em cada nó do cluster.  
@@ -99,7 +99,7 @@ Para os clientes que chegaram à conclusão de que as vantagens dessa configura�
   
 4.  No menu **Arquivo** , aponte para **Novo**e clique em **Recurso**.  
   
-5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **“Serviço Genérico”** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Avançar**.  
+5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **"Serviço Genérico"** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Avançar**.  
   
 6.  Na página **Possíveis Proprietários** , adicione ou remova os nós do cluster como os possíveis proprietários do recurso. Clique em **Avançar**.  
   

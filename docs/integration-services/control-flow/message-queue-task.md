@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639883"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503988"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
@@ -153,17 +153,17 @@ ms.locfileid: "51639883"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
  **DataFileMessage**  
- Digite o caminho do arquivo de dados ou clique no botão de reticências **(…)** e localize o arquivo.  
+ Digite o caminho do arquivo de dados ou clique nas reticências **(…)** e localize o arquivo.  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
  **VariableMessage**  
- Digite os nomes das variáveis ou clique no botão de reticências **(…)** e selecione as variáveis. As variáveis são separadas por vírgulas.  
+ Digite os nomes de variáveis ou clique nas reticências **(...)** e, em seguida, selecione as variáveis. As variáveis são separadas por vírgulas.  
   
  **Tópicos Relacionados:** Selecionar Variáveis  
   
 #### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
  **StringMessage**  
- Digite a mensagem de cadeia de caracteres ou clique no botão de reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres** .  
+ Digite a mensagem de cadeia de caracteres ou clique nas reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres**.  
   
 ## <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
   Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -192,7 +192,7 @@ ms.locfileid: "51639883"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
  **SaveFileAs**  
- Digite o caminho do arquivo a ser utilizado ou clique no botão de reticências **(…)** e localize o arquivo.  
+ Digite o caminho do arquivo a ser usado ou clique no botão de reticências **(...)** e, em seguida, localize o arquivo.  
   
  **Overwrite**  
  Indique se os dados em um arquivo existente devem ser substituídos quando o conteúdo de uma mensagem de arquivo de dados é salvo. O padrão é **False**.  
@@ -212,8 +212,8 @@ ms.locfileid: "51639883"
  Esta opção é somente leitura. Pode ser em branco ou conter o GUID de um pacote quando a propriedade Filtrar tiver sido definida anteriormente.  
   
 ##### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **Identifier**  
- Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+ **Identificador**  
+ Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
  **Tópicos relacionados:** [Selecionar um pacote](../../integration-services/control-flow/select-a-package.md)  
   
@@ -238,8 +238,8 @@ ms.locfileid: "51639883"
  Esta opção fica em branco.  
   
 ##### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **Identifier**  
- Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+ **Identificador**  
+ Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
  **Tópicos relacionados:** [Selecionar um pacote](../../integration-services/control-flow/select-a-package.md)  
   

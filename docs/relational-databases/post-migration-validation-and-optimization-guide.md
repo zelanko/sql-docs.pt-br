@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506338"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Alguns exemplos de predicados não SARGable:
 3. Pondere a utilidade das construções a seguir:
   -   Funções que estão sendo usadas como predicados;
   -   Pesquisas com curinga;
-  -   Expressões complexas baseadas em dados de coluna– avalie a necessidade de criar colunas computadas persistentes em vez disso, que podem ser indexadas;
+  -   Expressões complexas baseadas em dados de coluna – avalie a necessidade de criar colunas computadas persistentes que possam ser indexadas;
 
 > [!NOTE] 
 > Todas as opções acima podem ser feitas programaticamente.

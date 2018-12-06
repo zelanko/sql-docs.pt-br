@@ -1,26 +1,26 @@
 ---
 title: Personalizar a web part do Visualizador de Relatórios | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021520"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411633"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a web part do Visualizador de Relatórios
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)][!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Use a web part do Visualizador de Relatórios para exibir relatórios executados em um servidor de relatório configurado para integração do SharePoint. Os relatórios que você pode exibir incluem arquivos de definição de relatório (.rdl) e relatórios do Construtor de Relatórios. Os relatórios são abertos na web part do Visualizador de Relatórios em uma nova página automaticamente, mas você também pode adicionar uma web part do Visualizador de Relatórios a uma página da Web ou site existente se desejar que determinado relatório sempre esteja visível nessa página.
+Use a Web part do Visualizador de Relatórios para exibir relatórios executados em um servidor de relatório configurado para integração do SharePoint. Os relatórios que você pode exibir incluem arquivos de definição de relatório (.rdl) e relatórios do Construtor de Relatórios. Os relatórios são abertos na Web part do Visualizador de Relatórios em uma nova página automaticamente. Você também poderá adicionar uma Web part do Visualizador de Relatórios a uma página da Web ou um site existente se você quiser que um determinado relatório sempre esteja visível nessa página.
 
 > [!NOTE]
 > Apesar de terem nomes idênticos, a web part do Visualizador de Relatórios instalada pelo Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é diferente da web part do Visualizador de Relatórios incluída no arquivo RSWebParts.cab. As instruções deste tópico são específicas à web part do Visualizador de Relatórios instalada por meio do Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
@@ -41,7 +41,7 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
   
 ### <a name="change-default-properties"></a>Alterar as propriedades padrão
 
- A web part do Visualizador de Relatórios tem propriedades padrão idealmente adequadas para abrir relatórios sob demanda por meio de uma biblioteca ou pasta. Por padrão, todos os controles disponíveis são exibidos na barra de ferramentas. A altura e a largura são definidas para usarem todo o espaço disponível na página da Web. Se desejar modificar as propriedades padrão, personalize a web part por meio das **Configurações de Site**.  
+ A web part do Visualizador de Relatórios tem propriedades padrão idealmente adequadas para abrir relatórios sob demanda por meio de uma biblioteca ou pasta. Por padrão, todos os controles disponíveis são exibidos na barra de ferramentas. Altura e largura são definidas para usar todo o espaço disponível na página da Web. Se desejar modificar as propriedades padrão, personalize a web part por meio das **Configurações de Site**.  
   
 1.  No menu **Ações do Site** , clique em **Configurações de Site**.  
   
@@ -53,7 +53,7 @@ Use a web part do Visualizador de Relatórios para exibir relatórios executados
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Personalizar um Visualizador de Relatórios inserido em uma página da Web
 
- Defina as propriedades para ajustar o Visualizador de Relatórios em uma página da Web. O Visualizador de Relatórios pode usar o mesmo estilo e cores que a página que o contém. Você pode ocultar toda ou parte da barra de ferramentas, o mapa do documento e a área de parâmetros para maximizar a área de exibição do relatório no espaço alocado. O relatório sempre usa os estilos definidos para ele quando ele foi criado; você não pode personalizar a aparência do relatório depois de publicá-lo em uma biblioteca do SharePoint.  
+ Defina as propriedades para ajustar o Visualizador de Relatórios em uma página da Web. O Visualizador de Relatórios pode usar o mesmo estilo e cores que a página que o contém. Você pode ocultar toda ou parte da barra de ferramentas, o mapa do documento e a área de parâmetros para maximizar a área de exibição do relatório no espaço alocado. O relatório sempre usa os estilos que você definiu para ele ao criá-lo. Você não pode personalizar a aparência do relatório após publicá-lo em uma biblioteca do SharePoint.  
   
  Se estiver inserindo a web part do Visualizador de Relatórios em uma página da Web, defina a propriedade **URL de Relatório** com um relatório específico. Se não estiver, o Visualizador de Relatórios exibirá instruções para vincular a um relatório. Você não pode personalizar nem remover as instruções.  
   

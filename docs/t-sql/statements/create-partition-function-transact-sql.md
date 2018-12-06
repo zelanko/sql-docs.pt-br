@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755354"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191007"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Especifica os valores de limite para cada partição de uma tabela particionada ou índice que usa *partition_function_name*. Se *boundary_value*estiver vazio, a função de partição mapeará para uma única partição toda a tabela ou todo o índice usando *partition_function_name*. É possível usar somente uma coluna de divisão, especificada em uma instrução CREATE TABLE ou CREATE INDEX.  
   
  *boundary_value* é uma expressão constante que pode fazer referência a variáveis. Isso inclui variáveis ou funções de tipo definido pelo usuário e funções definidas pelo usuário. Não pode fazer referência a expressões [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou poder ser implicitamente convertido no tipo de dados fornecido em *input_parameter_type*, e não pode ser truncado durante conversão implícita de modo que o tamanho e a escala do valor não sejam equivalentes a seu *input_parameter_type* correspondente.  
-  
+
 > [!NOTE]  
->  Se *boundary_value* consiste em **datetime** ou **smalldatetime** literais, esses literais serão avaliados supondo que us_english é o idioma da sessão. Este comportamento é preterido. Para certificar-se de que a definição da função de partição se comporta conforme esperado para todos os idiomas de sessão, recomendamos usar constantes que sejam interpretadas da mesma maneira para todas as configurações de idioma, tal como o formato aaaammdd; ou converter explicitamente literais em um estilo específico. Para determinar a sessão de idioma de seu servidor, execute `SELECT @@LANGUAGE`.  
+>  Se *boundary_value* consiste em **datetime** ou **smalldatetime** literais, esses literais serão avaliados supondo que us_english é o idioma da sessão. Este comportamento é preterido. Para certificar-se de que a definição da função de partição se comporta conforme esperado para todos os idiomas de sessão, recomendamos usar constantes que sejam interpretadas da mesma maneira para todas as configurações de idioma, tal como o formato aaaammdd; ou converter explicitamente literais em um estilo específico. Para determinar a sessão de idioma de seu servidor, execute `SELECT @@LANGUAGE`.
+>
+> Para obter mais informações, confira [Conversão não determinística de cadeias de caracteres de data literal em valores de DATA](../data-types/nondeterministic-convert-date-literals.md).
   
  *...n*  
  Especifica o número de valores fornecidos por *boundary_value*, não excedendo 14.999. O número de partições criadas é igual a *n* + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O Mecanismo de Banco de Dados retorna um erro se *n* inclui um valor duplicado.  

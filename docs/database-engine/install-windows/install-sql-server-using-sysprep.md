@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513767"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
 
@@ -114,13 +114,13 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 11. Na página Configuração da Instância, especifique a ID da instância. Clique em **Avançar** para continuar. 
   
-     **ID da Instância** — É usada para identificar os diretórios de instalação e as chaves do registro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada. 
+     **ID da Instância** – É usada para identificar os diretórios de instalação e as chaves do Registro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada. 
   
-     **Diretório raiz da instância** — Por padrão, o diretório raiz da instância é [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique em **Procurar** para localizar uma pasta de instalação. O diretório especificado na etapa de preparação será usado durante a configuração na etapa Concluir. 
+     **Diretório raiz da instância** – Por padrão, o diretório raiz da instância é [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique em **Procurar** para localizar uma pasta de instalação. O diretório especificado na etapa de preparação será usado durante a configuração na etapa Concluir. 
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     **Instâncias Instaladas** — A grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. 
+     **Instâncias instaladas** – A grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. 
   
 12. A página **Requisitos de Espaço em Disco** calcula o espaço em disco necessário para os recursos especificados. Em seguida, ele compara o espaço necessário com o espaço em disco disponível. 
   
@@ -163,17 +163,17 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 9. Na página Configuração da Instância, especifique o nome da instância para a instância preparada. Esse será o nome da instância depois que você concluir a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar. 
   
-     **ID da Instância** — É usada para identificar os diretórios de instalação e as chaves do registro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada durante a etapa de preparação. 
+     **ID da Instância** – É usada para identificar os diretórios de instalação e as chaves do Registro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada durante a etapa de preparação. 
   
-     **Diretório raiz da instância** —O diretório especificado na etapa de preparação será usado e não poderá ser modificado nesta etapa. 
+     **Diretório raiz da instância** – O diretório especificado na etapa de preparação será usado e não poderá ser modificado nesta etapa. 
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     **Instâncias instaladas** — A grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador onde a Instalação está sendo executada. 
+     **Instâncias instaladas** : a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. 
   
 10. O fluxo de trabalho do restante deste artigo depende dos recursos que foram selecionados durante a etapa de preparação. Talvez você não veja todas as páginas, dependendo das seleções. 
   
-11. Na página **Configuração do Servidor** — Contas de Serviço, especifique contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. 
+11. Na página **Configuração do Servidor** – Contas de Serviço, especifique as contas de logon dos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. 
   
      Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
@@ -187,11 +187,11 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 13. Use a página Configuração – Provisionamento de Conta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para especificar o seguinte:  
   
-    - Modo de Segurança — selecione Autenticação do Windows ou Autenticação de Modo Misto para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
+    - Modo de Segurança - Selecione Autenticação do Windows ou Autenticação de Modo Misto para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
          Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — Você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
      Ao concluir a edição da lista, clique em **OK**. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**. 
   

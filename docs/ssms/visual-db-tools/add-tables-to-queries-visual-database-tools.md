@@ -15,12 +15,12 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511831"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Adicionar tabelas a consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ O Designer de Consulta e Exibição não exibirá as colunas de dados de uma tab
   
 3.  Abra o Designer de Consulta para a consulta existente. (Agora você tem dois Designers de Consulta abertos.)  
   
-4.  Exiba o **Painel SQL** para a consulta interna – a consulta existente que você está incluindo na consulta nova, externa.  
+4.  Exiba o **Painel SQL** para a consulta interna – a consulta existente que você está incluindo na nova consulta externa.  
   
 5.  Selecione todo o texto no **Painel SQL**e copie para a Área de Transferência.  
   

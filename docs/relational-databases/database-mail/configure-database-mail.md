@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505142"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678015"
 ###  <a name="Welcome"></a> Página de boas-vindas  
  Esta página descreve as etapas de configuração do Database Mail.  
   
- **Não mostrar esta página novamente** – Marque essa opção para não exibir a página de boas-vindas no futuro novamente.  
+ **Não mostrar esta página novamente** – marque essa opção para não exibir novamente esta página de boas-vindas.  
   
  **Avançar** – Segue para a página **Selecionar uma tarefa de configuração** .  
   
- **Cancelar** – Encerra o assistente sem configurar o Database Mail  
+ **Cancelar** – termina o assistente sem configurar o Database Mail  
   
  [Assistente de Configuração do Database](#DBWizard)  
   

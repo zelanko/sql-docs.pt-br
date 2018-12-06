@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785885"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512146"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices XML (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Quando expandida, mostra os campos de propriedade **Nome** e **Descrição** .
 Mostra o nome do índice XML. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
 **Descrição**  
-Descreve o índice. Para redigir uma descrição mais detalhada, clique em **Descrição** e depois clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
 **Categoria do Designer de Tabelas**  
 Quando expandida, mostra informações sobre as propriedades desse índice XML.  

@@ -11,12 +11,12 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58257752fa22f6b3536e80c3dd25da8cca924b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbbeb9f11b735f461f5901c8cc03d6fff313bf31
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723844"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397229"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Desempenho de tabelas temporais com controle de versão do sistema e otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

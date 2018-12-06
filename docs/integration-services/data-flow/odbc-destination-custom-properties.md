@@ -11,12 +11,12 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 308898cb506dcfe34b27b7081109c77251e2dc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16dc3c5cba0a37adb461e8f1768774bc1592f4c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599474"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412383"
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
@@ -28,7 +28,7 @@ ms.locfileid: "47599474"
 |BindCharColumnAs|Inteiro (enumeração)|Essa propriedade determina como o destino ODBC associa colunas a tipos de cadeia de caracteres de vários bytes, como SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR.<br /><br /> Os possíveis valores são Unicode (0), que associa as colunas como SQL_C_WCHAR e ANSI (1), que associa as colunas como SQL_C_CHAR). O valor padrão é Unicode (0).<br /><br /> Unicode é a melhor opção para a maioria dos provedores ODBC 3.x e ODBC 2.x que oferecem suporte para a associação de parâmetros CHAR como cadeias de caracteres amplas. Quando você seleciona Unicode e ExposeCharColumnsAsUnicode como True, o usuário não precisa especificar a página de código utilizada pelo banco de dados de origem.<br /><br /> **Observação:** essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  
 |BindNumericAs|Inteiro (enumeração)|Essa propriedade determina como o destino de ODBC associa colunas com dados numéricos a tipos de dados SQL_TYPE_NUMERIC e SQL_TYPE_DECIMAL.<br /><br /> Os valores possíveis são Char (0), que associa as colunas como SQL_C_CHAR e Numeric (1), que associa as colunas como SQL_C_NUMERIC. O valor padrão é Char (0).<br /><br /> **Observação**: essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  
 |DefaultCodePage|Integer|A página de código a ser usada para colunas de cadeia de caracteres.<br /><br /> **Observação**: essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  
-|InsertMethod|Inteiro (enumeração)|O método usado para inserir os dados. Os valores possíveis são Linha a linha (0) e Lote (1). O valor padrão é Lote (1).<br /><br /> Para obter mais informações sobre essas opções, consulte “Opções de carregamento” em [ODBC Destination](../../integration-services/data-flow/odbc-destination.md).|  
+|InsertMethod|Inteiro (enumeração)|O método usado para inserir os dados. Os valores possíveis são Linha a linha (0) e Lote (1). O valor padrão é Lote (1).<br /><br /> Para obter mais informações sobre essas opções, confira "Opções de carregamento" em [ODBC Destination](../../integration-services/data-flow/odbc-destination.md).|  
 |StatementTimeout|Integer|O número de segundos a aguardar a execução de uma instrução SQL antes de retornar com um erro para o aplicativo. O valor padrão é 120.|  
 |TableName|Cadeia de caracteres|O nome da tabela de destino onde os dados estão sendo inseridos.|  
 |TransactionSize|Integer|O número de inserções em uma única transação. O valor padrão é 0, que significa que o destino ODBC funciona no modo de confirmação automático.<br /><br /> Como o gerenciador de conexões ODBC não oferece suporte a transações distribuídas, é possível definir essa propriedade com um valor diferente de 0. No entanto, se a propriedade **RetainSameConnection** do gerenciador de conexões for definida como **true** , essa propriedade deverá ser definida como 0.<br /><br /> **Observação**: essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  

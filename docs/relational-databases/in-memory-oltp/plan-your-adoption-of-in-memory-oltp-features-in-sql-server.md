@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519558"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ Para ter uma visão geral dos índices em tabelas com otimização de memória, 
 
 Índices de hash podem ser a forma mais rápida de acessar uma linha específica pelo valor exato de sua chave primária usando o operador "**=**".
 
-- Operadores inexatos como "**! =**", "**>**" ou "**BETWEEN**" prejudicariam o desempenho se usados com um índice de hash.
+- Operadores inexatos como ‘**! =**’, ‘**>**’ ou ‘**BETWEEN**’ prejudicariam o desempenho se usados com um índice de hash.
 
 - Um índice de hash poderá não ser a melhor opção se a taxa de duplicação do valor da chave se tornar muito alta.
 
@@ -297,7 +297,7 @@ No o SQL Server 2016:
 Você pode tornar seus scripts do Transact-SQL mais robustos contra possíveis erros de transação adicionando a *lógica de repetição* a eles. A lógica de repetição tem mais chances de ajudar quando as chamadas UPDATE e DELETE são frequentes ou se a tabela com otimização de memória for referenciada por uma chave estrangeira em outra tabela. Para obter detalhes, confira:
 
 - [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Limites de dependência de transações em tabelam com otimização de memória – Erro 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Limites de dependência de transações em tabelas otimizadas para memória – Erro 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

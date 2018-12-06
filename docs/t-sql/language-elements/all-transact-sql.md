@@ -19,12 +19,12 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d5aa53bc64b8146b4afe8de98d8136c0abbec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509579"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- Retornará TRUE quando a comparação especificada for TRUE para todos os pares (*scalar_expression ***,*** x)* e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará FALSE.  
+ Retornará TRUE quando a comparação especificada for TRUE para todos os pares _expressão_escalar_**,**_x)_ e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará FALSE.  
   
 ## <a name="remarks"></a>Remarks  
  ALL requer que a *scalar_expression* seja comparada positivamente com todos os valores retornados pela subconsulta. Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* <= ALL (a subconsulta) será avaliada como TRUE para uma *scalar_expression* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  

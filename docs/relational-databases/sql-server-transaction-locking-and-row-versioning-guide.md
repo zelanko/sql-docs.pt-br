@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511775"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661105"
   
  Se ocorrer um erro de instrução de tempo de execução (como uma violação de restrição) em um lote, o comportamento padrão no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] será reverter somente a instrução que gerou o erro. Você pode alterar esse comportamento usando a instrução `SET XACT_ABORT`. Depois que `SET XACT_ABORT` ON for executada, qualquer erro de instrução em tempo de execução fará com que a transação atual seja revertida. Erros de compilação, como erros de sintaxe, não são afetados por `SET XACT_ABORT`. Para obter mais informações, veja [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Quando ocorrerem erros, a ação corretiva (`COMMIT` ou `ROLLBACK`) deve ser incluída em um código de aplicativo. Uma ferramenta eficiente para processar erros, inclusive aqueles em transações, é o constructo [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH`. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode usar a instrução `THROW` para gerar uma exceção e transferir a execução para um bloco `CATCH` de um constructo `TRY…CATCH`. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Quando ocorrerem erros, a ação corretiva (`COMMIT` ou `ROLLBACK`) deve ser incluída em um código de aplicativo. Uma ferramenta eficiente para processar erros, inclusive aqueles em transações, é o constructo [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH`. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode usar a instrução `THROW` para gerar uma exceção e transferir a execução para um bloco `CATCH` de um constructo `TRY...CATCH`. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erros em tempo de execução e de compilação no modo de confirmação automática  
  No modo de confirmação automática, às vezes parece que uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] reverteu um lote inteiro, em vez de apenas uma instrução SQL. Isto acontece se o erro encontrado for um erro de compilação, não um erro em tempo de execução. Um erro de compilação impede o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de criar um plano de execução, assim nada no lote é executado. Embora pareça que todas as instruções antes daquela que gerou o erro tenham sido revertidas, o erro impediu que tudo no lote fosse executado. No exemplo a seguir, nenhuma das instruções `INSERT` no terceiro lote foram executadas por causa de um erro de compilação. Parece que as primeiras duas instruções `INSERT` foram revertidas, mas elas nunca foram executadas.  
@@ -421,7 +421,7 @@ GO
 -   A dica **TABLOCK** é especificada ou a opção de tabela **bloqueio da tabela em carregamento em massa** é configurada usando **sp_tableoption**.  
   
 > [!TIP]  
-> Diferentemente da instrução BULK INSERT, que possui um bloqueio de atualização em massa menos restritivo, INSERT INTO.SELECT com a dica TABLOCK possui um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
+> Diferentemente da instrução BULK INSERT, que contém um bloqueio de atualização em massa menos restritivo, INSERT INTO...SELECT com a dica TABLOCK contém um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
   
 #### <a name="key_range"></a> Bloqueios de intervalo de chave  
  Os bloqueios de intervalos com chave protegem um intervalo de linhas implicitamente incluídas em um conjunto de registros sendo lido por uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)], ao mesmo tempo em que utiliza o nível de isolamento de transação serializável. O bloqueio de intervalo de chave impede leituras fantasmas. Ao proteger os intervalos de chaves entre as linhas, ele também evita inserções fantasmas ou exclusões em um conjunto de registros acessado por uma transação.  
@@ -1839,7 +1839,7 @@ GO
   
  Uma transação de execução longa pode causar sérios problemas para um banco de dados, como:  
   
--   Se uma instância do servidor for desligada depois de uma transação ativa ter feito muitas modificações não confirmadas, a fase de recuperação do reinício subsequente poderá levar muito mais tempo do que o especificado pela opção de configuração do servidor **intervalo de recuperação** ou pela opção `ALTER DATABASE … SET TARGET_RECOVERY_TIME`. Essas opções controlam a frequência de pontos de verificação ativos e indiretos, respectivamente. Para obter mais informações sobre os tipos de pontos de verificação, veja [Pontos de verificação de bancos de dados &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Se uma instância do servidor for desligada depois de uma transação ativa ter feito muitas modificações não confirmadas, a fase de recuperação do reinício subsequente poderá levar muito mais tempo do que o especificado pela opção de configuração do servidor **intervalo de recuperação** ou pela opção `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`. Essas opções controlam a frequência de pontos de verificação ativos e indiretos, respectivamente. Para obter mais informações sobre os tipos de pontos de verificação, veja [Pontos de verificação de bancos de dados &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   É importante ressaltar que, embora uma transação em espera possa gerar um log muito pequeno, ela reterá o truncamento de log indefinidamente, fazendo com que o log da transação aumente bastante e seja completamente preenchido. Se o log da transação for completamente preenchido, o banco de dados não fará mais atualizações. Para obter mais informações, veja [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [Solucionar problemas de um log de transações cheio &#40;SQL Server Erro 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) e [Log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

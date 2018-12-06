@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393979"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mecânica e diretrizes de tempos limite de concessão, de cluster e de verificação de integridade 
 
@@ -39,13 +39,13 @@ Se a detecção de integridade não relatar uma atualização para a DLL de recu
 
 ## <a name="lease-mechanism"></a>Mecanismo de concessão  
 
-Ao contrário de outros mecanismos de failover, a instância do SQL Server desempenha um papel ativo no mecanismo de concessão. Ao colocar o grupo de disponibilidade online como a réplica primária, a instância do SQL Server gera um thread de trabalho de concessão dedicado para o grupo de disponibilidade. O trabalho de concessão compartilha uma pequena região da memória com o host de recurso que contém eventos de renovação e de interrupção da concessão. O trabalho de concessão e o host de recurso trabalham de maneira circular, sinalizando o respectivo evento de renovação da concessão e, em seguida, entrando em suspensão e aguardando a outra parte sinalizar seu próprio evento de renovação da concessão ou o evento de interrupção. O host do recurso e o thread de concessão do SQL Server mantêm um valor de vida útil, atualizado cada vez que o thread é ativado após ser sinalizado por outro thread. Se a vida útil for atingida enquanto aguarda o sinal, a concessão expirará e, em seguida, a réplica fará a transição para o estado de resolução para esse grupo de disponibilidade específico. Se o evento de interrupção da concessão for sinalizado, então a réplica fará a transição para uma função de resolução. 
+Ao contrário de outros mecanismos de failover, a instância do SQL Server desempenha um papel ativo no mecanismo de concessão. O mecanismo de concessão é usado como uma validação Looks-Alive entre o host de recursos de Cluster e o processo do SQL Server. O mecanismo é usado para garantir que os dois lados (o Serviço de Cluster e o SQL Server) estejam em contato frequente, verificando o estado um do outro e, por fim, impedindo um cenário de separação.  Ao colocar o grupo de disponibilidade online como a réplica primária, a instância do SQL Server gera um thread de trabalho de concessão dedicado para o grupo de disponibilidade. O trabalho de concessão compartilha uma pequena região da memória com o host de recurso que contém eventos de renovação e de interrupção da concessão. O trabalho de concessão e o host de recurso trabalham de maneira circular, sinalizando o respectivo evento de renovação da concessão e, em seguida, entrando em suspensão e aguardando a outra parte sinalizar seu próprio evento de renovação da concessão ou o evento de interrupção. O host do recurso e o thread de concessão do SQL Server mantêm um valor de vida útil, atualizado cada vez que o thread é ativado após ser sinalizado por outro thread. Se a vida útil for atingida enquanto aguarda o sinal, a concessão expirará e, em seguida, a réplica fará a transição para o estado de resolução para esse grupo de disponibilidade específico. Se o evento de interrupção da concessão for sinalizado, então a réplica fará a transição para uma função de resolução. 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 O mecanismo de concessão impõe a sincronização entre o SQL Server e o Cluster de Failover do Windows Server. Quando um comando de failover é emitido, o serviço de cluster faz uma chamada offline para a DLL de recurso da réplica primária atual. A DLL de recurso tenta primeiro colocar o grupo de disponibilidade offline usando um procedimento armazenado. Se esse procedimento armazenado falhar ou atingir o tempo limite, a falha será relatada de volta para o serviço de cluster, que emitirá um comando de encerramento. O encerramento tenta novamente executar o mesmo procedimento armazenado, mas, desta vez, o cluster não aguarda a DLL de recurso relatar êxito ou falha antes de colocar o grupo de disponibilidade online em uma nova réplica. Se a segunda chamada de procedimento falhar, então o host do recurso precisará contar com o mecanismo de concessão para colocar a instância offline. Quando a DLL de recurso for chamada para colocar o grupo de disponibilidade offline, a DLL de recurso sinalizará o evento de interrupção da concessão, ativando o thread de trabalho de concessão do SQL Server para colocar o grupo de disponibilidade offline. Mesmo se esse evento de interrupção não for sinalizado, a concessão expirará e a réplica fará a transição para o estado de resolução. 
 
-A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, a alta pressão da CPU ou de tempdb pode enfraquecer o thread de trabalho de concessão, impedindo a renovação da concessão da instância do SQL e causando um failover. 
+A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, alta utilização da CPU, condições de memória insuficiente, falha do processo SQL em responder ao gerar um despejo de memória, travamento de todo o sistema ou pressão do tempdb pode enfraquecer o thread de trabalho de concessão, impedindo a renovação da concessão da instância do SQL e provocando um failover. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Diretrizes para valores de tempo limite de cluster 
 

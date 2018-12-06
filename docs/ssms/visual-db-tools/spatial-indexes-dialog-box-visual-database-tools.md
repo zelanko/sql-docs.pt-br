@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30d728c87ec3f83f20491933c0cda1af845ea6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651393"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509356"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ Quando expandida, mostra os campos de propriedade **Nome** e **Descrição** .
 Mostra o nome do índice espacial. Quando um novo índice é criado, é dado um nome padrão baseado na tabela da janela ativa no Designer de Tabela. O nome pode ser alterado a qualquer momento.  
   
 **Descrição**  
-Descreve o índice. Para redigir uma descrição mais detalhada, clique em **Descrição** e depois clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
 **Categoria do Designer de Tabelas**  
 Quando expandida, mostra informações sobre as propriedades desse índice espacial.  

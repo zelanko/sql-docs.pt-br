@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800564"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410703"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você usa expressões com funções e operadores comuns para criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avançados e flexíveis. 
@@ -422,7 +422,7 @@ Nesta seção, você adiciona uma coluna e usa a função **Now** ou a variável
 ## <a name="Indicator"></a>7. Usar um indicador para mostrar comparação de vendas  
 Nesta seção, você adiciona uma nova coluna e use um indicador para mostrar se as compras de uma pessoa YTD (desde o início do ano) estão acima ou abaixo da média de compras YTD. A função **Round** remove os decimais dos valores.  
   
-Configurar o indicador e seus estados envolve várias etapas. Se desejar, você poderá passar para o procedimento “Para configurar o indicador” e copiar/colar as expressões completas deste tutorial na caixa de diálogo **Expressão** .  
+Configurar o indicador e seus estados envolve várias etapas. Se desejar, você poderá passar para o procedimento "Para configurar o indicador" e copiar/colar as expressões completas deste tutorial na caixa de diálogo **Expressão**.  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Para adicionar a coluna + ou - AVG Sales  
   
@@ -589,7 +589,7 @@ Crie um parâmetro para que os leitores do relatório possam especificar a cor a
   
 22. Imediatamente após `Parameters!RowColor.Value`, digite **, "Branco")**  
   
-    A expressão completa é: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    A expressão completa é: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

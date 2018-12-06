@@ -15,12 +15,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97c774afa437340e584a0b2f94e6170fe7ca94fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e265ee9e55f11249ce84d15a2e0851d8d03752a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404491"
 ---
 # <a name="business-rules-master-data-services"></a>Regras de negócio (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "47806505"
   
  Para usar regras de negócio, você deve primeiramente criar e publicar suas regras e depois aplicar as regras publicadas aos dados. As regras podem ser aplicadas a subconjuntos de dados ou a todos os dados de uma versão por meio da validação da versão. Uma versão não pode ser confirmada até que todos os atributos sejam submetidos com êxito à validação de regras de negócio.  
   
- Se um usuário tentar adicionar um valor de atributo que não é aprovado na validação das regras de negócio, esse valor ainda poderá ser salvo. Você pode revisar e corrigir problemas de validação, que são exibidos no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Se um usuário tentar adicionar um valor de atributo que não é aprovado na validação da regra de negócios, esse valor ainda poderá ser salvo. Você pode revisar e corrigir problemas de validação, que são exibidos no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Ao criar um pacote de implantação de modelo, se quiser incluir regras de negócio, você deverá incluir dados da versão no pacote.  
   

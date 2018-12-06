@@ -11,19 +11,19 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853364"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393710"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados de **arquivo simples** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Para arquivos simples, essas duas páginas do assistente apresentam conjuntos diferentes de opções e, portanto, este tópico descreve a origem de arquivo simples e o destino de arquivo simples separadamente.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Uma alternativa para a importação de texto simples
 Se precisar importar um arquivo de texto para o SQL Server e não precisar de todas as opções de configuração disponíveis no Assistente de Importação e Exportação, considere a possibilidade de usar o **Assistente Importar Arquivo Simples** no SSMS (SQL Server Management Studio). Para saber mais, veja os tópicos a seguir:
-- [Novidades do SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Novidades do SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>Conectar-se a uma fonte de arquivo simples

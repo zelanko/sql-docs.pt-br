@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513756"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,14 +95,14 @@ ms.locfileid: "47817564"
  Você, o DBA, pode controlar se os usuários podem usar a durabilidade da transação atrasada em um banco de dados com a instrução a seguir. Você deve definir a configuração de durabilidade atrasada com ALTER DATABASE.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DESABILITADO**    
  [padrão] Com essa configuração, todas as transações confirmadas no banco de dados são completamente duráveis, independentemente da configuração do nível de confirmação (DELAYED_DURABILITY=[ON | OFF]). Não há nenhuma necessidade de modificação e recompilação do procedimento armazenado. Isso permite garantir que a durabilidade atrasada nunca coloque os dados em risco.    
     
  **PERMITIDO**    
- Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Consulte [Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) e [Nível de controle COMMIT – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) para obter mais informações.    
+ Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Confira [Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) e [Nível de controle COMMIT – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) para obter mais informações.    
     
  **FORÇADO**    
  Com essa configuração, cada transação que é confirmada no banco de dados é durável atrasada. Independentemente de a transação especificar completamente durável (DELAYED_DURABILITY = OFF) ou não fizer nenhuma especificação, a transação será durável atrasada. Essa configuração é útil quando a durabilidade da transação atrasada é útil para um banco de dados e você não quer alterar o código do aplicativo.    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Código de exemplo:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    

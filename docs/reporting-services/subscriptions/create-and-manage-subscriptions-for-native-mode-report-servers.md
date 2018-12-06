@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400899"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -112,7 +112,7 @@ ms.locfileid: "50021680"
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
   
-7.  **Assunto**: usa como padrão “@ReportName foi executado em @ExecutionTime”. Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
+7.  **Assunto**: usa como padrão "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
   
 8.  Selecione as opções de entrega do seguinte modo:  
   
@@ -161,9 +161,9 @@ ms.locfileid: "50021680"
 >  Um administrador de servidor de relatório não pode gerenciar a partir de um lugar todas as assinaturas individuais que estão sendo usadas em um servidor de relatório específico. No entanto, os administradores de servidor de relatório podem acessar cada assinatura individual para modificá-la ou excluí-la.  
   
 ##  <a name="bkmk_delete_subscription"></a> Para excluir uma assinatura  
- Para excluir uma assinatura”  
+ Para excluir uma assinatura"  
   
-1.  Inicie o [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, clique em **Minhas Assinaturas** na barra de ferramentas e navegue até a assinatura que deseja modificar ou excluir.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b6492cc78c9cbdc23f8deed9b1a577341637c300
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029975"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402071"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
   É possível adicionar um parâmetro a um relatório que permite ao usuário selecionar mais de um valor para o parâmetro.  
@@ -38,7 +38,7 @@ ms.locfileid: "50029975"
     > [!IMPORTANT]  
     > *  O texto da consulta não deve incluir uma instrução DECLARE para a variável de consulta.  
     > *  O texto da variável de consulta deve incluir o operador **IN** , como mostrado no exemplo acima.  
-    > *  Lembre-se de incluir os parênteses delimitando a variável, conforme mostrado acima. Caso contrário, o relatório não será renderizado e o erro “É necessário declarar a variável escalar” será exibido.  
+    > *  Lembre-se de incluir os parênteses delimitando a variável, conforme mostrado acima. Caso contrário, o relatório não será renderizado e o erro "É necessário declarar a variável escalar" será exibido.  
   
     Um parâmetro de conjunto de dados para um conjunto de dados inserido ou um conjunto de dados compartilhado é criado automaticamente para a variável de consulta. Um parâmetro de relatório é criado automaticamente para o parâmetro de conjunto de dados.  
   

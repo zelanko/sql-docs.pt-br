@@ -1,7 +1,7 @@
 ---
 title: Exibir o plano de execução estimado | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94191f5127e5236d106dd9061f52bb7285debd39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d58470fa6427a37510f28ca1305c1ab4c7927697
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606726"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302759"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Exibir o plano de execução estimado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,15 +34,23 @@ ms.locfileid: "47606726"
   
  Para usar esse recurso, os usuários devem ter as permissões apropriadas para executar a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para as quais está sendo gerado um plano de execução gráfica e devem ter permissão SHOWPLAN para todos os bancos de dados incluídos na consulta.  
   
-### <a name="to-display-the-estimated-execution-plan-for-a-query"></a>Para exibir o plano de execução estimado para uma consulta  
+## <a name="to-display-the-estimated-execution-plan-for-a-query"></a>Para exibir o plano de execução estimado para uma consulta  
   
 1.  Na barra de ferramentas, clique em **Consulta do Mecanismo de Banco de Dados**. Você também pode abrir uma consulta existente e exibir o plano de execução estimado clicando no botão de barra de ferramentas **Abrir Arquivo** e localizando a consulta existente.  
   
 2.  Insira a consulta para a qual você deseja exibir o plano de execução estimado.  
   
-3.  No menu **Consulta** , clique em **Exibir Plano de Execução Estimado** ou clique no botão de barra de ferramentas **Exibir Plano de Execução Estimado** . O plano de execução estimado é exibido na guia **Plano de execução** no painel de resultados. Para exibir mais informações, mantenha o mouse sobre os ícones dos operadores lógicos e físicos e exiba a dica de tela com a descrição e as propriedades do operador. Você também pode exibir propriedades do operador na janela Propriedades. Se a janela Propriedades não estiver visível, clique com o botão direito do mouse em um operador e clique em **Propriedades**. Selecione um operador cujas propriedades exibir.  
+3.  No menu **Consulta** , clique em **Exibir Plano de Execução Estimado** ou clique no botão de barra de ferramentas **Exibir Plano de Execução Estimado** . O plano de execução estimado é exibido na guia **Plano de execução** no painel de resultados. 
+
+    ![Botão Plano de Execução Estimado na barra de ferramentas](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Botão Plano de Execução Estimado na barra de ferramentas")    
+
+    Para exibir mais informações, mantenha o mouse sobre os ícones dos operadores lógicos e físicos e exiba a dica de tela com a descrição e as propriedades do operador. Você também pode exibir propriedades do operador na janela Propriedades. Se a janela Propriedades não estiver visível, clique com o botão direito do mouse em um operador e clique em **Propriedades**. Selecione um operador cujas propriedades exibir.  
+
+    ![Clique com o botão direito do mouse em Propriedades no operador de plano](../../relational-databases/performance/media/planproperties.png "Clique com o botão direito do mouse em Propriedades no operador de plano")    
   
 4.  Para alterar a exibição do plano de execução, clique com o botão direito do mouse no plano de execução e selecione **Ampliar**, **Reduzir**, **Zoom Personalizado**ou **Ajustar Nível de Zoom**. **Ampliar** e **Reduzir** permitem ampliar ou reduzir o plano de execução com valores fixos. **Zoom personalizado** permite que você defina sua própria ampliação da exibição, como ampliar em 80 por cento. **Ajustar Nível de Zoom** aumenta o plano de execução para se ajustar ao painel de resultados. Como alternativa, use a tecla CTRL e o botão de rolagem do mouse para ativar o **zoom dinâmico**.  
+
+5.  Para navegar na exibição do plano de execução, use as barras de rolagem vertical e horizontal ou **clique e segure em qualquer área em branco** do plano de execução e **arraste o mouse**. Como alternativa, clique e segure o sinal de adição (+) no canto inferior direito da janela de plano de execução para exibir um mapa em miniatura de todo o plano de execução.
  
- > [!NOTE] 
- > Como alternativa, use [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) para retornar informações do plano de execução para cada instrução sem executá-las. Se usada em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a guia *Resultados* terá um link para abrir o plano de execução em formato gráfico.   
+> [!NOTE] 
+> Como alternativa, use [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) para retornar informações do plano de execução para cada instrução sem executá-las. Se usada em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a guia *Resultados* terá um link para abrir o plano de execução em formato gráfico.   

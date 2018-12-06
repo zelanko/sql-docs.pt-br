@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506575"
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51697385"
 Um **histograma** mede a frequência de ocorrência de cada valor distinto em um conjunto de dados. O otimizador de consulta calcula um histograma com base nos valores de coluna na primeira coluna de chave do objeto de estatísticas, selecionando os valores de coluna por amostragem estatística das linhas ou pela execução de uma verificação completa de todas as linhas na tabela ou na exibição. Se o histograma for criado com base em um conjunto amostrado de linhas, os totais armazenados para o número de linhas e o número de valores distintos são estimativas e não precisam ser números inteiros.
 
 > [!NOTE]
-> <a name="frequency"></a> Os histogramas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são criados apenas para uma única coluna – a primeira coluna do conjunto de colunas de chave do objeto de estatísticas.
+> <a name="frequency"></a> Os histogramas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são criados apenas para uma única coluna, ou seja, a primeira coluna do conjunto de colunas de chave do objeto de estatísticas.
   
 Para criar o histograma, o otimizador de consulta classifica os valores de colunas, calcula o número de valores que correspondem a cada valor de coluna distinta e agrega os valores de colunas em um máximo de 200 etapas de histograma contíguas. Cada etapa do histograma inclui uma gama de valores de coluna seguidos por um valor de coluna de limite superior. O intervalo inclui todos os possíveis valores de coluna entre valores de limite, excluindo-se os próprios valores de limite em si. O mais baixo dos valores de coluna classificados é o valor do limite superior da primeira etapa do histograma.
 

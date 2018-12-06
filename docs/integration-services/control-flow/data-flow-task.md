@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639083"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518469"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
@@ -56,7 +56,7 @@ ms.locfileid: "51639083"
 |**OnPipelinePrePrimeOutput**|Indica que o componente está prestes a receber sua chamada do método **PrimeOutput** . Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
 |**OnPipelineRowsSent**|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método **ProcessInput** . A entrada de log inclui o nome do componente.|  
 |**PipelineBufferLeak**|Fornece informações sobre qualquer componente que manteve buffers ativos depois que o gerenciador de buffers for desativado. Se um buffer ainda estiver ativo, os recursos de buffers não foram liberados e pode haver perdas de memória. A entrada de log fornece o nome do componente e a ID do buffer.|  
-|**PipelineComponentTime**|Reporta o tempo (em milissegundos) que o componente gastou em cada uma das cinco principais etapas de processamento — Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
+|**PipelineComponentTime**|Reporta o tempo (em milissegundos) que o componente gastou em cada uma das cinco principais etapas de processamento – Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |**PipelineExecutionPlan**|Informa o plano de execução do fluxo de dados. O plano de execução fornece informações sobre como os buffers serão enviados para os componentes. Essas informações, em combinação com a entrada de log PipelineExecutionTrees, descrevem o que está ocorrendo na tarefa de Fluxo de Dados.|  
 |**PipelineExecutionTrees**|Informa as árvores de execução sobre o layout do fluxo de dados. O agendador do mecanismo de fluxo de dados usa as árvores para criar o plano de execução do fluxo de dados.|  
 |**PipelineInitialization**|Fornece informações de inicialização sobre a tarefa. Essas informações incluem os diretórios para armazenamento temporário de dados de BLOB, o tamanho do buffer padrão e o número de linhas em um buffer. Dependendo da configuração da tarefa de Fluxo de Dados, várias entradas de log podem ser gravadas.|  

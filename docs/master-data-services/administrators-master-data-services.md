@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418767"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 

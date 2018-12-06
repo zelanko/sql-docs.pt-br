@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c42c413e235abd758d51a76b1726e0c35e3ff758
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 4564b83e50f835d29a96d71cf91eb14aeafe12c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812289"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505850"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Adicionar uma imagem externa (Construtor de Relatórios e SSRS)
   Imagens externas podem estar em um servidor de relatório em modo nativo ou em modo Integrado do SharePoint, ou em qualquer outro site. Quando você incluir imagens externas em seu relatório, verifique se a imagem existe e se o leitor do relatório tem permissões para acessar a imagem. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -33,9 +33,9 @@ ms.locfileid: "51812289"
   
 5.  Em **Selecione a origem da imagem**, selecione **Externa**.  
   
-     Para uma imagem que está em um servidor de relatório no modo nativo, digite um caminho relativo até a imagem na caixa **Usar esta imagem** ; por exemplo, /images/image1.jpg.  
+     Para uma imagem que está em um servidor de relatório no modo nativo, digite um caminho relativo até a imagem na caixa **Usar esta imagem**, por exemplo, ../images/image1.jpg.  
   
-     Para uma imagem em um servidor de relatório no modo integrado do SharePoint ou em qualquer outro site, digite uma URL completa para a imagem na caixa **Usar esta imagem**. Por exemplo, https://\<nomedoservidordoSharePoint>/\<site>/Documents/images/image1.jpg.  
+     Para uma imagem em um servidor de relatório no modo integrado do SharePoint ou em qualquer outro site, digite uma URL completa para a imagem na caixa **Usar esta imagem**. Por exemplo, https://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
   
      Para obter mais informações, consulte [Especificando caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

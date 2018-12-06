@@ -1,22 +1,22 @@
 ---
 title: Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813019"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398340"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)][!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatórios do Power BI, adicionando uma web part do Visualizador de Relatórios a uma página do SharePoint.
 
@@ -46,19 +46,19 @@ Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatór
 
     ![Adicione a web part do Visualizador de Relatórios.](media/sharepoint-report-viewer-web-part.png)
 
-    Inicialmente, isso pode ser exibido com um erro. O erro ocorre porque a URL padrão do servidor de relatório é definida como *https://localhost* e pode não estar disponível nesse local.
+    Você poderá ver um erro inicialmente. O erro ocorre porque a URL padrão do servidor de relatório é definida como *https://localhost* e pode não estar disponível nesse local.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurar a web part do Visualizador de Relatórios
 
-Para configurar a web part para que ela aponte para o relatório específico, realize o procedimento a seguir.
+Para configurar a Web part para que ela aponte para o relatório específico, realize as etapas a seguir.
 
 1. Ao editar a página do SharePoint, selecione a seta para baixo no canto superior direito da web part e selecione **Editar web part**.
 
     ![Edite a página da Web por meio do menu suspenso da web part.](media/sharepoint-edit-web-part.png)
 
-2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Sua tabela deve ter a seguinte aparência *https://myrsserver/reportserver*.
+2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. A URL deve ser semelhante a: *https://myrsserver/reportserver*.
 
-3. Insira o caminho e o nome do relatório que deseja exibir na web part. Isso será semelhante a */AdventureWorks Sample Reports/Company Sales*. Neste exemplo, o relatório *Vendas da Empresa* está em uma pasta chamada *Relatórios de Exemplo do AdventureWorks*.
+3. Insira o caminho e o nome do relatório que deseja exibir na web part. Será semelhante a */AdventureWorks Sample Reports/Company Sales*. Neste exemplo, o relatório *Vendas da Empresa* está em uma pasta chamada *Relatórios de Exemplo do AdventureWorks*.
 
 4. Se o relatório exigir parâmetros, depois de fornecer a URL do servidor de relatório e o nome do relatório, selecione **Carregar Parâmetros** na seção **Parâmetros**.
 

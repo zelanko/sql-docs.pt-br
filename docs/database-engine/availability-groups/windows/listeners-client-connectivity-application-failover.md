@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603566"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408883"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Ouvintes, conectividade de cliente e failover de aplicativo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +139,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Tentativa do aplicativo somente leitura e roteamento somente leitura  
- A propriedade da cadeia de conexão da tentativa de aplicativo expressa a solicitação do aplicativo cliente de ser direcionada para uma versão de leitura/gravação ou somente leitura de um banco de dados de grupo de disponibilidade. Para usar o roteamento somente leitura, um cliente deve usar uma tentativa de aplicativo somente leitura na cadeia de conexão ao conectar-se ao ouvinte de grupo de disponibilidade. Sem a tentativa de aplicativo somente leitura, as conexões para o ouvinte de grupo de disponibilidade são direcionadas para o banco de dados na réplica primária.  
+ A propriedade da cadeia de conexão da intenção de aplicativo expressa a solicitação do aplicativo cliente de ser direcionada para uma versão de leitura/gravação ou somente leitura de um banco de dados de grupo de disponibilidade. Para usar o roteamento somente leitura, um cliente deve usar uma tentativa de aplicativo somente leitura na cadeia de conexão ao conectar-se ao ouvinte de grupo de disponibilidade. Sem a tentativa de aplicativo somente leitura, as conexões para o ouvinte de grupo de disponibilidade são direcionadas para o banco de dados na réplica primária.  
   
- O atributo da tentativa de aplicativo é armazenado na sessão do cliente durante o logon e a instância do SQL Server processará essa tentativa e determinará o que fazer de acordo com a configuração do grupo de disponibilidade e o estado de leitura/gravação atual do banco de dados de destino na réplica secundária.  
+ O atributo de intenção de aplicativo é armazenado na sessão do cliente durante o logon e a instância do SQL Server processará essa intenção e determinará o que fazer de acordo com a configuração do grupo de disponibilidade e o estado de leitura/gravação atual do banco de dados de destino na réplica secundária.  
   
  Um exemplo de uma cadeia de conexão para o provedor de ADO.NET (System.Data.SqlClient) que designa a intenção de aplicativo somente leitura é o seguinte:  
   
@@ -180,10 +180,10 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> Comportamento de conexões de cliente em failover  
  Quando ocorrer um failover de grupo de disponibilidade, as conexões persistentes ao grupo de disponibilidade são terminadas e o cliente deve estabelecer uma nova conexão para continuar trabalhando com o mesmo banco de dados primário ou banco de dados secundário somente leitura.  Enquanto um failover estiver ocorrendo no lado do servidor, a conectividade com o grupo de disponibilidade pode falhar, forçando o aplicativo cliente a repetir a conexão até que o primário seja colocado completamente online.  
   
- Se o grupo de disponibilidade voltar a ficar online durante a tentativa de conexão de um aplicativo cliente, mas antes do tempo limite da conexão, o driver cliente poderá conectar-se com êxito durante uma de suas tentativas internas, e não ocorrerá nenhum erro no aplicativo nesse caso.  
+ Se o grupo de disponibilidade voltar a ficar online durante a tentativa de conexão de um aplicativo cliente, mas antes do tempo limite da conexão, o driver cliente poderá conectar-se com êxito durante uma de suas tentativas internas e não ocorrerá nenhum erro no aplicativo nesse caso.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Dando suporte a failovers de várias sub-redes de grupo de disponibilidade  
- Se estiver usando bibliotecas de cliente que dão suporte à opção de conexão MultiSubnetFailover na cadeia de conexão, você poderá otimizar o failover do grupo de disponibilidade para uma sub-rede diferente configurando MultiSubnetFailover como “Verdadeiro” ou "Sim", dependendo da sintaxe do provedor que você está usando.  
+ Se estiver usando bibliotecas de cliente que dão suporte à opção de conexão MultiSubnetFailover na cadeia de conexão, você poderá otimizar o failover do grupo de disponibilidade para uma sub-rede diferente configurando MultiSubnetFailover como "Verdadeiro" ou "Sim", dependendo da sintaxe do provedor que você está usando.  
   
 > [!NOTE]  
 >  Essa configuração é recomendável para conexões únicas e de várias sub-redes para ouvintes de grupos de disponibilidade e nomes de instâncias de cluster de failover do SQL Server.  A habilitação dessa opção adiciona mais otimizações, até mesmo para cenários de única sub-rede.  

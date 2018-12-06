@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517437"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "43820242"
 ###  <a name="database-options-and-settings"></a>Opções e configurações do banco de dados  
  Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE, exceto:  
   
--   O agrupamento de banco de dados e o nível de compatibilidade são definidos para os valores definidos no pacote de DAC. Um pacote DAC criado a partir de um projeto de banco de dados no SQL Server Developer Tools usa os valores definidos no projeto de banco de dados. Um pacote extraído de um banco de dados existente usa os valores do banco de dados original.  
+-   A ordenação de banco de dados e o nível de compatibilidade são definidos para os valores definidos no pacote de DAC. Um pacote DAC criado a partir de um projeto de banco de dados no SQL Server Developer Tools usa os valores definidos no projeto de banco de dados. Um pacote extraído de um banco de dados existente usa os valores do banco de dados original.  
   
 -   É possível ajustar algumas das configurações de banco de dados, como nome de banco de dados e caminhos de arquivo, na página **Atualizar Configuração** . Não é possível definir os caminhos de arquivo durante a implantação no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -65,7 +65,7 @@ A implantação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância na qual você deseja implantar o DAC.  
   
-2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Implantar Aplicativo da Camada de Dados…**  
+2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Implantar Aplicativo da Camada de Dados...**  
   
 3.  Conclua as caixas de diálogo do assistente e clique em Concluir.
 Mais informações sobre algumas das páginas de assistente abaixo: 

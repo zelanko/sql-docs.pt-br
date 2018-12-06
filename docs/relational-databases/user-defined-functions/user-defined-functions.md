@@ -10,24 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
+- UDF
+- TVF
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064399d1193a0421286e9d39c1449b9c829a4a25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56e4f6239ce68c5bd93791849082f9f56c3a80f2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836214"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858641"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
    
 ##  <a name="Benefits"></a> Funções definidas pelo usuário  
-Por que usá-las? 
+Por que usar UDFs (funções definidas pelo usuário)? 
   
 -   Eles permitem programação modular.  
   
@@ -43,16 +45,16 @@ Por que usá-las?
   
      Uma operação que filtra dados com base em alguma restrição complexa que não pode ser expressa em uma única expressão escalar pode ser expressa como uma função. Em seguida, a função pode ser invocada na cláusula WHERE para reduzir o número ou linhas enviadas ao cliente.  
   
-> [!NOTE]
-> As funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial).  
+> [!IMPORTANT]
+> As UDFs [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial). Portanto, usar UDFs inibe o processamento paralelo de consultas. Para obter mais informações sobre o processamento paralelo de consultas, confira o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
 **Função escalar**  
  As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto **text**, **ntext**, **image**, **cursor**e **timestamp**. 
- **[Exemplos.](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
+ **[Exemplos.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Funções com valor de tabela**  
- As funções com valor de tabela definidas pelo usuário retornam um tipo de dados **table**. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT. **[Exemplos.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
+ As funções com valor de tabela definidas pelo usuário retornam um tipo de dados **table**. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT. **[Exemplos.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **Funções do Sistema**  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
@@ -60,29 +62,32 @@ Por que usá-las?
 ##  <a name="Guidelines"></a> Diretrizes  
  Erros de [!INCLUDE[tsql](../../includes/tsql-md.md)] que levam ao cancelamento de uma instrução e continuam com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
   
- As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
+ As instruções em um bloco `BEGIN...END` não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
   
 > [!NOTE]
-> Se a instrução CREATE FUNCTION produzir efeitos colaterais contra os recursos que não existem quanto a instrução CREATE FUNCTION é emitida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa a instrução. Porém, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a função quando é chamada.  
+> Se uma instrução `CREATE FUNCTION` produzir efeitos colaterais com base nos recursos que não existem quando a instrução `CREATE FUNCTION` for emitida, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará a instrução. Porém, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a função quando é chamada.  
   
- O número de vezes em que uma função especificada em uma consulta é realmente executada pode variar entre os planos de execução desenvolvidos pelo otimizador. Um exemplo é a função chamada por uma subconsulta em uma cláusula WHERE. O número de vezes em que a subconsulta e sua função são executadas pode variar com os caminhos de acesso diferentes escolhidos pelo otimizador.  
+ O número de vezes em que uma função especificada em uma consulta é realmente executada pode variar entre os planos de execução desenvolvidos pelo otimizador. Um exemplo é a função chamada por uma subconsulta em uma cláusula `WHERE`. O número de vezes em que a subconsulta e sua função são executadas pode variar com os caminhos de acesso diferentes escolhidos pelo otimizador.  
+ 
+> [!IMPORTANT]   
+> Para obter mais considerações de desempenho e informações sobre funções definidas pelo usuário, confira [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
 ##  <a name="ValidStatements"></a> Instruções válidas em uma função  
 Os tipos de instruções que são válidos em uma função incluem:  
   
--   As instruções DECLARE podem ser usadas para definir variáveis de dados e cursores que são locais à função.  
+-   As instruções `DECLARE` podem ser usadas para definir variáveis de dados e cursores que são locais à função.  
   
--   A atribuição de valores a objetos locais à função, como o uso de SET para atribuir valores para escalar e para as variáveis locais à tabela.  
+-   A atribuição de valores a objetos locais à função, como o uso de `SET` para atribuir valores para escalar e para as variáveis locais à tabela.  
   
--   As operações de cursor que referenciam cursores locais são declaradas, abertas, fechadas e desalocadas na função. As instruções FETCH que retornam os dados aos clientes não são permitidas. Somente instruções FETCH que atribuem valores a variáveis locais usando a cláusula INTO são permitidas.  
+-   As operações de cursor que referenciam cursores locais são declaradas, abertas, fechadas e desalocadas na função. As instruções `FETCH` que retornam os dados aos clientes não são permitidas. Somente instruções FETCH que atribuem valores a variáveis locais usando a cláusula `INTO` são permitidas.  
   
--   Instruções de controle-de-fluxo exceto as instruções TRY ... CATCH.  
+-   Instruções de controle de fluxo, exceto instruções `TRY...CATCH`.  
   
--   Instruções SELECT com listas de seleção com expressões que atribuem valores às variáveis que são locais à função.  
+-   Instruções `SELECT` com listas de seleção com expressões que atribuem valores às variáveis que são locais à função.  
   
--   As instruções UPDATE, INSERT e DELETE que modificam variáveis de tabela que são locais à função.  
+-   Instruções `UPDATE`, `INSERT` e `DELETE` que modificam variáveis de tabela locais à função.  
   
--   Instruções EXECUTE que chamam um procedimento armazenado estendido.  
+-   Instruções `EXECUTE` que chamam um procedimento armazenado estendido.  
   
 ### <a name="built-in-system-functions"></a>Funções do sistema internas  
  As funções não determinísticas internas a seguir podem ser usadas nas funções definidas por usuário Transact-SQL.  
@@ -99,7 +104,7 @@ Os tipos de instruções que são válidos em uma função incluem:
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- As funções não determinísticas internas a seguir **não** podem ser usadas nas funções Transact-SQL definidas pelo usuário.  
+ As funções não determinísticas internas a seguir **não** podem ser usadas nas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas pelo usuário.  
   
 |||  
 |-|-|  
@@ -109,17 +114,17 @@ Os tipos de instruções que são válidos em uma função incluem:
  Para obter uma lista das funções internas do sistema determinísticas e não determinísticas, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ##  <a name="SchemaBound"></a> Funções associadas a esquema  
- CREATE FUNCTION dá suporte à cláusula SCHEMABINDING que associa a função ao esquema de qualquer objeto que ela referencia, como tabelas, exibições e demais funções definidas pelo usuário. Uma tentativa para alterar ou descartar qualquer objeto referenciado por uma função associada a esquema falhará.  
+ `CREATE FUNCTION` dá suporte a uma cláusula `SCHEMABINDING` que associa a função ao esquema de qualquer objeto que ela referencia, como tabelas, exibições e demais funções definidas pelo usuário. Uma tentativa para alterar ou descartar qualquer objeto referenciado por uma função associada a esquema falhará.  
   
- Essas condições devem ser cumpridas antes de especificar SCHEMABINDING em [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md):  
+ Essas condições devem ser cumpridas antes de especificar `SCHEMABINDING` em [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md):  
   
 -   Todas as exibições e as funções definidas pelo usuário referenciadas pela função devem ser associadas a esquema.  
   
 -   Todos os objetos referenciados pela função devem estar no mesmo banco de dados da função. Os objetos devem ser referenciados usando nomes de uma única parte ou nomes de duas partes.  
   
--   Você deve ter permissão REFERENCES em todos os objetos (tabelas, exibições e funções definidas pelo usuário) referenciados na função.  
+-   Você deve ter permissão `REFERENCES` em todos os objetos (tabelas, exibições e funções definidas pelo usuário) referenciados na função.  
   
- Você pode usar ALTER FUNCTION para remover a associação a esquema. A instrução ALTER FUNCTION deve redefinir a função sem especificar WITH SCHEMABINDING.  
+ Você pode usar `ALTER FUNCTION` para remover a associação de esquema. A instrução `ALTER FUNCTION` deve redefinir a função sem especificar `WITH SCHEMABINDING`.  
   
 ##  <a name="Parameters"></a> Especificando parâmetros  
  Uma função definida pelo usuário usa parâmetros de entrada zero ou mais e retorna um valor escalar ou uma tabela. A função pode ter um máximo de 1024 parâmetros de entrada. Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deve ser especificada quando a função for chamada para obter o valor padrão. Esse comportamento é diferente dos parâmetros com valores padrão nos procedimentos armazenados definidos pelo usuário nos quais a omissão de parâmetro também implica o valor padrão. Funções definidas pelo usuário não dão suporte aos parâmetros de saída.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29acfcbe2ff3b94abdd0edf52adf0f594fe768e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409584"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
     
@@ -109,7 +109,7 @@ ms.locfileid: "47620814"
   
  Você também pode passar o nome de um escopo específico para uma função de agregação. O escopo pode se referir ao nome de um conjunto de dados, uma região de dados ou ao nome de um escopo superior na hierarquia de dados. Isso se aplica às seguintes mensagens:  
   
--   O '*\<report item name>*' do *\<report item type>* tem um escopo inválido “*\<scope name>*”. O escopo deve ser o escopo atual ou estar contido no escopo atual.  
+-   O '*\<nome do item de relatório>*' do *\<tipo de item de relatório>* tem um escopo inválido "*\<nome do escopo>*". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
   
 -   A expressão *\<property name>* do '*\<report item name>*' do *\<report item type>* tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
   

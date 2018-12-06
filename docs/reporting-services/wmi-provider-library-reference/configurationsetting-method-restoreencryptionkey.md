@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d19ecb9c4f14c0f9750a7344a6c2c442785cbb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416133"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Método de ConfigurationSetting – RestoreEncryptionKey
   Reaplica a chave de criptografia especificada para o banco de dados do servidor de relatório.  

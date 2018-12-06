@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639783"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393609"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  
@@ -91,7 +91,7 @@ ms.locfileid: "51639783"
   
 -   1300, produtoE  
   
- Os novos dados são adicionados no final do arquivo bruto e as chaves classificadas (PK) estão fora de ordem. Além disso, a operação de adicionar não alterou os metadados do arquivo (informações de classificação). Se você ler o arquivo usando a fonte Arquivo Bruto, o componente indicará que o arquivo ainda está classificado em PK, embora os dados no arquivo não estejam mais na ordem correta.  
+ Os novos dados são adicionados no final do arquivo bruto e as chaves classificadas (PK) estão fora de ordem. Além disso, a operação de acrescentar não alterou os metadados do arquivo (informações de classificação). Se você ler o arquivo usando a fonte Arquivo Bruto, o componente indicará que o arquivo ainda está classificado em PK, embora os dados no arquivo não estejam mais na ordem correta.  
   
  Para manter as chaves classificadas na ordem correta enquanto adiciona dados, você pode criar o fluxo de dados de pacote da seguinte maneira:  
   

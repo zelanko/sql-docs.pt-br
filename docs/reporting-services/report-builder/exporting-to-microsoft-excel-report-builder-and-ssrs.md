@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663114"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400020"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  
@@ -67,7 +67,7 @@ ms.locfileid: "47663114"
   
 -   O efeito de texto "Linha sobreposta" não tem suporte no Excel.  
   
--   O Excel adiciona um preenchimento padrão de aproximadamente 3,75 pontos à esquerda e à direita das células. Se as configurações de preenchimento de uma caixa de texto forem inferiores a 3,75 pontos e largas o suficiente para acomodar o texto, o texto pode ser quebrado no Excel.  
+-   O Excel adiciona um preenchimento padrão de aproximadamente 3,75 pontos à esquerda e à direita das células. Se as configurações de preenchimento de uma caixa de texto forem inferiores a 3,75 pontos e largas o suficiente para acomodar o texto, o texto poderá ser encapsulado no Excel.  
   
     > [!NOTE]  
     >  Para solucionar esse problema, aumente a largura da caixa de texto no relatório.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663114"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- A extensão EXCELOPENXML define o renderizador do Excel para arquivos do Excel (.xslx) atuais. A extensão EXCEL define a versão do Excel 2003. `Visible = “false”` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ A extensão EXCELOPENXML define o renderizador do Excel para arquivos do Excel (.xslx) atuais. A extensão EXCEL define a versão do Excel 2003. `Visible = "false"` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Diferenças entre os renderizadores do Excel (.xslx) atuais e do Excel 2003  
  Relatórios, renderizando usando o renderizador do Excel (.xslx) atual ou do Excel 2003, costumam ser idênticos e apenas em raras circunstâncias você notará diferenças entre os dois formatos. A tabela a seguir compara os renderizadores do Excel e do Excel 2003.  

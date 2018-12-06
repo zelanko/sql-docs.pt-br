@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503788"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "51701976"
  **Fornece disponibilidade econômica para dados sem vida**  
  Ampliar dados transacionais quentes e frios dinamicamente a partir do SQL Server para o Microsoft Azure com o SQL Server Stretch Database. Ao contrário do armazenamento de dados frios típicos, seus dados estão sempre online e disponível para consulta. Você pode fornecer linhas de tempo de retenção de dados mais longas sem muito trabalho para obter grandes tabelas, como o Histórico de Pedidos do Cliente. Aproveite o baixo custo do Azure, em vez de dimensionar amplos armazenamentos no local. Você escolhe a camada de preços e definições de configuração no Portal do Azure para manter o controle sobre o preço e os custos. Expanda ou reduza conforme necessário. Visite [Preços do SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) para obter mais detalhes.  
   
- **Não requer alterações a consultas nem aplicativos**  
- Acesse os dados do SQL Server diretamente, independentemente de ele estar no local ou ampliado para a nuvem.  Você define a política que determina onde os dados são armazenados e o SQL Server trata a movimentação de dados em segundo plano. A tabela inteira está sempre online e é passível de consulta. E, o Stretch Database não requer nenhuma mudança para aplicativos ou consultas existentes – o local dos dados é completamente transparente para o aplicativo.  
+ **Não requer alterações em consultas nem em aplicativos**  
+ Acesse os dados do SQL Server diretamente, independentemente se é local ou ampliado para a nuvem.  Você define a política que determina onde os dados são armazenados e o SQL Server trata a movimentação de dados em segundo plano. A tabela inteira está sempre online e é passível de consulta. Além disso, o Stretch Database não exige nenhuma mudança nos aplicativos ou nas consultas existentes. A localização dos dados é completamente transparente para o aplicativo.  
   
  **Simplifica a manutenção de dados local**  
  Reduza a necessidade de manutenção e armazenamento no local dos seus dados. Os backups de seus dados no local são executados mais rápido e são concluídos dentro da janela de manutenção. Os backups para a parte da nuvem de seus dados são executados automaticamente. Suas necessidades de armazenamento no local são reduzidas significativamente. O armazenamento do Azure pode ser 80% mais barato do que adicionar ao SSD local.  
   
  **Mantém seus dados seguros mesmo durante a migração**  
- Fique tranquilo para ampliar seus aplicativos mais importantes com segurança para a nuvem. O Sempre Criptografado do SQL Server fornece a criptografia para seus dados em movimentação. A Segurança em Nível de Linha e outros recursos de segurança avançados do SQL Server também funcionam com o Stretch Database para proteger seus dados.  
+ Fique tranquilo para ampliar seus aplicativos mais importantes com segurança para a nuvem. O Always Encrypted do SQL Server fornece a criptografia para seus dados em movimento. A Segurança em Nível de Linha e outros recursos de segurança avançados do SQL Server também funcionam com o Stretch Database para proteger seus dados.  
   
 ## <a name="what-does-stretch-database-do"></a>O que faz o Stretch Database?  
  Depois de habilitar o Stretch Database para uma instância do SQL Server e um banco de dados, e selecionar pelo menos uma tabela, ele começa silenciosamente a migrar os dados frios para o Azure.  
@@ -64,7 +64,7 @@ ms.locfileid: "51701976"
 |Preciso manter dados transacionais por longos períodos.|O tamanho das minhas tabelas está saindo do controle.|  
 |Às vezes, preciso consultar os dados frios.|Meus usuários dizem que querem ter acesso aos dados frios, mas eles raramente os utilizam.|  
 |Tenho aplicativos, incluindo aplicativos mais antigos, que não quero atualizar.|Preciso continuar comprando e adicionando mais armazenamento.|  
-|Quero encontrar uma forma de economizar dinheiro com armazenamento.|Não consigo fazer backup ou restaurar tabelas tão grandes no SLA.|  
+|Quero encontrar uma forma de economizar dinheiro com armazenamento.|Não consigo fazer backup nem restaurar as tabelas grandes contidas no SLA.|  
   
 ## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>Qual tipo de bancos de dados e tabelas são candidatos para o Stretch Database?  
  O Stretch Database se destina a bancos de dados transacionais com grandes quantidades de dados frios, geralmente armazenados em uma pequena quantidade de tabelas. Essas tabelas podem conter mais de um bilhão de linhas.  

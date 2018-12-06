@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403641"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51665120"
   
     -   [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Baixar o banco de dados de exemplo do Adventure Works:** para começar a usar Tabelas Temporais, baixe o [banco de dados AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) com exemplos de script e siga as instruções na pasta ‘Temporal’  
+    -   **Baixar o banco de dados de exemplo do Adventure Works:** para começar a usar Tabelas Temporais, baixe o [banco de dados AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) com exemplos de script e siga as instruções na pasta 'Temporal'  
   
 -   **Sintaxe:**  
   

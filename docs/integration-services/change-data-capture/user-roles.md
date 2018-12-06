@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397999"
 ---
 # <a name="user-roles"></a>Funções de usuário
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  
@@ -129,7 +129,7 @@ ms.locfileid: "47599444"
   
  O administrador de banco de dados Oracle pode obter scripts SQL de Oracle que precisam ser executados, para que possam ser avaliados antes de serem executados. O administrador de banco de dados Oracle também pode executar scripts SQL de Oracle diretamente do Console de Designer do Oracle CDC.  
   
- Se o administrador de banco de dados Oracle escolher usar o console de Designer do Oracle CDC, as credenciais de administrador não serão mantidas com exceção do contexto (caixa de diálogo) no qual eles foram usados.  
+ Se o administrador do Oracle Database escolher usar o console do Oracle CDC Designer, as credenciais de administrador não serão mantidas com exceção do contexto (caixa de diálogo) no qual eles foram usados.  
   
  O administrador de banco de dados Oracle funciona em coordenação com o administrador do Serviço Oracle CDC na configuração de Instâncias Oracle CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

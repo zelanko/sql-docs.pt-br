@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814319"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393209"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
 Expressões costumam ser usadas em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
 -   A expressão a seguir gera os anos de intervalo entre SellStartDate e LastReceiptDate. Esses campos estão em dois conjuntos de dados diferentes, DataSet1 e DataSet2. A [Função First &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que é uma função de agregação, retorna o primeiro valor de SellStartDate em DataSet1 e o primeiro valor de LastReceiptDate em DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   A função **DatePart** retorna um valor de Inteiro que contém o componente especificado de um valor de Data fornecido. A expressão a seguir retorna o ano para o primeiro valor do SellStartDate em DataSet1. O escopo do conjunto de dados é especificado, pois há vários conjuntos de dados no relatório.  
@@ -229,7 +229,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
      O exemplo a seguir faz o mesmo que exemplo acima, além de exibir uma cadeia de texto antes da lista de valores selecionados.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
   
 ### <a name="lookup"></a>Pesquisar  
   
--   Ao especificar um campo chave, você pode usar a função **Lookup** para recuperar um valor de um conjunto de dados para uma relação um para um, como um par chave-valor. A expressão seguinte exibe o nome de produto de um conjunto de dados (“Produto”), considerando o identificador de produto para correspondência:  
+-   Ao especificar um campo chave, você pode usar a função **Lookup** para recuperar um valor de um conjunto de dados para uma relação um para um, como um par chave-valor. A expressão seguinte exibe o nome de produto de um conjunto de dados ("Produto"), considerando o identificador de produto para correspondência:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
     End Function  
     ```  
   
-     A expressão a seguir mostra como chamar esse código personalizado de uma caixa de texto, para o contêiner “ColumnGroupByYear” (grupo ou região de dados).  
+     A expressão a seguir mostra como chamar esse código personalizado de uma caixa de texto, para o contêiner "ColumnGroupByYear" (grupo ou região de dados).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

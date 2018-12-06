@@ -14,12 +14,12 @@ ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ca691be3a18e6b74c407707ec3e2203629d9c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa167df2f75b42cf5612b725cbfd368f4dc4407
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843494"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519947"
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>Especificar o local do instantâneo padrão (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47843494"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Para modificar o local do instantâneo padrão.  
   
-1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**…**) para o Publicador para o qual você deseja alterar o local do instantâneo padrão.  
+1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**...**) para o Publicador para o qual você deseja alterar a localização do instantâneo padrão.  
   
 2.  Na caixa de diálogo **Propriedades do Publicador – \<Publisher>**, digite um valor para a propriedade **Pasta de Instantâneo Padrão**.  
   

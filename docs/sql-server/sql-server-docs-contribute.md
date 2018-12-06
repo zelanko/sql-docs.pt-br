@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439898"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -28,6 +28,8 @@ Há dois fluxos de trabalho principais que você pode usar para contribuir:
 |---|---|
 | [Editar no navegador](#githubui) | Bom para edições simples e breves de qualquer artigo. |
 | [Editar localmente com ferramentas](#tools) | Bom para edições mais complexas, edições que envolvem vários artigos e contribuições frequentes para docs.microsoft.com. |
+
+Todas as contribuições públicas são validadas pela equipe de conteúdo do SQL para exatidão técnica e consistência. 
 
 ## <a id="githubui"></a> Editar no navegador
 

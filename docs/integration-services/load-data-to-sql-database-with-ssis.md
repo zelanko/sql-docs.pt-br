@@ -12,12 +12,12 @@ ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 8151b4e46e3a36eebc54642075aeb9b8648ac927
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705494"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412683"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
 

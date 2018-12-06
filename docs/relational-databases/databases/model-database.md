@@ -1,7 +1,7 @@
 ---
 title: Modelo de banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558823"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191026"
 ---
 # <a name="model-database"></a>Banco de dados modelo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51558823"
 |----------|------------------|-------------------|-----------------|  
 |Dados primários|modeldev|model.mdf|Aumento automático de 64 MB até que o disco fique cheio.|  
 |Log|modellog|modellog.ldf|Aumento automático de 64 MB para um máximo de 2 terabytes.|  
-  
- Para versões anteriores [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consulte [Banco de dados modelo](../../2014/relational-databases/databases/model-database.md) para valores de crescimento de arquivo padrão.  
-  
+
+Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) para valores de crescimento de arquivo padrão.  
+
  Para mover o banco de dados **model** ou os arquivos de log, veja [Mover bancos de dados do sistema](../../relational-databases/databases/move-system-databases.md).  
   
 ### <a name="database-options"></a>Opções de banco de dados  

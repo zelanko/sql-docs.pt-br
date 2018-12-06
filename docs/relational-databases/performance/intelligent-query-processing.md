@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660948"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403921"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ A família de recursos **Processamento de consulta inteligente** inclui recursos
 ![Recursos de processamento de consulta inteligente](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Processamento de consulta adaptável
-A família de recursos de processamento de consulta adaptável inclui aprimoramentos do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Esses aprimoramentos incluem: uniões adaptáveis do modo de lote, comentários de concessão de memória e execução intercalada para funções com valor de tabela e várias instruções.
+A família de recursos de processamento de consulta adaptável inclui aprimoramentos do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Estas melhorias incluíam: 
+-  Junções adaptáveis de modo de lote
+-  Comentários de concessão de memória
+-  Execução Intercalada para MSTVFs (funções com valor de tabela de várias instruções)
 
 ### <a name="batch-mode-adaptive-joins"></a>Junções adaptáveis de modo de lote
 Esse recurso permite que seu plano mude dinamicamente para uma melhor estratégia de junção durante a execução usando um único plano armazenado em cache.
+
+Para obter mais informações sobre uniões adaptáveis do modo de lote, confira [Processamento de consulta adaptável em bancos de dados SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>Comentários de concessão de memória do modo de lote e linha
 > [!NOTE]
@@ -40,10 +45,12 @@ Esse recurso permite que seu plano mude dinamicamente para uma melhor estratégi
 
 Esse recurso recalcula a memória real necessária para uma consulta e, em seguida, atualiza o valor de concessão para o plano armazenado em cache, reduzindo concessões de memória excessivas que afetam a simultaneidade e corrigindo concessões de memória subestimadas que causam derramamentos de alto custo para o disco.
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Execução Intercalada para MSTVFs (funções com valor de tabela de várias instruções)
-Com a execução intercalada, as contagens de linha reais da função são usadas para tornar decisões de plano de consulta downstream mais embasadas. 
+Para saber mais sobre comentários de concessão de memória, confira [Processamento de consultas adaptável em bancos de dados SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
-Para saber mais, confira [Processamento de consultas adaptável em bancos de dados SQL](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Execução Intercalada para MSTVFs (funções com valor de tabela de várias instruções)
+Com a execução intercalada, as contagens de linha reais da função são usadas para tornar decisões de plano de consulta downstream mais embasadas. Para obter mais informações sobre MSTVFs (funções com valor de tabela de várias instruções), confira [Funções com valor de tabela](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Para obter mais informações sobre a execução intercalada, confira [Processamento de consulta adaptável em bancos de dados SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## <a name="table-variable-deferred-compilation"></a>Compilação adiada de variável da tabela
 > [!NOTE]
@@ -59,7 +66,7 @@ Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/d
 > [!NOTE]
 > O embutimento de UDF escalar é a versão prévia pública do recurso.  
 
-O inlining do UDF escalar transforma automaticamente funções definidas pelo usuário (UDF) escalares em expressões relacionais e as insere na consulta SQL de chamada, melhorando o desempenho de cargas de trabalho que aproveitam UDFs escalares. O inlining do UDF escalar possibilita a otimização baseada em custo de operações em UDFs e resulta em planos eficientes que são orientados ao conjunto e paralelos, em vez de planos de execução seriais ineficientes e iterativos. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
+O inlining do UDF escalar transforma automaticamente [UDFs (funções definidas pelo usuário)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) escalares em expressões relacionais e as insere na consulta SQL de chamada, melhorando o desempenho de cargas de trabalho que aproveitam UDFs escalares. O inlining do UDF escalar possibilita a otimização baseada em custo de operações em UDFs e resulta em planos eficientes que são orientados ao conjunto e paralelos, em vez de planos de execução seriais ineficientes e iterativos. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
 
 Para saber mais, confira [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (Embutimento de UDF escalar).
 
@@ -76,9 +83,9 @@ Para saber mais, confira [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/func
 > O Modo de Lote no Rowstore é uma versão prévia pública do recurso.  
 
 ### <a name="background"></a>Plano de fundo
-O SQL Server 2012 introduziu um novo recurso para acelerar as cargas de trabalho analíticas: índices columnstore. Expandimos os casos de uso e melhoramos o desempenho de índices columnstore em todas as versões subsequentes. Até agora, elaboramos e documentamos todas essas funcionalidades como um único recurso: criar os índices columnstore em suas tabelas e sua carga de trabalho analítica “é simplesmente mais rápido”. Nos bastidores, no entanto, há dois conjuntos relacionados, mas distintos, de tecnologias:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu um novo recurso para acelerar as cargas de trabalho analíticas: índices columnstore. Expandimos os casos de uso e melhoramos o desempenho de índices columnstore em todas as versões subsequentes. Até agora, elaboramos e documentamos todas essas funcionalidades como um único recurso: criar os índices columnstore em suas tabelas e sua carga de trabalho analítica “é simplesmente mais rápido”. Nos bastidores, no entanto, há dois conjuntos relacionados, mas distintos, de tecnologias:
 - Índices **columnstore** permitem que consultas analíticas acessem apenas os dados nas colunas que precisam. O formato columnstore também possibilita uma compactação muito mais eficiente do que a obtida com a compactação de página em índices “rowstore” tradicionais. 
-- O processamento de **modo de lote** permite que os operadores de consulta processem dados com mais eficiência trabalhando em um lote de linhas por vez, em vez de uma linha por vez. Diversos outros aprimoramentos de escalabilidade estão ligados ao processamento do modo de lote.
+- O processamento de **modo de lote** permite que os operadores de consulta processem dados com mais eficiência trabalhando em um lote de linhas por vez, em vez de uma linha por vez. Diversos outros aprimoramentos de escalabilidade estão ligados ao processamento do modo de lote. Para obter mais informações sobre o modo de lote, confira [Modos de execução](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 Os dois conjuntos de recursos funcionam juntos para melhorar a utilização de CPU e E/S:
 - Índices columnstore permitem que mais dados caibam na memória e, portanto, reduzem a necessidade de E/S.
@@ -106,7 +113,7 @@ Mesmo se uma consulta não envolver nenhuma tabela com um índice columnstore, o
 1.  Uma verificação inicial dos tamanhos de tabela, operadores usados e cardinalidades estimadas na consulta de entrada.
 2.  Pontos de verificação adicionais à medida que o otimizador descobre planos novos e mais baratos para a consulta. Se esses planos alternativos não usarem o modo de lote de forma significativa, o otimizador parará de explorar as alternativas de modo de lote.
 
-Se o modo de lote no rowstore for usado, no plano de execução de consulta, você verá o modo de execução real como “modo de lote” usado pelo operador de verificação para heaps no disco e os índices de árvore B.  Essa verificação de modo de lote pode avaliar os filtros de bitmap do modo de lote.  Você também pode ver outros operadores de modo de lote no plano, como junções hash, agregações baseadas em hash, classificações, agregações de janela, filtros, concatenações e operadores escalares de computação.
+Se o modo de lote no rowstore for usado, no plano de execução de consulta, você verá o modo de execução real como "modo de lote" usado pelo operador de verificação para heaps no disco e os índices de árvore B.  Essa verificação de modo de lote pode avaliar os filtros de bitmap do modo de lote.  Você também pode ver outros operadores de modo de lote no plano, como junções hash, agregações baseadas em hash, classificações, agregações de janela, filtros, concatenações e operadores escalares de computação.
 
 ### <a name="remarks"></a>Remarks
 1.  Não há nenhuma garantia de que os planos de consulta usarão o modo de lote. O otimizador de consulta pode decidir se o modo de lote não parecer útil para a consulta. 
@@ -117,6 +124,7 @@ Se o modo de lote no rowstore for usado, no plano de execução de consulta, voc
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>Configurar o modo de lote no rowstore
 A configuração com escopo de banco de dados BATCH_MODE_ON_ROWSTORE é ativada por padrão e pode ser usada para desabilitar o modo de lote no rowstore sem exigir uma alteração no nível de compatibilidade do banco de dados:
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 É possível desabilitar o modo de lote no rowstore por meio de configuração com escopo do banco de dados, mas ainda substituir a configuração no nível da consulta usando a dica de consulta ALLOW_BATCH_MODE. O exemplo a seguir habilita o modo de lote no rowstore, mesmo com o recurso desabilitado por meio de configuração com escopo do banco de dados:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 Também é possível desabilitar o modo de lote no rowstore para uma consulta específica usando a dica de consulta DISALLOW_BATCH_MODE. Por exemplo:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

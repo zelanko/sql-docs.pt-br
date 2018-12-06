@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692184"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395661"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -92,7 +92,7 @@ Esta seção aborda as seguintes tarefas.
 
 Conforme mostrado na Figura 1 na seção anterior, a solução descrita neste artigo inclui o WSFC (Cluster de Failover do Windows Server). É preciso configurar o WSFC porque o SQL AlwaysOn depende do WFSC para failover e detecção de falha.
 
-O WSFC é um recurso para melhorar a alta disponibilidade de aplicativos e serviços. Ele consiste em um grupo de instâncias do Windows Server independentes com o 	Serviço de Cluster de Failover da Microsoft em execução nessas instâncias. As instâncias do Windows Server (ou nós como são chamadas às vezes) estão conectadas de forma que possam se comunicar entre si e a detecção de falha seja possível. O WSFC fornece as funcionalidades de detecção de falha e failover. Se um nó ou um serviço falhar no cluster, a falha será detectada e outro nó automaticamente ou manualmente começará a fornecer os serviços hospedados no nó com falha. Dessa forma, os usuários sofrem interrupções mínimas nos serviços e a disponibilidade do serviço é melhorada.  
+O WSFC é um recurso para melhorar a alta disponibilidade de aplicativos e serviços. Ele consiste em um grupo de instâncias do Windows Server independentes com o 	Serviço de Cluster de Failover da Microsoft em execução nessas instâncias. As instâncias do Windows Server (ou nós como são chamadas às vezes) estão conectadas de forma que possam se comunicar entre si e a detecção de falha seja possível. O WSFC fornece as funcionalidades de detecção de falha e failover. Se um nó ou um serviço falhar no cluster, a falha será detectada e outro nó automaticamente ou manualmente começará a fornecer os serviços hospedados no nó com falha. Dessa forma, os usuários sofrem interrupções mínimas nos serviços e a disponibilidade do serviço é melhorada.  
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -155,9 +155,9 @@ Depois que o recurso de WSFC é instalado em todas as instâncias, você pode co
 
 7.  Na página **Resumo**, verifique se há alguma mensagem de erro ou aviso.
 
-    Os erros devem ser corrigidos. No entanto, os avisos não podem ser um problema. Uma mensagem de aviso significa que "o item testado pode atender ao requisito, mas há algo que você deve verificar". Por exemplo, a Figura 7 mostra um aviso “validar latência de acesso ao disco”, que pode ser devido ao disco estar ocupado com outras tarefas temporariamente e você pode ignorá-lo. Você deve verificar o documento online para cada um dos avisos e mensagens de erro para obter mais detalhes. Consulte a Figura 7.
- 
-    ![Assistente para Validar a Configuração, página Validando](media/Fig6_ValidationTests.png)
+    Os erros devem ser corrigidos. No entanto, os avisos não podem ser um problema. Uma mensagem de aviso significa que "o item testado pode atender ao requisito, mas há algo que você deve verificar". Por exemplo, a Figura 7 mostra um aviso "validar latência de acesso ao disco", que pode ser devido ao disco estar ocupado com outras tarefas temporariamente e você pode ignorá-lo. Você deve verificar o documento online para cada um dos avisos e mensagens de erro para obter mais detalhes. Consulte a Figura 7.
+ 
+![Assistente para Validar a Configuração, página Validando](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -219,7 +219,7 @@ A FCI melhora a alta disponibilidade no nível da instância. O serviço do SQL 
 
 -   (Recomendado) Instalar exatamente a mesma versão e conjunto de recursos do SQL Server em todos os nós. Em particular, o MDS deve ser instalado.
 
--   (Recomendado) Usar a mesma configuração em cada instância do SQL Server. Em particular, o mesmo agrupamento do servidor deve ser configurado em todas as instâncias do SQL Server.
+-   (Recomendado) Usar a mesma configuração em cada instância do SQL Server. Em particular, a mesma ordenação do servidor deve ser configurada em todas as instâncias do SQL Server.
 
 -   (Recomendado) Usar a mesma conta de serviço para executar cada instância do SQL Server. Caso contrário, você terá que conceder permissão em cada instância do SQL Server para se certificar de que todas as instâncias do SQL Server podem se comunicar entre si.
 
@@ -326,7 +326,7 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
     d.  Insira o DHCP na caixa de texto **Modo de Rede** e clique em **Avançar** para continuar.
 
     >[!NOTE] 
-    >Opcionalmente, você pode escolher "IP Estático" como o **Modo de Rede** e inserir um IP estático. Você também pode inserir uma porta diferente de 1433. 
+    >Opcionalmente, você pode escolher "IP Estático" como o **Modo de Rede** e inserir um IP estático. Você também pode inserir uma porta diferente de 1433. 
 
     ![Configurar o Ouvinte](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
     ![Configurar a sincronização de dados](media/Fig19_AvailabilityGroupDataSync.png)
 
-    Figura 19 
+    Figura 19 
 
 10. Na página **Validação**, certifique-se de que todas as validações sejam aprovadas com êxito e corrija os erros. Clique em **Avançar** para continuar.
 
@@ -354,11 +354,11 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
     ![Exibir o painel](media/Fig20_ShowDashboard.png)
 
-    Figura 20 
+    Figura 20 
 
 3.  Clique em **Failover** para realizar um failover para uma réplica síncrona e uma réplica assíncrona. Isso é para verificar se o failover ocorre corretamente sem problemas.
 
- A configuração do AlwaysOn está concluída.
+ A configuração do AlwaysOn está concluída.
 
 Para obter mais informações sobre o Grupo de Disponibilidade AlwaysOn, consulte [Grupo de Disponibilidade AlwaysOn do SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

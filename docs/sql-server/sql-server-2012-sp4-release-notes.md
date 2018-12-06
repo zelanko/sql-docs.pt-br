@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503269"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Os services packs estão disponíveis somente online, não em uma mídia de inst
 - **Novo DMF para substituir o DBCC INPUTBUFFER** – Uma nova Função de gerenciamento dinâmico sys.dm_input_buffer que usa o session_id como parâmetro é introduzida para substituir DBCC INPUTBUFFER
 - **Aprimoramento de XEvents para falha na leitura de roteamento para um Grupo de disponibilidade** – No momento, o XEvent read_only_rout_fail só será acionado se houver uma lista de roteamento presente, mas nenhum dos servidores na lista de roteamento estará disponível para conexões. Essa melhoria inclui informações adicionais para ajudar a solucionar problemas e também é expandida nos pontos de código em que o XEvent é acionado. 
 - **Melhoria no tratamento do Service Broker com o failover do grupo de disponibilidade** – No momento, quando o Service Broker é habilitado em Banco de dados do gruo de disponibilidade, durante um failover do grupo de disponibilidade, todas as conexões do Service Broker originadas na Réplica Primária são deixadas abertas. A melhoria fecha todas essas conexões abertas durante um failover do grupo de disponibilidade.
-- **Particionamento do soft-NUMA automático** – com o SQL 2014 SP2, o particionamento [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automático é introduzido quando o sinalizador de rastreamento 8079 é habilitado no nível do servidor. Quando o Sinalizador de rastreamento 8079 é habilitado durante a inicialização, o SQL Server 2014 SP2 interroga o layout de hardware e configura automaticamente o soft-NUMA em sistemas que reportam oito ou mais CPUs por nó NUMA. O comportamento do soft-NUMa automático tem reconhecimento de hyperthread (HT/processador lógico). O particionamento e a criação de nós adicionais dimensiona o processamento em segundo plano aumentando o número de ouvintes, o dimensionamento e os recursos de rede e de criptografia. É recomendável testar primeiro o desempenho da carga de trabalho com o soft-NUMA automático antes que ele seja ATIVADO na produção.
+- **Particionamento do soft-NUMA automático** – com o SQL 2014 SP2, o particionamento do [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automático é introduzido quando o sinalizador de rastreamento 8079 é habilitado no nível do servidor. Quando o Sinalizador de rastreamento 8079 é habilitado durante a inicialização, o SQL Server 2014 SP2 interroga o layout de hardware e configura automaticamente o soft-NUMA em sistemas que reportam oito ou mais CPUs por nó NUMA. O comportamento do soft-NUMa automático tem reconhecimento de hyperthread (HT/processador lógico). O particionamento e a criação de nós adicionais dimensiona o processamento em segundo plano aumentando o número de ouvintes, o dimensionamento e os recursos de rede e de criptografia. É recomendável testar primeiro o desempenho da carga de trabalho com o soft-NUMA automático antes que ele seja ATIVADO na produção.
 
 ## <a name="service-pack-3-release-notes"></a>Notas de versão do Service Pack 3
 
@@ -226,11 +226,11 @@ Anteriormente, a DACFx não preservava o estado (WITH CHECK/NOCHECK) das Restri�
   
 **Atualizações da SqlPackage.exe (ferramenta de linha de comando da DACFx)**  
   
--   Extrair DACPAC com dados – Cria um arquivo de instantâneo de banco de dados (.dacpac) de um banco de dados dinâmico SQL Server ou SQL do Windows Azure que contém dados de tabelas de usuário além do esquema de banco de dados. Esses pacotes podem ser publicados em um banco de dados SQL Server ou SQL do Windows Azure existente ou novo, usando a ação Publicar da SqlPackage.exe. Os dados contidos no pacote substituem os dados existentes no banco de dados de destino.  
+-   Extrair DACPAC com os dados – Cria um arquivo de instantâneo de banco de dados (.dacpac) de um Banco de Dados SQL do Microsoft Azure ou do SQL Server dinâmico que contém dados de tabelas de usuário além do esquema de banco de dados. Esses pacotes podem ser publicados em um banco de dados SQL Server ou SQL do Windows Azure existente ou novo, usando a ação Publicar da SqlPackage.exe. Os dados contidos no pacote substituem os dados existentes no banco de dados de destino.  
   
 -   Exportar BACPAC – Cria um arquivo de backup lógico (.bacpac) de um banco de dados dinâmico SQL Server ou SQL do Windows Azure que contém o esquema de banco de dados e dados de usuário que podem ser usados para migrar um banco de dados SQL Server ou SQL do Windows Azure no local. Os bancos de dados compatíveis com o Azure podem ser exportados e importados posteriormente entre versões com suporte do SQL Server.  
   
--   Importar BACPAC – Importa um arquivo .bacpac para popular um banco de dados vazio ou criar um novo banco de dados SQL Server ou SQL do Windows Azure.  
+-   Importar BACPAC – Importar um arquivo .bacpac para popular um banco de dados vazio ou criar um Banco de Dados SQL do Microsoft Azure ou do SQL Server.  
   
 A documentação completa da SqlPackage.exe no MSDN pode ser encontrada [aqui](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

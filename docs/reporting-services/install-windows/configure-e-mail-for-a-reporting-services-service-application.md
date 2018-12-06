@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410363"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurar o email para um serviço de aplicativo do Reporting Services
 
@@ -52,16 +52,16 @@ ms.locfileid: "50050858"
   
     -   Falha ao enviar o email: o servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: 5.7.1 O cliente não estava autenticado. O email não será reenviado.  
   
-     Altere **SMTPAuthenticate** para usar um valor de “2”. Esse valor não pode ser alterado na interface do usuário. O exemplo de script PowerShell a seguir atualiza a configuração completa da extensão de entrega de email do servidor de relatório para o aplicativo de serviço denominado “SSRS_TESTAPPLICATION”. Observe que alguns dos nós listados no script também podem ser definidos na interface do usuário, por exemplo, o endereço de origem.  
+     Altere **SMTPAuthenticate** para usar um valor de "2". Esse valor não pode ser alterado na interface do usuário. O exemplo de script PowerShell a seguir atualiza a configuração completa da extensão de entrega de email do servidor de relatório para o aplicativo de serviço denominado "SSRS_TESTAPPLICATION". Observe que alguns dos nós listados no script também podem ser definidos na interface do usuário, por exemplo, o endereço "De".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -71,14 +71,14 @@ ms.locfileid: "50050858"
     get-sprsserviceapplication  
     ```  
   
-3.  O exemplo a seguir retornará os valores atuais da extensão de email para o aplicativo de serviço denominado “SSRS_TESTAPPLICATION”.  
+3.  O exemplo a seguir retornará os valores atuais da extensão de email para o aplicativo de serviço denominado "SSRS_TESTAPPLICATION".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  O exemplo a seguir criará um novo arquivo denominado “emailconfig.txt” com os valores atuais da extensão de email para o aplicativo de serviço chamado “SSRS_TESTAPPLICATION”  
+4.  O exemplo a seguir criará um novo arquivo denominado "emailconfig.txt" com os valores atuais da extensão de email para o aplicativo de serviço chamado "SSRS_TESTAPPLICATION"  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516638"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,19 +56,19 @@ ms.locfileid: "51675407"
   
 1.  No Pesquisador de Objetos, expanda a pasta da instância de servidor no qual deseja criar o novo logon.  
   
-2.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e selecione **Logon...**.  
+2.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Logon...**.  
   
-3.  Na caixa de diálogo **Logon – Novo** , na página **Geral** , insira o nome de um usuário na caixa **Nome de logon** . Como alternativa, clique em **Pesquisar…** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo** .  
+3.  Na caixa de diálogo **Logon – Novo**, na página **Geral**, insira o nome de um usuário na caixa **Nome de logon**. Como alternativa, clique em **Pesquisar...** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
   
      Se você clicar em **Pesquisar...**:  
   
-    1.  Sob **Selecione este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecionar qualquer opção a seguir ou todas: **Entidades de segurança internas**, **Grupos**e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
+    1.  Em **Selecionar este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecione qualquer opção a seguir ou todas elas: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
-    2.  Sob **Deste local**, clique em **Locais...** para abrir a caixa de diálogo **Locais** e selecionar um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
+    2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
     3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Clique em **Avançado...** para mais opções de pesquisa avançadas. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Clique em **Avançado...** para mais opções de pesquisa avançada. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Clique em **OK**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51675407"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Logon – Novo** também oferece opções de quadro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis**e **Status**.  
+ A caixa de diálogo **Logon – Novo** também oferece opções de quadro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis** e **Status**.  
   
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
@@ -165,13 +165,13 @@ ms.locfileid: "51675407"
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos…**, **Todos os objetos dos tipos…** ou **The server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **OBSERVAÇÃO:** a seleção de **The server**_server\_name_ preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
   
-3.  Se você selecionar **Objetos específicos…**:  
+3.  Se você selecionar **Objetos específicos...**:  
   
-    1.  Na caixa de diálogo **Selecionar Objetos** , em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto…**.  
+    1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...**.  
   
     2.  Na caixa de diálogo **Selecionar Tipos de Objeto** , selecione qualquer um destes tipos de objeto ou todos: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade**e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -181,7 +181,7 @@ ms.locfileid: "51675407"
   
     5.  Na caixa de diálogo **Selecionar Objetos** , clique em **OK**.  
   
-4.  Se você selecionar **Todos os objetos dos tipos...**, na caixa de diálogo **Selecionar Tipos de Objeto** , selecione qualquer um destes tipos de objeto ou todos: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade**e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se você selecionar **Todos os objetos dos tipos....**, na caixa de diálogo **Selecionar Tipos de Objeto**, selecione qualquer um destes tipos de objeto ou todos eles: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  O nome de cada entidade ou protegível que é adicionado à grade.  

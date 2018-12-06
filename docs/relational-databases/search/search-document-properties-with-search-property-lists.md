@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bce4439473aa19790435fc89dff3e4107311bb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503051"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "51661075"
 ### <a name="indexing-of-registered-properties"></a>Indexação de propriedades registradas  
  Depois que um índice de texto completo é associado a uma lista de propriedades de pesquisa, o índice deve ser populado novamente para indexar termos de pesquisa específicos da propriedade. Durante a indexação de texto completo, o conteúdo de todas as propriedades é armazenado no índice de texto completo juntamente com outro conteúdo. No entanto, ao indexar um termo de pesquisa encontrado em uma propriedade registrada, o indexador de texto completo também armazenará a ID de propriedade interna correspondente com o termo. Em contrapartida, se uma propriedade não estiver registrada, ela será armazenada no índice de texto completo como se fosse parte do corpo do documento e terá um valor de zero para a ID de propriedade interna.  
   
- A ilustração a seguir mostra uma exibição lógica de como os termos de pesquisa aparecem em um índice de texto completo associado à lista de propriedades de pesquisa mostrada na ilustração anterior. Um documento de exemplo, Document 1, contém três propriedades - Title, Author e Keywords - bem como o corpo do documento. Para as propriedades Title e Keywords, que são especificadas na lista de propriedades de pesquisa, os termos de pesquisa são associados às suas IDs de propriedade interna correspondentes no índice de texto completo. Em contrapartida, o conteúdo da propriedade Author é indexado como se fosse parte do corpo do documento. Isso significa que registrar uma propriedade aumenta um pouco o tamanho do índice de texto completo, dependendo da quantidade de conteúdo armazenada na propriedade.  
+ A ilustração a seguir mostra uma exibição lógica de como os termos de pesquisa aparecem em um índice de texto completo associado à lista de propriedades de pesquisa mostrada na ilustração anterior. Um documento de exemplo, Document 1, contém três propriedades – Title, Author e Keywords –, bem como o corpo do documento. Para as propriedades Title e Keywords, que são especificadas na lista de propriedades de pesquisa, os termos de pesquisa são associados às suas IDs de propriedade interna correspondentes no índice de texto completo. Em contrapartida, o conteúdo da propriedade Author é indexado como se fosse parte do corpo do documento. Isso significa que registrar uma propriedade aumenta um pouco o tamanho do índice de texto completo, dependendo da quantidade de conteúdo armazenada na propriedade.  
   
  ![Índice de texto completo que usa uma lista de propriedades de pesquisa](../../relational-databases/search/media/ifts-spl-and-fti.gif "Índice de texto completo que usa uma lista de propriedades de pesquisa")  
   
- Os termos de pesquisa na propriedade Title — "Favorite", "Biking" e "Trails" — são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords — "biking" e "mountain" — são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author — "Jane" e "Doe" — e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. O termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
+ Os termos de pesquisa na propriedade Title – "Favorite", "Biking" e "Trails" – são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords – "biking" e "mountain" – são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author – "Jane" e "Doe" – e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. O termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
   
  Uma consulta de texto completo com escopo de propriedade usa as IDs de propriedade interna para a lista de propriedades de pesquisa atual do índice de texto completo.  
   

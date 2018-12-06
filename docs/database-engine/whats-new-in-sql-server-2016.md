@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504509"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Esta versão oferece melhorias para índices columnstore, incluindo índices col
 
 Para obter mais detalhes, confira estes tópicos na seção [Guia de índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md) dos Manuais Online:
 
-- [Resumo de recursos dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – inclui as novidades.
+- [Resumo do recurso com versão dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – inclui as novidades.
 
 - [Carregamento de dados dos índices columnstore](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -225,7 +225,7 @@ A amostragem de dados para criar estatísticas agora é feita em paralelo (no n�
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>Limite sublinear para atualização de estatísticas
 A atualização automática de estatísticas agora é mais agressiva em tabelas grandes (no nível de compatibilidade 130). O limite para disparar a atualização automática de estatísticas é 20%, a partir do SQL Server 2016, para tabelas maiores. Esse limite começará a diminuir (ainda uma porcentagem) conforme o número de linhas na tabela aumentar. Você não precisará mais definir o sinalizador de rastreamento 2371 para reduzir o limite. 
 ### <a name="other-enhancements"></a>Outros aprimoramentos
-O Insert em uma instrução Insert-select tem vários threads ou pode ter um plano paralelo (no nível de compatibilidade 130). Para obter um plano paralelo, INSIRA… A instrução SELECT deve usar a dica TABLOCK. Para obter mais informações, consulte [Selecionar inserção paralela](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
+O Insert em uma instrução Insert-select tem vários threads ou pode ter um plano paralelo (no nível de compatibilidade 130). Para obter um plano paralelo, INSERT... A instrução SELECT deve usar a dica TABLOCK. Para obter mais informações, consulte [Selecionar inserção paralela](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
 ## <a name="live-query-statistics"></a>Estatísticas de consulta dinâmica
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. Para obter mais informações, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
@@ -293,7 +293,7 @@ O SQL Server 2016 adiciona suporte interno para importação e exportação de J
  Para obter mais informações, veja [Guia do PolyBase](../relational-databases/polybase/polybase-guide.md).
 
 ## <a name="stretch-database"></a>Stretch Database
- O Stretch Database é um novo recurso do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] que migra seus dados históricos de forma transparente e segura para a nuvem do Microsoft Azure. Acesse os dados do SQL Server diretamente, independentemente de ele ser local ou estendido para a nuvem. Você define a política que determina onde os dados são armazenados e o SQL Server trata a movimentação de dados em segundo plano. A tabela inteira está sempre online e é passível de consulta. Além disso, o Stretch Database não exige nenhuma mudança para aplicativos ou consultas existentes – o local dos dados é completamente transparente para o aplicativo. Para obter mais informações, consulte [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ O Stretch Database é um novo recurso do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] que migra seus dados históricos de forma transparente e segura para a nuvem do Microsoft Azure. Acesse os dados do SQL Server diretamente, independentemente se ele é local ou ampliado para a nuvem. Você define a política que determina onde os dados são armazenados e o SQL Server trata a movimentação de dados em segundo plano. A tabela inteira está sempre online e é passível de consulta. Além disso, o Stretch Database não exige nenhuma mudança nos aplicativos ou nas consultas existentes. A localização dos dados é completamente transparente para o aplicativo. Para obter mais informações, consulte [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Suporte a UTF-8
 [O Utilitário bcp](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) agora dão suporte à página de código UTF-8. Para obter mais informações, confira esses tópicos e [Criar um arquivo de formato XML &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -382,11 +382,11 @@ A segurança em nível de linha introduz o controle de acesso baseado em predica
 
 
 ### <a name="always-encrypted"></a>Always Encrypted
-Com o Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar operações em dados criptografados e, o melhor de tudo, a chave de criptografia reside no aplicativo, no ambiente confiável do cliente e não no servidor. O Sempre Criptografado protege os dados do cliente para que DBAs não tenham acesso a dados de texto sem formatação. A criptografia e a descriptografia de dados ocorrem de modo transparente no nível do driver, minimizando as alterações que precisam ser feitas a aplicativos existentes. Para obter mais informações, consulte [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Com o recurso Always Encrypted, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar operações em dados criptografados, mas o melhor de tudo é que a chave de criptografia reside no aplicativo, no ambiente confiável do cliente e não no servidor. O Sempre Criptografado protege os dados do cliente para que DBAs não tenham acesso a dados de texto sem formatação. A criptografia e a descriptografia de dados ocorrem de modo transparente no nível do driver, minimizando as alterações que precisam ser feitas a aplicativos existentes. Para obter mais informações, consulte [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
-O mascaramento de dados dinâmicos limita a exposição de dados confidenciais mascarando-os para usuários sem privilégios. O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. É um recurso de segurança baseado em políticas que oculta os dados confidenciais no conjunto de resultados de uma consulta em relação aos campos do banco de dados designados, sendo que os dados no banco de dados não são alterados. Para obter mais informações, consulte [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+O mascaramento de dados dinâmicos limita a exposição de dados confidenciais mascarando-os para usuários sem privilégios. O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. Ele é um recurso de segurança baseado em políticas que oculta os dados confidenciais no conjunto de resultados de uma consulta em relação aos campos do banco de dados designados, sem que os dados no banco de dados sejam alterados. Para obter mais informações, consulte [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
 ### <a name="new-permissions"></a>Novas permissões
@@ -426,7 +426,7 @@ Dois grupos de disponibilidade em dois WSFCs (Clusters de Failover do Windows Se
 
 A propagação direta permite que uma réplica secundária seja propagada automaticamente pela rede (em vez da propagação manual, que exige a restauração de um backup físico do banco de dados de destino na réplica secundária). A propagação direta é especificada pela configuração de **SEEDING_MODE=AUTOMATIC** na instrução [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) ou [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md). Também é necessário especificar **GRANT CREATE ANY DATABASE** com [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) em cada réplica secundária usada com a propagação direta.
 
-**Melhorias no desempenho** – A taxa de transferência de sincronização dos grupos de disponibilidade foi aumentada em aproximadamente 10x por meio da compactação paralela e mais rápida dos blocos de log na réplica primária, um protocolo de sincronização otimizado e a descompactação paralela e a restauração dos registros de log na réplica secundária. Isso aumenta a atualização de secundários legíveis e reduz o tempo de recuperação de banco de dados no caso de failover. Observe que a restauração de tabelas com otimização de memória ainda não é paralela no SQL Server 2016.
+**Melhorias no desempenho** – a produtividade da sincronização dos grupos de disponibilidade aumentou aproximadamente 10 vezes por meio da compactação paralela e mais rápida dos blocos de log na réplica primária, de um protocolo de sincronização otimizado e da descompactação e restauração paralelas dos registros de log na réplica secundária. Isso aumenta a atualização de secundários legíveis e reduz o tempo de recuperação de banco de dados no caso de failover. Observe que a restauração de tabelas com otimização de memória ainda não é paralela no SQL Server 2016.
 
 ## <a name="replication-enhancements"></a>Aprimoramentos de replicação
 - Agora há suporte para a replicação de tabelas com otimização de memória. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).

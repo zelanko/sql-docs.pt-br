@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641563"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521226"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -243,7 +243,7 @@ GO
  A sintaxe para a função OPENQUERY é:  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Os parâmetros Folder, Project e Package são obrigatórios. Use32BitRuntime, Timeout e Parameters são opcionais.  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  A lista a seguir especifica os caracteres especiais permitidos na cláusula de consulta:  
   
--   Aspas Simples (') – têm suporte pelo OPENQUERY padrão. Se você quiser usar as aspas simples na cláusula de consulta, use duas aspas simples (‘’).  
+-   Aspas Simples (‘) – são compatíveis com o OPENQUERY padrão. Se você quiser usar as aspas simples na cláusula de consulta, use duas aspas simples (‘’).  
   
--   Aspas duplas (“) – a parte da consulta correspondente aos parâmetros é colocada entre aspas duplas. Se um valor de parâmetro contiver aspas duplas, use o caractere de escape. Por exemplo: \”.  
+-   Aspas duplas (“) – a parte da consulta correspondente aos parâmetros é colocada entre aspas duplas. Se um valor de parâmetro contiver aspas duplas, use o caractere de escape. Por exemplo: \".  
   
 -   Colchetes esquerdo e direito ([ e ]) – esses caracteres são usados para indicar os espaços à esquerda/direita. Por exemplo, “[ alguns espaços ]” representa a cadeia de caracteres “alguns espaços” com um espaço à esquerda e um espaço à direita. Se esses caracteres forem usados na cláusula de consulta, eles deverão ser usados com escape. Por exemplo: \\[e \\].  
   
--   Barra (\\) – cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
+-   Barra (\\) – Cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
   
- Barra (\\) – cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
+ Barra (\\) – Cada \ usada na cláusula de consulta deve usar o caractere de escape. Por exemplo, \\\ é avaliada como \ na cláusula de consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Destino do Streaming de Dados](../../integration-services/data-flow/data-streaming-destination.md)   

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 89ab3aab8806c32c15496a3544e5fc660368d511
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604346"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394750"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>Você está atualizando do SQL Server 2005, 2008 ou 2008R2?
 

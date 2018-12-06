@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763244"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391689"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método de ConfigurationSetting – SetWindowsServiceIdentity
   Faz com que o serviço do Windows do servidor de relatório seja executado como um usuário do Windows especificado e concede a esta conta permissões de sistema de arquivos suficientes para permitir que o servidor de relatório opere.  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] ou no Windows XP, os valores dos parâmetros *Name*, *Domain*e *Password* serão ignorados e a conta sistema Local será usada.  
   
- Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Windows Server 2003, as propriedades *Domain* e *Password* serão ignoradas e o campo de nome deverá conter “Builtin\NetworkService”, “Builtin\System” ou “Builtin\LocalService”.  
+ Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Windows Server 2003, as propriedades *Domain* e *Password* serão ignoradas e o campo de nome deverá conter "Builtin\NetworkService" ou "Builtin\System" ou "Builtin\LocalService".  
   
  O método SetWindowsServiceIdentity define as permissões de arquivo nos arquivos e nas pastas do diretório de instalação do servidor de relatório.  
   

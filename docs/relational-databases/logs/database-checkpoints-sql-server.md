@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518094"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "51676646"
  
   
 ##  <a name="Overview"></a> Visão geral   
-Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa modificações nas páginas de banco de dados — no cache do buffer — e não grava essas páginas em disco após cada alteração. Em vez disso, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação periodicamente em cada banco de dados. Um *ponto de verificação* grava as páginas atuais modificadas na memória (conhecidas como *páginas sujas*) e as informações do log de transações de memória para disco e, além disso, registra informações sobre o log de transações.  
+Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa modificações nas páginas de banco de dados, no cache do buffer e não grava essas páginas em disco após cada alteração. Em vez disso, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação periodicamente em cada banco de dados. Um *ponto de verificação* grava as páginas atuais modificadas na memória (conhecidas como *páginas sujas*) e as informações do log de transações de memória para disco e, além disso, registra informações sobre o log de transações.  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte para vários tipos de pontos de verificação: automáticos, indiretos, manuais e internos. A seguinte tabela resume os tipos de **pontos de verificação:**
   
 |Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'** recovery interval **','**_seconds_**'**|Emitido automaticamente em segundo plano para seguir de tempo superior sugerido pela opção de configuração de servidor **recovery interval** . Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são limitados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detectar um aumento na latência de gravação acima de 50 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indireto.|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], o valor padrão é de 1 minuto. O padrão é 0 para versões mais antigas, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indireto.|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], o valor padrão é de 1 minuto. O padrão é 0 para versões mais antigas, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [*checkpoint_duration*]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, consulte [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Internal|Nenhum.|Emitido por várias operações de servidor, como backup e criação de instantâneo de banco de dados, para garantir que as imagens de disco coincidam com o estado atual do log.|  
   
@@ -61,7 +61,7 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
 > Transações não confirmadas de execução longa aumentam o tempo de recuperação para todos os tipos de pontos de verificação.   
   
 ##  <a name="InteractionBwnSettings"></a> Interação de TARGET_RECOVERY_TIME e opções 'recovery interval'  
- A tabela a seguir resume a interação entre a configuração do servidor **sp_configure'** recovery interval **'** de todo o servidor e a configuração ALTER DATABASE... específica do banco de dados. TARGET_RECOVERY_TIME.  
+ A tabela a seguir resume a interação entre a configuração do servidor **sp_configure'** recovery interval **'** de todo o servidor e a configuração ALTER DATABASE ... específica do banco de dados. TARGET_RECOVERY_TIME.  
   
 |target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
 |----------------------------|-------------------------|-----------------------------|  

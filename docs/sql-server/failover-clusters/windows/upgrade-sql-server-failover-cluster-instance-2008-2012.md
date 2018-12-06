@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394140"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
@@ -107,11 +107,11 @@ Se você tiver um ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-
 
 7.  Copie os bancos de dados do sistema dos computadores originais para seu computador de destino paralelo.
 
-8.  No ambiente original no Gerenciador de Cluster de Failover, altere o nome do recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+8.  No ambiente original no Gerenciador de Cluster de Failover, altere o nome do recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 9.  Agora coloque online novamente apenas o recurso Nome do Servidor renomeado para cada uma das funções da FCI do SQL.
 
-10. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
+10. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
 
     >[!NOTE]
     >Os erros resultantes do nome que já está sendo usado por outro computador serão interrompidos depois que os registros DNS do nome forem excluídos.
@@ -122,7 +122,7 @@ Se você tiver um ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Cenário 3: o Cluster do Windows tem FCIs do SQL e Grupos de Disponibilidade do SQL Server
 
-Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário “nenhum Grupo de Disponibilidade, nenhuma instância autônoma”. Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager em cada computador no ambiente de destino antes da migração.**
+Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário "nenhum Grupo de Disponibilidade, nenhuma instância autônoma". Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager em cada computador no ambiente de destino antes da migração.**
 
 ### <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 
@@ -142,11 +142,11 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 8.  Copie os bancos de dados do sistema dos computadores originais para seu computador de destino paralelo.
 
-9.  No ambiente original no Gerenciador de Cluster de Failover, altere o nome do recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+9.  No ambiente original no Gerenciador de Cluster de Failover, altere o nome do recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 10. Agora coloque online novamente apenas o recurso Nome do Servidor renomeado para cada uma das funções da FCI do SQL.
 
-11. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
+11. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
 
 12. Depois que todas as FCIs forem renomeadas, reinicie cada um dos computadores no novo cluster.
 
@@ -180,7 +180,7 @@ A migração de um cluster com instâncias autônomas é semelhante no processo 
 
 8.  Copie os bancos de dados do sistema para os computadores de destino.
 
-9.  No ambiente original no Gerenciador de Cluster de Failover, altere o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um novo nome exclusivo.
+9.  No ambiente original no Gerenciador de Cluster de Failover, altere o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um novo nome exclusivo.
 
 10. Agora coloque online novamente apenas o recurso Nome do Servidor renomeado para cada uma das funções da FCI do SQL.
 
@@ -188,7 +188,7 @@ A migração de um cluster com instâncias autônomas é semelhante no processo 
 
 12. Após a reinicialização, ingresse cada um dos computadores autônomos no Cluster de Failover do Windows Server de destino.
 
-13. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
+13. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
 
 14. Depois que todas as FCIs forem renomeadas, reinicie cada um dos computadores no novo cluster.
 
@@ -218,7 +218,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 9.  Copie os bancos de dados do sistema para os computadores de destino.
 
-10. No ambiente original no Gerenciador de Cluster de Failover, altere o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um novo nome exclusivo.
+10. No ambiente original no Gerenciador de Cluster de Failover, altere o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um novo nome exclusivo.
 
 11. Agora coloque online novamente apenas o recurso Nome do Servidor renomeado para cada uma das funções da FCI do SQL.
 
@@ -226,7 +226,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 13. Após a reinicialização, ingresse cada um dos computadores autônomos no cluster de failover do Windows Server de destino.
 
-14. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso “Nome do Servidor” de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
+14. Agora no cluster de destino no Gerenciador de Cluster de Failover, renomeie o recurso "Nome do Servidor" de cada função da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o nome usado anteriormente pelo cluster original.
 
 15. Depois que todas as FCIs forem renomeadas, reinicie cada um dos computadores no novo cluster.
 

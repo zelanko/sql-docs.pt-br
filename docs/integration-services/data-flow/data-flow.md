@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503572"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
@@ -68,7 +68,7 @@ ms.locfileid: "51641673"
  Quando a guia **Fluxo de Dados** está ativa, a Caixa de Ferramentas contém as origens, as transformações e os destino que podem ser adicionados ao fluxo de dados.  
   
 ## <a name="expressions"></a>Expressões  
- Vários componentes de fluxo de dados — origens, transformações e destinos — oferecem suporte ao uso de expressões de propriedade em algumas de suas propriedades. Uma expressão de propriedade é uma expressão que substitui o valor da propriedade quando o pacote é carregado. Em tempo de execução, o pacote usa os valores atualizados de propriedade. As expressões são criadas usando a sintaxe de expressão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e podem incluir as funções, os operadores, os identificadores e as variáveis do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
+ Vários dos componentes do fluxo de dados, como origens, transformações e destinos, permitem o uso de expressões de propriedade em algumas de suas propriedades. Uma expressão de propriedade é uma expressão que substitui o valor da propriedade quando o pacote é carregado. Em tempo de execução, o pacote usa os valores atualizados de propriedade. As expressões são criadas usando a sintaxe de expressão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e podem incluir as funções, os operadores, os identificadores e as variáveis do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
  Se você criar um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as propriedades de quaisquer componentes de fluxo de dados que oferecem suporte às expressões de propriedade estarão expostas na tarefa de Fluxo de Dados à qual pertencem. Para adicionar, alterar e remover as expressões de propriedade dos componentes de fluxo de dados, clique na tarefa de Fluxo de Dados e, em seguida, use a janela Propriedades ou o editor para a tarefa adicionar, alterar ou excluir expressões de propriedade. As expressões de propriedades para a tarefa de Fluxo de Dados em si são gerenciadas na janela Propriedades.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51641673"
  Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colunas  
- Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna será configurável dependendo do tipo da coluna, entrada, saída, ou externa. O[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para a coluna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
+ Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e, dependendo do tipo de coluna, como entrada, saída ou externa, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para cada uma. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
   
 ## <a name="paths"></a>Caminhos  
  Os caminhos conectam os componentes de fluxo de dados. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , você pode exibir e modificar as propriedades de caminho, exibir os metadados de saída do ponto inicial do caminho e anexar visualizadores de dados a um caminho.  

@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699781"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398640"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,9 +98,9 @@ ms.locfileid: "51699781"
 |0|Nenhum failover ou reinicialização automática|Indica que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha. Esse nível destina-se apenas a fins de manutenção do sistema.|  
 |1|Failover ou reinicialização quando o servidor estiver inativo|Indica que uma reinicialização ou failover de servidor será disparado se a seguinte condição for gerada:<br /><br /> O serviço SQL Server está inativo.|  
 |2|Failover ou reinicialização em caso de servidor sem resposta|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).|  
-|3*|Failover ou reinicialização em caso de erros críticos de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.|  
-|4|Failover ou reinicialização em caso de erros moderados de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de recurso’.|  
-|5|Failover ou reinicialização em qualquer condição de falha qualificada|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de recurso’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de processamento de consulta’.|  
+|3*|Failover ou reinicialização em caso de erros críticos de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.|  
+|4|Failover ou reinicialização em caso de erros moderados de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de recurso'.|  
+|5|Failover ou reinicialização em qualquer condição de falha qualificada|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de recurso'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'query_processing error'.|  
   
  *Valor padrão  
   

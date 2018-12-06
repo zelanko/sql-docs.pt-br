@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417477"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Aprimorar grupos de expansão do PolyBase no Windows
 
@@ -70,7 +70,7 @@ Veja o passo a passo de como configurar um Grupo do PolyBase usando:
   
 ## <a name="select-one-sql-server-as-head-node"></a>Selecione um SQL Server como nó de cabeçalho  
   
-Depois que a instalação estiver concluída, os computadores podem funcionar como nós de cabeçalho do Grupo do PolyBase. Neste exemplo, podemos escolher "MSSQLSERVER" em PQTH4A CMP01 como o nó de cabeçalho.
+Depois que a instalação estiver concluída, os computadores podem funcionar como nós de cabeçalho do Grupo do PolyBase. Neste exemplo, podemos escolher "MSSQLSERVER" em PQTH4A-CMP01 como o nó de cabeçalho.
   
 ## <a name="add-other-sql-server-instances-as-compute-nodes"></a>Adicionar outras instâncias do SQL Server como nós de computação  
   

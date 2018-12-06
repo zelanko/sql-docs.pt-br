@@ -14,19 +14,19 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505357"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Classificar linhas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Você pode classificar linhas em um resultado de consulta. Isto é, você pode nomear uma coluna particular ou conjunto de colunas cujos valores determinam a classificação das linhas no conjunto de resultados.  
   
 > [!NOTE]  
-> A ordem de classificação é determinada em parte pela sequência de agrupamento da coluna. Você pode alterar a sequência de agrupamento na [Caixa de Diálogo de Agrupamento](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md).  
+> A ordem de classificação é determinada em parte pela sequência de ordenação da coluna. Você pode alterar a sequência de ordenação na [Caixa de Diálogo de Ordenação](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md).  
   
 Existem vários modos onde você pode classificar resultados de consulta:  
   
@@ -62,7 +62,7 @@ Existem vários modos onde você pode classificar resultados de consulta:
     ORDER BY price DESC  
     ```  
   
--   **Você pode classificar por colunas derivadas** .   Por exemplo, você pode criar um conjunto de resultados onde cada linha contenha um título de livro – com os livros que pagam royalty mais alto por cópia aparecendo primeiro. O SQL resultante pode ter esta aparência:  
+-   **Você pode classificar por colunas derivadas**. Por exemplo, crie um conjunto de resultados no qual cada linha contenha um título de livro, com os livros que pagam os royalties mais altos por cópia aparecendo primeiro. O SQL resultante pode ter esta aparência:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ Existem vários modos onde você pode classificar resultados de consulta:
   
     Para calcular uma coluna derivada, você pode usar sintaxe SQL, como no exemplo anterior, ou pode usar uma função definida pelo usuário que retorna um valor escalar. Para obter mais informações sobre funções definidas pelo usuário, consulte a documentação do SQL Server.  
   
--   **Você pode classificar linhas agrupadas** .   Por exemplo; você pode criar um conjunto de resultados onde cada linha descreve uma cidade, mais o número de autores naquela cidade – com as cidades contendo muitos autores que aparecem primeiro. O SQL resultante pode ter esta aparência:  
+-   **Você pode classificar linhas agrupadas**. Por exemplo, crie um conjunto de resultados em que cada linha descreva uma cidade, mais o número de autores naquela cidade – com as cidades contendo muitos autores que aparecem primeiro. O SQL resultante pode ter esta aparência:  
   
     ```  
     SELECT city, state, COUNT(*)  

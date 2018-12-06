@@ -13,12 +13,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b49e683b948443533019ce23c91bacfc04165c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c265d14a78f89cf90e7aaa572fa584a5aa69f96f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689334"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520217"
 ---
 # <a name="print-dialog-box"></a>Caixa de diálogo Imprimir
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Você pode especificar como deseja imprimir um documento selecionando opções n
 Especifica a impressora. Selecione uma impressora na lista. A impressora selecionada torna-se a padrão até que você encerre o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou selecione outra impressora. As informações mostradas nos campos abaixo da lista aplicam-se à impressora selecionada.  
   
 **Status**  
-Descreve o estado da impressora selecionada; por exemplo, ocupada ou pronta.  
+Descreve o estado da impressora selecionada, por exemplo, ocupada ou pronta.  
   
 **Tipo**  
 Identifica a impressora selecionada.  

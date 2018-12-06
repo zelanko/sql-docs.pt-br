@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09004ae91d7a30c64413f1f5f426e1c9da9fd07
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509000"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Caixa de diálogo Índice de Texto Completo (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Exclua o índice de texto completo selecionado na lista **Índice de texto compl
 Quando expandida, mostra **Colunas** e o **Nome do Catálogo de Texto Completo**.  
   
 **Colunas**  
-Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para consultar a lista completa, clique no botão de reticências (**…**) à esquerda do campo de propriedade.  
+Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para ver a lista completa, clique no botão de reticências (**...**) à esquerda do campo de propriedade.  
   
 **Full-Text Catalog Name**  
 Exibe o nome do catálogo de texto completo no qual este índice de texto completo é armazenado. Para armazenar o índice em um catálogo diferente, clique no nome do catálogo e escolha outro na lista suspensa.  

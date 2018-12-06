@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812819"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390479"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Você pode transmitir parâmetros de relatório a um relatório incluindo-os em uma URL de relatório. Esses parâmetros de URL não são prefixados, pois eles são transmitidos diretamente para o mecanismo de processamento de relatório.  
@@ -81,17 +81,17 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Exemplos adicionais  
  O exemplo de URL a seguir inclui espaços e vários parâmetros  
   
--   O nome de pasta “Equipe de instrução do usuário do SQL Server” inclui espaços e, portanto, o sinal “+” substitui cada espaço.  
+-   O nome de pasta "Equipe de Instrução do Usuário do SQL Server" inclui espaços e, portanto, o sinal "+" substitui cada espaço.  
   
--   O nome de relatório “relatório do projeto da equipe” inclui espaços e, portanto, o sinal “+” substitui cada espaço.  
+-   O nome de relatório "relatório do projeto de equipe" inclui espaços e, portanto, o sinal "+" substitui cada espaço.  
   
--   Passa dois parâmetros “teamgrouping2” com um valor “xgroup” e “teamgrouping1” com um valor “ygroup”.  
+-   Passa dois parâmetros "teamgrouping2" com um valor "xgroup" e "teamgrouping1" com um valor "ygroup".  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- O exemplo de URL a seguir inclui um parâmetros com vários valores, ”OrderID. O formato de um parâmetro com vários valores é repetir o nome do parâmetro para cada valor.  
+ O exemplo de URL a seguir inclui um parâmetros com vários valores, "OrderID. O formato de um parâmetro com vários valores é repetir o nome do parâmetro para cada valor.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  

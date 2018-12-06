@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668695"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395872"
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-Os comandos anteriores criam um índice padrão na coluna computada `vName`, que representa o valor da propriedade JSON `$.name`. Na página de código Sérvio Cirílico, a ordem das letras é "А", "Б", "В", "Г", "Д", "Ђ", "Е" etc. A ordem dos itens no índice está em conformidade com as regras do Sérvio Cirílico, pois o resultado da função `JSON_VALUE` herda sua ordenação da coluna de origem. O exemplo a seguir consulta esse agrupamento e classifica os resultados por nome.  
+Os comandos anteriores criam um índice padrão na coluna computada `vName`, que representa o valor da propriedade JSON `$.name`. Na página de código Sérvio Cirílico, a ordem das letras é 'А','Б','В','Г','Д','Ђ','Е', etc. A ordem dos itens no índice está em conformidade com as regras do Sérvio Cirílico, pois o resultado da função `JSON_VALUE` herda sua ordenação da coluna de origem. O exemplo a seguir consulta esse agrupamento e classifica os resultados por nome.  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*

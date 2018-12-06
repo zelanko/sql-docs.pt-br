@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 18a805e049dfeedc3b8984c1c92da3af40b5bfda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812273"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405705"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
 
@@ -32,7 +32,7 @@ ms.locfileid: "51812273"
   
  "O aplicativo Web SharePoint 80 não tem a coleção de sites raiz"  
   
- A mensagem é encontrada no log de instalação do suplemento, chamada “RS_SP_#.log”, em que # é um número de incremento. O arquivo de log é encontrado na pasta Temp de usuários atuais, por exemplo, C:\Users\\[user name]\AppData\Local\Temp. Para obter mais informações sobre como registrar opções em log com o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ A mensagem é encontrada no log de instalação do suplemento, chamada "RS_SP_#.log", em que # é um número de incremento. O arquivo de log é encontrado na pasta Temp de usuários atuais, por exemplo, C:\Users\\[user name]\AppData\Local\Temp. Para obter mais informações sobre como registrar opções em log com o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
 
 ## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Ativar os recursos de integração de conjunto de sites do Servidor de Relatório e do Power View
   

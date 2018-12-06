@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1083c87475c27e33dccd069149e240098d187473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812919"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418797"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Relatórios em modo local vs. modo conectado no Visualizador de Relatórios
 
@@ -79,7 +79,7 @@ ms.locfileid: "51812919"
   
 ## <a name="connected-mode"></a>modo conectado
 
- Para obter as informações mais recentes sobre o uso da extensão ADS com o modo conectado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte [Relatório de Serviços do Access no site do SharePoint mostra erro na extensão de dados ‘ADS’](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Para obter as informações mais recentes sobre o uso da extensão ADS com o modo conectado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], confira [Acessar Relatório de Serviços no Site do SharePoint mostra erro na extensão de dados 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Confira também
 

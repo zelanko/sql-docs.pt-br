@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849584"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410853"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   O `PERMISSION` estabelece qual ação é permitida ou proibida. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] pode especificar 230 permissões. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tem menos permissões, pois algumas ações não são relevantes no Azure. As permissões são listadas no tópico [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-database-engine.md) e no gráfico referenciado abaixo.  
   
--   `ON SECURABLE::NAME` é o tipo de item protegível (servidor, objeto de servidor, banco de dados ou objeto de banco de dados) e seu nome. Algumas permissões não exigem `ON SECURABLE::NAME` , pois ele não é ambíguo ou inadequado ao contexto. Por exemplo, a permissão `CREATE TABLE` não exige a cláusula `ON SECURABLE::NAME` . (Por exemplo, `GRANT CREATE TABLE TO Mary;` permite que a Maria crie tabelas.)  
+-   `ON SECURABLE::NAME` é o tipo de item protegível (servidor, objeto de servidor, banco de dados ou objeto de banco de dados) e seu nome. Algumas permissões não exigem `ON SECURABLE::NAME` , pois ele não é ambíguo ou inadequado ao contexto. Por exemplo, a permissão `CREATE TABLE` não exige a cláusula `ON SECURABLE::NAME`. (Por exemplo, `GRANT CREATE TABLE TO Mary;` permite que a Maria crie tabelas.)  
   
 -   `PRINCIPAL` é a entidade de segurança (logon, usuário ou função) que recebe ou perde a permissão. Conceda permissões às funções sempre que possível.  
   

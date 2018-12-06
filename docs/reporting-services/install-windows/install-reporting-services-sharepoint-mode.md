@@ -12,12 +12,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2f2de4e141a43631968124684c9c31ecc3f235f6
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1aca33e3978b89ccf5f4423e76f0e2ba7888e6a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050958"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406513"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>Instalar o Reporting Services 2016 no modo do SharePoint
 
@@ -25,7 +25,7 @@ ms.locfileid: "50050958"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-O SQL Server Reporting Services no SharePoint permite a criação de relatórios e a exibição em bibliotecas de documentos, entrega da assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de relatórios por email, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], alertas de dados e recursos de gerenciamento de relatórios, tudo isso em uma implantação com base no [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Para obter mais informações sobre recursos no modo do SharePoint, consulte a seção “Suporte a recursos e diferenças de comportamento por modo de servidor” em [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
+O SQL Server Reporting Services no SharePoint permite a criação de relatórios e a exibição em bibliotecas de documentos, entrega da assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de relatórios por email, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], alertas de dados e recursos de gerenciamento de relatórios, tudo isso em uma implantação com base no [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Para obter mais informações sobre recursos no modo do SharePoint, confira a seção "Suporte a recursos e diferenças de comportamento por modo de servidor" em [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
 
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.

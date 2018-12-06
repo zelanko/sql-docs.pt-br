@@ -23,12 +23,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1570c643375d9ca7b327b7e5f630657ff9aeaeed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6a920aa5f31bb18d717ea3da8edd328bd398a92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694974"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420537"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -61,7 +61,7 @@ ms.locfileid: "47694974"
   
 -   Especifique um caractere de qualificador de texto. Cada coluna pode ser configurada para reconhecer um qualificador de texto.  
   
-     O uso de um caractere qualificador para inserir um caractere qualificador em uma cadeia de caracteres qualificada tem suporte de um Gerenciador de Conexões de arquivo simples. A instância dupla de um qualificador de texto é interpretada como uma instância literal única daquela cadeia de caracteres. Por exemplo, se o qualificador de texto for uma aspa simples e os dados de entrada forem ‘abc’, ‘def’, ‘g’hi’, os dados de saída serão abc, def, g'hi. No entanto, uma instância de um qualificador inserida em uma cadeia de caracteres qualificada faz com que a fonte de arquivo simples falhe com o erro DTS_E_PRIMEOUTPUTFAILED.
+     O uso de um caractere qualificador para inserir um caractere qualificador em uma cadeia de caracteres qualificada tem suporte de um Gerenciador de Conexões de arquivo simples. A instância dupla de um qualificador de texto é interpretada como uma instância literal única daquela cadeia de caracteres. Por exemplo, se o qualificador de texto for uma aspa simples e os dados de entrada forem 'abc', 'def', 'g'hi', os dados de saída serão abc, def, g'hi. No entanto, uma instância de um qualificador inserida em uma cadeia de caracteres qualificada faz com que a fonte de arquivo simples falhe com o erro DTS_E_PRIMEOUTPUTFAILED.
   
 -   Defina as propriedades, como o nome, o tipo de dados e a largura máxima em colunas individuais.  
   

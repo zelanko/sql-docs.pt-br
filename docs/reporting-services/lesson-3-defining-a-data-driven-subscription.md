@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703474"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302548"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
@@ -32,14 +32,17 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
   
 ## <a name="define-a-description"></a>Definir uma descrição  
 1.  Digite **Entrega de ordem de venda** na descrição.
+
 ## <a name="type"></a>Digite
 1.  Clique em **Assinatura controlada por dados**.  
+
 ## <a name="schedule"></a>Agenda
 1. Na seção de agendamento, clique em **Agendamento específico do relatório**.
 2. Clique em **Editar agendamento**.
 3.  Em **Detalhes do Agendamento**, clique em **Uma vez**.  
 4.  Especifique uma hora de início que esteja alguns minutos adiantados da hora atual.  
 5.  Clique em **Aplicar**.
+
 ## <a name="destination"></a>Destino  
 1.  Na seção Destino, selecione **Compartilhamento de Arquivos do Windows** como o método de entrega.  
 
@@ -53,22 +56,24 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>Credenciais
- 1. Selecione **Usando as seguintes credenciais**.
- 2. Selecione **Nome de usuário e senha do Windows**.
- 3.  Em **Nome de Usuário** e **Senha**, digite seu nome de usuário de domínio e senha. Inclua a conta de domínio e de usuário ao especificar **Nome de Usuário**.
-     > [!NOTE]  
+## <a name="credentials"></a>Credenciais
+1. Selecione **Usando as seguintes credenciais**.
+2. Selecione **Nome de usuário e senha do Windows**.
+3.  Em **Nome de Usuário** e **Senha**, digite seu nome de usuário de domínio e senha. Inclua a conta de domínio e de usuário ao especificar **Nome de Usuário**.
+    > [!NOTE]  
     > As credenciais usadas para a conexão com uma fonte de dados de assinante não são retransmitidas para o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Se você modificar a assinatura mais tarde, deverá digitar novamente a senha usada para a conexão com a fonte de dados.
+
 ## <a name="query"></a>Consulta      
 1.  Na caixa de consulta, digite a seguinte consulta:  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Especifique um tempo limite de 30 segundos.  
   
 3.  Clique em **Validar consulta**e em **Aplicar**.
+
 ## <a name="delivery-options"></a>Opções de entrega
 Preencha os seguintes valores:
 

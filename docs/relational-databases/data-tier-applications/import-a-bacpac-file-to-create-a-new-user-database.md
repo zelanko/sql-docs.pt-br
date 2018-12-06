@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673665"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521238"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de importação compila um novo DAC em dois estágios.  
@@ -90,16 +90,16 @@ ms.locfileid: "51673665"
   
  **Opções**  
   
--   **Não exibir esta página novamente.** – Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
+-   **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
--   **Avançar** – Continua na página **Configurações de Importação** .  
+-   **Avançar** – continua na página **Configurações de Importação**.  
   
 -   **Cancelar** – cancela a operação e fecha o assistente.  
   
 ###  <a name="Import_settings"></a> Página Configurações de Importação  
  Use essa página para especificar a localização do arquivo .bacpac a ser importado.  
   
--   **Importar de disco local** – Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
+-   **Importar do disco local** – clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
 -   **Importar do Azure** – importa um arquivo BACPAC de um contêiner do Microsoft Azure. É necessário se conectar a um contêiner do Microsoft Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673665"
   
  **Para uma instância local do SQL Server:**  
   
--   **Nome do novo banco de dados** – Forneça um nome para o banco de dados importado.  
+-   **Nome do novo banco de dados** – forneça um nome para o banco de dados importado.  
   
--   **Caminho do arquivo de dados** – Forneça um diretório local para arquivos de dados. Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido.  
+-   **Caminho do arquivo de dados** – forneça um diretório local para arquivos de dados. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido.  
   
--   **Caminho do arquivo de log** – Forneça um diretório local para arquivos de log. Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido.  
+-   **Caminho do arquivo de log** – forneça um diretório local para arquivos de log. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido.  
   
  Para continuar, clique em **Avançar**.  
   

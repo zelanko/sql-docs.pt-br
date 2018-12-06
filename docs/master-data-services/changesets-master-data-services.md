@@ -12,12 +12,12 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b341dc48a5f72e3f3a0067c9f4d00267175243be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 728f79c1856cf4447bf12333162fcd209583468e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395279"
 ---
 # <a name="changesets-master-data-services"></a>Conjuntos de alterações (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "47713224"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] agora dá suporte à capacidade de salvar todas as alterações pendentes em uma entidade como conjuntos de alterações. Há dois cenários de uso para este recurso.  
   
--   **É alterado quando “Aprovação necessária” é ativada pelo Administrador de Entidade**  
+-   **É alterado quando "Aprovação necessária" é ativada pelo Administrador de Entidade**  
   
      Se um Administrador de entidade especificar que as alterações em determinada entidade exigem aprovação antes que sejam confirmadas, as alterações na entidade deverão ser salvas em um conjunto de alterações novo ou existente antes que sejam enviadas para aprovação.  Para obter mais informações, consulte [Aprovação necessária &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)  
   

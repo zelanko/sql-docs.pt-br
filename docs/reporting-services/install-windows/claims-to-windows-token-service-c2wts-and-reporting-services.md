@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020590"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397149"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
 
@@ -90,7 +90,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
 
 3. Configure o *AllowedCallers* do C2WTS.
 
-    O C2WTS exige que as identidades dos “chamadores” sejam explicitamente listadas no arquivo de configuração, **C2WTShost.exe.config**. O C2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que esteja configurado para fazer assim. Neste caso, o “chamador” é o grupo WSS_WPG do Windows. O arquivo C2WTShost.exe.confi é salvo no seguinte local:
+    O C2WTS exige que as identidades dos "chamadores" sejam explicitamente listadas no arquivo de configuração, **C2WTShost.exe.config**. O C2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que esteja configurado para fazer assim. Neste caso, o “chamador” é o grupo WSS_WPG do Windows. O arquivo C2WTShost.exe.confi é salvo no seguinte local:
 
     Alterar a conta de serviço na Administração Central do SharePoint para o serviço C2WTS adicionará essa conta ao grupo WSS_WPG.
 

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513824"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51657075"
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de exportação compila um arquivo de exportação DAC em duas fases.  
   
-1.  A exportação compila uma definição de DAC no arquivo de exportação – BACPAC– do mesmo modo que uma extração de DAC compila uma definição de DAC em um arquivo de pacote de DAC. A definição do DAC exportada inclui todos os objetos no banco de dados atual. Se o processo de exportação for executado em um banco de dados que foi implantado originalmente de um DAC, e tiverem sido feitas alterações diretamente no banco de dados depois da implantação, a definição exportada corresponderá ao objeto definido no banco de dados, e não ao que foi definido no DAC original.  
+1.  A exportação compila uma definição de DAC no arquivo de exportação – BACPAC – do mesmo modo que uma extração de DAC compila uma definição de DAC em um arquivo de pacote de DAC. A definição do DAC exportada inclui todos os objetos no banco de dados atual. Se o processo de exportação for executado em um banco de dados que foi implantado originalmente de um DAC, e tiverem sido feitas alterações diretamente no banco de dados depois da implantação, a definição exportada corresponderá ao objeto definido no banco de dados, e não ao que foi definido no DAC original.  
   
 2.  A exportação em massa copia os dados de todas as tabelas no banco de dados e incorpora os dados no arquivo de exportação.  
   
@@ -90,12 +90,12 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
   
  **Avançar** – Segue para a página **Selecionar Pacote de DAC** .  
   
- **Cancelar** – Cancela a operação e fecha o Assistente.  
+ **Cancelar** – cancela a operação e fecha o Assistente.  
   
 ##  <a name="Export_settings"></a> Página Configurações de Exportação  
  Use essa página para especificar o local onde criar o arquivo BACPAC a ser criado.  
   
--   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
+-   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
 -   **Salvar no Microsoft Azure** – Cria um arquivo BACPAC em um contêiner do Microsoft Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   

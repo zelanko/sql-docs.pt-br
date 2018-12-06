@@ -27,12 +27,12 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609604"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393038"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ CREATE COLUMN MASTER KEY key_name
  É o nome pelo qual a chave mestra de coluna será conhecida no banco de dados.  
   
  *key_store_provider_name*  
- Especifica o nome de um provedor de repositório de chaves, que é um componente de software do cliente que encapsula um repositório de chaves que contém a chave mestra de coluna. Um driver cliente habilitado para Always Encrypted usa um nome de provedor de repositório de chaves para pesquisar um provedor de repositório de chaves no registro do driver de provedores de repositório de chaves. O driver usa o provedor para descriptografar chaves de criptografia de coluna, protegidas pela chave mestra da coluna, armazenadas no repositório de chaves subjacente. Um valor de texto não criptografado da chave de criptografia de coluna então é usado para criptografar parâmetros de consulta, correspondentes às colunas de banco de dados criptografadas, ou para descriptografar os resultados da consulta de colunas criptografadas.  
+ Especifica o nome de um provedor de repositório de chaves, que é um componente de software do cliente que encapsula um repositório de chaves que contém a chave mestra de coluna. Um driver cliente habilitado para Always Encrypted usa um nome de provedor de repositório de chaves para pesquisar um provedor de repositório de chaves no Registro do driver de provedores de repositório de chaves. O driver usa o provedor para descriptografar chaves de criptografia de coluna, protegidas pela chave mestra da coluna, armazenadas no repositório de chaves subjacente. Um valor de texto não criptografado da chave de criptografia de coluna então é usado para criptografar parâmetros de consulta, correspondentes às colunas de banco de dados criptografadas, ou para descriptografar os resultados da consulta de colunas criptografadas.  
   
  Bibliotecas de drivers de cliente habilitadas para Always Encrypted incluem provedores de repositório de chaves para repositórios de chaves populares.   
   

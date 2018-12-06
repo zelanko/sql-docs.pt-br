@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085252"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302683"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085252"
 -   Gerenciar o espaço de armazenamento  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Benefícios do Orientador de Otimização do Mecanismo de Banco de Dados  
- A otimização do desempenho de consulta pode ser difícil sem uma compreensão completa da estrutura de banco de dados e as consultas que são executadas no banco de dados. O Orientador de Otimização do Mecanismo de Banco de Dados pode fazer essa tarefa com mais facilidade analisando o cache de planos da consulta atual ou analisando uma carga de trabalho de consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] que você cria e recomendando um design físico apropriado. Para administradores de banco de dados mais experientes, o DTA expõe um mecanismo avançado para executar a análise E-Se exploratória de diferentes alternativas de design físico. O DTA pode fornecer as seguintes informações.  
+ A otimização do desempenho de consulta pode ser difícil sem uma compreensão completa da estrutura de banco de dados e as consultas que são executadas no banco de dados. O DTA (**Orientador de Otimização do Mecanismo de Banco de Dados**) pode fazer essa tarefa com mais facilidade analisando o cache de plano de consulta atual ou analisando uma carga de trabalho de consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] que você cria e recomendando um design físico apropriado. Para administradores de banco de dados mais experientes, o DTA expõe um mecanismo avançado para executar a análise E-Se exploratória de diferentes alternativas de design físico. O DTA pode fornecer as seguintes informações.  
   
 -   Recomendar a melhor combinação de índices rowstore e [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) para bancos de dados utilizando o otimizador de consulta para analisar consultas em uma carga de trabalho.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085252"
 
 -   Considerar alternativas em que você fornece possíveis escolhas de design no formulário de configurações hipotéticas para avaliação do Orientador de Otimização do Mecanismo de Banco de Dados.
 
--  Ajustar cargas de trabalho de uma variedade de fontes, incluindo arquivo e tabela do Repositório de Consultas do SQL Server, do Plan Cache, de Rastreamento do SQL Server Profiler ou um arquivo .SQL.
+-   Ajustar cargas de trabalho de uma variedade de fontes, incluindo arquivo e tabela do Repositório de Consultas do SQL Server, do Plan Cache, de Rastreamento do SQL Server Profiler ou um arquivo .SQL.
 
   
- O Orientador de Otimização do Mecanismo de Banco de Dados é projetado para tratar os seguintes tipos de cargas de trabalho de consulta.  
+O Orientador de Otimização do Mecanismo de Banco de Dados é projetado para tratar os seguintes tipos de cargas de trabalho de consulta:  
   
 -   Processamento de transações online (OLTP) somente consulta  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085252"
 -   Cargas de trabalho de atualização pesadas (mais modificações de dados do que consultas)  
   
 ## <a name="dta-components-and-concepts"></a>Componentes e conceitos do DTA  
- Interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
+ **Interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados**  
  Uma interface fácil de usar na qual você pode especificar a carga de trabalho e selecionar várias opções de ajuste.  
   
  Utilitário**dta**   
  A versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
- carga de trabalho  
+ **carga de trabalho**  
  Um arquivo de script, um arquivo de rastreamento ou uma tabela de rastreamento Transact-SQL que contém uma carga de trabalho representativa para os bancos de dados a serem ajustados. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode especificar o cache de planos como carga de trabalho.  Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, é possível [especificar o Repositório de Consultas como a carga de trabalho](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- Arquivo de entrada XML  
+ **Arquivo de entrada XML**  
  Um arquivo formatado pelo XML que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar cargas de trabalho. O arquivo de entrada XML dá suporte a opções de ajuste avançadas que não estão disponível na GUI nem no utilitário **dta** .  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  O Orientador de Otimização do Mecanismo de Banco de Dados tem as seguintes limitações e restrições:  
   
--   Ele não pode adicionar ou remover índices exclusivos ou índices que impõem restrições PRIMARY KEY ou UNIQUE.  
+-   Ele não pode adicionar nem remover índices exclusivos ou índices que impõem restrições `PRIMARY KEY` ou `UNIQUE`.  
   
 -   Ele não pode analisar um banco de dados que está definido para modo de usuário único.  
   

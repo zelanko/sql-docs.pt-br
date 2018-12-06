@@ -17,12 +17,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77b815ac5cf4a470570e458cd9702d64ebada5ce
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 9a12b22546610ef8b60eba510619bb523d0b6e58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515361"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas espera até receber todas as linhas de entrada para completar seu processamento. Este tópico discute uma transformação síncrona. Para obter informações sobre transformações assíncronas, consulte [Criando uma transformação assíncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "49991269"
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se desejar usar variáveis existentes no script, adicione-as aos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** na página **Script** do **Editor de Transformação Scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Outra alternativa é selecionar diversas variáveis clicando no botão de reticências (**…**) ao lado dos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** e, em seguida, selecionar as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Outra alternativa é selecionar diversas variáveis clicando no botão de reticências (**...**) ao lado dos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** e, em seguida, selecionar as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505909"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Gera uma exceção e transfere a execução para um bloco CATCH de uma construção TRY…CATCH no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Gera uma exceção e transfere a execução a um bloco CATCH de um constructo TRY…CATCH no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Remarks  
  A instrução antes de THROW deve ser seguida pelo terminador de instrução ponto-e-vírgula (;).  
   
- Se uma construção TRY…CATCH não estiver disponível, o lote de instruções será encerrado. O número da linha e o procedimento em que a exceção foi gerada estão definidos. A severidade é definida como 16.  
+ Se não houver um constructo TRY…CATCH disponível, o lote de instruções será terminado. O número da linha e o procedimento em que a exceção foi gerada estão definidos. A severidade é definida como 16.  
   
  Se a instrução THROW for especificada sem parâmetros, ela deverá aparecer dentro de um bloco CATCH. Isso faz com que a exceção capturada seja gerada. Qualquer erro que ocorrer em uma instrução THROW causará o encerramento do lote de instruções.  
   

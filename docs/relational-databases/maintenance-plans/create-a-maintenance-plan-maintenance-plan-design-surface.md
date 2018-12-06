@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217944"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514386"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "51217944"
   
     3.  Na caixa de diálogo **Propriedades de Conexão** , na caixa **Nome da conexão** , insira o nome da conexão que você está criando.  
   
-    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite um nome de servidor** , digite o nome do SQL Server que deseja usar ou clique nas reticências **(…)** e selecione um servidor na caixa de diálogo **SQL Server** . Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
+    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite o nome do servidor**, digite o nome do SQL Server que deseja usar ou clique nas reticências **(...)** e selecione um servidor na caixa de diálogo **SQL Server**. Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
   
     5.  Em **Insira as informações para fazer logon no servidor**, selecione **Usar Segurança Integrada do Windows NT** ou **Usar nome de usuário e senha específicos**. Se você optar por usar um nome e uma senha de usuário específicos, insira essas informações nas caixas **Nome de usuário** e **Senha** , respectivamente.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "51217944"
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar pasta –**_nome_do\_servidor_ ou **Localizar arquivos de banco de dados –**_nome_do\_servidor_.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar pasta –** _server\_name_ ou **Localizar arquivos de banco de dados –** _server\_name_.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "51217944"
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do arquivo de log –**_nome_do\_servidor_.  
+     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –** _server\_name_.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  

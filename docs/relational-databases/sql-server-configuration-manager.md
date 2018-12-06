@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510584"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657027"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou exiba as propriedades do alias de um servidor, incluindo:  
   
--   Alias de Servidor –– O alias de servidor usado para o computador ao qual o cliente está se conectando.  
+-   Alias de servidor: alias do servidor usado para o computador ao qual o cliente está se conectando.  
   
--   Protocolo –– O protocolo de rede usado para a entrada de configuração.  
+-   Protocolo – o protocolo de rede usado para a entrada de configuração.  
   
--   Parâmetros de Conexão –– Os parâmetros associados ao endereço de conexão da configuração de protocolo de rede.  
+-   Parâmetros de Conexão – os parâmetros associados ao endereço de conexão da configuração do protocolo de rede.  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager também permite que você visualize as informações sobre as instâncias de cluster de failover, apesar do Administrador de Cluster dever ser usado para algumas ações como iniciar e interromper os serviços.  
   

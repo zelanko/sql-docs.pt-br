@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418027"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -133,7 +133,7 @@ deallocate #hfunctions
   
 -   Todas as colunas solicitadas de dados de alteração.  
   
--   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: ‘I’ de inserir, ‘D’ de excluir, ‘UO’ de atualizar valores antigos e ‘UN’ de atualizar valores novos.  
+-   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: 'I' de inserir, 'D' de excluir, 'UO' de atualizar valores antigos e 'UN' de atualizar valores novos.  
   
 -   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *@update_flag_list* . Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
   

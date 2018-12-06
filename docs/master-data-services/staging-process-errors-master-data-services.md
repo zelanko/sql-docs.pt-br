@@ -14,12 +14,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65239f7dbdb0690115f50172ea34f72a62924250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798064"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395380"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
 
@@ -35,8 +35,8 @@ ms.locfileid: "47798064"
 |210032|O nome da hierarquia está ausente ou não é válido.|A hierarquia explícita não foi encontrada ou o valor de **HierarchyName** estava em branco.|Consolidado<br /><br /> Relação|  
 |210035|Como não existe uma regra de negócio de geração de código, o **MemberCode** é necessário.|Ao criar ou atualizar membros, um **MemberCode** sempre é necessário, a menos que você esteja usando a geração de código automática. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
 |210036|Como existe uma regra de negócio de geração de código, o **MemberCode** não é necessário.|Ao criar ou atualizar membros, um **MemberCode** não é necessário quando você está usando a geração de código automática. Porém, se preferir, você poderá especificar um código. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
-|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra “ROOT”.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
-|210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra “MDMUNUSED”.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **ImportType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
 |300002|O código de membro não é válido.|Relações: o código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |300004|O código de membro já existe.|**ImportType** = **1** e você usou um código de membro que já existe na entidade.|Folha<br /><br /> Consolidado|  

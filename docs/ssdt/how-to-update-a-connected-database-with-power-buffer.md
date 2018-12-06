@@ -13,12 +13,12 @@ ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701520"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396779"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Como atualizar um banco de dados conectado com o Power Buffer
 A tecnologia Power Buffer do SQL Server Data Tools facilita a aplicação de alterações em seu banco de dados conectado, armazenando todas as suas edições na sessão atual. Qualquer erro causado ao editar na janela Power Buffer (no Editor Transact\-SQL ou no Designer de Tabela) é exibido imediatamente no painel **Lista de Erros**, permitindo que você siga os erros identificados para a devida solução de problemas. Você pode verificar suas alterações pendentes até estar pronto para aplicá-las no seu banco de dados. Durante o processo de atualização, o SSDT automaticamente cria um script ALTER com base nas suas edições e o alerta para qualquer problema potencial. Você pode aplicar todas as alterações acumuladas em todas as janelas abertas do Power Buffer no mesmo banco de dados, ou salvar o script ALTER para ser implantado posteriormente.  
@@ -29,7 +29,7 @@ Os procedimentos a seguir utilizam entidades criadas em procedimentos anteriores
   
 ### <a name="to-apply-the-changes-made-in-the-previous-procedures"></a>Para aplicar as alterações feitas nos procedimentos anteriores  
   
-1.  Clique no botão verde **Atualizar** na barra de ferramentas (a dica de ferramenta “Atualizar Banco de Dados” será exibida se você passar o mouse sobre o botão). A barra de ferramentas está acima da Grade de Colunas do Designer de Tabela.  
+1.  Clique no botão verde **Atualizar** na barra de ferramentas (a dica de ferramenta "Atualizar Banco de Dados" será exibida se você passar o mouse sobre o botão). A barra de ferramentas está acima da Grade de Colunas do Designer de Tabela.  
   
 2.  A caixa de diálogo **Visualizar Atualizações de Banco de Dados** será exibida. Um script de implantação baseado nas suas alterações é gerado em segundo plano. A caixa de diálogo mostra um resumo das ações que o SSDT vai realizar (por exemplo, criar ou remover entidades de banco de dados), junto com problemas potenciais identificados (isso não se aplica ao nosso procedimento, mas será útil quando sua definição de banco de dados contiver erros que impeçam uma ação de atualização até serem resolvidos).  
   

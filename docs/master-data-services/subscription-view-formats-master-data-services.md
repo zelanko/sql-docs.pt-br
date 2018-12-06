@@ -12,12 +12,12 @@ ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a2df34751bd17c256860130101ac03a1d264366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8211d8e996d30d880cfc39f1e47e1141432c0e95
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716194"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395469"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
 

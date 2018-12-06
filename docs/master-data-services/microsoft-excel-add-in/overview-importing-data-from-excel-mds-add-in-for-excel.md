@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685964"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502946"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Visão geral: importação de dados do Excel (Suplemento MDS para Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47685964"
 
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publique dados no repositório do MDS quando quiser compartilhá-lo com outros usuários. Assim que os dados são publicados, eles ficam disponíveis para outros usuários do suplemento para download.  
   
- Ao publicar dados, qualquer dado que você adicionar ou atualizar será publicado no repositório do MDS. Os dados que você excluir não serão publicados – você deverá excluir os dados separadamente. Para obter mais informações, consulte [Excluir uma linha &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md).  
+ Ao publicar dados, qualquer dado que você adicionou ou atualizou será publicado no repositório do MDS. Os dados que você excluiu não são publicados – é necessário excluir os dados separadamente. Para obter mais informações, consulte [Excluir uma linha &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
 >  A publicação não pode ser usada para criar uma nova entidade. Para obter mais informações sobre como criar entidades, consulte [Criar uma entidade &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "47685964"
   
 -   Se você alterar o valor de **Código** para um membro, todas as transações anteriores do membro não serão disponibilizadas. Ao retornar o valor **Code** para o valor original, você pode acessar as transações anteriores.  
   
--   Você pode ver as transações feitas em um membro por outros usuários. Você também pode ver todas as transações que você fez em um membro, mesmo se não tiver mais permissão para atributos específicos. Não é possível exibir as transações que envolvam atributos em que a permissão esteja definida como Negar.  
+-   Você pode ver as transações feitas em um membro por outros usuários. Também será possível exibir todas as transações que você fez em um membro, mesmo se não tiver mais permissão para atributos específicos. Não é possível exibir as transações que envolvam atributos em que a permissão esteja definida como Negar.  
   
  Você pode ver todas as transações feitas em um membro. Para obter mais informações, consulte [Exibir todas as anotações ou transações de um membro &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   

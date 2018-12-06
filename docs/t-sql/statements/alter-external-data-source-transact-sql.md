@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667244"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396808"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumentos  
  data_source_name Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo.
   
- LOCATION = ‘server_name_or_IP’ especifica o nome do servidor ou um endereço IP.
+ LOCATION = 'server_name_or_IP' especifica o nome do servidor ou um endereço IP.
   
- RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port> especifica o local do Gerenciador de Recursos do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar os dados para uma consulta do PolyBase usando os recursos de computação do Hadoop. Essa é uma decisão baseada em custo. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port> especifica a localização do Resource Manager do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar os dados para uma consulta do PolyBase usando os recursos de computação do Hadoop. Essa é uma decisão baseada em custo. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.
   
  CREDENTIAL = Credential_Name Especifica a credencial nomeada. Confira [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 

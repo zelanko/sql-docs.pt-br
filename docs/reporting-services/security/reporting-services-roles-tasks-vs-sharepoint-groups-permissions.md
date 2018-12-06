@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813290"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397190"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
@@ -47,9 +47,9 @@ ms.locfileid: "51813290"
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Função:** por exemplo “Gerenciador de Conteúdo”.|**Grupo:** por exemplo, o grupo padrão “Visualizadores”.|  
-|---|**Grupo de nível de permissão:** por exemplo “Exibir Apenas” para o grupo “Visualizadores”.|  
-|**Tarefas:** por exemplo “Gerenciar Relatórios”.|**Permissões:** por exemplo, dentro do grupo “Exibir Apenas”, há permissões relacionadas à lista de exibir itens, exibir versões e exibir páginas de aplicativo.|  
+|**Função:** por exemplo "Gerenciador de Conteúdo".|**Grupo:** por exemplo, o grupo padrão "Visualizadores".|  
+|---|**Grupo de nível de permissão:** por exemplo "Exibir Apenas" para o grupo "Visualizadores".|  
+|**Tarefas:** por exemplo "Gerenciar Relatórios".|**Permissões:** por exemplo, dentro do grupo "Exibir Apenas", há permissões relacionadas à lista de exibir itens, exibir versões e exibir páginas de aplicativo.|  
   
  Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   

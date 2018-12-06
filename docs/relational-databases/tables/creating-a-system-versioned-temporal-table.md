@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665515"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409613"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665515"
 -   Tabela temporal com uma tabela de histórico definida pelo usuário criada antecipadamente: crie a tabela de histórico que melhor atenda às suas necessidades e faça referência a essa tabela durante a criação da tabela temporal.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Criação de uma tabela temporal com uma tabela de histórico anônimo  
- Criar uma tabela temporal com uma tabela de histórico "anônimo" é uma opção conveniente para a criação rápida de objeto, especialmente em ambientes de teste e de protótipos. Também é a maneira mais simples de criar uma tabela temporal, já que não exige qualquer parâmetro na cláusula **SYSTEM_VERSIONING** . No exemplo a seguir, uma nova tabela é criada com o controle de versão do sistema habilitado, sem definir o nome da tabela de histórico.  
+ Criar uma tabela temporal com uma tabela de histórico "anônimo" é uma opção conveniente para a criação rápida de objeto, especialmente em ambientes de teste e de protótipos. Também é a maneira mais simples de criar uma tabela temporal, já que não exige qualquer parâmetro na cláusula **SYSTEM_VERSIONING**. No exemplo a seguir, uma nova tabela é criada com o controle de versão do sistema habilitado, sem definir o nome da tabela de histórico.  
   
 ```  
 CREATE TABLE Department   

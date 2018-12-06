@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 589da307442ff382910d7185c761d4a0fe6a8178
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1713cfed406a4a300f98a1a06e9317cae1fb82e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723894"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402161"
 ---
 # <a name="xml-device-information-settings"></a>Configurações de informações do dispositivo XML
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato XML.  
@@ -36,7 +36,7 @@ ms.locfileid: "47723894"
 ## <a name="see-also"></a>Consulte Também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

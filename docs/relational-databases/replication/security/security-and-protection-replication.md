@@ -18,12 +18,12 @@ ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd926d424d02f5fb4e078688b62511e13340b206
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1abb3fe0d6a6ce1459ad3d29de0d9a5e6cf4d49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844584"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517356"
 ---
 # <a name="security-and-protection-replication"></a>Segurança e proteção (Replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +34,16 @@ ms.locfileid: "47844584"
   
  [Identidade e controle de acesso &#40;Replicação&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
- [Mais…](../../../relational-databases/replication/security/security-overview-replication.md)  
+ [Mais...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![Ícone de pasta de arquivos pequena](../../../analysis-services/media/filefolder-small.png "Ícone de pasta de arquivos pequena") **Desenvolvimento seguro**  
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [Modelo de segurança do agente de replicação](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
- [Mais…](../../../relational-databases/replication/security/secure-development-replication.md)  
+ [Mais...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
  ![Ícone de pasta de arquivos pequena](../../../analysis-services/media/filefolder-small.png "Ícone de pasta de arquivos pequena") **Implantação segura**  
  [Proteger o Distribuidor](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -54,9 +54,9 @@ ms.locfileid: "47844584"
   
  [Proteger a pasta de instantâneos](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [Protegendo a replicação na Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
   
- [Mais…](../../../relational-databases/replication/security/secure-deployment-replication.md)  
+ [Mais...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
  ![Ícone de pasta de arquivos pequena](../../../analysis-services/media/filefolder-small.png "Ícone de pasta de arquivos pequena") **Operação segura**  
  [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  

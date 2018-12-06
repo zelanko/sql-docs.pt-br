@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89d5396d70afa05055ac5905e8fa1a204b6d7d97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e9cb87260aa04deaa2e91e928f17b2a94261a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844044"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418127"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 11.0 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  
@@ -94,7 +94,7 @@ ms.locfileid: "47844044"
  Para preservar a compactação de imagens incluídas no arquivo em PDF, quando possível, as imagens JPEG são armazenadas como JPEG e todos os demais tipos de imagens são armazenados como BMP.  
   
 > [!NOTE]  
->  Os arquivos PDF não suportam a incorporação de imagens PNG.  
+>  Os arquivos PDF não têm suporte para a incorporação de imagens PNG.  
   
   
 ##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  

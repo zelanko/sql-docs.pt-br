@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520687"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47649504"
   
 > [!IMPORTANT]  
 >  O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que o nome da chave use somente os caracteres “a-z”, “A-Z”, “0-9” e “-”, com um limite de 26 caracteres.   
-> Versões de chave diferentes com o mesmo nome de chave no Cofre de Chaves do Azure não funcionarão com o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar um Cofre de Chaves do Azure que está sendo usado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma nova chave com um novo nome de chave deve ser criada.  
+> Versões de chave diferentes com o mesmo nome de chave no Cofre de Chaves do Azure não funcionarão com o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar uma chave do Azure Key Vault que está sendo usado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma nova chave com um novo nome de chave deve ser criada.  
   
  Normalmente, as chaves assimétricas do servidor para criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisam ter sua verão atualizada cada 1-2 anos. É importante observar que embora o cofre de chaves permita que as chaves tenham sua versão atualizada, os clientes não devem usar esse recurso para implementar o controle de versão. O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não pode lidar com as alterações na versão das chaves do Cofre de Chaves. Para implementar o controle de versão de chaves, o cliente precisa criar uma nova chave no Cofre de Chaves e criptografar novamente a chave de criptografia de dados no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649504"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -159,7 +159,7 @@ Backups de chaves podem ser restaurados em regiões do Azure, desde que eles per
 ### <a name="on-azure-key-vault"></a>No Cofre de Chaves do Azure  
   
 **Como funcionam as operações de chave com o Cofre de Chaves do Azure?**  
- A chave assimétrica no cofre de chave é usada para proteger chaves de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são feitas no serviço do Cofre de Chaves do Azure e são protegidas pela segurança do serviço.  
+ A chave assimétrica no cofre de chave é usada para proteger chaves de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são feitas no serviço do Azure Key Vault e são protegidas pela segurança do serviço.  
   
  **O que é um URI de chave?**  
  Cada chave no Cofre de Chaves do Azure tem um URI (Uniform Resource Identifier), que pode ser usado para fazer referência à chave em seu aplicativo. Use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obter a versão atual e use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obter uma versão específica.  
@@ -240,9 +240,9 @@ Código do erro  |Símbolo  |Descrição
 3076 | ErrorHttpResourceNotFound | O servidor respondeu 404, pois o nome da chave não foi encontrado. Verifique se o nome da chave existe no cofre.
 3077 | ErrorHttpOperationForbidden | O servidor respondeu 403, pois o usuário não tem permissão adequada para executar a ação. Verifique se você tem permissão para a operação especificada. No mínimo, o conector exige as permissões “get, list, wrapKey e unwrapKey” para funcionar corretamente.   
   
-Se você não ver o código de erro nesta tabela, aqui estão algumas outras razões pelas quais o erro pode estar ocorrendo:   
+Se você não vir o código de erro nesta tabela, aqui estão algumas outras razões pelas quais o erro pode estar ocorrendo:   
   
--   Você pode não ter acesso à Internet e não pode acessar seu Cofre de Chaves do Azure – Verifique sua conexão de Internet.  
+-   Você pode não ter acesso à Internet e não pode acessar seu Azure Key Vault, verifique sua conexão com a Internet.  
   
 -   O serviço do Cofre de Chaves do Azure pode estar desativado. Tente novamente em outro momento.  
   

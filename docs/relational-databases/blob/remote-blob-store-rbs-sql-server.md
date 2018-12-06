@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673595"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393651"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51673595"
  Quando você usa um provedor personalizado para armazenar BLOBs fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certifique-se de proteger os BLOBs armazenados com permissões e opções de criptografia apropriadas para a mídia de armazenamento usada pelo provedor personalizado.  
   
 ### <a name="credential-store-symmetric-key"></a>Chave simétrica do repositório de credenciais  
- Se um provedor requer a instalação e o uso de um segredo armazenado no repositório de credenciais, o RBS usa uma chave simétrica para criptografar os segredos de provedor que um cliente pode usar para obter autorização para o repositório de blob do provedor.  
+ Se um provedor requer a instalação e o uso de um segredo armazenado no repositório de credenciais, o RBS usará uma chave simétrica para criptografar os segredos de provedor que um cliente pode usar para obter autorização para o repositório de blob do provedor.  
   
 -   O RBS 2016 usa uma chave simétrica do **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não permite a criação de novas chaves do **TRIPLE_DES**, exceto por motivos de compatibilidade com versões anteriores. Para obter mais informações, consulte [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   

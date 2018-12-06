@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516706"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Como: Alterar a plataforma de destino e publicar um projeto de banco de dados
 Você pode alterar a versão do SQL Server de destino do projeto de banco de dados SSDT (Ferramentas de dados do SQL Server) para qualquer instância com suporte do SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 ou SQL Azure). Ao fazer isso, você pode centralizar seu desenvolvimento de banco de dados em um único projeto, mas publicá-lo em várias instâncias do SQL Server de acordo com a necessidade.  
@@ -63,7 +63,7 @@ O SSDT também simplifica essa tarefa reconhecendo a plataforma de destino e det
   
 6.  Você também pode salvar as configurações de publicação em um perfil, de modo que você possa reutilizar as mesmas configurações para operações de publicação futuras. Para fazer isso, clique no botão **Salvar Perfil como** , na caixa de diálogo **Publicar Banco de Dados** . No futuro, você poderá clicar no botão **Carregar Perfil** quando desejar recarregar configurações existentes.  
   
-7.  Observe as mensagens na janela **Operações de Ferramentas de Dados** . Clique no link “Exibir Visualização” à direita de **Criando visualização de publicação…** Isso abrirá o relatório de visualização da implantação. Se a plataforma de destino do seu projeto não for idêntica ao servidor de banco de dados em que o projeto foi publicado, o SSDT emitirá um aviso neste relatório.  Por exemplo, se a plataforma de destino do projeto for o Microsoft SQL Server 2012 e você estiver tentando publicar o projeto em uma instância do servidor SQL Server 2012 R2, você verá o seguinte aviso na janela **Saída**:  
+7.  Observe as mensagens na janela **Operações de Ferramentas de Dados** . Clique no link “Exibir Visualização” à direita de **Criando visualização de publicação...** Isso abrirá o relatório de visualização da implantação. Se a plataforma de destino do seu projeto não for idêntica ao servidor de banco de dados em que o projeto foi publicado, o SSDT emitirá um aviso neste relatório.  Por exemplo, se a plataforma de destino do projeto for o Microsoft SQL Server 2012 e você estiver tentando publicar o projeto em uma instância do servidor SQL Server 2008 R2, você verá o seguinte aviso na janela de **Saída**:  
   
 **Um projeto que especifica o Microsoft SQL Server 2012 como a plataforma de destino pode enfrentar problemas de compatibilidade com o SQL Server 2008**   Se tal projeto contiver entidades (por exemplo, um objeto Sequence) introduzidas no Microsoft SQL Server 2012, a operação de publicação falhará.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021770"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391719"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
 Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -30,7 +30,7 @@ Depois que você criar um novo projeto de site usando o modelo de site ASP.NET p
   
 4.  Na página **Escolher a Conexão de Dados** , clique em **Nova Conexão**.  
   
-5.  Se esta for a primeira vez que você criou uma fonte de dados no Visual Studio, você verá a página **Escolher Fonte de Dados** . Na caixa **Fonte de Dados** , selecione **Microsoft SQL Server**.  
+5.  Se esta for a primeira vez que você criou uma fonte de dados no Visual Studio, você verá a página **Escolher Fonte de Dados**. Na caixa **Fonte de Dados** , selecione **Microsoft SQL Server**.  
   
 6.  Na caixa de diálogo **Adicionar Conexão** , realize as seguintes etapas:  
   

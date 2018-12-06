@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505890"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- O modo de mapeamento especificado pelo usuário permite especificar um tipo e uma cardinalidade para que o nó obtenha melhor desempenho. Entretanto, esse desempenho aprimorado é obtido desistindo-se da segurança (pois uma conversão pode falhar) porque apenas o tipo especificado corresponde ao índice XML seletivo.  
+ O modo de mapeamento especificado pelo usuário permite especificar um tipo e uma cardinalidade para que o nó obtenha melhor desempenho. Entretanto, essa melhoria de desempenho é obtida abrindo mão da segurança, porque uma conversão pode falhar, bem como da generalidade, porque apenas o tipo especificado corresponde ao índice XML seletivo.  
   
  Os tipos XQuery com suporte para ocorrências XML não tipadas são:  
   
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -351,7 +351,7 @@ WHERE T.xmldata.exist('
   
  O uso de dicas de otimização é opcional. Sempre é possível aceitar os mapeamentos padrão, que são confiáveis, mas que podem não proporcionar um desempenho e um armazenamento ideais.  
   
- Algumas dicas de otimização, por exemplo, a dica SINGLETON, apresentam restrições aos seus dados. Em alguns casos, erros podem ser gerados quando essas restrições não são atendidas.  
+ Algumas dicas de otimização, como a dica SINGLETON, apresentam restrições aos dados. Em alguns casos, erros podem ser gerados quando essas restrições não são atendidas.  
   
 ### <a name="benefits-of-optimization-hints"></a>Benefícios de dicas de otimização  
  A tabela a seguir identifica as dicas de otimização que dão suporte a um armazenamento mais eficiente ou a um melhor desempenho.  
