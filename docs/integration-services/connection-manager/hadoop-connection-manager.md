@@ -13,12 +13,12 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841624"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417908"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
   O Gerenciador de Conexões do Hadoop permite que um pacote do SSIS (SQL Server Integration Services) se conecte a um cluster Hadoop usando os valores especificados para as propriedades.  
@@ -205,7 +205,7 @@ Execute os seguintes comandos **Ksetup** para adicionar uma entrada de realm.
 
 ## <a name="see-also"></a>Confira também  
  [Tarefa do Hive do Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Tarefa do Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Tarefa de Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tarefas do Sistema de Arquivos Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

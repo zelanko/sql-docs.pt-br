@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639174"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513388"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
   O utilitário de prompt de comando **dtexec** é usado para configurar e executar pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário **dtexec** fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O utilitário **dtexec** permite carregar pacotes destas origens: do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de um arquivo de projeto .ispac, de um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] e do sistema de arquivos.  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      Você pode usar a opção **/ConfigFile** para carregar configurações adicionais em tempo de execução que você não especificou em tempo de design. Porém, você não pode usar a opção **/ConfigFile** para substituir valores configurados que você também especificou em tempo de design. Para compreender como são aplicadas as configurações de pacote, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*: (opcional). Especifica que o gerenciador de conexões com o nome ou o GUID especificado está localizado no pacote e especifica uma cadeia de conexão.  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (opcional). Especifica que o gerenciador de conexões com o nome ou o GUID especificado está localizado no pacote e especifica uma cadeia de conexão.  
   
      Essa opção requer que ambos os parâmetros sejam especificados: o nome ou o GUID do gerenciador de conexões deve ser fornecido no argumento *id_or_name*, e uma cadeia de conexão válida deve ser especificada no argumento *connection_string*. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *password*: (opcional). Define a senha de decodificação usada ao carregar um pacote com criptografia de senha.  
   
--   (Opcional) Cria os arquivos de despejo de depuração, .mdmp e .tmp, quando um ou mais eventos especificados ocorrem enquanto o pacote está em execução. O argumento *error code* especifica o tipo de código de evento (erro, aviso ou informação) que acionará o sistema para criar os arquivos de despejo de depuração. Para especificar vários códigos de evento, separe cada argumento *error code* por um ponto-e-vírgula (;). Não inclua aspas com o argumento *error code* .  
+-   (Opcional) Cria os arquivos de despejo de depuração, .mdmp e .tmp, quando um ou mais eventos especificados ocorrem enquanto o pacote está em execução. O argumento *error code* especifica o tipo de código de evento (erro, aviso ou informação) que disparará o sistema para criar os arquivos de despejo de depuração. Para especificar vários códigos de evento, separe cada argumento *error code* por um ponto-e-vírgula (;). Não inclua aspas com o argumento *error code* .  
   
      O exemplo a seguir gera arquivos de despejo de depuração quando o erro DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER ocorre.  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      Veja a seguir um exemplo de execução de pacote e fornecimento do myvalue para o parâmetro de projeto (myparam) e o valor inteiro 12 para o parâmetro de pacote (anotherparam).  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      Você também pode definir as propriedades do gerenciador de conexões usando parâmetros. Use o prefixo CM para denotar um parâmetro do gerenciador de conexões.  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  O exemplo a seguir mostra como usar a opção **/ISServer** e definir parâmetros do gerenciador de conexões e projetos.  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

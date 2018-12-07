@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507387"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,13 +64,13 @@ IDENTITY [ (seed , increment) ]
   
  A propriedade de identidade em uma coluna não garante o seguinte:  
   
--   **Exclusividade do valor** – a exclusividade deve ser imposta usando um **PRIMARY KEY** ou restrição **UNIQUE** ou índice **UNIQUE**.  
+-   **Exclusividade do valor** – a exclusividade precisa ser imposta usando uma restrição **PRIMARY KEY** ou **UNIQUE** ou um índice **UNIQUE**.  
   
--   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas vá obter valores consecutivos para as linhas porque as demais inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
+-   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas obtenha valores consecutivos para as linhas porque outras inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
   
--   **Valores consecutivos após o reinício do servidor ou outras falhas** – o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar em cache valores de identidade por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
+-   **Valores consecutivos após o reinício do servidor ou outras falhas** – o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar valores de identidade em cache por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
   
--   **Reutilização de valores** – para determinada propriedade de identidade com seed/increment específicos, os valores de identidade não são reutilizados pelo mecanismo. Se uma instrução de inserção específica falhar ou se a instrução de inserção for revertida, os valores de identidade consumidos serão perdidos e não serão gerados novamente. Isso pode resultar em intervalos quando os valores de identidade subsequentes são gerados.  
+-   **Reutilização de valores** – para determinada propriedade de identidade com semente/incremento específico, os valores de identidade não são reutilizados pelo mecanismo. Se uma instrução de inserção específica falhar ou se a instrução de inserção for revertida, os valores de identidade consumidos serão perdidos e não serão gerados novamente. Isso pode resultar em intervalos quando os valores de identidade subsequentes são gerados.  
   
  Essas restrições são parte do design para melhorar o desempenho, e por serem aceitáveis em muitas situações comuns. Se você não pode usar valores de identidade devido a essas restrições, crie uma tabela separada contendo um valor atual e gerencie o acesso à tabela e a atribuição de número com seu aplicativo.  
   

@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514528"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Ajuda offline do SQL Server e Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Use o Help Viewer no SSMS (SQL Server Management Studio) ou no VS (Visual Studio) para baixar e instalar os pacotes da Ajuda do SQL Server de fontes online ou do disco e exibi-los offline. Este artigo descreve as ferramentas que instalam o Help Viewer, como instalar o conteúdo da Ajuda offline e como exibir a Ajuda para o [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 e SQL Server 2017.
+
+Depois que o conteúdo tiver sido baixado em um sistema que tem acesso à Internet, você poderá migrar o conteúdo para um sistema que não tem acesso à Internet. 
 
 > [!NOTE]
 > A Ajuda do SQL Server 2016 e do SQL Server 2017 é combinada, embora alguns tópicos se apliquem a versões individuais, quando indicado. A maioria dos tópicos se aplica a ambos.
@@ -125,7 +127,8 @@ Para exibir a Ajuda instalada no Visual Studio:
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    O sumário da Ajuda é mostrado à esquerda e o tópico da Ajuda selecionado, à direita. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Usar o Help Viewer v1.x
 
 As versões anteriores do SSMS e do VS usam o Help Viewer 1.x, que dá suporte à Ajuda do SQL Server 2014. 
@@ -165,6 +168,8 @@ Esse processo usa o Help Viewer 1.x para baixar a Ajuda do SQL Server 2014 no Ce
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Exibir a Ajuda online
 
 A Ajuda online sempre mostra o conteúdo mais atualizado. 
@@ -204,6 +209,22 @@ Quando você pressiona F1 ou clica em **Ajuda** ou no ícone **?** em uma caixa 
 
 >  [!NOTE]
 >  A Ajuda F1 só funciona quando você está online. Não há nenhuma fonte offline para a Ajuda F1. 
+
+## <a name="systems-without-internet-access"></a>Sistemas sem acesso à Internet
+Depois que você tiver seguido as [etapas mencionadas anteriormente](#use-help-viewer-v2x) para baixar conteúdo offline usando o Visualizador da Ajuda do SQL Server em um sistema que tem acesso à Internet, você poderá migrar esse conteúdo para um sistema que não tem acesso à Internet. Você pode fazer isso com as etapas a seguir. 
+
+  >[!NOTE]
+  >O Software compatível com o Visualizador da Ajuda, como SQL Server Management Studio, deve ser instalado no sistema offline. 
+
+1. Abra o Visualizador da Ajuda (Ctrl + Alt + F1).
+1. Selecione a documentação na qual tem interesse. Por exemplo, filtre por SQL e selecione a Documentação Técnica do SQL Server. 
+1. Identifique o caminho físico dos arquivos no disco, que pode ser encontrado em **Caminho do repositório local**.
+1. Navegue até essa localização usando o explorador de sistema de arquivos. 
+    1.  A localização padrão é: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Selecione as três pastas **ContentStore**, **Incoming** e **IndexStore** e copie-as para a mesma localização no seu sistema offline. Talvez você precise usar um dispositivo de mídia intermediário, como um CD ou USB. 
+1. Depois que esses arquivos tiverem sido movidos, inicie o Visualizador da Ajuda no sistema offline e a documentação técnica do SQL Server estará disponível.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Próximas etapas
