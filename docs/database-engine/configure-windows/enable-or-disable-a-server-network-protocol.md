@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534010"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Habilitar ou desabilitar um protocolo de rede de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606186"
   
 4.  No painel de console, clique em **Serviços do SQL Server**.  
   
-5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (***\<instance name>***)** e, depois, clique em **Reiniciar** para parar e reiniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (**_\<instance name>_**)** e, depois, clique em **Reiniciar** para parar e reiniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="PowerShellProcedure"></a> Usando o SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606186"
   
 2.  Inicie o Windows PowerShell na barra de tarefas ou clique em Iniciar, Todos os Programas, Acessórios, Windows PowerShell e Windows PowerShell.  
   
-3.  Importe o módulo **sqlps** inserindo **Import-Module “sqlps”**  
+3.  Importe o módulo **sqlps** inserindo **Import-Module "sqlps"**  
   
 4.  Execute as instruções a seguir para habilitar os protocolos TCP e de pipes nomeados. Substitua `<computer_name>` pelo nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se estiver configurando uma instância nomeada, substitua `MSSQLSERVER` pelo nome da instância.  
   

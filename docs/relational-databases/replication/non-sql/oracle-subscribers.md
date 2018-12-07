@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab63604cbaad009cd92825df1f252a95c1f4e0fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525627"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47842444"
   
     -   Garantir que cadeias de caracteres vazias não estejam inseridas na tabela publicada como valores de colunas.  
   
-    -   Usar o parâmetro **–SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 (**-SkipErrors1400**).  
+    -   Usar o parâmetro **-SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 (**-SkipErrors1400**).  
   
     -   Modifique o script de criação de tabela gerado, removendo o atributo NOT NULL das colunas de caracteres que talvez tenham cadeias de caracteres vazias associadas e forneça o script modificado como um script de criação personalizado para o artigo usando o parâmetro @creation_script de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

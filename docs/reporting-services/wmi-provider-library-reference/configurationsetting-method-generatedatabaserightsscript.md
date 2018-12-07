@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526401"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Método de ConfigurationSetting – GenerateDatabaseRightsScript
   Gera um Script SQL que pode ser usado para conceder direitos de usuário ao banco de dados do servidor de relatório e a outros bancos de dados necessários para a execução de um servidor de relatório. O chamador deve se conectar ao servidor de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar o script.  
@@ -80,8 +80,8 @@ out Int32 HRESULT);
 |LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Serviço Local|Erro – consulte abaixo.|  
-|NT AUTHORITY\LocalService|Serviço Local|Erro – consulte abaixo.|  
+|(S-1-5-19)|Serviço Local|Erro – veja abaixo.|  
+|NT AUTHORITY\LocalService|Serviço Local|Erro – veja abaixo.|  
   
  No [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], se você estiver usando uma conta interna e o banco de dados do servidor de relatório for remoto, será retornado um erro.  
   
@@ -91,9 +91,9 @@ out Int32 HRESULT);
   
 |Valor do DatabaseServerName|Exemplo|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  

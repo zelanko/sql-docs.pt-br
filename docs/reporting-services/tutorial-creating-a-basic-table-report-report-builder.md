@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627884"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712347"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
@@ -312,7 +312,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 4.  Clique em **Salvar**.  
   
 ## <a name="Export"></a>7. Exportar o relatório  
-Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Neste tutorial, você exportará o relatório para o Excel e definirá uma propriedade no relatório para atribuir um nome personalizado à guia Pasta de Trabalho.  
   
@@ -355,6 +355,6 @@ Isso conclui o passo a passo sobre como criar um relatório de tabela básico. P
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
-[Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

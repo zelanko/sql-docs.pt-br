@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedb57a3e9505503cc367619c4827bc1e348abf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843644"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523069"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47843644"
 |Funções definidas pelo usuário ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
 |Tipos de dados de alias|X|X|  
 |Índices de texto completo|X|X|  
-|Objetos de esquema (restrições, índices, gatilhos DML de usuário, propriedades estendidas e agrupamento)|X|X|  
+|Objetos de esquema (restrições, índices, gatilhos DML de usuário, propriedades estendidas e ordenação)|X|X|  
   
 ## <a name="creating-publications"></a>Criando publicações  
  Para criar uma publicação, forneça as seguintes informações:  
@@ -117,7 +117,7 @@ ms.locfileid: "47843644"
   
 -   [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
- Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e agrupamento. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
+ Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e ordenação. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
   
  Para especificar opções de esquema, consulte [Especificar opções de esquema](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "47843644"
 ## <a name="publishing-stored-procedures"></a>Publicando procedimentos armazenados  
  Todos os tipos de replicação permitem que você reproduza definições de procedimentos armazenados: o CREATE PROCEDURE é copiado para cada Assinante. No caso de procedimentos armazenados CLR (Common Language Runtime), o assembly associado também é copiado. As alterações a procedimentos são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
   
- Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="publishing-views"></a>Publicando exibições  
  Todos os tipos de replicação permitem que você reproduza exibições. A exibição (e o índice correspondente, se for uma exibição indexada) pode ser copiada para o Assinante, mas a tabela base também deve ser replicada.  

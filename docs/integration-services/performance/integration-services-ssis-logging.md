@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641253"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542888"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -209,7 +209,7 @@ ms.locfileid: "51641253"
   
 -   A transformação Coluna Derivada denominada "Calculate LineItemTotalCost" gastou 356 ms. executando os cálculos em linhas de entrada.  
   
--   A transformação Agregação denominada "Quantidade de Soma e LineItemTotalCost" gastou no total 220 ms — 141 em PrimeOutput e 79 em ProcessInput — executando cálculos e passando os dados para a próxima transformação.  
+-   A transformação Agregação denominada "Quantidade de Soma e LineItemTotalCost" gastou no total 220 ms – 141 em PrimeOutput e 79 em ProcessInput – executando cálculos e passando os dados para a próxima transformação.  
 
 ## <a name="ssdt"></a> Habilitar o log de pacote no SQL Server Data Tools
   Este procedimento descreve como adicionar registros a um pacote, configurar os registros no nível do pacote e salvar a configuração dos registros em um arquivo XML. Você só pode adicionar os registros no nível do pacote, mas o pacote não precisa executar os registros para habilitar os registros nos contêineres incluídos no pacote.  

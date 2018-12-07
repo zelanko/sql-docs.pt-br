@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523549"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -228,7 +228,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
 1. Conecte-se a seu banco de dados usando o SSMS.
 2. No **Pesquisador de Objetos**, expanda o banco de dados e navegue até **Segurança** > **Chaves Always Encrypted**.
 3. Provisione uma nova chave mestra da coluna habilitada para enclave:
-    1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave mestra da coluna…**.
+    1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave mestra da coluna...**.
     2. Selecione o nome de sua chave mestra da coluna: CMK1.
     3. Certifique-se de selecionar **Repositório de certificados do Windows (usuário atual ou computador local)** ou **Azure Key Vault**.
     4. Selecione **Permitir computações de enclave**.
@@ -295,7 +295,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
 
 1. Habilite a parametrização de Always Encrypted.
     1. Selecione **Consultar** no menu principal do SSMS.
-    2. Selecione **Opções de Consulta…**.
+    2. Selecione **Opções de Consulta...**.
     3. Navegue para **Execução** > **Avançado**.
     4. Selecione ou desmarque a seleção de Habilitar Parametrização de Always Encrypted.
     5. Selecione OK.

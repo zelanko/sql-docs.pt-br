@@ -14,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5564de165e053a871202798ee55b07f2dccc1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524816"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriedades de consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534442"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637484"
   
     -   Defina o valor do parâmetro **@working_directory** para a pasta de instantâneos usada pelo principal.  
   
-4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner** . Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
+4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner**. Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
   
     -   Snapshot Agent (para todas as publicações)  
   

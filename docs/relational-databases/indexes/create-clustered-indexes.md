@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539034"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,11 +84,11 @@ ms.locfileid: "47703204"
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Clusterizado…**.  
+2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...**.  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-4.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+4.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 5.  Na caixa de diálogo **Selecionar Colunas de** _table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   

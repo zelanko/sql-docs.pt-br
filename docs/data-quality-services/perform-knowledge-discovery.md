@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,12 +16,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 500508952a99d773b0349bb930dc04e5abfb8701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738024"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617826"
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
 
@@ -201,7 +200,7 @@ ms.locfileid: "47738024"
   
     -   **Cancelar** para encerrar a atividade de Descoberta da Base de Dados de Conhecimento, o que resultará na perda do trabalho, e retornar à home page do DQS.  
   
-    -   **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento será bloqueada para você, e o estado da base de dados de conhecimento na tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta – Gerenciamento de Valor**.  
+    -   **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento será bloqueada para você e o estado da base de dados de conhecimento na tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta – Gerenciamento de Valor**.  
   
     -   Clique em **Voltar** para retornar à página **Descobrir** . Depois de clicar em **Fechar**para executar a atividade de Gerenciamento de Domínio, você precisará clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento** , prosseguir para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio** , clicar em **Concluir**e, em seguida, clicar em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
   
@@ -211,11 +210,11 @@ ms.locfileid: "47738024"
 ##  <a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  
  Cada valor na tabela **Valor** da página **Valores de Domínio** recebe a configuração de **Tipo** **Correto**, **Erro**ou **Inválido**. O tipo do valor é gerado inicialmente pela atividade de descoberta da base de dados de conhecimento, e você pode alterar isso da forma que achar mais conveniente. O tipo final, com base na descoberta e nas alterações interativas, é gerado pela atividade de limpeza. Essas configurações têm os seguintes significados:  
   
--   **Correto:** este é um valor que pertence ao domínio e não tem nenhum erro de sintaxe. Por exemplo, “Chicago” em um domínio Cidade está correto.  
+-   **Correto:** este é um valor que pertence ao domínio e não tem nenhum erro de sintaxe. Por exemplo, "Chicago" em um domínio Cidade está correto.  
   
--   **Erro:** este é um valor que pertence ao domínio, mas é um valor incorreto. Por exemplo, “Shicago” em vez de “Chicago” em um domínio Cidade é um erro. O DQS designa um valor como erro; ele detecta um erro de sintaxe e uma correção associada no processo de descoberta. Os erros de sintaxe incluem erros de ortografia.  
+-   **Erro:** este é um valor que pertence ao domínio, mas é um valor incorreto. Por exemplo, "Shicago" em vez de "Chicago" em um domínio Cidade é um erro. O DQS designa um valor como erro; ele detecta um erro de sintaxe e uma correção associada no processo de descoberta. Os erros de sintaxe incluem erros de ortografia.  
   
--   **Inválido:** este é um valor que não pertence ao domínio e não tem correção. Por exemplo, o valor “12345” em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
+-   **Inválido:** este é um valor que não pertence ao domínio e não tem correção. Por exemplo, o valor "12345" em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
   
  Você pode alterar o tipo de um valor manualmente para qualquer um dos outros dois valores. O DQS não impõe validade e semânticas de erro em operações manuais. Você pode inserir uma correção para obter um valor inválido sem alterar seu status. Você pode designar um valor como inválido até mesmo se ele não desobedecesse a uma regra de domínio. Você pode designar um valor como erro até mesmo se o processo de descoberta não indicasse que ele tem um erro de sintaxe. Você também pode remover uma correção para um valor Erro, que é marcado como Correto, sem alterar seu status.  
   

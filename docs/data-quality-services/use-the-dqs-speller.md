@@ -5,19 +5,18 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 704af229a0d61238ebd4bae9c306fec17c35816a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655356"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616687"
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
 
@@ -73,7 +72,7 @@ ms.locfileid: "47655356"
  Após executar o verificador ortográfico, conclua a atividade do domínio para usar as correções sugeridas pelo verificador ortográfico. Se estiver na atividade de descoberta da base de dados de conhecimento, gerenciamento de domínio ou política de correspondência, publique a base de dados de conhecimento para disponibilizar os resultados da análise do verificador ortográfico para uso na base de dados de conhecimento. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Como o verificador ortográfico funciona  
- O verificador ortográfico do DQS marca qualquer erro em potencial de valor da cadeia de caracteres com um sublinhado vermelho que é exibido para o valor inteiro. Por exemplo, se “New York” estivesse escrito incorretamente como “Neu York”, o verificador ortográfico exibiria um sublinhado vermelho em “Neu York”, e não apenas em “Neu”. Se você clicar com o botão direito do mouse no valor, verá as correções sugeridas para o valor inteiro. Você também pode clicar em **Mais sugestões** quando há mais de cinco sugestões. Você pode escolher uma das sugestões ou adicionar um valor ao dicionário (em nível de conta de usuário) a ser exibido para o valor original. Valores adicionados ao dicionário se aplicam a todos os domínios. Somente se você designar explicitamente uma sugestão, a correção será feita no domínio. Quando você seleciona uma sugestão no menu de contexto do verificador ortográfico, o tipo de valor se torna (ou permanece como) um erro. A sugestão selecionada será adicionada à coluna de correção. Observe que o **Tipo** de um valor pode ser **Correto** e ele ainda ser marcado como um erro potencial pelo verificador ortográfico.  
+ O verificador ortográfico do DQS marca qualquer erro em potencial de valor da cadeia de caracteres com um sublinhado vermelho que é exibido para o valor inteiro. Por exemplo, se "New York" estivesse escrito incorretamente como "Neu York", o verificador ortográfico exibiria um sublinhado vermelho em "Neu York", e não apenas em "Neu". Se você clicar com o botão direito do mouse no valor, verá as correções sugeridas para o valor inteiro. Você também pode clicar em **Mais sugestões** quando há mais de cinco sugestões. Você pode escolher uma das sugestões ou adicionar um valor ao dicionário (em nível de conta de usuário) a ser exibido para o valor original. Valores adicionados ao dicionário se aplicam a todos os domínios. Somente se você designar explicitamente uma sugestão, a correção será feita no domínio. Quando você seleciona uma sugestão no menu de contexto do verificador ortográfico, o tipo de valor se torna (ou permanece como) um erro. A sugestão selecionada será adicionada à coluna de correção. Observe que o **Tipo** de um valor pode ser **Correto** e ele ainda ser marcado como um erro potencial pelo verificador ortográfico.  
   
  O DQS fornecerá sugestões para valores nas colunas **Valor** e **Corrigir para** da tabela **Valor** . Quando você seleciona uma sugestão na coluna **Valor** , o tipo de valor é definido como **Erro**e a sugestão é copiada para a coluna **Corrigir para** , como se ela tivesse sido inserida manualmente. Caso exista uma correção, ela se tornará uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , quando você seleciona uma sugestão na coluna **Corrigir para** , o DQS substitui o valor selecionado no momento pela seleção, e o valor selecionado no momento se torna uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , não há sugestões no nível de registro (a grade inferior).  
   

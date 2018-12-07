@@ -14,12 +14,12 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe71c72bfd7211a3ee73de7cc95a3d7ddb0bd405
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19acf085cfde3c0247e7c3d5d3316a1cc4f853e6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683664"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528352"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Criar aliases de tabelas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ Os aliases podem facilitar o trabalho com nomes de tabela. Usar aliases é útil
   
 -   Você quer tornar a instrução no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) mais curta e fácil de ser lida.  
   
--   Você se refere frequentemente ao nome de tabela em sua consulta - como em nomes de coluna qualificativos - e quer estar seguro de estar dentro de um limite de comprimento de caracteres específico na sua consulta (alguns bancos de dados impõem um comprimento máximo para as consultas).  
+-   Você se refere frequentemente ao nome de tabela em sua consulta – como em nomes de coluna qualificados – e quer estar seguro de estar dentro de um limite de comprimento de caracteres específico na sua consulta. (alguns bancos de dados impõem um comprimento máximo para as consultas).  
   
 -   Você está trabalhando com várias instâncias da mesma tabela (como em uma autojunção) e precisa um modo para se referir a uma instância ou a outra.  
   

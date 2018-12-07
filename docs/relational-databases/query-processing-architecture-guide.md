@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura de processamento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542519"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ Os planos de execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Quando alguma instrução SQL for executada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o mecanismo relacional examinará primeiro o cache de planos para verificar se há um plano de execução para a mesma instrução SQL. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza qualquer plano existente que encontrar, diminuindo as despesas de recompilação da instrução SQL. Se não houver nenhum plano de execução, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerará um plano de execução novo para a consulta.
+Quando alguma instrução SQL for executada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o mecanismo relacional examinará primeiro o cache de planos para verificar se há um plano de execução para a mesma instrução SQL. A instrução SQL será qualificada como existente se ela corresponder a uma instrução SQL executada anteriormente com um plano armazenado em cache, caractere por caractere. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza qualquer plano existente que encontrar, diminuindo as despesas de recompilação da instrução SQL. Se não houver nenhum plano de execução, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerará um plano de execução novo para a consulta.
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um algoritmo eficiente para localizar qualquer plano de execução existente de qualquer instrução SQL específica. Na maioria dos sistemas, os recursos mínimos usados por esta varredura são inferiores aos recursos salvos graças à reutilização de planos existentes em vez da compilação de cada instrução SQL.
 
-Os algoritmos para corresponder as instruções SQL novas a planos de execução existentes não utilizados no cache exigeem que todas as referências de objeto sejam qualificadas completamente. Por exemplo, a primeira dessas instruções `SELECT` não corresponde a um plano existente e a segunda corresponde:
+Os algoritmos para corresponder as instruções SQL novas a planos de execução existentes não utilizados no cache exigeem que todas as referências de objeto sejam qualificadas completamente. Por exemplo, suponha que `Person` é o esquema padrão do usuário que executa as instruções `SELECT` abaixo. Embora neste exemplo não seja necessário que a tabela `Person` seja totalmente qualificada para executar, isso significa que a segunda instrução não tem correspondência com um plano existente, mas tem com a terceira:
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>Removendo planos de execução do cache de planos
@@ -637,7 +640,6 @@ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o modelo de preparaç
 * O aplicativo pode controlar quando o plano de execução é criado e quando é reutilizado.
 * O modelo de preparação/execução é portátil para outros bancos de dados, inclusive para versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
- 
 ### <a name="ParamSniffing"></a> Detecção de Parâmetros
 “Detecção de parâmetro” refere-se a um processo no qual o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] “fareja” os valores de parâmetro atuais durante a compilação ou recompilação e os passa para o Otimizador de Consulta para que eles podem ser usados para gerar planos de execução de consulta possivelmente mais eficientes.
 
@@ -655,6 +657,24 @@ Valores de parâmetro são detectados durante a compilação ou recompilação p
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar uma consulta ou uma operação de índice em paralelo usando vários threads de trabalho do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
 
 Durante a otimização da consulta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procura consultas ou operações de índice que poderiam se beneficiar da execução paralela. Para essas consultas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insere operadores de troca no plano de execução de consulta para preparar a consulta para a execução paralela. Um operador de troca é um operador em um plano de execução de consulta que fornece gerenciamento de processo, redistribuição de dados e controle de fluxo. O operador de troca inclui como subtipos os operadores lógicos `Distribute Streams`, `Repartition Streams`e `Gather Streams` dos quais um ou mais podem aparecer na saída do Plano de Execução de um plano de consulta para uma consulta paralela. 
+
+> [!IMPORTANT]
+> Determinados construtos inibem a capacidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de aproveitar o paralelismo em todo o plano de execução, ou partes ou o plano de execução.
+
+Os constructos que inibem o paralelismo incluem:
+>
+> - **UDFs escalares**    
+>   Para obter mais informações sobre funções escalares definidas pelo usuário, confira [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) (Criar funções definidas pelo usuário). Começando com [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tem a capacidade de embutir essas funções e desbloquear o uso do paralelismo durante o processamento de consultas. Para obter mais informações sobre o inlining do UDF escalar, confira [Processamento inteligente de consultas em bancos de dados SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+> - **Consulta remota**    
+>   Para obter mais informações sobre Consulta Remota, confira [Referência de operadores lógicos e físicos de plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> - **Cursores dinâmicos**    
+>   Para saber mais sobre cursores, confira [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+> - **Consultas recursivas**    
+>   Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Recursão em T-SQL).
+> - **TVFs (Funções com valor de tabela)**    
+>   Para saber mais sobre TVFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+> - **Palavra-chave TOP**    
+>   Para saber mais, confira [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 Depois que os operadores de troca são inseridos, o resultado é um plano de execução da consulta paralela. Um plano de execução de consulta paralela pode usar mais de um thread de trabalho. Um plano de execução em série, usado por uma consulta não paralela, usa só um thread de trabalho para sua execução. O número real de threads de trabalho usado por uma consulta paralela é determinado na inicialização da execução do plano de consulta e pela complexidade do plano e seu grau de paralelismo. O grau de paralelismo determina o número máximo de CPUs que estão sendo usadas; isso não significa o número de threads de trabalho que estão sendo usadas. O valor do grau de paralelismo é definido no nível de servidor e pode ser modificado usando-se o procedimento armazenado no sistema sp_configure. Esse valor pode ser substituído por consulta individual ou instruções de índice especificando-se a dica de consulta `MAXDOP` ou a opção de índice `MAXDOP` . 
 
@@ -1098,4 +1118,6 @@ GO
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimativa de cardinalidade](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Processamento de consulta adaptável](../relational-databases/performance/adaptive-query-processing.md)   
- [Precedência de operador](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [Precedência de operador](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [Planos de execução](../relational-databases/performance/execution-plans.md)    
+ [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

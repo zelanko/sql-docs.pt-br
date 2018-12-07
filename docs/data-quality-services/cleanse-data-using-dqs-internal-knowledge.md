@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822034"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617646"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
 
@@ -38,7 +37,7 @@ ms.locfileid: "47822034"
   
 -   Você deve ter especificado valores de limites apropriados para a atividade de limpeza. Para obter informações sobre como fazer isso, consulte [Para obter informações sobre como fazer isso, consulte](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Uma base de dados de conhecimento do DQS deve estar disponível no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] em relação ao qual você deseja comparar e limpar sua fonte de dados. Além disso, a base de dados de conhecimento deve conter conhecimento sobre o tipo de dados que você deseja limpar. Por exemplo, se você quiser limpar sua fonte de dados que contém endereços nos EUA, deverá ter uma base de dados de conhecimento que tenha sido criada a partir de dados de exemplo de “alta qualidade” para endereços nos EUA.  
+-   Uma base de dados de conhecimento do DQS deve estar disponível no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] em relação ao qual você deseja comparar e limpar sua fonte de dados. Além disso, a base de dados de conhecimento deve conter conhecimento sobre o tipo de dados que você deseja limpar. Por exemplo, se você quiser limpar seus dados de origem que contêm endereços nos EUA, deverá ter uma base de dados de conhecimento que tenha sido criada com base de dados de exemplo de "alta qualidade" para endereços nos EUA.  
   
 -   O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se os dados de origem a serem limpos estiverem em um arquivo do Excel. Caso contrário, você não poderá selecionar o arquivo do Excel no estágio de mapeamento. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Se a versão de 64 bits do Excel for usada, somente arquivos do Excel 2003 (.xls) terão suporte; não haverá suporte para os arquivos do Excel 2007 ou 2010 (.xlsx). Se você estiver usando a versão de 64 bits do Excel 2007 ou 2010, salve o arquivo como .xls ou .csv ou instale uma versão de 32 bits do Excel.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "47822034"
   
     -   O painel inferior exibe ocorrências individuais do valor de domínio selecionadas no painel superior direito. As informações a seguir são exibidas: valor original, número de instâncias (registros), uma caixa para especificar outro valor (correto), o nível de confiança (não disponível para os valores na guia **Corrigir** ), o motivo para a ação do DQS no valor e a opção de aprovar ou rejeitar as correções e sugestões para o valor e o valor original.  
   
-3.  Se você habilitou o recurso **Verificador Ortográfico** para um domínio ao criá-lo, sublinhados vermelhos ondulados são exibidos nos valores de domínio identificados como erros potenciais. O sublinhado é exibido para o valor inteiro. Por exemplo, se “New York” estivesse escrito incorretamente como “Neu York”, o verificador ortográfico exibiria o sublinhado vermelho em “Neu York” e não apenas em “Neu”. Se você clicar com o botão direito do mouse no valor, as correções sugeridas serão exibidas. Se houver mais de 5 sugestões, você poderá clicar em **Mais sugestões** no menu de contexto para exibir o resto delas. Assim como ocorre com a exibição de erro, as sugestões são substitutos para todo o valor. Por exemplo, “New York” será exibido como uma sugestão no exemplo anterior e não apenas “New”. Você pode escolher uma das sugestões ou adicionar um valor ao dicionário a ser exibido para esse valor. Os valores são armazenados em dicionário em um nível de conta de usuário. Quando você seleciona uma sugestão no menu de contexto do verificador ortográfico, a sugestão selecionada será adicionada à coluna **Corrigir para** . No entanto, se você selecionar uma sugestão na coluna **Corrigir para** , o valor na coluna será substituído pela sugestão selecionada.  
+3.  Se você habilitou o recurso **Verificador Ortográfico** para um domínio ao criá-lo, sublinhados vermelhos ondulados são exibidos nos valores de domínio identificados como erros potenciais. O sublinhado é exibido para o valor inteiro. Por exemplo, se "New York" estivesse escrito incorretamente como "Neu York", o verificador ortográfico exibiria o sublinhado vermelho em "Neu York" e não apenas em "Neu". Se você clicar com o botão direito do mouse no valor, as correções sugeridas serão exibidas. Se houver mais de 5 sugestões, você poderá clicar em **Mais sugestões** no menu de contexto para exibir o resto delas. Assim como ocorre com a exibição de erro, as sugestões são substitutos para todo o valor. Por exemplo, "New York" será exibido como uma sugestão no exemplo anterior e não apenas "New". Você pode escolher uma das sugestões ou adicionar um valor ao dicionário a ser exibido para esse valor. Os valores são armazenados em dicionário em um nível de conta de usuário. Quando você seleciona uma sugestão no menu de contexto do verificador ortográfico, a sugestão selecionada será adicionada à coluna **Corrigir para** . No entanto, se você selecionar uma sugestão na coluna **Corrigir para** , o valor na coluna será substituído pela sugestão selecionada.  
   
      O recurso do verificador ortográfico está habilitado por padrão no estágio de limpeza interativa. Você pode desabilitar o verificador ortográfico no estágio de limpeza interativa clicando no ícone **Habilitar/Desabilitar Verificador Ortográfico** ou clicando com o botão direito do mouse na área de valores de domínio e, em seguida, clicando em **Verificador Ortográfico** no menu de atalho. Para habilitá-lo novamente, faça o mesmo.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "47822034"
   
     1.  **SQL Server**: selecione **DQS_STAGING_DATA** como o banco de dados de destino se você quiser exportar seus dados aqui e depois especifique um nome da tabela que será criada para armazenar os dados exportados. Caso contrário, selecione outro banco de dados se você quiser exportar dados para um banco de dados diferente e depois especifique um nome da tabela que será criada para armazenar os dados exportados. O banco de dados de destino deve estar presente na mesma instância do SQL Server que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para que esteja disponível na lista suspensa **Banco de dados** .  
   
-    2.  **Arquivo CSV**: clique em **Procurar**e especifique o nome e o local do arquivo .csv para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo .csv junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.csv." O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
+    2.  **Arquivo CSV**: clique em **Procurar**e especifique o nome e o local do arquivo .csv para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo .csv junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.csv". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
     3.  **Arquivo do Excel**: clique em **Procurar**e especifique o nome e o local do arquivo do Excel para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo do Excel junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.xlsx". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "47822034"
   
         -   **\<Domain>_Status**: o status do valor de domínio após a limpeza de dados. Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
   
-        -   **Status do Registro**: além de ter um campo de status para cada domínio mapeado, **(\<DomainName>_Status**), o campo **Status do Registro** exibe o status de um registro. Se algum status de domínio no registro for *Novo* ou *Correto*, o **Status do Registro** será definido como *Correto*. Se algum status de domínio no registro for *Sugerido*, *Inválido*ou *Corrigido*, o **Status do Registro** será definido com o respectivo valor. Por exemplo, se algum status de domínio no registro for *Sugerido*, o **Status do Registro** será definido como *Sugerido*.  
+        -   **Status do Registro**: além de ter um campo de status para cada domínio mapeado, **(\<DomainName>_Status**), o campo **Status do Registro** exibe o status de um registro. Se algum status de domínio no registro for *Novo* ou *Correto*, o **Status do Registro** será definido como *Correto*. Se algum status de domínio no registro for *Sugerido*, *Inválido* ou *Corrigido*, o **Status do Registro** será definido com o respectivo valor. Por exemplo, se algum status de domínio no registro for *Sugerido*, o **Status do Registro** será definido como *Sugerido*.  
   
             > [!NOTE]  
             >  Se você usar o serviço de dados de referência para a operação de limpeza, alguns dados adicionais sobre o valor de domínio também estarão disponíveis para exportação. Para obter mais informações, consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

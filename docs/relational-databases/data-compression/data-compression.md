@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89da8d8beeca843662c6752cbc99d934b03760ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533546"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadados  
 As seguintes exibições do sistema contêm informações sobre compactação de dados para índices clusterizados:  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) – As colunas **type** e **type_desc** incluem CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – As colunas **data_compression** e **data_compression_desc** incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – as colunas **data_compression** e **data_compression_desc** incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   
 O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) não se aplica a índices columnstore.  
   

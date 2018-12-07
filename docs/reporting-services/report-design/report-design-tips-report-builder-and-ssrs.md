@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764074"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711237"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
   Use as dicas a seguir para ajudar na criação de seus relatórios paginados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -156,7 +156,7 @@ ms.locfileid: "47764074"
  Esse comportamento, as propriedades de largura e de altura dos itens do relatório, o tamanho do corpo do relatório, a definição da altura e da largura da página, as configurações de margem do relatório pai e o suporte específico à renderização são todos combinados para determinar quais itens do relatório se ajustam em uma página renderizada. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526966"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51600996"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Descarta o aviso de uma métrica de desempenho especificada.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventos de limite de desempenho enviados para o log de eventos do Windows  
- Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido alcançado, o procedimento de atualização **sp_dbmmonitorupdate**vai gerar um evento informativo, um *evento do limite de desempenho*, para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
+ Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido alcançado, o procedimento de atualização **sp_dbmmonitorupdate** gerará um evento informativo, um *evento do limite de desempenho*, para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
   
 |Métrica de desempenho|ID do evento|  
 |------------------------|--------------|  

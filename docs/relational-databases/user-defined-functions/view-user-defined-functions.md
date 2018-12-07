@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6b18b3248bf74ee85f849a8f62fcb87815558d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533580"
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47750244"
   
 4.  Clique com o botão direito do mouse na função da qual você deseja ver as propriedades e selecione **Propriedades**.  
   
-     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name* .  
+     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name*.  
   
      **Backup de banco de dados**  
      Nome do banco de dados que contém essa função.  

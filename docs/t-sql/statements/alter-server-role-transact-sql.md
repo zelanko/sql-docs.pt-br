@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0280b76490e82aa8bbad2d2dd3bf8cb451d81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808334"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541251"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ Adiciona a entidade de segurança do servidor especificado à função de servid
 DROP MEMBER *server_principal*  
 Remove a entidade de segurança de servidor especificada da função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados nem sa.  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 Especifica o novo nome da função de servidor definida pelo usuário. Esse nome ainda não pode existir no servidor.  
   
 ## <a name="remarks"></a>Remarks  

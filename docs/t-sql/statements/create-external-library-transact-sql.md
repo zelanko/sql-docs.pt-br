@@ -19,12 +19,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e6154611d2579706f3da4f9159e5d1bfce41bb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538766"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -41,7 +41,7 @@ Atualmente, há compatibilidade apenas com a linguagem R e a plataforma Windows.
 ```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,…2]  
+FROM <file_spec> [,...2]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 

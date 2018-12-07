@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539727"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47633674"
   
 4.  Clique com o botão direito do mouse na pasta **Funções de Aplicativo** e selecione **Nova Função de Aplicativo...**.  
   
-5.  Na caixa de diálogo **Função de Aplicativo – Nova** , na página **Geral**, digite o novo nome da nova função de aplicativo na caixa **Nome da função** .  
+5.  Na caixa de diálogo **Função de Aplicativo – Nova**, na **Página Geral**, digite o novo nome da nova função de aplicativo na caixa **Nome da função**.  
   
-6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema** .  
+6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema**.  
   
 7.  Na caixa **Senha** , digite uma senha para a nova função. Digite essa senha novamente na caixa **Confirmar Senha** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633674"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Ampliadas**.  
   
 -   A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
   

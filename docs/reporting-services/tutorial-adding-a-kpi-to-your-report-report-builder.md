@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905786"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712637"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -342,6 +342,6 @@ Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obt
   
 ## <a name="see-also"></a>Consulte Também  
 * [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)
-* [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

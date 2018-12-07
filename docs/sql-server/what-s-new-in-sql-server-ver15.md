@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703904"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711827"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-O [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o SQL Server 2019. Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do SQL Server 2019](sql-server-ver15-release-notes.md).
+O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o SQL Server 2019. Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Experimente o SQL Server 2019!**
 - [![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Baixar o SQL Server 2019 para instalar no Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ O [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] se baseia em versões 
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-O CTP (Community Technology Preview) 2.1 é a última versão pública do [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Os recursos a seguir foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
+O CTP (Community Technology Preview) 2.1 é a última versão pública do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Os recursos a seguir foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1.
 
 - [Clusters de Big Data](#bigdatacluster)
   - Implantar aplicativos Python e R
@@ -46,7 +46,7 @@ O CTP (Community Technology Preview) 2.1 é a última versão pública do [!INCL
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-O CTP (Community Technology Preview) 2.0 é a primeira versão pública do [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Os seguintes recursos foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
+O CTP (Community Technology Preview) 2.0 é a primeira versão pública do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Os recursos a seguir foram adicionados ou aprimorados no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 - [Clusters de Big Data](#bigdatacluster)
   - Implantar um cluster de Big Data com contêineres SQL e Spark Linux no Kubernetes
@@ -163,7 +163,7 @@ Suporte completo para a amplamente utilizada codificação de caracteres UTF-8 c
 
 Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no SQL Server 2012. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
 
-Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres Latinas de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 leva a quase 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 22 bytes para armazenamento, enquanto `CHAR(10)` requer 12 bytes para a mesma cadeia de caracteres Unicode.
+Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres Latinas de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Criação de índice online retomável (CTP 2.0)
 
@@ -329,7 +329,7 @@ Para obter informações detalhadas, consulte [Novidades dos Serviços do Machin
 
 A infraestrutura de criação de perfil com consulta leve (LWP) fornece dados de desempenho de consulta de maneira mais eficiente do que as tecnologias de criação de perfil padrão. A criação de perfil leve agora está habilitada por padrão. Ela foi introduzida no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. A criação de perfil leve oferece um mecanismo de coleção de estatísticas de execução de consulta com uma sobrecarga esperada de 2% da CPU, em comparação com uma sobrecarga de até 75% da CPU para o mecanismo de criação de perfil com consulta padrão. Em versões anteriores, ela ficava DESATIVADA por padrão. Os administradores de banco de dados podiam habilitá-la com o [sinalizador de rastreamento 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Para obter mais informações sobre a criação de perfil leve, consulte [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Para obter mais informações sobre a criação de perfil leve, confira [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Novos conectores de PolyBase
 

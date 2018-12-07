@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542224"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -85,7 +85,7 @@ ms.locfileid: "50021940"
  O modo mais fácil de criar um relatório é adicionar uma parte de relatório existente, como uma tabela ou gráfico, ao relatório a partir da Galeria de Partes de Relatório. Depois de adicioná-lo a seu relatório, você poderá modificá-lo o quanto precisar, ou aceitar as atualizações do servidor. Alterar o item de relatório em seu relatório não afetará a instância da parte de relatório publicada no site ou servidor, nem interromperá a relação entre a instância no relatório e no site ou servidor. Se você tiver permissões suficientes, poderá salvar a cópia atualizada no site ou servidor. Se outra pessoa modificar a cópia no site ou servidor, você poderá decidir manter sua cópia como está, ou poderá atualizá-la para ficar com a cópia no site ou servidor.  
   
 ### <a name="searching-for-report-parts"></a>Procurando partes de relatório  
- Você deve procurar partes de relatório para adicionar a seu relatório na Galeria de Partes de Relatório. Você pode filtrar as partes de relatório por tudo ou parte do nome da parte, quem criou, quem modificou por último, quando foi a última modificação, onde está armazenado, ou que tipo de parte de relatório. Por exemplo, você pode procurar todos os gráficos criados na semana passada por um de seus colaboradores.  
+ Você deve procurar partes de relatório para adicionar a seu relatório na Galeria de Partes de Relatório. É possível filtrar as partes de relatório por tudo ou parte do nome da parte, quem criou, quem modificou por último, quando foi a última modificação, onde está armazenada ou que tipo de parte de relatório é. Por exemplo, você pode procurar todos os gráficos criados na semana passada por um de seus colaboradores.  
   
  Você pode exibir os resultados da pesquisa como miniaturas ou como uma lista, e classificar os resultados da pesquisa por nome, data de criação e modificação, e criador. Para obter mais informações, consulte [Procurar partes de relatório e definir uma pasta padrão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   

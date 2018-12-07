@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c4618fc4c6b352e119fb4c4686820ee8077dfab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545721"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -176,11 +176,11 @@ O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por e
 
 -   Moeda – moeda (DT_CY)
 
--   Booliano - booliano (DT_BOOL)
+-   Booliano – booliano (DT_BOOL)
 
 -   Data/hora – datetime (DT_DATE)
 
--   Cadeia – cadeia Unicode, 255 de comprimento (DT_WSTR)
+-   Cadeia de caracteres – cadeia Unicode, 255 de comprimento (DT_WSTR)
 
 -   Memorando – fluxo de texto Unicode (DT_NTEXT)
 

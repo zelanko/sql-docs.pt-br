@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526387"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Limita mais as linhas dentro da partição com a especificação de pontos iniciais e finais na partição. Isso é feito pela especificação de um intervalo de linhas em relação à linha atual por associação lógica ou associação física. A associação física é obtida com o uso de uma cláusula ROWS.  
   
- A cláusula ROWS limita as linhas dentro de uma partição especificando um número fixo de linhas antes ou depois da linha atual. Alternativamente, a cláusula RANGE limita as linhas logicamente dentro de uma partição especificando um intervalo de valores em relação ao valor na linha atual. As linhas precedentes e seguintes são definidas com base na classificação na cláusula ORDER BY. O quadro de janela "RANGE … CURRENT ROW …" inclui todas as linhas que têm os mesmos valores na expressão ORDER BY da linha atual. Por exemplo, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa que a janela de linhas em que a função funciona tem três linhas de tamanho, iniciando com 2 linhas antes e incluindo a linha atual.  
+ A cláusula ROWS limita as linhas dentro de uma partição especificando um número fixo de linhas antes ou depois da linha atual. Alternativamente, a cláusula RANGE limita as linhas logicamente dentro de uma partição especificando um intervalo de valores em relação ao valor na linha atual. As linhas precedentes e seguintes são definidas com base na classificação na cláusula ORDER BY. O quadro de janela "RANGE ... CURRENT ROW…" inclui todas as linhas que têm os mesmos valores na expressão ORDER BY da linha atual. Por exemplo, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa que a janela de linhas em que a função funciona tem três linhas de tamanho, iniciando com 2 linhas antes e incluindo a linha atual.  
   
 > [!NOTE]  
 >  ROWS ou RANGE requer que a cláusula ORDER BY seja especificada. Se ORDER BY contiver várias expressões de ordem, CURRENT ROW FOR RANGE considerará todas as colunas na lista ORDER BY ao determinar a linha atual.  
@@ -175,7 +175,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Importante:
 
-Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<window frame extent> (sintaxe curta), essa especificação será usada para o ponto de partida de limite de quadro de janela e CURRENT ROW será usado para o ponto de extremidade do limite. Por exemplo "ROWS 5 PRECEDING" é igual a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW."  
+Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<window frame extent> (sintaxe curta), essa especificação será usada para o ponto de partida de limite de quadro de janela e CURRENT ROW será usado para o ponto de extremidade do limite. Por exemplo "ROWS 5 PRECEDING" é igual a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
 > Se ORDER BY não for especificado, toda a partição será usada para um quadro de janela. Isso só se aplica a funções que não requerem a cláusula ORDER BY. Se ROWS/RANGE não for especificado, mas ORDER BY for especificado, RANGE UNBOUNDED PRECEDING AND CURRENT ROW é usado como padrão para quadro de janela. Isso só se aplica a funções que podem aceitar a especificação de ROWS/RANGE opcional. Por exemplo, as funções de classificação não podem aceitar ROWS/RANGE, portanto, esse quadro de janela não é aplicado, mesmo que ORDER BY esteja presente e ROWS/RANGE não.  

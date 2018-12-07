@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537346"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
@@ -40,7 +40,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
 Para gerenciar um relatório paginado existente, você pode fazer o seguinte.  
   
 > [!NOTE]
-> Se você não vir relatórios paginados na pasta, certifique-se de estar visualizando relatórios paginados. Você pode selecionar **Modo de Exibição** na barra de menus na parte superior direita do portal da Web. Certifique-se de que a opção **Relatórios paginados** está marcada.  
+> Se os relatórios paginados não aparecerem na pasta, verifique se você visualizando os relatórios paginados. Você pode selecionar **Modo de Exibição** na barra de menus na parte superior direita do portal da Web. Certifique-se de que a opção **Relatórios paginados** está marcada.  
   
 1.  Selecione as **reticências (...)** do conjunto de dados que deseja gerenciar.  
       

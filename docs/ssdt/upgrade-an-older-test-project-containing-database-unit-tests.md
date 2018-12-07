@@ -11,15 +11,15 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661215"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616219"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Atualizar um projeto de teste mais antigo contendo testes de unidade de banco de dados
-Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual Studio 2010 e que contém testes de unidade de banco de dados, para usar o novo tempo de execução e as ferramentas do teste de unidade de banco de dados do SQL Server Data Tools. Assim que você tiver atualizado um projeto mais antigo, você poderá adicionar os testes de unidade do SQL Server ao projeto (confira [Criar e definir testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md) para obter mais informações.  
+Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual Studio 2010 e que contém testes de unidade de banco de dados, para usar o novo tempo de execução e as ferramentas do teste de unidade de banco de dados do SQL Server Data Tools. Assim que você tiver atualizado um projeto mais antigo, você poderá adicionar os testes de unidade do SQL Server ao projeto (confira [Criar e definir testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md) para obter mais informações).  
   
 > [!TIP]  
 > Se você estiver usando o Visual Studio 2010, depois de adicionar os testes de unidade do SQL Server a um projeto de teste, não deverá adicionar testes de unidade usando o modelo de teste de unidade de banco de dados mais antigo. Se o fizer, precisará converter para o projeto novamente antes de os testes serem executados corretamente.  

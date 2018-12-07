@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545448"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 
@@ -728,7 +728,7 @@ SIZE_BASED_CLEANUP_MODE
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo:  
   
 OFF  
-Limpeza com base no tamanho não será ativada automaticamente. 
+A limpeza com base no tamanho não será ativada automaticamente. 
   
 AUTO  
 A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**.  Esse é o valor de configuração padrão.  
@@ -1079,7 +1079,7 @@ O status dessa opção pode ser determinado examinando-se a coluna is_recursive_
   
 Especifica a frequência de pontos de verificação indiretos por banco de dados. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o valor padrão para novos bancos de dados é de 1 minuto, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Especifica o salto máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.  
   
@@ -1692,7 +1692,7 @@ SIZE_BASED_CLEANUP_MODE
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo:  
   
 OFF  
-Limpeza com base no tamanho não será ativada automaticamente. 
+A limpeza com base no tamanho não será ativada automaticamente. 
   
 AUTO  
 A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**.  Esse é o valor de configuração padrão.  
@@ -1910,7 +1910,7 @@ O status dessa opção pode ser determinado examinando-se a coluna is_recursive_
   
 Especifica a frequência de pontos de verificação indiretos por banco de dados. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o valor padrão para novos bancos de dados é de 1 minuto, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Especifica o salto máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.  
   
@@ -2420,7 +2420,7 @@ SIZE_BASED_CLEANUP_MODE
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo:  
   
 OFF  
-Limpeza com base no tamanho não será ativada automaticamente. 
+A limpeza com base no tamanho não será ativada automaticamente. 
   
 AUTO  
 A limpeza com base em tamanho será ativada automaticamente quando o tamanho em disco atingir 90% do **max_storage_size_mb**. Limpeza com base no tamanho remove as consultas menos dispendiosas e mais antigas primeiro. Ele para a aproximadamente 80% do **max_storage_size_mb**.  Esse é o valor de configuração padrão.  
@@ -2638,7 +2638,7 @@ O status dessa opção pode ser determinado examinando-se a coluna is_recursive_
   
 Especifica a frequência de pontos de verificação indiretos por banco de dados. Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o valor padrão para novos bancos de dados é de 1 minuto, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Especifica o salto máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.  
   

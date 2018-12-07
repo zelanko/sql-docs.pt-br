@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030190"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710697"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Criar um relatório móvel do Reporting Services
-Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server 2016 Reporting Services com rapidez que se ajustam à qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
+Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server Reporting Services com rapidez que se ajustam a qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
   
 Na primeira vez que você criar um relatório móvel, instale o Publicador de Relatórios Móveis do SQL Server no computador local pelo portal da Web do Reporting Services. Ou então, você pode instalá-lo do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Depois da primeira vez, você poderá iniciá-lo no portal da Web ou localmente.   
     
@@ -62,7 +62,7 @@ Na primeira vez que você criar um relatório móvel, instale o Publicador de Re
   
 11. Hora de salvar o relatório. Selecione o ícone Salvar no canto superior esquerdo e **Salvar Localmente** ou **Salvar no Servidor**.  
   
-   Para salvá-lo em um servidor, você precisa ter acesso a um servidor de relatório do SQL Server 2016 Reporting Services.  
+   Para salvá-lo em um servidor, você precisa ter acesso a um servidor de relatório do SQL Server Reporting Services.  
      
    ### <a name="see-also"></a>Confira também  
      

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702924"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617946"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
 
@@ -67,7 +66,7 @@ ms.locfileid: "47702924"
     > [!NOTE]  
     >  Você poderá mapear sua fonte de dados para um domínio DQS somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (–)** para remover uma linha.  
+4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (-)** para remover uma linha.  
   
 5.  Clique em **Visualizar fonte de dados** para visualizar os dados na tabela do SQL Server ou visualizar os dados selecionados ou a planilha do Excel selecionada.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "47702924"
   
     -   Uma lista de clusters e os registros correspondentes em cada cluster, inclusive o nome de regra e a contagem. O registro dinâmico será marcado como "Dinâmico". Os clusters aparecerão primeiro na lista de exportação.  
   
-    -   Uma lista dos registros sem correspondência, com “NULL” nas colunas Pontuação e Nome da Regra. Esses registros serão anexados à lista de exportação depois dos clusters.  
+    -   Uma lista dos registros sem correspondência, com "NULL" nas colunas Pontuação e Nome da Regra. Esses registros serão anexados à lista de exportação depois dos clusters.  
   
      Isto será exportado para resultados de sobrevivência:  
   

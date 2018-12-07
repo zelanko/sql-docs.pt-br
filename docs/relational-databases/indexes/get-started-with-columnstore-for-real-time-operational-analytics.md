@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739734"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531539"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47739734"
 >  Um índice columnstore não clusterizado filtrado é permitido apenas em tabelas baseadas em disco. Ele não é permitido em tabelas com otimização de memória  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Exemplo A: acessar dados ativos do índice btree, dados passivos do índice columnstore  
- Este exemplo usa uma condição filtrada (accountkey > 0) para estabelecer quais linhas estarão no índice columnstore. O objetivo é criar a condição filtrada e as consultas subsequentes para acessar dados "ativos" que mudam frequentemente no índice btree e acessar os dados "passivos" mais estáveis no índice columnstore.  
+ Este exemplo usa uma condição filtrada (accountkey > 0) para estabelecer quais linhas estarão no índice columnstore. A meta é criar a condição filtrada e as consultas subsequentes para acessar dados "frequentes" que mudam frequentemente no índice btree e acessar os dados "passivos" mais estáveis no índice columnstore.  
   
  ![Índices combinados para dados ativos e passivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para dados ativos e passivos")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47739734"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Inserir/consultar a carga de trabalho:** se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
     Alguns exemplos de tal carga de trabalho são (a) carga de trabalho DW tradicional (b) análise de fluxo de clique quando você precisa analisar o padrão de clique em um aplicativo Web.  
   
--   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem "ativos" (isto é, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  
+-   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem 'frequentes' (ou seja, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  
   
  Esperamos que a maioria dos clientes não precise fazer nada. O valor padrão da opção COMPRESSION_DELAY deve funcionar para eles.  
 Para usuários avançados, é recomendável executar a consulta abaixo e coletar a % de linhas excluídas nos últimos 7 dias.  
@@ -218,12 +218,12 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Se o número de linhas excluídas em rowgroups compactados for superior a 20%, lidando com rowgroups antigos com variação inferior a 5% (referido como rowgroups frios) defina COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Observe que essa abordagem funciona melhor com uma carga de trabalho relativamente homogênea e estável.  
+ Se o número de linhas excluídas em rowgroups compactados for superior a 20%, lidando com rowgroups antigos com variação inferior a 5% (referido como rowgroups frios) defina COMPRESSION_DELAY = (youngest_rowgroup_created_time – current_time). Observe que essa abordagem funciona melhor com uma carga de trabalho relativamente homogênea e estável.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Guia de Índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Carregamento de dados dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
- [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+ [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   

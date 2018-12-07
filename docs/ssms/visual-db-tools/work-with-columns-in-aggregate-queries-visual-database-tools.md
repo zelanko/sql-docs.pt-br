@@ -16,12 +16,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 393bc1e434071c82bc198531e855f9c355feaac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540652"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabalhar com colunas em consultas de agregação (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Os seguintes princípios descrevem como você pode fazer referência a colunas e
     WHERE price > 10  
     ```  
   
--   Se você criar um critério de pesquisa que envolve uma coluna que também é usada em uma cláusula GROUP BY ou função de agregação, o critério de pesquisa poderá ser exibido como uma cláusula WHERE ou uma cláusula HAVING – você pode decidir quando criar o critério. Por exemplo, a seguinte instrução cria um preço médio para os títulos de cada editor, depois exibe a média para as publicações nas quais o preço médio é maior que R$ 10,00:  
+-   Se você criar uma condição de pesquisa que envolva uma coluna também usada em uma cláusula GROUP BY ou em uma função de agregação, a condição de pesquisa poderá ser exibida como uma cláusula WHERE ou como uma cláusula HAVING; você decide quando você criar a condição. Por exemplo, a seguinte instrução cria um preço médio para os títulos de cada editor, depois exibe a média para as publicações nas quais o preço médio é maior que R$ 10,00:  
   
     ```  
     SELECT pub_id, AVG(price)  

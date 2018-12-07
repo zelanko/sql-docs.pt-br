@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635954"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533025"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,10 +80,10 @@ A tabela a seguir mostra os formatos de literais de cadeia de caracteres válido
   
 |Formato W3C XML|Descrição|  
 |--------------------|-----------------|  
-|aaaa-mm-ddTZD|Suporte específico para utilização com XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />-   + (mais) ou – (menos) é o sinal obrigatório do deslocamento de fuso horário. Ele indica que o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado) para se obter a hora local. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
+|aaaa-mm-ddTZD|Suporte específico para utilização com XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />– + (mais) ou - (menos) é o sinal obrigatório do deslocamento de fuso horário. Ele indica que o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado) para se obter a hora local. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com o ANSI e ISO 8601  
-**date** é compatível com a definição do padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de data 0001-01-01 CE a 9999-12-31 CE".
+**date** é compatível com a definição do padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de data 0001-01-01 CE a 9999-12-31 CE."
   
 O formato padrão de literais de cadeia de caracteres que é usado para clientes de nível inferior,é compatível com o formato padrão SQL que é definido como AAAA-MM-DD. Este formato é o mesmo da definição ISO 8601 para DATE.
   

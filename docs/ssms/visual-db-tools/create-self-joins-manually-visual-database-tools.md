@@ -15,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afedc37f2ee6b2b6b1eb87b7e3a024e51697a724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd175d4d66cfea79f1449ae7da9d06d5c9f247c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542279"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Clique com o botão direito do mouse na linha de junção e escolha **Propriedades** no menu de atalho.  
   
-4.  Na janela Propriedades, clique em **Condição e Tipo de Junção** e clique nas reticências **(…)** à direita da propriedade.  
+4.  Na janela Propriedades, clique em **Condição e Tipo de Junção** e clique nas **reticências (…)** à direita da propriedade.  
   
 5.  Na caixa de diálogo [Junção](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , altere o operador de comparação entre as chaves primárias conforme requerido. Por exemplo, você pode alterar o operador para menor que (<).  
   

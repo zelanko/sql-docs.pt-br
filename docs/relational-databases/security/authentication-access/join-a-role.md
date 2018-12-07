@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539130"
 ---
 # <a name="join-a-role"></a>unir uma função
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,9 +79,9 @@ ms.locfileid: "47699354"
   
 4.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades de Função de Servidor –**_server\_role\_name_, na página **Membros**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Propriedades da Função de Servidor -**_server\_role\_name_, na página **Membros**, clique em **Adicionar**.  
   
-6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Servidor –**_server\_role\_name_.  
+6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **OK** para retornar à caixa de diálogo **Propriedades da Função de Servidor -**_server\_role\_name_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47699354"
   
 7.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-8.  Na caixa de diálogo **Propriedades de Função de Banco de Dados –**_database\_role\_name_, na página **Geral**, clique em **Adicionar**.  
+8.  Na caixa de diálogo **Propriedades da Função de Banco de Dados -**_database\_role\_name_, na página **Geral**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Banco de Dados –**_database\_role\_name_.  
+9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **OK** para retornar à caixa de diálogo **Propriedades da Função de Banco de Dados -**_database\_role\_name_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

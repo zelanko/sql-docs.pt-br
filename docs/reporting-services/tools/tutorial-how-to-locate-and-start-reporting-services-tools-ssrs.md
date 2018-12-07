@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813849"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711297"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as ferramentas do Reporting Services (SSRS)
 
@@ -132,7 +132,7 @@ Baixar o [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
  Para iniciar seu primeiro relatório, consulte [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Para obter mais informações sobre os designers de consulta que podem ser usados no Designer de Relatórios, consulte [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- O[Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) é um aplicativo autônomo que você pode usar para criar relatórios paginados fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode personalizar e atualizar todos os relatórios existentes, quer tenham sido criados no Designer de Relatórios ou em versões anteriores do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
+ O [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) é um aplicativo autônomo que você pode usar para criar relatórios paginados fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode personalizar e atualizar todos os relatórios existentes, quer tenham sido criados no Designer de Relatórios ou em versões anteriores do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
   
  [Baixe o Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
   

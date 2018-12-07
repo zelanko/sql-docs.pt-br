@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696264"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617396"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
 
@@ -30,7 +29,7 @@ ms.locfileid: "51696264"
   
  As cláusulas If e Then de uma regra de domínio cruzado são definidas para um dos domínios únicos do domínio composto. Cada cláusula deve ser definida para um único domínio diferente. Uma regra de domínio cruzado deve se relacionar a vários domínios únicos; você não pode definir uma regra de domínio simples (destinada a um domínio único) para um domínio composto. Você faria isso definindo uma regra de domínio para um domínio único. As cláusulas If e Then podem contar uma ou mais condições cada uma.  
   
- Uma regra de domínio cruzado que tem condições definitivas aplicará a lógica de regras a sinônimos do valor nas condições, bem como os próprios valores. As condições definitivas das cláusulas If e Then são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio cruzado para um domínio composto: “Para ‘Cidade’, se Valor é igual a ‘Los Angeles’, então para ‘Estado’, Valor é igual a ‘CA’. “Se ‘Los Angeles’ e ‘LA’ forem sinônimos, esta regra retornará correto para ‘Los Angeles CA’ e ‘LA CA’ e com erro para ‘Los Angeles WA’ e ‘LA WA’.  
+ Uma regra de domínio cruzado que tem condições definitivas aplicará a lógica de regras a sinônimos do valor nas condições, bem como os próprios valores. As condições definitivas das cláusulas If e Then são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio cruzado para um domínio composto: "Para ‘Cidade’, se Valor é igual a ‘Los Angeles’, então para ‘Estado’, Valor é igual a ‘CA’. "Se 'Los Angeles' e 'LA' forem sinônimos, esta regra retornará correto para 'Los Angeles CA' e 'LA CA' e com erro para 'Los Angeles WA' e 'LA WA'.  
   
  Além de informar você sobre a validade de uma regra de domínio cruzado, a cláusula *Then* definitiva em uma regra de domínio cruzado, **Valor é igual a**, também corrige os dados durante a atividade de limpeza de dados. Para obter mais informações, consulte [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) em [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

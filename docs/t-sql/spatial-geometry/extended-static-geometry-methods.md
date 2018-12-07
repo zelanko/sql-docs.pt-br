@@ -15,12 +15,12 @@ ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b18bd7b184523734e98ea49c96080856ccfe60a4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 43e7e88c10ffa05036e4a89d32ac6fa9021142f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702744"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530575"
 ---
 # <a name="extended-static-geometry-methods"></a>Métodos estendidos de geometria estática
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51702744"
   
  [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [Especificações do OGC, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Acesso de recurso simples Parte 2 – opções de SQL)  
   
  [Especificações OGC, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)  
   

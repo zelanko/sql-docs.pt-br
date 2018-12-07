@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021860"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712177"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
 
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em *\<Report Project Name>***Propriedades**.  
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_**Propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021860"
  Selecione **True** para substituir a fonte de dados no servidor pela fonte de dados no projeto quando os relatórios são publicados. Selecione **False** para deixar a fonte de dados existente no servidor.  
   
  **TargetServerVersion**  
- Selecione a versão apropriada do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **Detectar Versão** para determinar automaticamente a versão instalada no servidor identificado pela propriedade **TargetServer URL** . O valor padrão é **SQL Server 2016**.  
+ Selecione a versão apropriada do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **Detectar Versão** para determinar automaticamente a versão instalada no servidor identificado pela propriedade **TargetServer URL** . O valor padrão é **SQL Server 2017**.  
   
  **TargetDataSourceFolder**  
  O nome da pasta na qual serão armazenadas as fontes de dados compartilhadas publicadas. Se você não especificar uma pasta, a fonte de dados será publicada na mesma pasta do relatório. Se a pasta não existir no servidor de relatório, o Designer de Relatórios irá criar a pasta quando os relatórios forem publicados.  

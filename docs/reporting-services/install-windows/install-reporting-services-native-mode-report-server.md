@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813659"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712377"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 
@@ -64,7 +64,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
 ##  <a name="bkmk_requirements"></a> Requisitos  
  A opção de configuração padrão usa valores padrão para definir as configurações básicas necessárias para tornar operacional um servidor de relatório. Ela tem os seguintes requisitos:  
   
--   Examine [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) .  
+-   Examine [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem ser instalados juntos na mesma instância. A instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospeda o banco de dados do servidor de relatório que a Instalação cria e configura.  
   

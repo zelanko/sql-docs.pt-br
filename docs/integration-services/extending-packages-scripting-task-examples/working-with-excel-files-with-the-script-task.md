@@ -17,12 +17,12 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddbb2e0fe97024fe0ae44fcdcd971746263fad24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715724"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529592"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece o gerenciador de conexões do Excel, a origem do Excel e o destino do Excel para trabalhar com dados armazenados em planilhas no formato de arquivo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. As técnicas descritas neste tópico utilizam a tarefa Script para obter informações sobre bancos de dados (arquivos de pasta de trabalho) e tabelas (planilhas e intervalos nomeados) do Excel disponíveis.

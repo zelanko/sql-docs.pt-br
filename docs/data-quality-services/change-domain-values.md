@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
@@ -14,12 +13,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e9a804f90b3e318c9cfd665502b8f3349bf16ce7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699914"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617586"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
@@ -67,7 +66,7 @@ ms.locfileid: "51699914"
   
 3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio no qual você deseja alterar valores ou crie um novo domínio. Se você precisar criar um novo domínio, consulte [Criar um Domínio](../data-quality-services/create-a-domain.md). Clique na guia **Valores do Domínio** .  
   
-4.  Exiba os valores que você precisa modificar na tabela **Valor** . Para obter mais informações, consulte [How to Display the Appropriate Values](#Display) abaixo.  
+4.  Exiba os valores que você precisa modificar na tabela **Valor** . Para obter mais informações, consulte [Como exibir os valores apropriados](#Display) abaixo.  
   
 5.  Para alterar o estado de um valor, faça o seguinte:  
   
@@ -111,11 +110,11 @@ ms.locfileid: "51699914"
 ##  <a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  
  Cada valor na tabela **Valor** da página **Valores de Domínio** recebe a configuração de **Tipo** **Correto**, **Erro**ou **Inválido**. O tipo do valor é gerado inicialmente pela atividade de descoberta da base de dados de conhecimento, e você pode alterar isso da forma que achar mais conveniente. O tipo final, com base na descoberta e nas alterações interativas, é gerado pela atividade de limpeza. Essas configurações têm os seguintes significados:  
   
--   **Correto:** este é um valor que pertence ao domínio e não tem nenhum erro de sintaxe. Por exemplo, “Chicago” em um domínio Cidade está correto.  
+-   **Correto:** este é um valor que pertence ao domínio e não tem nenhum erro de sintaxe. Por exemplo, "Chicago" em um domínio Cidade está correto.  
   
--   **Erro:** este é um valor que pertence ao domínio, mas é um valor incorreto. Por exemplo, “Shicago” em vez de “Chicago” em um domínio Cidade é um erro. O DQS designa um valor como erro; ele detecta um erro de sintaxe e uma correção associada no processo de descoberta. Os erros de sintaxe incluem erros de ortografia.  
+-   **Erro:** este é um valor que pertence ao domínio, mas é um valor incorreto. Por exemplo, "Shicago" em vez de "Chicago" em um domínio Cidade é um erro. O DQS designa um valor como erro; ele detecta um erro de sintaxe e uma correção associada no processo de descoberta. Os erros de sintaxe incluem erros de ortografia.  
   
--   **Inválido:** este é um valor que não pertence ao domínio e não tem correção. Por exemplo, o valor “12345” em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
+-   **Inválido:** este é um valor que não pertence ao domínio e não tem correção. Por exemplo, o valor "12345" em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
   
  Você pode alterar o tipo de um valor manualmente para qualquer um dos outros dois valores. O DQS não impõe validade e semânticas de erro em operações manuais. Você pode inserir uma correção para obter um valor inválido sem alterar seu status. Você pode designar um valor como inválido até mesmo se ele não desobedecesse a uma regra de domínio. Você pode designar um valor como erro até mesmo se o processo de descoberta não indicasse que ele tem um erro de sintaxe. Você também pode remover uma correção para um valor Erro, que é marcado como Correto, sem alterar seu status.  
   

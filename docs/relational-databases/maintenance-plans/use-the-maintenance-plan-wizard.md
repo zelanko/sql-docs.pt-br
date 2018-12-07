@@ -35,12 +35,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee630731ac4cfa1648eb6096f5c80ee817d0d989
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 533447273bb174eadeace6cd3b8a2b2f95504811
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544151"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
     5.  Se você selecionou **Agenda única para o plano inteiro ou sem agenda**, em **Agenda**, clique em **Alterar**.  
   
-        1.  Na caixa de diálogo **Nova Agenda de Trabalho** , na caixa **Nome** , digite o nome da agenda de trabalho.  
+        1.  Na caixa de diálogo **Nova Agenda de Trabalho**, na caixa **Nome**, digite o nome da agenda de trabalho.  
   
         2.  Na lista **Tipo de Agenda** , selecione o tipo de agenda:  
   
@@ -113,7 +113,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
                 -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
-                    -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
+                    -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
                     -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
@@ -121,7 +121,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
                 -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-                -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite “2” na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+                -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
   
                      Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
@@ -143,7 +143,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
     > **OBSERVAÇÃO:** as tarefas selecionadas aqui determinarão quais páginas deverão ser preenchidas após a página **Selecionar Ordem da Tarefa de Manutenção** abaixo.  
   
-8.  Na página **Selecionar Ordem da Tarefa de Manutenção** , selecione uma tarefa e clique em **Mover para Cima…** ou **Mover para Baixo…** para alterar sua ordem de execução. Ao concluir ou se você estiver satisfeito com a ordem atual das tarefas, clique em **Avançar**.  
+8.  Na página **Selecionar Ordem da Tarefa de Manutenção**, selecione uma tarefa e clique em **Mover para Cima...** ou em **Mover para Baixo...** para alterar sua ordem de execução. Ao concluir ou se você estiver satisfeito com a ordem atual das tarefas, clique em **Avançar**.  
   
     > **OBSERVAÇÃO:** se você selecionou **Agendamentos separados para cada tarefa** na página **Selecionar Propriedades do Plano** acima, não será possível alterar a ordem das tarefas de manutenção nessa página.  
   
@@ -206,7 +206,7 @@ Caixa de seleção**Incluir índices**
   
 ## <a name="define-the-index-tasks"></a>Definir as tarefas de índice  
   
-1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX … REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX ... REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -220,9 +220,9 @@ Caixa de seleção**Incluir índices**
      Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
      Caixa de seleção**Compactar objetos grandes**   
-     Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  Na página **Definir Tarefa Recompilar Índice** , selecione o banco de dados ou os bancos de dados nos quais vários índices serão recriados. Esta tarefa usa a instrução `ALTER INDEX … REBUILD PARTITION`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Ao concluir, clique em **Avançar**.  
+2.  Na página **Definir Tarefa Recompilar Índice** , selecione o banco de dados ou os bancos de dados nos quais vários índices serão recriados. Esta tarefa usa a instrução `ALTER INDEX ... REBUILD PARTITION`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -423,7 +423,7 @@ Caixa de seleção**Incluir índices**
     |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
-2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE … WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Ao concluir, clique em **Avançar**.  
+2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Ao concluir, clique em **Avançar**.  
   
 3.  Na página **Definir Tarefa de Backup de Banco de Dados (Log de Transações)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup de um log de transações. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP LOG`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Ao concluir, clique em **Avançar**.  
   
@@ -519,10 +519,10 @@ Caixa de seleção**Incluir índices**
      Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
-     Copia os resultados do relatório de progresso do assistente na área de transferência.  
+     Copia os resultados do relatório de progresso do assistente na Área de transferência.  
   
      **Enviar Relatório como Email**  
-     Copia os resultados do relatório de progresso do assistente em uma mensagem de email.  
+     Copia os resultados do relatório de progresso do assistente para uma mensagem de email.  
   
   
 

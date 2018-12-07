@@ -10,12 +10,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05519dae5377d1e58f6b8e47b91d898c0b67dc2f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028365"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710867"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Instalar o Reporting Services 2016 no prompt de comando
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028365"
 ### <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE (modo nativo)
  A configuração de entrada primária para a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é a configuração de entrada **/RSINSTALLMODE** . A configuração tem duas opções: **DefaultNativeMode** e **FilesOnlyMode**  
   
- Se a instalação incluir o Mecanismo de Banco de Dados do SQL Server, o RSINSTALLMODE padrão será DefaultNativeMode. Se a instalação não incluir o Mecanismo de Banco de Dados do SQL Server, o RSINSTALLMODE padrão será FilesOnlyMode. Se você escolher DefaultNativeMode, mas a instalação não incluir o Mecanismo de Banco de Dados do SQL Server, a instalação alterará automaticamente o RSINSTALLMODE para FilesOnlyMode. Para obter mais informações sobre as configurações de entrada, consulte [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+ Se a instalação incluir o Mecanismo de Banco de Dados do SQL Server, o RSINSTALLMODE padrão será DefaultNativeMode. Se a instalação não incluir o Mecanismo de Banco de Dados do SQL Server, o RSINSTALLMODE padrão será FilesOnlyMode. Se você escolher DefaultNativeMode, mas a instalação não incluir o Mecanismo de Banco de Dados do SQL Server, a instalação alterará automaticamente o RSINSTALLMODE para FilesOnlyMode. Para obter mais informações sobre as configurações de entrada, confira [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
 ### <a name="examples-of-native-mode-installation"></a>Exemplos de instalação do modo nativo
 

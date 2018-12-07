@@ -8,19 +8,19 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051198"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711889"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
 
   Adicionar um segundo ou mais servidores de relatório de modo do SharePoint ao seu farm do SharePoint pode melhorar o desempenho e o tempo de resposta do processamento do servidor de relatório. Se você perceber que o desempenho está mais lento à medida que você adiciona mais usuários, relatórios e outros aplicativos ao servidor de relatório, então a adição de servidores de relatório pode melhorar o desempenho. Isto também é recomendado para adicionar um segundo servidor de relatório para aumentar a disponibilidade de servidores de relatório quando houver problemas com hardware ou você estiver realizando manutenção geral em servidores individuais em seu ambiente. A partir da versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , as etapas para expansão de um ambiente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint seguem a implantação padrão de farm do SharePoint e aproveita os recursos de balanceamento de carga do SharePoint.  
   
 > [!IMPORTANT]  
->  Não há suporte expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, confira a seção [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Não há suporte expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, confira a seção [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de [Recursos compatíveis com as edições do SQL Server](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS).  
   
 > [!TIP]  
 >  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , você não usa o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para adicionar servidores e expandir servidores de relatório. Os produtos do SharePoint gerenciam a expansão dos serviços de relatório à medida que os servidores do SharePoint com o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são adicionados ao farm.  

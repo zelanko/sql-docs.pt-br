@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699744"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711667"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente de criação do Construtor de Relatórios (SSRS)
   O Construtor de Relatórios [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é um ambiente de criação autônomo para a criação de relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fora do Visual Studio. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode instalá-lo do portal da Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou do Centro de Download da Microsoft.  
@@ -41,7 +41,7 @@ ms.locfileid: "47699744"
   
 -   Salvar o relatório e os itens relacionados em uma biblioteca do SharePoint, em um servidor de relatório ou em seu computador local.  
   
- O Construtor de Relatórios e o Designer de Relatórios compartilham muitos recursos. Leia mais sobre [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
+ O Construtor de Relatórios e o Designer de Relatórios compartilham muitos recursos. Leia mais sobre o [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

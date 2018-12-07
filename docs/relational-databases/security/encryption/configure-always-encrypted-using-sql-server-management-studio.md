@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee365b25b272d0a442632d23cbd407bb21090a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535358"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurar o Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ A Parametrização de Always Encrypted é desabilitada por padrão.
 
 Para habilitar/desabilitar a Parametrização de Always Encrypted na janela atual do Editor de Consultas:   
 1.  Selecione **Consulta** no menu principal.   
-2.  Selecione **Opções de Consulta…**.   
+2.  Selecione **Opções de Consulta...**.   
 3.  Navegue para **Execução** > **Avançado**.   
 4.  Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.   
 5.  Clique em **OK**.   
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 
 Para executar as consultas em colunas criptografadas, incluindo consultas que recuperam dados em texto cifrado, são necessárias as permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` no banco de dados.   
 Além das permissões acima, para descriptografar qualquer resultado de consulta ou criptografar os parâmetros de consulta (produzidos por parametrização de variáveis Transact-SQL), você também precisa acessar a chave mestra de coluna protegendo as colunas de destino:   
-- **Repositório de Certificados – computador local** Você deve ter acesso `Read` ao certificado que é usado como chave mestra da coluna, ou ser o administrador do computador.   
+- **Repositório de Certificados – Computador local** Você precisa ter o acesso `Read` ao certificado que é usado como a chave mestra da coluna ou ser o administrador do computador.   
 - **Cofre de Chaves do Azure** Você precisa de `get`, `unwrapKey`e verificar as permissões no cofre que contém a chave mestra da coluna.   
 - **Provedor do Repositório de Chaves (CNG)** A permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.   
 - **Provedor de Serviços de Criptografia (CAPI)** A permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.   
@@ -226,10 +226,10 @@ A caixa de diálogo **Nova Chave Mestra da Coluna** permite que você gere uma c
 2.  Clique com o botão direito do mouse na pasta **Chaves Mestras de Coluna** e selecione **Nova Chave Mestra de Coluna...**. 
 3.  Na caixa de diálogo **Nova Chave Mestra de Coluna** , digite o nome do objeto de metadados de chave mestra de coluna.
 4.  Selecione um repositório de chaves:
-    - **Repositório de Certificados – Usuário atual** : indica o local do repositório do certificado do usuário atual no Repositório de Certificados do Windows, que é seu repositório pessoal. 
-    - **Repositório de Certificados – Computador local** : indica o local do repositório de certificados do computador local no Repositório de Certificados do Windows. 
-    - **Cofre de Chaves do Azure** : você precisará entrar no Azure (clique em **Entrar**). Após entrar, você poderá escolher uma das suas assinaturas do Azure e um cofre de chaves.
-    - **Provedor do Repositório de Chaves (CNG)** : indica um repositório de chaves que é acessível por meio do KSP (provedor do repositório de chaves) que implementa a API CNG (Cryptography Next Generation). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um KSP. **Provedor de Armazenamento de Chaves do Software Microsoft** é selecionado por padrão. Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um KSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
+    - **Repositório de Certificados – Usuário atual**: indica a localização do repositório de certificados do usuário atual no Repositório de Certificados do Windows, que é seu repositório pessoal. 
+    - **Repositório de Certificados – Computador local**: indica a localização do repositório de certificados do computador local no Repositório de Certificados do Windows. 
+    - **Azure Key Vault** – você precisará entrar no Azure (clique em **Entrar**). Após entrar, você poderá escolher uma das suas assinaturas do Azure e um cofre de chaves.
+    - **Provedor do Repositório de Chaves (CNG)**: indica um repositório de chaves que pode ser acessado pelo KSP (provedor do repositório de chaves) que implementa a API CNG (Cryptography Next Generation). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um KSP. **Provedor de Armazenamento de Chaves do Software Microsoft** é selecionado por padrão. Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um KSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
     -   **Provedor de Serviços de Criptografia (CAPI)** : um repositório de chaves que é acessível por meio de um CSP (provedor de serviços de criptografia) que implementa a CAPI (Cryptography API). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um CSP.  Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um CSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
     
     >   [!NOTE]
@@ -249,7 +249,7 @@ O SQL Server Management Studio criará metadados para a chave mestra da coluna n
 A caixa de diálogo **Nova Chave de Criptografia de Coluna** permite gerar uma nova chave de criptografia de coluna, criptografá-la com uma chave mestra da coluna e criar metadados de chave de criptografia de coluna no banco de dados.
 
 1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança/Chaves Always Encrypted** em seu banco de dados.
-2.  Clique com o botão direito do mouse na pasta **Chaves de Criptografia de Coluna** e selecione **Nova Chave de Criptografia da Coluna...**. 
+2.  Clique com o botão direito do mouse na pasta **Chaves de Criptografia de Coluna** e selecione **Nova Chave de Criptografia de Coluna...**. 
 3.  Na caixa de diálogo **Nova Chave de Criptografia da Coluna** , digite o nome do objeto de metadados de chave de criptografia da coluna.
 4.  Selecione um objeto de metadados que representa a chave mestra da coluna no banco de dados.
 5.  Clique em **OK**. 
@@ -261,17 +261,17 @@ O SQL Server Management Studio gerará uma nova chave de criptografia da coluna 
 
 Você precisa das permissões de banco de dados *ALTER ANY ENCRYPTION MASTER KEY* e *VIEW ANY COLUMN MASTER KEY DEFINITION* no banco de dados para a caixa de diálogo criar os metadados da chave de criptografia da coluna e para acessar os metadados de chave mestra da coluna.
 Para acessar um repositório de chaves e usar a chave mestra da coluna, você pode precisar de permissões no repositório de chaves e/ou na chave:
-- **Repositório de Certificados – Computador local** : você deve ter acesso de leitura ao certificado que é usado como uma chave mestra da coluna ou ser o administrador do computador.
-- **Cofre de Chaves do Azure** : você precisa das permissões *get*, *unwrapKey*, *wrapKey*, *sign*e *verify*  no cofre que contém a chave mestra da coluna.
-- **Provedor do Repositório de Chaves (CNG)** : as permissões e credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
-- **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
+- **Repositório de Certificados – Computador local**: você precisa ter acesso de leitura ao certificado que é usado como uma chave mestra da coluna ou ser o administrador do computador.
+- **Azure Key Vault**: você precisa das permissões *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* no cofre que contém a chave mestra da coluna.
+- **Provedor do Repositório de Chaves (CNG)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
+- **Provedor de Serviços de Criptografia (CAPI)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
 <a name="rotatecmk"></a>
 ## <a name="rotating-column-master-keys"></a>Rotação de chaves mestras de coluna
 
-A rotação de uma chave mestra de coluna é um processo de substituição de uma chave mestra de coluna existente por uma nova chave mestra de coluna. Pode ser necessário girar uma chave se ela tiver sido comprometida ou para manter a conformidade com políticas e regulamentos da sua organização que exigem que chaves criptográficas sejam giradas com regularidade. A rotação de chave mestra de coluna envolve a descriptografia de chaves de criptografia de coluna que são protegidas com a chave mestra de coluna atual, criptografando-as novamente usando a nova chave mestra de coluna e atualizando os metadados da chave. Para obter mais informações, consulte [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)(Visão geral do gerenciamento de chaves do Sempre Criptografado).
+A rotação de uma chave mestra de coluna é um processo de substituição de uma chave mestra de coluna existente por uma nova chave mestra de coluna. Pode ser necessário girar uma chave caso ela tenha sido comprometida ou para manter a conformidade com políticas e regulamentos da sua organização que exigem que chaves criptográficas sejam giradas com regularidade. A rotação de chave mestra de coluna envolve a descriptografia de chaves de criptografia de coluna que são protegidas com a chave mestra de coluna atual, criptografando-as novamente usando a nova chave mestra de coluna e atualizando os metadados da chave. Para obter mais informações, consulte [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)(Visão geral do gerenciamento de chaves do Sempre Criptografado).
 
 **Etapa 1: Provisionar uma nova chave mestra de coluna**
 
@@ -297,8 +297,8 @@ O SQL Server Management Studio obterá os metadados das chaves de criptografia d
 
 Nesta etapa, você precisa se certificar de que todos os aplicativos cliente que consultam colunas de banco de dados protegidas pela chave mestra de coluna que você está girando possam acessar a nova chave mestra de coluna (isto é, colunas de banco de dados criptografadas com uma chave de criptografia de coluna que está criptografada com a chave mestra de coluna, que está sendo girada). Esta etapa depende do tipo de repositório de chaves em que sua nova chave mestra de coluna está. Por exemplo:
 - Se a nova chave mestra de coluna for um certificado armazenado no Repositório de Certificados do Windows, você precisará implantar o certificado no mesmo local do repositório de certificados (*Usuário Atual* ou *Computador local*) que o local especificado no caminho da chave de sua chave mestra de coluna no banco de dados. O aplicativo precisa ser capaz de acessar o certificado:
-    - Se o certificado for armazenado no local do repositório de certificados do *Usuário Atual* , o certificado precisará ser importado no repositório do Usuário Atual da identidade (usuário) do Windows do aplicativo.
-    - Se o certificado for armazenado no local do repositório de certificados do *Computador local* , a identidade do Windows do aplicativo deverá ter permissão para acessar o certificado.
+    - Se o certificado estiver armazenado na localização do repositório de certificados do *Usuário Atual*, o certificado precisará ser importado no repositório do Usuário Atual da identidade (usuário) do Windows do aplicativo.
+    - Se o certificado estiver armazenado na localização do repositório de certificados do *Computador local*, a identidade do Windows do aplicativo precisará ter permissão para acessar o certificado.
 - Se a nova chave mestra de coluna for armazenada no Cofre de Chaves do Microsoft Azure, o aplicativo deverá ser implementado para que possa se autenticar no Azure e tenha permissão para acessar a chave.
 
 Para obter detalhes, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
@@ -336,16 +336,16 @@ Se você optar por remover a definição da chave mestra de coluna antiga do ban
 
 Girar uma chave mestra de coluna requer as seguintes permissões de banco de dados:
 
-- **ALTER ANY COLUMN MASTER KEY** : necessária para criar os metadados para a nova chave mestra de coluna e excluir os metadados da chave mestra de coluna antiga.
-- **ALTER ANY COLUMN ENCRYPTION KEY** : necessária para modificar metadados de chave de criptografia de coluna (adicionar novos valores criptografados).
+- **ALTER ANY COLUMN MASTER KEY**: necessária para criar os metadados da nova chave mestra de coluna e excluir os metadados da chave mestra de coluna antiga.
+- **ALTER ANY COLUMN ENCRYPTION KEY**: necessária para modificar os metadados da chave de criptografia de coluna (adicionar novos valores criptografados).
 - **VIEW ANY COLUMN MASTER KEY DEFINITION** : necessária para acessar e ler os metadados das chaves mestras de coluna.
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : necessária para acessar e ler os metadados das chaves de criptografia de coluna. 
 
 Você também precisa ser capaz de acessar a chave mestra de coluna antiga e a nova chave mestra de coluna em seus repositórios de chaves. Para acessar um repositório de chaves e usar uma chave mestra da coluna, você pode precisar de permissões no repositório de chaves e/ou na chave:
-- **Repositório de Certificados – Computador local** : você deve ter acesso de leitura ao certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
-- **Cofre de Chaves do Azure** : você precisa das permissões *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* no cofre que contém as chaves mestras da coluna.
-- **Provedor do Repositório de Chaves (CNG)** : as permissões e credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
-- **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
+- **Repositório de Certificados – Computador local**: você precisa ter acesso de leitura ao certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
+- **Azure Key Vault**: você precisa das permissões *create*, *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* no cofre que contém as chaves mestras da coluna.
+- **Provedor do Repositório de Chaves (CNG)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
+- **Provedor de Serviços de Criptografia (CAPI)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
@@ -361,7 +361,7 @@ Para girar uma chave de criptografia de coluna, use o Assistente do Always Encry
 1.  Abra o assistente para o banco de dados: clique com o botão direito do mouse, aponte para **Tarefas**e clique em **Criptografar Colunas**.
 2.  Examine a página **Introdução** e, em seguida, clique em **Avançar**.
 3.  Na página **Seleção de Coluna** , expanda as tabelas e localize todas as colunas que deseja substituir que atualmente estão criptografadas com a chave de criptografia de coluna.
-4.  Para cada coluna criptografada com a chave de criptografia de coluna antiga, defina a **Chave de Criptografia** para uma nova chave gerada automaticamente. **Observação:** como alternativa, você pode criar uma nova chave de criptografia de coluna antes de executar o assistente. Consulte a seção *Provisionamento de chaves de criptografia da coluna* acima.
+4.  Para cada coluna criptografada com a chave de criptografia de coluna antiga, defina a **Chave de Criptografia** para uma nova chave gerada automaticamente. **Observação:** como alternativa, você pode criar uma chave de criptografia de coluna antes de executar o assistente. Confira a seção *Provisionamento de chaves de criptografia da coluna* acima.
 5.  Na página **Configuração da Chave Mestra** , selecione um local para armazenar a nova chave e uma fonte de chave mestra e clique em **Avançar**. **Observação:** se você estiver usando uma chave de criptografia de coluna existente (não uma gerada automaticamente), não há nenhuma ação a ser executada nesta página.
 6.  Na **página Validação**, escolha se deseja executar o script imediatamente ou criar um script do PowerShell e, em seguida, clique em **Avançar**.
 7.  Na página **Resumo** , examine as opções que você selecionou, clique em **Concluir** e feche o assistente após a conclusão.
@@ -369,22 +369,22 @@ Para girar uma chave de criptografia de coluna, use o Assistente do Always Encry
 
 ### <a name="permissions"></a>Permissões
 
-A rotação de uma chave de criptografia de coluna requer as seguintes permissões de banco de dados: **ALTER ANY COLUMN MASTER KEY** : necessária se você usar uma nova chave de criptografia de coluna gerada automaticamente (uma nova chave mestra de coluna e seus novos metadados também serão gerados).
-**ALTER ANY COLUMN ENCRYPTION KEY** : necessária para adicionar metadados para a nova chave de criptografia de coluna.
+A troca de uma chave de criptografia de coluna requer as seguintes permissões de banco de dados: **ALTER ANY COLUMN MASTER KEY** – necessária se você usar uma nova chave de criptografia de coluna gerada automaticamente (uma nova chave mestra de coluna e seus novos metadados também serão gerados).
+**ALTER ANY COLUMN ENCRYPTION KEY**: necessária para adicionar metadados para a nova chave de criptografia de coluna.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : necessária para acessar e ler os metadados das chaves mestras de coluna.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : necessária para acessar e ler os metadados das chaves de criptografia de coluna.
 
 Você também precisa ser capaz de acessar as chaves mestras de coluna das chaves de criptografia de coluna nova e antiga. Para acessar um repositório de chaves e usar uma chave mestra da coluna, você pode precisar de permissões no repositório de chaves e/ou na chave:
-- **Repositório de Certificados – Computador local** : você deve ter acesso de leitura para o certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
-- **Cofre de Chaves do Azure** : você precisa das permissões get, unwrapKey e verify no cofre que contém a chave mestra da coluna.
-- **Provedor do Repositório de Chaves (CNG)** : as permissões e credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
-- **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
+- **Repositório de Certificados – Computador local**: você precisa ter acesso de leitura para o certificado que é usado como a chave mestra da coluna ou ser o administrador do computador.
+- **Azure Key Vault**: você precisa das permissões get, unwrapKey e verify no cofre que contém a chave mestra da coluna.
+- **Provedor do Repositório de Chaves (CNG)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
+- **Provedor de Serviços de Criptografia (CAPI)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Executando operações de atualização de DAC quando o banco de dados ou o DACPAC usa o Always Encrypted
 
-As[operações de DAC](../../data-tier-applications/data-tier-applications.md) têm suporte em arquivos DACPAC e bancos de dados com esquemas contendo colunas criptografadas. Considerações especiais são aplicadas à operação de atualização de DAC. Consulte [Atualizar um aplicativo da camada de dados](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) sobre como executar uma operação de atualização de DAC em várias ferramentas, incluindo o SSMS. 
+As[operações de DAC](../../data-tier-applications/data-tier-applications.md) têm suporte em arquivos DACPAC e bancos de dados com esquemas contendo colunas criptografadas. Considerações especiais são aplicadas à operação de atualização de DAC. Confira [Atualizar um aplicativo da camada de dados](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) para saber como executar uma operação de atualização de DAC em várias ferramentas, incluindo o SSMS. 
 
 Quando você atualiza um banco de dados usando um DACPAC e o DACPAC ou o banco de dados de destino tem colunas criptografadas, a operação de atualização disparará uma operação de criptografia de dados se todas as seguintes condições forem atendidas:
 - O banco de dados contém uma coluna com dados.
@@ -407,10 +407,10 @@ Para executar uma operação de atualização de DAC se o Always Encrypted estiv
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 Se a operação de atualização disparar uma operação de criptografia de dados, você também precisará ser capaz de acessar as chaves mestras de coluna configuradas para as colunas afetadas:
-- **Repositório de Certificados – Computador local** : você deve ter acesso de leitura ao certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
-- **Cofre de Chaves do Azure** : você precisa das permissões *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* no cofre que contém as chaves mestras da coluna.
-- **Provedor do Repositório de Chaves (CNG)** : as permissões e credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
-- **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
+- **Repositório de Certificados – Computador local**: você precisa ter acesso de leitura ao certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
+- **Azure Key Vault**: você precisa das permissões *create*, *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* no cofre que contém a chave mestra da coluna.
+- **Provedor do Repositório de Chaves (CNG)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
+- **Provedor de Serviços de Criptografia (CAPI)**: a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
@@ -451,10 +451,10 @@ A tabela a seguir lista os cenários de migração possíveis e como eles se rel
 Para **criptografar** ou **descriptografar** os dados armazenados na fonte de dados, você precisará das permissões *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* no banco de dados de origem.
 
 Você também precisa acessar as chaves mestras de coluna, configuradas para as colunas, armazenando os dados que estão sendo criptografados ou descriptografados:
-- **Repositório de Certificados – Computador local** : você deve ter acesso de leitura para o certificado que é usado como chave mestra da coluna ou ser o administrador do computador.
-- **Cofre de Chaves do Azure** : você precisa das permissões get, unwrapKey, wrapKey, sign e verify no cofre que contém a chave mestra da coluna.
-- **Provedor do Repositório de Chaves (CNG)** : a permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
-- **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
+- **Repositório de Certificados – Computador local**: você precisa ter acesso de leitura para o certificado que é usado como a chave mestra da coluna ou ser o administrador do computador.
+- **Azure Key Vault** – você precisa das permissões get, unwrapKey, wrapKey, sign e verify no cofre que contém a chave mestra da coluna.
+- **Provedor do Repositório de Chaves (CNG)** – a permissão e as credenciais necessárias que poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
+- **Provedor de Serviços de Criptografia (CAPI)**: a permissão e as credenciais necessárias que poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
 ## <a name="see-also"></a>Consulte Também

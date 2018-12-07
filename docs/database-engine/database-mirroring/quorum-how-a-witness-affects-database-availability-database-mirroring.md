@@ -22,12 +22,12 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7437ae3e5a0489d582699c77af6d8d13c4ef6ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533377"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47657514"
   
     -   Todas as instâncias de servidor perdem quorum, mas subsequentemente o espelho e a testemunha são reconectados. O banco de dados não será servido neste caso.  
   
-     Raramente, a conexão de rede entre parceiros de failover é perdida enquanto ambos os parceiros permanecem conectados à testemunha. Nesse evento, há dois quoruns testemunha a parceiro individuais, sendo que a testemunha é o contato. A testemunha informa ao servidor espelho que o servidor principal ainda está conectado. Então, o failover automático não acontece. Ao contrário, o servidor espelho retém a função espelho e aguarda para reconectar-se ao servidor principal. Nesse momento, se a fila de restauração contiver os registros de log, o servidor espelho continuará a efetuar o roll forward do banco de dados espelho. Durante a reconexão, o servidor espelho sincronizará o banco de dados espelho novamente.  
+     Raramente, a conexão de rede entre parceiros de failover é perdida enquanto ambos os parceiros permanecem conectados à testemunha. Nesse evento, há dois quóruns individuais de testemunha a parceiro, sendo que a testemunha é o contato. A testemunha informa ao servidor espelho que o servidor principal ainda está conectado. Então, o failover automático não acontece. Ao contrário, o servidor espelho retém a função espelho e aguarda para reconectar-se ao servidor principal. Nesse momento, se a fila de restauração contiver os registros de log, o servidor espelho continuará a efetuar o roll forward do banco de dados espelho. Durante a reconexão, o servidor espelho sincronizará o banco de dados espelho novamente.  
   
 -   Um *quorum parceiro a parceiro* consiste nos dois parceiros.  
   

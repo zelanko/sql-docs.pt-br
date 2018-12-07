@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021580"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712487"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021580"
 
 Um KPI (indicador chave de desempenho) é uma indicação visual que informa o progresso feito em relação a um objetivo.  Os KPIs são valiosos para que equipes, gerentes e empresas avaliem rapidamente o progresso feito em relação a objetivos mensuráveis.   
   
-Ao usar os KPIs no SSRS para SQL Server 2016, você pode obter respostas rapidamente para as seguintes perguntas:  
+Ao usar os KPIs no SQL Server Reporting Services, você pode visualizar respostas rapidamente para as seguintes perguntas:  
   
 -   Em que estou adiantado ou atrasado?  
   

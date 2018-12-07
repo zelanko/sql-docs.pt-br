@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605976"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617726"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51605976"
 
 As contas de inicialização usadas para iniciar e executar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser [contas de usuário de domínio](#Domain_User), [contas de usuário locais](#Local_User), [contas de serviço gerenciado](#MSA), [contas virtuais](#VA_Desc)ou [contas de sistema internas](#Local_Service). Para ser iniciado e executado, cada serviço no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter uma conta de inicialização configurada durante a instalação.
   
- Esta seção descreve as contas que podem ser configuradas para iniciar os serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os valores padrão usados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o conceito de SIDs por serviço, as opções de inicialização e a configuração de firewall.  
+ Esta seção descreve as contas que podem ser configuradas para iniciar os serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os valores padrão usados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conceito de SIDs por serviço, as opções de inicialização e a configuração de firewall.  
   
 -   [Contas de serviço padrão](#Default_Accts)  
   
@@ -247,7 +247,7 @@ Na maioria dos casos, quando inicialmente instalado, o [!INCLUDE[ssDE](../../inc
   
 ##  <a name="Serv_Perm"></a> Permissões de serviço
 
-Esta seção descreve as permissões que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura para os SIDs por serviço dos serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Esta seção descreve as permissões que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura para os SIDs por serviço dos serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [Configuração de serviço e controle de acesso](#Serv_SID)  
   
@@ -562,13 +562,13 @@ Em toda a instalação, a Instalação do [!INCLUDE[ssNoVersion](../../includes/
   
     -   O SID por serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é provisionado no [!INCLUDE[ssDE](../../includes/ssde-md.md)] como membro da função de servidor fixa **sysadmin** .  
   
-    -   Os SIDs por serviço são adicionados aos grupos locais do Windows do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja uma Instância de Cluster de Failover.  
+    -   Os SIDs por serviço são adicionados aos grupos locais do Windows do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja uma Instância de Cluster de Failover.  
   
     -   Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permanecem provisionados nos grupos locais do Windows do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   O grupo Windows local para serviços é renomeado de **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ para **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_. Os locais de arquivos de bancos de dados migrados terão ACEs (Entradas de Controle de Acesso) para os grupos locais do Windows. Os locais de arquivos dos novos bancos de dados terão ACEs para o SID por serviço.  
   
--   Durante a atualização do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserva as ACEs para o SID por serviço do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
+-   Durante a atualização do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserva as ACEs para o SID por serviço do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 -   Para uma Instância de Cluster de Failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a ACE da conta de domínio configurada para o serviço será retida.  
   
@@ -647,7 +647,7 @@ Em toda a instalação, a Instalação do [!INCLUDE[ssNoVersion](../../includes/
 |Francês|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administradores|  
 |Italiano|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
 |Espanhol|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|Russo|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|Russo|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

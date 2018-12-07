@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb1318a5acd0e5ad04dd2ebefa009af7a60dd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf30ad3a99c8ffbe469413a315db26ad2e3b79e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782664"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532784"
 ---
 # <a name="understanding-database-engine-errors"></a>Compreendendo os erros do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47782664"
   
  Todos os APIs de banco de dados, como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** namespace, ActiveX Data Objects (ADO), OLE DB e Open Database Connectivity (ODBC), informam os atributos básicos de erro. Essa informação inclui o número de erro e cadeia de caracteres de mensagem. Porém, nem todos os APIs informam todos os outros atributos de erro.  
   
- Informações sobre um erro que acontece no escopo do bloco TRY de uma construção TRY.CATCH podem ser obtidas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] usando-se funções como ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE no escopo do bloco CATCH associado. Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Informações sobre um erro que acontece no escopo do bloco TRY de um constructo TRY…CATCH podem ser obtidas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] usando-se funções como ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE no escopo do bloco CATCH associado. Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir consulta a exibição de catálogo `sys.messages` para retornar uma lista de todas as mensagens de erro do sistema e definidas pelo usuário no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que tenham texto em inglês (`1033`).  

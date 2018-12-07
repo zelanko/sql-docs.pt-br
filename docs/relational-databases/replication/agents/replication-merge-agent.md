@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca8b44ba4f5d2c62e4f4476d77f7d62e853fd1bd
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523464"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[–InternetProxyPassword internet_proxy_password]  
+[-InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -174,7 +174,7 @@ replmerg [-?]
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
 
  > [!NOTE]  
- >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro ‘Alias Name’ deve ser o nome do servidor e o parâmetro ‘Server’ deve ser definido como o nome totalmente qualificado do SQL Server.
+ >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
 
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  Especifica o nome de logon usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword** *internet_proxy_password*  
  Especifica a senha usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

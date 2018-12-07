@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543800"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653364"
 |Barra invertida*|\\\|  
 |Terminador nulo (terminador invisível)**|\0|  
 |Qualquer caractere imprimível (caracteres de controle não são imprimíveis, exceto nulo, tabulação, nova linha e retorno de carro)|(*, A, t, l, etc.)|  
-|Cadeia de caracteres de até 10 caracteres imprimíveis, incluindo alguns ou todos os terminadores listados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t—\n e assim por diante)|  
+|Cadeia de caracteres de até 10 caracteres imprimíveis, incluindo alguns ou todos os terminadores listados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t-\n e assim por diante)|  
   
  *Somente os caracteres t, n, r, 0 e '\0' funcionam com o caractere de escape de barra invertida para produzir um caractere de controle.  
   

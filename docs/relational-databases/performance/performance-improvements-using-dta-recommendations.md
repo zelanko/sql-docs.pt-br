@@ -12,12 +12,12 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690694"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545359"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Melhorias de desempenho usando recomendações do DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ Em cada caso, depois implementamos os índices recomendados. Relatamos o Tempo d
 
 **Eficiência das recomendações de índice columnstore**: o quarto conjunto de barras correspondente ao Cliente 2 Consulta 2 representa um caso em que a consulta examina tabelas grandes que se beneficiariam de índices columnstore. O DTA (somente rowstore) gera uma recomendação cujo Tempo de CPU é mais alto comparado com quando os índices columnstore estão presentes. O DTA (rowstore + columnstore) recomenda índices columnstore adequados, encontrando a correspondência do desempenho de execução da consulta da opção somente columnstore.
 
-**Eficiência das recomendações de carga de trabalho com várias consultas**: o conjunto final de barras correspondente à carga de trabalho completa do Cliente 2 exemplifica a capacidade do DTA de analisar várias consultas na carga de trabalho para recomendar um conjunto adequado de índices rowstore e columnstore que pode melhorar o custo geral de execução da carga de trabalho. O DTA (rowstore + columnstore) recomenda quatro índices columnstore e dezenas de índices rowstore que resultam em uma melhoria que supera uma ordem de magnitude para a carga de trabalho quando comparado à opção que cria somente índices columnstore e em uma melhoria de cerca de 4X-5X quando comparado ao DTA (somente rowstore).
+**Eficiência das recomendações de carga de trabalho com várias consultas**: o conjunto final de barras correspondente à carga de trabalho completa do Cliente 2 exemplifica a capacidade do DTA de analisar várias consultas na carga de trabalho para recomendar um conjunto adequado de índices rowstore e columnstore que pode melhorar o custo geral de execução da carga de trabalho. O DTA (rowstore + columnstore) recomenda quatro índices columnstore e dezenas de índices rowstore que resultam em uma melhoria que supera uma ordem de magnitude para a carga de trabalho quando comparado à opção que cria somente índices columnstore e em uma melhoria de cerca de 4X a 5X quando comparado ao DTA (somente rowstore).
 
 Em resumo, os exemplos acima ilustram a capacidade do DTA de utilizar de forma conveniente índices rowstore e columnstore com suporte no Mecanismo de Banco de Dados do SQL Server, além de recomendar uma combinação apropriada de índices que pode reduzir consideravelmente o Tempo de CPU da carga de trabalho. 
 
 <a name="see-also"></a>Consulte Também
 ---
-[Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
 [Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 

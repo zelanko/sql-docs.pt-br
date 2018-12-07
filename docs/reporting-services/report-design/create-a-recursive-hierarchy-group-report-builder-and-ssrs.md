@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542467"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Criar um grupo de hierarquia recursiva (Construtor de Relatórios e SSRS)
 Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um grupo de hierarquia recursiva organiza dados de um único conjunto de dados de relatório que contém vários níveis hierárquicos, como a estrutura de subordinação para relações gerente-funcionários em uma hierarquia organizacional.  
@@ -48,7 +48,7 @@ Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
     > [!NOTE]  
     >  Se o painel Propriedades não for exibido, clique em **Propriedades** na guia **Exibir** .  
   
-2.  No painel Propriedades, expanda o nó **Preenchimento**, clique em **Esquerda** e, na lista suspensa, selecione **\<Expression…>**.  
+2.  No painel Propriedades, expanda o nó **Preenchimento**, clique em **Esquerda** e, na lista suspensa, selecione **\<Expression...>**.  
   
 3.  No painel Expressão, digite a seguinte expressão:  
   

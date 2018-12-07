@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799704"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641017"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -204,7 +204,7 @@ Execute a character string
  Quando usada para invocar uma função definida pelo usuário com valor escalar, a variável @*return_status* pode ser de qualquer tipo de dados escalar.  
   
  *module_name*  
- É o nome totalmente qualificado do procedimento armazenado ou do valor escalar da função a ser chamada, definida pelo usuário. Os nomes de módulos devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os nomes de procedimentos armazenados estendidos sempre têm diferenciação entre maiúsculas e minúsculas, independentemente do agrupamento do servidor.  
+ É o nome totalmente qualificado do procedimento armazenado ou do valor escalar da função a ser chamada, definida pelo usuário. Os nomes de módulos devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os nomes de procedimentos armazenados estendidos sempre têm diferenciação entre maiúsculas e minúsculas, independentemente da ordenação do servidor.  
   
  Um módulo que tenha sido criado em outro banco de dados poderá ser executado se o usuário que estiver executando o módulo for o proprietário ou se tiver permissão apropriada para executá-lo no referido banco de dados. Um módulo poderá ser executado em outro servidor que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o usuário que estiver executando o módulo tiver a permissão apropriada para usar esse servidor (acesso remoto) e executar o módulo no referido banco de dados. Se você especificar um nome de servidor mas não especificar um nome de banco de dados, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] procurará o módulo no banco de dados padrão do usuário.  
   
@@ -235,6 +235,8 @@ Execute a character string
   
  Se o valor de um parâmetro for o nome de um objeto, cadeia de caracteres ou qualificado por um nome de esquema ou nome de banco de dados, o nome todo deverá ficar dentro de aspas simples. Se o valor de um parâmetro for uma palavra-chave, a palavra-chave deverá ficar dentro de aspas duplas.  
   
+Se você passar uma única palavra que não começa com `@` e que não está entre aspas, por exemplo, se você esquecer `@` em um nome de parâmetro, a palavra será tratada como uma cadeia de caracteres nvarchar, apesar das aspas ausentes.
+
  Se um padrão estiver definido no módulo, um usuário poderá executar o módulo sem especificar um parâmetro.  
   
  O padrão também pode ser NULL. Geralmente, a definição de módulo especificará a ação a ser tomada se um valor de parâmetro for NULL.  
@@ -287,7 +289,7 @@ Execute a character string
  É uma cadeia de caracteres constante que contém o comando a ser passado ao servidor vinculado. Se N for incluído, a cadeia de caracteres será interpretada como o tipo de dados **nvarchar**.  
   
  [?]  
- Indica parâmetros para os quais valores são fornecidos em \<arg-list> de comandos de passagem usados em uma instrução EXEC('…', \<arg-list>) AT \<linkedsrv>.  
+ Indica parâmetros para os quais valores são fornecidos em \<arg-list> de comandos de passagem usados em uma instrução EXEC('...', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -295,7 +297,7 @@ Execute a character string
  Especifica que *command_string* é executada em *linked_server_name* e os resultados, se houver, são retornados ao cliente. *linked_server_name* deve referenciar uma definição de servidor vinculado existente no servidor local. Os servidores vinculados são definidos por meio de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  WITH \<execute_option>  
- Opções de execução possíveis. As opções de RESULT SETS não podem ser especificadas em uma instrução INSERT.EXEC.  
+ Opções de execução possíveis. As opções de RESULT SETS não podem ser especificadas em uma instrução INSERT...EXEC.  
   
 |Termo|Definição|  
 |----------|----------------|  
@@ -315,13 +317,13 @@ Execute a character string
 |schema_name|O nome do esquema proprietário da tabela, da exibição ou da função com valor de tabela.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Especifica que as colunas retornadas serão as especificadas na tabela, exibição ou função com valor de tabela nomeada. Não há suporte para variáveis de tabela, tabelas temporárias e sinônimos na sintaxe de objetos do AS.|  
 |AS TYPE [schema_name.]table_type_name|Especifica que as colunas retornadas serão as especificadas no tipo de tabela.|  
-|AS FOR XML|Especifica que os resultados XML da instrução ou procedimento armazenado chamado pela instrução EXECUTE serão convertidos no formato como se fossem gerados por uma instrução SELECT … FOR XML … . Toda a formatação das políticas do tipo na instrução original é removida, e os resultados são retornados como se nenhuma política do tipo fosse especificada. AS FOR XML não converte em XML os resultados de tabela não XML da instrução executada ou do procedimento armazenado.|  
+|AS FOR XML|Especifica que os resultados XML da instrução ou procedimento armazenado chamado pela instrução EXECUTE serão convertidos no formato como se fossem gerados por uma instrução SELECT ... FOR XML ... Toda a formatação das políticas do tipo na instrução original é removida, e os resultados são retornados como se nenhuma política do tipo fosse especificada. AS FOR XML não converte em XML os resultados de tabela não XML da instrução executada ou do procedimento armazenado.|  
   
 |Termo|Definição|  
 |----------|----------------|  
 |column_name|Os nomes de cada coluna. Se o número de colunas for diferente do conjunto de resultados, ocorrerá um erro e o lote será anulado. Se o nome de uma coluna for diferente do conjunto de resultados, o nome de coluna retornado será definido como o nome definido.|  
 |data_type|Os tipos de dados de cada coluna. Se os tipos de dados forem diferentes, será executada uma conversão implícita para o tipo de dados definido. Se a conversão falhar, o lote será anulado|  
-|COLLATE collation_name|O agrupamento de cada coluna. Se houver uma incompatibilidade de agrupamento, será tentado um agrupamento implícito. Se isso falhar, o lote será anulado.|  
+|COLLATE collation_name|A ordenação de cada coluna. Se houver uma incompatibilidade de ordenação, será tentada uma ordenação implícita. Se isso falhar, o lote será anulado.|  
 |NULL &#124; NOT NULL|A nulidade de cada coluna. Se a nulidade definida for NOT NULL e os dados retornados contiver NULLs, ocorrerá um erro e o lote será anulado. Se não especificado, o valor padrão se conforma à configuração das opções do ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.|  
   
  O conjunto de resultados real retornado durante execução pode diferir do resultado definido usando a cláusula WITH RESULT SETS de uma das seguintes maneiras: número de conjuntos de resultados, número de colunas, nome de coluna, nulidade e tipo de dados. Se o número de conjuntos de resultados for diferente, ocorrerá um erro e o lote será anulado.  

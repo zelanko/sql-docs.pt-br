@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701244"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641467"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
 
@@ -59,8 +59,11 @@ ms.locfileid: "51701244"
 10. Agora, abra o arquivo web.config de *drive*:\Arquivos de Programas\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 11. Localize a cadeia de caracteres `<security mode="Message">` e altere-a para `<security mode="Transport">`.  
-  
-12. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
+
+12. Alterar `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` para `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que podem aparecer no cliente do Silverlight.
+
+13. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
+
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

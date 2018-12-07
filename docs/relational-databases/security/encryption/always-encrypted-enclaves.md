@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307110"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711177"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -48,14 +48,14 @@ Durante o processamento de consulta, os dados ou as chaves de criptografia de co
 
 Com enclaves seguros, o Always Encrypted protege a confidencialidade dos dados confidenciais, fornecendo os seguintes benefícios:
 
-- **Criptografia in-loco** – Operações criptográficas em dados confidenciais, por exemplo: criptografia de dados ou rotação de uma chave de criptografia de coluna são executadas dentro do enclave seguro e não exigem a movimentação dos dados para fora do banco de dados. Você pode emitir a criptografia in-loco usando a instrução Transact-SQL ALTER TABLE, e não será preciso usar ferramentas como o assistente de Always Encrypted no SSMS ou o cmdlet do PowerShell Set-SqlColumnEncryption.
+- **Criptografia in-loco** – operações criptográficas em dados confidenciais, por exemplo: criptografia de dados ou rotação de uma chave de criptografia de coluna são executadas dentro do enclave seguro e não exigem a movimentação dos dados para fora do banco de dados. Você pode emitir a criptografia in-loco usando a instrução Transact-SQL ALTER TABLE, e não será preciso usar ferramentas como o assistente de Always Encrypted no SSMS ou o cmdlet do PowerShell Set-SqlColumnEncryption.
 
-- **Cálculos avançados (versão prévia)** – Operações em colunas criptografadas, incluindo a correspondência de padrões (o predicado LIKE) e comparações de intervalo são compatíveis dentro do enclave seguro, que desbloqueia o Always Encrypted para uma ampla gama de aplicativos e cenários que exigem que esses cálculos sejam executados dentro do sistema de banco de dados.
+- **Cálculos avançados (versão prévia)** – operações em colunas criptografadas, incluindo a correspondência de padrões (o predicado LIKE) e comparações de intervalo são compatíveis dentro do enclave seguro, que desbloqueia o Always Encrypted para uma ampla gama de aplicativos e cenários que exigem que esses cálculos sejam executados dentro do sistema de banco de dados.
 
 > [!IMPORTANT]
-> Em [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], os cálculos avançados estão aguardando várias otimizações de desempenho, incluindo a funcionalidade limitada (sem indexação, etc) e estão desabilitados por padrão no momento. Para habilitar cálculos avançados, consulte [Habilitar cálculos avançados](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], os cálculos avançados estão aguardando várias otimizações de desempenho, incluindo a funcionalidade limitada (sem indexação etc) e estão desabilitados por padrão no momento. Para habilitar cálculos avançados, consulte [Habilitar cálculos avançados](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-Em [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM, ou Modo Seguro Virtual) no Windows.
+Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM ou Modo Seguro Virtual) no Windows.
 
 ## <a name="secure-enclave-attestation"></a>Atestado de enclave seguro
 
@@ -63,18 +63,18 @@ O enclave seguro dentro do Mecanismo do SQL Server pode acessar dados confidenci
 
 O processo de confirmação do enclave é chamado de **atestado de enclave**, e geralmente requer que um driver de cliente dentro do aplicativo (e, às vezes, também do SQL Server) entre em contato com um serviço de atestado externo. As especificidades do processo de atestado dependem da tecnologia de enclave e do serviço de atestado.
 
-O processo de atestado do SQL Server é compatível com enclaves seguros de VBS em [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] é o atestado de tempo de execução de do Windows Defender System Guard, que usa o HGS (Serviço Guardião de Host) como um serviço de atestado. Você precisa configurar o HGS no seu ambiente e registrar o computador que hospeda a instância do SQL Server no HGS. Você também precisa configurar seus aplicativos cliente ou ferramentas (por exemplo, o SQL Server Management Studio) com um atestado de HGS.
+O processo de atestado do SQL Server é compatível com enclaves seguros de VBS em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] é o atestado de tempo de execução de do Windows Defender System Guard, que usa o HGS (Serviço Guardião de Host) como um serviço de atestado. Você precisa configurar o HGS no seu ambiente e registrar o computador que hospeda a instância do SQL Server no HGS. Você também precisa configurar seus aplicativos cliente ou ferramentas (por exemplo, o SQL Server Management Studio) com um atestado de HGS.
 
 ## <a name="secure-enclave-providers"></a>Provedores de enclave seguro
 
-Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. No [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], seus aplicativos precisam usar o .NET Framework 4.7.2 e o Provedor de Dados do .NET Framework para SQL Server. Além disso, os aplicativos .NET precisam ser configurados com um **provedor de enclave seguro** específico para o tipo de enclave (por exemplo, VBS) e o serviço de atestado (por exemplo, HGS) que você está usando. Os provedores de enclave compatíveis são fornecidos separadamente em um pacote NuGet, que você precisa integrar ao seu aplicativo. Um provedor de enclave implementa a lógica do lado do cliente para o protocolo de atestado e estabelece um canal seguro com um enclave seguro de um tipo determinado.
+Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. No [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], seus aplicativos precisam usar o .NET Framework 4.7.2 e o Provedor de Dados do .NET Framework para SQL Server. Além disso, os aplicativos .NET precisam ser configurados com um **provedor de enclave seguro** específico para o tipo de enclave (por exemplo, VBS) e o serviço de atestado (por exemplo, HGS) que você está usando. Os provedores de enclave compatíveis são fornecidos separadamente em um pacote NuGet, que você precisa integrar ao seu aplicativo. Um provedor de enclave implementa a lógica do lado do cliente para o protocolo de atestado e estabelece um canal seguro com um enclave seguro de um tipo determinado.
 
 ## <a name="enclave-enabled-keys"></a>Chaves habilitadas para enclave
 
 O Always Encrypted com enclaves seguros apresenta o conceito de chaves habilitadas para enclave:
 
-- **Chave mestra de coluna habilitada para enclave** – Uma chave mestra de coluna que tem a propriedade ENCLAVE_COMPUTATIONS especificada no objeto de metadados de chave mestra de coluna no banco de dados. O objeto de metadados de chave mestra de coluna também precisa conter uma assinatura válida das propriedades de metadados.
-- **Chave de criptografia de coluna habilitada para enclave** – Uma chave de criptografia de coluna que é criptografada com uma chave mestra de coluna habilitada para enclave.
+- **Chave mestra de coluna habilitada para enclave** – uma chave mestra de coluna que tem a propriedade ENCLAVE_COMPUTATIONS especificada no objeto de metadados de chave mestra de coluna no banco de dados. O objeto de metadados de chave mestra de coluna também precisa conter uma assinatura válida das propriedades de metadados.
+- **Chave de criptografia de coluna habilitada para enclave** – uma chave de criptografia de coluna que é criptografada com uma chave mestra de coluna habilitada para enclave.
 
 Quando o Mecanismo do SQL Server determina as operações que, especificadas em uma consulta, precisam ser executadas dentro do enclave seguro, o Mecanismo do SQL Server solicita que o driver do cliente compartilhe as chaves de criptografia de coluna que são necessários para os cálculos com o enclave seguro. O driver do cliente compartilha as chaves de criptografia de coluna apenas se as chaves estiverem habilitada para enclave (ou seja, criptografadas com chaves mestras de coluna habilitada para enclave) e se estiverem devidamente assinadas. Caso contrário, a consulta falhará.
 
@@ -92,10 +92,10 @@ A tabela a seguir resume a funcionalidade disponível para colunas criptografada
 | **Operação**| **A coluna NÃO é habilitada para enclave** |**A coluna NÃO é habilitada para enclave**| **A coluna é habilitada para enclave**  |**A coluna é habilitada para enclave** |
 |:---|:---|:---|:---|:---|
 | | **Criptografia aleatória**  | **Criptografia determinística**     | **Criptografia aleatória**      | **Criptografia determinística**     |
-| **Criptografia in-loco** | Incompatível  | Incompatível   | Tem suporte         | Tem suporte    |
+| **Criptografia in-loco** | Incompatível  | Sem suporte   | Tem suporte         | Tem suporte    |
 | **Comparação de igualdade**   | Incompatível | Compatível fora do enclave | Compatível (dentro do enclave) | Compatível fora do enclave |
-| **Operadores de comparação além de igualdade** | Incompatível  | Incompatível   | Tem suporte      | Incompatível     |
-| **LIKE**    | Incompatível      | Incompatível    | Tem suporte     | Incompatível    |
+| **Operadores de comparação além de igualdade** | Incompatível  | Sem suporte   | Tem suporte      | Sem suporte     |
+| **LIKE**    | Sem suporte      | Sem suporte    | Tem suporte     | Sem suporte    |
 
 A criptografia in-loco é compatível com as seguintes operações dentro do enclave:
 
@@ -121,7 +121,7 @@ Limitações gerais:
 
 - A comparação de igualdade continua sendo o único operador de Transact-SQL compatível com a criptografia determinística e as comparações de igualdade são executadas comparando valores de texto cifrado fora do enclave, independentemente se a chave de criptografia de colunas foi habilitada para enclave ou não. A única funcionalidade nova desbloqueada com chaves de criptografia de coluna habilitadas para enclave para criptografia determinística são as operações criptográficas in-loco. Se tiver uma coluna criptografada usando a criptografia determinística (e uma chave que não é habilitada para enclave), você precisará criptografar novamente a coluna usando criptografia aleatória para habilitar cálculos avançados (operações de comparação de correspondência de padrões).
 
-- A restrição existente do uso de agrupamentos se aplica a colunas criptografadas com chaves de criptografia de coluna habilitada para enclave: as colunas de cadeia de caracteres (char, nchar, varchar, nvarchar) criptografadas usando criptografia determinística precisam usar agrupamentos com uma ordem de classificação binary2 (agrupamentos BIN2). Colunas de cadeias de caracteres que usam agrupamentos diferentes de BIN2 podem ser criptografadas usando a criptografia aleatória – no entanto, a única funcionalidade nova que está habilitada para essas colunas (se forem criptografadas com chaves de criptografia de coluna habilitadas para enclave) é a criptografia in-loco. **Para ser compatível com cálculos avançados (correspondência de padrões, operações de comparação) uma coluna precisa usar um agrupamento BIN2** (e a coluna precisa ser criptografada usando criptografia aleatória e uma chave de criptografia de coluna habilitada para enclave).
+- A restrição existente do uso de agrupamentos se aplica a colunas criptografadas com chaves de criptografia de coluna habilitada para enclave: as colunas de cadeia de caracteres (char, nchar, varchar, nvarchar) criptografadas usando criptografia determinística precisam usar agrupamentos com uma ordem de classificação binary2 (agrupamentos BIN2). Colunas de cadeias de caracteres que usam agrupamentos diferentes de BIN2 podem ser criptografadas usando a criptografia aleatória, no entanto, a única funcionalidade nova que está habilitada para essas colunas (se forem criptografadas com chaves de criptografia de coluna habilitadas para enclave) é a criptografia in-loco. **Para ser compatível com cálculos avançados (correspondência de padrões, operações de comparação) uma coluna precisa usar um agrupamento BIN2** (e a coluna precisa ser criptografada usando criptografia aleatória e uma chave de criptografia de coluna habilitada para enclave).
 
 - O uso de chaves habilitadas para enclave para colunas em tabelas na memória não é compatível.
 
@@ -143,4 +143,4 @@ As seguintes limitações se aplicam à Versão prévia atual, mas estão em nos
 
 ## <a name="next-steps"></a>Next Steps
 
-- Configure seu ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguros no SSMS – consulte [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Configure seu ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguros no SSMS – confira [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -1,7 +1,7 @@
 ---
 title: Práticas recomendadas com o repositório de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657835"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712108"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Este artigo descreve as práticas recomendadas para usar o Repositório de Consultas com sua carga de trabalho.  
   
@@ -34,7 +34,7 @@ Baixe a versão mais recente do [!INCLUDE[ssManStudio](../../includes/ssmanstudi
   
 ##  <a name="Insight"></a> Usar a Análise de Desempenho de Consultas no banco de dados SQL do Azure  
  Se você executar o Repositório de Consultas em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , você poderá usar a **Análise de Desempenho de Consultas** para analisar o consumo de DTU ao longo do tempo.  
-Embora você possa usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para obter o consumo de recursos detalhado de todas as suas consultas (CPU, memória, E/S, etc.), a Análise de Desempenho de Consultas fornece uma maneira rápida e eficiente para determinar seu impacto sobre o consumo de DTU geral do seu banco de dados.  
+Embora você possa usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para obter o consumo de recursos detalhado de todas as suas consultas (CPU, memória, E/S, etc.), a Análise de Desempenho de Consultas fornece uma maneira rápida e eficiente para determinar seu impacto sobre o consumo de DTU geral do banco de dados.  
 Para obter mais informações, consulte [Análise de Desempenho de Consultas do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Usando o Repositório de Consultas com Bancos de Dados de Pools Elásticos
@@ -48,11 +48,11 @@ Os parâmetros padrão são bons o bastante para iniciar, mas você deve monitor
   
  Aqui estão as diretrizes a seguir para definir valores de parâmetro:  
   
- **Tamanho Máximo (MB):** especifica o limite para o espaço de dados que o Repositório de Consultas admitirá em seu banco de dados.  Essa é a configuração mais importante, que afeta diretamente o modo de operação do Repositório de Consultas.  
+ **Tamanho Máximo (MB):** especifica o limite para o espaço de dados que o Repositório de Consultas admitirá em seu banco de dados. Essa é a configuração mais importante, que afeta diretamente o modo de operação do Repositório de Consultas.  
   
  Conforme o Repositório de Consultas coleta consultas, planos de execução e estatísticas, seu tamanho no banco de dados cresce até esse limite ser atingido. Quando isso acontece, o Repositório de Consultas automaticamente altera o modo de operação para somente leitura e para de coletar novos dados, o que significa que a análise de desempenho não é mais precisa.  
   
- O valor padrão (100 MB) pode não ser suficiente se sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
+ O valor padrão (100 MB) pode não ser suficiente se sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **Intervalo de Coleta de Estatísticas:** define o nível de granularidade para a estatística de tempo de execução coletada (o padrão é 1 hora). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use o SSMS ou Transact-SQL para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
+
+ **Intervalo de liberação de dados:** define a frequência em segundos para manter as estatísticas de tempo de execução coletadas em disco (o padrão é 900 segundos, ou seja, 15 minutos). Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados. 
+ 
+> [!NOTE]
+> O uso do sinalizador de rastreamento 7745 impedirá que os dados do Repositório de Consultas sejam gravados em disco em caso de um failover ou comando de desligamento. Confira a seção [Usar sinalizadores de rastreamento em servidores críticos para melhorar a recuperação de desastre](#Recovery) para obter mais detalhes.
+
+Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o Intervalo de Liberação de Dados:  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **Intervalo de Coleta de Estatísticas:** define o nível de granularidade da estatística de tempo de execução coletada (o padrão é de 60 minutos). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Limite de Consulta Obsoleto (Dias):** política de limpeza com base em tempo que controla o período de retenção de estatísticas de tempo de execução persistentes e consultas inativas.  
@@ -132,7 +145,7 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
   
  O gráfico a seguir mostra como localizar os modos de exibição do Repositório de Consultas:  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![Exibições do Repositório de Consultas](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Exibições do Repositório de Consultas")  
   
  A tabela a seguir explica quando usar cada um dos modos de exibição do Repositório de Consultas:  
   
@@ -143,10 +156,11 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
 |Consultas com maior consumo de recursos|Escolha uma métrica de execução de seu interesse e identifique as consultas que tinham os valores mais extremos em um intervalo de tempo fornecido. <br />Use esse modo de exibição para concentrar sua atenção nas consultas mais relevantes, as que apresentam o maior impacto no consumo de recursos do banco de dados.|  
 |Consultas com planos forçados|Listas de planos forçados anteriormente usando o Repositório de Consultas. <br />Use esta exibição para acessar rapidamente todos os planos forçados no momento.|  
 |Consultas com alta variação|Analise consultas com alta variação de execução relacionadas a qualquer dimensão disponível, como Duração, Tempo de CPU, E/S e Uso de memória no intervalo de tempo desejado.<br />Use esta exibição para identificar consultas com desempenho amplamente variável que possam afetar a experiência do usuário em seus aplicativos.|  
+|Estatísticas de Espera da Consulta|Analise as categorias de espera que são mais ativas em um banco de dados e quais consultas mais contribuem para a categoria de espera selecionada.<br />Use esta exibição para analisar as estatísticas de espera e identifique as consultas que podem afetar a experiência do usuário em seus aplicativos.<br /><br />**Aplica-se a:** Começando com [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Consultas rastreadas|Acompanhe a execução das consultas mais importantes em tempo real. Normalmente, você usa este modo de exibição quando você tem consultas com planos forçados e você deseja certificar-se de que o desempenho de consultas é estável.|
   
 > [!TIP]  
->  Para obter uma descrição detalhada como usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar as consultas com maior consumo de recursos e corrigir as que regrediram devido à alteração de uma opção de plano, confira [Repositório de Consultas @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+> Para obter uma descrição detalhada como usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar as consultas com maior consumo de recursos e corrigir as que regrediram devido à alteração de uma opção de plano, confira [Repositório de Consultas @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Ao identificar uma consulta com desempenho abaixo do ideal, sua ação dependerá da natureza do problema.  
   

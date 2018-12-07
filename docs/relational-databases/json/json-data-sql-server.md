@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b772ebe8af00bee81c6034745b2e21311d09f23a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537396"
 ---
 # <a name="json-data-in-sql-server"></a>Dados JSON no SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ Para obter mais informações, consulte [Formatar Resultados da Pesquisa como JS
 
 ## <a name="use-cases-for-json-data-in-sql-server"></a>Usar casos para dados JSON no SQL Server
 
-O suporte a JSON no SQL Server e no Banco de Dados SQL do Azure permite combinar conceitos relacionais e NoSQL. É possível transformar facilmente dados relacionais em semiestruturados e vice-versa. No entanto, o JSON não é uma substituição para modelos relacionais existentes. Aqui estão alguns casos de uso específicos que se beneficiam do suporte a JSON no SQL Server e no Banco de Dados SQL. Para obter mais informações, consulte [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON no SQL Server – casos de uso).
+O suporte a JSON no SQL Server e no Banco de Dados SQL do Azure permite combinar conceitos relacionais e NoSQL. É possível transformar facilmente dados relacionais em semiestruturados e vice-versa. No entanto, o JSON não é uma substituição para modelos relacionais existentes. Aqui estão alguns casos de uso específicos que se beneficiam do suporte a JSON no SQL Server e no Banco de Dados SQL. Para obter mais informações, confira [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON no SQL Server – casos de uso).
 
 ### <a name="simplify-complex-data-models"></a>Simplificar modelos de dados complexos
 
@@ -226,7 +226,7 @@ Armazene informações sobre produtos com uma ampla gama de atributos de variáv
 
 ### <a name="process-log-and-telemetry-data"></a>Processar dados de log e de telemetria
 
-Carregue, consulte e analise dados de log armazenados como arquivos JSON com todos os recursos da linguagem Transact-SQL. Para obter mais informações, consulte a seção *Análise de dados de log e de telemetria* em [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON no SQL Server – casos de uso).
+Carregue, consulte e analise dados de log armazenados como arquivos JSON com todos os recursos da linguagem Transact-SQL. Para obter mais informações, confira a seção *Análise de dados de log e de telemetria* em [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON no SQL Server – casos de uso).
 
 ### <a name="store-semi-structured-iot-data"></a>Armazenar dados semiestruturados de IoT
 

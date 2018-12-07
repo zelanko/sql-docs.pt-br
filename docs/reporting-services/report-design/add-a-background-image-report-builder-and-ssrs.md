@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a03db689605fe26f9ba6c21ff26377fcbe40e8c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 635783deea70ed334ad3b73f1c0136809415c332
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527286"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Adicionar uma imagem de plano de fundo (Construtor de Relatórios e SSRS)
   Você pode adicionar uma imagem de plano de fundo a um item de relatório tais como um retângulo, uma caixa de texto, uma lista, uma matriz, uma tabela, algumas partes de um gráfico, ou uma seção de relatório como cabeçalho de página, rodapé de página ou corpo de relatório. Você pode definir uma imagem de tela de fundo para qualquer item selecionado na superfície de design do relatório que exiba **BackgroundImage** no painel Propriedades. Assim como outras imagens, a imagem de plano de fundo pode ser uma URL para uma imagem no servidor de relatório, uma imagem de um campo de conjunto de dados ou uma imagem inserida na definição de relatório. Para usar uma imagem inserida no relatório, primeiro adicione a imagem à definição de relatório antes de adicioná-la à superfície de design.  
@@ -56,7 +56,7 @@ ms.locfileid: "50031175"
   
          Defina **Valor** como o nome de um campo no conjunto de dados de relatório. Para obter mais informações, consulte [Adicionar uma imagem com limite de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
-         Para **MIMEType**, ou formato de arquivo, selecione o tipo MIME adequado para a imagem; por exemplo, .bmp.  
+         Para **MIMEType** ou formato de arquivo, selecione o tipo MIME adequado para a imagem; por exemplo, .bmp.  
   
         > [!NOTE]  
         >  MIMEType só poderá ser aplicado se a propriedade **Source** estiver definida como **Banco de Dados**. Se a propriedade **Source** estiver definida como **Externa** ou **Inserida**, o valor **MIMEType** será ignorado.  

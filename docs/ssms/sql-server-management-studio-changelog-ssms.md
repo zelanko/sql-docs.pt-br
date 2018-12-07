@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703984"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712727"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -198,10 +198,10 @@ O SSMS não é adicionado à variável de ambiente PATH:
 
 - O caminho para SSMS. EXE (e ferramentas em geral) não é mais adicionado ao caminho. Os usuários podem adicionar por conta própria ou, se usarem um Windows moderno, confiar no menu Iniciar.
 
-Suporte para [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Compatível com [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- Esta é a primeira versão do SSMS totalmente *ciente* do [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (nível de compatibilidade 150, etc).
-- Suporte a "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" no [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] e na Instância Gerenciada no SSMS.
+- Esta é a primeira versão do SSMS totalmente *ciente* do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel 150, etc).
+- Compatível com "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e na Instância Gerenciada no SSMS.
 - GraphDB: adicione o sinalizador no plano de execução para a sequência de TC do Graph.
 - Always Encrypted: foi adicionado suporte para [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - A caixa de diálogo Conexão tem uma nova guia "Always Encrypted" quando o usuário clica no botão "Opções" para habilitar e configurar o suporte de enclave.
@@ -427,10 +427,39 @@ SSMS
 
 SSIS
 
-- O pacote não pode ser implantado nem executado com êxito quando ele tem como alvo o SQL Server da versão antiga e contém o componente de Tarefa Script/Script ao mesmo tempo.
+- O pacote não pode ser implantado nem executado com êxito quando tem como alvo o SQL Server da versão antiga e contém o componente de Tarefa Script/Script ao mesmo tempo.
 - O SSMS não pode se conectar ao Integration Services remoto.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (versão mais recente de GA)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (versão mais recente de GA)
+
+![baixar](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Número da versão: 17.9.1<br>
+- Número de build: 14.0.17289.0<br>
+- Data de lançamento: 21 de novembro de 2018
+
+A versão 17.9.1 é uma pequena atualização da versão 17.9 com as seguintes correções de bug:
+
+- Corrigido um problema em que ao usarem a autenticação do "Active Directory – Universal com suporte MFA" com o editor de consultas SQL, a conexão é fechada e reaberta a cada invocação de consulta. Os efeitos colaterais do fechamento da conexão incluem tabelas temporárias globais que são descartadas inesperadamente e, às vezes, um novo SPID fornecido para a conexão.
+- Corrigido um problema antigo em que o plano de restauração não localiza um plano de restauração ou gera um plano de restauração ineficiente em determinadas condições.
+- Corrigido um problema no assistente "Importar Aplicativo da Camada de Dados", que poderia resultar em um erro quando conectado a um Banco de Dados SQL do Azure.
+
+
+
+> [!NOTE]
+> Versões do SSMS 17.x não localizadas para o inglês exigem o [pacote de atualização de segurança da base de dados 2862966](https://support.microsoft.com/kb/2862966) se a instalação for realizada em: Windows 8, Windows 7, Windows Server 2012 e Windows Server 2008 R2.
+
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![baixar](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -496,7 +525,7 @@ Monitor de Atividade:
 
 Integração do Microsoft Azure: 
 
-- Corrigido um problema em que o SSMS mostrava apenas as primeiras 50 assinaturas (caixas de diálogo Always Encrypted, diálogos Fazer backup/Restaurar da URL etc.). 
+- Corrigido um problema em que o SSMS mostrava somente as primeiras 50 assinaturas (caixas de diálogo Always Encrypted, diálogos Fazer backup/Restaurar da URL etc…). 
 - Corrigido um problema em que o SSMS lançava uma exceção ("Índice fora do intervalo") ao tentar entrar em uma conta do Microsoft Azure que não tivesse nenhuma conta de armazenamento (na caixa de diálogo Restaurar Backup da URL). 
 
 Script de objeto: 
@@ -924,7 +953,7 @@ Geralmente disponível| Número de build: 14.0.17199.0
 
 - XEvent: 
    - Correção do problema em que o SSMS abre apenas parte dos eventos no arquivo .xel.
-   - Melhoria na experiência “Observar dados dinâmicos” quando o banco de dados padrão não é 'mestre' – [Item do Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+   - Melhoria na experiência "Observar dados dinâmicos" quando o banco de dados padrão não é "mestre" – [Item do Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
 - Always On: correção do problema em que "Restaurar backups de log" pode falhar com o erro "O sinal deste conjunto de backup termina em LSN x, o que é muito cedo para ser aplicado ao banco de dados".
 - Monitor de atividade de trabalho: correção de ícones inconsistentes – [Item do Connect 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Repositório de Consultas: correção do problema em que o usuário não pode escolher o intervalo de datas "personalizado" para relatórios do Repositório de Consultas. Vinculado aos itens do Connect abaixo.
@@ -948,7 +977,7 @@ Habilitação nova do "botão de Script" ao direcionar objetos do SQL Azure.
    - Correção do problema no qual o Profiler não estava funcionado ao direcionar o SQL 2005.
    - Correção do problema no qual o Profiler não estava respeitando a opção de conexão “confiar no certificado do servidor”.
 - Monitor de atividade: correção de um problema em que o Monitor de atividade não funciona quando indicado no SQL Server em execução no Linux.
-- Correção de um problema com a classe de Transferência do SMO no qual ela não transferiria os objetos da Fonte de dados externos nem do Formato de arquivo externo; agora os objetos desses tipos devem ser corretamente incluídos na transferência.
+- Correção de um problema com a classe de Transferência do SMO no qual ela não transferia os objetos da Fonte de Dados Externa nem do Formato de Arquivo Externo. Agora, os objetos desses tipos devem ser corretamente incluídos na transferência.
 - Servidores registrados:
    - Habilitação da consulta multisservidor para servidores do agente do usuário (ela tenta usar o mesmo token para todo servidor do agente do usuário no grupo).
 - Autenticação universal do AD:
@@ -978,14 +1007,14 @@ Habilitação nova do "botão de Script" ao direcionar objetos do SQL Azure.
 **SSMS geral**
 
 - A funcionalidade SSMS a seguir não é compatível com a autenticação do Azure AD usando o agente do usuário com MFA:
-   - O Orientador de Otimização do Mecanismo de Banco de Dados não é compatível com a autenticação do Azure AD; há um problema conhecido em que a mensagem de erro apresentada ao usuário está um pouco criptografada “Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" em vez da esperada "O Orientador de Otimização do Mecanismo de Banco de Dados não dá suporte ao Banco de Dados SQL do Microsoft Azure. (DTAClient)”.
+   - O Orientador de Otimização do Mecanismo de Banco de Dados não é compatível com a autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário está um pouco ambígua "Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" em vez da esperada "O Orientador de Otimização do Mecanismo de Banco de Dados não é compatível com o Banco de Dados SQL do Microsoft Azure. (DTAClient)”.
 - A tentativa de analisar uma consulta nos resultados do DTA resulta em erro: "o objeto deve implementar IConvertible. (mscorlib)".
 - *Consultas retornadas* está ausente na lista de relatórios do Repositório de Consultas no Pesquisador de Objetos.
    - Solução alternativa: clique com o botão direito do mouse no nó **Repositório de Consultas** e selecione **Exibir consultas retornadas**.
 
 **IS (Integration Services)**
 
-- O [execution_path] em [catalog]. [event_messagea] não está correto para execuções de pacote no Scale Out. O [Execution_path] começa com "\Package" em vez do nome do objeto do executável do pacote. Ao exibir o relatório de visão geral de execuções de pacote no SSMS, o link do "Caminho de execução" na Visão geral de execução não funciona. A solução alternativa é clicar em "Exibir mensagens” no relatório de visão geral para verificar todas as mensagens do evento.
+- O [execution_path] em [catalog]. [event_messagea] não está correto para execuções de pacote no Scale Out. O [execution_path] começa com "\Package" em vez do nome do objeto do executável do pacote. Ao exibir o relatório de visão geral de execuções de pacote no SSMS, o link do "Caminho de Execução" na Visão Geral de Execução não funciona. A solução alternativa é clicar em "Exibir Mensagens" no relatório de visão geral para verificar todas as mensagens do evento.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![baixar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - O designer **Nova tabela/exibição** mostra o prompt de logon de estilo antigo e não funciona para a autenticação do Azure AD.
   - O recurso **Editar 200 linhas superiores** não dá suporte à autenticação do Azure AD.
   - O componente **Servidor Registrado** não dá suporte à autenticação do Azure AD.
-  - Não há suporte para o **Orientador de Otimização do Mecanismo de Banco de Dados** para autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário não é útil: *Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* em vez da esperada *O Orientador de Otimização do Mecanismo de Banco de Dados não dá suporte ao Banco de Dados SQL do Microsoft Azure. (DTAClient)*.
+  - Não há suporte para o **Orientador de Otimização do Mecanismo de Banco de Dados** para autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário não ajuda muito: *Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* em vez da esperada *O Orientador de Otimização do Mecanismo de Banco de Dados não dá suporte ao Banco de Dados SQL do Microsoft Azure. (DTAClient)*.
 
 **AS (Analysis Services)**
 
@@ -1251,7 +1280,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Erros do Always Encrypted causados pela atualização de módulos após a criptografia são manipulados incorretamente.
 - Alterado tempo limite de conexão padrão para OLTP e OLAP de 15 para 30 segundos para corrigir uma classe de falhas de conexão ignoradas. 
 - Corrigida uma falha no SSMS quando o relatório personalizado era iniciado. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Foi corrigido um problema em que "Gerar Script..." falha para bancos de dados do Azure SQL.
+- Corrigido um problema em que "Gerar Script..." falha para bancos de dados SQL do Azure.
 - Corrigido "Escrever Script Como" e "Assistente de Gerar Script" para não adicionar novas linhas extras ao escrever script de objetos, por exemplo procedimentos armazenados. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - O provedor SQLAS PowerShell: adicione a propriedade LastProcessed às pastas Dimension e MeasureGroup. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - Estatísticas de consulta em tempo real: corrigido o problema em que apenas a primeira consulta em um lote era mostrada. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3114221)  
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Corrigido um problema de truncamento da interface do usuário na caixa de diálogo "Registro de Novo Servidor"
 - Corrigida a interface do usuário da condição DMF, que atualizava incorretamente expressões que continham valores de constante de cadeia de caracteres com aspas
 - Corrigido um problema que pode fazer com que o SSMS falhe ao executar relatórios personalizados
-- Adicionar item de menu "Execução ao Escalar Horizontalmente..." no nó da pasta
+- Adicionar item de menu "Execução no Scale Out..." ao nó de pasta
 - Correção de um problema com o recurso de endereço IP da lista de permissões do firewall do BD SQL do Azure
 - Correção de um problema no SSMS que causava uma exceção de referência de objeto não definida ao editar a origem da partição multidimensional do AS
 - Correção de um problema no SSMS que causava uma exceção de referência de objeto não definida ao excluir um assembly de cliente do servidor multidimensional do AS

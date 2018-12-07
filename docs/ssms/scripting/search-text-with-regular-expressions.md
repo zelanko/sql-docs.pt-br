@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7424ec1883ec7f9dcc488ec231bcfcd7f6d601
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538781"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,8 @@ ms.locfileid: "51642626"
   
 |Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
-|Mínimo — zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
-|Mínimo - um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
+|Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
+|Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 correspondem a qualquer sequência de 4 dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  

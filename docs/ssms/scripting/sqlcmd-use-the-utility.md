@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642555"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617866"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -505,21 +505,21 @@ ms.locfileid: "51642555"
  Conectar usando credenciais do Windows e comunicação criptografada:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Conectar usando credenciais do Windows e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

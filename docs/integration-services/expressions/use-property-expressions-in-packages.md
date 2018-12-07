@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641383"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531608"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641383"
   
  ![A interface do usuário para expressões de propriedade](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "A interface do usuário para expressões de propriedade")  
   
- Na janela **Propriedades** e na página **Expressões** , clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade** . O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
+ Na janela **Propriedades** e na página **Expressões**, clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade**. O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
   
  Você também pode abrir a caixa de diálogo **Construtor de Expressões** na caixa de diálogo **Editor de Expressões de Propriedade** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51641383"
   
  No entanto, os valores atualizados das propriedades dos objetos do pacote que usam a expressão de propriedade no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] não poderão ser visualizados enquanto você não salvar o pacote, executá-lo ou reabri-lo após adicionar as expressões de propriedade.  
   
- As expressões de propriedade associadas a diferentes tipos de objetos — gerenciadores de conexões, provedores de logs e enumeradores — também são carregados quando os métodos específicos a esse tipo de objeto são chamados. Por exemplo, as propriedades de gerenciadores de conexões são carregadas antes que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criasse uma instância da conexão.  
+ As expressões de propriedade associadas a diferentes tipos de objetos – gerenciadores de conexões, provedores de logs e enumeradores – também são carregados quando os métodos específicos a esse tipo de objeto são chamados. Por exemplo, as propriedades de gerenciadores de conexões são carregadas antes que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criasse uma instância da conexão.  
   
  As expressões de propriedade são carregadas depois que as configurações de pacote são carregadas. Por exemplo, as variáveis são atualizadas primeiro pelas suas configurações e depois as expressões de propriedade que usam as variáveis são avaliadas e carregadas. Isso significa que as expressões de propriedade sempre usam os valores de variáveis que são definidos pelas configurações.  
   

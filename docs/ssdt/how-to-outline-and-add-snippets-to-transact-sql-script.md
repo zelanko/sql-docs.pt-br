@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526060"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como estruturar tópicos e adicionar snippets a scripts Transact-SQL
 O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa, como a criação de uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  
@@ -42,7 +42,7 @@ Por padrão, todo texto é exibido no Editor Transact\-SQL, mas você pode optar
   
 ### <a name="to-outline-code"></a>Para código de estrutura de tópicos  
   
-1.  Observe o sinal **–** ao lado da instrução CREATE TABLE. Clique no sinal **-** ao lado de uma seção no script para ocultá-lo.  
+1.  Observe o sinal **-** ao lado da instrução CREATE TABLE. Clique no sinal **-** ao lado de uma seção no script para ocultá-lo.  
   
 2.  Clique com o botão direito do mouse no Editor Transact\-SQL e selecione **Estrutura de Tópicos** e **Interromper Estrutura de Tópicos** para remover as informações de estrutura de tópicos sem afetar seu código subjacente no editor.  
   

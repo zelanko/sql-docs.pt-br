@@ -1,6 +1,6 @@
 ---
-title: Construtor de Relatórios no SQL Server 2016 | Microsoft Docs
-ms.date: 03/30/2017
+title: Construtor de Relatórios no SQL Server | Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690954"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711414"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>Construtor de Relatórios no SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio.  Quando você cria um relatório paginado, você está criando uma definição de relatório que especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o seu relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e publicá-lo em um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou em modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  
+# <a name="report-builder-in-sql-server"></a>Construtor de Relatórios no SQL Server
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio.  Quando você cria um relatório paginado, você está criando uma definição de relatório que especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, publicar seu relatório em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo ou no modo integrado do SharePoint (2016 e anterior). Você também pode publicar um relatório paginado no serviço do Power BI. Leia mais sobre [relatórios paginados no Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Versão prévia).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690954"
   
   [Instalar o Construtor de Relatórios](../../reporting-services/install-windows/install-report-builder.md)
 
-  [Novidades no Reporting Services e no Construtor de Relatórios para SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [Novidades no SQL Server Reporting Services e no Construtor de Relatórios](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Tutorial: Criando um relatório de gráfico rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
@@ -80,7 +80,7 @@ ms.locfileid: "47690954"
  Fornece informações sobre o que você deve considerar antes de começar a criar seu relatório.  
   
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Define os conceitos-chave usados em toda a documentação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+ Define os conceitos-chave usados em toda a documentação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design de relatório.  

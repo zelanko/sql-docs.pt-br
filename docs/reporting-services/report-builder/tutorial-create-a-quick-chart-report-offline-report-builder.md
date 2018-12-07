@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021697"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711355"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
 
@@ -231,6 +231,6 @@ Observe que a superfície de design fica maior à medida que você arrasta.
 ## <a name="next-steps"></a>Próximas etapas
 
 [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
-[Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535278"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47718971"
   
      Atualizar o Assinante para o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou para uma versão posterior atualiza o Merge Agent usado pelas assinaturas do Assinante. Para se beneficiar dos muitos recursos e otimizações de desempenho, é necessário o Merge Agent do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou de uma versão posterior.  
   
--   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Publicador e do assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
+-   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Editor e do Assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
   
      O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo parâmetro no Agente de Mesclagem: **–ParallelUploadDownload**. Definir esse parâmetro permite ao Merge Agent processar em paralelo as mudanças carregadas no Publicador e as baixadas no Assinante. É útil em ambientes com grandes volumes e largura de banda de rede alta. Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   

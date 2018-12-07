@@ -14,12 +14,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523567"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Especifique as informações a seguir sobre sua conta do Windows Azure e clique 
 
 2.  **Chave de Conta** – Especifique a chave de conta para a conta de armazenamento especificada.  
   
-3.  **Use pontos de extremidade seguros (HTTPS)** – Esta opção utiliza a comunicação criptografada e a identificação segura de um servidor Web de rede.  
+3.  **Use pontos de extremidade seguros (HTTPS)** – esta opção utiliza a comunicação criptografada e a identificação segura de um servidor Web de rede.  
   
 4.  **Salvar chave de conta** – Esta opção salva sua senha em um arquivo criptografado.  
   

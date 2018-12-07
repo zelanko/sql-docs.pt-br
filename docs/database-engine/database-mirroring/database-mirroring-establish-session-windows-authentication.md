@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529916"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47599094"
   
      em que _\<system-address>_ é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e _\<port>_ é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome de banco de dados é **AdventureWorks**, o endereço de sistema é DBSERVER1 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
+     Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER1 – o nome de sistema do parceiro – e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -90,7 +90,7 @@ ms.locfileid: "47599094"
   
      Para obter mais informações, consulte a etapa 4.  
   
-     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor espelho original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER2 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7025:  
+     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor espelho original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER2 – o nome de sistema do parceiro – e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -222,7 +222,7 @@ ms.locfileid: "47599094"
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
 

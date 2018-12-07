@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542055"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurando a tarefa Script no Editor da Tarefa Script
   Antes de escrever um código personalizado na tarefa Script, configure suas propriedades de entidade de segurança nas três páginas do **Editor da Tarefa Script**. É possível configurar propriedades de tarefa adicionais que não são exclusivas da tarefa Script através da janela Propriedades.  

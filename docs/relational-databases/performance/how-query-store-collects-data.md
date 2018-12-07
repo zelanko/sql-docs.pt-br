@@ -1,7 +1,7 @@
 ---
 title: Como o Repositório de Consultas coleta dados | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775054"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711068"
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O Repositório de Consultas funciona como um **gravador de dados de voo** constantemente coletando informações de compilação e tempo de execução relacionadas a consultas e planos. As consultas relacionadas a dados são mantidas em tabelas internas e apresentadas aos usuários por meio de um conjunto de exibições.  
   
@@ -30,19 +30,18 @@ ms.locfileid: "47775054"
  O diagrama a seguir mostra os modos de exibição do Repositório de Consultas e suas relações lógicas, com informações de tempo de compilação, apresentadas como entidades azuis:  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Descrições de exibições**  
+**Descrições de exibições**  
   
 |Exibição|Descrição|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Apresenta os textos de consulta exclusivos executados no banco de dados. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados. Cada instrução no lote gera uma entrada de texto de consulta separada.|  
 |**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta executado com um plano diferente, afetando as configurações produz a entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
-|**sys.query_store_query**|Entradas de consulta que são controladas e forçadas separadamente no Repositório de Consultas. Um único texto de consulta pode gerar várias entradas de consulta se elas forem executadas em configurações de contextos diferentes ou se forem executadas fora versus dentro de diferentes módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] (procedimentos armazenados, gatilhos, etc.).|  
+|**sys.query_store_query**|Entradas de consulta que são controladas e forçadas separadamente no Repositório de Consultas. Um único texto de consulta poderá gerar várias entradas de consulta se elas forem executadas em configurações de contextos diferentes ou se forem executadas fora versus dentro de diferentes módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] (procedimentos armazenados, gatilhos etc.).|  
 |**sys.query_store_plan**|Apresenta estimativa de plano para a consulta com as estatísticas de tempo de compilação. O plano armazenado é equivalente a um que você obteria usando o `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|O Repositório de Consultas divide o tempo em janelas de tempo geradas automaticamente (intervalos) e armazena estatísticas agregadas no intervalo para cada plano executado. O tamanho do intervalo é controlado pela opção de configuração Intervalo de Coleta de Estatísticas (em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` usando [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estatísticas agregadas de tempo de execução para planos executados. Todas as métricas capturadas são expressas na forma de quatro funções de estatística: média, mínima, máxima e desvio padrão.|  
   
- Para obter detalhes adicionais sobre modos de exibição do Repositório de Consultas, veja a seção **Exibições, funções e procedimentos relacionados** de [Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md).  
+ Para obter mais informações sobre modos de exibição do Repositório de Consultas, confira a seção **Exibições, funções e procedimentos relacionados** de [Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Query Processing  
  O Repositório de Consultas interage com o pipeline de processamento de consulta nos pontos-chave a seguir:  
@@ -63,10 +62,10 @@ ms.locfileid: "47775054"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- No caso de uma falha do sistema, o Repositório de Consultas pode perder dados de tempo de execução até a quantidade definida com `DATA_FLUSH_INTERVAL_SECONDS`. O valor padrão de 900 segundos (15 minutos) é um bom equilíbrio entre desempenho de captura de consulta e a disponibilidade de dados.  
-No caso de pressão de memória, as estatísticas de tempo de execução podem ser liberadas para o disco antes do que foi definido com `DATA_FLUSH_INTERVAL_SECONDS`.  
+ Se o sistema falhar, o Repositório de Consultas poderá perder dados de tempo de execução até a quantidade definida com `DATA_FLUSH_INTERVAL_SECONDS`. O valor padrão de 900 segundos (15 minutos) é um bom equilíbrio entre desempenho de captura de consulta e a disponibilidade de dados.  
+Se o sistema estiver enfrentando pressão de memória, as estatísticas de tempo de execução poderão ser liberadas para o disco antes do que foi definido com `DATA_FLUSH_INTERVAL_SECONDS`.  
 Durante a leitura do Repositório de Consultas, os dados na memória e no disco são unificados de maneira transparente.
-No caso de encerramento de sessão ou reinicialização/falha de aplicativo do cliente, as estatísticas de consulta não serão gravadas.  
+Se uma sessão for encerrada ou o aplicativo cliente for reiniciado ou falhar, as estatísticas de consulta não serão gravadas.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

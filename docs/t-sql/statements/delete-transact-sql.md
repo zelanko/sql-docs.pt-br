@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532166"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Use a função @@ROWCOUNT para retornar o número de linhas excluídas para o aplicativo cliente. Para obter mais informações, consulte [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Tratamento de erros  
- Você pode implementar o tratamento de erros para a instrução DELETE especificando a instrução em uma construção TRY…CATCH.  
+ Você pode implementar o tratamento de erro para a instrução DELETE especificando a instrução em um constructo TRY...CATCH.  
   
  A instrução DELETE pode falhar se violar um gatilho ou tentar remover uma linha referenciada por dados em outra tabela com uma restrição FOREIGN KEY. Se DELETE remover várias linhas e qualquer uma das linhas removidas violar um gatilho ou uma restrição, a instrução será cancelada, um erro será retornado e nenhuma linha será removida.  
   

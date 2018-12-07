@@ -25,17 +25,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807095"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617056"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Esta função retorna o nome do procedimento armazenado ou gatilho no qual ocorreu um erro, caso esse erro tenha causado a execução do bloco CATCH de um constructo TRY…CATCH.  
+Esta função retorna o nome do procedimento armazenado ou gatilho no qual ocorreu um erro, caso esse erro tenha causado a execução do bloco CATCH de um constructo TRY...CATCH.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,9 +59,7 @@ Quando chamado em um bloco CATCH de procedimento armazenado em que um erro ocorr
 `ERROR_PROCEDURE` dá suporte a chamadas em qualquer lugar dentro do escopo de um bloco CATCH.  
   
 `ERROR_PROCEDURE` retorna o nome do procedimento armazenado ou gatilho em que ocorre um erro, independentemente de quantas vezes ele é executado ou do local em que ele é executado dentro do escopo do bloco `CATCH`. É diferente de uma função como @@ERROR, que retorna apenas um número de erro na instrução imediatamente após àquela que causa um erro.  
-  
-Em um bloco `CATCH` aninhado, `ERROR_PROCEDURE` retorna o número do erro específico do escopo do bloco `CATCH` que referenciou esse bloco `CATCH`. Por exemplo, o bloco `CATCH` de um constructo TRY...CATCH externo poderia ter um constructo `TRY...CATCH` interno. Dentro desse bloco `CATCH` interno, `ERROR_PROCEDURE` retorna o número do erro que invocou o bloco `CATCH` interno. Se `ERROR_PROCEDURE` é executado no bloco `CATCH` externo, ele retorna o número do erro que invocou esse bloco `CATCH` externo.  
-  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Usando ERROR_PROCEDURE em um bloco CATCH  

@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540931"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e Executar um Teste de Unidade do SQL Server
 Neste passo a passo, você criará um teste de unidade do SQL Server que verifica o comportamento de vários procedimentos armazenados. Os testes de unidade do SQL Server são criados para facilitar a identificação de falhas no código que podem resultar em comportamento incorreto do aplicativo. Você pode executar testes de unidade do SQL Server e teste de aplicativo como parte de um pacote automatizado de testes.  
@@ -556,7 +556,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
 4.  No painel **Condições de Teste** , clique em **Esquema Esperado** na lista e clique em **Adicionar Condição de Teste**.  
   
-5.  Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**…**').  
+5.  Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**...**').  
   
 6.  Na caixa de diálogo de **Configuração para expectedSchemaCondition1** , especifique uma conexão com o banco de dados. Por exemplo, se você usou o local de implantação padrão, que é LocalDB, clique em **Nova Conexão** e especifique **(LocalDB)\Projects**. Em seguida, escolha o nome do banco de dados.  
   
@@ -621,7 +621,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
   
 13. No painel **Condições de Teste** , clique em **Soma de Verificação de Dados** na lista e clique em **Adicionar Condição de Teste**.  
   
-14. Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**…**').  
+14. Na janela **Propriedades**, na propriedade **Configuração**, clique no botão Procurar ('**...**').  
   
 15. Na caixa de diálogo **Configuração para checksumCondition1** , especifique uma conexão com o banco de dados.  
   

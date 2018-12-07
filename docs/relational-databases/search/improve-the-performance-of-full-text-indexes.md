@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532545"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ As partes variáveis do nome do arquivo de log de rastreamento são as seguintes
   
 Para obter informações essenciais sobre as fórmulas a seguir, consulte as notas que seguem a tabela.  
   
-|Plataforma|Estimando as necessidades de memória de fdhost.exe em MB —*F*^1|Fórmula para calcular a memória máxima do servidor —*M*^2|  
+|Plataforma|Estimando as necessidades de memória de fdhost.exe em MB-*F*^1|Fórmula para calcular a memória máxima do servidor -*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Número de intervalos de rastreamento* * 50|*M* =mínimo(*T*, 2000) – F – 500|  
-|x64|*F* = *Número de intervalos de rastreamento* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *Número de intervalos de rastreamento* * 50|*M* =mínimo(*T*, 2000) - F - 500|  
+|x64|*F* = *Número de intervalos de rastreamento* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **Observações sobre as fórmulas**
-1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como *T***–** sigma **(***F*i**)**.  
+1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como _T_**-** sigma **(**_F_i **)**.  
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar as necessidades de memória do fdhost.exe  
   
- Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe —*F*. O número de intervalos de rastreamento é `8`.  
+ Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe -*F*. O número de intervalos de rastreamento é `8`.  
   
  `F = 8*10*8=640`  
   
- O próximo cálculo obtém o valor ideal para **memória máxima do servidor**—*M*. A memória física total disponível no sistema em MB —*T*—é `8192`.  
+ O próximo cálculo obtém o valor ideal para **memória máxima do servidor**-*M*. A memória física total disponível no sistema em MB-*T*- é `8192`.  
   
  `M = 8192-640-500=7052`  
   

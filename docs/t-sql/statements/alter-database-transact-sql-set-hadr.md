@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533351"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  Executa o comando [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] especificado no banco de dados especificado.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Une ou remove o banco de dados de disponibilidade no grupo de disponibilidade especificado, da seguinte forma:  
   
  *group_name*  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  Remove o banco de dados secundário especificado do grupo de disponibilidade.  
   
- Remover um banco de dados secundário pode ser útil caso ele fique muito atrás do banco de dados primário e você não deseje esperar pelo banco de dados secundário ficar em dia. Depois de remover o banco de dados secundário, você pode atualizá-lo restaurando uma sequência de backups que terminam com um backup de log recente (usando RESTORE… WITH NORECOVERY).  
+ Remover um banco de dados secundário pode ser útil caso ele fique muito atrás do banco de dados primário e você não deseje esperar pelo banco de dados secundário ficar em dia. Depois de remover o banco de dados secundário, você pode atualizá-lo restaurando uma sequência de backups que terminam com um backup de log recente (usando RESTORE ... WITH NORECOVERY).  
   
 > [!IMPORTANT]  
 >  Para remover completamente um banco de dados de disponibilidade de um grupo de disponibilidade, conecte-se à instância do servidor que hospeda a réplica primária e use a instrução [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name*. Para obter mais informações, confira [Remover um banco de dados primário de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  

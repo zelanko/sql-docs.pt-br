@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845704"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537778"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -224,7 +224,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  não usa a ordem de classificação.  
   
-2.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação.  Os dados estão "offline" e indisponíveis durante a recompilação, mesmo se você usar NOLOCK, RCSI ou SI.  
+2.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação.  Os dados ficarão "offline" e não disponíveis quando você recompilar, mesmo se NOLOCK, RCSI ou SI for usado.  
   
 3.  Compacta novamente todos os dados do columnstore. Há duas cópias do índice columnstore durante a recompilação. Quando a recompilação é concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui o índice columnstore original.  
   
@@ -654,7 +654,7 @@ No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores, ainda é p
   
 Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação. Os dados estão “offline” e indisponíveis durante a recompilação.  
+1.  Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação. Os dados ficam "offline" e não disponíveis enquanto você recompila.  
   
 2.  Desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela; os bytes excluídos são recuperados na mídia física.  
   
@@ -720,7 +720,7 @@ Online index rebuild é especificado como retomável usando a opção RESUMABLE=
  
 -  Executar novamente a instrução ALTER INDEX REBUILD original com os mesmos parâmetros retoma uma operação de recompilação de índice em pausa. Você também pode retomar uma operação de recompilação de índice em pausa executando a instrução ALTER INDEX RESUME.
 -  A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável 
--  O comando DDL com RESUMABLE=ON não pode ser executado em uma transação explícita (não pode fazer parte do bloco de confirmação begin tran…).
+-  O comando DDL com RESUMABLE=ON não pode ser executado em uma transação explícita (não pode fazer parte do bloco begin tran... commit).
 -  Apenas operações de índice em pausa estão retomáveis.
 -  Ao retomar uma operação de índice em pausa, você pode alterar o valor MAXDOP para um novo valor.  Se MAXDOP não for especificado ao retomar uma operação de índice que está em pausa, o último valor MAXDOP será usado. Se a opção MAXDOP não for especificada para a operação de recompilação de índice, o valor padrão será usado.
 - Para pausar imediatamente a operação de índice, você pode interromper o comando em andamento (Ctrl-C) ou executar o comando ALTER INDEX PAUSE ou o comando KILL *session_id*. Depois que o comando for colocado em pausa, ele poderá ser retomado usando a opção RESUME.
@@ -733,7 +733,7 @@ A seguinte funcionalidade está desabilitada para operações de recompilação 
    -    Não é possível recompilar um índice desabilitado com RESUMABLE=ON
    -    Comando ALTER INDEX REBUILD ALL
    -    ALTER TABLE com recompilação de índice  
-   -    O comando DDL com "RESUMEABLE = ON" não pode ser executado em uma transação explícita (não pode fazer parte do bloco de confirmação begin tran…)
+   -    O comando DDL com "RESUMEABLE = ON" não pode ser executado em uma transação explícita (não pode fazer parte do bloco begin tran... commit)
    -    Recompile um índice que tenha colunas TIMESTAMP ou computadas como colunas chave.
 -   Caso a tabela base contenha colunas LOB retomáveis clusterizadas, a recompilação do índice clusterizado exigirá um bloqueio Sch-M no início desta operação
    -    A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável 
@@ -768,7 +768,7 @@ As restrições a seguir se aplicam a índices particionados:
 -   O ALTER INDEX \<index>... REBUILD WITH... recria todas as partições do índice.  
   
 ## <a name="statistics"></a>Estatísticas  
- Quando você executar **ALTER INDEX ALL…** em uma tabela, somente as estatísticas associadas a índices serão atualizadas. As estatísticas automáticas ou manuais criadas na tabela (em vez de um índice) não são atualizadas.  
+ Quando você executar **ALTER INDEX ALL...** em uma tabela, somente as estatísticas associadas aos índices serão atualizadas. As estatísticas automáticas ou manuais criadas na tabela (em vez de um índice) não são atualizadas.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar ALTER INDEX, no mínimo, a permissão ALTER na tabela ou exibição é necessária.  

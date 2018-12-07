@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526921"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Página geral da opções dos Designers do Integration Services
   Use a página **Geral** da página **Designers do Integration Services** na caixa de diálogo **Opções** para especificar as opções de carregamento, exibição e atualização de pacotes.  
@@ -37,7 +37,7 @@ ms.locfileid: "47649034"
  Selecione para exibir um aviso ao carregar um pacote que não está assinado.  
   
  **Mostrar rótulos de restrição de precedência**  
- Selecione qual rótulo—Êxito, Falha ou Conclusão—será exibido em restrições de precedência ao exibir pacotes em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Selecione qual rótulo – Êxito, Falha ou Conclusão – será exibido em restrições de precedência ao exibir pacotes em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Idioma do script**  
  Selecione o idioma padrão de scripts para novas tarefas e componentes de Script.  
@@ -56,6 +56,6 @@ ms.locfileid: "47649034"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
- [Estender pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

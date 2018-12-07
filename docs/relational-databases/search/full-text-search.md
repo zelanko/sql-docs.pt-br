@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ae40796c73616831797d3d9fdf589e4dc4e8320
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb330dfed7671762b353176cc7d94df02c5c0e65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535560"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,21 +61,21 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  As consultas de texto completo usam um pequeno conjunto de predicados [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS e FREETEXT) e funções (CONTAINSTABLE e FREETEXTTABLE). Entretanto, as metas de pesquisa de um determinado cenário comercial influenciam a estrutura das consultas de texto completo. Por exemplo:  
   
--   E-business — procurar por um produto em um site:  
+-   Comércio eletrônico – procurando por um produto em um site:  
   
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
--   Cenário de recrutamento — procurar candidatos a uma vaga de trabalho que tenham experiência prática com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Cenário de recrutamento – procurando candidatos a uma vaga de trabalho que tenham experiência prática com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  Para obter mais informações, veja [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  

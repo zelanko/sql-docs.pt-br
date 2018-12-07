@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a11a7160f5ba6128358531c15bf24e304fdbaad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522346"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "47688934"
  Por exemplo, você poderia especificar 10.000 para **@pub_identity_range**; 1.000 para **@identity_range** (assumindo menos atualizações no Assinante), e 80 por cento de **@threshold**. Após 800 inserções em um Assinante (80 por cento de 1.000), um Assinante é atribuído a um novo intervalo. Depois de 8.000 inserções em um Publicador, um novo intervalo é atribuído ao Publicador. Quando o novo intervalo é atribuído, há uma lacuna nos valores de intervalo de identidade da tabela. Especificar um limite superior resulta em lacunas menores, mas o sistema torna-se menos tolerante a falhas. Se o Merge Agent não puder ser executado por algum motivo, um Assinante poderá ficar mais facilmente sem identidades.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Atribuindo intervalos para o gerenciamento manual de intervalo de identidade  
- Caso o gerenciamento manual de identidade seja especificado, será preciso assegurar que o Publicador e cada um dos Assinantes usem intervalos de identidade diferentes. Por exemplo, considere uma tabela do Publicador com coluna de identidade definida como `IDENTITY(1,1)`: a coluna de identidade começa com 1 e é incrementada em 1 toda vez que uma linha é inserida. Se a tabela do Publicador tiver 5.000 linhas, e houver expectativa de algum aumento da tabela durante a vida útil do aplicativo, o Publicador poderá usar o intervalo de 1 a 10.000. Considerando-se dois Assinantes, o Assinante A poderá usar de 10.001 a 20.000, e o Assinante B poderá usar de 20.001 a 30.000.  
+ Caso o gerenciamento manual de identidade seja especificado, será preciso assegurar que o Publicador e cada um dos Assinantes usem intervalos de identidade diferentes. Por exemplo, considere uma tabela do Publicador com coluna de identidade definida como `IDENTITY(1,1)`: a coluna de identidade começa com 1 e é incrementada em 1 toda vez que uma linha é inserida. Se a tabela do Publicador tiver 5.000 linhas, e houver expectativa de algum aumento da tabela durante a vida útil do aplicativo, o Publicador poderá usar o intervalo de 1 a 10.000. Considerando-se dois Assinantes, o Assinante A poderá usar de 10.001 a 20.000 e o Assinante B poderá usar de 20.001 a 30.000.  
   
  Após o Assinante ser iniciado com um instantâneo ou por outros meios, execute DBCC CHECKIDENT para atribuir ao Assinante um ponto inicial para o seu intervalo de identidade. Por exemplo, no Assinante A, `DBCC CHECKIDENT('<TableName>','reseed',10001)`seria executado. No Assinante B, `CHECKIDENT('<TableName>','reseed',20001)`seria executado.  
   

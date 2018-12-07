@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535590"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funções escalares ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,15 +93,15 @@ ms.locfileid: "51702674"
 |CURDATE( ) (ODBC 3.0)|Retorna a data atual.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Retorna a hora local atual. O argumento time-precision determina a precisão em segundos do valor retornado|  
 |CURTIME() (ODBC 3.0)|Retorna a hora local atual.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico da fonte de dados do dia (por exemplo, Sunday a Saturday ou Sun. a Sat. para uma fonte de dados que usa o inglês, ou Sonntag a Samstag para uma fonte de dados que usa alemão) para a parte do dia de date_exp.|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|Retorna o dia do mês com base no campo mês de date_exp como um valor inteiro no intervalo de 1 a 31.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Retorna o dia da semana com base no campo semana de date_exp como um valor inteiro no intervalo de 1 a 7, em que 1 representa Sunday.|  
-|HOUR( time_exp ) (ODBC 1.0)|Retorna a hora com base no campo hora de time_exp como um valor inteiro no intervalo de 0 a 23.|  
-|MINUTE( time_exp ) (ODBC 1.0)|Retorna o minuto com base no campo minuto de time_exp como um valor inteiro no intervalo de 0 a 59.|  
-|SECOND( time_exp ) (ODBC 1.0)|Retorna o segundo com base no campo segundo de time_exp como um valor inteiro no intervalo de 0 a 59.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Retorna uma cadeia de caracteres que contém um nome específico de fonte de dados do mês (por exemplo, January a December ou Jan. a Dec. para a fonte de dados que utiliza o inglês, ou Januar a Dezember para a fonte de dados que utiliza o alemão) para a parte do mês de date_exp.|  
+|DAYNAME( date_exp ) (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico da fonte de dados do dia (por exemplo, domingo a sábado ou dom. a Sat. para uma fonte de dados que usa o inglês, ou Sonntag a Samstag para uma fonte de dados que usa alemão) para a parte do dia de date_exp.|  
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|Retorna o dia do mês com base no campo de mês em date_exp como um valor inteiro no intervalo de 1 a 31.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Retorna o dia da semana com base no campo de semana em date_exp como um valor inteiro no intervalo de 1 a 7, em que 1 representa domingo.|  
+|HOUR( time_exp ) (ODBC 1.0)|Retorna a hora com base no campo de hora em time_exp como um valor inteiro no intervalo de 0 a 23.|  
+|MINUTE( time_exp ) (ODBC 1.0)|Retorna o minuto com base no campo de minuto em time_exp como um valor inteiro no intervalo de 0 a 59.|  
+|SECOND( time_exp ) (ODBC 1.0)|Retorna o segundo com base no campo de segundo em time_exp como um valor inteiro no intervalo de 0 a 59.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Retorna uma cadeia de caracteres que contém um nome específico de fonte de dados do mês (por exemplo, January a December ou Jan a Dec para a fonte de dados que utiliza o inglês ou Januar a Dezember para uma fonte de dados que usa o alemão) para a parte de mês em date_exp.|  
 |QUARTER( date_exp ) (ODBC 1.0)|Retorna o trimestre em date_exp como um valor inteiro no intervalo de 1 a 4, em que 1 representa 1 de janeiro a 31 de março.|  
-|WEEK( date_exp ) (ODBC 1.0)|Retorna a semana do ano, com base no campo semana de date_exp como um valor inteiro no intervalo de 1 a 53.|  
+|WEEK( date_exp ) (ODBC 1.0)|Retorna a semana do ano, com base no campo de semana em date_exp como um valor inteiro no intervalo de 1 a 53.|  
   
 ## <a name="examples"></a>Exemplos  
   

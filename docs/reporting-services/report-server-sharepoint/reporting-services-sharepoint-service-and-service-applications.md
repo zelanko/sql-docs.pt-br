@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e248ef60abf94ece20d93a6715c53cfc39660be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531468"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Serviço SharePoint do Reporting Services e aplicativos de serviço
 
@@ -28,7 +28,7 @@ ms.locfileid: "50030625"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Criando um aplicativo do serviço Reporting Services
 
- Use a Administração Central do SharePoint ou scripts do PowerShell para criar aplicativos do serviço Reporting Services. Para obter mais informações sobre como usar a Administração Central do SharePoint, consulte a seção “Criar um aplicativo de serviço do Reporting Services” em [Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consulte a seção PowerShell posteriormente neste tópico para obter um exemplo de script PowerShell para criar aplicativos de serviço.  
+ Use a Administração Central do SharePoint ou scripts do PowerShell para criar aplicativos do serviço Reporting Services. Para obter mais informações sobre como usar a Administração Central do SharePoint, confira a seção "Criar um aplicativo de serviço do Reporting Services" em [Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consulte a seção PowerShell posteriormente neste tópico para obter um exemplo de script PowerShell para criar aplicativos de serviço.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modificar as associações do aplicativo de serviço com um grupo proxy
 
@@ -61,19 +61,19 @@ ms.locfileid: "50030625"
 1.  Adicione o objeto do pool de aplicativos do nome do pool de aplicativos a uma variável que será passada para a ação Novo.  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  Crie o aplicativo de serviço com um nome e um nome de pool de aplicativos fornecidos.  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Obtenha o novo objeto do aplicativo de serviço e redirecione o objeto para o Pipe do novo cmdlet de proxy.  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas

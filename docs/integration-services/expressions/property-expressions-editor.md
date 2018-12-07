@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532152"
 ---
 # <a name="property-expressions-editor"></a>Editor de Expressões de Propriedades
   Use a caixa de diálogo **Editor de Expressões de Propriedades** para criar, editar ou excluir as expressões de propriedades que atualizam os valores das propriedades.  
@@ -35,7 +35,7 @@ ms.locfileid: "47793564"
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
   
- **Expressão (...)**  
+ **Expression (...)**  
  Clique nas reticências para abrir a caixa de diálogo **Construtor de Expressões** . Para obter mais informações, consulte [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
  **Delete (excluir)**  
@@ -44,7 +44,7 @@ ms.locfileid: "47793564"
 ## <a name="see-also"></a>Consulte Também  
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Variáveis do Sistema](../../integration-services/system-variables.md)   
+ [Variáveis do sistema](../../integration-services/system-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   

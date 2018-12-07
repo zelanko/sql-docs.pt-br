@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812969"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712647"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalar o SQL Server Reporting Services (2017 e posterior)
 
@@ -124,7 +124,7 @@ Você precisa abrir a porta TCP configurada para a URL do Serviço Web e a URL d
 
 ## <a name="related-information"></a>Informações relacionadas
 
-Para obter informações sobre como instalar o SQL Server 2016 Reporting Services no modo nativo, consulte [Instalar o servidor de relatório no modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md). Para obter informações sobre como instalar o SQL Server 2016 Reporting Services no modo de integração do SharePoint, consulte [Instalar o primeiro Servidor de Relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+Para obter informações sobre como instalar o SQL Server Reporting Services no modo nativo, confira [Instalar o servidor de relatório no modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md). Para obter informações sobre como instalar o SQL Server 2016 Reporting Services (e versões anteriores) no modo de integração do SharePoint, confira [Instalar o primeiro Servidor de Relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

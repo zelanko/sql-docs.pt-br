@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522908"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,7 @@ Para obter informações específicas à inserção de dados em tabelas de grafo
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Práticas recomendadas para importar dados em massa  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Usando INSERT INTO…SELECT em importação de dados em massa com log mínimo  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Usando INSERT INTO...SELECT em importação de dados em massa com log mínimo  
  Use `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` para transferir com eficiência um grande número de linhas de uma tabela, como uma tabela de preparo, para outra tabela com log mínimo. O log mínimo pode melhorar o desempenho da instrução e reduzir a possibilidade de a operação preencher o espaço de log disponível durante a transação.  
   
  O log mínimo dessa instrução possui os seguintes requisitos:  
@@ -322,7 +322,7 @@ Para obter informações específicas à inserção de dados em tabelas de grafo
   
 As linhas inseridas em um heap como o resultado de uma ação de inserção em uma instrução MERGE também podem ser minimamente registradas.  
   
- Diferentemente da instrução BULK INSERT, que possui um bloqueio de atualização em massa menos restritivo, INSERT INTO.SELECT com a dica TABLOCK possui um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
+ Diferentemente da instrução BULK INSERT, que contém um bloqueio de atualização em massa menos restritivo, INSERT INTO...SELECT com a dica TABLOCK contém um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Usando OPENROWSET e BULK para importação de dados em massa  
  A função OPENROWSET pode aceitar as seguintes dicas de tabela, que fornecem otimizações de carregamento em massa com a instrução INSERT:  
@@ -380,7 +380,7 @@ Essas otimizações são semelhantes àquelas disponíveis com o comando BULK IN
     ```  
   
 ## <a name="error-handling"></a>Tratamento de erros  
- Você pode implementar a manipulação de erros para a instrução INSERT especificando essa instrução em uma construção TRY.CATCH.  
+ Você pode implementar o tratamento de erro para a instrução INSERT especificando essa instrução em um constructo TRY...CATCH.  
   
  Se uma instrução INSERT violar uma restrição ou regra ou se ela tiver um valor incompatível com o tipo de dados da coluna, a instrução falhará e uma mensagem de erro será retornada.  
   

@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eed8e2ea431b38ff11c61d86c869cbc3f3de82cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539160"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47618514"
   
 2.  Expanda a pasta **Segurança** .  
   
-3.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria de Banco de Dados** e selecione **Nova Especificação de Auditoria do Banco de Dados...**.  
+3.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria do Banco de Dados** e selecione **Nova Especificação de Auditoria do Banco de Dados...**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Banco de Dados** .  
   

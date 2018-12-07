@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730814"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617077"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730814"
 > [!WARNING]  
 >  O domínio composto anexado a um serviço de dados de referência está disponível na lista suspensa dos domínios ao mapear domínios para colunas no esquema de serviço de dados de referência. Não mapeie o domínio composto para uma coluna no esquema do serviço de dados de referência; mapeie apenas domínios individuais em um domínio composto para as colunas apropriadas no esquema de serviço de dados de referência. Caso contrário, isso resultará em um erro.  
   
- Um esquema de serviço de dados de referência pode ter uma coluna obrigatória que deverá ser mapeada com o domínio apropriado se você optar por usar o serviço de dados de referência. A coluna obrigatória em um esquema de dados de referência é identificada com “(M)” no nome da coluna. Por exemplo, **AddressLine** é a coluna de esquema obrigatória em **Melissa Data – Dados de Endereço** e **CompanyName** é a coluna de esquema obrigatória em **Digital Trowel Inc. – Dados de empresas norte-americanas e de profissionais para usuários do SQL**.  
+ Um esquema de serviço de dados de referência pode ter uma coluna obrigatória que deverá ser mapeada com o domínio apropriado se você optar por usar o serviço de dados de referência. A coluna obrigatória em um esquema de dados de referência é identificada com "(M)" no nome da coluna. Por exemplo, **AddressLine** é a coluna de esquema obrigatória em **Melissa Data – Dados de Endereço** e **CompanyName** é a coluna de esquema obrigatória em **Digital Trowel Inc. – Dados de empresas norte-americanas e de profissionais para usuários do SQL**.  
   
- Neste tópico, criaremos quatro domínios: **Linha de endereço**, **Cidade**, **Estado**e **CEP**, em um domínio composto, **Verificação de Endereço**, anexaremos o domínio composto para o serviço de dados de referência de **Melissa Data – Dados de Endereço** , e mapearemos os domínios individuais no domínio composto para as colunas no esquema de serviço de dados de referência.  
+ Neste tópico, criaremos quatro domínios: **Linha de endereço**, **Cidade**, **Estado** e **CEP**, em um domínio composto, **Verificação de Endereço**, anexaremos o domínio composto para o serviço de dados de referência de **Melissa Data – Dados de Endereço** e mapearemos os domínios individuais no domínio composto para as colunas no esquema de serviço de dados de referência.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730814"
   
 8.  Caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** :  
   
-    1.  Em **DataMarket Data Quality Services**, selecione a caixa **Melissa Data – Verificação de Endereço** .  
+    1.  Em **DataMarket Data Quality Services**, selecione a caixa **Melissa Data – Verificação de Endereço**.  
   
-    2.  Mapeie as colunas do serviço de dados de referência de Melissa Data - Verificação de Endereço com os domínios apropriados (Linha de Endereço, Cidade, Estado e CEP). Você mapeia as colunas selecionando uma coluna de serviço de dados de referência na coluna **Esquema RDS** e, depois, selecionando o domínio apropriado na coluna **Domínio** . Para adicionar mais linhas à tabela, clique no ícone **Adicionar Entrada de Esquema** .  
+    2.  Mapeie as colunas do serviço de dados de referência de Melissa Data – Verificação de Endereço com os domínios apropriados (Linha de Endereço, Cidade, Estado e CEP). Você mapeia as colunas selecionando uma coluna de serviço de dados de referência na coluna **Esquema RDS** e, depois, selecionando o domínio apropriado na coluna **Domínio** . Para adicionar mais linhas à tabela, clique no ícone **Adicionar Entrada de Esquema** .  
   
     3.  Clique em **OK** para salvar as alterações e fechar a caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** .  
   

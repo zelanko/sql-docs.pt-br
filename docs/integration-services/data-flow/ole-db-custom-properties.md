@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524506"
 ---
 # <a name="ole-db-custom-properties"></a>Propriedades personalizadas OLE DB
   **Propriedades personalizadas de fontes**  

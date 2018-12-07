@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533402"
 ---
 # <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Para começar a usar em um aplicativo existente:
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
 - O CMC Markets utiliza o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para conseguir baixa latência consistente: [como um segundo é muito tempo de espera, essa empresa de serviços financeiros está atualizando seu software comercial agora.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- A Derivco utiliza o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para dar suporte a uma maior taxa de transferência e lidar com picos na carga de trabalho: [quando uma empresa de jogos online não quer correr risco, ela aposta no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- A Derivco usa o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para dar suporte a uma maior taxa de transferência e lidar com picos na carga de trabalho: [quando uma empresa de jogos online não quer correr risco, ela aposta no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Ingestão de dados, incluindo a IoT (Internet das coisas)
@@ -83,7 +83,7 @@ Os padrões comuns de aplicativo são:
 Use uma tabela com otimização de memória para a ingestão de dados. Se a ingestão consistir principalmente de inserções (em vez de atualizações) e o espaço de armazenamento do OLTP in-memory dos dados for uma preocupação,
 
 - use um trabalho para a descarga em lotes regular de dados em uma tabela baseada em disco com um [índice Columnstore clusterizado](../indexes/columnstore-indexes-overview.md), usando um trabalho que faz `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; ou
-- use uma [tabela com otimização de memória temporária](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) para gerenciar dados históricos. Neste modo, os dados históricos residem no disco e a movimentação de dados é gerenciada pelo sistema.
+- Use uma [tabela com otimização de memória temporária](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) para gerenciar dados históricos. Neste modo, os dados históricos residem no disco e a movimentação de dados é gerenciada pelo sistema.
 
 O repositório de amostras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém um aplicativo de grade inteligente que usa uma tabela com otimização de memória temporária, um tipo de tabela com otimização de memória e um procedimento armazenado compilado nativamente, para agilizar a ingestão de dados e ao mesmo tempo gerenciar a superfície de armazenamento do OLTP in-memory dos dados do sensor: 
 
@@ -232,4 +232,4 @@ Encontre uma demonstração de desempenho usando o OLTP in-memory em: [in-memory
 [Melhorando o desempenho da tabela temporária e da variável de tabela usando a otimização de memória](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [Otimizar o desempenho usando tecnologias in-memory no Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx). 
+[OLTP in-memory – padrões comuns de carga de trabalho e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx). 

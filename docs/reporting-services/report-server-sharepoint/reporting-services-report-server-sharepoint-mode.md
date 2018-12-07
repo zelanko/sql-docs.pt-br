@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529736"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
 
@@ -80,11 +80,11 @@ ms.locfileid: "50029791"
   
 -   Também não há suporte para a personalização do SharePoint nas páginas do Reporting Services. Não há suporte para integração do Servidor de Relatório quando o aplicativo Web do SharePoint é habilitado para acesso Anônimo.  
   
--   SQL Server Reporting Services **não** dão suporte a controle de versão de biblioteca de documentos do SharePoint. Se você salvar itens de relatório em uma biblioteca de documentos que está configurada com “Histórico de Versão de Documento” habilitado, os recursos do Reporting Services não funcionarão corretamente e gerarão erros no log do ULS. Este é um exemplo de um erro no log do ULS:  
+-   SQL Server Reporting Services **não** dão suporte a controle de versão de biblioteca de documentos do SharePoint. Se você salvar itens de relatório em uma biblioteca de documentos que está configurada com "Histórico de Versão de Documento" habilitado, os recursos do Reporting Services não funcionarão corretamente e gerarão erros no log do ULS. Este é um exemplo de um erro no log do ULS:  
   
-    -   “…uma fonte de dados associada ao relatório foi desabilitada”.  
+    -   "...uma fonte de dados associada ao relatório foi desabilitada".  
   
-     O histórico de versão da biblioteca de documento está configurada na página ”Configurações de versão” de “Configurações da biblioteca”.  
+     O histórico de versão da biblioteca de documento está configurada na página "Configurações de versão" de "Configurações da biblioteca".  
   
 ## <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a>Combinações com suporte do suplemento e do servidor de relatório do SharePoint
 

@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1c6d278e421003b9a7c5db927d8c0d5d9e23343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527056"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,11 +82,11 @@ ms.locfileid: "47639904"
   
 3.  Expanda a tabela na qual você deseja criar um índice não clusterizado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+6.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
   

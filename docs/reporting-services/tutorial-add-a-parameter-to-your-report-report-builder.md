@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9a62e1258bb5c7babda59f9c3b64b9afd16afe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833284"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712357"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
 Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que os leitores do relatório possam filtrar um ou mais valores nos dados do relatório. 
@@ -501,5 +501,5 @@ Isso conclui o passo a passo da adição de um parâmetro ao seu relatório. Par
   
 ## <a name="see-also"></a>Consulte Também  
 * [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)
-* [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Função Lookup](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

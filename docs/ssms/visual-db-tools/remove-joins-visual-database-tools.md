@@ -15,12 +15,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf8c50739d1579087000aabf9dfbb9e958663118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532824"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Remover Junções (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Se você não quer unir tabelas por uma junção interna ou uma junção externa
 > [!NOTE]  
 > Remover uma junção de uma consulta não altera a relação subjacente no banco de dados.  
   
-Se duas tabelas unidas fazem parte de sua consulta e você remove todas as condições de junção entre elas, a consulta resultante se torna o produto das duas tabelas — ou seja, se torna uma CROSS JOIN.  
+Se duas tabelas unidas fazem parte de sua consulta e você remove todas as condições de junção entre elas, a consulta resultante se torna o produto das duas tabelas – ou seja, se torna uma CROSS JOIN.  
   
 ### <a name="to-remove-a-join"></a>Para remover uma junção  
   

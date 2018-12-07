@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2aaa46b763e58cff11fec353a46745cb4065325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802984"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711478"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com um gráfico de colunas, exibindo uma série como um conjunto de barras verticais agrupadas por categoria. 
@@ -302,6 +302,6 @@ Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu r
   
 ## <a name="see-also"></a>Consulte Também  
 -    [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
--    [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+-    [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

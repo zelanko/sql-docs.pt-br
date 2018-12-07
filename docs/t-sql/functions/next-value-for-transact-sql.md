@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800312"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525729"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** – Para cada objeto de sequência referenciado, um novo valor é gerado uma vez por linha no resultado da instrução.  
   
--   **INSERT** … **VALUES** – Para cada objeto de sequência referenciado, um novo valor é gerado uma vez para cada linha inserida na instrução.  
+-   **INSERT** ... **VALUES** – Para cada objeto de sequência referenciado, um novo valor é gerado uma vez para cada linha inserida na instrução.  
   
 -   **UPDATE** – Para cada objeto de sequência referenciado, um novo valor é gerado para cada linha atualizada pela instrução.  
   
@@ -93,7 +93,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Em uma instrução que usa o operador **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** ou **INTERSECT**.  
   
--   Em uma instrução que usa a cláusula **ORDER BY**, a menos que **NEXT VALUE FOR** … **OVER** (**ORDER BY**…) seja usado.  
+-   Em uma instrução que usa a cláusula **ORDER BY**, a menos que **NEXT VALUE FOR** ... **OVER** (**ORDER BY** ...) seja usado.  
   
 -   Nas seguintes cláusulas: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** ou **FOR XML**.  
   
@@ -130,7 +130,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Um objeto de sequência referenciado em uma restrição padrão pode ser alterado.  
   
--   No caso de uma instrução `INSERT … SELECT` ou `INSERT … EXEC` em que os dados inseridos são obtidos de uma consulta que usa uma cláusula **ORDER BY**, os valores retornados pela função **NEXT VALUE FOR** serão gerados na ordem especificada pela cláusula **ORDER BY**.  
+-   No caso de uma instrução `INSERT ... SELECT` ou `INSERT ... EXEC` em que os dados inseridos são obtidos de uma consulta que usa uma cláusula **ORDER BY**, os valores retornados pela função **NEXT VALUE FOR** serão gerados na ordem especificada pela cláusula **ORDER BY**.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Usando um objeto de sequência com uma cláusula OVER ORDER BY  
  A função **NEXT VALUE FOR** é compatível com a geração de valores de sequência classificados com a aplicação da cláusula **OVER** à chamada **NEXT VALUE FOR**. Usando a cláusula **OVER**, um usuário tem a garantia de que os valores retornados são gerados na ordem da subcláusula **ORDER B**Y da cláusula **OVER**. As seguintes regras adicionais aplicam-se ao usar a função **NEXT VALUE FOR** com a cláusula **OVER**:  
@@ -143,7 +143,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Se todas as chamadas à função **NEXT VALUE FOR** em uma instrução **SELECT** especificarem a cláusula **OVER**, uma cláusula **ORDER BY** poderá ser usada na instrução **SELECT**.  
   
--   A cláusula **OVER** é permitida com a função **NEXT VALUE FOR** quando usada em uma instrução **SELECT** ou `INSERT … SELECT …`. O uso da cláusula **OVER** com a função **NEXT VALUE FOR** não é permitido em instruções **UPDATE** ou **MERGE**.  
+-   A cláusula **OVER** é permitida com a função **NEXT VALUE FOR** quando usada em uma instrução **SELECT** ou `INSERT ... SELECT ...`. O uso da cláusula **OVER** com a função **NEXT VALUE FOR** não é permitido em instruções **UPDATE** ou **MERGE**.  
   
 -   Se outro processo estiver acessando o objeto de sequência ao mesmo tempo, os números retornados poderão ter intervalos.  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Usando a função NEXT VALUE FOR com SELECT … INTO  
- O exemplo a seguir usa a instrução `SELECT … INTO` para criar uma tabela chamada `Production.NewLocation` e usa a função `NEXT VALUE FOR` para numerar cada linha.  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Usando a função NEXT VALUE FOR com SELECT ... INTO  
+ O exemplo a seguir usa a instrução `SELECT ... INTO` para criar uma tabela chamada `Production.NewLocation` e usa a função `NEXT VALUE FOR` para numerar cada linha.  
   
 ```  
 USE AdventureWorks2012 ;   

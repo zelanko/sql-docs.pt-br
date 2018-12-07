@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523338"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |PERMISSIONS|Foram encontradas referencias à função intrínseca PERMISSIONS. Consulte sys.fn_my_permissions. Ocorre uma vez por consulta.|  
 |ProcNums|A sintaxe ProcNums preterida foi encontrada. Reescreva as instruções para remover as referências. Ocorre uma vez por compilação.|  
 |READTEXT|A sintaxe READTEXT foi encontrada. Reescreva os aplicativos para usar o tipo de dados **varchar(max)** e remover as sintaxes do tipo de dados **text** . Ocorre uma vez por consulta.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|A sintaxe RESTORE ... WITH DBO_ONLY foi encontrada. Em vez disso, use RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A sintaxe RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|A sintaxe RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|A RESTORE ... WITH DBO_ONLY foi encontrada. Use RESTORE ... RESTRICTED_USER.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|A RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
 |Retornando resultados de gatilho|Este evento ocorre uma vez por invocação de gatilho. Reescreva o gatilho de forma a não retornar conjuntos de resultados.|  
 |ROWGUIDCOL|A sintaxe ROWGUIDCOL foi encontrada. Reescreva as instruções para usar a sintaxe $rowguid. Ocorre uma vez por compilação.|  
 |SET ANSI_NULLS OFF|A sintaxe SET ANSI_NULLS OFF foi encontrada. Remova esta sintaxe preterida. Ocorre uma vez por compilação.|  
@@ -173,13 +173,13 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sp_configure 'ft notify bandwidth (min)'|A opção ft notify bandwidth (min) de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'locks'|A opção locks de sp_configure foi encontrada. Não é mais possível configurar locks. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'open objects'|A opção open objects de sp_configure foi encontrada. Não é mais possível configurar o número de open objects. Não use. Ocorre uma vez por consulta.|  
-|sp_configure 'priority boost'|A opção priority boost de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta. Usar a opção start/high… program.exe do Windows.|  
+|sp_configure 'priority boost'|A opção priority boost de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta. Em vez disso, use a opção start /high ... program.exe do Windows.|  
 |sp_configure 'remote proc trans'|A opção remote proc trans option de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'set working set size'|A opção set working set size de sp_configure foi encontrada. Não é mais possível configurar working set size. Não use. Ocorre uma vez por consulta.|  
 |sp_control_dbmasterkey_password|O procedimento armazenado sp_control_dbmasterkey_password não verifica se uma chave mestra existe. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, deverá existir uma chave mestra e a senha usada no procedimento armazenado sp_control_dbmasterkey_password deverá ser a mesma senha usada para criptografar a chave mestra do banco de dados.|  
 |sp_create_removable|O procedimento sp_create_removable foi encontrado. Em vez disso, use CREATE DATABASE. Ocorre uma vez por consulta.|  
 |sp_db_vardecimal_storage_format|O uso do formato de armazenamento **vardecimal** foi encontrado. Em vez disso, use a compactação de dados.|  
-|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Em vez disso, use ALTER DATABASE … SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
+|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
 |sp_dbfixedrolepermission|O procedimento sp_dbfixedrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_dboption|O procedimento sp_dboption foi encontrado. Em vez disso, use ALTER DATABASE e DATABASEPROPERTYEX. Ocorre uma vez por compilação.|  
 |sp_dbremove|O procedimento sp_dbremove foi encontrado. Em vez disso, use DROP DATABASE. Ocorre uma vez por consulta.|  

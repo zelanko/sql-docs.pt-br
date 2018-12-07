@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701624"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532080"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
   O gerenciamento de pacotes inclui monitoramento, gerenciamento, importação e exportação de pacotes.  
@@ -127,7 +127,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more…>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
@@ -151,7 +151,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 7.  Opcionalmente, atualize o nome de pacote.  
   
-8.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote** , escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
+8.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote**, escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
   
 9. Clique em **OK** para concluir a importação.  
   
@@ -163,7 +163,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more…>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
@@ -227,7 +227,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  Opcionalmente, renomeie o pacote. O nome padrão é o nome do pacote a ser importado.  
   
  **Nível de proteção**  
- Clique no botão Procurar **(…)** e, na caixa de diálogo **Nível de Proteção do Pacote** , atualize o nível de proteção. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Clique no botão Procurar **(…)** e, na caixa de diálogo **Nível de Proteção do Pacote**, atualize o nível de proteção. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Exportar Pacote
   Use a caixa de diálogo **Exportar Pacote** , disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para exportar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para um local diferente e, opcionalmente, modificar o nível de proteção do pacote.  
@@ -264,7 +264,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  Digite o caminho do pacote ou clique no botão Procurar **(…)** e localize a pasta na qual o pacote será armazenado.  
   
  **Nível de proteção**  
- Clique no botão Procurar **(…)** e atualize o nível de proteção na caixa de diálogo **Nível de Proteção do Pacote** . Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Clique no botão Procurar **(…)** e atualize o nível de proteção na caixa de diálogo **Nível de Proteção do Pacote**. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="back-up-and-restore-packages"></a>Fazer backup e restaurar pacotes
   

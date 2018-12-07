@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653264"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617606"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653264"
   
 -   Oferece processo de duas etapas para limpar os dados: *auxiliado por computador* e *interativo*. O processo por computador usa o conhecimento em uma base de conhecimento de DQS para processar os dados automaticamente e sugere substituições/correções. A próxima etapa, interativa, permite que o administrador de dados aprove, rejeite ou modifique as alterações propostas pelo DQS durante a limpeza auxiliada por computador.  
   
--   Unifica e enriquece dados de cliente usando valores de domínio, regras de domínio e dados de referência. Por exemplo, padronize o uso do termo alterando "R." por "Rua", enriqueça os dados inserindo elementos ausentes ao alterar "1 Microsoft way Redmond 98006" por "1 Microsoft Way, Redmond, WA 98006".  
+-   Unifica e enriquece dados de cliente usando valores de domínio, regras de domínio e dados de referência. Por exemplo, padronize o uso do termo alterando "R." para "Rua", enriqueça os dados inserindo elementos ausentes ao alterar "1 Microsoft way Redmond 98006" por "1 Microsoft Way, Redmond, WA 98006".  
   
 -   Oferece uma interface de assistente simples, intuitiva e consistente para que o usuário navegue pelos dados e inspecione erros em um conjunto muito grande de dados.  
   

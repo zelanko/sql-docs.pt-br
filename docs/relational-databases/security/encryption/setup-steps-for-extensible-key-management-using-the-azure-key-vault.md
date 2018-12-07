@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522919"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Versão do SQL Server  |Link de instalação redistribuível
 4.  **Conceda permissão para a Entidade de Serviço do Azure Active Directory acessar o Cofre de Chaves**  
   
      Você pode autorizar outros usuários e aplicativos a usarem o cofre de chaves.   
-    Nesse caso, vamos usar a entidade de serviço do Azure Active Directory criada na Parte I para autorizar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    Nesse caso, vamos usar a entidade de serviço do Azure Active Directory criada na Parte I para autorizar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  A entidade de serviço do Azure Active Directory deve ter, pelo menos, as permissões `get`, `wrapKey` e `unwrapKey` para o cofre de chaves.  
@@ -190,16 +190,16 @@ Versão do SQL Server  |Link de instalação redistribuível
     -   **Protegido por HSM:** criado e protegido por um HSM (módulo de segurança de hardware) para segurança adicional. Custa cerca de US$ 1 por versão de chave.  
   
         > [!IMPORTANT]  
-        >  O Conector do SQL Server exige que o nome da chave use somente os caracteres “a-z”, “A-Z”, “0-9” e “-”, com um limite de 26 caracteres.   
-        > Versões de chave diferentes com o mesmo nome de chave no Cofre de Chaves do Azure não funcionarão com o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar uma chave do Cofre de Chaves do Azure que está sendo usada por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], veja as etapas de Substituição de chave em [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+        >  O Conector do SQL Server exige que o nome da chave use somente os caracteres "a-z", "A-Z", "0-9" e "-", com um limite de 26 caracteres.   
+        > Versões de chave diferentes com o mesmo nome de chave no Cofre de Chaves do Azure não funcionarão com o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar uma chave do Azure Key Vault que está sendo usada por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], veja as etapas de substituição de chave em [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Importar uma chave existente   
   
     Se você tiver uma chave protegida por software RSA de 2048 bits, poderá carregar a chave no Cofre de Chaves do Azure. Por exemplo, se você tem um arquivo .PFX salvo em sua unidade `C:\\` em um arquivo chamado `softkey.pfx` e deseja carregá-lo no Cofre de Chaves do Azure, digite o seguinte para definir a variável `securepfxpwd` com uma senha de `12987553` para o arquivo .PFX:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Em seguida, digite o seguinte para importar a chave do arquivo .PFX, que a protege pelo hardware (recomendado) no serviço de Cofre de Chaves:  

@@ -15,16 +15,16 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525717"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tabelas, exibições e objetos de instância, incluindo logons, associados a um banco de dados de usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
+  Um aplicativo da camada de dados (DAC) é uma entidade de gerenciamento de banco de dados lógico que define todos os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assim como tabelas, exibições e objetos de instância, inclusive logons, associados do banco de dados do usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
   
  Um BACPAC é um artefato relacionado que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados.  
   
@@ -35,16 +35,16 @@ ms.locfileid: "47680304"
   
  A vantagem de uma implantação orientada por DAC em relação a um exercício orientado por script é que a ferramenta ajuda o DBA a identificar e validar comportamentos de bancos de dados de origem e destino diferentes. Durante atualizações, a ferramenta avisa o DBA se a atualização pode causar perda de dados, e também fornece um plano de atualização. O DBA pode avaliar o plano e, em seguida, utilizar a ferramenta para continuar com a atualização.  
   
- O DAC também dá suporte a controle de versão para ajudar o desenvolvedor e o DBA a manter e gerenciar a linhagem de banco de dados em todo o seu ciclo de vida.  
+ Os DACs também dão suporte a controle de versão para ajudar o desenvolvedor e o DBA a manter e gerenciar a linhagem de banco de dados em todo o seu ciclo de vida.  
   
 ## <a name="dac-concepts"></a>Conceitos de DAC  
  Um DAC simplifica o desenvolvimento, a implantação e o gerenciamento dos elementos da camada de dados que oferecem suporte a um aplicativo.  
   
 -   Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos SQL Server como tabelas, exibições e objetos de instância, associados a um banco de dados de usuário. Se uma unidade autossuficiente de implantação de banco de dados do SQL Server que permite que desenvolvedores da camada de dados e DBAs empacotem objetos SQL Server em um artefato portátil chamado pacote de DAC, ou arquivo .dacpac.  
   
--   Para que um banco de dados do SQL Server seja tratado como um DAC, ele deverá ser registrado ou explicitamente por uma operação de usuário, ou implicitamente por uma das operações de DAC. Quando um banco de dados é registrado, a versão do DAC e outras propriedades são registradas como parte dos metadados do banco de dados. De maneira recíproca, um banco de dados também pode ter o registro cancelado e ter suas propriedades do DAC removidas.  
+-   Para que um banco de dados do SQL Server seja tratado como um DAC, ele deverá ser registrado ou explicitamente por uma operação de usuário ou implicitamente por uma das operações de DAC. Quando um banco de dados é registrado, a versão do DAC e outras propriedades são registradas como parte dos metadados do banco de dados. De maneira recíproca, um banco de dados também pode ter o registro cancelado e ter suas propriedades do DAC removidas.  
   
--   Em geral, as ferramentas do DAC são capazes de ler arquivos do DACPAC gerados por ferramentas de DAC de versões anteriores do SQL Server, e também podem implantar o DACPAC em versões anteriores do SQL Server. No entanto, as ferramentas de DAC de versões anteriores não podem ler arquivos DACPAC gerados por ferramentas do DAC de versões posteriores. Especificamente:  
+-   Em geral, as ferramentas do DAC são capazes de ler arquivos do DACPAC gerados por ferramentas de DAC de versões anteriores do SQL Server e também podem implantar o DACPAC em versões anteriores do SQL Server. No entanto, as ferramentas de DAC de versões anteriores não podem ler arquivos DACPAC gerados por ferramentas do DAC de versões posteriores. Especificamente:  
   
     -   As operações do DAC foram introduzidas no SQL Server 2008 R2. Além de bancos de dados do SQL Server 2008 R2, as ferramentas dão suporte à geração de arquivos DACPAC de bancos de dados do SQL Server 2008, do SQL Server 2005 e do SQL Server 2000.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47680304"
   
  Por outro lado, um BACPAC destina-se a capturar esquema e dados com suporte a duas operações principais:  
   
--   **EXPORT**– O usuário pode exportar o esquema e os dados de um banco de dados para um BACPAC.  
+-   **EXPORT**– o usuário pode exportar o esquema e os dados de um banco de dados para um BACPAC.  
   
--   **IMPORT** – O usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
+-   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
  Estes recursos têm suporte nas ferramentas de gerenciamento de banco de dados: SQL Server Management Studio, Portal do Azure e API DACFx.  
   

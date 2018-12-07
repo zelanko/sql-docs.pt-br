@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788474"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586279"
 ---
 # <a name="update-statistics"></a>Atualização de Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,11 +60,11 @@ ms.locfileid: "47788474"
   
 5.  Clique com o botão direito do mouse no objeto de estatísticas que você deseja atualizar e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Propriedades estáticas –**_statistics\_name_, marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
+6.  Na caixa de diálogo **Propriedades estatísticas –**_statistics\_name_, marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
+### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47788474"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>Para atualizar todas as estatísticas em uma tabela  
+### <a name="to-update-all-statistics-in-a-table"></a>Para atualizar todas as estatísticas em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47788474"
     GO  
     ```  
   
- Para obter mais informações, veja [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
+Para obter mais informações, veja [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>Para atualizar todas as estatísticas em um banco de dados  
+### <a name="to-update-all-statistics-in-a-database"></a>Para atualizar todas as estatísticas em um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788474"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- Para obter mais informações, veja [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-  
-  
+
+Para obter mais informações, veja [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).   
+
+### <a name="automatic-index-and-statistics-management"></a>Índice automático e gerenciamento de estatísticas
+Aproveite soluções como a [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para gerenciar automaticamente a desfragmentação de índice e as atualizações de estatísticas em um ou mais bancos de dados. Este procedimento escolhe automaticamente se deve recompilar ou reorganizar um índice de acordo com seu nível de fragmentação, entre outros parâmetros, e atualizar as estatísticas com um limite linear.
+

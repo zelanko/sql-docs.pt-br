@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535703"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -103,7 +103,7 @@ ms.locfileid: "51640673"
  Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### <a name="accessing-parent-package-variables"></a>Acessando variáveis de pacote pai  
- Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Quando você insere o nome da variável de pacote pai na página de **Script** no **Editor da Tarefa Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai.  
+ Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Ao inserir o nome da variável de pacote pai na página **Script** do **Editor da Tarefa de Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurando a tarefa Executar Pacote  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
@@ -158,7 +158,7 @@ ms.locfileid: "51640673"
 >  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implante projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Senha**  
- Se o pacote filho for protegido por senha, forneça a senha para o pacote filho ou clique no botão de reticências (...) e crie uma nova senha para o pacote filho.  
+ Se o pacote filho for protegido por senha, forneça a senha dele ou clique no botão de reticências (...) e crie uma senha para ele.  
   
  **ExecuteOutOfProcess**  
  Especifique se o pacote filho é executado no processo do pacote pai ou um processo separado. Por padrão, a propriedade ExecuteOutOfProcess da tarefa Executar Pacote é definida como **False**, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como **true**, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se a propriedade for definida como **true**, você não poderá depurar o pacote em uma instalação somente ferramentas; você deverá instalar o produto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md).  

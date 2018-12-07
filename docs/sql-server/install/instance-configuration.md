@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535727"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vária
  Para obter mais informações, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="options"></a>Opções  
- Somente instâncias de cluster de failover — Especifique o nome de rede de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse nome identifica a instância do cluster de failover na rede.  
+ Somente instâncias de cluster de failover – especifique o nome da rede de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse nome identifica a instância do cluster de failover na rede.  
   
- Instância padrão ou nomeada — Considere as seguintes informações ao decidir se deve instalar uma instância padrão ou nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Instância padrão ou nomeada – considere as seguintes informações ao decidir se deve instalar uma instância padrão ou nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Se você planeja instalar uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor de banco de dados, ela deve ser uma instância padrão.  
   
@@ -437,7 +437,7 @@ Use a página **Instância de Usuário** para gerar uma instância separada do [
  Habilitar instâncias de usuário  
  O padrão é habilitado. Para desabilitar a funcionalidade de habilitar instâncias de usuário, desmarque a caixa de seleção.  
   
- A instância do usuário, também conhecida como instância filha ou cliente, é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerada pela instância pai (a instância primária executada como um serviço, como o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) em nome de um usuário. A instância de usuário é executada como um processo de usuário no contexto de segurança daquele usuário. A instância de usuário é isolada da instância pai e de qualquer outra instância de usuário que estiver em execução no computador. O recurso de instância de usuário também é chamado de "Executar como Usuário Normal (RANU, Run As Normal User)".  
+ A instância do usuário, também conhecida como instância filha ou cliente, é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerada pela instância pai (a instância primária executada como um serviço, como o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) em nome de um usuário. A instância de usuário é executada como um processo de usuário no contexto de segurança daquele usuário. A instância de usuário é isolada da instância pai e de qualquer outra instância de usuário que estiver em execução no computador. O recurso de instância de usuário também é chamado de RANU "Run As Normal User" (Executar como Usuário Normal).  
   
 > [!NOTE]  
 >  Logons provisionados como membros da função de servidor fixa **sysadmin** durante a instalação são provisionados como administradores no banco de dados de modelo. Eles são membros da função de servidor fixa **sysadmin** na instância de usuário, a menos que sejam removidos  
@@ -451,6 +451,6 @@ Use a página **Instância de Usuário** para gerar uma instância separada do [
   
  Verifique se o campo **Usuário para provisionamento** lista o NomeDeDomínio\NomeDeUsuário do usuário cujas permissões devem ser atualizadas. Selecione a função que será atualizada na lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no painel **Privilégios disponíveis** e clique na seta à direita. Para adicionar o usuário a todas as funções para todas as instâncias disponíveis das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todas as funções disponíveis, clique duas vezes na seta à direita.  
   
- Para implementar as alterações quando suas seleções estiverem completas, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. Para encerrar o uso da ferramenta sem fazer alterações, clique em **Cancelar**.  
+ Para implementar as alterações quando suas seleções estiverem completas, [!INCLUDE[clickOK](../../includes/clickok-md.md)] Para encerrar a ferramenta sem fazer alterações, clique em **Cancelar**.  
   
   

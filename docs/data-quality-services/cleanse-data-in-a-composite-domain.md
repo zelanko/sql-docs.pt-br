@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754644"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617426"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
 
@@ -34,7 +33,7 @@ ms.locfileid: "47754644"
   
     -   Se o domínio composto não for mapeado para um serviço de dados de referência, a análise se baseará no método de análise definido no domínio composto. Para obter mais informações sobre como especificar um método de análise para domínios compostos, consulte [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)  
   
--   Os dados de origem consistem em vários campos (digamos First Name, Middle Name e Last Name) que são mapeados para domínios individuais em um domínio composto.  
+-   Os dados de origem consistem em vários campos (digamos Nome, Nome do Meio e Sobrenome) que são mapeados para domínios individuais em um domínio composto.  
   
  Para obter um exemplo de como mapear domínios de composição para dados de origem, consulte [Anexar um domínio ou um domínio de composição aos dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47754644"
   
  Considere o seguinte exemplo: há um domínio composto, Product, com três domínios individuais: ProductName, CompanyName e ProductVersion. Crie a seguinte regra de domínio cruzado definitiva:  
   
- O valor de domínio IF 'CompanyName' contém *Microsoft* e o valor de domínio 'ProductName' equivale a *Office* ; o valor 'ProductVersion' equivale a *2010* . O valor de domínio THEN 'ProductName' Valor equivale a *Microsoft Office 2010*.  
+ O valor de domínio IF 'CompanyName' contém *Microsoft* e o valor de domínio 'ProductName' equivale a *Office*, o valor 'ProductVersion' equivale a *2010*. O valor de domínio THEN 'ProductName' Valor equivale a *Microsoft Office 2010*.  
   
  Quando esta regra de domínio cruzado é executada, os dados de origem (ProductName) são corrigidos da seguinte forma após a atividade de limpeza:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47754644"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra “*\<Cross-Domain Rule Name>*”. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra ‘*\<Nome da regra de domínio cruzado>*’. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  A regra do domínio cruzado definitiva não funcionará para domínios compostos que estão anexados ao serviço de dados de referência.  

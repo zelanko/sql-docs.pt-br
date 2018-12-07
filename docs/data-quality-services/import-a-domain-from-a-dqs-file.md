@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26af15dea92c143fe995e0072f80d3782a3adaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787216"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616396"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar um domínio de um arquivo .dqs
 
@@ -27,7 +26,7 @@ ms.locfileid: "47787216"
   
  O uso de um arquivo de dados .dqs para exportar um domínio de uma base de dados de conhecimento e, em seguida, importá-lo para outra base de dados de conhecimento simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que você compartilhe um domínio e seu conhecimento com outras pessoas, fazendo-as ganhar tempo. Você pode importar um único domínio ou um domínio composto (com vários domínios únicos). Um arquivo .dqs com um único domínio inclui todos os dados do domínio, inclusive os dados de propriedades, valores e regras do domínio, exceto para as informações de dados referenciados mapeados. Um arquivo .dqs com um domínio composto inclui todos os dados do domínio composto, incluindo todos os dados do domínio para os domínios únicos contidos no domínio composto, além das propriedades de domínio composto, das relações de valor e das regras de CD, exceto para os dados referenciados mapeados. Os dados publicados e não publicados serão importados.  
   
- Quando você importa um domínio, o nome do domínio permanece igual ao nome do domínio que foi exportado originalmente, a menos que o nome de domínio já exista; nesse caso, o DQS acrescentará "_1" ao nome. Isso também será verdade se você importar um domínio composto com um domínio individual com o mesmo nome de um domínio existente.  
+ Quando você importa um domínio, o nome do domínio permanece igual ao nome do domínio que foi exportado originalmente, a menos que o nome de domínio já exista, nesse caso, o DQS acrescentará "_1" ao nome. Isso também será verdade se você importar um domínio composto com um domínio individual com o mesmo nome de um domínio existente.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

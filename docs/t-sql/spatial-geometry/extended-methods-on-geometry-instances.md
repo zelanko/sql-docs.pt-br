@@ -15,12 +15,12 @@ ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83aec2e3ef50cad613d3ca7e356437d44419f2de
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f802814241e8294641329d70c16a75415de79726
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700744"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523378"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Métodos estendidos em instâncias geometry
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51700744"
   
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificações do OGC, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Acesso de recurso simples Parte 2 – opções de SQL)  
   
 -   [Especificações OGC, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)  
   

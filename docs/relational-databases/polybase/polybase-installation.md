@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523484"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -184,7 +184,7 @@ A instalação do PolyBase do SQL Server cria as seguintes regras de firewall no
    
 - PolyBase do SQL Server – Serviços do PolyBase – \<SQLServerInstanceName> (TCP-In)  
 
-- PolyBase do SQL Server – SQL Browser – (UDP-In)  
+- PolyBase do SQL Server – Navegador do SQL – (UDP-In)  
    
 Durante a instalação, se você usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase, essas regras serão habilitadas. O firewall abre e permite conexões de entrada. São permitidas para o Mecanismo de Banco de Dados do SQL Server, o Mecanismo PolyBase do SQL Server, o serviço de Movimentação de Dados PolyBase do SQL Server e o SQL Browser. Se o serviço de firewall no computador não estiver em execução durante a instalação, a instalação do SQL Server falhará ao habilitar essas regras. Nesse caso, inicie o serviço de Firewall no computador e habilite essas regras pós-instalação.  
    

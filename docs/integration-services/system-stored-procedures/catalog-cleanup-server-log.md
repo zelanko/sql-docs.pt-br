@@ -11,12 +11,12 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbcf940b5679a22ff6d2c0692878b6c57e104ddb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544705"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ catalog.cleanup_server_log
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 adicionou a propriedade SERVER_OPERATION_ENCRYPTION_LEVEL à tabela **internal.catalog_properties**. Essa propriedade tem dois valores possíveis:  
   
--   **PER_EXECUTION (1)** – o certificado e a chave simétrica usados para proteger parâmetros de execução e logs de execução confidenciais são criados para cada execução. Você pode ter problemas de desempenho (deadlocks, trabalhos de manutenção com falha, etc.) em um ambiente de produção porque chaves/certificado são gerados para cada execução. No entanto, essa configuração fornece um nível maior de segurança que o outro valor (2).  
+-   **PER_EXECUTION (1)** – O certificado e a chave simétrica usados para proteger parâmetros de execução e logs de execução confidenciais são criados para cada execução. Você pode ter problemas de desempenho (deadlocks, trabalhos de manutenção com falha, etc.) em um ambiente de produção porque chaves/certificado são gerados para cada execução. No entanto, essa configuração fornece um nível maior de segurança que o outro valor (2).  
   
--   **PER_PROJECT (2)** – o certificado e a chave simétrica usados para proteger parâmetros confidenciais são criados para cada projeto. PER_PROJECT (2) é o valor padrão. Essa configuração oferece um desempenho melhor do que o nível PER_EXECUTION porque a chave e o certificado são gerados uma vez para um projeto em vez de serem gerados para cada execução.  
+-   **PER_PROJECT (2)** – O certificado e a chave simétrica usados para proteger parâmetros confidenciais são criados para cada projeto. PER_PROJECT (2) é o valor padrão. Essa configuração oferece um desempenho melhor do que o nível PER_EXECUTION porque a chave e o certificado são gerados uma vez para um projeto em vez de serem gerados para cada execução.  
   
  Você precisa executar o procedimento armazenado [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) antes de alterar o SERVER_OPERATION_ENCRYPTION_LEVEL de 2 para 1 ou de 1 para 2. Você precisa fazer o seguinte antes de executar este procedimento armazenado:  
   

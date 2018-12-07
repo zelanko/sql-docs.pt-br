@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526177"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
 Este tutorial ensina como criar dois tipos de relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : um relatório de detalhamento e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. 
@@ -101,7 +101,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta** , no painel Metadados, clique no botão **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -392,7 +392,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta** , no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   

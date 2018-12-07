@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521674"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar a segurança do SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Siga estas diretrizes para melhorar a segurança de sua implementação do [!INC
   
 -   Quando um TSX se inscrever com um MSX, o sysadmins do MSX obtém controle total sobre a instância de TSX do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   ACE é uma extensão e não pode se chamar. ACE é chamado por Chainer ScenarioEngine.exe, também conhecido como Microsoft.SqlServer.Chainer.Setup.exe, ou pode ser chamado por outro processo do host.  
+-   ACE é uma extensão e não pode se chamar. ACE é chamado por Chainer ScenarioEngine.exe (também conhecido como Microsoft.SqlServer.Chainer.Setup.exe) ou pode ser chamado por outro processo do host.  
   
 -   ACE depende das seguintes DLLs de configuração de propriedade do SSDP, porque essas APIs de DLLs são chamadas pelo ACE:  
   

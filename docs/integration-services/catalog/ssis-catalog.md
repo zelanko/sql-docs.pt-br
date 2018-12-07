@@ -15,15 +15,15 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641403"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535544"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
-  O catálogo do **SSISDB** é o ponto central para trabalhar com projetos do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
+  O catálogo do **SSISDB** é o ponto central para trabalhar com os projetos do SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
 > Este artigo descreve o Catálogo do SSIS em geral e o Catálogo do SSIS em execução localmente. Também é possível criar o Catálogo do SSIS no Banco de Dados SQL do Azure e implantar e executar pacotes do SSIS no Azure. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
@@ -394,7 +394,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] inclui o banco de dados SSISDB. Você consulta exibições no banco de dados SSISDB para inspecionar objetos, configurações e dados operacionais que são armazenados no catálogo do **SSISDB** . Este tópico fornece instruções para fazer backup do banco de dados e restaurá-lo.  
   
- O catálogo do **SSISDB** armazena os pacotes que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre o catálogo, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
+ O catálogo do **SSISDB** armazena os pacotes que você implantou no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações sobre o catálogo, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> Para fazer o backup do banco de dados SSIS  
   
@@ -485,7 +485,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     -   **Método 1**  
   
-         Use este método se você já executou um backup da chave mestra do banco de dados e você tem a senha usada para criptografar a chave mestra.  
+         Use esse método se você já executou um backup da chave mestra do banco de dados e tem a senha usada para criptografar a chave mestra.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  
@@ -627,7 +627,7 @@ Forneça a senha especificada ao criar o Catálogo do SSIS na página **Selecion
 > [!WARNING]  
 >  O failover automático do banco de dados do SSISDB só será permitido quando você habilitar o Suporte do SSIS para o Always On.  
   
- As réplicas secundárias recém-adicionadas do grupo de disponibilidade Always On são mostradas na tabela. Clique em **Conectar …** de cada réplica na lista e digite as credenciais de autenticação para se conectar à réplica. A conta de usuário deve ser membro do grupo sysadmin em cada réplica para habilitar o suporte do SSIS para Always On. Depois de se conectar com êxito a cada réplica, clique em **OK** para habilitar o suporte do SSIS para Always On.  
+ As réplicas secundárias recém-adicionadas do grupo de disponibilidade Always On são mostradas na tabela. Clique no botão **Conectar...** de cada réplica na lista e insira as credenciais de autenticação para conectar-se à réplica. A conta de usuário deve ser membro do grupo sysadmin em cada réplica para habilitar o suporte do SSIS para Always On. Depois de se conectar com êxito a cada réplica, clique em **OK** para habilitar o suporte do SSIS para Always On.  
  
 Se a opção **Habilitar suporte do Always On** no menu de contexto parecer estar desabilitada depois que você concluir os pré-requisitos, tente fazer o seguinte:
 1.  Atualize o menu de contexto clicando na opção **Atualizar**.
@@ -635,13 +635,13 @@ Se a opção **Habilitar suporte do Always On** no menu de contexto parecer esta
 3.  Verifique se a versão do SQL Server é 13.0 ou superior. O SSIS dá suporte a Always On apenas no SQL Server 2016 e versões posteriores.
 
 ###  <a name="Upgrade"></a> Atualizando o SSISDB em um grupo de disponibilidade  
- Se estiver atualizando o SQL Server de uma versão anterior, e o SSISDB estiver em um grupo de disponibilidade Always On, sua atualização poderá ser bloqueada pela regra "Verificação do SSISDB no Grupo de Disponibilidade Always On". Esse bloqueio ocorre porque a atualização é executada no modo de usuário único, enquanto um banco de dados de disponibilidade deve ser um banco de dados de multiusuário. Portanto, durante a atualização ou a aplicação de patch, todos os bancos de dados de disponibilidade, incluindo o SSISDB, são colocados no modo offline e não são atualizados nem corrigidos. Para permitir que o upgrade continue, primeiro remova o SSISDB do grupo de disponibilidade, faça upgrade ou aplique patch a cada nó e, em seguida, adicione o SSISDB novamente ao grupo de disponibilidade.  
+ Se estiver atualizando o SQL Server de uma versão anterior e o SSISDB estiver em um grupo de disponibilidade Always On, sua atualização poderá ser bloqueada pela regra "Verificação do SSISDB no Grupo de Disponibilidade Always On". Esse bloqueio ocorre porque a atualização é executada no modo de usuário único, enquanto um banco de dados de disponibilidade deve ser um banco de dados de multiusuário. Portanto, durante a atualização ou a aplicação de patch, todos os bancos de dados de disponibilidade, incluindo o SSISDB, são colocados no modo offline e não são atualizados nem corrigidos. Para permitir que o upgrade continue, primeiro remova o SSISDB do grupo de disponibilidade, faça upgrade ou aplique patch a cada nó e, em seguida, adicione o SSISDB novamente ao grupo de disponibilidade.  
   
- Se estiver bloqueado pela regra “Verificação do SSISDB no Grupo de Disponibilidade Always On”, siga estas etapas para fazer upgrade do SQL Server.  
+ Se você estiver bloqueado pela regra "Verificação do SSISDB no Grupo de Disponibilidade Always On", siga estas etapas para atualizar o SQL Server.  
   
 1.  Remova o banco de dados do SSISDB do grupo de disponibilidade. Para obter mais informações, veja [Remover um banco de dados secundário de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) e [Remover um banco de dados primário de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
-2.  Clique em **Executar novamente** no assistente de atualização. A regra "Verificação do SSISDB no Grupo de Disponibilidade Always On" será aprovada.  
+2.  Clique em **Executar novamente** no assistente de atualização. A regra "Verificação do SSISDB no Grupo de Disponibilidade Always On" é aprovada.  
   
 3.  Clique em **Avançar** para continuar a atualização.  
   

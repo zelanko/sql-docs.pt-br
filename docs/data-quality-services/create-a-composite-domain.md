@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701774"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616856"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
 
@@ -86,7 +85,7 @@ ms.locfileid: "51701774"
   
     -   **Dados de Referência**: analise os valores do campo de acordo com o modo como os dados são formatados pelo RDS (Serviços de Dados de Referência). O Data Quality Services enviará os valores no domínio composto ao RDS e o RDS retornará os dados corrigidos e analisados de acordo com o domínio no domínio composto.  
   
-    -   **EM Ordem**: analise os valores do campo de acordo com a ordem dos domínios no domínio composto. O primeiro valor será incluído no primeiro domínio, o segundo valor no segundo domínio etc.  
+    -   **Em Ordem**: analise os valores do campo de acordo com a ordem dos domínios no domínio composto. O primeiro valor será incluído no primeiro domínio, o segundo valor no segundo domínio etc.  
   
     -   **Delimitadores**: analise os valores de campo com base no delimitador selecionado dentre os botões de opção exibidos quando os Delimitadores estão selecionados. Esses podem ser: **Guia**, **Ponto-e-vírgula**, **Vírgula**, **Espaço**ou **Outro**. Se **Outro**, insira o valor que atuará como o delimitador.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "51701774"
  Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- O Data Quality Services permite que você analise os dados com base no conhecimento, não apenas no delimitador ou na ordem. A análise baseada em conhecimento é usada quando fontes de dados complexas são mapeadas para um domínio composto e você não está usando serviços de dados de referência. Você pode usar a análise baseada em conhecimento para analisar os dados a partir da fonte de dados nos domínios únicos relevantes. Com a análise baseada em conhecimento, o DQS primeiro tentará usar o conhecimento para analisar os dados complexos em domínios únicos. Se possível, ela identificará partes da cadeia de caracteres como em um ou mais domínios e analisará a cadeia de caracteres em seus vários domínios. Por exemplo, suponha que tem “John B. Doe” como valores complexos em um campo de nome completo representado por um domínio composto de Nome Completo. Se o DQS identificar “John” como no domínio Nome e “Doe” como no domínio Sobrenome, o DQS adicionará “B.” ao domínio de Segundo Nome com base no conhecimento do domínio.  
+ O Data Quality Services permite que você analise os dados com base no conhecimento, não apenas no delimitador ou na ordem. A análise baseada em conhecimento é usada quando fontes de dados complexas são mapeadas para um domínio composto e você não está usando serviços de dados de referência. Você pode usar a análise baseada em conhecimento para analisar os dados a partir da fonte de dados nos domínios únicos relevantes. Com a análise baseada em conhecimento, o DQS primeiro tentará usar o conhecimento para analisar os dados complexos em domínios únicos. Se possível, ela identificará partes da cadeia de caracteres como em um ou mais domínios e analisará a cadeia de caracteres em seus vários domínios. Por exemplo, suponha que tem "John B. Doe" como valores complexos em um campo de nome completo representado por um domínio composto de Nome Completo. Se o DQS identificar "John" como no domínio Nome e "Doe" como no domínio Sobrenome e o DQS adicionará "B." ao domínio de Segundo Nome com base no conhecimento do domínio.  
   
  Você poderá usar a análise baseada em conhecimento somente se também selecionar a análise baseada no delimitador. A análise baseada em conhecimento não substitui a análise baseada no delimitador, mas a aprimora. Somente se não houver nenhum conhecimento para fazer isso é que o DQS usará um delimitador para realizar a análise. Em algumas instâncias, o DQS poderá determinar parte da análise executando a análise baseada no conhecimento e depois determinar outra análise pela análise baseada no delimitador.  
   

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828584"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616886"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
 
@@ -67,7 +66,7 @@ ms.locfileid: "47828584"
   
 10. Clique em **OK**. Uma barra de progresso é exibida, com uma indicação de quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores. Clique no botão **Cancelar** para cancelar o processo.  
   
-11. Verifique se “Importação concluída” é exibido na caixa de diálogo **Importar Valores de Domínio** . Nesta caixa de diálogo, veja quais valores foram importados com êxito e quais não foram. Ela indica o nome e o caminho do arquivo, o status de conclusão da operação, quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores processados.  
+11. Verifique se "Importação concluída" é exibido na caixa de diálogo **Importar Valores de Domínio**. Nesta caixa de diálogo, veja quais valores foram importados com êxito e quais não foram. Ela indica o nome e o caminho do arquivo, o status de conclusão da operação, quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores processados.  
   
 12. Para os valores que não foram importados com êxito, clique em **Log** para exibir a caixa de diálogo **Importar Valores de Domínio – Valores com Falha** para saber por que a operação de importação falhou. A coluna **Valor com Falha** mostra os valores que não puderam ser importados de um arquivo do Excel para um domínio, e a coluna **Razão** explica por que a importação falhou. Clique em **Copiar para a área de transferência** para copiar a tabela **Valor com Falha** para a área de transferência, a partir da qual você poderá copiá-la para outro programa, como uma planilha do Excel ou um arquivo do Bloco de Notas. Clique em **OK** para fechar a caixa de diálogo **Valores com Falha** .  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828584"
   
     -   O formato esperado é que a primeira coluna será os valores principais, enquanto a segunda coluna e acima serão sinônimos.  
   
-    -   Você pode importar vários sinônimos da mesma linha ou de linhas diferentes. Por exemplo, se você deseja importar “CNI” e “Cidade de Nova Iorque” como sinônimos para “Nova Iorque”, importe uma única linha com “Nova Iorque” na coluna 1, “CNI” na coluna 2, e “Cidade de Nova Iorque” na coluna 3; ou você pode importar uma linha com “Nova Iorque” na coluna 1 e “CNI” na coluna 2, e outra linha com “Nova Iorque” na coluna 1 e “Cidade de Nova Iorque” na coluna 2. Observe que, se o valor “Nova Iorque” já existir no domínio, somente os sinônimos serão adicionados, e o usuário não receberá um erro durante o processo de importação informando que o valor já existe. Se o primeiro valor ainda não existir, ele será adicionado ao domínio.  
+    -   Você pode importar vários sinônimos da mesma linha ou de linhas diferentes. Por exemplo, se você deseja importar "RJ" e "Cidade do Rio de Janeiro" como sinônimos para "Rio de Janeiro", importe uma única linha com "Rio de " na coluna 1, "RJ" na coluna 2 e "Cidade do Rio de Janeiro" na coluna 3 ou você pode importar uma linha com "Rio de Janeiro" na coluna 1 e "RJ" na coluna 2 e outra linha com "Rio de Janeiro" na coluna 1 e "Cidade do Rio de Janeiro" na coluna 2. Observe que, se o valor "Rio de Janeiro" já existir no domínio, somente os sinônimos serão adicionados e o usuário não receberá um erro durante o processo de importação informando que o valor já existe. Se o primeiro valor ainda não existir, ele será adicionado ao domínio.  
   
  As regras a seguir se aplicam ao arquivo do Excel que está sendo usado para a importação:  
   

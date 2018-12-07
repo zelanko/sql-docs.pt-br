@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b3886ac725556683a3b20d8c3cd513b2fe5949f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606906"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617713"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ Selecione **LocalDB** na página **Seleção de Recursos/Recursos Compartilhados
 ## <a name="description"></a>Descrição  
  O programa de instalação do **LocalDB** usa o programa SqlLocalDB.msi para instalar os arquivos necessários no computador. Uma vez instalado, o **LocalDB** torna-se uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que pode criar e abrir bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os arquivos de banco de dados do sistema para o banco de dados são armazenados no caminho de AppData local dos usuários, que normalmente é oculto. Por exemplo **C:\Usuários\\<usuário\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\\**. Os arquivos de banco de dados do usuário são armazenados onde o usuário determina, normalmente em algum lugar da pasta **C:\Usuários\\<usuário\>\Documents\\**.  
   
- Para obter mais informações sobre como incluir o **LocalDB** em um aplicativo, consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Visão geral da arquitetura lógica](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Passo a passo: criando um banco de dados LocalDB do SQL Server](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) e [Passo a passo: conectando-se a dados no banco de dados LocalDB do SQL Server (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ Para obter mais informações sobre como incluir o **LocalDB** em um aplicativo, consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Visão geral da arquitetura lógica](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Passo a passo: criando um banco de dados LocalDB do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233763(v=vs.110)) e [Passo a passo: conectando-se a dados no banco de dados LocalDB do SQL Server (Windows Forms)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms171890(v=vs.110)).  
   
- Para obter mais informações sobre a API do **LocalDB** , consulte [Referência de API da instância LocalDB do SQL Server Express](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) e [Função LocalDBStartInstance](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ Para obter mais informações sobre a API **LocalDB**, confira [Referência de LocalDB do SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md).  
   
  O utilitário SqlLocalDb pode criar novas instâncias do **LocalDB**, iniciar e interromper uma instância do **LocalDB**, e contém opções para ajudar a gerenciar o **LocalDB**.  Para obter mais informações sobre o utilitário SqlLocalDb, consulte [Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
@@ -128,7 +128,7 @@ REM Gather information about the instance of LocalDB
  Uma instância do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** é uma instância criada por um usuário para o seu próprio uso. Qualquer usuário no computador pode criar um banco de dados usando uma instância do **LocalDB**, armazenando arquivos sob o seu perfil do usuário e executando o processo sob suas credenciais. Por padrão, o acesso para a instância de **LocalDB** é limitado a seu proprietário. Os dados contidos no **LocalDB** são protegidos pelo acesso de sistema de arquivos aos arquivos de banco de dados. Se os arquivos de banco de dados do usuário estiverem armazenados em um local compartilhado, o banco de dados poderá ser aberto por qualquer pessoa com acesso de sistema de arquivos ao local, usando uma instância de **LocalDB** de sua propriedade. Se os arquivos de banco de dados estiverem em um local protegido, como a pasta de dados de usuários, somente esse usuário e os administradores com acesso a essa pasta poderão abrir o banco de dados. Os arquivos do **LocalDB** somente podem ser abertos por uma instância do **LocalDB** de cada vez.  
   
 > [!NOTE]  
->  O**LocalDB** sempre é executado sob o contexto de segurança de usuários; ou seja, o **LocalDB** nunca é executado com credenciais do grupo de Administradores local. Isto significa que todos os arquivos de banco de dados usados por uma instância do **LocalDB** devem estar acessíveis usando a conta de Windows do usuário proprietário, sem considerar a associação no grupo de Administradores local.  
+>  O **LocalDB** sempre é executado sob o contexto de segurança de usuários, ou seja, o **LocalDB** nunca é executado com credenciais do grupo de Administradores local. Isto significa que todos os arquivos de banco de dados usados por uma instância do **LocalDB** devem estar acessíveis usando a conta de Windows do usuário proprietário, sem considerar a associação no grupo de Administradores local.  
   
 ## <a name="see-also"></a>Consulte Também  
 

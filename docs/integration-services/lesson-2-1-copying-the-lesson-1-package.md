@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba8f4ef0845ebad226eb8a57edb15347eacf5814
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541957"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lição 2-1 – copiar o pacote da Lição 1
 Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
@@ -49,7 +49,7 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição
   
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
-4.  Clique no botão Procurar **(…)** , navegue até **Lesson 1.dtsx** no computador e clique em **Abrir**.  
+4.  Clique no botão Procurar **(…)**, navegue até **Lesson 1.dtsx** no computador e clique em **Abrir**.  
   
     Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   

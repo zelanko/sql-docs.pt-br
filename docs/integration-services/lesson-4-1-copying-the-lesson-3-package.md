@@ -11,12 +11,12 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ce3f4e559e9ed708154b8c5b5710540c701b44e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 573a0eeb49640b44af5179f0cb44ec8dfb6753f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544723"
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lição 4-1 – copiar o pacote da Lição 3
 Nesta tarefa, você criará uma cópia do pacote Lesson 3.dtsx criado na Lição 3. Se você não tiver completado a lição 3, poderá adicionar o pacote completo da lição 3, incluído no tutorial do projeto, e então trabalhar com uma cópia. Você usará essa cópia nova durante toda a Lição 4.  
@@ -47,9 +47,9 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 3.dtsx criado na Lição
   
 2.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS**e clique em **Adicionar Pacote Existente**.  
   
-3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente**, em **Local do pacote**, selecione **Sistema de arquivos**.  
+3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
-4.  Clique no botão Procurar **(…)** , navegue até Lesson 3.dtsx no computador e clique em **Abrir**.  
+4.  Clique no botão Procurar **(…)**, navegue até Lesson 3.dtsx no computador e clique em **Abrir**.  
   
     Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   

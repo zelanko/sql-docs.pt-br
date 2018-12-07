@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747434"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532739"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  As condições de filtragem especificadas nas cláusulas temporais com FOR SYSTEM_TIME são habilitadas para SARG (isto é, o SQL Server pode utilizar o índice clusterizado subjacente para realizar uma busca em vez de uma operação de varredura.   
-> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma \<coluna de período> {< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
+> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma \<coluna de período> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > Se você aplicar AT TIME ZONE a colunas de período, o SQL Server executará uma verificação de tabela/índice, que pode ser muito caro. Evite esse tipo de condição em suas consultas:  
-> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition.  
+> \<coluna de período> AT TIME ZONE '\<seu fuso horário>' > {< | > | =, ...} date_condition.  
   
  Consulte também: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Consultando dados em uma tabela temporal com controle da versão do sistema).  
   
@@ -147,7 +147,7 @@ FROM Employee
   
 -   Tendências dos indicadores importantes nos dados atuais e históricos  
   
--   Instantâneo exato de todos os dados "a partir de" qualquer ponto no tempo no passado (ontem, um mês atrás, etc.)  
+-   Instantâneo exato de todos os dados "começando em" qualquer ponto no tempo no passado (ontem, um mês atrás, etc.)  
   
 -   As diferenças entre dois pontos no tempo de interesse (por exemplo, um mês atrás versus três meses atrás)  
   
@@ -446,7 +446,7 @@ FROM CTE
  O exemplo a seguir ilustra o processo e pressupõe que a tabela de dimensões DimLocation já tenha ValidFrom e ValidTo como colunas não anuláveis datetime2, que são populadas pelo processo de ETL:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

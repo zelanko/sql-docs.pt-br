@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815396"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712517"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
@@ -56,7 +56,7 @@ O tutorial usa o relatório *Pedido de vendas* criado no tutorial [Criar um rela
   
 Para usar este tutorial, seu computador deve ter os seguintes itens instalados:  
   
--   Uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que dá suporte a assinaturas controladas por dados. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que dá suporte a assinaturas controladas por dados. Para obter mais informações, confira [Edições e recursos do SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   É necessário que o servidor de relatório esteja sendo executado no modo nativo. A interface do usuário descrita neste tutorial é baseada em um servidor de relatório de modo nativo. As assinaturas têm suporte em servidores de relatórios do modo do SharePoint, mas a interface do usuário será diferente do que está descrito neste tutorial.  
   

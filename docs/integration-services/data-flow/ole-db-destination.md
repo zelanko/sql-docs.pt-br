@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525322"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
   O destino OLE DB carrega os dados em uma variedade de bancos de dados compatíveis com OLE DB usando uma tabela ou exibição de banco de dados ou um comando SQL. Por exemplo, a fonte OLE DB pode carregar dados em tabelas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -161,7 +161,7 @@ ms.locfileid: "51640124"
 > [!NOTE]  
 >  Ao clicar em **Novo**, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gera uma instrução CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Modo de acesso aos dados = Tabela ou exibição – carregamento rápido  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Modo de acesso a dados = tabela ou exibição – carregamento rápido  
  **Nome da tabela ou exibição**  
  Selecione uma tabela ou exibição do banco de dados nessa lista ou crie uma nova tabela clicando em **Nova**.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640124"
  **Nome da variável**  
  Selecione a variável que contém o nome da tabela ou da exibição.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modo de acesso aos dados = Variável do nome da tabela ou do nome de exibição – carregamento rápido  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modo de acesso a dados = Variável do nome da tabela ou do nome de exibição – carregamento rápido)  
  **Nome da variável**  
  Selecione a variável que contém o nome da tabela ou da exibição.  
   

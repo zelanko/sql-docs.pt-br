@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98d4a19731c8d54326346522ffe9a1d458543d10
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: bfcbf1862968a00009bca4d735eb95a3bb5d1719
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991229"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712107"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ Guias de plano influenciam a otimização de consulta, anexando a elas dicas de 
 Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, para uma consulta.
   
 ##  <a name="Restrictions"></a> Limitações e restrições  
-  
 -   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você fornece valores para os parâmetros de **sp_create_plan_guide**, todos os nomes de parâmetros devem ser especificados explicitamente ou nenhum deles deve ser especificado. Por exemplo, se **@name =** for especificado, então **@stmt =**, **@type =** e assim por diante, também deverá ser especificado. Da mesma forma, se **@name =** for omitido e apenas o valor do parâmetro for fornecido, os nomes de parâmetro restantes também deverão ser omitidos e apenas seus valores deverão ser fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
   
 -   Você pode criar mais de um guia de plano OBJECT ou SQL para a mesma consulta e lote ou módulo. Porém, só um guia de plano pode ser ativado em um determinado momento.  
@@ -37,18 +36,14 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
 -   Os guias de plano OBJECT não podem ser criados para um valor @module_or_batch que referencie um procedimento armazenado, uma função ou um gatilho DML que especifique a cláusula WITH ENCRYPTION ou que seja temporário.  
   
 -   A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. A tentativa de descartar uma tabela com um gatilho definido nela que é mencionado por um guia de plano também causa um erro.  
- 
-  
+
 ##  <a name="Permissions"></a> Permissões  
  Para criar um guia de plano do tipo OBJECT, você precisa da permissão ALTER no objeto referenciado. Para criar um guia de plano do tipo SQL ou TEMPLATE, você precisa de permissão ALTER no banco de dados atual.  
   
 ##  <a name="SSMSProcedure"></a> Para criar um guia de plano, usando o SSMS  
-
- 
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja criar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
-2.  Clique com o botão direito do mouse na pasta **Guias de Plano** e selecione **Novo Guia de Plano…**.
-![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  Clique com o botão direito do mouse na pasta **Guias de Plano** e selecione **Novo Guia de Plano…**. ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  Na caixa de diálogo **Novo Guia de Plano** , na caixa **Nome** , digite o nome do guia de plano.  
   
@@ -56,7 +51,7 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
   
 5.  Na lista **Tipo de escopo** , selecione o tipo de entidade na qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. Isso especifica o contexto para se fazer a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ao guia de plano. Os valores possíveis são **OBJECT**, **SQL**e **TEMPLATE**.  
   
-6.  Na caixa **Lote de escopo** , digite o texto de lote no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. O texto de lote não pode incluir uma instrução USE``*database* . A caixa **Lote de escopo** está disponível apenas quando **SQL** é selecionado como um tipo de escopo. Se nada for inserido na caixa de lote de escopo quando o SQL for o tipo de escopo, o valor do texto de lote será definido com o mesmo valor que a caixa **Instrução** .  
+6.  Na caixa **Lote de escopo** , digite o texto de lote no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. O texto de lote não pode incluir uma instrução `USE`*database*. A caixa **Lote de escopo** está disponível apenas quando **SQL** é selecionado como um tipo de escopo. Se nada for inserido na caixa de lote de escopo quando o SQL for o tipo de escopo, o valor do texto de lote será definido com o mesmo valor que a caixa **Instrução** .  
   
 7.  Na lista **Nome do esquema de escopo** , digite o nome do esquema no qual o objeto está contido. A caixa **Nome do esquema de escopo** está disponível apenas quando **Objeto** é selecionado como um tipo de escopo.  
   
@@ -64,11 +59,11 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
   
 9. Na caixa **Parâmetros** , digite o nome do parâmetro e os tipos de dados de todos os parâmetros inseridos na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     Parâmetros são aplicados somente quando uma das seguintes condições for verdadeira:  
+   Parâmetros são aplicados somente quando uma das seguintes condições for verdadeira:  
   
-    -   O tipo de escopo é **SQL** ou **TEMPLATE**. No caso de **TEMPLATE**, parâmetros não devem ser NULL.  
+   -   O tipo de escopo é **SQL** ou **TEMPLATE**. No caso de **TEMPLATE**, parâmetros não devem ser NULL.  
   
-    -   A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é enviada usando-se sp_executesql e um valor para o parâmetro é especificado ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia internamente uma instrução depois de parametrizá-la.  
+   -   A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é enviada usando-se sp_executesql e um valor para o parâmetro é especificado ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia internamente uma instrução depois de parametrizá-la.  
   
 10. Na caixa **Dicas** , digite as dicas de consulta ou o plano de consulta a ser aplicado à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para especificar uma ou mais dicas de consulta, digite uma cláusula OPTION válida.  
   
@@ -76,16 +71,14 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-  
 ##  <a name="TsqlProcedure"></a> Criar um guia de plano usando T-SQL  
-  
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     -- creates a plan guide named Guide1 based on a SQL statement  
     EXEC sp_create_plan_guide   
         @name = N'Guide1',   
@@ -98,7 +91,7 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
         @hints = N'OPTION (MAXDOP 1)';  
   
     ```  
-  
- Para obter mais informações, consulte [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
-  
+
+Para obter mais informações, consulte [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
+
   

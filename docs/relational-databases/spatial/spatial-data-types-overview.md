@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535822"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ Os Recursos Simples do OGC para SQL Specification discutem anéis externos e int
 
 Para obter mais informações sobre especificações do OCG, consulte o seguinte:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificações do OGC, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Acesso de recurso simples Parte 2 – opções de SQL)  
 
 ##  <a name="circular"></a> Segmentos de arco circular  
 Três tipos instanciáveis podem adotar segmentos de arco circular: **CircularString**, **CompoundCurve**e **CurvePolygon**.  Um segmento de arco circular é definido por três pontos em um plano bidimensional, e o terceiro ponto não pode ser igual ao primeiro.  
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 Esse snippet produz os seguintes resultados:  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 As instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que as instâncias **LineString**. As instâncias**CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  

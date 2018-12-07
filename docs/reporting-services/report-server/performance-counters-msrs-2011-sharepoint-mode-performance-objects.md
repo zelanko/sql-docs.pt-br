@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529508"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do MSRS 2011 no modo do SharePoint
   Esse tópico descreve os contadores de desempenho para os objetos de desempenho do **modo do SharePoint do Serviço Web MSRS 2011** e do **modo do SharePoint do Serviço do Windows MSRS 2011** que fazem parte da implantação de um modo do SharePoint do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -80,12 +80,12 @@ ms.locfileid: "50030185"
 |**Sessões ativas**|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |**Alerta: comprimento da fila de evento**||  
 |**Alerta: eventos processados - CreateSchedule**||  
-|**Alerta: eventos processados - DeleteSchedule**||  
-|**Alerta: eventos processados - DeliverAlert**||  
-|**Alerta: eventos processados - FireAlert**||  
-|**Alerta: eventos processados - FireSchedule**||  
-|**Alerta: eventos processados - GenerateAlert**||  
-|**Alerta: eventos processados - UpdateSchedule**||  
+|**Alerta: eventos processados – excluir agenda**||  
+|**Alerta: eventos processados – DeliverAlert**||  
+|**Alerta: eventos processados – FireAlert**||  
+|**Alerta: eventos processados – FireSchedule**||  
+|**Alerta: eventos processados – GenerateAlert**||  
+|**Alerta: eventos processados – UpdateSchedule**||  
 |**Liberações do cache/s**|Número de liberações de cache por segundo.|  
 |**Acertos de cache/s**|Número de solicitações por segundo para relatórios armazenados em cache. Essas são solicitações para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte **Total de acertos de cache** mais adiante neste tópico.)|  
 |**Acertos do cache/s (modelos semânticos)**|Número de solicitações por segundo para modelos armazenados em cache.|  
@@ -118,7 +118,7 @@ ms.locfileid: "50030185"
 |**Total de atualizações de instantâneo**|Número total de atualizações de instantâneo de execução de relatório.|  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O script do Windows PowerShell a seguir retornará os conjuntos de contadores cujo CounterSetName começa com “msr”  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O script do Windows PowerShell a seguir retornará os conjuntos de contadores cujo CounterSetName começa com "msr"  
   
 ```  
 get-counter -listset msr*  
@@ -127,7 +127,7 @@ CounterSetName     : MSRS 2011 Windows Service SharePoint Mode
 CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
 ```  
   
- O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName “modo do SharePoint do serviço Windows MSRS 2011”.  
+ O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName "modo do SharePoint do serviço Windows MSRS 2011".  
   
 ```  
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  

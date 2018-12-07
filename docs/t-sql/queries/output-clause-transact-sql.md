@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336285"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529867"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

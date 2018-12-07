@@ -1,6 +1,6 @@
 ---
 title: Configurar uma implantação escalável do servidor de relatório no modo nativo | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021640"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710637"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 O modo nativo do Reporting Services oferece suporte a um modelo de implantação em expansão que permite executar várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório. As implantações em expansão são usadas para aumentar a escalabilidade dos servidores de relatório para manipular mais usuários simultâneos e cargas maiores de execução de relatório. Elas também podem ser usadas para dedicar servidores específicos para processar relatórios interativos ou agendados.
 
 Para o Servidor de Relatórios do Microsoft Power BI, é necessário configurar a afinidade de cliente (às vezes chamada de sessões temporárias) no balanceador de carga para qualquer ambiente de expansão para garantir um desempenho adequado.  
   
-Para o Reporting Services do SQL Server 2016, os servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre expansão no modo do SharePoint, veja [Adicionar um servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Para o Reporting Services do SQL Server 2016 e anteriores, os servidores de relatório do modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada acrescentando mais servidores de relatório de modo do SharePoint ao farm do SharePoint. Para obter informações sobre expansão no modo do SharePoint, veja [Adicionar um servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Uma *implantação de expansão* é usada nos seguintes cenários:  
   
@@ -46,7 +46,7 @@ Para o Reporting Services do SQL Server 2016, os servidores de relatório do mod
   
  **Para planejar, instalar e configurar uma implantação em expansão, siga estas etapas:**  
   
--   Examine [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obter instruções sobre como instalar instâncias do servidor de relatório.  
+-   Examine [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) para obter instruções sobre como instalar instâncias do servidor de relatório.  
   
 -   Se você estiver planejando hospedar a implantação em expansão em um cluster NLB (balanceamento de carga de rede), deverá configurar o cluster NLB antes de configurar a implantação em expansão. Para obter mais informações, consulte [Configurar um servidor de relatório em um cluster com balanceamento de carga de rede](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -133,7 +133,7 @@ O problema será intermitente, ou seja, apenas o servidor que criou a tarefa do 
 3.  Na página Implantação em Expansão, selecione a instância do servidor de relatório que está aguardando para se unir à implantação e selecione **Adicionar Servidor**.  
   
     > [!NOTE]  
-    >  **Problema:** quando você tenta unir uma instância do servidor de relatório do Reporting Services à implantação em expansão, pode receber mensagens de erro semelhantes a “Acesso negado”.  
+    >  **Problema:** quando você tenta unir uma instância do servidor de relatório do Reporting Services à implantação em expansão, pode receber mensagens de erro semelhantes a "Acesso Negado".  
     >   
     >  **Solução alternativa:** faça backup da chave de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da primeira instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e restaure a chave para o segundo servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Tente unir o segundo servidor à implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

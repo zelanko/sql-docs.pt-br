@@ -1,7 +1,7 @@
 ---
 title: Monitorando o desempenho usando o Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673325"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711497"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> Usar o recurso Consultas Regredidas  
- Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
+Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
   
- ![Árvore do repositório de consulta no Pesquisador de Objetos](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore do repositório de consulta no Pesquisador de Objetos")  
+![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS") ![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
   
- Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas de listas suspensas na parte superior para selecionar consultas com base em vários critérios. Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
+Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas suspensas na parte superior para filtrar consultas com base em diversos critérios: **Duração (ms)** (Padrão), Tempo de CPU (ms), Leituras Lógicas (KB), Gravações Lógicas (KB), Leituras Físicas (KB), Tempo do CLR (ms), DOP, Consumo de Memória (KB), Contagem de Linhas, Registro de Memória Usada (KB) Memória Usada pelo BD Temporário (KB) e o Tempo de Espera (ms).  
+Selecione um plano para ver o plano de consulta gráfico. Há botões disponíveis para exibir a consulta de origem, para forçar e não forçar um plano de consulta, para alternar entre os formatos de grade e gráfico, para comparar os planos selecionados (se houver mais de um selecionado) e para atualizar a exibição.  
   
- ![Consultas regressadas no Pesquisador de Objetos](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas regressadas no Pesquisador de Objetos")  
+![Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS")  
   
- Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
+Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.
+
 ##  <a name="Waiting"></a> Localizando consultas de espera
 
-Começando com o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as estatísticas de espera por consulta ao longo do tempo estão disponíveis no Repositório de Consultas. No Repositório de Consultas, os tipos de espera são combinados em **categorias de espera**. O mapeamento das categorias de espera para tipos de espera está disponível em [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+Começando com o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as estatísticas de espera por consulta ao longo do tempo estão disponíveis no Repositório de Consultas. No Repositório de Consultas, os tipos de espera são combinados em **categorias de espera**. O mapeamento das categorias de espera para tipos de espera está disponível em [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+
+Selecione **Estatísticas de Espera da Consulta** para abrir o painel **Estatísticas de Espera da Consulta** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 ou superior. O painel Estatísticas de Espera da Consulta mostra a você um gráfico de barras que contém os principais categorias de espera no Repositório de Consultas. Use lista suspensa na parte superior para selecionar um critério de agregação para o tempo de espera: avg, max, min, std dev e **total** (padrão).
+
+ ![Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
+
+Selecione uma categoria de espera clicando na barra e uma exibição de detalhes é mostrada na categoria de espera selecionada. Esse novo gráfico de barras contém as consultas que contribuíram para essa categoria de espera. 
+  
+ ![Exibição de detalhes das Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Exibição de detalhes das Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
+
+Use a lista suspensa na parte superior para filtrar consultas com base em vários critérios de tempo de espera para a categoria de espera selecionada: avg, max, min, std dev e **total** (padrão). Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
 
 As **categorias de espera** combinam tipos diferentes de espera em buckets semelhantes por natureza. Categorias de espera diferentes exigem um acompanhamento de análise diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas muito semelhantes e fornecer a consulta afetada com base nas esperas seria a peça que faltava para concluir a maioria dessas investigações de com êxito.
 
@@ -127,7 +139,6 @@ Aqui estão alguns exemplos de como você pode obter mais informações sobre su
 |Esperas de SOS_SCHEDULER_YIELD altas por banco de dados|Esperas de CPU altas no Repositório de Consultas para consultas específicas|Localize as consultas com maior consumo de CPU no Repositório de Consultas. Entre elas, identifique as consultas para as quais a tendência de CPU alta se correlaciona às esperas de CPU altas para as consultas afetadas. Concentre-se em otimizar essas consultas – poderia haver uma regressão de plano ou talvez um índice ausente.|
 
 ##  <a name="Options"></a> Opções de configuração 
-
 As seguintes opções estão disponíveis para configurar parâmetros de repositório de consulta.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> Manter a estabilidade do desempenho da consulta  
- Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planos, resultando em diferentes utilizações de recurso e duração. Com o Repositório de Consultas, você pode detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode impor esse plano ideal para execução futura da consulta.  
+Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planos, resultando em diferentes utilizações de recurso e duração. Com o Repositório de Consultas, você pode detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode impor esse plano ideal para execução futura da consulta.  
   
- Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros ( autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
+Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros (autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
   
- **Impor um plano para uma consulta (aplicar política de imposição).** Quando um plano é forçado para determinada consulta, sempre que uma consulta é executada com o plano imposto.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Impor um plano para uma consulta (aplicar política de imposição)
+
+Quando um plano é imposto em determinada consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta impor o plano no otimizador. Se a imposição do plano falhar, um XEvent será acionado e o otimizador será instruído a otimizar normalmente.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Ao usar **sp_query_store_force_plan** você só pode impor planos registrados pelo repositório de consultas como um plano para essa consulta. Em outras palavras, os únicos planos disponíveis para uma consulta são aqueles que já foram usados para executar essa consulta enquanto o Repositório de Consultas estava ativo.  
+Ao usar **sp_query_store_force_plan** você só pode impor planos registrados pelo repositório de consultas como um plano para essa consulta. Em outras palavras, os únicos planos disponíveis para uma consulta são aqueles que já foram usados para executar essa consulta enquanto o Repositório de Consultas estava ativo.  
   
- **Remover a imposição de plano de uma consulta.** Para depender novamente no otimizador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular o plano de consulta ideal, use **sp_query_store_unforce_plan** para cancelar a imposição do plano selecionado para a consulta.  
+### <a name="remove-plan-forcing-for-a-query"></a>Remover a imposição de plano de uma consulta
+
+Para depender novamente no otimizador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular o plano de consulta ideal, use **sp_query_store_unforce_plan** para cancelar a imposição do plano selecionado para a consulta.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

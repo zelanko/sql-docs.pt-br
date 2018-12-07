@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ff1856d340c5a95c1ed02109b74621361952f41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768804"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617146"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
 
@@ -39,13 +38,13 @@ ms.locfileid: "47768804"
   
 3.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e clique em **Logon**.  
   
-4.  Na caixa de diálogo **Logon – Novo** , especifique o nome de um usuário do Windows na caixa **Nome de Logon** , especifique o tipo de autenticação como **Autenticação do Windows**e clique em **Pesquisar** para validar o usuário.  
+4.  Na caixa de diálogo **Logon – Novo**, especifique o nome de um usuário do Windows na caixa **Nome de Logon**, especifique o tipo de autenticação como **Autenticação do Windows** e clique em **Pesquisar** para validar o usuário.  
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [DQS Security](../../data-quality-services/dqs-security.md).  
+6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
   
-7.  Na caixa de diálogo **Logon – Novo** , clique em **OK** para aplicar as alterações.  
+7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   
     > [!NOTE]  
     >  Se você conceder a função **dqs_administrator** a um usuário, aplique as alterações e verifique novamente as permissões de usuário; as outras duas caixas de seleção de funções DQS (**dq_kb_editor** e **dqs_kb_operator**) também serão marcadas.  
@@ -55,6 +54,6 @@ ms.locfileid: "47768804"
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

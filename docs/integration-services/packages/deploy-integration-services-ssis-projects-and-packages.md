@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526615"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -100,7 +100,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
  Para implantar um projeto no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , conclua as tarefas a seguir:  
   
-1.  Criar um catálogo do SSISDB, se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
+1.  Criar um catálogo do SSISDB se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert).  
   
@@ -293,7 +293,7 @@ Inicie o assistente:
 
 **OR**
 
- - Procurando o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: “C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”. 
+ - Pesquisando o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **OBSERVAÇÃO:** se a página **Introdução** for exibida, clique em **Avançar** para mudar para a página **Selecionar Fonte** . 
  
@@ -318,7 +318,7 @@ Inicie o assistente:
 #### <a name="select-source"></a>Selecionar Fonte  
  A página **Selecionar Origem** no **Assistente de Implantação do Integration Services** mostra configurações específicas ao modelo de implantação do pacote quando você selecionou a opção **Implantação do Pacote** para o **modelo de implantação**.  
   
- Para selecionar os pacotes de origem, clique no botão **Procurar…** para selecionar a **pasta** that contains the packages or type the pasta path in the **Packages pasta path** e clique no botão **Atualizar** na parte inferior da página. Agora, você deve ver todos os pacotes na pasta especificada na caixa de listagem. Por padrão, todos os pacotes são selecionados. Clique na **caixa de seleção** na primeira coluna para escolher quais pacotes você quer que sejam implantados no servidor.  
+ Para selecionar os pacotes de origem, clique no botão **Procurar…** para selecionar a **pasta** que contém os pacotes ou digite o caminho da pasta na caixa de texto **Caminho da pasta de pacotes** e clique no botão **Atualizar** na parte inferior da página. Agora, você deve ver todos os pacotes na pasta especificada na caixa de listagem. Por padrão, todos os pacotes são selecionados. Clique na **caixa de seleção** na primeira coluna para escolher quais pacotes você quer que sejam implantados no servidor.  
   
  Consulte as colunas **Status** e **Mensagem** para verificar o status do pacote. Se o status estiver definido como **Pronto** ou **Aviso**, o assistente de implantação não bloqueará o processo de implantação. Ao passo que, se o status estiver definido como **Erro**, o assistente não continuará implantando os pacotes selecionados. Para exibir as mensagens de Aviso/Erro, clique no link na coluna **Mensagem** .  
   
@@ -327,7 +327,7 @@ Inicie o assistente:
  Se o status de todos os pacotes selecionados não estiver definido como **Erro**, o botão **Avançar** será habilitado para que você possa continuar com o processo de implantação do pacote.  
   
 #### <a name="select-destination"></a>Selecionar Destino  
- Após seleção das origens do pacote, clique no botão **Avançar** para acessar a página **Selecionar Destino** . Os pacotes devem ser implantados em um projeto no Catálogo do SSIS (SSISDB). Portanto, antes de implantar pacotes, verifique se o projeto de destino já existe no Catálogo do SSIS. Caso contrário, crie um projeto vazio. Na página **Selecionar Destino** , digite o nome do servidor na caixa de texto **Nome do Servidor** ou clique no botão **Procurar…** para selecionar uma instância do servidor. Em seguida, clique no botão **Procurar…** ao lado da caixa de texto **Caminho** para especificar o projeto de destino. Se o projeto não existir, clique em **Novo projeto...** para criar um projeto vazio como o projeto de destino. O projeto **DEVE** ser criado em uma pasta.  
+ Após seleção das origens do pacote, clique no botão **Avançar** para acessar a página **Selecionar Destino** . Os pacotes devem ser implantados em um projeto no Catálogo do SSIS (SSISDB). Portanto, antes de implantar pacotes, verifique se o projeto de destino já existe no Catálogo do SSIS. Caso contrário, crie um projeto vazio. Na página **Selecionar Destino**, digite o nome do servidor na caixa de texto **Nome do Servidor** ou clique no botão **Procurar...** para selecionar uma instância do servidor. Em seguida, clique no botão **Procurar...** ao lado da caixa de texto **Caminho** para especificar o projeto de destino. Se o projeto não existir, clique em **Novo projeto...** para criar um projeto vazio como o projeto de destino. O projeto **DEVE** ser criado em uma pasta.  
   
 #### <a name="review-and-deploy"></a>Revisar e implantar  
  Clique em **Avançar** na página **Selecionar Destino** para acessar a página **Revisar** no **Assistente de Implantação do Integration Services**. Na página de revisão, revise o relatório de resumo sobre a ação de implantação. Depois da verificação, clique no botão **Implantar** para executar a ação de implantação.  
@@ -336,7 +336,7 @@ Inicie o assistente:
  Depois que a implantação estiver concluída, você deverá ver a página **Resultados** . Na página **Resultados** , revise os resultados de cada etapa no processo de implantação. Na página **Resultados** , clique em **Salvar Relatório** para salvar o relatório de implantação ou em **Fechar** para fechar o assistente.  
 
 ## <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
-  Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
+  Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
   
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
@@ -380,7 +380,7 @@ Inicie o assistente:
 7.  Para criar o script do ambiente, clique em **Script**. Por padrão, o script é exibido em uma nova janela do Editor de Consultas.  
   
     > [!TIP]  
-    >  Você precisará clicar em **Script** depois de ter feito uma ou mais alterações às propriedades do ambiente, como adicionar uma variável e antes de clicar em **OK** na caixa de diálogo **Propriedades do Ambiente** . Caso contrário, um script não será gerado.  
+    >  Você precisará clicar em **Script** depois de ter feito uma ou mais alterações às propriedades do ambiente, como adicionar uma variável e antes de clicar em **OK** na caixa de diálogo **Propriedades do Ambiente**. Caso contrário, um script não será gerado.  
   
 8.  Clique em **OK** para salvar suas alterações nas propriedades de ambiente.  
   
@@ -711,7 +711,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="review"></a> Definir as opções na página Revisão  
  Use a página **Revisão** para confirmar as opções selecionadas para a conversão do projeto.  
   
- **Previous**  
+ **Anterior**  
  Clique para alterar uma opção.  
   
  **Converter**  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030825"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711138"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
 
@@ -319,6 +319,6 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
-[Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

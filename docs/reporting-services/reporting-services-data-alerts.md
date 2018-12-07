@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021600"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539935"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
 
@@ -33,11 +33,11 @@ As mensagens de alerta de dados são enviadas por email. Dependendo da importân
 
 A seguir é apresentado um resumo das áreas principais dos alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
 
--   **Definir e salvar definições de alerta de dados**— você executa um relatório, cria regras que identificam valores de dados interessantes, define um padrões de recorrência para enviar a mensagem de alerta de dados e especifica os destinatários da mensagem de alerta.  
+-   **Definir e salvar definições de alerta de dados** – você executa um relatório, cria regras que identificam valores de dados interessantes, define um padrão de recorrência para enviar a mensagem de alerta de dados e especifica os destinatários da mensagem de alerta.  
   
--   **Executar definições de alerta de dados**—- o serviço de alerta processa definições de alerta em um horário agendado, recupera dados de relatório, cria instâncias de alerta de dados com base em regras da definição do alerta.  
+-   **Executar definições de alerta de dados** – o serviço de alerta processa as definições de alerta em um horário agendado, recupera dados de relatório e cria instâncias de alerta de dados com base nas regras da definição de alerta.  
   
--   **Entregar mensagens de alerta de dados para destinatários**— o serviço de alerta cria uma instância de alerta e envia ma mensagem de alerta por email.  
+-   **Entregar mensagens de alerta de dados a destinatários** – o serviço de alerta cria uma instância de alerta e envia uma mensagem de alerta aos destinatários por email.  
   
  Além disso, como proprietário do alerta de dados, você pode exibir informações sobre seus alertas de dados e excluir e editar suas definições de alerta de dados. Um alerta tem apenas um proprietário, a pessoa que o criou.  
   
@@ -190,7 +190,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   

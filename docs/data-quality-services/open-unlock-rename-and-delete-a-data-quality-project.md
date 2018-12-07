@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773186"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617816"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Abrir, desbloquear, renomear e excluir um projeto do Data Quality
 
@@ -34,7 +33,7 @@ ms.locfileid: "47773186"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
   
 -   Você não pode abrir um projeto bloqueado criado por outro usuário.  
   
@@ -64,9 +63,9 @@ ms.locfileid: "47773186"
   
 4.  O projeto de qualidade de dados é aberto no mesmo estado da atividade quando foi fechado pela última vez. Um projeto de qualidade de dados tem os seguintes estados:  
   
-    -   Para a atividade **Limpeza** , um projeto de qualidade de dados pode ter os seguintes estados: **Limpeza - Mapa**, **Limpeza - Limpar**, **Limpeza – Gerenciar e Exibir Resultados**e **Limpeza – Exportar**.  
+    -   Para a atividade **Limpeza**, um projeto de qualidade de dados pode ter os seguintes estados: **Limpeza – Mapa**, **Limpeza – Limpar**, **Limpeza – Gerenciar e Exibir Resultados** e **Limpeza – Exportar**.  
   
-    -   Para a atividade **Correspondência** , um projeto de qualidade de dados pode ter os seguintes estados: **Correspondência - Mapa**, **Correspondência - Correspondência**, **Correspondência – Sobrevivência**e **Correspondência – Exportar**.  
+    -   Para a atividade **Correspondência**, um projeto de qualidade de dados pode ter os seguintes estados: **Correspondência – Mapa**, **Correspondência – Correspondência**, **Correspondência – Sobrevivência** e **Correspondência – Exportar**.  
   
 ##  <a name="Unlock"></a> Desbloquear um projeto de qualidade de dados  
  Quando você cria um projeto de qualidade de dados, ele permanece em estado bloqueado para impedir seu uso ou modificação por outros usuários. Você deverá desbloquear o projeto de qualidade de dados depois de concluir seu trabalho se quiser que outros usuários trabalhem no seu projeto de qualidade de dados. Um símbolo de bloqueio é exibido para projetos que estão bloqueados.  

@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638793"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545791"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638793"
   
 8.  Feche o ambiente de desenvolvimento de script e, em seguida, o Editor da Tarefa Script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo - Lendo a saída de perfil a partir de uma variável  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Código alternativo – Lendo a saída de perfil com base em uma variável  
  O procedimento anterior mostra como carregar a saída da tarefa Criação de Perfil de Dados com base em um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
   
 -   Chame o método **LoadXml** da classe **XmlDocument** em vez do método **Load** .  

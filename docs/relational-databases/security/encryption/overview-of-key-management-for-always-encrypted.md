@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535394"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ O processo de gerenciamento de chaves pode ser dividido nas seguintes tarefas de
 
 - **Provisionamento de chave** - Criar as chaves físicas em um repositório de chaves confiável (por exemplo, no Repositório de Certificados do Windows, o Cofre de Chaves do Azure ou um módulo de segurança de hardware), chaves de criptografia de coluna de criptografia com chaves mestras de coluna e criar metadados para os dois tipos de chaves no banco de dados.
 
-- **Rotação de chaves** - Substituir periodicamente uma chave existente por uma nova chave. Pode ser necessário girar uma chave se ela tiver sido comprometida ou para manter a conformidade com políticas e regulamentos da sua organização que exigem que chaves criptográficas sejam giradas. 
+- **Rotação de chaves** - Substituir periodicamente uma chave existente por uma nova chave. Poderá ser necessário trocar uma chave caso ela tenha sido comprometida ou para manter a conformidade com as políticas ou os regulamentos da organização que exigem que as chaves de criptografia sejam trocadas. 
 
 
 ## <a name="KeyManagementRoles"></a> Funções de Gerenciamento de Chaves
@@ -93,7 +93,7 @@ O principal objetivo do Always Encrypted é garantir que os dados confidenciais 
 
 Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de ataques, o processo de gerenciamento de chaves deve garantir que as chaves mestras de coluna e as chaves de criptografia de coluna, bem como as credenciais para um repositório de chaves que contém as chaves mestras de coluna, nunca sejam reveladas para um invasor em potencial. Aqui estão algumas diretrizes que você deve seguir:
 
-- Nunca gere chaves mestras de coluna ou as chaves de criptografia de coluna em um computador que hospeda o banco de dados. Em vez disso, gere as chaves em um computador separado, dedicado para o gerenciamento de chaves ou que hospeda aplicativos que também precisarão de acesso às chaves. Isso significa que **você nunca deve executar ferramentas usadas para gerar as chaves no computador que hospeda o banco de dados** , pois se um invasor acessar um computador usado para provisionar ou manter as chaves Always Encrypted, ele poderá potencialmente obter suas chaves, mesmo se elas aparecerem somente na memória da ferramenta por um curto período.
+- Nunca gere chaves mestras de coluna ou as chaves de criptografia de coluna em um computador que hospeda o banco de dados. Em vez disso, gere as chaves em um computador separado, dedicado para o gerenciamento de chaves ou que hospeda aplicativos que também precisarão de acesso às chaves. Isso significa que **você nunca deve executar ferramentas usadas para gerar as chaves no computador que hospeda o banco de dados**, pois se um invasor acessar um computador usado para provisionar ou manter as chaves Always Encrypted, ele terá a chance de poderá obter suas chaves, mesmo se elas aparecerem somente na memória da ferramenta por um curto período.
 - Para garantir que o processo de gerenciamento de chaves não revele inadvertidamente as chaves mestras de coluna ou as chaves de criptografia de coluna, é essencial identificar os possíveis adversários e ameaças de segurança antes de definir e implementar um processo de gerenciamento de chaves. Por exemplo, se sua meta é garantir que os DBAs não tenham acesso a dados confidenciais, um DBA não pode ser o responsável por gerar as chaves. Um DBA, no entanto, *pode* gerenciar metadados de chave no banco de dados, pois os metadados não contêm as chaves de texto não criptografado.
 
 ## <a name="next-steps"></a>Next Steps

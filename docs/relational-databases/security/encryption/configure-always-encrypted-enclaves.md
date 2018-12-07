@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534769"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurar o Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -159,7 +159,7 @@ As etapas a seguir criam chaves habilitadas para enclave (é necessário o SSMS 
 2. No **Pesquisador de Objetos**, expanda o banco de dados e navegue até **Segurança** > **Chaves Always Encrypted**.
 3. Provisione uma nova chave mestra da coluna habilitada para enclave:
 
-    1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave mestra da coluna…**.
+    1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave mestra da coluna...**.
     2. Selecione o nome de sua chave mestra da coluna.
     3. Certifique-se de selecionar **Repositório de certificados do Windows (usuário atual ou computador local)** ou **Azure Key Vault**.
     4. Selecione **Permitir computações de enclave**.
@@ -180,7 +180,7 @@ As etapas a seguir criam chaves habilitadas para enclave (é necessário o SSMS 
 
 As seções a seguir fornecem exemplos de scripts do PowerShell para o provisionamento de chaves habilitadas para enclave. As etapas que são específicas (novas) do Always Encrypted com enclaves seguros estão realçadas. Para obter mais informações (não específicas do Always Encrypted com enclaves seguros) sobre o provisionamento de chaves usando o PowerShell, consulte [Configurar chaves do Always Encrypted usando o PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
-**Provisionamento de chaves habilitadas para enclave – Repositório de Certificados do Windows**
+**Provisionamento de chaves habilitadas para enclave – repositório de certificados do Windows**
 
 No computador do cliente/de desenvolvimento, abra o ISE do Windows PowerShell e execute o seguinte script.
 
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Provisionamento de chaves habilitadas para enclave – Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>Provisionamento de chaves habilitadas para enclave – Azure Key Vault
 
 No computador do cliente/de desenvolvimento, abra o ISE do Windows PowerShell e execute o seguinte script.
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ Estas são as três abordagens para habilitar enclaves para colunas existentes:
 - Contras:
   - não dá suporte para alterar o tipo de criptografia de determinística para aleatória, portanto, embora desbloqueie a criptografia no local para colunas criptografadas de forma determinística, não permite cálculos avançados.
   - não permite que você converta seletivamente algumas das colunas associadas a uma chave mestra de coluna especificada.
-  - introduz sobrecarga de gerenciamento de chaves – você precisará criar uma nova chave mestra da coluna e torná-la disponível para aplicativos que consultam as colunas afetadas.  
+  - Introduz sobrecarga de gerenciamento de chaves – você precisará criar uma nova chave mestra da coluna e torná-la disponível para aplicativos que consultam as colunas afetadas.  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opção 2: esta abordagem envolve duas etapas: 1) girar a chave mestra da coluna (como na Opção 1) e 2) criptografar novamente um subconjunto de colunas criptografadas de forma determinística usando criptografia aleatória, a fim de habilitar cálculos avançados para essas colunas.
@@ -522,7 +522,7 @@ Estas são as três abordagens para habilitar enclaves para colunas existentes:
   
 - Contras:
   - não permite que você converta seletivamente algumas das colunas associadas a uma chave mestra de coluna especificada.
-  - introduz sobrecarga de gerenciamento de chaves – você precisará criar uma nova chave mestra da coluna e torná-la disponível para aplicativos que consultam as colunas afetadas.
+  - Ele introduz sobrecarga de gerenciamento de chaves – você precisará criar uma nova chave mestra da coluna e torná-la disponível para aplicativos que consultam as colunas afetadas.
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opção 3: criptografar novamente colunas selecionadas com uma nova chave de criptografia de coluna habilitada para enclave e com criptografia aleatória (se necessário) no lado do cliente.
   
@@ -758,7 +758,7 @@ A maneira mais rápida de testar consultas avançadas em suas colunas habilitada
 2.  Habilitar parametrização de Always Encrypted.
     
     1.  Selecione **Consultar** no menu principal do SSMS.
-    2.  Selecione **Opções de Consulta…**.
+    2.  Selecione **Opções de Consulta...**.
     3.  Navegue para **Execução** > **Avançado**.
     4.  Selecione ou desmarque a seleção de Habilitar Parametrização de Always Encrypted.
     5.  Clique em OK.

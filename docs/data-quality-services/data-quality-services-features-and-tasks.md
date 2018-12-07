@@ -5,25 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eff47c86994f041ac297496f2e479d4303beeede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31bc5374f0db1bcca9487884c3e0493d2a1d18af
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669934"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616386"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Localize informações necessárias a qualquer um — administrador de dados, administrador do Data Quality Services ou administrador do SQL Server — para preparar e executar um projeto de qualidade de dados.  
+  Localize informações necessárias a qualquer um, administrador de Data Quality Services ou administrador do SQL Server, para preparar e executar um projeto de qualidade de dados.  
   
  ![Ícone de pasta de arquivos pequena](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Projetando e implementando uma solução de qualidade de dados**  
  [Aplicativo Data Quality Client](../data-quality-services/data-quality-client-application.md)  

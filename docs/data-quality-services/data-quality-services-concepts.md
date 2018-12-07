@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738454"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617106"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
 
@@ -61,7 +60,7 @@ ms.locfileid: "47738454"
   
  **Correspondência de dados**  
   
- O processo de correspondência permite ao administrador de dados comparar dados de forma que dados semelhantes, mas com ligeiras diferenças, possam ser alinhados através de um processo de eliminação de duplicação. O DQS executa a eliminação de duplicação com base em regras de correspondência contidas na base de dados de conhecimento; o administrador de dados especifica parâmetros para o processo de correspondência dentro de um projeto de qualidade de dados. Para obter mais informações, consulte [Correspondência de dados](../data-quality-services/data-matching.md).  
+ O processo de correspondência permite ao administrador de dados comparar dados de forma que dados semelhantes, mas com ligeiras diferenças, possam ser alinhados através de um processo de eliminação de duplicação. O DQS executa a eliminação de duplicação com base em regras de correspondência contidas na base de dados de conhecimento; o administrador de dados especifica parâmetros para o processo de correspondência dentro de um projeto de qualidade de dados. Para obter mais informações, consulte [Data Matching](../data-quality-services/data-matching.md).  
   
  **Criação de perfis e notificações**  
   

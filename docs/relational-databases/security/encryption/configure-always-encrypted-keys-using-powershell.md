@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb82567b3d30955db1ccb7e8f3f1229e4ef3249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843834"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532774"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurar chaves do Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Esse script é um exemplo de ponta a ponta para gerar uma chave mestra de coluna em um repositório de chaves que implementa a API CNG (Cryptography Next Generation), gerando e criptografando uma chave de criptografia de coluna e criando metadados de chave em um banco de dados do SQL Server.
 
-O exemplo utiliza o repositório de chaves que usa o Provedor de Armazenamento de Chaves do Microsoft Software. Você pode optar por modificar o exemplo para usar outro repositório, como o módulo de segurança de hardware. Para fazer isso, você precisará verificar se o KSP (provedor de repositório de chaves) que implementa a CNG para seu dispositivo está instalado corretamente em seu computador. Você precisará substituir “Provedor de Armazenamento de Chaves do Microsoft Software” pelo nome do KSP do dispositivo.
+O exemplo utiliza o repositório de chaves que usa o Provedor de Armazenamento de Chaves do Microsoft Software. Você pode optar por modificar o exemplo para usar outro repositório, como o módulo de segurança de hardware. Para fazer isso, você precisará verificar se o KSP (provedor de repositório de chaves) que implementa a CNG para seu dispositivo está instalado corretamente em seu computador. Você precisará substituir "Provedor de Armazenamento de Chaves do Microsoft Software" pelo nome do KSP do dispositivo.
 
 
 ```

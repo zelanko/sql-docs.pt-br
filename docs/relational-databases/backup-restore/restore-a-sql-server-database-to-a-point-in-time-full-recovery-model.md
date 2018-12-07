@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b910382d1357c9a854a58908fef6972ff8b1fb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535567"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "47818880"
   
  **Sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY...  
   
  O ponto de recuperação é a mais recente confirmação de transação ocorrida até o valor **datetime** especificado pela *hora*.  
   

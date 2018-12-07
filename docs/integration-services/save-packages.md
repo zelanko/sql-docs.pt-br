@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542034"
 ---
 # <a name="save-packages"></a>Salvar pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , você cria pacotes usando o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e salva os pacotes no sistema de arquivos como arquivos XML (arquivos .dtsx). Você também pode salvar cópias do arquivo XML de pacote no banco de dados msdb no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes. O repositório de pacotes representa as pastas no local do sistema de arquivos que o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia.  
@@ -68,7 +68,7 @@ ms.locfileid: "47693394"
   
 5.  Se for salvar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique o tipo de autenticação e, se estiver usando a Autenticação [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e senha.  
   
-6.  Para especificar o caminho do pacote, digite o caminho ou clique no botão Procurar **(…)** para especificar o local do pacote. O nome padrão do pacote é Pacote. Como opção, atualize o nome de pacote para um que atenda suas necessidades.  
+6.  Para especificar o caminho do pacote, digite o caminho ou clique no botão Procurar **(...)** para especificar a localização do pacote. O nome padrão do pacote é Pacote. Como opção, atualize o nome de pacote para um que atenda suas necessidades.  
   
      Se você selecionar **SQL Server** como a opção de **Caminho do Pacote** , o caminho do pacote consistirá de pastas lógicas no **msdb** e o nome do pacote. Por exemplo, se o pacote DownloadMonthlyData estiver associado à pasta Finance dentro da pasta MSDB (o nome padrão da pasta lógica raiz no **msdb**), o caminho do pacote chamado DownloadMonthlyData será MSDB/Finance/DownloadMonthlyData  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693394"
   
 7.  Revise o nível de proteção do pacote.  
   
-8.  Como opção, clique no botão Procurar **(…)** ao lado da caixa **Nível de proteção** para alterar o nível de proteção.  
+8.  Como opção, clique no botão Procurar **(...)** ao lado da caixa **Nível de proteção** para alterar o nível de proteção.  
   
     -   Na caixa de diálogo **Nível de Proteção do Pacote** , selecione um nível de proteção diferente.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539099"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabalhar com conjuntos de dados compartilhados – portal da Web
 
@@ -46,7 +46,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
 Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o seguinte.  
   
 > [!NOTE]
-> Se você não vir o conjunto de dados compartilhado na pasta, verifique se você está exibindo os conjuntos de dados. Você pode selecionar **Modo de Exibição** na barra de menus na parte superior direita do portal da Web. Certifique-se de que **Conjuntos de dados** esteja marcado.  
+> Se o conjunto de dados compartilhado não estiver na pasta, verifique se os conjuntos de dados estão sendo exibidos. Você pode selecionar **Modo de Exibição** na barra de menus na parte superior direita do portal da Web. Certifique-se de que **Conjuntos de dados** esteja marcado.  
   
 1.  Selecione as **reticências (...)** do conjunto de dados que deseja gerenciar.  
   

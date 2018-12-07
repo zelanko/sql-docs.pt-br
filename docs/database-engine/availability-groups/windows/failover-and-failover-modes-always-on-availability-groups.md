@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048b5d627e33ac241f68c7d2017535ddb5e0bd16
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605306"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523405"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "51605306"
   
  Por exemplo, considere um cluster WSFC que hospeda um grupo de disponibilidade em três nós: o nó A hospeda a réplica primária, enquanto os nós B e C hospedam, cada um, uma réplica secundária. O nó C é desconectado do cluster WSFC enquanto a réplica secundária local é SYNCHRONIZED.  Mas os nós A e B retêm um quorum íntegro e o grupo de disponibilidade permanece online. No nó A, a réplica primária continua a aceitar atualizações e, no nó B, a réplica secundária continua a sincronizar com a réplica primária. A réplica secundária no nó C se torna não sincronizada e fica bem atrás da réplica primária. Entretanto, como o nó C é desconectado, a réplica permanece, incorretamente, no estado SYNCHRONIZED.  
   
- Se o quorum for perdido e, em seguida, forçado no nó A, o estado de sincronização do grupo de disponibilidade no cluster WSFC deverá estar correto — com a réplica secundária no nó C mostrada como UNSYNCHRONIZED. No entanto, se o quorum for forçado no nó C, a sincronização do grupo de disponibilidade estará incorreta. A sincronização no cluster será revertida ao estado de quando o nó C foi desconectado, ou seja, com a réplica secundária no nó C mostrada *incorretamente* como SYNCHRONIZED. Como os failovers manuais planejados garantem a segurança dos dados, eles não têm permissão para recolocar um grupo de disponibilidade online após o quorum ser forçado.  
+ Se o quorum for perdido e, em seguida, forçado no Nó A, o estado de sincronização do grupo de disponibilidade no cluster WSFC deverá estar correto – com a réplica secundária no Nó C mostrada como UNSYNCHRONIZED. No entanto, se o quorum for forçado no nó C, a sincronização do grupo de disponibilidade estará incorreta. A sincronização no cluster será revertida ao estado de quando o Nó C foi desconectado, ou seja, com a réplica secundária no Nó C mostrada *incorretamente* como SYNCHRONIZED. Como os failovers manuais planejados garantem a segurança dos dados, eles não têm permissão para recolocar um grupo de disponibilidade online após o quorum ser forçado.  
   
 ###  <a name="TrackPotentialDataLoss"></a> Controlando a potencial perda de dados  
  Quando o cluster WSFC tem um quorum íntegro, você pode calcular o potencial atual de perda de dados em bancos de dados. Para uma réplica secundária específica, o potencial atual de perda de dados depende do atraso dos bancos de dados secundários locais em relação aos bancos de dados primários correspondentes. Como o tempo de retardo varia com o passar do tempo, é recomendável acompanhar periodicamente a possível perda de dados para os bancos de dados secundários não sincronizados. Controlar o retardo envolve comparar a LSN da Última Confirmação e a Hora da Última Confirmação para cada banco de dados primário e seus bancos de dados secundários, como segue:  

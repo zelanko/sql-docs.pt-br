@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539114"
 ---
 # <a name="static-data-masking"></a>Máscara de Dados Estáticos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ A substituição é feita no nível do armazenamento. Em decorrência disso, nã
 
 Veja abaixo um guia passo a passo para executar a Máscara de Dados Estáticos. 
  
-1. Inicie o SQL Server Management Studio. Conecte-se ao banco de dados. No painel **Pesquisador de Objetos** do lado esquerdo, expanda a pasta Bancos de dados. Clique com o botão direito do mouse no banco de dados que você deseja mascarar. Clique com o botão esquerdo do mouse em **Tarefas**. Clique com o botão esquerdo do mouse em **Mascarar banco de dados… (Versão prévia)**.
+1. Inicie o SQL Server Management Studio. Conecte-se ao banco de dados. No painel **Pesquisador de Objetos** do lado esquerdo, expanda a pasta Bancos de dados. Clique com o botão direito do mouse no banco de dados que você deseja mascarar. Clique com o botão esquerdo do mouse em **Tarefas**. Clique com o botão esquerdo do mouse em **Mascarar banco de dados... (versão prévia)**.
  
  ![Menu de tarefas](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -104,7 +104,7 @@ Veja abaixo um guia passo a passo para executar a Máscara de Dados Estáticos.
  
  ![Lista suspensa de funções de mascaramento](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- OBSERVAÇÃO: a maioria dessas funções de mascaramento tem parâmetros de configuração adicionais. Para mascaramento de ordem aleatória, a Máscara de Dados Estáticos oferece um parâmetro padrão. Para o Máscara de ordem aleatória de grupo, Mascaramento de valor único e mascaramento de Composição de cadeia de caracteres, o usuário precisa fornecer parâmetros de configuração. Para alterar ou fornecer parâmetros de configuração, clique na opção **Configurar…** e especifique um valor (alternativo) para o parâmetro na caixa de diálogo que for exibida. As descrições detalhadas de cada função de mascaramento são fornecidas em [Funções de mascaramento](#masking-functions).
+ OBSERVAÇÃO: a maioria dessas funções de mascaramento tem parâmetros de configuração adicionais. Para mascaramento de ordem aleatória, a Máscara de Dados Estáticos oferece um parâmetro padrão. Para o Máscara de ordem aleatória de grupo, Mascaramento de valor único e mascaramento de Composição de cadeia de caracteres, o usuário precisa fornecer parâmetros de configuração. Para alterar ou fornecer parâmetros de configuração, clique na opção **Configurar...** e especifique um valor (alternativo) para o parâmetro na caixa de diálogo que aparece. As descrições detalhadas de cada função de mascaramento são fornecidas em [Funções de mascaramento](#masking-functions).
  
  ![Botão de configuração de funções de mascaramento](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -135,7 +135,7 @@ O mascaramento NULL substitui todos os valores na coluna por NULL. Se a coluna n
 
 ### <a name="single-value-masking"></a>Mascaramento de valor único
 
-O Mascaramento de valor único substitui todos os valores na coluna por um único valor fixo; esse valor é especificado pelo usuário. O formato da entrada deve ser conversível independentemente de qual seja o tipo da coluna selecionada. Para especificar o valor, clique em **Configurar...**  e forneça um valor; em seguida, clique em **Okay**. 
+O Mascaramento de valor único substitui todos os valores na coluna por um único valor fixo; esse valor é especificado pelo usuário. O formato da entrada deve ser conversível independentemente de qual seja o tipo da coluna selecionada. Para especificar o valor, clique em **Configurar...**, forneça um valor e, em seguida, clique em **OK**. 
 
 ![Parâmetro do mascaramento de valor único](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

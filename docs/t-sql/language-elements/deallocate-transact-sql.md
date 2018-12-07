@@ -22,12 +22,12 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747824"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586199"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,49 +39,48 @@ ms.locfileid: "47747824"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *cursor_name*  
- É o nome de um cursor já declarado. Se houver um cursor global e um cursor local com *cursor_name* como seus nomes, o *cursor_name* se referirá ao cursor global, se GLOBAL for especificado, e ao cursor local, se GLOBAL não for especificado.  
+ É o nome de um cursor já declarado. Se houver um cursor global e um cursor local com *cursor_name* como seus nomes, o *cursor_name* se referirá ao cursor global se `GLOBAL` for especificado e ao cursor local se `GLOBAL` não for especificado.  
   
  @*cursor_variable_name*  
  É o nome de uma variável de **cursor**. @*cursor_variable_name* precisa ser do tipo **cursor**.  
   
 ## <a name="remarks"></a>Remarks  
- As instruções que operam em cursores usam um nome de cursor ou uma variável de cursor para se referir ao cursor. DEALLOCATE remove a associação entre um cursor e o nome de cursor ou variável de cursor. Se um nome ou uma variável forem os últimos a referenciarem o cursor, ele será desalocado e qualquer recurso usado por ele será liberado. Os bloqueios de rolagem usados para proteger o isolamento de buscas são liberado em DEALLOCATE. Os bloqueios de transação usados para proteger atualizações, incluindo atualizações posicionadas feitas através do cursor, são mantidos até o fim da transação.  
+As instruções que operam em cursores usam um nome de cursor ou uma variável de cursor para se referir ao cursor. `DEALLOCATE` remove a associação entre um cursor e o nome de cursor ou variável de cursor. Se um nome ou uma variável forem os últimos a referenciarem o cursor, ele será desalocado e qualquer recurso usado por ele será liberado. Os bloqueios de rolagem usados para proteger o isolamento de buscas são liberados em `DEALLOCATE`. Os bloqueios de transação usados para proteger atualizações, incluindo atualizações posicionadas feitas através do cursor, são mantidos até o fim da transação.  
   
- A instrução DECLARE CURSOR aloca e associa um cursor a um nome de cursor.  
+A instrução `DECLARE CURSOR` aloca e associa um cursor a um nome de cursor.  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- Depois que um nome de cursor é associado a um cursor, o nome não pode ser usado para outro cursor do mesmo escopo (GLOBAL ou LOCAL) até que este tenha sido desalocado.  
+Depois que um nome de cursor é associado a um cursor, o nome não pode ser usado para outro cursor do mesmo escopo (global ou local) até que este tenha sido desalocado.  
   
  Uma variável de cursor é associada a um cursor usando um destes dois métodos:  
   
--   Pelo nome usando uma instrução SET que define um cursor como uma variável de cursor.  
+-   Pelo nome usando uma instrução `SET` que define um cursor como uma variável de cursor.  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   Um cursor também pode ser criado e associado a uma variável sem ter um nome de cursor definido.  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- Uma instrução DEALLOCATE @*cursor_variable_name* remove somente a referência da variável nomeada como o cursor. A variável não é desalocada até que saia do escopo no fim do lote, procedimento armazenado ou gatilho. Depois de uma instrução DEALLOCATE @*cursor_variable_name*, a variável pode ser associada a outro cursor usando a instrução SET.  
+ Uma instrução `DEALLOCATE <@cursor_variable_name>` remove somente a referência da variável nomeada ao cursor. A variável não é desalocada até que saia do escopo no fim do lote, procedimento armazenado ou gatilho. Depois de uma instrução `DEALLOCATE <@cursor_variable_name>`, a variável pode ser associada a outro cursor usando a instrução SET.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -96,15 +95,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- Uma variável de cursor não precisa ser desalocada explicitamente. A variável é implicitamente desalocada quando sai de escopo.  
+Uma variável de cursor não precisa ser desalocada explicitamente. A variável é implicitamente desalocada quando sai de escopo.  
   
 ## <a name="permissions"></a>Permissões  
- As permissões DEALLOCATE assumem como padrão qualquer usuário válido.  
+ As permissões para `DEALLOCATE` são padronizadas para qualquer usuário válido.  
   
 ## <a name="examples"></a>Exemplos  
  O script a seguir mostra como os cursores persistem até o último nome ou até a variável que os referenciam ser desalocada.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

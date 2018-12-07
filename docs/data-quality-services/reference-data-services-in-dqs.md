@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702214"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617696"
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
 
@@ -53,7 +52,7 @@ ms.locfileid: "51702214"
  Você pode executar essas atividades na guia **Dados de Referência** da tela **Configuração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ##  <a name="Direct"></a> Usando dados de referência diretamente de provedores de dados de referência de terceiros  
- Se você não estiver conectado à Internet e, portanto, não puder usar o Marketplace, o DQS também oferecerá suporte à conexão direta com provedores de dados disponíveis na rede da sua organização. Para usar dados de referência de provedores de dados de referência de terceiros online diretos, você tem que criar um registro para o provedor de dados no DQS.  
+ Se você não estiver conectado à Internet e, portanto, não puder usar o Marketplace, o DQS também dará suporte à conexão direta com provedores de dados disponíveis na rede da sua organização. Para usar dados de referência de provedores de dados de referência de terceiros online diretos, você tem que criar um registro para o provedor de dados no DQS.  
   
 ##  <a name="HowToCleanse"></a> Como limpar dados usando dados de referência  
  Limpar seus dados no DQS usando dados de referência inclui as três seguintes etapas:  

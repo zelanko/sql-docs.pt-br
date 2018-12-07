@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534378"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.  
@@ -119,6 +119,6 @@ ms.locfileid: "51641143"
 -   [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), em sqlblog.com  
+ Entrada de blog, [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679) (Padrão de design SSIS – carga incremental), em sqlblog.com  
   
   

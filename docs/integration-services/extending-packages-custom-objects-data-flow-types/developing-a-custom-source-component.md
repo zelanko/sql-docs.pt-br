@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629184"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528772"
 ---
 # <a name="developing-a-custom-source-component"></a>Desenvolvendo um componente de fonte personalizado
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] habilita desenvolvedores a escrever componentes de origem que podem ser conectados a fontes de dados personalizadas e fornecer dados dessas fontes a outros componentes em uma tarefa de fluxo de dados. A capacidade de criar fontes personalizadas é valiosa quando você precisa se conectar a fontes de dados que não podem ser acessadas através de uma das fontes existentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

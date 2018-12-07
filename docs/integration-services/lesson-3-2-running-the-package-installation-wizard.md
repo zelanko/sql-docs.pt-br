@@ -11,12 +11,12 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527138"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2 – executar o Assistente de Instalação de Pacotes
 Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  
@@ -29,7 +29,7 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
 1.  No computador de destino, localize o pacote de implantação.  
   
-    Se você tiver usado o valor padrão – bin\Deployment – como local para o utilitário de implantação, o pacote de implantação será a pasta de Implantação do projeto Tutorial de Implantação.  
+    Se você tiver usado o valor padrão – bin\Deployment – como a localização do utilitário de implantação, o pacote de implantação será a pasta de Implantação do projeto Tutorial de Implantação.  
   
 2.  Na pasta Implantação, clique duas vezes no arquivo de manifesto, Deployment Tutorial.SSISDeploymentManifest.  
   

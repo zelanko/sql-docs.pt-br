@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050890"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712217"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050890"
   
  **Modo do SharePoint:** a página de opções de Instalação do Servidor de Relatório apenas tem uma opção **Instalar somente** para o modo do SharePoint. Esta opção instala todos os arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A próxima etapa é criar pelo menos um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de uma das seguintes maneiras:  
   
--   Use a Administração Central do SharePoint para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, veja a seção “Aplicativo de serviço” de [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+-   Use a Administração Central do SharePoint para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção "Aplicativo de serviço" de [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 -   Use os cmdlets do PowerShell do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar um aplicativo de serviço e os bancos de dados do servidor de relatório. Para obter mais informações, confira a amostra da criação de aplicativos de serviço no tópico [Cmdlets do PowerShell para Modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050890"
 >  O Servidor de Relatório e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório podem estar em domínios diferentes. Para implantação na Internet, é uma prática comum usar um servidor que esteja atrás de um firewall. Se estiver configurando um servidor de relatório para acesso à Internet, use as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está atrás do firewall e use IPSEC para proteger a conexão.  
   
 ## <a name="database-server-edition-requirements"></a>Requisitos de edição do servidor de banco de dados  
- Ao criar um banco de dados de servidor de relatório, esteja ciente de que nem todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se usadas para hospedar o banco de dados. Para obter mais informações, confira [Requisitos das edições do servidor de banco de dados do servidor de relatório](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) em [Recursos do Reporting Services compatíveis com as edições do SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ Ao criar um banco de dados de servidor de relatório, esteja ciente de que nem todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se usadas para hospedar o banco de dados. Para obter mais informações, confira [Requisitos das edições do servidor de banco de dados do servidor de relatório](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) em [Recursos do Reporting Services compatíveis com as edições do SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 

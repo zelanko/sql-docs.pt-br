@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fe389985659013e88009822eb20cf21302423e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029425"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712547"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
 
@@ -34,9 +34,9 @@ Crie, implante e gerencie relatórios móveis e paginados do Reporting Services 
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Criar, implantar e gerenciar relatórios móveis e paginados
 
-O SQL Server Reporting Services é uma solução que os clientes implantam em seus locais para criar, publicar e gerenciar relatórios e entregá-los aos usuários corretos de diferentes maneiras: exibindo-os em um navegador da Web, em seus dispositivos móveis ou como um email em suas caixas de entrada.
+O SQL Server Reporting Services é uma solução local que os clientes implantam para criar, publicar, gerenciar relatórios e entregá-los aos usuários corretos de diferentes maneiras: exibindo-os em um navegador da Web, em seus dispositivos móveis ou como um email em suas caixas de entrada.
 
-Para o SQL Server 2016, o Reporting Services oferece um pacote atualizado de produtos:
+O SQL Server Reporting Services oferece um pacote atualizado de produtos:
 
 * **Relatórios paginados "Tradicionais"** atualizados, de forma que você possa criar relatórios de aparência moderna, com ferramentas atualizadas e novos recursos para criá-los.
 * **Novos relatórios móveis** com um layout dinâmico que se adapta a diferentes dispositivos e as diferentes maneiras que você os segura.
@@ -46,7 +46,7 @@ Continue lendo para obter mais informações sobre cada produto.
 
 ### <a name="whats-new-in-reporting-services"></a>Novidades no Reporting Services
 
-Essas fontes serão mantidas atualizadas com os novos recursos no SQL Server 2016 Reporting Services.
+Essas fontes serão mantidas atualizadas com os novos recursos no SQL Server Reporting Services.
 
 * [Novidades no Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [Blog da equipe do SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -56,9 +56,9 @@ Essas fontes serão mantidas atualizadas com os novos recursos no SQL Server 201
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
-O Reporting Services está associado com os "tradicionais" relatórios paginados com estilo de documento, nos quais quanto mais dados você tiver, mais linhas haverá nas tabelas e mais páginas haveria no relatório. Isso é ótimo para geração de documentos de layout fixo, de resolução perfeita, otimizado para impressão, como os arquivos PDF e Word.
+O Reporting Services está associado com os "tradicionais" relatórios paginados com estilo de documento, nos quais quanto mais dados você tiver, mais linhas haverá nas tabelas e mais páginas no relatório. Isso é ótimo para geração de documentos de layout fixo, de resolução perfeita e otimizados para impressão, como os arquivos PDF e Word.
 
-Essa carga de trabalho principal de BI ainda existe hoje, por isso nós a modernizamos. Agora você pode criar relatórios de aparência moderna com novos recursos atualizados, usando o [Construtor de Relatórios](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) ou o Designer de Relatórios no [SSDT (SQL Server Data Tools)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
+Essa carga de trabalho principal de BI ainda existe hoje, por isso, nós a modernizamos. Agora você pode criar relatórios de aparência moderna com novos recursos atualizados, usando o [Construtor de Relatórios](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) ou o Designer de Relatórios no [SSDT (SQL Server Data Tools)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
 * Atualizamos todos os estilos padrão e paletas de cores, portanto, por padrão você cria relatórios com um novo estilo moderno minimalista.
 * Atualizamos o painel Parâmetro, portanto você pode organizar os parâmetros da maneira que desejar.
@@ -69,11 +69,11 @@ Essa carga de trabalho principal de BI ainda existe hoje, por isso nós a modern
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
-A computação em dispositivos móveis mudou os dispositivos que precisamos para trabalhar. Isso significa que as pessoas têm hoje uma necessidade de relatórios diferentes. A experiência de relatório de layout fixo não funciona bem quando você introduz tablets e telefones. Algo que foi criado para uma tela ampla de um computador não é a melhor experiência em uma tela pequena de um telefone, que não é apenas menor, mas tem uma orientação de retrato ou paisagem.
+A computação em dispositivos móveis mudou os dispositivos que precisamos para trabalhar. Isso significa que as pessoas têm hoje uma necessidade de relatórios diferentes. A experiência de relatório de layout fixo não funciona bem quando se trata de tablets e celulares. Algo que foi criado para uma tela ampla de um computador não oferece a melhor experiência em uma tela pequena de um celular, que não é apenas menor, mas tem uma orientação de retrato ou paisagem.
 
 O que você precisa para esses fatores de formas de tela muito diferentes não é um layout fixo, mas um layout dinâmico que se adapta a esses dispositivos diferentes e as diferentes maneiras de que você pode segurá-los. Para isso, adicionamos um novo tipo de relatório: relatórios móveis, baseados na tecnologia Datazen que adquirimos há cerca de um ano e integramos ao produto. Você pode migrar seus relatórios Datazen existentes para o Reporting Services com o [Assistente de Migração do SQL Server para Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
 
-Você cria esses relatórios móveis no novo aplicativo [Publicador de Relatórios Móveis](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . Em seguida nos [aplicativos nativos do Power BI para dispositivos móveis](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android e HTML5, você pode acessar os dados que tem no Power BI na nuvem, bem como seus dados do SQL Server 2016 Reporting Services local. Conforme cria visualizações, o Publicador de Relatórios Móveis gera automaticamente dados de exemplo para cada uma delas, assim você vê qual será a aparência da visualização com os seus dados e que tipo de dados funciona bem em cada visualização.
+Você cria esses relatórios móveis no novo aplicativo [Publicador de Relatórios Móveis](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . Em seguida, nos [aplicativos nativos do Power BI para dispositivos móveis](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android e HTML5, é possível acessar os dados do Power BI na nuvem, bem como os dados do SQL Server Reporting Services local. Conforme cria visualizações, o Publicador de Relatórios Móveis gera automaticamente dados de exemplo para cada uma delas, assim você vê qual será a aparência da visualização com os seus dados e que tipo de dados funciona bem em cada visualização.
 
 ## <a name="web-portal"></a>Portal da Web
 
@@ -83,7 +83,7 @@ Para os usuários finais do Reporting Services de modo nativo, a porta da frente
 
 Você pode aplicar sua própria marca personalizada ao portal da web. E você pode criar KPIs direitamente no portal da Web. Os KPIs podem expor as principais métricas de negócios em um relance no navegador, sem precisar abrir um relatório. 
 
-O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
+O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora, é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
 
 O conteúdo do portal da Web é organizado por tipo: KPIs, relatórios móveis e paginados do Reporting Services, pastas de trabalho do Excel, conjuntos de dados compartilhados e fontes de dados compartilhadas para serem usadas como blocos de construção em seus relatórios. Armazene-os e gerencie-os com segurança no portal, na tradicional hierarquia de pastas. Você pode rotular os seus favoritos e pode gerenciar o conteúdo, se você tiver essa função.
 

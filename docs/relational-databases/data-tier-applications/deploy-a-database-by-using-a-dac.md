@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540389"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ ms.locfileid: "51673345"
   
 -   **Avançar** - Continua na página **Configurações de Implantação** .  
   
--   **Cancelar** – Cancela a operação e fecha o Assistente.  
+-   **Cancelar** – cancela a operação e fecha o Assistente.  
   
 ##  <a name="Deployment_settings"></a> Página de configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Host local:**  
   
--   **Conexão de servidor** – Especifique os detalhes da conexão de servidor e clique em **Conectar** para verificar a conexão.  
+-   **Conexão do servidor** – Especifique os detalhes da conexão de servidor e clique em **Conectar** para verificar a conexão.  
   
 -   **Nome do novo banco de dados** – Especifique um nome para o novo banco de dados.  
   

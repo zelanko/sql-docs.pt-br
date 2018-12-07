@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fcda605644c29f21b6fd9f71578a4d860f59619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530492"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,11 +92,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Especifica o endereço de rede de servidor de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atuar como um parceiro de failover em uma nova sessão de espelhamento de banco de dados. Cada sessão requer dois parceiros: um começa como servidor principal e o outro, como servidor espelho. Recomendamos que estes parceiros residam em computadores diferentes.  
   
- Esta opção é especificada uma vez por sessão em cada parceiro. A inicialização de uma sessão de espelhamento de banco de dados exige duas instruções ALTER DATABASE *database* SET PARTNER **='***partner_server***'**. A ordem delas é significativa. Primeiro, conecte ao servidor espelho e especifique a instância de servidor de entidade de segurança como *partner_server* (SET PARTNER **='***principal_server***'**). Em segundo lugar, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='***mirror_server***'**); isto inicia uma sessão de espelhamento de banco de dados entre esses dois parceiros. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Esta opção é especificada uma vez por sessão em cada parceiro. A inicialização de uma sessão de espelhamento de banco de dados exige duas instruções ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. A ordem delas é significativa. Primeiro, conecte ao servidor espelho e especifique a instância de servidor principal como *partner_server* (SET PARTNER **='**_principal_server_**'**). Em segundo lugar, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='**_mirror_server_**'**); isto inicia uma sessão de espelhamento de banco de dados entre esses dois parceiros. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  O valor de *partner_server* é um endereço de rede do servidor. Tem a seguinte sintaxe:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP **://**_\<system-address>_**:**_\<port>_  
   
  onde  
   
@@ -106,7 +106,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- O seguinte exemplo ilustra a cláusula SET PARTNER **='***partner_server***'**:  
+ O seguinte exemplo ilustra a cláusulaSET PARTNER **='**_partner_server_**'**:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -154,7 +154,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   Quando a segurança está definida como FULL e a testemunha está definida como OFF, a sessão é executada em modo de alta segurança sem failover automático. Se a instância de servidor espelho cair, a instância de servidor principal não será afetada. Se a instância de servidor principal cair, você poderá forçar o serviço (com possível perda de dados) na instância de servidor espelho.  
   
- Se SAFETY estiver definido como OFF, a sessão será executada em modo de alto desempenho e não haverá suporte para failover automático ou manual. Porém, problemas no espelho não afetam o principal e, se a instância de servidor principal cair, você poderá, se necessário, forçar o serviço (com possível perda de dados) na instância de servidor espelho — se WITNESS estiver definido como OFF ou a testemunha estiver conectada atualmente ao espelho. Para obter mais informações sobre como forçar o serviço, consulte "FORCE_SERVICE_ALLOW_DATA_LOSS" anteriormente, nesta seção.  
+ Se SAFETY estiver definido como OFF, a sessão será executada em modo de alto desempenho e não haverá suporte para failover automático ou manual. Porém, problemas no espelho não afetam o principal e, se a instância de servidor principal cair, você poderá, se necessário, forçar o serviço (com possível perda de dados) na instância de servidor espelho – se WITNESS estiver definido como OFF ou a testemunha estiver conectada atualmente ao espelho. Para obter mais informações sobre como forçar o serviço, consulte "FORCE_SERVICE_ALLOW_DATA_LOSS" anteriormente, nesta seção.  
   
 > [!IMPORTANT]  
 >  Não se pretende que o modo de alto desempenho use uma testemunha. Porém, sempre que definir SAFETY como OFF, é altamente recomendável que você verifique se WITNESS está definido como OFF.  
@@ -198,7 +198,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Especifica uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para atuar como servidor testemunha de uma sessão de espelhamento de banco de dados. Você só pode especificar instruções SET WITNESS no servidor principal.  
   
- Em uma instrução SET WITNESS **='***witness_server***'**, a sintaxe de *witness_server* é igual à sintaxe de *partner_server*.  
+ Em uma instrução SET WITNESS **='**_witness_server_**'**, a sintaxe de *witness_server* é igual à sintaxe de *partner_server*.  
   
  OFF  
  Remove a testemunha de uma sessão de espelhamento de banco de dados. Definir a testemunha como OFF desabilita o failover automático. Se o banco de dados estiver definido como FULL SAFETY e a testemunha como OFF, uma falha no servidor espelho fará com que o servidor principal torne o banco de dados indisponível.  

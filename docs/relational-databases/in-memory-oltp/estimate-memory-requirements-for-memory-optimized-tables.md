@@ -12,19 +12,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b01a26ac0db5d41f23343dda7a106c52524dea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531510"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 As tabelas com otimização de memória requerem a existência de memória suficiente para manter todas as linhas e índices na memória. Como a memória é um recurso finito, é importante compreender e gerenciar o uso de memória no sistema. Os tópicos nessa seção abordam os cenários comuns de uso e gerenciamento de memória.
 
-Se você estiver criando uma nova tabela com otimização de memória ou estiver migrando uma tabela com base em disco existente para uma tabela com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa fornecer ao servidor memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
+Se você estiver criando uma nova tabela com otimização de memória ou estiver migrando uma tabela com base em disco existente para uma tabela com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)], é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa provisionar ao servidor memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
   
 Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória. 
   
@@ -102,7 +102,7 @@ Veja a seguir uma computação de tamanho para 5.000.000 (5 milhões) de linhas 
   
 #### <a name="memory-for-the-tables-rows"></a>Memória para linhas da tabela  
   
-Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes, ou 1,280,000,000 bytes – aproximadamente 1.28 GB.  
+Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes ou 1.280.000.000 bytes – aproximadamente 1,28 GB.  
   
 ###  <a name="bkmk_IndexMeemory"></a> Memória para índices  
 

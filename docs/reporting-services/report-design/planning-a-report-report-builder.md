@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716624"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710847"
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
   O Construtor de Relatórios permite que você crie muitos tipos de relatórios paginados. Por exemplo, você pode criar relatórios que mostram dados de vendas resumidos ou detalhados, tendências de marketing e vendas, relatórios operacionais ou painéis. Você também pode criar relatórios que aproveitam texto ricamente formatado, tais como pedidos de vendas, catálogos de produtos ou letras de formulário. Todos esses relatórios são criados usando combinações diferentes dos mesmos blocos de construção básicos no Construtor de Relatórios. Para criar um relatório útil, de fácil compreensão, convém primeiro fazer um planejamento. Antes de começar, considere algumas questões como:  
@@ -50,7 +50,7 @@ ms.locfileid: "47716624"
      Você pode salvar o relatório no computador local e continuar trabalhando nele, ou executá-lo localmente para obter suas próprias informações. No entanto, para compartilhar seu relatório com outros, é necessário salvá-lo em um servidor de relatório configurado no modo nativo ou em um servidor de relatório no modo integrado do SharePoint. Salvá-lo em um servidor permite que outros o executem sempre que desejarem. Alternativamente, o administrador do servidor de relatório pode configurar uma assinatura para o relatório ou configurar a entrega do relatório por email para outros indivíduos. Você poderá ter o relatório entregue em um formato de exportação específico se preferir. Para obter mais informações, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  
   

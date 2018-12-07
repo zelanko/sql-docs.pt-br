@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523417"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Passo a passo: Estenda a Compilação do Projeto de Banco de Dados para Gerar as Estatísticas do Modelo
 Você pode criar um colaborador de compilação para executar ações personalizadas ao compilar um projeto de banco de dados. Neste passo a passo, você cria um colaborador de compilação chamado ModelStatistics que gera estatísticas do modelo de banco de dados SQL quando você cria um projeto de banco de dados. Como esse colaborador de compilação usa parâmetros quando você compila, algumas etapas adicionais serão necessárias.  
@@ -46,7 +46,7 @@ Os colaboradores de compilação são executados durante a compilação do proje
   
 -   Gerando as estatísticas do modelo e relatando-as ao usuário. Esse é o exemplo mostrado aqui.  
   
-O ponto de entrada principal para colaboradores de compilação é o método OnExecute. Todas as classes que herdam do BuildContributor devem implementar esse método. Um objeto BuildContributorContext é passado para este método – ele contém todos os dados relevantes para a compilação, como um modelo de banco de dados, as propriedades de compilação e os argumentos/arquivos a serem usados por colaboradores de compilação.  
+O ponto de entrada principal para colaboradores de compilação é o método OnExecute. Todas as classes que herdam do BuildContributor devem implementar esse método. Um objeto BuildContributorContext é passado para este método – ele contém todos os dados relevantes para o build, como um modelo de banco de dados, as propriedades de build e os argumentos/arquivos a serem usados por colaboradores de build.  
   
 **TSqlModel e a API do modelo de banco de dados**  
   
@@ -57,7 +57,7 @@ Veja alguns dos comandos usados pelo colaborador de exemplo neste passo a passo:
 |**Classe**|**Método/propriedade**|**Descrição**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Consulta o modelo para objetos e é o ponto de entrada principal para a API do modelo. Apenas os tipos de nível superior como uma Tabela ou Exibição podem ser consultados – os tipos como Colunas podem ser encontrados desviando o modelo. Se nenhum filtro ModelTypeClass for especificado, todos os tipos de nível superior serão retornados.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Localiza relações para os elementos referenciados pelo TSqlObject atual. Por exemplo, para uma tabela, isto retornará objetos como as colunas da tabela. Nesse caso, um filtro ModelRelationshipClass pode ser usado para especificar relações exatas para a consulta (por exemplo, usar o filtro “Table.Columns” garantiria que apenas as colunas seriam retornadas).<br /><br />Há vários métodos semelhantes, como GetReferencingRelationshipInstances, GetChildren e GetParent. Consulte a documentação da API para obter mais informações.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Localiza relações para os elementos referenciados pelo TSqlObject atual. Por exemplo, para uma tabela, isto retornará objetos como as colunas da tabela. Nesse caso, um filtro ModelRelationshipClass pode ser usado para especificar relações exatas para a consulta (por exemplo, usar o filtro "Table.Columns" garantiria que apenas as colunas seriam retornadas).<br /><br />Há vários métodos semelhantes, como GetReferencingRelationshipInstances, GetChildren e GetParent. Consulte a documentação da API para obter mais informações.|  
   
 **Identificar com exclusividade seu colaborador**  
   
@@ -68,7 +68,7 @@ Durante o processo de compilação, os colaboradores personalizados são carrega
   
 ```  
   
-Nesse caso, o primeiro parâmetro para o atributo deve ser um identificador exclusivo – isso será usado para identificar seu colaborador em arquivos de projeto. A prática recomendada é combinar o namespace da biblioteca (neste passo a passo, “ExampleContributors") com o nome da classe (neste passo a passo, “ModelStatistics") para gerar o identificador. Você verá como esse namespace é usado para especificar que seu colaboradores deve ser executado posteriormente no passo a passo.  
+Nesse caso, o primeiro parâmetro para o atributo deve ser um identificador exclusivo – isso será usado para identificar seu colaborador em arquivos de projeto. A prática recomendada é combinar o namespace da biblioteca (neste passo a passo, "ExampleContributors") com o nome de classe (neste passo a passo, "ModelStatistics") para gerar o identificador. Você verá como esse namespace é usado para especificar que seu colaboradores deve ser executado posteriormente no passo a passo.  
   
 ## <a name="CreateBuildContributor"></a>Criar um colaborador de compilação  
 Para criar um colaborador de compilação, você deverá realizar as seguintes tarefas:  
@@ -87,7 +87,7 @@ Para criar um colaborador de compilação, você deverá realizar as seguintes t
   
 1.  Crie um projeto de biblioteca de classe do Visual Basic ou Visual C# denominado MyBuildContributor.  
   
-2.  Renomeie o arquivo “Class1.cs” para “ModelStatistics.cs”.  
+2.  Renomeie o arquivo "Class1.cs" para "ModelStatistics.cs".  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e, depois, clique em **Adicionar referência**.  
   
@@ -480,7 +480,7 @@ Você sempre deve atualizar o arquivo de projeto SQL para especificar a ID dos c
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,9 +493,9 @@ Você sempre deve atualizar o arquivo de projeto SQL para especificar a ID dos c
   
     1.  Navegue para %Arquivos de programas%\MSBuild\\.  
   
-    2.  Crie uma nova pasta “MyContributors” onde os arquivos de destino serão armazenados.  
+    2.  Crie uma nova pasta "MyContributors" na qual os arquivos de destino serão armazenados.  
   
-    3.  Crie um novo arquivo “MyContributors.targets” dentro desse diretório, adicione o seguinte texto e salve o arquivo:  
+    3.  Crie um novo arquivo "MyContributors.targets" dentro desse diretório, adicione o seguinte texto e então salve o arquivo:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -517,13 +517,13 @@ Você sempre deve atualizar o arquivo de projeto SQL para especificar a ID dos c
 Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para passar parâmetros para compilações de linha de comando.  
   
 > [!NOTE]  
-> Você sempre deve atualizar a propriedade “BuildContributors” para especificar sua ID de colaborador. Esta é a mesma ID usada no atributo “ExportBuildContributor” no seu arquivo de origem de colaborador. Sem isso, seu colaborador não será executado ao criar o projeto. A propriedade “ContributorArguments” deverá ser atualizada somente se você tiver os argumentos necessários para seu colaborador ser executado.  
+> Você sempre deve atualizar a propriedade “BuildContributors” para especificar sua ID de colaborador. Esta é a mesma ID usada no atributo "ExportBuildContributor" no seu arquivo de origem de colaborador. Sem isso, seu colaborador não será executado ao criar o projeto. A propriedade "ContributorArguments" deverá ser atualizada somente se você tiver os argumentos necessários para seu colaborador ser executado.  
   
 ### <a name="build-the-sql-project"></a>Crie o projeto SQL.  
   
 ##### <a name="to-rebuild-your-database-project-by-using-msbuild-and-generate-statistics"></a>Para recriar seu projeto de banco de dados usando MSBuild e gerar estatísticas  
   
-1.  No Visual Studio, clique com o botão direito do mouse no projeto e selecione “Recompilar”. Isso recompilará o projeto e você deverá ver as estatísticas de modelo geradas, com a saída incluída na saída da compilação e salva em ModelStatistics.xml. Observe que você pode precisar escolher “Mostrar todos os arquivos” no Gerenciador de Soluções para ver o arquivo XML.  
+1.  No Visual Studio, clique com o botão direito do mouse no projeto e selecione "Recompilar". Isso recompilará o projeto e você deverá ver as estatísticas de modelo geradas, com a saída incluída na saída da compilação e salva em ModelStatistics.xml. Observe que você pode precisar escolher "Mostrar todos os arquivos" no Gerenciador de Soluções para ver o arquivo XML.  
   
 2.  Abra um prompt de comando do Visual Studio: no menu **Iniciar**, clique em **Todos os Programas**, clique em **Microsoft Visual Studio <Visual Studio Version>**, clique em **Ferramentas do Visual Studio** e clique em **Prompt de Comando do Visual Studio (<Visual Studio Version>)**.  
   

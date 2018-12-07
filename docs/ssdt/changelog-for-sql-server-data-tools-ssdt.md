@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677895"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712602"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Data de lançamento: 27 de setembro de 2018
 
 **SSIS:**
 
-1. Adicionar suporte para [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+1. Adicionar suporte para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 2. Remova o suporte para o SQL Server 2012.
 
 ### <a name="known-issues"></a>Problemas conhecidos:
@@ -68,7 +68,7 @@ Data de lançamento: 05 de setembro de 2018
 **SSIS:**
 
 1. Foi corrigida a regressão no VS 15.8 em que salvar Tarefa Script/Componente causava erro de compilação.
-1. Foi corrigida a regressão no VS 15.8 em que o assistente de implantação não funcionava.
+1. Corrigida a regressão no VS 15.8 em que o assistente de implantação não funcionava.
 1. Foi corrigido um problema em que o gerenciador de conexões do ADO.NET não oferecia suporte a provedor ADO.NET de terceiros.
 
 **Instalador:**
@@ -92,7 +92,7 @@ Data do lançamento: 02 de junho de 2018
 **SSIS:**
 
 - Adicione suporte para a nova autoridade do AAD Azure Governamental (login.microsoftonline.us) para uso com Tarefas AS.
-- Foi corrigido um problema em a interface do usuário da tarefa de processamento de AS mostra "Método não encontrado" quando a versão do servidor de destino é o SQLServer2016.
+- Corrigido um problema em que a interface do usuário da tarefa de processamento de AS mostra "Método não encontrado" quando a versão do servidor de destino é o SQLServer2016.
 - Foi corrigido um problema em que alguns componentes do pipeline não podem ser executados quando a versão do servidor de destino é o SQLServer2012.
 
 **Instalador:**
@@ -102,7 +102,7 @@ Data do lançamento: 02 de junho de 2018
 ### <a name="known-issues"></a>Problemas conhecidos:
 
 - A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
-- Ao instalar o SSDT no Windows 10 e escolher "Instalar novas Ferramentas de Dados do SQL Server para a instância do Visual Studio 2017", a instalação falhará em "Não há suporte para a operação de metarquivo solicitada". Reinicialize o computador e inicie o instalador novamente para continuar a instalação do SSDT.
+- Ao instalar o SSDT no Windows 10 e escolher "Instalar uma nova instância do SQL Server Data Tools para Visual Studio 2017", a instalação falhará em "Não há suporte para a operação de metarquivo solicitada". Reinicialize o computador e inicie o instalador novamente para continuar a instalação do SSDT.
 
 
 
@@ -118,7 +118,7 @@ Data do lançamento: 4 de junho de 2018
 - Corrigir um problema que a emissão da taxa de luminosidade do texto está sendo exibida no editor *Editor de transformação classificação*.  
 - Corrigir um problema que a caixa de diálogo *Resolver referências* desaparece ao tentar editar um combobox.  
 - Corrigir um problema que o link de ajuda F1 do *Gerenciador de conexões do Hadoop* não funciona.  
-- Corrigir um problema que o código da tarefa de script será perdido se ele estiver em um contêiner durante o direcionamento do SQL Server 2016.  
+- Corrigir um problema que o código da tarefa de script será perdido se estiver em um contêiner durante o direcionamento do SQL Server 2016.  
 
 
 **Instalador:**
@@ -138,7 +138,7 @@ Data do lançamento: 10 de março de 2018
 
 **SSIS:**
 
-- Correção de um problema em que a tarefa de processamento AS não registra quaisquer etapas de processamento ao direcionar para o SQLServer2016 e SQLServer2017.
+- Correção de um problema em que a tarefa de processamento AS não registra quaisquer etapas de processamento ao direcionar para o SQLServer2016 e SQLServer2017
 - Correção de um problema em que a violação de acesso acontecerá ao abrir o dtsx com nomes de tarefa muitos longos e que não estejam em inglês no SSDT.
 - Correção de um problema em que, às vezes, uma lista variável de ScriptTask desaparecerá na interface do usuário da tarefa.
 - Correção de um problema em que a adição de uma cópia de um pacote existente falhará quando o local do pacote for o SQL Server.
@@ -152,7 +152,7 @@ Data do lançamento: 10 de março de 2018
 **Instalador:**
 
 - Adicione o link do "Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools" ao aviso de isenção de responsabilidade de privacidade.
-- Correção de um problema em que a janela de instalação do VS é exibida ao selecionar "Instale uma nova instância do SQL Server Data Tools para Visual Studio 2017".
+- Correção de um problema em que a janela de instalação do VS é exibida ao selecionar "Instale uma nova instância do SQL Server Data Tools para Visual Studio 2017"
 
 ### <a name="known-issues"></a>Problemas conhecidos:
 - A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
@@ -207,7 +207,7 @@ O SSDT para Visual Studio 2017 (15.5.0) passa da versão prévia para GA (dispon
 1. Substitua o ícone por uma versão de qualidade superior.
 
 **IS (Integration Services)**
-1. Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. A extensão do SSIS está localizada.
 
 ### <a name="bug-fixes"></a>Correções de bugs
@@ -234,7 +234,7 @@ Número de build: 14.0.61712.050
   - Executar análise em segundo plano – quando essa opção estiver habilitada, o Editor de Consultas para fontes de dados modernas executará consultas na fonte de dados, conforme as consultas forem carregadas para analisar o esquema de saída da consulta.
 
 **IS (Integration Services)**
-- Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+- Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
 ### <a name="bug-fixes"></a>Correções de bugs
@@ -282,7 +282,7 @@ Essa versão fornece um instalador da Web autônomo para projetos do Banco de Da
 - Permita que o usuário defina seu apelido ao instalar um novo SSDT para a instância do VS2017.
 - Oculte as caixas de seleção de recursos do instalador se nenhuma instância do VS estiver selecionada.
 - Refine algumas mensagens do instalador com base nos comentários dos clientes.
-- Corrija o problema que indica que o instalador não dá suporte à atualização.
+- Corrija o problema que indica que o instalador não dá suporte a upgrade.
 
 
 ### <a name="ssis"></a>SSIS
@@ -290,9 +290,9 @@ Essa versão fornece um instalador da Web autônomo para projetos do Banco de Da
 - Corrija o problema que indica que o Assistente para Importação/Exportação não pode listar a fonte de dados quando o feature pack do Azure é instalado.
 - Corrija o problema que indica que a edição de uma Tarefa de Processo do Analysis Services do SSIS gera uma exceção ao alternar a conexão.
 - Corrija o problema que indica quebras de componentes CDC após a aplicação da correção do SQL que adiciona a coluna __$command_id.
-- Corrija o problema que indica que um pacote de terceiros não pode ser editado e executado ao direcionar o SQL Server antigo.
+- Corrija o problema que indica que um pacote de terceiros não pode ser editado e executado ao ter o SQL Server antigo como destino.
 - Corrija o problema que indica que a caixa de diálogo Configurar Fonte de Arquivo Simples não é mostrada corretamente ao clicar duas vezes em DTSWizard.exe e selecionar Fonte de Arquivo Simples.
-- Corrija o problema que indica que um pacote que contém o componente/tarefa do Feature Pack do Azure não pode ser executado ao direcionar o SQL Server 2017.
+- Corrija o problema que indica que um pacote que contém o componente/tarefa do Feature Pack do Azure não pode ser executado ao ter o SQL Server 2017 como destino.
 
 
 **Problemas conhecidos**
@@ -382,7 +382,7 @@ Número de build: 14.0.61709.290
 - Agora a propriedade das linhas de detalhes apenas serão serializadas no JSON quando ele não estiver vazio (alterado de padrão)
 - Agora o driver Oracle OLEDB está disponível na lista do modo de Consulta direta de tabela
 - Agora adicionar expressões M nos modelos tabulares de compatibilidade 1400 agora é exibido/atualizado no TME (Gerenciador de Modelos Tabular)
-- Correção de um problema que fazia o provedor MSOLAP não ser exibido no VS2017 ao tentar importar usando a fonte de dados “Outro” nos modelos de nível de compatibilidade pré-1400
+- Correção de um problema que fazia o provedor MSOLAP não ser exibido no VS2017 ao tentar importar usando a fonte de dados "Outro" nos modelos de nível de compatibilidade pré-1400
 - Correção de um problema no qual a adição de uma translação por meio do TME pode causar problemas 
 - Correção de um problema na interface da Segurança em nível de objeto que fazia a guia ser exibida/oculta incorretamente em alguns casos
 - Correção de um problema em que a falha poderia ocorrer ao tentar abrir um modelo multidimensional carregado previamente usando a caixa de diálogo Conectar ao banco de dados
@@ -508,8 +508,8 @@ Número de build: 14.0.61704.140
     - Adicionar colunas por exemplo no PowerQuery
     - Opções de acesso a dados em modelos 1400 (propriedades do nível de modelo usadas pelo mecanismo M)
         - Habilitar combinação rápida (o padrão é false; quando definido como true, o mecanismo de mashup ignora os níveis de privacidade de fonte de dados ao combinar dados)
-        - Habilitar redirecionamentos herdados (o padrão é false; quando definido como true, o mecanismo de mashup segue redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
-        - Retornar valores de erro como Null (o padrão é false; quando definido como true, os erros no nível da célula são retornados como null. Quando definido como false, uma exceção será gerada se a célula contiver um erro)  
+        - Habilitar Redirecionamentos Herdados (o padrão é false; quando definido como true, o mecanismo de mashup segue redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
+        - Retornar Valores de Erro como Null (o padrão é false; quando definido como true, os erros no nível da célula são retornados como null. Quando definido como false, uma exceção será gerada se a célula contiver um erro)  
     - Fontes de dados adicionais (fontes de dados de arquivo) usando o PowerQuery
         - Excel 
         - Texto/CSV 
@@ -529,7 +529,7 @@ Número de build: 14.0.61704.140
 
 ### <a name="bug-fixes"></a>Correções de bugs
 **Projetos do AS:**
-- Correção da prioridade de modelo para projetos de BI, para que não aparecem na parte superior das categorias de Novos Projetos no VS
+- Correção da prioridade de modelo para Projetos de BI, para que não apareçam na parte superior das categorias de Novos Projetos no VS
 - Correção de um travamento do VS que pode ocorrer em circunstâncias raras durante a abertura de solução SSIS, SSAS ou SSRS
 - Tabular: uma variedade de aprimoramentos e correções de desempenho para análise de DAX e barra de fórmulas.
 - Tabular: o Gerenciador de Modelos de Tabela não estará visível se nenhum projeto Tabular do SSAS estiver aberto.
@@ -608,7 +608,7 @@ Agora, ao usar as APIs SqlPackage.exe e DacFx, você pode gerar um relatório de
 
 Para ações de Publicação e de Script do SqlPackage, foram adicionados dois novos argumentos.
 
-* DeployScriptPath (nome curto: dsp). Esse é um caminho opcional no qual gravar o script de implantação. Para implantação do Azure, se houvesse comandos de TSQL para criar ou modificar o banco de dados, um script mestre seria gravado no mesmo caminho, mas com "Filename_Master.sql" como o nome de arquivo de saída.
+* DeployScriptPath (nome curto: dsp). Esse é um caminho opcional no qual gravar o script de implantação. Para implantação do Azure, se houvesse comandos de TSQL para criar ou modificar o BD, um script mestre seria gravado no mesmo caminho, mas com "Filename_Master.sql" como o nome de arquivo de saída.
 * DeployReportPath (nome curto: drp). Esse é um caminho opcional no qual gravar o relatório de implantação.
 
 Observe que para a ação de Script, os argumentos de caminho de saída existentes ou os novos argumentos específicos de script/relatório devem ser usados, mas não ambos.
@@ -617,11 +617,11 @@ Exemplo de uso:
 
 **Ação de publicação**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **Ação de script**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 No DacFx, foram adicionadas duas novas APIs: DacServices.Publish() and DacServices.Script(). Elas também dão suporte à realização de ações de publicação + script + relatório em uma única operação. Exemplo de uso:
 
@@ -659,19 +659,19 @@ Para obter mais informações, leia a [Postagem de blog do Analysis Services](ht
 **Ferramentas de banco de dados**
 
 * [Bug de conexão 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – colunas não podem ser selecionadas de CROSS APPLY OPENJSON com esquema explícito
-* Corrigido – problema com índices de tabela de histórico gerados automaticamente, em que o DacFx soltava índices na reimplantação
+* Corrigido – problema com índices de tabela de Histórico Gerados Automaticamente, em que o DacFx soltava índices na reimplantação
 * Corrigido – problema com o analisador de lote DacFx que não analisava caracteres colchete ']' de escape, o que fazia com que a publicação falhasse
 * Aprimorado – agora o SqlPackage inclui descrições para cada ação na saída da ajuda
-* Corrigido – a opção "Lembrar senha", na caixa de diálogo de conexão, não era preservada ao editar opções avançadas e ao editar uma cadeia de conexão salva em Publicar, Comparação de Esquemas e outros arquivos
-* Corrigido – para mostrar conexões na guia Histórico com IntegratedAuthentication = true, o campo de Autenticação, nas propriedades de conexão, foi deixado em branco. Agora é mostrado "Autenticação do Windows" conforme o esperado
+* Corrigido – a opção "Lembrar senha", na caixa de diálogo de conexão não era preservada ao editar opções avançadas e ao editar uma cadeia de conexão salva em Publicar, Comparação de Esquemas e outros arquivos
+* Corrigido – para mostrar conexões na guia Histórico com IntegratedAuthentication = true, o campo de Autenticação, nas propriedades de conexão, foi deixado em branco. Agora, é mostrado "Autenticação do Windows", conforme o esperado
 * Corrigido – as alterações nas configurações do IntelliSense das Ferramentas do SQL Server em Ferramentas -> Opções -> Editor de Texto não eram preservadas
-* Aprimorado – o botão Fixar/Desafixar na guia Histórico da caixa de diálogo de conexão, agora é mais compacto, reduzindo a probabilidade de aparecimento de uma barra de rolagem
+* Aprimorado – o botão Fixar/Desafixar na guia Histórico da caixa de diálogo de conexão agora é mais compacto, reduzindo a probabilidade de aparecimento de uma barra de rolagem
 * Corrigido – vários problemas de acessibilidade na caixa de diálogo conexão foram corrigidos.
 
 **Analysis Services e Reporting Services**
 
 * Foi corrigido um problema no designer de tabela SSDT AS em que, ao clicar na miniatura de barra de rolagem da grade de dados, gerava falha em determinadas situações
-* Foi corrigido um problema em que a opção para representar a conexão como o usuário atual no designer de tabela SSDT AS não estava disponível
+* Corrigido um problema em que a opção para representar a conexão como o usuário atual no SSDT AS tabular não estava disponível
 * Foi corrigido um problema no designer de tabela SSDT AS em que ao expandir a barra de fórmulas para muito longe poderia fazer com que o projeto se tornasse impossível de reabrir
 * Foi corrigido uma falha no designer de tabela SSDT AS que ocorreria ao pressionar uma tecla, se a guia Tabela estivesse selecionada
 * Foi corrigido um problema em projetos SSDT AS em que Analisar no Excel não se conectaria a versões de servidor AS de nível inferior
@@ -732,8 +732,8 @@ Número de build: 14.0.60812.0
 **Novidades**
 
 - **Controle e numeração de versão:** as versões agora são rotuladas numericamente, em vez de por mês. Isso se alinha com a nova política do SSMS e simplifica os casos em que há várias versões ou hotfixes em um mês. Esta versão é a 16.3, que significa que é a terceira atualização após a versão RTM. Qualquer hotfix será 16.3.1 e assim por diante, com a nossa próxima atualização (planejada para o próximo mês) sendo a 16.4.
-- **Analysis Services – Gerenciador de Modelos Tabular:** o Gerenciador de Modelos Tabular permite que você percorra convenientemente pelos diversos objetos de metadados em um modelo, como fontes de dados, tabelas, medidas e relações. Ele é implementado como uma janela de ferramentas separada que você pode exibir ao abrir o menu Exibir no Visual Studio, apontando para Outras Janelas e clicando em Gerenciador de Modelos Tabular. O Gerenciador de Modelos Tabular é exibido por padrão na área de Gerenciador de Soluções, em uma guia separada. O Gerenciador de Modelos Tabular organiza objetos de metadados em uma estrutura de árvore que se assemelha ao esquema de um modelo tabular de 1200 e tem muitos recursos novos.
-- **Ferramentas de Banco de Dados – Always Encrypted**: esta versão oferece novas caixas de diálogo [Gerenciamento de Chaves Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) para adicionar facilmente Chaves Mestras da Coluna ou Chaves de Criptografia da Coluna ao seu projeto de banco de dados ou a um banco de dados ao vivo no Pesquisador de Objetos do SQL Server. Esta versão dá suporte a certificados no Repositório de Certificados do Windows. Em versões futuras, o Azure Key Vault e os provedores CNG terão suporte.
+- **Analysis Services – Gerenciador de Modelos Tabular:** o Gerenciador de Modelos Tabular permite que você navegue convenientemente pelos diversos objetos de metadados em um modelo, como fontes de dados, tabelas, medidas e relações. Ele é implementado como uma janela de ferramentas separada que você pode exibir ao abrir o menu Exibir no Visual Studio, apontando para Outras Janelas e clicando em Gerenciador de Modelos Tabular. O Gerenciador de Modelos Tabular é exibido por padrão na área de Gerenciador de Soluções, em uma guia separada. O Gerenciador de Modelos Tabular organiza objetos de metadados em uma estrutura de árvore que se assemelha ao esquema de um modelo tabular de 1200 e tem muitos recursos novos.
+- **Ferramentas de Banco de Dados – Always Encrypted**: esta versão oferece novas caixas de diálogo [Gerenciamento de Chaves Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) para adicionar facilmente Chaves Mestras da Coluna ou Chaves de Criptografia da Coluna ao projeto de banco de dados ou a um banco de dados ao vivo no Pesquisador de Objetos do SQL Server. Esta versão dá suporte a certificados no Repositório de Certificados do Windows. Em versões futuras, o Azure Key Vault e os provedores CNG terão suporte.
     - Ao criar a Chave Mestra da Coluna ou a Chave de Criptografia da Coluna, você poderá notar que as alterações não estão refletidas no Pesquisador de Objetos do SQL Server, logo depois de clicar em Atualizar Banco de Dados. Para solucionar esse problema, atualize o nó do banco de dados no Pesquisador de Objetos do SQL Server.
     - Se você tentar criptografar uma coluna em uma tabela com os dados do Pesquisador de Objetos do SQL Server, poderá enfrentar uma falha. Este recurso tem suporte apenas em projetos de banco de dados do SSDT e SSMS. Suporte para SQL Server Object Explorer será habilitado em uma versão posterior.
 
@@ -758,7 +758,7 @@ Número de build: 14.0.60812.0
         - Foi corrigido um problema de falha do VS ao criar KPIs.
         - Foi corrigido um problema que gerava relatórios inválidos para o SQL Server 2008 R2, 2012 e 2014.
         - Foi corrigido um problema de ordem de hierarquia que causava um erro de loop infinito para o projeto .dwpro.
-        - Foi corrigido um problema do RDL RS em que fazer downgrade do RDL exigia uma recompilação completa, o que gerava confusão no usuário.
+        - Corrigido um problema do RDL RS em que fazer downgrade do RDL exigia uma recompilação completa, o que gerava confusão para o usuário.
         - Foi corrigido um problema de KPI em que Ocultar das Ferramentas de Cliente não tinha nenhum efeito.
         
 

@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbfac38c561a8943a6e15753f3ba20f9ca534311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667764"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586259"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47667764"
 -   Solucionar problemas ou depurar componentes de aplicativos, como procedimentos armazenados.  
   
 ## <a name="monitoring-in-a-dynamic-environment"></a>Monitorando em um ambiente dinâmico  
-Mudanças nas condições resultam em alterações no desempenho. Em suas avaliações, você poderá consultar alterações no desempenho à medida que o número de usuários aumenta, o acesso de usuário e os métodos de conexões mudam, o conteúdo do banco de dados cresce, os aplicativos cliente se modificam, os dados nos aplicativos se alteram, as consultas se tornam mais complexas e o tráfego de rede aumenta. Com as ferramentas para monitorar o desempenho, é possível associar algumas alterações no desempenho a mudanças de condições e consultas complexas. **Exemplos:**:  
+Mudanças nas condições resultam em alterações no desempenho. Em suas avaliações, você poderá consultar alterações no desempenho à medida que o número de usuários aumenta, o acesso de usuário e os métodos de conexões mudam, o conteúdo do banco de dados cresce, os aplicativos cliente se modificam, os dados nos aplicativos se alteram, as consultas se tornam mais complexas e o tráfego de rede aumenta. Com as ferramentas para monitorar o desempenho, é possível associar algumas alterações no desempenho a mudanças de condições e consultas complexas. **Exemplos:**  
   
 -   Monitorando os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas em que as consultas são executadas.  
   
@@ -61,30 +61,29 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
   
 -   Monitorando os usuários que tentam se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível determinar se a segurança está configurada adequadamente e testar aplicativos ou sistemas de desenvolvimento.  
   
- O tempo de resposta é o tempo necessário para que a primeira linha do conjunto de resultados seja retornada para o usuário, na forma de uma confirmação visual de que uma consulta está sendo processada. A taxa de transferência é o número total de consultas manipuladas pelo servidor durante um período de tempo especificado.  
+O tempo de resposta é o tempo necessário para que a primeira linha do conjunto de resultados seja retornada para o usuário, na forma de uma confirmação visual de que uma consulta está sendo processada. A taxa de transferência é o número total de consultas manipuladas pelo servidor durante um período de tempo especificado.  
   
- À medida que o número de usuário aumenta, aumenta a competição por recursos do servidor, o que, por sua vez, aumenta o tempo de resposta e diminui o processamento global.  
+À medida que o número de usuário aumenta, aumenta a competição por recursos do servidor, o que, por sua vez, aumenta o tempo de resposta e diminui o processamento global.  
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>Tarefas de monitoramento e ajuste de desempenho  
   
 |Tópico| Tarefa|  
 |-----------|----------------------|  
-|[Monitorar componentes do SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|As etapas necessárias para monitorar qualquer componente do SQL Server.|  
-|[Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e ajuste disponíveis no SQL Server.|  
+|[Monitorar componentes do SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Etapas necessárias para monitorar qualquer componente do SQL Server, como o Monitor de Atividade, Funções e Eventos Estendidos e Exibições de Gerenciamento Dinâmico, etc.|  
+|[Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e de ajuste disponíveis com o SQL Server, como Estatísticas de Consulta em Tempo Real e o Orientador de Otimização do Mecanismo de Banco de Dados.|  
+|[Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Mantenha a estabilidade do desempenho da carga de trabalho durante a atualização para o nível de compatibilidade do banco de dados mais recente.|  
+|[Monitorando o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usar o Repositório de Consultas para capturar automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e os mantém para sua análise.|  
 |[Estabelecer uma linha de base de desempenho](../../relational-databases/performance/establish-a-performance-baseline.md)|Como estabelecer uma linha de base de desempenho.|  
 |[Isolar problemas de desempenho](../../relational-databases/performance/isolate-performance-problems.md)|Isole problemas de desempenho do banco de dados.|  
 |[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  
+|[Usar DMVs para determinar as estatísticas de uso e o desempenho das exibições](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Aborda a metodologia e os scripts usados para obter informações sobre o desempenho de consultas.|  
 |[Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as ferramentas de monitoramento de desempenho e atividades do Windows.|  
-|[Exibir e salvar planos de execução](../../relational-databases/performance/display-and-save-execution-plans.md)|Exiba e salve os planos de execução em um arquivo em formato XML.|  
-|[Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)|Exiba estatísticas em tempo real sobre as etapas de execução da consulta.|  
-|[Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usar o Repositório de Consultas para capturar automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e os mantém para sua análise.|  
-|[Como usar o Repositório de Consultas com OLTP in-memory](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Considerações sobre tabelas com otimização de memória.|  
-|[Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)|Recomendações sobre como usar o Repositório de Consultas.|  
+|[Monitorar o uso de recursos](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Usando o Monitor do Sistema (também conhecido como perfmon) para medir o desempenho de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando contadores de desempenho.|  
+
   
-## <a name="see-also"></a>Consulte também  
- [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)   
- [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+## <a name="see-also"></a>Confira também  
+ [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)    
+ [Comparar e analisar planos de execução](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
+ [Exibir e salvar planos de execução](../../relational-databases/performance/display-and-save-execution-plans.md)    
   
   

@@ -16,12 +16,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e320f6f0194f37a6836fd964bf69405bb01cf526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542729"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47803585"
   
  A função principal inicial é assumida pelo HOST_A, e a função de espelho é assumida pelo HOST_B.  
   
- A configuração do espelhamento de banco de dados usando certificados envolve quatro estágios gerais, dos quais três — 1, 2 e 4 — são demonstrados por este exemplo. Esses estágios são os seguintes:  
+ A configuração do espelhamento de banco de dados usando certificados envolve quatro estágios gerais, dos quais três – 1, 2 e 4 – são demonstrados por este exemplo. Esses estágios são os seguintes:  
   
 1.  [Configurando conexões de saída](#ConfiguringOutboundConnections)  
   

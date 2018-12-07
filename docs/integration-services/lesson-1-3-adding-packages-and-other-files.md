@@ -11,12 +11,12 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d46e8f04afac405e625952b077a00abb29415d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528600"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lição 1-3 – adicionar pacotes e outros arquivos
 Nesta tarefa, você adicionará pacotes existentes, arquivos auxiliares, que oferecem suporte a pacotes individuais, e um Leiame para o projeto do Tutorial de Implantação criado na tarefa anterior. Por exemplo, você adicionará um arquivo de dados XML que contém os dados para um pacote e um arquivo de texto que fornece as informações do Leiame sobre todos os pacotes do projeto.  
@@ -52,7 +52,7 @@ Na próxima tarefa, você adicionará configurações aos pacotes DataTransfer e
   
 4.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de Arquivos**.  
   
-5.  Clique no botão Procurar **(…)** , vá para C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx**e clique em **Abrir**.  
+5.  Clique no botão Procurar **(…)**, vá para C:\Arquivos de Programas\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx**e clique em **Abrir**.  
   
 6.  Clique em **OK**.  
   

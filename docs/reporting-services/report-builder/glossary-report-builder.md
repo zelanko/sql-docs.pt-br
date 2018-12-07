@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857154"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541802"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   
@@ -69,7 +69,7 @@ ms.locfileid: "47857154"
 |gatilho CLR|Um gatilho criado em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no Common Language Runtime do .NET Framework.|  
 |tipo de dados CLR definido pelo usuário|Um tipo de dados definido pelo usuário criado em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no Common Language Runtime do .NET Framework.|  
 |segurança de acesso do código|Um mecanismo fornecido pelo Common Language Runtime pelo qual são concedidas permissões ao código gerenciado pela política de segurança, e essas permissões são impostas, ajudando a limitar as operações que o código tem permissão para executar.|  
-|agrupamento|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
+|ordenação|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
 |coleção|1. Um objeto que contém um conjunto de outros objetos. 2. No Master Data Services, um agrupamento hierárquico de membros de hierarquias explícitas e outras coleções.|  
 |regras de cores|O algoritmo que atribui cores automaticamente a cada elemento do mapa em uma camada do mapa.|  
 |escala de cores|Um tipo de legenda de mapa usado para interpretar o que as cores representam em um mapa.|  
@@ -110,9 +110,9 @@ ms.locfileid: "47857154"
 |script de banco de dados|Uma coleção de instruções usadas para criar objetos de banco de dados.|  
 |imagem vinculada a dados|Uma imagem existente em um banco de dados, como um campo em um banco de dados que contém imagens.|  
 |assinatura controlada por dados|Uma assinatura no Reporting Services que usa uma consulta para recuperar dados de assinatura de uma fonte de dados externa em tempo de execução.|  
-|conjunto de dados|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e agrupamento como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
+|conjunto de dados|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e ordenação como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
 |DBCS|conjunto de caracteres de dois bytes|  
-|padrão|1. Um valor de dados, uma configuração de opção, um agrupamento ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, o agrupamento ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
+|padrão|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
 |banco de dados padrão|O banco de dados ao qual o usuário é conectado imediatamente após fazer logon no SQL Server.|  
 |instância padrão|A instância do SQL Server que usa o mesmo nome que o nome do computador no qual está instalada.|  
 |delimitador|1. No Transact-SQL, os caracteres que indicam o início e o fim de um nome de objeto, usando aspas duplas ("") ou colchetes ([]). 2. No Integration Services e no Reporting Services, caracteres que são usados para separar registros, campos ou cadeias de caracteres.|  
@@ -331,7 +331,7 @@ ms.locfileid: "47857154"
 |marca inteligente|Uma marca inteligente expõe configurações-chave diretamente na superfície de design para aumentar a produtividade global em tempo de design no Visual Studio 2005.|  
 |SMDL|Consulte outro termo: linguagem SMDL|  
 |instantâneo|Consulte outro termo: instantâneo de relatório|  
-|ordem de classificação|O conjunto de regras em um agrupamento que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
+|ordem de classificação|O conjunto de regras em uma ordenação que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
 |dados espaciais|Dados que especificam localizações de objetos em uma superfície plana ou curva. Os dados espaciais podem ser pontos, linhas ou polígonos.|  
 |tipos de dados espaciais|Especifica dados que representam informações geométricas (planares) ou geográficas (geodésicas).|  
 |SQL|Consulte outro termo: linguagem SQL|  

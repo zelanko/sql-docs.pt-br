@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524432"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
   O provedor WMI do Reporting Services expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo através de scripts:  
@@ -41,25 +41,25 @@ ms.locfileid: "50027775"
  Para listar os nomes de instância codificados de suas instâncias de servidor de relatório no caminho de namespace do WMI, use o seguinte comando do PowerShell:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>Acesse as classes WMI usando o PowerShell  
  Para acessar as classes WMI, execute o seguinte comando:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  Por exemplo, para acessar a classe MSReportServer_ConfigurationSetting na instância de servidor de relatório padrão do myrshost de host, execute o comando a seguir. A instância de servidor de relatório padrão deve ser instalada no myrshost para este comando ter êxito.  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  Esta sintaxe de comando gera todos os nomes e valores de propriedade de classe. Observe que todas as instâncias da classe MSReportServer_ConfigurationSetting são retornadas, embora você esteja acessando a classe no namespace da instância de servidor de relatório padrão (RS_MSSQLSERVER). Por exemplo, se myrshost for instalado com a instância de servidor de relatório padrão e uma instância de servidor de relatório nomeada chamada SHAREPOINT, este comando retornará dois objetos WMI e gerará os nomes e valores de propriedade para ambas as instâncias de servidor de relatório.  
   
- Para retornar uma instância de classe específica quando várias instâncias são retornadas, use o parâmetro –Filter para filtrar os resultados com base em propriedades com valores exclusivos como InstanceName. Por exemplo, para retornar apenas o objeto WMI para a instância de servidor de relatório padrão, use o seguinte comando:  
+ Para retornar uma instância de classe específica quando várias instâncias são retornadas, use o parâmetro -Filter para filtrar os resultados com base em propriedades com valores exclusivos como InstanceName. Por exemplo, para retornar apenas o objeto WMI para a instância de servidor de relatório padrão, use o seguinte comando:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  

@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527126"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lição 2-2 – adicionar e configurar o contêiner Loop Foreach
 Nessa tarefa, você adicionará a capacidade de executar loop através de uma pasta de arquivos simples e aplicará a mesma transformação Fluxo de Dados usada na Lição 1 para cada um desses arquivos simples. Você faz isto adicionando e configurando um contêiner Loop Foreach ao fluxo de controle.  
@@ -74,7 +74,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
   
 1.  Clique em **Mapeamentos de Variáveis**.  
   
-2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável…>**.  
+2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável...>**.  
   
 3.  Na caixa de diálogo **Adicionar Variável** , em **Nome**, digite **varFileName**.  
   

@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523114"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
   Quando você está trabalhando no designer de fluxo de controle, a Caixa de Ferramentas do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lista as tarefas que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece para criar o fluxo de controle em um pacote. Para obter mais informações a Barra de Ferramentas, consulte [Caixa de Ferramentas do SSIS](../../integration-services/ssis-toolbox.md).  
@@ -80,7 +80,7 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
 5.  Na janela **Propriedades** , atualize o valor da propriedade.  
   
     > [!NOTE]  
-    >  A maioria das propriedades pode ser definida digitando um valor diretamente na caixa de texto ou selecionando um valor de uma lista. Porém, algumas propriedades são mais complexas e têm um editor de propriedade personalizado. Para definir a propriedade, clique na caixa de texto e clique no botão de criação **(...)** para abrir o editor personalizado.  
+    >  A maioria das propriedades pode ser definida digitando um valor diretamente na caixa de texto ou selecionando um valor de uma lista. Porém, algumas propriedades são mais complexas e têm um editor de propriedade personalizado. Para definir a propriedade, clique na caixa de texto e clique no botão de criação **(…)** para abrir o editor personalizado.  
   
 6.  Como alternativa, crie expressões de propriedade para atualizar as propriedades da tarefa ou do contêiner dinamicamente. Para obter mais informações, consulte [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

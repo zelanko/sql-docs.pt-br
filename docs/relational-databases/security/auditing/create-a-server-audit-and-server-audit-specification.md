@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523028"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "47845404"
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre a caixa de diálogo **Localizar Pasta –**_server\_name_ para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
+     Abre a caixa de diálogo **Localizar Pasta -**_server\_name_ para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  

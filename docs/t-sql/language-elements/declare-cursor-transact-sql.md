@@ -25,24 +25,23 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3119038bac239e20ed903ef198674a74f9818eac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e085aff8a426a748e49c450e1bbb6258881583e5
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609184"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586299"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. DECLARE CURSOR aceita uma sintaxe fundada no padrão ISO e uma sintaxe que usa um conjunto de extensões [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. `DECLARE CURSOR` aceita uma sintaxe fundada no padrão ISO e uma sintaxe que usa um conjunto de extensões [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   
@@ -64,36 +63,36 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  É o nome do cursor de servidor do [!INCLUDE[tsql](../../includes/tsql-md.md)] definido. *cursor_name* deve estar em conformidade com as regras de identificadores.  
   
  INSENSITIVE  
- Define um cursor que faz uma cópia temporária dos dados a serem usados por ele. Todas as solicitações para o cursor são respondidas nessa tabela temporária em **tempdb**; portanto, as modificações feitas na tabelas base não são refletidas nos dados retornados pelas buscas feitas nesse cursor, que não permite modificações. Quando a sintaxe de ISO é usada, se INSENSITIVE for omitido, exclusões e atualizações confirmadas nestas tabelas subjacentes (por qualquer usuário) são refletidas em buscas subsequentes.  
+ Define um cursor que faz uma cópia temporária dos dados a serem usados por ele. Todas as solicitações para o cursor são respondidas nessa tabela temporária em **tempdb**; portanto, as modificações feitas na tabelas base não são refletidas nos dados retornados pelas buscas feitas nesse cursor, que não permite modificações. Quando a sintaxe de ISO é usada, se `INSENSITIVE` for omitido, exclusões e atualizações confirmadas nestas tabelas subjacentes (por qualquer usuário) serão refletidas em buscas subsequentes.  
   
  SCROLL  
- Especifica que todas as opções de busca (FIRST, LAST, PRIOR, NEXT, RELATIVE, ABSOLUTE) estão disponíveis. Se SCROLL não for especificado em um ISO DECLARE CURSOR, NEXT será a única opção de busca com suporte. SCROLL não poderá ser especificado se FAST_FORWARD também for especificado.  
+ Especifica que todas as opções de busca (`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`) estão disponíveis. Se `SCROLL` não for especificado em um ISO `DECLARE CURSOR`, `NEXT` será a única opção de busca compatível. Não será possível especificar `SCROLL` se `FAST_FORWARD` também estiver especificado.  
   
  *select_statement*  
- É uma instrução SELECT padrão que define o conjunto de resultados de um cursor. As palavras-chave FOR BROWSE e INTO não são permitidas na *select_statement* de uma declaração de cursor.  
+ É uma instrução `SELECT` padrão que define o conjunto de resultados de um cursor. As palavras-chave `FOR BROWSE` e `INTO` não são permitidas na *select_statement* de uma declaração de cursor.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente em outro tipo se as cláusulas em *select_statement* entram em conflito com a funcionalidade do tipo de cursor solicitado.  
   
  READ ONLY  
- Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula WHERE CURRENT OF em uma instrução UPDATE ou DELETE. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
+ Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula `WHERE CURRENT OF` em um instrução `UPDATE` ou `DELETE`. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
   
  UPDATE [OF *column_name* [**,**...*n*]]  
- Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**..*.n*] for especificado, somente as colunas listadas permitirão modificações. Se a UPDATE for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas.  
+ Define colunas atualizáveis em um cursor. Se OF <column_name> [, <... n>] for especificada, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas.  
   
  *cursor_name*  
  É o nome do cursor de servidor do [!INCLUDE[tsql](../../includes/tsql-md.md)] definido. *cursor_name* deve estar em conformidade com as regras de identificadores.  
   
  LOCAL  
- Especifica que o escopo do cursor é local para o lote, procedimento armazenado ou gatilho no qual o cursor foi criado. O nome de cursor só é válido dentro desse escopo. O cursor pode ser referenciado por meio de variáveis de cursor local no lote, no procedimento armazenado ou no gatilho, ou em um parâmetro OUTPUT do procedimento armazenado. Um parâmetro OUTPUT é usado para devolver o cursor local ao lote procedimento armazenado ou acionador de chamada, que pode nomear o parâmetro a uma variável de cursor para referenciar o cursor, depois que o procedimento armazenado terminar. O cursor é implicitamente desalocado quando o lote, procedimento armazenado ou acionador é encerrado, a menos que o cursor tenha sido repassado como um parâmetro OUTPUT. Se for repassado em um parâmetro OUTPUT, o cursor será desalocado quando a última variável que referenciada for desalocada ou extrapolar o escopo.  
+ Especifica que o escopo do cursor é local para o lote, procedimento armazenado ou gatilho no qual o cursor foi criado. O nome de cursor só é válido dentro desse escopo. O cursor pode ser referenciado por meio de variáveis de cursor local no lote, no procedimento armazenado ou no gatilho ou em um parâmetro `OUTPUT` do procedimento armazenado. Um parâmetro `OUTPUT` é usado para repassar o cursor local para o lote de chamada, o procedimento armazenado ou o gatilho, que pode atribuir o parâmetro a uma variável do cursor para fazer referência ao cursor após o procedimento armazenado terminar. O cursor é implicitamente desalocado quando o lote, o procedimento armazenado ou o gatilho é encerrado, a menos que o cursor tenha sido repassado como um parâmetro `OUTPUT`. Se for repassado em um parâmetro `OUTPUT`, o cursor será desalocado quando a última variável que faz referência a ele for desalocada ou extrapolar o escopo.  
   
  GLOBAL  
  Especifica que o escopo do cursor é global para a conexão. O nome do cursor pode ser referenciado em qualquer procedimento armazenado ou lote executado pela conexão. O cursor só é desalocado implicitamente na desconexão.  
   
 > [!NOTE]  
->  Se GLOBAL nem LOCAL forem especificados, o padrão será controlado pela definição da opção **default to local cursor** do banco de dados.  
+>  Se nem `GLOBAL` nem `LOCAL` forem especificados, o padrão será controlado pela definição da opção **padronizar para cursor local** do banco de dados.  
   
  FORWARD_ONLY  
- Especifica se o cursor só pode ser rolado da primeira à última linha. FETCH NEXT é a única opção de busca com suporte. Se FORWARD_ONLY for especificado sem as palavras-chave STATIC, KEYSET ou DYNAMIC, o cursor operará como um cursor DYNAMIC. Quando FORWARD_ONLY ou SCROLL não estiverem especificados, FORWARD_ONLY será o padrão; a não ser que as palavras-chave STATIC, KEYSET ou DYNAMIC estejam especificadas. Os cursores STATIC, KEYSET e DYNAMIC seguem o padrão SCROLL. Diferentemente das APIs de banco de dados, como ODBC e ADO, os cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] STATIC, KEYSET e DYNAMIC oferecem suporte para FORWARD_ONLY  
+ Especifica se o cursor só pode ser rolado da primeira à última linha. `FETCH NEXT` é a única opção de busca compatível. Se `FORWARD_ONLY` for especificado sem as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC`, o cursor operará como um cursor DYNAMIC. Quando nem `FORWARD_ONLY` nem `SCROLL` é especificado, `FORWARD_ONLY` é o padrão, a menos que as palavras-chave `STATIC`, `KEYSET` ou `DYNAMIC` sejam especificadas. Os cursores `STATIC`, `KEYSET` e `DYNAMIC` utilizam `SCROLL` como padrão. Ao contrário de APIs de banco de dados, como ODBC e ADO, `FORWARD_ONLY` dá suporte aos cursores `STATIC`, `KEYSET` e `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  STATIC  
  Define um cursor que faz uma cópia temporária dos dados a serem usados por ele. Todas as solicitações para o cursor são respondidas nessa tabela temporária em **tempdb**; portanto, as modificações feitas na tabelas base não são refletidas nos dados retornados pelas buscas feitas nesse cursor, que não permite modificações.  
@@ -102,56 +101,56 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Especifica que a associação e a ordem de linhas no cursor são fixas, quando o cursor é aberto. O conjunto de chaves que identificam exclusivamente as linhas é construído em uma tabela no **tempdb**, conhecido como **keyset**.  
   
 > [!NOTE]  
->  Se a consulta referencia ao menos uma tabela sem um índice exclusivo, o cursor controlado por conjunto de chaves é convertido a um cursor estático.  
+> Se a consulta referencia ao menos uma tabela sem um índice exclusivo, o cursor controlado por conjunto de chaves é convertido a um cursor estático.  
   
- Alterações em valores não chave nas tabelas base, realizadas pelo proprietário do cursor ou confirmadas por outros usuários, são visíveis como rolagens do proprietário ao redor do cursor. Inserções feitas por outros usuários não são visíveis (não é possível fazer inserções por um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]). Se uma linha é excluída, uma tentativa de buscá-la retorna um @@FETCH_STATUS igual a -2. Atualização de valores de chave externos ao cursor lembram a exclusão de uma linha antiga, seguida de uma inserção de uma nova linha. A linha com os novos valores não é visível, e as tentativas de buscar a linha com os valores antigos retornam um @@FETCH_STATUS igual a -2. Os novos valores ficarão visíveis se a atualização for feita através do cursor, especificando-se a cláusula WHERE CURRENT OF.   
+ Alterações em valores não chave nas tabelas base, realizadas pelo proprietário do cursor ou confirmadas por outros usuários, são visíveis como rolagens do proprietário ao redor do cursor. Inserções feitas por outros usuários não são visíveis (não é possível fazer inserções por um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]). Se uma linha é excluída, uma tentativa de buscá-la retorna um `@@FETCH_STATUS` igual a -2. Atualização de valores de chave externos ao cursor lembram a exclusão de uma linha antiga, seguida de uma inserção de uma nova linha. A linha com os novos valores não é visível e as tentativas de buscar a linha com os valores antigos retornam um `@@FETCH_STATUS` igual a -2. Os novos valores ficarão visíveis se a atualização for feita por meio do cursor especificando a cláusula `WHERE CURRENT OF`.  
   
  DYNAMIC  
  Define um cursor que reflete todas as mudanças de dados feitas às linhas no seu conjunto de resultados conforme você rola o cursor. Os valores de dados, a ordem e a associação das linhas podem ser alterados em cada busca. Cursores dinâmicos não oferecem suporte para a opção de busca ABSOLUTE.  
   
  FAST_FORWARD  
- Especifica um cursor FORWARD_ONLY, READ_ONLY, com otimizações de desempenho habilitadas. FAST_FORWARD não poderá ser especificado se SCROLL ou FOR_UPDATE também o for.  
+ Especifica um cursor `FORWARD_ONLY`, `READ_ONLY` com otimizações de desempenho habilitadas. Não será possível especificar `FAST_FORWARD` se `SCROLL` ou `FOR_UPDATE` também estiver especificado.  
   
 > [!NOTE]  
->  FAST_FORWARD e FORWARD_ONLY podem ser usadas na mesma instrução DECLARE CURSOR.  
+>  `FAST_FORWARD` e `FORWARD_ONLY` podem ser usados na mesma instrução `DECLARE CURSOR`.  
   
  READ_ONLY  
- Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula WHERE CURRENT OF em uma instrução UPDATE ou DELETE. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
+ Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula `WHERE CURRENT OF` em um instrução `UPDATE` ou `DELETE`. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
   
  SCROLL_LOCKS  
- Especifica se atualizações posicionadas ou exclusões feitas pelo cursor têm garantia de êxito. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloqueia as linhas à medida que são lidas no cursor para assegurar a disponibilidade para modificações posteriores. SCROLL_LOCKS não poderá ser especificado se FAST_FORWARD ou STATIC também o forem.  
+ Especifica se atualizações posicionadas ou exclusões feitas pelo cursor têm garantia de êxito. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloqueia as linhas à medida que são lidas no cursor para assegurar a disponibilidade para modificações posteriores. Não será possível especificar `SCROLL_LOCKS` se `FAST_FORWARD` ou `STATIC` também estiver especificado.  
   
  OPTIMISTIC  
- Especifica que as atualizações posicionadas e exclusões realizadas pelo cursor não terão êxito se a linha tiver sido atualizada desde que foi lida no cursor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não bloqueia linhas à medida que são lidas no cursor. Em vez disso, ele usa comparações de valores de coluna **timestamp** ou um valor de soma de verificação se a tabela não tem nenhuma coluna **timestamp**, para determinar se a linha foi modificada depois de ser lida no cursor. Se a linha tiver sido modificada, a tentativa de atualização ou exclusão posicionada falhará. OPTIMISTIC não poderá ser especificado se FAST_FORWARD também for especificado.  
+ Especifica que as atualizações posicionadas e exclusões realizadas pelo cursor não terão êxito se a linha tiver sido atualizada desde que foi lida no cursor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não bloqueia linhas à medida que são lidas no cursor. Em vez disso, ele usa comparações de valores de coluna **timestamp** ou um valor de soma de verificação se a tabela não tem nenhuma coluna **timestamp**, para determinar se a linha foi modificada depois de ser lida no cursor. Se a linha tiver sido modificada, a tentativa de atualização ou exclusão posicionada falhará. Não será possível especificar `OPTIMISTIC` se `FAST_FORWARD` também estiver especificado.  
   
  TYPE_WARNING  
  Especifica que uma mensagem de aviso é enviada ao cliente quando o cursor é convertido implicitamente em outro a partir do tipo solicitado.  
   
  *select_statement*  
- É uma instrução SELECT padrão que define o conjunto de resultados de um cursor. As palavras-chave COMPUTE, COMPUTE BY, FOR BROWSE e INTO não são permitidas na *select_statement* de uma declaração de cursor.  
+ É uma instrução SELECT padrão que define o conjunto de resultados de um cursor. As palavras-chave `COMPUTE`, `COMPUTE BY`, `FOR BROWSE` e `INTO` não são permitidas na *select_statement* de uma declaração de cursor.  
   
 > [!NOTE]  
->  Você pode usar uma dica de consulta em uma declaração de cursor; porém, se você também usar a cláusula FOR UPDATE OF, especifique OPTION (*query_hint*) depois de FOR UPDATE OF.  
+>  Você pode usar uma dica de consulta dentro de uma declaração de cursor, porém, se você também usar a cláusula `FOR UPDATE OF`, especifique `OPTION (<query_hint>)` após de `FOR UPDATE OF`.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente em outro tipo se as cláusulas em *select_statement* entram em conflito com a funcionalidade do tipo de cursor solicitado. Para obter mais informações, consulte Conversões implícitas de cursor  
   
  FOR UPDATE [OF *column_name* [**,**...*n*]]  
- Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**...*n*] for fornecido, somente as colunas listadas permitirão modificações. Se UPDATE for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade READ_ONLY seja especificada.  
+ Define colunas atualizáveis em um cursor. Se `OF <column_name> [, <... n>]` for fornecido, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificado sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade `READ_ONLY` seja especificada.  
   
 ## <a name="remarks"></a>Remarks  
- DECLARE CURSOR define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. A instrução OPEN popula o conjunto de resultados e FETCH retorna uma linha do conjunto de resultados. A instrução CLOSE libera o conjunto de resultados atual associado com o cursor. A instrução DEALLOCATE libera os recursos usados pelo cursor.  
+`DECLARE CURSOR` define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para criar o conjunto de resultados no qual o cursor funciona. A instrução `OPEN` popula o conjunto de resultados e `FETCH` retorna uma linha do conjunto de resultados. A instrução `CLOSE` libera o conjunto de resultados atual associado ao cursor. A instrução `DEALLOCATE` libera os recursos usados pelo cursor.  
   
- O primeiro formulário da instrução DECLARE CURSOR usa a sintaxe ISO para declarar comportamentos do cursor. O segundo formulário do DECLARE CURSOR usa extensões [!INCLUDE[tsql](../../includes/tsql-md.md)] que lhe permitem definir cursores com os mesmos tipos de cursor usados nas funções do cursor de API do banco de dados de ODBC ou ADO.  
+ O primeiro formulário da instrução `DECLARE CURSOR` usa a sintaxe ISO para declarar comportamentos do cursor. O segundo formulário do `DECLARE CURSOR` usa extensões [!INCLUDE[tsql](../../includes/tsql-md.md)] que lhe permitem definir cursores com os mesmos tipos de cursor usados nas funções do cursor de API do banco de dados de ODBC ou ADO.  
   
- Você não pode misturar os dois formulários. Se você especificar as palavras-chave SCROLL ou INSENSITIVE antes da palavra-chave CURSOR, não poderá usar nenhuma palavra-chave entre as palavras-chave CURSOR e FOR *select_statement*. Se você especificar uma palavra-chave entre as palavras-chave CURSOR e FOR *select_statement*não poderá especificar SCROLL ou INSENSITIVE antes da palavra-chave CURSOR.  
+ Você não pode misturar os dois formulários. Se você especificar as palavras-chave `SCROLL` ou `INSENSITIVE` antes da palavra-chave `CURSOR`, não poderá usar nenhuma palavra-chave entre as palavras-chave `CURSOR` e `FOR <select_statement>`. Se você especificar quaisquer palavras-chave entre `CURSOR` e `FOR <select_statement>`, não poderá especificar `SCROLL` ou `INSENSITIVE` antes da palavra-chave `CURSOR`.  
   
- Se uma instrução DECLARE CURSOR que usa sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] não especificar READ_ONLY, OPTIMISTIC ou SCROLL_LOCKS, o padrão é como se segue:  
+ Se um `DECLARE CURSOR` usando a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] não especifica `READ_ONLY`, `OPTIMISTIC` ou `SCROLL_LOCKS`, o padrão é o seguinte:  
   
--   Se a instrução SELECT não oferecer suporte a atualizações (permissões insuficientes, acesso a tabelas remotas que não oferecem suporte a atualizações, e assim por diante), o cursor será READ_ONLY.  
+-   Se a instrução `SELECT` não der suporte para atualizações (permissões insuficientes, acesso a tabelas remotas que não dão suporte a atualizações e assim por diante), o cursor será `READ_ONLY`.  
   
--   Os cursores STATIC e de FAST_FORWARD seguem o padrão READ_ONLY.  
+-   Os cursores `STATIC` e `FAST_FORWARD` utilizam `READ_ONLY` como padrão.  
   
--   Os cursores DYNAMIC e KEYSET seguem o padrão OPTIMISTIC.  
+-   Os cursores `DYNAMIC` e `KEYSET` utilizam `OPTIMISTIC` como padrão.  
   
  Nomes de cursor só podem ser referenciados através de outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles não podem ser referenciados através de funções da API do banco de dados. Por exemplo, depois de declarar um cursor, o nome de cursor não pode ser referenciado das funções ou métodos OLE DB, ODBC ou ADO. As linhas de cursor não podem ser pesquisadas com as funções ou métodos de busca das APIs; as linhas só podem ser buscadas através de instruções FETCH [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -167,7 +166,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Variáveis podem ser usadas como parte da *select_statement* que declara um cursor. Valores de variáveis de cursor não se alteram depois que um cursor é declarado.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de DECLARE CURSOR seguem o padrão para todo usuário que tem permissões SELECT para exibições, tabelas e colunas usadas no cursor.
+ Permissões de `DECLARE CURSOR` seguem o padrão para todo usuário que tem permissões `SELECT` para exibições, tabelas e colunas usadas no cursor.
  
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições
 
@@ -178,9 +177,8 @@ Não é possível usar cursores nem gatilhos em uma tabela com um índice column
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. Usando a sintaxe e o cursor simples  
 
 O conjunto de resultados gerado na abertura deste cursor inclui todas as linhas e todas as colunas na tabela. Este cursor pode ser atualizado e todas as atualizações e exclusões são representadas em buscas feitas no cursor. `FETCH NEXT` é a única busca disponível porque a opção `SCROLL` não foi especificada.  
-
-  
-```  
+ 
+```sql  
 DECLARE vend_cursor CURSOR  
     FOR SELECT * FROM Purchasing.Vendor  
 OPEN vend_cursor  
@@ -190,7 +188,7 @@ FETCH NEXT FROM vend_cursor;
 ### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. Usando cursores aninhados para produzir saída de relatório  
  O exemplo a seguir mostra como cursores podem ser aninhados para produzir relatórios complexos. O cursor interno é declarado para cada vendedor.  
   
-```  
+```sql  
 SET NOCOUNT ON;  
   
 DECLARE @vendor_id int, @vendor_name nvarchar(50),  

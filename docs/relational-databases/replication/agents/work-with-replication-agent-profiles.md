@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760884"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536428"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "47760884"
   
 1.  Se a caixa de diálogo **Perfis do Agente** exibir perfis para mais de um agente, selecione um agente.  
   
-2.  Clique no botão de propriedades (**…**) ao lado do perfil.  
+2.  Clique no botão de propriedades (**…**) ao lado de um perfil.  
   
 3.  Exiba os parâmetros e valores na caixa de diálogo **Propriedades do Perfil \<ProfileName>**.  
   

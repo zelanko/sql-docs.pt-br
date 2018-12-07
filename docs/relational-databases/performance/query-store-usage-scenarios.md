@@ -1,7 +1,7 @@
 ---
 title: Cenários de uso do Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673825"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711197"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O Repositório de Consultas pode ser usado em um amplo conjunto de cenários ao rastrear e garantir que o desempenho previsível da carga de trabalho é essencial. Veja alguns exemplos que você pode levar em consideração:  
   
 -   Apontar e corrigir consultas com regressões de escolha do plano  
-  
 -   Identificar e ajustar as principais consultas de consumo  
-  
 -   Fazer testes A/B  
-  
 -   Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recente  
-  
 -   Identificar e melhorar cargas de trabalho ad hoc  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Apontar e corrigir consultas com regressões de escolha do plano  
- Durante a execução da consulta regular, o Otimizador de Consulta pode decidir usar um plano diferente porque entradas importantes foram modificadas: a cardinalidade dos dados mudou, índices foram criados, alterados ou descartados, estatísticas foram recompiladas etc. Na maioria das vezes, o novo plano é melhor ou quase igual ao que estava sendo usado anteriormente. No entanto, há casos em que o novo plano é consideravelmente pior — essa situação é conhecida como regressão de alteração da escolha do plano. Antes do Repositório de Consultas, esse era um problema bastante difícil de identificar e corrigir, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornecia armazenamento de dados interno para que os usuários examinassem os planos de execução usados ao longo do tempo.  
+ Durante a execução da consulta regular, o Otimizador de Consulta pode decidir usar um plano diferente porque entradas importantes foram modificadas: a cardinalidade dos dados mudou, índices foram criados, alterados ou descartados, estatísticas foram recompiladas etc. Na maioria das vezes, o novo plano é melhor ou quase igual ao que estava sendo usado anteriormente. No entanto, há casos em que o novo plano é consideravelmente pior — essa situação é conhecida como regressão de alteração da escolha do plano. Antes do Repositório de Consultas, esse era um problema difícil de identificar e corrigir, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornecia armazenamento de dados interno para que os usuários examinassem os planos de execução usados ao longo do tempo.  
   
  Com o Repositório de Consultas, é possível, rapidamente:  
   
 -   Identificar todas as consultas cujas métricas de execução foram degradadas no período de interesse (última hora, dia, semana etc.). Use as **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agilizar a análise.  
   
--   Entre as consultas regredidas, é muito fácil encontrar aquelas que tiveram vários planos e que foram degradadas devido à escolha de um plano ruim. Use o painel **Resumo do Plano** em **Consultas Regredidas** para visualizar todos os planos de uma consulta regredida e o respectivo desempenho ao longo do tempo.  
+-   Entre as consultas regredidas, é fácil encontrar aquelas que tiveram vários planos e que foram degradadas devido à escolha de um plano ruim. Use o painel **Resumo do Plano** em **Consultas Regredidas** para visualizar todos os planos de uma consulta regredida e o respectivo desempenho ao longo do tempo.  
   
 -   Forçar o plano anterior no histórico, caso seja provado que ele é melhor. Usar o botão **Forçar plano** em **Consultas Regredidas** para forçar o plano selecionado para a consulta.  
   
@@ -81,7 +77,7 @@ Ao identificar uma consulta com desempenho abaixo do ideal, sua ação depender�
   
 -   Criando índices ausentes nas tabelas referenciadas por consultas caras.  
   
--   Aplicando política de filtragem para segurança no nível de linha. Para obter mais detalhes, consulte [Otimizando a segurança em nível de linha com o Repositório de Consultas](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Aplicando política de filtragem para segurança no nível de linha. Para obter mais informações, confira [Otimizando a segurança em nível de linha com o Repositório de Consultas](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
 -   Adicionando controle de versão do sistema temporal a tabelas que são frequentemente modificadas pelos seus aplicativos OLTP.  
   
@@ -145,10 +141,10 @@ Algumas cargas de trabalho não têm consultas dominantes que você possa ajusta
   
 Use a métrica **Contagem de Execução** para analisar se as consultas principais são ad hoc (isso exige que você execute o Repositório de Consultas com `QUERY_CAPTURE_MODE = ALL`). No diagrama acima, você pode ver que 90% das suas **Principais Consultas de Consumo de Recursos** são executadas apenas uma vez.  
   
-Como alternativa, é possível executar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obter o número total de textos de consulta, consultas e planos no sistema e determinar o quanto eles são diferentes comparando os respectivos query_hash e plan_hash:  
+Como alternativa, é possível executar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obter o número total de textos de consulta, consultas e planos no sistema e determinar o quanto eles são diferentes comparando query_hash e plan_hash:  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ Se você estiver no controle do código do aplicativo, reescreva a camada de ace
 A abordagem com modelos de consulta individuais exige a criação do guia de plano:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ A solução com guias de plano é mais precisa, mas é mais trabalhosa.
 Se todas as consultas (ou a maioria delas) forem candidatas à parametrização automática, alterar `FORCED PARAMETERIZATION` para o banco de dados inteiro poderá ser uma opção mais adequada:  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

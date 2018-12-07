@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686554"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542368"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47686554"
   
 -   Um nome de diretório. Na hierarquia de pastas de FileTable, esse diretório em nível de tabela se torna o filho do diretório de banco de dados especificado no nível de banco de dados, e o pai dos arquivos ou diretórios armazenados na tabela.  
   
--   O nome do agrupamento a ser usado para nomes de arquivo na coluna **Name** da FileTable.  
+-   O nome da ordenação a ser usado para nomes de arquivo na coluna **Name** da FileTable.  
   
 -   Os nomes a serem usados para as 3 chaves primária e restrições exclusivas que são criadas automaticamente.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "47686554"
  **Criar uma FileTable usando Transact-SQL**  
  Crie uma FileTable chamando a instrução [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) com a opção **AS FileTable**. Como uma FileTable tem um esquema fixo, você não precisa especificar uma lista de colunas. Você pode especificar as seguintes configurações para a nova FileTable:  
   
-1.  **FILETABLE_DIRECTORY**. Especifica o diretório que atua como diretório raiz de todos os arquivos e diretórios armazenados na FileTable. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento atuais.  
+1.  **FILETABLE_DIRECTORY**. Especifica o diretório que atua como diretório raiz de todos os arquivos e diretórios armazenados na FileTable. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação atuais.  
   
-    -   Esse valor tem um tipo de dados **nvarchar(255)** e usa um agrupamento fixo de **Latin1_General_CI_AS_KS_WS**.  
+    -   Esse valor tem um tipo de dados **nvarchar(255)** e usa uma ordenação fixa de **Latin1_General_CI_AS_KS_WS**.  
   
     -   O nome de diretório que você fornece deve atender aos requisitos do sistema de arquivos para um nome de diretório válido.  
   
-    -   Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento atuais.  
+    -   Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação atuais.  
   
     -   Se você não fornecer um nome de diretório ao criar a FileTable, o nome da FileTable será usado como nome do diretório.  
   
-2.  **FILETABLE_COLLATE_FILENAME**. Especifica o nome do agrupamento a ser aplicado à coluna **Name** da FileTable.  
+2.  **FILETABLE_COLLATE_FILENAME**. Especifica o nome da ordenação a ser aplicado à coluna **Name** da FileTable.  
   
-    1.  O agrupamento especificado não deve fazer **diferenciação de maiúsculas e minúsculas** para estar em conformidade com a semântica de nomenclatura de arquivo do Windows.  
+    1.  A ordenação especificada não deve fazer **diferenciação de maiúsculas e minúsculas** para estar em conformidade com a semântica de nomenclatura de arquivo do Windows.  
   
-    2.  Se você não fornecer um valor para **FILETABLE_COLLATE_FILENAME**ou se você especificar **database_default**, a coluna herdará o agrupamento do banco de dados atual. Se o agrupamento do banco de dados atual diferenciar maiúsculas de minúsculas, será gerado um erro e a operação **CREATE TABLE** . falhará.  
+    2.  Se você não fornecer um valor para **FILETABLE_COLLATE_FILENAME** ou se você especificar **database_default**, a coluna herdará a ordenação do banco de dados atual. Se a ordenação do banco de dados atual diferenciar maiúsculas de minúsculas, será gerado um erro e a operação **CREATE TABLE** falhará.  
   
 3.  Você também pode especificar os nomes a serem usados para as 3 restrições de chave primária e exclusivas que são criadas automaticamente. Se você não fornecer nomes, o sistema gerará nomes conforme descrito posteriormente neste tópico.  
   
@@ -98,7 +98,7 @@ GO
   
 -   Uma FileTable requer um grupo de arquivos FILESTREAM válido, já que uma FileTable contém uma coluna FILESTREAM. Opcionalmente, você pode especificar um grupo de arquivos FILESTREAM válido como parte do comando **CREATE TABLE** para criação de uma FileTable. Se você não especificar um grupo de arquivos, a FileTable usará o grupo de arquivos FILESTREAM padrão para o banco de dados. Se o banco de dados não tiver um grupo de arquivos FILESTREAM, será gerado um erro.  
   
--   Não é possível criar uma restrição de tabela como parte de uma instrução **CREATE TABLE…AS FILETABLE** . No entanto, você pode adicionar a restrição posteriormente usando uma instrução **ALTER TABLE** .  
+-   Não é possível criar uma restrição de tabela como parte de uma instrução **CREATE TABLE...AS FILETABLE**. No entanto, você pode adicionar a restrição posteriormente usando uma instrução **ALTER TABLE** .  
   
 -   Não é possível criar uma FileTable no banco de dados **tempdb** ou em qualquer outro banco de dados do sistema.  
   

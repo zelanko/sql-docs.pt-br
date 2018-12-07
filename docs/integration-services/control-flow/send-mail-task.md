@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641283"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528450"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
@@ -102,7 +102,7 @@ ms.locfileid: "51641283"
   
 ### <a name="options"></a>Opções  
  **SMTPConnection**  
- Selecione um gerenciador de conexões SMTP na lista ou clique em **\<Nova conexão…>** para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões SMTP na lista ou clique em **\<Nova conexão...>** para criar um novo gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
@@ -146,11 +146,11 @@ ms.locfileid: "51641283"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Entrada direta  
  **MessageSource**  
- Digite o texto da mensagem ou clique no botão Procurar (...) e digite a mensagem na caixa de diálogo **Origem da mensagem** .  
+ Digite o texto da mensagem ou clique no botão Procurar (...) e digite a mensagem na caixa de diálogo **Origem da mensagem**.  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexão do arquivo  
  **MessageSource**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   

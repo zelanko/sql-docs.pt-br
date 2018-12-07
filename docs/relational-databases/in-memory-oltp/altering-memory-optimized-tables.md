@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bcf4ff6daa7a6d5e5fe710a51d78a8730a56cfeb
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 698272ee29fe7828f9298d534476db7948b2bde7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636465"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641267"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 
@@ -26,7 +26,7 @@ ms.locfileid: "49636465"
 Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. No SQL Server 2016 e no Banco de Dados SQL do Azure as operações ALTER TABLE em tabelas com otimização de memória são OFFLINE, o que significa que a tabela não está disponível para consulta enquanto a operação está em andamento. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído. É possível combinar várias operações ADD, DROP ou ALTER em uma única instrução ALTER TABLE.
 
 > [!IMPORTANT]
-> A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas com otimização de memória.
+> A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas com otimização de memória na camada de serviço de Uso Geral.
   
 ## <a name="alter-table"></a>ALTER TABLE  
 
@@ -34,7 +34,7 @@ A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem
   
 - A sintaxe ALTER TABLE... ADD/DROP/ALTER INDEX só tem suporte para tabelas com otimização de memória.  
   
-- Sem o uso de uma instrução ALTER TABLE, as instruções [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) e [PAD_INDEX](../../t-sql/statements/alter-table-index-option-transact-sql.md) não têm suporte para índices em tabelas com otimização de memória.  
+- Sem o uso de uma instrução ALTER TABLE, não há suporte para as instruções [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) e [PAD_INDEX](../../t-sql/statements/alter-table-index-option-transact-sql.md) para índices em tabelas com otimização de memória.  
   
 Os tipos de alteração a seguir têm suporte:  
   

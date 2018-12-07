@@ -18,12 +18,12 @@ ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fb17be22b1dc970b83ca28d1fec44afd4e80f9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 096bc5aa18727eec1e01d1cf2da1fbd0c48834f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534071"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>Permissões DENY de coleção de esquema XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser recusada em uma coleção de esquemas XML. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
  Especifica a coleção de esquemas XML na qual a permissão está sendo recusada. O qualificador de escopo (::) é necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) será obrigatório.  
   
  TO \<database_principal>  

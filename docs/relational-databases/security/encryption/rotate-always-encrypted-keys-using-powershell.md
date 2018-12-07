@@ -12,19 +12,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652984"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617836"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Girar chaves Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este artigo fornece as etapas para girar chaves para Always Encrypted usando o módulo do SqlServer PowerShell. Para obter informações sobre como começar a usar o módulo do SqlServer PowerShell para Always Encrypted, consulte [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-O giro de chaves Always Encrypted é o processo de substituir uma chave existente por uma nova. Pode ser necessário girar uma chave se ela tiver sido comprometida ou para manter a conformidade com políticas e regulamentos da sua organização que exigem que chaves criptográficas sejam giradas com regularidade. 
+O giro de chaves Always Encrypted é o processo de substituir uma chave existente por uma nova. Pode ser necessário girar uma chave caso ela tenha sido comprometida ou para manter a conformidade com políticas e regulamentos da sua organização que exigem que chaves criptográficas sejam giradas com regularidade. 
 
 Always Encrypted usa dois tipos de chaves, portanto, há dois fluxos de trabalho de rotação de chaves de alto nível; rotação de chaves mestras de coluna e chaves de criptografia de coluna.
 

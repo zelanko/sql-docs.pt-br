@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77c42bdf35fce0bb2106e99818e14d5b42992647
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525641"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51217194"
  Essa caixa sem-nome fornece uma descrição curta dos critérios à medida que eles são selecionados.  
   
  **Aplicar filtro**  
- Para aplicar o filtro, clique em **Aplicar****filtro** e em **OK**. Para manter as configurações de filtro na caixa de diálogo **Configurações de****Filtro** sem aplicá-las, desmarque a opção **Aplicar****filtro**e clique em **OK**para exibir todas as linhas.  
+ Para aplicar o filtro, clique em **Applyfilter** e em **OK**. Para manter as configurações de filtro na caixa de diálogo **FilterSettings** sem aplicá-las, desmarque a opção **Applyfilter** e clique em **OK** para exibir todas as linhas.  
   
  **Liberada**  
  Retorna as configurações de filtro para as configurações padrão.  

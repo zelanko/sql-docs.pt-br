@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da51f432e92aac3ea446dc6d8392fe5dea305457
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530015"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47799204"
   
 4.  As informações apresentadas pela página **Introdução** variarão de acordo com a elegibilidade de qualquer réplica secundária para um failover planejado. Se esta página informar "**Faça um failover planejado para este grupo de disponibilidade**", você poderá fazer o failover do grupo de disponibilidade sem perda de dados.  
   
-5.  Na página **Selecionar Nova Réplica Primária** , você pode exibir o status da réplica primária atual e do quórum WSFC, antes de escolher a réplica secundária que se tornará a nova réplica primária (o *destino de failover*). Em um failover manual planejado, selecione uma réplica secundária cujo valor de **Prontidão de Failover** é "**Sem perda de dados**". Em um failover forçado, para todos os destinos possíveis de failover, este valor será “**Perda de dados, Avisos (***#***)**”, em que *#* indica o número de avisos que existem para uma réplica secundária específica. Para exibir os avisos de um destino de failover específico, clique em seu valor de “Prontidão de Failover”.  
+5.  Na página **Selecionar Nova Réplica Primária** , você pode exibir o status da réplica primária atual e do quórum WSFC, antes de escolher a réplica secundária que se tornará a nova réplica primária (o *destino de failover*). Em um failover manual planejado, selecione uma réplica secundária cujo valor de **Prontidão de Failover** é "**Sem perda de dados**". Em um failover forçado, para todos os destinos possíveis de failover, este valor será "**Perda de dados, Avisos (***#***)**", em que *#* indica o número de avisos que existem para uma réplica secundária específica. Para exibir os avisos de um destino de failover específico, clique em seu valor de "Prontidão de Failover".  
   
      Para obter mais informações, consulte [Página Selecionar Nova Réplica Primária](#SelectNewPrimaryReplica), posteriormente neste tópico.  
   

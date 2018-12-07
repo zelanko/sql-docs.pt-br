@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 976c052b519cc72de226c06f27abf8b8f43fd74c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543835"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  Especifica o serviço que inicia a caixa de diálogo. O nome especificado deve ser o nome de um serviço no banco de dados atual. A fila especificada para o serviço iniciador recebe mensagens retornadas pelo serviço de destino e mensagens criadas pelo Service Broker para essa conversa.  
   
- TO SERVICE **'***target_service_name***'**  
- Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para correspondência com a cadeia de caracteres *target_service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta o agrupamento atual.  
+ TO SERVICE **'**_target_service_name_**'**  
+ Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para correspondência com a cadeia de caracteres *target_service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta a ordenação atual.  
   
  *service_broker_guid*  
  Especifica o banco de dados que hospeda o serviço de destino. Quando mais de um banco de dados hospeda uma instância do serviço de destino, é possível se comunicar com um banco de dados específico fornecendo um *service_broker_guid*.  
@@ -92,13 +92,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Especifica o contrato que essa conversa segue. O contrato deve existir no banco de dados atual. Se o serviço de destino não aceitar novas conversas no contrato especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retornará uma mensagem de erro na conversa. Quando essa cláusula é omitida, a conversa segue o contrato chamado **DEFAULT**.  
   
- RELATED_CONVERSATION **=***related_conversation_handle*  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo pertencerá ao mesmo grupo de conversa que a caixa de diálogo especificada por *related_conversation_handle*. O *related_conversation_handle* deve ser do tipo implicitamente conversível no tipo **uniqueidentifier**. A instrução falhará se o *related_conversation_handle* não referenciar uma caixa de diálogo existente.  
   
- RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a nova caixa de diálogo será adicionada ao grupo de conversa especificado por *related_conversation_group_id*. O *related_conversation_group_id* deve ser do tipo implicitamente conversível no tipo **uniqueidentifier**. Se *related_conversation_group_id* não referenciar um grupo de conversa existente, o Service Broker criará um novo grupo de conversa com a *related_conversation_group_id* especificada e relacionará a nova caixa de diálogo a esse grupo de conversa.  
   
- LIFETIME **=***dialog_lifetime*  
+ LIFETIME **=**_dialog_lifetime_  
  Especifica o limite máximo de tempo que a caixa de diálogo permanecerá aberta. Para a caixa de diálogo ser concluída com êxito, os pontos de extremidade devem finalizar explicitamente a caixa de diálogo antes que seu tempo de vida expire. O valor de *dialog_lifetime* deve ser expresso em segundos. O tempo de vida é do tipo **int**. Quando nenhuma cláusula LIFETIME é especificada, o tempo de vida da caixa de diálogo é o valor máximo do tipo de dados **int**.  
   
  ENCRYPTION  

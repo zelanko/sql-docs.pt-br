@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543899"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
 Em um teste de unidade do SQL Server, um script de teste Transact\-SQL executa e retorna um resultado. Muitas vezes, os resultados são retornados como um conjunto de resultados. Você pode validar resultados usando condições de teste. Por exemplo, você pode usar uma condição de teste para verificar quantas linhas foram retornadas em um conjunto de resultados específico ou para verificar quanto tempo um teste específico levou para ser executado. Para saber mais sobre as condições de teste, confira [Usar as condições de teste em Testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -72,7 +72,7 @@ onde:
   
 @ErrorMessage é qualquer mensagem de erro definida pelo usuário. Você pode formatar essa cadeia de caracteres de mensagem semelhante à função printf_s.  
   
-@ErrorSeverity é um nível de severidade definido pelo usuário de 0 a 18.  
+@ErrorSeverity é um nível de gravidade definido pelo usuário de 0 a 18.  
   
 > [!NOTE]  
 > Os valores '0' e '10' para o nível de severidade não ocasionam a falha do teste de unidade do SQL Server. Você pode usar qualquer outro valor no intervalo de 0 a 18 para provocar a falha do teste.  

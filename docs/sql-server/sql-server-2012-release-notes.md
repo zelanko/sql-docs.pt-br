@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540562"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ Antes de instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider
 **Solução alternativa:** você pode consultar o relatório de verificação da configuração do sistema para saber mais sobre essas regras de instalação. A verificação da configuração do sistema gera um relatório que contém uma breve descrição de cada regra executada, bem como o status de execução. O relatório de verificação da configuração do sistema está localizado em %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 Adicionar uma conta de usuário local para o serviço Distributed Replay Controller pode terminar a instalação de forma inesperada  
-**Problema:** na página do **Distributed Replay Controller** da instalação do SQL Server, ao tentar adicionar uma conta de usuário local para o serviço Distributed Replay Controller, a instalação será terminada de maneira inesperada com uma mensagem de erro “Falha da instalação do SQL Server”.  
+**Problema:** na página do **Distributed Replay Controller** da instalação do SQL Server, ao tentar adicionar uma conta de usuário local para o serviço Distributed Replay Controller, a instalação será terminada de maneira inesperada com uma mensagem de erro "Falha da instalação do SQL Server".  
   
-**Solução alternativa:** durante a instalação do SQL, não adicione contas de usuário local pelas opções “Adicionar Usuário Atual” ou “Adicionar”. Após a instalação, adicione uma conta de usuário local manualmente usando as seguintes etapas:  
+**Solução alternativa:** durante a instalação do SQL, não adicione contas de usuário local pelas opções "Adicionar Usuário Atual" ou "Adicionar...". Após a instalação, adicione uma conta de usuário local manualmente usando as seguintes etapas:  
   
 1.  Interrompa o serviço SQL Server Distributed Replay Controller  
   
@@ -188,7 +188,7 @@ Os tópicos a seguir descrevem o comportamento de instalação de itens de pré-
   
 -   O Windows PowerShell 2.0 é um pré-requisito para a instalação de componentes do Mecanismo de Banco de Dados do SQL Server 2012 e do SQL Server Management Studio, mas o Windows PowerShell não é mais instalado pela Instalação do SQL Server. Se a instalação relatar que o PowerShell 2.0 não está presente no seu computador, você poderá habilitá-lo seguindo as instruções da página [Estrutura de gerenciamento do Windows](https://support.microsoft.com/kb/968929) . Como você obtém o Windows PowerShell 2.0 depende do sistema operacional em execução:  
   
-    -   Windows Server 2008 – Windows PowerShell 1.0 é um recurso e pode ser adicionado. As versões do Windows PowerShell 2.0 são baixadas e instaladas (efetivamente como uma correção de sistema operacional).  
+    -   Windows Server 2008 – O Windows PowerShell 1.0 é um recurso e pode ser adicionado. As versões do Windows PowerShell 2.0 são baixadas e instaladas (efetivamente como uma correção de sistema operacional).  
   
     -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 são instalados por padrão.  
   
@@ -308,9 +308,9 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
   
 **Solução alternativa**: para evitar esse problema, habilite o IPv4 ou use as etapas a seguir para adicionar uma entrada ao Registro e crie uma ACL para habilitar o Visualizador da Ajuda para IPv6:  
   
-1.  Crie uma chave de Registro com o nome “IPv6” e um valor de “1 (DWORD(32 bit))” em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Crie uma chave do Registro com o nome "IPv6" e um valor de "1 (DWORD(32 bit))" em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
-2.  Defina as ACLs de segurança da porta para IPv6 executando o seguinte de uma janela CMD do admin:  
+2.  Defina as ACLs de segurança da porta para IPv6 executando o seguinte em uma janela CMD do admin:  
   
     ```  
     netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
@@ -341,7 +341,7 @@ Há problemas com a Tarefa de Processamento do AS quando você trabalha com mode
 **Solução alternativa:** para evitar isso, publique o trabalho que deve persistir na base de dados de conhecimento antes de iniciar uma nova atividade.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Os controles não são dimensionados corretamente em tamanhos de fontes grandes  
-**Problema:** se você alterar o tamanho do texto para “Maior – 150%” (no Windows Server 2008 ou Windows 7) ou alterar a configuração de DPI Personalizada para 200% (no Windows 7), os botões **Cancelar** e **Criar** na página **Nova Base de Dados de Conhecimento** não ficarão acessíveis.  
+**Problema:** se você alterar o tamanho do texto para "Maior – 150%" (no Windows Server 2008 ou Windows 7) ou alterar a configuração de DPI Personalizada para 200% (no Windows 7), os botões **Cancelar** e **Criar** na página **Nova Base de Dados de Conhecimento** não ficarão acessíveis.  
   
 **Solução alternativa:** para resolver o problema, defina a tela para um tamanho menor.  
   
@@ -403,7 +403,7 @@ Problema: você pode receber o seguinte erro se abrir a base de dados de conheci
   
 Isso ocorre por causa da diferença na maneira como o DQS compara cadeias de caracteres no banco de dados do SQL Server e no C#. A comparação de cadeia de caracteres no banco de dados do SQL Server não faz distinção de maiúsculas e minúsculas embora faça distinção no C#.  
   
-Vamos ilustrar isso com um exemplo. Considere um usuário, Domínio\usuário1. O usuário faz logon no computador do cliente Data Quality usando a conta "usuário1" e trabalha em uma base de dados de conhecimento. O DQS armazena a base de dados de conhecimento recente para cada usuário como um registro na tabela A_CONFIGURATION no banco de dados DQS_MAIN. Nesse caso, o registro será armazenado com o seguinte nome: RecentList:KB:Domínio\usuário1. Posteriormente, o usuário faz logon no computador do cliente Data Quality como “Usuário1” (observe o U maiúsculo) e tenta abrir a base de dados de conhecimento na lista **Base de Dados de Conhecimento Recente** para a atividade de gerenciamento de domínio. O código subjacente no DQS comparará as duas cadeias de caracteres, RecentList:KB:DOMÍNIO\usuário1 e DOMÍNIO\Usuário1 e, considerando a comparação de cadeia de caracteres com distinção de maiúsculas e minúsculas no C#, as cadeias de caracteres não corresponderão e, portanto, o DQS tentará inserir um novo registro para o usuário (Usuário1) na tabela A_CONFIGURATION no banco de dados DQS_MAIN. No entanto, devido à comparação de cadeia de caracteres com distinção de maiúsculas e minúsculas no banco de dados SQL, a cadeia de caracteres já existe na tabela A_CONFIGURATION no banco de dados DQS_MAIN e a operação de inserção falhará.  
+Vamos ilustrar isso com um exemplo. Considere um usuário, Domínio\usuário1. O usuário faz logon no computador do Data Quality Client usando a conta "usuário1" e trabalha em uma base de dados de conhecimento. O DQS armazena a base de dados de conhecimento recente para cada usuário como um registro na tabela A_CONFIGURATION no banco de dados DQS_MAIN. Nesse caso, o registro será armazenado com o seguinte nome: RecentList:KB:Domínio\usuário1. Posteriormente, o usuário faz logon no computador do Data Quality Client como "Usuário1" (observe o U maiúsculo) e tenta abrir a base de dados de conhecimento na lista **Base de Dados de Conhecimento Recente** para a atividade de gerenciamento de domínio. O código subjacente no DQS comparará as duas cadeias de caracteres, RecentList:KB:DOMÍNIO\usuário1 e DOMÍNIO\Usuário1 e, considerando a comparação de cadeia de caracteres com distinção de maiúsculas e minúsculas no C#, as cadeias de caracteres não corresponderão e, portanto, o DQS tentará inserir um novo registro para o usuário (Usuário1) na tabela A_CONFIGURATION no banco de dados DQS_MAIN. No entanto, devido à comparação de cadeia de caracteres com distinção de maiúsculas e minúsculas no banco de dados SQL, a cadeia de caracteres já existe na tabela A_CONFIGURATION no banco de dados DQS_MAIN e a operação de inserção falhará.  
   
 **Solução alternativa:** para corrigir esse problema, faça o seguinte:  
   

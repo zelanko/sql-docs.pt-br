@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668545"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586309"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
+Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições**. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas em um banco de dados. 
 
-Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições** em um objeto de banco de dados. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas dentro de um banco de dados. 
-
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
-
-O DMV [exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) expõe estatísticas sobre as otimizações realizadas pelo otimizador de consulta do SQL Server. Esses valores são cumulativos e começam a gravar quando o SQL Server é iniciado.  
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+O DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) expõe estatísticas sobre as otimizações realizadas pelo otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses valores são cumulativos e começam a gravar quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Para obter mais informações sobre o otimizador de consulta, confira o [Guia da arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md).   
 
 A CTE (common_table_expression) a seguir usa esse DMV para fornecer informações sobre a carga de trabalho, como o percentual de consultas que fazem referência a uma exibição. Os resultados retornados pela consulta não indicam um problema de desempenho por si só, mas podem expor problemas subjacentes quando combinados com reclamações de usuários sobre o desempenho lento de consultas. 
 
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-Combine os resultados dessa consulta com os resultados da exibição do sistema [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) para identificar estatísticas de consulta, o texto da consulta e o plano de execução armazenado em cache. 
 
-## <a name="sysviews"></a>Sys.views
+Combine os resultados dessa consulta com os resultados da exibição do sistema [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) para identificar estatísticas de consulta, o texto da consulta e o plano de execução armazenado em cache. 
 
+## <a name="sysviews"></a>sys.views
 A CTE a seguir fornece informações sobre o número de execuções, o tempo total de execução e as páginas lidas da memória. Os resultados podem ser usados para identificar consultas que podem ser candidatos para otimização. 
   
-  >[!NOTE]
-  > Os resultados dessa consulta podem variar dependendo da versão do SQL Server.  
+> [!NOTE]
+> Os resultados dessa consulta podem variar dependendo da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+A consulta final fornece informações sobre as exibições não utilizadas, usando o DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). No entanto, o cache do plano de execução é dinâmico e os resultados podem variar. Sendo assim, use esta consulta ao longo do tempo para determinar se uma exibição está de fato sendo usada ou não. 
 
-A consulta final fornece informações sobre as exibições não utilizadas, usando o DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). No entanto, o cache do plano de execução é dinâmico e os resultados podem variar. Sendo assim, use esta consulta ao longo do tempo para determinar se uma exibição está de fato sendo usada ou não. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>Recursos externos relacionados
-
-- [DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Vídeo – SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Slide e demonstração – SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [SQL Server Tuning in capsule form (Ajuste do SQL Server em formato de cápsula) (filme – SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server Tuning in a nutshell (Ajuste do SQL Server em poucas palavras) (slides e demonstração – SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [Ajuste de desempenho com exibições de gerenciamento dinâmico do SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [Os tipos de espera mais proeminentes do SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## <a name="see-also"></a>Confira também
+[Exibições e funções de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Vídeo – SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
+[DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Slide e demonstração – SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
+[SQL Server Tuning in capsule form (Ajuste do SQL Server em formato de cápsula) (filme – SQL Saturday Parma)](https://vimeo.com/200980883)    
+[SQL Server Tuning in a nutshell (Ajuste do SQL Server em poucas palavras) (slides e demonstração – SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
+[Ajuste de desempenho com exibições de gerenciamento dinâmico do SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
+[Os tipos de espera mais proeminentes do SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   

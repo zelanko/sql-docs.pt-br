@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051168"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711607"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051168"
 ##  <a name="bkmk_3ways_to_install"></a> Visão geral dos métodos de instalação  
  O Suplemento SQL Server 2016 Reporting Services para produtos do SharePoint pode ser instalado usando um dos dois seguintes métodos:  
   
--   **O assistente de instalação:** ![observação](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")Uma novidade do SQL Server 2016, o suplemento pode ser instalado pelo assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escolha **suplemento Reporting Services para produtos do SharePoint** na página **Seleção de recursos** do assistente.  
+-   **O assistente de instalação:** ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") No SQL Server 2016, o suplemento pode ser instalado pelo assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escolha **suplemento Reporting Services para produtos do SharePoint** na página **Seleção de recursos** do assistente.  
   
 -   **rsSharepoint.msi:** o suplemento pode ser instalado diretamente da mídia de instalação ou baixado e instalado. O rsSharepoint.msi dá suporte à interface gráfica do usuário e à instalação pela linha de comando. Para executar o .msi com privilégios de administrador, abra primeiro um prompt de comando com permissões elevadas e execute o rsSharepoint.msi na linha de comando. Para obter mais informações sobre como baixar o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -114,7 +114,7 @@ Rssharepoint.msi /?
     3.  A quantidade de tempo necessária para que as alterações entrem em vigor pode variar, dependendo de seu ambiente de servidor. Você também pode executar **iisreset** para forçar uma atualização mais rápida.  
   
 ### <a name="quiet-installation-for-scripting"></a>Instalação silenciosa para script  
- Você pode usar a opção **/q** ou **/quiet** para uma instalação “silenciosa” que não exibirá caixas de diálogo nem avisos. A instalação silenciosa é útil quando você deseja gerar scripts da instalação do suplemento.  
+ Você pode usar a opção **/q** ou **/quiet** para uma instalação "silenciosa" que não exibirá caixas de diálogo nem avisos. A instalação silenciosa é útil quando você deseja gerar scripts da instalação do suplemento.  
   
 > [!NOTE]  
 >  Se você usar a opção **/q** para uma instalação de linha de comando silenciosa, o contrato de licença de usuário final não será exibido. Independentemente do método de instalação, o uso deste software é controlado por um contrato de licença e você é responsável por respeitar o contrato de licença.  
@@ -234,7 +234,7 @@ Rssharepoint.msi /?
   
 #### <a name="view-a-log-file-with-powershell"></a>Exiba um arquivo de log com o PowerShell  
   
-1.  Digite o seguinte comando do SharePoint Management Shell para retornar uma lista filtrada de linhas do arquivo, contendo "ssrscustomactionerror":  
+1.  Digite o seguinte comando no Shell de Gerenciamento do SharePoint para retornar uma lista filtrada de linhas do arquivo, contendo "ssrscustomactionerror":  
   
     ```  
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  

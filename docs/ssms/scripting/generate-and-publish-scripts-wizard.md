@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700264"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530567"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,11 +122,11 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
   
  **Opções** – Se desejar que o assistente salve scripts em um local de sua preferência, selecione **Salvar scripts em um local específico**. Você pode executar os scripts posteriormente em relação a uma instância do Mecanismo de Banco de Dados ou em relação ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se você desejar que o assistente publique seus objetos de banco de dados em um provedor remoto de hospedagem Web, selecione **Publicar no serviço Web**.  
   
- **Salvar Scripts em um Local Específico** – salve um ou mais arquivos de script Transact-SQL em um local especificado.  
+ **Salvar Scripts em uma Localização Específica** – salve um ou mais arquivos de script Transact-SQL em uma localização especificada.  
 
   ![Salvar](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e um local para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
+-   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e uma localização para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
   
 -   **Salvar na Área de Transferência** – Salve o script Transact-SQL na área de transferência.  
   
@@ -149,7 +149,7 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
- **Geral** – As opções a seguir se aplicam ao script inteiro.  
+ **Geral** – as opções a seguir se aplicam ao script inteiro.  
   
 -   **Preenchimento ANSI** – Inclui **ANSI PADDING ON** no script. O padrão é **True**.  
   
@@ -199,7 +199,7 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
   
 -   **Controle de alterações de script** – Controle de alterações de scripts se for habilitado no banco de dados de origem ou nas tabelas no banco de dados de origem. O padrão é **False**. Para obter mais informações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Restrições de Verificação do Script** – Adiciona restrições **CHECK** ao script. O padrão é **True**. Restrições**CHECK** exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Restrições de Verificação do Script** – adiciona restrições **CHECK** ao script. O padrão é **True**. Restrições**CHECK** exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). O padrão é **False**.  
   
@@ -239,7 +239,7 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
- **Geral** – As opções a seguir se aplicam à publicação inteira.  
+ **Geral** – as opções a seguir se aplicam à publicação inteira.  
   
 1.  **Converter UDDTs em tipos de base** – Se for **True**, os UDDT (tipos de dados definidos pelo usuário) serão convertidos nos tipos de dados base subjacentes que foram usados para criá-los. Use **True** quando o UDDT não existir no banco de dados em que o script será executado. Se for **False**, serão usados UDDTs. O padrão é **False**.  
   
@@ -265,7 +265,7 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
   
 12. **Tipos de dados para publicação** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema e Dados**.  
   
- **Publicando Opções** – Especifica transações devem ser usadas ao publicar no provedor de host Web.  
+ **Publicando Opções** – especifica transações devem ser usadas ao publicar no provedor de host Web.  
   
 1.  **Publicar usando transações** – Usa transações ao publicar em um provedor remoto de hospedagem na Web. Se o banco de dados de destino não puder concluir a publicação, as transações serão revertidas. O padrão é **True**.  
   
@@ -340,7 +340,7 @@ Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e 
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Gerando scripts no SQL Data Warehouse do Azure  
 
-Se a sintaxe é gerada quando usar “Gerar Script Como...” não parece uma sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou se você receber uma mensagem de erro, talvez seja necessário definir as opções de script no SQL Server Management Studio para o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+Se a sintaxe gerada ao usar "Script como…" não parecer uma sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou se você receber uma mensagem de erro, talvez seja necessário definir as opções de script no SQL Server Management Studio para o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Como definir opções de script padrão para o SQL Data Warehouse  
 

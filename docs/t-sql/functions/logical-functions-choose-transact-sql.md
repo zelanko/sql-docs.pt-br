@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 4538f270007508cea6b90a34388968ed886b4d36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526138"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funções lógicas – CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
  Se o valor de índice fornecido tiver um tipo de dados numérico diferente de **int**, o valor será convertido implicitamente em um inteiro. Se o valor de índice exceder os limites da matriz de valores, CHOOSE retornará nulo.  
   
- *val_1 … val_n*  
+ *val_1 ... val_n*  
  Lista de valores separados por vírgulas de qualquer tipo de dados.  
   
 ## <a name="return-types"></a>Tipos de retorno  

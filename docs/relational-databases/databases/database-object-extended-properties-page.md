@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522247"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de banco de dados (página Propriedades Estendidas)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671865"
  Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
   
  **Botão Procurar**  
- Clique no botão Procurar (...) após **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior.  
+ Clique no botão Procurar (…) após **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida**. Digite ou exiba o valor da propriedade estendida neste local maior.  
   
  **Delete (excluir)**  
  Remove a propriedade estendida selecionada.  

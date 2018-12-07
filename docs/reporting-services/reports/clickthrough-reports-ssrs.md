@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021830"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710777"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
   Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como designer de modelo, determina o que é exibido nos relatórios de clickthrough definindo as propriedades **DefaultDetailAttribute** e **DefaultAggregateAttribute** que você atribui a uma entidade no modelo de relatório.  
   
 > [!NOTE]  
->  Os relatórios de clickthrough não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Caso você não tenha certeza sobre qual edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sua organização está usando, contate o administrador do banco de dados.  
+>  Os relatórios de clickthrough não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Recursos com suporte nas edições do SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). Caso você não tenha certeza sobre qual edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sua organização está usando, contate o administrador do banco de dados.  
   
 ## <a name="using-default-templates"></a>Usando modelos padrão  
  Por padrão, o servidor de relatórios gera dois tipos de modelos de clickthrough para cada entidade: um modelo de uma instância e um modelo de várias instâncias. O item no qual você clica determina qual modelo é usado. Se a pessoa que lê o relatório clicar em um atributo escalar, o modelo de uma instância será usado. Se a pessoa que lê o relatório clicar em um atributo de agregação, o modelo de várias instâncias será usado.  

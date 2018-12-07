@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542006"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 
@@ -28,7 +28,7 @@ Antes de criar uma nova assinatura, você deve verificar se a fonte de dados do 
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Acesse a página Assinaturas selecionando as **reticências (...)** de um relatório e, em seguida, selecione **Gerenciar** e **Assinaturas**.  
+É possível acessar a página Assinaturas selecionando as **reticências (...)** de um relatório, selecionando **Gerenciar** e **Assinaturas**.  
   
 Na página Assinaturas, você pode criar novas assinaturas selecionando **+ Nova assinatura**. Você também pode editar as assinaturas existentes ou excluir assinaturas que você selecionou.  
   

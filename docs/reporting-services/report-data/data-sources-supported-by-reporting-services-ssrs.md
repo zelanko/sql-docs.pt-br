@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813859"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712567"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -68,7 +68,7 @@ ms.locfileid: "51813859"
  Para obter mais informações sobre extensões de processamento de dados personalizadas, consulte [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Para obter mais informações sobre os provedores de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] padrão, consulte o namespace <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Suporte da plataforma a fontes de dados de relatório  
- As fontes de dados que você pode usar em uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variam de acordo com a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e com a plataforma. Para obter mais informações sobre recursos, consulte [Recursos do Reporting Services com suporte nas edições do SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Posteriormente neste tópico, uma tabela fornece informações sobre fontes de dados para as quais há suporte de acordo com a versão e a plataforma.  
+ As fontes de dados que você pode usar em uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variam de acordo com a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e com a plataforma. Para obter mais informações sobre recursos, confira [Recursos do Reporting Services compatíveis com as Edições do SQL Server](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Posteriormente neste tópico, uma tabela fornece informações sobre fontes de dados para as quais há suporte de acordo com a versão e a plataforma.  
   
  Considerações sobre plataforma em relação a fontes de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são feitas separadamente para o cliente de criação do relatório e o para o servidor de relatório.  
   

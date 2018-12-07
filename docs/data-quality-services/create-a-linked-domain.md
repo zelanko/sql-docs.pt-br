@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
@@ -14,12 +13,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702224"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617886"
 ---
 # <a name="create-a-linked-domain"></a>Criar um domínio vinculado
 
@@ -36,7 +35,7 @@ ms.locfileid: "51702224"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Controlando o fluxo de dados para domínios compostos  
  Os domínios vinculados permitem que você controle o fluxo de dados entre campos e entre domínios compostos. Você pode diferenciar quando dados de um campo fluem para um domínio composto e quando dados de outro campo bastante semelhante não fluem para o domínio composto. Você faz isso ao especificar que, de dois domínios vinculados, um faz parte de um domínio composto e outro não faz. De uma perspectiva de domínio, os domínios vinculados são idênticos. Eles contêm o mesmo conhecimento. Entretanto, de uma perspectiva de um domínio composto, os domínios vinculados são diferentes. Um participa do domínio composto, o outro não.  
   
- Um exemplo é um registro que contém os seguintes campos: Nome do Cliente, Sobrenome do Cliente e Nome do Pai. Suponha você mapeie o nome do cliente e o nome do pai para um domínio Nome, e faça com que o domínio Nome e o domínio Sobrenome façam parte de um domínio composto Nome Completo. O problema é que o nome do pai será adicionado ao domínio composto sem um sobrenome. Se, no entanto, você vincular cada um dos dois campos de nome a um domínio, e vincular os dois domínios, então poderá adicionar o domínio Nome do Cliente ao domínio composto Nome Completo e não adicionar o campo Nome do Pai ao domínio composto, impedindo que o Nome do Pai seja adicionado ao domínio composto.  
+ Um exemplo é um registro que contém os seguintes campos: Nome do Cliente, Sobrenome do Cliente e Nome do Pai. Suponha você mapeie o nome do cliente e o nome do pai para um domínio Nome e faça com que o domínio Nome e o domínio Sobrenome façam parte de um domínio composto Nome Completo. O problema é que o nome do pai será adicionado ao domínio composto sem um sobrenome. Se, no entanto, você vincular cada um dos dois campos de nome a um domínio e vincular os dois domínios, então poderá adicionar o domínio Nome do Cliente ao domínio composto Nome Completo e não adicionar o campo Nome do Pai ao domínio composto, impedindo que o Nome do Pai seja adicionado ao domínio composto.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

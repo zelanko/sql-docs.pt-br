@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541404"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - MELHORIA DE DESEMPENHO PARA BUILD DE ÍNDICE NÃO CLUSTERIZADO EM TABELAS COM OTIMIZAÇÃO DE MEMÓRIA. O desempenho da recompilação de índice bwtree (não clusterizado) em tabelas MEMORY_OPTIMIZED durante a recuperação de banco de dados foi otimizado de modo significativo. Essa melhoria reduz consideravelmente o tempo de recuperação de banco de dados quando os índices não clusterizados são usados.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) tem três colunas novas: socket_count, cores_per_socket e numa_node_count. Isso é útil quando você executa o servidor em uma VM, já que exceder o NUMA pode gerar hosts sobrecarregados que resultam em problemas de desempenho.
 - Uma nova coluna modified_extent_page_count\, foi introduzida em [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) para controlar as alterações diferenciais em cada arquivo de banco de dados do banco de dados. A nova coluna modified_extent_page_count permite criar uma solução de backup inteligente, que faz o backup diferencial se o percentual de páginas alteradas no banco de dados está abaixo de um limite (digamos, 70-80%); caso contrário, ela faz o backup de banco de dados completo.
-- SELECT INTO… Em FileGroup – [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) agora dá suporte ao carregamento de uma tabela em um grupo de arquivos que não é um grupo de arquivos padrão do usuário, usando o suporte à palavra-chave **ON** adicionado à sintaxe SELECT INTO do T-SQL.
+- SELECT INTO ... Em FileGroup – [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) agora dá suporte ao carregamento de uma tabela em um grupo de arquivos que não é um grupo de arquivos padrão do usuário, usando o suporte à palavra-chave **ON** adicionado à sintaxe SELECT INTO do T-SQL.
 - Melhorias de configuração do Tempdb – a configuração permite especificar um tamanho inicial do arquivo do tempdb de até **256 GB (262.144 MB)** por arquivo, com um aviso para os clientes informando se o tamanho do arquivo é definido como um valor maior que 1 GB e se a IFI não está habilitada. É importante entender a implicação de não habilitar a IFI (inicialização instantânea de arquivo), nos casos em que o tempo de configuração pode aumentar exponencialmente, dependendo do tamanho inicial do arquivo de dados do tempdb especificado. A IFI não é aplicável ao tamanho do log de transações e, portanto, a especificação de um valor maior do log de transações pode invariavelmente aumentar o tempo de configuração ao iniciar o tempdb durante a configuração, independentemente da configuração da IFI para a conta de serviço do SQL Server.
 - Uma nova DMV [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) foi introduzida para controlar o uso do repositório de versão por banco de dados. Essa nova DMV é útil no monitoramento do uso do repositório de versão no tempdb, a fim de planejar de modo proativo o dimensionamento do tempdb de acordo com o requisito de uso do repositório de versão por banco de dados, sem cobrança de desempenho nem sobrecargas de executá-lo em servidores de produção.
 - Uma nova DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) foi introduzida para expor as informações de VLF semelhantes a DBCC LOGINFO, a fim de monitorar, emitir alertas e evitar possíveis problemas de log de transações causados pelo número de VLFs, tamanho de VLF ou problemas de redução de arquivo enfrentados pelos clientes.
@@ -63,7 +63,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
     - Operador`CROSS APPLY` em módulos compilados nativamente.   
 - Foram adicionadas as novas funções de cadeia de caracteres [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)e [TRIM](../t-sql/functions/trim-transact-sql.md) .   
 - Agora há suporte para a cláusula `WITHIN GROUP` pela função [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) .
-- Duas novas famílias de agrupamento em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140) foram adicionadas, além da opção de agrupamento Variation-selector-sensitive (_VSS) para uso nesses novos agrupamentos em japonês. Além disso, todos os novos agrupamentos dão suporte automático a caracteres suplementares sem a necessidade de especificar a opção _SC. Para obter mais detalhes, consulte [Suporte a Agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
+- Duas novas famílias de ordenação em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140) foram adicionadas, além da opção de ordenação Variation-selector-sensitive (_VSS) para uso nesses novas ordenações em japonês. Além disso, todas as novas ordenações dão suporte automático a caracteres suplementares sem a necessidade de especificar a opção _SC. Para obter mais detalhes, consulte [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
 - As novas opções de acesso em massa [[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)] permitem acessar os dados diretamente em um arquivo especificado como o formato CSV e em arquivos armazenados no armazenamento de Blobs do Azure por meio da nova opção `BLOB_STORAGE` de [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - **COMPATIBILITY_LEVEL** 140 do banco de dados foi adicionado.   Os clientes executando neste nível obterão os últimos recursos de linguagem e comportamentos de otimizador de consulta. Isso inclui alterações em cada versão de pré-lançamento que a Microsoft lançar.
 - Melhorias na forma como os limites de atualização de estatísticas incrementais são computados (necessário modo de compatibilidade 140).

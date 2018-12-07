@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534673"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "51603976"
 |**-n**|Não usa o log de aplicativo do Windows para registrar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com **-n**, recomendamos que você também use a opção de inicialização **-e** . Caso contrário, eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são registrados no log.|  
 |**-s**|Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tentará iniciar. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar `\mssql$Instance1` para seus binários, o usuário deverá estar no diretório `\mssql$Instance1\binn` para iniciar **sqlservr.exe -s instance1**.|  
 |**-T**  *trace#*|Indica que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Importante:** Ao especificar um sinalizador de rastreamento com a opção **-T**, use um “T” maiúsculo para passar o número do sinalizador de rastreamento. Um "t" minúsculo é aceito através de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas isso define outros sinalizadores de rastreamento internos que só são exigidos através de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engenheiros de suporte. (Parâmetros especificados na janela de inicialização do Painel de Controle não são legíveis.)|  
-|**-x**|Desabilita os seguintes recursos de monitoramento:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de monitoramento de desempenho<br /> - Manutenção da hora da CPU e as estatísticas de taxa de acertos de cache<br /> - Coleta de informações para o comando DBCC SQLPERF<br /> - Coleta de informações por algumas exibições de gerenciamento dinâmico<br /> - Muitos pontos de evento dos eventos estendidos<br /><br /> **Aviso:** Quando você usa a opção de inicialização **–x**, as informações disponíveis para diagnosticar problemas de desempenho e funcionais com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são bastante reduzidas.|  
+|**-x**|Desabilita os seguintes recursos de monitoramento:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de monitoramento de desempenho<br /> - Manutenção da hora da CPU e as estatísticas de taxa de acertos de cache<br /> - Coleta de informações para o comando DBCC SQLPERF<br /> - Coleta de informações por algumas exibições de gerenciamento dinâmico<br /> - Muitos pontos de evento dos eventos estendidos<br /><br /> **Aviso:** Quando você usa a opção de inicialização **-x**, as informações disponíveis para diagnosticar problemas de desempenho e funcionais com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são bastante reduzidas.|  
 |**-E**|Aumenta o número de extensões alocadas para cada arquivo em um grupo de arquivos. Essa opção pode ser útil para aplicativos de data warehouse que têm um número limitado de usuários que estão executando exames de índices ou de dados. Ela não deve ser usada em outros aplicativos porque pode afetar o desempenho de maneira prejudicial. Essa opção não tem suporte no versões de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>Usando opções de inicialização para solucionar problemas  
- Algumas opções de inicialização, como o modo de usuário único e o modo de configuração mínima, são usados principalmente durante a solução de problemas. Iniciar o servidor para solucionar problemas com as opções **–m** ou **–f** é mais fácil na linha de comando, enquanto o sqlservr.exe é iniciado manualmente.  
+ Algumas opções de inicialização, como o modo de usuário único e o modo de configuração mínima, são usados principalmente durante a solução de problemas. Iniciar o servidor para solucionar problemas com as opções **-m** ou **-f** é mais fácil na linha de comando, enquanto o sqlservr.exe é iniciado manualmente.  
   
 > [!NOTE]  
 >  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado usando o **net start**, as opções de inicialização usam uma barra (/) em vez de hífen (-).  
   
 ## <a name="using-startup-options-during-normal-operations"></a>Usando opções de inicialização durante operações normais  
- Você pode desejar usar algumas opções de inicialização sempre que iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas opções, como **–g** ou inicialização com um sinalizador de rastreamento, são mais fáceis com a configuração dos parâmetros de inicialização usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Essas ferramentas salvam as opções de inicialização como chaves do Registro, habilitando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para sempre ser iniciado com as opções de inicialização.  
+ Você pode desejar usar algumas opções de inicialização sempre que iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas opções, como **-g** ou inicialização com um sinalizador de rastreamento, são mais fáceis com a configuração dos parâmetros de inicialização usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Essas ferramentas salvam as opções de inicialização como chaves do Registro, habilitando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para sempre ser iniciado com as opções de inicialização.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
  Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  

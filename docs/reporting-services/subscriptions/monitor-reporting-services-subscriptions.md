@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535614"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
@@ -85,9 +85,9 @@ ms.locfileid: "50100177"
   
 1.  navegue até a biblioteca de documentos que contém o relatório  
   
-2.  Abra o menu de contexto do relatório (**…**).  
+2.  Abra o menu de contexto do relatório (**...**).  
   
-3.  Selecione a opção de menu expandido (**…**).  
+3.  Selecione a opção de menu ampliado (**...**).  
   
 4.  Selecione **Gerenciar assinaturas**  
   

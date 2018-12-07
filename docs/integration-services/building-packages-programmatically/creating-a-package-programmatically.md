@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540871"
 ---
 # <a name="creating-a-package-programmatically"></a>Criando um pacote programaticamente
   O objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> é o contêiner de alto nível para todos os outros objetos em uma solução de projeto do [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Como contêiner de alto nível, o pacote é o primeiro objeto criado, e os objetos subsequentes são adicionados a ele e executados dentro do contexto do pacote. O próprio pacote não move nem transforma dados. O pacote confia nas tarefas que contém para executar o trabalho. As tarefas executam a maioria do trabalho executado por um pacote e definem a funcionalidade de um pacote. Um pacote é criado e executado com apenas três linhas de código, mas várias tarefas e objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> são adicionados para acrescentar funcionalidades ao seu pacote. Esta seção discute como criar um pacote programaticamente. Ela não fornece informações sobre como criar as tarefas ou o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Essas informações são discutidas em seções posteriores.  
@@ -153,7 +153,7 @@ End Module
   
 -   Entrada de blog, [API Sample – OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824), (Amostra de API – origem e destino de OleDB) em blogs.msdn.com.  
   
--   Entrada de blog, [EzAPI – Atualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) em blogs.msdn.com.  
+-   Entrada no blog, [EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI – atualizado para o SQL Server 2012) em blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

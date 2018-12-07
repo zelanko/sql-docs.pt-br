@@ -15,12 +15,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8b62b974951172924ac475c68a652e80ce444c4
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544515"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "51560255"
   
 4.  Para criar o banco de dados aceitando todos os valores padrão, clique em **OK**; do contrário, passe para as etapas opcionais a seguir.  
   
-5.  Para alterar o nome do proprietário, clique em (**…**) para selecionar outro proprietário.  
+5.  Para alterar o nome do proprietário, clique em (**...**) para selecionar outro proprietário.  
   
     > [!NOTE]  
     >  A opção **Usar indexação de texto completo** sempre está marcada e esmaecida porque, a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todos os bancos de dados de usuários são habilitados para texto completo.  

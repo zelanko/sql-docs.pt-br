@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d60a5174b5ca067e9f0e0d9f5db7efd6e71466ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840424"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535106"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Desinstalar o Power Pivot para SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47840424"
 -   Você deve ser um Administrador do Sistema do Analysis Services e membro do grupo administradores local para desinstalar o Analysis Services e o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 ##  <a name="bkmk_before"></a> Etapa 1: lista de verificação pré-desinstalação  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O acesso aos dados será desabilitado quando o software que dá suporte ao processamento de consulta e dados for removido do farm. A primeira etapa é excluir preventivamente arquivos e bibliotecas que não funcionarão mais. Isso permite que você solucione dúvidas ou preocupações sobre a ‘falta de dados’ antes de desinstalar o software.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O acesso aos dados será desabilitado quando o software que dá suporte ao processamento de consulta e dados for removido do farm. A primeira etapa é excluir preventivamente arquivos e bibliotecas que não funcionarão mais. Isso permite que você solucione dúvidas ou preocupações sobre a 'falta de dados' antes de desinstalar o software.  
   
 1.  Exclua todas as pastas de trabalho, documentos e bibliotecas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] com associação a uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Nenhuma das bibliotecas nem os documentos funcionarão depois que o software for desinstalado.  
   
@@ -119,15 +119,15 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  Inicie o Shell de Gerenciamento do SharePoint como administrador e execute o comando a seguir para exibir os trabalhos na fila:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
-4.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
+4.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Tente a tarefa novamente na ferramenta de configuração clicando em **Validar** e, em seguida, em **Executar**.  

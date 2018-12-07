@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814329"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711217"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portal da Web (Modo Nativo do SSRS)
 
@@ -54,7 +54,7 @@ Você pode usar o portal da Web para navegar pelas pastas do servidor de relató
 
 O portal da Web é usado apenas para um servidor de relatório executado no modo nativo. Ele não possui suporte para um servidor de relatório configurado no modo integrado do SharePoint.
 
-Alguns recursos do portal da Web só estão disponíveis em edições específicas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos do Reporting Services compatíveis com as Edições do SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Alguns recursos do portal da Web só estão disponíveis em edições específicas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, confira [Recursos do Reporting Services compatíveis com as Edições do SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 Em uma nova instalação, somente os administradores locais têm permissões suficientes para trabalhar com o conteúdo e as configurações. Para conceder permissões a outros usuários, o administrador local deve criar atribuições de função que fornecem acesso ao servidor de relatório. As páginas de aplicativo e as tarefas que um usuário pode acessar posteriormente dependem das atribuições de função do usuário em questão. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório](security/grant-user-access-to-a-report-server-report-manager.md)
 
@@ -126,6 +126,6 @@ Você pode inserir uma equipe de pesquisa e verá tudo que pode ser acessado. Os
 [Configurar um URL (Gerenciador de configurações SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Ferramentas do Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Recursos do Reporting Services compatíveis com as edições do SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Recursos do Reporting Services compatíveis com as edições do SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 Ainda tem dúvidas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

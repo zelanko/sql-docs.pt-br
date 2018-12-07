@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543959"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -84,7 +84,7 @@ rs {-?}
  (Opcional) Especifica que os comandos no arquivo de script são executados em um lote. Se algum comando falhar, o lote será revertido. Alguns comandos não podem ser processados em lote e são executados como de costume. Somente exceções emitidas e não controladas no resultado de script resultam em reversão. Se o script controlar uma exceção e retornar normalmente de **Main**, o lote será confirmado. Se você omitir esse parâmetro, os comandos serão executados sem criar um lote. Para obter mais informações, consulte [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  **-v** *globalvar*  
- (Opcional) Especifica variáveis globais usadas no script. Se o script usa variáveis globais, você deve especificar esse argumento. O valor que você especifica deve ser válido para a variável global definida no arquivo .rss. Você deve especificar uma variável global para cada argumento **–v** .  
+ (Opcional) Especifica variáveis globais usadas no script. Se o script usa variáveis globais, você deve especificar esse argumento. O valor que você especifica deve ser válido para a variável global definida no arquivo .rss. É necessário especificar uma variável global para cada argumento **–v**.  
   
  O argumento **–v** é especificado na linha de comando e é usado para definir o valor de uma variável global definida no script no tempo de execução. Por exemplo, se seu script contiver uma variável nomeada *parentFolder*, você poderá especificar um nome para aquela pasta na linha de comando:  
   
@@ -104,7 +104,7 @@ rs {-?}
  O exemplo a seguir ilustra como especificar o arquivo de script que contém o script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e os métodos do serviço Web que você quer executar.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  Para obter um exemplo detalhado, consulte [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

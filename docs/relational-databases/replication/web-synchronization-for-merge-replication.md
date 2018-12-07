@@ -18,12 +18,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f018f3415d0ee99eedb3c086e308a84c61cdc058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542894"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47770034"
   
  ![Fluxo de dados e componentes de sincronização da Web](../../relational-databases/replication/media/web-sync01.gif "Fluxo de dados e componentes de sincronização da Web")  
   
- A sincronização da Web é uma opção apenas para assinatura pull; então, um Merge Agent sempre será executado no Assinante. Esse Merge Agent pode ser o Merge Agent padrão, o MErge Agent do controle de Active X ou um aplicativo que fornece sincronização através do RMO (Replication Management Objects). Para especificar o local do computador que está executando IIS, use o parâmetro **–InternetUrl** para o Merge Agent.  
+ A sincronização da Web é uma opção apenas para assinatura pull; então, um Merge Agent sempre será executado no Assinante. Esse Merge Agent pode ser o Merge Agent padrão, o MErge Agent do controle de Active X ou um aplicativo que fornece sincronização através do RMO (Replication Management Objects). Para especificar a localização do computador que está executando o IIS, use o parâmetro **–InternetUrl** para o Agente de Mesclagem.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) está configurado no computador que está executando IIS e é responsável pelo manuseio das mensagens enviadas para o servidor do Publicador e dos Assinantes. Cada nó na topologia controla o fluxo de dados XML usando o Reconciliador de Replicação de Mesclagem (Replrec.dll).  
   

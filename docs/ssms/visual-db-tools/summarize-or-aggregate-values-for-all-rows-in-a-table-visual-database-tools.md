@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535515"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir ou agregar valores para todas as linhas em uma tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Se você adicionar um critério de pesquisa, será possível agregar o subconjun
   
 Quando você cria um valor de agregação único para todas as linhas em uma tabela, somente os valores de agregação são exibidos. Por exemplo, se você estivesse totalizando o valor da coluna `price` da tabela `titles` , você também não exibiria títulos individuais, nomes de publicador, e assim por diante.  
  
- **!** Se você estiver subtotalizando – isto é, durante a criação de grupos – será possível exibir valores de coluna para cada grupo. Para obter detalhes, veja [Agrupar linhas em resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** Se estiver subtotalizando (ou seja, criando grupos), você poderá exibir valores de coluna para cada grupo. Para obter detalhes, veja [Agrupar linhas em resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## <a name="aggregate-values-for-all-rows"></a>Agregar valores para todas as linhas  
   

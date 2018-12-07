@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537420"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ Há dois tipos de controle de alterações:
   
      **Para iniciar o controle de alterações com população automática**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING AUTO  
   
     **Exemplo -– alterar um índice de texto completo para usar o controle de alterações automático**  
     O exemplo a seguir altera o índice de texto completo da tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` para usar o controle de alterações com população automática.  
@@ -116,13 +116,13 @@ Há dois tipos de controle de alterações:
   
 -   **População manual**  
   
-     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. Porém, eles não serão propagados para o índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX… Instrução START UPDATE POPULATION . É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
+     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. Porém, eles não serão propagados para o índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX... Instrução START UPDATE POPULATION . É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
      **Para começar a controlar alterações com população manual**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING MANUAL  
   
     **Exemplo – criar um índice de texto completo com controle de alterações manual**  
     O exemplo a seguir cria um índice de texto completo que usará o controle de alterações com população manual na tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
@@ -150,9 +150,9 @@ Há dois tipos de controle de alterações:
    
 ### <a name="disable-change-tracking"></a>Desabilitar o controle de alterações 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)... SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>População incremental com base em um carimbo de data/hora  

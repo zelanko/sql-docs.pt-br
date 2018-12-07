@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531558"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Passo a passo: estenda a implantação do projeto de banco de dados para modificar o plano de implantação
 Você pode criar colaboradores de implantação para executar ações personalizadas ao implantar um projeto SQL. Você pode criar um [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) ou um [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Use um [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para alterar o plano antes de ser executado e um [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) para realizar operações enquanto o plano está sendo executado. Nesse passo a passo, você cria um [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) chamado SqlRestartableScriptContributor que adiciona instruções IF aos lotes no script de implantação para habilitar o script para ser executado novamente até que seja concluído se um erro ocorrer durante a execução.  
@@ -58,7 +58,7 @@ Para criar um colaborador de implantação, você deverá realizar as seguintes 
   
 1.  Crie um projeto de biblioteca de classe do Visual C# ou Visual Basic chamado MyOtherDeploymentContributor.  
   
-2.  Renomeie o arquivo “Class1.cs” para “SqlRestartableScriptContributor.cs”.  
+2.  Renomeie o arquivo "Class1.cs" para "SqlRestartableScriptContributor.cs".  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e, depois, clique em **Adicionar referência**.  
   
@@ -191,7 +191,7 @@ Em seguida, comece a adicionar código à classe.
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -672,9 +672,9 @@ Você sempre deve atualizar o arquivo de projeto SQL para especificar a ID dos c
   
     1.  Navegue para %Arquivos de programas%\MSBuild.  
   
-    2.  Crie uma nova pasta “MyContributors” onde os arquivos de destino serão armazenados.  
+    2.  Crie uma nova pasta "MyContributors" na qual os arquivos de destino serão armazenados.  
   
-    3.  Crie um novo arquivo “MyContributors.targets” dentro desse diretório, adicione o seguinte texto e salve o arquivo:  
+    3.  Crie um novo arquivo "MyContributors.targets" dentro desse diretório, adicione o seguinte texto e salve o arquivo:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,17 +697,17 @@ Você sempre deve atualizar o arquivo de projeto SQL para especificar a ID dos c
 Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para passar parâmetros para compilações de linha de comando.  
   
 > [!NOTE]  
-> Você sempre deve atualizar a propriedade “DeploymentContributors” para especificar sua ID de colaborador. Esta é a mesma ID usada no atributo “ExportDeploymentPlanModifier” no seu arquivo de origem de colaborador. Sem isso, seu colaborador não será executado ao criar o projeto. A propriedade “ContributorArguments” precisará ser atualizada somente se você tiver os argumentos necessários para seu colaborador ser executado.  
+> Você sempre deve atualizar a propriedade “DeploymentContributors” para especificar sua ID de colaborador. Esta é a mesma ID usada no atributo "ExportDeploymentPlanModifier" no seu arquivo de origem de colaborador. Sem isso, seu colaborador não será executado ao criar o projeto. A propriedade "ContributorArguments" precisará ser atualizada somente se você tiver os argumentos necessários para seu colaborador ser executado.  
   
 ## <a name="deploy-the-database-project"></a>Implantar o projeto de banco de dados  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Para implantar o projeto SQL e gerar um relatório de implantação  
   
--   Seu projeto pode ser publicado ou implantado normalmente dentro do Visual Studio. Basta abrir uma solução que contém o projeto do SQL e escolher a opção Publicar… no menu de contexto (clicando com o botão direito do mouse) no projeto ou usar F5 para uma implantação de depuração para o LocalDB. Neste exemplo, usaremos a caixa de diálogo "Publicar..." para gerar um script de implantação.  
+-   Seu projeto pode ser publicado ou implantado normalmente dentro do Visual Studio. Basta abrir uma solução contendo seu projeto SQL e escolher a opção Publicar… no menu de contexto aberto clicando com o botão direito do mouse para o projeto ou usar F5 para uma implantação de depuração para o LocalDB. Neste exemplo, usaremos a caixa de diálogo "Publicar…" para gerar um script de implantação.  
   
     1.  Abra o Visual Studio e abra a solução que contém o seu projeto SQL.  
   
-    2.  Clique com o botão direito do mouse no projeto no Gerenciador de Soluções e escolha a opção **Publicar…** .  
+    2.  Clique com o botão direito do mouse no projeto no Gerenciador de Soluções e escolha a opção **Publicar...**.  
   
     3.  Defina o nome do servidor e o nome do banco de dados para publicação.  
   
