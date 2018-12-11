@@ -1,5 +1,5 @@
 ---
-title: Extensão de dados Studio SQL Server Profiler do Azure | Microsoft Docs
+title: Extensão SQL Server Profiler do Azure Data Studio | Microsoft Docs
 description: Extensão do SQL Server Profiler (visualização) para o Studio de dados do Azure
 ms.custom: tools|sos
 ms.date: 09/24/2018
@@ -12,7 +12,7 @@ ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 7f5d1731cfb126b2dbaa259b89b327951d384e1a
 ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49356007"
@@ -23,10 +23,10 @@ A extensão do SQL Server Profiler (versão prévia) fornece uma solução simpl
 
 **SQL Profiler-casos de uso comuns:**
 
-- Percorrer consultas de problemas para localizar a causa do problema.
+- Percorrer consultas problemáticas para localizar a causa do problema.
 - Localizar e diagnosticar consultas de execução lenta.
 - Capturar a série de instruções Transact-SQL que levam a um problema.
-- Monitorando o desempenho do SQL Server para ajustar cargas de trabalho.
+- Monitorar o desempenho do SQL Server para ajustar cargas de trabalho.
 - Correlacionar contadores de desempenho para diagnosticar problemas.
 
 
@@ -37,12 +37,12 @@ A extensão do SQL Server Profiler (versão prévia) fornece uma solução simpl
 
    ![Gerenciador de extensões do criador de perfil](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Selecione a extensão desejada e **instalar** -lo.
-2. Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
+1. Selecione a extensão desejada e **instale-a**.
+2. Selecione **Recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
 
 ## <a name="start-profiler"></a>Iniciar o Profiler
 
-1. Para iniciar o Profiler, fazer uma conexão a um servidor na guia servidores.
+1. Para iniciar o Profiler, estabeleça uma conexão com um servidor na guia Servidores.
 2. Depois de fazer uma conexão, digite **Alt + P** para iniciar o Profiler.
 3. Para iniciar o Profiler, digite **Alt + S.** Agora você pode começar a ver eventos estendidos.
     ![Gerenciador de extensões do criador de perfil](media/extensions/sql-server-profiler-extension/view-profiler.png)    
