@@ -44,9 +44,9 @@ A extensão do SQL Server Profiler (versão prévia) fornece uma solução simpl
 
 1. Para iniciar o Profiler, estabeleça uma conexão com um servidor na guia Servidores.
 2. Depois de fazer uma conexão, digite **Alt + P** para iniciar o Profiler.
-3. Para iniciar o Profiler, digite **Alt + S.** Agora você pode começar a ver eventos estendidos.
+3. Para iniciar o Profiler, pressione **Alt + S.** Agora você pode começar a ver eventos estendidos.
     ![Gerenciador de extensões do criador de perfil](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. Para parar o Profiler, digite **Alt + S.** Esta tecla de acesso é um controle de alternância.
+1. Para parar o Profiler, pressione **Alt + S.** Este atalho alterna entre a execução e pausa do Profiler.
 
 ## <a name="next-steps"></a>Próximas etapas
 
