@@ -44,7 +44,7 @@ ms.locfileid: "50029305"
   
  Se você habilitar uma quebra de escala mas ela não aparecer, mesmo que haja distância suficiente entre os intervalos de dados, será possível definir a propriedade CollapsibleSpaceThreshold com um valor inferior a 25. CollapsibleSpaceThreshold especifica o percentual de espaço recolhível necessário entre os intervalos de dados. Para obter mais informações, consulte [Adicionar quebras de escala a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
- Os gráficos suportam até cinco quebras de escala por gráfico; no entanto, exibir mais de uma quebra de escala pode deixar o gráfico ilegível. Se houver dois ou mais intervalos de dados, considere o uso de outro método para exibir esses dados. Para obter mais informações, consulte [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Os gráficos suportam até cinco quebras de escala por gráfico; no entanto, exibir mais de uma quebra de escala pode deixar o gráfico ilegível. Se houver dois ou mais intervalos de dados, considere o uso de outro método para exibir esses dados. Para obter mais informações, consulte [Várias séries em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="unsupported-scale-break-scenarios"></a>Cenários de quebra de escala não suportados  
  As quebras de escala não são suportadas nos seguintes cenários:  

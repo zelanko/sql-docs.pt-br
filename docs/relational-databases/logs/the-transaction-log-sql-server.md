@@ -91,7 +91,7 @@ Para evitar a falta de espaço, a menos que o truncamento de log seja atrasado p
  Para obter mais informações, consulte [Fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation), mais adiante neste tópico.  
   
 > [!NOTE]
-> O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > No entanto, tenha em mente os [Fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation). Se o espaço de armazenamento for necessário novamente após a redução de um log, o log de transações aumentará novamente e, fazendo isso, introduzirá uma sobrecarga de desempenho durante as operações de aumento do log.
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  

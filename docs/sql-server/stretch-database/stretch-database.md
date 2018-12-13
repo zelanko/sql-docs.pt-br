@@ -24,7 +24,7 @@ ms.locfileid: "52503788"
 
   O Stretch Database migra seus dados frios de forma transparente e segura para a nuvem do Microsoft Azure.  
   
- Se você deseja começar a usar o Stretch Database imediatamente, veja [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
+ Se você deseja começar a usar o Stretch Database imediatamente, veja [Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Quais são os benefícios do Stretch Database?  
  O Stretch Database oferece as seguintes vantagens:  
