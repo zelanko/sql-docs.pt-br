@@ -40,7 +40,7 @@ ms.locfileid: "51672075"
 |Permissões de Convidado|[Permissões de convidado em bancos de dados de usuários](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Data do Último Backup bem-sucedido|[Backup desatualizado](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Public Não Recebeu Permissões de Servidor|[Permissões públicas de servidor](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Corrigir a sobreposição de máscara de afinidade e máscara de afinidade de entrada e saída](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Máscara de Afinidade do SQL Server|[Manter o valor padrão da máscara de afinidade](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |Limite de Processo Bloqueado do SQL Server|[Aumentar ou desabilitar o limite de processo bloqueado](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |Rastreamento Padrão do SQL Server|[Arquivos de log de rastreamento padrão desabilitados](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -62,8 +62,8 @@ ms.locfileid: "51672075"
 |Erro de Controle de Driver do Dispositivo do Log de Eventos do Windows|[Erro de controle de driver de dispositivo](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Erro de Dispositivo Não Pronto do Log de Eventos do Windows|[Erro de Dispositivo Não Pronto](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Erro de Solicitação de I_O com Falha do Log de Eventos do Windows|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|Aviso de Atraso de I_O do Log de Eventos do Windows|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página de hardware](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
+|Aviso de Atraso de I_O do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de atraso de E/S](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página física](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Erro de Repetição de Leitura do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Erro de Tempo Limite de I_O do Sistema de Armazenamento do Log de Eventos do Windows|[Tempo limite de entrada e saída dd sistema de armazenamento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Erro de Falha do Sistema do Log de Eventos do Windows|[Falhas inesperadas do sistema](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  

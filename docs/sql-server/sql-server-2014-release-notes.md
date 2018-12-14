@@ -361,7 +361,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Mais Informações:**  
   
@@ -376,7 +376,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Mais Informações:**  
   
