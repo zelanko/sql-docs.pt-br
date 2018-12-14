@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
@@ -16,19 +15,19 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbceb75a036343b0d116481c5e36e3da3aa63a85
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1cb952d965c2ddb316b0890a03e2d10947c2e61a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51272584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766828"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (Expressão SSIS)
   Esta seção descreve os operadores que a linguagem de expressão fornece e a precedência e a associação de operadores usados pelo avaliador de expressão.  
   
  A tabela a seguir lista os tópicos sobre os operadores desta seção.  
   
-|Operador|Description|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[Conversão &#40;Expressão SSIS&#41;](cast-ssis-expression.md)|Converte uma expressão de um tipo de dados para um tipo de dados diferente.|  
 |[&#40;&#41; &#40;Parênteses&#41; &#40;Expressão SSIS&#41;](parentheses-ssis-expression.md)|Identifica a ordem de avaliação de expressões.|  
@@ -41,13 +40,13 @@ ms.locfileid: "51272584"
 |[&#40;Módulo&#41; &#40;Expressão SSIS&#41;](modulo-ssis-expression.md)|Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda.|  
 |[&#124;&#124; &#40;OR lógica&#41; &#40;Expressão SSIS&#41;](logical-or-ssis-expression.md)|Executa uma operação OR lógica.|  
 |[&& &#40;AND lógico&#41; &#40;Expressão SSIS&#41;](logical-and-ssis-expression.md)|Executa uma operação AND lógica.|  
-|[\! &#40;NOT lógico&#41; &#40;expressão do SSIS&#41;](logical-not-ssis-expression.md)|Nega um operando booliano.|  
+|[\! &#40;NOT lógico&#41; &#40;Expressão SSIS&#41;](logical-not-ssis-expression.md)|Nega um operando booliano.|  
 |[&#124; &#40;OR inclusivo de bit a bit&#41; &#40;Expressão SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)|Executa uma operação OR de bit a bit de dois valores de inteiro.|  
 |[^ &#40;OR exclusivo de bit a bit&#41; &#40;Expressão SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)|Executa uma operação OR de bit a bit exclusiva de dois valores inteiros.|  
 |[& &#40;AND bit a bit&#41; &#40;Expressão SSIS&#41;](bitwise-and-ssis-expression.md)|Executa uma operação AND de bit a bit de dois valores de inteiro.|  
 |[~ &#40;Not bit a bit&#41; &#40;Expressão SSIS&#41;](bitwise-not-ssis-expression.md)|Executa uma negação bit a bit de um inteiro.|  
 |[== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões são iguais.|  
-|[!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões não forem iguais.|  
+|[\!= &#40;Diferente&#41; &#40;Expressão SSIS&#41;](unequal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões não forem iguais.|  
 |[&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](greater-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que a segunda.|  
 |[&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](less-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que a segunda.|  
 |[&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda.|  
