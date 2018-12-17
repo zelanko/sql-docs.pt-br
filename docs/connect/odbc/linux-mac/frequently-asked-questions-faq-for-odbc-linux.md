@@ -40,7 +40,7 @@ UTF-8 para dados SQL_CHAR e UTF-16 para dados SQL_WCHAR.
 
 **Há exemplos de ODBC que eu possa baixar e executar com o driver para experimentar ou avaliar?**
 
-Consulte [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) para obter um exemplo. Isso também é aplicável para o driver ODBC do macOS. 
+Consulte [Use exemplos ODBC do MSDN C ++ para o driver ODBC no Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) para obter um exemplo. Isso também é aplicável para o driver ODBC do macOS. 
 
 **É o driver ODBC no Linux ou macOS software livre?**
 
