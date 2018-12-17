@@ -1,6 +1,6 @@
----
+﻿---
 title: Extensão SQL Server Profiler do Azure Data Studio | Microsoft Docs
-description: Extensão do SQL Server Profiler (visualização) para o Studio de dados do Azure
+description: Extensão do SQL Server Profiler (versão prévia) para o Azure Data Studio
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -17,9 +17,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49356007"
 ---
-# <a name="sql-server-profiler-extension-preview"></a>Extensão do SQL Server Profiler (visualização)
+# <a name="sql-server-profiler-extension-preview"></a>Extensão do SQL Server Profiler (versão prévia)
 
-A extensão do SQL Server Profiler (versão prévia) fornece uma solução simples de rastreamento de SQL Server semelhante ao Profiler do SQL Server Management Studio (SSMS), exceto criados usando o XEvents. SQL Server Profiler é muito fácil de usar e tem bons valores padrão para as configurações de rastreamento mais comuns. A experiência do usuário é otimizada para navegação por meio de eventos e exibindo o texto associado do Transact-SQL (T-SQL). O Profiler de servidor SQL para o Studio de dados do Azure também pressupõe que bons valores padrão para coleta de atividades de execução de T-SQL com uma experiência do usuário fácil de usar. Esta extensão está atualmente em visualização.
+A extensão do SQL Server Profiler (versão prévia) fornece uma solução simples de rastreamento do SQL Server semelhante ao Profiler do SQL Server Management Studio (SSMS), exceto pela criação com os XEvents. O SQL Server Profiler é muito fácil de usar e tem bons valores padrão para as configurações de rastreamento mais comuns. A experiência do usuário é otimizada para a navegação por eventos e para a exibição do texto associado do Transact-SQL (T-SQL). O SQL Server Profiler para o Azure Data Studio também pressupõe bons valores padrão para a coleta de atividades de execução do T-SQL com uma experiência do usuário fácil de usar. Essa extensão está atualmente em versão prévia.
 
 **SQL Profiler-casos de uso comuns:**
 
@@ -32,7 +32,7 @@ A extensão do SQL Server Profiler (versão prévia) fornece uma solução simpl
 
 ## <a name="install-the-sql-server-profiler-extension"></a>Instalar a extensão do SQL Server Profiler
 
-1. Para abrir o Gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione **extensões** na **exibição** menu.
+1. Para abrir o Gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione extensões no menu Exibição.
 2. Selecione uma extensão disponível para exibir seus detalhes.
 
    ![Gerenciador de extensões do criador de perfil](media/extensions/sql-server-profiler-extension/profiler-extension.png)
