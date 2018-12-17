@@ -106,7 +106,7 @@ Os relatórios móveis do Reporting Services são relatórios dedicados e otimiz
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
- Você não pode se conectar, por padrão, sem algumas alterações de configuração. Para saber mais sobre como permitir que o aplicativo móvel do Power BI se conecte ao seu servidor de relatório, veja [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
+ Você não pode se conectar, por padrão, sem algumas alterações de configuração. Para saber mais sobre como permitir que o aplicativo móvel do Power BI se conecte ao seu servidor de relatório, veja [Habilitar um servidor de relatórios para acesso móvel ao Power BI](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
   
 ### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>Modo de suporte ao SharePoint e SharePoint 2016.  
  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte à integração com o SharePoint 2013 e o SharePoint 2016.
