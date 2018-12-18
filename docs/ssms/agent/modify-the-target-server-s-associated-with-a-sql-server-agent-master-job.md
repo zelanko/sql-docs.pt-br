@@ -49,7 +49,7 @@ Um trabalho mestre do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ### <a name="Security"></a>Segurança  
   
 #### <a name="Permissions"></a>Permissões  
-A menos que seja membro da função de servidor fixa **sysadmin** , você poderá modificar somente trabalhos de sua propriedade. Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+A menos que seja membro da função de servidor fixa **sysadmin** , você poderá modificar somente trabalhos de sua propriedade. Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
