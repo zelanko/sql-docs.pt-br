@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
 ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51217804"
@@ -34,19 +34,19 @@ Baixe e instale a versão mais recente, a *versão de novembro*:
 
 Para obter detalhes sobre a versão mais recente, consulte as [notas de versão](release-notes.md).
 
-## <a name="get-azure-data-studio-for-windows"></a>Obter o Azure Data Studio para o Windows
+## <a name="get-azure-data-studio-for-windows"></a>Obter dados do Azure Studio para Windows
 
-Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui um instalador padrão do Windows e um arquivo .zip: 
+Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma experiência padrão do Windows installer e. zip: 
 
 **Instalador**
 
-1. Baixe e execute o instalador do [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para o Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
-1. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+1. Baixe e execute o [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] installer para Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
+1. Iniciar o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] aplicativo.
 
 
 **arquivo zip**
 
-1. Baixe o [arquivo .zip do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para o Windows](https://go.microsoft.com/fwlink/?linkid=2038323).
+1. Baixe [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] . zip para Windows](https://go.microsoft.com/fwlink/?linkid=2038323).
 2. Navegue até o arquivo baixado e o extraia.
 3. Execute `\azuredatastudio-windows\azuredatastudio.exe`
 
@@ -60,7 +60,7 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui um in
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenha o Azure Data Studio para Linux
 
-1. Baixe o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux usando um dos instaladores ou o arquivo morto gz:
+1. Baixar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux usando um dos instaladores ou gz arquivo morto:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
@@ -120,7 +120,7 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui um in
 
 Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] usando o instalador do Windows, desinstale da mesma maneira que você remove qualquer aplicativo do Windows.
 
-Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] com um. zip ou outro arquivo, basta excluir os arquivos.
+Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] com um. zip ou outro arquivo, em seguida, simplesmente excluir os arquivos.
 
 ## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
@@ -160,7 +160,7 @@ Para verificar se há atualizações mais recentes, clique no ícone de engrenag
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL com suporte
 
-* Esta versão do Azure Data Studio funciona com todas as [versões com suporte do SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e no SQL Data Warehouse do Azure. O Azure Data Studio também fornece suporte de versão prévia para instância gerenciada do SQL Server.
+* Esta versão do estúdio de dados do Azure funciona com todos os [versões com suporte do SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece suporte para trabalhar com os recursos de nuvem mais recentes no banco de dados SQL e Azure SQL Data Warehouse. O estúdio de dados do Azure também fornece suporte de versão prévia para instância gerenciada do SQL.
 
 ## <a name="move-user-settings"></a>Mover as configurações do usuário
 
