@@ -54,7 +54,7 @@ Um relatório de servidor do SQL Server Reporting Services instalado no modo do 
 |14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |15|SQL Server 2008 SP2|SQL Server 2008 e SQL Server 2008 SP2|SharePoint 2007|
 
- Exceção: a integração do Power View não tem suporte.
+ *Exceção: a integração do Power View não tem suporte.
 
  Para obter links para as páginas de download de suplementos, consulte [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 

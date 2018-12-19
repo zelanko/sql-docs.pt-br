@@ -221,7 +221,7 @@ Ao converter o tipo de dados **xml** explícita ou implicitamente em um tipo de 
 Os tipos de dados **text** e **image** não dão suporte a conversão automática de tipo de dados. Você pode converter explicitamente os dados **text** em dados de caractere, e os dados **image** em **binary** ou **varbinary**, mas o tamanho máximo é de 8.000 bytes. Se você tentar uma conversão incorreta, por exemplo, tentar a conversão de uma expressão de caractere que inclui letras em um **int**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro.
   
 ## <a name="output-collation"></a>Ordenação da saída  
-Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem a mesma ordenação e o mesmo rótulo de ordenação da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá a ordenação padrão do banco de dados e um rótulo de ordenação de padrão coercível. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
+Quando as funções CAST ou CONVERT produzem uma cadeia de caracteres e elas recebem uma entrada de cadeia de caracteres, a saída tem a mesma ordenação e o mesmo rótulo de ordenação da entrada. Se a entrada não for uma cadeia de caracteres, a saída terá a ordenação padrão do banco de dados e um rótulo de ordenação de padrão coercível. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
 Para atribuir uma ordenação diferente à saída, aplique a cláusula COLLATE à expressão do resultado da função CAST ou CONVERT. Por exemplo:
   
