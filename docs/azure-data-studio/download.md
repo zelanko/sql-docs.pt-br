@@ -36,7 +36,7 @@ Para obter detalhes sobre a versão mais recente, consulte as [notas de versão]
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obter o Azure Data Studio para o Windows
 
-Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma experiência padrão do Windows installer e. zip: 
+Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui um instalador padrão do Windows e um arquivo .zip: 
 
 **Instalador**
 
@@ -120,7 +120,7 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
 
 Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] usando o instalador do Windows, desinstale da mesma maneira que você remove qualquer aplicativo do Windows.
 
-Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] com um. zip ou outro arquivo, em seguida, simplesmente excluir os arquivos.
+Se você instalou o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] com um. zip ou outro arquivo, basta excluir os arquivos.
 
 ## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
