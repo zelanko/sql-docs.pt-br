@@ -24,7 +24,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47630664"
 ---
 # <a name="handling-errors-in-visual-c"></a>Tratamento de erro em Visual C++
-No COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. A diretiva #import gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM por chamada _com_issue_errorex() com o código de retorno de HRESULT como um argumento. Objetos de erro de COM podem ser capturados em uma **try-catch** bloco. (Para meu Deus da eficiência, capturar uma referência a um objeto com_error).  
+No COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. A diretiva #import gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM por chamada _com_issue_errorex() com o código de retorno de HRESULT como um argumento. Objetos de erro de COM podem ser capturados em uma **try-catch** bloco. (Por questões de eficiência, capture uma referência a um objeto com_error).  
   
  Lembre-se de que esses são erros ADO: eles resultam de falha de operação do ADO. Erros retornados pelo provedor subjacente aparecem como **erro** objetos na **Conexão** do objeto **erros** coleção.  
   

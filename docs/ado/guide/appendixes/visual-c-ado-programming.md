@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
 ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51350370"
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>Tratamento de erros  
- No COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. O **#import** diretiva gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM por chamada _com_issue_errorex() com o código de retorno de HRESULT como um argumento. Objetos de erro de COM podem ser capturados em uma **tente**-**catch** bloco. (Para meu Deus da eficiência, capturar uma referência a um **com_error** objeto.)  
+ No COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. O **#import** diretiva gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM por chamada _com_issue_errorex() com o código de retorno de HRESULT como um argumento. Objetos de erro de COM podem ser capturados em uma **tente**-**catch** bloco. (Por questões de eficiência, capture uma referência a um objeto **com_error**.)  
   
  Lembre-se de que esses são erros ADO: eles resultam de falha de operação do ADO. Erros retornados pelo provedor subjacente pareçam **erro** objetos na **Conexão** objeto **erros** coleção.  
   

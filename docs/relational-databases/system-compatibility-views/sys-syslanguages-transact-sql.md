@@ -79,7 +79,7 @@ ms.locfileid: "47719714"
 |Estoniano|1061|1061|  
 |Letão|1062|1062|  
 |Lituano|1063|1063|  
-|Brasileiro|1046|1046|  
+|Português (Brasil)|1046|1046|  
 |Chinês tradicional|1028|1028|  
 |Coreano|1042|1042|  
 |Chinês simplificado|2052|2052|  

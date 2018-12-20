@@ -69,7 +69,7 @@ Se você usar **sistema de arquivos de rede (NFS)** compartilhamentos remotos em
 
 ## <a id="repositories"></a> Configurar repositórios de origem
 
-Quando você instala ou atualizar o SQL Server, você receberá a versão mais recente do SQL Server do seu repositório configurado do Microsoft. Guias de início rápido usam a atualização cumulativa do SQL Server 2017 **CU** repositório. Mas em vez disso, você pode configurar o **GDR** repositório ou o **visualização (vNext)** repositório. Para obter mais informações sobre repositórios e como configurá-las, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
+Quando você instala ou atualizar o SQL Server, você receberá a versão mais recente do SQL Server do seu repositório configurado do Microsoft. Guias de início rápido usam a atualização cumulativa do SQL Server 2017 **AC** repositório. Mas em vez disso, você pode configurar o **GDR** repositório ou o **visualização (vNext)** repositório. Para obter mais informações sobre repositórios e como configurá-las, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > Se você instalou anteriormente um CTP ou a versão do SQL Server 2017 RC, remova o repositório de versão prévia e registrar uma disponibilidade geral (GA) um. Para obter mais informações, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
@@ -86,7 +86,7 @@ Você pode instalar o SQL Server 2017 no Linux da linha de comando. Para obter i
 
 ## <a id="sqlvnext"></a> Instalar o SQL Server 2019 preview
 
-Você pode instalar a visualização de 2019 do SQL Server no Linux usando os mesmos links de início rápido na seção anterior. No entanto, você deve registrar o **versão prévia (vNext)** repositório, em vez da **CU** repositório. Os inícios rápidos fornecem instruções sobre como fazer isso.  
+Você pode instalar a visualização de 2019 do SQL Server no Linux usando os mesmos links de início rápido na seção anterior. No entanto, você deve registrar o **versão prévia (vNext)** repositório, em vez da **AC** repositório. Os inícios rápidos fornecem instruções sobre como fazer isso.  
 
 Depois de instalar, considere a possibilidade de fazer alterações de configuração adicionais para otimizar o desempenho. Para obter mais informações, consulte [práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux](sql-server-linux-performance-best-practices.md).
 

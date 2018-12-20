@@ -33,21 +33,21 @@ Quando você instala o SQL Server no Linux, você deve configurar um repositóri
 |---|---|---|
 | **Visualização (2017)** | **mssql-server** | Repositório do SQL Server 2017 CTP e RC (Descontinuado). |
 | **Visualização (2019)** | **MSSQL-server-visualização** | Visualização do SQL Server 2019 e repositório RC. |
-| **CU** | **mssql-server-2017** | Repositório do SQL Server 2017 atualização cumulativa (CU). |
+| **CU** | **mssql-server-2017** | Repositório do SQL Server 2017 atualização cumulativa (AC). |
 | **GDR** | **mssql-server-2017-gdr** | Repositório do SQL Server 2017 GDR somente para atualizações críticas. |
 
 ## <a id="cuversusgdr"></a> Atualização cumulativa versus GDR
 
 É importante observar que há dois tipos principais de repositórios para cada distribuição:
 
-- **Atualizações cumulativas (CU)**: repositório de atualização a cumulativa (CU) contém os pacotes para a versão base do SQL Server e correções de bug ou melhorias desde essa versão. As atualizações cumulativas são específicas para uma versão de lançamento, como o SQL Server 2017. Elas são lançadas em um ritmo regular.
+- **Atualizações cumulativas (AC)**: repositório de atualização a cumulativa (AC) contém os pacotes para a versão base do SQL Server e correções de bug ou melhorias desde essa versão. As atualizações cumulativas são específicas para uma versão de lançamento, como o SQL Server 2017. Elas são lançadas em um ritmo regular.
 
-- **GDR**: repositório o GDR contém pacotes para a versão base do SQL Server e apenas correções críticas e atualizações de segurança desde essa versão. Essas atualizações também são adicionadas para a próxima versão CU.
+- **GDR**: repositório o GDR contém pacotes para a versão base do SQL Server e apenas correções críticas e atualizações de segurança desde essa versão. Essas atualizações também são adicionadas para a próxima versão de atualização cumulativa.
 
-Cada versão de CU e GDR contém o pacote completo do SQL Server e todas as atualizações anteriores para esse repositório. Há suporte para a atualização de uma versão GDR para uma versão de CU, alterando seu repositório configurado para o SQL Server. Você também pode [fazer o downgrade](sql-server-linux-setup.md#rollback) para qualquer versão dentro de sua versão principal (ex: 2017).
+Cada versão de atualização cumulativa e GDR contém o pacote completo do SQL Server e todas as atualizações anteriores para esse repositório. Há suporte para a atualização de uma versão GDR para uma versão de atualização cumulativa, alterando seu repositório configurado para o SQL Server. Você também pode [fazer o downgrade](sql-server-linux-setup.md#rollback) para qualquer versão dentro de sua versão principal (ex: 2017).
 
 > [!NOTE]
-> Você pode atualizar de uma versão GDR para CU, alterando os repositórios de versão a qualquer momento. Atualizando de uma CU versão de lançamento de uma GDR não tem suporte. 
+> Você pode atualizar de uma versão GDR para atualização cumulativa, alterando os repositórios de versão a qualquer momento. Atualizar de uma versão de atualização cumulativa para uma versão GDR não tem suporte. 
 
 ## <a id="configure"></a> Configurar um repositório
 
@@ -182,6 +182,6 @@ Configure o novo repositório a ser usado para atualizações e instalações do
 Depois de configurar o repositório correto, você poderá [instale](sql-server-linux-setup.md#platforms) ou [atualizar](sql-server-linux-setup.md#upgrade) do SQL Server e qualquer relacionadas a pacotes do novo repositório.
 
 > [!IMPORTANT]
-> Neste ponto, se você optar por usar um dos artigos a instalação, como o [guias de início rápido](sql-server-linux-setup.md#platforms), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque os inícios rápidos usam o repositório do CU.
+> Neste ponto, se você optar por usar um dos artigos a instalação, como o [guias de início rápido](sql-server-linux-setup.md#platforms), lembre-se de que você já configurou o repositório de destino. Não repita essa etapa nos tutoriais. Isso é especialmente verdadeiro se você configurar o repositório GDR, porque os inícios rápidos usam o repositório de atualização cumulativa.
 
 Para obter mais informações sobre como instalar o SQL Server 2017 no Linux, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).

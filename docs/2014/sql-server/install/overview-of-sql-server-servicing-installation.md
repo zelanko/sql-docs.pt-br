@@ -13,7 +13,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab2ef4879ae4c29c43bfa07c0ccf314eae51ff39
 ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50100207"
@@ -88,7 +88,7 @@ ms.locfileid: "50100207"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Iniciando uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Para instalar uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , execute o arquivo de pacote autoextraível.  
   
- Pacote de atualização cumulativa (CU): \<lt;sqlserver2014 > - KBxxxxxx -*PPP*.exe  
+ Pacote de atualização cumulativa (AC): \<lt;sqlserver2014 > - KBxxxxxx -*PPP*.exe  
   
  Pacote de service pack (PCU): \<lt;sqlserver2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
   

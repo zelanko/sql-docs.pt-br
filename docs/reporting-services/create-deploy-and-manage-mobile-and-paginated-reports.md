@@ -83,7 +83,7 @@ Para os usuários finais do Reporting Services de modo nativo, a porta da frente
 
 Você pode aplicar sua própria marca personalizada ao portal da web. E você pode criar KPIs direitamente no portal da Web. Os KPIs podem expor as principais métricas de negócios em um relance no navegador, sem precisar abrir um relatório. 
 
-O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora, é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
+O novo portal da Web é uma reformulação completa do Gerenciador de Relatórios. Agora, é um aplicativo de página única, com base em padrões HTML5, para os quais os navegadores modernos são otimizados: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e todos os principais navegadores.
 
 O conteúdo do portal da Web é organizado por tipo: KPIs, relatórios móveis e paginados do Reporting Services, pastas de trabalho do Excel, conjuntos de dados compartilhados e fontes de dados compartilhadas para serem usadas como blocos de construção em seus relatórios. Armazene-os e gerencie-os com segurança no portal, na tradicional hierarquia de pastas. Você pode rotular os seus favoritos e pode gerenciar o conteúdo, se você tiver essa função.
 

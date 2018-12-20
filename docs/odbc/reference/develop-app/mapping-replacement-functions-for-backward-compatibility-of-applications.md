@@ -281,7 +281,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
 3.  O Gerenciador de Driver executa as verificações necessárias para ver se SQLSTATE HY010 (erro de sequência de função) precisa ser gerado. Se assim, o Gerenciador de Driver retornará SQL_ERROR e SQLSTATE HY010 (erro de sequência de função). Nenhuma regra adicional desta seção se aplicam.  
   
-4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, a retorna um ponteiro em Gerenciador de Driver à variável interna do Gerenciador de Driver *galinha*, que ele usou ou usará em uma chamada para  **SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
+4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, a retorna um ponteiro para o *cRow* da variável do Gerenciador de Driver interno, que ele usou ou usará em uma chamada para **SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
   
 5.  Se *atributo* é igual para SQL_DESC_FETCH_BOOKMARK_PTR, o Gerenciador de Driver retorna o ponteiro apropriado que ele tivesse armazenado em cache durante uma chamada para **SQLSetStmtAttr**.  
   

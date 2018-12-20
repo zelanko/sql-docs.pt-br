@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48078886"
@@ -55,10 +55,10 @@ Componente |Versão inicial | [R Server 9.0.1](https://docs.microsoft.com/machin
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) r | R 3.2.2     | R 3.3.2   |3.3.3 DO R   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| Antilhas Holandesas | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| Antilhas Holandesas | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| Antilhas Holandesas | 1.0 |  1.0 |  1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | Antilhas Holandesas | 1.0 |  1.0 |  1.0 |  1.0 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| NA | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| NA | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| NA | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | NA | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
 [**Serviços de aprendizado de máquina do SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
@@ -83,8 +83,8 @@ Durante a associação, o conteúdo de C:\Program Files\Microsoft SQL Server\MSS
 
 Ao mesmo tempo, o modelo de manutenção também é invertido mecanismos de atualização do SQL Server para o ciclo de lançamento principais e secundárias mais frequente do Microsoft Machine Learning Server. Alternar as políticas de suporte é uma opção atraente para as equipes de ciência de dados que precisam de geração mais recente de R e módulos de Python para suas soluções. 
 
-+ Sem vinculação, pacotes R e Python são corrigidos para correções de bugs quando você instala um SQL Server service pack ou atualização cumulativa (CU). 
-+ Com associação, as versões mais recentes do pacote podem ser aplicadas à sua instância, independentemente do agendamento de versão de CU, sob o [política de ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e versões do Microsoft Machine Learning Server. A política de suporte do ciclo de vida moderno oferece atualizações mais frequentes em um tempo de vida de um ano, mais curto. Pós-associação, você continuará a usar o instalador MLS para atualizações futuras do R e Python assim que estiverem disponíveis nos sites de download da Microsoft.
++ Sem vinculação, pacotes R e Python são corrigidos para correções de bugs quando você instala um SQL Server service pack ou atualização cumulativa (AC). 
++ Com associação, as versões mais recentes do pacote podem ser aplicadas à sua instância, independentemente do agendamento de versão de atualização cumulativa, sob o [política de ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e versões do Microsoft Machine Learning Server. A política de suporte do ciclo de vida moderno oferece atualizações mais frequentes em um tempo de vida de um ano, mais curto. Pós-associação, você continuará a usar o instalador MLS para atualizações futuras do R e Python assim que estiverem disponíveis nos sites de download da Microsoft.
 
 Associação se aplica somente recursos de R e Python. Ou seja, pacotes de código-fonte aberto para recursos de R e Python (Microsoft R Open, Anaconda) e os pacotes de proprietários RevoScaleR, revoscalepy e assim por diante. Associação não altera o modelo de suporte para a instância do mecanismo de banco de dados e não altera a versão do SQL Server.
 

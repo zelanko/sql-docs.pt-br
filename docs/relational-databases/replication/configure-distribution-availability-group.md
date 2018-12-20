@@ -57,7 +57,7 @@ Depois que um banco de dados de distribuição no AG for configurado com base na
 - Não há suporte para replicação de mesclagem.
 - Não há suporte para replicação transacional com assinante de atualização imediata ou em fila.
 - Não há suporte para a replicação ponto a ponto.
-- Todas as instâncias do SQL Server que hospedam réplicas de banco de dados de distribuição devem ter o SQL Server 2017 CU 6 ou posterior. 
+- Todas as instâncias do SQL Server que hospedam réplicas de banco de dados de distribuição devem ter a Atualização Cumulativa 6 do SQL Server 2017 ou posterior. 
 - Todas as instâncias do SQL Server que hospedam réplicas de banco de dados de distribuição devem ter a mesma versão, exceto durante o período curto da atualização.
 - O banco de dados de distribuição deve estar no modo de recuperação completa.
 - Para a recuperação e para permitir o truncamento do log de transações, configure backups completos e de log de transações.

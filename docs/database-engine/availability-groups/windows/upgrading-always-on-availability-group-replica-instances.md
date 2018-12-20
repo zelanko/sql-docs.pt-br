@@ -245,7 +245,7 @@ Dependendo da atualização aplicada, outras etapas podem ser necessárias para 
 
 1. Atualize a instância que foi originalmente a réplica primária.
 
-Para obter mais informações, consulte [Funcionalidade de CDC pode falhar após a atualização para a CU mais recente](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Para obter mais informações, consulte [Funcionalidade de CDC pode falhar após a atualização para a atualização cumulativa mais recente](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
   
 ## <a name="see-also"></a>Consulte Também  

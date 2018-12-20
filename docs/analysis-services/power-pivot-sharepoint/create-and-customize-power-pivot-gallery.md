@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34025973"
@@ -42,7 +42,7 @@ ms.locfileid: "34025973"
     >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
     > Para exibir o conteúdo da biblioteca no Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
     > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
-    >  Para obter mais informações sobre ao que o Edge dá suporte, consulte o blog do Windows, [Uma ruptura com o passado, parte 2: adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Para obter mais informações sobre ao que o Microsoft Edge dá suporte, consulte o blog do Windows, [Uma ruptura com o passado, parte 2: adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Você deve ser proprietário do site para criar uma biblioteca.  
   

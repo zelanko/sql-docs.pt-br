@@ -31,7 +31,7 @@ Por exemplo, um grupo de disponibilidade em um cluster do Linux tem `CLUSTER_TYP
 
 O Gerenciador de cluster pode consultar as instâncias do SQL Server no grupo de disponibilidade e orquestrar o failover para manter a alta disponibilidade. Em um cluster do Linux, o Pacemaker é o Gerenciador de cluster. 
 
-SQL Server 2017 CU 1 habilita a alta disponibilidade para um grupo de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para duas réplicas síncronas, mais uma réplica somente de configuração. A réplica somente de configuração pode ser hospedada em qualquer edição do SQL Server 2017 CU1 ou posterior – incluindo o SQL Server Express edition. A réplica somente de configuração mantém informações de configuração sobre o grupo de disponibilidade no banco de dados mestre, mas não contém os bancos de dados do usuário no grupo de disponibilidade. 
+A Atualização Cumulativa 1 do SQL Server 2017 habilita a alta disponibilidade para um grupo de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para duas réplicas síncronas, mais uma réplica somente de configuração. A réplica somente de configuração pode ser hospedada em qualquer edição do SQL Server 2017 CU1 ou posterior – incluindo o SQL Server Express edition. A réplica somente de configuração mantém informações de configuração sobre o grupo de disponibilidade no banco de dados mestre, mas não contém os bancos de dados do usuário no grupo de disponibilidade. 
 
 ## <a name="how-the-configuration-affects-default-resource-settings"></a>Como a configuração afeta as configurações de recurso padrão
 
@@ -84,7 +84,7 @@ Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de 
 <sup>*</sup> Padrão
 
 >[!NOTE]
->O cenário anterior é o comportamento antes do SQL Server 2017 CU 1. 
+>O cenário anterior é o comportamento antes da Atualização Cumulativa 1 do SQL Server 2017 
 
 <a name = "configOnly"></a>
 
@@ -118,7 +118,7 @@ O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabel
 
 ## <a name="requirements"></a>Requisitos
 
-* Todas as réplicas em um grupo de disponibilidade com uma réplica somente de configuração devem ser SQL Server 2017 CU 1 ou posterior.
+* Todas as réplicas em um grupo de disponibilidade com uma réplica somente de configuração devem ser a Atualização Cumulativa 1 do SQL Server 2017 ou posterior.
 * Qualquer edição do SQL Server pode hospedar uma réplica somente de configuração, incluindo o SQL Server Express. 
 * O grupo de disponibilidade precisa de pelo menos uma réplica secundária - além da réplica primária.
 * Réplicas de somente de configuração não contam para o número máximo de réplicas por instância do SQL Server. SQL Server standard edition permite até três réplicas, o SQL Server Enterprise Edition permite até 9.

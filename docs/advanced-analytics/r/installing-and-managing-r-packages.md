@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 7f5c51e9b93aca5d52858417667865633a0c4151
 ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/28/2018
 ms.locfileid: "43118304"
@@ -28,8 +28,8 @@ Packages         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Usado para contextos de computação remota, streaming, a execução paralela de funções de rx para importação de dados e transformação, modelagem, visualização e análise. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Usado para a inclusão de script R em procedimentos armazenados. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| Antilhas Holandesas | 9.2 | Adiciona os algoritmos de aprendizado de máquina em R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | Antilhas Holandesas  | 9.2 | Usado para escrever instruções MDX no R. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| NA | 9.2 | Adiciona os algoritmos de aprendizado de máquina em R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | NA  | 9.2 | Usado para escrever instruções MDX no R. |
 
 MicrosoftML e olapR estão disponíveis por padrão nos serviços de aprendizado de máquina do SQL Server 2017. Em uma instância do SQL Server 2016 R Services, você pode adicionar esses pacotes por meio de um [atualização do componente](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Uma atualização de componente também obtém as versões mais recentes dos pacotes (por exemplo, as versões mais recentes do RevoScaleR incluem funções para gerenciamento de pacotes no SQL Server).
 

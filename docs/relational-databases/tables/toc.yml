@@ -40,7 +40,7 @@ items:
   href: use-column-sets.md
 - name: Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
   href: use-table-valued-parameters-database-engine.md
-- name: Restrições do Edge
+- name: Restrições do Microsoft Edge
   href: graph-edge-constraints.md
   items:
   - name: Criar

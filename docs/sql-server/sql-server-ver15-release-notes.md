@@ -125,9 +125,9 @@ Suporte limitado pode ser encontrado em um dos seguintes locais:
 
 ### <a name="sql-graph"></a>SQL Graph
 
-- **Problema e impacto para o cliente**: ferramentas que dependem de DacFx, como importação-exportação, não funcionarão para os novos recursos de grafo – DML de restrições ou mesclagem do Edge. Os scripts em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] podem não funcionar.
+- **Problema e impacto para o cliente**: ferramentas que dependem de DacFx, como importação-exportação, não funcionarão para os novos recursos de grafo – DML de restrições ou mesclagem do Microsoft Edge. Os scripts em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] podem não funcionar.
 
-- **Solução alternativa**: escrever scripts [!INCLUDE[tsql](../includes/tsql-md.md)] e execute-os no servidor usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou SQLCMD funcionará. A exportação ou a importação de objetos de banco de dados que criam restrições do Edge, têm nova sintaxe de DML de mesclagem ou criam exibições/tabelas derivadas em objetos de grafo não funcionarão. Os usuários precisarão criar manualmente esses objetos no seu banco de dados usando scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. 
+- **Solução alternativa**: escrever scripts [!INCLUDE[tsql](../includes/tsql-md.md)] e execute-os no servidor usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou SQLCMD funcionará. A exportação ou a importação de objetos de banco de dados que criam restrições do Microsoft Edge, têm nova sintaxe de DML de mesclagem ou criam exibições/tabelas derivadas em objetos de grafo não funcionarão. Os usuários precisarão criar manualmente esses objetos no seu banco de dados usando scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 - **Aplica-se a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
 

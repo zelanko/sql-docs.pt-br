@@ -12,7 +12,7 @@ ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
 ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/07/2018
 ms.locfileid: "51269829"
@@ -21,7 +21,7 @@ ms.locfileid: "51269829"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
-As notas de versão a seguir se aplicam à visualização de 2019 do SQL Server em execução no Linux. Este artigo é dividido em seções para cada versão. Cada versão tem um link para um artigo de suporte que descrevem alterações CU, bem como links para downloads de pacotes Linux.
+As notas de versão a seguir se aplicam à visualização de 2019 do SQL Server em execução no Linux. Este artigo é dividido em seções para cada versão. Cada versão tem um link para um artigo de suporte que descrevem alterações de atualização cumulativa, bem como links para downloads de pacotes Linux.
 
 > [!TIP]
 > Para saber sobre novos recursos de Linux do SQL Server 2019, consulte [o que há de novo no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
@@ -55,7 +55,7 @@ A tabela a seguir lista o histórico de versão de visualização do SQL Server 
 
 Se você tiver configurado o repositório de versão prévia (**mssql-server-visualização**), você receberá os pacotes mais recentes do CTP do SQL Server quando você executar novas instalações. Se você precisar de imagens de contêiner do Docker, consulte as imagens oficiais para [Microsoft SQL Server no Linux para o mecanismo do Docker](https://hub.docker.com/r/microsoft/mssql-server/). Para obter mais informações sobre a configuração do repositório, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
-Se você estiver atualizando os pacotes existentes do SQL Server, execute o comando de atualização apropriado para cada pacote obter o CU mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
+Se você estiver atualizando os pacotes existentes do SQL Server, execute o comando de atualização apropriado para cada pacote obterá a atualização cumulativa mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
 
 - [Instalar o pacote do SQL Server](sql-server-linux-setup.md#upgrade)
 - [Instalar o pacote de pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
