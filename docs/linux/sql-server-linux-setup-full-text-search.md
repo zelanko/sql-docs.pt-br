@@ -94,7 +94,7 @@ Pesquisa de texto completo usa [separadores de palavras](../relational-databases
 | Árabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmal | 1044 |
-| Brasileiro | 1046 |
+| Português (Brasil) | 1046 |
 | British English | 2057 |
 | Búlgaro | 1026 |
 | Catalão | 1027 |
