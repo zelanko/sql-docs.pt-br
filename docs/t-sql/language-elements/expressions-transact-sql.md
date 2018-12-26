@@ -116,7 +116,7 @@ ms.locfileid: "52511925"
   
  Se não houver nenhuma conversão implícita ou explícita com suporte, as duas expressões não poderão ser combinadas.  
   
- A ordenação de qualquer expressão avaliada como uma cadeia de caracteres é definida seguindo as regras de precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ A ordenação de qualquer expressão avaliada como uma cadeia de caracteres é definida seguindo as regras de precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
  Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um único resultado. As expressões em uma lista de seleção [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nessa regra: a expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
   

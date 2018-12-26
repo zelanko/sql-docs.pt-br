@@ -196,7 +196,7 @@ CREATE DATABASE database_snapshot_name
   
  Um nome de ordenação não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar a ordenação de um banco de dados anexado, acesse o [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &amp;#40;Transact-SQL&amp;#41;](~/t-sql/statements/collations.md).  
+ Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &#40;Transact-SQL &#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
 >  Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.  
