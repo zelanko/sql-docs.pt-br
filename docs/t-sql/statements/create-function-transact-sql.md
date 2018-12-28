@@ -337,7 +337,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
   
  Em TVFs embutidas, o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.  
   
- <a name="mstvf"></a> Em MSTVFs, @*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. @*return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
+ <a name="mstvf"></a> Em MSTVFs, @*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. @ *return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
   
  *select_stmt*  
  É a única instrução SELECT que define o valor retornado de uma TVF (função com valor de tabela) embutida.  

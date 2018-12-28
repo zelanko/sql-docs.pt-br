@@ -132,7 +132,7 @@ Especifica o nome do novo índice.
   
 Se a tabela já tiver um índice columnstore clusterizado, você poderá especificar o mesmo nome que o do índice existente ou usar a opção DROP EXISTING para especificar um novo nome.  
   
-ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
+ON [*database_name*. [*schema_name* ]. |  *schema_name*. ] *table_name*  
    Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um índice de heap ou clusterizado, ela será convertida de rowstore para columnstore. Se a tabela já for um columnstore, essa instrução recompilará o índice columnstore clusterizado.  
   
 #### <a name="with-options"></a>Opções WITH  
