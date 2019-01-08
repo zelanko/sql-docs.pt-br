@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540304"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@dbname** = *Database_Name * * * '**  
+ **@dbname** = _Database_Name_**'**  
  Significa o nome do banco de dados no qual o coletor de lixo será executado.  
   
 > [!NOTE]  
@@ -56,13 +56,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|Valor|Description|  
+|Valor|Descrição|  
 |0|Êxito na operação|  
 |1|Falha na operação|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*file_name*|Indica o nome de contêiner FILESTREAM|  
 |*num_collected_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram limpos (excluídos) pelo coletor de dados neste contêiner.|  
@@ -97,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>B. Especificando um contêiner  
+### <a name="b-specifying-a-container"></a>b. Especificando um contêiner  
   
 ```sql  
 USE FSDB;  

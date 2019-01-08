@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209806"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530511"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
   Uma consulta de conteúdo é um modo de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração propriamente dito. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- A consulta a seguir é criada com base nestas informações. A consulta retorna três colunas: a ID do nó, a regra completa e o produto na lateral direita do conjunto de itens, isto é, o produto previsto para ser associado a alguns outros produtos como parte de um conjunto de itens.  
+ A consulta a seguir é criada com base nestas informações. A consulta retorna três colunas: a ID do nó, a regra completa e o produto no lado direito do conjunto de itens-ou seja, o produto previsto para ser associado a alguns outros produtos como parte de um conjunto de itens.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -197,7 +197,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Para obter mais informações sobre como trabalhar com conjuntos de linhas hierárquicas, consulte a especificação OLEDB no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre a instrução DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Compreendendo a instrução DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
   

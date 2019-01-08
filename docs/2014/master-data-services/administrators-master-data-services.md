@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -15,12 +14,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778238"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], há dois tipos de administradores: administradores de modelo e o administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48083517"
   
  Cada modelo pode ter vários administradores. Cada usuário pode ser um administrador de modelo para um, vários ou todos os modelos na implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Create a Model Administrator &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
+ Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Administrador do sistema do Master Data Services  
  Há somente um administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O administrador do sistema é o usuário especificado para o **conta de administrador** quando você cria o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
@@ -49,7 +48,7 @@ ms.locfileid: "48083517"
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|Description|  
+|Tipo de administrador|Descrição|  
 |------------------------|-----------------|  
 |Administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente **atualização** permissão a todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> Em tbluser, o valor de **ID** coluna é **1**.|  
 |Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm **atualização** permissão atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Em tbluser, o valor de **ID** coluna não é **1**.|  

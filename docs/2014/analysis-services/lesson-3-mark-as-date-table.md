@@ -11,24 +11,24 @@ ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26eb4f82b97d745f6269d57a76c479d677d6cc2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177526"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417287"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lição 4: Marcar como Tabela de Data
-  Na lição 2: Adicionar Dados, você importou uma tabela de dimensão chamada DimDate. Você renomeou a tabela DimDate, na Lição 3: Renomear Colunas, como simplesmente Data. Em seu modelo, essa tabela agora é chamada Date; ela também pode ser conhecida como uma *tabela Data*, pois contém dados de data e hora.  
+  Lição 2: Adicionar dados, você importou uma tabela de dimensão chamada DimDate. Você renomeou a tabela DimDate, na lição 3: Renomear colunas, como simplesmente Data. Em seu modelo, essa tabela agora é chamada Date; ela também pode ser conhecida como uma *tabela Data*, pois contém dados de data e hora.  
   
  Sempre que você usar funções de Inteligência de Dados Temporais em cálculos, como fará quando criar medidas mais adiante, especifique as propriedades da tabela de data, que inclui uma *tabela de Data* e uma *coluna de Data* de identificador exclusivo nessa tabela. Você pode criar relações válidas entre outras tabelas e a tabela de Data; necessário para cálculos que usam funções de inteligência de tempo DAX.  
   
- Nesta lição, você aprenderá a marcar a tabela de Data importada e renomeada como a *tabela de Data* e a coluna de Data (na tabela de Data) como a *coluna de Data* (identificador exclusivo). O uso do nome Data pode ficar confuso, mas isso logo se esclarecerá.  
+ Nesta lição, você aprenderá a marcar a tabela de Data importada e renomeada como a *tabela de Data* e a coluna de Data (na tabela de Data) como a *coluna de Data* (identificador exclusivo). O uso do nome que data pode ficar confusa, mas você receberá em breve a ideia.  
   
  Tempo estimado para concluir esta lição: **3 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 3: Renomear colunas](rename-columns.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 3: Renomear colunas](rename-columns.md).  
   
 ### <a name="to-set-mark-as-date-table"></a>Para definir Marcar como Tabela de Data  
   

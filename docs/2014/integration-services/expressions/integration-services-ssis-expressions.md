@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,12 +16,12 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192166"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352325"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
@@ -31,7 +30,7 @@ ms.locfileid: "48192166"
   
 -   [Sintaxe &#40;SSIS&#41;](syntax-ssis.md)  
   
--   [Literais de &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
+-   [Literais &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   
 -   [Identificadores &#40;SSIS&#41;](identifiers-ssis.md)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48192166"
   
 -   Variáveis usam uma expressão para definir seu valor. Por exemplo, GETDATE() define o valor da variável como a data atual.  
   
--   As restrições de precedência podem usar expressões para especificar as condições que determinam se a tarefa ou contêiner restrito em um pacote é executado. As expressões usadas em uma restrição de precedência devem ser avaliadas como `true` ou `false`. Por exemplo, a expressão \@A > \@B compara duas variáveis definidas pelo usuário para determinar se a tarefa restrita é executada.  
+-   As restrições de precedência podem usar expressões para especificar as condições que determinam se a tarefa ou contêiner restrito em um pacote é executado. Expressões usadas em uma restrição de precedência devem avaliar para `true` ou `false`. Por exemplo, a expressão \@A > \@B compara duas variáveis definidas pelo usuário para determinar se a tarefa restrita é executada.  
   
 -   O contêiner Loop For pode usar expressões para construir a inicialização, avaliação e instruções de incremento usadas pela estrutura de looping. Por exemplo, a expressão \@Counter = 1 inicializa o contador de loop.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48192166"
  [Usar uma expressão em um componente de fluxo de dados](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+ Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

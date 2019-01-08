@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668645"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511454"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de Tipos – Correspondência de Tipo de Sequência
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668645"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparando o tipo do valor atômico retornado por uma expressão  
  Se uma expressão retornar uma sequência de valores atômicos, você terá que achar o tipo do valor na sequência. Os exemplos a seguir ilustram como o tipo da sintaxe de sequência pode ser usado para avaliar o tipo de valor atômico retornado por uma expressão.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Exemplo: determinando se uma sequência é vazia  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Exemplo: Determinando se uma sequência está vazia  
  O **Empty ()** tipo de sequência pode ser usado em uma expressão de tipo de sequência para determinar se a sequência retornada pela expressão especificada é uma sequência vazia.  
   
  No exemplo a seguir, o esquema XML permite que o elemento <`root`> seja anulado:  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>Exemplo: determinando o tipo de um valor de atributo  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>Exemplo: Determinando o tipo de um valor de atributo  
  Às vezes, você pode querer avaliar o tipo de sequência retornado por uma expressão antes do processamento. Por exemplo, você pode ter um esquema XML em que um nó está definido como um tipo de união. No exemplo seguinte, o esquema XML na coleção define o atributo `a` como um tipo de união cujo valor pode ser decimal ou um tipo de cadeia de caracteres.  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>Exemplo: uma cardinalidade em expressões de sequência  
+### <a name="example-cardinality-in-sequence-expressions"></a>Exemplo: Cardinalidade em expressões de sequência  
  Este exemplo ilustra o efeito da cardinalidade em uma expressão de sequência. O esquema XML a seguir define um elemento <`root`> que é de tipo de byte e é anulável.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Se ambos forem verdadeiros, a expressão `instance of` retornará True.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Exemplo: consultando em uma coluna do tipo xml  
+### <a name="example-querying-against-an-xml-type-column"></a>Exemplo: Consulta em relação a uma coluna de tipo xml  
  No exemplo a seguir, uma consulta é especificada em uma coluna de instruções do **xml** digite o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados. É uma coluna XML digitada porque tem um esquema associado a ela. O esquema XML define o atributo `LocationID` do tipo inteiro. Portanto, na expressão de sequência, o `instance of xs:integer?` retorna True.  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Comparando o tipo do nó retornado por uma expressão  
  Se uma expressão retornar uma sequência de nós, você terá de localizar o tipo do nó na sequência. Os exemplos a seguir ilustram como o tipo da sintaxe de sequência pode ser usado para avaliar o tipo de nó retornado por uma expressão. Você pode usar os seguintes tipos de sequência:  
   
--   **item()** – corresponde a qualquer item na sequência.  
+-   **item()** -corresponde a qualquer item na sequência.  
   
--   **node ()** – determina se a sequência é um nó.  
+-   **node ()** -determina se a sequência é um nó.  
   
--   **Instruction ()** – determina se a expressão retorna uma instrução de processamento.  
+-   **Instruction ()** -determina se a expressão retorna uma instrução de processamento.  
   
--   **Comment** – determina se a expressão retorna um comentário.  
+-   **Comment** -determina se a expressão retorna um comentário.  
   
--   **Document-Node()** – determina se a expressão retorna um nó de documento.  
+-   **Document-Node()** -determina se a expressão retorna um nó de documento.  
   
  O exemplo a seguir ilustra esses tipos de sequência.  
   
-### <a name="example-using-sequence-types"></a>Exemplo: usando tipos de sequência  
+### <a name="example-using-sequence-types"></a>Exemplo: Usando tipos de sequência  
  Neste exemplo, são executadas várias consultas em uma variável XML não digitada. Essas consultas ilustram o uso dos tipos de sequência.  
   
 ```  

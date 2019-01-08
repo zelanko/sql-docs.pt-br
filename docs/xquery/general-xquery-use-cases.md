@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659375"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539870"
 ---
 # <a name="general-xquery-use-cases"></a>Casos gerais de uso de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659375"
  A consulta a seguir retorna as IDs e os pesos de modelo do produto , se existentes, da descrição do catálogo de produtos. A consulta constrói XML que tenha a seguinte forma:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -61,7 +61,7 @@ WHERE CatalogDescription is not null
   
 -   Na cláusula WHERE, o **exist ()** método é usado para localizar somente as linhas que contêm descrições de catálogo de produtos. Ou seja, o XML que contém o elemento <`ProductDescription`>.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -89,13 +89,13 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  Na consulta anterior, o **exist ()** método da **xml** tipo de dados na cláusula WHERE verifica para ver se há um <`Weight`> elemento no <`Specifications`> elemento.  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Localizar IDs de modelos de produtos cujas descrições de catálogo incluem ângulo frontal e pequenas fotos  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>b. Localizar IDs de modelos de produtos cujas descrições de catálogo incluem ângulo frontal e pequenas fotos  
  A descrição de catálogo de produto XML inclui as fotos do produto, o elemento <`Picture`>. Cada foto tem várias propriedades. Essas incluem o ângulo da foto, o elemento <`Angle`> e o tamanho, o elemento <`Size`>.  
   
  Para modelos de produtos cujas descrições de catálogo incluem ângulo frontal e pequenas fotos, a consulta constrói um XML com o seguinte formato:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -306,7 +306,7 @@ WHERE CatalogDescription.value('
   
 -   O **Value ()** método o **xml** tipo de dados compara o valor retornado por **Contains ()** como 1.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 ProductModelID Result        

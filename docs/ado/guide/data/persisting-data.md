@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527628"
 ---
 # <a name="persisting-data"></a>Persistência de dados
 Computação portátil (por exemplo, usando laptops) gerou a necessidade de aplicativos que podem ser executados em um estado conectado e desconectado. ADO adicionou suporte para isso, dando a desenvolvedores a capacidade de salvar um cursor do cliente **Recordset** em disco e recarregá-lo mais tarde.  
   
  Há vários cenários em que você pode usar esse tipo de recurso, incluindo o seguinte:  
   
--   **Viajando:** ao fazer o aplicativo em trânsito, é essencial para fornecer a capacidade de fazer alterações e adicionar novos registros que podem ser reconectados ao banco de dados mais tarde e confirmados.  
+-   **Uma viagem:** Ao fazer o aplicativo em trânsito, é vital para fornecer a capacidade de fazer alterações e adicionar novos registros que podem ser reconectados ao banco de dados mais tarde e confirmados.  
   
--   **Raramente atualizados pesquisas:** geralmente em um aplicativo, as tabelas são usadas como pesquisas — por exemplo, tabelas de impostos de estado. Eles são atualizados com pouca frequência e são somente leitura. Em vez de reler esses dados do servidor de cada vez que o aplicativo é iniciado, o aplicativo pode simplesmente carregar os dados de um localmente persistente **conjunto de registros**.  
+-   **Pesquisas não costumam ser atualizadas:** Muitas vezes em um aplicativo, tabelas são usadas como pesquisas-por exemplo, tabelas de impostos de estado. Eles são atualizados com pouca frequência e são somente leitura. Em vez de reler esses dados do servidor de cada vez que o aplicativo é iniciado, o aplicativo pode simplesmente carregar os dados de um localmente persistente **conjunto de registros**.  
   
  No ADO, salvar e carregar **conjuntos de registros**, use o **Recordset.Save** e **Recordset.Open(,,,adCmdFile)** métodos em ADO **Recordset**objeto.  
   

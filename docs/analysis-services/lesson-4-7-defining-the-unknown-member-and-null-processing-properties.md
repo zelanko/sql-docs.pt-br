@@ -1,5 +1,5 @@
 ---
-title: Definir o membro desconhecido e propriedades de processamento nulo | Microsoft Docs
+title: Definindo o membro desconhecido e as propriedades de processamento nulo | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019573"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525918"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lição 4-7-definindo o membro desconhecido e propriedades de processamento nulo
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lição 4-7: definindo o membro desconhecido e as propriedades de processamento nulo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Quando o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] processa uma dimensão, todos os valores distintos das colunas subjacentes nas tabelas, ou nas exibições da fonte de dados, populam os atributos na dimensão. Por padrão, se o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detecta um valor nulo durante o processamento, ele converte o valor nulo em zero no caso de colunas numéricas ou em cadeia vazia no caso de colunas de cadeia de caracteres. Você pode modificar as configurações padrão ou converter valores nulos em seu processo de extração, transformação e carregamento (caso haja algum) do data warehouse relacional subjacente. Além disso, você pode usar o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para converter o valor nulo em um valor designado, configurando três propriedades: **UnknownMember** e **UnknownMemberName** para a dimensão e **NullProcessing** para o atributo de chave da dimensão.  
@@ -60,7 +60,7 @@ Nas tarefas deste tópico, você adicionará os atributos da categoria e subcate
   
     Esse nível contém os componentes do assembly que são usados para criar outros componentes, começando com o produto **Corrida Ajustável** , como mostra a imagem a seguir.  
   
-    ![Componentes do assembly usados para criar outros componentes](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "componentes do Assembly usados para criar outros componentes")  
+    ![Componentes de assembly usados para criar outros componentes](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "componentes usados para criar outros componentes do Assembly")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Definindo atributos das tabelas floco de neve e uma hierarquia definida pelo usuário Categoria do Produto  
   
@@ -90,7 +90,7 @@ Nas tarefas deste tópico, você adicionará os atributos da categoria e subcate
   
 9. No painel **Atributos** , altere o nome deste novo atributo para **Categoria**.  
   
-10. Na janela Propriedades, clique no campo de propriedade **NameColumn** e no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+10. Na janela Propriedades, clique no **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 11. Selecione **EnglishProductCategoryName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -98,11 +98,11 @@ Nas tarefas deste tópico, você adicionará os atributos da categoria e subcate
   
 13. No painel **Atributos** , altere o nome deste novo atributo para **Subcategoria**.  
   
-14. Na janela Propriedades, clique no campo de propriedade **NameColumn** e no botão Procurar **(…)** para abrir a caixa de diálogo **Coluna de Nome** .  
+14. Na janela Propriedades, clique no **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar **(...)**  para abrir o **nome da coluna** caixa de diálogo.  
   
 15. Selecione **EnglishProductSubcategoryName** na lista **Coluna de origem** e clique em **OK**.  
   
-16. Crie uma nova hierarquia definida pelo usuário chamada **Categorias de Produto** com os seguintes níveis na ordem de cima para baixo: **Categoria**, **Subcategoria**e **Nome do Produto**.  
+16. Criar uma nova hierarquia definida pelo usuário chamada **categorias de produtos** com os seguintes níveis na ordem de cima para baixo: **Categoria**, **subcategoria**, e **nome do produto**.  
   
 17. Especifique **Todos os Produtos** como o valor da propriedade **AllMemberName** da hierarquia definida pelo usuário Categorias de Produto.  
   
@@ -176,7 +176,7 @@ Para modificar o comportamento mencionado na tarefa anterior, você habilitará 
   
     Observe que todos os componentes do assembly agora são exibidos no nível **Nome do Produto** , como mostra a imagem a seguir.  
   
-    ![Nível nome do produto mostrando componentes de assembly](../analysis-services/media/l4-assemblycomponents-1.gif "nível nome do produto mostrando componentes de assembly")  
+    ![Nível nome do produto mostrando componentes do assembly](../analysis-services/media/l4-assemblycomponents-1.gif "nível nome do produto mostrando componentes de assembly")  
   
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 5: Definindo relações entre dimensões e grupos de medidas](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  

@@ -1,5 +1,5 @@
 ---
-title: Carregando dados em Parallel Data Warehouse | Microsoft Docs
+title: Carregar dados no Parallel Data Warehouse | Microsoft Docs
 description: Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o utilitário bcp, Integration Services, dwloader ou a instrução SQL INSERT.
 author: mzaman1
 manager: craigg
@@ -9,47 +9,47 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fed89686683616164132cf0322e3709eab78f32
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502140"
 ---
-# <a name="loading-data-into-parallel-data-warehouse"></a>Carregando dados em Parallel Data Warehouse
-Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando o Integration Services, [utilitário bcp](../tools/bcp-utility.md), **dwloader** carregador de linha de comando ou a instrução SQL INSERT.  
+# <a name="loading-data-into-parallel-data-warehouse"></a>Carregar dados no Parallel Data Warehouse
+Você pode carregar ou inserir dados no SQL Server Parallel Data Warehouse (PDW) usando os serviços de integração [utilitário bcp](../tools/bcp-utility.md), **dwloader** carregador de linha de comando ou a instrução SQL INSERT.  
 
-## <a name="loading-environment"></a>Ambiente de carregamento  
-Para carregar dados, você precisa de um ou mais servidores de carregamento. Você pode usar seu próprio ETL existente ou outros servidores, ou você pode adquirir novos servidores. Para obter mais informações, consulte [adquirir e configurar um servidor ao carregar](acquire-and-configure-loading-server.md). Essas instruções incluem um [carregar planilha de planejamento de capacidade de servidor](loading-server-capacity-planning-worksheet.md) para ajudá-lo a planejar a solução certa para carregamento.  
+## <a name="loading-environment"></a>Carregando ambiente  
+Para carregar dados, você precisa de um ou mais servidores de carregamento. Você pode usar seu próprio ETL existente ou outros servidores, ou você pode comprar novos servidores. Para obter mais informações, consulte [adquirir e configurar um servidor carregando](acquire-and-configure-loading-server.md). Essas instruções incluem um [carregamento de planilha de planejamento de capacidade de servidor](loading-server-capacity-planning-worksheet.md) para ajudá-lo a planejar a solução certa para o carregamento.  
   
 ## <a name="load-with-dwloader"></a>Carregar com dwloader  
-Usando o [dwloader carregador de linha de comando](dwloader.md) é a maneira mais rápida para carregar dados no PDW.  
+Usando o [dwloader carregador de linha de comando](dwloader.md) é a maneira mais rápida de carregar dados em PDW.  
   
 ![Processo de carregamento](media/loading-process.png "processo de carregamento")  
   
-dwloader carrega dados diretamente para os nós de computação sem passar os dados por meio do nó de controle. Para carregar dados, dwloader primeiro se comunica com o nó de controle para obter informações de contato para os nós de computação. dwloader configura um canal de comunicação com cada nó de computação e, em seguida, envia partes de 256KB de dados para os nós de computação de forma round robin.  
+dwloader carrega os dados diretamente para os nós de computação sem passar os dados por meio do nó de controle. Para carregar dados, dwloader pela primeira vez se comunica com o nó de controle para obter informações de contato para os nós de computação. dwloader configura um canal de comunicação com cada nó de computação e, em seguida, envia partes de 256KB de dados para os nós de computação de forma round-robin.  
   
-Em cada nó de computação, o serviço de movimentação de dados (DMS) recebe e processa as partes dos dados. Processamento de dados inclui converter cada linha em formato nativo do SQL Server e calcular o hash de distribuição para determinar o nó de computação para o qual cada linha pertence.  
+Em cada nó de computação, o serviço de movimentação de dados (DMS) recebe e processa as partes dos dados. Processamento de dados inclui conversão de cada linha em formato nativo do SQL Server e computar o hash de distribuição para determinar o nó de computação para o qual cada linha pertence.  
   
-Depois de processar as linhas, DMS usa uma movimentação de ordem aleatória para transferir a cada linha para o nó de computação correto e a instância do SQL Server. Como o SQL Server recebe as linhas, lotes-los de acordo com o **– b** definir o parâmetro tamanho do lote na dwloader e, em seguida, em massa carrega o lote.  
+Depois de processar as linhas, o DMS usa uma movimentação de ordem aleatória para transferir cada linha para o nó de computação correto e a instância do SQL Server. Como o SQL Server recebe as linhas, ele processa em lotes-los de acordo com o **-b** definir o parâmetro de tamanho de lote na dwloader e, em seguida, em massa carrega o lote.  
 
 ## <a name="load-with-prepared-statements"></a>Carregar com instruções preparadas
 
-Você pode usar as instruções preparadas para carregar dados em tabelas replicadas e distribuídas. Quando os dados de entrada não coincide com o tipo de dados de destino, uma conversão implícita é executada. As conversões implícitas com suporte pelo PDW instruções preparadas são um subconjunto das conversões suportadas pelo SQL Server. Ou seja, apenas um subconjunto de conversões têm suporte, mas as conversões com suporte correspondem conversões implícitas do SQL Server. Independentemente se a tabela de destino a ser carregado é definida como uma tabela replicada ou distribuída, conversões implícitas são aplicadas (se necessário) para todas as colunas existentes na tabela de destino. 
+Você pode usar as instruções preparadas para carregar dados em tabelas replicadas e distribuídas. Quando os dados de entrada não corresponder ao tipo de dados de destino, uma conversão implícita é executada. As conversões implícitas com suporte pelo PDW instruções preparadas são um subconjunto de conversões com suporte pelo SQL Server. Ou seja, apenas um subconjunto de conversões que têm suporte, mas as conversões com suporte correspondem conversões implícitas do SQL Server. Independentemente se a tabela de destino a ser carregado é definida como uma tabela distribuída ou replicada, as conversões implícitas são aplicadas (se necessário) para todas as colunas que existem na tabela de destino. 
 
 <!-- MISSING LINK
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |--------|---------------|  
 |Crie o banco de dados de preparo.|[Criar o banco de dados de preparo](staging-database.md)|  
-|Carregar serviços de integração.|[Carregar com o Integration Services](load-with-ssis.md)|  
-|Entenda as conversões de tipo para dwloader.|[Regras de conversão de tipo de dados do dwloader](dwloader-data-type-conversion-rules.md)|  
-|Carregar dados com dwloader.|[Carregador de linha de comando de dwloader](dwloader.md)|  
-|Entenda as conversões de tipo para inserção.|[Carregar dados com INSERT](load-with-insert.md)|  
+|Carregar com o Integration Services.|[Carregar com o Integration Services](load-with-ssis.md)|  
+|Entenda as conversões de tipo de dwloader.|[Regras de conversão de tipo de dados do dwloader](dwloader-data-type-conversion-rules.md)|  
+|Carregar dados com dwloader.|[Carregador de linha de comando do dwloader](dwloader.md)|  
+|Entenda as conversões de tipo de inserção.|[Carregar dados com INSERT](load-with-insert.md)|  
  
 <!-- MISSING LINKS
 ## See Also  

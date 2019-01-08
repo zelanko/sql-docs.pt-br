@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d57bbdf7219561dfea45f338f463834e578e3138
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9152e7415b81378f595930fab5a5a8335660734
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781328"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
   Use a caixa de diálogo **Criar InfoSource para os Dados da Transação** para criar um novo InfoSource para dados de transação no sistema SAP Netweaver BW.  
@@ -82,7 +81,7 @@ ms.locfileid: "48203876"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  

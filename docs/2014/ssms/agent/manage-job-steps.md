@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768448"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
   Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
@@ -57,7 +57,7 @@ ms.locfileid: "48167177"
   
 -   Programas executáveis e comandos de sistema operacional.  
   
--   Instruções[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarefas.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167177"
   
 -   O código de saída do processo retornado, se o comando teve êxito.  
   
--   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. No caso de um programa externo, é o nome do programa e os argumentos para o programa; por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Um programa externo, isso é o nome do programa e os argumentos para o programa, por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q "sp_who"**  
   
     > [!NOTE]  
     >  É necessário fornecer o caminho completo para o executável, caso este não esteja localizado em um diretório especificado no caminho de sistema ou no caminho para o usuário em cujo nome a etapa de trabalho é executada.  

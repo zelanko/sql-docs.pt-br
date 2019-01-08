@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
@@ -13,19 +13,19 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db96a90e9621949c528ea707be08beb5002177fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777798"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objeto General Statistics
   O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
   
-|Contadores de Estatísticas Gerais do SQL Server|Description|  
+|Contadores de Estatísticas Gerais do SQL Server|Descrição|  
 |--------------------------------------------|-----------------|  
 |**Tabelas Temporárias Ativas**|Número de tabelas temporárias/variáveis de tabela em uso.|  
 |**Redefinições de conexão/s**|O número total de logons iniciados do pool de conexão.|  

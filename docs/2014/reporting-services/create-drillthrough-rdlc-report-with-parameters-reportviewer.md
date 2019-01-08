@@ -11,20 +11,20 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04a797540abdde31411978ca05b776ee7693bd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352069"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Criar um relatório detalhado (RDLC) com parâmetros usando o Visualizador de Relatórios (Tutorial do SSRS)
-  Um relatório de [detalhamento](http://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
+  Um relatório de [detalhamento](https://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Requisitos  
- Para usar este passo a passo, você deve ter acesso para o **AdventureWorks2008** banco de dados de exemplo. A consulta usada neste passo a passo também funcionarão com **AdventureWorks2012** banco de dados. Para obter mais informações sobre como obter o **AdventureWorks2008** banco de dados de exemplo, consulte [Walkthrough: Installing the AdventureWorks Database](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) para Microsoft Visual Studio 2010.  
+ Para usar este passo a passo, você deve ter acesso para o **AdventureWorks2008** banco de dados de exemplo. A consulta usada neste passo a passo também funcionarão com **AdventureWorks2012** banco de dados. Para obter mais informações sobre como obter o **AdventureWorks2008** banco de dados de exemplo, consulte [passo a passo: Installing the AdventureWorks Database](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) para Microsoft Visual Studio 2010.  
   
- Este passo a passo pressupõe que você esteja familiarizado com consultas Transaction-SQL e ADO.NET [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) e [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) objetos.  
+ Este passo a passo pressupõe que você esteja familiarizado com as consultas Transaction-SQL e os objetos [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) e [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) do ADO.NET.  
   
  Use o Visual Studio 2010 ou o Visual Studio 2012 e o modelo de site ASP.NET para criar uma página da Web ASP.NET com um controle ReportViewer. O controle é configurado para exibir um relatório criado por você. Neste passo a passo, você cria o aplicativo no Microsoft Visual C #.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48106876"
  [Lição 6: Adicionar um controle ReportViewer ao aplicativo](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Lição 7: Adicionar ação de detalhamento ao relatório pai](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [Lição 8: Criar um filtro de dados](../reporting-services/lesson-8-create-a-data-filter.md)   
- [Lição 9: Criar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [Lição 9: Compilar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   

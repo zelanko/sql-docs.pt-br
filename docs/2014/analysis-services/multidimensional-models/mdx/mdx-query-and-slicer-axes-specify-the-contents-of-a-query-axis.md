@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209766"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393090"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificando o conteúdo de um eixo de consulta (MDX)
   Eixos de consulta especificam as extremidades de um conjunto de células retornadas por uma instrução MDX SELECT. Especificar as extremidades de um conjunto de células permitir restringir os dados retornados que ficam visíveis ao cliente.  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos observamos que não existem dados no cubo desde agosto de 2004. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
+ A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos que vimos até agora não há nenhum dado no cubo a partir de agosto de 2004 em diante. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -116,6 +116,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Especificando o conteúdo de um eixo de segmentação de dados &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Especificando o conteúdo de um eixo da segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

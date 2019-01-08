@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414593"
 ---
 # <a name="using-large-value-types"></a>Usando tipos de valor grande
   Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduzida uma **max** especificador para **varchar**, **nvarchar** e **varbinary** tipos de dados para permitir o armazenamento de valores tão grandes quanto 2 ^-31 1 bytes. Colunas da tabela e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis podem especificar **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados.  
@@ -43,7 +43,7 @@ ms.locfileid: "48136186"
   
  Os tipos de dados **varchar(max)**, **varbinary(max)** e **nvarchar(max)** em colunas com o tamanho **max** definido como ilimitado são representados como ISLONG por meio de conjuntos de linhas de esquema e interfaces principais do OLE DB que retornam tipos de dados de coluna.  
   
- A implementação de **IAccessor** do objeto de comando foi alterada para permitir a associação como DBTYPE_IUNKNOWN. Se o consumidor especificar DBTYPE_IUNKNOWN e definir *pObject* como nulo, o provedor retornará a interface **ISequentialStream** para o consumidor, de modo que ele possa transmitir os dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** usando variáveis de saída.  
+ O objeto de comando **IAccessor** implementação foi alterada para permitir a associação como DBTYPE_IUNKNOWN. Se o consumidor especificar DBTYPE_IUNKNOWN e definir *pObject* como nulo, o provedor retornará a interface **ISequentialStream** para o consumidor, de modo que ele possa transmitir os dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** usando variáveis de saída.  
   
  Os valores de parâmetro de saída transmitidos são retornados após as linhas de resultado. Se o aplicativo tentar avançar para o próximo conjunto de resultados chamando **IMultipleResults::GetResult** sem consumir todos os valores de parâmetro de saída retornados, DB_E_OBJECTOPEN será retornado.  
   

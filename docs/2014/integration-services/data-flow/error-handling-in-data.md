@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -21,12 +20,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4f907c45007942d7185decac2f958576647fed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787628"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
@@ -60,7 +59,7 @@ ms.locfileid: "48201306"
   
  Você pode configurar como fontes, transformações e destinos manipulam erros e truncamentos. A tabela a seguir descreve as opções.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Falha no Componente|A tarefa Fluxo de Dados falha quando ocorre um erro ou um truncamento. Falha é a opção padrão para um erro e um truncamento.|  
 |Ignorar Falha|O erro ou truncamento é ignorado e a linha de dados é direcionada para a saída da transformação ou fonte.|  
@@ -77,7 +76,7 @@ ms.locfileid: "48201306"
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](data-flow.md)   
- [Transformar Dados com Transformações](transformations/transform-data-with-transformations.md)   
+ [Transformar dados com transformações](transformations/transform-data-with-transformations.md)   
  [Conectar componentes com caminhos](../connect-components-with-paths.md)   
  [Tarefa de Fluxo de Dados](../control-flow/data-flow-task.md)   
  [Fluxo de Dados](data-flow.md)  

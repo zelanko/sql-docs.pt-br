@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504525"
 ---
 # <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
   Use o Editor da tarefa Executar Pacote para configurar a Tarefa Executar Pacote. A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -59,7 +59,7 @@ ms.locfileid: "48119036"
 >  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. Para obter mais informações sobre conversão, consulte [Implantar projetos no Servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
  **Senha**  
- Se o pacote filho for protegido por senha, forneça a senha para o pacote filho ou clique no botão de reticências (...) e crie uma nova senha para o pacote filho.  
+ Se o pacote filho for protegido por senha, forneça a senha dele ou clique no botão de reticências (...) e crie uma senha para ele.  
   
  `ExecuteOutOfProcess`  
  Especifique se o pacote filho é executado no processo do pacote pai ou um processo separado. Por padrão, a propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False`, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `true`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se a propriedade foi definida como `true`, você não poderá depurar o pacote em uma instalação somente ferramentas; você deve instalar o produto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](install-windows/install-integration-services.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "48119036"
  **Local**  
  Selecione o local de armazenamento do pacote filho. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**SQL Server**|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Sistema de arquivos**|Defina o local para o sistema de arquivos.|  
@@ -91,7 +91,7 @@ ms.locfileid: "48119036"
  **Conexão**  
  Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar Gerenciador de Conexões OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md), [configurar Gerenciador de Conexão do OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Digite o nome do pacote filho ou clique nas reticências (...) e localize o pacote.  
@@ -100,7 +100,7 @@ ms.locfileid: "48119036"
  **Conexão**  
  Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Exibe o nome do pacote.  

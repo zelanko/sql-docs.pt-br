@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
@@ -14,12 +13,12 @@ ms.assetid: 174ade3e-74a1-4e67-a6da-b874be3ff50f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1451a8645edb5f1da2aa4590246b2e50ff73b4df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8be85ae97d281113515205fadba9be827492474
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762559"
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>Compactar arquivos de instantâneo (SQL Server Management Studio)
   Especifique que os arquivos devem ser compactados na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  

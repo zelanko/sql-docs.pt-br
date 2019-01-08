@@ -11,23 +11,23 @@ ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdc6b3aa34ae3d2a75e78fe70862d3186c959f82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419007"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Procurando um modelo Naive Bayes
   Quando você abre um modelo de Naïve Bayes usando **procurar**, o modelo é exibido em um visualizador interativo com quatro painéis diferente. Use o visualizador para explorar correlações e obter informações sobre o modelo e os dados subjacentes.  
   
--   [Rede de dependências](#bkmk_DepNet)  
+-   [Rede de Dependências](#bkmk_DepNet)  
   
--   [Perfis de atributo](#bkmk_AttProf)  
+-   [Perfis de Atributo](#bkmk_AttProf)  
   
--   [Características do atributo](#bkmk_AttChar)  
+-   [Características do Atributo](#bkmk_AttChar)  
   
--   [Distinção de atributo](#bkmk_AttDisc)  
+-   [Distinção de Atributo](#bkmk_AttDisc)  
   
 ##  <a name="BKMK_Tabs"></a> Explorar o modelo  
  A finalidade do visualizador é ajudar a explorar a interação entre os atributos de entrada e saída (entradas e variáveis dependentes) que foram descobertos pelo modelo Naïve Bayes da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48223303"
   
  Para esses exemplos, é usada a fonte de dados na pasta de trabalho de exemplo e agrupamos a coluna **Renda anual**, em cinco grupos de renda, do **muito baixa** para **muito alta**. O modelo Naïve Bayes analisou os fatores correlacionadas com cada categoria de renda.  
   
-###  <a name="bkmk_DepNet"></a> Rede de dependências  
+###  <a name="bkmk_DepNet"></a> Rede de Dependências  
  A primeira janela que você usará é o **rede de dependências**. Ela mostra uma visão geral cujas entradas estão estreitamente correlacionadas ao resultado selecionado.  
   
  ![rede de dependências no visualizador Naive Bayes](media/dm13-nb.gif "rede de dependências no visualizador Naive Bayes")  
@@ -57,7 +57,7 @@ ms.locfileid: "48223303"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a> Perfis de atributo  
+###  <a name="bkmk_AttProf"></a> Perfis de Atributo  
  O **perfis de atributo** windows fornece uma indicação visual de como todas as outras variáveis estão relacionados aos resultados individuais.  
   
 ##### <a name="explore-the-profiles"></a>Explorar os perfis  
@@ -74,7 +74,7 @@ ms.locfileid: "48223303"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a> Características do atributo  
+###  <a name="bkmk_AttChar"></a> Características do Atributo  
  O **características do atributo** exibição é útil para a verificação detalhada de uma variável de resultado específico e os fatores de contribuição.  
   
  ![atributo características no visualizador Naive Bayes](media/dm13-nb-viewer.gif "atributo características no visualizador Naive Bayes")  
@@ -91,7 +91,7 @@ ms.locfileid: "48223303"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a> Distinção de atributo  
+###  <a name="bkmk_AttDisc"></a> Distinção de Atributo  
  O **distinção de atributo** exibição ajuda a comparar dois resultados ou um resultado versus todos os outros resultados.  
   
  ![atributo discriminação no visualizador Naive Bayes](media/dm13-nb-attdisc.gif "atributo discriminação no visualizador Naive Bayes")  

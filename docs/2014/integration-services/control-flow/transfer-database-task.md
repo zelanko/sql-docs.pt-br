@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203356"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805548"
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
   A tarefa Transferir Banco de Dados transfere um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao contrário das outras tarefas que transferem apenas objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de cópia, a tarefa Transferir Banco de Dados pode copiar ou mover um banco de dados. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203356"
 ## <a name="execution-value"></a>Valor de execução  
  O valor da execução, definido na propriedade `ExecutionValue` da tarefa, retorna o valor 1, porque em contraste com outras tarefas de transferência, a tarefa Transferir Banco de Dados pode transferir somente um banco de dados.  
   
- Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir banco de dados, as informações sobre a transferência de mensagem de erro pode se tornar disponível a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ Ao atribuir uma variável definida pelo usuário à propriedade `ExecValueVariable` da tarefa Transferir Banco de Dados, as informações sobre a transferência de mensagem de erro podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Banco de Dados inclui as seguintes entradas de log personalizadas:  
@@ -50,7 +49,7 @@ ms.locfileid: "48203356"
   
 -   SourceDB    Esta entrada de log lista o nome do banco de dados que é transferido.  
   
- Além disso, uma entrada de log para o `OnInformation` evento será gravado quando o banco de dados de destino é substituído.  
+ Além disso, uma entrada de log para o evento `OnInformation` é gravada quando o banco de dados de destino é substituído.  
   
 ## <a name="security-and-permissions"></a>Segurança e permissões  
  Para transferir um banco de dados usando o  modo offline, o usuário que executa o pacote deve ser um membro da função servidor sysadmin.  
@@ -72,9 +71,9 @@ ms.locfileid: "48203356"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa de banco de dados transferir &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa de banco de dados transferir &#40;página de bancos de dados&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor da Tarefa Transferir Banco de Dados &#40;Página Bancos de Dados&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice e: funções escalares | Microsoft Docs'
+title: 'Apêndice e: Funções escalares | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540515"
 ---
-# <a name="appendix-e-scalar-functions"></a>Apêndice E: Funções escalares
+# <a name="appendix-e-scalar-functions"></a>Apêndice e: Funções escalares
 ODBC Especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidos nas seções correspondentes neste apêndice. As descrições de função incluem sintaxe associada.  
   
  Este apêndice contém os tópicos a seguir.  
@@ -39,7 +39,7 @@ ODBC Especifica os seguintes tipos de funções escalares, com informações det
   
 -   [Função CAST do SQL-92](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC não exige um tipo de dados para valores de retorno de funções escalares, como as funções são geralmente específico da fonte de dados. Aplicativos devem usar a função escalar CONVERT sempre que possível forçar a conversão de tipo de dados.  
+ ODBC não exige um tipo de dados para valores de retorno de funções escalares, como as funções são geralmente específico de fonte de dados. Aplicativos devem usar a função escalar CONVERT sempre que possível forçar a conversão de tipo de dados.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>Funções escalares ODBC e SQL-92  
  As tabelas neste apêndice incluem funções que foram adicionadas no ODBC 3.0 para se alinhar com o SQL-92. Essas funções adicionadas para um determinado tipo de função escalar, conforme definido no ODBC, são indicadas em cada seção.  

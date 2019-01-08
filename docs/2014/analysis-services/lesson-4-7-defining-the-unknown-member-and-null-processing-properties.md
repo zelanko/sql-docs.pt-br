@@ -11,12 +11,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c0e257a3fe1b4aff1f1c9336f4cb11e8a12e613
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521623"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definindo o membro desconhecido e as propriedades de processamento nulo
   Quando o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] processa uma dimensão, todos os valores distintos das colunas subjacentes nas tabelas, ou nas exibições da fonte de dados, populam os atributos na dimensão. Por padrão, se o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detecta um valor nulo durante o processamento, ele converte o valor nulo em zero no caso de colunas numéricas ou em cadeia vazia no caso de colunas de cadeia de caracteres. Você pode modificar as configurações padrão ou converter valores nulos em seu processo de extração, transformação e carregamento (caso haja algum) do data warehouse relacional subjacente. Além disso, você pode usar o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para converter o valor nulo em um valor designado, configurando três propriedades: **UnknownMember** e **UnknownMemberName** para a dimensão e **NullProcessing** para o atributo de chave da dimensão.  
@@ -90,7 +90,7 @@ ms.locfileid: "48088726"
   
 9. No **atributos** painel, altere o nome deste novo atributo para `Category`.  
   
-10. Na janela Propriedades, clique no campo de propriedade **NameColumn** e no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+10. Na janela Propriedades, clique no **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 11. Selecione **EnglishProductCategoryName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48088726"
   
 13. No **atributos** painel, altere o nome deste novo atributo para `Subcategory`.  
   
-14. Na janela Propriedades, clique no campo de propriedade **NameColumn** e no botão Procurar **(…)** para abrir a caixa de diálogo **Coluna de Nome** .  
+14. Na janela Propriedades, clique no **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar **(...)**  para abrir o **nome da coluna** caixa de diálogo.  
   
 15. Selecione **EnglishProductSubcategoryName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -179,6 +179,6 @@ ms.locfileid: "48088726"
      ![Nível nome do produto mostrando componentes do assembly](../../2014/tutorials/media/l4-assemblycomponents-1.gif "nível nome do produto mostrando componentes de assembly")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: definindo relações entre grupos de medidas e dimensões](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lição 5: Definindo relações entre dimensões e grupos de medidas](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

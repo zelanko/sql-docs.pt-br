@@ -19,29 +19,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844664"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409733"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retorna estatísticas de desempenho para as funções em cache de agregação. A exibição retorna uma linha para cada plano de função em cache, e o tempo de vida da linha é desde que a função permanece em cache. Quando uma função é removida do cache, a linha correspondente é eliminada desta exibição. Nesse momento, um evento de rastreamento do SQL de estatísticas de desempenho é gerado semelhante à **DM exec_query_stats**. Retorna informações sobre as funções escalares, incluindo funções na memória e funções escalares CLR. Não retorna informações sobre as funções com valor de tabela.  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.  
   
 > [!NOTE]
 > Uma consulta inicial de **DM exec_function_stats** pode produzir resultados inexatos se houver uma carga de trabalho atualmente em execução no servidor. Mais resultados precisos podem ser determinados pela reexecução da consulta.  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID de banco de dados no qual a função reside.|  
 |**object_id**|**int**|Número de identificação de objeto da função.|  
-|**type**|**char(2)**|Tipo de objeto: FN = funções com valor escalar|  
+|**type**|**char(2)**|Tipo do objeto:   FN = funções com valor escalar|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de objeto: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas no **DM exec_query_stats** que foram executados nessa função.|  
 |**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com o **DM exec_cached_plans** exibição de gerenciamento dinâmico.<br /><br /> Sempre será 0x000 quando uma tabela de consultas, uma otimização de memória de função compilada nativamente.|  

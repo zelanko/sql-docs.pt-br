@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761888"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -133,7 +132,7 @@ deallocate #hfunctions
   
 -   Todas as colunas solicitadas de dados de alteração.  
   
--   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: ‘I’ de inserir, ‘D’ de excluir, ‘UO’ de atualizar valores antigos e ‘UN’ de atualizar valores novos.  
+-   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são da seguinte maneira: 'I' para inserção, vinda ' para excluir, 'UO' para atualizar valores antigos e un' ' para atualizar valores novos.  
   
 -   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *@update_flag_list* . Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
   
@@ -142,7 +141,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Escrevendo sua própria função do valor de tabela  
  Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa função usa dados captura funções alteração para mapear o `datetime` valores LSN (número) nas tabelas de alteração usam internamente de sequência de valores para o log binário. Esta função também controla diversas condições especiais:  
+ O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa função usa funções de captura de dados de alteração para mapear os valores `datetime` para os valores LSN (número de sequência de log) binários usados pelas tabelas de alteração internamente. Esta função também controla diversas condições especiais:  
   
 -   Quando um valor nulo é passado como a hora inicial, essa função usa o valor mais baixo disponível.  
   
@@ -207,7 +206,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Recuperando metadados adicionais com os dados de alteração  
  Embora a função com valor de tabela criada pelo usuário mostrada anteriormente use apenas a coluna **__$operation**, a função **cdc.fn_cdc_get_net_changes_<capture_instance>** retorna quatro colunas de metadados para cada linha de alteração. Se quiser usar esses valores no seu fluxo de dados, poderá retorná-los como colunas adicionais com a função de invólucro com valor de tabela.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas linhas diferentes, a tabela de alteração conterá quatro linhas (duas com os valores antigos e duas com os valores novos), cada uma com o mesmo valor de **__$start_lsn** .|  
 |**__$seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
@@ -220,6 +219,6 @@ go
 ## <a name="next-step"></a>Próxima etapa  
  Após ter criado a função com valor de tabela que consulta a existência de dados de alteração, a próxima etapa será iniciar a criação do fluxo de dados no pacote.  
   
- **Próximo tópico:** [Recuperar e compreender os dados de alteração](retrieve-and-understand-the-change-data.md)  
+ **Próximo tópico:** [Recuperar e compreender os dados de alterações](retrieve-and-understand-the-change-data.md)  
   
   

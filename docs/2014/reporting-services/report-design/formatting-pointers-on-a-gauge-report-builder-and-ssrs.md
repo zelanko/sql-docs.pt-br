@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544249"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
   Um ponteiro do medidor indica o valor atual do medidor. Por padrão, quando um campo for adicionado, os valores contidos nele serão agregados a um valor mostrado pelo ponteiro do medidor. É possível adicionar vários ponteiros ao medidor para mostrar vários valores na mesma escala, ou adicionar várias escalas e um ponteiro para todas as escalas adicionadas. Depois de adicionar um campo a um medidor, defina os valores mínimo e máximo da escala correspondente para oferecer contexto ao valor do ponteiro. Outra opção é definir os valores mínimo e máximo em um intervalo, que mostra uma área crítica na escala.  
@@ -43,7 +43,7 @@ ms.locfileid: "48183177"
   
   
 ##  <a name="SettingGradients"></a> Definindo as gradações em uma extremidade de agulha  
- Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o `RoundedDark` estilo, onde você pode especificar uma cor e estilo de gradiente.  
+ Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o estilo `RoundedDark`, em que você pode especificar uma cor de gradiente e o estilo de gradiente.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Como definir um intervalo de ajuste  
@@ -58,7 +58,7 @@ ms.locfileid: "48183177"
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

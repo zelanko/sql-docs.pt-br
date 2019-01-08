@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112806"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531419"
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
   A ASSL (Analysis Services Scripting Language) representa a hierarquia de objetos como um conjunto de tipos de elementos, cada um definindo os elementos filhos que podem conter.  
   
  Para representar a hierarquia de objeto, a ASSL usa as seguintes convenções XML:  
   
--   Todos os objetos e as propriedades são representadas como elementos, com exceção de atributos XML padrão como 'xml:lang'.  
+-   Todos os objetos e propriedades são representadas como elementos, com exceção de atributos XML padrão como 'XML: lang'.  
   
 -   Nomes de elementos e valores de enumeração seguem a convenção de nomenclatura do Microsoft .NET Framework do Pascal casing sem sublinhados.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112806"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112806"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112806"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112806"
  O Analysis Services usa os seguintes tipos de dados XSD (linguagem de definição de esquema XML) padrão:  
   
  `Int`  
- Um valor inteiro no intervalo de -231 até 231 – 1.  
+ Um valor inteiro no intervalo de-231 até 231-1.  
   
  `Long`  
- Um valor inteiro no intervalo de -263 até 263 – 1.  
+ Um valor inteiro no intervalo de -263 até 263-1.  
   
  `String`  
  Um valor de cadeia de caracteres em conformidade com as seguintes regras globais:  

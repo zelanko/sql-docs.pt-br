@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
@@ -14,17 +13,17 @@ ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219367"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641297"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Opção clr enabled de configuração de servidor
   Use a opção clr habilitado para especificar se assemblies de usuário podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A opção clr enabled fornece os seguintes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Execução de assembly não permitida no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |1|Execução de assembly permitida no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -35,7 +34,7 @@ ms.locfileid: "48219367"
 >  Quando RECONFIGURE é executado e o valor de execução da opção clr ativado é alterado de 1 para 0, todos os domínios de aplicativo que contêm assemblies de usuário são descarregados imediatamente.  
   
 > [!NOTE]  
->  Não há suporte para a execução de CLR (common language runtime) com lightweight pooling. Desabilite uma das duas opções: “clr enabled” ou “lightweight pooling”. Os recursos que dependem de CLR e que não funcionam corretamente no modo fibra incluem o `hierarchy` tipo de dados, replicação e gerenciamento baseado em políticas.  
+>  Não há suporte para a execução de CLR (common language runtime) com lightweight pooling. Desabilite uma das duas opções: “clr enabled” ou “lightweight pooling”. Os recursos que dependem de CLR e que não funcionam corretamente no modo fibra incluem o tipo de dados `hierarchy`, replicação e Gerenciamento Baseado em Políticas.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir primeiro mostra a configuração atual da opção clr enabled e, em seguida, habilita a opção configurando o valor da opção como 1. Para desabilitar a opção, defina o valor para 0.  

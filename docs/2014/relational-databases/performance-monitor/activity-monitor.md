@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
@@ -12,18 +12,18 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebdcf8fd98d24be3c0d8e6d9f2c5a97a90433218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801388"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
   O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Benefícios do Monitor de Atividade  
- Monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **visão geral**, **tarefas do usuário ativo**, **esperas**, **E/s do arquivo de dados**, e **consultas caras recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
+ Monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **Visão geral**, **tarefas do usuário do Active Directory**, **esperas recentes**, **e/s do arquivo de dados**, e **consultas caras recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
   
  Para as colunas que estão incluídas na **tarefas do usuário ativo**, **esperas**, **e/s de arquivo de dados**, e **consultas caras recentes** painéis, você pode personalizar a exibição das seguintes maneiras:  
   

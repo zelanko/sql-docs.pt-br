@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -25,12 +25,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef07f6885b99393b05b85b530464040490dd7bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135066"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777058"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
   Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  
@@ -59,7 +59,7 @@ ms.locfileid: "48135066"
   
 -   Exibir relatórios sobre a atividade atual ou criar relatórios a partir de arquivos de log existentes.  
   
--   Salvar gráficos, alertas, logs ou configurações de relatórios individuais ou toda a configuração do espaço de trabalho, para reutilização.  
+-   Salvar gráficos, alertas, logs ou configurações de relatórios individuais ou toda a configuração do workspace, para reutilização.  
   
     > [!NOTE]  
     >  O Monitor do Sistema substituiu o Monitor de Desempenho a partir do Windows NT 4.0. Você pode usar o Monitor do Sistema ou o Monitor de Desempenho para essas tarefas.  

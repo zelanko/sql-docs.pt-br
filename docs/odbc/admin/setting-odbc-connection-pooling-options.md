@@ -15,12 +15,12 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b6f5d7e6af3726558f5cee72f00ff06e13ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503892"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Configurar opções de pool de conexões ODBC
 Pooling de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar o **Pooling de Conexão** guia da **administrador de fonte de dados ODBC** caixa de diálogo para habilitar e desabilitar o monitoramento de desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
@@ -36,7 +36,7 @@ Pooling de Conexão permite que um aplicativo para usar uma conexão de um pool 
 |-------------|----------------|  
 |Contador de disco rígido de Conexão ODBC por segundo|O número de conexões reais por segundo que são feitas no servidor. Na primeira vez em que seu ambiente apresenta uma carga pesada, esse contador será subir muito rapidamente. Depois de alguns segundos, ele descarta a zero. Essa é a situação de normal quando o pooling de conexão está funcionando. Quando as conexões com o servidor tiveram sido estabelecidas, eles serão usados e colocados no pool para reutilização.|  
 |ODBC rígido desconectar contador por segundo|O número de disco rígido desconexões por segundo emitido para o servidor. Essas são as conexões reais para o servidor que estão sendo lançadas pelo pool de conexão. Esse valor serão aumentados de zero quando você parar todos os clientes no sistema e as conexões começam a atingir o tempo limite.|  
-|Contador de Conexão flexível de ODBC por segundo|O número de conexões satisfeitos por pool por segundo — em outras palavras, as conexões desse pool que foram passadas para os usuários. Este contador indica se o pool está funcionando. Dependendo da carga em seu servidor, não é incomum para esta opção para mostrar as conexões de software de 40 a 60 por segundo.|  
+|Contador de Conexão flexível de ODBC por segundo|O número de conexões satisfeitos por pool por segundo em outras palavras, as conexões do pool que foram entregues aos usuários. Este contador indica se o pool está funcionando. Dependendo da carga em seu servidor, não é incomum para esta opção para mostrar as conexões de software de 40 a 60 por segundo.|  
 |Contador de desconexão reversível ODBC por segundo|O número de desconexões por segundo emitido pelos aplicativos. Quando o aplicativo libera ou se desconecta, a conexão é colocado de volta no pool.|  
 |Contador de Conexão ativa atual do ODBC|O número de conexões no pool que estão atualmente em uso.|  
 |Contador de Conexão livre atual do ODBC|O número atual de conexões livres no pool. Essas são as conexões dinâmicas que estão disponíveis para uso.|  

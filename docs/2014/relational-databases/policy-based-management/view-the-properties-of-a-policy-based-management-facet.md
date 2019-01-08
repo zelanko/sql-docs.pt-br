@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, view facet properties
@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76cc2c4586adb2eed49fba89e113136063916d6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753258"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Exibir as propriedades de uma faceta de gerenciamento baseado em políticas
   Este tópico descreve como exibir as propriedades de uma faceta do Gerenciamento Baseado em Políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48064796"
   
 4.  Clique no sinal de adição para expandir a pasta **Facetas** .  
   
-5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Propriedades da faceta –***facet_name*, consulte [Caixa de diálogo Propriedades de Faceta, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md) e [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Propriedades da faceta-***nome_da_faceta*, confira [Caixa de diálogo Propriedades de Faceta, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md) e [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Quando terminar, clique em **Fechar**.  
   

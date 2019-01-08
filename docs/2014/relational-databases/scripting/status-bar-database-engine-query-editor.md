@@ -11,21 +11,21 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512076"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de status (Editor de Consultas do Mecanismo de Banco de Dados)
   A barra de status das janelas do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser codificadas por cor para indicar a qual instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] cada janela está conectada.  
   
 1.  **Antes de começar:**  [Cores da barra de status](#StatusBarColors)  
   
-2.  **Para definir uma cor de status do servidor no:**  [Pesquisador de Objetos](#SetOEServerColor), [Servidor Registrado](#SetRegServerColor)  
+2.  **Para definir uma cor de status em:**  [Pesquisador de objetos](#SetOEServerColor), [servidor registrado](#SetRegServerColor)  
   
-3.  **Para usar uma cor de status:**  [Abrir o Editor de Consultas que usando uma cor de servidor](#OpenServerColor), [Abrir o Editor de Consultas especificando uma cor de status](#OpenSpecColor)  
+3.  **Para usar uma cor de status:**  [Abra o Editor de consulta usando uma cor de servidor](#OpenServerColor), [abrir um Editor de consultas especificando uma cor de Status](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Cores da barra de status  
  Você pode associar uma cor de barra de status a um nó de servidor específico em **Pesquisador de Objetos** ou **Servidores Registrados**. As cores podem ser especificadas somente para nós de servidor conectados a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], e não para nós de servidor de outras tecnologias do SQL Server. Você também pode especificar uma cor de barra de status personalizada sempre que você conecta uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Em seguida, você pode abrir uma janela do Editor de Consultas usando a cor de status definida para o nó do servidor ou especificar uma cor exclusiva para essa janela do editor.  
@@ -35,13 +35,13 @@ ms.locfileid: "48093426"
 ##  <a name="SetOEServerColor"></a> Definir a cor de status para um servidor no Pesquisador de Objetos  
  **Para definir uma cor de status no Pesquisador de Objetos**  
   
-1.  No **Pesquisador de Objetos**, selecione o botão **Conectar** e depois a opção **Mecanismo de Banco de Dados…**.  
+1.  No **Pesquisador de Objetos**, selecione o botão **Conectar** e depois a opção **Mecanismo de Banco de Dados...**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>**.  
   
 3.  Marque a caixa de seleção **Usar cor personalizada** .  
   
-4.  Para selecionar a cor, selecione o botão **Selecionar…** .  
+4.  Para selecionar a cor, selecione o botão **Selecionar...**.  
   
 5.  Selecione uma cor básica ou personalizada e clique em OK.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093426"
 ##  <a name="SetRegServerColor"></a> Definir a cor de status para um servidor registrado  
  **Par definir uma cor de status para um servidor registrado**  
   
-1.  Em **Servidores Registrados**, clique com o botão direito no nó do servidor e selecione **Propriedades…**.  
+1.  Em **Servidores Registrados**, clique com o botão direito do mouse no nó de servidor e selecione **Propriedades...**.  
   
 2.  Na caixa de diálogo **Editar Propriedades de Registro do Servidor** , selecione a guia **Propriedades de Conexão** .  
   
 3.  Marque a caixa de seleção **Usar cor personalizada** .  
   
-4.  Para selecionar a cor, selecione o botão **Selecionar…** .  
+4.  Para selecionar a cor, selecione o botão **Selecionar...**.  
   
 5.  Selecione uma cor básica ou personalizada e clique em OK.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093426"
   
 -   Marque a caixa de seleção **Usar cor personalizada** .  
   
--   Para selecionar a cor, selecione o botão **Selecionar…** .  
+-   Para selecionar a cor, selecione o botão **Selecionar...**.  
   
 -   Selecione uma cor básica ou personalizada e clique em OK.  
   

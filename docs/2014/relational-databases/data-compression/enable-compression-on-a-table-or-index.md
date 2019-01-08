@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542691"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
   Este tópico descreve como habilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48906436"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Não é possível habilitar as tabelas do sistema para compactação.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48906436"
   
 2.  Para compactar um índice, expanda a tabela que contém o índice que você deseja compactar e expanda a pasta **Índices** .  
   
-3.  Clique com o botão direito do mouse na tabela ou índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação…**.  
+3.  Clique com o botão direito do mouse na tabela ou no índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação...**.  
   
 4.  No Assistente de Compactação de Dados, na página **Bem-vindo ao Assistente de Compactação de Dados** , clique em **Avançar**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48906436"
   
      Se você selecionar **Agenda**, clique em **Alterar agenda**.  
   
-    1.  Na caixa de diálogo **Nova Agenda de Trabalho** , na caixa **Nome** , digite o nome da agenda de trabalho.  
+    1.  Na caixa de diálogo **Nova Agenda de Trabalho**, na caixa **Nome**, digite o nome da agenda de trabalho.  
   
     2.  Na lista **Tipo de Agenda** , selecione o tipo de agenda:  
   
@@ -140,15 +140,15 @@ ms.locfileid: "48906436"
   
             -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
-                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
+                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeira**, **segundo**, **terceira**, ou **quarto**, bem como dias específicos da semana (por exemplo: Domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
             -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite “2” na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
   
                  Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
@@ -190,14 +190,14 @@ ms.locfileid: "48906436"
      Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
-     Copia os resultados do relatório de progresso do assistente na área de transferência.  
+     Copia os resultados do relatório de progresso do assistente na Área de transferência.  
   
      **Enviar Relatório como Email**  
-     Copia os resultados do relatório de progresso do assistente em uma mensagem de email.  
+     Copia os resultados do relatório de progresso do assistente para uma mensagem de email.  
   
      Quando terminar, clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-enable-compression-on-a-table"></a>Para permitir a compactação em uma tabela  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48906436"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Depois, ele executará o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado do ID de índice especificado se ele fosse usar a configuração de compactação de página. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Em seguida, ele executaria o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado da ID de índice especificada como se a configuração de compactação PAGE fosse usada. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
   
     ```  
     USE AdventureWorks2012;   

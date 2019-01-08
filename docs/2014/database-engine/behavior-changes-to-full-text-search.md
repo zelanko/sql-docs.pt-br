@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461011"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508875"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Alterações de comportamento na pesquisa de texto completo
   Este tópico descreve alterações de comportamento em pesquisa de texto completo. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,8 +68,8 @@ ms.locfileid: "49461011"
   
 |**Termo**|**Resultados com separador de palavras anterior e lematizador**|**Resultados com novo separador de palavras e lematizador**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(em que os termos não são caracteres válidos em inglês)*|‘jěˊÿｑℭžl’|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|jěˊÿqℭžl<br /><br /> *(em que os termos não são caracteres válidos em inglês)*|'jěˊÿqℭžl'|je yq zl|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(em que v e z são palavras de ruído)*|*(nenhum resultado)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461011"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Alterações de comportamento na pesquisa de texto completo no SQL Server 2008  
  No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores, o mecanismo de texto completo é integrado como um serviço de banco de dados ao banco de dados relacional como parte da infraestrutura de mecanismo de consulta e o armazenamento de servidor. A nova arquitetura de pesquisa de texto completo atinge as seguintes metas:  
   
--   Armazenamento e gerenciamento integrados — agora, pesquisa de texto completo é integrada diretamente com os recursos de armazenamento e gerenciamento inerentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], e o serviço MSFTESQL não existe mais.  
+-   Armazenamento integrado e gerenciamento-Full-text search agora está integrado diretamente com os recursos de armazenamento e gerenciamento inerentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], e o serviço MSFTESQL não existe mais.  
   
     -   Os índices de texto completo são armazenados nos grupos de arquivos de banco de dados, e não no sistema de arquivos. As operações administrativas executadas em um banco de dados, como a criação de um backup, afetam automaticamente seus índices de texto completo.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461011"
         > [!NOTE]  
         >  As instruções DDL [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] do [!INCLUDE[tsql](../includes/tsql-md.md)] que especificam catálogos de texto completo funcionam corretamente.  
   
--   Processamento de consultas integrado — O processador de consultas de pesquisa de texto completo faz parte do Mecanismo de Banco de Dados e está totalmente integrado ao Processador de Consultas do SQL Server. Isso significa que o otimizador de consulta reconhece predicados de consulta de texto completo e os executa automaticamente com o máximo de eficácia possível.  
+-   O processamento de consulta integrada à nova, processador de consulta pesquisa de texto completo faz parte do mecanismo de banco de dados e é totalmente integrado com o processador de consulta do SQL Server. Isso significa que o otimizador de consulta reconhece predicados de consulta de texto completo e os executa automaticamente com o máximo de eficácia possível.  
   
--   Administração e solução de problemas aprimoradas — A pesquisa de texto completo integrada oferece ferramentas que ajudam você a analisar estruturas de pesquisa, como o índice de texto completo, a saída de um determinado separador de palavras, a configuração de palavras irrelevantes (stopwords), entre outras.  
+-   Administração aprimorada e integrada à solução de problemas de pesquisa de texto completo fornece ferramentas para ajudá-lo a analisar estruturas de pesquisa, como o índice de texto completo, a saída de um determinado separador de palavras, configuração de palavras irrelevantes e assim por diante.  
   
 -   As palavras irrelevantes e as listas de palavras irrelevantes (stoplists) substituíram as palavras de ruído o os arquivos de palavras de ruído. Uma lista de palavras irrelevantes é um objeto de banco de dados que facilita as tarefas de capacidade de gerenciamento relacionadas a palavras irrelevantes e melhora a integridade entre diferentes ambientes e instâncias de servidor. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   

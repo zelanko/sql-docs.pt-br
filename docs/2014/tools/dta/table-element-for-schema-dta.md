@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074407"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781808"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
   Especifica a tabela para ajuste.  
@@ -36,13 +35,13 @@ ms.locfileid: "48074407"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |`NumberOfRows`|Opcional. Inteiro que permite simular tabelas de tamanhos diferentes.|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  
@@ -52,8 +51,8 @@ ms.locfileid: "48074407"
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de esquema para o banco de dados &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**Elementos filho**|[Nomeie o elemento para a tabela &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**Elemento pai**|[Elemento Schema para Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**Elementos filho**|[Elemento Name para Table &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Comentários  
  Se você não especificar um elemento `Table`, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá que todas as tabelas no banco de dados especificado podem ser ajustadas.  
