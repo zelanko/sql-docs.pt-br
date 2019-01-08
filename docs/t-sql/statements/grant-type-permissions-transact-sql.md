@@ -18,12 +18,12 @@ ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b2cc4e32272a337a196d93df8c3101a3bbbad8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0769e3435cf09b4c69ddbc2f75f3e866e2a61a3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808354"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588740"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>Permissões de tipo GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Especifica uma permissão que pode ser concedida em um tipo. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Especifica o tipo em que a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) será obrigatório.  
   
  TO \<database_principal> Especifica a entidade de segurança para a qual a permissão está sendo concedida.  
