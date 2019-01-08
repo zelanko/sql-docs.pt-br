@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350822"
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
   Antes de instalar e usar o recurso Distributed Replay do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , revise as informações de segurança importantes neste tópico. Este tópico descreve as etapas de configuração de segurança pós-instalação que são necessárias antes de usar o Distributed Replay. Este tópico também descreve considerações importantes referentes à proteção de dados e etapas de remoção importantes.  
@@ -70,7 +70,7 @@ ms.locfileid: "48181396"
   
  Para configurar permissões do controlador DCOM, siga estas etapas:  
   
-1.  **Abrir dcomcnfg.exe, o snap-in de Serviços de Componentes**: esta é a ferramenta que é usada para configurar permissões DCOM.  
+1.  **Snap-in de serviços de componente de dcomcnfg.exe aberto,**: Esta é a ferramenta que é usada para configurar permissões DCOM.  
   
     1.  No computador do controlador, clique em **Iniciar**.  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48181396"
   
     3.  Pressione ENTER.  
   
-2.  **Configurar permissões DCOM no computador inteiro**: conceda as permissões DCOM correspondentes no computador inteiro para cada conta listada na tabela a seguir. Para obter mais informações sobre como definir permissões no computador inteiro, veja [Lista de verificação: Gerenciar aplicativos DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurar permissões DCOM de todo o computador**: Conceda as permissões DCOM de computadores correspondentes para cada conta listada na tabela a seguir. Para obter mais informações sobre como definir permissões em todo o computador, consulte [lista de verificação: Gerenciar aplicativos DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurar permissões DCOM específicas do aplicativo**: conceda as permissões DCOM correspondentes específicas do aplicativo para cada conta listada na tabela a seguir. O nome do aplicativo DCOM para o serviço do controlador é **DReplayController**. Para obter mais informações sobre como definir permissões específicas do aplicativo, veja [Lista de verificação: Gerenciar aplicativos DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurar permissões DCOM específicas do aplicativo**: Conceda as permissões de DCOM correspondentes específicas do aplicativo para cada conta listada na tabela a seguir. O nome do aplicativo DCOM para o serviço do controlador é **DReplayController**. Para obter mais informações sobre como definir permissões específicas do aplicativo, consulte [lista de verificação: Gerenciar aplicativos DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  A seguinte tabela descreve quais permissões DCOM são necessárias para a conta de usuário interativa da ferramenta de administração e para as contas de serviço cliente:  
   
 |Recurso|Conta|Permissões DCOM necessárias no controlador|  
 |-------------|-------------|---------------------------------------------|  
 |Ferramenta de administração Distributed Replay|A conta de usuário interativa|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
-|Cliente Distributed Replay|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conta de serviço do cliente do Distributed Replay|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
+|Distributed Replay Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conta de serviço do cliente do Distributed Replay|Acesso local<br /><br /> Acesso remoto<br /><br /> Inicialização local<br /><br /> Inicialização remota<br /><br /> Ativação local<br /><br /> Ativação remota|  
   
 > [!IMPORTANT]  
 >  Para ajudar a proteger contra consultas mal-intencionadas ou ataques de negação de serviço, verifique se está usando apenas uma conta de usuário de confiança para a conta de serviço do cliente. Esta conta poderá se conectar e reproduzir cargas de trabalho na instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

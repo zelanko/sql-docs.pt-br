@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538589"
 ---
 # <a name="cross-container-transactions"></a>Transações entre contêineres
   As transações entre contêineres são as transações de usuário implícitas ou explícitas que incluem chamadas para procedimentos armazenados compilados nativamente ou para operações em tabelas com otimização de memória.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  A consistência transacional para um conjunto de leituras se refere à garantia de que as versões de linha lidas incluirão atualizações precisamente do mesmo conjunto de transações.  
   
  A estabilidade garante que o sistema forneça à transação T informações sobre a leitura de dados.  
- A estabilidade se refere ao fato de as leituras de transação serem ou não repetidas. Isto é, se as leituras fossem repetidas, elas retornariam as mesmas linhas e versões de linha?  
+ Estabilidade se refere ao se as leituras de transação são repetidas. Isto é, se as leituras fossem repetidas, elas retornariam as mesmas linhas e versões de linha?  
   
  Determinadas garantias se referem à hora de término lógica da transação. De modo geral, a hora de término lógica é a hora em que a transação foi confirmada no banco de dados. Se as tabelas com otimização de memória são acessadas pela transação, a hora de término lógica, tecnicamente, é o início da fase de validação. (Para obter mais informações, consulte a discussão de tempo de vida de transação na [transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

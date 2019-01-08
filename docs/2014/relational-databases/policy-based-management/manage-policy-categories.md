@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.policycategories.f1
@@ -12,12 +12,12 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb6b0d2ebf9f8e47a40318a8309e363560921dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817961"
 ---
 # <a name="manage-policy-categories"></a>Gerenciar Categorias de Política
   Este tópico descreve como aplicar uma ou todas as políticas disponíveis em uma categoria a toda a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48050519"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Ao usar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se a caixa de seleção **Autorizar Assinaturas de Banco de Dados** não estiver selecionada, a categoria de política deve ser aplicada individualmente a cada parte relevante do servidor, como em um ou mais bancos de dados e tabelas.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48050519"
   
 5.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar políticas de categoria a uma instância do SQL Server  
   

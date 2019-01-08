@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
@@ -13,12 +13,12 @@ ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcd423d58bbc344d11a7a3c35e27e7406f90664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764398"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página Gerenciador de scripts de objeto do SQL Server)
   Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
@@ -87,8 +87,8 @@ ms.locfileid: "48080671"
  **Gerar comandos SET ANSI PADDING**  
  Adiciona a instrução SET ANSI_PADDING antes e depois de cada instrução CREATE TABLE. O padrão é True. Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
- **Incluir agrupamento**  
- Inclui agrupamento na definição de coluna. O padrão é True. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ **Incluir ordenação**  
+ Inclui ordenação na definição de coluna. O padrão é True. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  **Incluir propriedade IDENTITY**  
  Inclui definições para semente IDENTITY e incremento IDENTITY. O padrão é True. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
@@ -35,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e168c23035722174451d316ef53b14be3cc5c8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804548"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
   Este tópico descreve como criar um plano de manutenção de um único servidor ou multisservidor usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
@@ -57,7 +56,7 @@ ms.locfileid: "48127876"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "48127876"
   
     5.  Se você selecionou **Agenda única para o plano inteiro ou sem agenda**, em **Agenda**, clique em **Alterar**.  
   
-        1.  Na caixa de diálogo **Nova Agenda de Trabalho** , na caixa **Nome** , digite o nome da agenda de trabalho.  
+        1.  Na caixa de diálogo **Nova Agenda de Trabalho**, na caixa **Nome**, digite o nome da agenda de trabalho.  
   
         2.  Na lista **Tipo de Agenda** , selecione o tipo de agenda:  
   
@@ -119,15 +118,15 @@ ms.locfileid: "48127876"
   
                 -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
-                    -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
+                    -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                    -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                    -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeira**, **segundo**, **terceira**, ou **quarto**, bem como dias específicos da semana (por exemplo: Domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
             2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
                 -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-                -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite “2” na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+                -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
   
                      Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "48127876"
     > [!NOTE]  
     >  As tarefas selecionadas aqui determinarão quais páginas deverão ser preenchidas depois da página **Selecionar Ordem da Tarefa de Manutenção** a seguir.  
   
-8.  Na página **Selecionar Ordem da Tarefa de Manutenção** , selecione uma tarefa e clique em **Mover para Cima…** ou **Mover para Baixo…** para alterar sua ordem de execução. Ao concluir ou se você estiver satisfeito com a ordem atual das tarefas, clique em **Avançar**.  
+8.  Na página **Selecionar Ordem da Tarefa de Manutenção**, selecione uma tarefa e clique em **Mover para Cima...** ou em **Mover para Baixo...** para alterar sua ordem de execução. Ao concluir ou se você estiver satisfeito com a ordem atual das tarefas, clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se você selecionou **Agendas separadas para cada tarefa** na página **Selecionar Propriedades do Plano** acima, não será possível alterar a ordem das tarefas de manutenção nessa página.  
@@ -210,7 +209,7 @@ ms.locfileid: "48127876"
   
 #### <a name="define-the-index-tasks"></a>Definir as tarefas de índice  
   
-1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX … REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Reorganizar Índice** , selecione os servidores nos quais você moverá páginas de índice para uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX ... REORGANIZE`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -224,9 +223,9 @@ ms.locfileid: "48127876"
      Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
      Caixa de seleção**Compactar objetos grandes**   
-     Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  Na página **Definir Tarefa Recompilar Índice** , selecione o banco de dados ou os bancos de dados nos quais vários índices serão recriados. Esta tarefa usa a instrução `ALTER INDEX … REBUILD PARTITION`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) Ao concluir, clique em **Avançar**.  
+2.  Na página **Definir Tarefa Recompilar Índice** , selecione o banco de dados ou os bancos de dados nos quais vários índices serão recriados. Esta tarefa usa a instrução `ALTER INDEX ... REBUILD PARTITION`. Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -255,7 +254,7 @@ ms.locfileid: "48127876"
      Usa a opção `SORT_IN_TEMPDB` , que determina onde são armazenados temporariamente os resultados intermediários de classificação, gerados durante a criação do índice. Se uma operação de classificação não for necessária, ou se a classificação puder ser executada na memória, a opção `SORT_IN_TEMPDB` será ignorada.  
   
      Caixa de seleção**Manter o índice online enquanto estiver reindexando**   
-     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. A seleção dessa opção ativa opções adicionais para a recriação de índices que não permitem recriações online: **Não recompilar índices** e **Recompilar índices offline**.  
+     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. Esta opção ativa opções adicionais para a recriação de índices que não permitem recriações online: **Não recompilar índices** e **recompilar índices offline**.  
   
     > [!NOTE]  
     >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -408,7 +407,7 @@ ms.locfileid: "48127876"
     |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
-2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE … WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Ao concluir, clique em **Avançar**.  
+2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Ao concluir, clique em **Avançar**.  
   
 3.  Na página **Definir Tarefa de Backup de Banco de Dados (Log de Transações)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup de um log de transações. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP LOG`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Ao concluir, clique em **Avançar**.  
   
@@ -505,9 +504,9 @@ ms.locfileid: "48127876"
      Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
-     Copia os resultados do relatório de progresso do assistente na área de transferência.  
+     Copia os resultados do relatório de progresso do assistente na Área de transferência.  
   
      **Enviar Relatório como Email**  
-     Copia os resultados do relatório de progresso do assistente em uma mensagem de email.  
+     Copia os resultados do relatório de progresso do assistente para uma mensagem de email.  
   
   

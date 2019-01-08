@@ -4,28 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 869bbc88b10c5b1c561dd7fa9f085c5296aaf16f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103166"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328936"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
-  A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
+
+A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
- **Caixa de ferramentas** ícones podem ser arrastados e descartados ou copiados e colados em editores de código ou a exibição de superfícies de design dentro do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+**Caixa de ferramentas** ícones podem ser arrastados e descartados ou copiados e colados em editores de código ou a exibição de superfícies de design dentro do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Usando a Caixa de Ferramentas  
  A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais (**+**) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos (**-**) próximo a seu nome.  
@@ -40,5 +38,3 @@ ms.locfileid: "48103166"
 ## <a name="see-also"></a>Consulte também  
  [Usar a Caixa de Ferramentas](../../ssms/use-the-toolbox.md)   
  [Escolher itens da caixa de ferramenta &#40;página Tarefas de Manutenção&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
-  
-  

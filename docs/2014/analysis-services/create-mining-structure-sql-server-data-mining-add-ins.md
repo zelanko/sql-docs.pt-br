@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542974"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Criar estrutura de mineração (Suplementos de Mineração de Dados do SQL Server)
   ![O botão Criar estrutura de mineração, faixa de opções mineração de dados](media/dmc-createstruct.gif "botão Criar estrutura de mineração, faixa de opções mineração de dados")  
@@ -93,7 +93,7 @@ ms.locfileid: "48086336"
 ###  <a name="Bkmk_strctcolumn"></a> Definindo o uso de coluna na criar Assistente de estrutura de mineração  
  Ao criar uma nova estrutura de mineração, você pode especificar quais colunas da fonte de dados deverão ser incluídas na estrutura de mineração e como essas colunas deverão ser usadas. Lembre-se de que uma estrutura de mineração pode oferecer suporte a vários modelos de mineração.  
   
-|Valores|Description|  
+|Valores|Descrição|  
 |------------|-----------------|  
 |**Incluir**|Especifica que a coluna contém dados que podem ser usados para análise ou previsão.|  
 |**Chave**|Especifica que a coluna contém uma ID de transação, uma ID de série ou outra chave necessária para processamento.<br /><br /> Todos os algoritmos requerem uma coluna Key. Porém, alguns algoritmos permitem apenas uma única chave, enquanto outros permitem várias chaves.<br /><br /> Se a coluna contém uma chave, mas não é necessária para o processamento, selecione **não Use**.|  

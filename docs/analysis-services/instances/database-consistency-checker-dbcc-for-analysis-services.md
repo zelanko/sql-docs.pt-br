@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697005"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413083"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
-O comando usa uma definição de objeto e retornará um conjunto de resultados vazio ou informações de erro detalhadas se o objeto estiver corrompido.   Neste artigo, você vai aprender a executar o comando, interpretar os resultados e resolver os problemas que surgirem.  
+O comando usa uma definição de objeto e retornará um conjunto de resultados vazio ou informações de erro detalhadas se o objeto estiver corrompido.   Neste artigo, você vai aprender a executar o comando, interpretar os resultados e resolver quaisquer problemas que surgem.  
   
  Para bancos de dados tabulares, verificações de consistência executadas pelo DBCC são equivalentes à validação interna que ocorre automaticamente sempre que você recarrega, sincroniza ou restaura um banco de dados.  Por outro lado, verificações de consistência de bancos de dados multidimensionais ocorrem somente quando você executa o DBCC sob demanda.  
   
@@ -35,7 +35,7 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
  O DBCC para Analysis Services será executado em qualquer banco de dados do Analysis Services em qualquer nível de compatibilidade, desde que o banco de dados esteja em execução em uma instância do SQL Server 2016. Verifique se que você está usando a sintaxe de comando correta para cada tipo de banco de dados.  
   
 > [!NOTE]  
->  Se você estiver familiarizado com [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), você perceberá rapidamente que o DBCC no Analysis Services tem um escopo muito mais estreito. O DBCC no Analysis Services é um único comando que reporta exclusivamente sobre dados corrompidos entre o banco de dados ou em objetos individuais. Se você tiver outras tarefas em mente, como coleta de informações, tente usar scripts do PowerShell do AMO ou XMLA.
+>  Se você já conhece [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), você perceberá rapidamente que o DBCC no Analysis Services tem um escopo muito mais estreito. O DBCC no Analysis Services é um único comando que reporta exclusivamente sobre dados corrompidos entre o banco de dados ou em objetos individuais. Se você tiver outras tarefas em mente, como coleta de informações, tente usar scripts do PowerShell do AMO ou XMLA.
   
 ## <a name="permission-requirements"></a>Requisitos de permissão  
  Você deve ser um administrador do servidor ou do banco de dados do Analysis Services (um membro da função de servidor) para executar o comando. Consulte [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) ou [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter instruções.  
@@ -72,7 +72,7 @@ O comando usa uma definição de objeto e retornará um conjunto de resultados v
   
 ```  
   
- Para executar o DBCC em objetos superiores na cadeia de objeto, exclua todos elementos de ID de objeto de nível inferior que não sejam necessários:  
+ Para executar DBCC em objetos superiores na cadeia de objeto, exclua quaisquer elementos de ID de objeto de nível inferior que não é necessário:  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -200,7 +200,7 @@ Execution complete
   
      As mensagens de erro estão listadas abaixo.  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Referência: verificações de consistência e erros de bancos de dados multidimensionais  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Referência: Verificações de consistência e erros de bancos de dados multidimensionais  
  Para bancos de dados multidimensionais, somente os índices de partição são validados.  Durante a execução, o DBCC criará um índice temporário para cada partição e o comparará com o índice persistente no disco.  Compilar um índice temporário requer ler todos os dados dos dados da partição no disco e, em seguida, manter o índice temporário na memória para comparação. Dada a carga de trabalho adicional, o servidor terá um consumo de memória e E/S de disco significativo durante a execução de uma execução de DBCC.  
   
  A detecção de corrupção de índice Multidimensional inclui as seguintes verificações. Os erros nesta tabela aparecem no xEvent ou o Profiler rastreia falhas no nível do objeto.  
@@ -212,7 +212,7 @@ Execution complete
 |Índice de Partição|Valida os metadados.<br /><br /> Verifica que cada membro no índice temporário pode ser encontrado no arquivo de cabeçalho de índice do segmento no disco.|O segmento da partição está corrompido.|  
 |Índice de Partição|Verificar segmentos para procurar corrupção física.<br /><br /> Lê o arquivo de índice em disco para cada membro no índice temporário e verifica se o tamanho dos registros de índice correspondem e que as mesmas páginas de dados são sinalizadas como tendo registros para o membro atual.|O segmento da partição está corrompido.|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Referência: verificações de consistência e erros de bancos de dados tabulares  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Referência: Verificações de consistência e erros de bancos de dados tabulares  
  A tabela a seguir é a lista de todas as verificações de consistência executadas em objetos tabulares, juntamente com os erros que são gerados se a verificação indica corrupção. Os erros nesta tabela aparecem no xEvent ou o Profiler rastreia falhas no nível do objeto.  
   
 ||||  

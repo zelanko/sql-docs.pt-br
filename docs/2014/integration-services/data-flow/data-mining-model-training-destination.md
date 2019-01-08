@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781158"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -42,15 +41,15 @@ ms.locfileid: "48068943"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Treinamento de Modelo de Mineração de Dados** , clique em um dos seguintes tópicos:  
   
--   [Editor de treinamento do modelo de mineração de dados &#40;guia de Conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Editor de treinamento do modelo de mineração de dados &#40;guia colunas&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Colunas&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../common-properties.md)  
   
--   [Propriedades personalizadas do destino treinamento do modelo de mineração de dados](data-mining-model-training-destination-custom-properties.md)  
+-   [Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados](data-mining-model-training-destination-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   

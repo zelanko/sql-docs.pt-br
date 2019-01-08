@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815378"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Use a página **Solicitações de Perfil** do **Editor da Tarefa Criação de Perfil de Dados** para selecionar e configurar os perfis que deseja computar. Em uma tarefa Criação de Perfil de Dados simples, você pode calcular várias perfis para várias colunas ou combinações de colunas em várias tabelas ou exibições.  
@@ -49,15 +48,15 @@ ms.locfileid: "48189166"
 ### <a name="requests-pane-columns"></a>Colunas do painel de solicitações  
  As colunas exibidas pelo painel de solicitações dependem da **Exibição** selecionada:  
   
--   Se **Todas as Solicitações**for selecionado, o painel de solicitações terá duas colunas: **Tipo de Perfil** e **ID da Solicitação**.  
+-   Se você optar por exibir **todas as solicitações**, o painel de solicitações terá duas colunas: **Tipo de perfil** e **ID da solicitação**.  
   
--   Se desejar exibir um dos cinco perfis de coluna, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Coluna**e **ID da Solicitação**.  
+-   Se você selecionar para exibir um dos cinco perfis de coluna, o painel de solicitações terá quatro colunas: **Tipo de perfil**, **tabela ou exibição**, **coluna**, e **ID da solicitação**.  
   
--   Se optar por exibir um perfil Chave Candidata, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas de Chave**e **ID da Solicitação**.  
+-   Se você selecionar para exibir um perfil chave candidata, o painel de solicitações tem quatro colunas: **Tipo de perfil**, **tabela ou exibição**, **KeyColumns**, e **ID da solicitação**.  
   
--   Se desejar exibir um perfil Dependência Funcional, o painel de solicitações terá cinco colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas Determinantes**, **Coluna Dependente**e **ID da Solicitação**.  
+-   Se você selecionar para exibir um perfil dependência funcional, o painel de solicitações terá cinco colunas: **Tipo de perfil**, **tabela ou exibição**, **colunas determinantes**, **coluna dependente**, e **ID da solicitação**.  
   
--   Se desejar exibir um perfil Inclusão de Valor, o painel de solicitações terá seis colunas: **Tipo de Perfil**, **Tabela Lateral de Subconjunto ou Exibição**, **Tabela Lateral de Superconjunto ou Exibição**, **Colunas Laterais de Subconjunto**, **Colunas Laterais de Superconjunto**e **ID da Solicitação**.  
+-   Se você optar por exibir um perfil de inclusão de valor, o painel de solicitações terá seis colunas: **Tipo de perfil**, **tabela lateral de subconjunto ou exibição**, **tabela lateral de superconjunto ou exibição**, **colunas laterais de subconjunto**, **colunas laterais de superconjunto**, e **ID da solicitação**.  
   
  As seções a seguir descrevem cada dessas colunas.  
   
@@ -65,13 +64,13 @@ ms.locfileid: "48189166"
  **Tipo de Perfil**  
  Selecione um perfil de dados das opções seguintes:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Solicitação do Perfil Chave de Candidato**|Compute um perfil Chave de Candidato.<br /><br /> Este perfil informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Este perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.|  
 |**Solicitação do Perfil Distribuição de Comprimento de Coluna**|Computa um perfil Distribuição de Comprimento da Coluna.<br /><br /> O perfil Distribuição de Comprimento de Coluna informa todos os comprimentos distintos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa. Este perfil pode ajudar a identificar problemas em seus dados, como valores que não são válidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos com dois caracteres e descobre valores maiores que dois caracteres.|  
 |**Solicitação do Perfil Razão Nula de Coluna**|Computa um perfil Razão Nula de Coluna.<br /><br /> O perfil Razão Nula de Coluna informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Por exemplo, você cria um perfil de uma coluna de Zip/Código Postal e descobre uma porcentagem alta e inaceitável de códigos ausentes.|  
 |**Solicitação do Perfil Padrão de Coluna**|Computa um Perfil Padrão de Coluna.<br /><br /> O perfil Padrão de Coluna informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres. Esse perfil pode ajudar a identificar problemas em seus dados, como cadeias de caracteres inválidos. Este perfil também pode sugerir expressões regulares que podem ser usadas no futuro para validar novos valores. Por exemplo, um perfil de padrão de uma coluna de Código Postal dos Estados Unidos pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.|  
-|**Solicitação do Perfil Estatísticas de Coluna**|Selecione esta opção para computar um perfil Estatísticas de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> O perfil de estatísticas de coluna informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para `datetime` colunas. Esse perfil pode ajudar a identificar problemas em seus dados, como datas inválidas. Por exemplo, você cria o perfil de uma coluna de datas de histórico e descobre uma data máxima no futuro.|  
+|**Solicitação do Perfil Estatísticas de Coluna**|Selecione esta opção para computar um perfil Estatísticas de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Um perfil Estatísticas de Coluna informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas `datetime`. Esse perfil pode ajudar a identificar problemas em seus dados, como datas inválidas. Por exemplo, você cria o perfil de uma coluna de datas de histórico e descobre uma data máxima no futuro.|  
 |**Solicitação do Perfil Distribuição de Valor**|Computa um perfil Distribuição de Valor da Coluna.<br /><br /> Um perfil Distribuição de Valor de Coluna informa todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. Esse perfil também pode informar valores que representam mais que uma porcentagem especificada na tabela. O perfil também pode ajudar a identificar problemas em seus dados, como um número incorreto de valores distintos em uma coluna. Por exemplo, você cria o perfil de uma coluna que contém estados dos Estados Unidos e descobre mais que 50 valores distintos.|  
 |**Solicitação do Perfil Dependência Funcional**|Compute um perfil Dependência Funcional.<br /><br /> Um perfil Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Este perfil também pode ajudar a identificar problemas em seus dados, como valores inválidos. Por exemplo, você cria o perfil da dependência entre uma coluna que contém Códigos Postais dos Estados Unidos e uma coluna que contém estados dos Estados Unidos. O mesmo Código Postal sempre deve ter o mesmo estado, mas o perfil descobre violações desta dependência.|  
 |**Solicitação do Perfil Inclusão de Valor**|Compute um perfil Inclusão de Valor.<br /><br /> O perfil Inclusão de Valor computa a sobreposição nos valores entre duas colunas ou conjuntos de colunas. Esse perfil também pode determinar se uma coluna ou conjunto de colunas é apropriado para servir como uma chave estrangeira entre as tabelas selecionadas. Esse perfil também pode ajudar a identificar problemas em seus dados, como valores inválidos. Por exemplo, você cria um perfil com a coluna ID_do_produto de uma tabela Vendas e descobre que a coluna contém valores não encontrados na coluna ID_do_produto da tabela Produtos.|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189166"
   
  Essas opções variam com base no perfil selecionado. Para obter mais informações sobre as opções para tipos de perfil individual, consulte os seguintes tópicos:  
   
--   [Opções de solicitação do perfil chave de candidato &#40;tarefa de criação de perfil&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa de criação de perfil&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa de criação de perfil&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil de distribuição de valor de coluna &#40;tarefa de criação de perfil&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil Distribuição de Valor de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil de distribuição de comprimento de coluna &#40;tarefa de criação de perfil&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de padrão de coluna &#40;tarefa de criação de perfil&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Padrão de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil dependência funcional &#40;tarefa de criação de perfil&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Dependência Funcional &#40;Tarefa Criação de Perfil de Dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil inclusão de valor &#40;tarefa de criação de perfil&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa de criação de perfil &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

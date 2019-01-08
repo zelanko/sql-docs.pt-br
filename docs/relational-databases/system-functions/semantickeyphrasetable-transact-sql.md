@@ -18,12 +18,12 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414483"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Tipo|Description|  
+|Column_name|Tipo|Descrição|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|ID da coluna da qual a frase-chave atual foi extraída e indexada.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|O valor da chave exclusiva do documento ou linha a partir da qual a frase-chave atual foi indexada.|  
@@ -108,7 +108,7 @@ ORDER BY KEYP_TBL.score DESC;
 ```  
   
 ###  <a name="HowToTopDocuments"></a> Exemplo 2: Localizar os principais documentos que contêm uma frase chave específica  
- O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave Bracket da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
+ O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave "Bracket" da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,21 +14,21 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081619"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807708"
 ---
 # <a name="implementing-endpoints"></a>Implementando pontos de extremidade
-  Um ponto de extremidade é um serviço que pode escutar nativamente solicitações. O SMO dá suporte a vários tipos de pontos de extremidade usando o <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Para criar um serviço de ponto de extremidade que manipula um tipo específico de carga, que usa um protocolo específico, crie uma instância de um objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e defina suas propriedades.  
+  Um ponto de extremidade é um serviço que pode escutar nativamente solicitações. O SMO dá suporte a vários tipos de pontos de extremidade usando o objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. Para criar um serviço de ponto de extremidade que manipula um tipo específico de carga, que usa um protocolo específico, crie uma instância de um objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e defina suas propriedades.  
   
- O <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propriedade do <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto pode ser usado para especificar sobre os seguintes tipos de carga:  
+ A propriedade <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> pode ser usada para especificar os tipos de carga a seguir:  
   
 -   Espelhamento de banco de dados  
   
--   SOAP (o suporte a pontos de extremidade SOAP está presente no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+-   SOAP (o suporte a pontos de extremidade SOAP está presente no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
 -   Service Broker  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081619"
   
 -   Protocolo TCP  
   
- Que especifica o tipo de carga, a carga real pode ser definida usando o <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propriedade de objeto. A propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornece uma referência a um objeto de carga do tipo especificado para o qual as propriedades podem ser modificadas.  
+ Após a especificação do tipo de carga, a carga real pode ser definida usando a propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>. A propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornece uma referência a um objeto de carga do tipo especificado para o qual as propriedades podem ser modificadas.  
   
- Para o objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, especifique a função de espelhamento e se a criptografia está habilitada. O <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objeto requer informações sobre o encaminhamento de mensagens, o número máximo de conexões permitidas e o modo de autenticação. O objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> requer a definição de várias propriedades, incluindo a propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> que especifica os métodos de carga SOAP disponíveis para clientes (procedimentos armazenados e funções definidas pelo usuário).  
+ Para o objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, especifique a função de espelhamento e se a criptografia está habilitada. O objeto <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> requer informações sobre o encaminhamento de mensagens, o número máximo de conexões permitidas e o modo de autenticação. O objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> requer a definição de várias propriedades, incluindo a propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> que especifica os métodos de carga SOAP disponíveis para clientes (procedimentos armazenados e funções definidas pelo usuário).  
   
- Da mesma forma, o protocolo real pode ser definido através da propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> que referencia um objeto de protocolo do tipo especificado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. O objeto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requer uma lista de endereços IP restritos e informações sobre porta, site e autenticação. O <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objeto também requer uma lista de endereços IP restritos e informações de porta.  
+ Da mesma forma, o protocolo real pode ser definido através da propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> que referencia um objeto de protocolo do tipo especificado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. O objeto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requer uma lista de endereços IP restritos e informações sobre porta, site e autenticação. O objeto <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> também requer uma lista de endereços IP restritos e informações sobre porta.  
   
  Quando o ponto de extremidade estiver sido criado e totalmente definido, usuários do banco de dados, grupos, funções e logons poderão ter o acesso concedido, revogado e negado.  
   

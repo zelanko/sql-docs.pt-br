@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetNumValue Method (ClientNetworkProtocolProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8a10171dff88688d64f6e2d1ed581e924941d999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: faf680e657cc533f9874b0d041aac0d3fe29f34b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782158"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>Método SetNumValue (classe ClientNetworkProtocolProperty)
   Define o valor numérico da propriedade atual referenciado pelo valor [PropertyIdx Property (classe ClientNetworkProtocolProperty) (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -44,7 +42,7 @@ object
   
 #### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*value*|Um valor `uint32` que especifica o valor numérico da propriedade referenciada.|  
   

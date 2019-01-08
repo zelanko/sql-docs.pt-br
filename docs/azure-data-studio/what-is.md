@@ -1,7 +1,8 @@
 ---
-title: O que é o Studio de dados do Azure? | Microsoft Docs
-description: O estúdio de dados do Azure é uma ferramenta gratuita, leve, que é executado no Windows, macOS e Linux, para o gerenciamento do SQL Server, banco de dados SQL e SQL Data Warehouse do Azure; onde quer que elas estão em execução.
-ms.custom: tools|sos
+title: Visão geral
+titleSuffix: Azure Data Studio
+description: O estúdio de dados do Azure é uma ferramenta gratuita, leve, que é executado no Windows, macOS e Linux, para o gerenciamento do SQL Server, banco de dados SQL e Azure SQL Data Warehouse.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099778"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030770"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>O que é [!INCLUDE[name-sos](../includes/name-sos.md)]?
+# <a name="what-is-azure-data-studio"></a>O que é o Studio de dados do Azure?
 
 O estúdio de dados do Azure é uma plataforma cruzada ferramenta de banco de dados para os profissionais de dados usando a família Microsoft de locais e na nuvem de plataformas de dados no Windows, MacOS e Linux.
 

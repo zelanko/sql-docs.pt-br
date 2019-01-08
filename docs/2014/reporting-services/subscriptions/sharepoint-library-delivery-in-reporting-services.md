@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061966"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211845"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
@@ -72,10 +72,10 @@ ms.locfileid: "48061966"
  Especifique o nome de arquivo e extensão do relatório como deseja que apareça na biblioteca de destino. Se você não especificar uma extensão de arquivo, o servidor de relatório criará uma com base no formato de saída do relatório. Esse valor é necessário. O nome de arquivo não deve incluir os seguintes caracteres: : \ / * ? " \< > | # { } %  
   
  Title  
- Especifica um recurso opcional `Title` propriedade para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
+ Especifica uma propriedade `Title` opcional para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
   
  Caminho  
- Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: http://mySharePointWeb/MySite/MyDocLib; onde "http://mySharePointWeb" indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint em que o relatório será entregue.  
+ Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: <http://mySharePointWeb/MySite/MyDocLib>; onde "<http://mySharePointWeb>" indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint em que o relatório será entregue.  
   
  Você não pode especificar uma página, um site nem uma lista. O contêiner de destino deve ser uma biblioteca no mesmo site ou farm.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "48061966"
  Se você estiver usando o recurso Autocopy para copiar automaticamente a última versão de um arquivo para vários locais, o arquivo será copiado se **Substituir** estiver habilitado. Se você usou **Autoincrement** ou **None**, a entrega falhará e o `rsDeliveryError` erro ocorrerá.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar assinaturas de servidores de relatório do modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

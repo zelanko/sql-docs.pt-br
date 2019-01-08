@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
@@ -15,12 +14,12 @@ ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f2688868da0866f521693ebed50f7b3b68937a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792738"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
   Você pode adicionar classes de eventos de Plano de Execução a uma definição de rastreamento para fazer com que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] reúna e exiba informações do plano de consulta no rastreamento. Também é possível extrair eventos de Plano de Execução de outros eventos coletados no rastreamento e salvá-los em um arquivo XML separado.  
@@ -36,7 +35,7 @@ ms.locfileid: "48143856"
 ## <a name="showplan-events"></a>Eventos de Plano de Execução  
  Os eventos de rastreamento de Plano de Execução são listados e descritos na tabela a seguir.  
   
-|Nome do evento|Description|  
+|Nome do evento|Descrição|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica a primeira vez em que um Plano de Execução compilado é colocado em cache, quando é recompilado e quando é descartado do cache do plano. A coluna **TextData** contém o Plano de Execução em formato XML. Para obter mais informações, veja [Classe de evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Exibe o plano de consulta com detalhes completos da compilação da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] executada. Por exemplo, pode exibir estimativas de preço de custo e listas de colunas. Para obter mais informações, consulte [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  

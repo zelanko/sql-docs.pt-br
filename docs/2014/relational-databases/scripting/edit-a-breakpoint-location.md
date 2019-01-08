@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffa9cad3ef994f3306a485d5a911f2e03eff0f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211436"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327327"
 ---
 # <a name="edit-a-breakpoint-location"></a>Editar um local de ponto de interrupção
   O local do ponto de interrupção especifica a linha e o caractere em que o ponto de interrupção reside em um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode editar o local do ponto de interrupção para movê-lo para outro local no script ou para outro script.  
@@ -45,5 +43,3 @@ ms.locfileid: "48211436"
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)   
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
  [Especificar um filtro de ponto de interrupção](specify-a-breakpoint-filter.md)  
-  
-  

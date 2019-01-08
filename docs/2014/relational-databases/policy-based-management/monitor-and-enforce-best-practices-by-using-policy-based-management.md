@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e21317e2019fe1530e346567a5767a1dfc18c329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758008"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
   Gerenciamento baseado em política permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornece um conjunto de arquivos de política que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de banco de dados. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48165416"
 |Local do Arquivo de Dados e Log|[Colocar arquivos de dados e de log em unidades separadas](place-data-and-log-files-on-separate-drives.md)|  
 |Fechamento Automático do Banco de Dados|[Definir a opção do banco de dados AUTO_CLOSE como OFF](set-the-auto-close-database-option-to-off.md)|  
 |Redução Automática de Banco de Dados|[Definir a opção do banco de dados AUTO_SHRINK como OFF](set-the-auto-shrink-database-option-to-off.md)|  
-|Agrupamento de banco de dados|[Definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md)|  
+|Ordenação de banco de dados|[Definir a ordenação de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md)|  
 |Verificação de Página de Banco de Dados|[Definir a opção do banco de dados PAGE_VERIFY como CHECKSUM](set-the-page-verify-database-option-to-checksum.md)|  
 |Status da Página de Banco de Dados|[Verificar a integridade do banco de dados com páginas suspeitas](check-integrity-of-database-with-suspect-pages.md)|  
 |Permissões de Convidado|[Permissões de convidado em bancos de dados de usuários](guest-permissions-on-user-databases.md)|  
@@ -61,13 +61,13 @@ ms.locfileid: "48165416"
 |Erro de Controle de Driver do Dispositivo do Log de Eventos do Windows|[Erro de controle de driver de dispositivo](device-driver-control-error.md)|  
 |Erro de Dispositivo Não Pronto do Log de Eventos do Windows|[Erro de Dispositivo Não Pronto](device-not-ready-error.md)|  
 |Erro de Solicitação de I_O com Falha do Log de Eventos do Windows|[Detectar a solicitação de entrada e saída com falha](detect-failed-input-and-output-requests.md)|  
-|Aviso de Atraso de I_O do Log de Eventos do Windows|[Check Disk Input and Output Subsystem for IO Delay Problems](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página de hardware](input-and-output-error-during-hard-page-fault.md)|  
+|Aviso de Atraso de I_O do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de atraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página física](input-and-output-error-during-hard-page-fault.md)|  
 |Erro de Repetição de Leitura do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Erro de Tempo Limite de I_O do Sistema de Armazenamento do Log de Eventos do Windows|[Tempo limite de entrada e saída dd sistema de armazenamento](storage-system-input-output-time-out.md)|  
 |Erro de Falha do Sistema do Log de Eventos do Windows|[Falhas inesperadas do sistema](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com facetas do Gerenciamento Baseado em Políticas](working-with-policy-based-management-facets.md)  
   
   

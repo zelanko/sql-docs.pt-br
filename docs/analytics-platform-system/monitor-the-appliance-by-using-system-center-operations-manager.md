@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909716"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417557"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o System Center Operations Manager - Analytics Platform System
 Use o System Center Operations Manager (SCOM) para monitorar o dispositivo do Analytics Platform System (APS).
@@ -39,7 +39,7 @@ Use o System Center Operations Manager (SCOM) para monitorar o dispositivo do An
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Para monitorar o SQL Server PDW com SCOM  
-Depois de configurar os pacotes de gerenciamento do SCOM, clique o painel de monitoramento do SCOM e fazer drill down até **SQL Server Appliance** e, em seguida **Microsoft SQL Server Parallel Data Warehouse**. Sob o Microsoft SQL Server Parallel Data Warehouse, há quatro opções: alertas, dispositivos, diagrama de dispositivo e nós.  
+Depois de configurar os pacotes de gerenciamento do SCOM, clique o painel de monitoramento do SCOM e fazer drill down até **SQL Server Appliance** e, em seguida **Microsoft SQL Server Parallel Data Warehouse**. Sob o Microsoft SQL Server Parallel Data Warehouse, há quatro opções: Alertas, dispositivos, o diagrama de dispositivo e nós.  
   
 ### <a name="alerts"></a>Alertas  
 Os alertas são onde você pode encontrar os alertas atuais para gerenciar.  

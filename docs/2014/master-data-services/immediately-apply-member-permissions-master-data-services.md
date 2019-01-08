@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
@@ -14,12 +13,12 @@ ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a68e3747f08b2e55cd6a59b14cc43566ca9f3aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88c574e713862699e72a0f596371c64f9f6a11cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792892"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>Aplicar permissões de membros imediatamente (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], em vez de esperar que a segurança de membro seja aplicada a intervalos regulares, você pode aplicar permissões de membro imediatamente.  

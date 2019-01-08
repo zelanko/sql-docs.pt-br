@@ -8,7 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vs.wildcards
 - vswildcardsbuilder
 helpviewer_keywords:
 - searches [SQL Server Management Studio], wildcards
@@ -18,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3419d8fb17d11e340eff50331908641929a78d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114956"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328256"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
   As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **do** .  
@@ -36,7 +35,7 @@ ms.locfileid: "48114956"
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  
@@ -47,5 +46,3 @@ ms.locfileid: "48114956"
 ## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar texto com expressões regulares](search-text-with-regular-expressions.md)  
-  
-  

@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528740"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Criar Relação de Atributo** para definir novas relações de atributo e a caixa de diálogo **Editar Relação de Atributo** para alterar uma relação de atributo. Para obter mais informações, consulte [Definir Relações de Atributos](multidimensional-models/attribute-relationships-define.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48141586"
   
 2.  Na barra de ferramentas, clique no ícone Nova Relação de Atributo.  
   
-     — ou —  
+     -ou-  
   
      No diagrama de relação de atributo ou na lista **Atributos** , clique com o botão direito do mouse em um atributo e clique em **Nova Relação de Atributo**.  
   

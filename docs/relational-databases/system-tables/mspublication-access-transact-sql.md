@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpublication_access_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68feed782310e4584427f60e1da02ba81d45f309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aab667d16e9e6423b9e26d2c3f37a945f1ad3b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760118"
 ---
 # <a name="mspublicationaccess-transact-sql"></a>MSpublication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSpublication_access** tabela contém uma linha para cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que tenha acesso à publicação específica ou publicador. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|A ID da publicação.|  
 |**login**|**sysname**|Contas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que existem no lado do Publicador e do Distribuidor.|  

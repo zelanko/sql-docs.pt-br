@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817998"
 ---
 # <a name="script-component"></a>Componente Script
   O componente Script hospeda o script e permite que um pacote inclua e execute um código de script personalizado. Você pode usar o componente Script em pacotes para as seguintes finalidades:  
@@ -91,13 +90,13 @@ ms.locfileid: "48084616"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurando o componente Script no Designer  
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Scripts** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação scripts &#40;página de colunas de entrada&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Editor de transformação scripts &#40;entradas e saídas de página&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Editor de transformação scripts &#40;página Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Editor de Transformação Scripts &#40;Página Script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Editor de transformação scripts &#40;página de gerenciadores de Conexão&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   

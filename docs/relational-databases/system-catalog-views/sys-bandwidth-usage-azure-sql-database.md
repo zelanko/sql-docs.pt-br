@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603844"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403711"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "47603844"
   
  O **sys. bandwidth_usage** exibição contém as colunas a seguir.  
   
-|Column Name|Description|  
+|Column Name|Descrição|  
 |-----------------|-----------------|  
 |**time**|A hora em que a largura de banda foi consumida. As linhas nessa exibição são por hora. Por exemplo, 2009-09-19 02:00:00.000 significa que a largura de banda foi consumida em 19 de setembro de 2009 entre 2h e 3h.|  
 |**database_name**|O nome do banco de dados que usou largura de banda.|  
-|**Direção**|O tipo de largura de banda que foi usado, um de:<br /><br /> Entrada: Dados que são movidos para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Saída: Dados que são movidos para fora do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|A classe da largura de banda que foi usada, um de:<br />Interno: Dados que são movidos dentro da plataforma do Azure.<br />Externas: Dados que são movidos para fora da plataforma do Azure.<br /><br /> Essa classe é retornado somente se o banco de dados está envolvido em uma relação de cópia contínua entre regiões ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. Para obter mais informações, consulte a seção "Comentários", posteriormente neste tópico.|  
+|**direction**|O tipo de largura de banda que foi usado, um de:<br /><br /> Entrada: Dados que são movidos para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Saída: Dados que são movidos para fora do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|A classe da largura de banda que foi usada, um de:<br />Interno: Dados que são movidos dentro da plataforma do Azure.<br />Externas: Dados que são movidos para fora da plataforma do Azure.<br /><br /> Esta classe será retornada somente se o banco de dados estiver envolvido em uma relação de cópia contínua entre regiões ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se um determinado banco de dados não participar em qualquer relacionamento de cópia contínua, linhas "Interlink" não são retornadas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
 |**time_period**|O período de tempo em que ocorreu o uso é o horário de pico ou OffPeak. The Peak time is based on the region in which the server was created. Por exemplo, se um servidor tiver sido criado na região "US_Northwest", o horário de pico será definido como estando entre 10h e 18h. PST.|  
 |**quantity**|A quantidade de largura de banda, em quilobytes (KBs), que foi usada.|  
   
@@ -60,8 +60,8 @@ ms.locfileid: "47603844"
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
+|2012-04-21 17:00:00|Db1|Saída|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|Entrada|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Internal|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretando a direção de dados do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]  

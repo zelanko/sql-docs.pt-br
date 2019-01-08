@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82d306e1359b9f36340ad5084edebc730c5d8e9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca8ed2bc61c75657f8a9ddf95e56df67f84889e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506730"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,16 +68,16 @@ HRESULT BCPSetBulkMode (
 |**E_OUTOFMEMORY**|Erro de memória insuficiente.|  
   
 ## <a name="remarks"></a>Comentários  
- IBCPSession2::BCPSetBulkMode pode ser usado para fazer cópias fora de uma consulta ou uma tabela em massa. Quando IBCPSession2::BCPSetBulkMode é usado para fazer cópias em massa de uma instrução de consulta, ele precisa ser chamado antes de `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` para especificar a instrução de consulta.  
+ IBCPSession2::BCPSetBulkMode pode ser usado para fazer cópias fora de uma consulta ou uma tabela em massa. Quando IBCPSession2::BCPSetBulkMode é usado para fazer cópias em massa de uma instrução de consulta, ele precisa ser chamado antes de `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` para especificar a instrução de consulta.  
   
  Evite combinar a sintaxe de chamada RPC com a sintaxe de consulta em lotes (`{rpc func};SELECT * from Tbl`, por exemplo) no texto de um único comando.  Isso fará com que icommandprepare:: Prepare retornar um erro e impedirá de recuperar metadados. Use a sintaxe de ODBC CALL (`{call func}; SELECT * from Tbl`, por exemplo) se precisar combinar a execução de procedimentos armazenados e a consulta em lotes no texto de um único comando.  
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|property|Description|  
+|property|Descrição|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção – c no BCP. EXE e para ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção – w no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLNCHAR**.|  
+|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção - c no BCP. EXE e para ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção -w no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLNCHAR**.|  
 |BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção – N no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_SQLNCHAR** se o tipo de coluna for uma cadeia de caracteres ou **BCP_TYPE_DEFAULT** se não uma cadeia de caracteres.|  
 |BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção – n no BCP. EXE e ibcpsession:: BCPColFmt com *eUserDataType* propriedade definida como **BCP_TYPE_DEFAULT**.|  
   
@@ -102,7 +102,7 @@ BCPReadFmt();
   
 ```  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -123,7 +123,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533409"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -32,8 +32,8 @@ Member_Expression.Children
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **filhos** função retorna um conjunto ordenado naturalmente que contém os filhos de um membro especificado. Se o membro especificado não tiver nenhum filho, essa função retornará um conjunto vazio.  
+## <a name="remarks"></a>Comentários  
+ O **filhos** função retorna um conjunto naturalmente ordenado que contém os filhos de um membro especificado. Se o membro especificado não tiver nenhum filho, essa função retornará um conjunto vazio.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna os filhos do membro Estados Unidos da hierarquia Geografia na dimensão Geografia.  
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna todos os membros de **medidas** dimensão no eixo da coluna, isso inclui todos os membros calculados e o conjunto de todos os filhos do `[Product].[Model Name]` hierarquia no eixo da linha de atributo a **Adventure Works** cubo.  
+ O exemplo a seguir retorna todos os membros a **medidas** dimensão no eixo da coluna, isso inclui todos os membros calculados e o conjunto de todos os filhos do `[Product].[Model Name]` hierarquia no eixo de linhas de atributos da **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -56,9 +56,9 @@ FROM
   
 |Versão|Histórico|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Conteúdo alterado:**<br /> — Atualizada a sintaxe e argumentos para melhorar a clareza.<br /><br /> — Exemplos atualizados somados.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Conteúdo alterado:**<br /> -Atualizada a sintaxe e os argumentos para melhorar a clareza.<br /><br /> -Exemplos atualizados somados.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604056"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351850"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604056"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requer mais etapas, consulte [não é possível usar o SQL Server 2005 para hospedar bancos de dados do relatório Server 2014](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requer mais etapas, consulte [não é possível usar o SQL Server 2005 para hospedar bancos de dados do relatório Server 2014](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -184,7 +184,7 @@ ms.locfileid: "51604056"
   
     1.  [Implantando um assembly personalizado](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Como implantar um item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Como: Implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   

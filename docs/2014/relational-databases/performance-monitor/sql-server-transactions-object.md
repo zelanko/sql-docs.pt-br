@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
@@ -13,12 +13,12 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb1efc812503a34d0bace9739a3de93f85059cdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810648"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
   O objeto **Transactions** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar o número de transações ativas em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], e os efeitos dessas transações em recursos como o repositório de versões de linhas de isolamento de instantâneo em **tempdb**. As transações são unidades de trabalho lógicas; um conjunto de operações que devem ter êxito ou ser apagadas de um banco de dados para manter a integridade lógica dos dados. Todas as modificações de dados nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são feitas em transações.  
@@ -29,12 +29,12 @@ ms.locfileid: "48196466"
   
  Esta tabela descreve os contadores **SQLServer:Transactions** .  
   
-|Contadores de transações do SQL Server|Description|  
+|Contadores de transações do SQL Server|Descrição|  
 |--------------------------------------|-----------------|  
 |**Espaço livre em tempdb (KB)**|A quantidade de espaço (em quilobytes) disponível em **tempdb**. Deve haver espaço livre suficiente para manter o repositório de versão de nível de isolamento do instantâneo e todos os novos objetos temporários criados nesta instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo de execução da transação mais longa**|A quantidade de tempo (em segundos) desde o início da transação que está ativada por mais tempo que qualquer outra transação atual. Este contador somente mostra a atividade quando o banco de dados está no nível de isolamento do instantâneo de leitura confirmada. Ele não registra nenhuma atividade se o banco de dados estiver em qualquer outro nível de isolamento.|  
 |**Transações da versão de não instantâneo**|O número de transações atualmente ativas que não estão usando o nível de isolamento do instantâneo e que fizeram modificações de dados que geraram versões de linhas no armazenamento de versão de **tempdb** .|  
-|**Transações de instantâneo**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo.<br /><br /> Observação: os contadores do objeto **Transações de Instantâneo** respondem quando ocorre o primeiro acesso a dados, não quando a instrução `BEGIN TRANSACTION` é emitida.|  
+|**Transações de instantâneo**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo.<br /><br /> Observação: O **transações de instantâneo** objeto contador responde quando ocorre o primeiro acesso a dados, não quando o `BEGIN TRANSACTION` instrução for emitida.|  
 |**Transactions**|O número de transações atualmente ativas de todos os tipos.|  
 |**Taxa de conflito de atualização**|A porcentagem dessas transações que usam o nível de isolamento do instantâneo que encontrou conflitos de atualização no último segundo. Um conflito de atualização ocorre quando uma transação de nível de isolamento do instantâneo tenta modificar uma linha que foi modificada pela última vez por outra transação que não estava confirmada quando a transação de nível de isolamento do instantâneo foi iniciada.|  
 |**Transações de instantâneo de atualização**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo e que modificaram dados.|  

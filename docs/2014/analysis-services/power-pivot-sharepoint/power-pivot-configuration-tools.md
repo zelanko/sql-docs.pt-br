@@ -11,15 +11,15 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102106"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210865"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as ferramentas de configuração do PowerPivot.  
+  Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as Ferramentas de Configuração do PowerPivot.  
   
  O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, bem como a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Este tópico descreve o uso geral das duas ferramentas e as diferenças entre elas.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48102106"
 -   Não há requisitos de porta TCP/IP para usar as ferramentas de configuração. Portanto, não é preciso configurar o firewall para acomodar as ferramentas de configuração. A ferramenta configuração espera que os aplicativos Web e serviços compartilhados estejam disponíveis como parte da plataforma SharePoint. Pode ser necessário configurar o firewall para o servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> Duas versões da ferramenta de configuração  
- O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistente de instalação instala a ferramenta de configuração do PowerPivot para SharePoint 2010, bem como uma ferramenta de configuração do PowerPivot para SharePoint 2013.  
+ O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do PowerPivot para SharePoint 2010, bem como a Ferramenta de Configuração do PowerPivot para SharePoint 2013.  
   
  As ferramentas podem ser usada apenas com uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Não use-as com instalações do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48102106"
   
 -   [Referência do PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  A ferramenta não configura o Reporting Services. Se estiver adicionando o Reporting Services a seu ambiente do SharePoint, você precisará instalar e configurar o Reporting Services separadamente. Para obter mais informações, consulte o seguinte:  
->   
+> 
 >  -   [Instalar o Reporting Services SharePoint Mode para SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102106"
   
      ![duas ferramentas de configuração do Power Pivot](../media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
-     **Observação:** As ferramentas estão disponíveis apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é instalado no servidor local.  
+     **Observação:** As ferramentas estão disponíveis apenas quando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado no servidor local.  
   
 2.  Na inicialização, as ferramentas de configuração verificam o status de sua instalação e fornecem tarefas que são válidas para a instalação.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102106"
  Quando você clica em Executar, a ferramenta processa todas as ações em modo de lote. Embora cada ação apareça como um item separado na lista de tarefas, todas as ações incluídas na tarefa são processadas em conjunto. Apenas as ações aprovadas em uma verificação de validação são processadas. Você pode precisar adicionar ou alterar alguns dos valores de entrada para ser aprovado para verificação de validação.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Atualizar o PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) descreve o fluxo de trabalho que atualiza uma instalação existente que já está em um farm.  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que atualiza uma instalação existente que já está em um farm.  
   
- [Desinstalar o PowerPivot para SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) descreve o fluxo de trabalho que remove o PowerPivot para serviços, soluções e páginas de aplicativo de um farm do SharePoint.  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que remove serviços, soluções e páginas de aplicativos do PowerPivot para SharePoint de um farm.  
   
  [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

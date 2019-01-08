@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
@@ -15,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93dda12a8a100f78db3568620afdffacc1258bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350071"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
   Este tópico descreve como configurar publicação e distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -54,7 +53,7 @@ ms.locfileid: "48087026"
   
     -   Além disso, faça o script das definições de configuração. Para obter mais informações, consulte [Scripting Replication](scripting-replication.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Publicação e distribuição de replicação podem ser configuradas de forma programada, usando-se procedimentos de replicação armazenados.  
   
 #### <a name="to-configure-publishing-using-a-local-distributor"></a>Para configurar publicação usando um distribuidor local  
@@ -116,7 +115,7 @@ ms.locfileid: "48087026"
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - o modo de segurança usado durante a conexão com o Publicador. O<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> é recomendado.  
   
-8.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
+8.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>Para configurar a publicação e a distribuição usando um Distribuidor remoto  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48087026"
 5.  Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique uma senha segura (usada pelo Publicador ao se conectar ao Distribuidor remoto) e o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3. Para obter mais informações, consulte [Proteger o Distribuidor](security/secure-the-distributor.md).  
   
     > [!IMPORTANT]  
-    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
+    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .  
   
@@ -156,7 +155,7 @@ ms.locfileid: "48087026"
 11. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passe o nome do Distribuidor remoto e a senha para o Distribuidor remoto especificados na etapa 5.  
   
     > [!IMPORTANT]  
-    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
+    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
   
 ###  <a name="PShellExample"></a> Exemplo (RMO)  
  Você pode configurar a replicação da publicação e da distribuição de forma programada usando o RMO (Replication Management Objects).  

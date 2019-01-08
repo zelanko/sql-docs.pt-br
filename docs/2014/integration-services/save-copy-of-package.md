@@ -15,12 +15,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545555"
 ---
 # <a name="save-copy-of-package"></a>Salvar cópia de pacote
   Use a caixa de diálogo **Salvar Cópia de Pacote** , disponível no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], para salvar a cópia de um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] em um local diferente e, opcionalmente, modificar o nível de proteção do pacote.  
@@ -54,15 +54,15 @@ ms.locfileid: "48140496"
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça uma senha.  
   
  **Caminho do pacote**  
- Digite o caminho do pacote ou clique no botão procurar **(...)** e localize a pasta na qual o pacote será armazenado.  
+ Digite o caminho do pacote ou clique no botão Procurar **(...)**  e localize a pasta na qual o pacote será armazenado.  
   
  **Nível de proteção**  
- Clique no botão de procura **(...)** e atualize o nível de proteção na caixa de diálogo **Nível de Proteção do Pacote** . Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Clique no botão Procurar **(...)**  botão e atualize o nível de proteção na **nível de proteção do pacote** caixa de diálogo. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de interface do usuário de caixa de diálogo de pacote de importação](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Referência de interface do usuário da caixa de diálogo pacote de exportação](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Referência da interface do usuário da caixa de diálogo Importar Pacote](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referência da interface do usuário da caixa de diálogo Exportar Pacote](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Salvar pacotes](save-packages.md)   
- [Importar e exportar pacotes &#40;serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Importar e exportar pacotes &#40;Serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

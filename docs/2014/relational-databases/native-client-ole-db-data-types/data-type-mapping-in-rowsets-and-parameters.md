@@ -21,12 +21,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b79afdc8917e3a14055b8ada17cbd3d57a8c9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766038"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
   Em conjuntos de linhas e como valores de parâmetro, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client representa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os dados usando o seguinte OLE DB definidos os tipos de dados, relatados nas funções **icolumnsinfo:: Getcolumninfo** e  **ICommandWithParameters:: Getparameterinfo**.  
@@ -68,7 +68,7 @@ ms.locfileid: "48186406"
  Os objetos **sql_variant** podem armazenar qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp e os tipos CLR (Common Language Runtime) definidos pelo usuário do Microsoft .NET Framework. Uma instância de dados sql_variant também não pode ter sql_variant como seu tipo de dados base subjacente. Por exemplo, a coluna pode conter valores **smallint** em algumas linhas, valores **float** em outras linhas e valores **char**/**nchar** no restante.  
   
 > [!NOTE]  
->  O tipo de dados **sql_variant** é semelhante ao tipo de dados Variant no Microsoft Visual Basic® e ao DBTYPE_VARIANT, DBTYPE_SQLVARIANT no OLEDB.  
+>  O **sql_variant** tipo de dados é semelhante ao tipo de dados Variant no Microsoft Visual Basic?? e ao DBTYPE_VARIANT, DBTYPE_SQLVARIANT no OLEDB.  
   
  Quando dados **sql_variant** são buscados como DBTYPE_VARIANT, eles são colocados em uma estrutura VARIANT no buffer. Mas os subtipos na estrutura VARIANT podem não ser mapeados para os subtipos definidos no tipo de dados **sql_variant**. Os dados **sql_variant** precisam ser buscados como DBTYPE_SQLVARIANT para que todos os subtipos obtenham uma correspondência.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48186406"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados são como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: o tipo de coluna é retornado como DBTYPE_SQLVARIANT e o buffer terá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: o tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Digite: VT_BOOL<br /><br /> R/W: Leitura/Gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Tipo de coluna é retornado como DBTYPE_SQLVARIANT, nesse caso o buffer conterá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: Tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;OLE DB&#41;](data-types-ole-db.md)  

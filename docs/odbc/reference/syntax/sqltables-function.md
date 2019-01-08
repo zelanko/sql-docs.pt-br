@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212395"
 ---
 # <a name="sqltables-function"></a>Função SQLTables
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: Open Group  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: Open Group  
   
  **Resumo**  
  **SQLTables** retorna a lista de nomes de tabela, catálogo ou esquema e tipos de tabela, armazenados em uma fonte de dados específico. O driver retorna as informações como um conjunto de resultados.  
@@ -92,7 +92,7 @@ SQLRETURN SQLTables(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLTables** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLTables** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  

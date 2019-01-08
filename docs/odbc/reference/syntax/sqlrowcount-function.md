@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654910"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502548"
 ---
 # <a name="sqlrowcount-function"></a>Função SQLRowCount
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLRowCount** retorna o número de linhas afetadas por um **UPDATE**, **inserir**, ou **excluir** instrução; um SQL_ADD SQL_UPDATE_BY_BOOKMARK ou SQL _ A operação DELETE_BY_BOOKMARK na **SQLBulkOperations**; ou uma operação de SQL_UPDATE ou SQL_DELETE na **SQLSetPos**.  
@@ -63,7 +63,7 @@ SQLRETURN SQLRowCount(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLRowCount** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLRowCount** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  

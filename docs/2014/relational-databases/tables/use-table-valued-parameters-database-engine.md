@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - DECLARE
@@ -19,12 +18,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9603f76f90b8481905077c04cb78cb6d9aa47d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794838"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
   Os parâmetros com valor de tabela são declarados usando tipos de tabela definidos pelo usuário. Você pode usar parâmetros com valor de tabela para enviar várias linhas de dados para uma rotina ou instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , como um procedimento armazenado ou função, sem criar uma tabela temporária ou muitos parâmetros.  

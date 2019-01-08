@@ -10,12 +10,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8ee9e17df37ef97f8abe945405934e2aeb1364f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 635dabe67e8311d71097e445523de2be0974bc35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537105"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associar um banco de dados com tabelas com otimização de memória a um pool de recursos
   Um pool de recursos representa um subconjunto de recursos físicos que podem ser controlados. Por padrão, os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão associados a e consomem recursos do pool de recursos padrão. Para proteger o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ter todos os recursos consumidos por uma ou mais tabelas com otimização de memória, e evitar que outros usuários da memória consumam a memória necessária para as tabelas com otimização de memória, você deve criar um pool de recursos separado para gerenciar o consumo de memória para o banco de dados com tabelas com otimização de memória.  
@@ -84,7 +84,7 @@ Para este exemplo, vamos pressupor que, com base nos cálculos, você determinou
 ###  <a name="bkmk_CreateResourcePool"></a> Criar um pool de recursos e configurar a memória  
  Ao configurar a memória para tabelas com otimização de memória, o planejamento de capacidade deve ser feito com base em MIN_MEMORY_PERCENT, não MAX_MEMORY_PERCENT.  Veja [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql) para obter informações sobre MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT. Isso fornece uma disponibilidade de memória mais previsível para tabelas com otimização de memória porque o MIN_MEMORY_PERCENT causa uma pressão de memória em outros pools de recursos para garantir que seja cumprida. Para garantir que essa memória esteja disponível e para ajudar a evitar condições de memória insuficiente, os valores de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT devem ser iguais. Veja [Percentual de memória disponível de índices e tabelas com otimização de memória](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_percentavailable) abaixo para obter o percentual de memória disponível para tabelas com otimização de memória com base na quantidade de memória confirmada.  
   
- Veja [Práticas recomendadas: usando OLTP in-memory em um ambiente de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações ao trabalhar em um ambiente de VM.  
+ Consulte [Práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações ao trabalhar em um ambiente de VM.  
   
  O código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir cria um pool de recursos chamado Pool_IMOLTP com metade da memória disponível para esse uso.  Depois que o pool é criado, o Administrador de Recursos é reconfigurado para incluir Pool_IMOLTP.  
   
@@ -140,7 +140,7 @@ GO
  Agora o banco de dados está associado ao pool de recursos.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente  
- Se você adicionar mais memória ao servidor ou se a quantidade de memória das suas tabelas com otimização de memória for alterada, talvez seja necessário alterar o valor de MIN_MEMORY_PERCENT e de MAX_MEMORY_PERCENT. As etapas a seguir mostram como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos. Consulte a seção abaixo, para obter orientação sobre quais valores usar para MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
+ Se você adicionar mais memória ao servidor ou se a quantidade de memória das suas tabelas com otimização de memória for alterada, talvez seja necessário alterar o valor de MIN_MEMORY_PERCENT e de MAX_MEMORY_PERCENT. As etapas a seguir mostram como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos. Consulte a seção abaixo, para obter orientação sobre quais valores usar para MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  Consulte o tópico [Práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
 1.  Use `ALTER RESOURCE POOL` para alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  
   
@@ -173,7 +173,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- Por exemplo, se a 'memória confirmada de destino' for 100 GB, e você calcular que as tabelas com otimização de memória e os índices precisam de 60 GB de memória, poderá criar um pool de recursos com MAX_MEMORY_PERCENT = 67 (60 GB necessários / 0,90 = 66,667 GB – arredondar para 67 GB; 67 GB / 100 GB instalados = 67%) para garantir que seus objetos [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] tenham os 60 GB necessários.  
+ Por exemplo, se a 'memória confirmada de destino' for 100 GB e você calcular que as tabelas com otimização de memória e os índices precisam de 60 GB de memória, poderá criar um pool de recursos com MAX_MEMORY_PERCENT = 67 (60 GB necessários / 0,90 = 66,667 GB – arredondar para 67 GB, 67 GB / 100 GB instalados = 67%) para garantir que seus objetos [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] tenham os 60 GB necessários.  
   
  Quando um banco de dados for associado a um pool de recursos nomeado, use a consulta a seguir para ver as alocações de memória em diferentes pools de recursos.  
   

@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351031"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpeza de assembly não usado
   O exemplo `AssemblyCleanup` contém um procedimento armazenado .NET que limpa os assemblies não usados do banco de dados atual consultando os catálogos de metadados. Seu único parâmetro, `visible_assemblies`, é usado para especificar se os assemblies visíveis não usados devem ser descartados. Um valor ''false'' significa, por padrão, que somente os assemblies invisíveis não usados serão descartados, caso contrário, todos os assemblies não usados serão descartados. O conjunto de assemblies não usados são aqueles que não têm pontos de entrada definidos (rotinas/tipos e agregações) e não há assemblies usados referenciando-os direta ou indiretamente.  
@@ -25,9 +25,9 @@ ms.locfileid: "50743161"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50743161"
   
     #### <a name="enabling-clr-integration"></a>Habilitando integração CLR  
   
-    -   Execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+    -   Execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
      `sp_configure 'clr enabled', 1`  
   

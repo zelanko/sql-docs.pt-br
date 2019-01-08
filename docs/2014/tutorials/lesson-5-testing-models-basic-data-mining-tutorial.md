@@ -11,12 +11,12 @@ ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b04a515fee16e686efc6816d2f68a281f318fa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392929"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lição 5: Testando modelos (Tutorial de mineração de dados básico)
   Agora que você processou o modelo usando o conjunto de treinamentos de cenário de mala direta, verificará os seus modelos usando um conjunto de testes. A validação é uma etapa importante do processo de mineração de dados. É importante saber como é o desempenho dos seus modelos de mineração de mala direta usando dados reais antes de implantá-los em um ambiente de produção.  
@@ -27,7 +27,7 @@ ms.locfileid: "48200486"
   
 1.  Você fará previsões no conjunto de testes para verificar a exatidão do modelo em resultados conhecidos. Você usará um *gráfico de comparação de precisão* para medir a eficácia.  
   
-     [Testando a precisão com gráficos de comparação &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+     [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 2.  Você testará seus modelos em um subconjunto filtrado dos dados. Você pode comparar vários modelos no mesmo gráfico de comparação de precisão.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48200486"
  Para obter mais informações sobre como validação do modelo em geral, consulte [conceitos de mineração de dados](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
   
 ## <a name="first-task-in-lesson"></a>Primeira tarefa na lição  
- [Testando a precisão com gráficos de comparação &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Lição anterior  
  [Lição 4: Explorando os modelos de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
@@ -46,9 +46,9 @@ ms.locfileid: "48200486"
   
 ## <a name="see-also"></a>Consulte também  
  [Guia gráfico de comparação de precisão &#40;exibição de gráfico de precisão de mineração&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
- [Lift Chart &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Teste e validação &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Guia matriz de classificação &#40;exibição de gráfico de precisão de mineração&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [Matriz de classificação &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

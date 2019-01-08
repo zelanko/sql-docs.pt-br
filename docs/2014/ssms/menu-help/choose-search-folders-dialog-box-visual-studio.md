@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095146"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328606"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
   Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  
@@ -56,5 +54,3 @@ ms.locfileid: "48095146"
   
  **Aplicar**  
  Salve o conjunto de pastas de pesquisa presente na lista **Pastas selecionadas** como um conjunto de pastas nomeado. Esse conjunto de pastas poderá, então, ser escolhido no campo **Examinar** , em todas as guias da janela **Localizar e Substituir** . Fecha a caixa de diálogo Escolher Pastas de Pesquisa.  
-  
-  

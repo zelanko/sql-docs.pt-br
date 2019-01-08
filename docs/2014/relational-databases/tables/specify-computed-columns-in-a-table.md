@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
@@ -13,15 +12,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072180"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789088"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
-  Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. Uma expressão de coluna computada pode usar dados de outras colunas para calcular um valor para a coluna à qual pertence. Você pode especificar uma expressão para uma coluna computada [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. Uma expressão de coluna computada pode usar dados de outras colunas para calcular um valor para a coluna à qual pertence. Você pode especificar uma expressão para uma coluna computada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -39,7 +38,7 @@ ms.locfileid: "49072180"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Limitations"></a> Limitações e restrições  
+###  <a name="Limitations"></a> Limitações e Restrições  
   
 -   Uma coluna computada não pode ser usada como uma definição de restrição DEFAULT ou FOREIGN KEY ou com uma definição de restrição NOT NULL. Entretanto, se o valor da coluna computada for definido por uma expressão determinística e o tipo de dados do resultado for permitido em colunas de índice, uma coluna computada poderá ser usada como uma coluna de chave em um índice ou como parte de qualquer restrição PRIMARY KEY ou UNIQUE. Por exemplo, se a tabela tiver colunas de inteiros a e b, a coluna computada a + b poderá ser indexada, mas a coluna computada a +DATEPART(dd, GETDATE()) não poderá ser indexada, pois o valor pode ser alterado em invocações subsequentes.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "49072180"
   
 3.  Adicione uma nova coluna e especifique a fórmula de coluna computada seguindo o procedimento anterior para adicionar uma nova coluna computada.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>Para adicionar uma coluna computada ao criar uma tabela  
   

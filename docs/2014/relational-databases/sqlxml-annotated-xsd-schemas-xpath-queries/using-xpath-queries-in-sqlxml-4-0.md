@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c3f09dc7aca21e3ca56d86e340f083ea7b26251
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804508"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Usando consultas XPath no SQLXML 4.0
   O suporte do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a esquemas XSD anotados permite criar exibições XML dos dados relacionais armazenados no banco de dados. Você pode usar um subconjunto da linguagem XPath para consultar as exibições XML criadas por um esquema XSD anotado.  

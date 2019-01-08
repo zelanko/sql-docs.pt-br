@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f702490cd4137e2a791c796e6b126da247648813
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 850d5b6472fda4b12ad9be2018575ea7d0d97770
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784858"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrair dados por meio da origem ODBC
   Este procedimento descreve como extrair dados usando uma fonte ODBC. Para adicionar e configurar uma origem ODBC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -33,11 +32,11 @@ ms.locfileid: "48069316"
   
 5.  Selecione o método de acesso de dados.  
   
-    -   **Nome da Tabela**: selecione uma tabela ou exibição no banco de dados ou digite uma expressão regular para identificar a tabela à qual o gerenciador de conexão ODBC se conecta.  
+    -   **Nome da tabela**: Selecione uma tabela ou exibição no banco de dados ou digite uma expressão regular para identificar a tabela à qual o Gerenciador de conexão ODBC se conecta.  
   
          Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.  
   
-    -   **Comando SQL**: digite um Comando SQL ou clique em **Procurar** para carregar a consulta SQL de um arquivo de texto.  
+    -   **Comando SQL**: Digite um comando SQL ou clique em **procurar** para carregar a consulta SQL de um arquivo de texto.  
   
 6.  É possível clicar em **Visualizar** para exibir até 200 linhas dos dados extraídos pela origem ODBC.  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48069316"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-source-editor-connection-manager-page.md)   
- [Editor de Origem ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)   
- [Editor de origem ODBC &#40;página de saída de erro&#41;](../odbc-source-editor-error-output-page.md)  
+ [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-source-editor-connection-manager-page.md)   
+ [Editor de Fonte ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)   
+ [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](../odbc-source-editor-error-output-page.md)  
   
   

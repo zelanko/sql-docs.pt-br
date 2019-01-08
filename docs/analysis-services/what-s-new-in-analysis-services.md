@@ -1,5 +1,5 @@
 ---
-title: O que&#39;novo no Analysis Services | Microsoft Docs
+title: O que há de novo no SQL Server 2016 Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210185"
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que&#39;novo no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ O SQL Server 2016 Service SP1 Analysis Services oferece melhor desempenho e esca
 
 Em particular, o SQL Server 2016 SP1 Analysis Services apresenta melhorias nas principais áreas a seguir:
 
--   **Reconhecimento NUMA** – para o melhor suporte ao NUMA, o mecanismo na memória (VertiPaq) no Analysis Services agora mantém uma fila de trabalho separada em cada nó NUMA. Isso garante que os trabalhos de verificação de segmento sejam executados no mesmo nó no qual a memória é alocada para os dados do segmento. Observe que o reconhecimento NUMA é habilitado por padrão somente nos sistemas com, pelo menos, quatro nós NUMA. Em sistemas de dois nós, os custos de acesso à memória alocada remota geralmente não justificam a despesa de gerenciamento específicas de NUMA.
+-   **Reconhecimento NUMA** – para o melhor suporte ao NUMA, o mecanismo na memória (VertiPaq) no Analysis Services agora mantém uma fila de trabalho separada em cada nó NUMA. Isso garante que os trabalhos de verificação de segmento sejam executados no mesmo nó no qual a memória é alocada para os dados do segmento. Observe que o reconhecimento NUMA é habilitado por padrão somente nos sistemas com, pelo menos, quatro nós NUMA. Em sistemas de dois nós, os custos de acesso remoto alocados memória geralmente não justificam a despesa de gerenciamento específicas de NUMA.
 -   **Alocação de memória** – o Analysis Services foi acelerado com o Intel Threading Building Blocks, um alocador escalonável que fornece pools de memória separados para cada núcleo. À medida que aumenta o número de núcleos, o sistema pode ser dimensionado de forma quase linear.
 -   **Fragmentação de heap** – o alocador escalonável com base no Intel TBB também ajuda a reduzir problemas de desempenho devido à fragmentação de heap que notadamente têm ocorrido com o Heap do Windows.
 
@@ -49,10 +49,6 @@ Para aproveitar ao máximo os aprimoramentos nesta versão, certifique-se de ins
 - [Baixar o SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 Se você tiver um aplicativo dependente do AMO personalizado, talvez seja necessário instalar uma versão atualizada do AMO. Para ver as instruções, consulte [Instalar provedores de dados do Analysis Services &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>Laboratórios virtuais do TechNet: SQL Server 2016 Analysis Services
-Aprende melhor na prática? Acompanhe um passo a passo com as [Novidades no Laboratório Virtual do SQL Server 2016 Analysis Services](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
-Neste laboratório, você vai criar e monitorar eventos estendidos (xEvents), atualizar um projeto tabular para o nível de compatibilidade 1200, trabalhar com as configurações do Visual Studio, implementar novos recursos de cálculo e de relação de tabela, configurar as pastas de exibição, gerenciar conversões de modelo, trabalhar com a nova TMSL (Linguagem de Script de Modelo Tabular) e com o PowerShell, além de experimentar os novos recursos do modo DirectQuery.
 
 ## <a name="modeling"></a>Modelagem    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>Desempenho de modelagem aprimorado para modelos de tabela 1200    
@@ -92,7 +88,7 @@ Uma *tabela calculada* é uma construção exclusivamente de modelos com base em
 
 ## <a name="scripting"></a>Script
  ### <a name="powershell-for-tabular-models"></a>PowerShell para modelos de tabela    
- Esta versão inclui aprimoramentos do PowerShell para modelos de tabela no nível de compatibilidade 1200. Você pode usar todos os cmdlets aplicáveis, além de cmdlets específicos para o modo Tabular: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) e [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
+ Esta versão inclui aprimoramentos do PowerShell para modelos de tabela no nível de compatibilidade 1200. Você pode usar todos os cmdlets aplicáveis, além de cmdlets específicos para o modo de tabela: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) e [cmdlet Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Operações de banco de dados de script de SSMS    
  No [SSMS (SQL Server Management Studio) mais recente](http://msdn.microsoft.com/library/mt238290.aspx), o script agora está habilitado para comandos de banco de dados, inclusive Create, Alter, Delete, Backup, Restore, Attach e Detach. A saída é em TMSL (linguagem de script de modelo de tabela) em JSON. Consulte [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) para obter mais informações.    
  ### <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services    
@@ -101,7 +97,7 @@ Uma *tabela calculada* é uma construção exclusivamente de modelos com base em
  O cmdlet do PowerShell do SSAS **Invoke-ASCmd** agora aceita comandos de TMSL (linguagem de script de modelo de tabela). Outros cmdlets do PowerShell do SSAS serão atualizados em uma versão futura para usar os novos metadados de tabela (exceções serão indicadas nas notas de versão).    
 Para obter detalhes, consulte [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) .    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>A TMSL (linguagem de script de modelo de tabela) tem suporte no SSMS    
-  Usando a [versão mais recente do SSMS](http://msdn.microsoft.com/library/mt238290.aspx), agora você pode criar scripts para automatizar a maioria das tarefas administrativas para modelos de tabela 1200. Atualmente, as seguintes tarefas podem ser incluídas no script: Process em qualquer nível, além de CREATE, ALTER e DELETE no nível do banco de dados.    
+  Usando a [versão mais recente do SSMS](http://msdn.microsoft.com/library/mt238290.aspx), agora você pode criar scripts para automatizar a maioria das tarefas administrativas para modelos de tabela 1200. Atualmente, as seguintes tarefas podem ser incluídos no script: Processo em qualquer nível, além de CREATE, ALTER, excluir o nível de banco de dados.    
     
  Funcionalmente, TMSL é equivalente à extensão de ASSL XMLA que fornece definições de objeto multidimensional, exceto pelo fato de que o TMSL usa descritores nativos como **model**, **table**e **relationship** para descrever metadados tabulares. Consulte [Referência de Linguagem de Scripts de Modelo de Tabela &#40;TMSL&#41;](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) para ver mais detalhes sobre o esquema.    
     
@@ -134,7 +130,7 @@ refresh|Processa o objeto. O equivalente no ASSL é PROCESS.
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>Edição de fórmula do DAX aprimorada
-Atualizações para a barra de fórmulas lhe ajudarão a escrever fórmulas com mais facilidade, diferenciando funções, campos e medidas usando cores de sintaxe; ele fornece a função inteligente e sugestões de campo e informa se partes da expressão DAX estão erradas usando *rabiscos*de erro. Ele também permite que você use várias linhas (Alt + Enter) e recuo (Tab). A Barra de fórmula agora também permite que você escreva comentários como parte de suas medidas, basta digitar "//" e tudo depois desses caracteres, na mesma linha, será considerado um comentário.
+Atualizações para a barra de fórmulas lhe ajudarão a escrever fórmulas com mais facilidade, diferenciando funções, campos e medidas usando cores de sintaxe; ele fornece a função inteligente e sugestões de campo e informa se partes da expressão DAX estão erradas usando *rabiscos*de erro. Ele também permite que você use várias linhas (Alt + Enter) e recuo (Tab). A barra de fórmula agora também permite que você escreva comentários como parte de suas medidas, basta digitar "/ /" e tudo depois desses caracteres na mesma linha serão considerados um comentário.
 
 ### <a name="dax-variables"></a>Variáveis DAX    
 Esta versão agora inclui suporte a variáveis em DAX. As variáveis agora podem armazenar o resultado de uma expressão como uma variável nomeada, que pode ser passada como um argumento para outras expressões de medida. Uma vez que os valores resultantes forem calculados para uma expressão variável, esses valores não serão alterados, mesmo se a variável for referenciada em outra expressão. Para obter mais informações, consulte [Função VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
@@ -177,10 +173,10 @@ Um modelo vazio conterá, no mínimo, o JSON a seguir:
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > Evite editar o JSON diretamente. Fazer isso pode corromper o modelo.    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>Novos elementos no esquema MS-CSDLBI 2.0    
- Os elementos a seguir foram adicionados ao tipo complexo **TProperty** definido no esquema [MS-CSDLBI] 2.0:    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>Novos elementos no esquema MS-CSDLBI 2.0    
+>  Os elementos a seguir foram adicionados ao tipo complexo **TProperty** definido no esquema [MS-CSDLBI] 2.0:    
     
 |Elemento|Definição|    
 |-------------|----------------|    

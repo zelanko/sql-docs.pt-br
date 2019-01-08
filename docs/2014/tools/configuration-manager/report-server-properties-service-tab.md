@@ -1,22 +1,21 @@
 ---
-title: Propriedades (guia serviço) do servidor de relatório | Microsoft Docs
+title: Propriedades do servidor de relatório (guia Serviço) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478278f6cc0c097fd8ced85ae42990d31b2578c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803418"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriedades do servidor de relatório (guia Serviço)
   Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
@@ -46,11 +45,11 @@ ms.locfileid: "48159016"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
--   Automático: este serviço tenta ser iniciado na inicialização do computador.  
+-   Automático: Este serviço tenta ser iniciado na inicialização do computador.  
   
--   Desabilitado: este serviço não pode ser iniciado.  
+-   Desabilitado: Esse serviço não pode ser iniciado.  
   
  **Estado**  
  Indica se este serviço está sendo executado, se está parado ou desabilitado.  

@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533079"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade Item (conjunto de células do ADO MD)
 Recupera uma célula de uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  A posição ordinal é um número que identifica exclusivamente uma célula dentro de **conjunto de células**. Conceitualmente, as células são numeradas em um **Cellset** como se o **conjunto de células** foram um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal. Abaixo está a fórmula para calcular o número ordinal de uma célula:  
   
- Se os nomes de membro são passados como cadeias de caracteres **Item**, os membros devem ser listados em ordem crescente de identificadores de eixo numérico. Dentro de um eixo, os membros devem ser listados em ordem crescente de aninhamento de dimensão — ou seja, membro da dimensão mais externo vem em primeiro lugar, seguidas por membros das dimensões internas. Cada dimensão deve ser representado por uma cadeia de caracteres separada, e a lista de cadeias de caracteres do membro deve ser separada por vírgulas.  
+ Se os nomes de membro são passados como cadeias de caracteres **Item**, os membros devem ser listados em ordem crescente de identificadores de eixo numérico. Dentro de um eixo, os membros devem ser listados em ordem crescente de aninhamento de dimensão – ou seja, membro da dimensão mais externo vem em primeiro lugar, seguidas por membros das dimensões internas. Cada dimensão deve ser representado por uma cadeia de caracteres separada, e a lista de cadeias de caracteres do membro deve ser separada por vírgulas.  
   
 > [!NOTE]
 >  Recuperar células pelo nome do membro não pode ter suporte pelo seu provedor de dados. Consulte a documentação do seu provedor para obter mais informações.  

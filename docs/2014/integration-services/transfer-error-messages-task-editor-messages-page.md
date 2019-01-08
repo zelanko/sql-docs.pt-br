@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545797"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Mensagens)
   Use a página **Mensagens** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para especificar as propriedades de cópia de uma ou mais mensagens de erro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definidas pelo usuário de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Para obter mais informações sobre essa tarefa, consulte [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48103986"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copia todas as mensagens definidas pelo usuário.|  
 |**Falso**|Copia só as mensagens definidas pelo usuário especificadas.|  
@@ -60,9 +60,9 @@ ms.locfileid: "48103986"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de tarefa de mensagens de erro de transferência &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Gerenciador de Conexão do SMO](connection-manager/smo-connection-manager.md)   
- [Editor de tarefa de mensagens de erro de transferência &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)   
+ [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Gerenciador de Conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

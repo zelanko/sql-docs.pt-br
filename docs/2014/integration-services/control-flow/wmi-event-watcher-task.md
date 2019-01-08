@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203106"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351771"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
   A tarefa Detector de Eventos do WMI detecta um evento de Instrumentação de Gerenciamento do Windows (WMI) por meio de uma consulta de evento WQL (Management Instrumentation Query Language, Linguagem de Consulta de Instrumentação de Gerenciamento) para especificar eventos de interesse. É possível utilizar a tarefa Detector de Eventos do WMI para as seguintes finalidades:  
@@ -39,7 +38,7 @@ ms.locfileid: "48203106"
 -   [Tarefa Leitor de Dados do WMI](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>Consultas WQL  
- WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  As classes WMI variam entre versões de Windows.  
@@ -59,7 +58,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Mensagens de registro personalizadas disponíveis na tarefa Detector de Eventos do WMI  
  A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|Indica que ocorreu um evento que a tarefa estava monitorando.|  
 |`WMIEventWatcherTimedout`|Indica que o tempo limite da tarefa foi esgotado.|  
@@ -92,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor de tarefa do detector de eventos do WMI &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Detector de Eventos do WMI &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tarefa do detector de eventos do WMI &#40;página de opções do WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor do Detector de Eventos do WMI &#40;Página Opções do WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

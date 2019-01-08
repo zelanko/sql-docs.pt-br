@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768328"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
   A única maneira de criar um instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não dá suporte à criação de instantâneos de banco de dados.  
@@ -29,9 +28,9 @@ ms.locfileid: "48212196"
   
      [Segurança](#Security)  
   
-     [Prática recomendada: Nomeando instantâneos de bancos de dados](#Naming)  
+     [Prática recomendada: Nomeando instantâneos de banco de dados](#Naming)  
   
--   **Para criar um banco de dados de instantâneo, usando:**[Transact-SQL  ](#TsqlProcedure)  
+-   **Para criar um banco de dados de instantâneo, usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48212196"
   
 -   O banco de dados de origem precisa estar online, a menos que se trate de um banco de dados espelho dentro de uma sessão de espelhamento de banco de dados.  
   
--   Para criar um banco de dados de instantâneo no banco de dados espelho, o banco de dados deve estar no sincronizado[estado de espelhamento](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
+-   Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no[estado de espelhamento](../../database-engine/database-mirroring/mirroring-states-sql-server.md)sincronizado.  
   
 -   O banco de dados de origem não pode ser configurado como banco de dados compartilhado escalonável.  
   
@@ -52,13 +51,13 @@ ms.locfileid: "48212196"
 ###  <a name="Recommendations"></a> Recomendações  
  Esta seção aborda as seguintes práticas recomendadas:  
   
--   [Prática recomendada: Nomeando instantâneos de bancos de dados](#Naming)  
+-   [Prática recomendada: Nomeando instantâneos de banco de dados](#Naming)  
   
 -   [Prática recomendada: Limitando o número de instantâneos de banco de dados](#Limiting_Number)  
   
--   [Prática recomendada: Conexões do cliente a um instantâneo de banco de dados](#Client_Connections)  
+-   [Prática recomendada: Conexões de cliente para um instantâneo de banco de dados](#Client_Connections)  
   
-####  <a name="Naming"></a> Prática recomendada: Nomeando instantâneos de bancos de dados  
+####  <a name="Naming"></a> Prática recomendada: Nomeando instantâneos de banco de dados  
  Antes de criar instantâneos, é importante considerar como serão nomeados. Cada instantâneo de banco de dados requer um nome exclusivo de banco de dados. Para facilidade administrativa, o nome de um instantâneo pode inserir informações que identifiquem o banco de dados, como:  
   
 -   O nome do banco de dados de origem.  
@@ -137,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
   
--   B. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
+-   b. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Criando um instantâneo no banco de dados AdventureWorks  
  Este exemplo cria um instantâneo de banco de dados no banco de dados `AdventureWorks` . O nome do instantâneo, `AdventureWorks_dbss_1800`e o nome do arquivo de seu respectivo arquivo esparso, `AdventureWorks_data_1800.ss`, indicam a hora da criação, 18h00.  

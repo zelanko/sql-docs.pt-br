@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661145"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216045"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51661145"
   
     -   O nome de um arquivo de dados que receberá qualquer mensagem de erro de cópia em massa (especifique NULL se você não desejar um arquivo de mensagem).  
   
-    -   A direção da cópia: DB_IN do aplicativo para a exibição ou tabela ou DB_OUT para o aplicativo da tabela ou exibição.  
+    -   A direção da cópia: DB_IN do aplicativo para o modo de exibição, tabela ou DB_OUT para o aplicativo da tabela ou exibição.  
   
 5.  Chame [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada coluna na cópia em massa para associar a coluna a uma variável de programa.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "51661145"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar as tabelas que serão usadas pelo exemplo.  
+ Execute a primeira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para criar tabelas que usará o exemplo de código.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e odbcbcp.lib. Se você compilou com o MSBuild.exe, copie primeiro o Bcpfmt.fmt e o Bcpodbc.bcp do diretório do projeto no diretório com o .exe e, em seguida, invoque o .exe.  
   
- Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir as tabelas usadas pelo exemplo.  
+ Execute a terceira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para excluir as tabelas usadas pelo exemplo de código.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

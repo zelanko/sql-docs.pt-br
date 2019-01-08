@@ -20,16 +20,16 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9790305690b83e5e5a39e8f645a419c8ddd098b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d1f433732cf710e715418df94eba5184e9a907
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640617"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210125"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Função SQLGetPrivateProfileString
 **Conformidade com**  
- Versão introduziu: ODBC 2.0  
+ Versão introduzida: ODBC 2.0  
   
  **Resumo**  
  **SQLGetPrivateProfileString** obtém uma lista de nomes de valores ou dados que correspondem a um valor de informações do sistema.  
@@ -72,7 +72,7 @@ int SQLGetPrivateProfileString(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando uma chamada para **SQLGetPrivateProfileString** falhar, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  

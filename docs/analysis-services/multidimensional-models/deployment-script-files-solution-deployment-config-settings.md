@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002218"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525659"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>Arquivos de Script de implantação – definições de configuração de implantação de solução
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>Arquivos de script de implantação – Definições de configuração de implantação de solução
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê a partição e a função de opções de implantação que você usa no script de implantação dos \< *nome do projeto*>. configsettings arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa as definições de configuração do projeto atual para criar o \< *nome do projeto*>. configsettings arquivo.  
@@ -46,11 +46,11 @@ ms.locfileid: "38002218"
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interativamente, e na página **Parâmetros de Configuração** , especifique o parâmetro de configuração para os objetos que estão sendo implantados.  
   
-     — ou —  
+     -ou-  
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     — ou —  
+     -ou-  
   
 -   Modificar a \< *nome do projeto*> arquivo. configsettings usando qualquer editor de texto.  
   

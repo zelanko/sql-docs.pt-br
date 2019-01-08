@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538130"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
@@ -51,7 +51,7 @@ ms.locfileid: "48100086"
   
 1.  Na Administração Central, abra a página Configurar contas de serviço.  
   
-2.  Selecione o pool de aplicativos de serviço usados por Serviços do Excel. Ele pode ser um **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** ou um pool de aplicativos personalizados. A conta gerenciada usada por Serviços do Excel aparecerá na página.  
+2.  Selecione o pool de aplicativos de serviço usados por Serviços do Excel. Ele pode ser **Pool de aplicativos de serviço - sistema de serviços Web do SharePoint** ou um pool de aplicativos personalizados. A conta gerenciada usada por Serviços do Excel aparecerá na página.  
   
      Para farms do SharePoint que incluem o Reporting Services em modo do SharePoint, obtenha as informações de conta também para o aplicativo de serviço do Reporting Services.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48100086"
   
 5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e em **Concluir**.  
   
- Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
+ Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Conectar do SharePoint  
  Se você estiver usando o PowerPivot para SharePoint, poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que forneça redirecionamento a um banco de dados executado em um servidor de modo de tabela do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico do PowerPivot BI &#40;. bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [criar uma Conexão de modelo semântico do BI para um modelo de tabela Banco de dados](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -115,6 +115,6 @@ ms.locfileid: "48100086"
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

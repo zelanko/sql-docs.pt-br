@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843374"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211276"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  É o método usado para calcular a contagem de linhas. *full_or_fast* está **tinyint**, com um padrão de **2**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
 |**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é muito mais rápido do que contar linhas na tabela atual. No entanto, porque **sysindexes** é lentamente atualizado, o número de linhas pode não ser preciso.|  
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  Ao efetuar uma soma de verificação, a estrutura da tabela deve ser idêntica entre os dois servidores; ou seja, as tabelas devem ter as mesmas colunas, na mesma ordem, o mesmo tipo de dados e comprimentos e as mesmas condições NULL/NOT NULL. Por exemplo, se o Publicador tiver executado um CREATE TABLE, depois um ALTER TABLE para adicionar colunas, mas o script aplicado ao Assinante for uma simples tabela CREATE, a estrutura não será a mesma. Se não tiver certeza de que a estrutura das duas tabelas é idêntica, examine [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) e confirme se o deslocamento em cada tabela é o mesmo.  
   
- Valores de ponto flutuante têm probabilidade de gerar as diferenças de soma de verificação se o modo de caractere **bcp** tiver sido usado, que é o caso se a publicação tiver não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes. Isso se deve a diferenças menores e inevitáveis na precisão ao efetuar conversão para e do modo de caractere.  
+ Valores de ponto flutuante têm probabilidade de gerar as diferenças de soma de verificação se o modo de caractere **bcp** tiver sido usado, que é o caso se a publicação tiver não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes. Isso se deve a diferenças menores e inevitáveis na precisão ao efetuar conversão para e do modo de caractere.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar **sp_table_validation**, você deve ter permissões SELECT na tabela que está sendo validada.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792488"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
   A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
@@ -45,7 +44,7 @@ ms.locfileid: "48098096"
   
  Para controlar as falhas de validação, considere o seguinte:  
   
--   Configure o alerta de replicação chamado **Replicação: Falha na validação de dados do assinante** para que você seja notificado da falha. Para obter mais informações, consulte [configurar alertas de replicação predefinidos &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configure o alerta de replicação chamado **replicação: Assinante Falha na validação de dados** para que você seja notificado da falha. Para obter mais informações, consulte [configurar alertas de replicação predefinidos &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   O fato da validação falhar é um problema para o seu aplicativo? Se a falha de validação é um problema, atualize manualmente os dados para serem sincronizados ou reinicialize a assinatura:  
   

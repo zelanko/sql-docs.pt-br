@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
@@ -14,12 +14,12 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26f75c135fdc0dcbcc5534a019ff6658d7c9e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778448"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
   O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor representa o destino da coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  
@@ -39,7 +39,7 @@ ms.locfileid: "48089306"
   
  A tabela a seguir descreve as tabelas de banco de dados no esquema principal. Essas tabelas de banco de dados permitem que o coletor de dados rastreie o local de origem dos dados, quem os inseriu e quando foram carregados no data warehouse.  
   
-|Nome da tabela|Description|  
+|Nome da tabela|Descrição|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Armazena informações sobre como os relatórios do data warehouse de gerenciamento devem agrupar e agregar contadores de desempenho.|  
 |core.snapshots_internal|Identifica cada novo instantâneo. Uma nova linha é inserida nessa tabela sempre que um pacote de carregamento inicia o carregamento de um novo lote de dados.|  
@@ -128,7 +128,7 @@ ms.locfileid: "48089306"
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [Coleta de Dados](data-collection.md)   
+ [Coleta de dados](data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

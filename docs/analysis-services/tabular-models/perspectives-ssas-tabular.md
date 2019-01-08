@@ -1,5 +1,5 @@
 ---
-title: Perspectivas | Microsoft Docs
+title: Perspectivas em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040514"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983887"
 ---
-# <a name="perspectives"></a>Perspectivas
+# <a name="perspectives-in-tabular-models"></a>Perspectivas em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   As perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "34040514"
  As perspectivas não se destinam a serem usadas como um mecanismo de segurança, mas como uma ferramenta para fornecer uma melhor experiência. Toda a segurança de uma determinada perspectiva é herdada do modelo subjacente. As perspectivas não podem fornecer acesso a objetos de modelo aos quais o usuário ainda não tem acesso. A segurança para o banco de dados modelo deve ser resolvida antes que o acesso a objetos no modelo possa ser fornecido por meio de uma perspectiva. As funções de segurança podem ser usadas para proteger metadados e dados do modelo. Para obter mais informações, consulte [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_testpersp"></a> Testing perspectives  
- Ao criar um modelo, você pode usar o recurso Analisar no Excel no designer de modelo para testar a eficácia das perspectivas que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao banco de dados do espaço de trabalho modelo como uma fonte de dados e exibir os dados.  
+ Ao criar um modelo, você pode usar o recurso Analisar no Excel no designer de modelo para testar a eficácia das perspectivas que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao banco de dados do workspace modelo como uma fonte de dados e exibir os dados.  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar e gerenciar perspectivas](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|Descreve como criar e gerenciar perspectivas usando a caixa de diálogo Perspectivas no designer de modelo.|  
   

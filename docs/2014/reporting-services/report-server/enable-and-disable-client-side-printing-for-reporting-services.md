@@ -11,12 +11,12 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c454dece75264c08d4f4bdc9f9549a1ef0f9b932
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067436"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418875"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] controle de ActiveX **RSClientPrint**, fornece impressão do lado do cliente para relatórios exibidos em um navegador. O controle exibe uma caixa de diálogo de impressão personalizada que oferece suporte aos recursos comuns com outras caixas de diálogo de impressão. Os recursos incluem a visualização de impressão, as seleções de página para determinar páginas e intervalos específicos, as margens da página e a orientação. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
@@ -90,7 +90,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

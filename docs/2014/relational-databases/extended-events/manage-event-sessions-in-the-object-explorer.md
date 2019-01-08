@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801288"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
   Este tópico aborda as ações que você pode executar no **Pesquisador de Objetos** que afetam os Eventos Estendidos:  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importar um modelo da sessão de Eventos Estendidos  
  Usando o **Pesquisador de Objetos**, você pode importar um modelo para uma sessão de Eventos Estendidos. Por exemplo, talvez você queira fazer isso para criar uma sessão de um modelo que foi exportado de outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para importar uma sessão eventos estendidos, você deve ter o necessário `ALTER ANY EVENT SESSION` permissões.  
+ Para importar uma sessão de Eventos Estendidos, você deve ter as permissões `ALTER ANY EVENT SESSION` necessárias.  
   
  Antes de importar um arquivo de modelo, verifique se ele é de uma fonte confiável. os arquivos de modelo devem ser salvos em um local que use o sistema de arquivos NTFS e onde o acesso aos usuários que tenham autorização para exibir as informações seja restrito.  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  Expanda a caixa suspensa **Modelo** .  
   
-5.  Clique em **\<Arquivo De…> Abrir** e procure a sessão (arquivo XML) que você deseja importar.  
+5.  Clique em **\<Arquivo De... > Abrir** e procure a sessão (arquivo XML) que você deseja importar.  
   
  A sessão aparece abaixo do nó **Sessões** . Por padrão, a sessão não é iniciada.  
   

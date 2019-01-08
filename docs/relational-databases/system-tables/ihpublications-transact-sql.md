@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublications_TSQL
@@ -19,19 +18,19 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175d43ed9cd6165ee8670d558a5488f239a39b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802778"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **IHpublications** tabela do sistema contém uma linha para cada publicação não SQL Server usando o distribuidor atual. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
@@ -59,10 +58,10 @@ ms.locfileid: "47605164"
 |**centralized_conflicts**|**bit**|Especifica se registros de conflito são ou não armazenados no Publicador:<br /><br /> **0** = registros de conflito são armazenados no publicador e no assinante que causou o conflito.<br /><br /> **1** = registros de conflito são armazenados no publicador.<br /><br /> *Não tem suporte para Publicadores não SQL.*|  
 |**conflict_retention**|**int**|Especifica o período de retenção de conflito, em dias. *Não tem suporte para Publicadores não SQL.*|  
 |**conflict_policy**|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o publicador ganha o conflito.<br /><br /> **2** = o assinante ganha o conflito.<br /><br /> **3** = assinatura é reinicializada.<br /><br /> *Não tem suporte para Publicadores não SQL.*|  
-|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** = msmq que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **2** = sql, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Esta coluna não é usada por assinantes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.<br /><br /> Observação: Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi preterido e não é mais suportado.<br /><br /> *Esta coluna não é suportada para Publicadores não SQL.*|  
+|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** = msmq que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **2** = sql, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Esta coluna não é usada por assinantes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.<br /><br /> Observação: O uso do Serviço de Enfileiramento de Mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi preterido e não tem mais suporte.<br /><br /> *Esta coluna não é suportada para Publicadores não SQL.*|  
 |**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um identificador global exclusivo válido (GUID) Especifica que a publicação é publicada na [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Active Directory e o GUID é o objeto de publicação do Active Directory correspondente **objectGUID**. Se for NULL, a publicação não será publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Não tem suporte para Publicadores não SQL.*|  
 |**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Não tem suporte para Publicadores não SQL.*|  
-|**Descrição**|**nvarchar(255)**|Entrada descritiva para a publicação.|  
+|**description**|**nvarchar(255)**|Entrada descritiva para a publicação.|  
 |**independent_agent**|**bit**|Especifica se existe um Distribution Agent autônomo para essa publicação.<br /><br /> **0** = a publicação usa um Distribution Agent compartilhado e cada par publicador/assinante do banco de dados tem um agente compartilhado, único.<br /><br /> **1** = há um Distribution Agent autônomo para essa publicação.|  
 |**immediate_sync**|**bit**|Indica se os arquivos de sincronização são criados ou recriados cada vez que o Snapshot Agent é executado, onde **1** significa que eles são criados sempre que o agente é executado.|  
 |**allow_push**|**bit**|Indica se são permitidas assinaturas push na publicação, onde **1** significa que elas são permitidas.|  

@@ -11,12 +11,12 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90c1387a609ee59dec93b67e0a48bd2af7baf77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4abd066dd2fc971528468fb7104cb0c11e088150
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348783"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server obsoletos no SQL Server 2014
   Este tópico descreve os recursos substituídos que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -30,9 +30,9 @@ ms.locfileid: "48129766"
 |Programação de Dados|[sys. endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) ou ASP.NET|Serviços Web XML nativos|23|  
   
 ### <a name="slipstream-functionality"></a>Funcionalidade de instalação integrada  
- O recurso de Atualização de Produto substitui a funcionalidade de instalação integrada que estava disponível no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Portanto, os parâmetros de linha de comando /*PCUSource* e /*CUSource*, associados à funcionalidade de instalação integrada, não devem mais ser usados. Os parâmetros continuarão funcionando, mas poderão ser removidos em uma versão futura da Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O parâmetro /*UpdateSource* combina a funcionalidade dos parâmetros Slipstream, /*PCUSource* e /*CUSource*.  
+ O recurso de Atualização de Produto substitui a funcionalidade de instalação integrada que estava disponível no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Portanto, os parâmetros de linha de comando /*PCUSource* e /*CUSource*, associados à funcionalidade de instalação integrada, não devem mais ser usados. Os parâmetros continuarão funcionando, mas poderão ser removidos em uma versão futura da Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O parâmetro /*UpdateSource* combina a funcionalidade dos parâmetros Slipstream, /*PCUSource* e /*CUSource*.  
   
- Para obter mais informações sobre a funcionalidade de instalação integrada que estava disponível no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, consulte [integrar uma atualização do SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
+ Para obter mais informações sobre a funcionalidade de instalação integrada que estava disponível no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, consulte [integrar uma atualização do SQL Server](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
   
 ## <a name="see-also"></a>Consulte também  
  [Compatibilidade com versões anteriores](../../2014/getting-started/backward-compatibility.md)  

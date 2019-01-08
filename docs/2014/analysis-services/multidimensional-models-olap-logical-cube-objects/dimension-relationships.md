@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512769"
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
   O uso de dimensões define as relações entre uma dimensão de cubo e os grupos de medidas em um cubo. Uma dimensão de cubo é uma instância de uma dimensão de banco de dados usada em um cubo específico. Um cubo pode ter, e frequentemente tem, dimensões de cubo que não estão diretamente relacionadas ao grupo de medidas, mas que podem estar indiretamente relacionadas ao grupo de medidas por meio de outra dimensão ou grupo de medidas. Quando você adiciona um grupo de medidas ou dimensões de banco de dados a um cubo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta determinar uso da dimensão examinando relações entre as tabelas de dimensões e tabelas de fatos na exibição de fonte de dados do cubo e por meio do exame as relações entre atributos em dimensões. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define as configurações de uso de dimensão automaticamente para as relações que pode detectar.  
@@ -35,7 +35,7 @@ ms.locfileid: "48164516"
  Uma relação entre uma dimensão e um grupo de medidas consiste na dimensão e tabelas de fatos participantes da relação e um atributo de granularidade que especifica a granularidade da dimensão em um determinado grupo de medidas.  
   
 ## <a name="regular-dimension-relationships"></a>Relações regulares de dimensão   
- Uma relação regular de dimensão entre uma dimensão de cubo e um grupo de medidas existe quando a coluna de chave da dimensão está associada diretamente à tabela de fatos. Essa relação direta é com base em uma relação de chave estrangeira primária no banco de dados relacional subjacente, mas pode estar baseada também em uma relação lógica definida na exibição de fonte de dados. Uma relação de dimensão regular representa a relação entre tabelas de dimensão e uma tabela de fatos em um projeto de esquema em estrela tradicional. Para obter mais informações sobre as relações regulares, consulte [definir uma relação Regular e as propriedades da relação](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ Uma relação regular de dimensão entre uma dimensão de cubo e um grupo de medidas existe quando a coluna de chave da dimensão está associada diretamente à tabela de fatos. Essa relação direta se baseia em uma relação de chave estrangeira de chave primária no banco de dados relacional subjacente, mas também pode se basear em uma relação lógica que é definida na exibição da fonte de dados. Uma relação de dimensão regular representa a relação entre tabelas de dimensão e uma tabela de fatos em um projeto de esquema em estrela tradicional. Para obter mais informações sobre as relações regulares, consulte [definir uma relação Regular e as propriedades da relação](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## <a name="reference-dimension-relationships"></a>Relações de dimensão de referência  
  Uma relação de dimensão de referência entre uma dimensão de cubo e um grupo de medidas existe quando a coluna de chave da dimensão está associada indiretamente à tabela de fatos por meio de uma chave em outras tabelas de dimensões, conforme mostrado na ilustração a seguir.  
@@ -61,7 +61,7 @@ ms.locfileid: "48164516"
   
  ![Colunas de fato tabela pode dar suporte a dimensões](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "colunas na verdade tabela pode dar suporte a dimensões")  
   
- A tabela contém informações de atributo não apenas para cada linha de um pedido emitido por um revendedor, mas o próprio pedido. Os atributos circulados no diagrama anterior identificam as informações na **FactResellerSales** tabela que pode ser usada como atributos em uma dimensão. Nesse caso, duas informações adicionais, o número de rastreamento da transportadora e o número da ordem de compra emitido pelo revendedor, conforme representado pelas colunas de atributo CarrierTrackingNumber e CustomerPONumber. Essas informações são interessantes — por exemplo, usuários podem estar interessados em visualizar informações agregadas, como o custo total do produto, para todos os pedidos sendo enviados sob um único número de rastreamento. Mas, sem dados de dimensão esses dois atributos não podem ser organizados ou ser agregados.  
+ A tabela contém informações de atributo não apenas para cada linha de um pedido emitido por um revendedor, mas o próprio pedido. Os atributos circulados no diagrama anterior identificam as informações na **FactResellerSales** tabela que pode ser usada como atributos em uma dimensão. Nesse caso, duas informações adicionais, o número de rastreamento da transportadora e o número da ordem de compra emitido pelo revendedor, conforme representado pelas colunas de atributo CarrierTrackingNumber e CustomerPONumber. Essas informações são interessantes – por exemplo, os usuários podem estar interessados em visualizar informações agregadas, como o total de custos, para todos os pedidos sendo enviados sob um único número de rastreamento do produto. Mas, sem dados de dimensão esses dois atributos não podem ser organizados ou ser agregados.  
   
  Na teoria, você pode criar uma tabela de dimensões que usa as mesmas informações de chave que a tabela FactResellerSales e mover as outras duas colunas de atributo, CarrierTrackingNumber e CustomerPONumber, para essa tabela de dimensões. Entretanto, você pode estar duplicando uma parte significativa dos dados e adicionando complexidade desnecessária para o data warehouse, para representar apenas dois atributos como uma dimensão separada.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164516"
  Para obter mais informações sobre relações muitos-para-muitos, consulte [definem um muitos-para-muitos relação e muitos-para-muitos e propriedades de relação](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

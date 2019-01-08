@@ -11,12 +11,12 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d708c3ad151cf213f21715f6837c7669aa7baff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511682"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Criar um grupo de hierarquia recursiva (Construtor de Relatórios e SSRS)
   Um grupo de hierarquia recursiva organiza dados de um único conjunto de dados de relatório que contém vários níveis hierárquicos, como a estrutura de subordinação para relações gerente-funcionários em uma hierarquia organizacional.  
@@ -57,16 +57,16 @@ ms.locfileid: "48154106"
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Todas as propriedades de Preenchimento requerem uma cadeia de caracteres no formato *nnyy*, sendo que *nn* é um número e *yy* é a unidade de medida. O exemplo de expressão cria uma cadeia de caracteres que usa o `Level` função para aumentar o tamanho do preenchimento com base no nível de recursão. Por exemplo, uma linha com um nível de 1 resultaria em um preenchimento de (2 + (1\*10))=12 pt, e uma linha com um nível de 3 resultaria em um preenchimento de (2 + (3\*10))=32 pt. Para obter informações sobre o `Level` , consulte [nível](report-builder-functions-level-function.md).  
+     Todas as propriedades de Preenchimento requerem uma cadeia de caracteres no formato *nnyy*, sendo que *nn* é um número e *yy* é a unidade de medida. O exemplo de expressão cria uma cadeia de caracteres que usa a função `Level` para aumentar o tamanho do preenchimento com base no nível de recursão. Por exemplo, uma linha com um nível de 1 resultaria em um preenchimento de (2 + (1\*10))=12 pt, e uma linha com um nível de 3 resultaria em um preenchimento de (2 + (3\*10))=32 pt. Para obter informações sobre o `Level` , consulte [nível](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Execute o relatório. O relatório exibe uma exibição hierárquica dos dados agrupados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando grupos de hierarquia recursiva &#40;relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Criar grupos de hierarquia recursiva &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Referência de funções de agregação &#40;relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

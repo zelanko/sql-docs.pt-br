@@ -22,12 +22,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116846"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541847"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -37,11 +37,11 @@ ms.locfileid: "48116846"
 ```  
   
       rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -65,7 +65,7 @@ ms.locfileid: "48116846"
  **-a**  
  Substitui uma chave simétrica existente por uma cópia que você fornece em uma senha de arquivo de backup protegido. Todas as instâncias da chave simétrica são atualizadas.  
   
- Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para selecionar o arquivo que contém a chave a ser aplicada. Os argumentos que você pode especificar incluem `-f` e`-p`.  
+ Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para selecionar o arquivo que contém a chave a ser aplicada. Os argumentos que você pode especificar incluem `-f` e `-p`.  
   
  **-d**  
  Exclui todas as instâncias de chave simétrica e todos os dados criptografados em um banco de dados do servidor de relatório. Esse argumento não exige um valor.  
@@ -90,19 +90,19 @@ ms.locfileid: "48116846"
  (Necessário para `-f`) Especifica a senha usada para fazer backup ou para aplicar uma chave simétrica. Esse valor não pode ficar em branco.  
   
  `-i`  
- Especifica uma instância do servidor de relatório local. Esse argumento é opcional se você instalou o servidor de relatórios no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-i` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-i` é necessária.  
+ Especifica uma instância do servidor de relatório local. Esse argumento será opcional se você instalou o servidor de relatório na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o valor padrão para `-i` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-i` será necessário.  
   
  `-m`  
  Especifica o nome do computador remoto que hospeda a instância do servidor de relatório que está sendo unido à implantação em expansão do servidor de relatório. Use o nome do computador que o identifica em sua rede.  
   
  `-n`  
- Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento é opcional se você instalou o servidor de relatórios no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` é necessária.  
+ Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento será opcional se você instalou o servidor de relatório na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` será necessário.  
   
  `-u`  *conta do usuário*  
  Especifica a conta de administrador no computador remoto que você está unindo à implantação em expansão. Se uma conta não for especificada, as credenciais do usuário atual serão usadas.  
   
  `-v`  *senha*  
- (Necessário para `-u`) Especifica a senha da conta de administrador no computador remoto que você deseja unir à implantação em expansão.  
+ (Necessário para `-u`) Especifica a senha de uma conta de administrador no computador remoto que você quer unir à implantação em expansão.  
   
  **-t**  *trace*  
  Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -148,7 +148,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Uma implantação em expansão de servidor de relatório se refere a um modelo de implantação onde várias instâncias do servidor de relatório compartilham o mesmo banco de dados do servidor de relatório. Um banco de dados do servidor de relatório pode ser usado por qualquer instância que armazena suas chaves simétricas no banco de dados. Por exemplo, se um banco de dados do servidor de relatório contiver informações de chave para três instâncias do servidor de relatório, todas as três instâncias serão consideradas membros da mesma implantação em expansão.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
- Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina a `-u` e `-v` argumentos, se você estiver unindo instâncias do servidor de relatório instalados localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
+ Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos `-u` e `-v` se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se especificar os argumentos, você obterá o seguinte erro: "As credenciais do usuário não podem ser usadas para conexões locais".  
   
  O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância já iniciada para usar o banco de dados do servidor de relatório e <`newinstance`> é o nome da instância que você quer adicionar à implantação:  
   
@@ -159,7 +159,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>Removendo chaves de criptografia para um servidor de relatório único em uma implantação em expansão  
  Este exemplo mostra como remover as chaves de criptografia para um servidor de relatório único em uma implantação em expansão de servidor de relatório. As chaves são removidas do banco de dados do servidor de relatório. Uma vez que as chaves da instância do servidor de relatório são removidas, aquela instância do servidor de relatório não poderá mais acessar dados criptografados no banco de dados, removendo-os efetivamente da implantação em expansão.  
   
- A remoção de uma instância de servidor de relatório de uma implantação em expansão exige que você especifique uma ID de instalação. A ID de instalação é um GUID armazenado no arquivo RSReportserver.config da instância do servidor de relatório para o qual você quer remover as chaves de criptografia. Você deve executar o comando a seguir no computador que você quer remover da implantação em expansão. Se o servidor de relatório é instalado como uma instância nomeada, use o `-i` argumento para especificar a instância. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ A remoção de uma instância de servidor de relatório de uma implantação em expansão exige que você especifique uma ID de instalação. A ID de instalação é um GUID armazenado no arquivo RSReportserver.config da instância do servidor de relatório para o qual você quer remover as chaves de criptografia. Você deve executar o comando a seguir no computador que você quer remover da implantação em expansão. Se o servidor de relatório estiver instalado como uma instância nomeada, use o argumento `-i` para especificar a instância. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -178,7 +178,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>Consulte também  
  [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilitários de Prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

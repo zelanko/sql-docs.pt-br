@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516105"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor da Tarefa Fila de Mensagens (página Enviar)
   Use a página **Enviar** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa de Fila de Mensagens para enviar mensagens de um pacote do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "48095936"
  **MessageType**  
  Selecione o tipo de mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Mensagem do arquivo de dados**|A mensagem é armazenada em um arquivo. Selecionar este valor faz com que seja exibida a opção dinâmica **DataFileMessage**.|  
 |**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
@@ -53,22 +53,22 @@ ms.locfileid: "48095936"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
  **DataFileMessage**  
- Digite o caminho do arquivo de dados ou clique no botão de reticências **(…)** e localize o arquivo.  
+ Digite o caminho do arquivo de dados ou clique nas reticências **(…)** e localize o arquivo.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
  **VariableMessage**  
- Digite os nomes das variáveis ou clique no botão de reticências **(…)** e selecione as variáveis. As variáveis são separadas por vírgulas.  
+ Digite os nomes de variáveis ou clique nas reticências **(...)** e, em seguida, selecione as variáveis. As variáveis são separadas por vírgulas.  
   
- **Tópicos Relacionados:** Selecionar Variáveis  
+ **Tópicos relacionados:** Selecionar variáveis  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
  **StringMessage**  
- Digite a mensagem de cadeia de caracteres ou clique no botão de reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres** .  
+ Digite a mensagem de cadeia de caracteres ou clique nas reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa fila de mensagens &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa fila de mensagens &#40;página receber&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Fila de Mensagens &#40;Página Receber&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

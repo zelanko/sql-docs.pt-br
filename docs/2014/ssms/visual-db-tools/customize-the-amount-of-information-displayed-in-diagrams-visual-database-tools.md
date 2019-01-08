@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
@@ -15,12 +15,12 @@ ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36a8dc1a6f7d12d0c8064522dc4b7a6c02998a00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210536"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790388"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
   Quando você adiciona uma tabela a um diagrama de banco de dados, ela aparece com um número fixo de propriedades de exibição. Você pode escolher em um menu de variações o volume de informações a ser exibido ou pode criar um conjunto de propriedades personalizado.  

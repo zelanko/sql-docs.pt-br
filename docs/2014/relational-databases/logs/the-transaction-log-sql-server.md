@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,15 +14,15 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807008"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
-  Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
+  Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e modificações feitas no banco de dados a cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
   
  O log de transações é um componente crítico do banco de dados e, se houver uma falha do sistema, será necessário que o log de transações retorne seu banco de dados a um estado consistente. O log de transações nunca deve ser excluído ou movido a menos que você compreenda plenamente as consequências disso.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072886"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios: Operações com suporte pelo Log de transações  
+##  <a name="Benefits"></a> Benefícios: Operações com suporte pelo log de transações  
  O log de transações dá suporte às seguintes operações:  
   
 -   Recuperação de transações individuais.  
@@ -66,7 +66,7 @@ ms.locfileid: "48072886"
  Para obter mais informações, consulte [Fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation), mais adiante neste tópico.  
   
 > [!NOTE]  
->  O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você precisa reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Manage the Size of the Transaction Log File](manage-the-size-of-the-transaction-log-file.md).  
+>  O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você precisa reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Gerenciar o tamanho do arquivo de log de transações](manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Fatores que podem atrasar o truncamento de Log  
  Quando os registros de log permanecem ativos por muito tempo, o truncamento do log de transações é atrasado e esse log poderá ocupar todo o espaço.  
@@ -76,10 +76,10 @@ ms.locfileid: "48072886"
   
  O truncamento de log pode ser atrasado por uma variedade de fatores. É possível descobrir se, de fato, há algo impedindo o truncamento de log consultando as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição do catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . A tabela a seguir descreve os valores dessas colunas.  
   
-|Valor log_reuse_wait|Valor log_reuse_wait_desc|Description|  
+|Valor log_reuse_wait|Valor log_reuse_wait_desc|Descrição|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Atualmente há um ou mais arquivos de log virtuais reutilizáveis.|  
-|1|CHECKPOINT|Não aconteceu nenhum ponto de verificação desde o último truncamento de log, ou o início do log ainda não foi movido para fora de um arquivo de log virtual. (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Não aconteceu nenhum ponto de verificação desde o último truncamento de log, ou o início do log ainda não foi movido para fora de um arquivo de log virtual. (Todos os modelos de recuperação)<br /><br /> Essa é uma razão rotineira para atrasar o truncamento de log. Para obter mais informações, consulte [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Um backup de log é necessário antes do truncamento do log de transações. (Modelos de recuperação completa e bulk-logged somente)<br /><br /> Quando o backup de log seguinte é concluído, parte do espaço do log poder se tornar reutilizável.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Um backup de dados ou uma restauração está em andamento (todos os modelos de recuperação).<br /><br /> Se um backup de dados estiver evitando o truncamento de log, a operação de backup pode ajudar a solucionar o problema imediatamente.|  
 |4|ACTIVE_TRANSACTION|Uma transação está ativa (todos os modelos de recuperação).<br /><br /> É possível haver uma transação de longa execução no início do backup de log. Nesse caso, a liberação de espaço pode exigir outro backup de log. Observe que um transações demoradas impedem o truncamento de log em todos os modelos de recuperação, incluindo o modelo de recuperação simples, no qual o log de transações geralmente é truncado em cada ponto de verificação automático.<br /><br /> Uma transação é adiada. Uma *transação adiada* é efetivamente uma transação ativa cuja reversão é bloqueada por causa de algum recurso indisponível. Para obter informações sobre as causas de transações adiadas e como fazer com que elas saiam do estado adiado, consulte [Transações adiadas &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Transações demoradas também podem preencher o log de transações do tempdb. Tempdb é usado implicitamente por transações de usuário para objetos internos, como tabelas de trabalho para classificação, arquivos de trabalho para hashing, tabelas de trabalho do cursor e a controle de versão de linha. Mesmo que a transação de usuário inclui somente leitura de dados (consultas SELECT), objetos internos podem ser criados e usados em transações de usuário. Dessa forma, o log de transações de tempdb pode ser preenchido.|  
@@ -88,12 +88,12 @@ ms.locfileid: "48072886"
 |7|DATABASE_SNAPSHOT_CREATION|Um instantâneo de banco de dados está sendo criado. (Todos os modelos de recuperação)<br /><br /> Esse é um motivo rotineiro e, normalmente breve, de truncamento de log atrasado.|  
 |8|LOG_SCAN|Um exame de log está ocorrendo. (Todos os modelos de recuperação)<br /><br /> Esse é um motivo rotineiro e, normalmente breve, de truncamento de log atrasado.|  
 |9|AVAILABILITY_REPLICA|Uma réplica secundária de um grupo de disponibilidade está aplicando registros de log de transações desse banco de dados para um banco de dados secundário correspondente. (Modelo de recuperação completa)<br /><br /> Para obter mais informações, consulte [visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Somente para uso interno|  
-|11|—|Somente para uso interno|  
-|12|—|Somente para uso interno|  
+|10|-|Somente para uso interno|  
+|11|-|Somente para uso interno|  
+|12|-|Somente para uso interno|  
 |13|OLDEST_PAGE|Se um banco de dados estiver configurado para usar pontos de verificação indiretos, a página mais antiga no banco de dados poderá ser mais antiga do que o LSN do ponto de verificação. Nesse caso, a página mais antiga pode atrasar o truncamento de log. (Todos os modelos de recuperação)<br /><br /> Para obter informações sobre pontos de verificação indiretos, consulte [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Esse valor não é usado atualmente.|  
-|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ponto de verificação é disparado (o que ocorre a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando Checkpoint manualmente no banco de dados em questão.|  
+|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até o ponto de verificação automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ser acionado (o que acontece a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando Checkpoint manualmente para o banco de dados em questão.|  
   
 ##  <a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas  
  O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no modelo de recuperação bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
@@ -135,7 +135,7 @@ ms.locfileid: "48072886"
     -   Recriação de novo heap DROP INDEX (se aplicável).  
   
         > [!NOTE]  
-        >  Índice de desalocação de página durante uma [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operação sempre totalmente registrada em log.  
+        >  A desalocação de páginas de índice durante uma operação [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) sempre é totalmente registrada em log.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  `Managing the transaction log`  
@@ -155,7 +155,7 @@ ms.locfileid: "48072886"
 ## <a name="see-also"></a>Consulte também  
  [Controlar a durabilidade da transação](control-transaction-durability.md)   
  [Pré-requisitos para registro mínimo em log na importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Backup e Restauração de bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

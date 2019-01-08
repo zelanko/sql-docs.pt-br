@@ -10,19 +10,19 @@ ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144616"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406153"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP in-memory
   Este tópico fornece descrições breves e links para vários objetos de banco de dados que dão suporte a OLTP na memória.  
   
 ### <a name="system-views"></a>Exibições do sistema  
   
-|Exibição do sistema|Description|Recurso de OLTP na memória|  
+|Exibição do sistema|Descrição|Recurso de OLTP na memória|  
 |-----------------|-----------------|-----------------------------|  
 |[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se um grupo de arquivos contém dados com otimização de memória.|As colunas a seguir exibem valores adicionais: **tipo** e **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Verifica se um índice está em uma tabela com otimização de memória.|As colunas a seguir exibem valores adicionais: **tipo** e **type_desc**.|  
@@ -30,19 +30,19 @@ ms.locfileid: "48144616"
 |[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifique se algum procedimento armazenado foi originalmente compilado.|**uses_native_compilation** coluna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Verifique se algum procedimento armazenado foi originalmente compilado.|**uses_native_compilation** coluna.|  
 |[table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Verifique se uma tabela tem otimização de memória.|**is_memory_optimized** coluna.|  
-|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Verifica se uma tabela tem otimização de memória e verifica a configuração de durabilidade da tabela.|**durabilidade**, **durability_desc**, e **is_memory_optimized** colunas.|  
+|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Verifique se uma tabela tem otimização de memória e verifique a configuração de durabilidade de uma tabela.|**durabilidade**, **durability_desc**, e **is_memory_optimized** colunas.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Mostre os índices de hash de uma tabela com otimização de memória.|Específico para OLTP na memória.|  
   
 ### <a name="metadata-functions"></a>Funções de metadados  
   
-|Função de metadados|Description|Recurso de OLTP na memória|  
+|Função de metadados|Descrição|Recurso de OLTP na memória|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Verifica se os objetos de banco de dados tem otimização de memória.|**ExecIsWithNativeCompilation** e **TableIsMemoryOptimized** propriedades.<br /><br /> O **IsSchemaBound** propriedade dá suporte ao tipo de objeto Procedure (retorna 0 para procedimentos, em vez de NULL).|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Verifica se um servidor dá suporte a OLTP na memória.|**Isxtpsupported não depende** propriedade.|  
   
 ### <a name="system-stored-procedures"></a>Procedimentos armazenados do sistema  
   
-|Procedimento armazenado|Description|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associa um banco de dados de OLTP na memória para um pool de recursos.|  
 |[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Inicia a coleta de lixo em um banco de dados de OLTP na memória.|  

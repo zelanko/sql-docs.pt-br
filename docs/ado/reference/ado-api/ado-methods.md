@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660584"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530238"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660584"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Cria um novo registro para um atualizável **Recordset** objeto.|  
 |[Acrescentar](../../../ado/reference/ado-api/append-method-ado.md)|Acrescenta um objeto a uma coleção. Se a coleção estiver **campos**, uma nova **campo** objeto pode ser criado antes que ele é acrescentado à coleção.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Acrescenta dados a um grande de texto ou dados binários **campo**, ou como um **parâmetro** objeto.|  
-|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gerencia o processamento dentro de transações uma **Conexão** da seguinte maneira:<br /><br /> **BeginTrans** — inicia uma nova transação.<br /><br /> **CommitTrans** — salva as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.<br /><br /> **RollbackTrans** — cancela todas as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.|  
+|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gerencia o processamento dentro de transações uma **Conexão** da seguinte maneira:<br /><br /> **BeginTrans** -inicia uma nova transação.<br /><br /> **CommitTrans** – salva as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.<br /><br /> **RollbackTrans** - cancela todas as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de uma chamada de método assíncrono pendente.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela uma atualização em lotes pendentes.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela todas as alterações foram feitas para a linha atual ou nova de um **conjunto de registros** objeto, ou o **campos** coleção de um **registro** objeto antes de chamar o  **Atualização** método.|  
@@ -74,7 +74,7 @@ ms.locfileid: "47660584"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Define a posição em que é o final do fluxo.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora uma linha inteira durante a leitura de um fluxo de texto.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtém informações estatísticas sobre um fluxo aberto.|  
-|[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Determina se um especificado **Recordset** objeto dá suporte a um determinado tipo de funcionalidade.|  
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Determina se um especificado **Recordset** objeto dá suporte a um determinado tipo de funcionalidade.|  
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Salva as alterações feitas na linha atual de um **conjunto de registros** objeto, ou o **campos** coleção de um **registro** objeto.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Grava todas as atualizações em lotes pendentes no disco.|  
 |[gravação](../../../ado/reference/ado-api/write-method.md)|Grava dados binários em uma **Stream** objeto.|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660584"
  [Coleções ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apêndice b: erros de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Apêndice b: Erros ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventos ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfaces e os objetos do ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

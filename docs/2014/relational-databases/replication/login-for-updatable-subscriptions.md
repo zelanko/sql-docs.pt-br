@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.updatablesubscriptionslogin.f1
@@ -13,12 +12,12 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2055ac3e09a82bba6ae4ee7357e689086f6da659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ccf1a79b2dc27bbc49628d11a0c6fb0cf0e4e50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816618"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
   Se você tiver selecionado **replicar** sobre o **inscrições atualizáveis** página desse assistente, você deve especificar uma conta no assinante na qual as conexões com o publicador são feitas para atualização imediata assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Essa conta é necessária mesmo se você selecionou **enfileirar alterações e confirmar quando possível** sobre o **inscrições atualizáveis** página, porque, por padrão o Assistente para nova assinatura configura atualização enfileirada com a capacidade de alternar para atualização imediata, se necessário.  

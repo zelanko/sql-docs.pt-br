@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194906"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396360"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistente de Conversão de Projeto do Integration Services
   O **Assistente de Conversão de Projeto do Integration Services** converte um projeto no modelo de implantação de projeto.  
@@ -222,7 +222,7 @@ ms.locfileid: "48194906"
 ##  <a name="review"></a> Definir as opções na página Revisão  
  Use a página **Revisão** para confirmar as opções selecionadas para a conversão do projeto.  
   
- **Previous**  
+ **Anterior**  
  Clique para alterar uma opção.  
   
  **Converter**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194906"
  Clique para salvar um resumo da conversão de projeto em um arquivo .xml.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantar projetos no Servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

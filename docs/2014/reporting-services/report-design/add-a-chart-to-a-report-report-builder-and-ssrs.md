@@ -11,19 +11,19 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349832"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Adicionar um gráfico a um relatório (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual, use uma região de dados do gráfico. É importante escolher um tipo de gráfico apropriado para o tipo de dados que você está apresentando. Isso influencia a interpretação dos dados quando colocados em formato de gráfico. Para obter mais informações, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  A maneira mais simples de adicionar uma região de dados de gráfico a seu relatório é executar o Assistente de Novo Gráfico. O assistente oferece gráficos de colunas, linhas, pizza, barras e área. Para esses e outros tipos de gráfico, você pode adicionar um gráfico manualmente.  
   
- Depois de adicionar uma região de dados do gráfico à superfície de design, você pode arrastar campos do conjunto de dados do relatório de dados numéricos e não numéricos para o painel do gráfico Dados do Gráfico. Clique no gráfico para exibir o painel Dados do Gráfico com suas três áreas: Grupos de Séries, Grupos de Categorias e Valores.  
+ Depois de adicionar uma região de dados do gráfico à superfície de design, você pode arrastar campos do conjunto de dados do relatório de dados numéricos e não numéricos para o painel do gráfico Dados do Gráfico. Clique no gráfico para exibir o painel de dados do gráfico com suas três áreas: Grupos de séries, grupos de categorias e valores.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "48123486"
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adicionando um gráfico de barras ao relatório (Construtor de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adicionando um gráfico de barras a um relatório (Designer de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adicionando um gráfico de pizza ao relatório (Construtor de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adicionando um gráfico de pizza ao relatório (Designer de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Adicionando um gráfico de barras ao relatório (construtor de relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adicionando um gráfico de barras ao relatório (Designer de relatórios)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adicionando um gráfico de pizza ao relatório (construtor de relatórios)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adicionando um gráfico de pizza ao relatório (Designer de relatórios)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522376"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   
   
 |Termo|Definição|  
 |----------|----------------|  
-|.NET Framework|Um componente integrante do Windows que dá suporte à criação, implantação e execução da próxima geração de aplicativos e serviços Web. Ele fornece um ambiente multilíngue baseado em padrões, altamente produtivo, para integrar investimentos existentes com aplicativos e serviços da próxima geração, bem como a agilidade para resolver os desafios de implantação e operação de aplicativos na escala da Internet. O .NET Framework consiste em três partes principais: o Common Language Runtime, um conjunto hierárquico de bibliotecas de classes unificadas e uma versão de ASP em componentes chamada de ASP.NET. Consulte também: ASP.NET, Common Language Runtime, biblioteca de classes do .NET Framework.|  
+|.NET Framework|Um componente integrante do Windows que dá suporte à criação, implantação e execução da próxima geração de aplicativos e serviços Web. Ele fornece um ambiente multilíngue baseado em padrões, altamente produtivo, para integrar investimentos existentes com aplicativos e serviços da próxima geração, bem como a agilidade para resolver os desafios de implantação e operação de aplicativos na escala da Internet. O .NET Framework consiste em três partes principais: o Common Language Runtime, um conjunto hierárquico de bibliotecas de classes unificadas e uma versão de ASP em componentes chamada de ASP.NET. Consulte também: ASP.NET, CLR, biblioteca de classes do .NET Framework.|  
 |ActiveX Data Objects|Objetos do Component Object Model que fornecem acesso a fontes de dados. Essa API fornece uma camada entre o OLE DB e linguagens de programação, como o Visual Basic, o Visual Basic for Applications, o Active Server Pages e o Microsoft Internet Explorer Visual Basic Scripting.|  
 |relatório ad hoc|Um relatório .rdl criado com o Construtor de Relatórios 1.0 que acessa modelos de relatórios.|  
 |adorno|Uma área de controle ou de status que é anexada à borda de um painel ou de uma janela, como uma barra de ferramentas ou régua.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48095376"
 |gatilho CLR|Um gatilho criado em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no Common Language Runtime do .NET Framework.|  
 |tipo de dados CLR definido pelo usuário|Um tipo de dados definido pelo usuário criado em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no Common Language Runtime do .NET Framework.|  
 |segurança de acesso do código|Um mecanismo fornecido pelo Common Language Runtime pelo qual são concedidas permissões ao código gerenciado pela política de segurança, e essas permissões são impostas, ajudando a limitar as operações que o código tem permissão para executar.|  
-|agrupamento|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
+|ordenação|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
 |coleção|1. Um objeto que contém um conjunto de outros objetos. 2. No Master Data Services, um agrupamento hierárquico de membros de hierarquias explícitas e outras coleções.|  
 |regras de cores|O algoritmo que atribui cores automaticamente a cada elemento do mapa em uma camada do mapa.|  
 |escala de cores|Um tipo de legenda de mapa usado para interpretar o que as cores representam em um mapa.|  
@@ -113,9 +113,9 @@ ms.locfileid: "48095376"
 |script de banco de dados|Uma coleção de instruções usadas para criar objetos de banco de dados.|  
 |imagem vinculada a dados|Uma imagem existente em um banco de dados, como um campo em um banco de dados que contém imagens.|  
 |assinatura controlada por dados|Uma assinatura no Reporting Services que usa uma consulta para recuperar dados de assinatura de uma fonte de dados externa em tempo de execução.|  
-|conjunto de dados|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e agrupamento como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
+|conjunto de dados|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e ordenação como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
 |DBCS|conjunto de caracteres de dois bytes|  
-|padrão|1. Um valor de dados, uma configuração de opção, um agrupamento ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, o agrupamento ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
+|padrão|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
 |banco de dados padrão|O banco de dados ao qual o usuário é conectado imediatamente após fazer logon no SQL Server.|  
 |instância padrão|A instância do SQL Server que usa o mesmo nome que o nome do computador no qual está instalada.|  
 |delimitador|1. No Transact-SQL, os caracteres que indicam o início e o fim de um nome de objeto, usando aspas duplas ("") ou colchetes ([]). 2. No Integration Services e no Reporting Services, caracteres que são usados para separar registros, campos ou cadeias de caracteres.|  
@@ -180,12 +180,12 @@ ms.locfileid: "48095376"
 |instância|1. Uma cópia do SQL Server em execução em um computador. 2. Uma cópia específica de um item de relatório, como uma parte de relatório, um sub-relatório, um membro dinâmico ou um grupo.|  
 |inteiro|Uma categoria de tipo de dados numérico que inclui os tipos de dados bigint, int, smallint e tinyint.|  
 |Protocolo IPSec|Regras que os computadores seguem para fornecer comunicação particular e segura pelas redes IP por meio do uso de serviços de segurança criptográfica.|  
-|IPsec|Consulte outro termo: protocolo IPSec|  
+|IPsec|Consulte outro termo: Protocolo IPSec|  
 |ISO|Uma de duas agências de padrões internacionais responsáveis por desenvolver padrões de comunicação de dados internacionais. A ISO (International Organization for Standardization) trabalha intimamente com a IEC (International Electrotechnical Commission) para definir padrões de computação. Em conjunto, elas publicaram o padrão ISO/IEC SQL-92 para SQL.|  
 |atribuição de função em nível de item|Uma política de segurança que se aplica a um item na pasta do servidor de relatório.|  
 |definição de função em nível de item|um modelo de segurança que define uma função usada para controlar o acesso ou a interação com um item no namespace da pasta do servidor de relatório.|  
 |indicador chave de desempenho|(KPI) Uma métrica quantificável e padronizada que reflete uma variável comercial crítica (por exemplo, fatia de mercado), medida com o decorrer do tempo.|  
-|palavra-chave|Uma palavra reservada no SQL Server que executa uma função específica, como definir, manipular ou acessar objetos de banco de dados. Por exemplo: SELECT, FROM e AND.|  
+|palavra-chave|Uma palavra reservada no SQL Server que executa uma função específica, como definir, manipular ou acessar objetos de banco de dados. Por exemplo: SELECT, FROM, e and.|  
 |KPI|Consulte outro termo: indicador chave de desempenho|  
 |campo de rótulo|Um campo de conjunto de dados de relatório que identifica um rótulo para um campo de chave correspondente. Os parâmetros e as regiões de dados podem exibir o rótulo de um campo de chave, em vez do valor.|  
 |latência|Um período de tempo decorrido quando uma alteração de dados é concluída em um servidor e quando essa alteração aparece em outro servidor.|  
@@ -213,7 +213,7 @@ ms.locfileid: "48095376"
 |arquivo mestre|O arquivo instalado com versões anteriores do SQL Server usado para armazenar os bancos de dados do sistema mestre, modelo e tempdb, logs de transações, o banco de dados de exemplo de publicações e o log de transações.|  
 |campos de correspondência|Um conjunto de campos usados para criar um relacionamento entre dados analíticos e dados espaciais.|  
 |região de dados de matriz|Uma região de dados em um layout de relatório que oferece funcionalidade semelhante à de referências cruzadas e relatórios de Tabela Dinâmica. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence.|  
-|MDX|Consulte outro termo: linguagem MDX|  
+|MDX|Consulte outro termo: Linguagem MDX|  
 |projeção Mercador|Em um item de relatório de mapa, uma projeção de mapa cilíndrica criada por Gerardus Mercator em 1569.|  
 |metadados|Informações sobre as propriedades de dados, como o tipo de dados em uma coluna (numeric, text etc.) ou o comprimento de uma coluna; informações sobre um arquivo, como seu título, descrição, data de criação e data da última modificação; ou informações sobre a estrutura de dados ou informações que especificam o design de objetos, como cubos ou dimensões.|  
 |método|Uma função que executa uma ação por meio de um objeto COM, como no SQL-DMO, no OLE DB e no ActiveX Data Objects (ADO).|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095376"
 |protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
 |provedor|1. Um provedor OLE DB. 2. Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
 |parâmetros de consulta|Parâmetros que são especificados em uma consulta de conjunto de dados, como uma consulta Transact-SQL.|  
-|RDL|Consulte outro termo: Linguagem de Definição de Relatório|  
+|RDL|Consulte outro termo: Linguagem RDL|  
 |registro|Um grupo de campos relacionados (colunas) de informações tratadas como uma unidade. Um registro é mais comumente chamado de uma linha em um banco de dados relacional.|  
 |retângulo|Um item de relatório que pode ser usado como um contêiner para vários itens de relatório ou como um elemento gráfico em um relatório.|  
 |hierarquia recursiva|1. Uma hierarquia de dados de um único conjunto de dados de relatório que inclui vários níveis hierárquicos em uma estrutura hierárquica, como a estrutura de subordinação para relações gerente-funcionário em uma hierarquia organizacional. 2. No Master Data Services, uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio baseado na própria entidade.|  
@@ -334,10 +334,10 @@ ms.locfileid: "48095376"
 |marca inteligente|Uma marca inteligente expõe configurações-chave diretamente na superfície de design para aumentar a produtividade global em tempo de design no Visual Studio 2005.|  
 |SMDL|Consulte outro termo: linguagem SMDL|  
 |instantâneo|Consulte outro termo: instantâneo de relatório|  
-|ordem de classificação|O conjunto de regras em um agrupamento que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
+|ordem de classificação|O conjunto de regras em uma ordenação que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
 |dados espaciais|Dados que especificam localizações de objetos em uma superfície plana ou curva. Os dados espaciais podem ser pontos, linhas ou polígonos.|  
 |tipos de dados espaciais|Especifica dados que representam informações geométricas (planares) ou geográficas (geodésicas).|  
-|SQL|Consulte outro termo: linguagem SQL|  
+|SQL|Consulte outro termo: SQL (Structured Query Language)|  
 |consulta SQL|Uma instrução SQL, como SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |Autenticação do SQL Server|O mecanismo para validar uma tentativa de conectar-se a uma instância do SQL Server especificando uma ID de logon e uma senha do SQL Server.|  
 |logon do SQL Server|Uma conta armazenada no SQL Server que permite que os usuários se conectem ao SQL Server.|  
@@ -371,6 +371,6 @@ ms.locfileid: "48095376"
 |eixo y|Consulte outro termo: eixo de valor (y)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
