@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfe0a9f6927e1dd62469c8d3e7c3be542cbda76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb71506fabe25de06e991574bcdf013e3c111d19
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794804"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596767"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Desabilitar o Stretch Database e trazer de volta os dados remotos
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "47794804"
 > Desabilitar o Stretch Database de um banco de dados não exclui o banco de dados remoto. Se você quiser excluir o banco de dados remoto, descarte-o usando o Portal de Gerenciamento do Azure. O banco de dados remoto continua a gerar custos do Azure até você excluí-la. Para saber mais, confira [Preços do SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Usar o Transact-SQL para desabilitar o Stretch Database de um banco de dados.  
- Execute o seguinte comando  
+ Execute o comando a seguir.  
   
 ```sql  
 ALTER DATABASE <Stretch-enabled database name>  
