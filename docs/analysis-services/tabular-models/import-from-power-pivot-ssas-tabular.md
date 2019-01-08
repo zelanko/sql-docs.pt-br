@@ -1,5 +1,5 @@
 ---
-title: Importar do PowerPivot | Microsoft Docs
+title: Importar do PowerPivot no Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 63a1619b09475bfa0ec8d4a1f21aaf88791a5b6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21abcfbec94808df6560af887ff0598d97fcb068
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041692"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072373"
 ---
 # <a name="import-from-power-pivot"></a>Importar do PowerPivot 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artigo descreve como criar um novo projeto de modelo tabular importando os metadados e dados de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho usando a importação de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo de projeto em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Este artigo descreve como criar um novo projeto de modelo tabular importando os metadados e dados de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando a importação da pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo de projeto em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Criar um novo Modelo Tabular de um arquivo PowerPivot para Excel  
  Ao criar um novo projeto de modelo tabular importando de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os metadados que definem a estrutura da pasta de trabalho são usados para criar e definir a estrutura do projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Objetos como tabelas, colunas, medidas e relações são mantidos e aparecerão no projeto de modelo tabular tal como estão na pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Nenhuma alteração é feita ao arquivo da pasta de trabalho .xlsx.  
@@ -26,13 +26,13 @@ ms.locfileid: "34041692"
 > [!NOTE]  
 >  Modelos tabulares não dão suporte a tabelas vinculadas. Ao importar de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contém uma tabela vinculada, os dados de tabela vinculada são tratados como dados copiados\colados e armazenados no arquivo Model.bim. Ao exibir as propriedades para uma tabela copiada\colada, a propriedade **Dados de Origem** é desabilitada e a caixa de diálogo **Propriedades da Tabela** no menu **Tabela** é desabilitada.  
 >   
->  Há um limite de 10.000 linhas que podem ser adicionadas aos dados inseridos no modelo. Se você importar um modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o erro “Os dados estavam truncados. As tabelas coladas não podem conter mais de 10.000 linhas” surgir, revise o modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] movendo os dados inseridos para outra fonte de dados, como uma tabela do SQL Server, e importe-os novamente.  
+>  Há um limite de 10.000 linhas que podem ser adicionadas aos dados inseridos no modelo. Se você importar um modelo de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e ver o erro "os dados estavam truncados. As tabelas coladas não podem conter mais de 10.000 linhas"surgir, revise o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de modelo, movendo os dados inseridos para outra fonte de dados, como uma tabela no SQL Server e, em seguida, importe novamente.  
   
- Há considerações especiais dependendo se o banco de dados de espaço de trabalho está em uma instância do Analysis Services no mesmo computador (local) que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou está em uma instância remota do Analysis Services.  
+ Há considerações especiais dependendo se o banco de dados de workspace está em uma instância do Analysis Services no mesmo computador (local) que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou está em uma instância remota do Analysis Services.  
   
- Se o banco de dados do espaço de trabalho estiver em uma instância local do Analysis Services, você poderá importar os metadados e os dados da pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Os metadados são copiados da pasta de trabalho e usados para criar o projeto de modelo tabular. Os dados são então copiados da pasta de trabalho e armazenados no banco de dados de espaço de trabalho do projeto (com exceção dos dados copiados/colados, que são armazenados no arquivo Model.bim).  
+ Se o banco de dados do workspace estiver em uma instância local do Analysis Services, você poderá importar os metadados e os dados da pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Os metadados são copiados da pasta de trabalho e usados para criar o projeto de modelo tabular. Os dados, em seguida, são copiados da pasta de trabalho e armazenados no banco de dados de espaço de trabalho do projeto (com exceção de copiados/colados, que são armazenados no arquivo Model. BIM).  
   
- Se o banco de dados de espaço de trabalho estiver em uma instância remota do Analysis Services, você não poderá importar os dados da pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. Você ainda poderá importar os metadados da pasta de trabalho; porém, isto fará um script ser executado na instância remota do Analysis Services. Você só deve importar metadados de uma pasta de trabalho confiável do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Os dados devem ser importados de origens definidas nas conexões da fonte de dados. Os dados copiados/colados e de tabela vinculada na pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] devem ser copiados e colados no projeto de modelo tabular.  
+ Se o banco de dados de workspace estiver em uma instância remota do Analysis Services, você não poderá importar os dados da pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. Você ainda poderá importar os metadados da pasta de trabalho; porém, isto fará um script ser executado na instância remota do Analysis Services. Você só deve importar metadados de uma pasta de trabalho confiável do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Os dados devem ser importados de origens definidas nas conexões da fonte de dados. Os dados copiados/colados e de tabela vinculada na pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] devem ser copiados e colados no projeto de modelo tabular.  
   
 #### <a name="to-create-a-new-tabular-model-project-from-a-power-pivot-for-excel-file"></a>Para criar um novo projeto de modelo tabular de um arquivo PowerPivot para Excel  
   

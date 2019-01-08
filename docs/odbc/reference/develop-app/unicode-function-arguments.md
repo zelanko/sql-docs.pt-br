@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669454"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201835"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos da função Unicode
 O Gerenciador de Driver ODBC 3.5 (ou superior) dá suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou SQLPOINTER em seus argumentos. As funções do Unicode são implementadas como funções (com um sufixo *W*), e não como macros. As funções ANSI (que pode ser chamado com ou sem um sufixo *um*) são idênticas as funções API ODBC atuais.  
@@ -65,7 +65,7 @@ O Gerenciador de Driver ODBC 3.5 (ou superior) dá suporte a versões ANSI e Uni
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
+> [!NOTE]
 >  Funções preteridas tem suporte de mapeamento de Unicode para ANSI porque o ODBC 3 *. x* Gerenciador de Driver dá suporte a recompilação do ODBC 2. *x* aplicativos com o UNICODE **#define**.  
   
  Esta seção contém os tópicos a seguir.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.editrecurringjobsched.f1
@@ -13,14 +13,14 @@ ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d220cf42df242b0cf7ff436d7ad711adf4a89fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822400"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>Nova agenda de trabalho: propriedades da agenda de trabalho
+# <a name="new-job-schedule-job-schedule-properties"></a>Nova agenda de trabalho: Propriedades da agenda de trabalho
   Use essa página para exibir e alterar as propriedades da agenda.  
   
 ## <a name="options"></a>Opções  
@@ -89,7 +89,7 @@ ms.locfileid: "48094786"
  Especifique que a agenda permanecerá efetiva indefinidamente.  
   
 ## <a name="one-time-schedule-types-options"></a>Opções de tipos de agendas que ocorrem apenas uma vez  
- **Date**  
+ **Data**  
  Selecione a data para que o trabalho seja executado.  
   
  **Hora**  

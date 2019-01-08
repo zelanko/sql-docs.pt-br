@@ -13,12 +13,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502887"
 ---
 # <a name="ragged-hierarchies"></a>Hierarquias desbalanceadas
   Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que tem um número irregular de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
@@ -44,7 +44,7 @@ ms.locfileid: "48087886"
   
 -   Crie uma hierarquia pai-filho que gerencie explicitamente os membros de nível. Para obter uma ilustração da técnica, consulte [Hierarquia desbalanceada em SSAS (postagem de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obter mais informações nos Manuais Online, consulte [hierarquia pai-filho](parent-child-dimension.md). As desvantagens de criar uma hierarquia pai-filho são que você só pode ter uma por dimensão e, em geral, incorre em uma penalidade de desempenho ao calcular agregações para membros intermediários.  
   
- Se a dimensão contém mais de uma hierarquia desbalanceada, você deve usar a primeira abordagem, definindo `HideMemberIf`. Os desenvolvedores de BI com experiência prática no trabalho com hierarquias desbalanceadas defendem ainda mais as alterações adicionais nas tabelas de dados físicos, criando tabelas separadas para cada nível. Consulte [Martin Mason's the SSAS Financial Cube–Part 1a–Ragged Hierarchies (Cubo financeiro de SSAS de Martin Mason, Parte 1a, Hierarquias desbalanceadas) (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obter detalhes sobre essa técnica.  
+ Se a dimensão contém mais de uma hierarquia desbalanceada, você deve usar a primeira abordagem, definindo `HideMemberIf`. Os desenvolvedores de BI com experiência prática no trabalho com hierarquias desbalanceadas defendem ainda mais as alterações adicionais nas tabelas de dados físicos, criando tabelas separadas para cada nível. Ver [Martin Mason do SSAS Financial Cube – Part irregular de 1a hierarquias (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obter detalhes sobre essa técnica.  
   
 ##  <a name="bkmk_Hide"></a> Definir HideMemberIf para ocultar membros em uma hierarquia regular  
  Na tabela de uma dimensão imperfeita, os membros logicamente ausentes podem ser representados de formas diferentes. As células da tabela podem conter cadeias de caracteres nulas ou vazias ou podem conter o mesmo valor que o pai, servindo como espaço reservado. A representação de espaços reservados é determinada pelo status de espaço reservado dos membros filho, conforme determinado pela propriedade `HideMemberIf` e pela propriedade de cadeia de conexão `MDX Compatibility` do aplicativo cliente.  
@@ -55,7 +55,7 @@ ms.locfileid: "48087886"
   
 2.  Clique com o botão direito do mouse em um membro na hierarquia e selecione **Propriedades**. Defina `HideMemberIf` com um dos valores descritos a seguir.  
   
-    |Configuração de HideMemberIf|Description|  
+    |Configuração de HideMemberIf|Descrição|  
     |--------------------------|-----------------|  
     |`Never`|Os membros do nível nunca são ocultos. Este é o valor padrão.|  
     |**OnlyChildWithNoName**|Um membro do nível ficará oculto quando for o único filho de seu pai e seu nome for uma cadeia de caracteres nula ou vazia.|  
@@ -64,16 +64,16 @@ ms.locfileid: "48087886"
     |**ParentName**|Um membro do nível ficará oculto quando seu nome for idêntico ao de seu pai.|  
   
 ##  <a name="bkmk_Mdx"></a> Definir a compatibilidade MDX para determinar como espaços reservados são representados em aplicativos cliente  
- Depois de definir `HideMemberIf` em um nível de hierarquia, você também deve definir o `MDX Compatibility` propriedade na cadeia de conexão enviada do aplicativo cliente. A definição `MDX Compatibility` determina se o `HideMemberIf` é usado.  
+ Após definir `HideMemberIf` em um nível de hierarquia, defina também a propriedade `MDX Compatibility` na cadeia de conexão enviada do aplicativo cliente. A definição `MDX Compatibility` determina se o `HideMemberIf` é usado.  
   
-|Definição de MDX Compatibility|Description|Uso|  
+|Definição de MDX Compatibility|Descrição|Uso|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Mostrar um valor de espaço reservado.|Esse é o padrão usado pelo Excel, pelo SSDT e pelo SSMS. Ele orienta o servidor a retornar valores de espaço reservado ao detalhar níveis vazios em uma hierarquia desbalanceada. Se você clicar no valor de espaço reservado, poderá continuar até obter os nós filho (folha)<br /><br /> O Excel tem a cadeia de conexão usada para conectar-se ao Analysis Services, e ele sempre define `MDX Compatibility` como 1 em cada nova conexão. Esse comportamento preserva a compatibilidade com versões anteriores.|  
 |**2**|Oculte um valor de espaço reservado (um valor nulo ou uma duplicata do nível pai), mas mostre outros níveis e nós com valores relevantes.|`MDX Compatibility`=2 costuma ser visto como a configuração preferencial em termos de hierarquias desbalanceadas. Um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alguns aplicativos cliente de terceiros talvez persistam nessa configuração.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)   
- [Hierarquias de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Hierarquia pai-filho](parent-child-dimension.md)   
  [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   

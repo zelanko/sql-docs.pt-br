@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar KPIs | Microsoft Docs
+title: Criar e gerenciar KPIs em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042110"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072083"
 ---
 # <a name="create-and-manage-kpis"></a>Criar e gerenciar KPIs 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artigo descreve como criar, editar ou excluir um KPI (indicador chave de desempenho) em um modelo de tabela. Para criar um KPI, selecione uma medida que seja avaliada como o valor base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
+  Este artigo descreve como criar, editar ou excluir um KPI (indicador chave de desempenho) em um modelo tabular. Para criar um KPI, você deve selecionar uma medida que é avaliada como valor Base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
   
 ## <a name="tasks"></a>Tarefas  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34042110"
 |Descrições|ALT+D|  
 |Tendência|ALT+T|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Criar e managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  

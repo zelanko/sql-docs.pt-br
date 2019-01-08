@@ -17,12 +17,12 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f0e4b7946c0e34e79940ac149ac9d3544d85d50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524069"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ WHERE ProductModelID=7
   
 -   O [função SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclui o valor relacional no XML que está sendo construído.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -76,7 +76,7 @@ WHERE ProductModelID=7
               MachineHours="2"  LaborHours="1.75" LotSize="1">  
   <Steps>  
    <Step>Assemble all frame components following blueprint 1299.</Step>  
-     …  
+     ...  
   </Steps>  
  </Location>  
 </ManuStep>    
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
   
  A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o <`step`> elemento retornado em vez disso, remova o **String ()** função da consulta:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
  Para um modelo de produto específico, a consulta a seguir recupera as ferramentas e os materiais usados no segundo centro de trabalho na sequência de locais de centro de trabalho no processo de produção.  
   
 ```sql
@@ -120,7 +120,7 @@ where ProductModelID=7
   
 -   Ela usa duas iterações FLWOR (for...return): uma para recuperar ferramentas e outra para recuperar o material usado.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -162,7 +162,7 @@ where ProductModelID=19
   
 -   A consulta usa um loop FOR... RETURN para recuperar as descrições de recurso de modelo de produto. O **Position ()** função é usada para recuperar os primeiros dois recursos.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -205,7 +205,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -235,7 +235,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```xml
 <LastTwoManuSteps>  

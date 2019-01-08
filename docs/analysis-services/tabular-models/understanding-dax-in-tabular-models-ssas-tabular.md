@@ -1,5 +1,5 @@
 ---
-title: DAX em modelos de tabela | Microsoft Docs
+title: DAX em modelos tabulares do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906496"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072440"
 ---
 # <a name="dax-in-tabular-models"></a>DAX em modelos de tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,16 +42,16 @@ ms.locfileid: "48906496"
   
  A razão pela qual você não pode consultar os resultados filtrados do cálculo imediatamente é que o resultado de uma medida não pode ser determinado sem contexto. Para avaliar uma medida, é necessário um aplicativo cliente de relatório que pode fornecer o contexto necessário para recuperar os dados relevantes para cada célula e, em seguida, avaliar a expressão para cada célula. Cliente pode ser uma tabela dinâmica do Excel ou gráfico dinâmico, um relatório do Power BI ou uma consulta MDX. Independentemente do cliente de relatório, uma consulta separada é executada para cada célula nos resultados. Ou seja, cada combinação de cabeçalhos de linha e coluna em uma tabela dinâmica, ou cada seleção de segmentações de dados e filtros em um relatório do Power BI, gera um subconjunto diferente de dados sobre o qual a medida é calculada. Por exemplo, em uma medida com uma fórmula `Total Sales:=SUM([Sales Amount])`, quando um usuário coloca a medida TotalSales na janela valores em uma tabela dinâmica e, em seguida, coloca a coluna DimProductCategory de uma tabela DimProduct na janela filtros, a soma do valor de vendas fique calculada e exibida para cada categoria de produto.  
   
- Diferentemente de colunas calculadas e filtros de linha, a sintaxe para uma medida inclui o nome da medida que precede a fórmula. No exemplo que acabamos de fornecer, o nome **Total de Vendas:** : aparece antes da fórmula. Depois que você criou uma medida, o nome e sua definição aparecem na Lista de Campos do aplicativo de cliente de relatório e, dependendo das perspectivas e funções, está disponível para todos os usuários do modelo dependendo das perspectivas e das funções.  
+ Ao contrário de colunas calculadas e filtros de linha, a sintaxe para uma medida inclui o nome da medida precede a fórmula. No exemplo que acabamos de fornecer, o nome **Total de Vendas:** : aparece antes da fórmula. Depois que você criou uma medida, o nome e sua definição aparecem na Lista de Campos do aplicativo de cliente de relatório e, dependendo das perspectivas e funções, está disponível para todos os usuários do modelo dependendo das perspectivas e das funções.  
   
  Para obter mais informações, consulte [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
 ### <a name="row-filters"></a>Filtros de linha  
  Os filtros de linha definem quais linhas em uma tabela são visíveis a membros de uma função específica. Os filtros de linha podem ser criados para cada tabela em um modelo usando fórmulas DAX. Filtros de linha são criados para uma função específica usando o Gerenciador de funções no SSDT. Filtros de linha também podem ser definidos para um modelo implantado usando propriedades de função no SQL Server Management Studio (SSMS).  
   
- Em um filtro de linha, uma fórmula DAX, que deve ser avaliada como uma condição booliana TRUE/FALSE, define quais as linhas que poderão ser retornadas pelos resultados de uma consulta por membros dessa função específica. As linhas não incluídas na fórmula DAX não poderão ser retornadas. Por exemplo, para membros da função Vendas, a tabela de Clientes com a seguinte fórmula DAX: `=Customers[Country] = “USA”`somente poderá exibir dados para clientes nos EUA e agregações, como SUM, são retornadas apenas para clientes nos EUA.  
+ Em um filtro de linha, uma fórmula DAX, que deve ser avaliada como uma condição booliana TRUE/FALSE, define quais as linhas que poderão ser retornadas pelos resultados de uma consulta por membros dessa função específica. As linhas não incluídas na fórmula DAX não poderão ser retornadas. Por exemplo, para membros da função Vendas, a tabela de Clientes com a seguinte fórmula DAX: `=Customers[Country] = "USA"`somente poderá exibir dados para clientes nos EUA e agregações, como SUM, são retornadas apenas para clientes nos EUA.  
   
- Quando você define um filtro de linha usando a fórmula do DAX, está criando um conjunto de linha permitido. Isto não nega acesso a outras linhas; em vez disso, elas simplesmente não são retornadas como parte do conjunto de linha permitido. Outras funções podem permitir acesso às linhas excluídas pela fórmula do DAX. Se um usuário for membro de outra função, e os filtros de linha dessa função permitirem acesso àquele conjunto de linha específico, o usuário poderá exibir os dados para aquela linha.  
+ Quando você define um filtro de linha usando a fórmula do DAX, está criando um conjunto de linha permitido. Isto não nega acesso a outras linhas; em vez disso, elas simplesmente não são retornadas como parte do conjunto de linha permitido. Outras funções podem permitir acesso às linhas excluídas pela fórmula do DAX. Se um usuário é um membro de outra função e os filtros de linha da função permitirem o acesso a esse conjunto de linhas específico, o usuário pode exibir dados para aquela linha.  
   
  Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tiver várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas.  
   
@@ -62,19 +62,19 @@ ms.locfileid: "48906496"
   
  Modelos de tabela e DAX oferecem suporte aos seguintes tipos de dados:  
   
-|Tipo de dados em modelo|Tipos de dados em DAX|Description|  
+|Tipo de dados em modelo|Tipos de dados em DAX|Descrição|  
 |------------------------|----------------------|-----------------|  
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes) <sup>1, 2</sup>|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
-|Boolean|Booliano|Um valor True ou False.|  
+|Booliano|Booliano|Um valor True ou False.|  
 |Texto|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
 |data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
 |CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
-|N/A|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
+|N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  Os modelos de tabela também incluem o tipo de dados como a entrada ou a saída para muitas funções DAX. Por exemplo, a função FILTER usa uma tabela como entrada e gera outra tabela que contém apenas as linhas que atendam às condições do filtro. Ao combinar funções de tabela com funções de agregação, você pode executar cálculos complexos em conjuntos de dados definidos de forma dinâmica.  
   
- Embora os tipos de dados em geral sejam definidos automaticamente, é importante entendê-los e saber como se aplicam, em particular, a fórmulas DAX. Erros em fórmulas ou resultados inesperados, por exemplo, são causados frequentemente pelo uso de um operador específico que não pode ser usado com um tipo de dados especificado em um argumento. Por exemplo, a fórmula `= 1 & 2`retorna um resultado de cadeia de caracteres de 12. A fórmula `= “1” + “2”`, no entanto, retorna um resultado de inteiro de 3.  
+ Embora os tipos de dados em geral sejam definidos automaticamente, é importante entendê-los e saber como se aplicam, em particular, a fórmulas DAX. Erros em fórmulas ou resultados inesperados, por exemplo, são causados frequentemente pelo uso de um operador específico que não pode ser usado com um tipo de dados especificado em um argumento. Por exemplo, a fórmula `= 1 & 2`retorna um resultado de cadeia de caracteres de 12. A fórmula `= "1" + "2"`, no entanto, retorna um resultado de inteiro de 3.  
   
  Para obter informações detalhadas sobre os tipos de dados em modelos de tabela e conversões explícitas e implícitas de tipos de dados no DAX, consulte [tipos de dados com suporte](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48906496"
   
 |||  
 |-|-|  
-|Fórmula|Description|  
+|Fórmula|Descrição|  
 |`=TODAY()`|Insere a data de hoje em cada linha da coluna.|  
 |`=3`|Insere o valor 3 em cada linha da coluna.|  
 |`=[Column1] + [Column2]`|Adiciona os valores na mesma linha de [Column1] e [Column2], além de colocar os resultados na coluna calculada da mesma linha.|  
@@ -135,7 +135,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Essa fórmula contém os seguintes elementos:  
   
-|Elemento Formula|Description|  
+|Elemento Formula|Descrição|  
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|O nome da medida.|  
 |`=`|O sinal de igualdade (=) inicia a fórmula.|  
@@ -232,7 +232,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Há tipos diferentes de contexto: *contexto de linha*, *contexto de consulta*e *contexto de filtro*.  
   
 ###  <a name="bkmk_row_context"></a> Contexto de linha  
- O*Contexto de linha* pode considerado como "a linha atual". Se você criar uma fórmula em uma coluna calculada, o contexto de linha dessa fórmula incluirá os valores de todas as colunas na linha atual. Se a tabela estiver relacionada a outra tabela, o conteúdo também incluirá todos os valores dessa outra tabela que estão relacionados à linha atual.  
+ *Contexto de linha* pode ser pensada como "a linha atual". Se você criar uma fórmula em uma coluna calculada, o contexto de linha dessa fórmula incluirá os valores de todas as colunas na linha atual. Se a tabela estiver relacionada a outra tabela, o conteúdo também incluirá todos os valores dessa outra tabela que estão relacionados à linha atual.  
   
  Por exemplo, suponha que você crie uma coluna calculada, `=[Freight] + [Tax]`, que soma os valores de duas colunas, Freight e Tax, da mesma tabela. Esta fórmula automaticamente obtém somente os valores da linha atual nas colunas especificadas.  
   
@@ -354,7 +354,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  *Recálculo* é o processo de atualizar os resultados das fórmulas para refletir todas as alterações feitas nas próprias fórmulas e nos dados subjacentes. O recálculo pode afetar o desempenho das seguintes formas:  
   
--   O valores em uma coluna calculada são computados e armazenados no modelo. Para atualizar os valores na coluna calculada, você deverá processar o modelo usando um dos três comandos de processamento: Processar Completo, Processar Dados ou Processar Recálculo. O resultado da fórmula sempre deve ser recalculado para a coluna inteira, todas as vezes que você alterar a fórmula.  
+-   O valores em uma coluna calculada são computados e armazenados no modelo. Para atualizar os valores na coluna calculada, você deve processar o modelo usando um dos três comandos de processamento - processar completo, processar dados ou processar recálculo. O resultado da fórmula sempre deve ser recalculado para a coluna inteira, todas as vezes que você alterar a fórmula.  
   
 -   Os valores calculados por medidas são avaliados dinamicamente sempre que um usuário adiciona a medida a uma tabela dinâmica ou abre um relatório; à medida que o usuário modifica o contexto, os valores retornados pela medida são alterados. Os resultados da medida sempre refletem o mais recente no cache na memória.  
   

@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855806"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212445"
 ---
 # <a name="sqlgetdata-function"></a>Função SQLGetData
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetData** recupera dados para uma única coluna no conjunto de resultados ou para um único parâmetro após **SQLParamData** retorna SQL_PARAM_DATA_AVAILABLE. Ele pode ser chamado várias vezes para recuperar dados de comprimento variável em partes.  
@@ -57,11 +57,11 @@ SQLRETURN SQLGetData(
  Para recuperar dados de parâmetro, é o ordinal do parâmetro, que começa em 1.  
   
  *TargetType*  
- [Entrada] O identificador de tipo do tipo de dados C a **TargetValuePtr* buffer. Para obter uma lista de tipos de dados válidos do C e identificadores de tipo, consulte o [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção apêndice d: tipos de dados.  
+ [Entrada] O identificador de tipo do tipo de dados C a **TargetValuePtr* buffer. Para obter uma lista de tipos de dados válidos do C e identificadores de tipo, consulte o [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção no Apêndice d: Tipos de dados.  
   
  Se *TargetType* é SQL_ARD_TYPE, o driver utiliza o identificador do tipo especificado no campo SQL_DESC_CONCISE_TYPE da descartar. Se *TargetType* é SQL_APD_TYPE, **SQLGetData** usará o mesmo tipo de dados de C que foi especificado na **SQLBindParameter**. Caso contrário, o tipo de dados C é especificado na **SQLGetData** substitui o tipo de dados C especificado em **SQLBindParameter**. Se for SQL_C_DEFAULT, o driver seleciona o tipo de dados C padrão com base no tipo da fonte de dados SQL.  
   
- Você também pode especificar um tipo de dados estendido C. Para obter mais informações, consulte [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+ Você também pode especificar um tipo de dados estendido C. Para obter mais informações, consulte [Tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
  [Saída] Ponteiro para o buffer no qual retornar os dados.  
@@ -96,7 +96,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLGetData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetData** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Nem todos os dados da coluna especificada, *Col_or_Param_Num*, pôde ser recuperado em uma única chamada à função. SQL_NO_TOTAL ou o comprimento dos dados restantes da coluna especificada antes da chamada atual para **SQLGetData** é retornado na \* *StrLen_or_IndPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)<br /><br /> Para obter mais informações sobre como usar várias chamadas para **SQLGetData** para uma única coluna, consulte "Comentários".|  
@@ -105,8 +105,8 @@ SQLRETURN SQLGetData(
 |07009|Índice de descritor inválido|O valor especificado para o argumento *Col_or_Param_Num* era 0, e o atributo da instrução SQL_ATTR_USE_BOOKMARKS foi definido como SQL_UB_OFF.<br /><br /> O valor especificado para o argumento *Col_or_Param_Num* era maior que o número de colunas no conjunto de resultados.<br /><br /> O *Col_or_Param_Num* valor não era igual ao ordinal do parâmetro que está disponível.<br /><br /> (DM) da coluna especificada foi associada. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS na SQL_GD_BOUND **SQLGetInfo**.<br /><br /> (DM) o número da coluna especificado era menor que ou igual ao número da coluna de limite mais alto. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS na SQL_GD_ANY_COLUMN **SQLGetInfo**.<br /><br /> (DM) o aplicativo já chamou **SQLGetData** para a linha atual; o número da coluna especificada na chamada atual era menor que o número da coluna especificada na chamada anterior; e o driver não retorna o SQL _ Bitmask GD_ANY_ORDER para a opção SQL_GETDATA_EXTENSIONS na **SQLGetInfo**.<br /><br /> (DM) a *TargetType* argumento era SQL_ARD_TYPE e o *Col_or_Param_Num* registro de descritor na descartar falhou a verificação de consistência.<br /><br /> (DM) a *TargetType* argumento era SQL_ARD_TYPE, e o valor no campo SQL_DESC_COUNT da descartar era menor do que o *Col_or_Param_Num* argumento.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22002|Variável de indicador necessária, mas não fornecida|*StrLen_or_IndPtr* é um ponteiro nulo e dados nulos foi recuperados.|  
-|22003|Valor numérico fora do intervalo|Retornando o valor numérico (como numérico ou cadeia de caracteres) para a coluna teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
-|22007|Formato de data/hora inválido|A coluna de caractere no conjunto de resultados foi associada a uma data, hora ou estrutura de carimbo de hora do C e o valor na coluna era uma data inválida, hora ou carimbo de hora, respectivamente. Para obter mais informações, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|22003|Valor numérico fora do intervalo|Retornando o valor numérico (como numérico ou cadeia de caracteres) para a coluna teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|22007|Formato de data/hora inválido|A coluna de caractere no conjunto de resultados foi associada a uma data, hora ou estrutura de carimbo de hora do C e o valor na coluna era uma data inválida, hora ou carimbo de hora, respectivamente. Para obter mais informações, consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22012|Divisão por zero|Um valor de uma expressão aritmética que resultaram na divisão por zero foi retornado.|  
 |22015|Estouro no campo de intervalo|A atribuição de um numérico exato ou o intervalo de tipo SQL para um tipo de intervalo C causou uma perda de dígitos significativos no campo à esquerda.<br /><br /> Ao retornar dados para um tipo de intervalo de C, não houve nenhuma representação do valor do tipo SQL no tipo de intervalo de C.|  
 |22018|Valor de caractere inválido para especificação de conversão|Uma coluna de caractere no conjunto de resultados foi retornada para um buffer de caracteres C, e a coluna continha um caractere para o qual não havia nenhuma representação no conjunto de caracteres do buffer.<br /><br /> O tipo C era um valor numérico exato ou aproximado, uma data e hora ou um tipo de dados de intervalo; o tipo SQL da coluna era um tipo de dados de caractere; e o valor na coluna não era um literal válido do tipo C associado.|  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o valor especificado para o argumento *BufferLength* foi menor que 0.<br /><br /> O valor especificado para o argumento *BufferLength* era menor do que 4, o *Col_or_Param_Num* argumento foi definido como 0 e o driver foi um ODBC 2 *. x* driver.|  
 |HY109|Posição do cursor inválida|O cursor é posicionado (por **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, ou **SQLBulkOperations**) em uma linha que foi excluída ou não pôde ser buscada.<br /><br /> O cursor foi um cursor de somente avanço e o tamanho do conjunto de linhas foi maior do que um.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta o uso de **SQLGetData** com várias linhas na **SQLFetchScroll**. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS na SQL_GD_BLOCK **SQLGetInfo**.<br /><br /> A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados SQL da coluna correspondente. Esse erro se aplica somente quando o tipo de dados SQL da coluna foi mapeado para um tipo de dados SQL específica do driver.<br /><br /> O driver dá suporte a apenas o ODBC 2 *. x*e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) apêndice d: tipos de dados.<br /><br /> O driver dá suporte apenas a versões ODBC anteriores 3,50 e o argumento *TargetType* foi SQL_C_GUID.|  
+|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta o uso de **SQLGetData** com várias linhas na **SQLFetchScroll**. Essa descrição não se aplica a drivers de retornam a máscara de bits para a opção SQL_GETDATA_EXTENSIONS na SQL_GD_BLOCK **SQLGetInfo**.<br /><br /> A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados SQL da coluna correspondente. Esse erro se aplica somente quando o tipo de dados SQL da coluna foi mapeado para um tipo de dados SQL específica do driver.<br /><br /> O driver dá suporte a apenas o ODBC 2 *. x*e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice d: Tipos de dados.<br /><br /> O driver dá suporte apenas a versões ODBC anteriores 3,50 e o argumento *TargetType* foi SQL_C_GUID.|  
 |HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver não oferece suporte a essa função|(DM) o driver correspondente a *StatementHandle* não suporta a função.|  
 |IM017|Sondagem está desabilitada no modo de notificação assíncrona|Sempre que o modelo de notificação é usado, a sondagem é desabilitada.|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  Se o *TargetType* argumento é um tipo de dados de intervalo, a precisão de à esquerda do intervalo de padrão (2) e a precisão de segundos de intervalo padrão (6), conforme definido nos campos de SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION Descartar, respectivamente, são usados para os dados. Se o *TargetType* argumento é um tipo de dados SQL_C_NUMERIC, a precisão padrão (definido pelo driver) e padrão de escala (0), conforme definido nos campos de SQL_DESC_PRECISION e SQL_DESC_SCALE a descartar, é usado para os dados. Se qualquer escala ou precisão padrão não for apropriada, o aplicativo deve definir explicitamente o campo de descritor apropriado por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**. Ele pode definir o campo SQL_DESC_CONCISE_TYPE como SQL_C_NUMERIC e chame **SQLGetData** com um *TargetType* argumento de SQL_ARD_TYPE, que fará com que os valores de precisão e escala nos campos de descritor a ser usado.  
   
-> [!NOTE]  
+> [!NOTE]
 >  No ODBC 2 *. x*, o conjunto de aplicativos *TargetType* SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP para indicar que \* *TargetValuePtr* for uma data, hora, ou estrutura de carimbo de hora. Em ODBC 3 *. x*, o conjunto de aplicativos *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. O Gerenciador de Driver faz mapeamentos apropriados se necessário, com base na versão do aplicativo e o driver.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Recuperando dados de comprimento variável em partes  
- **SQLGetData** pode ser usado para recuperar dados de uma coluna que contém os dados de comprimento variável em partes — ou seja, quando o identificador do tipo de dados SQL da coluna é SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL _ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou um identificador específico do driver para um tipo de comprimento variável.  
+ **SQLGetData** pode ser usado para recuperar dados de uma coluna que contém os dados de comprimento variável em partes - ou seja, quando o identificador do tipo de dados SQL da coluna é SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL _ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou um identificador específico do driver para um tipo de comprimento variável.  
   
  Para recuperar dados de uma coluna em partes, o aplicativo chama **SQLGetData** várias vezes sucessivamente para a mesma coluna. Em cada chamada **SQLGetData** retorna a próxima parte dos dados. É até o aplicativo para a remontagem de partes, tomando cuidado para remover o caractere nulo de terminação de partes intermediários de dados de caracteres. Se houver mais dados para retornar ou não buffer suficiente foi alocado para o caractere de terminação **SQLGetData** retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados truncados). Quando ele retorna a última parte dos dados, **SQLGetData** retorna SQL_SUCCESS. Nem SQL_NO_TOTAL nem zero pode ser retornado na última chamada válida para recuperar dados de uma coluna, pois o aplicativo, em seguida, teria que não há como saber quanto dos dados no buffer de aplicativo é válido. Se **SQLGetData** é chamado depois disso, ele retornar SQL_NO_DATA. Para obter mais informações, consulte a próxima seção, "Recuperando dados com o SQLGetData."  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  Coloca o comprimento dos dados no \* *StrLen_or_IndPtr*. Se *StrLen_or_IndPtr* é um ponteiro nulo, **SQLGetData** não retorna o comprimento.  
   
-    -   Para caracteres ou dados binários, esse é o comprimento dos dados após a conversão e antes do truncamento devido à *BufferLength*. Se o driver não puder determinar o comprimento dos dados após a conversão, como, às vezes, é o caso com dados longos, ele retornará SQL_SUCCESS_WITH_INFO e define o comprimento para SQL_NO_TOTAL. (A última chamada para **SQLGetData** devem sempre retornar o comprimento dos dados, e não em zero ou SQL_NO_TOTAL.) Se os dados foram truncados devido à instrução SQL_ATTR_MAX_LENGTH de atributo, o valor desse atributo — em vez do comprimento real — é colocado na \* *StrLen_or_IndPtr*. Isso ocorre porque esse atributo foi projetado para truncar os dados no servidor antes da conversão, portanto, o driver não tem nenhuma maneira de descobrir o que o comprimento real é. Quando **SQLGetData** é chamado várias vezes sucessivamente para a mesma coluna, esse é o comprimento dos dados disponíveis no início da chamada atual; ou seja, o tamanho diminui com cada chamada subsequente.  
+    -   Para caracteres ou dados binários, esse é o comprimento dos dados após a conversão e antes do truncamento devido à *BufferLength*. Se o driver não puder determinar o comprimento dos dados após a conversão, como, às vezes, é o caso com dados longos, ele retornará SQL_SUCCESS_WITH_INFO e define o comprimento para SQL_NO_TOTAL. (A última chamada para **SQLGetData** devem sempre retornar o comprimento dos dados, e não em zero ou SQL_NO_TOTAL.) Se os dados foram truncados devido ao atributo de instrução SQL_ATTR_MAX_LENGTH, o valor desse atributo - em vez do comprimento real - é colocado no \* *StrLen_or_IndPtr*. Isso ocorre porque esse atributo foi projetado para truncar os dados no servidor antes da conversão, portanto, o driver não tem nenhuma maneira de descobrir o que o comprimento real é. Quando **SQLGetData** é chamado várias vezes sucessivamente para a mesma coluna, esse é o comprimento dos dados disponíveis no início da chamada atual; ou seja, o tamanho diminui com cada chamada subsequente.  
   
     -   Para todos os outros tipos de dados, isso é o comprimento dos dados após a conversão; ou seja, ele é o tamanho do tipo ao qual os dados foi convertidos.  
   

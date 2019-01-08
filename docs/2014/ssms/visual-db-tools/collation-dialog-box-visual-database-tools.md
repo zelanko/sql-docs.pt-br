@@ -1,10 +1,10 @@
 ---
-title: Caixa de diálogo Agrupamento (Ferramentas de Banco de Dados Visual) | Microsoft Docs
+title: Caixa de diálogo Ordenação (Ferramentas de Banco de Dados Visual) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
@@ -13,34 +13,34 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c48d4fc1d475a07dc9133173418c6474a87f9cab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812458"
 ---
-# <a name="collation-dialog-box-visual-database-tools"></a>Caixa de diálogo Agrupamento (Visual Database Tools)
-  Essa caixa de diálogo lhe permite especificar uma sequência de agrupamento para a coluna. A sequência de agrupamento de uma coluna é usada em qualquer operação que compare os valores da coluna com os de outra coluna ou com valores constantes. Isso também afeta o comportamento de algumas funções de cadeia de caracteres, como SUBSTRING e CHARINDEX. Para uma lista completa dos efeitos da configuração de agrupamento de uma coluna, consulte a documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="collation-dialog-box-visual-database-tools"></a>Caixa de diálogo Ordenação (Ferramentas de Banco de Dados Visual)
+  Essa caixa de diálogo lhe permite especificar uma sequência de ordenação para a coluna. A sequência de ordenação de uma coluna é usada em qualquer operação que compare os valores da coluna com os de outra coluna ou com valores constantes. Isso também afeta o comportamento de algumas funções de cadeia de caracteres, como SUBSTRING e CHARINDEX. Para uma lista completa dos efeitos da configuração de ordenação de uma coluna, consulte a documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Essa caixa de diálogo aparece:  
   
--   Se você digitar um nome de agrupamento inválido no campo **Agrupamento** na guia **Propriedades de Coluna** .  
+-   Se você digitar um nome de ordenação inválido no campo **Ordenação** na guia **Propriedades de Coluna**.  
   
--   Se você clicar no campo **Agrupamento** na guia **Propriedades de Coluna** e clicar no botão de reticências (**…**) à direita do campo.  
+-   Quando você clica no campo **Ordenação** na guia **Propriedades de Coluna** e, em seguida, clica no botão de reticências (**…**) à direita do campo.  
   
 ## <a name="options"></a>Opções  
- **Agrupamento SQL**  
- Escolha na lista suspensa as sequências de agrupamento definidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Ordenação SQL**  
+ Escolha na lista suspensa as sequências de ordenação definidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Agrupamento do Windows**  
- Escolha na lista suspensa as sequências de agrupamento definidas pelo Windows.  
+ **Ordenação do Windows**  
+ Escolha na lista suspensa as sequências de ordenação definidas pelo Windows.  
   
  **Classificação binária**  
- Use os códigos binários de valores de caractere para comparações. Se você selecionar essa opção, certas opções de comparação alfabéticas não estarão mais disponíveis. Por exemplo, comparações que não diferenciam maiúsculas de minúsculas ficam indisponíveis porque letras maiúsculas e letras minúsculas têm codificações binárias diferentes. Aplicável apenas se você selecionar **Agrupamento do Windows**.  
+ Use os códigos binários de valores de caractere para comparações. Se você selecionar essa opção, certas opções de comparação alfabéticas não estarão mais disponíveis. Por exemplo, comparações que não diferenciam maiúsculas de minúsculas ficam indisponíveis porque letras maiúsculas e letras minúsculas têm codificações binárias diferentes. Aplicável apenas se você selecionar **Ordenação do Windows**.  
   
  **Classificação do Dicionário**  
- Use opções de comparação alfabéticas. Aplicável apenas se você selecionar **Agrupamento do Windows**. As opções de comparação alfabéticas são:  
+ Use opções de comparação alfabéticas. Aplicável apenas se você selecionar **Ordenação do Windows**. As opções de comparação alfabéticas são:  
   
 -   Selecione**Diferenciar Maiúsculas de Minúsculas** se quiser que as comparações considerem letras maiúsculas e letras minúsculas de forma diferente.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48070416"
 -   Selecione**Diferenciar Largura** se quiser que as comparações considerem de forma diferente caracteres de meia largura e de largura inteira.  
   
  **Botão Restaurar padrão**  
- Aplica à coluna o agrupamento padrão para o banco de dados.  
+ Aplica à coluna a ordenação padrão para o banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com colunas em consultas de agregação &#40;Visual Database Tools&#41;](visual-database-tools.md)  

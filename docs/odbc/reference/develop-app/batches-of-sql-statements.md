@@ -15,12 +15,12 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531240"
 ---
 # <a name="batches-of-sql-statements"></a>Lotes de instruções SQL
 Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma única instrução SQL que tem o mesmo efeito de um grupo de duas ou mais instruções SQL. Em algumas implementações, a instrução do lote inteiro é executada antes que todos os resultados estejam disponíveis. Isso geralmente é mais eficiente do que enviar instruções separadamente, pois o tráfego de rede geralmente pode ser reduzido e a fonte de dados, às vezes, pode otimizar a execução de um lote de instruções SQL. Em outras implementações, chamando **SQLMoreResults** dispara a execução da próxima instrução no lote. ODBC dá suporte aos seguintes tipos de lotes:  
@@ -40,7 +40,7 @@ Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma 
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedimentos** se um procedimento contiver mais de uma instrução SQL, ele é considerado um lote de instruções SQL. Por exemplo, a seguinte instrução específicos do SQL Server cria um procedimento que retorna um conjunto de resultados contendo informações sobre um cliente e um resultado definido listando todos os pedidos de vendas abertos desse cliente:  
+-   **Procedimentos** se um procedimento contiver mais de uma instrução SQL, ele é considerado um lote de instruções SQL. Por exemplo, a instrução específica do SQL Server a seguir cria um procedimento que retorna um conjunto de resultados contendo informações sobre um cliente e um resultado definido listando todos os pedidos de vendas abertos desse cliente:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

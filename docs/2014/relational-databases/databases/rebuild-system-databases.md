@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -16,15 +15,15 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749398"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
-  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)ou [resource](resource-database.md) , ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md) ou [resource](resource-database.md), ou para modificar a ordenação em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Neste tópico**  
   
@@ -48,8 +47,8 @@ ms.locfileid: "48135496"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
- Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se um agrupamento novo for especificado na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de agrupamento. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
+###  <a name="Restrictions"></a> Limitações e Restrições  
+ Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se uma ordenação nova for especificada na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de ordenação. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  Execute as tarefas a seguir antes de recriar os bancos de dados do sistema para garantir que os bancos de dados possam ser restaurados para suas configurações atuais.  
@@ -60,7 +59,7 @@ ms.locfileid: "48135496"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Registre todos os pacotes de serviço e os hotfixes aplicados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao agrupamento atual. Você deve reaplicar essas atualizações depois de recriar os bancos de dados do sistema.  
+2.  Registre todos os pacotes de serviço e os hotfixes aplicados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à ordenação atual. Você deve reaplicar essas atualizações depois de recriar os bancos de dados do sistema.  
   
     ```  
     SELECT  
@@ -100,14 +99,14 @@ ms.locfileid: "48135496"
   
      `Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]`  
   
-    |Nome do parâmetro|Description|  
+    |Nome do parâmetro|Descrição|  
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos do Windows ou contas individuais para adicionar ao `sysadmin` função de servidor fixa. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta `sa` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de segurança \* \***  o `sa` conta é um conhecido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta e geralmente é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o `sa` logon.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \* \***  alterando o agrupamento de nível de servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../collations/set-or-change-the-server-collation.md).|  
+    |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa `sysadmin`. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, insira `NT AUTHORITY\SYSTEM`.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta `sa` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de segurança \* \***  o `sa` conta é um conhecido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta e geralmente é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon `sa`.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> **\*\* Importante \* \***  alterando o agrupamento de nível de servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Quando a Instalação tiver concluído a recriação dos bancos de dados do sistema, ela retornará ao prompt de comando sem mensagens. Examine o arquivo de log Summary.txt para verificar se o processo foi concluído com êxito. Esse arquivo está localizado em C:\Arquivos de Programas\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "48135496"
 -   Restaure os backups completos mais recentes dos bancos de dados mestre, modelo e msdb. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Se você alterou o agrupamento do servidor, não restaure os bancos de dados do sistema. Fazer isso substituirá o novo agrupamento pela configuração do agrupamento anterior.  
+    >  Se você alterou a ordenação do servidor, não restaure os bancos de dados do sistema. Fazer isso substituirá a nova ordenação pela configuração da ordenação anterior.  
   
      Se um backup não estiver disponível ou se o backup restaurado não for atual, recrie todas as entradas ausentes. Por exemplo, recrie todas as entradas ausentes de seus bancos de dados de usuários, dispositivos de backup, logons, pontos de extremidade, etc. do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A melhor maneira de recriar entradas é executar os scripts originais que as criaram.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "48135496"
   
 2.  Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da linha de comando usando o comando: `NET START MSSQLSERVER /T3608`  
   
-     Para obter mais informações, veja [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Em outra janela de linha de comando, Desanexe o `msdb` banco de dados, executando o comando a seguir, substituindo  *\<servername >* com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   

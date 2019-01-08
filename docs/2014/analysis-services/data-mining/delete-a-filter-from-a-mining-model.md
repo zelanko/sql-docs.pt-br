@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508396"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Excluir um filtro de um modelo de mineração
   Quando você cria um filtro em um modelo de mineração, pode criar modelos em um subconjunto dos dados na exibição da fonte de dados. Os filtros também são úteis para testar a precisão do modelo em um subconjunto dos dados originais.  
@@ -33,7 +33,7 @@ ms.locfileid: "48082936"
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     –ou–  
+     -ou-  
   
      Selecione o modelo. No menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48082936"
 -   Na caixa de diálogo **Editor de Filtro** , clique com o botão direito do mouse em uma linha na grade e selecione **Excluir Tudo**.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>Trabalhando com os filtros de modelos usando a janela Propriedades  
- Para excluir o filtro inteiro, você não precisa abrir as caixas de diálogo do editor de filtro. As condições de filtro que você criou estão disponíveis no `Filter` propriedade do modelo de mineração.  
+ Para excluir o filtro inteiro, você não precisa abrir as caixas de diálogo do editor de filtro. As condições de filtro que você criou estão disponíveis na propriedade `Filter` do modelo de mineração.  
   
 > [!NOTE]  
 >  Você pode exibir as propriedades de um modelo de mineração no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], mas não no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -60,8 +60,8 @@ ms.locfileid: "48082936"
 3.  Pressione a tecla Backspace ou Delete.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhar dados do caso de um modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)   
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+ [Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)   
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
   
   

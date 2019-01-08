@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521928"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Função de conversão de tipo de dados explícitos
 Conversão de tipo de dados explícito é especificada em termos de definições de tipo de dados SQL.  
@@ -29,7 +29,7 @@ Conversão de tipo de dados explícito é especificada em termos de definições
   
  O formato do **converter** função é:  
   
- **Converter (** *value_exp*, *data_type * * *)**  
+ **Converter (** *value_exp*, _data_type_**)**  
   
  A função retorna o valor especificado por *value_exp* convertido especificado *data_type*, onde *data_type* é uma das seguintes palavras-chave:  
   
@@ -65,7 +65,7 @@ Conversão de tipo de dados explícito é especificada em termos de definições
   
  Converte a saída da função escalar CURDATE em uma cadeia de caracteres.  
   
- Como o ODBC não exige um tipo de dados para valores de retorno de funções escalares (como as funções costumam ser específico da fonte de dados), aplicativos devem usar a função escalar CONVERT sempre que possível forçar a conversão de tipo de dados.  
+ Como o ODBC não exige um tipo de dados para valores de retorno de funções escalares (como as funções costumam ser específico de fonte de dados), aplicativos devem usar a função escalar CONVERT sempre que possível forçar a conversão de tipo de dados.  
   
  Os exemplos a seguir ilustram o uso do **converter** função. Estes exemplos supõem a existência de uma tabela chamada funcionários, com uma coluna do tipo SQL_SMALLINT de EMPNO e uma coluna de EMPNAME do tipo SQL_CHAR.  
   

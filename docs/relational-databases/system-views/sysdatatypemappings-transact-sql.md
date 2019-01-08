@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysdatatypemappings
@@ -19,19 +18,19 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2af4bba93611f2a67fb66f8a9a47a11d9b279d7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31f90836b26d9551cc3e5a1200208cc51e3ef30a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641720"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756938"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **sysdatatypemappings** exibição é usada para mostrar o mapeamento entre tipos de dados do SQL Server e tipos de dados de um sistema de gerenciamento de banco de dados (DBMS) não SQL Server. Essa exibição é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|A ID do mapeamento de tipo de dados.|  
 |**source_dbms**|**sysname**|Indica o nome do DBMS do qual os tipos de dados são mapeados, e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = a origem é um banco de dados do SQL Server.<br /><br /> **ORACLE** = a origem é um banco de dados Oracle.|  

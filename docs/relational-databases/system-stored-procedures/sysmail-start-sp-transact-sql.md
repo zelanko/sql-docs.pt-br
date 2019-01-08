@@ -18,12 +18,12 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210005"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_start_sp
  None  
   
 ## <a name="remarks"></a>Comentários  
- O Database Mail não está habilitado ou instalado após[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. Use o Assistente para Configuração do Database Mail para habilitar e instalar objetos do Database Mail.  
+ O Database Mail não está habilitado ou instalado na instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o Assistente para Configuração do Database Mail para habilitar e instalar objetos do Database Mail.  
   
  Esse procedimento armazenado está no **msdb** banco de dados. Esse procedimento armazenado inicia a fila do Database Mail que contém solicitações de mensagens de saída e habilita a ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para o programa externo.  
   

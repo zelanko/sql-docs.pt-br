@@ -1,27 +1,31 @@
 ---
-title: Enviar trabalho do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
-description: Enviar trabalho do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Executar trabalhos do Spark no estúdio de dados do Azure
+titleSuffix: SQL Server 2019 big data clusters
+description: Envie trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221602"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246495"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalho do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
 
-Um dos principais cenários é a capacidade de enviar o trabalho do Spark para o SQL Server de 2019 CTP 2.1. O recurso de envio de trabalho do Spark permite que você envie arquivos Jar ou Py locais com referências a cluster de big data do SQL Server de 2019. Ele também permite que você execute um arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
+Um dos principais cenários para clusters de big data é a capacidade de enviar trabalhos do Spark para visualização do SQL Server de 2019. O recurso de envio de trabalho do Spark permite que você envie arquivos Jar ou Py locais com referências a cluster de big data do SQL Server de 2019. Ele também permite que você execute um arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisite"></a>Pré-requisito 
-Instalar ferramentas de big data para o SQL Server e se conectar a um cluster de big data antes de enviar o trabalho do Spark. Para obter detalhes de instalação, consulte para vincular [implantar ferramentas de big data](deploy-big-data-tools.md).
+## <a name="prerequisites"></a>Prerequisites
+
+- [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+   - **Kubectl**
+
+- [Conectar-se o Studio de dados do Azure para o gateway HDFS/Spark do seu cluster de big data](connect-to-big-data-cluster.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Abrir caixa de diálogo de envio de trabalho Spark
 Há várias maneiras para abrir a caixa de diálogo de envio de trabalho Spark. As maneiras de incluem o painel, Menu de contexto no Pesquisador de objetos e paleta de comando.

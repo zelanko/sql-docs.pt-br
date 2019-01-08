@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202557"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. A tentativa de descartar uma tabela com um gatilho definido nela que é mencionado por um guia de plano também causa um erro.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Os guias de plano não podem ser usados em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). As guias de plano são visíveis em qualquer edição. Também é possível anexar um banco de dados contendo guias de plano a qualquer edição. Os guias de plano permanecem intactos quando o banco de dados é restaurado ou anexado a uma versão atualizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve verificar a finalidade dos guias de plano em cada banco de dados depois de executar uma atualização de servidor.  
   
 ## <a name="plan-guide-matching-requirements"></a>Guia de plano correspondente a requisitos  
@@ -137,7 +137,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora o retorno de carro, a alimentação de linha e caracteres de espaço dentro da primeira consulta. Na segunda consulta, a sequência `WHERE b = 10` é interpretada diferentemente de `WHERE a = 10`. A correspondência diferencia maiúsculas de minúsculas e acentos (mesmo quando o agrupamento do banco de dados não diferencia), exceto no caso de palavras-chave, no qual não há diferenciação. A correspondência não diferencia maiúsculas de minúsculas em formas abreviadas de palavras-chave. Por exemplo, as palavras-chave `EXECUTE`, `EXEC` e `execute` são consideradas equivalentes.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora o retorno de carro, a alimentação de linha e caracteres de espaço dentro da primeira consulta. Na segunda consulta, a sequência `WHERE b = 10` é interpretada diferentemente de `WHERE a = 10`. A correspondência diferencia maiúsculas de minúsculas e acentos (mesmo quando a ordenação do banco de dados não diferencia), exceto no caso de palavras-chave, no qual não há diferenciação. A correspondência não diferencia maiúsculas de minúsculas em formas abreviadas de palavras-chave. Por exemplo, as palavras-chave `EXECUTE`, `EXEC` e `execute` são consideradas equivalentes.  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Efeito do guia de plano no cache do esquema  
  Criar um guia de plano em um módulo remove o plano de consulta desse módulo do cache do esquema. Criar um guia de plano do tipo OBJECT ou SQL em um lote remove o plano de consulta de um lote que tem o mesmo valor de hash. Criar um guia de plano do tipo TEMPLATE remove todos os lotes da instrução única do cache do esquema dentro desse banco de dados.  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B. Criando um guia de plano do tipo SQL para uma consulta autônoma  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>b. Criando um guia de plano do tipo SQL para uma consulta autônoma  
  O exemplo a seguir cria um guia de plano que faz a correspondência de uma consulta em um lote enviado por um aplicativo que usa o procedimento armazenado do sistema sp_executesql.  
   
  Este é o lote:  

@@ -11,12 +11,12 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f768d03f52adcf6bd17b4a97c7e509f4fb6922d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6920be084265c010b6666559e8c66cc82085f9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537769"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Adicionar uma imagem de plano de fundo (Construtor de Relatórios e SSRS)
   Você pode adicionar uma imagem de plano de fundo a um item de relatório tais como um retângulo, uma caixa de texto, uma lista, uma matriz, uma tabela, algumas partes de um gráfico, ou uma seção de relatório como cabeçalho de página, rodapé de página ou corpo de relatório. Você pode definir uma imagem de tela de fundo para qualquer item selecionado na superfície de design do relatório que exiba **BackgroundImage** no painel Propriedades. Assim como outras imagens, a imagem de plano de fundo pode ser uma URL para uma imagem no servidor de relatório, uma imagem de um campo de conjunto de dados ou uma imagem inserida na definição de relatório. Para usar uma imagem inserida no relatório, primeiro adicione a imagem à definição de relatório antes de adicioná-la à superfície de design.  
@@ -59,7 +59,7 @@ ms.locfileid: "48202736"
   
          Defina **Valor** como o nome de um campo no conjunto de dados de relatório. Para obter mais informações, consulte [Adicionar uma imagem com limite de dados &#40;Construtor de Relatórios e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
-         Para **MIMEType**, ou formato de arquivo, selecione o tipo MIME adequado para a imagem; por exemplo, .bmp.  
+         Para **MIMEType** ou formato de arquivo, selecione o tipo MIME adequado para a imagem; por exemplo, .bmp.  
   
         > [!NOTE]  
         >  MIMEType só poderá ser aplicado se a propriedade **Source** estiver definida como **Banco de Dados**. Se a propriedade **Source** estiver definida como **Externa** ou **Inserida**, o valor **MIMEType** será ignorado.  
@@ -69,7 +69,7 @@ ms.locfileid: "48202736"
          Para as imagens de tela de fundo em um gráfico, **BackgroundRepeat** poderá ser definido como **Default**, **Repeat**, **Fit**e **Clip**, mas não **RepeatX** ou **RepeatY**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imagens &#40;relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

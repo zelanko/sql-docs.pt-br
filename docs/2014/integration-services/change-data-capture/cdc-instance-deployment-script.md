@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8db79bafe46975071f776e34e240e20344acc5fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa3ba6fec2e29b48e86b3771bd081037381df6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811418"
 ---
 # <a name="cdc-instance-deployment-script"></a>Script de implantação de instância CDC
   A caixa de diálogo CDC Instance Deployment Script que exibe o script de implantação de instância CDC. Este script pode ser usado para recriar o banco de dados CDC com todos os seus artefatos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
@@ -38,6 +37,6 @@ ms.locfileid: "48183796"
  Copiar o script para a área de transferência. Você pode em seguida colar o script no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou em qualquer editor de texto para executar os scripts posteriormente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
+ [Preparar SQL Server para CDC](prepare-sql-server-for-cdc.md)  
   
   

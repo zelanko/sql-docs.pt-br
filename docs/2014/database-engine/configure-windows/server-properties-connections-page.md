@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
@@ -13,12 +12,12 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b20ec9f33d9b2d117ad3c29d464af2392703a771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079167"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640027"
 ---
 # <a name="server-properties-connections-page"></a>Propriedades do servidor (página Conexões)
   Use esta página para exibir ou modificar suas opções de conexão.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079167"
  **Default connection options**  
  Especifica as opções de conexão padrão, como descrito na tabela a seguir.  
   
-|Opções de configuração|Description|  
+|Opções de configuração|Descrição|  
 |--------------------------|-----------------|  
 |**desabilite verificação de restrição adiada**|Controla a verificação provisória ou adiada de restrições.|  
 |**transações implícitas**|Controla se uma transação é iniciada implicitamente ou não, quando uma instrução é executada.|  
@@ -62,7 +61,7 @@ ms.locfileid: "48079167"
  Especifica quanto tempo (em segundos) uma operação remota pode levar antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chegue ao tempo limite. O padrão é 600 segundos ou uma espera de 10 minutos.  
   
  **Requer transações distribuídas para comunicação servidor a servidor**  
- Protege as ações de um procedimento servidor-a-servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Para obter mais informações, consulte [Configure the remote proc trans Server Configuration Option](configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protege as ações de um procedimento servidor-a-servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Para obter mais informações, consulte [configurar a opção de configuração de servidor remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md).  
   
 ## <a name="property-page-display-options"></a>Opções Property Page Display  
  **Valores Configurados**  

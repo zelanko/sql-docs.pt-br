@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar funções | Microsoft Docs
+title: Criar e gerenciar funções em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099647"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072213"
 ---
 # <a name="create-and-manage-roles"></a>Criar e gerenciar funções 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "50099647"
   
 4.  No campo **Permissões** , clique na seta para baixo e selecione um dos tipos de permissão a seguir:  
   
-    |Permissão|Description|  
+    |Permissão|Descrição|  
     |----------------|-----------------|  
-    |**Nenhuma**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
+    |**Nenhum**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
     |**Leitura**|Os membros têm permissão de consultar dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
     |**Leitura e processo**|Os membros têm permissão de consultar dados (com base em filtros de nível de linha) e executar operações de Processar e Processar Tudo, mas não podem fazer nenhuma alteração ao esquema modelo.|  
     |**Processar**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível consultar dados.|  

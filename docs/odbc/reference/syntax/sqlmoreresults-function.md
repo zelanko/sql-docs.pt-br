@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849934"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205355"
 ---
 # <a name="sqlmoreresults-function"></a>Função SQLMoreResults
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLMoreResults** determina se houver mais resultados disponíveis em uma instrução que contém **selecionar**, **UPDATE**, **inserir**, ou  **Excluir** instruções e, nesse caso, inicializa o processamento para esses resultados.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849934"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,7 +52,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLMoreResults** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLMoreResults** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valor de opção alterado|O valor de um atributo de instrução foram alterado como o lote estava sendo processado. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>Comentários  
  **Selecione** instruções retornam conjuntos de resultados. **ATUALIZAÇÃO**, **inserir**, e **excluir** instruções retornam uma contagem de linhas afetadas. Se qualquer uma dessas instruções são em lote, enviado com matrizes de parâmetros (numerados em ordem de parâmetro, na ordem em que aparecem no lote crescente) ou em procedimentos, elas podem retornar vários conjuntos de resultados ou contagens de linhas. Para obter informações sobre lotes de instruções e matrizes de parâmetros, consulte [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md) e [matrizes de valores de parâmetro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Depois de executar o lote, o aplicativo está posicionado no primeiro conjunto de resultados. O aplicativo pode chamar **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**e todas as funções de metadados, em conjuntos de resultados do primeiro ou qualquer subsequentes, assim como faria se houver apenas um único conjunto de resultados. Depois que ele é feito com o primeiro conjunto de resultados, o aplicativo chama **SQLMoreResults** para mover para o próximo conjunto de resultados. Se estiver disponível, de outro conjunto de resultados ou contagem **SQLMoreResults** retorna SQL_SUCCESS e inicializa o conjunto de resultados ou a contagem para processamento adicional. Se quaisquer instruções de geração de contagem de linha aparecem entre resultar gerando ao conjunto de instruções, eles podem ser manipulados a tecla TAB chamando **SQLMoreResults**. Depois de chamar **SQLMoreResults** para **atualização**, **inserir**, ou **excluir** instruções, um aplicativo pode chamar **SQLRowCount**.  
+ Depois de executar o lote, o aplicativo está posicionado no primeiro conjunto de resultados. O aplicativo pode chamar **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**e todas as funções de metadados, em conjuntos de resultados do primeiro ou qualquer subsequentes, assim como faria se houver apenas um único conjunto de resultados. Depois que ele é feito com o primeiro conjunto de resultados, o aplicativo chama **SQLMoreResults** para mover para o próximo conjunto de resultados. Se estiver disponível, de outro conjunto de resultados ou contagem **SQLMoreResults** retorna SQL_SUCCESS e inicializa o conjunto de resultados ou a contagem para processamento adicional. Se quaisquer instruções de geração de contagem de linha aparecem entre resultar gerar o conjunto de instruções, eles podem ser manipulados a tecla TAB chamando **SQLMoreResults**. Depois de chamar **SQLMoreResults** para **atualização**, **inserir**, ou **excluir** instruções, um aplicativo pode chamar **SQLRowCount**.  
   
  Se houvesse um atual conjunto de resultados com linhas não buscadas **SQLMoreResults** descarta esse conjunto de resultados e torna o próximo conjunto de resultados ou contar disponíveis. Se todos os resultados foram processados, **SQLMoreResults** retorne SQL_NO_DATA. Para alguns drivers, valores de retornados e parâmetros de saída não estão disponíveis até que todos os conjuntos de resultados e contagens de linhas foram processadas. Para esses drivers, parâmetros de saída e retornar valores ficam disponíveis quando **SQLMoreResults** retorne SQL_NO_DATA.  
   
@@ -89,7 +89,7 @@ SQLRETURN SQLMoreResults(
   
  Se um pesquisada, insere, instrução update ou delete em um lote de instruções não afetará quaisquer linhas na fonte de dados, **SQLMoreResults** retorna SQL_SUCCESS. Isso é diferente do caso de uma atualização pesquisada, inserir ou excluir a instrução é executada por meio **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, que retorna SQL_NO_DATA se isso não afetará quaisquer linhas na fonte de dados. Se um aplicativo chamar **SQLRowCount** para recuperar a contagem de linhas após uma chamada para **SQLMoreResults** não afetou nenhuma linha **SQLRowCount** irá retornar SQL_NO_DATA.  
   
- Para obter informações adicionais sobre o sequenciamento válido de funções de processamento de resultados, consulte [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Para obter informações adicionais sobre o sequenciamento válido de funções de processamento de resultados, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obter mais informações sobre parâmetros de saída transmitidos e SQL_PARAM_DATA_AVAILABLE, consulte [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   

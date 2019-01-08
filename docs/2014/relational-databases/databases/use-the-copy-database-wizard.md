@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108686"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759108"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
-  O Assistente para Copiar Banco de Dados lhe permite migrar ou copiar bancos de dados e seus objetos facilmente de um servidor para outro, sem inatividade do servidor. Você também pode atualizar os bancos de dados do anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Com esse assistente, é possível fazer o seguinte:  
+  O Assistente para Copiar Banco de Dados lhe permite migrar ou copiar bancos de dados e seus objetos facilmente de um servidor para outro, sem inatividade do servidor. Também é possível atualizar bancos de dados de uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Com esse assistente, é possível fazer o seguinte:  
   
 -   Selecionar um servidor de origem e de destino.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48108686"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   O Assistente para Copiar Banco de Dados não está disponível na edição Express.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108686"
      Permite que um usuário conecte por meio de uma conta de usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usar Autenticação do SQL Server**  
-     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário e senha.  
+     Permite que um usuário conecte-se fornecendo um nome de usuário e uma senha de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Nome de usuário**  
-     Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver optado por conectar-se usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+     Digite o nome do usuário com o qual se conectar. Essa opção estará disponível somente se você decidiu se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Senha**  
      Digite a senha do logon. Essa opção estará disponível somente se você decidiu conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -142,13 +141,13 @@ ms.locfileid: "48108686"
      Permite que um usuário conecte por meio de uma conta de usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usar Autenticação do SQL Server**  
-     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário e senha.  
+     Permite que um usuário conecte-se fornecendo um nome de usuário e uma senha de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Nome de usuário**  
-     Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver selecionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+     Digite o nome do usuário com o qual se conectar. Essa opção estará disponível apenas se você selecionou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Senha**  
-     Digite a senha do logon. Essa opção só estará disponível se você tiver selecionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+     Digite a senha do logon. Essa opção estará disponível apenas se você selecionou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Próximo**  
      Conecta ao servidor e valida o usuário. Esse processo verifica se o usuário tem as permissões listadas acima nos computadores selecionados.  
@@ -229,20 +228,20 @@ ms.locfileid: "48108686"
      **Local da pasta**  
      Especifique o local dos arquivos de banco de dados de origem no sistema de arquivos.  
   
-     Por exemplo, C:\Arquivos de Programas\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA.  
+     Por exemplo: Server\MSSQL110 SQL do C:\Program Files\Microsoft. MSSQLSERVER\MSSQL\DATA  
   
      **Compartilhamento de arquivo no servidor de origem**  
      Especifique o local dos arquivos de banco de dados de origem como um caminho de compartilhamento de arquivos.  
   
      Por exemplo: "\\\\*nome_do_servidor*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. O Assistente para cópia de banco de dados cria uma [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote para transferir o banco de dados de **configurar o pacote** página, personalize o pacote, se apropriado.  
+9. O Assistente para Copiar Banco de Dados cria um pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] para transferir o banco de dados. Na página **Configurar o Pacote** , personalize o pacote, se apropriado.  
   
      **Local do pacote**  
-     Exibe onde o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote será gravado.  
+     Exibe onde o pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] será gravado.  
   
      **Nome do pacote**  
-     Insira um nome para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote.  
+     Insira um nome para o pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      **Opções de log**  
      Selecione se as informações de log serão armazenadas no log de eventos do Windows ou em um arquivo de texto.  
@@ -250,7 +249,7 @@ ms.locfileid: "48108686"
      **Caminho do arquivo de log de erros**  
      Forneça um caminho para o local do arquivo de log. Essa opção só estará disponível se a opção de log de arquivo de texto for selecionada.  
   
-10. Na página **Agendar o Pacote** , especifique quando você quer que a operação de movimentação ou cópia seja iniciada. Se você não for um administrador do sistema, você deve especificar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de Proxy de agente que tem acesso ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] subsistema de execução de pacote (SSIS).  
+10. Na página **Agendar o Pacote** , especifique quando você quer que a operação de movimentação ou cópia seja iniciada. Se você não for um administrador do sistema, deverá especificar uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que tenha acesso ao subsistema de execução de Pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
      **Run immediately**  
      Iniciar a operação de mover ou copiar depois de clicar em **próxima**.  
@@ -279,7 +278,7 @@ ms.locfileid: "48108686"
      **Mensagem**  
      Fornece qualquer mensagem que retornou de cada etapa.  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
+##  <a name="FollowUp"></a> Acompanhar: Depois de atualizar um banco de dados do SQL Server  
  Após o uso do Assistente para Copiar Banco de Dados para atualizar um banco de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados é disponibilizado imediatamente e é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

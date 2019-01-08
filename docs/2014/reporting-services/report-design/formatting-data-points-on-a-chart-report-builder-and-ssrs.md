@@ -14,12 +14,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350116"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
   Ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "48167906"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Posicionando rótulos de ponto de dados em um gráfico  
  Em todos os tipos de gráfico, é possível mostrar rótulos de ponto de dados quando você clica com o botão direito do mouse no gráfico e seleciona **Mostrar Rótulos de Dados**. A posição dos rótulos de ponto de dados é especificada de acordo com o tipo de gráfico:  
   
--   Em um gráfico de barras, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **BarLabelStyle** . Há quatro posições possíveis: Externo, Esquerda, Centro e Direita. Quando o estilo do rótulo da barra for definido como Externo, os rótulos serão posicionados fora da barra, desde que caibam na área do gráfico. Caso não possa ser posicionado fora da barra e dentro da área do gráfico, o rótulo é posicionado dentro da barra.  
+-   Em um gráfico de barras, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **BarLabelStyle** . Há quatro posições possíveis: Externo, esquerda, centro e direita. Quando o estilo do rótulo da barra for definido como Externo, os rótulos serão posicionados fora da barra, desde que caibam na área do gráfico. Caso não possa ser posicionado fora da barra e dentro da área do gráfico, o rótulo é posicionado dentro da barra.  
   
 -   Em um gráfico de pizza, é possível reposicionar o rótulo de ponto de dados usando o atributo personalizado **PieLabelStyle** . Há muitas considerações a serem feitas durante o posicionamento dos rótulos de ponto de dados próximos a um gráfico de pizza, inclusive o tipo do gráfico, o espaço disponível entre ele e a legenda correspondente e o tamanho dos rótulos. Para obter mais informações, consulte [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48167906"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Adicionando palavras-chave a rótulos de ponto de dados, dicas de ferramenta e texto de legenda  
  É possível usar palavras-chave específicas do gráfico, diferenciando maiúsculas de minúsculas, para representar um item existente no gráfico. Essas palavras-chave só são aplicáveis a dicas de ferramenta, texto de legenda personalizado e propriedades de rótulo de ponto de dados. Em muitos casos, uma palavra-chave de gráfico tem uma expressão simples equivalente, mas a palavra-chave é mais rápida e mais fácil de digitar. A seguir, uma lista de palavras-chave de gráfico.  
   
-|Palavra-chave de gráfico|Description|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
+|Palavra-chave de gráfico|Descrição|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
 |#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|None|  
@@ -77,7 +77,7 @@ ms.locfileid: "48167906"
 |#MAX|Máximo de todos os valores Y na série.|Todos|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Primeiro de todos os valores Y na série.|Todos|`=First(Fields!MyDataField.Value)`|  
   
- Para formatar a palavra-chave, coloque uma cadeia de caracteres de formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parênteses. Por exemplo, para especificar o valor do ponto de dados em uma dica de ferramenta como um número com duas casas decimais, coloque a cadeia de caracteres de formato "N2" entre chaves como, por exemplo, "#VALY{N2}" para a propriedade **ToolTip** da série. Para obter mais informações sobre cadeias de caractere de formato do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Tipos de formatação](http://go.microsoft.com/fwlink/?LinkId=112024) no MSDN. Para obter mais informações sobre como formatar números em [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Para formatar a palavra-chave, coloque uma cadeia de caracteres de formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parênteses. Por exemplo, para especificar o valor do ponto de dados em uma dica de ferramenta como um número com duas casas decimais, coloque a cadeia de caracteres de formato "N2" entre chaves como, por exemplo, "#VALY{N2}" para a propriedade **ToolTip** da série. Para obter mais informações sobre cadeias de caractere de formato do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Tipos de formatação](https://go.microsoft.com/fwlink/?LinkId=112024) no MSDN. Para obter mais informações sobre como formatar números em [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Para obter mais informações sobre como adicionar palavras-chave a um gráfico, consulte [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md), [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48167906"
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

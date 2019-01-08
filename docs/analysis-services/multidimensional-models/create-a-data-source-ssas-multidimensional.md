@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027043"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410313"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027043"
   
 3.  Na página **Selecione como definir a conexão** , escolha **Criar uma fonte de dados com base em uma conexão já existente ou em uma nova conexão** e clique em **Novo** para abrir o **Gerenciador de Conexões**.  
   
-     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, presumiremos uma conexão de banco de dados do SQL Server.  
+     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, vamos supor que uma conexão de banco de dados do SQL Server.  
   
 4.  Selecione o provedor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework ou de OLE DB nativo a ser usado para a conexão.  
   
@@ -165,6 +165,6 @@ ms.locfileid: "34027043"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados com suporte &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

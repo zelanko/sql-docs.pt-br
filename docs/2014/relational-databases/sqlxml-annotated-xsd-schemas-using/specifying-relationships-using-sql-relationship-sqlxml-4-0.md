@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ca0676d280a266561c45388beac938366d17ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144906"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814868"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
   Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
@@ -70,7 +68,7 @@ ms.locfileid: "48144906"
  **Inverso**  
  Este atributo especificado em  **\<SQL: Relationship >** é usado por diagramas de atualização. Para obter mais informações, consulte [especificando o atributo SQL: Inverse em SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- O `sql:key-fields` anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e que não fornece a chave primária do tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >**, você deve especificar `sql:key-fields` para gerar a hierarquia adequada. Para obter mais informações, consulte [Identifying Key Columns by Using SQL: Key-campos](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ O `sql:key-fields` anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e que não fornece a chave primária do tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >**, você deve especificar `sql:key-fields` para gerar a hierarquia adequada. Para obter mais informações, consulte [Identificando colunas-chave usando o SQL: Key-campos](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Para gerar o aninhamento adequado no resultado, recomenda-se que `sql:key-fields` sejam especificados em todos os esquemas.  
   
@@ -186,7 +184,7 @@ ms.locfileid: "48144906"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Especificando uma cadeia de relações  
+### <a name="b-specifying-a-relationship-chain"></a>b. Especificando uma cadeia de relações  
  Para obter este exemplo, pressuponha que você deseja o seguinte documento XML que use dados obtidos do banco de dados AdventureWorks:  
   
 ```  

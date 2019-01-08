@@ -1,7 +1,8 @@
 ---
-title: Estender a funcionalidade do estúdio de dados do Azure | Microsoft Docs
-description: Adicionar extensões ao estúdio de dados do Azure
-ms.custom: tools|sos
+title: Adicionar extensões
+titleSuffix: Azure Data Studio
+description: Adicionar extensões do Marketplace de extensões para o Studio de dados do Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f00275187781b3981974c0456a7870a52604220c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a79732ba0a10121f4c4323e7f19bac009c64964d
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356227"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030460"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Estender a funcionalidade do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -26,13 +27,13 @@ Extensões são fornecidas pela equipe do estúdio de dados do Azure (Microsoft)
 
 ## <a name="add-azure-data-studio-extensions"></a>Adicionar extensões do estúdio de dados do Azure
 
-1. Para abrir o Gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione **extensões** na **exibição** menu.
+1. Para abrir o Gerenciador de extensões e acessar as **extensões** disponíveis, selecione o ícone de extensões ou selecione extensões no menu **Exibição**.
 2. Selecione uma extensão disponível para exibir seus detalhes.
 
    ![Gerenciador de extensões](media/extensions/extension-manager.png)
 
-3. Selecione a extensão desejada e **instalar** -lo.
-4. Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
+3. Selecione a extensão desejada e **instale-a**.
+4. Selecione **Recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
 5. Navegue até o painel de gerenciamento clicando duas vezes o seu servidor ou banco de dados e selecionando **gerenciar**.
 6. Extensões instaladas são exibidas como guias no seu painel de gerenciamento:
 

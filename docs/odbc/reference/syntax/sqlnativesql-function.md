@@ -20,16 +20,16 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692294"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208620"
 ---
 # <a name="sqlnativesql-function"></a>Função SQLNativeSql
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLNativeSql** retorna a cadeia de caracteres SQL conforme modificado pelo driver. **SQLNativeSql** não executa a instrução SQL.  
@@ -74,7 +74,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLNativeSql** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* SQL_HANDLE_DBC e uma *manipular* dos *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLNativeSql** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *OutStatementText* não era grande o suficiente para retornar a cadeia de caracteres inteira do SQL, portanto, a cadeia de caracteres SQL foi truncada. O comprimento da cadeia de caracteres SQL completo é retornado no **TextLength2Ptr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

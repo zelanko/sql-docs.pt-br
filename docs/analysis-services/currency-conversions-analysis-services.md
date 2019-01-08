@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebcce8d042b7a87771f99bac53b78bb59af6f7e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015763"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207205"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "34015763"
 ## <a name="defining-currency-conversions"></a>Definindo conversões de moeda  
  Você pode usar o Assistente de Business Intelligence para definir a funcionalidade de conversão de moeda de um cubo ou pode definir manualmente as conversões de moeda usando scripts MDX.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
  Antes de você poder definir uma conversão de moedas em um cubo, usando o Assistente de Business Intelligence, será necessário definir, primeiro, pelo menos uma dimensão de moeda, uma dimensão temporal e, pelo menos, um grupo de medidas de taxa. A partir desses objetos, o Assistente de Business Intelligence pode recuperar os dados e os metadados usados para criar a dimensão de moeda de relatório e script MDX que são necessários para fornecer a funcionalidade de conversão de moedas.  
   
 ### <a name="decisions"></a>Decisões  

@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527505"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_ajuste\_recomendações (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Retorna informações detalhadas sobre recomendações de ajuste.  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.
 
 | **Nome da coluna** | **Data type** | **Descrição** |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ ms.locfileid: "47792104"
 | **reason** | **nvarchar(4000)** | Motivo por que essa recomendação foi fornecida. |
 | **valid\_since** | **datetime2** | Na primeira vez em que essa recomendação foi gerada. |
 | **última\_atualizar** | **datetime2** | A última vez em que essa recomendação foi gerada. |
-| **state** | **nvarchar(4000)** | Documento JSON que descreve o estado da recomendação. Campos a seguir estão disponíveis:<br />-   `currentValue` -estado atual da recomendação.<br />-   `reason` – constante que descreve por que a recomendação está no estado atual.|
+| **state** | **nvarchar(4000)** | Documento JSON que descreve o estado da recomendação. Campos a seguir estão disponíveis:<br />-   `currentValue` -estado atual da recomendação.<br />-   `reason` -constante que descreve por que a recomendação está no estado atual.|
 | **está\_executável\_ação** | **bit** | 1 = a recomendação pode ser executada no banco de dados por meio de [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = a recomendação não pode ser executada no banco de dados (por exemplo: recomendação de apenas ou revertido de informações) |
 | **está\_revertable\_ação** | **bit** | 1 = a recomendação pode ser monitorada e revertida pelo mecanismo de banco de dados automaticamente.<br />0 = a recomendação não pode ser monitorada e revertida automaticamente. A maioria dos &quot;executável&quot; ações serão &quot;revertable&quot;. |
 | **Execute\_ação\_iniciar\_tempo** | **datetime2** | Data em que a recomendação é aplicada. |
@@ -62,7 +62,7 @@ ms.locfileid: "47792104"
  Informações retornadas por `sys.dm_db_tuning_recommendations` é atualizada quando o mecanismo de banco de dados identifica potenciais regressão de desempenho de consulta e não é persistente. As recomendações são mantidas apenas até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de recomendação de ajuste se quiserem mantê-lo após a reciclagem do servidor. 
 
  `currentValue` campo de `state` coluna pode ter os seguintes valores:
- | Status | Description |
+ | Status | Descrição |
  |--------|-------------|
  | `Active` | Recomendação estiver ativo e aplicada não ainda. Usuário pode tirar o script de recomendação e executá-lo manualmente. |
  | `Verifying` | A recomendação é aplicada por [!INCLUDE[ssde_md](../../includes/ssde_md.md)] e o processo de verificação interno compara o desempenho do plano forçado com o plano regredido. |
@@ -72,7 +72,7 @@ ms.locfileid: "47792104"
 
 Documento JSON na `state` coluna contém o motivo que descreve por que é a recomendação no estado atual. Valores do campo motivo podem ser: 
 
-| Reason | Description |
+| Reason | Descrição |
 |--------|-------------|
 | `SchemaChanged` | Recomendação expirou porque o esquema de uma tabela referenciado é alterado. |
 | `StatisticsChanged`| Recomendação expirou devido à alteração de estatística em uma tabela referenciada. |
@@ -80,7 +80,7 @@ Documento JSON na `state` coluna contém o motivo que descreve por que é a reco
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` opção está desabilitada pelo usuário durante o processo de verificação. Habilitar `FORCE_LAST_GOOD_PLAN` usando a opção [ALTER AUTOMATIC_TUNING definido do banco de dados &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) instrução ou forçar o plano manualmente usando o script na `[details]` coluna. |
 | `UnsupportedStatementType` | Não é possível forçar o plano na consulta. Exemplos de consultas sem suporte são cursores e `INSERT BULK` instrução. |
 | `LastGoodPlanForced` | A recomendação é aplicada com êxito. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificado regressão de desempenho possíveis, mas o `FORCE_LAST_GOOD_PLAN` opção não está habilitada – consulte [ALTER AUTOMATIC_TUNING definido do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Aplicar recomendação manualmente ou habilitar `FORCE_LAST_GOOD_PLAN` opção. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificado regressão de desempenho potencial, mas o `FORCE_LAST_GOOD_PLAN` opção não está habilitada – veja [ALTER AUTOMATIC_TUNING definido do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Aplicar recomendação manualmente ou habilitar `FORCE_LAST_GOOD_PLAN` opção. |
 | `VerificationAborted`| Processo de verificação foi anulado devido à reinicialização ou do limpeza de Store de consulta. |
 | `VerificationForcedQueryRecompile`| Consulta é recompilada porque não há nenhuma melhoria de desempenho significativa. |
 | `PlanForcedByUser`| Usuário forçado manualmente usando o plano [sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedimento. |

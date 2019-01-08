@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2ad857b2174528db8f6c2d7c8453b956129686d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c578c07c1e20331d2b2b302619cfc95b9463a639
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767308"
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarefa Executar Instrução T-SQL
   A tarefa Executar Instrução T-SQL executa instruções Transact-SQL. Para obter mais informações, consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference) e [Integration Services &#40;SSIS&#41; Consultas](../integration-services-ssis-queries.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "48058486"
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de controle](control-flow.md)   
+ [Fluxo de Controle](control-flow.md)   
  [MERGE em pacotes do Integration Services](merge-in-integration-services-packages.md)  
   
   

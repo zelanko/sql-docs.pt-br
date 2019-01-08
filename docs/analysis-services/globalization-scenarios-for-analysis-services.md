@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031898"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202245"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Cenários de globalização para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "38031898"
   
 -   Os arquivos de log conterão uma mistura mensagens em inglês e traduzidas, supondo que você instalou um pacote de idiomas no servidor Windows que executa o Analysis Services.  
   
--   Documentos e ferramentas, tais como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], estão traduzidos para os seguintes idiomas: chinês simplificado, chinês tradicional, francês, alemão, italiano, japonês, coreano, português (Brasil), russo e espanhol. A cultura é especificada durante a instalação.  
+-   Documentação e ferramentas, tais como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], são traduzidas para estes idiomas: Chinês simplificado, chinês tradicional, francês, alemão, italiano, japonês, coreano, português (Brasil), russo e espanhol. A cultura é especificada durante a instalação.  
   
- Para modelos multidimensionais, o Analysis Services permite a você definir idioma, agrupamento e traduções de forma independente em toda a hierarquia de objetos.  Para modelos de tabela, você só pode adicionar traduções: agrupamento e idioma são herdados pelo sistema operacional do host.  
+ Para modelos multidimensionais, o Analysis Services permite a você definir idioma, ordenação e traduções de forma independente em toda a hierarquia de objetos.  Para modelos de tabela, você só pode adicionar traduções: ordenação e idioma são herdados pelo sistema operacional do host.  
   
  Os cenários habilitados por meio de recursos de globalização do Analysis Services incluem:  
   
 -   Um modelo de dados fornece várias legendas traduzidas para que os valores e nomes de campos sejam exibidos no idioma de escolha do usuário. Para empresas que operam em países bilíngues como Suíça, Bélgica ou no Canadá, o suporte a vários idiomas em aplicativos cliente e servidor é um requisito padrão de codificação. Este cenário é habilitado por meio de traduções e conversões de moeda. Consulte [Recursos](#bkmk_features) abaixo para obter detalhes e links.  
   
--   Ambientes de desenvolvimento e produção estão localizados geograficamente em diferentes países. É cada vez mais comum desenvolver uma solução em um país e, em seguida, implantá-la em outro. Saber como definir as propriedades de agrupamento e idioma é essencial se você ficar encarregado de preparar uma solução desenvolvida em um idioma para implantação em um servidor que usa um pacote de idiomas diferente. A configuração dessas propriedades permite substituir os padrões herdados que você obtém do sistema host original. Consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) para obter detalhes sobre como definir propriedades.  
+-   Ambientes de desenvolvimento e produção estão localizados geograficamente em diferentes países. É cada vez mais comum desenvolver uma solução em um país e, em seguida, implantá-la em outro. Saber como definir as propriedades de ordenação e idioma é essencial se você ficar encarregado de preparar uma solução desenvolvida em um idioma para implantação em um servidor que usa um pacote de idiomas diferente. A configuração dessas propriedades permite substituir os padrões herdados que você obtém do sistema host original. Consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md) para obter detalhes sobre como definir propriedades.  
   
 ##  <a name="bkmk_features"></a> Recursos para compilar uma solução globalizada multilíngue  
  No nível do cliente, aplicativos globalizados que consomem ou manipulam dados multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem usar os recursos multilíngues e multiculturais no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -55,16 +55,16 @@ ms.locfileid: "38031898"
 ||||  
 |-|-|-|  
 |**Recurso**|**Tabular**|**Multidimensional**|  
-|[Idiomas e agrupamentos &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Herdado do sistema operacional.|Herdado, mas com a capacidade de substituir o idioma e agrupamento para os principais objetos na hierarquia de modelos.|  
-|Escopo do suporte à tradução|Legendas e descrições.|Traduções podem ser criadas para nomes de objeto, legendas, identificadores e descrições, e também podem estar em qualquer script e linguagem Unicode. Isso é verdadeiro mesmo quando as ferramentas e o ambiente estão em outro idioma. Por exemplo, em um ambiente de desenvolvimento que usa o idioma inglês e um agrupamento latino em toda a pilha, você pode incluir em seu modelo de um objeto que usa caracteres cirílicos no nome.|  
-|Implementando o suporte à tradução|Criar usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar arquivos de tradução que você preenche e depois importa de volta para o modelo.<br /><br /> Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.|Crie usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as traduções da legenda, descrição e tipos de conta para cubos e medidas, dimensão e atributos.<br /><br /> Consulte [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obter mais informações. Uma lição sobre como usar esse recurso pode ser encontrada na [Lição 9: definindo perspectivas e traduções](../analysis-services/lesson-9-defining-perspectives-and-translations.md) do tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md)|Herdado do sistema operacional.|Herdado, mas com a capacidade de substituir o idioma e ordenação para os principais objetos na hierarquia de modelos.|  
+|Escopo do suporte à tradução|Legendas e descrições.|Traduções podem ser criadas para nomes de objeto, legendas, identificadores e descrições, e também podem estar em qualquer script e linguagem Unicode. Isso é verdadeiro mesmo quando as ferramentas e o ambiente estão em outro idioma. Por exemplo, em um ambiente de desenvolvimento que usa o idioma inglês e uma ordenação latina em toda a pilha, você pode incluir em seu modelo de um objeto que usa caracteres cirílicos no nome.|  
+|Implementando o suporte à tradução|Criar usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar arquivos de tradução que você preenche e depois importa de volta para o modelo.<br /><br /> Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.|Crie usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as traduções da legenda, descrição e tipos de conta para cubos e medidas, dimensão e atributos.<br /><br /> Consulte [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obter mais informações. Uma lição sobre como usar esse recurso pode ser encontrada em [lição 9: Definindo perspectivas e traduções](../analysis-services/lesson-9-defining-perspectives-and-translations.md) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.|  
 |Conversão de moeda|Não disponível.|A conversão de moeda é por meio de scripts MDX especializados que convertem medidas contendo dados de moeda. Você pode usar o Assistente de Business Intelligence em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para gerar um script MDX que usa uma combinação de dados e metadados de dimensões, atributos e grupos de medidas para converter medidas contendo dados de moeda. Consulte [Conversões de moeda &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internacionalização para aplicativos do Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Aplicativos de gravação Windows Store com design adaptável baseado em localidade](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Desenvolvimento de aplicativos Universal do Windows com c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Gravando aplicativos da Windows Store com design adaptável baseado em localidade](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Desenvolvendo aplicativos universais do Windows com C# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

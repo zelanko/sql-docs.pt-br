@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,12 +17,12 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0b08bcbf989f2c6fc0bc5b6cc163150b388d797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4db032d7ab26bb2ebace555b1594500dbd116b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085946"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762128"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
   Um gerenciador de conexões de Vários Arquivos permite que um pacote faça referência a arquivos e pastas existentes ou crie arquivos e pastas em tempo de execução.  
@@ -36,7 +35,7 @@ ms.locfileid: "48085946"
   
  A tabela a seguir lista os valores de `FileUsageType`.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de vários arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de vários arquivos cria um arquivo.|  
@@ -46,7 +45,7 @@ ms.locfileid: "48085946"
 ## <a name="configuration-of-the-multiple-files-connection-manager"></a>Configuração do gerenciador de conexões de vários arquivos  
  Quando você adicionar um gerenciador de conexões de vários arquivos a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um gerenciador de conexões que será resolvido como um gerenciador de conexões de vários arquivos no tempo de execução, definirá as propriedades de conexão de vários arquivos e adicionará essa conexão à coleção `Connections` do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `MULTIFILE`.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `MULTIFILE`.  
   
  Você pode configurar um gerenciador de conexões de vários arquivos da seguinte maneira:  
   
@@ -66,6 +65,6 @@ ms.locfileid: "48085946"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos](add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

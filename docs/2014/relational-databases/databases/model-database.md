@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089678"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812178"
 ---
 # <a name="model-database"></a>Banco de dados modelo
   O banco de dados **modelo** é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "48089678"
  Se o banco de dados **modelo** for modificado, todos os bancos de dados criados posteriormente herdarão as mudanças. Por exemplo, você poderia definir permissões ou opções de banco de dados, ou adicionar objetos, como tabelas, funções ou procedimentos armazenados. Propriedades de arquivo do banco de dados **modelo** são uma exceção e são ignoradas, exceto o tamanho inicial do arquivo de dados.  
   
 ## <a name="physical-properties-of-model"></a>Propriedades físicas de modelo  
- A tabela a seguir lista os valores iniciais de configuração dos dados do **modelo** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco para edições diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A tabela a seguir lista os valores iniciais de configuração dos dados do **modelo** e dos arquivos de log. Os tamanhos desses arquivos podem variar ligeiramente das diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Arquivo|Nome lógico|Nome físico|Aumento do arquivo|  
 |----------|------------------|-------------------|-----------------|  
@@ -61,14 +60,14 @@ ms.locfileid: "48089678"
 |AUTO_SHRINK|OFF|Sim|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|não|  
+|CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> Sim<br /><br /> Sim|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Sim<br /><br /> Sim|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|OFF|não|  
-|ENCRYPTION|OFF|não|  
+|DB_CHAINING|OFF|Não|  
+|ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
@@ -76,8 +75,8 @@ ms.locfileid: "48089678"
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
 |RECOVERY|Depende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|não|  
-|TRUSTWORTHY|OFF|não|  
+|Opções do Service Broker|DISABLE_BROKER|Não|  
+|TRUSTWORTHY|OFF|Não|  
   
  <sup>1</sup> para verificar se o modelo de recuperação atual do banco de dados, consulte [exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48089678"
   
 -   Adicionando arquivos ou grupos de arquivos.  
   
--   Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  
+-   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
 -   Alteração do proprietário do banco de dados. **modelo** pertence a **sa**.  
   

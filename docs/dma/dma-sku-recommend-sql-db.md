@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544114"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 
@@ -58,7 +58,7 @@ Você não precisa executar essa tarefa para cada banco de dados individualmente
     - **OutputFilePath**: O caminho do arquivo de saída para salvar os contadores coletados.
     - **CollectionTimeInSeconds**: A quantidade de tempo durante o qual você deseja coletar dados do contador de desempenho.
       Capture os contadores de desempenho para pelo menos de 40 minutos obter uma recomendação significativa. Quanto maior a duração da captura, mais precisos a recomendação será.
-    - **DbConnectionString**: cadeia de caracteres de Conexão a apontando para o banco de dados mestre, hospedado no computador do qual você está coletando dados do contador de desempenho.
+    - **DbConnectionString**: A cadeia de caracteres de Conexão que aponta para o banco de dados mestre, hospedado no computador do qual você está coletando dados do contador de desempenho.
      
     Aqui está uma invocação de exemplo:
 
@@ -78,30 +78,30 @@ Use o arquivo de saída de contadores de desempenho da etapa anterior como entra
 
 Execute o dmacmd.exe com os seguintes argumentos:
 
-- **/ Ação = SkuRecommendation**: inserir esse argumento para executar avaliações de SKU.
-- **/ SkuRecommendationInputDataFilePath**: O caminho para o arquivo de contador coletado na seção anterior.
+- **/ Ação = SkuRecommendation**: Insira esse argumento para executar avaliações de SKU.
+- **/ SkuRecommendationInputDataFilePath**: O caminho para o arquivo de contador são coletados na seção anterior.
 - **/ SkuRecommendationTsvOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato TSV.
 - **/ SkuRecommendationJsonOutputResultsFilePath**: O caminho para gravar os resultados de saída no formato JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: caminho no qual gravar os resultados de saída no formato HTML.
+- **/ SkuRecommendationHtmlResultsFilePath**: Caminho no qual gravar os resultados de saída no formato HTML.
 
 Além disso, você precisa escolher um dos argumentos a seguir:
 - Impedir que a atualização de preço
-    - **/ SkuRecommendationPreventPriceRefresh**: impede que o preço de atualização ocorra. Use se executando no modo offline.
+    - **/ SkuRecommendationPreventPriceRefresh**: Impede que o preço de atualização ocorra. Use se executando no modo offline.
 - Obter os preços mais recentes 
-    - **/ SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo, "US").
-    - **/ SkuRecommendationOfferName**: A oferta de nome (por exemplo, "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+    - **/ SkuRecommendationCurrencyCode**: A moeda na qual exibir os preços (por exemplo "US").
+    - **/ SkuRecommendationOfferName**: A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
     - **/ SkuRecommendationRegionName**: A região (por exemplo, nomeie "Oeste dos EUA").
     - **/ SkuRecommendationSubscriptionId**: A ID da assinatura.
     - **/ AzureAuthenticationTenantId**: O locatário de autenticação.
     - **/ AzureAuthenticationClientId**: A ID do cliente do aplicativo AAD usado para autenticação.
     - Uma das seguintes opções de autenticação:
         - Interativo
-            - **AzureAuthenticationInteractiveAuthentication**: definido como true para uma janela pop-up de autenticação.
+            - **AzureAuthenticationInteractiveAuthentication**: Definido como true para uma janela pop-up de autenticação.
         - Baseada em certificado
-            - **AzureAuthenticationCertificateStoreLocation**: definido como o repositório de certificados local (por exemplo, "CurrentUser").
-            - **AzureAuthenticationCertificateThumbprint**: definido como a impressão digital do certificado.
+            - **AzureAuthenticationCertificateStoreLocation**: Definido como o repositório de certificados local (por exemplo "CurrentUser").
+            - **AzureAuthenticationCertificateThumbprint**: Defina a impressão digital do certificado.
         - Baseada em token
-            - **AzureAuthenticationToken**: definido para o símbolo de certificado.
+            - **AzureAuthenticationToken**: Defina como o token de certificado.
 
 Aqui estão alguns invocações de exemplo:
 
@@ -135,8 +135,8 @@ O arquivo de saída TSV conterá as colunas mostradas no gráfico a seguir:
 
 Segue uma descrição de cada coluna.
 
-- **DatabaseName** – o nome do banco de dados.
-- **MetricName** – se ou não uma métrica foi executada.
+- **DatabaseName** -o nome do banco de dados.
+- **MetricName** - se de uma métrica foi executada ou não.
 - **MetricType** -camada recomendada banco de dados SQL.
 - **MetricValue** -recomendado do banco de dados SQL do Azure SKU.
 - **SQLMiEquivalentCores** -se você escolher Ir para o banco de dados de instância gerenciada do SQL, você pode usar esse valor para contagem de núcleos.
@@ -152,11 +152,11 @@ O arquivo HTML contém essas informações em um formato gráfico. Você pode us
 Com apenas alguns cliques, você pode usar as recomendações da etapa anterior para provisionar bancos de dados de destino no Azure para o qual você pode migrar seus bancos de dados. Você também pode fazer alterações para as recomendações, atualizando o arquivo HTML da seguinte maneira.
 
 1. Abra o arquivo HTML e insira as seguintes informações:
-    - **ID da assinatura** – a ID da assinatura da assinatura do Azure ao qual você deseja provisionar os bancos de dados.
-    - **Região** – a região na qual você deseja provisionar bancos de dados. Certifique-se de que sua assinatura dá suporte a região de select.
-    - **Grupo de recursos** – o grupo de recursos ao qual você deseja implantar os bancos de dados. Insira um grupo de recursos existente.
-    - **Nome do servidor** – servidor o banco de dados do SQL do Azure ao qual você deseja que os bancos de dados implantados. Se você inserir um nome de servidor que não existe, ele será criado.
-    - **Admin Username\Password** – o nome de usuário de administrador de servidor e a senha.
+    - **ID da assinatura** -a ID da assinatura da assinatura do Azure ao qual você deseja provisionar os bancos de dados.
+    - **Região** -a região na qual você deseja provisionar bancos de dados. Certifique-se de que sua assinatura dá suporte a região de select.
+    - **Grupo de recursos** -o grupo de recursos ao qual você deseja implantar os bancos de dados. Insira um grupo de recursos existente.
+    - **Nome do servidor** -servidor o banco de dados do SQL do Azure ao qual você deseja que os bancos de dados implantados. Se você inserir um nome de servidor que não existe, ele será criado.
+    - **Admin Username\Password** -o nome de usuário de administrador de servidor e a senha.
 
 2. Analise as recomendações para cada banco de dados e modificar o tipo de preço, computação nível e o tamanho máximo de dados conforme necessário. Certifique-se de desmarcar quaisquer bancos de dados que você não deseja atualmente para provisionar.
 

@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545217"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
 O comportamento padrão do manipulador é negar todas as conexões. O **conectar** seção especifica as exceções a esse comportamento. Por exemplo, se todos os **conectar** seções foram ausente ou vazio e, em seguida, por padrão não foi possível estabelecer conexões.  
@@ -54,12 +54,12 @@ connectionString
   
 ## <a name="remarks"></a>Comentários  
   
-|Parte|Description|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**Connect**|Uma cadeia de caracteres literal que indica que essa é uma entrada de cadeia de caracteres de conexão.|  
 |***connectionString***|Uma cadeia de caracteres que substitui a cadeia de caracteres de conexão de cliente inteira.|  
 |**Acesso**|Uma cadeia de caracteres literal que indica que essa é uma entrada de acesso.|  
-|***accessRight***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** — usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** — o usuário pode ler a fonte de dados.<br />-   **ReadWrite** — usuário pode ler ou gravar na fonte de dados.|  
+|***accessRight***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -usuário pode ler ou gravar na fonte de dados.|  
   
  Se você quiser permitir qualquer conexão (em vigor, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso **conexão padrão** seção `Access=ReadWrite`e exclua ou comente a qualquer outro **conectar** *identificador* seção.  
   

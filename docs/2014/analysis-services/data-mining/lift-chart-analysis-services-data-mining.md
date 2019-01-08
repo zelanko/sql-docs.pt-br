@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119396"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398010"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
-  Um **gráfico de ganho** representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de um *comparação de precisão* pontuação. Ao comparar as pontuação de comparação para várias partes de seu conjunto de dados e para modelos diferentes, você pode determinar qual modelo é melhor, e qual percentual dos casos no conjunto de dados seria beneficiado de aplicar as previsões do modelo.  
+  Um **gráfico de ganho** representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de um *comparação de precisão* pontuação. Comparando as pontuações de comparação de precisão para as várias partes de seu conjunto de dados em modelos diferentes, você pode determinar qual modelo é melhor, e qual porcentagem dos casos no conjunto de dados seria beneficiado de aplicar as previsões do modelo.  
   
  Com um gráfico de comparação de precisão, você pode comparar a exatidão de previsões para vários modelos que têm o mesmo atributo previsível. Você também pode avaliar a exatidão de previsão para um único resultado (um único valor do atributo previsível), ou para todos os resultados (todos os valores do atributo especificado).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48119396"
 |Targeted mailing all|0.71|47.40%|61.38%|  
 |Mala direta dirigida – menos de 30 anos|0.85|51.81%|46.62%|  
 |Modelo de previsão aleatória||31.00%||  
-|Modelo ideal para: Mala direta dirigida – todos||62.48%||  
+|Modelo ideal para: Targeted mailing all||62.48%||  
 |Modelo ideal para: Mala direta dirigida – menos de 30 anos||65.28%||  
   
  [Voltar ao Início](#bkmk_Top)  
@@ -118,6 +118,6 @@ ms.locfileid: "48119396"
  [Voltar ao Início](#bkmk_Top)  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

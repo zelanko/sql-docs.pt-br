@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSlogreader_agents_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9762ac48d7c757b564d37cd4bedf1d468957de3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 301aecad91702c1b851488e70f4de77858439d3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823240"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSlogreader_agents** tabela contém uma linha para cada Log Reader Agent está em execução no distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|A ID do Log Reader Agent.|  
 |**name**|**nvarchar(100)**|O nome do Log Reader Agent.|  

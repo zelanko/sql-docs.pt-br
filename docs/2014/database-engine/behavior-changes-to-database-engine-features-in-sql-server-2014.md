@@ -15,12 +15,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520366"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
   Este tópico descreve as alterações no comportamento no [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -87,7 +87,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 |-------------------------|--------------------------------------|  
 |byte<br /><br /> short<br /><br /> INT<br /><br /> inteiro<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
-|FLOAT|real|  
+|FLOAT|REAL|  
 |double|FLOAT|  
   
  O novo comportamento melhora o desempenho quando a conversão intermediária pode ser ignorada. Porém, quando as conversões de tipo de dados falharem, você verá mensagens de erro diferentes daquelas geradas na conversão do valor xs:string intermediário. Por exemplo, se o método de valor não convertesse o valor `int` 100000 em `smallint`, a mensagem de erro anterior seria:  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Alteração de comportamento de sqlcmd.exe no modo XML  
- Há alterações de comportamento se você usar sqlcmd.exe com modo de XML (comando :XML ON) ao executar SELECT * de T FOR XML ….  
+ Há alterações de comportamento, se você usar sqlcmd.exe com modo XML (: comando XML ON) ao executar SELECT * de T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Mensagem DBCC CHECKIDENT revisada  
  Na [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a mensagem retornada pelo comando DBCC CHECKIDENT mudou somente quando ele é usado com RESEED *new_reseed_value* para alterar o valor de identidade atual. A nova mensagem é "Verificando informações de identidade: valor de identidade atual '\<valor de identidade atual >'. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".  
@@ -107,7 +107,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Em versões anteriores, a mensagem é "Verificando informações de identidade: valor de identidade atual '\<valor de identidade atual >', valor de coluna atual '\<valor atual da coluna >'. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema". A mensagem não muda quando DBCC CHECKIDENT é especificado com NORESEED, sem um segundo parâmetro ou sem um valor reseed. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>O comportamento da função exist() no tipo de dados XML mudou  
- O comportamento do **exist ()** função mudou em comparação a um tipo de dados XML com um valor nulo para 0 (zero). Considere o seguinte exemplo:  
+ O comportamento do **exist ()** função mudou em comparação a um tipo de dados XML com um valor nulo para 0 (zero). Considere o exemplo a seguir:  
   
 ```xml  
 DECLARE @test XML;  

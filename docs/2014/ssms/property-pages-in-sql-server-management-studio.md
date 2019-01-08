@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
@@ -12,19 +12,19 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b64507fcd5e7b64602e751832d1ac81f1447e61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816998"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propriedades no SQL Server Management Studio
   As caixas de diálogo de página de propriedades no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usam um formato comum que exibe informações com categorias que podem ser expandidas e recolhidas. Os campos mostrados dependem da propriedade em particular. As propriedades mostradas em cinza são somente leitura. Os botões Categorizado e Alfabético estão na parte superior de cada página de propriedades.  
   
  A tabela a seguir descreve os elementos comuns das caixas de diálogo das páginas de propriedades do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |**Categorizado**|Relaciona todas as propriedades e valores de propriedade do objeto selecionado, classificado por categoria. Em uma exibição por categoria, você pode recolher uma categoria para reduzir o número de propriedades visíveis. Quando você expande ou recolhe uma categoria, você vê um sinal de mais (+) ou menos (-) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.|  
 |**Alfabético**|Relaciona todas as propriedades e valores de propriedade do objeto selecionado, classificado por ordem alfabética.|  

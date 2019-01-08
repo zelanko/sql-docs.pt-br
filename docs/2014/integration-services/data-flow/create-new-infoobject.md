@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afb148143e11ca77f87fe071cef165d60f3bdb7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17e9b7508317abc2ceb3b6e273c46fdea5a5abb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070061"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781249"
 ---
 # <a name="create-new-infoobject"></a>Criar Novo InfoObject
   Use a caixa de diálogo **Criar Novo InfoObject** para criar um novo InfoObject no sistema SAP Netweaver BW.  
@@ -130,7 +129,7 @@ ms.locfileid: "48070061"
  **Tipo do InfoObject**  
  Exiba o tipo do InfoObject. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |CHA|Características|  
 |KYF|Valores-chave|  
@@ -154,9 +153,9 @@ ms.locfileid: "48070061"
  Remova o InfoObject selecionado da lista **Atributos** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar InfoCube para os dados da transação](create-infocube-for-transaction-data.md)   
+ [Criar InfoCube para os Dados da Transação](create-infocube-for-transaction-data.md)   
  [Criar InfoSource](create-infosource.md)   
- [Criar InfoSource para os dados da transação](create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os Dados da Transação](create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](create-infosource-for-master-data.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

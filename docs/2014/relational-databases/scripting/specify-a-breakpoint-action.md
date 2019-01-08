@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328986"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
   Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
@@ -43,7 +41,7 @@ ms.locfileid: "48189506"
   
     4.  $FUNCTION retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $FUNCTION retornará o nome do arquivo de script que está sendo editado.  
   
-    5.  $PID e $PNAME retornam a ID e o nome do processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados onde o [!INCLUDE[tsql](../../includes/tsql-md.md)] está em execução. $PID retorna a mesma ID que SERVERPROPERTY(‘ProcessID’), exceto pelo fato de que $PID é um valor hexadecimal enquanto SERVERPROPERTY(‘ProcessID’) é um valor decimal.  
+    5.  $PID e $PNAME retornam a ID e o nome do processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados onde o [!INCLUDE[tsql](../../includes/tsql-md.md)] está em execução. $PID retorna a mesma ID que SERVERPROPERTY('ProcessID'), exceto pelo fato de que $PID é um valor hexadecimal enquanto SERVERPROPERTY('ProcessID') é um valor decimal.  
   
     6.  $TID e $TNAME retornam a ID e o nome do thread do sistema operacional que está executando o lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] . O thread é associado ao processo que executa a instância do Mecanismo de Banco de Dados. $TID retorna o mesmo valor que SELECT kpid FROM sys.sysprocesses, WHERE spid = @@SPID; porém, $TID é um valor hexadecimal, enquanto kpid é um valor decimal.  
   
@@ -70,5 +68,3 @@ ms.locfileid: "48189506"
 ## <a name="see-also"></a>Consulte também  
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
  [Especificar uma contagem de ocorrências](specify-a-hit-count.md)  
-  
-  

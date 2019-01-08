@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792394"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208326"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de padrão
 Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLTables**, aceite os padrões de pesquisa. Esses argumentos aceitam os padrões de pesquisa se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; são argumentos de identificador que não aceitam um padrão de pesquisa se esse atributo é definido como SQL_TRUE.  
@@ -35,7 +35,7 @@ Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLT
   
  O caractere de escape é recuperado com a opção SQL_SEARCH_PATTERN_ESCAPE **SQLGetInfo**. Ele deve preceder a qualquer caractere de sublinhado, um sinal de porcentagem ou um caractere de escape em um argumento que aceita padrões de pesquisa para incluir esse caractere como um literal. Exemplos são mostrados na tabela a seguir.  
   
-|Padrão de pesquisa|Description|  
+|Padrão de pesquisa|Descrição|  
 |--------------------|-----------------|  
 |%A %|Todos os identificadores que contém a letra A|  
 |ABC _|Todos os identificadores de quatro caracteres, começando com o ABC|  
@@ -44,7 +44,7 @@ Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLT
   
  Especial deve ter cuidado para escapar o caracteres de padrão de pesquisa em argumentos que aceitam os padrões de pesquisa. Isso é especialmente verdadeiro para o caractere de sublinhado, que é normalmente usado em identificadores. Um erro comum em aplicativos é recuperar um valor de uma função de catálogo e passa esse valor para um argumento de padrão de pesquisa em outra função de catálogo. Por exemplo, suponha que um aplicativo recupera o nome da tabela MY_TABLE do resultado definido para **SQLTables** e passa isso **SQLColumns** para recuperar uma lista de colunas no MY_TABLE. Em vez de obter as colunas para MY_TABLE, o aplicativo obterá as colunas para todas as tabelas que correspondem ao padrão de pesquisa MY_TABLE como MY_TABLE, MY1TABLE, MY2TABLE e assim por diante.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2. *x* drivers não dão suporte a padrões de pesquisa do *CatalogName* argumento **SQLTables**. 3 de ODBC *. x* drivers aceitam os padrões de pesquisa neste argumento se o atributo de ambiente sql_attr ODBC_VERSION é definido como SQL_OV_ODBC3; eles não aceitarem os padrões de pesquisa neste argumento se ele for definido como SQL_OV_ODBC2.  
   
- Passando um ponteiro nulo para um argumento de padrão de pesquisa não restringe a pesquisa para o argumento; ou seja, um ponteiro nulo e o padrão de pesquisa % (caracteres) são equivalentes. No entanto, um comprimento de zero Pesquisar padrão — ou seja, um ponteiro válido para uma cadeia de caracteres de comprimento zero — corresponde apenas a cadeia de caracteres vazia ("").
+ Passando um ponteiro nulo para um argumento de padrão de pesquisa não restringe a pesquisa para o argumento; ou seja, um ponteiro nulo e o padrão de pesquisa % (caracteres) são equivalentes. No entanto, um padrão de pesquisa de comprimento zero - ou seja, um ponteiro válido para uma cadeia de caracteres de comprimento zero - corresponde apenas a cadeia de caracteres vazia ("").

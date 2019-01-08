@@ -20,12 +20,12 @@ ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b8c490da7ecfe0230eaad5f98da1c66293f99eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73092fcd7091665f9a3dae969b7821cbf9777c9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209995"
 ---
 # <a name="sqlwritefiledsn-function"></a>Função SQLWriteFileDSN
 **Conformidade com**  
@@ -39,10 +39,10 @@ ms.locfileid: "47758954"
 ```  
   
 BOOL SQLWriteFileDSN(  
-     LPCSTR     lpszFileName,  
-     LPCSTR     lpszAppName,  
-     LPCSTR     lpszKeyName,  
-     LPCSTR     lpszString);  
+     LPCSTR     lpszFileName,  
+     LPCSTR     lpszAppName,  
+     LPCSTR     lpszKeyName,  
+     LPCSTR     lpszString);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -64,7 +64,7 @@ BOOL SQLWriteFileDSN(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLWriteFileDSN** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_INVALID_PATH|Caminho de instalação inválido|O caminho do nome do arquivo especificado na *lpszFileName* argumento era inválido.|  

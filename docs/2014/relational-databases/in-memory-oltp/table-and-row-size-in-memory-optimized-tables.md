@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822530"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
   Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. Entender o tamanho de uma tabela com otimização de memória ajudará você a saber se o computador tem memória suficiente.  
@@ -40,7 +40,7 @@ Tabela com otimização de memória composta por índices e linhas.
  O tamanho de uma tabela na memória, em bytes, é calculado da seguinte forma:  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  O tamanho de um índice de hash é fixado no momento da criação da tabela e depende do número real de buckets. O bucket_count na especificação de índice é arredondado para a potência mais próxima de 2, de modo a obter [número real de buckets]. Por exemplo, se o bucket_count especificado for 100000, o [número real de buckets] para o índice será 131072.  
@@ -93,7 +93,7 @@ Tabela com otimização de memória composta por índices e linhas.
   
  ![Estrutura de linha para uma tabela que tem dois índices. ](../../database-engine/media/hekaton-tables-4.gif "Estrutura de linha para uma tabela que tem dois índices da linha.")  
   
- Os carimbos de data/hora de início e de término indicam o período em que uma determinada versão de linha é válida. As transações que começam nesse intervalo podem ver essa versão de linha. Para obter mais detalhes, consulte [transações em tabelas com otimização de memória](memory-optimized-tables.md).  
+ Os carimbos de data/hora de início e de término indicam o período em que uma determinada versão de linha é válida. As transações que começam nesse intervalo podem ver essa versão de linha. Para obter mais detalhes consulte [Transações em Tabelas com Otimização de Memória](memory-optimized-tables.md).  
   
  Os ponteiros de índice apontam para a próxima linha da cadeia de caracteres que pertence ao bucket de hash. A figura a seguir ilustra a estrutura de uma tabela com duas colunas (nome, cidade), e com dois índices, um na coluna nome e outro na coluna cidade.  
   
@@ -113,7 +113,7 @@ Tabela com otimização de memória composta por índices e linhas.
   
 -   Segundo bucket: (John, Paris), (Jane, Praga)  
   
- Um carimbo de data/hora de término ∞ (infinito) indica que essa é a versão atualmente válida da linha. A linha não foi atualizada nem excluída desde que essa versão de linha foi gravada.  
+ Um carimbo de hora de término??? (infinito) indica que esta é a versão válida no momento da linha. A linha não foi atualizada nem excluída desde que essa versão de linha foi gravada.  
   
  Para um tempo maior que 200, a tabela contém as seguintes linhas:  
   
@@ -130,7 +130,7 @@ Tabela com otimização de memória composta por índices e linhas.
 |Jane|Praga|  
 |Susan|Bogotá|  
   
-##  <a name="bkmk_ExampleComputation"></a> Exemplo: Cálculo do tamanho da tabela e da linha  
+##  <a name="bkmk_ExampleComputation"></a> Exemplo: Cálculo do tamanho de linha e de tabela  
  Para índices de hash, o número de buckets real é arredondado até a potência mais próxima de 2. Por exemplo, se o bucket_count especificado for 100000, o número real de buckets para o índice será 131072.  
   
  Considere uma tabela Orders com a seguinte definição:  
@@ -147,9 +147,9 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- Observe que esta tabela tem um índice de hash e um índice não clusterizado (a chave primária). Ela também tem três colunas de comprimento fixo e uma coluna de comprimento variável, com uma das colunas sendo NULLable (OrderDescription). Vamos considerar que a tabela Orders tem 8379 linhas e o comprimento médio dos valores na coluna OrderDescription é de 78 caracteres.  
+ Observe que esta tabela tem um índice de hash e um índice não clusterizado (a chave primária). Ela também tem três colunas de comprimento fixo e uma coluna de comprimento variável, com uma das colunas sendo NULLable (OrderDescription). Vamos supor que a tabela Orders tem 8379 linhas e o tamanho médio dos valores na coluna OrderDescription é de 78 caracteres.  
   
- Para determinar o tamanho da tabela, primeiro determine o tamanho dos índices. O bucket_count para ambos os índices é especificado como 10000. Isso é arredondado para a potência mais próxima de 2: 16384. Consequentemente, o tamanho total dos índices da tabela Orders é:  
+ Para determinar o tamanho da tabela, primeiro determine o tamanho dos índices. O bucket_count para ambos os índices é especificado como 10000. Isso é arredondado para cima até a potência mais próxima de 2: 16384. Consequentemente, o tamanho total dos índices da tabela Orders é:  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -168,7 +168,7 @@ GO
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
- Em seguida, vamos calcular o [tamanho do corpo da linha real]:  
+ Em seguida, vamos calcular o [tamanho real do corpo da linha]:  
   
 -   Colunas do tipo superficial:  
   
@@ -196,9 +196,9 @@ GO
   
     -   O múltiplo mais próximo de 8 é 24.  
   
-    -   O preenchimento total é 24 – 22 = 2 bytes.  
+    -   O preenchimento total é 24 - 22 = 2 bytes.  
   
--   Não há colunas do tipo profundas de comprimento fixo (Colunas do tipo profundas de comprimento fixo: 0.).  
+-   Não há nenhuma coluna do tipo profundas de comprimento fixo (colunas do tipo profundas de comprimento fixo: 0.).  
   
 -   O tamanho real da coluna do tipo profunda é 2 * 78 = 156. Uma única coluna do tipo profunda OrderDescription tem o tipo nvarchar.  
   

@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.TextEditor
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
 - Code Editor [SQL Server Management Studio], about Query Editor
@@ -28,12 +26,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df942352f756c1911693ce339498489f88e31a7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132966"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328886"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
   Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou para editar um arquivo de texto XML ou sem-formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -118,9 +116,9 @@ ms.locfileid: "48132966"
 |Descreve os vários modos nos quais você pode abrir os editores no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Abrir um editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Descreve como gerenciar o modo de exibição, como quebra automática de linha, divisão de uma janela ou guias.|[Gerenciar o editor e o modo de exibição](manage-the-editor-and-view-mode.md)|  
 |Descreve como definir opções de formatação, como texto oculto ou recuo.|[Gerenciar formatação de código](manage-code-formatting.md)|  
-|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Navegar no código e no texto](navigate-code-and-text.md)|  
-|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores nos Editores de Consulta](color-coding-in-query-editors.md)|  
-|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estrutura de tópicos do código](code-outlining.md)|  
+|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Código e texto de navegação](navigate-code-and-text.md)|  
+|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores no Editor de Consultas](color-coding-in-query-editors.md)|  
+|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estruturação do código](code-outlining.md)|  
 |Descreve como arrastar texto de um local em um script e soltá-lo em um novo local.|[Arrastar e soltar texto](drag-and-drop-text.md)|  
 |Descreve como realizar uma pesquisa global e fazer a substituição, como alterar nomes de coluna.|[Pesquisar e substituir](search-and-replace.md)|  
 |Descreve como definir indicadores para localizar partes importantes de código com mais facilidade.|[Gerenciar indicadores](../native-client-ole-db-rowsets/bookmarks.md)|  
@@ -133,5 +131,3 @@ ms.locfileid: "48132966"
   
 ## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

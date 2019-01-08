@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816608"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
-  Em alguns casos, pode ser útil reduzir ou expandir o arquivo de log físico do log de transações de fisicamente uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Este tópico contém informações sobre como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações **tempdb** e controlar o crescimento de um arquivo de log de transações.  
+  Em alguns casos, pode ser útil reduzir ou expandir fisicamente o arquivo de log físico do log de transações de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico contém informações sobre como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações **tempdb** e controlar o crescimento de um arquivo de log de transações.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Monitorar o uso do espaço em Log  
@@ -55,7 +55,7 @@ ms.locfileid: "48066756"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Consulte as colunas **size**, **max_size** e **growth** do arquivo ou arquivos de log.)  
   
 > [!NOTE]  
->  A redução de arquivos de log e do banco de dados pode ser configurada para ocorrer automaticamente. Contudo, não é recomendável a redução automática, e a propriedade de banco de dados `autoshrink` é definida como FALSE por padrão. Se `autoshrink` for configurada como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25 por cento de seu espaço estiver inutilizado. O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. Para obter informações sobre como alterar a configuração do `autoshrink` propriedade, consulte [exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)— usar os **redução automática** propriedade no **opções**página — ou [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— use a opção AUTO_SHRINK.  
+>  A redução de arquivos de log e do banco de dados pode ser configurada para ocorrer automaticamente. Contudo, não é recomendável a redução automática, e a propriedade de banco de dados `autoshrink` é definida como FALSE por padrão. Se `autoshrink` for configurada como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25 por cento de seu espaço estiver inutilizado. O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. Para obter informações sobre como alterar a configuração do `autoshrink` propriedade, consulte [exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)-usar o **redução automática** propriedade o **opções**página- ou [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-use a opção AUTO_SHRINK.  
   
   
 ##  <a name="AddOrEnlarge"></a> Adicionar ou aumentar um arquivo de Log  

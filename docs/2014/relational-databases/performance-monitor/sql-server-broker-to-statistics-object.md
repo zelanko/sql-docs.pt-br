@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker Transmission Object object
@@ -13,12 +13,12 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a9574e4ab6618d08df94e8bd3de3c2b21d6000c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a8c5bc039e4e6c18680ba4e290ea7e69fa87804
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782288"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objeto Broker TO Statistics
   O objeto de desempenho SQLServer:Broker TO Statistics informa quantas vezes os diálogos do [!INCLUDE[ssSB](../../includes/sssb-md.md)] requerem objetos de transmissão, e com que frequência os objetos de transmissão são gravados no **tempdb**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48207926"
   
  A tabela a seguir lista os contadores contidos nesse objeto.  
   
-|Contadores do SQL Server Broker TO Statistics|Description|  
+|Contadores do SQL Server Broker TO Statistics|Descrição|  
 |----------------------------------------------|-----------------|  
 |**Méd. de gravações em lotes**|O número médio de objetos de transmissão salvo em um lote.|  
 |**Méd. de tempo de gravação em lote (ms)**|O número médio de milissegundos exigido para salvar um lote de objetos de transmissão.|  

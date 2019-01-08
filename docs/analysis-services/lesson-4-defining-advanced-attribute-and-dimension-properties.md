@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Definindo avançado propriedades de dimensão e atributo | Microsoft Docs'
+title: 'Lição 4: Definindo avançado de propriedades de dimensão e atributo | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015843"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951578"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Definindo propriedades de dimensão e atributo avançadas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ Esta lição contém as seguintes tarefas:
 [Usando uma versão modificada do projeto do Tutorial do Analysis Services](../analysis-services/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
 Nesta tarefa, você abrirá, revisará e implantará uma versão modificada do projeto Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , que contém vários grupos de medidas e dimensões adicionais.  
   
-[Definindo propriedades de atributo pai em uma hierarquia pai-filho](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
+[Definindo propriedades de atributo pai em uma hierarquia pai–filho](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
 Nesta tarefa, você definirá nomes de nível em uma dimensão pai-filho e especificará se os dados relacionados aos membros pai serão exibidos. Para obter mais informações, consulte [Dimensões pai-filho](../analysis-services/multidimensional-models/parent-child-dimension.md) e [Atributos em hierarquias pai-filho](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 [Agrupando membros de atributo automaticamente](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
@@ -41,18 +41,18 @@ Nesta tarefa, você aprenderá como e quando desativar ou ocultar as hierarquias
 [Classificando membros de atributo com base em um atributo secundário](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 Nesta tarefa, você aprenderá como classificar os membros de dimensão com base em um atributo secundário para atingir a ordem de classificação desejada.  
   
-[Especificando relações de atributos entre atributos em uma hierarquia definida pelo usuário](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Especificando relações de atributos entre atributos em uma hierarquia definida pelo usuário](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 Nesta tarefa, você aprenderá a definir propriedades de membro para atributos e especificar relações de agregação entre eles. Para obter mais informações, consulte [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Propriedades da hierarquia de usuário](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
 [Definindo o membro desconhecido e as propriedades de processamento nulo](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
 Nesta tarefa, você configura as propriedades UnknownMember e UnknownMemberName para tratar as condições de erro causadas por membros de dimensão nulos.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 5: Definindo relações entre grupos de medidas e dimensões](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Lição 5: Definindo relações entre dimensões e grupos de medidas](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional & #40; Tutorial do Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

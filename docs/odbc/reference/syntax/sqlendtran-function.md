@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204555"
 ---
 # <a name="sqlendtran-function"></a>Função SQLEndTran
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLEndTran** solicita uma operação de confirmação ou reversão para todas as operações ativas em todas as declarações associadas com uma conexão. **SQLEndTran** também pode solicitar que uma operação de confirmação ou reversão ser executada para todas as conexões associadas a um ambiente.  
@@ -65,7 +65,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLEndTran** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com os devidos *HandleType*e *manipular*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLEndTran** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08003|Conexão não aberta|(DM) a *HandleType* foi SQL_HANDLE_DBC e o *manipular* não estava em um estado conectado.|  
@@ -132,7 +132,7 @@ SQLRETURN SQLEndTran(
   
 -   O driver não retornou uma das seguintes mensagens, que confirmar que a transação não foi concluída:  
   
-    -   25S03: transação será revertida  
+    -   25S03: Transação será revertida  
   
     -   40001: Falha na serialização  
   

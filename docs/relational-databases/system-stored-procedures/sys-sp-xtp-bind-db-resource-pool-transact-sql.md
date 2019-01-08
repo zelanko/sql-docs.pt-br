@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647044"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391649"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name refere-se a um pool do sistema reservado**  
- Os nomes de pool “INTERNAL” e “DEFAULT” são reservados para pools do sistema.  Não é válido associar explicitamente um banco de dados a nenhum deles.  Se um nome do pool do sistema é inserido, o erro a seguir será retornado:  
+ Os nomes de pool "INTERNAL" e "DEFAULT" são reservados para pools do sistema.  Não é válido associar explicitamente um banco de dados a nenhum deles.  Se um nome do pool do sistema é inserido, o erro a seguir será retornado:  
 *O Pool de recursos %s é um pool de recursos do sistema.  Pools de recursos do sistema não podem ser associados explicitamente para um banco de dados usando esse procedimento.*  
   
 ```  
@@ -116,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  A associação entra em vigor da próxima vez que o banco de dados é colocado online.  
  
- B. Exemplo expandido de exemplo que inclui algumas verificações básicas acima.  Execute o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ b. Exemplo expandido de exemplo que inclui algumas verificações básicas acima.  Execute o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';

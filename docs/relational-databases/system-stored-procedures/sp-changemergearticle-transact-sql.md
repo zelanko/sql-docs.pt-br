@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752264"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823140"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valores|Description|  
+|Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Habilita o uso de um resolvedor interativo para o artigo.|  
 ||**false**|Desabilita o uso de um resolvedor interativo para o artigo.|  
@@ -74,7 +73,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**delete_tracking**|**true**|Instruções DELETE são replicadas, o que é o comportamento padrão.|  
 ||**false**|Instruções DELETE não são replicadas.<br /><br /> **\*\* Importante \* \***  configuração **delete_tracking** para **false** resulta em não convergência e as linhas excluídas precisa ser removidos manualmente.|  
-|**Descrição**||Entrada descritiva para o artigo.|  
+|**description**||Entrada descritiva para o artigo.|  
 |**destination_owner**||Nome do proprietário do objeto no banco de dados, se não estiver **dbo**.|  
 |**identity_range**||**bigint** que especifica o tamanho do intervalo a ser usado ao atribuir novos valores de identidade, se o artigo tiver **identityrangemanagementoption** definido como **automático** ou **auto_identity_ intervalo** definido como **verdadeiro**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "Replicação de mesclagem" do [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manual**|Desabilita gerenciamento automático do intervalo de identidade. Marca colunas de identidade com NOT FOR REPLICATION para ativar o tratamento manual do intervalo de identidade. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -90,7 +89,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pre_creation_command**|**None**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
 ||**delete**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
 ||**drop**|Cancela a tabela antes de recriá-la.|  
-||**Truncar**|Trunca a tabela de destino.|  
+||**truncate**|Trunca a tabela de destino.|  
 |**processing_order**||**int** que indica a ordem de processamento de artigos em uma publicação de mesclagem.|  
 |**pub_identity_range**||**bigint** que especifica o tamanho do intervalo alocado a um assinante com assinatura de servidor, se o artigo tiver **identityrangemanagementoption** definido como **automático** ou **auto_ identity_range** definido como **verdadeiro**. Esse intervalo de identidade é reservado para um Assinante de republicação para ser alocado a seus próprios Assinantes. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "Replicação de mesclagem" do [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|Artigo também é publicado em uma publicação transacional.|  
@@ -107,7 +106,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x200**|Replica restrições FOREIGN KEY. Se a tabela referenciada não fizer parte de uma publicação, todas as restrições FOREIGN KEY em uma tabela publicada não serão replicadas.|  
 ||**0x400**|Replica restrições CHECK.|  
 ||**0x800**|Replica padrões.|  
-||**0x1000**|Replica agrupamento em nível de coluna.|  
+||**0x1000**|Replica ordenação em nível de coluna.|  
 ||**0x2000**|Replica propriedades estendidas associadas com o objeto de origem do artigo publicado.|  
 ||**0x4000**|Replica chaves exclusivas definidas em um artigo de tabela.|  
 ||**0x8000**|Gera instruções ALTER TABLE em scripts de restrições.|  
@@ -150,7 +149,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|A assinatura digital em um resolvedor personalizado não é verificada para determinar se é de uma fonte confiável.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para *propriedade*.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  

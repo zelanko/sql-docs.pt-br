@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c73c8b2e381609e8aa9af2e6218a906e87b71ef6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e18c78f55b48061597abb0daa07ca9862cef5738
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627556"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207701"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelas de replicação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "47627556"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- Essas tabelas no banco de dados de distribuição são usadas para replicar dados de Editor não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [os publicadores não SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Essas tabelas no banco de dados de distribuição são usadas para replicar dados de não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. Para obter mais informações, consulte [os publicadores não SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  

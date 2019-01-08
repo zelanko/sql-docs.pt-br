@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979578"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984017"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Recuperação de desastre e disponibilidade do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "38979578"
   
 ||Comentários|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em um farm para disponibilidade.|Com suporte, mas não é recomendado. A recomendação é usar o AlwaysOn em modo de confirmação síncrona.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em um farm para disponibilidade.|Com suporte, mas não é recomendado. A recomendação é usar o Always On em - modo de confirmação síncrona.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em modo de confirmação síncrona|Suporte e recomendado.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] espelhamento assíncrono ou envio de logs para outro farm para a recuperação de desastres.|Tem suporte.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] com confirmação assíncrona para a recuperação de desastres|Tem suporte|  
@@ -91,15 +91,13 @@ ms.locfileid: "38979578"
  Para obter mais informações sobre como planejar um cenário de espera a frio com [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], consulte [Recuperação de desastres do PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Verificação  
- Para obter orientações e scripts para ajudá-lo a verificar uma implantação [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] antes e depois de um ciclo de recuperação de desastres, consulte [Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Para obter orientações e scripts para ajudá-lo a verificar uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantação antes e depois de um ciclo de recuperação de desastres, consulte [lista de verificação: Usar o PowerShell para verificar o Power Pivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links para mais informações  
   
 -   [Opções com suporte para recuperação de desastres e alta disponibilidade para bancos de dados do SharePoint (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Plano de recuperação de desastres (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [White paper de backup e recuperação de nuvem do SQL Server](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Microsoft® SQL Server Backup para Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
   

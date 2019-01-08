@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166096"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350486"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexão PowerPivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho PowerPivot publicada em uma Galeria PowerPivot do SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166096"
 ## <a name="prerequisites"></a>Prerequisites  
  A fonte de dados PowerPivot deve ser publicada em um Galeria PowerPivot em um site do SharePoint.  
   
- Para dar suporte a conexões do Construtor de Relatórios a uma pasta de trabalho PowerPivot, o SQL Server 2008 R2 ADOMD.NET deve estar instalado no computador de sua estação de trabalho. Essa biblioteca de cliente é instalada com o PowerPivot para Excel, mas se você estiver usando um computador que não tenha esse aplicativo, deverá baixar e instalar o ADOMD.NET no site [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Para dar suporte a conexões do Construtor de Relatórios a uma pasta de trabalho PowerPivot, o SQL Server 2008 R2 ADOMD.NET deve estar instalado no computador de sua estação de trabalho. Essa biblioteca de cliente é instalada com o PowerPivot para Excel, mas se você estiver usando um computador que não tenha esse aplicativo, deverá baixar e instalar o ADOMD.NET no site [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Tipo de fonte de dados  
  Use o tipo de fonte de dados de relatório **Microsoft SQL Server Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166096"
   
  Os dados em uma pasta de trabalho PowerPivot são altamente compactados. Os dados recuperados da pasta de trabalho PowerPivot para um relatório não são compactados. Use o designer de consulta para especificar filtros e parâmetros para limitar os dados para apenas o que é necessário no relatório.  
   
- Ao contrário da conexão a um cubo do Analysis Services, um modelo PowerPivot não tem nenhuma hierarquia. Para fornecer funcionalidade semelhante a segmentações de dados na pasta de trabalho, você deve criar parâmetros em cascata no relatório. Para obter mais informações, consulte [adicionar parâmetros em cascata a um relatório &#40;construtor de relatórios e SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ Ao contrário da conexão a um cubo do Analysis Services, um modelo PowerPivot não tem nenhuma hierarquia. Para fornecer funcionalidade semelhante a segmentações de dados na pasta de trabalho, você deve criar parâmetros em cascata no relatório. Para obter mais informações, consulte [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  Em alguns casos, pode ser necessário ajustar expressões para acomodar os valores de dados subjacentes do modelo PowerPivot. Pode ser necessário modificar expressões para converter dados no tipo de dados correto ou adicionar ou remover uma função de agregação. Por exemplo, para converter o tipo de dados Cadeia de caracteres em Inteiro, use `=CInt`. Verifique sempre se o relatório exibe os valores esperados dos dados no modelo PowerPivot antes de publicá-lo.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166096"
 -   O relatório contém apenas dados PowerPivot de uma fonte de dados PowerPivot.  
   
 ## <a name="see-also"></a>Consulte também  
- [Interface de usuário do Designer de consulta MDX do Analysis Services &#40;construtor de relatórios&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Interface do usuário do Designer de Consultas MDX do Analysis Services &#40;Construtor de Relatórios&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   
