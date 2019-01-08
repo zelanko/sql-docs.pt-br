@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808058"
 ---
 # <a name="lockcancel-event-class"></a>Classe de evento Lock:Cancel
   A classe de evento **Lock:Cancel** indica aquela aquisição de um bloqueio em um recurso cancelado; por exemplo, devido ao cancelamento de uma consulta.  
   
 ## <a name="lockcancel-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Cancel  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|`image`|Identificador de recurso bloqueado.|2|Sim|  
@@ -36,8 +35,8 @@ ms.locfileid: "48200856"
 |**DatabaseName**|`nvarchar`|Nome do banco de dados no qual foi realizada a tentativa de aquisição do bloqueio.|35|Sim|  
 |**Duration**|`bigint`|Tempo (em microssegundos) entre a hora em que a solicitação de bloqueio foi emitida e a hora em que o bloqueio foi cancelado.|13|Sim|  
 |**EndTime**|`datetime`|Horário em que o evento foi encerrado.|15|Sim|  
-|**EventClass**|`int`|Tipo de evento = 26.|27|não|  
-|**EventSequence**|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|**EventClass**|`int`|Tipo de evento = 26.|27|Não|  
+|**EventSequence**|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |**GroupID**|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData2**|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sim|  
@@ -51,7 +50,7 @@ ms.locfileid: "48200856"
 |**ObjectID2**|`bigint`|Identificação do objeto ou entidade relacionada, se disponível e aplicável.|56|Sim|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sim|  
 |**RequestID**|`int`|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|`datetime`|Horário de início do evento, quando disponível.|14|Sim|  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publisherproperty
@@ -17,17 +16,17 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002e8a5ffc7a619aeda3e8372e30631e96fa9d30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679424"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204395"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Exibe ou altera as propriedades do publicador para não -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esse procedimento armazenado é executado no Distribuidor.  
+  Exibe ou altera as propriedades do publicador para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esse procedimento armazenado é executado no Distribuidor.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  [**@propertyname** =] **'***propertyname***'**  
  É o nome da propriedade que está sendo definida. *PropertyName* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**xactsetbatching**|Se forem agrupadas transações no Publicador em conjuntos transacionalmente consistentes para processamento subsequente, conhecidos como Xactsets. Um valor de **habilitado** significa que Xactsets podem ser criados, que é o padrão. Um valor de **desabilitada** significa que Xactsets existentes são processados por nenhum novo Xactsets é criadas.|  
 |**xactsetjob**|Se o trabalho Xactset estiver habilitado para a criação de Xactsets. Um valor de **habilitado** significa que o trabalho de Xactset é executado periodicamente para criar Xactsets no publicador. Um valor de **desabilitada** significa que os Xactsets só são criados pelo Log Reader Agent quando ele pesquisa alterações no publicador.|  
@@ -60,7 +59,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Retorna as propriedades de publicação seguintes que podem ser definidas:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**PropertyValue**|**sysname**|É a configuração atual da propriedade na **propertyname** coluna.|  
@@ -69,7 +68,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_publisherproperty** é usado em replicação transacional para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
+ **sp_publisherproperty** é usado em replicação transacional para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
  Quando apenas *publicador* for especificado, o conjunto de resultados inclui as configurações atuais para todas as propriedades que podem ser definidas.  
   

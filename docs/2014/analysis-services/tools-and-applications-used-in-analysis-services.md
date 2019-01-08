@@ -11,12 +11,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213786"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354968"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Ferramentas e aplicativos usados no Analysis Services
   Encontre as ferramentas e aplicativos que você precisa para a criação de modelos do Analysis Services e o gerenciamento de bancos de dados associados em uma instância do Analysis Services.  
@@ -27,14 +27,14 @@ ms.locfileid: "48213786"
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Baixe o SQL Server Data Tools para Business Intelligence (SSDT-BI)  
  O [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), anteriormente conhecido como Business Intelligence Development Studio (BIDS), é usado para criar modelos do Analysis Services, relatórios do Reporting Services e pacotes do Integration Services. Você pode baixar o SSDT-BI nos locais a seguir:  
   
--   [Baixar o SSDT-BI para Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Baixar o SSDT-BI para Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Baixar o SSDT-BI para Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Baixar o SSDT-BI para Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  Se você tiver uma versão anterior do SSDT-BI ou BIDS instalado no computador, a versão mais recente será instalada lado a lado da versão anterior. É comum executar versões mais recentes e anteriores das ferramentas de design em uma única estação de trabalho para que você possa modificar projetos e soluções associados às versões específicas do servidor.  
   
 > [!NOTE]  
->  Existem vários sites de download para as versões do Visual Studio 2012 e do Visual Studio 2013 do SSDT. A maioria deles não incluem os modelos de projeto de BI. O uso dos links acima oferecerão a você a versão correta. Você saberá que tem a versão correta do SSDT-BI ao ver a pasta de modelos de projeto de Business Intelligence. Essa pasta contém modelos de projeto para o Analysis Services, o Reporting Services e o Integration Services. Dependendo de como você tiver instalado o SSDT-BI, provavelmente também verá um modelo de projeto adicional para bancos de dados do SQL Server.  
+>  Existem vários sites de download para as versões do Visual Studio 2012 e do Visual Studio 2013 do SSDT. A maioria deles não incluem os modelos de projeto de BI. O uso dos links acima oferecerão a você a versão correta. Você saberá que você tenha a versão correta do SSDT-BI, se você vir a pasta de modelos de projeto de Business Intelligence. Essa pasta contém modelos de projeto para o Analysis Services, o Reporting Services e o Integration Services. Dependendo de como você tiver instalado o SSDT-BI, provavelmente também verá um modelo de projeto adicional para bancos de dados do SQL Server.  
   
  ![Novos modelos de Projeto no SSDT](media/ssdt-biprojects.png "Novos modelos de Projeto no SSDT")  
   

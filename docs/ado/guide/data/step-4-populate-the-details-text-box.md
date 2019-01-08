@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Preencher a caixa de texto de detalhes | Microsoft Docs'
+title: 'Etapa 4: Preencha a caixa de texto de detalhes | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706826"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206645"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
+# <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencha a caixa de texto de detalhes
 Para preencher a caixa de texto de detalhes, criar uma nova sub-rotina denominada **recFields** e insira o seguinte código:  
   
 ```  
@@ -49,4 +49,4 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Etapa 3: Preencher a caixa de listagem de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Etapa 3: Preencha a caixa de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

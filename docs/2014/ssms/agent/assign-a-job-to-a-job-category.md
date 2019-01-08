@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -17,12 +17,12 @@ ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 645953aa9864eb867617dc8aacd71735d978d4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786288"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Atribuir um trabalho a uma categoria de trabalho
   Este tópico descreve como atribuir trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a categorias de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  
@@ -33,7 +33,7 @@ ms.locfileid: "48177196"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
   
   
@@ -47,14 +47,14 @@ ms.locfileid: "48177196"
   
 3.  Clique no sinal de adição para expandir a pasta **Trabalhos** .  
   
-4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecione **Propriedades**.  
+4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecionar **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, na lista **Categoria**, selecione a categoria de trabalho a qual deseja atribuir o trabalho.  
+5.  Na caixa de diálogo **Propriedades do Trabalho -**_job_name_ , na lista **Categoria** , selecione a categoria de trabalho a qual deseja atribuir o trabalho.  
   
 6.  Clique em **OK**.  
   
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Para atribuir um trabalho a uma categoria de trabalho  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48177196"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para atribuir um trabalho a uma categoria de trabalho**  
   
- Use o `JobCategory` classe usando uma linguagem de programação que você escolher, como Visual Basic, Visual c# ou PowerShell.  
+ Use a classe `JobCategory` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell.  
   
   
   

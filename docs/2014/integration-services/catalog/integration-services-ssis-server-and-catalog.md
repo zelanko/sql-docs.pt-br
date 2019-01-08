@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -14,12 +13,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67a74b8b9958eb52426a4f2bc8f36cd14c005f87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4059973f0a81e92c680c81b0bc6a60bd0483dae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358838"
 ---
 # <a name="integration-services-ssis-server"></a>Servidor do Integration Services (SSIS)
   Depois de criar e testar pacotes no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode implantar os projetos que contêm os pacotes no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -33,9 +32,9 @@ ms.locfileid: "48074987"
  Para obter uma visão geral da funcionalidade de catálogo do SSISDB, confira [Catálogo do SSIS](ssis-catalog.md).  
   
 ## <a name="high-availability"></a>Alta disponibilidade  
- Como outros bancos de dados do usuário, o `SSISDB` banco de dados oferece suporte a espelhamento de banco de dados e replicação. Para obter mais informações sobre espelhamento e replicação, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Como outros bancos de dados de usuários, o banco de dados `SSISDB` dá suporte a espelhamento de banco de dados e replicação. Para obter mais informações sobre espelhamento e replicação, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade AlwaysOn. Para obter mais informações, consulte a publicação deste blog de Matt Masson, [SSIS com AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)em blogs.msdn.com.  
+ Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade AlwaysOn. Para obter mais informações, consulte a publicação deste blog de Matt Masson, [SSIS com AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)em blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Servidor do Integration Services no SQL Server Management Studio  
  Quando você conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda o banco de dados do `SSISDB`, vê os seguintes objetos no Pesquisador de Objetos:  
@@ -59,6 +58,6 @@ ms.locfileid: "48074987"
 -   [Executar um pacote no servidor SSIS usando o SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog [SSIS com AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)em blogs.msdn.com.  
+ Entrada de blog [SSIS com AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)em blogs.msdn.com.  
   
   

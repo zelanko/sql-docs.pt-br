@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019453"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415603"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019453"
   
  Este tópico descreve os outros recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que geralmente fazem parte de uma solução de análises preditiva, para dar suporte aos processos de preparação de dados e mineração de dados, ou para dar suporte aos usuários fornecendo ferramentas para análise e ação.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Serviços de Integração](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019453"
  [Indexação semântica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
   
 -   Representa tarefas como parte de um fluxo de trabalho que pode ser repetido, automatizado, ramificado e estendido.  
   
@@ -57,17 +57,17 @@ ms.locfileid: "34019453"
   
  **Componentes de fluxo de controle**  
   
--   [Executar tarefa DDL do Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tarefa Executar DDL do Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tarefa de processamento do Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tarefa Processamento do Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
--   [Tarefa controle CDC](../../integration-services/control-flow/cdc-control-task.md)  
+-   [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Limpeza de dados](../../data-quality-services/data-cleansing.md)  
+-   [Limpeza de Dados](../../data-quality-services/data-cleansing.md)  
   
--   [Tarefa de consulta de mineração de dados](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tarefa Consulta de Mineração de Dados](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [Tarefa de criação de perfil de dados](../../integration-services/control-flow/data-profiling-task.md)  
+-   [Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componentes de fluxo de dados**  
   
@@ -75,19 +75,19 @@ ms.locfileid: "34019453"
   
 -   [Transformação Divisão Condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformação de conversão de dados](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformação Conversão de Dados](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Destino de treinamento do modelo de mineração de dados](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformação de consulta de mineração de dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformação Consulta de Mineração de Dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformação Coluna Derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Transformação Amostragem Percentual](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformação extração de termos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformação Extração de Termos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Transformação de pesquisa de termo](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+-   [Transformação Pesquisa de Termo](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
 ##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não seja visto normalmente como um componente crítico de soluções de mineração de dados, ele fornece os recursos a seguir que são úteis para a apresentação de soluções de mineração de dados.  
@@ -102,11 +102,11 @@ ms.locfileid: "34019453"
   
  Para obter informações sobre como usar o Reporting Services com consultas DMX como fonte de dados, consulte esses links:  
   
- [Recuperar dados de um modelo de mineração de dados & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar dados de um modelo de Data Mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interface de usuário do Designer de consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interface de usuário do Designer de Consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de Conexão do Analysis Services para DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexão Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Porém, não é necessário usar DMX como a fonte de dados. Os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mineração de dados também dão suporte a gravar os resultados de uma consulta de previsão em um banco de dados relacional. Se você tiver um fluxo de trabalho estabelecido para atualizar modelos usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persistir previsões e outros resultados da consulta de mineração de dados para o SQL Server permitirá que você use o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para relatório, assim como outras ferramentas que não fazem interface com DMX.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019453"
   
  Para obter mais informações, veja [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- A versão de uma palavra que está armazenada depois que a indexação de texto completo seja um token em uma forma compactada. As consultas subsequentes para o índice de texto completo geram várias formas flexivas de uma palavra específica baseada nas regras desse idioma, para assegurar que todas as correspondências prováveis sejam feitas. Por exemplo, embora o token que está armazenado possa ser "run", o mecanismo de consulta também procura os termos "running", "ran" e "runner", porque eles são variações morfológicas derivadas regularmente da palavra raiz "run".  
+ A versão de uma palavra que está armazenada depois que a indexação de texto completo seja um token em uma forma compactada. As consultas subsequentes para o índice de texto completo geram várias formas flexivas de uma palavra específica baseada nas regras desse idioma, para assegurar que todas as correspondências prováveis sejam feitas. Por exemplo, embora o token que está armazenado possa ser "run", o mecanismo de consulta também procura os termos "running", "ran" e "executor", porque essas são variações morfológicas derivadas regularmente da palavra raiz "run".  
   
  Você também pode criar e compilar um dicionário de sinônimos de usuário para armazenar sinônimos e habilitar melhores resultados de pesquisa ou categorização de termos. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados. Para obter mais informações, veja [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   

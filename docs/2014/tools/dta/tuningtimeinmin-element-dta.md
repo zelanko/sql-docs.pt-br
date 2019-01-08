@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815868"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
   Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
@@ -37,11 +36,11 @@ ms.locfileid: "48140326"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
-|**Ocorrência**|Necessário a menos que um valor foi especificado para o `NumberOfEvents` elemento.|  
+|**Ocorrência**|Exigido, exceto se houver valor especificado para o elemento `NumberOfEvents`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48140326"
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O exemplo de código a seguir mostra como definir 12 horas como tempo máximo de ajuste:  
   
 ## <a name="code"></a>Código  

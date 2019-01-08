@@ -13,12 +13,12 @@ ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211246"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
 ADO permite a persistência de objetos de conjunto de registros hierárquicos em XML. Com objetos de conjunto de registros hierárquicos, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho em um fluxo XML em vez de um atributo.  
@@ -33,7 +33,7 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
  Este é o formato XML do conjunto de registros persistente:  
   
 ```  
-<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
     xmlns:z="#RowsetSchema">   
   <s:Schema id="RowsetSchema">   
     <s:ElementType name="row" content="eltOnly" rs:updatable="true">   

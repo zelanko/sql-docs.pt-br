@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Criar uma extensão para o Studio de dados do Azure | Microsoft Docs'
-description: Este tutorial demonstra como criar uma extensão para o Studio de dados do Azure.
-ms.custom: tools|sos
+title: 'Tutorial: Criar uma extensão'
+titleSuffix: Azure Data Studio
+description: Este tutorial demonstra como criar uma extensão para adicionar funcionalidade personalizada ao estúdio de dados do Azure.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356547"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030600"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Criar uma extensão do estúdio de dados do Azure
 
-Este tutorial demonstra como criar uma nova extensão do estúdio de dados do Azure. A extensão cria associações de teclas familiares SSMS no estúdio de dados do Azure.
+Este tutorial demonstra como criar uma nova extensão do estúdio de dados do Azure. A extensão cria as associações de teclas familiares do SSMS no estúdio de dados do Azure.
 
 Durante este tutorial, você aprenderá como:
 > [!div class="checklist"]
@@ -37,7 +38,7 @@ O estúdio de dados do Azure baseia-se na mesma estrutura como o Visual Studio C
 - [Node. js](https://nodejs.org) instalado e disponível no seu `$PATH`. Inclui o Node. js [npm](https://www.npmjs.com/), o Gerenciador de pacotes do Node. js, que é usado para instalar o gerador de extensão.
 - [Visual Studio Code](https://code.visualstudio.com) para depurar a extensão.
 - O estúdio de dados do Azure [extensão de depuração](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Certifique-se de sqlops está em seu caminho. Para Windows, verifique se você escolher o `Add to Path` opção no setup.exe. Para Mac ou Linux, execute as *instalar o comando 'sqlops' no caminho* opção.
+- Certifique-se de `sqlops` está em seu caminho. Para Windows, verifique se você escolher o `Add to Path` opção no setup.exe. Para Mac ou Linux, execute as *instalar o comando 'sqlops' no caminho* opção.
 - SQL Operations Studio depurar extensão (opcional). Isso lhe permite testar sua extensão sem a necessidade de empacotar e instalá-lo no estúdio de dados do Azure.
 
 
@@ -61,7 +62,7 @@ Para criar uma extensão:
 
 3. Siga as etapas para preencher o nome da extensão (para este tutorial, use **ssmskeymap**) e adicione uma descrição.
 
-Concluir as etapas anteriores cria uma nova pasta. Abra a pasta no Visual Studio Code e você está pronto para criar sua própria extensão keybinding!
+Concluir as etapas anteriores cria uma nova pasta. Abra a pasta no Visual Studio Code e você está pronto para criar sua própria extensão de associação de chave!
 
 
 ### <a name="add-a-keyboard-shortcut"></a>Adicionar um atalho de teclado
@@ -73,12 +74,12 @@ Agora que temos nossa extensão pronto para começar, adicione alguns SSMS tecla
 As principais coisas que eu vi ausentes foram:
 
 - Execute uma consulta com o plano de execução real habilitado. Isso é **Ctrl + M** no SSMS e não tem uma associação no estúdio de dados do Azure.
-- Tendo **CTRL + SHIFT + E** como uma forma 2º de execução de uma consulta. Comentários do usuário indicam que isso estava ausente.
+- Tendo **CTRL + SHIFT + E** como uma segunda maneira de executar uma consulta. Comentários do usuário indicam que isso estava ausente.
 - Tendo **ALT + F1** executar `sp_help`. Adicionamos isso no estúdio de dados do Azure, mas desde que a associação já estava em uso, é mapeado para **ALT + F2** em vez disso.
 - Alternar tela inteira (**SHIFT + ALT + ENTER**).
 - **F8** para mostrar **Pesquisador de objetos** / **modo de exibição servidores**.
 
-É fácil de localizar e substituir essas associações de teclas. Executar *atalhos de teclado aberto* para mostrar a **atalhos de teclado** guia no estúdio de dados do Azure, procure *consulta* e, em seguida, escolha **alteração Keybinding**. Quando você terminar alterando o keybinding você pode ver o mapeamento atualizado no arquivo de KeyBindings. JSON (execute *atalhos de teclado aberto* para vê-lo).
+É fácil de localizar e substituir essas associações de tecla. Executar *aberto atalhos de teclado* para mostrar a **atalhos de teclado** guia no estúdio de dados do Azure, procure *consulta* e, em seguida, escolha **deassociaçãodechavedealteração**. Quando você terminar alterando a associação de teclas, você pode ver o mapeamento atualizado no arquivo de KeyBindings. JSON (execute *atalhos de teclado aberto* para vê-lo).
 
 ![atalhos de teclado](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
@@ -132,11 +133,11 @@ Selecione **F5** para iniciar o estúdio de dados do Azure no modo de depuraçã
 
 ![extensão de teste](./media/tutorial-create-extension/test-extension.png)
 
-Mapas de teclas são uma das extensões mais rápidas para criar, portanto, sua nova extensão agora deve estar funcionando e pronto para compartilhar com êxito.
+Mapas de chave são uma das extensões mais rápidas para criar, portanto, sua nova extensão agora deve estar funcionando e pronto para compartilhar com êxito.
 
 ## <a name="package-your-extension"></a>Empacotar sua extensão
 
-Para compartilhar com outras pessoas, você precisará empacotar a extensão em um único arquivo. Isso pode ser publicado no marketplace de extensão do estúdio de dados do Azure ou compartilhado apenas entre sua equipe ou da comunidade. Para fazer isso, você precisará instalar outro pacote npm da linha de comando:
+Para compartilhar com outras pessoas, você precisará empacotar a extensão em um único arquivo. Isso pode ser publicado no marketplace de extensão do estúdio de dados do Azure ou compartilhado entre sua equipe ou da comunidade. Para fazer isso, você precisará instalar outro pacote npm da linha de comando:
 
 `npm install -g vsce`
 

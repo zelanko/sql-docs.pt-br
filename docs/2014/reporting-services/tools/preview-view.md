@@ -15,18 +15,18 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354037"
 ---
 # <a name="preview-view"></a>Modo Visualizar
   Use o modo **Visualizar** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.  
   
 > [!IMPORTANT]  
->  Quando o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for executado como um RemoteApp, os relatórios não poderão ser exibidos no modo **Visualizar** do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os programas RemoteApp são acessados remotamente através dos Serviços da área de trabalho remota. Para obter mais informações, consulte [Guia passo a passo do TS RemoteApp](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  Quando o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for executado como um RemoteApp, os relatórios não poderão ser exibidos no modo **Visualizar** do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os programas RemoteApp são acessados remotamente através dos Serviços da área de trabalho remota. Para obter mais informações, consulte [Guia passo a passo do TS RemoteApp](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
 ## <a name="options"></a>Opções  
  Use a barra de ferramentas para gerenciar as funções de visualização.  

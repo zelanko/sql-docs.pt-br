@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504586"
 ---
 # <a name="core-interface-conformance"></a>Conformidade de interface de núcleo
-Todos os drivers ODBC devem apresentar pelo menos nível de núcleo conformidade de interface. Como os recursos no nível de núcleo são aquelas necessárias para aplicativos interoperáveis mais genéricos, o driver pode trabalhar com esses aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação de CLI ISO e para os recursos definidos na especificação de CLI de grupo aberto. Driver ODBC de interface – compatível com um nível de núcleo permite que o aplicativo faça o seguinte:  
+Todos os drivers ODBC devem apresentar pelo menos nível de núcleo conformidade de interface. Como os recursos no nível de núcleo são aquelas necessárias para aplicativos interoperáveis mais genéricos, o driver pode trabalhar com esses aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação de CLI ISO e para os recursos definidos na especificação de CLI de grupo aberto. Um driver ODBC do nível de núcleo compatível com o interface permite que o aplicativo faça o seguinte:  
   
 -   Alocar e liberar todos os tipos de identificadores, chamando **SQLAllocHandle** e **SQLFreeHandle**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Adicione dados de exemplo para um modelo DirectQuery no modo de Design | Microsoft Docs
+title: Adicionar dados de exemplo para um modelo DirectQuery do Analysis Services no modo de design | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041630"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071533"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Adicionar dados de exemplo a um modelo DirectQuery no Modo de Design
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34041630"
  
  Por padrão, ao criar um modelo de tabela no modo DirectQuery no SSDT, o banco de dados de trabalho do modelo não contém dados. Há uma partição padrão para cada tabela, e essa partição direciona todas as consultas para a fonte de dados. 
   
-No entanto, você pode adicionar uma quantidade menor de dados de exemplo ao banco de dados de trabalho do modelo para uso em tempo de design. Os dados de exemplo são especificados por meio de uma consulta em uma partição de exemplo usada somente durante o design. Eles são armazenados em cache na memória com o modelo. Isso ajudará a validar as decisões de modelagem sem afetar a fonte de dados. Você pode testar suas decisões de modelagem com o conjunto de dados de exemplo quando usar o recurso **Analisar no Excel** no SSDT (SQL Server Data Tools) ou em outros aplicativos cliente que se conectam ao seu banco de dados de espaço de trabalho.  
+No entanto, você pode adicionar uma quantidade menor de dados de exemplo ao banco de dados de trabalho do modelo para uso em tempo de design. Os dados de exemplo são especificados por meio de uma consulta em uma partição de exemplo usada somente durante o design. Eles são armazenados em cache na memória com o modelo. Isso ajudará a validar as decisões de modelagem sem afetar a fonte de dados. Você pode testar suas decisões de modelagem com o conjunto de dados de exemplo quando usar o recurso **Analisar no Excel** no SSDT (SQL Server Data Tools) ou em outros aplicativos cliente que se conectam ao seu banco de dados de workspace.  
   
 > [!TIP]  
 >  Mesmo no modo DirectQuery em um modelo vazio, você sempre poderá exibir um pequeno conjunto de linhas interno para cada tabela. Em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique em **Tabela** > **Propriedades da Tabela** para exibir o conjunto de dados de 50 linhas.  

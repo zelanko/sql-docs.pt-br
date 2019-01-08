@@ -12,12 +12,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9f6a00432f4feed70f010e18bdeea45980fa053
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102236"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353570"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Usar parâmetros de dados em execução (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48102236"
   
     -   Use um `rgbValue` (oitavo parâmetro) de um identificador de parâmetro definido por programa.  
   
-2.  Chamar [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) ou [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) retorna SQL_NEED_DATA, que indica que os parâmetros de dados em execução estão prontos para serem processados.  
+2.  Chamar [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) ou [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retorna SQL_NEED_DATA, que indica que os parâmetros de dados em execução estão prontos para serem processados.  
   
 3.  Para cada parâmetro de dados em execução:  
   
-    -   Chame [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para obter o ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
+    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter a ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
   
     -   Chame [SQLPutData](../native-client-odbc-api/sqlputdata.md) uma ou mais vezes para enviar os dados de parâmetro, até que o comprimento seja enviado.  
   
-4.  Chame [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para indicar que todos os dados do parâmetro de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
+4.  Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para indicar que todos os dados do parâmetro de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis do SQL_LONG por meio de SQLParamData e SQLPutData. Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

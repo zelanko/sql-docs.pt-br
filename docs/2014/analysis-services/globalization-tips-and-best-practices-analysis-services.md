@@ -17,21 +17,21 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188256"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357306"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
   
- Essas diretrizes e dicas podem ajudar a aumentar a portabilidade das soluções de business intelligence e evitar os erros diretamente relacionados às configurações de idioma e agrupamento.  
+ Essas diretrizes e dicas podem ajudar a aumentar a portabilidade das soluções de business intelligence e evitar os erros diretamente relacionados às configurações de idioma e ordenação.  
   
--   [Usar agrupamentos similares em toda a pilha](#bkmk_sameColl)  
+-   [Usar ordenações similares em toda a pilha](#bkmk_sameColl)  
   
--   [Recomendações de agrupamento mais comuns](#bkmk_recos)  
+-   [Recomendações de ordenação mais comuns](#bkmk_recos)  
   
 -   [Diferenciação de maiúsculas e minúsculas de identificadores de objeto](#bkmk_objid)  
   
@@ -41,23 +41,23 @@ ms.locfileid: "48188256"
   
 -   [Escrevendo consultas MDX que contêm valores de data e hora](#bkmk_datetime)  
   
-##  <a name="bkmk_sameColl"></a> Usar agrupamentos similares em toda a pilha  
- Se possível, tente usar as mesmas configurações de agrupamento na [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você usa no mecanismo de banco de dados, tentando obter correspondência na diferenciação de largura, maiúsculas de minúsculas e acesso.  
+##  <a name="bkmk_sameColl"></a> Usar ordenações similares em toda a pilha  
+ Se possível, tente usar as mesmas configurações de ordenação no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você usa para o mecanismo de banco de dados, buscando correspondência na diferenciação de largura, maiúsculas e minúsculas e acesso.  
   
- Cada serviço tem suas próprias configurações de agrupamento, com o mecanismo de banco de dados padrão definido como SQL_Latin1_General_CP1_CI_AS e o Analysis Services definido como Latin1_General_AS. Os padrões são compatíveis em termos de distinção entre maiúsculas e minúsculas, largura e acento. Se você quiser variar as configurações de agrupamento, poderá ter problemas quando as propriedades do agrupamento divergirem de maneiras fundamentais.  
+ Cada serviço tem suas próprias configurações de ordenação, com o mecanismo de banco de dados padrão definido como SQL_Latin1_General_CP1_CI_AS e o Analysis Services definido como Latin1_General_AS. Os padrões são compatíveis em termos de distinção entre maiúsculas e minúsculas, largura e acento. Se você quiser variar as configurações de ordenação, poderá ter problemas quando as propriedades da ordenação divergirem de maneiras fundamentais.  
   
- Mesmo quando as configurações de agrupamento forem funcionalmente equivalentes, você pode executar em um caso especial em que um espaço vazio em qualquer lugar dentro de uma cadeia de caracteres é interpretado diferentemente de cada serviço.  
+ Mesmo quando as configurações de ordenação são funcionalmente equivalentes, pode ocorrer um caso especial em que um espaço vazio em qualquer lugar de uma cadeia de caracteres é interpretado diferentemente por cada serviço.  
   
  O caractere de espaço é um 'caso especial' porque ele pode ser representado como um byte único (SBCS) ou um conjunto de caracteres de dois bytes (DBCS) em Unicode. No mecanismo relacional, duas cadeias de caracteres compostas e separadas por um espaço, uma usando SBCS e outra usando DBCS, são consideradas idênticas. No Analysis Services, durante o processamento, as mesmas duas cadeias compostas não são idênticas, e a segunda instância será sinalizada como uma duplicata.  
   
- Para mais detalhes e soluções alternativas sugeridas, consulte [Blanks in a Unicode string have different processing outcomes based on collation (Espaços em branco em uma cadeia de caracteres Unicode têm resultados de processamento diferentes com base no agrupamento)](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ Para mais detalhes e soluções alternativas sugeridas, consulte [Blanks in a Unicode string have different processing outcomes based on collation (Espaços em branco em uma cadeia de caracteres Unicode têm resultados de processamento diferentes com base na ordenação)](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
-##  <a name="bkmk_recos"></a> Recomendações de agrupamento mais comuns  
- O Analysis Services sempre apresenta a lista completa de todos os idiomas e agrupamentos disponíveis; ele não filtra os agrupamentos com base no idioma selecionado. Certifique-se de escolher uma combinação viável.  
+##  <a name="bkmk_recos"></a> Recomendações de ordenação mais comuns  
+ O Analysis Services sempre apresenta a lista completa de todos os idiomas e ordenações disponíveis; ele não filtra as ordenações com base no idioma selecionado. Certifique-se de escolher uma combinação viável.  
   
- Alguns dos agrupamentos usados com mais frequência incluem os da lista a seguir.  
+ Algumas das ordenações usadas com mais frequência incluem os da lista a seguir.  
   
- Você deve considerar essa lista como um ponto de partida para uma investigação adicional, em vez de uma recomendação definitiva que exclui outras opções. Você pode achar que um agrupamento não especificamente recomendado é o que funciona melhor para seus dados. Teste completo é a única maneira de verificar se os valores de dados são classificados e comparados adequadamente. Como sempre, certifique-se de executar cargas de trabalho de processamento e consulta ao testar o agrupamento.  
+ Você deve considerar essa lista como um ponto de partida para uma investigação adicional, em vez de uma recomendação definitiva que exclui outras opções. Você pode achar que uma ordenação não especificamente recomendada é o que funciona melhor para seus dados. Teste completo é a única maneira de verificar se os valores de dados são classificados e comparados adequadamente. Como sempre, certifique-se de executar cargas de trabalho de processamento e consulta ao testar a ordenação.  
   
 -   Latin1_General_100_AS é geralmente usado para aplicativos que usam os 26 caracteres do [alfabeto latino básico ISO](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet).  
   
@@ -65,26 +65,26 @@ ms.locfileid: "48188256"
   
 -   Idiomas do Leste da Europa, como o russo, geralmente usam Cyrillic_General_100.  
   
--   Agrupamentos e idioma chinês variam por região, mas geralmente são chinês simplificado ou chinês tradicional.  
+-   Ordenações de idioma chinês variam por região, mas geralmente são chinês simplificado ou chinês tradicional.  
   
-     Na República Popular da China e em Cingapura, o Microsoft Support tende a ver o chinês simplificado, com Pinyin, como a ordem de classificação preferencial. Os agrupamentos recomendados são Chinese_PRC (para o SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (para o SQL Server 2008 e posterior).  
+     Na República Popular da China e em Singapura, o Microsoft Support tende a ver o chinês simplificado, com Pinyin, como a ordem de classificação preferencial. As ordenações recomendadas são Chinese_PRC (para o SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (para o SQL Server 2008 e posterior).  
   
-     Em Taiwan, é mais comum ver chinês tradicional com a ordem de classificação recomendada baseada no número de traços: Chinese_Taiwan_Stroke (for SQL Server 2000), Chinese_Taiwan_Stroke_90 (for SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 e posterior).  
+     Em Taiwan, é mais comum ver o chinês tradicional com a ordem de classificação recomendada baseada no número de traços: Chinese_Taiwan_Stroke (para o SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (para o SQL Server 2008 e posterior).  
   
-     Outras regiões (por exemplo, Hong Kong e Macau) também usam chinês tradicional. Para agrupamentos em Hong Kong, não é incomum ver Chinese_Hong_Kong_Stroke_90 (no SQL Server 2005). Macau, Chinese_Traditional_Stroke_Count_100 (no SQL Server 2008 e posterior) é usado com bastante frequência.  
+     Outras regiões (por exemplo, Hong Kong e Macau) também usam chinês tradicional. Para ordenações em Hong Kong, não é incomum ver Chinese_Hong_Kong_Stroke_90 (no SQL Server 2005). Macau, Chinese_Traditional_Stroke_Count_100 (no SQL Server 2008 e posterior) é usado com bastante frequência.  
   
--   Para japonês, o agrupamento mais comumente usado é Japanese_CI_AS. Japanese_XJIS_100 é usado nas instalações com suporte a [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 é geralmente visto em projetos de migração de dados com dados provenientes de plataformas não Windows ou de fontes de dados diferentes do mecanismo de banco de dados relacional do SQL Server.  
+-   Para japonês, a ordenação mais comumente usada é Japanese_CI_AS. Japanese_XJIS_100 é usado nas instalações com suporte a [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 é geralmente visto em projetos de migração de dados com dados provenientes de plataformas não Windows ou de fontes de dados diferentes do mecanismo de banco de dados relacional do SQL Server.  
   
      Japanese_Bushu_Kakusu_100 é raramente visto em servidores que executam cargas de trabalho do Analysis Services.  
   
 -   Korean_100 é recomendado para coreano. Embora Korean_Wansung_Unicode ainda esteja disponível na lista, ele foi preterido.  
   
 ##  <a name="bkmk_objid"></a> Diferenciação de maiúsculas e minúsculas de identificadores de objeto  
- A partir do SQL Server 2012 SP2, diferenciação de maiúsculas e minúsculas de IDs de objeto é aplicada independentemente do agrupamento, mas o comportamento varia por idioma:  
+ A partir do SQL Server 2012 SP2, a diferenciação de maiúsculas e minúsculas de IDs de objeto será aplicada independentemente da ordenação, mas o comportamento variará por idioma:  
   
 |Script de idioma|Diferenciação de maiúsculas e minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto latino básico**|Identificadores de objeto expressos em scripts latinos (qualquer uma das 26 letras minúsculas ou maiúsculas em inglês) são tratados como não diferenciando maiúsculas de minúsculas, independentemente do agrupamento. Por exemplo, as seguintes IDs de objeto são consideradas idênticas: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, o Analysis Services trata os caracteres na cadeia como se todos estivessem em maiúsculas e, em seguida, executa uma comparação de byte simples, independente do idioma.<br /><br /> Observe que somente os 26 caracteres são afetados. Se o idioma for da Europa Ocidental, mas usar caracteres escandinavos, o caractere adicional não será em maiúsculas.|  
+|**Alfabeto latino básico**|Identificadores de objeto expressos em scripts latinos (qualquer uma das 26 letras minúsculas ou maiúsculas em inglês) são tratados como não diferenciando maiúsculas de minúsculas, independentemente da ordenação. Por exemplo, as seguintes IDs de objeto são consideradas idênticas: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, o Analysis Services trata os caracteres na cadeia como se todos estivessem em maiúsculas e, em seguida, executa uma comparação de byte simples, independente do idioma.<br /><br /> Observe que somente os 26 caracteres são afetados. Se o idioma for da Europa Ocidental, mas usar caracteres escandinavos, o caractere adicional não será em maiúsculas.|  
 |**Cirílico, grego, cóptico, armênio**|Identificadores de objeto em um script bicameral não latinos, como cirílico, sempre diferenciam maiúsculas de minúsculas. Por exemplo, Измерение e измерение são considerados dois valores distintos, mesmo que a única diferença seja a capitalização da primeira letra.|  
   
  **Implicações da diferenciação de maiúsculas e minúsculas para identificadores de objeto**  
@@ -125,7 +125,7 @@ ms.locfileid: "48188256"
  As traduções fornecem informações de exibição para os nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas os identificadores dos mesmos objetos não são traduzidos. Sempre que possível, use os identificadores e chaves para objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em vez das legendas traduzidas e nomes. Por exemplo, use as chaves de membro em vez dos nomes de membro para instruções e scripts MDX para assegurar a portabilidade para vários idiomas.  
   
 > [!NOTE]  
->  Lembre-se de que os nomes de objeto de tabela sempre diferenciam maiúsculas de minúsculas, independentemente do agrupamento. Nomes de objetos multidimensionais, por outro lado, seguem a diferenciação de maiúsculas e minúsculas do agrupamento. Uma vez que apenas nomes de objeto multidimensional diferenciam maiúsculas de minúsculas, certifique-se de que todas as consultas MDX que fazem referência a objetos multidimensionais estejam com maiúsculas e minúsculas corretas.  
+>  Lembre-se de que os nomes de objeto de tabela sempre diferenciam maiúsculas de minúsculas, independentemente da ordenação. Nomes de objetos multidimensionais, por outro lado, seguem a diferenciação de maiúsculas e minúsculas da ordenação. Uma vez que apenas nomes de objeto multidimensional diferenciam maiúsculas de minúsculas, certifique-se de que todas as consultas MDX que fazem referência a objetos multidimensionais estejam com maiúsculas e minúsculas corretas.  
   
 ##  <a name="bkmk_datetime"></a> Escrevendo consultas MDX que contêm valores de data e hora  
  A seguir, sugestões para tornar suas consultas MDX baseadas em data e hora mais portáteis entre diferentes idiomas:  
@@ -140,7 +140,7 @@ ms.locfileid: "48188256"
   
 3.  **Use formatos de data ISO para informações universais de data e hora**  
   
-     Um [especialista do Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tem esta recomendação: "Eu sempre uso o formato de data ISO, aaaa-mm-dd, para qualquer cadeia de caracteres de data que passo para consultas em SQL ou MDX, pois ele não é ambíguo e funcionará independentemente das configurações regionais do servidor ou do cliente. Concordo que o servidor deve adiar suas configurações regionais ao analisar um formato de data ambíguo, mas também acho que se você tiver uma opção que não está aberta a interpretações, é melhor escolhê-la, de qualquer maneira."  
+     Uma [especialista do Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tem esta recomendação: "Eu sempre uso o formato de data ISO aaaa-mm-dd para qualquer cadeia de datas nas consultas em SQL ou MDX porque é inequívoco e funcionará, independentemente das configurações regionais do cliente ou servidor. Concordo que o servidor deve adiar suas configurações regionais ao analisar um formato de data ambíguo, mas também acho que se você tiver uma opção que não está aberta a interpretações, é melhor escolhê-la, de qualquer maneira."  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

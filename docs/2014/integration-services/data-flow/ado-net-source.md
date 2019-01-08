@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,20 +18,20 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352110"
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
- A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo se o tipo de dados é `System.Object`.  
+ A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja `System.Object`.  
   
  É possível alterar o tipo de dados DT_NTEXT para o tipo de dados DT_WSTR ou alterar DT_WSTR para DT_NTEXT. Para alterar tipos de dados, defina a propriedade **DataType** na caixa de diálogo **Editor Avançado** da fonte ADO.NET. Para obter mais informações, consulte [Propriedades comuns](../common-properties.md).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48072153"
 >  Quando você usa uma instrução SQL para invocar um procedimento armazenado que retorna resultados de uma tabela temporária, use a opção de WITH RESULT SETS para definir metadados para o conjunto de resultados.  
   
 > [!NOTE]  
->  Se você usar uma instrução SQL para executar um procedimento armazenado e o pacote falhar com o erro a seguir, você poderá resolver o erro adicionando a `SET FMTONLY OFF` instrução antes da instrução exec.  
+>  Se você usar uma instrução SQL para executar um procedimento armazenado e o pacote falhar com o seguinte erro, você poderá resolver o erro adicionando a instrução `SET FMTONLY OFF` antes da instrução exec.  
 >   
 >  **Não é possível encontrar a coluna <nome_da_coluna> na fonte de dados.**  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48072153"
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Destino do DataReader](datareader-destination.md)   
+ [Destino DataReader](datareader-destination.md)   
  [Destino do ADO NET](ado-net-destination.md)   
  [Fluxo de Dados](data-flow.md)  
   

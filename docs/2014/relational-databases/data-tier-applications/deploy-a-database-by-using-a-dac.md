@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362808"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
   Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48050467"
  O assistente usa um arquivo morto BACPAC DAC (aplicativo da camada de dados) para implantar os dados e as definições dos objetos de banco de dados. Ele executa uma operação de exportação de DAC do banco de dados de origem, e uma importação de DAC para o destino.  
   
 ###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
- Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE. A exceção é que o agrupamento e o nível de compatibilidade do banco de dados estão definidos como valores do banco de dados de origem.  
+ Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE. A exceção é que a ordenação e o nível de compatibilidade do banco de dados estão definidos como valores do banco de dados de origem.  
   
  As opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
@@ -87,14 +87,14 @@ ms.locfileid: "48050467"
   
 -   **Avançar** - Continua na página **Configurações de Implantação** .  
   
--   **Cancelar** – Cancela a operação e fecha o Assistente.  
+-   **Cancelar** – cancela a operação e fecha o Assistente.  
   
 ##  <a name="Deployment_settings"></a> Página de configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Host local:**  
   
--   **Conexão de servidor** – Especifique os detalhes da conexão de servidor e clique em **Conectar** para verificar a conexão.  
+-   **Conexão do servidor** – Especifique os detalhes da conexão de servidor e clique em **Conectar** para verificar a conexão.  
   
 -   **Nome do novo banco de dados** – Especifique um nome para o novo banco de dados.  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050467"
 ## <a name="using-a-net-framework-application"></a>Usando um aplicativo .NET Framework  
  **Para implantar um banco de dados usando os métodos DacStoreExport() e Import() em um aplicativo .Net Framework.**  
   
- Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância ou o servidor que contém o banco de dados a ser implantado.  
   
-2.  Abra um `ServerConnection` do objeto e conecte-se à mesma instância.  
+2.  Abra um objeto `ServerConnection` e conecte-se à mesma instância.  
   
-3.  Use o `Export` método da `Microsoft.SqlServer.Management.Dac.DacStore` tipo para exportar o banco de dados para um arquivo BACPAC. Especifique o nome do banco de dados a ser exportado e o caminho para a pasta onde o arquivo BACPAC será colocado.  
+3.  Use o método `Export` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar o banco de dados para um arquivo BACPAC. Especifique o nome do banco de dados a ser exportado e o caminho para a pasta onde o arquivo BACPAC será colocado.  
   
 4.  Crie um objeto de servidor SMO e defina-o como a instância ou o servidor de destino.  
   
-5.  Abra um `ServerConnection` do objeto e conecte-se à mesma instância.  
+5.  Abra um objeto `ServerConnection` e conecte-se à mesma instância.  
   
-6.  Use o `Import` método da `Microsoft.SqlServer.Management.Dac.DacStore` tipo para importar o BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
+6.  Use o método `Import` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para importar o BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](data-tier-applications.md)   

@@ -17,19 +17,19 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357998"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
   Esse tópico fornece detalhes dos recursos que têm suporte na diferentes edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-> **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação por um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
-  
-> **Observação:** para recursos com suporte pelas edições Evaluation e Developer, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de recursos da empresa.  
+> **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação por um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+> 
+> **OBSERVAÇÃO:** Para saber quais recursos têm suporte pelas edições Evaluation e Developer, consulte o conjunto de recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   
  Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48095882"
   
  [Modelo semântico de BI (Multidimensional)](#BISemModel_multi)  
   
- [Modelo semântico de BI (Tabular)](#BISemModel_tabular)  
+ [Modelo semântico de BI (tabular)](#BISemModel_tabular)  
   
  [PowerPivot para SharePoint](#PowerPivot)  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48095882"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Capacidade máxima de computação usada por uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mecanismo de banco de dados)<sup>1</sup>|Máximo do sistema operacional|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
 |Capacidade máxima de computação usada por uma única instância (Analysis Services, Reporting Services) <sup>1</sup>|Máximo do sistema operacional|Máximo do sistema operacional|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
-|Memória máxima utilizada (por instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])|Máximo do sistema operacional|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|Memória máxima utilizada (por instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|N/D|N/A|N/A|N/A|  
-|Memória máxima utilizada (por instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|64 GB|4 GB|N/A|N/A|  
+|Memória máxima utilizada (por instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Máximo do sistema operacional|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
+|Memória máxima utilizada (por instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|N/D|N/D|N/D|N/D|  
+|Memória máxima utilizada (por instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|64 GB|4 GB|N/D|N/D|  
 |Tamanho máximo do banco de dados relacional|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
  <sup>1</sup> Enterprise Edition with Server + cliente acesso licenciamento CAL (licença) com base (não disponível para novos contratos) é limitado a um máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -99,11 +99,11 @@ ms.locfileid: "48095882"
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Suporte do Server Core<sup>1</sup>|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Envio de log|Sim|Sim|Sim|Sim||||  
+|Envio de logs|Sim|Sim|Sim|Sim||||  
 |Espelhamento de banco de dados|Sim|Sim (somente segurança completa)|Sim (somente segurança completa)|Somente testemunha|Somente testemunha|Somente testemunha|Somente testemunha|  
 |Compactação de backup|Sim|Sim|Sim|||||  
 |Instantâneo do banco de dados|Sim|||||||  
-|Instâncias de cluster de failover AlwaysOn|Sim (suporte de nó: máximo do sistema operacional|Sim (suporte de nó: 2)|Sim (suporte de nó: 2)|||||  
+|Instâncias de cluster de failover AlwaysOn|Sim (Suporte a nó: Máximo do sistema operacional|Sim (Suporte a nó: 2)|Sim (Suporte a nó: 2)|||||  
 |Grupos de Disponibilidade AlwaysOn|Sim (até oito réplicas secundárias, incluindo duas réplicas secundárias síncronas)|||||||  
 |Diretor de Conexão|Sim|||||||  
 |Restauração de arquivo e página online|Sim|||||||  
@@ -114,7 +114,7 @@ ms.locfileid: "48095882"
 |Memória e CPU a quente<sup>2</sup>|Sim|||||||  
 |Orientador de recuperação de banco de dados|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Backup criptografado|Sim|Sim|Sim|||||  
-|Backup inteligente|Sim|Sim|Sim|não||||  
+|Backup inteligente|Sim|Sim|Sim|Não||||  
   
  <sup>1</sup>para obter mais informações sobre como instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] no Server Core, consulte [instalar o SQL Server 2014 no Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48095882"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Controle de alterações|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Controle de alterações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Replicação de mesclagem|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação transacional|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação de instantâneo|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
@@ -170,9 +170,9 @@ ms.locfileid: "48095882"
 |SQL Configuration Manager|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |SQL CMD (ferramenta de prompt de comando)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Sim|Sim|Sim|Sim|Sim|Sim||  
-|Distributed Replay – Ferramenta de administração|Sim|Sim|Sim|Sim|Sim|Sim||  
-|Distributed Replay - Client|Sim|não|Sim|Sim||||  
-|Distributed Replay - Controller|Sim (Enterprise dá suporte a até 16 clientes, o Developer dá suporte a apenas 1 cliente)|não|Sim (suporte a apenas 1 cliente)|Sim (suporte a apenas 1 cliente)||||  
+|Distributed Replay – Ferramenta de Administração|Sim|Sim|Sim|Sim|Sim|Sim||  
+|Distributed Replay - Client|Sim|Não|Sim|Sim||||  
+|Distributed Replay - Controller|Sim (Enterprise dá suporte a até 16 clientes, o Developer dá suporte a apenas 1 cliente)|Não|Sim (suporte a apenas 1 cliente)|Sim (suporte a apenas 1 cliente)||||  
 |SQL Profiler|Sim|Sim|Sim|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Sim|Sim|Sim|Sim||||  
 |Pacote de gerenciamento do Microsoft System Center Operations Manager|Sim|Sim|Sim|Sim||||  
@@ -193,7 +193,7 @@ ms.locfileid: "48095882"
 |Conexão dedicada de administrador|Sim|Sim|Sim|Sim|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|  
 |Suporte de scripts PowerShell|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Suporte do SysPrep<sup>1</sup>|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Suporte para operações de componente do aplicativo da camada de dados – extrair, implantar, atualizar, excluir|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Suporte para operações de componente de aplicativo de camada de dados – extrair, implantar, atualizar, excluir|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|Sim||||  
 |Coletor de dados de desempenho|Sim|Sim|Sim|Sim||||  
 |Capaz de se inscrever como uma instância gerenciada em um gerenciamento com várias instâncias|Sim|Sim|Sim|Sim||||  
@@ -205,7 +205,7 @@ ms.locfileid: "48095882"
 |Operações indexadas paralelas|Sim|||||||  
 |Uso automático da exibição indexada através do otimizador de consulta|Sim|||||||  
 |Verificação de consistência paralela|Sim|||||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ponto de controle do utilitário|Sim|||||||  
+|Ponto de controle do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|||||||  
 |Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Extensão do Pool de buffers<sup>2</sup>|Sim|Sim|Sim|||||  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48095882"
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Integração com [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] e MDX)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] e MDX)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Sim|Sim|Sim|Sim|Sim|||  
 |Ferramentas de edição e design de consulta SQL<sup>1</sup>|Sim|Sim|Sim|||||  
 |Suporte a controle de versão<sup>1</sup>|Sim|Sim|Sim|||||  
@@ -280,7 +280,7 @@ ms.locfileid: "48095882"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponível nas edições de 64 bits do Business Intelligence e Enterprise somente.  
+>  -   O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponível apenas nas edições de 64 bits somente do Business Intelligence e do Enterprise.  
   
 |Recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -293,7 +293,7 @@ ms.locfileid: "48095882"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Criar cubos sem um banco de dados|Sim|Sim|Sim|||||  
 |Gerar automaticamente esquema e data warehouse de preparo|Sim|Sim|Sim|||||  
-|Change Data Capture|Sim|||||||  
+|captura de dados de alterações|Sim|||||||  
 |Otimizações de consulta de junção em estrela|Sim|||||||  
 |Configuração escalonável somente leitura do Analysis Services|Sim|||||||  
 |Processamento paralelo de consultas em tabelas e índices particionados|Sim|||||||  
@@ -371,7 +371,7 @@ ms.locfileid: "48095882"
 |Atualização de dados PowerPivot|Sim|Sim||||||  
 |Feeds de dados PowerPivot|Sim|Sim||||||  
   
-###  <a name="DataMining"></a> Data Mining  
+###  <a name="DataMining"></a> Mineração de dados  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -439,7 +439,7 @@ ms.locfileid: "48095882"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Clientes de Business Intelligence  
- Os seguintes aplicativos de cliente de software estão disponíveis no Centro de Downloads da Microsoft e são fornecidos para ajudar a criar documentos de business intelligence que são executados em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância. Quando esses documentos forem hospedados em um ambiente de servidor, use uma edição de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que tenha suporte para esse tipo de documento. A tabela a seguir identifica qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém os recursos de servidor necessários para hospedar os documentos criados nesses aplicativos cliente.  
+ Os seguintes aplicativos cliente de software estão disponíveis na Central de Downloads da Microsoft e são fornecidos para ajudar a criar documentos de Business Intelligence que são executados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando esses documentos forem hospedados em um ambiente de servidor, use uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que tenha suporte para esse tipo de documento. A tabela a seguir identifica qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém os recursos de servidor necessários para hospedar os documentos criados nesses aplicativos cliente.  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -448,9 +448,9 @@ ms.locfileid: "48095882"
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sim|Sim||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sim|Sim||||||  
   
-> [!NOTE]  
+> [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] é um suplemento do Excel e não depende de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No entanto, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] é necessário para compartilhar e colaborar com pastas de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] no SharePoint e este recurso está disponível como parte das edições [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
-> 2.  A tabela acima identifica as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edições que são necessárias para habilitar essas ferramentas cliente; no entanto, esses recursos podem acessar dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> 2.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, esses recursos podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

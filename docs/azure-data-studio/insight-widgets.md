@@ -1,7 +1,8 @@
 ---
-title: Usar widgets de Insights para monitorar servidores e bancos de dados no Studio de dados do Azure | Microsoft Docs
-description: Saiba mais sobre os widgets de Insights no estúdio de dados do Azure.
-ms.custom: tools|sos
+title: Usar widgets de Insights para monitorar servidores e bancos de dados
+titleSuffix: Azure Data Studio
+description: Saiba mais sobre os widgets de Insights no estúdio de dados do Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356324"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030190"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de Insights em [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

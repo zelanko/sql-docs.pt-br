@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356379"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
   Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inicialize o Orientador de Otimização do Mecanismo de Banco de Dados  
- Ao usá-lo pela primeira vez, um usuário que seja membro da função de servidor fixa **sysadmin** deve inicializar o Orientador de Otimização do Mecanismo de Banco de Dados. Isso ocorre porque várias tabelas do sistema devem ser criadas no `msdb` banco de dados para dar suporte a operações de ajuste. A inicialização também possibilita que os usuários membros da função de banco de dados fixa **db_owner** ajustem cargas de trabalho em tabelas em seus próprios bancos de dados.  
+ Ao usá-lo pela primeira vez, um usuário que seja membro da função de servidor fixa **sysadmin** deve inicializar o Orientador de Otimização do Mecanismo de Banco de Dados. Isso acontece porque devem ser criadas vários tabelas do sistema no banco de dados `msdb` para oferecer suporte a operações de ajuste. A inicialização também possibilita que os usuários membros da função de banco de dados fixa **db_owner** ajustem cargas de trabalho em tabelas em seus próprios bancos de dados.  
   
  Um usuário com permissões de administrador do sistema deve executar qualquer um das ações a seguir:  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097816"
 >  Não há suporte para pausar o Orientador de Otimização do Mecanismo de Banco de Dados. Se você clicar no botão de barra de ferramentas **Iniciar Análise** depois de clicar no botão **Parar Análise** ou **Parar Análise (com Recomendações)** , o Orientador de Otimização do Mecanismo de Banco de Dados iniciará uma nova sessão de ajuste.  
   
 ###  <a name="dta"></a> Usar o utilitário dta  
- O utilitário [dta utility](../../tools/dta/dta-utility.md) fornece um arquivo executável de prompt de comando que pode ser usado para ajustar bancos de dados. Ele permite usar a funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em scripts e arquivos em lote. O utilitário **dta** assume entradas de cache de plano, arquivos de rastreamento, tabelas de rastreamento e scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabalho. Ele ainda aceita entrada XML compatível com o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados, que está disponível no [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100).  
+ O utilitário [dta utility](../../tools/dta/dta-utility.md) fornece um arquivo executável de prompt de comando que pode ser usado para ajustar bancos de dados. Ele permite usar a funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em scripts e arquivos em lote. O utilitário **dta** assume entradas de cache de plano, arquivos de rastreamento, tabelas de rastreamento e scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabalho. Ele ainda aceita entrada XML compatível com o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados, que está disponível no [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Antes de começar a ajustar uma carga de trabalho com o utilitário **dta** , considere o seguinte:  
   
@@ -235,16 +234,16 @@ ms.locfileid: "48097816"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Para modificar o número de eventos a serem usados para análise, especifique a opção **–n** . O exemplo a seguir aumenta o número de entradas de cache para 2.000.  
+2.  Para modificar o número de eventos a serem usados para análise, especifique a opção **-n**. O exemplo a seguir aumenta o número de entradas de cache para 2.000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Para analisar eventos para todos os bancos de dados na instância, especifique a opção **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Para ajustar um banco de dados usando uma carga de trabalho e configurações padrão do utilitário dta  
@@ -303,7 +302,7 @@ ms.locfileid: "48097816"
   
  C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também está disponível online neste [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também está disponível online neste [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Esse URL abre uma página em que estão disponíveis vários esquemas XML do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Role a página para baixo até atingir a linha do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  Inclua apenas recomendações para adicionar exibições indexadas. Índices clusterizados e não clusterizados  não serão recomendados.  
   
  **Incluir índices filtrados**  
- Inclua recomendações para adicionar índices filtrados. Esta opção estará disponível se você selecionar uma destas estruturas de design físicas: **Índices e exibições indexadas**, **Índices**ou **Índices não clusterizados**.  
+ Inclua recomendações para adicionar índices filtrados. Essa opção estará disponível se você selecionar uma destas estruturas de design físico: **Índices e exibições indexadas**, **índices**, ou **índices não clusterizados**.  
   
  **Índices**  
  Inclua apenas recomendações para adicionar índices clusterizados e não clusterizados. Não serão recomendadas exibições indexadas.  

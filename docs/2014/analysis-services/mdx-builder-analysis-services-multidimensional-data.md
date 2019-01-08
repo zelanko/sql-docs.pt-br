@@ -15,15 +15,15 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512486"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Construtor MDX (Analysis Services – Dados Multidimensionais)
-  Use a caixa de diálogo **Construtor MDX** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para criar uma expressão em linguagem MDX. É possível exibir a caixa de diálogo **Construtor MDX** clicando no botão de reticências ( **…** ) de**Editar MDX**para a opção **Permitir leitura do conteúdo do cubo** , a opção **Permitir leitura do contingente do conteúdo da célula na segurança da célula** ou a opção **Permitir leitura e gravação do conteúdo do cubo** na página **Dados da Célula** do **Designer de Função**.  
+  Use a caixa de diálogo **Construtor MDX** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para criar uma expressão em linguagem MDX. Você pode exibir o **construtor MDX** caixa de diálogo clicando o **editar MDX** botão de reticências (**...** ) para o **Permitir leitura do conteúdo do cubo** opção, o **Permitir leitura do conteúdo da célula contingente na segurança da célula** opção, ou o **Permitir leitura e gravação do conteúdo do cubo** opção de **dados da célula** página de **Designer de função**.  
   
 ## <a name="options"></a>Opções  
   

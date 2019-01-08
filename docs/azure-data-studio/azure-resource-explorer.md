@@ -1,6 +1,8 @@
 ---
-title: Explore os recursos do SQL do Azure com o Gerenciador de recursos do Azure | Microsoft Docs
-description: Aprenda a explorar e gerenciar o servidor SQL do Azure, BD SQL do Azure e instância gerenciada do SQL por meio do Gerenciador de recursos do Azure.
+title: Explore os recursos do SQL do Azure com o Gerenciador de recursos do Azure
+titleSuffix: Azure Data Studio
+description: Aprenda a explorar e gerenciar a instância gerenciada do SQL por meio do Gerenciador de recursos do Azure, banco de dados SQL e SQL Server do Azure.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356057"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030110"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Explore os recursos do SQL do Azure com o Gerenciador de recursos do Azure
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorar e gerenciar recursos de SQL do Azure com o Gerenciador de recursos do Azure
 
 Neste documento, você aprenderá como você pode explorar e gerenciar o servidor SQL do Azure, banco de dados SQL do Azure e recursos de instância gerenciada do SQL por meio do Gerenciador de recursos do Azure no [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
@@ -23,7 +25,7 @@ Neste documento, você aprenderá como você pode explorar e gerenciar o servido
 >O Gerenciador de recursos do Azure terão suporte na versão prévia do SQL Server 2019 em outubro. Depois disso, você pode instalar a extensão de visualização por meio [Gerenciador de extensões](extensions.md) ou por meio das **arquivo** > **instalar pacote do pacote VSIX**.
 
 
-## <a name="connect-to-azure"></a>Conectar-se para o Azure
+## <a name="connect-to-azure"></a>Conecte-se ao Azure
 
 Depois de instalar o plug-in de visualização do SQL, um ícone do Azure aparece na barra de menus à esquerda. Clique no ícone para abrir o Gerenciador de recursos do Azure. Se você não vir o ícone do Azure, clique com botão direito na barra de menus à esquerda e selecione **Azure Resource Explorer**.
 

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905976"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374318"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -32,7 +32,7 @@ ms.locfileid: "48905976"
  A instalação e a ferramenta também irão atribuir permissões na URL para o serviço Servidor de Relatório, verificar se existem instâncias duplicadas e adicionar a reserva de URL a HTTP.SYS. Nunca crie ou modifique diretamente uma reserva de URL do Reporting Services usando HttpCfg.exe ou outra ferramenta. Se você pular uma etapa ou definir um valor inválido, ocorrerão problemas difíceis de diagnosticar ou corrigir.  
   
 > [!NOTE]  
->  HTTP.SYS é um componente do sistema operacional que escuta solicitações de rede e as roteia para uma fila de solicitações. Nesta versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS estabelece e mantém a fila de solicitações para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. O IIS (Serviços de Informações da Internet) não mais é usado para hospedar ou acessar aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre a funcionalidade HTTP.SYS, consulte [HTTP Server API](http://go.microsoft.com/fwlink/?LinkId=92652) no MSDN.  
+>  HTTP.SYS é um componente do sistema operacional que escuta solicitações de rede e as roteia para uma fila de solicitações. Nesta versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS estabelece e mantém a fila de solicitações para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. O IIS (Serviços de Informações da Internet) não mais é usado para hospedar ou acessar aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre a funcionalidade HTTP.SYS, consulte [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) no MSDN.  
   
 ##  <a name="ReportingServicesURLs"></a> URLs no Reporting Services  
  Em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você pode acessar as seguintes ferramentas, aplicativos e itens usando URLs:  
@@ -51,7 +51,7 @@ ms.locfileid: "48905976"
 >  Este tópico não descreve o acesso de URL ao Construtor de Relatórios ou a relatórios específicos armazenados no servidor de relatório. Para obter mais informações sobre o acesso à URL a esses itens, veja [Acessar itens do Servidor de Relatório usando o acesso à URL](../access-report-server-items-using-url-access.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLreservation"></a> Reserva e registro de URLs  
- Uma reserva de URL define as URLs que podem ser usadas para acessar um aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará uma ou mais URLs para o serviço Web do Servidor de Relatório e o Gerenciador de Relatórios no HTTP.SYS e, em seguida, os registrará quando o servidor for iniciado. As URLs para o Construtor de Relatórios e os relatórios se baseiam na reserva de URL do serviço Web Servidor de Relatório. Ao anexar parâmetros à URL, você pode abrir o Construtor de Relatórios ou os relatórios usando o serviço Web. As reservas e o registro são fornecidos por HTTP.SYS. Para obter mais informações, consulte [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) no MSDN.  
+ Uma reserva de URL define as URLs que podem ser usadas para acessar um aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará uma ou mais URLs para o serviço Web do Servidor de Relatório e o Gerenciador de Relatórios no HTTP.SYS e, em seguida, os registrará quando o servidor for iniciado. As URLs para o Construtor de Relatórios e os relatórios se baseiam na reserva de URL do serviço Web Servidor de Relatório. Ao anexar parâmetros à URL, você pode abrir o Construtor de Relatórios ou os relatórios usando o serviço Web. As reservas e o registro são fornecidos por HTTP.SYS. Para obter mais informações, consulte [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) no MSDN.  
   
  *Reserva de URL* consiste em um processo através do qual um ponto de extremidade de URL para um aplicativo Web é criado e armazenado em HTTP.SYS. HTTP.SYS é o repositório comum de todas as reservas de URL que estão definidas em um computador e define um conjunto de regras comuns que garantem reservas de URL exclusivas.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48905976"
   
  As URLs terão o registro cancelado se você interromper o serviço ou reciclar o serviço Web ou o domínio do aplicativo do Gerenciador de Relatórios. Se você modificar uma reserva de URL enquanto o serviço estiver em execução, o servidor de relatório reciclará o domínio do aplicativo imediatamente para que o registro da antiga URL seja cancelado e a nova URL possa ser usada.  
   
- Alguns exemplos simples ilustram o conceito de uma reserva de URL e como ela está relacionada aos endereços de URL usados para aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um ponto importante a observar é que a reserva de URL tem sintaxe diferente a URL usada para acessar o aplicativo:  
+ Alguns exemplos simples ilustram o conceito de uma reserva de URL e como ela está relacionada aos endereços de URL usados para aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um ponto importante a ser observado é que a reserva de URL tem sintaxe diferente da URL usada para acessar o aplicativo:  
   
 |Reserva de URL em HTTP.SYS|URL|Explicação|  
 |---------------------------------|---------|-----------------|  

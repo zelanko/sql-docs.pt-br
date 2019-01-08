@@ -11,14 +11,14 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399329"
 ---
-# <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
+# <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentação de expressões
   As expressões o ajudam a criar relatórios avançados e flexíveis. Este tutorial ensina a criar e implementar expressões que utilizam funções e operadores comuns. Você usará o **expressão** caixa de diálogo para escrever expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibir diferentes imagens com base em valores de campo e assim por diante.  
   
  O relatório é um relatório de barras com cores de linhas alternadas em branco e uma cor. O relatório inclui um parâmetro para selecionar a cor das linhas que não são brancas.  
@@ -66,7 +66,7 @@ ms.locfileid: "48075846"
 >  Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Para criar um novo relatório de tabela  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075846"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para pesquisar valores no conjunto de dados CountryRegion  
   
-1.  Clique no título da coluna **Identificação de país ou região** e exclua o texto: Identificação.  
+1.  Clique o **Country Region ID** título de coluna e exclua o texto: ID.  
   
 2.  Clique com o botão direito do mouse na célula de dados da coluna **Country Region** e clique em **Expressão**.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075846"
 11. Clique em **Executar** para visualizar o relatório.  
   
 ##  <a name="Count"></a> 6. Contar dias desde a última compra  
- Adicione uma coluna e use a função **Now** ou a variável global interna `ExecutionTime` para calcular o número de dias desde a data das últimas compras de uma pessoa até hoje.  
+ Adicionar uma coluna e, em seguida, usar o **agora** função ou o `ExecutionTime` variável global interna para calcular o número de dias a partir de hoje uma pessoa última compra.  
   
 #### <a name="to-add-the-days-ago-column"></a>Para adicionar a coluna Days Ago  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075846"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Usar um indicador para mostrar comparação de vendas  
- Adicione uma nova coluna e use um indicador para mostrar se as compras de uma pessoa YTD (desde o início do ano) estão acima ou abaixo da média de compras YTD. A função **Round** remove os decimais dos valores.  
+ Adicionar uma nova coluna e use um indicador para mostrar se as compras do ano (YTD) de uma pessoa estão acima ou abaixo da média de que compras YTD. A função **Round** remove os decimais dos valores.  
   
- A configuração do indicador e seus estados exige várias etapas. Se desejar, no procedimento “Para configurar o indicador”, você poderá ignorar e copiar/colar as expressões completas deste tutorial na caixa de diálogo **Expressão**.  
+ A configuração do indicador e seus estados exige várias etapas. Se você quiser, no procedimento "para configurar o indicador", você pode ignorá-la e copiar/colar as expressões completas deste tutorial para o **expressão** caixa de diálogo.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>Para adicionar a coluna + ou - AVG Sales  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075846"
   
 38. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="GreenBar"></a> 8. Transformar o relatório em um relatório de "barra verde"  
+##  <a name="GreenBar"></a> 8. Tornar o relatório de relatório "Barra verde"  
  Use um parâmetro para especificar a cor a ser aplicada para alternar linhas no relatório, transformando-o em um relatório de barras.  
   
 #### <a name="to-add-a-parameter"></a>Para adicionar um parâmetro  
@@ -543,9 +543,9 @@ ms.locfileid: "48075846"
   
 7.  Clique em **Adicionar**.  
   
-8.  Na caixa **Rótulo**, digite: **Amarelo**  
+8.  No **rótulo** , digite: **Amarelo**  
   
-9. Na caixa **Valor**, digite **Amarelo**  
+9. Na caixa **Valor** , digite **Amarelo**  
   
 10. Clique em **Adicionar**.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075846"
   
 15. Se o cursor não estiver logo após `Count(`, posicione-o lá.  
   
-16. Exclua o parêntese à esquerda e digite **,“Expressions”)**  
+16. Exclua o parêntese esquerdo e, em seguida, digite **, "Expressions")**  
   
     > [!NOTE]  
     >  Expressions é o nome do conjunto de dados no qual as linhas de dados serão contadas.  
@@ -621,7 +621,7 @@ ms.locfileid: "48075846"
   
 22. Se o cursor não estiver logo após `Parameters!RowColor.Value`, posicione-o lá.  
   
-23. Digite **, “Branco”)**  
+23. Digite **, "White")**  
   
      A expressão completa é: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -708,7 +708,7 @@ ms.locfileid: "48075846"
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Indicadores &#40;relatórios e SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Imagens, caixas de texto, retângulos e linhas de &#40;relatórios e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

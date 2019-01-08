@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106381"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361958"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
   A transformação Pesquisa Difusa executa tarefas de limpeza de dados, como padronização de dados, correção de dados e fornecimento de valores ausentes.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
+>  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
   
  A transformação Pesquisa Difusa difere da transformação Pesquisa no uso da correspondência difusa. A transformação Pesquisa usa uma junção por igualdade para localizar registros correspondentes na tabela de referência. Ela retorna registros com pelo menos um registro correspondente e retorna registros sem registros correspondentes. Por outro lado, a transformação Pesquisa Difusa usa a correspondência difusa para retornar uma ou mais correspondências aproximadas na tabela de referência.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48106381"
   
  A tabela a seguir descreve as opções de índice de correspondência.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Cria um índice novo, salva-o e faz a sua manutenção. A transformação instala acionadores na tabela de referência para manter essa tabela de referência e a tabela de índice sincronizadas.|  
 |**GenerateAndPersistNewIndex**|Cria um índice novo, salva-o, mas não faz a sua manutenção.|  
@@ -127,24 +126,24 @@ ms.locfileid: "48106381"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa Difusa** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação pesquisa difusa &#40;guia da tabela de referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de Transformação Pesquisa Difusa &#40;Guia Tabela de Referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor de transformação pesquisa difusa &#40;guia colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de transformação pesquisa difusa &#40;guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação pesquisa](lookup-transformation.md)   
- [Transformação agrupamento difuso](fuzzy-grouping-transformation.md)   
+ [Transformação Pesquisa](lookup-transformation.md)   
+ [Transformação Agrupamento Difuso](fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359228"
 ---
 # <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
   O [!INCLUDE[ssDE](../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados. O [!INCLUDE[ssDE](../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados dentro de sua empresa.  
@@ -42,6 +41,6 @@ ms.locfileid: "48056486"
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [referência XQuery](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>Consulte também  
- [Central de Recursos do SQL Server](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [Central de Recursos do SQL Server](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

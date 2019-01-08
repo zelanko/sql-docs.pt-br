@@ -10,17 +10,17 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364699"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opções de armazenamento de Blobs (SQL Server)
   Discute e compara as opções disponíveis para armazenar arquivos e documentos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Armazenando arquivos no banco de dados - benefícios e expectativas  
+##  <a name="Expectations"></a> Armazenando arquivos no banco de dados – Benefícios e expectativas  
  Um grande percentual de dados corporativos é não estruturado por natureza, e é normalmente armazenado como arquivos e documentos em sistemas de arquivos. A maioria desses dados é produzida, gerenciada e consumida por aplicativos que acessam os arquivos por meio de APIs do Windows. As empresas geralmente mantêm esses dados no sistema de arquivos, enquanto armazenam os metadados relacionados dos arquivos em um banco de dados relacional.  
   
  A integração de dados não estruturados no banco de dados relacional oferece benefícios significativos. Esses benefícios incluem o seguinte:  
@@ -47,16 +47,16 @@ ms.locfileid: "48059726"
   
 |Recurso|Servidor de arquivos e solução de banco de dados|Solução FILESTREAM|Solução FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Armazenamento único para tarefas de gerenciamento**|não|Sim|**Sim**|  
-|**Conjunto único de serviços**: pesquisa, relatório, consulta etc.|não|Sim|**Sim**|  
-|**Modelo de segurança integrada**|não|Sim|**Sim**|  
-|**Atualizações in loco de dados FILESTREAM**|Sim|não|**Sim**|  
-|**Hierarquia de arquivos e diretórios mantida no banco de dados**|não|não|**Sim**|  
-|**Compatibilidade de aplicativos do Windows**|Sim|não|**Sim**|  
-|**Acesso relacional a atributos de arquivo**|não|não|**Sim**|  
+|**Armazenamento único para tarefas de gerenciamento**|Não|Sim|**Sim**|  
+|**Conjunto único de serviços**: pesquisa, relatório, consulta etc.|Não|Sim|**Sim**|  
+|**Modelo de segurança integrada**|Não|Sim|**Sim**|  
+|**Atualizações in loco de dados FILESTREAM**|Sim|Não|**Sim**|  
+|**Hierarquia de arquivos e diretórios mantida no banco de dados**|Não|Não|**Sim**|  
+|**Compatibilidade de aplicativos do Windows**|Sim|Não|**Sim**|  
+|**Acesso relacional a atributos de arquivo**|Não|Não|**Sim**|  
   
 ##  <a name="CompareRBS"></a> Comparando FILESTREAM e repositório de BLOB remoto (RBS)  
- Para uma comparação destes dois recursos, consulte esta postagem de blog da equipe de RBS: [Comparação de recursos do Repositório de BLOB Remoto do SQL Server e do FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Para uma comparação destes dois recursos, confira essa postagem da equipe de RBS: [Comparação de recursos do SQL Server Remote BLOB Store e FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Mais informações  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

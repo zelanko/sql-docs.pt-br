@@ -13,12 +13,12 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9226df03f6d1ef018991d4d958430a315ac81cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140746"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361379"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de Loop Foreach (página Coleção)
   Use a página **Coleção** da caixa de diálogo **Editor de Loop Foreach** para especificar o tipo de enumerador e configurá-lo.  
@@ -29,7 +29,7 @@ ms.locfileid: "48140746"
  **Enumerador**  
  Selecione o tipo de enumerador na lista. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Enumerador de Arquivo Foreach**|Enumera arquivos. Se este valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivo Foreach**.|  
 |**Enumerador de Item Foreach**|Enumera valores em um item. Se este valor for selecionado serão exibidas as opções dinâmicas na seção **Enumerador de Item Foreach**.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48140746"
  **Expressões**  
  Clique ou expanda **Expressões** para exibir a lista de expressões de propriedade existentes. Clique no botão de reticências **(...)** para adicionar uma expressão de propriedade para uma propriedade de enumerador ou edite e avalie uma expressão de propriedade existente.  
   
- **Tópicos relacionados:**[Expressões do Integration Services  40SSIS 41](expressions/integration-services-ssis-expressions.md), [Editor de expressões de propriedade](expressions/property-expressions-editor.md), [Construtor de Expressões](expressions/expression-builder.md)  
+ **Tópicos relacionados:**  [Serviços de integração &#40;SSIS&#41; expressões](expressions/integration-services-ssis-expressions.md), [Editor de expressões de propriedade](expressions/property-expressions-editor.md), [construtor de expressões](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>Opções dinâmicas do Enumerador  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48140746"
  Especifique os arquivos a enumerar.  
   
 > [!NOTE]  
->  Use caracteres curinga (*) para especificar os arquivos a serem incluídos na coleção. Por exemplo, para incluir arquivos com nomes que contêm "abc", use o seguinte filtro: \*abc\*.  
+>  Use caracteres curinga (*) para especificar os arquivos a serem incluídos na coleção. Por exemplo, para incluir arquivos com nomes que contenham "abc", use o seguinte filtro: \*abc\*.  
 >   
 >  Quando você especifica uma extensão de nome de arquivo, o enumerador também retorna os arquivos que têm a mesma extensão com caracteres adicionais acrescentados. (É o mesmo comportamento do comando **dir** no sistema operacional, que também compara nomes de arquivos 8.3 para fins de compatibilidade com versões anteriores.) Este comportamento do enumerador poderia causar resultados inesperados. Por exemplo, você deseja enumerar somente arquivos do Excel 2003 e especifica "*.xls". Todavia, o enumerador também retornará arquivos do Excel 2007 porque esses arquivos têm a extensão ".xlsx".  
 >   
->  Você pode usar uma expressão para especificar os arquivos a serem incluídos em uma coleção, expandindo **Expressões** na página **Coleção** , selecionando a propriedade **FileSpec** e clicando no botão de reticências (…) para adicionar a expressão de propriedade. Para obter mais informações sobre como selecionar de modo dinâmico arquivos especificados, consulte [SSIS–Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)  
+>  Você pode usar uma expressão para especificar os arquivos a serem incluídos em uma coleção expandindo **Expressões** na página **Coleção**, selecionando a propriedade **FileSpec** e clicando no botão de reticências (…) para adicionar a expressão de propriedade. Para obter mais informações sobre como selecionar arquivos especificados dinamicamente, consulte [SSIS – Dynamically set File Mask: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
   
  **Totalmente qualificado**  
  Selecione para recuperar o caminho totalmente qualificado de nomes de arquivo. Se forem especificados caracteres curinga na opção Arquivos, os caminhos totalmente qualificados que retornarem corresponderão ao filtro.  
@@ -121,7 +121,7 @@ ms.locfileid: "48140746"
 > [!NOTE]  
 >  A variável deve ter o tipo de dados do Objeto, caso contrário ocorrerá um erro.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
  **Linhas na primeira tabela**  
  Selecione para enumerar somente linhas na primeira tabela.  
@@ -141,7 +141,7 @@ ms.locfileid: "48140746"
 > [!IMPORTANT]  
 >  O gerenciador de conexões ADO.NET deve usar um provedor .NET para OLE DB. Se você estiver se conectando com o SQL Server, o provedor indicado é o Cliente Nativo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , listado na seção **Provedores de .Net para OleDb** da caixa de diálogo **Gerenciador de conexões** .  
   
- **Tópicos relacionados:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão do ADO](connection-manager/ado-connection-manager.md), [configurar Gerenciador de Conexão do ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Esquema**  
  Selecione o esquema a enumerar.  
@@ -149,7 +149,7 @@ ms.locfileid: "48140746"
  **Definir Restrições**  
  Defina as restrições a serem aplicadas ao esquema especificado.  
   
- **Tópicos relacionados:** [Caixa de diálogo restrições de esquema](../../2014/integration-services/schema-restrictions-dialog-box.md)  
+ **Tópicos relacionados:** [Caixa de diálogo Restrições de Esquemas](../../2014/integration-services/schema-restrictions-dialog-box.md)  
   
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerador = Enumerador Foreach de Variável  
  Você usa o Enumerador Foreach de Variável para enumerar os objetos enumeráveis na variável especificada. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL que executa uma consulta e armazena o resultado em uma variável, você poderá usar o Enumerador Foreach de Variável para enumerar os resultados da consulta.  
@@ -157,39 +157,39 @@ ms.locfileid: "48140746"
  **Variável**  
  Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador NodeList Foreach  
  Use o enumerador NodeList Foreach para enumerar o conjunto de nós XML resultante da aplicação de uma expressão XPath a um arquivo XML. Por exemplo, se o Loop Foreach incluir uma tarefa Script, você poderá usar o enumerador NodeList Foreach para passar um valor que atende aos critérios da expressão XPath do arquivo XML para a tarefa Script.  
   
  A expressão XPath que se aplica ao arquivo XML é a operação XPath externa, armazenada na propriedade OuterXPathString. Se o tipo de enumeração XPath for definido como `ElementCollection`, o enumerador Foreach NodeList poderá aplicar uma expressão XPath interna, armazenada na propriedade InnerXPathString, a uma coleção de elementos.  
   
- Para saber mais sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
+ Para saber mais sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
   
  **DocumentSourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **DocumentSource**  
- Se **DocumentSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
+ Se **DocumentSourceType** estiver definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
  Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Selecione um tipo de enumeração na lista. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Navegador**|Enumere usando um XPathNavigator.|  
 |**Nó**|Enumere nós retornados por uma operação XPath.|  
@@ -199,7 +199,7 @@ ms.locfileid: "48140746"
  **OuterXPathStringSourceType**  
  Selecione o tipo de origem da cadeia XPath. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -210,11 +210,11 @@ ms.locfileid: "48140746"
   
  Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
  Se **EnumerationType** é definido como `ElementCollection`, selecione o tipo de elemento interno na lista.  
@@ -222,7 +222,7 @@ ms.locfileid: "48140746"
  **InnerXPathStringSourceType**  
  Seleciona o tipo de origem da cadeia interna XPath. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -233,11 +233,11 @@ ms.locfileid: "48140746"
   
  Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerador = Enumerador SMO Foreach  
  Use o enumerador SMO Foreach para enumerar objetos SMO (SQL Server Management Object). Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o enumerador SMO Foreach para enumerar as tabelas no banco de dados **AdventureWorks** e executar consultas que contam o número de linhas em cada tabela.  
@@ -245,7 +245,7 @@ ms.locfileid: "48140746"
  **Conexão**  
  Selecione um gerenciador de conexões ADO.NET existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- Tópicos relacionados: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ Tópicos relacionados: [Gerenciador de Conexão ADO.NET](connection-manager/ado-net-connection-manager.md), [configurar Gerenciador de Conexão do ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Enumerar**  
  Especifique o objeto SMO a enumerar.  
@@ -253,7 +253,7 @@ ms.locfileid: "48140746"
  **Procurar**  
  Selecione a enumeração SMO.  
   
- **Tópicos relacionados:** [Selecionar a caixa de diálogo de enumeração SMO](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
+ **Tópicos relacionados:** [Caixa de diálogo Selecionar Enumeração SMO](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>Enumerador = Enumerador de Blob do Azure Foreach  
  O  **Enumerador de Blob do Azure**permite que um pacote do SSIS enumere arquivos de Blob no local de Blob especificado. O nome do arquivo de blob enumerado pode ser armazenado em uma variável e usado em tarefas dentro do Contêiner do Loop Foreach.  
@@ -261,7 +261,7 @@ ms.locfileid: "48140746"
  **Gerenciador de conexões do Armazenamento do Azure**  
  Selecione um Gerenciador de Conexão de Armazenamento do Azure existente ou crie um novo que se refere a uma Conta de Armazenamento do Azure.  
   
- Tópicos Relacionados: [Azure Storage Connection Manager](connection-manager/azure-storage-connection-manager.md).  
+ Tópicos relacionados: [Gerenciador de Conexão de armazenamento do Azure](connection-manager/azure-storage-connection-manager.md).  
   
  **Nome do contêiner de Blob**  
  Especifique o nome do contêiner de Blob que contém os arquivos de Blob a serem enumerados.  
@@ -291,15 +291,15 @@ Especifica se deve-se pesquisar recursivamente dentro do diretório especificado
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), em bidn.com.  
+-   Entrada de blog, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), em bidn.com.  
   
--   Entrada de blog, [SSIS–Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154), em beyondrelational.com.  
+-   Entrada de blog, [SSIS – Dynamically set File Mask: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), em beyondrelational.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de Loop foreach &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de Loop foreach &#40;página de mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Página expressões](expressions/expressions-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
  [Contêiner do Loop For](control-flow/for-loop-container.md)  
   
   

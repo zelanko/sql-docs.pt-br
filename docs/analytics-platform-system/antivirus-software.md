@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524474"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivírus para o Analytics Platform System
 Se seu data center exige um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. É recomendável não instalar o software antivírus, a menos que ele é um requisito sólido de seu data center.  
@@ -46,13 +46,13 @@ Para instalar o software antivírus em hosts físicos, exclua a seguinte lista d
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusões para máquinas virtuais (VMs)  
 Para instalar o software antivírus em VMs, exclua a seguinte lista de diretórios e arquivos. Eles não devem ser verificados pelo software antivírus.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** e ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** e  **_appliance_domain_-AD02**  
   
 -   Sem restrições  
   
@@ -62,15 +62,15 @@ Para instalar o software antivírus em VMs, exclua a seguinte lista de diretóri
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_- VMM**  
   
 -   Sem restrições  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_- WDS**  
   
 -   Sem restrições  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

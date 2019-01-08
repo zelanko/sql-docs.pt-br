@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraintexpression
@@ -12,12 +12,12 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28b62cf6a0774840385c0f3377675d26d57d6486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190946"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781638"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
   Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
@@ -56,7 +56,7 @@ NOT (payment_method = 'credit card') OR
   
  A sintaxe de SQL é criada para os seguintes parâmetros:  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |constante|Um valor literal, como numérico ou dados de caractere. Os dados de caractere devem estar entre aspas (').|  
 |column_name|Especifica uma coluna.|  

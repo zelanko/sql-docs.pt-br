@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373608"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
   Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
   
-1.  **Antes de iniciar:**  [Publicando em um serviço hospedado](#PubHostSvc), [Permissões](#Permissions)  
+1.  **Antes de começar:**  [Publicando um serviço hospedado](#PubHostSvc), [permissões](#Permissions)  
   
-2.  **Para gerar ou publicar um script, usando:**  [Assistente para Gerar e Publicar Scripts](#GenPubScriptWiz)  
+2.  **Para gerar ou publicar um script, usando:**  [Gerar e publicar Scripts Assistente](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Os bancos de dados de origem e destino podem estar no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ou em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
   
 ###  <a name="PubHostSvc"></a> Publicando em um serviço hospedado  
- Além de criar scripts, você pode usar o **Assistente para Gerar e Publicar Scripts** para criar scripts para publicar um banco de dados em um tipo específico de serviço Web hospedado do SQL Server. O Conjunto de Ferramentas de Hospedagem do SQL Server fornece Serviços de Publicação de Banco de dados como um projeto de origem compartilhado no CodePlex. O projeto dos Serviços de Publicação de Banco de dados pode ser usado por provedores de hospedagem na Web para criar um conjunto de serviços Web que facilitam a implantação de banco de dados no serviço Web para clientes. Para obter mais informações sobre como baixar o Conjunto de Ferramentas de Hospedagem do SQL Server, consulte [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)(em inglês).  
+ Além de criar scripts, você pode usar o **Assistente para Gerar e Publicar Scripts** para criar scripts para publicar um banco de dados em um tipo específico de serviço Web hospedado do SQL Server. O Conjunto de Ferramentas de Hospedagem do SQL Server fornece Serviços de Publicação de Banco de dados como um projeto de origem compartilhado no CodePlex. O projeto dos Serviços de Publicação de Banco de dados pode ser usado por provedores de hospedagem na Web para criar um conjunto de serviços Web que facilitam a implantação de banco de dados no serviço Web para clientes. Para obter mais informações sobre como baixar o Conjunto de Ferramentas de Hospedagem do SQL Server, consulte [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)(em inglês).  
   
  Para publicar um banco de dados em um serviço de hospedagem Web, selecione a opção **Publicar no Serviço Web** na página **Definir Opções de Script** do assistente.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192847"
  **Cancelar** – Encerra o assistente sem gerar nem publicar um script do banco de dados.  
   
 ###  <a name="ChooseObjects"></a> Página Escolher Objetos  
- Use esta página para escolher quais objetos você deseja incluir nos scripts gerados por este assistente. Na página do assistente a seguir, você terá a opção de salvar esses scripts no local de sua escolha ou usá-los para publicar objetos de banco de dados em um provedor remoto de hospedagem Web que tenha instalados os [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ Use esta página para escolher quais objetos você deseja incluir nos scripts gerados por este assistente. Na página do assistente a seguir, você terá a opção de salvar esses scripts no local de sua escolha ou usá-los para publicar objetos de banco de dados em um provedor remoto de hospedagem Web que tenha instalados os [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  **Opção Gerar Script de Todo o Banco de Dados** – Clique para gerar scripts para todos os objetos do banco de dados e incluir um script para o próprio banco de dados.  
   
@@ -124,11 +124,11 @@ ms.locfileid: "48192847"
   
  **Opções** – Se desejar que o assistente salve scripts em um local de sua preferência, selecione **Salvar scripts em um local específico**. Você pode executar os scripts posteriormente em relação a uma instância do Mecanismo de Banco de Dados ou em relação ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se você desejar que o assistente publique seus objetos de banco de dados em um provedor remoto de hospedagem Web, selecione **Publicar no serviço Web**.  
   
- **Salvar Scripts em um Local Específico** – Salve um ou mais arquivos de script Transact-SQL em um local especificado por você.  
+ **Salvar Scripts em um local específico** – salve um ou mais. Arquivos de script do Transact-SQL para um local que você especificar.  
   
 -   **Avançado** – Exiba a caixa de diálogo **Opções de Script Avançadas** em que você pode selecionar opções avançadas para gerar scripts.  
   
--   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e um local para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
+-   **Salvar em arquivo** – Salve o script em um ou mais arquivos .sql. Clique no botão Procurar (**…**) para especificar um nome e uma localização para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Clique em **Arquivo único** ou **Arquivo único por objeto** para especificar como os scripts devem ser gerados. Clique **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.  
   
 -   **Salvar na Área de Transferência** – Salve o script Transact-SQL na área de transferência.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192847"
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
- **Geral** – As opções a seguir se aplicam ao script inteiro.  
+ **Geral** – as opções a seguir se aplicam ao script inteiro.  
   
 -   **Preenchimento ANSI** -inclui `ANSI PADDING ON` no script. O padrão é **True**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48192847"
   
 -   **Associação de script** – Gera um script para associação padrão e objetos de regra. O padrão é **False**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) e [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
--   **Agrupamento de scripts** – Inclui informações de agrupamento no script. O padrão é **False**. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../collations/collation-and-unicode-support.md).  
+-   **Ordenação de scripts** – Inclui informações de ordenação no script. O padrão é **False**. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../collations/collation-and-unicode-support.md).  
   
 -   **Padrões de script** – Inclui objetos padrão usados para definir valores padrão em colunas de tabela. O padrão é **True**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
@@ -191,17 +191,17 @@ ms.locfileid: "48192847"
   
 -   **Estatísticas de script** -quando definido como **estatísticas de Script**, essa opção inclui a `CREATE STATISTICS` instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Usar banco de dados de script** -adiciona o `USE DATABASE` instrução no script. Para ter certeza de que os objetos de banco de dados são criados no banco de dados correto, inclua o `USE DATABASE` instrução. Quando se espera que o script a ser usado em outro banco de dados, selecione **falsos** omitir o `USE DATABASE` instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Usar banco de dados de script** -adiciona o `USE DATABASE` instrução no script. Para ter certeza de que os objetos de banco de dados serão criados no banco de dados correto, inclua a instrução `USE DATABASE`. Quando se espera que o script a ser usado em outro banco de dados, selecione **falsos** omitir o `USE DATABASE` instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Tipos de dados para script** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema somente**.  
+-   **Tipos de dados para script** -seleciona o que deve ser inserido no script: **Data only**, **somente esquema**, ou ambos. O padrão é **Esquema somente**.  
   
  **Opções de tabela/exibição** – As opções a seguir são válidas somente para scripts de tabelas ou exibições.  
   
 -   **Controle de alterações de script** – Controle de alterações de scripts se for habilitado no banco de dados de origem ou nas tabelas no banco de dados de origem. O padrão é **False**. Para obter mais informações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Restrições check do script** – Adds `CHECK` restrições para o script. O padrão é **True**. `CHECK` restrições de exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Restrições check do script** -adiciona `CHECK` restrições para o script. O padrão é **True**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
--   **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para obter mais informações, consulte [Data Compression](../data-compression/data-compression.md). O padrão é **False**.  
+-   **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para saber mais, veja [Data Compression](../data-compression/data-compression.md). O padrão é **False**.  
   
 -   **Chaves estrangeiras do script** – Adiciona chaves estrangeiras ao script. O padrão é **True**. Chaves estrangeiras indicam e impõem relações entre tabelas.  
   
@@ -237,11 +237,11 @@ ms.locfileid: "48192847"
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
- **Geral** – As opções a seguir se aplicam à publicação inteira.  
+ **Geral** – as opções a seguir se aplicam à publicação inteira.  
   
 1.  **Converter UDDTs em tipos de base** – Se for **True**, os UDDT (tipos de dados definidos pelo usuário) serão convertidos nos tipos de dados base subjacentes que foram usados para criá-los. Use **True** quando o UDDT não existir no banco de dados em que o script será executado. Se for **False**, serão usados UDDTs. O padrão é **False**.  
   
-2.  **Publicar agrupamento** – Inclui informações de agrupamento para colunas de tabela. O padrão é **False**. Para obter mais informações, consulte [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
+2.  **Publicar ordenação** – Inclui informações de ordenação para colunas de tabela. O padrão é **False**. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../collations/collation-and-unicode-support.md).  
   
 3.  **Publicar padrões** – Inclui objetos padrão usados para definir valores padrão em colunas de tabela. O padrão é **True**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192847"
   
 11. **Associação de script** – Inclui associação por padrão e objetos de regra no script enviados ao provedor para publicação. O padrão é **True**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) e [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Tipos de dados para publicação** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema e Dados**.  
+12. **Tipos de dados para publicação** -seleciona o que deve ser inserido no script: **Data only**, **somente esquema**, ou ambos. O padrão é **Esquema e Dados**.  
   
- **Publicando Opções** – Especifica transações devem ser usadas ao publicar no provedor de host Web.  
+ **Publicando Opções** – especifica transações devem ser usadas ao publicar no provedor de host Web.  
   
 1.  **Publicar usando transações** – Usa transações ao publicar em um provedor remoto de hospedagem na Web. Se o banco de dados de destino não puder concluir a publicação, as transações serão revertidas. O padrão é **True**.  
   
  **Opções de Tabela/Exibição** – As opções a seguir se aplicam somente a tabelas ou exibições.  
   
-1.  **Publicar restrições check** -inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **True**. `CHECK` restrições de exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publicar restrições check** -inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **True**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publicar chaves estrangeiras** – Inclui a criação de chaves estrangeiras no processo de publicação. O padrão é **True**. Chaves estrangeiras indicam e impõem relações entre tabelas. Para obter mais informações, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -338,6 +338,6 @@ ms.locfileid: "48192847"
   
 ## <a name="see-also"></a>Consulte também  
  [Instalando o SMO](../server-management-objects-smo/installing-smo.md)   
- [Copiar bancos de dados para outros servidores](../databases/copy-databases-to-other-servers.md)  
+ [Copiar bancos de dados em outros servidores](../databases/copy-databases-to-other-servers.md)  
   
   

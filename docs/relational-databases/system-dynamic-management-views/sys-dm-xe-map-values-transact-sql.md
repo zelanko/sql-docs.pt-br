@@ -20,24 +20,24 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0adf93355baebd7be881d46c62f649c61245af4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d554a7269b8f10f8d2d44a48bc401e866f3dce8
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680334"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785767"
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna um mapeamento de chaves numéricas internas para texto legível.  
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**nvarchar(60)**|O nome do mapa. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
+|nome|**nvarchar(256)**|O nome do mapa. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o mapa. Não permite valor nulo.|  
 |map_key|**int**|O valor da chave interno. Não permite valor nulo.|  
-|map_value|**nvarchar(2048)**|Uma descrição do valor da chave. Não permite valor nulo.|  
+|map_value|**nvarchar(3072)**|Uma descrição do valor da chave. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
@@ -46,7 +46,7 @@ ms.locfileid: "47680334"
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Muitos para um|  
+|dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Muitos para um| 
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

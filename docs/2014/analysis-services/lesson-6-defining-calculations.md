@@ -11,12 +11,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de2a2286527dfa53124aeeb619ee5ab3c8f7753c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361378"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lição 6: Definindo cálculos
   Nesta lição, você aprenderá a definir cálculos, que são scripts ou expressões MDX (Multidimensional Expressions). Os cálculos permitem que você defina membros calculados, conjuntos nomeados ou execute outros comandos de script para aumentar os recursos de um cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por exemplo, você pode executar um comando de script para definir um subcubo e depois atribuir um cálculo às células no subcubo.  
@@ -42,7 +42,7 @@ ms.locfileid: "48055456"
  Para obter mais informações, consulte [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)e [Cálculos em modelos multidimensionais](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
  Esta lição contém as seguintes tarefas:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055456"
  Nesta tarefa, você aprenderá a definir conjuntos nomeados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 7: Definindo KPIs &#40;Indicadores Chave de Desempenho&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lição 7: Definindo indicadores chave de desempenho &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário do Tutorial do Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   

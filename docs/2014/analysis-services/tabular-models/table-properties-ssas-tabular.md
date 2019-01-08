@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169016"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401029"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propriedades da tabela (SSAS tabular)
   Este tópico descreve as propriedades do modelo de tabela. As propriedades descritas aqui são diferentes daquelas na caixa de diálogo Editar Propriedades de Tabela, que definem quais colunas da origem são importadas.  
@@ -32,9 +32,9 @@ ms.locfileid: "48169016"
 ##  <a name="bkmk_properties"></a> Propriedades da tabela  
  **Basic**  
   
-|Propriedade|Configuração padrão|Description|  
+|Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
-|**Nome da conexão**|\<nome da conexão >|O nome da conexão com a fonte de dados da tabela.<br /><br /> Para editar a conexão, clique no botão.|  
+|**Nome da conexão**|\<nome da conexão >|O nome da conexão à fonte de dados da tabela.<br /><br /> Para editar a conexão, clique no botão.|  
 |**Oculto**|Falso|Especifica se a tabela é ocultada das listas de campo de cliente de relatório.|  
 |**Partições**||As partições para a tabela não podem ser exibidas na janela **Propriedades** . Para exibir, criar ou editar partições, clique no botão para abrir o Gerenciador de Partições.|  
 |**Dados de origem**||Os dados de origem da tabela não podem ser exibidos na janela **Propriedades** . Para exibir ou editar os dados de origem, clique no botão para abrir a caixa de diálogo Editar Propriedades da Tabela.|  
@@ -45,7 +45,7 @@ ms.locfileid: "48169016"
   
  Para obter descrições detalhadas e informações de configuração das propriedades de relatório, consulte [Propriedades de relatório do Power View &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md).  
   
-|Propriedade|Configuração padrão|Description|  
+|Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
 |**Conjunto de Campos Padrão**|||  
 |Comportamento de tabela|||  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
@@ -15,19 +14,19 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30ca21d997d95058e034dbe36d601b601670a4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 648f142eb80607412e13151098418c22e45f04bd
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058616"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640137"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>Opção de configuração de servidor in-doubt xact resolution
   Use a opção **in-doubt xact resolution** para controlar o resultado padrão de transações que o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) não pode resolver. A incapacidade de resolver transações pode estar relacionada ao tempo de desligamento do MS DTC ou a um resultado de transação desconhecido no momento da recuperação.  
   
  A tabela seguinte lista os possíveis valores de resultado para resolver uma transação incerta.  
   
-|Valor de resultado|Description|  
+|Valor de resultado|Descrição|  
 |-------------------|-----------------|  
 |0|Nenhuma suposição. Recuperação falhará se o MS DTC não puder resolver nenhuma transação incerta.|  
 |1|Suponha confirmação. Supõe-se que qualquer transação incerta de MS DTC esteja confirmada.|  
@@ -40,7 +39,7 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 2 -– presume abort  
+sp_configure 'in-doubt xact resolution', 2 -- presume abort  
 GO  
 RECONFIGURE  
 GO  
@@ -58,13 +57,13 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 1 -– presume commit  
+sp_configure 'in-doubt xact resolution', 1 -- presume commit  
 GO  
 reconfigure  
 GO  
-ALTER DATABASE pubs SET ONLINE –- run recovery again  
+ALTER DATABASE pubs SET ONLINE -- run recovery again  
 GO  
-sp_configure 'in-doubt xact resolution', 0 –- back to no assumptions  
+sp_configure 'in-doubt xact resolution', 0 -- back to no assumptions  
 GO  
 sp_configure 'show advanced options', 0  
 GO  

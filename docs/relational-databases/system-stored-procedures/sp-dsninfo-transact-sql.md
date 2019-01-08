@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dsninfo
@@ -17,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93b8fb31c89d48a3281e5d5b102e94f95e5f2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828160"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817728"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@infotype =**] **'***tipo_info***'**  
  É o tipo de informação a ser retornada. Se *tipo_info* não for especificado ou se NULL for especificado, todos os tipos de informações são retornados. *Tipo_info* está **varchar (128)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica o nome de fornecedor da fonte de dados.|  
 |**DBMS_VERSION**|Especifica a versão da fonte de dados.|  
@@ -65,7 +64,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *dso_type*  
  É o tipo da fonte de dados. *dso_type* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Fonte de dados ODBC|  
 |**3**|Fonte de dados OLE DB|  
@@ -75,7 +74,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Tipo de informação**|**nvarchar(64)**|Tipos de informações como DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Value**|**nvarchar(512)**|Valor do tipo de informação associado.|  

@@ -39,17 +39,17 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905756"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369138"
 ---
 # <a name="general-properties"></a>Propriedades gerais
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Este tópico documenta essas propriedades de servidor no arquivo msmdsrv.ini que não são incluídas em uma seção específica, como Segurança, Rede ou ThreadPool. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** modo de servidor Multidimensional e de Tabela, a menos que indicado em contrário  
+ **Aplica-se a:** Modo de servidor multidimensional e Tabular, a menos que indicado o contrário  
   
 ## <a name="non-specific-category"></a>Categoria não específica  
  `AdminTimeout`  
@@ -64,15 +64,15 @@ ms.locfileid: "48905756"
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
   
  `CollationName`  
- Uma propriedade de cadeia de caracteres que identifica o agrupamento do servidor. Para obter mais informações, consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
+ Uma propriedade de cadeia de caracteres que identifica a ordenação do servidor. Para obter mais informações, consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../languages-and-collations-analysis-services.md).  
   
  `CommitTimeout`  
  Uma propriedade integer que especifica quanto tempo (em milissegundos) o servidor aguardará para adquirir um bloqueio de gravação visando confirmar uma transação. Um período de espera costuma ser necessário porque o servidor precisa aguardar que outros bloqueios sejam liberados para usar um bloqueio de gravação que confirme a transação.  
   
- O valor padrão para esta propriedade é zero (0), o que indica que o servidor aguardará indefinidamente. Para obter mais informações sobre propriedades relacionadas a bloqueio, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ O valor padrão para esta propriedade é zero (0), o que indica que o servidor aguardará indefinidamente. Para obter mais informações sobre propriedades relacionadas a bloqueio, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorBuildMaxThreads`  
- Uma propriedade de inteiro de 32 bits assinada que define o número máximo de threads alocados à criação de índices de partição. Aumente esse valor para acelerar a indexação da partição, pelo uso da memória. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Uma propriedade de inteiro de 32 bits assinada que define o número máximo de threads alocados à criação de índices de partição. Aumente esse valor para acelerar a indexação da partição, pelo uso da memória. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorCancelCount`  
  Uma propriedade de inteiro de 32 bits assinada que define com que frequência o servidor deve verificar se um evento de cancelamento ocorreu (com base na contagem de iterações internas). Diminua esse número para verificar cancelamentos frequentemente pelo desempenho geral.  
@@ -84,7 +84,7 @@ ms.locfileid: "48905756"
   
  `CoordinatorExecutionMode` é ignorado no modo de servidor de tabela.  
   
- O valor padrão dessa propriedade é -4, que indica que o servidor está limitado a 4 operações paralelas por processador. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ O valor padrão dessa propriedade é -4, que indica que o servidor está limitado a 4 operações paralelas por processador. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorQueryMaxThreads`  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de threads por segmento da partição durante a resolução da consulta. Quanto menor o número de usuários simultâneos, mais alto o valor pode ser, devido ao uso da memória. Inversamente, pode ser necessário baixar o valor se houver um grande número de usuários simultâneos.  
@@ -96,11 +96,11 @@ ms.locfileid: "48905756"
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os dados são armazenados.  
   
  `DeploymentMode`  
- Determina o contexto operacional de uma instância de servidor do Analysis Services. Esta propriedade é referenciada como 'modo de servidor' em caixas de diálogo, mensagens e documentação. Esta propriedade é configurada pela Instalação do SQL Server com base no modo de servidor selecionado ao instalar o Analysis Services. Esta propriedade deve ser considerada apenas interna, sempre usando o valor especificado pela Instalação.  
+ Determina o contexto operacional de uma instância de servidor do Analysis Services. Essa propriedade é conhecida como 'modo de servidor' em caixas de diálogo, mensagens e documentação. Esta propriedade é configurada pela Instalação do SQL Server com base no modo de servidor selecionado ao instalar o Analysis Services. Esta propriedade deve ser considerada apenas interna, sempre usando o valor especificado pela Instalação.  
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Este é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
 |1|Especifica instâncias do Analysis Services que foram instaladas como parte de um PowerPivot para implantação do SharePoint. Não altere a propriedade de modo de implantação da instância do Analysis Services que faz parte de uma instalação do PowerPivot para SharePoint. Dados PowerPivot não serão mais executados no servidor se você alterar o modo.|  
@@ -117,7 +117,7 @@ ms.locfileid: "48905756"
  O valor padrão desta propriedade é 3600 (segundos).  
   
  `ExternalConnectionTimeout`  
- Uma propriedade integer que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
+ Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
   
  O valor padrão desta propriedade é 60 (segundos).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905756"
 > [!NOTE]  
 >  Consultas e processos cancelados por este evento relatarão a seguinte mensagem de erro: "`Server: The operation has been cancelled`"  
   
- Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` é aplicado para comandos de processamento de cubo e para operações de writeback.  

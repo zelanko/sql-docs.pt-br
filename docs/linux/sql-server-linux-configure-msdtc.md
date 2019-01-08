@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269669"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513194"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Como configurar o Microsoft Distributed Transaction coordenador (MSDTC) no Linux
 
@@ -29,7 +29,7 @@ Transações distribuídas são habilitadas no SQL Server no Linux com a introdu
 
 SQL Server 2019 apresenta dois parâmetros de configuração para o utilitário mssql-conf.
 
-| configuração de MSSQL-conf | Description |
+| configuração de MSSQL-conf | Descrição |
 |---|---|
 | **Network.rpcport** | A porta TCP que o processo do mapeador de ponto de extremidade RPC associa ao. |
 | **Network.servertcpport** | A porta que o servidor MSDTC escuta. Se não for definido, o serviço MSDTC usa uma porta efêmera aleatória na reinicialização do serviço e exceções do firewall precisarão ser reconfiguradas para garantir que o serviço MSDTC pode continuar a comunicação. |
@@ -101,7 +101,7 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>Configurar o roteamento de porta
 
-Configurar a tabela de roteamento do servidor Linux, de modo que a comunicação de RPC na porta 135 é redirecionada para o SQL Server **network.rpcport**. As regras de iptable não podem persistir durante as reinicializações, portanto, os comandos a seguir também fornecem instruções para restaurar as regras após uma reinicialização.
+Configurar a tabela de roteamento do servidor Linux, de modo que a comunicação de RPC na porta 135 é redirecionada para o SQL Server **network.rpcport**. Mecanismo de configuração do encaminhamento de porta em distribuição diferente pode ser diferente. Em distribuições que não usam o serviço firewalld, regras de iptable são um mecanismo eficiente para fazer isso. Exemplo de tal distrubution são Ubuntu 16.04 e v12 SUSE Enterprise Linux. As regras de iptable não podem persistir durante as reinicializações, portanto, os comandos a seguir também fornecem instruções para restaurar as regras após uma reinicialização.
 
 1. Crie regras de roteamento para a porta 135. No exemplo a seguir, a porta 135 é direcionada para a porta RPC, 13500, definida na seção anterior. Substitua `<ipaddress>` com o endereço IP do seu servidor.
 
@@ -132,10 +132,16 @@ Configurar a tabela de roteamento do servidor Linux, de modo que a comunicação
    iptables-restore < /etc/iptables.conf
    ```
 
-O **salvar iptables** e **iptables restauração** comandos fornecem um mecanismo básico para salvar e restaurar iptables entradas. Dependendo de sua distribuição do Linux, lá pode ser mais avançado ou automatizado opções disponíveis. Por exemplo, uma alternativa de Ubuntu é o **iptables persistente** pacote para tornar as entradas persistente. Ou para Red Hat Enterprise Linux, você poderá usar o serviço firewalld (por meio do utilitário de configuração de firewall-cmd com – Adicionar-forward-porta ou opções semelhantes) para criar regras em vez de usar iptables de encaminhamento de porta persistente.
+O **salvar iptables** e **iptables restauração** comandos fornecem um mecanismo básico para salvar e restaurar iptables entradas. Dependendo de sua distribuição do Linux, lá pode ser mais avançado ou automatizado opções disponíveis. Por exemplo, uma alternativa de Ubuntu é o **iptables persistente** pacote para tornar as entradas persistente. 
+
+Em distribuições que usam o serviço firewalld, o mesmo serviço pode ser usado para ambos os abrindo a porta no servidor e o encaminhamento de porta interno. Por exemplo, no Red Hat Enterprise Linux, você deve usar o serviço firewalld (por meio do utilitário de configuração de firewall-cmd com - Adicionar-forward-porta ou opções semelhantes) para criar e gerenciar regras em vez de usar iptables de encaminhamento de porta persistente.
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> As etapas anteriores supõem que um endereço IP fixo. Se o endereço IP para sua instância do SQL Server for alterado (devido a intervenção manual ou DHCP), remova e recrie as regras de roteamento. Se você precisar recriar ou excluir regras de roteamentos existentes, você pode usar o comando a seguir para remover o antigo `RpcEndPointMapper` regras:
+> As etapas anteriores supõem que um endereço IP fixo. Se o endereço IP para sua instância do SQL Server for alterado (devido a intervenção manual ou DHCP), remova e recrie as regras de roteamento se eles foram criados com iptables. Se você precisar recriar ou excluir regras de roteamentos existentes, você pode usar o comando a seguir para remover o antigo `RpcEndPointMapper` regras:
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

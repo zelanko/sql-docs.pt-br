@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Enabled Property (ServerNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d63f5a3b66001d3c9d57dfdd4106334af7239a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119376"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363939"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Propriedade Enabled (classe ServerNetworkProtocol)
   Obtém a propriedade booliana que especifica se o protocolo de rede do servidor está habilitado.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -14,15 +14,15 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524554"
 ---
 # <a name="database-engine-features-and-tasks"></a>Recursos e tarefas do Mecanismo de Banco de Dados
-  Encontre as informações que qualquer um — designer, desenvolvedor, analista ou administrador — necessite para construir bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Encontre informações que qualquer pessoa-designer, desenvolvedor, analista ou administrador-necessite para construir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Instâncias do mecanismo de banco de dados &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

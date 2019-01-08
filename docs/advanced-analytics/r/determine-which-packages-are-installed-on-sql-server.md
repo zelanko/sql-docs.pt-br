@@ -1,5 +1,5 @@
 ---
-title: Obter informações de pacote de R e Python no SQL Server Machine Learning | Microsoft Docs
+title: Obter informações de pacote de R e Python - serviços do SQL Server Machine Learning
 description: Determinar a versão do pacote de R e Python, verificar a instalação e obter uma lista de pacotes instalados no SQL Server R Services ou serviços de Machine Learning.
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291532"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645365"
 ---
 #  <a name="get-r-and-python-package-information"></a>Obter informações de pacote de R e Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ Há várias maneiras que você pode obter uma lista completa dos pacotes atualme
 
 ### <a name="r"></a>R
 
-O exemplo a seguir usa a função R `installed.packages()` em um [!INCLUDE [tsql](..\..\includes\tsql-md.md)] procedimento armazenado para obter uma matriz de pacotes que foram instalados na biblioteca R_SERVICES da instância atual. Esse script retorna campos de nome e a versão do pacote no arquivo de descrição, apenas o nome é retornado.
+O exemplo a seguir usa a função R `installed.packages()` em um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado para obter uma matriz de pacotes que foram instalados na biblioteca R_SERVICES da instância atual. Esse script retorna campos de nome e a versão do pacote no arquivo de descrição, apenas o nome é retornado.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ Se o pacote for encontrado, uma mensagem será retornada: "Comandos concluídos com êxito."
++ Se o pacote for encontrado, uma mensagem será retornada: "Comandos concluídos com êxito".
 
 + Se o pacote não pode ser localizado ou carregado, você obterá um erro que contém o texto: "não há nenhum pacote chamado 'MissingPackageName'"
 

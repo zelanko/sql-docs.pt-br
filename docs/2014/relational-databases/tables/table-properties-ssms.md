@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096656"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356286"
 ---
 # <a name="table-properties"></a>Propriedades da tabela
   Este tópico descreve as propriedades de tabela que são exibidas na caixa de diálogo Propriedades da Tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como exibir essas propriedades, veja [Exibir a definição da tabela](view-the-table-definition.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "48096656"
  Indica se o objeto foi criado com a opção de identificador entre aspas definida como ON. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
  **Escalonamento de Bloqueios**  
- Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](http://msdn.microsoft.com/library/jj856598.aspx). Os valores possíveis são:  
+ Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](https://msdn.microsoft.com/library/jj856598.aspx). Os valores possíveis são:  
   
  AUTO  
  Essa opção permite que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecione a granularidade do escalonamento de bloqueios apropriado ao esquema da tabela.  
@@ -100,8 +99,8 @@ ms.locfileid: "48096656"
 ##  <a name="FileTable"></a> Página FileTable  
  Exibe as propriedades da tabela relacionada a FileTables. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
- **Agrupamento da colunas de nome FileTable**  
- O agrupamento aplicado à coluna **Name** em uma FileTable. A coluna **Name** contém nomes de arquivos e diretórios.  
+ **Ordenação da colunas de nome FileTable**  
+ A ordenação aplicada à coluna **Name** em uma FileTable. A coluna **Name** contém nomes de arquivos e diretórios.  
   
  **Nome de diretório da FileTable**  
  A pasta raiz da FileTable.  
@@ -114,7 +113,7 @@ ms.locfileid: "48096656"
   
 ### <a name="compression"></a>Compactação  
  **Tipo de compactação**  
- O tipo de compactação da tabela. Essa propriedade está disponível somente para tabelas que não são particionadas. Para obter mais informações, consulte [Data Compression](../data-compression/data-compression.md).  
+ O tipo de compactação da tabela. Essa propriedade está disponível somente para tabelas que não são particionadas. Para saber mais, veja [Data Compression](../data-compression/data-compression.md).  
   
  **Partições que usam compactação de página**  
  Os números de partição que estão usando compactação de página. Essa propriedade está disponível somente para tabelas particionadas.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096656"
  Os valores possíveis são `True` e `False`.  
   
  **Grupos de Arquivos do Fluxo de Arquivos**  
- Especifique o nome do grupo de arquivos de dados FILESTREAM se a tabela tiver um `varbinary(max)` coluna que tem o atributo FILESTREAM. O valor padrão é o grupo de arquivos de dados padrão FILESTREAM.  
+ Especifique o nome do grupo de arquivos de dados FILESTREAM se a tabela tiver uma coluna `varbinary(max)` com um atributo FILESTREAM. O valor padrão é o grupo de arquivos de dados padrão FILESTREAM.  
   
  Se a tabela não contiver dados FILESTREAM, o campo ficará em branco.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48096656"
  A quantidade de espaço em megabytes que os dados ocupam na tabela.  
   
 ### <a name="partitioning"></a>Particionamento  
- Esta seção estará disponível somente se a tabela estiver particionada. Para saber mais, confira [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+ Esta seção estará disponível somente se a tabela estiver particionada. Para obter mais informações, consulte [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Coluna de partição**  
  O nome da coluna na qual a tabela é particionada.  

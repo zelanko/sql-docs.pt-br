@@ -10,12 +10,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0857669590f5d81c7ab6aa585de4a4aa052ca492
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff3acde2d4257412c743958311a050a7879ed2a4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514614"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Aviso legal (SSMA para Oracle)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
@@ -35,7 +35,7 @@ SAP NetWeaver é marca registrada da SAP AG na Alemanha e em vários outros paí
 Todas as outras marcas comerciais pertencem a seus respectivos proprietários.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Política de documentação para suporte e atualização do SQL Server  
-O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. A documentação do produto, Manuais Online do SQL Server, arquivos Leiame, documentos sobre problemas conhecidos e artigos da Base de Dados de Conhecimento, tem conteúdo sobre recursos e funcionalidades do SQL Server sólido o suficiente para ser usado com segurança por todos os clientes. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
+O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto - Manuais Online do SQL Server, arquivos Leiame, documentos de problemas conhecidos e artigos da Base de dados de Conhecimento - tem conteúdo sobre recursos do SQL Server e funcionalidade que é robusta o suficiente para ser usado por todos os clientes com segurança. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
   
 Em alguns casos, determinado recurso pode não ser algo que os clientes devam usar diretamente; nesse caso, ele não está documentado. A menos que um recurso também seja abordado na documentação do SQL Server publicada pela Microsoft, o conteúdo de manuais ou sites de terceiros não tem suporte do atendimento ao cliente da Microsoft e não deve ser usado em aplicativos ou bancos de dados de produção.  
   

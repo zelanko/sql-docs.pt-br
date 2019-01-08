@@ -1,5 +1,6 @@
 ---
-title: Tutorial de autenticação do Active Directory para o SQL Server no Linux | Microsoft Docs
+title: 'Tutorial: Autenticação do Active Directory para o SQL Server no Linux'
+titleSuffix: SQL Server
 description: Este tutorial fornece as etapas de configuração para a autenticação do AAD para o SQL Server no Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658486"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160587"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Autenticação usar o Active Directory com o SQL Server no Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ Para obter mais informações, consulte a documentação do Red Hat [descobrindo
    ```
 
    > [!NOTE]
-   > Os SPNs podem levar vários minutos para propagar por meio de seu domínio, especialmente se o domínio for grande. Se você receber o erro "kvno: servidor não encontrado no banco de dados do Kerberos ao obter as credenciais para MSSQLSvc /\*\*\<nome de domínio totalmente qualificado do computador host\>\*\*:\* \* \<porta tcp\>\*\*\@CONTOSO.COM ", aguarde alguns minutos e tente novamente.
+   > Os SPNs podem levar vários minutos para propagar por meio de seu domínio, especialmente se o domínio for grande. Se você receber o erro "kvno: Servidor não encontrado no banco de dados do Kerberos ao obter as credenciais para MSSQLSvc /\*\*\<nome de domínio totalmente qualificado do computador host\>\*\*:\* \* \< a porta TCP\>\*\*\@CONTOSO.COM ", aguarde alguns minutos e tente novamente.
 
 2. Crie um arquivo keytab com **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** para o usuário do AD que você criou na etapa anterior. Quando solicitado, insira a senha para essa conta do AD.
 
@@ -292,7 +293,7 @@ Para obter mais informações, consulte a documentação do Red Hat [descobrindo
    sudo systemctl restart mssql-server
    ```
 
-6. Opcional: Desabilitar conexões UDP para o controlador de domínio para melhorar o desempenho. Em muitos casos, as conexões UDP sempre irá falhar ao se conectar a um controlador de domínio, portanto, você pode definir opções de configuração no `/etc/krb5.conf` para ignorar chamadas UDP. Editar `/etc/krb5.conf` e defina as seguintes opções:
+6. Opcional: Desabilite conexões UDP para o controlador de domínio para melhorar o desempenho. Em muitos casos, as conexões UDP sempre irá falhar ao se conectar a um controlador de domínio, portanto, você pode definir opções de configuração no `/etc/krb5.conf` para ignorar chamadas UDP. Editar `/etc/krb5.conf` e defina as seguintes opções:
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,9 +340,9 @@ O parâmetro de cadeia de caracteres de conexão específicas para os clientes u
 
 * Autenticação do AD usando outros drivers de cliente
 
-  * JDBC: [usando o Kerberos de autenticação para conectar-se o SQL Server integrada](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC: [usando a autenticação integrada](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET: [sintaxe da cadeia de Conexão](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
+  * JDBC: [Usando a autenticação integrada do Kerberos para se conectar do SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC: [Como usar a autenticação integrada](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * ADO.NET: [Sintaxe de cadeia de caracteres de Conexão](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>Melhorias no desempenho
 Se você notar que pesquisas de conta do AD estão demorando um pouco, e você verificou a configuração do AD é válida com as etapas em [uso de autenticação do Active Directory com o SQL Server no Linux por meio de provedores de AD de terceiros](sql-server-linux-active-directory-third-party-providers.md), você pode adicionar o linhas abaixo para `/var/opt/mssql/mssql.conf` ignorar chamadas SSSD e usar diretamente as chamadas de LDAP.

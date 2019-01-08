@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143786"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367988"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
   Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
@@ -36,7 +36,7 @@ ms.locfileid: "48143786"
   
  As seguintes recomendações se aplicam a chamadas de procedimento armazenado compilado nativamente usando o driver ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- A maneira mais eficiente chamar um procedimento armazenado uma vez é emitindo uma chamada RPC direta usando `SQLExecDirect` e cláusulas ODBC CALL. Não use o [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrução. Se um procedimento armazenado for chamado mais de uma vez, a execução preparada será mais eficiente.  
+ O modo mais eficiente de chamar um procedimento armazenado uma vez é emitindo uma chamada RPC direta usando `SQLExecDirect` e cláusulas ODBC CALL. Não use o [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrução. Se um procedimento armazenado for chamado mais de uma vez, a execução preparada será mais eficiente.  
   
  O modo mais eficiente de chamar um procedimento armazenado do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais de uma vez é através de chamadas de procedimento RPC preparadas. As chamadas RPC preparadas são executadas da seguinte maneira através do driver ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Crie um banco de dados de exemplo com um grupo de arquivos de dados com otimização de memória. Para obter informações sobre como criar um banco de dados com um grupo de arquivos de dados com otimização de memória, veja [Criando uma tabela com otimização de memória e um procedimento armazenado compilado de modo nativo](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Crie uma fonte de dados ODBC chamada PrepExecSample que aponte para o banco de dados. Use o driver do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Você também pode modificar a amostra e usar o [Microsoft ODBC Driver para SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Crie uma fonte de dados ODBC chamada PrepExecSample que aponte para o banco de dados. Use o driver do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Você também pode modificar a amostra e usar o [Microsoft ODBC Driver para SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Execute o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] (abaixo) no banco de dados de exemplo.  
   

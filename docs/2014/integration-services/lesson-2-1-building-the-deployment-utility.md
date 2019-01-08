@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 1: compilar o utilitário de implantação | Microsoft Docs'
+title: 'Etapa 1: Compilando o utilitário de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356345"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
@@ -49,7 +48,7 @@ ms.locfileid: "48215998"
   
 4.  Na janela Saída, verifique as seguintes informações:  
   
-     Compilação iniciada: Projeto do SQL Integration Services: Incremental ...  
+     Compilação iniciada: Projeto do Integration Services do SQL: Incremental...  
   
      Criando utilitário de implantação...  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48215998"
   
      Compilação concluída – 0 erros, 0 avisos  
   
-     ========== Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado ==========  
+     = = = Compilação: 0 bem-sucedido, 0 com falha, 1 atualizado, 0 ignorado = = =  
   
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um utilitário de implantação](../../2014/integration-services/create-a-deployment-utility.md)  

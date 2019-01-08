@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
@@ -15,12 +14,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367088"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tarefa e visualizador da tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados fornece a funcionalidade de criação de perfil de dados dentro do processo de extração, transformação e carga de dados. Usando a tarefa Criação de Perfil de Dados, você pode alcançar os seguintes benefícios:  
@@ -56,20 +55,20 @@ ms.locfileid: "48119906"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services e criação de perfil de dados  
  Em [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o processo de criação de perfil de dados consiste nas seguintes etapas:  
   
- **Etapa 1: Definindo a tarefa Criação de Perfil de Dados**  
+ **Etapa 1: Configurando a tarefa de criação de perfil de dados**  
  A tarefa Criação de Perfil de Dados é uma tarefa que você usa para configurar os perfis que deseja calcular. Você executa o pacote que contém a tarefa de Criação de Perfil de Dados para computar os perfis. A tarefa salva o perfil produzido em formato de XML em um arquivo ou uma variável de pacote.  
   
- **Para obter mais informações:** [Instalação da Tarefa de Criação de Perfil de Dados](data-profiling-task.md)  
+ **Para obter mais informações, consulte:** [Configuração da tarefa Criação de Perfil de Dados](data-profiling-task.md)  
   
- **Etapa 2: Revisando os perfis que a tarefa Criação de Perfis de Dados computa**  
+ **Etapa 2: Revisando os perfis que a tarefa criação de perfil de dados computa**  
  Para exibir os perfis de dados que a tarefa Criação de Perfil de Dados computa, envie a saída para um arquivo e utilize o Visualizador de Perfil de dados Esse visualizador é um utilitário autônomo que mostra a saída do perfil em formato resumido e detalhado com uma capacidade opcional de busca.  
   
- **Para obter mais informações:** [Visualizador de Perfil de Dados](data-profile-viewer.md)  
+ **Para obter mais informações, consulte:** [Visualizador de Perfil de Dados](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Adição de lógica condicional ao fluxo de trabalho de criação de perfil de dados.  
  A tarefa Criação de Perfil de Dados não tem recursos internos que lhe permitam usar lógica condicional para conectar essa tarefa a tarefas de downstream com base na saída do perfil. Porém, você pode adicionar facilmente esta lógica, com uma quantidade pequena de programação, em uma tarefa de Script. Por exemplo, a tarefa Script poderia executar uma consulta XPath contra o arquivo de saída da tarefa de Criação de Perfil de Dados. A consulta poderia determinar se a porcentagem de valores nulos em uma coluna particular excede certo limite. Se a porcentagem exceder o limite, você pode interromper o pacote e resolver o problema na fonte de dados antes de continuar. Para obter informações, consulte [Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote](incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Esquema do criador de perfil de dados](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Esquema do criador de perfil de dados](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46f8591a7fe3e8a69ceb3df60011248db38da722
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354729"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
   Este tópico contém informações sobre os eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os quais os limites de avisos podem ser configurados e gerenciados para espelhamento de banco de dados. Você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Este tópico também contém informações sobre como configurar alertas em eventos de espelhamento de banco de dados.  
@@ -45,7 +45,7 @@ ms.locfileid: "48132696"
 |Métrica de desempenho|Limite de aviso|Rótulo do monitor de espelhamento de banco de dados|  
 |------------------------|-----------------------|--------------------------------------|  
 |Log não enviado|Especifica quantos quilobytes (KB) de log não enviado geram um aviso na instância do servidor principal. Essa advertência ajuda a medir o potencial para perda de dados em termos de KB e é especialmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|**Avisar se o log não enviado exceder o limite**|  
-|Log não restaurado|Especifica quantos KB de log não restaurado geram um aviso na instância do servidor espelho. Esse aviso ajuda a medir o tempo de failover. *Tempo de failover* consiste, essencialmente, no tempo necessário para que o servidor espelho anterior efetue o roll-forward de quaisquer logs restantes em sua fila de restauração, mais um pequeno tempo adicional.<br /><br /> Observação: em um failover automático, o tempo necessário para que o sistema observe o erro é independente do período do failover.<br /><br /> Para obter mais informações, consulte [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avisar se o log não restaurado exceder o limite**|  
+|Log não restaurado|Especifica quantos KB de log não restaurado geram um aviso na instância do servidor espelho. Esse aviso ajuda a medir o tempo de failover. *Tempo de failover* consiste, essencialmente, no tempo necessário para que o servidor espelho anterior efetue o roll-forward de quaisquer logs restantes em sua fila de restauração, mais um pequeno tempo adicional.<br /><br /> Observação: Em um failover automático, o tempo necessário para que o sistema observe o erro é independente do período do failover.<br /><br /> Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avisar se o log não restaurado exceder o limite**|  
 |Transação não enviada mais antiga|Especifica o número de minutos de transações que podem ser acumuladas na fila de envio, antes da geração de um aviso na instância do servidor principal. Essa advertência ajuda a medir o potencial para perda de dados em termos de tempo e é especialmente relevante no modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|**Avisar se a idade da transação não enviada mais antiga exceder o limite**|  
 |Sobrecarga espelhada confirmada|Especifica o número de milissegundos de atraso médio por transação tolerado, antes que um aviso seja gerado no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|**Avisar se a sobrecarga espelhada confirmada exceder o limite**|  
   
@@ -66,14 +66,14 @@ ms.locfileid: "48132696"
   
      O conjunto a seguir de procedimentos armazenados do sistema permite que um administrador configure e gerencie limites de aviso em bancos de dados espelhados, um parceiro por vez.  
   
-    |Procedimento|Description|  
+    |Procedimento|Descrição|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Adiciona ou altera limites de aviso para uma métrica especificada de desempenho de espelhamento.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Descarta o aviso de uma métrica de desempenho especificada.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventos de limite de desempenho enviados para o log de eventos do Windows  
- Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido alcançado, o procedimento de atualização **sp_dbmmonitorupdate**vai gerar um evento informativo, um *evento do limite de desempenho*, para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
+ Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido alcançado, o procedimento de atualização **sp_dbmmonitorupdate** gerará um evento informativo, um *evento do limite de desempenho*, para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
   
 |Métrica de desempenho|ID do evento|  
 |------------------------|--------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "48132696"
   
  Quando você define alertas em eventos de espelhamento de banco de dados, recomendamos que defina limites de aviso e alertas em ambas as instâncias do servidor parceiro. Eventos individuais são gerados no servidor principal ou no servidor espelho, mas cada parceiro pode executar qualquer uma dessas funções a qualquer momento. Para garantir que um alerta continue operando depois de um failover, o alerta deve ser definido em ambos os parceiros.  
   
- Para obter mais informações, consulte o white paper sobre alertas em eventos de espelhamento de banco de dados neste site do [SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). Esse white paper contém informações sobre como configurar alertas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, os eventos WMI de espelhamento de banco de dados e scripts de exemplo.  
+ Para obter mais informações, consulte o white paper sobre alertas em eventos de espelhamento de banco de dados neste site do [SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). Esse white paper contém informações sobre como configurar alertas com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, os eventos WMI de espelhamento de banco de dados e scripts de exemplo.  
   
 > [!IMPORTANT]  
 >  Para todas a sessões de espelhamento, é altamente recomendável que você configure o banco de dados para enviar um alerta em qualquer evento de alteração de estado. A menos que uma alteração de estado seja esperada como resultado de uma alteração de configuração manual, algo ocorreu que pode comprometer seus dados. Para ajudar a proteger seus dados, identifique e repare a causa de uma alteração de estado imprevista.  

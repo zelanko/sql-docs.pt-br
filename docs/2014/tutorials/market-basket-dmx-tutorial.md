@@ -19,17 +19,17 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360788"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial de DMX do Market Basket
   Nesse tutorial, você aprenderá como criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Você então utilizará esses modelos de mineração de dados para criar previsões que descrevem quais produtos tendem a ser adquiridos ao mesmo tempo.  
   
- Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. Suas operações principais estão situadas em Bothell, Washington, com 290 funcionários, e tem várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
+ Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. Suas operações principais estão situadas em Bothell, Washington, com 290 funcionários, e tem várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu criar um aplicativo personalizado que utilize a funcionalidade de mineração de dados para prever que tipos de produtos seus clientes tendem a comprar ao mesmo tempo. A meta do aplicativo personalizado é poder especificar um conjunto de produtos e prever quais produtos adicionais serão adquiridos com os produtos especificados. O [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] usará essas informações para adicionar um recurso de "sugestão" a seu site, e também para organizar melhor a maneira como as informações são apresentadas a seus clientes.  
@@ -46,7 +46,7 @@ ms.locfileid: "49461902"
   
  O objetivo deste tutorial é fornecer as consultas DMX que serão usadas no aplicativo personalizado.  
   
- **Para obter mais informações:** [soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Para obter mais informações, consulte:** [Soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Estrutura de mineração e modelos de mineração  
  Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. O *estrutura de mineração* é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários *modelos de mineração* que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
@@ -87,16 +87,16 @@ ms.locfileid: "49461902"
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Ele se divide nas lições a seguir:  
   
- [Lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Lição 1: Criando a estrutura de mineração da cesta de compras](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `CREATE` para criar estruturas de mineração.  
   
- [Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `ALTER` para adicionar modelos de mineração a uma estrutura de mineração.  
   
- [Lição 3: Processando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lição 3: Processando a estrutura de mineração da cesta de compras](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `INSERT INTO` para processar estruturas de mineração e seus modelos de mineração associados.  
   
- [Lição 4: Executando previsões de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lição 4: Execução de previsões de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  Nesta lição, você aprenderá a usar a instrução `PREDICTION JOIN` para criar previsões em relação aos modelos de mineração.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -108,7 +108,7 @@ ms.locfileid: "49461902"
   
 -   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
   
- Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], acesse [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
+ Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], acesse [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
   
 > [!NOTE]  
 >  Ao examinar os tutoriais, recomendamos que você adicione os botões **Próximo Tópico** e **Tópico Anterior** à barra de ferramentas do visualizador de documentos.  
@@ -116,6 +116,6 @@ ms.locfileid: "49461902"
 ## <a name="see-also"></a>Consulte também  
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

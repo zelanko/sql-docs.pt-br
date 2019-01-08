@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7ef284a927504bb4c7567d8700a8b15d63c92be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190796"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365258"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Ajuda F1 do Assistente de Otimização com Base no Uso
   O Assistente de Otimização com Base no Uso tem saída semelhante ao Assistente de Design de Agregação e é usado para criar agregações para uma partição. No entanto o Assistente de Otimização com Base no Uso cria agregações com base em padrões específicos de uso de consultas registradas no log de consultas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . As agregações fornecem melhorias de desempenho permitindo que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere totais pré-calculados diretamente do armazenamento de cubo em vez de precisar recalcular dados de uma fonte de dados subjacente para cada consulta.  
@@ -39,12 +39,12 @@ ms.locfileid: "48190796"
   
 -   Salvar e opcionalmente processar a partição, grupo de medidas ou cubo para gerar as agregações definidas.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o Assistente de Design de agregação para agregações de design com base em análise estatística da estrutura de partição para fornecer um design de agregação que pode ser limitado pelo tamanho do armazenamento ou ganho estimado de desempenho. É possível usar o Assistente de Design de Agregação para melhorar o desempenho geral de uma partição, mas o design de agregação não se destina a necessidades específicas de seus usuários empresariais. O Assistente de Otimização com Base no Uso pode fornecer um design de agregação destinado a essas necessidades específicas, mas o assistente poderá fazer isso apenas se o log de consultas da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiver informações suficientes para construir essas consultas.  
+ O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o Assistente de Design de Agregação para criação de agregações com base em análise estatística da estrutura da partição para fornecer um design de agregação que pode ser limitado pelo tamanho do armazenamento ou ganho estimado de desempenho. É possível usar o Assistente de Design de Agregação para melhorar o desempenho geral de uma partição, mas o design de agregação não se destina a necessidades específicas de seus usuários empresariais. O Assistente de Otimização com Base no Uso pode fornecer um design de agregação destinado a essas necessidades específicas, mas o assistente poderá fazer isso apenas se o log de consultas da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiver informações suficientes para construir essas consultas.  
   
  Normalmente, os dois assistentes são usados em conjunto para melhorar o desempenho na implantação e com o passar do tempo. O Assistente de Design de Agregação deve ser usado primeiro quando a partição (ou o cubo ou o grupo de medidas que contém a partição) é implantado inicialmente para fornecer um benefício geral de desempenho. Após um período de tempo de registro de consultas de usuários empresariais da partição no log de consultas, você poderá usar o Assistente de Otimização com Base no Uso para focalizar ainda mais o design de agregação para atender melhor aos requisitos de desempenho e de consultas dos usuários empresariais.  
   
 > [!NOTE]  
->  Para obter informações sobre como configurar o log de consultas, consulte [Configurando o log de consultas do Analysis Services](http://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx).  
+>  Para obter informações sobre como configurar o log de consultas, consulte [Configurando o log de consultas do Analysis Services](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

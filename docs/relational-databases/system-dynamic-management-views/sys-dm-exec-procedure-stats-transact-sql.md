@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663384"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418670"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna estatísticas de desempenho de agregação para procedimentos armazenados em cache. A exibição retorna uma linha para cada plano de procedimento armazenado, e o tempo de vida da linha é igual ao tempo em que o procedimento armazenado permanece em cache. Quando um procedimento armazenado é removido do cache, a linha correspondente é eliminada da exibição. Nesse momento, um evento de rastreamento do SQL de estatísticas de desempenho é gerado semelhante à **DM exec_query_stats**.  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.  
   
 > [!NOTE]
 > Uma consulta inicial de **DM exec_procedure_stats** pode produzir resultados inexatos se houver uma carga de trabalho atualmente em execução no servidor. Mais resultados precisos podem ser determinados pela reexecução da consulta.  
@@ -41,7 +41,7 @@ ms.locfileid: "47663384"
 > [!NOTE]
 > Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados no qual o procedimento armazenado reside.|  
 |**object_id**|**int**|Número de identificação de objeto do procedimento armazenado.|  
@@ -72,10 +72,10 @@ ms.locfileid: "47663384"
 |**last_elapsed_time**|**bigint**|O tempo decorrido, em microssegundos, da execução concluída mais recente deste procedimento armazenado.|  
 |**min_elapsed_time**|**bigint**|O tempo mínimo decorrido, em microssegundos, de qualquer execução concluída deste procedimento armazenado.|  
 |**max_elapsed_time**|**bigint**|O tempo máximo decorrido, em microssegundos, de qualquer execução concluída deste procedimento armazenado.|  
-|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste procedimento armazenado desde sua compilação.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|O número de páginas despejadas a última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|O número máximo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste procedimento armazenado desde sua compilação.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|O número de páginas despejadas a última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|O número máximo de páginas que este procedimento armazenado já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|O identificador para o nó que essa distribuição é no.<br /><br />**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas é habilitada, tempo de trabalho será coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0.  

@@ -1,7 +1,7 @@
 ---
 title: Assistente de migração do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668392"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031712"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -42,9 +42,10 @@ As seguintes versões de destino têm suporte para o SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 no Windows e Linux
+- No Windows e Linux do SQL Server de 2019
 - Banco de dados SQL do Azure
-- SQL Server 2017 no Windows e Linux (visualização)
-- * * Azure SQL Data Warehouse
+- Azure SQL Data Warehouse * *
 
 * * Este destino é compatível apenas com o SSMA para Oracle.
  
@@ -60,7 +61,7 @@ As seguintes versões de destino têm suporte para o SSMA.
   
 -   **Ajuda do produto** - para acessar o suporte do produto, inicie o SSMA e selecione o menu Ajuda ou pressione a tecla F1.  
   
--   **Fóruns da comunidade do SQL Server** – faça uma pergunta na comunidade do SQL Server  
+-   **Fóruns da comunidade do SQL Server** -faça uma pergunta na comunidade do SQL Server  
   
     -   [Comunidade do SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -grupos de notícias e fóruns monitorados pela comunidade do SQL Server. O site também lista fontes de informações da comunidade, como blogs e sites.  
   
@@ -70,7 +71,7 @@ As seguintes versões de destino têm suporte para o SSMA.
   
 -   Suporte Premier - se você tiver um contrato Premier, você pode obter Premier suporte sobre o [portal Premier Online](https://premier.microsoft.com/).  
   
--   Serviços de consultoria – para parceiro assistido por migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Serviços de consultoria - para parceiro assistido por migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Aviso legal (SSMA)  
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
@@ -81,7 +82,7 @@ A menos que indicado o contrário, os exemplos de empresas, organizações, prod
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   
-© 2017 Microsoft Corporation. Todos os direitos reservados.  
+© Microsoft Corporation de 2019. Todos os direitos reservados.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, Gráfico Dinâmico, Tabela Dinâmica, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX são marcas registradas ou comerciais da Microsoft Corporation nos Estados Unidos e/ou em outros países/regiões.  
   
@@ -90,7 +91,7 @@ SAP NetWeaver é marca registrada da SAP AG na Alemanha e em vários outros paí
 Todas as outras marcas comerciais pertencem a seus respectivos proprietários.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Política de documentação para suporte e atualização do SQL Server  
-O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. A documentação do produto, Manuais Online do SQL Server, arquivos Leiame, documentos sobre problemas conhecidos e artigos da Base de Dados de Conhecimento, tem conteúdo sobre recursos e funcionalidades do SQL Server sólido o suficiente para ser usado com segurança por todos os clientes. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
+O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto - Manuais Online do SQL Server, arquivos Leiame, documentos de problemas conhecidos e artigos da Base de dados de Conhecimento - tem conteúdo sobre recursos do SQL Server e funcionalidade que é robusta o suficiente para ser usado por todos os clientes com segurança. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
   
 Em alguns casos, determinado recurso pode não ser algo que os clientes devam usar diretamente; nesse caso, ele não está documentado. A menos que um recurso também seja abordado na documentação do SQL Server publicada pela Microsoft, o conteúdo de manuais ou sites de terceiros não tem suporte do atendimento ao cliente da Microsoft e não deve ser usado em aplicativos ou bancos de dados de produção.  
   

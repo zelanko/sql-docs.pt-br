@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354701"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar e exibir arquivos de log do SharePoint e log de diagnóstico (PowerPivot para SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] operações de servidor, eventos e mensagens são registradas nos arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Neste tópico:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188346"
   
 4.  Expanda a categoria e selecione categorias individuais.  
   
-     **Solicitação de página de aplicativo** especifica eventos disparados pelo aplicativo de serviço ao localizar um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para carregar uma fonte de dados do PowerPivot e comunicar com outros servidores no farm.  
+     A**Solicitação de página de aplicativos** especifica eventos disparados pelo aplicativo de serviço ao localizar um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para carregar uma fonte de dados PowerPivot e comunicar-se com outros servidores no farm.  
   
      O**Processamento de solicitação** especifica eventos disparados por solicitações de consulta em relação a um banco de dados do PowerPivot que é carregado em um servidor no farm.  
   
@@ -77,16 +77,16 @@ ms.locfileid: "48188346"
   
 -   Para erros que fornecem uma ID de correlação, copie a ID e use-a como um termo de pesquisa no arquivo de log.  
   
--   Procure status de erro "Alto" ou "Exceção." Procure o 'Serviço PowerPivot'.  
+-   Procure status de erro "Alto" ou "Exceção." Pesquise por "Serviço do PowerPivot".  
   
 -   Se você souber quando o erro ocorreu, use a data e as informações de tempo para restringir o escopo das entradas pelas quais você deve rolar.  
   
 #### <a name="use-a-log-viewer-application"></a>Use um aplicativo de visualizador de log  
- Embora você possa usar um editor de texto para exibir os logs de rastreamento individualmente, um aplicativo de visualizador de log que permite exibir vários arquivos de log ao mesmo tempo pode ser muito mais útil. Felizmente, há vários aplicativos de visualizador de log de terceiros disponíveis para download no site da Codeplex que pode ajudar a exibir vários logs de rastreamento em um único espaço de trabalho.  
+ Embora você possa usar um editor de texto para exibir os logs de rastreamento individualmente, um aplicativo de visualizador de log que permite exibir vários arquivos de log ao mesmo tempo pode ser muito mais útil. Felizmente, há vários aplicativos de visualizador de log de terceiros disponíveis para download no site da Codeplex que pode ajudar a exibir vários logs de rastreamento em um único workspace.  
   
  As instruções a seguir incluem links para Visualizadores de Log populares de ULS do SharePoint que você pode baixar do Codeplex.  
   
-1.  Vá para [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) ou [Visualizador de log do ULS do SharePoint](http://go.microsoft.com/fwlink/?LinkId=150052) no site da Codeplex.  
+1.  Vá para [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) ou [Visualizador de log do ULS do SharePoint](https://go.microsoft.com/fwlink/?LinkId=150052) no site da Codeplex.  
   
 2.  Clique na guia **Downloads** .  
   

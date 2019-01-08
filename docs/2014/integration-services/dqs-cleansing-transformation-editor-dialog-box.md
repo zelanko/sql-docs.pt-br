@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062458"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978412"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
   Use a caixa de diálogo **Editor de Transformação de Limpeza DQS** para corrigir os dados usando Data Quality Services (DQS). Para obter mais informações, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48062458"
  Selecione uma base de dados de conhecimento do DQS para a fonte de dados conectada. Para obter mais informações sobre a base de dados de conhecimento do DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Criptografar conexão**  
- Especifique se é preciso criptografar a conexão para criptografar a transferência de dados entre o Servidor DQS e o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Especifique se deseja criptografar a conexão para criptografar a transferência de dados entre o servidor DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Domínios disponíveis**  
  Liste os domínios disponíveis para a base de conhecimento selecionada. Há dois tipos de domínios: domínios únicos e domínios compostos que contêm dois ou mais domínios únicos.  

@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e84b37c0e2d8436a8b113103d3459d12b4ac7784
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193536"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359358"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>A réplica de disponibilidade não têm uma função íntegra
     
@@ -32,11 +32,11 @@ ms.locfileid: "48193536"
 |**Categoria**|**Crítico**|  
 |**Faceta**|Réplica de disponibilidade|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Esta política verifica o estado da função da réplica de disponibilidade. O estado da política é não íntegro quando a função da réplica de disponibilidade não é primária nem secundária. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
->  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [A réplica de disponibilidade não tem uma função íntegra](http://go.microsoft.com/fwlink/p/?LinkId=220856) no Wiki do TechNet.  
+>  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [A réplica de disponibilidade não tem uma função íntegra](https://go.microsoft.com/fwlink/p/?LinkId=220856) no Wiki do TechNet.  
   
 ## <a name="possible-causes"></a>Causas possíveis  
  A função desta réplica de disponibilidade é não íntegra. A réplica não tem a função primária ou secundária.  

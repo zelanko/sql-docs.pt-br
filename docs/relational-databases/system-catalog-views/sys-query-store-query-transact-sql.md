@@ -1,7 +1,7 @@
 ---
 title: query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726784"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711847"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>query_store_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contém informações sobre a consulta e suas estatísticas de execução geral agregado tempo de execução associado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Chave primária.|  
 |**query_text_id**|**bigint**|Chave estrangeira. Ingressa [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
@@ -43,7 +43,7 @@ ms.locfileid: "47726784"
 |**batch_sql_handle**|**varbinary(64)**|ID do lote de instrução de consulta faz parte. Populado somente se a consulta faz referência a tabelas temporárias ou variáveis de tabela.|  
 |**query_hash**|**binary(8)**|Hash MD5 da consulta individual, com base na árvore de lógica de consulta. Inclui dicas do otimizador.|  
 |**is_internal_query**|**bit**|A consulta foi gerada internamente.|  
-|**query_parameterization_type**|**tinyint**|Tipo de parametrização:<br /><br /> 0 – none<br /><br /> 1 = usuário<br /><br /> 2 – simples<br /><br /> 3 – forçado|  
+|**query_parameterization_type**|**tinyint**|Tipo de parametrização:<br /><br /> 0 – none<br /><br /> 1 - usuário<br /><br /> 2 - simples<br /><br /> 3 - forçada|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Descrição textual para o tipo de parametrização.|  
 |**initial_compile_start_time**|**datetimeoffset**|Iniciar tempo de compilação.|  
 |**last_compile_start_time**|**datetimeoffset**|Iniciar tempo de compilação.|  

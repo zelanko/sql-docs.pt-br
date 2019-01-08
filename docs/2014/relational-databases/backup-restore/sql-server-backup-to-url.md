@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065116"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359288"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de armazenamento de Blob do Windows Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. As diferenças, todas as exceções notáveis e alguns exemplos de código são incluídos neste tópico.  
@@ -52,40 +52,40 @@ ms.locfileid: "48065116"
 -   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial** .  
   
 ###  <a name="intorkeyconcepts"></a> Introdução aos principais componentes e conceitos  
- As seções a seguir apresentam o serviço de armazenamento de Blob do Windows Azure e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes usados ao fazer backup ou restauração do serviço de armazenamento de Blob do Windows Azure. É importante entender os componentes e a interação entre eles para fazer um backup ou uma restauração no serviço de armazenamento de Blob do Windows Azure.  
+ As duas seções a seguir apresentam o serviço de armazenamento de Blob do Windows Azure, e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados durante o backup ou a restauração do serviço de armazenamento de Blob do Windows Azure. É importante entender os componentes e a interação entre eles para fazer um backup ou uma restauração no serviço de armazenamento de Blob do Windows Azure.  
   
- A criação de uma conta do Windows Azure é a primeira etapa desse processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o **nome de conta de armazenamento do Windows Azure** e seu **chave de acesso** valores para se autenticar, gravar e ler blobs no serviço de armazenamento. A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração. Para obter um passo a passo completo de como criar uma conta de armazenamento e executar uma restauração simples, consulte o [Tutorial sobre uso do serviço de armazenamento do Microsoft Azure para backup e restauração do SQL Server](http://go.microsoft.com/fwlink/?LinkId=271615).  
+ A criação de uma conta do Windows Azure é a primeira etapa desse processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o **nome de conta de armazenamento do Windows Azure** e seu **chave de acesso** valores para se autenticar, gravar e ler blobs no serviço de armazenamento. A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração. Para obter um passo a passo completo de como criar uma conta de armazenamento e executar uma restauração simples, consulte o [Tutorial sobre uso do serviço de armazenamento do Microsoft Azure para backup e restauração do SQL Server](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![mapeamento de conta de armazenamento para as credenciais do sql](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapeando a conta de armazenamento para as credenciais do sql")  
   
 ###  <a name="Blob"></a> Serviço de armazenamento de BLOBs do Azure do Windows  
- **Conta de armazenamento:** a conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de armazenamento de Blob do Windows Azure, primeiro crie uma conta de armazenamento do Windows Azure. O **storage account name** e as respectivas propriedades de **access key** são necessários para realizar a autenticação no serviço de armazenamento de Blob do Windows Azure e seus componentes.  
+ **Conta de armazenamento:** A conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de armazenamento de Blob do Windows Azure, primeiro crie uma conta de armazenamento do Windows Azure. O **storage account name** e as respectivas propriedades de **access key** são necessários para realizar a autenticação no serviço de armazenamento de Blob do Windows Azure e seus componentes.  
   
  **Contêiner:** Um contêiner fornece o agrupamento de um conjunto de Blobs e pode armazenar um número ilimitado de Blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Blob do Windows Azure, você deve ter pelo menos o contêiner raiz criado.  
   
- **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de armazenamento de Blob do Windows Azure: blobs de bloco e de página. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página como o tipo de Blob. BLOBs são endereçáveis usando o seguinte formato de URL: https://\<conta de armazenamento >.blob.core.windows.net/\<contêiner > /\<blob >  
+ **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de armazenamento de Blob do Windows Azure: blobs de bloco e de página. O backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página. BLOBs são endereçáveis usando o seguinte formato de URL: https://\<conta de armazenamento >.blob.core.windows.net/\<contêiner > /\<blob >  
   
  ![Armazenamento de Blobs do Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Armazenamento de Blobs do Azure")  
   
  Para obter mais informações sobre o serviço de armazenamento de Blob do Windows Azure, consulte [Como usar o serviço de armazenamento de Blob do Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
- Para obter mais informações sobre Blobs de página, consulte [Noções básicas sobre Blobs de bloco e de página](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
+ Para obter mais informações sobre Blobs de página, consulte [Noções básicas sobre Blobs de bloco e de página](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Componentes  
- **URL:** uma URL especifica um URI (Uniform Resource Identifier) para um arquivo de backup único. A URL é usada para fornecer o local e o nome do arquivo de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nessa implementação, a única URL válida é a que aponta para um Blob de página em uma conta de armazenamento do Windows Azure. A URL deve apontar para um Blob real, e não apenas para um contêiner. Se o Blob não existir, ele será criado. Se um Blob existente for especificado, o BACKUP falhará, a não ser que a opção “WITH FORMAT” seja especificada.  
+ **URL:** Uma URL especifica um URI (Uniform Resource Identifier) para um arquivo de backup exclusivo. A URL é usada para fornecer o local e o nome do arquivo de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nessa implementação, a única URL válida é a que aponta para um Blob de página em uma conta de armazenamento do Windows Azure. A URL deve apontar para um Blob real, e não apenas para um contêiner. Se o Blob não existir, ele será criado. Se um Blob existente for especificado, o BACKUP falhará, a menos que a opção "WITH FORMAT" é especificada.  
   
 > [!WARNING]  
 >  Se você optar por copiar e carregar um arquivo de backup para o serviço de armazenamento de Blob do Windows Azure, use o blob de página como opção de armazenamento. Não há suporte para restaurações de Blobs de bloco. A RESTAURAÇÃO de um blob de bloco falhará.  
   
  Este é um valor de URL de exemplo: http[s]://ACCOUNTNAME.Blob.Core.Windows.NET/\<CONTÊINER > /\<nomedoarquivo. bak >. O HTTPS não é obrigatório, mas é recomendado.  
   
- **Credencial:** uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processos de backup e restauração usam a credencial para se autenticar no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, os processos de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a credencial para autenticação no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Para obter instruções passo a passo sobre como criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, consulte [criar uma credencial](#credential) exemplo mais adiante neste tópico.  
+ Para obter instruções passo a passo sobre como criar uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte o exemplo [Create a Credential](#credential) mais adiante neste tópico.  
   
  Para obter informações gerais sobre credenciais, consulte [Credenciais](../security/authentication-access/credentials-database-engine.md)  
   
- Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [criar um Proxy do SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [Criar um proxy do SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitações  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48065116"
   
     ```  
   
--   Especificando um tamanho de bloco com `BACKUP` não tem suporte.  
+-   Não há suporte para a especificação de um tamanho de bloco com `BACKUP`.  
   
 -   Não há suporte para a especificação de `MAXTRANSFERSIZE`.  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48065116"
 |||||  
 |-|-|-|-|  
 |Instrução de backup/restauração|Tem suporte|Exceções|Comentários|  
-|BACKUP|√|Não há suporte para BLOCKSIZE e MAXTRANSFERSIZE.|Requer a especificação de WITH CREDENTIAL|  
-|RESTORE|√||Requer a especificação de WITH CREDENTIAL|  
-|RESTORE FILELISTONLY|√||Requer a especificação de WITH CREDENTIAL|  
-|RESTORE HEADERONLY|√||Requer a especificação de WITH CREDENTIAL|  
-|RESTORE LABELONLY|√||Requer a especificação de WITH CREDENTIAL|  
-|RESTORE VERIFYONLY|√||Requer a especificação de WITH CREDENTIAL|  
-|RESTORE REWINDONLY|−|||  
+|BACKUP|???|Não há suporte para BLOCKSIZE e MAXTRANSFERSIZE.|Requer a especificação de WITH CREDENTIAL|  
+|RESTORE|???||Requer a especificação de WITH CREDENTIAL|  
+|RESTORE FILELISTONLY|???||Requer a especificação de WITH CREDENTIAL|  
+|RESTORE HEADERONLY|???||Requer a especificação de WITH CREDENTIAL|  
+|RESTORE LABELONLY|???||Requer a especificação de WITH CREDENTIAL|  
+|RESTORE VERIFYONLY|???||Requer a especificação de WITH CREDENTIAL|  
+|RESTORE REWINDONLY|???|||  
   
  Para obter a sintaxe e informações gerais sobre as instruções de backup, consulte [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -141,34 +141,34 @@ ms.locfileid: "48065116"
 |||||  
 |-|-|-|-|  
 |Argumento|Tem suporte|Exceção|Comentários|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|???|||  
+|LOG|???|||  
 ||  
-|TO (URL)|√|Diferente de DISK e TAPE, a URL não oferece suporte para a especificação ou criação de um nome lógico.|Esse argumento é usado para especificar o caminho da URL para o arquivo de backup.|  
-|MIRROR TO|−|||  
+|TO (URL)|???|Diferente de DISK e TAPE, a URL não oferece suporte para a especificação ou criação de um nome lógico.|Esse argumento é usado para especificar o caminho da URL para o arquivo de backup.|  
+|MIRROR TO|???|||  
 |**Opções WITH:**||||  
-|CREDENTIAL|√||Há suporte para WITH CREDENTIAL somente quando a opção BACKUP TO URL é usada para fazer backup no serviço de armazenamento de Blob do Windows Azure.|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Esta opção será ignorada se for usada.<br /><br /> Não é possível anexar aos blobs. Para substituir um backup, use o argumento FORMAT.|  
-|NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Esta opção será ignorada se for usada.<br /><br /> Um backup feito em um blob existente falhará, a menos que WITH FORMAT seja especificado. O blob existente será substituído quando WITH FORMAT for especificado.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|CREDENTIAL|???||Há suporte para WITH CREDENTIAL somente quando a opção BACKUP TO URL é usada para fazer backup no serviço de armazenamento de Blob do Windows Azure.|  
+|DIFFERENTIAL|???|||  
+|COPY_ONLY|???|||  
+|COMPRESSION&#124;NO_COMPRESSION|???|||  
+|DESCRIPTION|???|||  
+|NAME|???|||  
+|EXPIREDATE &#124; RETAINDAYS|???|||  
+|NOINIT &#124; INIT|???||Esta opção será ignorada se for usada.<br /><br /> Não é possível anexar aos blobs. Para substituir um backup, use o argumento FORMAT.|  
+|NOSKIP &#124; SKIP|???|||  
+|NOFORMAT &#124; FORMAT|???||Esta opção será ignorada se for usada.<br /><br /> Um backup feito em um blob existente falhará, a menos que WITH FORMAT seja especificado. O blob existente será substituído quando WITH FORMAT for especificado.|  
+|MEDIADESCRIPTION|???|||  
+|MEDIANAME|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|NO_CHECKSUM &#124; CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|NORECOVERY &#124; STANDBY|???|||  
+|NO_TRUNCATE|???|||  
   
  Para obter mais informações sobre os argumentos de backup, consulte [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -177,35 +177,35 @@ ms.locfileid: "48065116"
 |||||  
 |-|-|-|-|  
 |Argumento|Tem suporte|Exceções|Comentários|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||O argumento FROM URL é usado para especificar o caminho da URL do arquivo de backup.|  
+|DATABASE|???|||  
+|LOG|???|||  
+|FROM (URL)|???||O argumento FROM URL é usado para especificar o caminho da URL do arquivo de backup.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||Há suporte para WITH CREDENTIAL somente quando a opção RESTORE FROM URL é usada para realizar a restauração no serviço de armazenamento de Blob do Windows Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
-|FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|CREDENTIAL|???||Há suporte para WITH CREDENTIAL somente quando a opção RESTORE FROM URL é usada para realizar a restauração no serviço de armazenamento de Blob do Windows Azure.|  
+|PARTIAL|???|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
+|LOADHISTORY|???|||  
+|MOVE|???|||  
+|REPLACE|???|||  
+|RESTART|???|||  
+|RESTRICTED_USER|???|||  
+|FILE|???|||  
+|PASSWORD|???|||  
+|MEDIANAME|???|||  
+|MEDIAPASSWORD|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|CHECKSUM &#124; NO_CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|FILESTREAM|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|KEEP_REPLICATION|???|||  
+|KEEP_CDC|???|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
   
  Para obter mais informações sobre os argumentos de restauração, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
@@ -220,10 +220,10 @@ ms.locfileid: "48065116"
   
     1.  **Nome do arquivo:** Nome do arquivo de backup.  
   
-    2.  **Credencial do SQL:** Você pode especificar uma Credencial do SQL Server existente ou pode criar uma nova clicando em **Criar** ao lado da caixa Credencial SQL.  
+    2.  **Credencial do SQL:** Você pode especificar uma credencial do SQL Server existente ou pode criar um novo clicando na **criar** ao lado da caixa credencial SQL.  
   
         > [!IMPORTANT]  
-        >  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. No momento, o SQL Server oferece suporte à versão do perfil de publicação 2.0. Para baixar a versão com suporte do perfil de publicação, consulte [Download do perfil de publicação 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+        >  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. No momento, o SQL Server oferece suporte à versão do perfil de publicação 2.0. Para baixar a versão com suporte do perfil de publicação, consulte [Download do perfil de publicação 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
         >   
         >  Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo na seção [Criar uma credencial](#credential) para criar uma credencial usando Transact-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
@@ -242,7 +242,7 @@ ms.locfileid: "48065116"
  [Criar credencial - autenticar no Armazenamento do Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Backup do SQL Server para a URL usando o Assistente de Plano de Manutenção  
- Assim como a tarefa de backup descrita anteriormente, o Assistente de Plano de Manutenção no SQL Server Management Studio foi aprimorado para incluir a **URL** como uma das opções de destino, e outros objetos de suporte necessários ao backup no armazenamento do Windows Azure, como a Credencial SQL. Para obter mais informações, consulte o **definir tarefas de Backup** seção [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Assim como a tarefa de backup descrita anteriormente, o Assistente de Plano de Manutenção no SQL Server Management Studio foi aprimorado para incluir a **URL** como uma das opções de destino, e outros objetos de suporte necessários ao backup no armazenamento do Windows Azure, como a Credencial SQL. Para obter mais informações, consulte a seção **Definir tarefas de Backup** em [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a> Restauração do armazenamento do Windows Azure usando o SQL Server Management Studio  
  Se você estiver restaurando um banco de dados, a **URL** será incluída como o dispositivo a partir do qual a restauração será realizada. As etapas a seguir descrevem as alterações na tarefa Restaurar para permitir a restauração a partir do armazenamento do Windows Azure:  
@@ -877,6 +877,6 @@ ms.locfileid: "48065116"
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Backup e restauração do SQL Server para o serviço de armazenamento de Blob do Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure do Windows](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

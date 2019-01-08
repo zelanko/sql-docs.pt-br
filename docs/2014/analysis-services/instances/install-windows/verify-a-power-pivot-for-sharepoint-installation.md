@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214772"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355080"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verificar uma instalação do PowerPivot para SharePoint
   Uma instância do PowerPivot para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor PowerPivot. No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho PowerPivot que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha os dados PowerPivot e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
@@ -41,7 +41,7 @@ ms.locfileid: "48214772"
     5.  Clique em **Fechar**e em **OK**.  
   
         > [!NOTE]  
-        >  A documentação de instalação do SharePoint inclui instruções adicionais para contornar erros de servidor proxy e para desabilitar a Configuração de Segurança Reforçada do Internet Explorer para que você possa baixar e instalar atualizações. Para obter mais informações, consulte a seção **Perform additional tasks** em [Deploy a single server with SQL Server](http://go.microsoft.com/fwlink/?LinkId=177754) no site da Microsoft.  
+        >  A documentação de instalação do SharePoint inclui instruções adicionais para contornar erros de servidor proxy e para desabilitar a Configuração de Segurança Reforçada do Internet Explorer para que você possa baixar e instalar atualizações. Para obter mais informações, consulte a seção **Perform additional tasks** em [Deploy a single server with SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) no site da Microsoft.  
   
 3.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar recursos de farm**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214772"
 ## <a name="verify-data-access-on-the-server"></a>Verificar acesso a dados no servidor  
  Para verificar o acesso a dados PowerPivot no servidor, faça o seguinte:  
   
-1.  [Baixe](http://go.microsoft.com/fwlink/?LinkID=219108) os exemplos de dados Picnic que acompanham um tutorial do Reporting Services. Você usará a pasta de trabalho de exemplo nesse download para verificar o acesso aos dados PowerPivot. Extraia os arquivos.  
+1.  [Baixe](https://go.microsoft.com/fwlink/?LinkID=219108) os exemplos de dados Picnic que acompanham um tutorial do Reporting Services. Você usará a pasta de trabalho de exemplo nesse download para verificar o acesso aos dados PowerPivot. Extraia os arquivos.  
   
 2.  Carregue a pasta de trabalho (.xlsx) do Excel nos Documentos Compartilhados. A pasta de trabalho contém dados PowerPivot inseridos.  
   

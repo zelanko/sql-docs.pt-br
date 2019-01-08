@@ -18,12 +18,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: df43f04c94819ee5e409a42774d025950908d7c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1fd420af1a50623f6f248e4dc99426907e987c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365685"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contadores de desempenho para o objeto de desempenho do serviço Windows MSRS 2014 e o Serviço Web MSRS 2014 (modo nativo)
   Este tópico descreve os contadores de desempenho dos objetos de desempenho `MSRS 2014 Web Service` e `MSRS 2014 Windows Service`  
@@ -33,7 +33,7 @@ ms.locfileid: "48128336"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo  
   
- Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para saber mais, veja a documentação do Windows, [Criação de perfil em tempo de execução](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para saber mais, veja a documentação do Windows, [Criação de perfil em tempo de execução](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Para obter informações relacionadas aos contadores de desempenho do modo do SharePoint, consulte [contadores de desempenho para o modo do SharePoint do MSRS 2014 Web Service e objetos de desempenho do MSRS 2014 Windows Service SharePoint modo &#40;modo do SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "48128336"
 -   [Use cmdlets do PowerShell para retornar listas](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Contadores de desempenho do MSRS 2014 Web Service  
- O objeto de desempenho `MSRS 2014 Web Service` monitora o desempenho do servidor de relatório. Esse objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por operações interativas de exibição de relatórios. Quando você configura esse contador, você pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou você pode selecionar instâncias específicas. Esses contadores são redefinidos sempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] interrompe o serviço Web do servidor de relatório.  
+ O objeto de desempenho `MSRS 2014 Web Service` monitora o desempenho do servidor de relatório. Esse objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por operações interativas de exibição de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas. Esses contadores são redefinidos sempre que o [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] interrompe o serviço Web servidor de relatórios.  
   
- A tabela a seguir lista os contadores que acompanham o `MSRS 2014 Web Service` objeto de desempenho.  
+ A tabela a seguir lista os contadores que são incluídos com o objeto de desempenho do `MSRS 2014 Web Service`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |`Cache Hits/Sec`|Número de solicitações por segundo para relatórios armazenados em cache. As solicitações são para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte `Total Cache Hits` mais adiante neste tópico.)|  
@@ -62,7 +62,7 @@ ms.locfileid: "48128336"
 |`Memory Cache Misses/Sec`|Número de vezes por segundo que os relatórios não puderam ser recuperados do cache na memória.|  
 |`Next Session Requests/Sec`|Número de solicitações por segundo para relatórios que estão abertos em uma sessão já existente (por exemplo, relatórios que são renderizados de um instantâneo de sessão).|  
 |`Report Requests`|Número de relatórios que estão ativos no momento e gerenciados pelo servidor de relatório.|  
-|`Reports Executed/Sec`|Número de execuções de relatório bem-sucedidas por segundo. Este contador fornece estatísticas sobre volume de relatório. Use este contador com `Request/Sec` para comparar a execução de relatório de solicitações de relatórios que podem ser retornadas do cache.|  
+|`Reports Executed/Sec`|Número de execuções de relatório bem-sucedidas por segundo. Este contador fornece estatísticas sobre volume de relatório. Use este contador com `Request/Sec` para comparar execução de relatórios com solicitações de relatórios que podem ser retornadas do cache.|  
 |`Requests/Sec`|Número de solicitações por segundo feitas ao servidor de relatório. Este contador controla todos os tipos de solicitações que são gerenciadas pelo servidor de relatório.|  
 |`Total Cache Hits`|Número total de solicitações de relatórios do cache depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
 |`Total Cache Hits (Semantic Models)`|Número total de solicitações de modelos do cache depois que o serviço foi iniciado. Este contador é zerado sempre que ASP.NET para o serviço Web Servidor de Relatórios.|  
@@ -76,11 +76,11 @@ ms.locfileid: "48128336"
 |`Total Requests`|Número total de todas as solicitações feitas ao servidor de relatório depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
   
 ##  <a name="bkmk_windowsservice"></a> Contadores de desempenho do MSRS 2014 Windows Service  
- O `MSRS 2014 Windows Service` objeto de desempenho monitora o serviço do Windows do servidor de relatório. Este objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por operações agendadas. As operações agendadas podem incluir assinatura e entrega, instantâneos de execução de relatório e histórico de relatórios. Quando você configura esse contador, você pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou você pode selecionar instâncias específicas.  
+ O objeto de desempenho do `MSRS 2014 Windows Service` monitora o serviço Windows do servidor de relatório. Este objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por operações agendadas. As operações agendadas podem incluir assinatura e entrega, instantâneos de execução de relatório e histórico de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas.  
   
- A tabela a seguir lista os contadores que estão incluídos no `MSRS 2014 Windows Service` objeto de desempenho.  
+ A tabela a seguir lista os contadores incluídos no objeto de desempenho `MSRS 2014 Windows Service`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |`Cache Flushes/Sec`|Número de liberações de cache por segundo.|  
@@ -89,7 +89,7 @@ ms.locfileid: "48128336"
 |`Cache Misses/Sec`|Número de solicitações por segundo que não retornaram um relatório de cache. Use este contador para descobrir se os recursos usados para armazenamento em cache (disco ou memória) são suficientes.|  
 |`Cache Misses/Sec (Semantic Models)`|Número de solicitações por segundo que não retornaram um modelo de cache. Use este contador para descobrir se os recursos usados para armazenamento em cache (disco ou memória) são suficientes.|  
 |`Delivers/Sec`|Número de entregas de relatório por segundo, em qualquer extensão de entrega.|  
-|`Events/Sec`|Número de eventos processados por segundo. Os eventos que são monitorados incluem `SnapshotUpdated` e `TimedSubscription`.|  
+|`Events/Sec`|Número de eventos processados por segundo. Os eventos monitorados incluem `SnapshotUpdated` e `TimedSubscription`.|  
 |`First Session Requests/Sec`|Número de novas sessões de execução de relatório criadas por segundo.|  
 |`Memory Cache Hits/Sec`|Número de vezes por segundo que os relatórios são recuperados do cache na memória. *Cache na memória* é uma parte do cache que armazena relatórios na memória da CPU. Quando o cache na memória é usado, o servidor de relatório não consulta o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para obter o conteúdo armazenado em cache.|  
 |`Memory Cache Misses/Sec`|O número de vezes por segundo que os relatórios não podem ser recuperados a partir do cache na memória.|  
@@ -115,7 +115,7 @@ ms.locfileid: "48128336"
 |`Total Snapshot Updates`|Número total de atualizações para instantâneos de execução de relatório.|  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O seguinte script do Windows PowerShell retorna os conjuntos de contadores cujo CounterSetName começa com “msr”:  
+ ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O seguinte script do Windows PowerShell retorna os conjuntos de contadores cujo CounterSetName começa com "msr":  
   
 ```  
 get-counter -listset msr*  

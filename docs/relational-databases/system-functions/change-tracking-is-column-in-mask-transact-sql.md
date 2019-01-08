@@ -20,17 +20,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e34dc41b4fbd0bf8b7a3a16db3edf21799926954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 534df29b5ad3422ed3290ce4037490f69f988832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535748"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Interpreta o valor SYS_CHANGE_COLUMNS retornado pela função CHANGETABLE (CHANGES ...). Permite que um aplicativo determine se a coluna especificada deve ser incluída nos valores retornados para SYS_CHANGE_COLUMNS.  
+  Interpreta o valor SYS_CHANGE_COLUMNS retornado pela função CHANGETABLE(CHANGES...). Permite que um aplicativo determine se a coluna especificada deve ser incluída nos valores retornados para SYS_CHANGE_COLUMNS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valores de retorno  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retorna os seguintes valores.  
   
-|Valor retornado|Description|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0|A coluna especificada não está no *change_columns* lista.|  
 |1|A coluna especificada está no *change_columns* lista.|  

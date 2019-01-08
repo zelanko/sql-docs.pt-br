@@ -43,15 +43,15 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207526"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357896"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
-  Use o **implantar um banco de dados do SQL Server em uma VM do Windows Azure** Assistente para implantar um banco de dados de uma instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma máquina Virtual (VM do Windows Azure). O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
+  Use o assistente para **Implantar um Banco de dados do SQL Server em uma VM do Windows Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma Máquina Virtual (VM) do Windows Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais porque o assistente não substituirá um banco de dados existente que tenha o mesmo nome. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48207526"
 -   O seu perfil de publicação do Windows Azure.  
   
     > [!CAUTION]  
-    >  No momento, o SQL Server oferece suporte à versão do perfil de publicação 2.0. Para baixar a versão com suporte do perfil de publicação, consulte [Download do perfil de publicação 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+    >  No momento, o SQL Server oferece suporte à versão do perfil de publicação 2.0. Para baixar a versão com suporte do perfil de publicação, consulte [Download do perfil de publicação 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 -   O certificado de gerenciamento carregado na sua assinatura do Windows Azure.  
   
@@ -85,18 +85,18 @@ ms.locfileid: "48207526"
   
 -   Credenciais com privilégios de Operador de backup no banco de dados que pretende implantar, da instância de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obter mais informações sobre como executar o SQL Server em máquinas virtuais do Windows Azure, consulte [Preparando-se para migrar para o SQL Server em máquinas virtuais do Windows Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Para obter mais informações sobre como executar o SQL Server em máquinas virtuais do Microsoft Azure, consulte [Preparando-se para migrar para o SQL Server em máquinas virtuais do Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  Em computadores que executam sistemas operacionais do Windows Server, você deverá usar os seguintes parâmetros de configuração para executar esse assistente:  
   
--   Desative a Configuração de Segurança Avançada: use o Gerenciador do Servidor > Servidor Local para definir a ESC (Configuração de Segurança Avançada) do Internet Explorer como **OFF**.  
+-   Desativar a configuração de segurança aprimorada:  Use o Gerenciador do servidor > servidor Local para definir a configuração de segurança reforçada (ESC) do Internet Explorer **OFF**.  
   
--   Habilite o JavaScript: Internet Explorer > Opções da Internet > Segurança > Nível do Cliente > Scripts > Scripts Ativos: **Habilitar**.  
+-   Habilitar o JavaScript:  Internet Explorer > Opções da Internet > Segurança > Nível do Cliente > Scripts > Scripts Ativos: **Habilitar**.  
   
 ###  <a name="limitations"></a> Limitações e Restrições  
  A limitação de tamanho do banco de dados para essa operação é de 1 TB.  
   
- Esse recurso de implantação está disponível no SQL Server Management Studio para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ Esse recurso de implantação está disponível no SQL Server Management Studio para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Esse recurso de implantação é para uso apenas com bancos de dados de usuário; implantar bancos de dados de sistema não tem suporte.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48207526"
 ###  <a name="filestream"></a> Considerações para implantar um banco de dados habilitado para FILESTREAM em uma VM do Azure  
  Observe as seguintes diretrizes e restrições ao implantar bancos de dados com BLOBS armazenados em objetos FILESTREAM:  
   
--   O recurso de implantação não pode implantar um banco de dados habilitado para FILESTREAM em uma nova VM. Se FILESTREAM não estiver habilitado na VM antes da execução do assistente, a operação de restauração do banco de dados falhará e a operação do assistente não poderá ser concluída com êxito. Para implantar com êxito um banco de dados que usa FILESTREAM, habilite-o na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na VM do host antes de iniciar o assistente. Para obter mais informações, veja [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
+-   O recurso de implantação não pode implantar um banco de dados habilitado para FILESTREAM em uma nova VM. Se FILESTREAM não estiver habilitado na VM antes da execução do assistente, a operação de restauração do banco de dados falhará e a operação do assistente não poderá ser concluída com êxito. Para implantar com êxito um banco de dados que usa FILESTREAM, habilite-o na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na VM do host antes de iniciar o assistente. Para obter mais informações, veja [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, veja [OLTP in-memory (otimização na memória)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, veja [OLTP in-memory (otimização na memória)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Considerações sobre a distribuição geográfica de recursos  
  Observe que os seguintes recursos devem estar localizados na mesma região geográfica:  
@@ -179,7 +179,7 @@ ms.locfileid: "48207526"
   
 2.  No **Pesquisador de Objetos**, expanda o nome da instância e o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no banco de dados que deseja implantar, selecione **Tarefas**e selecione **Implantar Banco de Dados na VM do Windows Azure...**  
+3.  Com o banco de dados que você deseja implantar, selecione o botão direito **tarefas**e, em seguida, selecione **implantar banco de dados para a VM do Windows Azure...**  
   
 
   
@@ -194,14 +194,14 @@ ms.locfileid: "48207526"
   
 -   **Cancelar** – cancela a operação e fecha o assistente.  
   
--   **Ajuda** – inicia o tópico da Ajuda do MSDN para o assistente.  
+-   **Ajudar a** -inicia o tópico da Ajuda do MSDN para o assistente.  
   
 ##  <a name="Source_settings"></a> Configurações de origem  
- Use esta página para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados que você deseja implantar a VM do Windows Azure. Você também especificará um local temporário para que os arquivos sejam salvos do computador local antes de serem transferidos para o Windows Azure. Pode ser um local de rede compartilhado.  
+ Use essa página para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados que deseja implantar na VM do Windows Azure. Você também especificará um local temporário para que os arquivos sejam salvos do computador local antes de serem transferidos para o Windows Azure. Pode ser um local de rede compartilhado.  
   
  **Opções**  
   
--   Clique em **Conectar …** e, em seguida, especifique os detalhes de conexão para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados para implantar.  
+-   Clique em **conectar-se...**  e, em seguida, especifique os detalhes de conexão para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados para implantar.  
   
 -   Use a lista suspensa **Selecionar Banco de Dados** para especificar o banco de dados a ser implantado.  
   
@@ -212,34 +212,34 @@ ms.locfileid: "48207526"
   
  **Opções**  
   
--   **Certificado de Gerenciamento** – use essa opção para especificar um certificado do repositório de certificados local que corresponde ao certificado de gerenciamento do Windows Azure.  
+-   **Certificado de gerenciamento** -Use essa opção para especificar um certificado do repositório de certificados local que corresponde ao certificado de gerenciamento do Windows Azure.  
   
--   **Perfil de Publicação** – use essa opção se você já tiver um perfil de publicação baixado no seu computador.  
+-   **Perfil de publicação** -Use essa opção se você já tiver um perfil de publicação baixado no seu computador.  
   
--   **Entrar** – use essa opção para entrar no Windows Azure usando uma conta da Microsoft, por exemplo, uma conta Hotmail ou Live ID, para gerar e baixar um novo certificado de gerenciamento. Observe que o número de certificados por assinatura é limitado.  
+-   **Entrar no** - Use essa opção para entrar no Windows Azure usando um Microsoft conta - por exemplo, uma conta do Hotmail ou Live ID - para gerar e baixar um novo certificado de gerenciamento. Observe que o número de certificados por assinatura é limitado.  
   
--   **Assinatura** – selecione, digite ou cole sua ID de assinatura do Windows Azure que corresponda ao certificado de gerenciamento do repositório de certificados local ou de um perfil de publicação.  
+-   **Assinatura** – selecione, digite ou cole sua ID de assinatura do Windows Azure que corresponde ao certificado de gerenciamento do repositório de certificados local ou um perfil de publicação.  
   
 ##  <a name="Deployment_settings"></a> Página de configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Opções**  
   
--   **Máquina Virtual do Azure** – especificar detalhes para a VM que hospedará o banco de dados do SQL Server:  
+-   **Máquina Virtual do Azure** -especificar detalhes para a VM que hospedará o banco de dados do SQL Server:  
   
--   **Nome do Serviço de Nuvem** – especifique o nome do serviço que hospeda a VM. Para criar um novo Serviço em Nuvem, especifique um nome para o novo Serviço em Nuvem.  
+-   **Nome do serviço de nuvem** -especifique o nome do serviço que hospeda a VM. Para criar um novo Serviço em Nuvem, especifique um nome para o novo Serviço em Nuvem.  
   
--   **Nome da Máquina Virtual** – especificar o nome da VM que hospedará o banco de dados do SQL Server. Para criar uma nova VM do Windows Azure, especifique um nome para a nova VM.  
+-   **Nome da máquina virtual** -especifique o nome da VM que hospedará o banco de dados do SQL Server. Para criar uma nova VM do Windows Azure, especifique um nome para a nova VM.  
   
--   **Configurações** – use o botão Configurações para criar uma nova VM para hospedar o banco de dados do SQL Server. Se você estiver usando uma VM existente, as informações fornecidas serão usadas para autenticar suas credenciais.  
+-   **Configurações** -Use o botão Configurações para criar uma nova VM para hospedar o banco de dados do SQL Server. Se você estiver usando uma VM existente, as informações fornecidas serão usadas para autenticar suas credenciais.  
   
--   **Conta de armazenamento** – selecione a conta de armazenamento na lista suspensa. Para criar uma nova conta de armazenamento, especifique um nome para a nova conta. Observe que as contas de armazenamento associadas a um grupo de afinidade não estarão disponíveis na lista suspensa.  
+-   **Conta de armazenamento** -selecione a conta de armazenamento na lista suspensa. Para criar uma nova conta de armazenamento, especifique um nome para a nova conta. Observe que as contas de armazenamento associadas a um grupo de afinidade não estarão disponíveis na lista suspensa.  
   
--   **Banco de Dados de Destino** – especifique os detalhes do banco de dados de destino.  
+-   **Banco de dados de destino** -especifique os detalhes para o banco de dados de destino.  
   
--   **Conexão do Servidor** – detalhes da conexão do servidor.  
+-   **Conexão de servidor** -detalhes da Conexão do servidor.  
   
--   **Banco de Dados** – especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de dados já existir na instância do SQL Server de destino, sugerimos especificar um nome de banco de dados modificado.  
+-   **Banco de dados** – Especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de dados já existir na instância do SQL Server de destino, sugerimos especificar um nome de banco de dados modificado.  
   
 ##  <a name="Summary"></a> Página de Resumo  
  Use essa página para analisar as configurações especificadas da operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do assistente, clique em **Cancelar**.  
@@ -257,7 +257,7 @@ ms.locfileid: "48207526"
  [Exportar um aplicativo da camada de dados](../data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Backup e restauração de Banco de Dados SQL do Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Implantação do SQL Server em Máquinas Virtuais do Microsoft Azure](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Preparando-se para migrar para o SQL Server em Máquinas Virtuais do Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [Implantação do SQL Server em Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Preparando-se para migrar para o SQL Server em Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

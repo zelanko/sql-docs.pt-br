@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074443"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363138"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
   É possível adicionar um parâmetro a um relatório que permite ao usuário selecionar mais de um valor para o parâmetro.  
   
- Você pode passar vários valores de parâmetro para o relatório na URL de relatório. Para um exemplo de URL inclui um parâmetro com vários valores, consulte [passar um parâmetro de relatório dentro de uma URL](../pass-a-report-parameter-within-a-url.md).  
+ Você pode passar vários valores de parâmetro para o relatório na URL de relatório. Para um exemplo de URL que inclui um parâmetro com vários valores, consulte [Passar um parâmetro de relatório em uma URL](../pass-a-report-parameter-within-a-url.md).  
   
- Para obter informações sobre como passar vários valores de parâmetro para um procedimento armazenado, consulte [Trabalhando com parâmetros de seleções múltiplas para relatórios SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) em mssqltips.com.  
+ Para obter informações sobre como passar vários valores de parâmetro para um procedimento armazenado, consulte [Trabalhando com parâmetros de seleções múltiplas para relatórios SSRS](https://go.microsoft.com/fwlink/?LinkId=321529) em mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Para adicionar um parâmetro com vários valores  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074443"
     ```  
   
     > [!IMPORTANT]  
-    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado anteriormente, o relatório não será renderizado e o erro “é necessário declarar a variável escalar” será exibido.  
+    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado acima, o relatório não será renderizado e o erro "deve declarar a variável escalar" será exibido.  
   
      Um parâmetro de conjunto de dados para um conjunto de dados inserido ou um conjunto de dados compartilhado é criado automaticamente para a variável de consulta. Um parâmetro de relatório é criado automaticamente para o parâmetro de conjunto de dados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074443"
     ```  
   
     > [!IMPORTANT]  
-    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado anteriormente, o relatório não será renderizado e o erro “é necessário declarar a variável escalar” será exibido.  
+    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado acima, o relatório não será renderizado e o erro "deve declarar a variável escalar" será exibido.  
   
      Um parâmetro de conjunto de dados para um conjunto de dados inserido ou um conjunto de dados compartilhado é criado automaticamente para a variável de consulta. Um parâmetro de relatório é criado automaticamente para o parâmetro de conjunto de dados.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074443"
      Para obter mais informações, consulte [Adicionar, alterar ou excluir os valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar parâmetros em cascata a um relatório &#40;relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Adicionar, alterar ou excluir um parâmetro de relatório &#40;relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

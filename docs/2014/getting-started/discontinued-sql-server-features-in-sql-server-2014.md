@@ -11,12 +11,12 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063836"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351010"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
   Este tópico descreve os recursos que não estão mais disponíveis após a atualização para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "48063836"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Recursos descontinuados no SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Suporte à plataforma de 64 bits no Reporting Services  
- A partir [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente não oferece suporte a servidores baseados em Itanium que executam o Windows Server 2003 ou Windows Server 2003 R2. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua dar suporte a outros sistemas operacionais de 64 bits. incluindo o Windows Server°2008 for Itanium-Based Systems e o Windows Server°2008°R2 for Itanium-Based Systems. Para atualizar o [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] de uma instalação do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] com o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em uma edição Itanium-Based System do Windows Server 2003 ou do Windows Server 2003 R2, você deve atualizar o sistema operacional primeiro.  
+ A partir do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], o componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não dá mais suporte a servidores baseados em Itanium que executam o Windows Server 2003 ou o Windows Server 2003 R2. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua dar suporte a outros sistemas operacionais de 64 bits. incluindo o Windows Server°2008 for Itanium-Based Systems e o Windows Server°2008°R2 for Itanium-Based Systems. Para atualizar o [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] de uma instalação do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] com o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em uma edição Itanium-Based System do Windows Server 2003 ou do Windows Server 2003 R2, você deve atualizar o sistema operacional primeiro.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Recursos descontinuados no SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL-DMO descontinuado da instalação do SQL Server Express  
- O SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi removido do [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. É recomendável que você modifique os aplicativos que usam atualmente esse recurso o mais rápido possível. Se você precisar dar suporte a SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale os componentes de compatibilidade com versões anteriores dos [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack a partir do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) para novos trabalhos de desenvolvimento.  
+ O SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi removido do [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. É recomendável que você modifique os aplicativos que usam atualmente esse recurso o mais rápido possível. Se precisar do suporte ao SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale os Componentes de Compatibilidade com Versões Anteriores do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack a partir do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=51230). Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) para novos trabalhos de desenvolvimento.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opção descontinuada para Assistente da Web  
  A opção `sp_configure` para habilitar o Assistente da Web foi removida do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Em vez dessa função, recomendamos usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -51,8 +51,8 @@ ms.locfileid: "48063836"
   
 |Configurações de substituição e recursos de componente|Como configurar|  
 |-------------------------------------------------|----------------------|  
-|Opções de protocolos, conexão e inicialização|Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do Configuration Manager.|  
-|Recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)]|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou sp_Configure.|  
+|Opções de protocolos, conexão e inicialização|Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.|  
+|Recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)]|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou sp_Configure.|  
 |Recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Propriedade EnableIntegrated Security|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -"Agendar eventos e entrega de relatório" e "Serviço Web e acesso HTTP"|Edite o arquivo de configuração RSReportServer.config.|  

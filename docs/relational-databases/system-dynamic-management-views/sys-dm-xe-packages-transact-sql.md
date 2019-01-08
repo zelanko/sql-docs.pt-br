@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738854"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785917"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "47738854"
   Lista todos os pacotes registrados com o mecanismo de eventos estendido.  
   
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|nome|**nvarchar(60)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
+|nome|**nvarchar(256)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
 |guid|**uniqueidentifier**|O GUID que identifica o pacote. Não permite valor nulo.|  
-|descrição|**nvarchar(256)**|A descrição do pacote. descriptionis definido pelo autor do pacote e não permite valor nulo.|  
+|descrição|**nvarchar(3072)**|A descrição do pacote. descriptionis definido pelo autor do pacote e não permite valor nulo.|  
 |funcionalidades|**int**|Bitmap que descreve os recursos deste pacote. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma lista de todas as funcionalidades possíveis para este pacote. Permite valor nulo.|  
-|module_guid|**uniqueidentifier**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  
+|module_guid|**nvarchar(60)**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  
 |module_address|**varbinary(8)**|O endereço básico onde o módulo que contém o pacote é carregado. Um único módulo pode expor vários pacotes. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

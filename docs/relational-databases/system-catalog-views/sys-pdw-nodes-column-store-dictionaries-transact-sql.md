@@ -13,26 +13,26 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520858"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada dicionário usado em índices columnstore. Dicionários são usados para codificar alguns, mas não todos os tipos de dados; portanto, nem todas as colunas em um índice columnstore têm dicionários. Um dicionário pode existir como um dicionário primário (para todos os segmentos) e, possivelmente, para outros dicionários secundários usados para um subconjunto de segmentos da coluna.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
 |**column_id**|**int**|ID da coluna columnstore.|  
 |**dictionary_id**|**int**|ID do dicionário.|  
 |**version**|**int**|Versão de formato do dicionário.|  
-|**type**|**int**|Tipo de dicionário:<br /><br /> 1 – hash dicionário que contém **int** valores<br /><br /> 2 – Não usado<br /><br /> 3 – Dicionário de hash que contém valores de cadeia de caracteres<br /><br /> 4 – hash de dicionário que contém **float** valores|  
+|**type**|**int**|Tipo de dicionário:<br /><br /> 1 - hash dicionário que contém **int** valores<br /><br /> 2 - não usado<br /><br /> 3 - dicionário de hash que contém os valores de cadeia de caracteres<br /><br /> 4 - hash dicionário que contém **float** valores|  
 |**last_id**|**int**|O último id de dados no dicionário.|  
 |**entry_count**|**bigint**|Número de entradas no dicionário.|  
 |**on_disc_size**|**bigint**|Tamanho do dicionário em bytes.|  

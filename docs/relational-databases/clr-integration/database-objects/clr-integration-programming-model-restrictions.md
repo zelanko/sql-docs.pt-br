@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538535"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809034"
  Em tempo de execução, o assembly do código é verificado em relação às seguintes condições. Se alguma dessas condições for encontrada, o código gerenciado não terá permissão de execução, e uma exceção será lançada.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Carregar um assembly – explicitamente, chamando o **System.Reflection.Assembly.Load()** método de uma matriz de bytes ou implicitamente através do uso de **Reflection. Emit** namespace — não é permitido.  
+ Carregar um assembly seja explicitamente chamando o **System.Reflection.Assembly.Load()** método de uma matriz de bytes ou implicitamente através do uso de **Reflection. Emit** namespace-não é permitida.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Todos os **UNSAFE** condições são verificadas.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155356"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356667"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
   O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a assinaturas push para IBM DB2/AS 400, DB2/MVS e DB2/Universal Database por meio dos provedores OLE DB fornecidos com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155356"
   
 1.  Instale a versão mais recente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider para DB2 no Distribuidor:  
   
-    -   Se você estiver usando [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]diante a [Downloads do SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página da Web, no **Downloads relacionados** seção, clique no link para a versão mais recente do Microsoft SQL Server 2008 Feature Pack. Na página da Web do **Microsoft SQL Server 2008 Feature Pack** , pesquise por **Microsoft OLE DB Provider for DB2**.  
+    -   Se você estiver usando o [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], na página da Web [Downloads do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) , na seção **Downloads relacionados** , clique no link para a versão mais recente do Microsoft SQL Server 2008 Feature Pack. Na página da Web do **Microsoft SQL Server 2008 Feature Pack** , pesquise por **Microsoft OLE DB Provider for DB2**.  
   
     -   Se você estiver usando o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard, instale a versão mais recente do servidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), que inclui o provedor.  
   
-     Além de instalar o provedor, recomendamos que você instale a ferramenta de acesso de dados, que é usado na próxima etapa (ele é instalado por padrão com o download do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obter mais informações sobre a instalação e uso de Data Access Tool, consulte a documentação do provedor ou a documentação HIS.  
+     Além de instalar o provedor, recomendamos que você instale o Data Access Tool, que é usado na próxima etapa (é instalado por padrão com o download do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obter mais informações sobre a instalação e uso de Data Access Tool, consulte a documentação do provedor ou a documentação HIS.  
   
 2.  Crie uma cadeia de conexão para o Assinante. A cadeia de conexão pode ser criada em qualquer editor de texto, mas recomendamos que você use o Data Access Tool. Para criar a cadeia de caracteres no Data Access Tool:  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155356"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|N/D|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  

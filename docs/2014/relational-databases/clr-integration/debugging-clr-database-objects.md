@@ -16,17 +16,17 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1cc46a4f9f4e6897971f45d8947c3eff6f830f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072236"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354168"
 ---
 # <a name="debugging-clr-database-objects"></a>Depurando objetos de banco de dados CLR
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte para depurar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] e objetos CLR (Common Language Runtime) no banco de dados. Os principais aspectos da depuração no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são a facilidade de configuração e uso, e a integração do depurador do SQL Server com o depurador do Microsoft Visual Studio. Além disso, a depuração funciona entre idiomas. Os usuários podem entrar diretamente em objetos CLR do [!INCLUDE[tsql](../../../includes/tsql-md.md)] e vice-versa. O depurador Transact-SQL no SQL Server Management Studio não pode ser usado para depurar objetos de banco de dados gerenciados, mas você pode depurar os objetos por meio dos depuradores do Visual Studio. A depuração de objetos de banco de dados gerenciados no Visual Studio oferece suporte a todos os recursos de depuração comuns, tais como as instruções de "depuração parcial" e "depuração completa" dentro de rotinas executadas no servidor. Os depuradores podem definir pontos de interrupção, inspecionar a pilha de chamadas, inspecionar variáveis e modificar valores de variáveis durante a depuração. Observe que o Visual Studio .NET 2003 não pode ser usado na programação de integração ou na depuração do CLR. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece o .NET Framework pré-instalado, e o Visual Studio .NET 2003 não pode usar os assemblies do .NET Framework 2.0.  
   
- Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte o "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" tópico na documentação do Visual Studio.  
+ Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte o "[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)" tópico na documentação do Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Depurando permissões e restrições  
  A depuração é uma operação altamente privilegiada e, portanto, somente os membros da **sysadmin** função de servidor fixa têm permissão para fazer isso no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48072236"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Visão geral da depuração de objetos de banco de dados gerenciados  
  A depuração no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] segue um modelo por conexão. Um depurador só pode detectar e depurar atividades para a conexão do cliente à qual ele está anexado. Como a funcionalidade do depurador não é limitada pelo tipo de conexão, pode-se depurar conexões do protocolo TDS e HTTP. Porém, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não permite a depuração de conexões existentes. A depuração oferece suporte a todos os recursos de depuração comuns dentro de rotinas executadas no servidor. A interação entre um depurador e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ocorre através do COM (Component Object Model) distribuído.  
   
- Para obter mais informações e cenários sobre a depuração de procedimentos armazenados gerenciados, funções, gatilhos, tipos definidos pelo usuário e agregações, consulte o "[depuração de banco de dados do SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)" tópico no Visual Studio documentação.  
+ Para obter mais informações e cenários sobre a depuração de procedimentos armazenados gerenciados, funções, gatilhos, tipos definidos pelo usuário e agregações, consulte o "[depuração de banco de dados do SQL Server CLR Integration](https://go.microsoft.com/fwlink/?LinkId=120378)" tópico no Visual Studio documentação.  
   
  O protocolo de rede TCP/IP deve estar habilitado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para permitir o uso do Visual Studio no desenvolvimento remoto, na depuração e no desenvolvimento. Para obter mais informações sobre como habilitar o protocolo TCP/IP no servidor, consulte [configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md).  
   

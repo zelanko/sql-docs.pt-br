@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services, programming
@@ -22,12 +20,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 634cbd5158331dde35afc81dd58c2e30b8d41fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2abb71a0c70a8caaacfee79d346f6c7101846a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156546"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357813"
 ---
 # <a name="integration-services-programming-overview"></a>Visão geral da programação do Integration Services
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tem uma arquitetura que separa a movimentação e a transformação de dados de gerenciamento e fluxos de controle de pacotes. Há dois mecanismos distintos que definem essa arquitetura e isso pode ser automatizado e estendido na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O mecanismo de tempo de execução implementa a infraestrutura de gerenciamento de fluxos de controle e pacotes que permite aos desenvolvedores controlar o fluxo de execução e definir opções para registro de log, manipuladores de eventos e variáveis. O mecanismo de fluxo de dados é um mecanismo de desempenho alto, especializado, dedicado exclusivamente a extrair, transformar e carregar dados. Sua programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se baseará nesses dois mecanismos.  
@@ -52,7 +50,7 @@ ms.locfileid: "48156546"
  Você pode programar pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], tarefas personalizadas e componentes no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou em outro editor de código ou de texto. O [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oferece ao desenvolvedor muitas ferramentas e recursos para simplificar e acelerar os ciclos iterativos de codificação, depuração e teste. O [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] também facilita a implantação. Porém, você não precisa do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para compilar e criar projetos de código do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O SDK do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] inclui os compiladores [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [!INCLUDE[csprcs](../includes/csprcs-md.md)] e as ferramentas relacionadas.  
   
 > [!IMPORTANT]  
->  Por padrão, o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+>  Por padrão, o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   
  A tarefa e o componente Script do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizam o VSTA ([!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) como um ambiente de script inserido. O VSTA dá suporte ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic e ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
@@ -67,7 +65,7 @@ ms.locfileid: "48156546"
 ## <a name="commonly-used-assemblies"></a>Assemblies comumente usados  
  A tabela a seguir lista os assemblies usados com frequência durante a programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] através do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Assembly|Description|  
+|Assembly|Descrição|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Contém o mecanismo de tempo de execução gerenciado.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contém o assembly de interoperabilidade primária (PIA), ou wrapper, para o mecanismo de tempo de execução nativo.|  
@@ -76,6 +74,6 @@ ms.locfileid: "48156546"
   
 ||  
 |-|  
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

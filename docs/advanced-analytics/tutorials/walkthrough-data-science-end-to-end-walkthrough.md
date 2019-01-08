@@ -1,78 +1,90 @@
 ---
-title: Passo a passo de ciência de dados de ponta a ponta para R e SQL Server | Microsoft Docs
+title: Tutorial para cientistas de dados usando a linguagem R - aprendizagem de máquina do SQL Server
+description: Tutorial que mostra como criar uma solução de R de ponta a ponta para análise no banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d4f38fd424c881392d48b0a6a24feb7f7e27ee0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086498"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596417"
 ---
-# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Passo a passo de ciência de dados de ponta a ponta para R e SQL Server
+# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>Tutorial: Análise no banco de dados para cientistas de dados usando o R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neste passo a passo, você deve desenvolver uma solução de ponta a ponta para modelagem de previsão com base no suporte de recurso do R no SQL Server 2016 ou SQL Server 2017.
+Neste tutorial para cientistas de dados, Aprenda a criar a solução de ponta a ponta para modelagem de previsão com base no suporte de recurso do R no SQL Server 2016 ou SQL Server 2017. Este tutorial usa um [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. 
 
-Este passo a passo baseia-se em um conjunto de dados público conhecido, o conjunto de dados de táxi de Nova York. Você usa uma combinação de código R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados e funções SQL personalizadas para criar um modelo de classificação que indica a probabilidade de que o driver pode receber uma gorjeta em uma corrida de táxi específica. Você também implantar seu modelo de R [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usar dados de servidor para gerar pontuações com base no modelo.
+Você usa uma combinação de código R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados e funções SQL personalizadas para criar um modelo de classificação que indica a probabilidade de que o driver pode receber uma gorjeta em uma corrida de táxi específica. Você também implantar seu modelo de R [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usar dados de servidor para gerar pontuações com base no modelo.
 
 Este exemplo pode ser estendido para todos os tipos de problemas da vida real, como prever as respostas dos clientes a campanhas de vendas ou prever gastos ou participação em eventos. Porque o modelo pode ser invocado a partir de um procedimento armazenado, você pode inseri-lo facilmente em um aplicativo.
 
 Porque o passo a passo foi projetada para apresentar os desenvolvedores do R [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R é usado sempre que possível. No entanto, isso não significa que o R é necessariamente a melhor ferramenta para cada tarefa. Em muitos casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá fornecer um desempenho melhor, especialmente para tarefas como agregação de dados e engenharia de recursos.  Essas tarefas podem se beneficiar particularmente dos novos recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], como índices columnstore com otimização de memória. Tentamos para destacar as otimizações possíveis ao longo do caminho.
 
-## <a name="target-audience"></a>Público-alvo
-
-Este passo a passo é destinado a desenvolvedores do R ou do SQL. Ele fornece uma introdução sobre como o R pode ser integrado em fluxos de trabalho empresariais usando [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  Você deve estar familiarizado com as operações de banco de dados, como criação de tabelas e bancos de dados, importação de dados e execução de consultas.
-
-+ Todos os scripts SQL e R são incluídos.
-+ Talvez você precise modificar cadeias de caracteres nos scripts, para ser executado em seu ambiente. Você pode fazer isso com qualquer editor de códigos, tais como [Visual Studio Code](https://code.visualstudio.com/Download).
-
 ## <a name="prerequisites"></a>Prerequisites
 
-É recomendável que você faça este passo a passo em um laptop ou outro computador que tenha as bibliotecas Microsoft R instaladas. Você deve ser capaz de estabelecer uma conexão, na mesma rede, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador com SQL Server e a linguagem R habilitado.
++ [Serviços do SQL Server 2017 Machine Learning com a integração do R](../install/sql-machine-learning-services-windows-install.md#verify-installation) ou [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-Você pode executar o passo a passo em um computador que tem ambos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um ambiente de desenvolvimento de R, mas nós não recomendamos essa configuração para um ambiente de produção.
++ [Permissões de banco de dados](../security/user-permission.md) e um logon de usuário de banco de dados do SQL Server
 
-Se você quiser executar os comandos de R de um computador remoto, como um laptop ou outro computador da rede, você deve instalar as bibliotecas Microsoft R Open. Você pode instalar o Microsoft R Client ou Microsoft R Server. O computador remoto deve ser capaz de conectar-se para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-Se você precisar colocar o cliente e servidor no mesmo computador, certifique-se de instalar um conjunto separado de bibliotecas do Microsoft R para uso no envio de script R de um cliente "remoto". Não use as bibliotecas do R que são instaladas para uso pela instância do SQL Server para essa finalidade.
++ [Banco de dados de demonstração de táxi de NYC](demo-data-nyctaxi-in-sql.md)
 
-## <a name="add-r-to-sql-server"></a>Adicionar o R para o SQL Server
++ Um IDE R como RStudio ou a ferramenta interna do RGUI incluído com o R
 
-Você deve ter acesso a uma instância do SQL Server com suporte para o R instalado. Este passo a passo foi originalmente desenvolvido para ervidor SQL 2016 e testado em 2017, portanto, você deve ser capaz de usar qualquer uma das seguintes versões do SQL Server. (Há algumas pequenas diferenças nas funções de RevoScaleR entre as versões.)
+É recomendável que você faça este passo a passo em uma estação de trabalho do cliente. Você deve ser capaz de estabelecer uma conexão, na mesma rede, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador com SQL Server e a linguagem R habilitado. Para obter instruções sobre configuração de estação de trabalho, consulte [configurar um cliente de ciência de dados para o desenvolvimento de R](../r/set-up-a-data-science-client.md).
 
-+ [Instalar os serviços SQL Server 2017 Machine Learning](../install/sql-machine-learning-services-windows-install.md)
-+ [Instalar o SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
+Como alternativa, você pode executar o passo a passo em um computador que tem ambos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um ambiente de desenvolvimento de R, mas nós não recomendamos essa configuração para um ambiente de produção. Se você precisar colocar o cliente e servidor no mesmo computador, certifique-se de instalar um segundo conjunto de bibliotecas do Microsoft R para o envio de script R de um cliente "remoto". Não use as bibliotecas do R que estão instaladas nos arquivos de programa da instância do SQL Server. Especificamente, se você estiver usando um computador, você precisa da biblioteca RevoScaleR em um desses locais para oferecer suporte a operações de cliente e servidor.
 
-## <a name="install-an-r-development-environment"></a>Instalar um ambiente de desenvolvimento de R
++ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ Server\MSSQL14 SQL do C:\Program Files\Microsoft. MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-Para este passo a passo, é recomendável que você use um ambiente de desenvolvimento de R. Aqui estão algumas sugestões:
+<a name="add-packages"></a>
 
-- **Ferramentas do R para Visual Studio** (RTVS) é um plug-in que fornece o Intellisense, depuração e suporte para o Microsoft R. você pode usá-lo com o R Server e serviços do SQL Server Machine Learning. Para baixar, consulte [R Tools para Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+## <a name="additional-r-packages"></a>Pacotes R adicionais
 
-- **Microsoft R Client** é uma ferramenta de desenvolvimento leve que dá suporte ao desenvolvimento em R usando o pacote RevoScaleR. Para fazer isso, veja [Começar a usar o cliente do Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
+Este passo a passo requer várias bibliotecas de R que não são instaladas por padrão como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Você deve instalar os pacotes no cliente onde você desenvolve a solução e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador em que você implantar a solução.
 
-- O**RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, consulte [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
+### <a name="on-a-client-workstation"></a>Em uma estação de trabalho do cliente
 
-    Você não pode concluir este tutorial usando uma instalação genérica do RStudio ou em outro ambiente; Você também deve instalar os pacotes R e bibliotecas de conectividade do Microsoft R Open. Para obter mais informações, consulte [Configurar um cliente de ciência de dados](../r/set-up-a-data-science-client.md).
+Em seu ambiente de R, copie as seguintes linhas e executar o código em uma janela de Console (Rgui ou um IDE). Alguns pacotes também instalam os pacotes necessários. Ao todo, 32 pacotes são instalados. Você deve ter uma conexão de internet para concluir esta etapa.
+    
+  ```R
+  # Install required R libraries, if they are not already installed.
+  if (!('ggmap' %in% rownames(installed.packages()))){install.packages('ggmap')}
+  if (!('mapproj' %in% rownames(installed.packages()))){install.packages('mapproj')}
+  if (!('ROCR' %in% rownames(installed.packages()))){install.packages('ROCR')}
+  if (!('RODBC' %in% rownames(installed.packages()))){install.packages('RODBC')}
+  ```
 
-- Ferramentas básicas de R (R.exe, RTerm.exe, RScripts.exe) também são instaladas por padrão, quando você instala o R no SQL Server ou cliente do R. Se você não quiser instalar um IDE, você pode usar essas ferramentas.
+### <a name="on-the-server"></a>No servidor
 
-## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>Obter permissões na instância do SQL Server e banco de dados
+Você tem várias opções para instalar pacotes no SQL Server. Por exemplo, o SQL Server fornece [gerenciamento de pacotes R](../r/install-additional-r-packages-on-sql-server.md) recurso que permite que os administradores de banco de dados, criar um repositório de pacotes e atribuir os direitos para instalar seus próprios pacotes de usuário. No entanto, se você for um administrador no computador, você pode instalar novos pacotes usando o R, desde que você instale a biblioteca correta.
 
-Para se conectar a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar scripts e carregar dados, você deve ter um logon válido no servidor de banco de dados.  Você pode usar um logon SQL ou a autenticação integrada do Windows. Peça ao administrador de banco de dados para configurar as seguintes permissões para a conta, no banco de dados em que você usar o r:
+> [!NOTE]
+> No servidor, **não** instale em uma biblioteca de usuário, mesmo se for solicitado. Se você instalar em uma biblioteca do usuário, a instância do SQL Server não pode localizar ou executar os pacotes. Para obter mais informações, consulte [instalar novos pacotes de R no SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
-- Criar banco de dados, tabelas, funções e procedimentos armazenados
-- Gravar dados em tabelas
-- Capacidade de executar script R (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+1. No computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra RGui.exe **como administrador**.  Se você tiver instalado o SQL Server R Services usando os padrões, Rgui.exe pode ser encontrado em C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin\x64).
 
-Para este passo a passo, usamos o logon do SQL **RTestUser**. Em geral, é recomendável que você usa a autenticação integrada do Windows, mas usar o logon do SQL é mais simples para algumas finalidades de demonstração.
+2. Em um prompt do R, execute os seguintes comandos do R:
+  
+  ```R
+  install.packages("ggmap", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("mapproj", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  ```
+  Este exemplo usa a função grep do R para pesquisar o vetor dos caminhos disponíveis e localizar o caminho que inclui "Arquivos de programas". Para obter mais informações, consulte [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep).
+
+  Se você acha que os pacotes já estão instalados, verifique a lista de pacotes instalados executando `installed.packages()`.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Preparar os dados usando o PowerShell](walkthrough-prepare-the-data.md)
+> [!div class="nextstepaction"]
+> [Explore e resuma os dados](walkthrough-view-and-summarize-data-using-r.md)

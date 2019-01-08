@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122366"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589620"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em *\<Report Project Name>***Propriedades**.  
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_**Propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
   
 ## <a name="options"></a>Opções  
  **Configuração**  
- Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal**e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)**.  
+ Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Depurar**, **DebugLocal**, e **versão**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)**.  
   
  Para ver as propriedades de mais de uma configuração ao mesmo tempo, selecione **Todas as Configurações** ou **Várias Configurações**.  
   

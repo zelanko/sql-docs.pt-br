@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -27,31 +26,31 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058526"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354456"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
   Este tópico fornece uma visão geral dos pontos de verificação de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
   
   
 ##  <a name="Overview"></a> Visão geral dos pontos de verificação  
- Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa modificações nas páginas de banco de dados — no cache do buffer — e não grava essas páginas em disco após cada alteração. Em vez disso, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação periodicamente em cada banco de dados. Um *ponto de verificação* grava as páginas atuais modificadas na memória (conhecidas como *páginas sujas*) e as informações do log de transações de memória para disco e, além disso, registra informações sobre o log de transações.  
+ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa modificações nas páginas de banco de dados, no cache do buffer e não grava essas páginas em disco após cada alteração. Em vez disso, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação periodicamente em cada banco de dados. Um *ponto de verificação* grava as páginas atuais modificadas na memória (conhecidas como *páginas sujas*) e as informações do log de transações de memória para disco e, além disso, registra informações sobre o log de transações.  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte para vários tipos de pontos de verificação: automáticos, indiretos, manuais e internos. A tabela a seguir resume os tipos de pontos de verificação.  
   
-|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Description|  
+|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Emitido automaticamente em segundo plano para atender o limite de tempo superior sugerido pelo `recovery interval` opção de configuração do servidor. Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são acelerados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta um aumento na latência de gravação acima de 20 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indireto.|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indireto.|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Internal|Nenhum.|Emitido por várias operações de servidor, como backup e criação de instantâneo de banco de dados, para garantir que as imagens de disco coincidam com o estado atual do log.|  
   
 > [!NOTE]  
->  O `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opção de configuração avançada permite que um administrador de banco de dados para o comportamento de e/s com base na taxa de transferência do subsistema de e/s para alguns tipos de pontos de verificação do ponto de verificação de restrição. O `-k` opção de configuração se aplica a pontos de verificação automáticos e a qualquer ponto de verificação manual e interna.  
+>  A opção de configuração avançada `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a um administrador de banco de dados acelerar o comportamento de E/S de ponto de verificação com base na taxa de transferência do subsistema de E/S de alguns tipos de pontos de verificação. O `-k` opção de configuração se aplica a pontos de verificação automáticos e a qualquer ponto de verificação manual e interna.  
   
  Para pontos de verificação automáticos, manuais e internos, somente as modificações feitas após o último ponto de verificação devem passar por roll forward durante a recuperação de banco de dados. Isso reduz o tempo necessário para recuperar um banco de dados.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48058526"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Arquitetura física do log de transações](http://technet.microsoft.com/library/ms179355.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+-   [Arquitetura física do log de transações](https://technet.microsoft.com/library/ms179355.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
   
 ## <a name="see-also"></a>Consulte também  
