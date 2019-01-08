@@ -18,12 +18,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8280e12c2fc0937fe85ccb8d6668e420540142b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e3362c19ee7f1be6a7c1d5074267de7039f676
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831924"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589710"
 ---
 # <a name="secure-the-publisher"></a>Proteger o Publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47831924"
  A PAL é o mecanismo principal para proteger publicações no Publicador. A PAL funciona de modo semelhante à lista de controle de acesso do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Quando você cria uma publicação, a replicação cria uma PAL para a publicação. A PAL pode ser configurada para conter uma lista de logons e grupos com acesso concedido à publicação. Quando um agente se conecta ao Publicador ou ao Distribuidor e solicita acesso à publicação, as informações de autenticação na PAL são comparadas com o logon no Publicador fornecido por aquele agente. Esse processo fornece segurança adicional ao Publicador, impedindo que o logon do Publicador e do Distribuidor seja usado por uma ferramenta cliente para executar modificações diretamente no Publicador.  
   
 > [!NOTE]  
->  A replicação cria uma função no Publicador para cada publicação impor a associação à PAL. A função tem um nome no formato **Msmerge_***\<PublicationID>* para a replicação de mesclagem e **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* para a replicação transacional e de instantâneo.  
+>  A replicação cria uma função no Publicador para cada publicação impor a associação à PAL. A função tem um nome no formato **Msmerge_**_\<PublicationID>_ para a replicação de mesclagem e **MSReplPAL_**_\<PublicationDatabaseID>_**_**_\<PublicationID>_ para a replicação transacional e de instantâneo.  
   
  Por padrão, os seguintes logons são incluídos na PAL: os membros da função de servidor fixa **sysadmin** no momento em que a publicação é criada e o logon usado para criar a publicação. Por padrão, todos os logons que são membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** no banco de dados de publicação podem assinar uma publicação sem serem adicionados explicitamente à PAL.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "47831924"
  Para gerenciar o PAL, consulte [Gerenciar logons na Lista de Acesso à Publicação](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
   
 ## <a name="snapshot-agent"></a>Snapshot Agent  
- Há um Agente de Instantâneo para cada publicação. Para obter mais informações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Há um Agente de Instantâneo para cada publicação. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Entrega de instantâneo por FTP  
  Se especificar que os instantâneos devem ser disponibilizados através de um compartilhamento FTP ao invés de um compartilhamento UNC, você deverá especificar um logon e uma senha quando for configurar o acesso ao FTP. Para obter mais informações, consulte [Deliver a Snapshot Through FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md) (Entregar um instantâneo por meio de FTP).  
   
 ## <a name="log-reader-agent"></a>Agente de Leitor de Log  
- Há um Agente de Leitor de Log para cada banco de dados publicado para replicação transacional. Para obter mais informações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Há um Agente de Leitor de Log para cada banco de dados publicado para replicação transacional. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Queue Reader Agent  
  Há um Agente de Leitor de Fila para todos os Publicadores e publicações (que permite assinaturas de atualização em fila) associado a um determinado Distribuidor. Para obter mais informações, consulte [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
