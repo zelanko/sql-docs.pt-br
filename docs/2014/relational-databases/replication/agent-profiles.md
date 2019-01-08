@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofiles.f1
@@ -15,12 +14,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c469b6d3e4fa23b5b20b70671f2c6a211836a4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752996"
 ---
 # <a name="agent-profiles"></a>Perfis de Agente
   Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis de agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em tempo de execução para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  
@@ -36,7 +35,7 @@ ms.locfileid: "48186316"
  O nome do perfil.  
   
  **Tipo**  
- O tipo de perfil: **Usuário** (definido pelo usuário) ou **Sistema** (predefinido).  
+ O tipo de perfil: **Usuário** (definida pelo usuário) ou **sistema** (predefinido).  
   
  **Propriedades (...)**  
  Clique para exibir os valores usados para cada parâmetro no perfil do agente.  

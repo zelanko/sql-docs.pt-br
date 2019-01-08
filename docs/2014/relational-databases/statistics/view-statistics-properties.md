@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064187"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415633"
 ---
 # <a name="view-statistics-properties"></a>Exibir propriedades de estatísticas
   Você pode exibir estatísticas de otimização de consulta atuais para uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os objetos de estatísticas incluem um cabeçalho com metadados sobre as estatísticas, um histograma com a distribuição de valores na primeira coluna de chave do objeto de estatísticas e um vetor de densidade para medir a correlação entre colunas. Para obter mais informações sobre histogramas e vetores de densidade, consulte [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -69,7 +69,7 @@ ms.locfileid: "48064187"
      Exibe o nome do objeto de banco de dados onde as estatísticas são armazenadas.  
   
      **Estatísticas para INDEXstatistics_name**  
-     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Estas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
+     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Estas propriedades são divididas em três seções: Cabeçalho de estatísticas, vetor de densidade e histograma.  
   
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Cabeçalho de Estatísticas.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48064187"
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Vetor de Densidade.  
   
      **Toda Densidade**  
-     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A,B) e (A, B, C). Com o uso do prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Com o uso do prefixo (A, B) os mesmos valores de colunas têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
+     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A, B) e (A, B, C). Usando o prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Usando o prefixo (A, B) os mesmos valores de coluna têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
   
      **Comprimento Médio**  
      O comprimento médio, em bytes, para armazenar uma lista dos valores das colunas para o prefixo da coluna. Por exemplo, se os valores na lista (3, 5, 6) exigirem cada um 4 bytes, o comprimento será de 12 bytes.  
@@ -133,7 +133,7 @@ ms.locfileid: "48064187"
   
 7.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Para exibir propriedades de estatísticas  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
@@ -16,12 +15,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcf0a38f9dedcae80badaa0ca7ba2462b1b808c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752567"
 ---
 # <a name="non-sql-server-publishers"></a>editores não SQL Server
   Publicar dados de origens que não são do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite consolidar dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode assinar um instantâneo ou dados transacionais publicados de um banco de dados Oracle. Para obter mais informações sobre a publicação do Oracle, consulte [Oracle Publishing Overview](oracle-publishing-overview.md) (Visão geral de publicação do Oracle).  
@@ -33,7 +32,7 @@ ms.locfileid: "48190756"
   
  Publicar de banco de dados não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é o ideal para os seguintes cenários:  
   
-|Cenário|Description|  
+|Cenário|Descrição|  
 |--------------|-----------------|  
 |Implantações de aplicativos do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Desenvolva com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enquanto estiver operando em dados replicados de banco de dados que não são do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |Servidores de preparo de data warehouse|Mantenha os bancos de dados de preparo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sincronizado com um banco de dados não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  

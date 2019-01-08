@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 2: configurar e habilitar configurações de pacote | Microsoft Docs'
+title: 'Etapa 2: Configurando e habilitando configurações de pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747958"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Configurando e habilitando configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
@@ -40,11 +39,11 @@ ms.locfileid: "48100796"
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor do Loop Foreach**, clique em **Expressões**e clique no botão de reticências **(…)**.  
+8.  Na página **Coleção** do **Editor de Loop Foreach**, clique em **Expressões** e, em seguida, clique no botão de reticências **(…)**.  
   
 9. No **Editor de expressões de propriedade**, clique no **propriedade** relacionar e selecionar `Directory`.  
   
-10. Na caixa **Expressão** , clique no botão de reticências **(…)**.  
+10. Na caixa **Expressão**, clique no botão de reticências **(…)**.  
   
 11. No **Construtor de Expressões**, expanda a pasta Variáveis e arraste a variável **User::varFolderName** até a caixa **Expressão** .  
   
@@ -106,6 +105,6 @@ ms.locfileid: "48100796"
 3.  No `New Sample Data` pasta, cole os arquivos copiados.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 3: Modificando o valor de configuração da propriedade de diretório](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Etapa 3: Modificando o valor de configuração de propriedade de diretório](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

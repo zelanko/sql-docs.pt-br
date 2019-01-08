@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788464"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535779"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinar os drivers e DBMSs de destino
 A próxima questão a considerar é, quais são o DBMSs de destino para o aplicativo e quais drivers estão disponíveis que dão suporte a esses DBMSs? Como aplicativos genéricos tendem a ser altamente interoperável, a pergunta do DBMSs de destino é mais aplicável a aplicativos personalizados e verticais. No entanto, a questão dos drivers de destino se aplica a todos os aplicativos, porque os drivers variam enormemente em velocidade, qualidade, suporte ao recurso e disponibilidade. Além disso, se os drivers devem ser redistribuídos com o aplicativo, o custo e a disponibilidade dos planos de licenciamento precisam ser considerados.  
   
- Para muitos aplicativos personalizados, o destino DBMSs são óbvias: eles são existentes DBMSs que o aplicativo foi projetado para acessar. Também devem ser considerados DBMSs ao qual a migração futura está planejada. No entanto, a questão principal para esses aplicativos é qual driver ou drivers a serem usados com elas. Para outros aplicativos personalizados — aqueles que não são projetados para acessar um DBMS existente — o DBMSs de destino pode ser escolhido com base no suporte ao recurso, suporte a usuários simultâneos, a disponibilidade de drivers e acessibilidade.  
+ Para muitos aplicativos personalizados, o destino DBMSs são óbvias: Eles são existentes DBMSs que o aplicativo foi projetado para acessar. Também devem ser considerados DBMSs ao qual a migração futura está planejada. No entanto, a questão principal para esses aplicativos é qual driver ou drivers a serem usados com elas. Para outros aplicativos personalizados – aquelas que não são projetados para acessar um DBMS existente - o DBMSs de destino pode ser escolhido com base no suporte ao recurso, suporte a usuários simultâneos, a disponibilidade de drivers e acessibilidade.  
   
  Para aplicativos verticais, o destino que DBMSs normalmente são escolhidos com base no mercado, a disponibilidade de drivers e suporte ao recurso. Por exemplo, um aplicativo vertical projetado para pequenas empresas deve ter como destino DBMSs são acessíveis a essas empresas; um aplicativo vertical projetado como um complemento para DBMSs existentes deve ter como destino amplamente usado DBMSs.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a75a38b502002fd925d8e5ae1e660afa896dec9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e9dfc21fe4f408362c4e8d32f39533c9d271136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755269"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua as permissões do objeto de modelo para remover as atribuições feitas.  
@@ -30,7 +29,7 @@ ms.locfileid: "48107286"
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-model-object-permissions"></a>Para excluir permissões de objeto de modelo  
   

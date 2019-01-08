@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.newperfprofile.f1
@@ -15,12 +14,12 @@ ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f817afb2364728b93718f9dc5831b501f681d9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780288"
 ---
 # <a name="new-agent-profile"></a>Novo Perfil de Agente
   Use a caixa de diálogo **Novo Perfil de Agente** para criar um novo perfil. Novos perfis sempre são baseados em perfis existentes, mas eles podem ser modificados para atender aos requisitos do aplicativo. Depois que um perfil é criado ele pode ser aplicado a trabalhos de agentes futuros e existentes na caixa de diálogo **Perfis de Agente** . Os valores de parâmetro de agente podem ser editados na caixa de diálogo \<**AgentProfileName> Propriedades**.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773768"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Funções de banco de dados fixas do SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem as seguintes funções de banco de dados fixas do **msdb** , que propiciam aos administradores um melhor controle do acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. As funções, ordenadas do menor para o maior acesso privilegiado, são:  
@@ -50,10 +50,10 @@ ms.locfileid: "48168756"
   
 |Ação|Operadores|Trabalhos locais<br /><br /> (apenas trabalhos possuídos)|Agendas de trabalho<br /><br /> (apenas agendas possuídas)|Proxies|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Criar/modificar/excluir|não|Sim <sup>1</sup>|Sim|não|  
+|Criar/modificar/excluir|Não|Sim <sup>1</sup>|Sim|Não|  
 |Exibir lista (enumerar)|Sim <sup>2</sup>|Sim|Sim|Sim <sup>3</sup>|  
-|Habilitar/desabilitar|não|Sim|Sim|Não aplicável|  
-|Exibir propriedades|não|Sim|Sim|não|  
+|Habilitar/desabilitar|Não|Sim|Sim|Não aplicável|  
+|Exibir propriedades|Não|Sim|Sim|Não|  
 |Executar/interromper/iniciar|Não aplicável|Sim|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Sim|Não aplicável|Não aplicável|  
 |Excluir histórico de trabalho|Não aplicável|Não <sup>4</sup>|Não aplicável|Não aplicável|  
@@ -77,14 +77,14 @@ ms.locfileid: "48168756"
   
 |Ação|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Criar/modificar/excluir|não|Sim <sup>1</sup> (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
+|Criar/modificar/excluir|Não|Sim <sup>1</sup> (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim <sup>2</sup>|Sim|Sim|Sim|Sim <sup>3</sup>|  
-|Habilitar/desabilitar|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|Não aplicável|  
-|Exibir propriedades|não|Sim|Sim|Sim|não|  
-|Editar propriedades|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
-|Executar/interromper/iniciar|Não aplicável|Sim (apenas trabalhos possuídos)|não|Não aplicável|Não aplicável|  
+|Habilitar/desabilitar|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não aplicável|  
+|Exibir propriedades|Não|Sim|Sim|Sim|Não|  
+|Editar propriedades|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
+|Executar/interromper/iniciar|Não aplicável|Sim (apenas trabalhos possuídos)|Não|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Sim|Sim|Não aplicável|Não aplicável|  
-|Excluir histórico de trabalho|Não aplicável|Não <sup>4</sup>|não|Não aplicável|Não aplicável|  
+|Excluir histórico de trabalho|Não aplicável|Não <sup>4</sup>|Não|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Não aplicável|Sim (somente agendas possuídas)|Não aplicável|  
   
  <sup>1</sup> não é possível alterar a propriedade do trabalho.  
@@ -109,14 +109,14 @@ ms.locfileid: "48168756"
   
 |Ação|Alertas|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Criar/modificar/excluir|não|não|Sim <sup>2</sup> (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
+|Criar/modificar/excluir|Não|Não|Sim <sup>2</sup> (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim|Sim <sup>1</sup>|Sim|Sim|Sim|Sim|  
-|Habilitar/desabilitar|não|não|Sim <sup>3</sup>|não|Sim <sup>4</sup>|Não aplicável|  
+|Habilitar/desabilitar|Não|Não|Sim <sup>3</sup>|Não|Sim <sup>4</sup>|Não aplicável|  
 |Exibir propriedades|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Editar propriedades|não|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
-|Executar/interromper/iniciar|Não aplicável|Não aplicável|Sim|não|Não aplicável|Não aplicável|  
+|Editar propriedades|Não|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
+|Executar/interromper/iniciar|Não aplicável|Não aplicável|Sim|Não|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Não aplicável|Sim|Sim|Não aplicável|Não aplicável|  
-|Excluir histórico de trabalho|Não aplicável|Não aplicável|Sim|não|Não aplicável|Não aplicável|  
+|Excluir histórico de trabalho|Não aplicável|Não aplicável|Sim|Não|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Não aplicável|Não aplicável|Sim (somente agendas possuídas)|Não aplicável|  
   
  <sup>1</sup> pode obter a lista de operadores disponíveis para uso na **sp_notify_operator** e o **propriedades do trabalho** caixa de diálogo do Management Studio.  

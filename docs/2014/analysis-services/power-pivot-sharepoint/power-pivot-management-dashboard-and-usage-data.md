@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069706"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419867"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
   O Painel de Gerenciamento PowerPivot é uma coleção de web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server PowerPivot para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  
@@ -39,7 +39,7 @@ ms.locfileid: "48069706"
 ##  <a name="items"></a> Visão geral das seções do Painel  
  O Painel de Gerenciamento PowerPivot contém as Web parts e relatórios inseridos que fazem busca detalhada em categorias de informações específicas. A lista a seguir descreve cada parte do painel:  
   
-|Painel|Description|  
+|Painel|Descrição|  
 |---------------|-----------------|  
 |Infraestrutura - Integridade do Serviço|Mostra as tendências de uso de CPU, o consumo de memória e os tempos de resposta de consulta ao longo do tempo, para que você possa avaliar se os recursos do sistema estão se aproximando da capacidade máxima ou estão subutilizados.|  
 |Ações|Contém links para outras páginas da Administração Central, incluindo o aplicativo de serviço atual, uma lista dos aplicativos de serviço e o log de uso.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48069706"
   
 -   [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
+ Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
   
 ##  <a name="edit"></a> Editar o painel do PowerPivot  
  Se você tiver experiência em desenvolvimento ou personalização de painéis, poderá editar o painel para incluir novas Web parts. Você também poderá editar as propriedades das Web parts incluídas no painel.  
@@ -125,7 +125,7 @@ ms.locfileid: "48069706"
   
     7.  Digite um nome para a conexão e clique em **Avançar**.  
   
-    8.  Em Especificar Consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados com os quais deseja trabalhar **Se a mensagem de erro** “O nome da propriedade Modo de Edição não está formatado corretamente.” for exibida, verifique se você editou o arquivo .ODC.  
+    8.  Em especificar consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados que você deseja trabalhar **se você vir a mensagem de erro** "o nome da propriedade modo de edição não é formatado corretamente.", verifique se você as edições do. Arquivo ODC.  
   
     9. Clique em **OK** e em **Concluir**.  
   

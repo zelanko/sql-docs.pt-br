@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510897"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Conceder acesso personalizado a dados de célula (Analysis Services)
   A segurança da célula é usada para permitir ou negar acesso a dados de medida de um cubo. A ilustração a seguir mostra uma combinação de medidas permitidas e negadas em uma Tabela Dinâmica quando conectada por um usuário cuja função permite acessar apenas algumas medidas. Neste exemplo, **Valor de Vendas do Revendedor** e **Custo Total do Produto do Revendedor** são as únicas medidas disponíveis por meio dessa função. Todas as outras medidas são negadas implicitamente (as etapas usadas para obter esse resultado são fornecidas abaixo, na seção Permitir acesso a medidas específicas).  
@@ -34,7 +34,7 @@ ms.locfileid: "48105166"
   
  As permissões de célula aplicam-se a dados dentro da célula e não aos seus metadados. Note como a célula ainda está visível nos resultados de uma consulta, exibindo um valor `#N/A` em vez do valor real da célula. O `#N/A` valor aparecerá na célula, a menos que o aplicativo cliente converta o valor ou outro valor seja especificado definindo a propriedade Secured Cell Value na cadeia de conexão.  
   
- Para ocultar a célula totalmente, limite os membros visíveis – dimensões, atributos de dimensão e membros do atributo de dimensão. Para obter mais informações, consulte [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
+ Para ocultar a célula totalmente, você deverá limitar os membros de dimensões, atributos de dimensão e membros de atributo de dimensão – que são visíveis. Para obter mais informações, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Como administrador, você pode especificar se os membros da função têm permissões de leitura, contingente de leitura ou de leitura/gravação nas células de um cubo. Colocar permissões em uma célula é o nível mais baixo de segurança permitido, por isso, antes de aplicar permissões neste nível, é importante considerar alguns fatos:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105166"
 ## <a name="allow-access-to-specific-measures"></a>Permitir acesso a medidas específicas  
  Você pode usar a segurança da célula para escolher explicitamente quais medidas estão disponíveis. Depois de identificar especificamente quais membros são permitidos, todas as outras medidas se tornam indisponíveis. Talvez esse seja o cenário mais simples para implantar por meio de script MDX, como mostram as etapas a seguir.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). Associação já deve estar especificada e a função deve ter `Read` acesso ao cubo. Consulte [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). A associação já deve estar especificada e a função deve ter acesso de `Read` ao cubo. Consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
   
 2.  Em **Dados da Célula**, marque a seleção do cubo para ter certeza de ter escolhido o correto e selecione **Habilitar permissões de leitura**.  
   
@@ -98,11 +98,11 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  As permissões de Leitura/Gravação na célula são usadas para habilitar write-back, desde que os membros tenham permissões de leitura/gravação para o cubo. As permissões que são concedidas no nível de célula não podem ser maiores que as permissões que concedidas no nível de cubo. Consulte [Definir write-back de partição](set-partition-writeback.md) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Construtor MDX &#40;Analysis Services - dados multidimensionais&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [O Script básico MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [Construtor MDX&#40;Analysis Services – Dados Multidimensionais&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [O script básico de MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
  [Conceder permissões em uma dimensão &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

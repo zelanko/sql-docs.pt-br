@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f290d76a6c7b352e438e836bfd48eedeb28e4db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764198"
 ---
 # <a name="edit-an-operator"></a>Editar um operador
   Este tópico descreve como editar a disponibilidade de operadores para o recebimento de notificações e seus endereços de email, pager e net send no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48093326"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48093326"
   
 5.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-edit-an-operator"></a>Para editar um operador  
   
@@ -93,9 +93,9 @@ ms.locfileid: "48093326"
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 1,  
-        @email_address = N'françoisa',  
+        @email_address = N'fran??oisa',  
         @pager_address = N'5551290AW@pager.Adventure-Works.com',  
         @weekday_pager_start_time = 080000,  
         @weekday_pager_end_time = 170000,  

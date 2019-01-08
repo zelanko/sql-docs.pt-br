@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71c695a31aacf146bf2e97dd0ad4a38044d6b8b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b24a03ff71e6ddec125dfa40ae4c01b3062ada8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761598"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Criar uma hierarquia explícita (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma hierarquia explícita quando precisar de uma hierarquia desbalanceada em que os membros podem existir em qualquer nível. As hierarquias explícitas contêm membros de uma única entidade.  
@@ -31,7 +30,7 @@ ms.locfileid: "48083576"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   A entidade deve estar habilitada para hierarquias explícitas e coleções. Para obter mais informações, consulte [habilitar uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48083576"
   
 7.  No **adicionar hierarquia explícita** página, o **nome da hierarquia explícita** caixa, digite um nome para a hierarquia.  
   
-8.  Opcionalmente, desmarque a caixa de seleção **Hierarquia obrigatória** para criar a hierarquia como não obrigatória. Para obter mais informações sobre tipos de hierarquia, consulte [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
+8.  Opcionalmente, desmarque a caixa de seleção **Hierarquia obrigatória** para criar a hierarquia como não obrigatória. Para obter mais informações sobre tipos de hierarquia, consulte [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
 9. Clique em **salvar hierarquia**.  
   

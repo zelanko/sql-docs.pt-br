@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518284"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usando dados de uma tabela aninhada como entrada para um gráfico de precisão
   Quando você testar a precisão de um modelo de mineração usando dados externos, se o modelo de mineração contiver tabelas aninhadas, os dados externos também deverão contar uma tabela de casos e uma tabela aninhada associada.  
@@ -44,7 +44,7 @@ ms.locfileid: "48196686"
   
 3.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(…)** para escolher um conjunto de dados externo em uma lista de exibições da fonte de dados do servidor atual.  
+4.  Clique no botão Procurar **(...)**  para escolher o conjunto de dados externos de uma lista de exibições da fonte de dados no servidor atual.  
   
 5.  Clique em **Selecionar Tabela de Casos**. Na caixa de diálogo **Selecionar Tabela** , escolha a tabela na exibição da fonte de dados que contém os dados do caso e, em seguida, clique em **OK**.  
   

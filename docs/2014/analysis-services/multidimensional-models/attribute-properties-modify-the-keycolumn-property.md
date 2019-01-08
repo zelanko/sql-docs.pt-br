@@ -15,12 +15,12 @@ ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524357"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificar a propriedade KeyColumn de um atributo
   Você pode modificar a propriedade **KeyColumns** de um atributo. Por exemplo, convém especificar uma chave composta em vez de uma chave única como a chave para o atributo.  
@@ -33,7 +33,7 @@ ms.locfileid: "48068756"
   
     -   No **Gerenciador de Soluções**, clique com o botão direito do mouse na dimensão na pasta **Dimensões** e, em seguida, clique em **Abrir** ou **Designer de Exibição**.  
   
-         — ou —  
+         -ou-  
   
     -   No Designer de cubo, sobre o **estrutura do cubo** guia, expanda a dimensão do cubo na **dimensões** painel e clique em **editar \<dimensão >**.  
   

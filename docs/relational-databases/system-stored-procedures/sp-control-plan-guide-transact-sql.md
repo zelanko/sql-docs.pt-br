@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502977"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Descarta o guia de plano especificado por *plan_guide_name*. Após um guia de plano ser descartado, as execuções futuras de uma consulta anteriormente equivalente ao guia de plano não serão influenciadas pelo guia de plano.  
   
  DROP ALL  
- Descarta todos os guias de plano no banco de dados atual. **N' * * * plan_guide_name* não pode ser especificado quando DROP ALL é especificado.  
+ Descarta todos os guias de plano no banco de dados atual. **N'**_plan_guide_name_ não pode ser especificado quando DROP ALL é especificado.  
   
  DISABLE  
  Desabilita o guia de plano especificado por *plan_guide_name*. Após um guia de plano ser desabilitado, as execuções futuras de uma consulta anteriormente equivalente ao guia de plano não serão influenciadas pelo guia de plano.  
   
  DISABLE ALL  
- Desabilita todos os guias de plano no banco de dados atual. **N' * * * plan_guide_name* não pode ser especificado quando DISABLE ALL é especificado.  
+ Desabilita todos os guias de plano no banco de dados atual. **N'**_plan_guide_name_ não pode ser especificado quando DISABLE ALL é especificado.  
   
  ENABLE  
  Permite que o guia de plano especificado por *plan_guide_name*. Um guia de plano pode ser vinculado a uma consulta elegível após ser habilitado. Por padrão, os guias de plano são habilitados no momento de sua criação.  
   
  ENABLE ALL  
- Habilita todos os guias de plano no banco de dados atual. **N'***plan_guide_name***'** não pode ser especificado quando ENABLE ALL está especificado.  
+ Habilita todos os guias de plano no banco de dados atual. **N'**_plan_guide_name_**'** não pode ser especificado quando ENABLE ALL está especificado.  
   
 ## <a name="remarks"></a>Comentários  
  A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro.  
@@ -125,7 +125,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. Desabilitando todos os guias de plano no banco de dados atual  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>b. Desabilitando todos os guias de plano no banco de dados atual  
  O exemplo seguinte desabilita todos os guias de plano no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

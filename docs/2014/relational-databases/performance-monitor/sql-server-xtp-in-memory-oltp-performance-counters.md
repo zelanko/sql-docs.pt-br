@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2362807e8e033fbc55e75a08d9dec80bf3782e03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69b24c96e4833a45038bfcae20f0a5fecd0d2340
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760578"
 ---
 # <a name="xtp-in-memory-oltp-performance-counters"></a>Contadores de desempenho de XTP (OLTP na memória)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece objetos e contadores que podem ser usados pelo Monitor de Desempenho para monitorar a atividade OLTP in-memory.  
@@ -23,7 +23,7 @@ ms.locfileid: "48084046"
 ##  <a name="SQLServerPOs"></a> Objetos de desempenho XTP (OLTP na memória)  
  A tabela a seguir descreve objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Objeto de desempenho|Description|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[Cursores de XTP](../cursors.md)|O objeto de desempenho Cursores de XTP contém os contadores relacionados aos cursores do mecanismo de XTP interno. Os cursores são os blocos de construção de baixo nível que o mecanismo de XTP usa para processar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] . Como tal, você normalmente não tem controle direto sobre eles.|  
 |[Coleta de Lixo de XTP](sql-server-xtp-garbage-collection.md)|O objeto de desempenho Coleta de Lixo de XTP contém os contadores relacionados ao coletor de lixo do mecanismo de XTP.|  

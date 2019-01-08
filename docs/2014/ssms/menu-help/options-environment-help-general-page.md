@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
@@ -12,12 +12,12 @@ ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14dca3e7fa9aa02a71a1920ad2443d4ae0d74cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774980"
 ---
 # <a name="options-environment-help-general-page"></a>Opções (página ambiente – ajuda – geral)
   Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  

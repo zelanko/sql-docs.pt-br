@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760239"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176096"
 |ID do evento|2601|  
 |Origem do evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Não é possível inserir uma linha de chave duplicada no objeto '%.*ls' com o índice exclusivo '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explicação  
@@ -42,7 +41,7 @@ ms.locfileid: "48176096"
   
 -   Uma tabela com uma coluna de identidade está sendo usada, mas a coluna não é gerenciada apropriadamente.  
   
--   Na replicação de mesclagem, esse erro também pode ocorrer durante uma inserção em uma tabela do sistema **MSmerge_contents**; o erro gerado é semelhante a: Não foi possível inserir uma linha de chave duplicada no objeto 'MSmerge_contents' com índice exclusivo 'ucl1SycContents'.  
+-   Na replicação de mesclagem, esse erro também pode ocorrer durante uma inserção na tabela do sistema **MSmerge_contents**; o erro gerado é semelhante a: Não é possível inserir a linha de chave duplicada no objeto 'MSmerge_contents' com índice exclusivo 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Ação do usuário  
  A ação necessária depende do motivo que levou à ocorrência do erro:  

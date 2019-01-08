@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748718"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
   As perguntas e as respostas a seguir fornecem orientação sobre várias tarefas enfrentadas pelos administradores de bancos de dados replicados.  
@@ -122,7 +121,7 @@ ms.locfileid: "48105156"
   
 -   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
--   O namespace dentro do qual um objeto é criado: \<Database>.\<Schema>.\<Object>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
+-   O namespace no qual um objeto é criado: \<Banco de dados >. \<Esquema >. \<Objeto >. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
   
 -   A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   

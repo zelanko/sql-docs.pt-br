@@ -24,19 +24,19 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152688"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774318"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
   Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
   
--   **Antes de começar:**  [Escolhendo Opções de Atualização de DAC](#ChoseDACUpgOptions), [Limitações e Restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
+-   **Antes de começar:**  [Escolhendo opções de atualização de DAC](#ChoseDACUpgOptions), [limitações e restrições](#LimitationsRestrictions), [pré-requisitos](#Prerequisites), [segurança](#Security), [permissões](#Permissions)  
   
--   **Para atualizar um DAC, usando:**  [O Assistente para Atualizar o Aplicativo da Camada de Dados](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O atualização de dados-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Uma atualização de DAC é um processo no local que altera o esquema do banco de dados existente para corresponder ao esquema definido em uma nova versão do DAC. A nova versão do DAC é fornecida em um arquivo de pacote DAC. Para obter mais informações sobre como criar um pacote de DAC, veja [Aplicativos da camada de dados](data-tier-applications.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "48152688"
 ###  <a name="ChoseDACUpgOptions"></a> Escolhendo Opções de Atualização de DAC  
  Há quatro opções de atualização para uma atualização no local:  
   
--   **Ignorar perda de dados** – se `True`, a atualização continuará mesmo que algumas das operações resultem na perda de dados. Se `False`, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não está presente no esquema do novo DAC, a tabela será removida se `True` for especificado. A configuração padrão é `True`.  
+-   **Ignorar perda de dados** - se `True`, a atualização continuará mesmo que algumas das operações resultem na perda de dados. Se `False`, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não estiver presente no esquema do novo DAC, a tabela será removida se `True` for especificado. A configuração padrão é `True`.  
   
--   **Bloquear alterações** – se `True`, a atualização será finalizada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se `False`, a atualização continuará mesmo se forem detectadas alterações. A configuração padrão é `False`.  
+-   **Bloquear alterações** - se `True`, a atualização será finalizada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se `False`, a atualização continuará mesmo que sejam detectadas alterações. A configuração padrão é `False`.  
   
--   **Reversão em caso de falha** – se `True`, a atualização será incluída em uma transação, e se forem encontrados erros será tentada uma reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
+-   **Reversão em caso de falha** - se `True`, a atualização será incluída em uma transação, e se forem encontrados erros será tentada uma reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
   
--   **Ignorar a validação da política** – se `True`, a política de seleção de servidor DAC não será avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
+-   **Ignorar a validação da política** - se `True`, a política de seleção de servidor DAC não será avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Só podem ser executados uprades de DAC em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
@@ -58,7 +58,7 @@ ms.locfileid: "48152688"
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  Convém fazer um backup completo do banco de dados antes de iniciar a atualização. Se uma atualização encontrar um erro e não puder reverter todas as suas alterações, talvez seja preciso restaurar o backup.  
   
- Antes de iniciar a atualização, há várias ações a serem adotadas para validar o pacote de DAC e as ações de atualização. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](validate-a-dac-package.md).  
+ Antes de iniciar a atualização, há várias ações a serem adotadas para validar o pacote de DAC e as ações de atualização. Para obter mais informações sobre como executar essas verificações, consulte [Validate a DAC Package](validate-a-dac-package.md).  
   
 -   É recomendável não atualizar usando um pacote de DAC de origens desconhecidas ou não confiáveis. Esses pacotes podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um pacote de uma origem desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48152688"
   
 2.  Expanda os nós **Gerenciamento** e **Aplicativos da Camada de Dados** .  
   
-3.  Clique com o botão direito do mouse no nó do DAC a ser atualizado e selecione **Atualizar Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no nó do DAC a ser atualizado e selecione **Atualizar Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -193,13 +193,13 @@ ms.locfileid: "48152688"
   
  **As ações a seguir serão usadas para atualizar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A coluna **Ação** exibe as ações, tais como instruções Transact-SQL, que serão executadas para realizar a atualização. A coluna **Perda de Dados** conterá um aviso se a ação associada puder excluir dados.  
   
- **Atualizar** - atualiza a lista de ações.  
+ **Atualizar** – Atualiza a lista de ações.  
   
- **Salvar Relatório de Ação** - salva o conteúdo da janela de ação em um arquivo HTML.  
+ **Salvar Relatório de Ação** – Salva o conteúdo da janela de ação em um arquivo HTML.  
   
  **Continuar, apesar da possível perda de alterações** – Especifique que você entende que alguns dos objetos ou dados no banco de dados atual não estarão presentes no novo banco de dados e que está disposto a continuar com a atualização. Somente selecione este botão se você tiver analisado o relatório de alterações e entender as etapas que deve executar para transferir manualmente os objetos ou os dados necessários no novo banco de dados. Se você não tiver certeza, clique no botão **Salvar Relatório de Ação** para salvar o relatório de alterações e no botão **Salvar Scripts** para salvar o script Transact-SQL. Depois, clique em **Cancelar**. Analise o relatório e o script. Em seguida, planeje como transferir os objetos e os dados necessários após a conclusão da atualização. Reinicie o assistente.  
   
- **Salvar Scripts** – salva as instruções Transact-SQL que serão usadas para executar a atualização em um arquivo de texto.  
+ **Salvar Scripts** – Salva as instruções Transact-SQL que serão usadas para executar a atualização em um arquivo de texto.  
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   
@@ -234,15 +234,15 @@ ms.locfileid: "48152688"
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC a ser atualizado.  
   
-2.  Abra um `ServerConnection` do objeto e conecte-se à mesma instância.  
+2.  Abra um objeto `ServerConnection` e conecte-se à mesma instância.  
   
-3.  Use `System.IO.File` para carregar o arquivo de pacote DAC.  
+3.  Use `System.IO.File` para carregar o arquivo de pacote de DAC.  
   
-4.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar eventos de atualização de DAC.  
+4.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar os eventos de atualização do DAC.  
   
 5.  Defina o `DacUpgradeOptions`.  
   
-6.  Use o `IncrementalUpgrade` método para atualizar o DAC.  
+6.  Use o método `IncrementalUpgrade` para atualizar o DAC.  
   
 7.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   
@@ -285,7 +285,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

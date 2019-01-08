@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
@@ -14,12 +13,12 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab4fbdbdc9b180969055114ea770727d3c1910a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 907d6191a781c4ac719982b61e97b88434790aea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154266"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767048"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarefa Criar Cluster do Azure HDInsight
 A **Tarefa Criar Cluster do Azure HDInsight** permite que um pacote do SSIS crie um cluster do Azure HDInsight na assinatura e grupo de recursos do Azure especificados.
@@ -39,7 +38,7 @@ A tabela a seguir fornece uma descrição para os campos nessa caixa de diálogo
 |AzureStorageConnection|Selecione um Gerenciador de conexão de armazenamento do Azure existente ou crie um novo, relacionado a uma conta de armazenamento do Azure, que será associado com o cluster HDInsight.|
 |SubscriptionId|Especifique a ID da assinatura na qual o cluster HDInsight será criado.|
 |ResourceGroup|Especifique o grupo de recursos do Azure no qual o cluster HDInsight será criado.|
-|Local|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
+|Local padrão|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
 |ClusterName|Especifique um nome para o cluster HDInsight que será criado.|  
 |ClusterSize|Especifique o número de nós a serem criados no cluster.|  
 |BlobContainer|Especifique o nome do contêiner de armazenamento padrão a ser associado ao cluster HDInsight.|  

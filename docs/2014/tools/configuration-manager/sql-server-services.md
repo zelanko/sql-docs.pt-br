@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f584f5fb52d1d7faec0cafb3bcdafde51abbe854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210826"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748409"
 ---
 # <a name="sql-server-services"></a>Serviços do SQL Server
   Esta seção contém os tópicos da Ajuda F1 das caixas de diálogo Serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  

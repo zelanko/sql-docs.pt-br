@@ -1,24 +1,23 @@
 ---
-title: 'Etapa 4: implantar o pacote da Lição 6 | Microsoft Docs'
+title: 'Etapa 4: Implantar o pacote da lição 6 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 02491a0773a3ecbaaf6384bf88d7c07d1549745b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905036"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752619"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>Etapa 4: Implantando o pacote da Lição 6
+# <a name="step-4-deploying-the-lesson-6-package"></a>Etapa 4: Implantar o pacote da lição 6
   Implantar o pacote envolve a adição do pacote no catálogo de SSISDB nos Integration Services em uma instância do SQL Server. Nesta lição, você adicionará o pacote da Lição 6 no catálogo SSISDB, definirá o parâmetro e executará o pacote. Nesta lição você usará o SQL Server Management Studio para adicionar o pacote da Lição 6 ao catálogo SSISDB e implantará esse pacote. Depois de implantar o pacote, você modificará o parâmetro para apontar para um novo local e, em seguida, executará o pacote.  
   
  Nesta lição, você irá:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: wmi
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
@@ -15,12 +14,12 @@ ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9269cd8d4e01257f4af2642ad767353d09444a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776094"
 ---
 # <a name="set-breakpoints"></a>Definir Pontos de Interrupção
   Use a caixa de diálogo **Definir Pontos de Interrupção** para especificar os eventos nos quais habilitar pontos de interrupção e para controlar o comportamento do ponto de interrupção.  
@@ -35,7 +34,7 @@ ms.locfileid: "48130327"
  **Tipo de Contagem de Ocorrências**  
  Especifique quando o ponto de interrupção entra em vigor.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Always**|A execução será sempre suspensa quando ocorrer o ponto de interrupção.|  
 |**Contagem de ocorrências igual a**|A execução será suspensa quando o número de vezes que o ponto de interrupção ocorreu for igual à contagem de ocorrências.|  
@@ -46,6 +45,6 @@ ms.locfileid: "48130327"
  Especifique o número de ocorrências no qual engatilhe uma interrupção. Esta opção não estará disponível se o ponto de interrupção estiver sempre ativado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Depurar o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
+ [Depurando o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

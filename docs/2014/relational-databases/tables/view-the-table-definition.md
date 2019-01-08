@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - showing table properties
@@ -16,12 +15,12 @@ ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff052e606045f004064c86c5cbec2248a2998c2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782018"
 ---
 # <a name="view-the-table-definition"></a>Exibir a definição da tabela
   Você pode exibir as propriedades de uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +52,7 @@ ms.locfileid: "48222176"
   
 2.  Clique com o botão direito do mouse na tabela e escolha **Propriedades** no menu de atalho. Para obter mais informações, consulte [Table Properties](table-properties-ssms.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-show-table-properties"></a>Para exibir as propriedades da tabela  
   

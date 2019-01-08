@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.LRA.f1
@@ -13,12 +12,12 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24e74cbeae446e4bd70088b0dc3a61b1490e590d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124446"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761438"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Segurança do Agente de Leitor de Log (replicação ponto a ponto)
   A página **Segurança do Agente de Leitor de Log** permite especificar as contas nas quais o Agente de Leitor de Log, em cada computador de mesmo nível, executa e efetua conexões. Para obter informações sobre as permissões necessárias para os agentes e as melhores práticas de segurança da replicação, consulte [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md) e [Melhores práticas de segurança da replicação](security/replication-security-best-practices.md).  
@@ -41,7 +40,7 @@ ms.locfileid: "48124446"
  O contexto no qual a conexão com o Distribuidor é feita. A conexão local com o Distribuidor é sempre feita usando o contexto da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado e, portanto, esse campo sempre exibirá **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'**.  
   
  **Conexão com o Publicador**  
- O contexto no qual a conexão com o Publicador é feita. A conexão com o Publicador pode ser feita usando um logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o contexto de uma conta do Windows na qual o agente é executado. O campo exibe uma das seguintes opções: **Usar logon '\<Login>'**, **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'**. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
+ O contexto no qual a conexão com o Publicador é feita. A conexão com o Publicador pode ser feita usando um logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o contexto de uma conta do Windows na qual o agente é executado. O campo exibe uma das seguintes opções: **Usar logon '\<Login >'**, **representar '\<domínio >\\< Login\>'** ou **Impersonate '\<computador >\\< login\>'**. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
