@@ -1,5 +1,5 @@
 ---
-title: Replicação bidirecional entre filtros em modelos de tabela | Microsoft Docs
+title: Replicação bidirecional entre filtros em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033304"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072303"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados de BI-direcional em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "38033304"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "Filteroption SSAS-BIDI-1")  
   
- Há dois tipos de filtros cruzados: filtragem unidirecional e bidirecional. Unidirecional é a direção do filtro tradicional de muitos para um entre tabelas de fatos e tabelas de dimensões nessa relação. Bidirecional é um filtro cruzado que permite o uso do contexto do filtro de uma única relação como o contexto do filtro de outra relação de tabela, com uma única tabela comum para as duas relações.  
+ Há dois tipos de filtros cruzados: Filtragem unidirecional e bidirecional. Unidirecional é a direção do filtro tradicional de muitos para um entre tabelas de fatos e tabelas de dimensões nessa relação. Bidirecional é um filtro cruzado que permite o uso do contexto do filtro de uma única relação como o contexto do filtro de outra relação de tabela, com uma única tabela comum para as duas relações.  
   
  Considerando **DimDate** e **DimProduct** com relações de chave estrangeira para **FactOnlineSales**, um filtro cruzado bidirecional é equivalente a **FactOnlineSales-DimDate** e **FactOnlineSales-DimProduct** usados simultaneamente.  
   
- Os filtros cruzados bidirecionais podem ser uma solução fácil para o problema de design de muitos para muitos, que desafiou os desenvolvedores de tabelas e do Power Pivot no passado. Caso tenha usado a solução alternativa DAX para relações de muitos para muitos em modelos de tabela ou do Power Pivot, você pode tentar aplicar um filtro bidirecional para ver se ele produz os resultados esperados.  
+ Os filtros cruzados bidirecionais podem ser uma solução fácil para o problema de design de muitos para muitos, que desafiou os desenvolvedores de tabelas e do Power Pivot no passado. Se você já usou a solução alternativa DAX para relações muitos-para-muitos na tabela ou modelos do Power Pivot, você pode tentar aplicar um filtro bidirecional para ver se ele produz os resultados esperados.  
   
  Quando criar um filtro cruzado bidirecional, lembre-se do seguinte:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "38033304"
   
  Como as medidas são extraídas da tabela de fatos e encerra o contexto do filtro na tabela de fatos, as agregações serão filtradas corretamente para este modelo. Mas, o que acontece se você quiser criar medidas em outro local, como uma contagem distinta na tabela de produtos ou de clientes ou um desconto médio na tabela de promoção e tiver um contexto de filtro existente estendido a essa medida?  
   
- Vamos experimentar adicionando uma contagem distinta de **DimProducts** na Tabela Dinâmica. Observe os valores repetidos da coluna **Contagem de Produtos**. Em princípio, isso parece uma relação de tabela ausente; no entanto, podemos ver que todas as relações estão totalmente definidas e ativas em nosso modelo. Nesse caso, os valores repetidos ocorrem porque não há nenhum filtro de datas nas linhas da tabela de produtos.  
+ Vamos experimentar adicionando uma contagem distinta de **DimProducts** à tabela dinâmica. Observe os valores repetidos da coluna **Contagem de Produtos**. Em princípio, isso parece uma relação de tabela ausente; no entanto, podemos ver que todas as relações estão totalmente definidas e ativas em nosso modelo. Nesse caso, os valores repetidos ocorrem porque não há nenhum filtro de datas nas linhas da tabela de produtos.  
   
  ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "38033304"
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
 ## <a name="learn-step-by-step"></a>Aprenda passo a passo  
- Para experimentar os filtros cruzados bidirecionais, confira esta apresentação passo a passo. Para acompanhar, é necessário ter:  
+ Para experimentar os filtros cruzados bidirecionais, confira esta apresentação passo a passo. Para acompanhar, você precisará de:  
   
 -   Uma instância do Analysis Services para SQL Server 2016, um modelo de tabela e a versão mais recente do CTP  
   
@@ -101,7 +101,7 @@ ms.locfileid: "38033304"
   
 2.  Clique em **Arquivo** > **Novo** > **Projeto** > **Modelos de Tabela do Analysis Services**.  
   
-3.  No Designer de Modelos de Tabela, defina o banco de dados de espaço de trabalho em uma instância da Visualização do Analysis Services para SQL Server 2016, no modo de servidor tabular.  
+3.  No Designer de Modelos de Tabela, defina o banco de dados de workspace em uma instância da Visualização do Analysis Services para SQL Server 2016, no modo de servidor tabular.  
   
 4.  Verifique se o nível de compatibilidade do modelo é definido como **SQL Server 2016 RTM (1200)** ou superior.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "38033304"
  Se ocorrer erros, verifique se a conta usada para se conectar ao banco de dados tem um logon do SQL Server com permissões de leitura no data warehouse da Contoso. Em uma conexão remota, você pode também verificar a configuração da porta no firewall do SQL Server.  
   
 ### <a name="review-default-table-relationships"></a>Revisar as relações de tabela padrão  
- Mude para a Exibição de Diagrama: **Modelo** > **Modelo View** > **Exibição de Diagrama**. A cardinalidade e as relações ativas são indicadas visualmente. Todas as relações são de um-para-muitos entre duas tabelas relacionadas.  
+ Alternar para exibição de diagrama: **Modelo** > **exibição de modelo** > **exibição de diagrama**. A cardinalidade e as relações ativas são indicadas visualmente. Todas as relações são de um-para-muitos entre duas tabelas relacionadas.  
   
  ![Modelo-de-2-BIDI-SSAS](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo SSAS-BIDI-2")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "38033304"
  ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>Criar medidas  
- Você vai precisar de uma agregação para os valores de soma das vendas por diferentes facetas de dados dimensionais. Na tabela **DimProduct** , você pode criar uma medida de contagem de produtos e usá-la em uma análise de merchandising que mostra uma contagem do número de produtos que fazem parte das vendas, em um determinado ano, região ou para um certo tipo de cliente.  
+ Você precisará de uma agregação para os valores de venda de soma por diferentes facetas de dados dimensionais. Na tabela **DimProduct** , você pode criar uma medida de contagem de produtos e usá-la em uma análise de merchandising que mostra uma contagem do número de produtos que fazem parte das vendas, em um determinado ano, região ou para um certo tipo de cliente.  
   
 1.  Clique em **Modelo** > **Exibição de Modelo** > **Exibição de Diagrama**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "38033304"
   
 4.  Escolha **Data** > **Ano Civil**.  
   
- Observe que as vendas são detalhadas por ano e por fabricante conforme esperado. Isso ocorre porque o contexto do filtro padrão entre **FactOnlineSales**, **DimProduct**e **DimDate** funciona corretamente para medidas, nos vários lados da relação.  
+ Observe que as vendas são detalhadas por ano e por fabricante conforme esperado. Isso ocorre porque o padrão contexto do filtro entre **FactOnlineSales**, **DimProduct**, e **DimDate** funciona corretamente para medidas no lado 'muitos' da relação.  
   
  Ao mesmo tempo, você pode ver que a contagem de produtos não é captada no mesmo contexto do filtro das vendas. Embora as contagens de produtos sejam filtradas corretamente por fabricante (as contagens de fabricante e de produto estão na mesma tabela), o filtro de data não é propagado na contagem de produtos.  
   
@@ -192,14 +192,14 @@ ms.locfileid: "38033304"
  Agora você pode observar que as contagens de produtos e de vendas são filtradas pelo mesmo contexto do filtro, que inclui os fabricantes de **DimProducts** e também o ano civil de **DimDate**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Entenda quando e como um filtro cruzado bidirecional pode ser usado de forma empírica para ver como funciona para o seu cenário. Por vezes, você vai descobrir que os comportamentos internos não são suficientes e vai recorrer a cálculos DAX para fazer o trabalho. Na seção **Consulte também** , você ai encontrar diversos links para recursos adicionais sobre esse tema.  
+ Entenda quando e como um filtro cruzado bidirecional pode ser usado de forma empírica para ver como funciona para o seu cenário. Às vezes, você encontrará que os comportamentos internos não são suficientes e serão necessário recorrer a cálculos DAX para realizar o trabalho. No **Consulte também** seção, você encontrará vários links para recursos adicionais sobre este assunto.  
   
- Na prática, a filtragem cruzada permite formas de exploração de dados que são fornecidas normalmente apenas por meio de uma construção de muitos para muitos. No entanto, é importante reconhecer que a filtragem cruzada bidirecional não é uma construção de muitos para muitos.  A configuração de tabela de muitos para muitos continua sem suporte no Designer para os modelos de tabela desta versão.  
+ Na prática, a filtragem cruzada permite formas de exploração de dados que são fornecidas normalmente apenas por meio de uma construção de muitos para muitos. Dito que, é importante reconhecer que bidirecionais filtragem cruzada não é uma construção de muitos-para-muitos.  A configuração de tabela de muitos para muitos continua sem suporte no Designer para os modelos de tabela desta versão.  
   
 ## <a name="see-also"></a>Confira também  
  [Criar e gerenciar relações no Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Um exemplo prático de como muitos para tratar relações simples no Power Pivot e modelos de tabela](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Resolvendo relações de muitos para muitos aproveitando DAX filtragem cruzadam de tabelas](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [Revolução muitos para muitos (blog do SQLBI)](http://www.sqlbi.com/articles/many2many/)  
+ [Resolvendo relações de muitos para muitos aproveitando a filtragem cruzada de tabelas DAX](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [A revolução muitos para muitos (blog do SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   

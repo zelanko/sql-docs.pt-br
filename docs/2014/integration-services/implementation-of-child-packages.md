@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373398"
 ---
 # <a name="implementation-of-child-packages"></a>Implementação de pacotes filho
   Quando você implementa balanceamento de carga usando o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os pacotes filho são instalados em outros servidores para aproveitar a CPU disponível ou o tempo do servidor. Para criar e executar os pacotes filho são necessárias as seguintes etapas:  
@@ -56,7 +56,7 @@ ms.locfileid: "48100168"
   
 -   Executar o trabalho individual do SQL Server Agent no computador remoto usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para garantir que o pacote seja executado.  
   
- Para obter informações sobre como resolver problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado quando você chama o pacote SSIS a partir de um trabalho do SQL Server Agent](http://support.microsoft.com/kb/918760) na Base de Dados de Conhecimento de Suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+ Para obter informações sobre como resolver problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado quando você chama o pacote SSIS a partir de um trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760) na Base de Dados de Conhecimento de Suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  O SQL Server Agent realiza verificações no acesso do subsistema para um proxy e fornece acesso ao proxy toda vez que a etapa do trabalho é executada.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100168"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
--   Entrada de blog [SSIS: você deve executar pacotes filho em processo ou out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Você deve executar pacotes filho em processo ou fora de processo? ](https://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
   
   

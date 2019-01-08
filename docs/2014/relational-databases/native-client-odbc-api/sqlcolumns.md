@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181316"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360948"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` Retorna SQL_SUCCESS havendo ou não valores para o *CatalogName*, *TableName*, ou *ColumnName* parâmetros. **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
@@ -29,13 +29,13 @@ ms.locfileid: "48181316"
   
  É possível executar `SQLColumns` em um cursor de servidor estático. Uma tentativa de executar `SQLColumns` em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *linked_server_name*.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *Linked_server_name*.  
   
  Para ODBC 2. *x* aplicativos que não usam curingas nos *TableName*, `SQLColumns` retorna informações sobre quaisquer tabelas cujo nomes correspondem ao *TableName* e são de propriedade atual usuário. Se o usuário atual não possuir nenhuma tabela cujo nome corresponda a *TableName* parâmetro, `SQLColumns` retorna informações sobre quaisquer tabelas pertencentes a outros usuários onde o nome da tabela corresponde a *TableName* parâmetro. Para ODBC 2. *x* aplicativos que usam curingas `SQLColumns` retorna todas as tabelas cujo nomes correspondem ao *TableName*. Para ODBC 3. *x* applications `SQLColumns` retorna todas as tabelas cujo nomes correspondem ao *TableName* independentemente do proprietário ou se os caracteres curinga é usada.  
   
  A tabela a seguir lista as colunas retornadas pelo conjunto de resultados:  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retorna SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR para os **varchar (max)** tipos de dados.|  
 |TYPE_NAME|Retorna "varchar", "varbinary" ou "nvarchar" para o **varchar (max)**, **varbinary (max)**, e **nvarchar (max)** tipos de dados.|  
@@ -77,7 +77,7 @@ ms.locfileid: "48181316"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Suporte de SQLColumns para colunas esparsas  
  Dois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas específicas foram adicionadas ao conjunto de resultados de SQLColumns:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|Se a coluna for uma coluna esparsa, será SQL_TRUE; caso contrário, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Se a coluna for a coluna `column_set`, será SQL_TRUE; caso contrário, SQL_FALSE.|  
@@ -89,7 +89,7 @@ ms.locfileid: "48181316"
  Para obter mais informações sobre colunas esparsas no ODBC, consulte [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [Função SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

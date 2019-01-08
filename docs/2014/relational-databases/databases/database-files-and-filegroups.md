@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -33,12 +32,12 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790108"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
   Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  
@@ -46,7 +45,7 @@ ms.locfileid: "48205457"
 ## <a name="database-files"></a>Arquivos do banco de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possuem três tipos de arquivos, como mostrado na tabela a seguir.  
   
-|Arquivo|Description|  
+|Arquivo|Descrição|  
 |----------|-----------------|  
 |Primária|O arquivo de dados primário contém as informações de inicialização do banco de dados e aponta para os outros arquivos no banco de dados. Dados do usuário e objetos podem ser armazenados neste arquivo ou em arquivos de dados secundários. Todo banco de dados possui um arquivo de dados primário. A extensão de nome de arquivo indicada para arquivos de dados primários é .mdf.|  
 |Secundário|Os arquivos de dados secundários são opcionais, definidos pelo usuário, e armazenam dados do usuário. Arquivos secundários podem ser usados para distribuir os dados entre os diversos discos, colocando cada arquivo em uma unidade de disco diferente. Além disso, caso um banco de dados exceda o tamanho máximo em um único arquivo Windows, será possível usar arquivos de dados secundários, assim, o banco de dados continuará a crescer.<br /><br /> A extensão de nome de arquivo indicada para arquivos de dados secundários é .ndf.|  
@@ -63,7 +62,7 @@ ms.locfileid: "48205457"
   
  Todos os arquivos de dados são armazenados nos grupos de arquivos listados na tabela a seguir.  
   
-|Grupo de arquivos|Description|  
+|Grupo de arquivos|Descrição|  
 |---------------|-----------------|  
 |Primária|O grupo de arquivos que contém o arquivo primário. Todas as tabelas do sistema são alocadas no grupo de arquivos primário.|  
 |Definido pelo usuário|Qualquer grupo de arquivos que seja criado especificamente pelo usuário quando o usuário cria primeiro ou modifica depois o banco de dados.|  

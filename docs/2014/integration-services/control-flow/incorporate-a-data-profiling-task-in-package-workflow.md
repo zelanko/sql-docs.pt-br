@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,12 +12,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085512"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368688"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -161,7 +160,7 @@ ms.locfileid: "49085512"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085512"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085512"
   
 8.  Feche o ambiente de desenvolvimento de script e, em seguida, o Editor da Tarefa Script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo - Lendo a saída de perfil a partir de uma variável  
- O procedimento anterior mostra como carregar a saída da tarefa criação de perfil de dados de um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Código alternativo – Lendo a saída de perfil com base em uma variável  
+ O procedimento anterior mostra como carregar a saída da tarefa Criação de Perfil de Dados com base em um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
   
 -   Chame o método `LoadXml` da classe `XmlDocument` em vez do método `Load`.  
   

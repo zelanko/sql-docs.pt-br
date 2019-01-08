@@ -1,20 +1,21 @@
 ---
-title: Como a consulta Oracle a partir de um cluster de big data do SQL Server | Microsoft Docs
+title: Consultar dados externos no Oracle
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server 2019 (visualização). Você cria uma tabela externa sobre os dados no Oracle e, em seguida, executa uma consulta.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644084"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432149"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o Oracle de um cluster de big data do SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle em um cluster de big data do SQL Server
 
 Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server de 2019. Para executar este tutorial, você precisará ter acesso a um servidor Oracle. Se você não tiver acesso, este tutorial pode dar uma ideia de como funciona a virtualização de dados para fontes de dados externas no cluster de big data do SQL Server.
 
@@ -29,11 +30,11 @@ Neste tutorial, você aprenderá como:
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-* [Implantar um cluster de big data no Kubernetes](deployment-guidance.md).
-* [Instalar o Studio de dados do Azure e a extensão do SQL Server 2019](deploy-big-data-tools.md).
-* [Carregar dados de exemplo no cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Ferramentas de big data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Criar uma tabela do Oracle
 
@@ -61,7 +62,7 @@ As seguintes etapas criam uma tabela de exemplo chamada `INVENTORY` no Oracle.
 
 A primeira etapa é criar uma fonte de dados externa que pode acessar o servidor Oracle.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](deploy-big-data-tools.md#master).
+1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
 

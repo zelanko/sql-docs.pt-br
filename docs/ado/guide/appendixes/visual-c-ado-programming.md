@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
-ms.translationtype: HT
+ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350370"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997588"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma sintaxe semelhante para o Microsoft Visual Basic. Embora o público-alvo é todos os usuários, programadores ADO empregam diversas linguagens como Visual Basic, Visual C++ (com e sem o **#import** diretiva) e Visual J++ (com o pacote de classe do ADO/WFC).  
@@ -40,7 +40,7 @@ A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma s
   
  Para cada operação dentro de uma classe (ou seja, uma chamada de método ou propriedade), há uma declaração para chamar a operação diretamente (ou seja, o formulário "bruto" da operação) e uma declaração para chamar a operação bruta e lançar um erro COM se a operação falhar ao executar succ essfully. Se a operação é uma propriedade, normalmente há uma diretiva de compilador que cria uma sintaxe alternativa para a operação que tem uma sintaxe como o Visual Basic.  
   
- Operações que recuperam o valor de uma propriedade tem nomes no formato **obter * * * propriedade*. Operações que definem o valor de uma propriedade tem nomes no formato **colocar * * * propriedade*. Operações que definem o valor de uma propriedade com um ponteiro para um objeto ADO têm nomes no formato **PutRef * * * propriedade*.  
+ Operações que recuperam o valor de uma propriedade tem nomes no formato **Obtenha**_propriedade_. Operações que definem o valor de uma propriedade tem nomes no formato **colocar**_propriedade_. Operações que definem o valor de uma propriedade com um ponteiro para um objeto ADO têm nomes no formato **PutRef**_propriedade_.  
   
  Você pode obter ou definir uma propriedade com chamadas destas formas:  
   
@@ -65,16 +65,16 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- O compilador irá gerar apropriado **Get * * *-*, **colocar**-, ou **PutRef * * * propriedade* chamada com base no qual sintaxe alternativa é declarado e se a propriedade é que estão sendo lidos ou gravados.  
+ O compilador irá gerar apropriado **Obtenha**_-_, **colocar**-, ou **PutRef**_propriedade_ chamada com base no qual sintaxe alternativa é declarado e se a propriedade está sendo lidos ou gravados.  
   
  O **__declspec(property...)**  diretiva de compilador só pode declarar **Obtenha**, **colocar**, ou **obter** e **colocar** sintaxe alternativa para uma função. Operações somente leitura só tem uma **obter** declaração; operações de somente gravação tiver apenas um **colocar** declaração; operações que são leitura e gravação tiver ambos **obter** e **colocar** declarações.  
   
- Apenas duas declarações são possíveis com essa diretiva; No entanto, cada propriedade pode ter três funções de propriedade: **obter * * * propriedade*, **colocar * * * propriedade*, e **PutRef * * * propriedade*. Nesse caso, apenas duas formas da propriedade tem a sintaxe alternativa.  
+ Apenas duas declarações são possíveis com essa diretiva; No entanto, cada propriedade pode ter três funções de propriedade: **Obtenha**_propriedade_, **colocar**_propriedade_, e **PutRef**_propriedade_. Nesse caso, apenas duas formas da propriedade tem a sintaxe alternativa.  
   
- Por exemplo, o **comando** objeto **ActiveConnection** propriedade é declarada com uma sintaxe alternativa para **obter * * * ActiveConnection* e **PutRef * * * ActiveConnection*. O **PutRef**-sintaxe é uma boa opção porque, na prática, você geralmente desejará colocar um aberto **Conexão** objeto (ou seja, uma **Conexão** ponteiro de objeto) neste propriedade. Por outro lado, o **conjunto de registros** objeto tem **obter**-, **colocar**-, e **PutRef * * * ActiveConnection* operações, mas nenhuma alternativa sintaxe.  
+ Por exemplo, o **comando** objeto **ActiveConnection** propriedade é declarada com uma sintaxe alternativa para **obter**_ActiveConnection_e **PutRef**_ActiveConnection_. O **PutRef**-sintaxe é uma boa opção porque, na prática, você geralmente desejará colocar um aberto **Conexão** objeto (ou seja, uma **Conexão** ponteiro de objeto) neste propriedade. Por outro lado, o **conjunto de registros** objeto tem **obter**-, **colocar**-, e **PutRef**_ActiveConnection_operações, mas nenhuma sintaxe alternativa.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>A propriedade do Item, o método GetItem e coleções  
- ADO define várias coleções, incluindo **campos**, **parâmetros**, **propriedades**, e **erros**. No Visual C++, o **GetItem (***índice***)** método retorna um membro da coleção. *Índice* é um **Variant**, o valor que é um índice numérico do membro na coleção, ou uma cadeia de caracteres que contém o nome do membro.  
+ ADO define várias coleções, incluindo **campos**, **parâmetros**, **propriedades**, e **erros**. No Visual C++, o **GetItem (_índice_)** método retorna um membro da coleção. *Índice* é um **Variant**, o valor que é um índice numérico do membro na coleção, ou uma cadeia de caracteres que contém o nome do membro.  
   
  O **__declspec(property...)**  diretiva de compilador declara o **Item** a propriedade como uma sintaxe alternativa para cada coleção do fundamental **obter GetItem ()** método. A sintaxe alternativa usa colchetes e é semelhante a uma referência de matriz. Em geral, as duas formas a seguinte aparência:  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Por exemplo, atribuir um valor a um campo de um **conjunto de registros** objeto, chamado ***rs***, derivado do **autores** tabela do **pubs** banco de dados. Use o **Item()** propriedade para acessar o terceiro **campo** dos **conjunto de registros** objeto **campos** coleção (o coleções são indexadas da zero; Suponha que o terceiro campo é chamado ***au_fname***). Em seguida, chame o **Value ()** método na **campo** objeto para atribuir um valor de cadeia de caracteres.  
+ Por exemplo, atribuir um valor a um campo de um **conjunto de registros** objeto, chamado  **_rs_**, derivado do **autores** tabela das **pubs** banco de dados. Use o **Item()** propriedade para acessar o terceiro **campo** dos **conjunto de registros** objeto **campos** coleção (o coleções são indexadas da zero; Suponha que o terceiro campo é chamado  **_au\_fname_**). Em seguida, chame o **Value ()** método na **campo** objeto para atribuir um valor de cadeia de caracteres.  
   
  Isso pode ser expresso no Visual Basic a seguir quatro maneiras (os últimos dois formulários são exclusivos para o Visual Basic; outros idiomas não têm equivalentes):  
   
@@ -114,7 +114,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ## <a name="com-specific-data-types"></a>Tipos de dados específicos de COM  
  Em geral, qualquer tipo de dados do Visual Basic que encontrar na referência da API ADO tem um equivalente de Visual C++. Isso inclui tipos de dados padrão, como **unsigned char** para um Visual Basic **bytes**, **curto** para **inteiro**, e  **longo** para **longo**. Examinar a sintaxe Indexesto ver exatamente o que é necessário para os operandos de um determinado método ou propriedade.  
   
- As exceções a essa regra são os tipos de dados específicos COM: **Variant**, **BSTR**, e **SafeArray**.  
+ As exceções a essa regra são os tipos de dados específicos COM: **Variante**, **BSTR**, e **SafeArray**.  
   
 ### <a name="variant"></a>Variante  
  Um **Variant** é um tipo de dados estruturados que contém um membro de valor e um membro de tipo de dados. Um **Variant** pode conter uma ampla variedade de outros tipos de dados, incluindo outra variante, BSTR, booliano, IDispatch ou IUnknown ponteiro, moeda, data e assim por diante. COM também fornece métodos que tornam fácil convertem um tipo de dados para outro.  
@@ -140,12 +140,12 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Por exemplo, a declaração para o **Recordset::Open** método é:  
   
 ```cpp
-    HRESULT Open (  
-        const _variant_t & Source,  
-        const _variant_t & ActiveConnection,  
-        enum CursorTypeEnum CursorType,  
-        enum LockTypeEnum LockType,  
-        long Options );  
+    HRESULT Open (  
+        const _variant_t & Source,  
+        const _variant_t & ActiveConnection,  
+        enum CursorTypeEnum CursorType,  
+        enum LockTypeEnum LockType,  
+        long Options );  
 ```
   
  O `ActiveConnection` argumento usa uma referência a um **variant_t**, que você pode codificar como uma cadeia de conexão ou um ponteiro para um aberto **Conexão** objeto.  
@@ -179,9 +179,9 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
 ```cpp
 _RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
+        long Options );  // Connection  
 _RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
+        long Options );  // Command  
 _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```
   
@@ -265,14 +265,14 @@ rs->Open(...);
   
  Uma variável pode ser usada de duas maneiras, porque o "`->`" operador está sobrecarregado para permitir que uma instância de uma classe se comportar como um ponteiro para uma interface. Um membro de classe privada da variável de instância contém um ponteiro para o **Recordset** interface; a "`->`" operador retorna esse ponteiro; e o ponteiro retornado acessa os membros do **Recordset**  objeto.  
   
-### <a name="coding-a-missing-parameter--string"></a>Codificação de um parâmetro ausente-cadeia de caracteres  
+### <a name="coding-a-missing-parameter---string"></a>Um parâmetro ausente - cadeia de caracteres de codificação  
  Quando você precisar codificar a ausência de um **cadeia de caracteres** operando no Visual Basic, você simplesmente omitir o operando. Você deve especificar o operando no Visual C++. Código de um **bstr_t** que tem uma cadeia de caracteres vazia como um valor.  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
-### <a name="coding-a-missing-parameter--variant"></a>Codificação de um parâmetro ausente-Variant  
+### <a name="coding-a-missing-parameter---variant"></a>Codificando um parâmetro ausente - Variant  
  Quando você precisar codificar a ausência de um **Variant** operando no Visual Basic, você simplesmente omitir o operando. Você deve especificar todos os operandos no Visual C++. A ausência de código **Variant** parâmetro com um **variant_t** definido como o valor especial, DISP_E_PARAMNOTFOUND e tipo, VT_ERROR. Como alternativa, especifique **vtMissing**, que é uma constante predefinida equivalente fornecida pelo **#import** diretiva.  
   
 ```cpp
@@ -334,10 +334,10 @@ End Sub
 2.  Você precisa apenas uma matriz unidimensional, portanto, você pode usar **SafeArrayCreateVector**, em vez de uso geral **SAFEARRAYBOUND** declaração e **SafeArrayCreate** função. A seguir está a aparência que o código usando **SafeArrayCreate**:  
   
     ```cpp
-       SAFEARRAYBOUND   sabound[1];  
-       sabound[0].lLbound = 0;  
-       sabound[0].cElements = 4;  
-       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
+       SAFEARRAYBOUND   sabound[1];  
+       sabound[0].lLbound = 0;  
+       sabound[0].cElements = 4;  
+       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
     ```
   
 3.  O esquema identificado pela constante enumerada **adSchemaColumns**, está associado com quatro colunas de restrição: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME e nome da coluna. Portanto, uma matriz de **Variant** valores com quatro elementos é criado. Em seguida, um valor de restrição que corresponde à terceira coluna, TABLE_NAME, é especificado.  
@@ -349,9 +349,9 @@ End Sub
      Se **SafeArrayDestroy** foi chamado, o código teria esta aparência:  
   
     ```cpp
-          TESTHR(SafeArrayDestroy(pSa));  
-       vtCriteria.vt = VT_EMPTY;  
-          vtCriteria.parray = NULL;  
+          TESTHR(SafeArrayDestroy(pSa));  
+       vtCriteria.vt = VT_EMPTY;  
+          vtCriteria.parray = NULL;  
     ```
   
      No entanto, é muito mais simples permitir que o **variant_t** gerenciar o **SafeArray**.  
@@ -422,7 +422,7 @@ Dim rs As New ADODB.Recordset
 Dim cn As New ADODB.Connection  
 Dim sz as Integer  
 cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
-         "Initial Catalog=pubs;Integrated Security=SSPI;"  
+         "Initial Catalog=pubs;Integrated Security=SSPI;"  
 rs.PageSize = 10  
 sz = rs.PageSize  
 rs.ActiveConnection = cn  
@@ -433,7 +433,7 @@ cn.Close
 End Sub  
 ```
   
- Este exemplo do Visual C++ demonstra a **Obtenha**/**colocar**/**PutRef * * * propriedade*.  
+ Este exemplo do Visual C++ demonstra a **Obtenha**/**colocar**/**PutRef**_propriedade_.  
   
 #### <a name="notes"></a>Observações  
  As observações a seguir correspondem às seções comentadas no exemplo de código.  
@@ -490,7 +490,7 @@ Public Sub GetItemItem
 Dim rs As New ADODB.Recordset  
 Dim name as String  
 rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
+         adLockBatchOptimistic, adTable  
 name = rs(0)  
 ' -or-  
 name = rs.Fields.Item(0)  
@@ -506,7 +506,7 @@ End Sub
  Este exemplo do Visual C++ demonstra **Item**.  
   
 > [!NOTE]
->  A observação a seguir corresponde às seções comentadas no código de exemplo: quando a coleção é acessada com **Item**, o índice **2**, deve ser convertido em **longo** para um construtor apropriado será invocado.  
+>  A observação a seguir corresponde a comentado seções no código de exemplo:  Quando a coleção é acessada com **Item**, o índice **2**, deve ser convertido em **longo** para que um construtor apropriado será invocado.  
   
 ```cpp
 // Visual_CPP_ado_prog_3.cpp  

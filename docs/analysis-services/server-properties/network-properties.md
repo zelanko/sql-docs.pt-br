@@ -1,5 +1,5 @@
 ---
-title: Propriedades de rede | Microsoft Docs
+title: Propriedades de rede do Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991598"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072353"
 ---
 # <a name="network-properties"></a>Propriedades de rede
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** modo de servidor multidimensional e tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e Tabular  
   
 ## <a name="general"></a>Geral  
  **ListenOnlyOnLocalConnections**  
@@ -31,7 +31,7 @@ ms.locfileid: "37991598"
  **IPV4Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv4. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*0*|IPv4 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv4 necessário; servidor não será iniciado se não puder escutar IPv4.|  
@@ -40,7 +40,7 @@ ms.locfileid: "37991598"
  **IPV6Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv6. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*0*|IPv6 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv6 necessário; servidor não será iniciado se não for possível escutar IPv6|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372518"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -45,9 +44,9 @@ ms.locfileid: "48106726"
 -   [Mensagens de erro do componente de fluxo de dados (DTSBC_E_ *)](#msgPipeline)  
   
 ##  <a name="msgError"></a> Mensagens de erro  
- Os nomes simbólicos das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensagens de erro começam com `DTS_E_`.  
+ Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_E_`.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Substituição do procedimento armazenado "%1" no destino.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Não existe suporte para o tipo de dados "%1" encontrado na coluna "%2" para o %3. Essa coluna será convertida em DT_NTEXT.|  
@@ -194,7 +193,7 @@ ms.locfileid: "48106726"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|O caminho de pacote especificado não contém um nome de pacote. Isso ocorre quando o caminho não contém pelo menos uma barra ou uma barra invertida.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|Não é possível encontrar a pasta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Durante uma tentativa de encontrar uma pasta no SQL, um erro OLE DB foi encontrado com o código de erro 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|O provedor de log SSIS não conseguiu abrir o log. Código de erro: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|O provedor de log SSIS não conseguiu abrir o log. Código de erro: 0x%1!8.8x!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Falha ao obter coleção ConnectionInfos com o erro 0x%1!8.8X! "%2". Esse erro ocorre quando a chamada ao IDTSApplication100::get_ConnectionInfos falha.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Deadlock detectado ao tentar bloquear variáveis. Os bloqueios não podem ser adquiridos depois de 16 tentativas. Os bloqueios expiraram.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|A coleção Variables não foi retornada de VariableDispenser. Foi tentada uma operação permitida somente em coleções dispensadas.|  
@@ -376,7 +375,7 @@ ms.locfileid: "48106726"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Erro 0x%1!8.8X! ao preparar para carregar o pacote. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|Falha do método Validate na tarefa com o código de erro 0x%1!8.8X! (%2). O método Validate deve ter êxito e indicar o resultado usando um parâmetro "out".|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|O método Execute na tarefa retornou o código de erro 0x%1!8.8X! (%2). O método Execute deve ter êxito e indicar o resultado usando um parâmetro "out".|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Falha na tarefa "%1": 0x%2!8.8X! ao recuperar dependências. O tempo de execução estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Ocorreu uma falha na tarefa "%1": 0x%2!8.8x! ao recuperar dependências. O tempo de execução estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Houve erros durante a validação da tarefa.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|O formato de cadeia de caracteres de conexão não é válido. Ele deve consistir em um ou mais componentes do formato X=Y, separados por ponto-e-vírgulas. Esse erro ocorre quando uma cadeia de caracteres de conexão sem nenhum componente é definida em um gerenciador de conexões de banco de dados.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Os componentes da cadeia de caracteres de conexão não podem conter ponto-e-vírgulas sem-aspas. Se o valor tiver que conter ponto e vírgula, coloque todo esse valor entre aspas. Esse erro ocorre quando os valores na cadeia de caracteres de conexão contêm ponto-e-vírgulas sem-aspas, como na propriedade InitialCatalog.|  
@@ -569,7 +568,7 @@ ms.locfileid: "48106726"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|A linguagem de script especificada não é válida.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Ponto de entrada não encontrado.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|A linguagem de script não está especificada. Verifique se foi especificada uma linguagem de script válida.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialização da interface do usuário: a tarefa é nula.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialização da interface de usuário: A tarefa é nula.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|A interface do usuário de Tarefa Script foi inicializada com uma tarefa incorreta.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|Nenhum destinatário foi especificado.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|O servidor SMTP (Simple Mail Transfer Protocol) não está especificado. Forneça um nome ou endereço IP válido do servidor SMTP.|  
@@ -789,8 +788,8 @@ ms.locfileid: "48106726"
 |0xC00292A7|-1073573209|DTS_E_TRANSFERDBTASK_NOOVERWRITEDB|O banco de dados "%1" já existe no servidor de destino "%2".|  
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|É necessário especificar pelo menos um arquivo de origem.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Não foi possível encontrar o arquivo "%1" no banco de dados de origem "%2".|  
-|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|A operação solicitada não é permitida em sistemas compatíveis com U.S. FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Falha na execução da consulta "%1", com o erro a seguir: "%2". Possíveis razões da falha: problemas com a consulta, propriedade "ResultSet" não definida corretamente, parâmetros não definidos corretamente ou conexão não estabelecida corretamente.|  
+|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|A operação solicitada não é permitida em sistemas em conformidade com U.S. FIPS 140-2.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Falha na execução da consulta "%1", com o erro a seguir: "%2". Possíveis razões da falha: Problemas com a consulta, propriedade "ResultSet" não definida corretamente, parâmetros não definidos corretamente ou conexão não estabelecida corretamente.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erro ao ler os nomes de procedimento armazenado do arquivo xml.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nó de dados inválido para a tarefa Transferir Procedimento Armazenado.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|A conexão "%1" não é do tipo "SMOServer".|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "48106726"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|O valor é %1!d! especificado como parâmetro de escala da função NULL com o tipo de dados %2 está fora do intervalo. A escala deve ficar no intervalo de %3!d! a %4!d!. A escala não deve exceder a precisão e não deve ser negativa.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|O valor é %1!d! especificado como parâmetro de comprimento da função "NULL" com o tipo de dados %2 é negativo e inválido. O comprimento deve ser positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Não pode ser atribuído valor negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um dos seguintes: DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um destes procedimentos:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Não é possível reanexar "%1". Exclua o caminho, adicione um novo e anexe.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|A função "%1" requer %2!d! parâmeros, não %3!d! parâmetro. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|A função "%1" requer %2!d! parâmetro, não %3!d! parâmetros. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
@@ -1237,15 +1236,15 @@ ms.locfileid: "48106726"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|A transformação da pesquisa recebeu do usuário uma solicitação de cancelamento.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|O processamento de dados de caractere ou de LOB (objeto binário grande) foi interrompido porque o limite de 4 GB foi alcançado.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|O componente de pipeline gerenciado "%1" não pôde ser carregado.  A exceção foi %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de erro SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: não há suporte para o Gerenciador de conexões do Excel nas versões de 64 bits do SSIS, pois não há um provedor OLE DB disponível.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de erro SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: Não há suporte para o Gerenciador de Conexão do Excel na versão de 64 bits do SSIS, pois nenhum provedor do OLE DB está disponível.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|O arquivo de cache está danificado ou não foi criado usando o gerenciador de conexões do Cache.  Forneça um arquivo de cache válido.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|O comando SQL não foi definido corretamente. Verifique a propriedade SQLCommand.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Estão disponíveis informações de objeto de erro COM.  Origem: "%1" código de erro: 0x%2!8.8X!  Descrição: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Estão disponíveis informações de objeto de erro COM.  Origem: "%1" código de erro: 0x%2!8.8x!  Descrição: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Não é possível acessar as conexões adquiridas.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|O número de colunas está incorreto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Não é possível encontrar a coluna "%1" na fonte de dados.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1" Hresult: 0x%2!8.8X!  Descrição: "%3".|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8X!.|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Está disponível um registro OLE DB.  Origem: "%1" Hresult: 0x%2!8.8x!  Descrição: "%3".|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de Erro SSIS DTS_E_OLEDBERROR.  Ocorreu um erro OLE DB. Código de erro: 0x%1!8.8x!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|O componente já está conectado. O componente precisa ser desconectado antes de tentar conectá-lo.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|O valor da propriedade "%1" está incorreto.|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Não é possível abrir o arquivo de dados "%1".|  
@@ -1621,8 +1620,8 @@ ms.locfileid: "48106726"
 |0xC0208242|-1071611326|DTS_E_TXLOOKUP_TOOFEWREFERENCECOLUMNS|Os metadados de referência da transformação Pesquisa contêm poucas colunas. Verifique a propriedade SQLCommand. A instrução SELECT deve retornar pelo menos uma coluna.|  
 |0xC0208243|-1071611325|DTS_E_TXLOOKUP_MALLOCERR_REFERENCECOLUMNINFO|Não é possível alocar memória para uma matriz de estruturas ColumnInfo.|  
 |0xC0208244|-1071611324|DTS_E_TXLOOKUP_MALLOCERR_REFERENCECOLUMNPAIR|Não foi possível alocar memória para uma matriz de estruturas ColumnPair.|  
-|0xC0208245|-1071611323|DTS_E_TXLOOKUP_MALLOCERR_BUFFCOL|Não é possível alocar memória para uma matriz de estruturas BUFFCOL para a criação de um espaço de trabalho principal.|  
-|0xC0208246|-1071611322|DTS_E_TXLOOKUP_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho principal.|  
+|0xC0208245|-1071611323|DTS_E_TXLOOKUP_MALLOCERR_BUFFCOL|Não é possível alocar memória para uma matriz de estruturas BUFFCOL para a criação de um workspace principal.|  
+|0xC0208246|-1071611322|DTS_E_TXLOOKUP_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace principal.|  
 |0xC0208247|-1071611321|DTS_E_TXLOOKUP_HASHTABLE_MALLOCERR|Não é possível alocar memória para uma tabela de hash.|  
 |0xC0208248|-1071611320|DTS_E_TXLOOKUP_HASHNODEHEAP_CREATEERR|Não é possível alocar memória para criar um heap para nós de hash.|  
 |0xC0208249|-1071611319|DTS_E_TXLOOKUP_HASHNODEHEAP_MALLOCERR|Não é possível alocar memória para um heap de nó de hash.|  
@@ -1634,11 +1633,11 @@ ms.locfileid: "48106726"
 |0xC020824F|-1071611313|DTS_E_TXLOOKUP_OLEDBERR_BINDPARAMETERS|Ocorreu um erro OLE DB ao associar os parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208250|-1071611312|DTS_E_TXLOOKUP_OLEDBERR_CREATEBINDING|Ocorreu um erro OLE DB ao criar associações. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208251|-1071611311|DTS_E_TXLOOKUP_INVALID_CASE|Encontrado um caso inválido em uma instrução switch durante o tempo de execução.|  
-|0xC0208252|-1071611310|DTS_E_TXLOOKUP_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho principal. Houve falta de memória.|  
+|0xC0208252|-1071611310|DTS_E_TXLOOKUP_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace principal. Houve falta de memória.|  
 |0xC0208253|-1071611309|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMIROWSET|Ocorreu um erro OLE DB ao buscar um conjunto de linhas com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208254|-1071611308|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMSINGLEROW|Ocorreu um erro OLE DB ao buscar uma linha com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
-|0xC0208255|-1071611307|DTS_E_TXAGG_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho principal. Houve falta de memória.|  
-|0xC0208256|-1071611306|DTS_E_TXAGG_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho principal.|  
+|0xC0208255|-1071611307|DTS_E_TXAGG_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace principal. Houve falta de memória.|  
+|0xC0208256|-1071611306|DTS_E_TXAGG_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace principal.|  
 |0xC0208257|-1071611305|DTS_E_TXAGG_HASHTABLE_MALLOCERR|Não é possível alocar memória para a tabela de hash.|  
 |0xC0208258|-1071611304|DTS_E_TXAGG_HASHNODEHEAP_CREATEERR|Não é possível alocar memória para criar um heap para os nós de hash.|  
 |0xC0208259|-1071611303|DTS_E_TXAGG_HASHNODEHEAP_MALLOCERR|Não é possível alocar memória para o heap de nó de hash.|  
@@ -1646,8 +1645,8 @@ ms.locfileid: "48106726"
 |0xC020825B|-1071611301|DTS_E_TXAGG_CDNODEHEAP_MALLOCERR|Não é possível alocar memória para heap de nó CountDistinct.|  
 |0xC020825C|-1071611300|DTS_E_TXAGG_CDCHAINHEAP_CREATEERR|Não é possível alocar memória para criar um heap para cadeias CountDistinct.|  
 |0xC020825D|-1071611299|DTS_E_TXAGG_CDHASHTABLE_CREATEERR|Não é possível alocar memória para a tabela de hash CountDistinct.|  
-|0xC020825E|-1071611298|DTS_E_TXAGG_CDWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de espaço de trabalho CountDistinct.|  
-|0xC020825F|-1071611297|DTS_E_TXAGG_CDWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho CountDistinct.|  
+|0xC020825E|-1071611298|DTS_E_TXAGG_CDWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace CountDistinct.|  
+|0xC020825F|-1071611297|DTS_E_TXAGG_CDWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace CountDistinct.|  
 |0xC0208260|-1071611296|DTS_E_TXAGG_CDCOLLASSEARRAY_MALLOCERR|Não é possível alocar memória para uma matriz CountDistinct Collapse.|  
 |0xC0208261|-1071611295|DTS_E_TXAGG_CDCHAINHEAP_MALLOCERR|Não é possível alocar memória para cadeias CountDistinct.|  
 |0xC0208262|-1071611294|DTS_E_TXCOPYMAP_MISMATCHED_COLUMN_METADATA|As colunas com identificações de linhagem %1!d! e %2!d! possuem metadados que não coincidem. A coluna de entrada mapeada para uma coluna de saída para copymap não tem os mesmos metadados (tipo de dados, precisão, escala, comprimento ou página de código).|  
@@ -1687,7 +1686,7 @@ ms.locfileid: "48106726"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|O tipo de dados da coluna "%1" não pode ser mapeado como especificado.|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|Não existe suporte para a versão (%1) do índice de correspondência pré-existente "%2". A versão esperada é "%3". Esse erro ocorre se a versão persistente nos metadados de índice não corresponde à versão para a qual o código atual foi criado. Corrija o erro, recriando o índice com a versão atual do código.|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|A tabela "%1" parece não ser um índice válido de correspondência pré-criado. Esse erro ocorre quando o registro de metadados não pode ser carregado do índice especificado pré-criado.|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Não é possível ler o índice de correspondência "%1" especificado e pré-criado.  Código de erro OLEDB: 0x%2!8.8X!.|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Não é possível ler o índice de correspondência "%1" especificado e pré-criado.  Código de erro OLEDB: 0x%2!8.8x!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|Não havia nenhuma coluna de entrada com uma junção válida para uma coluna da tabela de referência.  Verifique se existe pelo menos uma junção definida, usando as propriedades JoinToReferenceColumn e JoinType da coluna de entrada.|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|O índice de correspondência "%1" pré-existente especificado não foi criado originalmente com informações de correspondência difusa para a coluna "%2".  Ele deve ser recriado para incluir essas informações. Esse erro ocorre quando o índice foi criado com uma coluna que não era de junção difusa.|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|O nome "%1" atribuído à propriedade "%2" não é um nome válido de identificador SQL. Esse erro ocorre se o nome da propriedade não estiver de acordo com as especificações de um nome de identificador SQL.|  
@@ -1732,7 +1731,7 @@ ms.locfileid: "48106726"
 |0xC0208337|-1071611081|DTS_E_TERMEXTRACTION_INCORRECTMAXLENOFTERM|O valor de Comprimento Máximo do Termo não deve ser inferior a '%1!d!'.|  
 |0xC0208338|-1071611080|DTS_E_TERMEXTRACTION_TOOFEWREFERENCECOLUMNS|Os metadados de referência de Extração de Termo contêm poucas colunas.|  
 |0xC0208339|-1071611079|DTS_E_TERMEXTRACTION_MALLOCERR_REFERENCECOLUMNINFO|Ocorreu um erro durante a alocação de memória.|  
-|0xC020833A|-1071611078|DTS_E_TERMEXTRACTION_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de espaço de trabalho.|  
+|0xC020833A|-1071611078|DTS_E_TERMEXTRACTION_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de workspace.|  
 |0xC020833B|-1071611077|DTS_E_TERMEXTRACTION_OLEDBERR_CREATEBINDING|Ocorreu um erro OLEDB durante a criação de associações.|  
 |0xC020833C|-1071611076|DTS_E_TERMEXTRACTION_OLEDBERR_GETIROWSET|Ocorreu um erro OLEDB durante a busca em conjuntos de linhas.|  
 |0xC020833D|-1071611075|DTS_E_TERMEXTRACTION_OLEDBERR_FILLBUFFER|Ocorreu um erro OLE DB ao popular o cache interno.|  
@@ -1746,7 +1745,7 @@ ms.locfileid: "48106726"
 |0xC0208345|-1071611067|DTS_E_TERMLOOKUP_UNABLETOLOCATEREFCOLUMN|Erro durante a localização da coluna de referência '%1'.|  
 |0xC0208346|-1071611066|DTS_E_TERMLOOKUP_TOOFEWREFERENCECOLUMNS|Os metadados de referência de Pesquisa de Termo contêm poucas colunas.|  
 |0xC0208347|-1071611065|DTS_E_TERMEXTRACTIONORLOOKUP_TESTOFFSETERROR|Ocorreu um erro durante a normalização das palavras.|  
-|0xC0208348|-1071611064|DTS_E_TERMLOOKUP_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de espaço de trabalho.|  
+|0xC0208348|-1071611064|DTS_E_TERMLOOKUP_MAINWORKSPACE_CREATEERR|Ocorreu um erro durante a criação de um buffer de workspace.|  
 |0xC0208349|-1071611063|DTS_E_TERMLOOKUP_OLEDBERR_CREATEBINDING|Ocorreu um erro OLEDB durante a criação de associações.|  
 |0xC020834A|-1071611062|DTS_E_TERMLOOKUP_OLEDBERR_GETIROWSET|Ocorreu um erro OLEDB durante a busca em conjuntos de linhas.|  
 |0xC020834B|-1071611061|DTS_E_TERMLOOKUP_OLEDBERR_FILLBUFFER|Ocorreu um erro OLE DB ao popular o cache interno.|  
@@ -1937,7 +1936,7 @@ ms.locfileid: "48106726"
 |0xC02090D1|-1071607599|DTS_E_XMLSRCUNABLETOGETXMLDATAVARIABLE|O %1 não pôde obter a variável especificada pela propriedade "%2".|  
 |0xC02090D2|-1071607598|DTS_E_NODATATABLEMATCHROWID|O %1 contém um RowsetID com um valor de %2 que não faz referência a uma tabela de dados no esquema.|  
 |0xC02090D6|-1071607594|DTS_E_TXAGG_BADKEYSVALUE|A propriedade %1 deve ficar vazia ou ter um número entre %2!u! e %3!u!. A propriedade Keys ou CountDistinctKeys tem um valor inválido. A propriedade deveria ser um número entre 0 e ULONG_MAX, inclusive, ou não deveria ser definida.|  
-|0xC02090D7|-1071607593|DTS_E_TXAGG_TOOMANYKEYS|O componente de agregação encontrou muitas combinações de chave distintas. Ele não pode acomodar mais que %1!u! valores de chave distintos. Existem mais valores de chave distintos que ULONG_MAX no espaço de trabalho principal.|  
+|0xC02090D7|-1071607593|DTS_E_TXAGG_TOOMANYKEYS|O componente de agregação encontrou muitas combinações de chave distintas. Ele não pode acomodar mais que %1!u! valores de chave distintos. Existem mais valores de chave distintos que ULONG_MAX no workspace principal.|  
 |0xC02090D8|-1071607592|DTS_E_TXAGG_TOOMANYCOUNTDISTINCTVALUES|O componente de agregação encontrou muitos valores distintos ao calcular a agregação de distinção de contagem. Ele não pode acomodar mais que %1!u! valores distintos. Existiam mais valores distintos que ULONG_MAX durante o cálculo da agregação de distinção de contagem.|  
 |0xC02090D9|-1071607591|DTS_E_FAILEDTOWRITETOTHEFILENAMECOLUMN|Falha na tentativa de gravar na coluna de nome do arquivo com o código de erro 0x%1!8.8X!.|  
 |0xC02090DC|-1071607588|DTS_E_FAILEDTOFINDERRORCOLUMN|Ocorreu um erro, mas não é possível determinar a coluna que causou o erro.|  
@@ -1964,7 +1963,7 @@ ms.locfileid: "48106726"
 |0xC0209296|-1071607146|DTS_E_TXSCD_TOOFEWREFERENCECOLUMNS|Os metadados de referência de pesquisa contêm poucas colunas.|  
 |0xC0209297|-1071607145|DTS_E_TXSCD_MALLOCERR_REFERENCECOLUMNINFO|Não é possível alocar memória.|  
 |0xC0209298|-1071607144|DTS_E_TXSCD_MALLOCERR_BUFFCOL|Não é possível alocar memória.|  
-|0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de espaço de trabalho.|  
+|0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace.|  
 |0xC020929A|-1071607142|DTS_E_DTPXMLDOMCREATEERROR|Não é possível criar uma instância de documento XML DOM, verifique se os binários MSXML estão instalados e registrados corretamente.|  
 |0xC020929B|-1071607141|DTS_E_DTPXMLDOMLOADERROR|Não é possível carregar os dados XML em um DOM local para processamento.|  
 |0xC020929C|-1071607140|DTS_E_RSTDESTBADVARIABLETYPE|O tipo da variável de tempo de execução "%1" está incorreto. O tipo da variável de tempo de execução deve ser Object.|  
@@ -1992,8 +1991,8 @@ ms.locfileid: "48106726"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Falha em uma confirmação.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|A propriedade personalizada "%1" em %2 só pode ser usada com arquivos ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|A propriedade personalizada "%1" em %2 só pode ser usada com DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  O provedor OLE DB %2 solicitado não está registrado. Código de erro: 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  O provedor OLE DB solicitado %2 não está registrado--talvez nenhum provedor de 64 bits esteja disponível.  Código de erro: 0x%1!8.8X!.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  O provedor OLE DB %2 solicitado não está registrado. Código de erro: 0x%1!8.8x!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de erro SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  O provedor OLE DB solicitado %2 não está registrado--talvez nenhum provedor de 64 bits esteja disponível.  Código de erro: 0x%1!8.8x!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|A coluna de cache, "%1", está mapeada para mais de uma coluna. Remova os mapeamentos de coluna duplicados.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 não é mapeada para uma coluna de cache válida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Não é possível mapear a coluna de entrada, "%1", e a coluna de cache, "%2", porque os tipos de dados não coincidem.|  
@@ -2013,7 +2012,7 @@ ms.locfileid: "48106726"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|As informações de tipo de dados de esquema XML para "%1" no elemento "%2" foram alteradas.  Reinicialize os metadados para esse componente e revise os mapeamentos de coluna.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 não usado em junção ou cópia. Remova a coluna não usada da lista de colunas de entrada.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Falha na classificação devido a um estouro de pilha ao classificar um buffer de entrada.  Reduza a propriedade DefaultBufferMaxRows na Tarefa de Fluxo de Dados.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere alterar o PROVIDER na cadeia de conexão para %1 ou acesse http://www.microsoft.com/downloads para localizar e instalar o suporte para %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere alterar o PROVIDER na cadeia de conexão para %1 ou acesse https://www.microsoft.com/downloads para localizar e instalar o suporte para %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Falha ao inicializar o objeto de tarefa para a tarefa "%1!s!", tipo "%2!s!" devido ao erro 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Falha ao criar o Gerenciador de Categorias de Componentes COM devido ao erro 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|O componente %1!s! não inicializou devido ao erro 0x%2!8.8X! "%3!s!".|  
@@ -2021,7 +2020,7 @@ ms.locfileid: "48106726"
 ##  <a name="msgWarning"></a> Mensagens de aviso  
  Os nomes simbólicos das mensagens de aviso do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_W_`.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Restam %1!lu! dias de avaliação. Quando ela expirar, os pacotes não poderão ser executados.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Aviso(s) gerado(s). Deve haver mais avisos específicos precedentes a este que expliquem as especificidades do(s) aviso(s).|  
@@ -2037,7 +2036,7 @@ ms.locfileid: "48106726"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|A entrada de configuração "%1" tinha um formato incorreto. Isso pode ocorrer por falta de delimitador ou erros de formatação, como um delimitador inválido de matriz.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Falha ao importar o arquivo de configuração: "%1".|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai. Código de erro: 0x%2!8.8X!.|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|A configuração não ocorreu a partir de uma variável pai "%1" porque não existia nenhuma coleção de variáveis pai. Código de erro: 0x%2!8.8x!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|O arquivo de configuração estava vazio e não continha nenhuma entrada de configuração.|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|O tipo para a configuração "%1" não é válido. Isso pode ocorrer quando se tenta definir a propriedade de tipo de um objeto de configuração como um tipo inválido.|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|O tipo de configuração para a configuração de registro não foi encontrado na chave "%1". Adicione um valor chamado ConfigType à chave do registro e atribua a ela um valor de cadeia de caracteres de "Variable", "Property", "ConnectionManager", "LoggingProvider" ou "ForEachEnumerator".|  
@@ -2125,7 +2124,7 @@ ms.locfileid: "48106726"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Não é possível encontrar o valor "%1" para o componente %2. O valor de CurrentVersion para o componente não pode ser localizado. Esse erro ocorrerá se o componente não tiver definido suas informações de Registro para que contenham um valor de CurrentVersion na seção DTSInfo. Essa mensagem ocorre durante o desenvolvimento do componente, ou quando o componente é usado em um pacote, se o componente não for corretamente registrado.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|O gerenciador de buffer não pôde adquirir um nome de arquivo temporário.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|O gerenciador de buffer não criou um arquivo temporário no caminho "%1". O caminho não será considerado novamente para armazenamento temporário.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Aviso: não foi possível abrir a memória compartilhada global para se comunicar com o desempenho DLL; contadores de desempenho de fluxo de dados não estão disponíveis.  Para resolver, execute este pacote como um administrador ou no console do sistema.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Aviso: Não foi possível abrir a memória compartilhada global para se comunicar com o desempenho DLL; contadores de desempenho de fluxo de dados não estão disponíveis.  Para resolver, execute este pacote como um administrador ou no console do sistema.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Existe uma linha parcial no final do arquivo.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|O final do arquivo de dados foi atingido durante a leitura das linhas de cabeçalho. Verifique se o delimitador de linha de cabeçalho e o número de linhas de cabeçalho a serem ignoradas estão corretos.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Não é possível recuperar as informações da página de código de coluna do provedor OLE DB.  Se o componente fornecer suporte à propriedade "%1", a página de código dessa propriedade será usada.  Altere o valor da propriedade se os valores da página de código de cadeia de caracteres atuais estiverem incorretos.  Se o componente não fornecer suporte à propriedade, a página de código da identificação de localidade do componente será usada.|  
@@ -2167,7 +2166,7 @@ ms.locfileid: "48106726"
 ##  <a name="msgInfo"></a> Mensagens informativas  
  Os nomes simbólicos das mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_I_`.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Iniciando uma transação distribuída para esse contêiner.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Confirmando a transação distribuída iniciada por esse contêiner.|  
@@ -2243,7 +2242,7 @@ ms.locfileid: "48106726"
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 armazenou em cache um total de %2!d! linhas.|  
 |0x4020206D|1075847277|DTS_I_RAWSOURCENOCOLUMNS|O adaptador de origem bruto abriu um arquivo, mas o arquivo não contém nenhuma coluna. O adaptador não produzirá dados. Isso pode indicar que um arquivo está danificado, ou que não existem colunas e, portanto, não existem dados.|  
 |0x402020DA|1075847386|DTS_I_OLEDBINFORMATIONALMESSAGE|Uma mensagem informativa OLE DB está disponível.|  
-|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|É possível melhorar o desempenho da correspondência difusa se a junção exata FuzzyComparisonFlags na coluna de entrada "%1" for definida para corresponder com o agrupamento SQL para a coluna de tabela de referência "%2".  Além disso, nenhum sinalizador de dobra pode estar definido em FuzzyComparisonFlagsEx.|  
+|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|É possível melhorar o desempenho da correspondência difusa se a junção exata FuzzyComparisonFlags na coluna de entrada "%1" for definida para corresponder com a ordenação SQL para a coluna de tabela de referência "%2".  Além disso, nenhum sinalizador de dobra pode estar definido em FuzzyComparisonFlagsEx.|  
 |0x40208328|1075872552|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_INDEX_MISSING|É possível melhorar o desempenho da correspondência difusa se um índice for criado com base na tabela de referência entre todas as colunas de correspondência exata especificadas.|  
 |0x40208387|1075872647|DTS_I_DISPSNOTREVIEWED|As disposições de truncamento e erro não foram revisadas. Certifique-se de que esse componente esteja configurado para redirecionar as linhas para as saídas de erro, caso queira transformar posteriormente essas linhas.|  
 |0x402090DA|1075876058|DTS_I_TXAGG_WORKSPACE_REHASH|A transformação Agregação encontrou %1!d! combinações de chaves. É necessário refazer o hash dos dados porque o número de combinações de chave é superior ao esperado. O componente pode ser configurado para evitar o re-hash de dados, ajustando as propriedades Keys, KeyScale e AutoExtendFactor.|  
@@ -2264,9 +2263,9 @@ ms.locfileid: "48106726"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|A propriedade de tamanho máximo de confirmação de inserção do destino de OLE DB "%1" é definida como 0. Essa configuração de propriedade pode fazer com que o pacote em execução pare de responder. Para obter mais informações, consulte o tópico da Ajuda F1 do Editor de Destino de OLE DB (Página do Gerenciador de Conexões).|  
   
 ##  <a name="msgGeneral"></a> Mensagens de evento e gerais  
- Os nomes simbólicos das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensagens de erro começam com `DTS_MSG_`.  
+ Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_MSG_`.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Função incorreta.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|O sistema não pôde localizar o arquivo especificado.|  
@@ -2303,9 +2302,9 @@ ms.locfileid: "48106726"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome do evento: %1<br /><br /> Mensagem: %9<br /><br /> Operador: %2<br /><br /> Nome da Origem: %3<br /><br /> ID da Origem: %4<br /><br /> ID de Execução: %5<br /><br /> Hora de Início: %6<br /><br /> Hora de Término: %7<br /><br /> Código de Dados: %8|  
   
 ##  <a name="msgSuccess"></a> Mensagens de êxito  
- Os nomes simbólicos das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensagens de êxito começam com `DTS_S_`.  
+ Os nomes simbólicos das mensagens de êxito do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_S_`.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|O valor é NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|O valor da cadeia de caracteres foi truncado. O buffer recebeu uma cadeia de caracteres muito longa para a coluna e a truncou.|  
@@ -2314,7 +2313,7 @@ ms.locfileid: "48106726"
 ##  <a name="msgPipeline"></a> Mensagens de erro do componente de fluxo de dados  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTSBC_E_`, onde "BC" refere-se à classe de base nativa da qual é derivada a maioria dos componentes de fluxo de dados da Microsoft.  
   
-|Código hexadecimal|Código decimal|Nome simbólico|Description|  
+|Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|O número total de saídas e saídas de erro, %1!lu!, está incorreto. Deve haver exatamente %2!lu!.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Não é possível recuperar a saída com o índice %1!lu!.|  

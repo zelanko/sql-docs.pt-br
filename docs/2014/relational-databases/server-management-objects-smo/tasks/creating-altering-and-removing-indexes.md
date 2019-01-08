@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
@@ -14,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a335f0c62c4dcaa0ab69eac80488703c9372c3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814108"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Criando, alterando e removendo índices
   Na hierarquia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), os índices são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Index>. As colunas indexadas são representadas por uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
@@ -186,7 +184,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Criando um índice XML no Visual Basic  
- Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados XML é uma coleção de esquemas XML chamada MySampleCollection que é criado no [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
+ Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados de XML é uma coleção de esquemas XML chamada MySampleCollection que é criada em [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -249,7 +247,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Criando um índice de XML no Visual C#  
- Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados XML é uma coleção de esquemas XML chamada MySampleCollection que é criado no [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
+ Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados de XML é uma coleção de esquemas XML chamada MySampleCollection que é criada em [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -312,7 +310,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Criando um índice XML no PowerShell  
- Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados XML é uma coleção de esquemas XML chamada MySampleCollection que é criado no [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
+ Este exemplo de código mostra como criar um índice XML em um tipo de dados XML. O tipo de dados de XML é uma coleção de esquemas XML chamada MySampleCollection que é criada em [Using XML Schemas](using-xml-schemas.md). Os índices XML têm algumas restrições; uma delas é que eles devem ser criados em uma tabela que já possui uma chave primária clusterizada.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

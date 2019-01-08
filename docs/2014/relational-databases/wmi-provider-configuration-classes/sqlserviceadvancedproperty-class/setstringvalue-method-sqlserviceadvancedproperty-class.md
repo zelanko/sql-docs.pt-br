@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStringValue Method (SqlServiceAdvancedProperty Class )
@@ -20,12 +18,12 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f02ab6929e21c2d4f0d73bfdf55f0cdf18cc67e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076826"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373748"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Método SetStringValue (classe SqlServiceAdvancedProperty)
   Define o valor da cadeia de caracteres de uma propriedade.  
@@ -47,7 +45,7 @@ StrValue
   
 #### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*strValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
   
@@ -55,9 +53,9 @@ StrValue
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
- O tipo de valor de propriedade deve ser `string` ser capaz de definir a propriedade como um valor de cadeia de caracteres.  
+ O tipo de valor da propriedade deve ser `string` para definir a propriedade como um valor da cadeia de caracteres.  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

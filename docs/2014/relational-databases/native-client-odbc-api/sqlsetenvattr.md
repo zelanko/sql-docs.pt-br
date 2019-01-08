@@ -14,20 +14,20 @@ ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc8edc3a898223c49cdf79b1d1691898cc8cc28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47b0d30ac70ff3b7974f7d0530b9fb50494ac424
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354331"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
-  A [referência do programador de ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) define como os drivers de ODBC devem interpretar as especificações de atributos de **SQLSetEnvAttr** de aplicativos criados para a API do ODBC 2.*x* ou do ODBC 3.*x* . O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client obedece a essas regras.  
+  A [referência do programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) define como os drivers de ODBC devem interpretar as especificações de atributos de **SQLSetEnvAttr** de aplicativos criados para a API do ODBC 2.*x* ou do ODBC 3.*x* . O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client obedece a essas regras.  
   
  Um dos atributos controlados por **SQLSetEnvAttr** é se o pool de conexões deve ser usado. Se o pool de conexões for usado com o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o parâmetro *DriverCompletion* deverá ser definido como SQL_DRIVER_NOPROMPT ao fazer a conexão com [SQLDriverConnect](sqldriverconnect.md) ou **SQLConnect**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLSetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=59369)   
+ [Função SQLSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

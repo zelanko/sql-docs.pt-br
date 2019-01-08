@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fbafebfe9cd80a40c6bf575be97e1ccd6e694cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131216"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778378"
 ---
 # <a name="security-master-data-services"></a>Segurança (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a segurança para garantir que os usuários tenham acesso aos dados mestre específicos necessários para fazer seus trabalhos e para impedir que acessem dados que não devem estar disponíveis para eles.  
@@ -39,11 +38,11 @@ ms.locfileid: "48131216"
   
 -   [Acesso à área funcional](../../2014/master-data-services/functional-area-permissions-master-data-services.md), que determina quais das cinco áreas funcionais da interface do usuário podem ser acessadas pelo usuário.  
   
--   [Permissões de objeto modelo](../../2014/master-data-services/model-object-permissions-master-data-services.md), que determinam os atributos de um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses atributos.  
+-   [Permissões de objeto modelo](../../2014/master-data-services/model-object-permissions-master-data-services.md), que determinam os atributos que um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses atributos.  
   
--   Opcionalmente, [permissões de membro de hierarquia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinam os membros que um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses membros.  
+-   Opcionalmente, [permissões de membro da hierarquia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinam os membros que um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses membros.  
   
- Quando você atribui permissões a atributos e membros, as permissões se cruzam e as regras determinam qual permissão tem precedência. Para obter mais informações, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Quando você atribui permissões a atributos e membros, as permissões se cruzam e as regras determinam qual permissão tem precedência. Para obter mais informações, consulte [Como as permissões são determinadas &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
  Para implementar a segurança no nível do registro, crie uma hierarquia para uma entidade e atribua permissões de usuário para os membros da hierarquia. Os membros são registros de dados.  As permissões de membro de hierarquia devem ser usadas somente quando você desejar que um usuário tenha acesso limitado a membros específicos.  
   
@@ -65,13 +64,13 @@ ms.locfileid: "48131216"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar um usuário que permissão total para um modelo.|[Criar um administrador de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
-|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo de &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
+|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
 |Atribuir permissão a uma área funcional do aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Atribuir permissões de área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |Atribuir permissão a valores de atributos por meio da atribuição de permissão a objetos modelo.|[Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Atribuir permissão a valores de membros por meio da atribuição de permissão a nós da hierarquia.|[Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Os administradores de &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
+ [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
  [Usuários e grupos &#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)   
  [Permissões de área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   

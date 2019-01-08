@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: especificando a diretiva ELEMENT e a codificação de entidade | Microsoft Docs'
+title: 'Exemplo: Especificando a diretiva ELEMENT e codificação de entidade | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 375a8e520de2e50f9a9ab47ea4b597a33f6fb5bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089326"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360798"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemplo: Especificando a diretiva ELEMENT e codificação de entidade
   Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
@@ -84,7 +84,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  

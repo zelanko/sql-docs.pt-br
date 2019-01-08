@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670464"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589936"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** = ] *account_id*  
  A ID da conta a ser atualizada. *account_id* está **int**, com um padrão NULL. Pelo menos um dos *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_**'**  
  O nome da conta a ser atualizada. *account_name* está **sysname**, com um padrão NULL. Pelo menos um dos *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
   
- [ **@email_address** =] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_**'**  
  O novo endereço de email a partir do qual a mensagem será enviada. Esse endereço deve ser um endereço de email na Internet. O nome do servidor no endereço é o servidor que o Database Mail usa para enviar email dessa conta. *email_address* está **nvarchar (128)**, com um padrão NULL.  
   
- [ **@display_name** =] **'***display_name***'**  
+ [ **@display_name** =] **'**_display_name_**'**  
  O novo nome para exibição a ser usado em mensagens de email enviadas por essa conta. *display_name* está **nvarchar (128)**, sem padrão.  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'**_replyto_address_**'**  
  O novo endereço a ser usado no cabeçalho Responder das mensagens de email desta conta. *replyto_address* está **nvarchar (128)**, sem padrão.  
   
- [ **@description** =] **'***descrição***'**  
+ [ **@description** =] **'**_descrição_**'**  
  A nova descrição da conta. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** =] **'**_nome_do_servidor_**'**  
  O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *server_name* para um endereço IP. *nome_do_servidor* está **sysname**, sem padrão.  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_**'**  
  O novo tipo do servidor de email. *server_type* está **sysname**, sem padrão. Apenas um valor de **'SMTP'** tem suporte.  
   
  [ **@port** =] *port_number*  
  O novo número da porta do servidor de email. *port_number* está **int**, sem padrão.  
   
- [ **@timeout** =] **'***timeout***'**  
+ [ **@timeout** =] **'**_tempo limite_**'**  
  Parâmetro de tempo limite para SmtpClient.Send de uma única mensagem de email. *Tempo limite* está **int** em segundos, sem padrão.  
   
- [ **@username** =] **'***username***'**  
+ [ **@username** =] **'**_username_**'**  
  O novo nome do usuário a ser usado para fazer logon no servidor de email. *Nome de usuário* está **sysname**, sem padrão.  
   
- [ **@password** =] **'***senha***'**  
+ [ **@password** =] **'**_senha_**'**  
  A nova senha para usar para fazer logon no servidor de email. *senha* está **sysname**, sem padrão.  
   
  [ **@use_default_credentials** =] use_default_credentials  
@@ -128,7 +128,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. Alterando o nome de uma conta e as informações de uma conta  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>b. Alterando o nome de uma conta e as informações de uma conta  
  O exemplo a seguir altera o nome e atualiza as informações da conta com a identificação de conta `125`. O novo nome da conta é `Backup Mail Server`.  
   
 ```  

@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134616"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355810"
 ---
 # <a name="choosing-data-for-data-mining"></a>Escolhendo os dados para a mineração de dados
-  Quando você começa a mineração de dados, você pode perguntar "De quantos dados precisarei?" ou "Há algum requisito especial sobre o qual eu deva saber ao apagar ou formatar meus dados?"  
+  Conforme você começa a mineração de dados, talvez você pergunte: "quantos dados precisarei?" ou "Há algum requisito especial que eu deva saber ao apagar ou formatar meus dados?"  
   
  Em particular, as pessoas iniciantes na mineração de dados frequentemente têm problemas com dados do Excel, como a necessidade de formatar os dados de forma consistente dentro das colunas, apagar valores ausentes ou compartimentalizar números. Esta seção também lista os requisitos de dados para tipos específicos de modelos.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134616"
 ### <a name="how-much-data-do-i-need"></a>De quantos dados precisarei?  
  Uma regra básica é nunca ter menos de 50 a 100 linhas de dados para os tipos e cenários de modelos mais simples. Por exemplo, se você estiver prevendo um único atributo usando um modelo Naïve Bayes e o conjunto de dados estiver bem-formado, poderá gerar previsões razoavelmente precisas usando de 50 a 100 linhas de dados.  
   
- Para os modelos de associação, normalmente são necessários muito mais dados – mil linhas talvez não sejam suficientes caso você esteja analisando muitos atributos, como associações entre produtos. Se o seu conjunto de dados for muito grande ou muito pequeno, às vezes você poderá obter resultados melhores recolhendo as linhas em categorias. Por exemplo, em vez de analisar associações entre produtos individuais, você pode categorizar os produtos.  
+ Para modelos de associação, você normalmente precisa de muito mais dados – mil linhas podem não ser suficiente se você estiver analisando muitos atributos, como associações entre produtos. Se o seu conjunto de dados for muito grande ou muito pequeno, às vezes você poderá obter resultados melhores recolhendo as linhas em categorias. Por exemplo, em vez de analisar associações entre produtos individuais, você pode categorizar os produtos.  
   
  Se você tiver um conjunto de dados de um tamanho razoável, concentre-se mais na qualidade dos dados em vez de adicionar cada vez mais dados. Após um determinado ponto, todos os padrões estatisticamente válidos terão sido encontrados, e adicionar mais dados não melhora sua validade. Por outro lado, à medida que adiciona mais dados, você às vezes pode introduzir correlações acidentais.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48134616"
 ##  <a name="bkmk_CommonDataProblems"></a> Problemas comuns de dados  
   
 ### <a name="excel-number-formats"></a>Formatos numéricos do Excel  
- O Excel é uma ferramenta fácil de usar porque é tolerante — você pode colocar qualquer tipo de dados em qualquer lugar! Entretanto, antes de começar a procurar por padrões e por correlações de análise, será preciso impor estrutura ou limites a seus dados.  
+ Excel é uma ferramenta fácil de usar porque é tolerante - você pode colocar qualquer tipo de dados em qualquer lugar! Entretanto, antes de começar a procurar por padrões e por correlações de análise, será preciso impor estrutura ou limites a seus dados.  
   
  Por padrão, quando você importa dados numéricos para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, os números são armazenados em um formato decimal com duas casas decimais. Se esse não for um formato numérico apropriado, altere-o para outro formato numérico ou altere o número de casas decimais.  
   
- Uma opção é usar o [rotular novamente](relabel-sql-server-data-mining-add-ins.md) ferramenta para alterar a maneira como os números são exibidos ou agrupados.  
+ Uma opção é usar a ferramenta [Rotular Novamente](relabel-sql-server-data-mining-add-ins.md) para alterar o modo como os números são exibidos ou agrupados.  
   
  Contudo, se os dados forem complexos demais para serem processados com a ferramenta **Rotular Novamente** , use as funções numéricas do Excel para convertê-los em intervalos discretos, salve o resultado em uma coluna separada e use a coluna de dados discretos para classificação.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48134616"
   
  Por exemplo, se uma coluna contiver números que se repetem em um determinado intervalo para indicar os dias da semana, você poderia especificar o tipo de conteúdo dessa coluna como `Cyclical`.  
   
- Você não precisa se preocupar sobre tipos de conteúdo se usar os assistentes e ferramentas fornecidos neste suplemento. No entanto, se você usar o [Adicionar modelo à estrutura &#40;Data Mining Add-ins para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modelagem opção para adicionar um novo modelo de dados existentes, você poderá receber um erro relacionado a tipos de conteúdo.  
+ Você não precisa se preocupar sobre tipos de conteúdo, se você usar os assistentes e ferramentas fornecidas neste suplemento. No entanto, se você usar o [Adicionar modelo à estrutura &#40;Data Mining Add-ins para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modelagem opção para adicionar um novo modelo de dados existentes, você poderá receber um erro relacionado a tipos de conteúdo.  
   
  O motivo é que alguns tipos de modelo exigem um determinado tipo de dados (como um carimbo de data e hora). As ferramentas processam essas colunas de acordo com requisitos específicos e também adicionam uma propriedade de tipo de conteúdo. Em virtude disso, se você reutilizar os dados com um algoritmo completamente diferente, poderá ser necessário alterar o tipo de dados ou tipo de conteúdo.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48134616"
  `Continuous`  
  A coluna contém valores que representam dados numéricos em uma escala que permite valores provisórios. Uma coluna contínua representa medições escaláveis e é possível que os dados contenham um número infinito de valores fracionários. Uma coluna de temperaturas é um exemplo de uma coluna do atributo contínuo.  
   
- O `Continuous` tipo de conteúdo pode ser usado com os seguintes tipos de dados: `Date`, `Double`, e `Long`.  
+ O tipo de conteúdo `Continuous` pode ser usado com os seguintes tipos de dados: `Date`, `Double` e `Long`.  
   
  `Discretized`  
  A coluna contém valores que representam grupos de valores derivados de uma coluna contínua. Os buckets são tratados como valores **ordenados** e discretos.  
@@ -206,14 +206,14 @@ ms.locfileid: "48134616"
   
  Tipicamente, a coluna de chave é um identificador numérico ou de texto que não deve ser usada para análise, somente para rastrear registros. As exceções são séries temporais e chaves sequenciais.  
   
- **Chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exibição da fonte de dados. Para obter mais informações sobre tabelas aninhadas, consulte [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ As**chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações sobre tabelas aninhadas, consulte [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Esse tipo de conteúdo pode ser usado com os seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   
  **Sequência de teclas**  
  A coluna contém valores que representam uma sequência de eventos. Os valores são ordenados, mas a distância entre eles não precisa ser igual.  
   
- Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long`, `Text`, e `Date`.  
+ Esse tipo de conteúdo tem suporte dos seguintes tipos de dados: `Double`, `Long`, `Text` e `Date`.  
   
  **Tempo-chave**  
  A coluna contém valores que são ordenados e representam uma escala de tempo. Use o tipo de conteúdo Key Time somente se o modelo for um modelo de série temporal ou de clustering de sequências.  
@@ -221,7 +221,7 @@ ms.locfileid: "48134616"
  Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long` e `Date`.  
   
  **Table**  
- Esse tipo de conteúdo também é usado somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Esse tipo de conteúdo também é usado somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  O que isso significa é que cada linha de dados realmente contém uma tabela de dados aninhada, com uma ou mais colunas e uma ou mais linhas.  
   

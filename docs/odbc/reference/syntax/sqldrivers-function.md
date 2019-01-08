@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214727"
 ---
 # <a name="sqldrivers-function"></a>Função SQLDrivers
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 2.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 2.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLDrivers** lista as descrições de driver e palavras-chave de atributo de driver. Essa função é implementada somente pelo Gerenciador de Driver.  
@@ -84,7 +84,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLDrivers** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_ENV e uma *manipular* dos *EnvironmentHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDrivers** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|(DM) mensagem informativa do Gerenciador de Driver específico. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|(DM) buffer \* *DriverDescription* não era grande o suficiente para retornar a descrição completa do driver. Portanto, a descrição foi truncada. O comprimento da descrição completa de driver será retornado no \* *DescriptionLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) buffer \* *DriverAttributes* não era grande o suficiente para retornar a lista completa de pares de valor de atributo. Portanto, a lista foi truncada. O comprimento da lista de pares de valor de atributo completo será retornado no **AttributesLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 373abd00a9980803a4eb6df375ef8bbf00fc4979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb720e7ec3196e1016e5737f2cb47e42f09ffbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799048"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Procedimento armazenado de validação (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], valide uma versão para aplicar regras de negócio a todos os membros da versão do modelo.  
@@ -52,7 +51,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 ## <a name="parameters"></a>Parâmetros  
  Os parâmetros desse procedimento são os seguintes:  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |UserID|A ID do usuário.|  
 |Model_ID|A ID do modelo.|  
@@ -60,6 +59,6 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
   
 ## <a name="see-also"></a>Consulte também  
  [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [Validar uma versão em relação às regras de negócios &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)  
+ [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)  
   
   

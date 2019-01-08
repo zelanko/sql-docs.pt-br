@@ -1,6 +1,6 @@
 ---
-title: Dimensionar a execução simultânea de scripts externos em serviços do SQL Server Machine Learning | Microsoft Docs
-description: Como modificar o pool de conta de usuário para dimensionar os serviços do SQL Server Machine Learning.
+title: Escala de execução simultânea de scripts externos - serviços do SQL Server Machine Learning
+description: Configure paralela ou simultânea execução de script de R e Python em um pool de conta de usuário para dimensionar os serviços do SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419431"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596807"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Escala de execução simultânea de scripts externos em serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419431"
 Como parte do processo de instalação para os [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], um novo *pool de contas de usuário* do Windows é criado para dar suporte à execução de tarefas pelo serviço [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. A finalidade dessas contas de trabalho é isolar a execução simultânea de scripts externos por diferentes usuários do SQL.
 
 Este artigo descreve a configuração padrão e a capacidade para as contas de trabalho e como alterar a configuração padrão para dimensionar o número de execução simultânea de scripts externos em serviços do SQL Server Machine Learning.
-
-**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>Grupo de contas de trabalho
 
@@ -53,7 +51,7 @@ As senhas associadas a cada conta de usuário são geradas aleatoriamente, mas v
 2. Clique duas vezes o serviço Launchpad do SQL Server e interrompa o serviço se ele estiver em execução.
 3.  Na guia **Serviço**, certifique-se de que o Modo de Inicialização está definido como Automático. Não é possível iniciar a scripts externos quando o Launchpad não estiver em execução.
 4.  Clique na guia **Avançado** e edite o valor de **Contagem de Usuários Externos**, se necessário. Essa configuração controla quantos usuários diferentes do SQL pode executar script externo sessões simultaneamente. O padrão é 20 contas. O número máximo de usuários é 100.
-5. Opcionalmente, você poderá definir a opção **Redefinir a Senha de Usuários Externos** para _Sim_ se sua organização tiver uma política que exija a alteração de senhas regularmente. Isso regenerará as senhas criptografadas que o Launchpad mantém para as contas de usuário. Para obter mais informações, consulte [Imposição de Política de Senha](#bkmk_EnforcePolicy).
+5. Opcionalmente, você poderá definir a opção **Redefinir a Senha de Usuários Externos** para _Sim_ se sua organização tiver uma política que exija a alteração de senhas regularmente. Isso regenerará as senhas criptografadas que o Launchpad mantém para as contas de usuário. Para obter mais informações, consulte [Imposição de Política de Senha](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy).
 6.  Reinicie o serviço Launchpad.
 
 ## <a name="managing-workloads"></a>Gerenciar cargas de trabalho
@@ -64,9 +62,11 @@ Quando o mesmo usuário executa vários scripts externos, simultaneamente, todas
 
 O número de contas de trabalho que você pode dar suporte e o número de sessões simultâneas que qualquer usuário pode executar, é limitado apenas pelos recursos de servidor. Normalmente, a memória é o primeiro gargalo que você encontrará ao usar o tempo de execução de R.
 
-Os recursos que podem ser usados pelos scripts Python ou R são regidos pelo SQL Server. É recomendável monitorar o uso de recursos usando DMVs do SQL Server ou examinar os contadores de desempenho no objeto de trabalho associado do Windows, para então ajustar o uso de memória do servidor de acordo com isso. Se você tiver o SQL Server Enterprise Edition, você pode alocar recursos usados para executar scripts externos, configurando uma [pool de recursos externos](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+Os recursos que podem ser usados pelos scripts Python ou R são regidos pelo SQL Server. É recomendável monitorar o uso de recursos usando DMVs do SQL Server ou examinar os contadores de desempenho no objeto de trabalho associado do Windows, para então ajustar o uso de memória do servidor de acordo com isso. Se você tiver o SQL Server Enterprise Edition, você pode alocar recursos usados para executar scripts externos, configurando uma [pool de recursos externos](how-to-create-a-resource-pool.md).
 
-Para obter mais informações sobre como gerenciar a máquina aprendendo a capacidade de tarefa, consulte estes artigos:
+## <a name="see-also"></a>Confira também
+
+Para obter informações adicionais sobre como configurar a capacidade, consulte estes artigos:
 
 - [Configuração do SQL Server para o R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [Estudo de caso de desempenho para R Services](../../advanced-analytics/r/performance-case-study-r-services.md)

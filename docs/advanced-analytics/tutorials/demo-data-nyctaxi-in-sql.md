@@ -1,5 +1,5 @@
 ---
-title: Baixe dados de demonstração de táxi de NYC e scripts para embedded R e Python (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Baixe dados de demonstração de táxi de NYC e scripts para embedded R e Python – Machine Learning do SQL Server
 description: Instruções para baixar dados de exemplo de táxi de Nova York e criação de um banco de dados. Dados são usados nos tutoriais de linguagem Python do SQL Server e R que mostra como incorporar o script em procedimentos armazenados do SQL Server e funções T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701335"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645017"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de NYC para tutoriais do SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo explica como configurar um banco de dados de exemplo consiste em dados públicos a partir de [táxi de Nova York e Limusines comissão](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados nos tutoriais de várias R e Python para análise no banco de dados no SQL Server. Para fazer o código de exemplo executado mais rápido, criamos uma amostragem representativa de 1% dos dados. Em seu sistema, o arquivo de backup do banco de dados é um pouco mais de 90 MB, fornecendo 1.7 milhões de linhas na tabela de dados primário.
+Este artigo explica como configurar um banco de dados de exemplo consiste em dados públicos a partir de [táxi de Nova York e Limusines comissão](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados nos tutoriais de várias R e Python para análise no banco de dados no SQL Server. Para fazer o código de exemplo executado mais rápido, criamos uma amostragem representativa de 1% dos dados. Em seu sistema, o arquivo de backup do banco de dados é um pouco mais de 90 MB, fornecendo 1.7 milhões de linhas na tabela de dados primário.
 
 Para concluir este exercício, você deve ter [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou outra ferramenta que pode restaurar um arquivo de backup do banco de dados e executar consultas T-SQL.
 
@@ -57,7 +57,7 @@ A tabela a seguir resume os objetos criados no banco de dados de demonstração 
 
 |**Nome do objeto**|**Tipo de objeto**|**Descrição**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | Banco de Dados | Cria um banco de dados e duas tabelas:<br /><br />tabela nyctaxi_sample: contém o conjunto de dados principal táxi de Nova York. Um índice columnstore clusterizado é adicionado à tabela para melhorar o desempenho de armazenamento e consulta. A amostra de 1% do conjunto de dados de táxi de Nova York será inserida nesta tabela.<br /><br />tabela dbo.nyc_taxi_models: usado para persistir o modelo treinado de análise avançada.|
+|**NYCTaxi_Sample** | Banco de Dados | Cria um banco de dados e duas tabelas:<br /><br />tabela nyctaxi_sample: Contém o conjunto de dados principal táxi de Nova York. Um índice columnstore clusterizado é adicionado à tabela para melhorar o desempenho de armazenamento e consulta. A amostra de 1% do conjunto de dados de táxi de Nova York será inserida nesta tabela.<br /><br />tabela dbo.nyc_taxi_models: Usado para persistir o modelo treinado de análise avançada.|
 |**fnCalculateDistance** |função de valor escalar | Calcula a distância direta entre os locais de embarque e desembarque de passageiros. Essa função é usada na [criar recursos de dados](sqldev-create-data-features-using-t-sql.md), [treinar e salvar um modelo](sqldev-train-and-save-a-model-using-t-sql.md) e [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |função com valor de tabela | Cria novos recursos de dados para treinamento do modelo. Essa função é usada na [criar recursos de dados](sqldev-create-data-features-using-t-sql.md) e [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 
@@ -88,7 +88,7 @@ O banco de dados contém 1.7 milhões de linhas.
 
 3. No banco de dados é um **nyctaxi_sample** tabela que contém o conjunto de dados. A tabela foi otimizada para cálculos com base em conjunto com a adição de um [índice de columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md). Execute esta instrução para gerar um resumo rápido na tabela.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

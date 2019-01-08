@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358238"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
   Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados de lista dos sites do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -42,18 +42,18 @@ ms.locfileid: "48116337"
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|<sup>3</sup> autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, nenhum (com credenciais do Windows<sup>1</sup>)|Sim|não|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Sim|Não|  
 |Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<sup>2</sup>|  
-||Armazenado, Prompt, nenhum (com credenciais do Windows<sup>1</sup>)|Sim|Não<sup>2</sup>|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Sim|Não<sup>2</sup>|  
   
  **Tabela 2**  
   
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|<sup>3</sup> autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, nenhum (com credenciais do Windows<sup>1</sup>)|não|não|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não|  
 |Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<sup>2</sup>|  
-||Armazenado, Prompt, nenhum (com credenciais do Windows<sup>1</sup>)|não|Não<sup>2</sup>|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows<sup>1</sup>)|Não|Não<sup>2</sup>|  
   
  <sup>1</sup> não há suporte para credenciais armazenadas e prompt com credenciais de não-Windows.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116337"
  **Não são necessárias credenciais (Não use credenciais):**  
  Para usar essa opção, a conta de execução autônoma deve ser configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Para obter informações sobre o suporte à autenticação de declarações na pilha Microsoft BI, consulte [Usando a autenticação de declarações na pilha Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Para obter informações sobre o suporte à autenticação de declarações na pilha Microsoft BI, consulte [Usando a autenticação de declarações na pilha Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md), e [dados de fontes com suporte O Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116337"
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
   

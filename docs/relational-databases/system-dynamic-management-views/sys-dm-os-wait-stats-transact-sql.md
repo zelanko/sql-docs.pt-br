@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878189"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886881"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
 > [!NOTE] 
 > Chamá-lo partir **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use o nome **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
@@ -89,7 +89,7 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|Tipo |Description| 
+|Tipo |Descrição| 
 |-------------------------- |--------------------------| 
 |ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -168,8 +168,8 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução paralela da consulta. <br /> **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca de processador de consulta e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET refere-se apenas para sincronizar o iterador de troca de processador de consulta e para a produção de linhas para threads de consumidor. Threads de consumidor são rastreadas separadamente no tipo de espera de cxconsumer de acordo.| 
+|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução paralela da consulta. <br /> **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca de processador de consulta e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET refere-se apenas para sincronizar o iterador de troca de processador de consulta e para a produção de linhas para threads de consumidor. Threads de consumidor são rastreadas separadamente no tipo de espera de cxconsumer de acordo.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -331,7 +331,7 @@ Esse comando redefine todos os contadores como 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Uma tarefa em segundo plano está aguardando a conclusão da inicialização de uma tarefa em segundo plano que processa as notificações do Windows Server Failover Clustering. Somente para uso interno., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Uma tarefa em segundo plano está aguardando a conclusão de uma tarefa em segundo plano que processa as notificações do Windows Server Failover Clustering. Somente para uso interno., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_PARTNER_SYNC |Espera de controle de simultaneidade na lista de parceiro., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_READ_ALL_NETWORKS |Aguardando para obter acesso de leitura ou gravação para a lista de redes do WSFC. Somente para uso interno. Observação: O mecanismo mantém uma lista de redes do WSFC que é usada nas exibições de gerenciamento dinâmico (como DM hadr_cluster_networks) ou para sempre em Transact-SQL de validar as instruções que referenciam o WSFC as informações de rede. Esta lista é atualizada após a inicialização do mecanismo, relacionados ao WSFC notificações e Always On reinício interno (por exemplo, perda e recuperando quorum do WSFC). As tarefas serão geralmente bloqueadas quando uma atualização nessa lista estiver em andamento. , <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_READ_ALL_NETWORKS |Aguardando para obter acesso de leitura ou gravação para a lista de redes do WSFC. Somente para uso interno. Observação: O mecanismo mantém uma lista de redes do WSFC que é usada em exibições de gerenciamento dinâmico (como DM hadr_cluster_networks) ou para sempre em Transact-SQL de validar as instruções que referenciam o WSFC as informações de rede. Esta lista é atualizada após a inicialização do mecanismo, relacionados ao WSFC notificações e Always On reinício interno (por exemplo, perda e recuperando quorum do WSFC). As tarefas serão geralmente bloqueadas quando uma atualização nessa lista estiver em andamento. , <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Aguardando o banco de dados secundário conectar-se ao banco de dados primário antes de executar a recuperação. Isso é uma espera prevista, que pode ser prolongada se a conexão para o primário estiver lento para estabelecer., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |A recuperação de banco de dados está aguardando o banco de dados secundário concluir a fase de reversão e inicialização para devolvê-lo ao ponto de log comum com o banco de dados primário. Isso é uma espera prevista após failovers. Desfazer progresso pode ser acompanhado por meio do Monitor do sistema do Windows (perfmon.exe) e exibições de gerenciamento dinâmico., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_REPLICAINFO_SYNC |Aguardando o controle de simultaneidade para atualizar o estado atual da réplica., <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -931,6 +931,7 @@ Esse comando redefine todos os contadores como 0.
 |VIA_ACCEPT |Ocorre quando uma conexão do provedor Virtual Interface Adapter (VIA) é concluída durante a inicialização.| 
 |VIEW_DEFINITION_MUTEX |Ocorre durante a sincronização no acesso às definições de exibição em cache.| 
 |WAIT_FOR_RESULTS |Ocorre ao esperar a ativação de uma notificação de consulta.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Ocorre ao esperar para atualização de estatísticas síncronas para concluir antes da compilação de consulta e pode retomar a execução.<br /> **Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

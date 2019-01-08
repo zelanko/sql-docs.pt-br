@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,12 +17,12 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803748"
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
   A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
@@ -89,7 +88,7 @@ ms.locfileid: "48214747"
 |21318|Função CLR escalar|  
 |21321|Função SQL escalar embutida|  
 |21328|Esquema de partição|  
-|21333|Usuário|  
+|21333|User|  
 |21571|Contrato do serviço do Service Broker|  
 |21572|Gatilho em banco de dados|  
 |21574|Função CLR com valor de tabela|  
@@ -97,7 +96,7 @@ ms.locfileid: "48214747"
 |21581|Tipo de mensagem do Service Broker|  
 |21586|Rota do Service Broker|  
 |21587|Estatísticas|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Usuário|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|User|  
 |22099|Serviço do Service Broker|  
 |22601|Índice|  
 |22604|Logon de certificado|  

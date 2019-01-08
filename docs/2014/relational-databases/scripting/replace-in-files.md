@@ -7,21 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.replaceinfiles
-- vs.replaceinfiles
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c01a074c2b5380590fc18096578f29c3d5dcc2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128896"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328224"
 ---
 # <a name="replace-in-files"></a>Substituir em Arquivos
   A guia **Substituir nos Arquivos** da janela Localizar e Substituir permite pesquisar o código de um conjunto especificado de arquivos para uma cadeia de caracteres ou expressão, bem como alterar algumas ou todas as correspondências encontradas. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
@@ -158,5 +155,3 @@ ms.locfileid: "48128896"
   
 ## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

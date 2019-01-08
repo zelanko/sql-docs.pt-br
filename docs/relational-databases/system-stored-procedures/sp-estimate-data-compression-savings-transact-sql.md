@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743514"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213685"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. A compactação pode ser avaliada para tabelas inteiras ou partes de tabelas. Isso inclui heaps, índices clusterizados, índices não clusterizados, índices columnstore, indexados e modos de exibição, tabela e partições de índice. Os objetos podem ser compactados usando a compactação de arquivamento de linha, página, columnstore ou columnstore. Se a tabela, o índice ou a partição já estiver compactada, será possível usar esse procedimento para estimar o tamanho da tabela, do índice ou da partição, caso ela seja descompactada.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Compactação e **sp_estimate_data_compression_savings** não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Para estimar o tamanho do objeto se ele usar a configuração de compactação solicitada, esse procedimento armazenado faz a amostragem do objeto de origem e carrega esses dados em uma tabela e índice equivalentes criados no tempdb. Em seguida, a tabela ou o índice criado no tempdb é compactado para a configuração solicitada e o aumento estimado da compactação é computado.  
@@ -80,7 +80,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados a seguir é retornado para fornecer o tamanho atual e estimado da tabela, índice ou partição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nome da tabela ou exibição indexada.|  
 |schema_name|**sysname**|Esquema da tabela ou exibição indexada.|  
@@ -107,7 +107,7 @@ sp_estimate_data_compression_savings
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT na tabela.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Antes de 2019 do SQL Server, esse procedimento não foi aplicada a índices columnstore e, portanto, não aceitou os parâmetros de compactação de dados COLUMNSTORE e COLUMNSTORE_ARCHIVE.  Começando com o SQL Server 2019, índices columnstore podem ser usados como um objeto de origem para a estimativa e como um tipo de compactação solicitada.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Considerações para índices Columnstore

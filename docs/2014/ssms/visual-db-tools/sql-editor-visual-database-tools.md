@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.sqleditor
@@ -20,12 +20,12 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cbde2fecd83feab7752795eec5866e0548f31e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768948"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
   Use o Editor SQL para editar procedimentos armazenados, funções, gatilhos e scripts SQL existentes. Esta janela é aberta quando você abre qualquer um dos objetos. Se quiser criar uma nova instrução SQL para executar sua fonte de dados, use o [Painel SQL](visual-database-tools.md) do Designer de Consultas.  

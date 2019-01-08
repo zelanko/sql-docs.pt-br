@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795608"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
   A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
@@ -37,13 +37,13 @@ ms.locfileid: "48115586"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 ou superior**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sim|Sim|não|não|não|não|não|  
-|**MSX = 8.0 &LT; SP3**|Sim|Sim|não|não|não|não|não|  
-|**MSX = 8.0 SP3 ou superior**|não|não|Sim|Sim|Sim|Sim|Sim|  
-|**MSX = 9.0**|não|não|não|Sim|Sim|Sim|Sim|  
-|**MSX = 10.0**|não|não|não|não|Sim|Sim|Sim|  
-|**MSX = 10,5**|não|não|não|não|não|Sim|Sim|  
-|**MSX = 11.0**|não|não|não|não|não|não|Sim|  
+|**MSX = 7.0**|Sim|Sim|Não|Não|Não|Não|Não|  
+|**MSX = 8.0 &LT; SP3**|Sim|Sim|Não|Não|Não|Não|Não|  
+|**MSX = 8.0 SP3 ou superior**|Não|Não|Sim|Sim|Sim|Sim|Sim|  
+|**MSX = 9.0**|Não|Não|Não|Sim|Sim|Sim|Sim|  
+|**MSX = 10.0**|Não|Não|Não|Não|Sim|Sim|Sim|  
+|**MSX = 10,5**|Não|Não|Não|Não|Não|Sim|Sim|  
+|**MSX = 11.0**|Não|Não|Não|Não|Não|Não|Sim|  
   
  Considere as seguintes questões ao criar um ambiente multisservidor:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48115586"
 ## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir documentam tarefas comuns de criação de um ambiente multisservidor.  
   
-|Description|Tópico|  
+|Descrição|Tópico|  
 |-----------------|-----------|  
 |Descreve como criar um servidor mestre.|[Criar um servidor mestre](make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](make-a-target-server.md)|  

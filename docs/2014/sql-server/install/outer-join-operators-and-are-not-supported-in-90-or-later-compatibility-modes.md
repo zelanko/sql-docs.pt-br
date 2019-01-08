@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064896"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591610"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Os operadores de junção externa *= e =* não são compatíveis com o modo de compatibilidade 90 ou posterior
-  O Supervisor de atualização detectou o uso de operadores de junção externa * = e =\*. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Os operadores de junção externa \*= e =\* não são compatíveis com o modo de compatibilidade 90 ou posterior
+  O Supervisor de atualização detectou o uso de operadores de junção externa \*= e =\*. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Antes de alterar o modo de compatibilidade do banco de dados para 90 ou posterior, modifique as instruções que usam os operadores de junção externa * = e =\* usar palavras-chave de junção externa equivalentes. O exemplo a seguir mostra uma consulta que usa o operador `*=` e uma consulta equivalente que usa as palavras-chave `LEFT OUTER JOIN`.  
+ Antes de alterar o modo de compatibilidade do banco de dados para 90 ou posterior, modifique as instruções que usam os operadores de junção externa \*= e =\* usar palavras-chave de junção externa equivalentes. O exemplo a seguir mostra uma consulta que usa o operador `\*=` e uma consulta equivalente que usa as palavras-chave `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

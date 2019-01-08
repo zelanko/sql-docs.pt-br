@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636894"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588452"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sp_name =** ] **'***nome***'**  
+ [  **@sp_name =** ] **'**_nome_**'**  
  É o nome do procedimento usado para retornar as informações do catálogo. *nome da* está **nvarchar(390)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
- [  **@sp_owner =** ] **'***esquema***'**  
+ [  **@sp_owner =** ] **'**_esquema_**'**  
  É o nome do esquema ao qual o procedimento pertence. *esquema* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o esquema atual contiver um procedimento com o nome especificado, será retornado esse procedimento. Se um procedimento armazenado não qualificado for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o procedimento na ordem seguinte:  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   O esquema **dbo** no banco de dados atual.  
   
- [  **@qualifier =** ] **'***qualificador***'**  
- É o nome do qualificador do procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (*qualificador ***.*** esquema ***.*** nome*. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ [  **@qualifier =** ] **'**_qualificador_**'**  
+ É o nome do qualificador do procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_**.** _esquema_**.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determina se os caracteres sublinhado (_), porcentagem (%) ou colchetes ([ ]) são interpretados como curingas. *fUsePattern* está **bit**, com um padrão de 1.  
   
  **0** = padrão de correspondência está desativado.  
@@ -72,7 +72,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome do qualificador de procedimento. Esta coluna pode ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome do proprietário do procedimento. Esta coluna sempre retorna um valor.|  
@@ -104,7 +104,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>B. Retornando um único procedimento armazenado  
+### <a name="b-returning-a-single-stored-procedure"></a>b. Retornando um único procedimento armazenado  
  O exemplo a seguir retorna um conjunto de resultados do procedimento armazenado `uspLogError`.  
   
 ```  

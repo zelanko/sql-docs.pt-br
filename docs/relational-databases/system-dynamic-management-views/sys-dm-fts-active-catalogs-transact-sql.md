@@ -21,23 +21,23 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddb5b45019f5e34102ffa068539f25898d3172d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2efc674ac7a89200ee550374a7878b711e8fe70
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214277"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre os catálogos de texto completo que têm alguma atividade de população em andamento no servidor.  
   
-> [!NOTE]  
+> [!NOTE]
 >  As colunas a seguir serão removidas em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evite usar essas colunas em novos projetos de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
 |**catalog_id**|**int**|ID do catálogo de texto completo ativo.|  

@@ -1,33 +1,32 @@
 ---
-title: 'Etapa 2: adicionar e configurar o contêiner Loop Foreach | Microsoft Docs'
+title: 'Etapa 2: Adicionando e configurando o contêiner Loop Foreach | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197976"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360108"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: adicionando e configurando o contêiner Loop Foreach
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: Adicionando e configurando o contêiner Loop Foreach
   Nessa tarefa, você adicionará a capacidade de executar loop através de uma pasta de arquivos simples e aplicará a mesma transformação Fluxo de Dados usada na Lição 1 para cada um desses arquivos simples. Você faz isto adicionando e configurando um contêiner Loop Foreach ao fluxo de controle.  
   
  O contêiner Loop Foreach que você adicionar deve ser capaz de se conectar a cada arquivo simples na pasta. Como todos os arquivos da pasta têm o mesmo formato, o contêiner Loop Foreach pode usar o mesmo gerenciador de conexões de Arquivo Simples para conectar-se a cada um desses arquivos. O gerenciador de conexões de Arquivo Simples que o contêiner usará é o mesmo gerenciador de conexões de Arquivo Simples que você criou na Lição 1.  
   
  Atualmente, o gerenciador de conexões de Arquivo Simples da Lição 1 se conecta a um único arquivo simples específico. Para conectar-se iterativamente a cada arquivo simples da pasta, você terá que configurar o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples da seguinte maneira:  
   
--   **Contêiner Loop Foreach:** você mapeará o valor enumerado do contêiner para uma variável de pacote definida pelo usuário. O contêiner usará a variável definida pelo usuário para modificar dinamicamente a propriedade `ConnectionString` do gerenciador de conexões de Arquivo Simples, e conectar-se iterativamente a cada um dos arquivos simples da pasta.  
+-   **Contêiner de foreach Loop:** Você mapeará o valor enumerado do contêiner para uma variável de pacote definida pelo usuário. O contêiner usará a variável definida pelo usuário para modificar dinamicamente a propriedade `ConnectionString` do gerenciador de conexões de Arquivo Simples, e conectar-se iterativamente a cada um dos arquivos simples da pasta.  
   
--   **Gerenciador de conexão de arquivo simples:** você modificará o Gerenciador de conexão que foi criado na lição 1 usando uma variável definida pelo usuário para popular o Gerenciador de conexão `ConnectionString` propriedade.  
+-   **Gerenciador de conexão de arquivo simples:** Você modificará o Gerenciador de conexão que foi criado na lição 1 usando uma variável definida pelo usuário para popular o Gerenciador de conexão `ConnectionString` propriedade.  
   
  Os procedimentos nessa tarefa mostram como você pode criar e modificar o contêiner Loop Foreach para usar uma variável definida pelo usuário e adicionar a tarefa de fluxo de dados ao loop. Você aprenderá como modificar o gerenciador de conexões de Arquivo Simples para usar uma variável definida pelo usuário na próxima tarefa.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48197976"
   
      Estes dados de exemplo estão incluídos com os pacotes de lição do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para baixar os dados de exemplo e os pacotes de lição, faça o seguinte.  
   
-    1.  Navegue para os [Exemplos de Produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Clique na guia **DOWNLOADS** .  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48197976"
   
 1.  Clique em **Mapeamentos de Variáveis**.  
   
-2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável…>**.  
+2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável...>**.  
   
 3.  No **Adicionar variável** caixa de diálogo, para **nome**, tipo `varFileName`.  
   
@@ -90,10 +89,10 @@ ms.locfileid: "48197976"
 -   Arraste o **extrair dados de moeda de exemplo** tarefa de fluxo de dados para o contêiner Foreach Loop agora renomeado `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Próxima tarefa da lição  
- [Etapa 3: Modificando o Gerenciador de Conexões de Arquivo Simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Etapa 3: Modificando o Gerenciador de Conexão de arquivo simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar um contêiner Loop Foreach](control-flow/foreach-loop-container.md)   
+ [Para configurar um contêiner Loop Foreach](control-flow/foreach-loop-container.md)   
  [Usar variáveis em pacotes](use-variables-in-packages.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89818073559b3a6b6faab919691a62899b442e3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113416"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357283"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Designer de consulta MDX do Analysis Services (SSAS)
   O designer de consulta MDX (Multidimensional Expression) do Analysis Services fornece uma interface do usuário gráfica para ajudar a criar consultas MDX para uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere os dados que você deseja usar.  
@@ -60,22 +60,22 @@ ms.locfileid: "48113416"
  Não há suporte para a importação de uma consulta .mdx a partir de um arquivo.  
   
 > [!NOTE]  
->  Para obter mais informações sobre MDX e informações gerais sobre o designer de consulta MDX, consulte "Editor de consulta MDX (Analysis Services – Dados multidimensionais)" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+>  Para obter mais informações sobre MDX e informações gerais sobre o designer de consulta MDX, consulte "Editor de consulta MDX (Analysis Services – Dados multidimensionais)" nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas MDX no modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir lista os botões e as suas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Não habilitado para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
 |![Alterar para a exibição de consulta MDX](media/rsqdicon-commandtypemdx.gif "Alterar para a exibição de consulta MDX")|Alternar para Tipo de Comando MDX.|  
 |![Atualizar dados de resultados](media/rsqdicon-refresh.gif "Atualizar dados de resultados")|Atualiza metadados na fonte de dados.|  
-|![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado sempre que é feita uma alteração. Os resultados são mostrados no painel Dados.|  
 |![Botão Mostrar Agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações")|Mostra agregações no painel Dados.|  
-|![Exclua](media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Excluir](media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Parâmetros de Consulta** . Quando você especifica os valores para um parâmetro de consulta, um parâmetro com o mesmo nome é automaticamente criado.|  
 |![Botão Preparar Consulta](media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|  
 |![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
@@ -109,7 +109,7 @@ ms.locfileid: "48113416"
   
 -   **Editar como Texto**  
   
--   **Adicionar membro calculado** (![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado"))  
+-   **Adicionar Membro Calculado** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   

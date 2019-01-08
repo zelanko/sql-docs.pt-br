@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800694"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589310"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@remoteserver =** ] **'***remoteserver***'**  
+ [  **@remoteserver =** ] **'**_remoteserver_**'**  
  É o nome do servidor remoto mapeado para o logon remoto que será removido. *remoteserver* está **sysname**, sem padrão. *remoteserver* já deve existir.  
   
- [  **@loginame =** ] **'***logon***'**  
+ [  **@loginame =** ] **'**_logon_**'**  
  É o nome do logon opcional no servidor local que está associado ao servidor remoto. *login* é **sysname**, com um padrão de NULL. *logon* já deve existir se especificado.  
   
- [  **@remotename =** ] **'***remote_name***'**  
+ [  **@remotename =** ] **'**_remote_name_**'**  
  É o nome opcional do logon remoto mapeado para *login* durante o logon do servidor remoto. *remote_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -77,7 +77,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. Descartando um mapeamento de logon  
+### <a name="b-dropping-a-login-mapping"></a>b. Descartando um mapeamento de logon  
  O exemplo a seguir remove a entrada para o mapeamento de logons remotos do servidor remoto `ACCOUNTS` do logon local `Albert`.  
   
 ```  

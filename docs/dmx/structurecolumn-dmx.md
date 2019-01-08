@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992406"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412813"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ StructureColumn('structure column name')
   
  Se a coluna da estrutura de mineração mencionada for uma tabela aninhada, a função retornará um valor de tabela. O valor de tabela retornado pode ser usado na cláusula FROM de uma instrução sub-SELECT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta função é polimórfica e pode ser usada em qualquer lugar de uma instrução que permite expressões, incluindo uma lista de expressões SELECT, uma expressão de condição WHERE e uma expressão ORDER BY.  
   
  O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e como tal, deve ser colocado entre aspas simples: por exemplo, `StructureColumn('` **coluna 1**`')`. Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
@@ -49,11 +49,11 @@ StructureColumn('structure column name')
 ## <a name="error-messages"></a>Mensagens de erro  
  O erro de segurança a seguir ocorrerá se o usuário não tiver permissão de detalhamento na estrutura de mineração pai:  
   
- O usuário ‘%{user/}’ não tem permissão para detalhar na estrutura de mineração pai do modelo de mineração ‘%{model/}’.  
+ O ' % {usuário /}' usuário não tem permissão para detalhar a estrutura de mineração pai do ' % {modelo /}' modelo de mineração.  
   
  A mensagem de erro a seguir será exibida se um nome de coluna de estrutura inválido for especificado:  
   
- A coluna de estrutura de mineração ‘%{nome da coluna de estrutura/}’ não foi encontrada na estrutura de mineração pai ‘%{structure/}’ no contexto atual (linha %{line/}, coluna %{column/}).  
+ O ' % {nome da coluna de estrutura /}' coluna da estrutura de mineração não foi encontrada no ' % {Estrutura /}' pai da estrutura de mineração no contexto atual (linha % {linha /}, coluna % {coluna /}).  
   
 ## <a name="examples"></a>Exemplos  
  Usaremos a seguinte estrutura de mineração para obter estes exemplos. Observe que a estrutura de mineração contém duas colunas de tabela aninhada, `Products` e `Hobbies`. A tabela aninhada na coluna `Hobbies` tem uma única coluna que é usada como a chave para a tabela aninhada. A tabela aninhada na coluna `Products` é uma tabela aninhada complexa que tem uma coluna principal e outras colunas usadas para entrada. Os exemplos a seguir ilustram como uma estrutura de mineração de dados pode ser designada para incluir muitas colunas diferentes, mesmo que um modelo talvez não use todas as colunas. Algumas destas colunas podem não ser úteis no nível do modelo para generalizar padrões, mas podem ser muito úteis para detalhamento.  
@@ -98,22 +98,22 @@ WITH FILTER(EXISTS (Products))
  A consulta de exemplo a seguir retorna as colunas `CustomerName` e `Age`, que fazem parte do modelo de mineração. No entanto, a consulta também retorna a coluna `Age`, que faz parte da estrutura, mas não do modelo de mineração.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
  Observe que a filtragem de linhas para restringir os casos a clientes com mais de 30 anos ocorre no nível do modelo. Portanto, esta expressão não retornaria casos que estão incluídos nos dados da estrutura, mas não são usados pelo modelo. Como a condição de filtro usada para criar o modelo (`EXISTS (Products)`) restringe os casos somente aos clientes que adquiriram produtos, podem existir casos na estrutura que não são retornados por esta consulta.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de exemplo 2: Aplicando um filtro à coluna da estrutura  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de exemplo 2: Aplicando um filtro à coluna de estrutura  
  A consulta de exemplo a seguir retorna não só as colunas de modelo `CustomerName` e `Age`, e a tabela aninhada `Products`, mas também retorna o valor da coluna `Quantity` na tabela aninhada, que não faz parte do modelo.  
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos a clientes cuja ocupação é 'Arquiteto' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `(‘Occupation’)` são aplicados.  
+ Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos a clientes cuja ocupação é 'Arquiteto' (`WHERE StructureColumn('Occupation') = 'Architect'`). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `('Occupation')` são aplicados.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de exemplo 3: Selecionando colunas de uma tabela aninhada  
  A consulta de exemplo a seguir retorna os nomes dos clientes que foram usados como casos de treinamento do modelo. Para cada cliente, a consulta também retorna uma tabela aninhada que contém os detalhes de compra. Embora o modelo inclui o `ProductName` coluna, o modelo não usa o valor da `ProductName` coluna. O modelo só verifica se o produto foi adquirido regulares (`NOT``OnSale`) preço. Esta consulta não só retorna o nome do produto, mas também retorna a quantidade adquirida, que não é incluída no modelo.  

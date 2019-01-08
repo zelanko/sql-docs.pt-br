@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,21 +14,21 @@ ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16720db613815d5c8cce501c1cee2d5d3cc9b3cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755978"
 ---
 # <a name="preconnectcompleted-event-class"></a>Classe de evento PreConnect:Completed
   A classe de evento PreConnect:Completed indica quando um gatilho LOGON ou a função de classificação do Administrador de Recursos conclui a execução.  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento PreConnect:Completed  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|`int`|216|27|não|  
+|EventClass|`int`|216|27|Não|  
 |SPID|`int`|O ID de processo de servidor que dispara este evento.|12|Sim|  
 |EventSubClass|`int`|1 para a função de classificador definida pelo usuário.|21|Sim|  
 |StartTime|`datetime`|A hora que inicia a função de classificador definida pelo usuário.|14|Sim|  

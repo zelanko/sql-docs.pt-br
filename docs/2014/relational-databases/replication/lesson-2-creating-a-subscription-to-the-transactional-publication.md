@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072246"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590850"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lição 2: Criando uma assinatura na publicação transacional
-  Nessa lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md).  
+  Nessa lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta lição exige que você tenha concluído a lição anterior, [lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Para criar a assinatura  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072246"
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , digite **ProductReplica** na caixa **Nome do Banco de Dados** , clique em **OK**e clique em **Avançar**.  
   
-8.  Na caixa de diálogo **Segurança do Agente de Distribuição**, clique no botão de reticências (**…**), insira \<*Machine_Name>***\repl_distribution** na caixa **Conta de processo** e insira a senha dessa conta. Em seguida, clique em **OK** e em **Avançar**.  
+8.  No **segurança do Distribution Agent** caixa de diálogo, clique no botão de reticências (**...** ) botão, digite \< _Machine_Name >_**\repl_distribution** no **conta de processo** , digite a senha para este conta, clique em **Okey**e, em seguida, clique em **próxima**.  
   
 9. Clique em **Concluir** para aceitar os valores padrão nas páginas remanescentes e concluir o assistente.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48072246"
   
 2.  Na página **Geral** , na lista **Tipo de usuário** , selecione **Usuário do Windows**.  
   
-3.  Selecione a caixa **Nome de usuário** e clique no botão de reticências (...). Na caixa **Inserir o nome do objeto a ser selecionado**, insira <Machine_Name>**\repl_distribution**, clique em **Verificar nomes** e em **OK**.  
+3.  Selecione o **nome de usuário** caixa e clique no botão de reticências (...), na **insira o nome do objeto para selecionar** caixa, digite < nome_do_computador >**\repl_distribution**, clique em  **Verificar nomes**e, em seguida, clique em **Okey**.  
   
-4.  Na página **Associação**, na área **Associação à função do banco de dados**, selecione **db_owner** e clique em **OK** para criar o usuário.  
+4.  Na página **Associação** , na área **Associação à função do banco de dados** , selecione **db_owner**e clique em **OK** para criar o usuário.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Para exibir o status da sincronização da assinatura  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48072246"
 3.  Se a assinatura não for visível sob **AdvWorksProductTrans**, pressione F5 para atualizar a lista.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou com êxito uma assinatura para publicação transacional. Como o Distribution Agent dessa assinatura executa continuamente, a assinatura é inicializada quando ela é criada. Em seguida, você usará os tokens de rastreamento para verificar se as alterações estão sendo replicadas para o Assinante e para determinar a latência. Consulte [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ Você criou com êxito uma assinatura para publicação transacional. Como o Distribution Agent dessa assinatura executa continuamente, a assinatura é inicializada quando ela é criada. Em seguida, você usará os tokens de rastreamento para verificar se as alterações estão sendo replicadas para o Assinante e para determinar a latência. Consulte [lição 3: Validando a assinatura e medindo a latência](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)   

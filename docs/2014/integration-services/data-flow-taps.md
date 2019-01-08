@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376778"
 ---
 # <a name="data-flow-taps"></a>Toques de Fluxo de Dados
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] apresenta um novo recurso que permite que você adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  
+  O [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduz um novo recurso que permite adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  
   
 1.  Crie uma instância de execução de um pacote usando o procedimento armazenado [catalog.create_execution &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Listando todos os toques de dados  
- Você também pode listar todos os toques de dados usando a exibição de catalog.execution_data_taps. O exemplo a seguir extrai toques de dados para uma instância de execução da especificação (ID: 54).  
+ Você também pode listar todos os toques de dados usando a exibição de catalog.execution_data_taps. O exemplo a seguir extrai toques de dados para uma instância de execução de especificação (ID: 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
@@ -78,10 +78,10 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Habilitar o nível de log detalhado e adicionar toques de dados aumenta as operações de E/S executadas por sua solução de integração de dados. Consequentemente, recomendamos que você adicione toques de dados somente para fins de solução de problemas  
   
 ## <a name="video"></a>Vídeo  
- Esse [vídeo no TechNet](http://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
+ Esse [vídeo no TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
  [Ferramentas de solução de problemas de execução de pacote](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

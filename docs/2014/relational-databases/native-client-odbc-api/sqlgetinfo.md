@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112179"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354868"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   A tabela mostra os valores retornados pelo **SQLGetInfo**. Estes valores podem variar com base no número de versão do servidor conectado.  
@@ -46,7 +46,7 @@ ms.locfileid: "48112179"
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
 |SQL_CATALOG_TERM|"database"|  
 |SQL_CATALOG_USAGE|SQL_CU_DML_STATEMENTS SQL_CU_PROCEDURE_INVOCATION SQL_CU_TABLE_DEFINITION|  
-|SQL_COLLATION_SEQ|A sequência de agrupamentos atribuída atualmente para a conexão e o servidor.|  
+|SQL_COLLATION_SEQ|A sequência de ordenações atribuída atualmente para a conexão e o servidor.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
 |SQL_CONVERT_BIGINT|Nenhum suporte para conversão do tipo de dados ODBC SQL_BIGINT. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a driver de ODBC do Native Client a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** tipo de dados ODBC tipo SQL_DECIMAL. Consulte SQL_CONVERT_DECIMAL abaixo.|  
@@ -208,7 +208,7 @@ ms.locfileid: "48112179"
 |SQL_USER_NAME|O nome de usuário atual.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLGetInfo](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [Função SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
@@ -13,12 +13,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ba37a19f072292178ab96d01561004c55383cc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052387"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759948"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriedades de consulta (Visual Database Tools)
   Essas propriedades aparecem na janela Propriedades quando você tiver uma consulta aberta no Designer de Consulta e Exibição. A menos que seja indicado o contrário, é possível editar essas propriedades na janela Propriedades.  

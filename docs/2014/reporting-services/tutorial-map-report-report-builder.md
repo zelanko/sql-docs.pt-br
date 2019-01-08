@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Relatório de mapa (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Mapear um relatório (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098846"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359858"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
   Este tutorial foi desenvolvido para ajudá-lo a aprender sobre os recursos de mapa que você pode usar para exibir dados de relatório em comparação com um plano de fundo geográfico.  
@@ -63,7 +63,7 @@ ms.locfileid: "48098846"
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -451,7 +451,7 @@ ms.locfileid: "48098846"
   
 4.  Em **Opções de escala de cores**, limpe **Mostrar em escala de cores**.  
   
-5.  Em **Opções de legenda**, na lista suspensa, selecione Legend2. A opção de texto da legenda aparece. Por padrão, texto de legenda é formatado com uma cadeia de formato geral do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Os 0 em N0 não especifica nenhum dígito decimal.  
+5.  Em **Opções de legenda**, na lista suspensa, selecione Legend2. A opção de texto da legenda aparece. Por padrão, texto de legenda é formatado com uma cadeia de formato geral do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Os 0 em N0 não especifica nenhum dígito decimal.  
   
 6.  Na **texto de legenda**, use o seguinte formato para especificar a moeda sem dígitos decimais: `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098846"
 ## <a name="next-steps"></a>Próximas etapas  
  Isso conclui o passo a passo da adição de um mapa ao seu relatório.  
   
- Para obter mais informações, consulte [Maps &#40;construtor de relatórios e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [Cartographic Adjustment of Spatial Data para o SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) em blogs.msdn.com.  
+ Para obter mais informações, consulte [Maps &#40;construtor de relatórios e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [Cartographic Adjustment of Spatial Data para o SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) em blogs.msdn.com.  
   
  Para obter mais tutoriais, consulte [tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md).  
   

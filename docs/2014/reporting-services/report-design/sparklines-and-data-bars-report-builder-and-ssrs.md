@@ -14,19 +14,19 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b729d5fb711a855c0edbdac14101e1e04c3bc83f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362528"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos e barras de dados (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente embutidas com o texto. Em geral, os minigráficos e as barras de dados são usados em tabelas e matrizes. Seu impacto resulta da possibilidade de exibir vários deles juntos e compará-los uns sobre os outros, em vez de exibi-los individualmente. Eles facilitam a visualização das exceções, as linhas cujo desempenho se distingue das outras. Embora sejam pequenos, cada minigráfico costuma representar vários pontos de dados, geralmente durante um período de tempo. As barras de dados podem representar vários pontos de dados, mas normalmente ilustram apenas um. Cada minigráfico geralmente apresenta uma única série. Você não pode adicionar um minigráfico a um grupo de detalhes em uma tabela. Como os minigráficos exibem dados agregados, eles devem entrar em uma célula associada a um grupo. Minigráficos e barras de dados têm os mesmos elementos de gráficos básicos de categorias, séries e valores, mas não possuem legenda, linhas de eixo, rótulos nem marcas de escala.  
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Como introdução rápida aos minigráficos, consulte [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) e os vídeos [Como criar um minigráfico em uma tabela](http://go.microsoft.com/fwlink/?LinkId=197092) e [Sparklines, Bar Charts, e Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
+ Para começar rapidamente com minigráficos, consulte [Tutorial: Adicionar um minigráfico ao relatório &#40;construtor de relatórios&#41; ](../tutorial-add-a-sparkline-to-your-report-report-builder.md) e os vídeos [como: Criar um minigráfico em uma tabela](https://go.microsoft.com/fwlink/?LinkId=197092) e [minigráficos, gráficos de barras e indicadores no construtor de relatórios](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Você pode publicar minigráficos e barras de dados com suas tabelas, matrizes ou lista pai, separadamente de um relatório como uma parte de relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -37,15 +37,15 @@ ms.locfileid: "48074798"
 ##  <a name="KindsofSparklines"></a> Tipos de minigráficos  
  Você pode criar praticamente tantos tipos de minigráficos quanto gráficos normais. Em geral, você não pode fazer minigráficos em 3D. Você pode fazer versões de minigráfico destes gráficos completos:  
   
--   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md): os gráficos de coluna básicos, empilhados e 100% empilhados.  
+-   [Gráficos de colunas &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md): Os gráficos de coluna básicos, empilhados e 100% empilhados.  
   
--   [Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](line-charts-report-builder-and-ssrs.md): todos os gráficos, exceto o gráfico de linhas 3D.  
+-   [Gráficos de linhas &#40;relatórios e SSRS&#41;](line-charts-report-builder-and-ssrs.md): Todos exceto o gráfico de linha 3D.  
   
--   [Gráficos de áreas &#40;Construtor de Relatórios e SSRS&#41;](area-charts-report-builder-and-ssrs.md): todos os gráficos, exceto o gráfico de áreas 3D  
+-   [Gráficos de área &#40;relatórios e SSRS&#41;](area-charts-report-builder-and-ssrs.md): Todos exceto os gráficos de área 3D  
   
--   [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md): e gráficos de rosca, simples e 3D, mas não as outras formas como gráficos de funil e de pirâmide.  
+-   [Gráficos de pizza &#40;relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md): E gráficos de rosca, simples e 3D, mas não as outras formas como e gráficos de funil e de pirâmide.  
   
--   [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md): as ações, velas, barra de erros e gráficos de caixa.  
+-   [Gráficos de intervalos &#40;relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md): Os gráficos de ações, velas, barra de erros e gráfico de caixa.  
   
 ##  <a name="DataBars"></a> Barras de dados  
  Barras de dados geralmente representam um único ponto de dados, apesar de poderem representar vários pontos de dados, como os gráficos de barras normais. Normalmente contêm várias séries sem categoria ou possuem agrupamento de série.  
@@ -56,9 +56,9 @@ ms.locfileid: "48074798"
   
  Você pode fazer versões de barra de dados destes gráficos completos:  
   
--   [Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](bar-charts-report-builder-and-ssrs.md): os gráficos de barras básicos, empilhados e 100% empilhados.  
+-   [Gráficos de barras &#40;relatórios e SSRS&#41;](bar-charts-report-builder-and-ssrs.md): Gráficos de barras básicos, empilhados 100% empilhadas.  
   
--   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md): os gráficos de coluna básicos, empilhados e 100% empilhados. Os gráficos de coluna podem ser minigráficos ou barras de dados.  
+-   [Gráficos de colunas &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md): Gráficos de coluna básicos, empilhados e 100% empilhados. Os gráficos de coluna podem ser minigráficos ou barras de dados.  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -85,35 +85,35 @@ ms.locfileid: "48074798"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Adicionar minigráficos e barras de dados &#40;relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Adicionar minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [Alinhar os dados de um gráfico em uma tabela ou matriz &#40;relatórios e SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Alinhar os dados de um gráfico em uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Outros tópicos de instruções para gráficos  
  Como minigráficos e barras de dados são um tipo de gráfico, você também pode achar os tópicos de instruções a seguir úteis e pertinentes:  
   
- [Adicionar um gráfico a um relatório &#40;relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
  [Adicionar pontos vazios ao gráfico &#40;relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [Adicionar ou remover margens de um gráfico &#40;relatórios e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou remover margens de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Alterar um tipo de gráfico &#40;relatórios e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Alterar um tipo de gráfico &#40;Construtor de Relatórios e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [Definir cores em um gráfico usando uma paleta &#40;relatórios e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [Especificar uma escala logarítmica &#40;relatórios e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Especificar uma escala logarítmica &#40;Construtor de Relatórios e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Especifique um intervalo do eixo &#40;relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um minigráfico ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
- [Minigráficos, gráficos de barras e indicadores no construtor de relatórios (vídeo)](http://technet.microsoft.com/bi/video/ff877165)   
- [Como: criar um minigráfico em uma tabela (vídeo)](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [Minigráficos, gráficos de barras e indicadores no construtor de relatórios (vídeo)](https://technet.microsoft.com/bi/video/ff877165)   
+ [Como: Criar um minigráfico em uma tabela (vídeo)](https://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - IsReadOnly Property (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6d6239c0187047a05775d2ffdf2ab027413273ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202556"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373578"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Propriedades IsReadOnly (classe SqlServiceAdvancedProperty)
   Obtém ou define a propriedade booliana que especifica se a propriedade avançada é somente leitura ou não.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

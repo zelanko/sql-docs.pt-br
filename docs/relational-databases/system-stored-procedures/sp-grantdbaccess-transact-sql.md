@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652921"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591550"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ]  **' * * * logon* **'** é o nome do grupo de Windows, logon do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon a ser mapeada para o novo banco de dados usuário. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows na forma *domínio*\\*logon*; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *login* é um **sysname**, sem padrão.  
+ [  **@loginame =** ] **'**_logon_ **'**  
+ É o nome do grupo do Windows, logon do Windows ou logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser mapeado para o novo usuário do banco de dados. Nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows na forma *domínio*\\*logon*; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. *login* é um **sysname**, sem padrão.  
   
- [  **@name_in_db=**] **'***name_in_db***'** [ **saída**]  
+ [  **@name_in_db=**] **'**_name_in_db_**'** [ **saída**]  
  É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão NULL. Se não for especificado, *login* é usado. Se for especificado como uma variável OUTPUT com um valor NULL, **@name_in_db** é definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

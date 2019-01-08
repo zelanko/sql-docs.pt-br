@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,25 +16,25 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369908"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece o gerenciador de conexões do Excel, a origem do Excel e o destino do Excel para trabalhar com dados armazenados em planilhas no formato de arquivo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. As técnicas descritas neste tópico utilizam a tarefa Script para obter informações sobre bancos de dados (arquivos de pasta de trabalho) e tabelas (planilhas e intervalos nomeados) do Excel disponíveis. Esses exemplos podem ser facilmente modificados para funcionar com quaisquer das outras fontes de dados com base em arquivo suportadas pelo Provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
   
  [Configurando um pacote para testar as amostras](#configuring)  
   
- [Exemplo 1: verificar se existe um arquivo do Excel](#example1)  
+ [Exemplo 1: Verifique se existe um arquivo do Excel](#example1)  
   
- [Exemplo 2: verificar se existe uma tabela do Excel](#example2)  
+ [Exemplo 2: Verifique se existe uma tabela do Excel](#example2)  
   
- [Exemplo 3: obter uma lista de arquivos do Excel em uma pasta](#example3)  
+ [Exemplo 3: Obter uma lista de arquivos do Excel em uma pasta](#example3)  
   
- [Exemplo 4: obter uma lista de tabelas em um arquivo do Excel](#example4)  
+ [Exemplo 4: Obter uma lista de tabelas em um arquivo do Excel](#example4)  
   
  [Exibindo os resultados das amostras](#testing)  
   
@@ -76,7 +74,7 @@ ms.locfileid: "48049538"
   
 5.  Defina a linguagem de scripts padrão para o componente Script usando a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: verificar se existe um arquivo do Excel  
+##  <a name="example1"></a> Descrição do exemplo 1: Verifique se existe um arquivo do Excel  
  Esse exemplo determina se o arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile` existe, e define o valor booliano da variável `ExcelFileExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -146,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: verificar se existe uma tabela do Excel  
+##  <a name="example2"></a> Descrição do exemplo 2: Verifique se existe uma tabela do Excel  
  Esse exemplo determina se a planilha ou intervalo nomeado do Excel especificado na variável `ExcelTable` existe no arquivo da pasta de trabalho do Excel especificado na variável `ExcelFile`, e define o valor booliano da variável `ExcelTableExists` para o resultado. Você pode usar esse valor booliano para ramificar no fluxo de trabalho do pacote.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -253,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descrição do exemplo 3: obter uma lista de arquivos do Excel em uma pasta  
+##  <a name="example3"></a> Exemplo 3 Descrição: Obter uma lista de arquivos do Excel em uma pasta  
  Esse exemplo preenche uma matriz com a lista de arquivos do Excel encontrada na pasta especificada no valor da variável `ExcelFolder`, e copia a matriz para a variável `ExcelFiles`. Você pode usar o Enumerador Foreach de Variável para repetir nos arquivos da matriz.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
@@ -325,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solução alternada  
  Em vez de usar uma tarefa Script para reunir uma lista de arquivos do Excel em uma matriz, você também pode usar o Enumerador de Arquivo Foreach para repetir em todos os arquivos do Excel em uma pasta. Para obter mais informações, consulte [Executar um loop por meio de arquivos e tabelas do Excel usando um contêiner do Loop Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrição do exemplo 4: obter uma lista de tabelas em um arquivo do Excel  
+##  <a name="example4"></a> Descrição do exemplo 4: Obter uma lista de tabelas em um arquivo do Excel  
  Esse exemplo preenche uma matriz com a lista de planilhas e intervalos nomeados encontrados no arquivo da pasta de trabalho especificado pelo valor da variável `ExcelFile`, e copia a matriz para a variável `ExcelTables`. Você pode usar o Enumerador Foreach de Variável para repetir nas tabelas da matriz.  
   
 > [!NOTE]  
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)   

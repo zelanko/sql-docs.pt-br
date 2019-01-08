@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094056"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362228"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Definindo perspectivas e traduções
   Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
  Esta lição contém as seguintes tarefas:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48094056"
  Nesta tarefa, você definirá e navegará por traduções de metadados específicos para determinados idiomas.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 10: definindo funções administrativas](lesson-10-defining-administrative-roles.md)  
+ [Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário do Tutorial do Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   

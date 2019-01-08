@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47c8b792158095693ea4223578ef811a2509b2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358128"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparar dados para exportar ou importar em massa (SQL Server)
   Esta seção descreve as considerações envolvidas no planejamento de operações de exportação em massa e os requisitos para operações de importação em massa.  
@@ -52,7 +52,7 @@ ms.locfileid: "48073476"
   
 -   Para importar dados usando um comando **bcp**, use a instrução BULK INSERT ou INSERT... SELECT * FROM OPENROWSET(BULK...); a tabela de destino já deve existir.  
   
--   Cada campo no arquivo de dados deve ser compatível com a coluna correspondente na tabela de destino. Por exemplo, um `int` campo não pode ser carregado em um `datetime` coluna. Para obter mais informações, consulte [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) [Formatos de dados para importação ou exportação em massa (SQL Server)] e [Especificar formatos de dados para compatibilidade usando bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Cada campo no arquivo de dados deve ser compatível com a coluna correspondente na tabela de destino. Por exemplo, um campo `int` não pode ser carregado em uma coluna `datetime`. Para obter mais informações, consulte [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) [Formatos de dados para importação ou exportação em massa (SQL Server)] e [Especificar formatos de dados para compatibilidade usando bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
     >  Para especificar um subconjunto de linhas para importar de um arquivo de dados em vez do arquivo inteiro, você pode usar um comando **bcp** com a opção **-F** *first_row* e/ou **-L** *last_row*. Para obter mais informações, consulte [bcp Utility](../../tools/bcp-utility.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48073476"
   
      Para dados de importação em massa de um arquivo (.dbf) de tabela FoxPro ou Visual FoxPro do [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou de um arquivo de planilha (.xls) do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , você precisa converter os dados em um arquivo CSV, compatível com as restrições anteriores. A extensão de arquivo normalmente é .csv. Portanto, você pode usar o arquivo .csv como um arquivo de dados em uma operação de importação em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Em sistemas de 32 bits, é possível importar dados de CSV em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem otimizações de importação em massa usando [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) com o Provedor do OLE DB para Jet. O Jet trata arquivos de texto como tabelas, com o esquema definido por um arquivo schema.ini localizado no mesmo diretório da fonte de dados.  Para dados CSV, um dos parâmetros no arquivo schema.ini é "FORMAT=CSVDelimited". Para usar essa solução, você precisa compreender as operações do Jet Test IISAMm (sua sintaxe de cadeia de conexão, o uso de schema.ini, as opções de configuração de Registro, e assim por diante).  As melhores fontes dessas informações são a Ajuda do Microsoft Access e artigos da Base de Conhecimentos (KB). Para obter mais informações, consulte [Inicializando o driver da fonte de dados de texto](http://go.microsoft.com/fwlink/?LinkId=128503), [Como usar uma consulta distribuída do SQL Server 7.0 com um servidor vinculado aos bancos de dados de acesso protegidos](http://go.microsoft.com/fwlink/?LinkId=128504), [COMO usar o Jet OLE DB Provider 4.0 para conectar aos bancos de dados ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)e [Como abrir arquivos de texto delimitados usando o Text II sam do Jet Provider](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     Em sistemas de 32 bits, é possível importar dados de CSV em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem otimizações de importação em massa usando [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) com o Provedor do OLE DB para Jet. O Jet trata arquivos de texto como tabelas, com o esquema definido por um arquivo schema.ini localizado no mesmo diretório da fonte de dados.  Para dados CSV, um dos parâmetros no arquivo schema.ini é "FORMAT=CSVDelimited". Para usar essa solução, você precisa compreender as operações do Jet Test IISAMm (sua sintaxe de cadeia de conexão, o uso de schema.ini, as opções de configuração do Registro e assim por diante).  As melhores fontes dessas informações são a Ajuda do Microsoft Access e artigos da Base de Conhecimentos (KB). Para obter mais informações, consulte [Inicializando o Driver de fonte de dados de texto](https://go.microsoft.com/fwlink/?LinkId=128503), [como usar uma consulta distribuída do SQL Server 7.0 com um servidor vinculado para bancos de dados protegidos](https://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO: Usar o provedor OLE DB Jet 4.0 para se conectar aos bancos de dados ISAM](https://go.microsoft.com/fwlink/?LinkId=128505), e [como abrir arquivos de texto delimitados usando texto IIsam do provedor de Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Além disso, a importação em massa de dados de um arquivo de dados para uma tabela exige o seguinte:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48073476"
 >  Não há suporte para a importação em massa de uma exibição particionada; tentativas de fazer importação de dados em massa em uma visão particionada falharão.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Como importar dados do Excel para o SQL Server](http://support.microsoft.com/kb/321686)  
+ [Como importar dados do Excel para o SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Histórico de alterações  
   

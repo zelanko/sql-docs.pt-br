@@ -20,12 +20,12 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc70580de4f759a5adb6a501ac5dc200b62cba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a189bd082bbf3d5f08080fccec48334165d5d15c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716646"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208315"
 ---
 # <a name="sqlpostinstallererror-function"></a>Função SQLPostInstallerError
 **Conformidade com**  
@@ -39,8 +39,8 @@ ms.locfileid: "47716646"
 ```  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

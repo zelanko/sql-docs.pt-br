@@ -14,15 +14,15 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e5c4cdbc181012d72f02f4bc05b122a4e722ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111468"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349937"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
-  Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instâncias de Cluster de Failover (FCI) AlwaysOn tiram proveito do WSFC Windows Server Failover Clustering () como uma tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a resolução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  
+  Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quanto as instâncias de cluster de failover (FCI) AlwaysOn utilizam o Windows Server Failover Clustering (WSFC) como tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a resolução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  
   
  **Neste tópico:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48111468"
 > [!IMPORTANT]  
 >  Se um cluster WSFC for definido offline devido a uma falha de quorum, a intervenção manual será necessária para colocá-lo online novamente.  
 >   
->  Para obter mais informações, veja: [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periódico.  
+>  Para obter mais informações, consulte: [Recuperação de desastres WSFC por meio de Quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modos de quorum  
  Um *modo de quorum* é configurado no nível do cluster WSFC que dita a metodologia usada para votação de quorum.  O utilitário Gerenciador de Cluster de Failover recomendará um modo de quorum com base no número de nós no cluster.  
@@ -73,7 +73,7 @@ ms.locfileid: "48111468"
   
  Nenhum nó individual em um cluster WSFC pode determinar definitivamente se o cluster como um todo é íntegro ou não íntegro.  A qualquer momento, da perspectiva de cada nó, alguns dos outros nós podem aparecer offline ou talvez pareça que estão em processo de failover ou não respondentes devido a uma falha de comunicação de rede.  Uma função chave do voto de quorum é determinar se o estado aparente de cada nó no cluster WSFC é de fato o estado real desses nós.  
   
- Para todos os modelos de quorum, exceto ‘Somente Disco’, a efetividade de um voto de quorum depende das comunicações confiáveis entre todos os nós de votação no cluster. As comunicações de rede entre os nós na mesma sub-rede física devem ser consideradas confiáveis; o voto de quorum deve ser confiável.  
+ Para todos os modelos de quorum, exceto 'Somente Disco', a efetividade de um voto de quorum depende das comunicações confiáveis entre todos os nós de votação no cluster. As comunicações de rede entre os nós na mesma sub-rede física devem ser consideradas confiáveis; o voto de quorum deve ser confiável.  
   
  No entanto, se um nó em outra sub-rede for visto como não respondente em um voto de quorum, mas na verdade estiver online e, de outra forma, íntegro, isso ocorre muito provavelmente devido a uma falha de comunicação de rede entre sub-redes.  Dependendo da topologia de cluster, do modo de quorum e da configuração da política de failover, essa falha de comunicação de rede pode criar efetivamente mais de um conjunto (ou subconjunto) de nós de votação.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "48111468"
 > [!IMPORTANT]  
 >  Para usar configurações de NodeWeight, é necessário aplicar o seguinte hotfix para todos os servidores no cluster WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes indicados para votação de quorum  
- Ao ativar ou desativar o voto de um nó WSFC específico, siga estas diretrizes:  
+ Ao habilitar ou desabilitar o voto de um nó WSFC específico, siga estas diretrizes:  
   
 -   **Nenhum voto, por padrão.** Assuma que cada nó não deve votar sem justificativa explícita.  
   
@@ -104,16 +104,16 @@ ms.locfileid: "48111468"
   
 -   **Reavalie as atribuições de voto após o failover.** Você não deseja o failover em uma configuração de cluster sem suporte para um quorum íntegro.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Quando a configuração de voto de quorum do WSFC for validada, o Assistente para Grupo de Disponibilidade AlwaysOn exibirá um aviso se um das condições a seguir for verdadeira:  
->   
+> 
 >  -   O nó do cluster que hospeda a réplica primária não tem um voto  
 > -   Uma réplica secundária é configurada para failover automático e seu nó de cluster não tem um voto.  
-> -   O[KB2494036](http://support.microsoft.com/kb/2494036) não está instalado em todos os nós de cluster que hospedam réplicas de disponibilidade. Esse patch é necessário para adicionar ou remover votos para nós de cluster em implantações multissite. No entanto, em implantações de site único, ele geralmente não é necessário, e você pode ignorar o aviso sem nenhum problema.  
-  
-> [!TIP]  
+> -   O[KB2494036](https://support.microsoft.com/kb/2494036) não está instalado em todos os nós de cluster que hospedam réplicas de disponibilidade. Esse patch é necessário para adicionar ou remover votos para nós de cluster em implantações multissite. No entanto, em implantações de site único, ele geralmente não é necessário, e você pode ignorar o aviso sem nenhum problema.  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expõe várias DMVs (exibições de gerenciamento dinâmico) do sistema que podem ajudá-lo a gerenciar configurações relacionadas à configuração do cluster WSFC e à votação de quorum do nó.  
->   
+> 
 >  Para obter mais informações, veja:  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql), [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
@@ -124,13 +124,13 @@ ms.locfileid: "48111468"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Verificação de configuração de voto de quorum nos assistentes de grupo de disponibilidade do AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
+-   [Verificação de configuração de voto de quorum nos assistentes de grupo de disponibilidade do AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
   
--   [Tecnologias do Windows Server: clusters de failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologias do Windows Server:  Clusters de failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guia passo a passo do cluster de failover: configurando o quorum em um cluster de failover](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Guia passo a passo de Cluster de failover: Configurando o Quorum em um Cluster de Failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

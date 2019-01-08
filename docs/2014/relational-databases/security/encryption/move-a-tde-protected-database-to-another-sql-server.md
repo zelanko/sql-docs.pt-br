@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544632"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
-  Este tópico descreve como proteger um banco de dados por meio de criptografia de dados transparente (TDE) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
+  Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
   
  **Neste tópico**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "49072270"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou chave assimétrica deve ser instalado na `master` banco de dados do servidor de destino, para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "49072270"
   
 4.  Na caixa de diálogo **Novo Banco de Dados** , na caixa **Nome do banco de dados** , digite o nome do novo banco de dados.  
   
-5.  Na caixa de diálogo **Proprietário** , digite o nome do proprietário do novo banco de dados. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Proprietário do Banco de Dados** . Para obter mais informações sobre a criação de um novo banco de dados, consulte [Create a Database](../../databases/create-a-database.md).  
+5.  Na caixa de diálogo **Proprietário** , digite o nome do proprietário do novo banco de dados. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Proprietário do Banco de Dados**. Para obter mais informações sobre a criação de um novo banco de dados, consulte [Create a Database](../../databases/create-a-database.md).  
   
 6.  No Pesquisador de Objetos, clique no sinal de mais para expandir a pasta **Bancos de Dados** .  
   
@@ -184,14 +184,14 @@ ms.locfileid: "49072270"
      Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Status**  
-     Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
+     Exibe um dos estados a seguir: **Pronto** ou **não está pronto**.  
   
      **Mensagem**  
      A coluna **Mensagem** pode exibir informações sobre o banco de dados, da seguinte forma:  
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá *<number_of_active_connections>***Conexão(ões) ativa(s)** — por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe *< number_of_active_connections > * * * ativa**, por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "49072270"
   
 6.  Recrie o certificado do servidor usando o arquivo de backup de certificado do servidor original. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
-7.  No Pesquisador de Objetos, no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**.  
+7.  No Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**.  
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo *Localizar Arquivos de Banco de Dados –***server_name*, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
+9. No **localizar arquivos de banco de dados-* * * nome_do_servidor* caixa de diálogo, selecione o banco de dados de arquivo para anexar ao novo servidor e clique em **Okey**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   
@@ -234,7 +234,7 @@ ms.locfileid: "49072270"
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |Ícone|Texto de status|Description|  
+    |Ícone|Texto de status|Descrição|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
@@ -253,7 +253,7 @@ ms.locfileid: "49072270"
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
      **"** *<database_name>* **" detalhes do banco de dados**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**…**).  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**...**).  
   
     > [!NOTE]  
     >  Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  

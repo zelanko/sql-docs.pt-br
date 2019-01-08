@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -20,12 +18,12 @@ ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c64b28dba868344ed30c02f4ea9869caf241168a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822430"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>XPath do lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
   Este tópico descreve as diferenças gerais entre a formatação XML no lado cliente e no lado servidor no SQLXML.  

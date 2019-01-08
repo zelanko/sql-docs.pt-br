@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
@@ -14,12 +13,12 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c5739fc30656871c23b3a3c2b6e8ae9953b63c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810188"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   Divide a primeira expressão numérica pela segunda.  
@@ -67,7 +66,7 @@ ListPrice / StandardCost
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
+ [Precedência de operador e capacidade de associação](operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

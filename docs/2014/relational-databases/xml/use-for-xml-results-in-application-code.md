@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206066"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368668"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
   Usando cláusulas FOR XML com consultas SQL, é possível recuperar e até converter resultados de consultas como dados XML. Essa funcionalidade permite fazer o seguinte quando os resultados da consulta FOR XML podem ser usados no código do aplicativo XML:  
@@ -35,9 +35,9 @@ ms.locfileid: "48206066"
  Este tópico fornece exemplos que demonstram essas aproximações.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recuperando dados FOR XML com ilhas de dados ADO e XML  
- O ADO `Stream` objeto ou outros objetos que dão suporte a COM `IStream` interface, como Active Server Pages (ASP) `Request` e `Response` objetos, pode ser usado para conter os resultados quando você estiver trabalhando com consultas FOR XML.  
+ O objeto `Stream` do ADO ou outros objetos que oferecem suporte à interface `IStream` COM, como objetos `Request` e `Response` do Active Server Pages (ASP), pode ser usado para conter os resultados quando você está trabalhando com consultas FOR XML.  
   
- Por exemplo, o código ASP a seguir mostra os resultados da consulta um `xml` coluna tipo de dados, dados demográficos, na tabela Sales. Store do banco de dados de exemplo AdventureWorks. Especificamente, a consulta procura o valor da instância dessa coluna da linha em que o CustomerID é igual a 3.  
+ Por exemplo, o código ASP a seguir mostra os resultados de consulta a uma coluna de tipo de dados `xml`, Demographics, na tabela Sales.Store do banco de dados de exemplo AdventureWorks. Especificamente, a consulta procura o valor da instância dessa coluna da linha em que o CustomerID é igual a 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -157,17 +157,17 @@ ms.locfileid: "48206066"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** Primary International  
+-   **BankName:** International primário  
   
--   **BusinessType:** OS  
+-   **BusinessType:** SISTEMA OPERACIONAL  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Especialidade:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **Marcas:** 3  
   
 -   **Internet:** DSL  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206066"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206066"
   
  Neste exemplo, as seguintes APIs gerenciadas do Microsoft .NET Framework são usadas para executar o retorno e a renderização dos resultados de consultas FOR XML:  
   
-1.  `SqlConnection` é usado para abrir uma conexão ao SQL Server, com base no conteúdo de uma variável de cadeia de caracteres de conexão especificada, strConn.  
+1.  O `SqlConnection` é usado para abrir uma conexão ao SQL Server com base no conteúdo de uma variável da cadeia conexão especificada, strConn.  
   
 2.  Em seguida, o `SqlDataAdapter` é usado como o adaptador de dados e usa a conexão SQL e a cadeia de caracteres de uma consulta SQL especificada para executar a consulta FOR XML.  
   
-3.  Depois que a consulta foi executada, o `SqlDataAdapter.Fill` método é chamado e passado a uma instância de um `DataSet,` mydataset, é para preencher o conjunto de dados com a saída da consulta FOR XML.  
+3.  Depois da execução da consulta, o método `SqlDataAdapter.Fill` é chamado e uma instância de um `DataSet,` MyDataSet, é passada para preencher o conjunto de dados com a saída da consulta FOR XML.  
   
-4.  O `DataSet.GetXml` método é chamado para retornar os resultados da consulta como uma cadeia de caracteres que pode ser exibida na página HTML gerada pelo servidor.  
+4.  Em seguida, o método `DataSet.GetXml` é chamado para retornar os resultados da consulta como uma cadeia de caracteres que pode ser exibida na página HTML gerada pelo servidor.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

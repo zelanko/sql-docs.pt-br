@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - SqlServerAlias Class
@@ -20,12 +18,12 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d913f28415c708ad09b419732ebef4e26b607ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377886"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
   A classe [da classe SqlServerAlias](sqlserveralias-class.md) representa um alias de conexão de servidor.  
@@ -36,9 +34,9 @@ ms.locfileid: "48221406"
   
 -   A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o qual o cliente é conectado escuta em um pipe nomeado alternativo.  
   
- **Observação:** as [classe SqlServerAlias](sqlserveralias-class.md) herda o `Put` método da classe Provider. Porém, ela não retorna nenhum resultado como indicado pelo método `Provider::Put`. Para obter mais informações, consulte a documentação do WMI.  
+ **Observação:** O [classe SqlServerAlias](sqlserveralias-class.md) herda o `Put` método da classe Provider. Porém, ela não retorna nenhum resultado como indicado pelo método `Provider::Put`. Para obter mais informações, consulte a documentação do WMI.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677675"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979912"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para SQL Server
 
@@ -274,10 +274,10 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
    sudo firewall-cmd --reload
    ```
 
-   > Se você estiver usando outro firewall que não tenha uma configuração de alta disponibilidade interna, as portas a seguir precisarão ser abertas para que o Pacemaker seja capaz de se comunicar com outros nós no cluster
+   > Se você estiver usando outro firewall que não tem uma configuração de alta disponibilidade interna, as seguintes portas precisam ser abertas para o Pacemaker seja capaz de se comunicar com outros nós no cluster
    >
-   > * TCP: portas 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Portas 2224, 3121, 21064
+   > * UDP: Porta 5405
 
 1. Instale os pacotes do Pacemaker em cada nó.
 
@@ -285,7 +285,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Defina a senha do usuário padrão criado ao instalar pacotes do Pacemaker e do Corosync. Use a mesma senha em ambos os nós. 
 
@@ -293,7 +293,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. Habilite e inicie o serviço `pcsd` e o Pacemaker. Isso permitirá que os nós reingressem no cluster após a reinicialização. Execute o comando a seguir em ambos os nós.
 
@@ -314,8 +314,8 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
 1. Em um de nós, crie o cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
 
 2. Configurar os recursos de cluster para o SQL Server, sistema de arquivos e recursos IP virtuais e enviar por push a configuração para o cluster. Você precisa das seguintes informações:
 
-   - **Nome de recurso do SQL Server**: um nome para o recurso clusterizado do SQL Server. 
-   - **Flutuante nome do recurso IP**: um nome para o recurso de endereço IP virtual.
+   - **Nome de recurso do SQL Server**: Um nome para o recurso clusterizado do SQL Server. 
+   - **Flutuante nome do recurso IP**: Um nome para o recurso de endereço IP virtual.
    - **Endereço IP**: O endereço IP que os clientes usarão para se conectar à instância clusterizada do SQL Server. 
-   - **Nome de recurso do sistema de arquivos**: um nome para o recurso de sistema de arquivos.
-   - **dispositivo**: caminho de compartilhamento de NFS a
+   - **Nome de recurso do sistema de arquivos**: Um nome para o recurso de sistema de arquivos.
+   - **dispositivo**: Caminho de compartilhamento de NFS
    - **dispositivo**: O caminho local que ele está montado no compartilhamento
-   - **fsType**: tipo de compartilhamento de arquivo (ou seja, nfs)
+   - **fsType**: Tipo de compartilhamento de arquivo (ou seja, nfs)
 
    Atualize os valores do script a seguir para o seu ambiente. Execute em um nó para configurar e iniciar o serviço clusterizado.  
 
@@ -370,7 +370,7 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para executar 
    sudo pcs status 
    ```
 
-   Os exemplos a seguir mostram os resultados quando o Pacemaker com êxito iniciou uma instância clusterizada do SQL Server. 
+   Os exemplos a seguir mostra os resultados quando o Pacemaker foi iniciado com êxito uma instância clusterizada do SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

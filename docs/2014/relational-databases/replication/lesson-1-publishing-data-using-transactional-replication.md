@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Publicando dados que usam a replicação transacional | Microsoft Docs'
+title: 'Lição 1: Publicando dados usando a replicação transacional | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226586"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590560"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: publicando dados que usam replicação transacional
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: Publicando dados que usam replicação transacional
   Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
@@ -51,7 +51,7 @@ ms.locfileid: "48226586"
   
 10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo** .  
   
-11. Clique em **Configurações de Segurança** do Agente de Instantâneo, insira \<*Machine_Name>***\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e, em seguida, clique em **OK**.  
+11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
   
 12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226586"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione *<Machine_Name>***\repl_distribution** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_**\repl_distribution** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar os dados publicados](publish/filter-published-data.md)   

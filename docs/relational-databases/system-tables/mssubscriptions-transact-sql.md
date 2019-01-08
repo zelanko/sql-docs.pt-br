@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,19 +18,19 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728854"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823590"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSsubscriptions** tabela contém uma linha para cada artigo publicado em uma assinatura servida pelo distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|A ID do banco de dados Publicador.|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47728854"
 |**snapshot_seqno_flag**|**bit**|Indica a origem do número de sequência da transação de instantâneo, onde um valor de **1** significa que **subscription_seqno** é o número de sequência do instantâneo.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
 |**subscription_time**|**datetime**|Somente para uso interno.|  
-|**loopback_detection**|**bit**|Aplica-se a assinaturas que fazem parte de uma topologia de replicação transacional bidirecional. A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **1** = não envia de volta.<br /><br /> **0** = envia de volta.<br /><br /> Observação: Esta coluna é suportada somente para compatibilidade com versões anteriores com a funcionalidade de replicação bidirecional no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para versões posteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deve ser usada replicação ponto a ponto. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Aplica-se a assinaturas que fazem parte de uma topologia de replicação transacional bidirecional. A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **1** = não envia de volta.<br /><br /> **0** = envia de volta.<br /><br /> Observação: Essa coluna só tem suporte para compatibilidade com versões anteriores com a funcionalidade de replicação bidirecional no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para versões posteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deve ser usada replicação ponto a ponto. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|A ID do agente.|  
 |**update_mode**|**tinyint**|O tipo de atualização.|  
 |**publisher_seqno**|**varbinary(16)**|O número de sequência da transação no Publicador para esta assinatura.|  

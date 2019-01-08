@@ -14,12 +14,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140776"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358548"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   As seguintes restrições se aplicam ao usar o SQLPutData para enviar mais de 65.535 bytes de dados (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 4.21a) ou 400 KB de dados (para SQL Server versão 6.0 e posterior) para um SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) ou SQL_LONGVARBINARY (`image`) coluna:  
@@ -36,7 +36,7 @@ ms.locfileid: "48140776"
 ## <a name="diagnostics"></a>Diagnóstico  
  Há um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico do Native Client para o SQLPutData:  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |22026|Incompatibilidade de comprimento de dados String|Se o comprimento dos dados em bytes a ser enviado tiver sido especificado por um aplicativo, por exemplo, com o SQL_LEN_DATA_AT_EXEC (*n*) em que *n* for maior que 0, o número total de bytes fornecido pelo aplicativo por meio de SQLPutData deve corresponder ao comprimento especificado.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48140776"
   
  O *DataPtr* parâmetro é ignorado, mas deve ser definido como um valor não nulo. Para obter mais informações, consulte a seção sobre a associação de linha de variáveis TVP em [associação e Data Transfer of Table-Valued parâmetros e valores de coluna](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Se *StrLen_Or_Ind* tem qualquer valor diferente de SQL_DEFAULT_PARAM ou um número entre 0 e SQL_PARAMSET_SIZE (ou seja, o *ColumnSize* parâmetro de SQLBindParameter), é um erro. Esse erro faz SQLPutData retornar SQL_ERROR: SQLSTATE=HY090, "Comprimento de buffer ou de cadeia de caracteres inválido".  
+ Se *StrLen_Or_Ind* tem qualquer valor diferente de SQL_DEFAULT_PARAM ou um número entre 0 e SQL_PARAMSET_SIZE (ou seja, o *ColumnSize* parâmetro de SQLBindParameter), é um erro. Esse erro faz SQLPutData retornar SQL_ERROR: SQLSTATE SQLSTATE=hy090, "Comprimento inválido de buffer ou cadeia de caracteres".  
   
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140776"
  `SQLPutData` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLPutData](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [Função SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

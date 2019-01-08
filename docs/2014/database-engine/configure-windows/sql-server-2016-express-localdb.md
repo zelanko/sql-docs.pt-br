@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -17,29 +16,29 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368298"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` é um modo de execução do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destinado a desenvolvedores de programa. `LocalDB` instalação copia um conjunto mínimo de arquivos necessários para iniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Uma vez `LocalDB` é instalado, os desenvolvedores iniciam uma conexão usando uma cadeia de conexão especial. Ao se conectar, o necessário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infraestrutura é automaticamente criada e iniciada, permitindo que o aplicativo usar o banco de dados sem tarefas de configuração complexas ou demoradas. O Developer Tools pode fornecer aos desenvolvedores um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que permite que eles gravem e testem o código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem precisar gerenciar uma instância de servidor inteira do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` é gerenciado por meio de `SqlLocalDB.exe` utilitário. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` deve ser usado em vez do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] recurso de instância de usuário que foi preterido.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` é um modo de execução do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destinado a desenvolvedores de programa. `LocalDB` instalação copia um conjunto mínimo de arquivos necessários para iniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Uma vez `LocalDB` é instalado, os desenvolvedores iniciam uma conexão usando uma cadeia de conexão especial. Na conexão, a infraestrutura necessária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é criada e iniciada automaticamente, permitindo que o aplicativo use o banco de dados sem tarefas de configuração complexas ou demoradas. O Developer Tools pode fornecer aos desenvolvedores um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que permite que eles gravem e testem o código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem precisar gerenciar uma instância de servidor inteira do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` é gerenciado por meio de `SqlLocalDB.exe` utilitário. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` deve ser usado em vez do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] recurso de instância de usuário que foi preterido.  
   
 ## <a name="installing-localdb"></a>Instalando o LocalDB  
  O principal método de instalação `LocalDB` é usando o programa Sqllocaldb. `LocalDB` é uma opção na instalação de qualquer SKU do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. Selecione `LocalDB` sobre o **seleção de recursos** página durante a instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pode haver apenas uma instalação do `LocalDB` arquivos binários para cada principal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versão. Vários processos do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser iniciados e todos usarão os mesmos binários. Uma instância das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] começou como o `LocalDB` tem as mesmas limitações do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O `LocalDB` programa de instalação usa o programa Sqllocaldb para instalar os arquivos necessários no computador. Uma vez instalado, `LocalDB` é uma instância de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que pode criar e abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados. Os arquivos de banco de dados do sistema para o banco de dados são armazenados no caminho de AppData local dos usuários, que normalmente é oculto. Por exemplo **C:\Usuários\\<usuário\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\\**. Os arquivos de banco de dados do usuário são armazenados onde o usuário determina, normalmente em algum lugar da pasta **C:\Usuários\\<usuário\>\Documents\\**.  
   
- Para obter mais informações sobre como incluir `LocalDB` em um aplicativo, consulte a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentação [visão geral de dados locais](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [passo a passo: Criando um banco de dados do SQL Server LocalDB](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), e [Instruções passo a passo: conectando a dados em um banco de dados do SQL Server LocalDB (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ Para obter mais informações sobre como incluir `LocalDB` em um aplicativo, consulte a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentação [visão geral de dados locais](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [passo a passo: Criando um banco de dados do SQL Server LocalDB](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), e [passo a passo: Conectando a dados em um banco de dados do SQL Server LocalDB (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
- Para obter mais informações sobre o `LocalDB` API, consulte [SQL Server Express LocalDB instância referência da API](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) e [função LocalDBStartInstance](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ Para obter mais informações sobre o `LocalDB` API, consulte [SQL Server Express LocalDB instância referência da API](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) e [função LocalDBStartInstance](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
   
  O utilitário SqlLocalDb pode criar novas instâncias de `LocalDB`, iniciar e interromper uma instância do `LocalDB`e inclui opções para ajudá-lo a gerenciar `LocalDB`.  Para obter mais informações sobre o utilitário SqlLocalDb, consulte [Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
- O agrupamento de instância para `LocalDB` é definido como SQL_Latin1_General_CP1_CI_AS e não pode ser alterado. Normalmente há suporte para agrupamentos nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de agrupamentos tempdb definidas por [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
+ O agrupamento de instância para `LocalDB` é definido como SQL_Latin1_General_CP1_CI_AS e não pode ser alterado. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de ordenações tempdb definidas por [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).  
   
 ### <a name="restrictions"></a>Restrictions  
  `LocalDB` não pode ser um assinante de replicação de mesclagem.  
@@ -51,16 +50,16 @@ ms.locfileid: "48158946"
  Uma instância de `LocalDB` pertencentes as contas internas, como NT AUTHORITY\SYSTEM pode ter problemas de capacidade de gerenciamento devido ao redirecionamento de sistema de arquivos do windows. Em vez disso, use uma conta normal do windows como o proprietário.  
   
 ### <a name="automatic-and-named-instances"></a>Instâncias automáticas e nomeadas  
- `LocalDB` dá suporte a dois tipos de instâncias: instâncias automáticas e instâncias nomeadas.  
+ `LocalDB` dá suporte a dois tipos de instâncias: Instâncias automáticas e instâncias nomeadas.  
   
--   As instâncias automáticas do `LocalDB` são públicos. Elas são criadas e gerenciadas automaticamente para o usuário e podem ser usadas por qualquer aplicativo. Uma instância automática do `LocalDB` existe para todas as versões do `LocalDB` instalado no computador do usuário. As instâncias automáticas do `LocalDB` fornecem gerenciamento de instância contínuo. Não há necessidade de criar a instância; assim é o suficiente. Isso facilita a instalação e migração do aplicativo para um computador diferente. Se o computador de destino tiver a versão especificada do `LocalDB` instalado, a instância automática do `LocalDB` para que a versão está disponível no computador de destino. As instâncias automáticas do `LocalDB` têm um padrão especial para o nome da instância que pertence a um namespace reservado. Isso evita conflitos de nomes com instâncias nomeadas do `LocalDB`. O nome da instância automática é **MSSQLLocalDB**.  
+-   As instâncias automáticas do `LocalDB` são públicos. Elas são criadas e gerenciadas automaticamente para o usuário e podem ser usadas por qualquer aplicativo. Uma instância automática do `LocalDB` existe para todas as versões do `LocalDB` instalado no computador do usuário. As instâncias automáticas do `LocalDB` fornecem gerenciamento de instância contínuo. Não há necessidade de criar a instância; assim é o suficiente. Isso facilita a instalação e migração do aplicativo para um computador diferente. Se o computador de destino tiver a versão especificada do `LocalDB` instalada, a instância automática do `LocalDB` para essa versão também estará disponível no computador de destino. As instâncias automáticas do `LocalDB` têm um padrão especial para o nome da instância que pertence a um namespace reservado. Isso evita conflitos de nomes com instâncias nomeadas do `LocalDB`. O nome da instância automática é **MSSQLLocalDB**.  
   
 -   Instâncias nomeadas do `LocalDB` são particulares. Elas pertencem a um único aplicativo, que é responsável por criar e gerenciar a instância. As instâncias nomeadas fornecem isolamento de outras instâncias e melhoram o desempenho reduzindo a contenção de recursos com outros usuários de banco de dados. Instâncias nomeadas devem ser criadas explicitamente pelo usuário através do `LocalDB` API de gerenciamento ou implicitamente por meio de App. config de arquivos para um aplicativo gerenciado (embora o aplicativo gerenciado também possa usar a API, se desejado). Cada instância nomeada do `LocalDB` tem um associado `LocalDB` versão que aponta para o conjunto respectivo de `LocalDB` binários. O nome da instância de um `LocalDB` é `sysname` dados de tipo e pode ter até 128 caracteres. (Isso difere das instâncias nomeadas normais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que limitam os nomes a nomes NetBIOS normais de 16 caracteres ASCII.) O nome de uma instância de `LocalDB` pode conter qualquer caractere Unicode legal em um nome de arquivo.  Uma instância nomeada que usa um nome de instância automático torna-se uma instância automática.  
   
  Usuários diferentes de um computador podem ter instâncias com o mesmo nome. Cada instância é um processo diferente executado como um usuário diferente.  
   
 ## <a name="shared-instances-of-localdb"></a>Instâncias compartilhadas do LocalDB  
- Para dar suporte a cenários onde vários usuários do computador precisam se conectar a uma única instância de `LocalDB`, `LocalDB` oferece suporte ao compartilhamento de instância. O proprietário de uma instância pode optar por permitir que os outros usuários do computador se conectem à sua instância. Instâncias automáticas e nomeadas do `LocalDB` podem ser compartilhados. Para compartilhar uma instância de `LocalDB` um usuário seleciona um nome compartilhado (alias) para ele. Como o nome compartilhado fica visível para todos os usuários do computador, ele deve ser exclusivo no computador. O nome compartilhado de uma instância do `LocalDB` tem o mesmo formato que a instância nomeada do `LocalDB`.  
+ Para dar suporte a cenários onde vários usuários do computador precisam se conectar a uma única instância de `LocalDB`, `LocalDB` oferece suporte ao compartilhamento de instância. O proprietário de uma instância pode optar por permitir que os outros usuários do computador se conectem à sua instância. Instâncias automáticas e nomeadas do `LocalDB` podem ser compartilhados. Para compartilhar uma instância do `LocalDB`, o usuário seleciona um nome compartilhado (alias) para isso. Como o nome compartilhado fica visível para todos os usuários do computador, ele deve ser exclusivo no computador. O nome compartilhado de uma instância do `LocalDB` tem o mesmo formato que a instância nomeada do `LocalDB`.  
   
  Somente um administrador no computador pode criar uma instância compartilhada do `LocalDB`. Uma instância compartilhada do `LocalDB` pode ser descompartilhada por um administrador ou pelo proprietário da instância compartilhada do `LocalDB`. Para compartilhar e descompartilhar uma instância do `LocalDB`, use o `LocalDBShareInstance` e `LocalDBUnShareInstance` métodos do `LocalDB` API, ou o compartilhamento e descompartilhadas opções do utilitário SqlLocalDb.  
   
@@ -92,7 +91,7 @@ REM Gather information about the instance of LocalDB
 |Versão|\<Current Version>|  
 |Nome compartilhado|""|  
 |Proprietário|“\<Your Windows User>”|  
-|Criar automaticamente|não|  
+|Criar automaticamente|Não|  
 |Estado|executando|  
 |Hora da última inicialização|\<Date and Time>|  
 |Nome do pipe da instância|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -104,7 +103,7 @@ REM Gather information about the instance of LocalDB
  Para se conectar a uma instância compartilhada do `LocalDB` adicione **.\\**  (ponto + barra invertida) à cadeia de conexão para fazer referência ao namespace reservado para instâncias compartilhadas. Por exemplo, para se conectar a uma instância compartilhada do `LocalDB` nomeado `AppData` usar uma cadeia de caracteres de conexão, como `(localdb)\.\AppData` como parte da cadeia de conexão. Um usuário se conectar a uma instância compartilhada do `LocalDB` que não possuem deve ter uma autenticação do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de autenticação.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Para obter informações sobre solução de problemas `LocalDB`, consulte [solução de problemas de SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
+ Para obter informações sobre solução de problemas `LocalDB`, consulte [solução de problemas de SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## <a name="permissions"></a>Permissões  
  Uma instância do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` é uma instância criada por um usuário para seu uso. Qualquer usuário no computador pode criar um banco de dados usando uma instância de `LocalDB`, armazenando arquivos sob o seu perfil de usuário e executar o processo sob suas credenciais. Por padrão, o acesso à instância do `LocalDB` é limitado a seu proprietário. Os dados contidos no `LocalDB` é protegido pelo acesso de sistema de arquivos para os arquivos de banco de dados. Se os arquivos de banco de dados do usuário são armazenados em um local compartilhado, o banco de dados pode ser aberto por qualquer pessoa com acesso de sistema de arquivos para esse local usando uma instância de `LocalDB` que eles possuem. Se os arquivos de banco de dados estiverem em um local protegido, como a pasta de dados de usuários, somente esse usuário e os administradores com acesso a essa pasta poderão abrir o banco de dados. O `LocalDB` arquivos só podem ser abertos por uma instância de `LocalDB` por vez.  

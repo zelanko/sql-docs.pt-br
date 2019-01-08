@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372658"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2014)
 A linguagem de expressão de análise de dados (DAX) pode ser usada para criar medidas e outras fórmulas personalizadas para uso em modelos de tabela do Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados em pastas de trabalho do Excel e modelos de dados do Power BI Desktop. Na maioria dos aspectos, os modelos que você cria nesses ambientes são idênticos, e você pode usar o mesmo medidas, relações e KPIs, etc. No entanto, se você cria um modelo de tabela do Analysis Services e implantá-lo no modo DirectQuery, há algumas restrições sobre as fórmulas que você pode usar. Este tópico fornece uma visão geral dessas diferenças, lista as funções que não são suportadas no modelo do SQL Server 2014 Analysis Services tabulars no nível de compatibilidade 1100 ou 1103 e no modo DirectQuery, e lista as funções que têm suporte, mas talvez retorne resultados diferentes.  
   
-Neste tópico, usamos o termo *modelo na memória* para se referir aos modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos do DirectQuery* para se referir aos modelos de tabela que tiveram sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+Neste tópico, usamos o termo *modelo na memória* para se referir aos modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos do DirectQuery* para se referir aos modelos de tabela que tiveram sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Diferenças entre os modos na memória e DirectQuery  
@@ -51,16 +51,16 @@ As seguintes comparações sempre retornarão um erro quando usadas em um cálcu
 Em geral, a DAX é mais tolerante com incompatibilidades de tipo de dados em modelos na memória e tentará uma conversão implícita de valores até duas vezes, conforme descrito nesta seção. No entanto, as fórmulas enviadas a um repositório de dados relacional no modo DirectQuery são avaliadas com mais rigor, de acordo com as regras do mecanismo relacional e apresentam maior probabilidade de falha.  
   
 **Comparações de cadeias de caracteres e números**  
-EXEMPLO: `“2” < 3`  
+EXEMPLO: `"2" < 3`  
   
 A fórmula compara uma cadeia de caracteres de texto a um número. A expressão é **true** no modo DirectQuery e em modelos na memória.  
   
 Em um modelo na memória, o resultado é **true** porque números como cadeias de caracteres são convertidos implicitamente em um tipo de dados numérico para comparações com outros números. O SQL também converte implicitamente números de texto como números para comparação com tipos de dados numéricos.  
   
-Observe que isso representa uma alteração no comportamento da primeira versão do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], que retornaria **false**, pois o texto “2” sempre seria considerado maior do que qualquer número.  
+Observe que isso representa uma alteração no comportamento da primeira versão do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], que retornaria **falso**, porque o texto "2" sempre seria considerado maior do que qualquer número.  
   
 **Comparação de texto com booliano**  
-EXEMPLO: `“VERDADERO” = TRUE`  
+EXEMPLO: `"VERDADERO" = TRUE`  
   
 Esta expressão compara uma cadeia de caracteres de texto com um valor booliano. Em geral, para modelos DirectQuery ou Na Memória, a comparação de um valor de cadeia de caracteres com um valor booliano resulta em um erro. As únicas exceções à regra ocorrem quando a cadeia de caracteres contém as palavras **true** ou **false**; se a cadeia de caracteres contiver um dos valores true ou false, uma conversão em booliano será feita e a comparação ocorrerá, apresentando o resultado lógico.  
   
@@ -80,7 +80,7 @@ Não há nenhuma função de conversão como na DAX, mas conversões implícitas
 -   Valores boolianos sempre são tratados como valores lógicos em comparações e quando usados com EXACT, AND, OR, &amp;&amp;ou ||.  
   
 **Conversão de cadeia de caracteres em booliano**  
-Em modelos na memória e DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **“”** (cadeia de caracteres vazia), **“true”**, **“false”**; em que uma cadeia de caracteres vazia é convertida em um valor falso.  
+Na memória e modelos do DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **""** (cadeia de caracteres vazia), **"true"**, **"false"**; onde uma cadeia de caracteres vazia conversões de valor falso.  
   
 As conversões no tipo de dados Boolean de qualquer outra cadeia de caracteres resultam em um erro.  
   
@@ -92,10 +92,10 @@ Para obter informações sobre as regras que controlam conversões de cadeia de 
 Os modelos que usam o repositório de dados na memória oferecem suporte a um intervalo mais limitado de formatos de texto para datas que os formatos de cadeias de caracteres para datas que têm suporte no SQL Server. No entanto, a DAX oferece suporte a formatos de data e hora personalizados.  
   
 **Conversão de cadeia de caracteres em outros valores não boolianos**  
-Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Não é permitido converter de números em cadeia de caracteres**  
-EXEMPLO: `CONCATENATE(102,”,345”)`  
+EXEMPLO: `CONCATENATE(102,",345")`  
   
 A conversão de números em cadeias de caracteres não é permitida no SQL Server.  
   
@@ -104,7 +104,7 @@ Esta fórmula retorna um erro em modelos tabulares e no modo DirectQuery; no ent
 **Não há suporte para conversões em duas tentativas no DirectQuery**  
 Com frequência, os modelos na memória tentam uma segunda conversão quando a primeira falha. Isso nunca acontece no modo DirectQuery.  
   
-EXEMPLO: `TODAY() + “13:14:15”`  
+EXEMPLO: `TODAY() + "13:14:15"`  
   
 Nessa expressão, o primeiro parâmetro tem o tipo **datetime** e o segundo tem o tipo **string**. No entanto, as conversões durante a combinação dos operandos são tratadas de modo diferente. A DAX executará uma conversão implícita de **string** em **double**. Nos modelos na memória, o mecanismo da fórmula tentará converter diretamente em **double**e, se falhar, tentará converter a cadeia de caracteres em **datetime**.  
   
@@ -129,7 +129,7 @@ No Transact-SQL, as operações que resultam em um estouro numérico retornam um
 No entanto, quando usada em um modelo na memória, a mesma fórmula retorna um número inteiro de oito bytes. Isso ocorre porque o mecanismo da fórmula não executa verificações de estouros numéricos.  
   
 **Funções LOG com espaços em branco retornam resultados diferentes**  
-O SQL Server trata nulos e espaços em branco de modo diferente do mecanismo xVelocity. Com isso, a fórmula a seguir retorna um erro no modo DirectQuery, mas retorna infinito no modo (-inf) na memória.  
+O SQL Server trata nulos e espaços em branco de modo diferente do mecanismo xVelocity. Como resultado, a fórmula a seguir retorna um erro no modo DirectQuery, mas retorna infinito (-inf) no modo na memória.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -226,7 +226,7 @@ No modo DirectQuery, se o resultado de uma operação aritmética tiver o tipo *
   
 -   Mínimo: -922337203685477,5808  
   
--   Máximo: 922337203685477,5807  
+-   Máximo: 922337203685477.5807  
   
 **Combinação dos tipos de dados currency e REAL**  
 EXEMPLO: `Currency sample 1`  
@@ -259,18 +259,18 @@ Em geral, qualquer função de manipulação de cadeia de caracteres que use col
 Além disso, no SQL Server, algumas funções de texto oferecem suporte para argumentos adicionais que não são fornecidos no Excel. Se a fórmula exigir o argumento ausente, você poderá obter resultados diferentes ou erros no modelo na memória.  
   
 **Operações que retornam um caractere usando LEFT, RIGHT etc. podem retornar o caractere correto, mas com o uso de maiúsculas/minúsculas diferente, ou nenhum resultado**  
-EXEMPLO: `LEFT([“text”], 2)`  
+EXEMPLO: `LEFT(["text"], 2)`  
   
 No modo DirectQuery, o uso de maiúsculas/minúsculas do caractere retornado sempre é exatamente igual ao da letra armazenada no banco de dados. No entanto, o mecanismo xVelocity usa um algoritmo diferente para compactação e indexação de valores, para melhorar o desempenho.  
   
 Por padrão, é usada a ordenação Latin1_General, que não diferencia maiúsculas/minúsculas, mas diferencia acentos. Portanto, se houver várias instâncias de uma cadeia de caracteres de texto em minúsculas, maiúsculas ou minúsculas/maiúsculas, todas as instâncias serão consideradas a mesma cadeia de caracteres e somente a primeira instância da cadeia de caracteres será armazenada no índice. Todas as funções de texto que operam em cadeias de caracteres armazenadas recuperarão a parte especificada do formulário indexado. Assim, a fórmula de exemplo retornaria o mesmo valor de toda a coluna, usando a primeira instância como a entrada.  
   
-[Ordenação e armazenamento de cadeia de caracteres em modelos tabulares](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Ordenação e armazenamento de cadeia de caracteres em modelos tabulares](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Esse comportamento também se aplica a outras funções de texto, incluindo RIGHT, MID etc.  
   
 **O comprimento da cadeia de caracteres afeta os resultados**  
-EXEMPLO: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+EXEMPLO: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 Se você procurar uma cadeia de caracteres usando a função SEARCH, e a cadeia de caracteres de destino for maior do que a cadeia de caracteres interna, o modo DirectQuery gerará um erro.  
   
@@ -283,21 +283,21 @@ Se o comprimento da cadeia de caracteres de substituição for maior que o compr
 Em modelos na memória, a fórmula seguirá o comportamento do Excel, que concatena a cadeia de caracteres de origem e a cadeia de caracteres de substituição, que retorna CACalifornia.  
   
 **TRIM implícito no meio das cadeias de caracteres**  
-EXEMPLO: `TRIM(“ A sample sentence with leading white space”)`  
+EXEMPLO: `TRIM(" A sample sentence with leading white space")`  
   
 O modo DirectQuery traduz a função DAX TRIM na instrução SQL `LTRIM(RTRIM(<column>))`. Assim, somente os espaços em branco à esquerda e à direita são removidos.  
   
 Em contrapartida, a mesma fórmula em um modelo na memória remove espaços na cadeia de caracteres, de acordo com o comportamento do Excel.  
   
 **RTRIM implícito com o uso da função LEN**  
-EXEMPLO: `LEN(‘string_column’)`  
+EXEMPLO: `LEN('string_column')`  
   
 Como o SQL Server, o modo DirectQuery remove automaticamente o espaço em branco da extremidade das colunas de cadeia de caracteres: ou seja, ele executa um RTRIM implícito. Assim, as fórmulas que usam a função LEN poderão retornar valores diferentes se a cadeia de caracteres tiver espaços à direita.  
   
 **O modo Na Memória tem suporte para parâmetros adicionais para SUBSTITUTE**  
-EXEMPLO: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+EXEMPLO: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-EXEMPLO: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+EXEMPLO: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 No modo DirectQuery, você pode usar apenas a versão dessa função que tem três (3) parâmetros: uma referência a uma coluna, o texto antigo e o novo texto. Se você usar a segunda fórmula, um erro será gerado.  
   
@@ -429,7 +429,7 @@ RAND
   
 RANDBETWEEN  
   
-**Funções de inteligência de tempo: datas de início e término**  
+**Funções de inteligência de tempo: Datas de início e término**  
   
 DATESQTD  
   
@@ -453,7 +453,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**Funções de inteligência de dados temporais: saldos**  
+**Funções de inteligência de tempo: Saldos**  
   
 OPENINGBALANCEMONTH  
   
@@ -467,7 +467,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**Funções de inteligência de tempo: períodos anteriores e posteriores**  
+**Funções de inteligência de tempo: Períodos anteriores e posteriores**  
   
 PREVIOUSDAY  
   
@@ -485,7 +485,7 @@ NEXTQUARTER
   
 NEXTYEAR  
   
-**Funções de inteligência de tempo: períodos e cálculos sobre períodos**  
+**Funções de inteligência de tempo: Períodos e cálculos sobre períodos**  
   
 STARTOFMONTH  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Confira também  
-[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modo DirectQuery (SSAS tabular)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

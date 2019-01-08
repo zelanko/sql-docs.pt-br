@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: consultando colunas de tipo XML | Microsoft Docs'
+title: 'Exemplo: Consultando colunas XMLType | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ae1077d933d9872e3b5691e6233af4b82d61d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0457f9eddad9130e5b486cd09e754c2059a586a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218156"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373848"
 ---
-# <a name="example-querying-xmltype-columns"></a>Exemplo: Consultando colunas de tipo XML
-  A consulta a seguir inclui colunas de `xml` tipo. A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo `xml`.  
+# <a name="example-querying-xmltype-columns"></a>Exemplo: Consultando colunas XMLType
+  A consulta a seguir inclui colunas de tipo `xml`. A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo `xml`.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -29,7 +29,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ')   
 FROM Production.ProductModel  
@@ -55,7 +55,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -83,7 +83,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  

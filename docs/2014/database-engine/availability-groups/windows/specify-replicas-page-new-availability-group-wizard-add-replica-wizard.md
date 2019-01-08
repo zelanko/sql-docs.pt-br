@@ -1,5 +1,5 @@
 ---
-title: 'Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica) | Microsoft Docs'
+title: 'Página especificar réplicas (Assistente de novo grupo de disponibilidade: Assistente para adicionar réplica) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,31 +14,31 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1928b48145367e2bdd1ed183ac16230c5b7374fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172356"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371568"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página especificar réplicas (Assistente de novo grupo de disponibilidade: Assistente para adicionar réplica)
   Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
 |Tab|Descrição breve|  
 |---------|-----------------------|  
-|[Réplicas](#ReplicasTab)|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará ou que hospeda uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.<br /><br /> Dica: termine de especificar todas as réplicas na guia **Réplicas** antes de iniciar as outras guias.|  
+|[Réplicas](#ReplicasTab)|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará ou que hospeda uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.<br /><br /> Dica: Termine de especificar todas as réplicas na guia **Réplicas** antes de iniciar as outras guias.|  
 |[Pontos de extremidade](#EndpointsTab)|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.|  
 |[Preferências de backup](#BackupPreferencesTab)|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
-|[Ouvinte](#Listener)|Use esta guia, se disponível, para criar um ouvinte de grupo de disponibilidade. Por padrão, não é criado um ouvinte.<br /><br /> Observação: esta guia estará disponível apenas se você estiver executando o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
+|[Ouvinte](#Listener)|Use esta guia, se disponível, para criar um ouvinte de grupo de disponibilidade. Por padrão, não é criado um ouvinte.<br /><br /> Observação: Esta guia estará disponível apenas se você estiver executando o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
   
 ##  <a name="ReplicasTab"></a> Guia Réplicas  
  **Instância do Servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
- Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Se você estiver configurando um grupo de disponibilidade em um ambiente de TI híbrido (consulte [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Microsoft Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Microsoft Azure.  
+ Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Se você estiver configurando um grupo de disponibilidade em um ambiente de TI híbrido (consulte [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Microsoft Azure.  
   
  **Função inicial**  
- Indica a função que a nova réplica executará inicialmente: **Primária** ou **Secundária**.  
+ Indica a função que a nova réplica executará inicialmente: **Primário** ou **secundário**.  
   
  **Failover automático (até 2)**  
  Marque esta caixa de seleção se você desejar que esta réplica de disponibilidade seja um parceiro de failover automático. Para configurar o failover automático, você deve escolher essa opção para a réplica primária inicial e para uma réplica secundária. Essas duas réplicas usarão o modo de disponibilidade da confirmação síncrona. Apenas duas réplicas podem dar suporte a failover automático.  
@@ -66,7 +66,7 @@ ms.locfileid: "48172356"
  Clique para adicionar uma réplica secundária ao grupo de disponibilidade.  
   
  **Adicionar Réplica do Azure**  
- Clique para criar uma máquina virtual do Windows Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, consulte [Alta disponibilidade e recuperação de desastres para o SQL Server em máquinas virtuais do Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Clique para criar uma máquina virtual do Windows Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, consulte [Alta disponibilidade e recuperação de desastres para o SQL Server em máquinas virtuais do Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remover Réplica**  
  Clique para remover a réplica secundária especificada do grupo de disponibilidade.  
@@ -188,9 +188,9 @@ ms.locfileid: "48172356"
  **Sub-rede**  
  Se você selecionou **DHCP** como o modo de rede, use a lista suspensa **Sub-rede** para selecionar um endereço para a sub-rede que hospeda as réplicas de disponibilidade do grupo de disponibilidade.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Depois que você definir um ouvinte de grupo de disponibilidade, será altamente recomendável fazer o seguinte:  
->   
+> 
 >  -   Peça ao administrador da rede para reservar o endereço IP do ouvinte para seu uso exclusivo. Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
 > -   Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
   

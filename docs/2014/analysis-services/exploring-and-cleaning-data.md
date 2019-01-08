@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541231"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorando e limpando dados
   A preparação dos dados é muito mais do que limpeza de dados. Lembre-se de que o modo como os dados são preparados também afeta como os resultados são interpretados no final. A preparação dos dados envolve as seguintes tarefas:  
@@ -69,7 +69,7 @@ ms.locfileid: "48080466"
   
 -   Guarde os dados, criando grupos que representam intervalos de número.  
   
-     Por exemplo, você talvez queira substituir uma coluna de receita de números por rótulos como **renda – moderada** e **renda – alta**.  
+     Por exemplo, você talvez queira substituir uma coluna de receita de números por rótulos como **receita - moderada** e **receita - alta**.  
   
 -   Recolher valores discretos em categorias.  
   

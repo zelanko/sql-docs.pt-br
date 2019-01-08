@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209445"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Adiciona um dispositivo de backup a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,10 +51,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  [  **@devtype=** ] **'***device_type***'**  
  É o tipo do dispositivo de backup. *device_type* está **varchar(20)**, sem padrão e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**disco**|Arquivo de disco rígido como dispositivo de backup.|  
-|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
   
  [  **@logicalname =** ] **'***logical_name***'**  
  É o nome lógico do dispositivo de backup usado na instruções BACKUP e RESTORE. *logical_name* está **sysname**, sem padrão, e não pode ser NULL.  
@@ -110,7 +110,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>B. Adicionando um dispositivo de backup de disco de rede  
+### <a name="b-adding-a-network-disk-backup-device"></a>b. Adicionando um dispositivo de backup de disco de rede  
  O exemplo a seguir mostra a adição de um dispositivo de backup de disco remoto denominado `networkdevice`. O nome sob o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado deve ter permissões para aquele arquivo remoto (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  

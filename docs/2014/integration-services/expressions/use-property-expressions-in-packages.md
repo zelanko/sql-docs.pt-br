@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,17 +19,17 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373368"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
   
- Uma expressão pode ser adicionada a um pacote, tarefa, Loop Foreach, Loop For, Sequência, enumerador Foreach, manipulador de eventos, gerenciador de conexões de um pacote ou nível de projeto ou provedor de logs. Qualquer propriedade desses objetos que são de leitura/gravação pode implementar uma expressão de propriedade. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também dá suporte ao uso de expressões de propriedade em algumas propriedades personalizadas de componentes de fluxo de dados. As variáveis e as restrições de precedência não oferecem suporte às expressões de propriedade, mas elas incluem propriedades especiais que permitem o uso de expressões.  
+ Uma expressão pode ser adicionada a um pacote, tarefa, Loop Foreach, Loop For, Sequência, enumerador Foreach, manipulador de eventos, gerenciador de conexões de um pacote ou nível de projeto ou provedor de logs. Qualquer propriedade desses objetos que são de leitura/gravação pode implementar uma expressão de propriedade. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também dá suporte ao uso de expressões de propriedade em algumas propriedades personalizadas de componentes de fluxo de dados. As variáveis e as restrições de precedência não oferecem suporte às expressões de propriedade, mas elas incluem propriedades especiais que permitem o uso de expressões.  
   
  As expressões de propriedade podem ser atualizadas de diferentes maneiras:  
   
@@ -53,10 +52,10 @@ ms.locfileid: "48085726"
   
  Uma propriedade pode usar só uma expressão de propriedade e uma expressão de propriedade só pode ser aplicada a uma propriedade. Entretanto, você pode construir várias expressões de propriedade idênticas e atribuí-las a diferentes propriedades.  
   
- Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a `LoggingMode` propriedade, que usa um valor da `DTSLoggingMode` enumeração, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis `Enabled`, `Disabled`, ou `UseParentSetting`. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](enumerated-constants-in-property-expressions.md).  
+ Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade `LoggingMode`, que usa um valor da enumeração `DTSLoggingMode`, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis `Enabled`, `Disabled` ou `UseParentSetting`. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface de Usuário da Expressão de Propriedade  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Fornece um conjunto de ferramentas para criar e gerenciar as expressões de propriedade.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de ferramentas para construir e gerenciar as expressões de propriedade.  
   
 -   A página **Expressões** , localizada nos editores personalizados para tarefas, o contêiner do Loop For e os contêineres Foreach. A página **Expressões** permite editar as expressões e exibir uma lista de expressões de propriedade que usados por uma tarefa, por um Loop Foreach ou por um Loop For.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085726"
   
  ![A interface do usuário para expressões de propriedade](../media/ssis-propertyexpressionui.gif "A interface do usuário para expressões de propriedade")  
   
- Na janela **Propriedades** e na página **Expressões** , clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade** . O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
+ Na janela **Propriedades** e na página **Expressões**, clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade**. O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
   
  Você também pode abrir a caixa de diálogo **Construtor de Expressões** na caixa de diálogo **Editor de Expressões de Propriedade** .  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48085726"
   
  No entanto, os valores atualizados das propriedades dos objetos do pacote que usam a expressão de propriedade no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] não poderão ser visualizados enquanto você não salvar o pacote, executá-lo ou reabri-lo após adicionar as expressões de propriedade.  
   
- As expressões de propriedade associadas a diferentes tipos de objetos — gerenciadores de conexões, provedores de logs e enumeradores — também são carregados quando os métodos específicos a esse tipo de objeto são chamados. Por exemplo, as propriedades de gerenciadores de conexões são carregadas antes que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] criasse uma instância da conexão.  
+ As expressões de propriedade associadas a diferentes tipos de objetos – gerenciadores de conexões, provedores de logs e enumeradores – também são carregados quando os métodos específicos a esse tipo de objeto são chamados. Por exemplo, as propriedades de gerenciadores de conexões são carregadas antes que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] criasse uma instância da conexão.  
   
  As expressões de propriedade são carregadas depois que as configurações de pacote são carregadas. Por exemplo, as variáveis são atualizadas primeiro pelas suas configurações e depois as expressões de propriedade que usam as variáveis são avaliadas e carregadas. Isso significa que as expressões de propriedade sempre usam os valores de variáveis que são definidos pelas configurações.  
   
@@ -105,9 +104,9 @@ ms.locfileid: "48085726"
 |Enumeradores Foreach|Após carregar as configurações<br /><br /> Antes da validação<br /><br /> Antes da execução<br /><br /> Antes de cada enumeração do loop|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Usando as expressões de propriedade no Loop Foreach  
- Geralmente é útil implementar uma expressão de propriedade para definir o valor da propriedade `ConnectionString` dos gerenciadores de conexões que são usados dentro do contêiner Loop Foreach. Depois que o enumerador mapeia seu valor atual para uma variável em cada iteração do loop, a expressão de propriedade pode usar o valor dessa variável para atualizar o valor da `ConnectionString` propriedade dinamicamente.  
+ Geralmente é útil implementar uma expressão de propriedade para definir o valor da propriedade `ConnectionString` dos gerenciadores de conexões que são usados dentro do contêiner Loop Foreach. Depois que o enumerador mapeia seu valor atual para uma variável em cada iteração do loop, a expressão de propriedade pode usar o valor dessa variável para atualizar o valor da propriedade `ConnectionString` dinamicamente.  
   
- Se você quiser usar as expressões de propriedade com a propriedade `ConnectionString` dos gerenciadores de conexões Arquivo, Vários Arquivos, Arquivos Simples e Vários Arquivos Simples usados pelo Loop Foreach, é preciso considerar algumas informações. Um pacote pode ser configurado para executar vários arquivos executáveis simultaneamente definindo a propriedade `MaxConcurrentExecutables` como um valor maior que 1 ou com o valor -1. Um valor definido como -1 permite o número máximo de arquivos executáveis sendo executados simultaneamente para igualar o número de processadores mais dois. Para evitar consequências negativas da execução paralela de executáveis, o valor de `MaxConcurrentExecutables` deveria ser definido como 1. Se `MaxConcurrentExecutables` não está definido como 1, o valor da `ConnectionString` propriedade não pode ser garantida e os resultados serão imprevisíveis.  
+ Se você quiser usar as expressões de propriedade com a propriedade `ConnectionString` dos gerenciadores de conexões Arquivo, Vários Arquivos, Arquivos Simples e Vários Arquivos Simples usados pelo Loop Foreach, é preciso considerar algumas informações. Um pacote pode ser configurado para executar vários arquivos executáveis simultaneamente definindo a propriedade `MaxConcurrentExecutables` como um valor maior que 1 ou com o valor -1. Um valor definido como -1 permite o número máximo de arquivos executáveis sendo executados simultaneamente para igualar o número de processadores mais dois. Para evitar consequências negativas da execução paralela de executáveis, o valor de `MaxConcurrentExecutables` deveria ser definido como 1. Se `MaxConcurrentExecutables` não for definido como 1, o valor da propriedade `ConnectionString` não poderá ser garantido e os resultados serão imprevisíveis.  
   
  Por exemplo, considere um Loop Foreach que enumera arquivos em uma pasta, recupera os nomes de arquivo e usa uma tarefa Executar SQL para inserir cada nome de arquivos em uma tabela. Se `MaxConcurrentExecutables` não for definido como 1, poderão ocorrer conflitos de gravação se duas instâncias da tarefa Executar SQL tentarem gravar dados na tabela ao mesmo tempo.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48085726"
   
  Se o nome do pacote for EmailRowCountPP, se tiver sido executado em 04/03/2005, com duração de 9 segundos, a expressão avaliará a seguinte cadeia de caracteres.  
   
- PExpression-->Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.  
+ PExpression--> pacote: (EmailRowCountPP) Iniciado: 4/3/2005 segundos de duração: 9 de 11:06:18 AM.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expressão de Propriedade para a Mensagem de uma Mensagem de Email  
  A expressão de propriedade a seguir pode ser usada para definir a propriedade MessageSource de uma tarefa Enviar Email. A expressão usa uma combinação de literais de cadeia de caracteres, variáveis definidas pelo usuário e o operador de concatenação (+). As variáveis definidas pelo usuário são chamadas de `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. O "\n" da cadeia de caracteres indica um retorno de carro.  
@@ -168,9 +167,9 @@ ms.locfileid: "48085726"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   [Marca-texto de Expressão e Configuração (Projeto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Marca-texto de Expressão e Configuração (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+-   Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar variáveis em pacotes](../use-variables-in-packages.md)  

@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803764"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591490"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [  **@schedule_id=** ] *schedule_id*  
  O número de identificação da agenda a ser excluída. *schedule_id* está **int**, com um padrão NULL.  
   
-> **Observação:** ambos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
+> **OBSERVAÇÃO:** Qualquer um dos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  O nome da agenda a ser excluída. *schedule_name* está **sysname**, com um padrão NULL.  
   
-> **Observação:** ambos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
+> **OBSERVAÇÃO:** Qualquer um dos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
  [ **@force_delete** =] *force_delete*  
  Especifica se o procedimento deve falhar se a agenda estiver anexada a um trabalho. *Force_delete* é bit, com um padrão de **0**. Quando *force_delete* é **0**, o procedimento armazenado falhará se a agenda estiver anexada a um trabalho. Quando *force_delete* é **1**, a agenda será excluída, independentemente se a agenda estiver anexada a um trabalho.  
@@ -92,7 +92,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. Excluindo uma agenda anexada a um trabalho  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>b. Excluindo uma agenda anexada a um trabalho  
  O exemplo a seguir exclui a agenda `RunOnce`, independentemente do fato de a agenda estar anexada a um trabalho.  
   
 ```  

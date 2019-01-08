@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101986"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589890"
 ---
 # <a name="set-source-control-options"></a>Definir opções de controle do código-fonte
   Antes de poder se beneficiar dos recursos internos de controle do código-fonte do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], é necessário configurar as opções de controle do código-fonte dos vários ambientes em que você trabalha.  
@@ -50,7 +50,7 @@ ms.locfileid: "48101986"
      **Descrição da função**  
      Selecionar uma dessas funções faz com que as opções de controle do código-fonte apropriadas sejam automaticamente selecionadas.  
   
-    |Role|Description|  
+    |Role|Descrição|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações mais comumente usadas pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor independente**|Especifica que você está trabalhando independentemente.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48101986"
      **Configurações de ambiente de controle do código-fonte**  
      Especifica a função que você deseja usar. O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define as seguintes funções.  
   
-    |Role|Description|  
+    |Role|Descrição|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações mais comumente usadas pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor independente**|Especifica que você está trabalhando independentemente.|  
@@ -83,14 +83,14 @@ ms.locfileid: "48101986"
      Selecionar uma dessas funções faz com que as opções de controle do código-fonte apropriadas sejam automaticamente selecionadas.  
   
      **Manter itens com check-ao fazer check-in**  
-     Especifica que ao fazer o check-in de itens para atualizar o armazenamento de controle do código fonte, os itens devem permanecer com o check-out aplicado para você. Se você deseja alterar esta opção para um check-in específico, clique no **opções** seta na **Check-in** caixa de diálogo e desmarque os **manter * * * check-out** caixa de seleção.  
+     Especifica que ao fazer o check-in de itens para atualizar o armazenamento de controle do código fonte, os itens devem permanecer com o check-out aplicado para você. Se você deseja alterar esta opção para um check-in específico, clique no **opções** seta na **Check-in** caixa de diálogo e desmarque o **mantenha check-out** caixa de seleção.  
   
      **Itens com check-in**  
      Exibe uma lista de opções que especificam como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] deve se comportar quando se tentar editar um item cujo check out não tenha sido feito.  As tabelas a seguir descrevem as opções disponíveis.  
   
      **Salvando**  
   
-    |Ação|Description|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |**Prompt para check-out**|Exibe a **Check-Out** caixa de diálogo.|  
     |**Fazer check-out automaticamente**|Verifica o item sem exibir o **Check-Out** caixa de diálogo. Essa é a opção padrão.|  
@@ -98,7 +98,7 @@ ms.locfileid: "48101986"
   
      **Edição**  
   
-    |Ação|Description|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |**Prompt para check-out**|Exibe a **Check-Out** caixa de diálogo.|  
     |**Prompt para check outs exclusivos**|Exibe a **Check-Out** caixa de diálogo.|  

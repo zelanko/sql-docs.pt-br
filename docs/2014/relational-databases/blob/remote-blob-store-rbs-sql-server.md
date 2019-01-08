@@ -13,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373008"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
   O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) é um componente complementar opcional que permite aos administradores de bancos de dados armazenar objetos binários grandes em soluções de armazenamento de mercadorias, e não diretamente no servidor de banco de dados principal.  
@@ -50,22 +50,22 @@ ms.locfileid: "48181458"
 ## <a name="rbs-requirements"></a>Requisitos de RBS  
  O RBS requer o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise para o servidor de banco de dados principal no qual os metadados de BLOB são armazenados. Porém, se você usar o provedor FILESTREAM fornecido, poderá armazenar os próprios BLOBs no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard.  
   
- O RBS inclui um provedor FILESTREAM que permite usar o RBS para armazenar BLOBs em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso deseje usar o RBS para armazenar BLOBs em uma solução de armazenamento diferente, utilize um provedor RBS de terceiros desenvolvido para essa solução de armazenamento ou desenvolva um provedor RBS personalizado usando a API do RBS. Um provedor de exemplo que armazena BLOBs no sistema de arquivos NTFS está disponível como um recurso de aprendizagem em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ O RBS inclui um provedor FILESTREAM que permite usar o RBS para armazenar BLOBs em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso deseje usar o RBS para armazenar BLOBs em uma solução de armazenamento diferente, utilize um provedor RBS de terceiros desenvolvido para essa solução de armazenamento ou desenvolva um provedor RBS personalizado usando a API do RBS. Um provedor de exemplo que armazena BLOBs no sistema de arquivos NTFS está disponível como um recurso de aprendizagem em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Segurança do RBS  
  Quando você usar um provedor personalizado para armazenar BLOBs fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], talvez eles estejam disponíveis para outros processos que ignorem o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Proteja os BLOBs armazenados com permissões e opções de criptografia apropriadas para a mídia de armazenamento usada pelo provedor personalizado.  
   
 ##  <a name="rbsresources"></a> Recursos do RBS  
  **Documentação do RBS**  
- A documentação do RBS está incluída no pacote do Windows Installer. Se você desejar revisar a documentação do RBS sem instalar o RBS, poderá exibir a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] da documentação [online na Biblioteca do MSDN](http://go.microsoft.com/fwlink/?LinkId=210192).  
+ A documentação do RBS está incluída no pacote do Windows Installer. Se você desejar revisar a documentação do RBS sem instalar o RBS, poderá exibir a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] da documentação [online na Biblioteca do MSDN](https://go.microsoft.com/fwlink/?LinkId=210192).  
   
  **White paper do RBS**  
- O white paper "[Remote BLOB Storage](http://go.microsoft.com/fwlink/?LinkId=210422)", que está disponível para download como um documento do Microsoft Word, fornece informações detalhadas sobre como instalar e configurar o RBS.  
+ O white paper "[Remote BLOB Storage](https://go.microsoft.com/fwlink/?LinkId=210422)", que está disponível para download como um documento do Microsoft Word, fornece informações detalhadas sobre como instalar e configurar o RBS.  
   
  **Exemplos do RBS**  
- Os exemplos do RBS disponíveis em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
+ Os exemplos do RBS disponíveis em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
   
  **Blog do RBS**  
- O [blog do RBS](http://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
+ O [blog do RBS](https://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
   
   

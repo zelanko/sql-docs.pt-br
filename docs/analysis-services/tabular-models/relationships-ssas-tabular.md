@@ -1,5 +1,5 @@
 ---
-title: Relações | Microsoft Docs
+title: Relações em modelos tabulares do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045300"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072523"
 ---
 # <a name="relationships"></a>Relações 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34045300"
 ##  <a name="what"></a> Benefícios  
  Relação é uma conexão entre duas tabelas de dados, baseada em uma ou mais colunas em cada tabela. Para saber por que as relações são úteis, imagine que você acompanhe dados para pedidos de clientes na empresa. Você poderia acompanhar todos os dados em uma única tabela com uma estrutura semelhante à seguinte:  
   
-|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantidade|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Produto|Quantidade|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|0,05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|0,05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|0,10|254|2010-01-03|Budget Movie-Maker|27|  
   
- Esta abordagem pode funcionar, mas envolve o armazenamento de muitos dados redundantes, como o endereço de email do cliente para todos os pedidos. Embora o armazenamento seja barato, você deverá ter certeza de que atualizou todas as linhas desse cliente se o endereço de email for alterado. Uma solução para esse problema é dividir os dados em várias tabelas e definir relações entre essas tabelas. Essa é a abordagem usada em *bancos de dados relacionais* como o SQL Server. Por exemplo, um banco de dados importado para um modelo pode representar dados de pedidos usando três tabelas relacionadas:  
+ Esta abordagem pode funcionar, mas envolve o armazenamento de muitos dados redundantes, como o endereço de email do cliente para todos os pedidos. Embora o armazenamento seja barato, você deverá ter certeza de que atualizou todas as linhas desse cliente se o endereço de email for alterado. Uma solução para esse problema é dividir os dados em várias tabelas e definir relações entre essas tabelas. Essa é a abordagem usada no *bancos de dados relacionais* como o SQL Server. Por exemplo, um banco de dados importado para um modelo pode representar dados de pedidos usando três tabelas relacionadas:  
   
 ### <a name="customers"></a>Customers  
   
@@ -55,13 +55,13 @@ ms.locfileid: "34045300"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantidade|  
+|[CustomerID]|OrderID|OrderDate|Produto|Quantidade|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Se você importar essas tabelas do mesmo banco de dados, o Assistente de Importação de Tabela poderá detectar as relações entre as tabelas com base nas colunas que estão entre [colchetes] e poderá reproduzir essas relações na janela do designer de modelo. Para obter mais informações, consulte [Detecção automática e inferência de relações](#detection) neste tópico. Se você importar tabelas de várias fontes, você pode criar relações manualmente conforme descrito em [criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Se você importar essas tabelas do mesmo banco de dados, o Assistente de Importação de Tabela poderá detectar as relações entre as tabelas com base nas colunas que estão entre [colchetes] e poderá reproduzir essas relações na janela do designer de modelo. Para obter mais informações, consulte [Detecção automática e inferência de relações](#detection) neste tópico. Se você importar tabelas de várias fontes, você pode criar manualmente relações conforme descrito em [criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### <a name="columns-and-keys"></a>Colunas e chaves  
  As relações se baseiam em colunas de cada tabela que contenham os mesmos dados. Por exemplo, as tabelas Customers e Orders podem estar relacionadas porque ambas contêm uma coluna que armazena uma ID do cliente. No exemplo, os nomes de coluna são os mesmos, mas isso não é um requisito. Uma pessoa poderia ser CustomerID e outra, CustomerNumber, desde que todas as linhas na tabela Orders contivessem uma ID que também é armazenada na tabela Customers.  
@@ -97,7 +97,7 @@ ms.locfileid: "34045300"
 ### <a name="single-active-relationship-between-tables"></a>Relação ativa única entre tabelas  
  Várias relações podem resultar em dependências ambíguas entre as tabelas. Para criar cálculos exatos, você precisa de um único caminho de uma tabela para a próxima. Por isso, pode haver apenas uma relação ativa entre cada par de tabelas. Por exemplo, no AdventureWorks DW 2012, a tabela, DimDate, contém uma coluna, DateKey, que está relacionada a três colunas diferentes da tabela FactInternetSales: OrderDate, DueDate e ShipDate. Se você tentar importar essas tabelas, a primeira relação será criada com êxito, mas você receberá o seguinte erro em relações sucessivas que envolvam a mesma coluna:  
   
- \* Relação: tabela [column 1] -> tabela [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
+ \* Relação: table [column 1] -> table [column 2] - Status: error - motivo: Não é possível criar uma relação entre tabelas \<tabela 1 > e \<a tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
   
  Se tiver duas tabelas e várias relações entre elas, você precisará importar várias cópias da tabela que contém a coluna de pesquisa e criar uma relação entre cada par de tabelas.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "34045300"
   
  Se seu modelo contiver dados de várias origens, provavelmente você precisará criar relações manualmente. Por exemplo, você pode importar as tabelas Customers, CustomerDiscounts e Orders de uma fonte de dados relacional. As relações existentes entre essas tabelas na origem são criadas automaticamente no modelo. Você pode adicionar outra tabela de uma origem diferente; por exemplo, você importa dados de região de uma tabela Geography em uma pasta de trabalho do Microsoft Excel. Você pode criar manualmente uma relação entre uma coluna na tabela Customers e uma coluna na tabela Geography.  
   
- Para criar manualmente relações em um modelo de tabela, você pode usar o designer de modelos na Exibição de Diagrama ou usar a caixa de diálogo Gerenciar Relações. A exibição de diagrama exibe tabelas, com relações entre elas, em um formato gráfico. Você pode clicar em uma coluna em uma tabela e arrastar o cursor até outra tabela para criar facilmente uma relação, na ordem correta, entre as tabelas. A caixa de diálogo Gerenciar Relações exibe relações entre tabelas em um formato de tabela simples. Para aprender a criar relações manualmente, consulte [criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Para criar manualmente relações em um modelo de tabela, você pode usar o designer de modelos na Exibição de Diagrama ou usar a caixa de diálogo Gerenciar Relações. A exibição de diagrama exibe tabelas, com relações entre elas, em um formato gráfico. Você pode clicar em uma coluna em uma tabela e arrastar o cursor até outra tabela para criar facilmente uma relação, na ordem correta, entre as tabelas. A caixa de diálogo Gerenciar Relações exibe relações entre tabelas em um formato de tabela simples. Para saber como criar relações manualmente, consulte [criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Se você escolher uma coluna que não possa ser usada na relação, um X vermelho aparecerá ao lado da coluna. Você pode pausar o cursor sobre o ícone de erro para visualizar uma mensagem que fornece mais informações sobre o problema. Os problemas que podem tornar impossível a criação de uma relação entre as colunas selecionadas incluem os seguintes:  
@@ -171,13 +171,13 @@ ms.locfileid: "34045300"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Descreve como criar uma relação manualmente entre duas tabelas.|  
 |[Excluir relações](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Descreve como excluir uma relação e as ramificações de excluir relações.|  
 |[Filtros cruzados bidirecionais para modelos de tabela no SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|Descreve a filtragem cruzada bidirecional para tabelas relacionadas. Um contexto de filtro de uma relação de tabela pode ser usado ao realizar a consulta em uma segunda relação de tabela se as tabelas forem relacionadas e filtros cruzados bidirecionais estiverem definidos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Tabelas e colunas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Importar dados](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

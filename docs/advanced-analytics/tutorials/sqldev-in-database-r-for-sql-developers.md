@@ -1,33 +1,28 @@
 ---
-title: Tutorial para análise no banco de dados usando R e SQL Server Machine Learning | Microsoft Docs
+title: Tutorial de análise no banco de dados usando o R - aprendizagem de máquina do SQL Server
 description: Saiba como incorporar o código de idioma em procedimentos armazenados do SQL Server e funções T-SQL de programação R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80c4d39e87984b022340079be4d944ed6ad963e3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030643"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596337"
 ---
-# <a name="tutorial-in-database-r-analytics-for-sql-developers"></a>Tutorial: Análise de no banco de dados R para desenvolvedores do SQL
+# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Tutorial: Análise no banco de dados para desenvolvedores do SQL usando o R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste tutorial para programadores SQL, saiba mais sobre a integração do R criando e implantando uma solução usando de aprendizado de máquina baseada em R uma [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. 
 
-Este tutorial apresenta as funções de R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. Você usará os dados de exemplo do táxi de Nova York e Limosine comissão e o modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorreu e coleta local. Todo o código R usado neste tutorial é encapsulado em procedimentos armazenados que você criar e executar no Management Studio.
+Este tutorial apresenta as funções de R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. O modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorreu e coleta local. Todo o código R usado neste tutorial é encapsulado em procedimentos armazenados que você criar e executar no Management Studio.
 
-
-> [!NOTE]
-> 
-> Este tutorial está disponível em R e Python. Para a versão do Python, consulte [no banco de dados do analytics para desenvolvedores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md).
-
-## <a name="overview"></a>Visão geral
+## <a name="background-for-sql-developers"></a>Em segundo plano para desenvolvedores do SQL
 
 O processo de criação de uma solução de aprendizado de máquina é um complexo que pode envolver várias ferramentas e a coordenação de especialistas no assunto em várias fases:
 
@@ -36,9 +31,9 @@ O processo de criação de uma solução de aprendizado de máquina é um comple
 + treinamento e o modelo de ajuste
 + implantação na produção
 
-Desenvolvimento e teste do código real é mais bem executados usando um ambiente de desenvolvimento dedicado. No entanto, depois que o script é totalmente testado, você pode facilmente implantá-lo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Desenvolvimento e teste do código real é mais bem executados usando um ambiente de desenvolvimento dedicado do R. No entanto, depois que o script é totalmente testado, você pode facilmente implantá-lo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-Se você for um programador SQL é novo no R ou é um novidade no SQL, este tutorial com várias partes de desenvolvedor R introduz um fluxo de trabalho típico para realizar a análise no banco de dados com R e SQL Server. 
+O objetivo deste tutorial com várias partes é uma introdução a um fluxo de trabalho típico para migração "R código concluído" para o SQL Server. 
 
 - [Lição 1: Explorar e visualizar a forma de dados e a distribuição chamando funções de R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
 

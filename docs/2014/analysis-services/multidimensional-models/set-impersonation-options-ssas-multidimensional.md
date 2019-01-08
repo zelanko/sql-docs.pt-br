@@ -15,12 +15,12 @@ ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c8b5a891686a1317305c43d179e892caf69d8b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218266"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365738"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
   Ao criar um objeto `data source` em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
@@ -50,7 +50,7 @@ ms.locfileid: "48218266"
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato:  *\<nome de domínio >***\\***\<usuário nome da conta >*.  
+ Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >*.  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48218266"
  Para instruções OPENQUERY do DMX, cubos locais e modelos de mineração, as credenciais do usuário atual são usadas mesmo se você escolher uma opção da conta de serviço. A opção da conta de serviço não tem suporte para associações fora de linha.  
   
 > [!NOTE]  
->  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [Mining Structure: Issue while Processing when DataSource is OLAP Cube](http://go.microsoft.com/fwlink/?LinkId=251610)(Estrutura de mineração: problema durante o processamento quando DataSource é um cubo OLAP).  
+>  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [estrutura de mineração: Problema durante o processamento quando DataSource é um cubo OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Usar as credenciais do usuário atual**  
  Selecione esta opção para fazer com que o objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use as credenciais de segurança do usuário atual para associações fora de linha, OPENQUERY DMX, cubos locais e modelos de mineração.  
@@ -101,7 +101,7 @@ ms.locfileid: "48218266"
   
  Para obter mais informações sobre as configurações padrão no nível do banco de dados, consulte [Definir propriedades do Banco de Dados Multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
- **Bancos de dados – opção Padrão**  
+ **Bancos de dados – opção padrão**  
   
  Para bancos de dados tabulares **padrão** significa usar a conta de serviço.  
   

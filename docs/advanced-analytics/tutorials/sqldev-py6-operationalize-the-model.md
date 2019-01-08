@@ -1,5 +1,5 @@
 ---
-title: Prever resultados possíveis usando modelos do Python (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Prever resultados possíveis usando modelos do Python - aprendizagem de máquina do SQL Server
 description: Tutorial que mostra como colocar o script de PYthon incorporado no SQL Server em procedimentos armazenados com funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033673"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644765"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Execute previsões usando Python inserido em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ Nesse cenário, a operacionalização significa implantar o modelo em produção
 
 Esta lição demonstra dois métodos para criar previsões com base em um modelo de Python: pontuação e a linha por linha de pontuação do lote.
 
-- **Pontuação do lote:** para fornecer várias linhas de dados de entrada, passe uma consulta SELECT como um argumento para o procedimento armazenado. O resultado é uma tabela de observações correspondente aos casos de entrada.
-- **Pontuação individual:** transmitir um conjunto de valores de parâmetro individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
+- **Pontuação do lote:** Para fornecer várias linhas de dados de entrada, passe uma consulta SELECT como um argumento para o procedimento armazenado. O resultado é uma tabela de observações correspondente aos casos de entrada.
+- **Indivíduo de pontuação:** Passe um conjunto de valores de parâmetro individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
 
 Todo o código de Python necessário para a pontuação é fornecido como parte dos procedimentos armazenados.
 
@@ -48,7 +48,7 @@ Instruções de Rrun o T-SQL a seguir para criar os procedimentos armazenados. E
 
 + O quadro de dados que contém entradas é passado para o `predict_proba` função do modelo de regressão logística, `mod`. O `predict_proba` função (`probArray = mod.predict_proba(X)`) retorna um **float** que representa a probabilidade de que você terá uma dica (de qualquer valor).
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 Esse procedimento armazenado usa as mesmas entradas e cria o mesmo tipo de pontuações que o procedimento armazenado anterior, mas usa funções a partir de **revoscalepy** pacote fornecido com o aprendizado de máquina do SQL Server.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ Ao passar esses argumentos para o procedimento armazenado, você pode selecionar
 
 1. Para usar o **scikit-Saiba** do modelo de pontuação, chame o procedimento armazenado **PredictTipSciKitPy**, passando o nome do modelo e a cadeia de caracteres de consulta como entradas.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ Ao passar esses argumentos para o procedimento armazenado, você pode selecionar
 
 2. Para usar o **revoscalepy** do modelo de pontuação, chame o procedimento armazenado **PredictTipRxPy**, passando o nome do modelo e a cadeia de caracteres de consulta como entradas.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ Ambos os procedimentos armazenados criam uma pontuação com base no modelo de P
 
 Reserve um minuto para examinar o código do procedimento armazenado que executa a pontuação usando o **scikit-Saiba** modelo.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 O seguinte procedimento armazenado executa a pontuação usando o **revoscalepy** modelo.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ Depois que os procedimentos armazenados foram criados, é fácil gerar uma pontu
 
 1. Para gerar uma previsão usando o **revoscalepy** modelo, execute esta instrução:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. Para gerar uma pontuação usando o **scikit-Saiba** modelo, execute esta instrução:
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 A saída de ambos os procedimentos é uma probabilidade de uma dica que está sendo paga para a viagem de táxi com os parâmetros especificados ou recursos.

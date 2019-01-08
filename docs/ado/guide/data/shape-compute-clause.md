@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797865"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201785"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **conjunto de registros**, cujas colunas consistem em uma referência para o filho **conjunto de registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **conjunto de registros** ou formatados anteriormente **conjunto de registros**; e todas as colunas de filho **Recordset** listados em o opcional pela cláusula.  
@@ -33,7 +33,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  As partes dessa cláusula são da seguinte maneira:  
   
  *child-command*  
@@ -65,7 +65,7 @@ SHAPE child-command [AS] child-alias
  Por exemplo:  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  Independentemente de qual modo o pai **conjunto de registros** é formado (usando a computação ou usando o ACRÉSCIMO), ele conterá uma coluna de capítulo que é usada para relacioná-la a um filho **conjunto de registros**. Se desejar, o pai **Recordset** também podem conter colunas que contêm agregações (SUM, MIN, MAX e assim por diante) em relação às linhas filho. O pai e filho **conjunto de registros** podem conter colunas que contêm uma expressão na linha a **conjunto de registros**, bem como as colunas que são novos e inicialmente vazio.  

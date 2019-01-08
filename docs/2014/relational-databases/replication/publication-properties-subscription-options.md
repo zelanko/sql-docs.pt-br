@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753848"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
   A página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** permite visualizar e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
@@ -107,7 +106,7 @@ ms.locfileid: "48080516"
   
 ### <a name="filtering"></a>Filtragem  
  **Permitir filtros com parâmetros**  
- Defina com base no uso ou não de filtros com parâmetros na publicação. Essa opção é sempre somente leitura. Para saber mais, confira [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Defina com base no uso ou não de filtros com parâmetros na publicação. Essa opção é sempre somente leitura. Para obter mais informações, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Validar Assinantes**  
  Determina quais funções usar ao validar que um Assinante tem a partição correta de dados. Separe valores múltiplos por vírgulas. Para obter mais informações, consulte [Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md) (Validar informações de partição para um assinante de mesclagem).  
@@ -116,7 +115,7 @@ ms.locfileid: "48080516"
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a sincronização deve ser otimizada calculando com antecedência quais linhas de dados pertencem a quais partições. Essa configuração assumira **Verdadeiro** como padrão, se a publicação atender aos critérios de partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
  **Otimizar sincronização**  
- Determina se o processamento de mesclagem deve ser otimizado armazenando metadados adicional em cada Assinante. Essa otimização foi substituída por partições pré-computadas; a opção **Otimizar sincronização** só será relevante se **Pré- calcular partições** for definida como **Falso**. Para saber mais, confira [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Determina se o processamento de mesclagem deve ser otimizado armazenando metadados adicional em cada Assinante. Essa otimização foi substituída por partições pré-computadas; a opção **Otimizar sincronização** só será relevante se **Pré- calcular partições** for definida como **Falso**. Para obter mais informações, consulte [Filtros de linha com parâmetros](merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Processos de mesclagem  
  **Limitar processos simultâneos**  

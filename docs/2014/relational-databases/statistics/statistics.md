@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063746"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367138"
 ---
 # <a name="statistics"></a>Estatísticas
   O otimizador de consulta utiliza estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
@@ -40,7 +40,7 @@ ms.locfileid: "48063746"
  Cada objeto de estatísticas é criado em uma lista de uma ou mais colunas de tabela e inclui um histograma que exibe a distribuição de valores na primeira coluna. Os objetos de estatísticas em várias colunas também armazenam informações estatísticas sobre a correlação de valores entre as colunas. Essas estatísticas de correlação, ou *densidades*, são derivadas do número de linhas distintas de valores de coluna. Para obter mais informações sobre objetos de estatísticas, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
  Estatísticas filtradas  
- As estatísticas filtradas podem melhorar o desempenho de consultas selecionadas em subconjuntos bem definidos de dados. As estatísticas filtradas usam um predicado do filtro para selecionar o subconjunto de dados incluído nas estatísticas. Estatísticas filtradas bem projetadas podem aprimorar o plano de execução de consultas em comparação com as estatísticas de tabela completa. Para obter mais informações sobre o predicado de filtro, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Para obter mais informações sobre quando criar estatísticas filtradas, consulte a seção [Quando criar estatísticas](#UpdateStatistics) neste tópico. Para um estudo de caso, consulte a entrada de blog, [Usando estatísticas filtradas com tabelas particionadas](http://go.microsoft.com/fwlink/?LinkId=178505), no site do SQLCAT.  
+ As estatísticas filtradas podem melhorar o desempenho de consultas selecionadas em subconjuntos bem definidos de dados. As estatísticas filtradas usam um predicado do filtro para selecionar o subconjunto de dados incluído nas estatísticas. Estatísticas filtradas bem projetadas podem aprimorar o plano de execução de consultas em comparação com as estatísticas de tabela completa. Para obter mais informações sobre o predicado de filtro, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Para obter mais informações sobre quando criar estatísticas filtradas, consulte a seção [Quando criar estatísticas](#UpdateStatistics) neste tópico. Para um estudo de caso, consulte a entrada de blog, [Usando estatísticas filtradas com tabelas particionadas](https://go.microsoft.com/fwlink/?LinkId=178505), no site do SQLCAT.  
   
  Opções de estatísticas  
  Há três opções que você pode definir que afetam quando e como as estatísticas são criadas e atualizadas. Estas opções são definidas no nível do banco de dados somente.  
@@ -154,7 +154,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>A consulta faz seleções em um subconjunto de dados  
  Quando o otimizador de consulta cria estatísticas para colunas únicas e índices, as estatísticas são criadas para os valores em todas as linhas. Quando as consultas fazem seleções em um subconjunto de linhas e esse subconjunto tem uma distribuição de dados exclusiva, as estatísticas filtradas podem aprimorar os planos de consulta. É possível criar estatísticas filtradas usando a instrução CREATE STATISTICS com a cláusula WHERE para definir a expressão de predicado de filtro.  
   
- Por exemplo, usando o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto da tabela Production.Product pertence a uma das quatro categorias da tabela Production.ProductCategory: Bicicletas, Componentes, Vestuário e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
+ Por exemplo, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto na tabela Production. Product pertence a uma das quatro categorias da tabela Production: Bicicletas, componentes, roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
   
  Usando Bicicletas como um exemplo, as estatísticas filtradas em todos os pesos de bicicleta fornecerão estatísticas mais precisas ao otimizador de consultas e podem melhorar a qualidade do plano de consulta comparadas com as estatísticas de tabela completa ou estatísticas inexistentes na coluna Peso. A coluna de peso das bicicletas é uma boa candidata para estatísticas filtradas, mas não necessariamente para um índice filtrado se o número de pesquisas de peso for relativamente pequeno. O ganho de desempenho que um índice filtrado oferece às pesquisas pode não compensar os custos adicionais com a manutenção e o custo de armazenamento exigidos para adicionar um índice filtrado ao banco de dados.  
   
@@ -187,7 +187,7 @@ GO
   
 -   Crie as estatísticas ausentes usando a instrução CREATE STATISTICS.  
   
- Quando as estatísticas em um banco de dados somente leitura ou de um instantâneo somente leitura estão ausentes ou obsoletas, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cria e mantém estatísticas temporárias em `tempdb`. Quando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cria estatísticas temporárias, o nome das estatísticas é anexado com o sufixo _readonly_database_statistic para diferenciar as estatísticas temporárias de estatísticas permanentes. O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível criar e reproduzir scripts para as estatísticas temporárias em um banco de dados de leitura-gravação. Quando em script, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] altera o sufixo do nome das estatísticas de _readonly_database_statistic para _readonly_database_statistic_scripted.  
+ Quando as estatísticas em um banco de dados somente leitura ou um instantâneo somente leitura estão ausentes ou obsoletas, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cria e mantém estatísticas temporárias em `tempdb`. Quando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cria estatísticas temporárias, o nome das estatísticas é anexado com o sufixo _readonly_database_statistic para diferenciar as estatísticas temporárias de estatísticas permanentes. O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível criar e reproduzir scripts para as estatísticas temporárias em um banco de dados de leitura-gravação. Quando em script, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] altera o sufixo do nome das estatísticas de _readonly_database_statistic para _readonly_database_statistic_scripted.  
   
  Somente o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode criar e atualizar estatísticas temporárias. No entanto, você pode excluir estatísticas temporárias e monitorar as propriedades de estatísticas que usam as mesmas ferramentas que você utiliza para estatísticas permanentes:  
   

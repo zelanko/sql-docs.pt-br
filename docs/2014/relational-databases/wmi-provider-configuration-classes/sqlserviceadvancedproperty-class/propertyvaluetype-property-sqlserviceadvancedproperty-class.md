@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyValueType Property (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ffe5a59e84a6608e7b72a83b76ad6595b72c7201
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8f777bd8a3b473a93e3f9b6a6e212efd56c04a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373638"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyValueType (classe SqlServiceAdvancedProperty)
   Obtém o tipo de dados de uma propriedade.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

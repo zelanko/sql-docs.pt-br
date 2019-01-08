@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 2: criar um arquivo corrompido | Microsoft Docs'
+title: 'Etapa 2: Criando um arquivo corrompido | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226596"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366808"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criando um arquivo corrompido
   Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226596"
   
      Os dados de exemplo estão incluídos nos pacotes de lição do SSIS. Para baixar os dados de exemplo e os pacotes de lição, faça o seguinte.  
   
-    1.  Navegue até [Exemplos de produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navegue até [Exemplos de produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Clique na guia **DOWNLOADS** .  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpublications
@@ -19,19 +18,19 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c576bd5ce66661eb601984638c0608ae2eef8f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791538"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSpublications** tabela contém uma linha para cada publicação replicada por um publicador. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
@@ -44,7 +43,7 @@ ms.locfileid: "47732598"
 |**allow_push**|**bit**|Indica se podem ser criadas assinaturas push para a publicação determinada.|  
 |**allow_pull**|**bit**|Indica se podem ser criadas assinaturas pull para a publicação determinada.|  
 |**allow_anonymous**|**bit**|Indica se podem ser criadas assinaturas anônimas para a publicação determinada.|  
-|**Descrição**|**nvarchar(255)**|A descrição da publicação.|  
+|**description**|**nvarchar(255)**|A descrição da publicação.|  
 |**VENDOR_NAME**|**nvarchar(100)**|O nome do fornecedor se Publicador não for um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**retention**|**int**|O período de retenção da publicação, em horas.|  
 |**sync_method**|**int**|O método de sincronização:<br /><br /> **0** = nativo (produz saída de cópia em massa do modo nativo de todas as tabelas).<br /><br /> **1** = caractere (produz uma saída de cópia em massa em modo de caractere de todas as tabelas).<br /><br /> **3** = simultâneo (produz saída de cópia em massa do modo nativo de todas as tabelas, mas não bloqueia a tabela durante o instantâneo).<br /><br /> **4** = simultâneo (produz uma saída de cópia em massa em modo de caractere de todas as tabelas, mas não bloqueia a tabela durante o instantâneo)<br /><br /> Os valores **3** e **4** estão disponíveis para replicação transacional e replicação de mesclagem, mas não para replicação de instantâneo.|  

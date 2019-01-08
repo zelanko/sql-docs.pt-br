@@ -1,18 +1,20 @@
 ---
-title: Executar um exemplo de notebook em um cluster de big data do SQL Server 2019 | Microsoft Docs
+title: Executar um exemplo de notebook | Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial mostra como você pode carregar uma execução de um exemplo de notebook Spark em um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644080"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432549"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Tutorial: Executar um exemplo de notebook em um cluster de big data do SQL Server de 2019
 
@@ -23,11 +25,11 @@ Este tutorial demonstra como carregar e executar um bloco de anotações no est�
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-* [Implantar um cluster de big data no Kubernetes](deployment-guidance.md).
-* [Instalar o Studio de dados do Azure e a extensão do SQL Server 2019](deploy-big-data-tools.md).
-* [Carregar dados de exemplo no cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Ferramentas de big data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Baixe o arquivo do bloco de anotações de exemplo
 
@@ -47,7 +49,7 @@ Use as instruções a seguir para carregar o arquivo do bloco de anotações de 
 
 As etapas a seguir mostram como abrir o arquivo do bloco de anotações no estúdio de dados do Azure:
 
-1. No estúdio de dados do Azure, conecte-se ao gateway de HDFS/Spark do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. No estúdio de dados do Azure, conecte-se ao gateway de HDFS/Spark do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Clique duas vezes na conexão de gateway de HDFS/Spark na **servidores** janela. Em seguida, selecione **abrir Notebook**.
 

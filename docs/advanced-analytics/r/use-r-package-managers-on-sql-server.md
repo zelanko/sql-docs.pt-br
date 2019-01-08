@@ -1,6 +1,6 @@
 ---
-title: Instalar novos pacotes de R em serviços do SQL Server Machine Learning | Microsoft Docs
-description: Adicionar novos pacotes de R para SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados)
+title: Usar gerenciadores de pacotes de R – serviços do SQL Server Machine Learning
+description: Use os comandos de R padrão como Packages para adicionar novos pacotes do R para SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864344"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432879"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar gerenciadores de pacotes de R para instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Este procedimento usa o RGui, mas você pode usar o RTerm ou qualquer outra R li
 
 1. RGui.exe com o botão direito e selecione **executar como administrador**. Se você não tiver as permissões necessárias, contate o administrador de banco de dados e fornecer uma lista de pacotes que você precisa.
 
-1. Na linha de comando, se você souber o nome do pacote, você pode digitar: `install.packages("the_package-name")` aspas duplas são necessárias para o nome do pacote.
+1. Na linha de comando, se você souber o nome do pacote, você pode digitar: `install.packages("the_package-name")` As aspas duplas são necessárias para o nome do pacote.
 
 1. Quando for solicitado para um site de espelhamento, selecione qualquer site que é conveniente para seu local.
 

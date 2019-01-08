@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805188"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
   Para adicionar e configurar uma origem de CDC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma tarefa Controle de CDC.  
@@ -45,15 +44,15 @@ ms.locfileid: "48140648"
   
 8.  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
-    -   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização** .  
+    -   **todos os**: Retorna as alterações no intervalo CDC atual sem os **antes da atualização** valores.  
   
-    -   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
+    -   **Tudo com valores antigos**: Retorna as alterações no intervalo de processamento de CDC atual incluindo os valores antigos (**antes da atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   
-    -   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
+    -   **NET**: Retorna apenas uma alteração de linha por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
-    -   **Líquido com máscara atualizada**: este modo é semelhante ao modo Líquido normal, mas também adiciona colunas boolianas com o nome padrão **__$\<nome-da-coluna>\__Changed**, que indica as colunas alteradas na linha de alteração atual.  
+    -   **Líquido com máscara atualizada**: Esse modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\_Changed** que indica a linha de alteração de colunas alteradas na atual.  
   
-    -   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
+    -   **Líquido com mesclagem**: Esse modo é semelhante ao normal modo líquido, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
   
 9. Selecione a variável de pacote de cadeia de caracteres SSIS que mantém o estado CDC para o contexto CDC atual. Para obter mais informações sobre a variável de estado CDC, consulte [Definir uma variável de estado](define-a-state-variable.md).  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48140648"
 15. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC &#40;página do Gerenciador de Conexão&#41;](../cdc-source-editor-connection-manager-page.md)   
- [Editor de origem CDC &#40;página de colunas&#41;](../cdc-source-editor-columns-page.md)   
- [Editor de origem CDC &#40;página de saída de erro&#41;](../cdc-source-editor-error-output-page.md)  
+ [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../cdc-source-editor-connection-manager-page.md)   
+ [Editor de Origem CDC &#40;página Colunas&#41;](../cdc-source-editor-columns-page.md)   
+ [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../cdc-source-editor-error-output-page.md)  
   
   

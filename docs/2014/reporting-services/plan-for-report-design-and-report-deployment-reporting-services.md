@@ -11,12 +11,12 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ddb62344608d0fbd44376c0d6180dc973d3202a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209176"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362729"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planejar a criação e a implantação de relatórios (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios. Use este tópico para aprender a planejar um ambiente de criação de relatórios e servidor de relatório que funcionam em conjunto. Este tópico apresenta uma visão geral do suporte para definição de relatório pelos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Uma definição de relatório é um arquivo XML escrito em RDL ou RDLC. Cada definição de relatório segue uma versão específica de esquema listado no início do arquivo.  
@@ -38,29 +38,29 @@ ms.locfileid: "48209176"
   
 |Abreviação|Versão do esquema|  
 |------------------|--------------------|  
-|2010 RDL|http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
-|2008 RDL|http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
-|2005 RDL<br /><br /> 2005 RDLC|http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
-|2000 RDL|http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
+|2010 RDL|https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
+|2008 RDL|https://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
+|2005 RDL<br /><br /> 2005 RDLC|https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
+|2000 RDL|https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
   
  Para obter mais informações sobre RDL e esquemas RDL, consulte o seguinte:  
   
--   [Esquemas XML do Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Esquemas XML do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Especificações da linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Especificações da linguagem RDL](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
- Para obter mais informações sobre os controles ReportViewer, consulte [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ Para obter mais informações sobre os controles ReportViewer, consulte [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
  Um arquivo de definição de relatório pode ser implantado em um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] das seguintes maneiras:  
   
--   **Designer de Relatórios:** implante um relatório do Designer de Relatórios no [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Designer de relatórios:** Implanta um relatório do Designer de Relatórios em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Construtor de Relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
+-   **Construtor de relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
   
--   **Gerenciador de Relatórios:** carregue um relatório para um servidor de relatório de modo nativo do Gerenciador de Relatórios.  
+-   **Gerenciador de relatórios:** carregue um relatório para um servidor de relatório de modo nativo do Gerenciador de Relatórios.  
   
 -   **SharePoint:** carregue um relatório em um site do SharePoint configurado com um servidor de relatório do modo do SharePoint.  
   
@@ -92,14 +92,14 @@ ms.locfileid: "48209176"
 |Designer de Relatórios no SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012, no centro de download da Microsoft.<br /><br /> Ou<br /><br /> Designer de Relatórios no SQL Server 2012 Data Tools - Business Intelligence para Microsoft Visual Studio 2012, no centro de download da Microsoft.<br /><br /> Ou<br /><br /> O Designer de Relatórios no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluído no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Cria 2010 RDL. No código-fonte do RDL existente:<br /><br /> 2000 RDL, atualiza para 2010 RDL<br /><br /> 2005 RDL, atualiza para 2010 RDL<br /><br /> 2008 RDL, atualiza para 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Designer de Relatórios no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Cria 2010 RDL. No código-fonte do RDL existente:<br /><br /> 2000 RDL, atualiza para 2010 RDL<br /><br /> 2005 RDL, atualiza para 2010 RDL<br /><br /> 2008 RDL, atualiza para 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Designer de Relatórios no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Cria 2008 RDL. No código-fonte do RDL existente:<br /><br /> 2000 RDL, atualiza para 2008 RDL<br /><br /> 2005 RDL, atualiza para 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Construtor de relatórios|Cria 2010 RDL. No código-fonte do RDL existente:<br /><br /> 2000 RDL, atualiza para 2010 RDL<br /><br /> 2005 RDL, atualiza para 2010 RDL<br /><br /> 2008 RDL, atualiza para 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
-|Designer de Relatórios RDLC do Visual Studio Designer de Relatórios|2005 RDLC|N/A|N/A|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Construtor de Relatórios|Cria 2010 RDL. No código-fonte do RDL existente:<br /><br /> 2000 RDL, atualiza para 2010 RDL<br /><br /> 2005 RDL, atualiza para 2010 RDL<br /><br /> 2008 RDL, atualiza para 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|Designer de Relatórios RDLC do Visual Studio Designer de Relatórios|2005 RDLC|N/D|N/D|  
   
  Para obter mais informações sobre [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)], consulte o seguinte:  
   
 -   [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Microsoft SQL Server Data Tools – Business Intelligence para Visual Studio 2012](http://www.microsoft.com/download/details.aspx?id=36843).  
+-   [Microsoft SQL Server Data Tools – Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 ##  <a name="bkmk_reportviewer"></a> Controles ReportViewer  
  Um controle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer pode exibir um relatório .rdlc no modo de visualização local ou no modo remoto, o controle pode exibir um arquivo .rdl hospedado em um servidor de relatório [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A tabela a seguir fornece a lista de versões de RDL com suporte dos controles ReportViewer para processamento local (.rdlc). O suporte para RDL no lado do servidor é resumido na seção [Suporte para servidor de relatório e esquema RDL](#bkmk_report_server_rdl_schema_support).  
@@ -111,14 +111,14 @@ ms.locfileid: "48209176"
   
  Para obter mais informações, consulte o seguinte:  
   
--   [Convertendo arquivos RDLC em arquivos RDL](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Convertendo arquivos RDLC em arquivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Adicionando e configurando controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Adicionando e configurando controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
- [Relatórios, partes de relatório e definições de relatório &#40;relatórios e SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Ferramentas do Reporting Services](tools/reporting-services-tools.md)   
  [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   

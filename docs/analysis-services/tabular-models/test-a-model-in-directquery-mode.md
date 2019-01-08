@@ -1,5 +1,5 @@
 ---
-title: Testar um modelo no modo DirectQuery | Microsoft Docs
+title: Testar um modelo tabular do Analysis Services no modo DirectQuery | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eae53b4edbcc542154d627a748321810c2059d59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: def4c6231ef180e0fc7ff42bed1f170bf36884dd
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039708"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071883"
 ---
 # <a name="test-a-model-in-directquery-mode"></a>Testar um modelo no modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34039708"
   
 -   [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
--   [Use o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
+-   [Usar o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  Se você estiver usando o Oracle ou o Teradata, use as ferramentas de monitoramento de rastreamento para esses sistemas.  
   

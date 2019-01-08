@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674187"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626316"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
@@ -41,11 +41,11 @@ No diagrama anterior, `mssql-server` é um contêiner em um [pod](https://kubern
 
 No diagrama a seguir, o `mssql-server` contêiner falhou. Como o orquestrador Kubernetes garante a contagem correta de instâncias íntegras na réplica definida e inicia um novo contêiner de acordo com a configuração. O orquestrador inicia um pod de novo no mesmo nó, e `mssql-server` reconecta-se ao mesmo armazenamento persistente. O serviço se conecta ao criada novamente `mssql-server`.
 
-![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 No diagrama a seguir, o nó que hospeda o `mssql-server` contêiner falhou. O orquestrador inicia o pod de novo em um nó diferente, e `mssql-server` reconecta-se ao mesmo armazenamento persistente. O serviço se conecta ao criada novamente `mssql-server`.
 
-![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -174,13 +174,15 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
 
    Copie o código anterior para um novo arquivo, chamado `sqldeployment.yaml`. Atualize os valores a seguir: 
 
-   * `value: "Developer"`: Define o contêiner para executar o SQL Server Developer edition. Edição de desenvolvedor não está licenciada para dados de produção. Se a implantação for para uso em produção, defina a edição apropriada (`Enterprise`, `Standard`, ou `Express`). 
+   * MSSQL_PID `value: "Developer"`: Define o contêiner para executar o SQL Server Developer edition. Edição de desenvolvedor não está licenciada para dados de produção. Se a implantação for para uso em produção, defina a edição apropriada (`Enterprise`, `Standard`, ou `Express`). 
 
       >[!NOTE]
       >Para obter mais informações, consulte [como licenciar o SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
    * `persistentVolumeClaim`: Esse valor requer uma entrada para `claimName:` que mapeia para o nome usado para a declaração de volume persistente. Este tutorial usa `mssql-data`. 
 
-   * `name: SA_PASSWORD`: Define a imagem de contêiner para definir a senha de SA, conforme definido nesta seção.
+   * `name: SA_PASSWORD`: Configura a imagem de contêiner para definir a senha de SA, conforme definido nesta seção.
 
      ```yaml
      valueFrom:

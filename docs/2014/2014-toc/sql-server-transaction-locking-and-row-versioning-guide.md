@@ -10,17 +10,17 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cec7bddf8f44036d98457cb080b66c2cacd40c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117296"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375588"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações do SQL Server
   Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
   
-**Aplica-se ao**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado o contrário.  
+**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado em contrário.  
   
 ##  <a name="Top"></a> Neste guia  
  [Noções básicas sobre transações](#Basics)  
@@ -61,9 +61,9 @@ ms.locfileid: "48117296"
 -   Recursos de administração de transação que impõem a atomicidade e a consistência da transação. Depois que uma transação tiver sido iniciada, ela deve ser concluída com êxito (confirmada) ou o [!INCLUDE[ssDE](../includes/ssde-md.md)] desfará todas as modificações de dados feitas desde que a transação foi iniciada. Essa operação é denominada de reversão da transação porque retorna os dados ao estado anterior a essas alterações.  
   
 ### <a name="controlling-transactions"></a>Controle de transações  
- Os aplicativos controlam transações principalmente ao especificar quando uma transação começa e termina. O controle pode ser especificado pelo uso de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] ou funções de interface de programação de aplicativo (API) de banco de dados. O sistema também deve ser capaz de processar corretamente os erros que encerram uma transação antes de sua conclusão. Para obter mais informações, consulte [instruções de transação &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [transações em ODBC](http://technet.microsoft.com/library/ms131281.aspx) e [transações no SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
+ Os aplicativos controlam transações principalmente ao especificar quando uma transação começa e termina. O controle pode ser especificado pelo uso de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] ou funções de interface de programação de aplicativo (API) de banco de dados. O sistema também deve ser capaz de processar corretamente os erros que encerram uma transação antes de sua conclusão. Para obter mais informações, consulte [instruções de transação &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [transações em ODBC](https://technet.microsoft.com/library/ms131281.aspx) e [transações no SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- Por padrão, as transações são gerenciadas no nível de conexão. Quando uma transação é iniciada em uma conexão, todas as instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas nessa conexão fazem parte da transação até a conclusão da transação. Porém, em uma sessão de vários conjuntos de resultados ativos (MARS), uma transação [!INCLUDE[tsql](../includes/tsql-md.md)] explícita ou implícita se torna uma transação no escopo do lote gerenciada no nível do lote. Quando o lote for concluído, se a transação no escopo do lote não for confirmada ou revertida, ela será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+ Por padrão, as transações são gerenciadas no nível de conexão. Quando uma transação é iniciada em uma conexão, todas as instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas nessa conexão fazem parte da transação até a conclusão da transação. Porém, em uma sessão de vários conjuntos de resultados ativos (MARS), uma transação [!INCLUDE[tsql](../includes/tsql-md.md)] explícita ou implícita se torna uma transação no escopo do lote gerenciada no nível do lote. Quando o lote for concluído, se a transação no escopo do lote não for confirmada ou revertida, ela será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
 #### <a name="starting-transactions"></a>Iniciando transações  
  Ao usar funções de API e instruções [!INCLUDE[tsql](../includes/tsql-md.md)], você pode iniciar transações em uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] como transações explícitas, autoconfirmadas ou implícitas.  
@@ -96,7 +96,7 @@ ms.locfileid: "48117296"
 |-|-|-|  
 |ALTER TABLE|FETCH|REVOKE|  
 |CREATE|GRANT|SELECT|  
-|Delete (excluir)|INSERT|TRUNCATE TABLE|  
+|DELETE|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
  **Transações no escopo do Lote**  
@@ -134,7 +134,7 @@ ms.locfileid: "48117296"
   
  Se ocorrer um erro de instrução de tempo de execução (como uma violação de restrição) em um lote, o comportamento padrão no [!INCLUDE[ssDE](../includes/ssde-md.md)] será reverter somente a instrução que gerou o erro. Você pode alterar esse comportamento usando a instrução SET XACT_ABORT. Depois que SET XACT_ABORT ON for executada, qualquer erro de instrução em tempo de execução fará com que a transação atual seja revertida. Os erros de compilação, como erros de sintaxe, não são afetados por SET XACT_ABORT. Para obter mais informações, veja [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
- Quando ocorrerem erros, a ação corretiva (COMMIT ou ROLLBACK) deverá ser incluída em um código de aplicativo. Uma ferramenta eficiente para processar erros, inclusive aqueles em transações, é a construção TRY...CATCH [!INCLUDE[tsql](../includes/tsql-md.md)]. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). Com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode usar a instrução THROW para gerar uma exceção e transferir a execução para um bloco CATCH de uma construção TRY…CATCH. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
+ Quando ocorrerem erros, a ação corretiva (COMMIT ou ROLLBACK) deverá ser incluída em um código de aplicativo. É uma ferramenta eficiente para tratamento de erros, inclusive aqueles em transações, o [!INCLUDE[tsql](../includes/tsql-md.md)] tente... Construção de VARIÁVEL. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). Começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode usar a instrução THROW para gerar uma exceção e transfere a execução para um bloco CATCH de uma instrução TRY... Construção de VARIÁVEL. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erros em tempo de execução e de compilação no modo de confirmação automática  
  No modo de confirmação automática, às vezes parece que uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] reverteu um lote inteiro, em vez de apenas uma instrução SQL. Isto acontece se o erro encontrado for um erro de compilação, não um erro em tempo de execução. Um erro de compilação impede o [!INCLUDE[ssDE](../includes/ssde-md.md)] de criar um plano de execução, assim nada no lote é executado. Embora pareça que todas as instruções antes daquela que gerou o erro tenham sido revertidas, o erro impediu que tudo no lote fosse executado. No exemplo a seguir, nenhuma das instruções `INSERT` no terceiro lote foram executadas por causa de um erro de compilação. Parece que as primeiras duas instruções `INSERT` foram revertidas, mas elas nunca foram executadas.  
@@ -296,24 +296,24 @@ GO
 |Leitura não confirmada|O nível de isolamento mais baixo, no qual as transações só estão isoladas o bastante para assegurar que dados corrompidos fisicamente não são sejam lidos. Nesse nível, são permitidas leituras sujas, para que uma transação tenha acesso às alterações ainda não confirmadas de outras transações.|  
 |Leitura confirmada|Permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. O [!INCLUDE[ssDE](../includes/ssde-md.md)] mantém bloqueios de gravação (adquiridos em dados selecionados) até o término da transação, mas os bloqueios de leitura são liberados assim que a operação SELECT é efetuada. Esse é o nível padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
 |Leitura repetida|O [!INCLUDE[ssDE](../includes/ssde-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados até o término da transação. Contudo, poderão ocorrer leituras fantasmas, pois os bloqueios de intervalo não são gerenciados.|  
-|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDE](../includes/ssde-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** pode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
+|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDE](../includes/ssde-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** Pode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também oferece suporte a dois níveis adicionais de isolamento da transação que usam controle de versão de linha. O primeiro consiste em uma implementação nova de isolamento de leitura confirmada e o segundo consiste em um nível de isolamento da transação novo, instantâneo.  
   
 |Nível de isolamento do controle de versão de linha|Definição|  
 |------------------------------------|----------------|  
 |Instantâneo de leitura confirmada|Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, o isolamento de leitura confirmada usará o controle de versão de linha para fornecer consistência de leitura no nível da instrução. Operações de leitura só requerem bloqueios de nível de tabela SCH-S e nenhum bloqueio de página ou linha. Ou seja, o mecanismo do banco de dados usa o controle de versão de linha para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações. Uma função definida pelo usuário pode retornar dados confirmados depois do horário de início da instrução que contém que o UDF.<br /><br /> Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver configurada como OFF, que é a configuração padrão, o isolamento de leitura confirmada usará os bloqueios compartilhados para evitar que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. Ambas as implementações satisfazem a definição de ISO de isolamento de leitura confirmada.|  
-|Instantâneo|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. É possível usar o Isolamento do instantâneo em um banco de dados quando a opção de banco de dados ALLOW_SNAPSHOT_ISOLATION estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções de DDL a seguir não são permitidas sob isolamento do instantâneo depois de uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução CRL (Common Language Runtime) DDL. Essas instruções são permitidas quando você está usando isolamento do instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: “Falha na transação de isolamento do instantâneo no banco de dados '%. * ls' porque o objeto acessado pela instrução foi modificado por uma instrução de DDL em outra transação simultânea desde o início dessa transação. Isso não é permitido porque os metadados não têm controle de versão. Uma atualização simultânea para metadados poderia gerar inconsistências se misturada com isolamento do instantâneo."|  
+|Instantâneo|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. É possível usar o Isolamento do instantâneo em um banco de dados quando a opção de banco de dados ALLOW_SNAPSHOT_ISOLATION estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções DDL a seguir não são permitidas sob o isolamento de instantâneo após uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução DDL do CLR (common language runtime). Essas instruções são permitidas quando você está usando isolamento do instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: "Falha na transação de isolamento de instantâneo no banco de dados '%.*ls' porque o objeto acessado pela instrução foi modificado por uma instrução DDL em outra transação simultânea desde o início dessa transação. Isso não é permitido porque os metadados não têm controle de versão. Uma atualização simultânea para metadados poderia gerar inconsistências se misturada com isolamento do instantâneo."|  
   
  A tabela a seguir mostra os efeitos colaterais de simultaneidade habilitados por níveis de isolamento diferentes.  
   
 |Nível de isolamento|Leitura suja|Leitura não repetível|Fantasma|  
 |---------------------|----------------|------------------------|-------------|  
 |**Leitura não confirmada**|Sim|Sim|Sim|  
-|**Leitura confirmada**|não|Sim|Sim|  
-|**Leitura repetível**|não|não|Sim|  
-|**Instantâneo**|não|não|não|  
-|**Serializável**|não|não|não|  
+|**Leitura confirmada**|Não|Sim|Sim|  
+|**Leitura repetível**|Não|Não|Sim|  
+|**Instantâneo**|Não|Não|Não|  
+|**Serializável**|Não|Não|Não|  
   
  Para obter mais informações sobre os tipos específicos de controle de versão de linha ou bloqueio controlado pelos níveis de isolamento de transação, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -356,7 +356,7 @@ GO
   
  A tabela seguinte mostra os recursos que o [!INCLUDE[ssDE](../includes/ssde-md.md)] pode bloquear.  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |--------------|-----------------|  
 |RID|Um identificador de linha usado para bloquear uma única linha dentro de um heap.|  
 |KEY|Um bloqueio de linha dentro de um índice usado para proteger um intervalo de chaves em transações serializáveis.|  
@@ -378,13 +378,13 @@ GO
   
  A tabela a seguir mostra o recurso de modos de bloqueio que o [!INCLUDE[ssDE](../includes/ssde-md.md)] utiliza.  
   
-|Modo de bloqueio|Description|  
+|Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
 |Compartilhado (S)|Usado para operações de leitura que não alteram ou atualizam dados, como uma instrução SELECT.|  
 |Atualização (U)|Usado em recursos que podem ser atualizados. Evita uma forma comum de deadlock que ocorre quando várias sessões estão lendo, bloqueando e potencialmente atualizando recursos mais tarde.|  
 |Exclusivo (X)|Usado para operações da modificação de dados, como INSERT, UPDATE ou DELETE. Assegura que várias atualizações não sejam realizadas no mesmo recurso ao mesmo tempo.|  
 |Intencional|Usado para estabelecer uma hierarquia de bloqueio. Os tipos de bloqueios intencionais são: intencional compartilhado (IS), intencional exclusivo (IX) e compartilhado com intenção exclusiva (SIX).|  
-|Esquema|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
+|esquema|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
 |Atualização em massa (BU).|Usado quando copiar dados em massa em uma tabela e o **TABLOCK** dica for especificada.|  
 |Intervalo de chave|Protege o intervalo de leitura de linhas lido por uma consulta ao usar o nível de isolamento da transação serializável. Assegura que outras transações não possam inserir linhas que se qualifiquem para consultas da transação serializável se as consultas forem executadas novamente.|  
   
@@ -414,7 +414,7 @@ GO
   
  Os bloqueios intencionais incluem intencional compartilhado (IS), intencional exclusivo (IX) e compartilhado com intenção exclusiva (SIX).  
   
-|Modo de bloqueio|Description|  
+|Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
 |Intencional compartilhado (IS)|Protege bloqueios solicitados ou bloqueios compartilhados adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia.|  
 |Intencional exclusivo (IX)|Protege os bloqueios solicitados ou bloqueios exclusivos adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia. IX é um superconjunto de IS, e também protege solicitando bloqueios compartilhados em recursos de nível mais baixo.|  
@@ -438,7 +438,7 @@ GO
 -   A dica **TABLOCK** é especificada ou a opção de tabela **bloqueio da tabela em carregamento em massa** é configurada usando **sp_tableoption**.  
   
 > [!TIP]  
->  Diferentemente da instrução BULK INSERT, que possui um bloqueio de atualização em massa menos restritivo, INSERT INTO.SELECT com a dica TABLOCK possui um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
+>  Diferentemente da instrução BULK INSERT, que contém um bloqueio de atualização em massa menos restritivo, INSERT INTO...SELECT com a dica TABLOCK contém um bloqueio exclusivo (X) na tabela. Isso significa que você não pode inserir linhas usando operações de inserção paralelas.  
   
 #### <a name="key-range-locks"></a>Bloqueios de intervalo de chave  
  Os bloqueios de intervalos com chave protegem um intervalo de linhas implicitamente incluídas em um conjunto de registros sendo lido por uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)], ao mesmo tempo em que utiliza o nível de isolamento de transação serializável. O bloqueio de intervalo de chave impede leituras fantasmas. Ao proteger os intervalos de chaves entre as linhas, ele também evita inserções fantasmas ou exclusões em um conjunto de registros acessado por uma transação.  
@@ -451,12 +451,12 @@ GO
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Modo solicitado**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Tentativa compartilhada (IS)**|Sim|Sim|Sim|Sim|Sim|não|  
-|**Compartilhado (S)**|Sim|Sim|Sim|não|não|não|  
-|**Atualização (U)**|Sim|Sim|não|não|não|não|  
-|**IX (intensão exclusiva)**|Sim|não|não|Sim|não|não|  
-|**SIX (compartilhado com intenção exclusiva)**|Sim|não|não|não|não|não|  
-|**Exclusivo (X)**|não|não|não|não|não|não|  
+|**Tentativa compartilhada (IS)**|Sim|Sim|Sim|Sim|Sim|Não|  
+|**Compartilhado (S)**|Sim|Sim|Sim|Não|Não|Não|  
+|**Atualização (U)**|Sim|Sim|Não|Não|Não|Não|  
+|**IX (intensão exclusiva)**|Sim|Não|Não|Sim|Não|Não|  
+|**SIX (compartilhado com intenção exclusiva)**|Sim|Não|Não|Não|Não|Não|  
+|**Exclusivo (X)**|Não|Não|Não|Não|Não|Não|  
   
 > [!NOTE]  
 >  Um bloqueio intencional exclusivo (IX) é compatível com um modo de bloqueio IX porque IX significa que a intenção é atualizar somente algumas linhas em vez de todas. Outras transações que tentarem ler ou atualizar algumas das linhas também são permitidas, exceto se não forem as mesmas linhas que estejam sendo atualizadas por outras transações. Além disso, se duas transações tentarem atualizar a mesma linha, ambas receberão um bloqueio IX no nível de tabela e página. No entanto, uma transação receberá um bloqueio X no nível de linha. A outra transação deve aguardar até que o bloqueio de nível de linha seja removido.  
@@ -481,7 +481,7 @@ GO
   
 -   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range*T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas por um hífen (-), como Intervalo*T*-*K*.  
   
-    |Intervalo|Linha|Modo|Description|  
+    |Intervalo|Linha|Modo|Descrição|  
     |-----------|---------|----------|-----------------|  
     |RangeS|P|RangeS-S|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de intervalo serializável.|  
     |RangeS|U|RangeS-U|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de atualização serializável.|  
@@ -496,13 +496,13 @@ GO
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Compartilhado (S)**|Sim|Sim|não|Sim|Sim|Sim|não|  
-|**Atualização (U)**|Sim|não|não|Sim|não|Sim|não|  
-|**Exclusivo (X)**|não|não|não|não|não|Sim|não|  
-|**RangeS-S**|Sim|Sim|não|Sim|Sim|não|não|  
-|**RangeS-U**|Sim|não|não|Sim|não|não|não|  
-|**RangeI-N**|Sim|Sim|Sim|não|não|Sim|não|  
-|**RangeX-X**|não|não|não|não|não|não|não|  
+|**Compartilhado (S)**|Sim|Sim|Não|Sim|Sim|Sim|Não|  
+|**Atualização (U)**|Sim|Não|Não|Sim|Não|Sim|Não|  
+|**Exclusivo (X)**|Não|Não|Não|Não|Não|Sim|Não|  
+|**RangeS-S**|Sim|Sim|Não|Sim|Sim|Não|Não|  
+|**RangeS-U**|Sim|Não|Não|Sim|Não|Não|Não|  
+|**RangeI-N**|Sim|Sim|Sim|Não|Não|Sim|Não|  
+|**RangeX-X**|Não|Não|Não|Não|Não|Não|Não|  
   
 #### <a name="conversion-locks"></a>Bloqueios de Conversão  
  Os bloqueios de conversão são criados quando um bloqueio de intervalo de chave se sobrepuser a outro bloqueio.  
@@ -613,7 +613,7 @@ INSERT mytable VALUES ('Dan');
   
 -   A transação B agora solicita um bloqueio exclusivo na linha 1 e é bloqueado até que a transação A termine e libere o bloqueio compartilhado que tem na linha 1.  
   
- A transação A não pode terminar até que a transação B termine, mas a transação B está bloqueada pela transação A. Essa condição é também chamada de dependência cíclica: a transação A tem uma dependência da transação B, e a transação B fecha o círculo tendo uma dependência da transação A.  
+ A transação A não pode concluir até que a transação B seja concluída, mas a transação B está bloqueada pela transação A. Essa condição também é chamada de dependência cíclica: A transação A tem uma dependência da transação B e a transação B fecha o círculo tendo uma dependência da transação A.  
   
  Ambas as transações em um deadlock esperarão indefinidamente, a menos que o deadlock seja quebrado por um processo externo. O monitor de deadlock [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verifica periodicamente as tarefas que estão em um deadlock. Se o monitor detectar uma dependência cíclica, ele escolhe uma das tarefas como vítima e termina sua transação com um erro. Isso permite que a outra tarefa complete sua transação. O aplicativo com a transação que terminou com um erro pode repetir a transação, a qual normalmente é concluída depois que a outra transação em deadlock é encerrada.  
   
@@ -653,7 +653,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Recursos relacionados à execução de consultas paralelas** Threads de coordenador, produtor ou consumidor associados a uma porta de troca podem bloquear uns aos outros, provocando um deadlock, normalmente ao incluir pelo menos um outro processo que não faz parte da consulta paralela. Além disso, quando uma consulta paralela começa a ser executada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina o grau de paralelismo, ou o número de threads de trabalho, com base na carga de trabalho atual. Se a carga de trabalho do sistema for alterada inesperadamente, por exemplo, quando novas consultas forem executadas no servidor ou o sistema ficar sem threads de trabalho, poderá ocorrer um deadlock.  
   
--   **Recursos MARS (conjunto de resultados ativos múltiplos)**. Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Recursos MARS (conjunto de resultados ativos múltiplos)**. Esses recursos são usados para controlar a intercalação de várias solicitações ativas em MARS. Para obter mais informações, consulte [Multiple Active Result Sets (MARS) no SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **Recurso do usuário**. Quando um thread está esperando por um recurso que é potencialmente controlado por um aplicativo de usuário, o recurso é considerado como externo ou recurso de usuário e é tratado como um bloqueio.  
   
@@ -1335,7 +1335,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Trabalhando com leituras confirmadas com o controle de versão de linha  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Trabalhando com leituras confirmadas com o controle de versão de linha  
  Neste exemplo, uma transação de leitura confirmada que usa o controle de versão de linha é executada ao mesmo tempo que outra transação. A transação de leitura confirmada se comporta diferentemente de uma transação de instantâneo. Como uma transação de instantâneo, a transação de leitura confirmada lerá controles de versão de linhas, mesmo após a outra transação ter modificado os dados. Entretanto, diferentemente de uma transação de instantâneo, a transação de leitura confirmada:  
   
 -   Lerá os dados modificados depois que a outra transação confirmar as mudanças de dados.  
@@ -1462,7 +1462,7 @@ ALTER DATABASE AdventureWorks2012
   
  A tabela a seguir relaciona e descreve os estados da opção ALLOW_SNAPSHOT_ISOLATION. Usar a opção ALTER DATABASE com a opção ALLOW_SNAPSHOT_ISOLATION não bloqueará os usuários que estiverem acessando os dados do banco de dados no momento.  
   
-|Estado da estrutura de isolamento de instantâneo para banco de dados atual|Description|  
+|Estado da estrutura de isolamento de instantâneo para banco de dados atual|Descrição|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|O suporte para as transações de isolamento de instantâneo não está ativado. Não é permitida nenhuma transação de isolamento de instantâneo.|  
 |PENDING_ON|O suporte para as transações de isolamento de instantâneo está em estado de transição (de OFF para ON). As transações abertas precisam ser concluídas.<br /><br /> Não é permitida nenhuma transação de isolamento de instantâneo.|  
@@ -1860,8 +1860,8 @@ GO
  ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ## <a name="see-also"></a>Consulte também  
- [Isolamento de transação com base em servidor de controle de versão de linha de 2005 do SQL](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
- [Sobrecarga do controle de versão de linha](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
- [Como criar uma transação autônoma no SQL Server 2008](http://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
+ [Isolamento de transação com base em servidor de controle de versão de linha de 2005 do SQL](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
+ [Sobrecarga do controle de versão de linha](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+ [Como criar uma transação autônoma no SQL Server 2008](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
   
   

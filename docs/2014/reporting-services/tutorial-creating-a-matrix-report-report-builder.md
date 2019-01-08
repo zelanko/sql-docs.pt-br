@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criando um relatório de matriz (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando um relatório de matriz (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159496"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353390"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criando um relatório de matriz (construtor de relatórios)
   Este tutorial ensina a criar um relatório de matriz básico com base em dados de vendas de exemplo. A matriz tem grupos de linhas e de colunas aninhados e um grupo de colunas adjacente. Você também aprenderá a formatar colunas e a girar texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Uma versão aprimorada do relatório que você criará neste tutorial está disponível como um relatório de exemplo do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Uma versão aprimorada do relatório que você criará neste tutorial está disponível como um relatório de exemplo do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
@@ -74,7 +74,7 @@ ms.locfileid: "48159496"
   
 5.  Clique em **Avançar**.  
   
-6.  Sobre o **escolher uma conexão a uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sobre o **escolher uma conexão a uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159496"
   
 13. Clique em **Concluir**.  
   
-     A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Territory e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategory e Product. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     A matriz é adicionada à superfície de design. O painel de grupos de linhas mostra dois grupos de linhas: Territory e SalesDate. O painel de grupos de colunas mostra dois grupos de colunas: Subcategoria e produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 14. Clique em **Executar** para visualizar o relatório.  
   

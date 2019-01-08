@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357243"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
@@ -43,11 +43,11 @@ ms.locfileid: "50099877"
   
      Usuários avançados podem criar consultas DMX personalizadas com o **Editor de Consulta Avançada**do tipo "arrastar e soltar", ou automatizar previsões usando o VBA do Excel.  
   
--   **Documente e gerencie.** Depois de criar um conjunto de dados e de criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatísticos dos dados e dos parâmetros de modelo.  
+-   **Documente e gerencie.** Depois que você criou um conjunto de dados e criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatístico dos parâmetros de modelo e de dados.  
   
--   **Explorar e visualizar.** A mineração de dados não é uma atividade que pode ser completamente automatizada. É necessário explorar e compreender seus resultados para tomar uma medida significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
+-   **Explorar e visualizar.** Mineração de dados não é uma atividade que pode ser totalmente automatizada - você precisa explorar e compreender seus resultados para tomar uma ação significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
   
--   **Implante e integre.** Quando você criar um modelo útil, coloque-o em produção, usando as ferramentas de gerenciamento para exportar o modelo do servidor de avaliação para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implante e integre.** Quando você criou um modelo útil, coloque-o em produção, usando as ferramentas de gerenciamento para exportar o modelo do seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Você também pode deixar o modelo no servidor onde o criou, mas atualize os dados de treinamento e execute previsões usando o Integration Services ou scripts DMX.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "50099877"
   
  Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Para obter ajuda adicional com a instalação, consulte esta página no Centro de Download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Para obter ajuda adicional com a instalação, consulte esta página no Centro de Download: [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

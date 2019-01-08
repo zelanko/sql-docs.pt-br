@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222236"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412203"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Testando a precisão com gráficos de comparação de precisão (Tutorial de mineração de dados básico)
   Sobre o **gráfico de precisão de mineração** guia do Designer de mineração de dados, você pode calcular quanto cada um dos seus modelos faz previsões e comparar os resultados de cada modelo diretamente com os resultados dos outros modelos. Esse método de comparação é conhecido como um *gráfico de comparação de precisão*. Normalmente, a precisão da previsão de um modelo de mineração é medida pela comparação de precisão ou pela precisão de classificação. Para este tutorial, só usaremos o gráfico de comparação de precisão.  
@@ -47,7 +47,7 @@ ms.locfileid: "48222236"
   
      Para usar uma coluna como a **nome da coluna previsível** em um gráfico de precisão, as colunas devem ter o tipo de uso `Predict` ou `Predict Only`. Além disso, o tipo de conteúdo da coluna de destino deve ser `Discrete` ou `Discretized`. Em outras palavras, você não pode medir a precisão em relação a resultados numéricos contínuos que usem o gráfico de comparação de precisão.  
   
--   Você deseja medir a precisão geral do modelo, ou a precisão em prever um valor específico (como [Bike Buyer] = “Yes ")?  
+-   Você deseja medir a precisão do modelo geral ou a precisão em prever um valor específico (como [Bike Buyer] = 'Yes')  
   
 #### <a name="to-generate-the-lift-chart"></a>Para gerar o gráfico de comparação de precisão  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222236"
  [Testando um modelo filtrado &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Lift Chart &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Guia gráfico de comparação de precisão &#40;exibição de gráfico de precisão de mineração&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375218"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Construtor de Relatórios e SSRS)
   Uma região de dados de lista se repete a cada grupo ou linha no conjunto de dados de relatório. Uma lista pode ser usada para criar relatórios ou formulários de forma livre, como faturas, ou em conjunto com outras regiões de dados. É possível definir listas que contenham qualquer número de itens de relatório. Uma lista pode ser aninhada em outra lista para fornecer vários grupos de dados.  
@@ -24,9 +24,9 @@ ms.locfileid: "48161516"
 > [!NOTE]  
 >  É possível publicar listas separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para começar a trabalhar rapidamente com listas, consulte [Tutorial: criando um relatório de formato livre &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Para começar rapidamente com listas, consulte [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
- Os relatórios de exemplo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem um relatório que usa uma lista. Para saber mais sobre listas, explore a definição de relatório do relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualize o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Os relatórios de exemplo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem um relatório que usa uma lista. Para saber mais sobre listas, explore a definição de relatório do relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualize o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48161516"
 ##  <a name="DisplayingLayout"></a> Exibindo dados em um layout de forma livre  
  Para organizar dados de relatório em um layout de forma livre, e não em uma grade, é possível adicionar uma lista à superfície de design. Arraste campos do painel de dados do relatório para a célula. Por padrão, a célula contém um retângulo que funciona como um contêiner. Mova todos os campos do contêiner até obter o design desejado. Use as linhas de ajuste exibidas quando você arrasta caixas de texto no contêiner de retângulo para ajudar você a alinhar as bordas vertical e horizontalmente. Remova o espaço em branco indesejado, ajustando o tamanho da célula. Para obter mais informações, consulte [Alterar a altura da linha ou a largura da coluna &#40;Construtor de Relatórios e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- A seguinte figura mostra uma lista que exibe informações sobre uma ordem, inclusive os campos: Data, Ordem, Quantidade, Produto, LineTotal e uma imagem.  
+ A figura a seguir mostra uma lista que exibe informações sobre um pedido, incluindo estes campos: Data, ordem, Qty, produto, LineTotal e uma imagem.  
   
  ![Lista no modo de exibição de Design, quatro campos e uma imagem](../media/rs-basiclistformdesign.gif "Lista no modo de exibição de Design, quatro campos e uma imagem")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48161516"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de funções de agregação &#40;relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

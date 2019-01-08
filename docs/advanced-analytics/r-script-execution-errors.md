@@ -1,5 +1,5 @@
 ---
-title: Erros de script do R no SQL Server Machine Learning e R Services | Microsoft Docs
+title: R script erros e solução de problemas - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695434"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644885"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erros de script do R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo documenta várias gerrors. inittabem durante a execução de código R no SQL Server. A lista não é abrangente. Há muitos pacotes e erros podem variar entre as versões do mesmo pacote. É recomendável publicar erros de script na [Fórum do Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que oferece suporte para os componentes usados no R Services (no banco de dados), o Microsoft R Client e Microsoft R Server de aprendizado de máquina.
 
-**Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 serviços de Machine Learning
+**Aplica-se a:** SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
 
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Falha de script válida em T-SQL ou em procedimentos armazenados
@@ -39,7 +39,7 @@ Se o tempo de execução de R está funcionando, mas o script retorna erros, rec
 Também recomendamos que você analise e ligeiramente reescreva o script para corrigir quaisquer problemas com tipos de dados que podem surgir quando você move dados entre R e o mecanismo de banco de dados. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
 
 Além disso, você pode usar o pacote de sqlrutils para agrupar seu script R em um formato que seja mais facilmente consumido como um procedimento armazenado. Para obter mais informações, consulte:
-* [Gerar um procedimento armazenado para código R usando o pacote sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [pacote de sqlrutils](r/ref-r-sqlrutils.md)
 * [Criar um procedimento armazenado usando sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>Script retorna resultados inconsistentes
@@ -68,7 +68,7 @@ Para habilitar suas credenciais do Windows a ser passado com segurança a partir
 
 2. Execute o script a seguir. Certifique-se de editar o nome de grupo do usuário, se você tiver alterado o padrão e os nomes de computador e da instância.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

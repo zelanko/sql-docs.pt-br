@@ -1,6 +1,6 @@
 ---
-title: Instalar novos pacotes de Python no SQL Server Machine Learning | Microsoft Docs
-description: Adicionar novos pacotes de Python para SQL Server 2017 Machine Learning Services (no banco de dados) e Machine Learning Server (autônomo)
+title: Instalar novos pacotes de linguagem Python - aprendizagem de máquina do SQL Server
+description: Adicione novos pacotes de Python para SQL Server 2017 Machine Learning Services (no banco de dados) e Machine Learning Server (autônomo).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697635"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432309"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes de Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ Para obter mais informações sobre os caminhos de local e a instalação do pac
 
 + [Serviços SQL Server 2017 Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md) com a opção de linguagem Python. 
 
-+ Pacotes devem ser Python 3.5 em conformidade e em execução no Windows. 
++ Pacotes devem estar em conformidade com a 3.5 e execute o Python no Windows. 
 
 + Acesso administrativo ao servidor é necessário para instalar pacotes.
 
@@ -46,13 +46,6 @@ Instalação do pacote é por instância. Se você tiver várias instâncias de 
 
 O pacote instalado neste exemplo é [CNTK](https://docs.microsoft.com/cognitive-toolkit/), uma estrutura para aprendizado aprofundado da Microsoft que oferece suporte à personalização, treinamento e o compartilhamento de tipos diferentes de redes neurais.
 
-> [!TIP]
-> Precisa de ajuda para configurar suas ferramentas Python? Confira estes blogs:
-> 
-> [Introdução aos serviços de Web Python usando o Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
-
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Etapa 1. Baixe a versão do Windows do pacote do Python
 
 + Se você estiver instalando os pacotes do Python em um servidor sem acesso à internet, você deve baixar o arquivo WHL para um computador diferente e, em seguida, copie-o para o servidor.
@@ -64,7 +57,7 @@ O pacote instalado neste exemplo é [CNTK](https://docs.microsoft.com/cognitive-
 > [!IMPORTANT]
 > Certifique-se de que você obtenha a versão do Windows do pacote. Se o arquivo terminar em gz, provavelmente não é a versão correta.
 
-Esta página contém os downloads para várias plataformas e para várias versões do Python: [configurar CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+Esta página contém os downloads para várias plataformas e para várias versões do Python: [Configurar o CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>Etapa 2. Abra um prompt de comando do Python
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 Quando a instalação for concluída, você pode começar imediatamente usando o pacote conforme descrito na próxima etapa.
 
-Para obter exemplos de aprendizagem profunda usando CNTK, consulte estes tutoriais: [API do Python para CNTK](https://cntk.ai/pythondocs/tutorials.html)
+Para obter exemplos de aprendizagem profunda usando CNTK, consulte estes tutoriais: [API do Python para o CNTK](https://cntk.ai/pythondocs/tutorials.html)
 
 Para usar funções do pacote em seu script, insira o padrão `import <package_name>` instrução nas linhas iniciais do script:
 

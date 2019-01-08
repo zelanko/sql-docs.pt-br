@@ -1,5 +1,5 @@
 ---
-title: Propriedades OLAP | Microsoft Docs
+title: Propriedades OLAP do Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239286"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072513"
 ---
 # <a name="olap-properties"></a>Propriedades OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor OLAP listadas nas seguintes tabelas. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** somente modo de servidor multidimensional  
+ **Aplica-se a:** Somente o modo de servidor multidimensional  
   
 ## <a name="memory"></a>Memória  
  **DefaultPageSizeForData**  

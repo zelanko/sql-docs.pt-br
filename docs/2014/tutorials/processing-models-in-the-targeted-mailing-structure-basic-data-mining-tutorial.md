@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101336"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402571"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Processando modelos na estrutura de mala direta (Tutorial de mineração de dados básico)
   Antes de navegar ou trabalhar nos modelos de mineração criados por você, implante o projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e processe a estrutura de mineração e os modelos de mineração.  
@@ -47,7 +47,7 @@ ms.locfileid: "48101336"
 4.  Insira `12` para **HoldoutSeed**.  
   
 ## <a name="deploying-and-processing-the-models"></a>Implantando e processando os modelos  
- No Designer de Mineração de Dados, você pode decidir que objetos processar, dependendo do escopo das alterações feitas ao seu modelo ou aos dados subjacentes:  
+ No Designer de mineração de dados, você pode decidir que objetos processar, dependendo do escopo das alterações feitas ao seu modelo ou os dados subjacentes:  
   
  Para esta tarefa, como os dados e os modelos são novos, você processará a estrutura e todos os modelos ao mesmo tempo.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "48101336"
  [Lição 4: Explorando os modelos de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

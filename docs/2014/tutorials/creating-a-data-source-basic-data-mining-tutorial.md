@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128166"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376448"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Criando uma fonte de dados (Tutorial de mineração de dados básico)
   Um *fonte de dados* é uma conexão de dados que é salvo e gerenciado no seu projeto e implantado em seu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. A fonte de dados contém os nomes do servidor e o banco de dados em que a sua fonte de dados reside, além das demais propriedades de conexão necessárias.  
   
 > [!IMPORTANT]  
->  O nome do banco de dados é [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se você ainda não instalou esse banco de dados, consulte o [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) página.  
+>  O nome do banco de dados é [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se você ainda não instalou esse banco de dados, consulte o [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) página.  
   
 ### <a name="to-create-a-data-source"></a>Para criar uma fonte de dados  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128166"
 ## <a name="see-also"></a>Consulte também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Definindo uma fonte de dados](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Definir opções de representação &#40;SSAS - Multidimensional&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Definir opções de representação &#40;SSAS – Multidimensional&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

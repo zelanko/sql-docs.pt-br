@@ -14,12 +14,12 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2570a21987ed46ce7bda01302cf890ffab87bb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22d560c8a65d5b9a7cebc4062ddd2d1ce936d5a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372049"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   O driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão que substituem ou aprimoram palavras-chave de cadeia de conexão. Várias palavras-chave de cadeia de conexão têm valores padrão especificados pelo driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -78,7 +78,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLDriverConnect](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [Função SQLDriverConnect](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

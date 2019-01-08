@@ -1,5 +1,5 @@
 ---
-title: Renomear uma tabela ou coluna | Microsoft Docs
+title: Renomear uma tabela de modelo tabular do Analysis Services ou uma coluna | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040100"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072633"
 ---
 # <a name="rename-a-table-or-column"></a>Renomear uma tabela ou coluna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34040100"
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>Efeito de renomear tabelas, colunas e cálculos existentes  
  Sempre que altera o nome de uma tabela, você altera o nome do objeto de tabela subjacente que pode conter várias colunas ou medidas. As colunas que estão na tabela e as relações que usam a tabela devem ser atualizadas para usar o novo nome em suas definições. Essa atualização ocorre automaticamente na maioria dos casos.
   
- Qualquer cálculo que use a tabela renomeada ou as colunas da tabela renomeada também deverá ser atualizado, e os dados derivados desses cálculos devem ser atualizados e recalculados. Dependendo da quantidade de tabelas e cálculos afetados, a conclusão dessa operação poderá demorar algum tempo. Portanto, o melhor momento para renomear tabelas é durante o processo de importação ou antes de você começar a criar relacionamentos e cálculos complexos.  
+ Os cálculos que usam a tabela renomeada ou que usam colunas da tabela renomeada também deverá ser atualizados, e os dados derivados desses cálculos devem ser atualizados e recalculados. Dependendo da quantidade de tabelas e cálculos afetados, a conclusão dessa operação poderá demorar algum tempo. Portanto, o melhor momento para renomear tabelas é durante o processo de importação ou antes de você começar a criar relacionamentos e cálculos complexos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas e colunas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

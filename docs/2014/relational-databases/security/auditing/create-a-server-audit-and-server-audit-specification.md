@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219595"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979792"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "48219595"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Deve existir uma auditoria antes da criação de uma especificação de auditoria de servidor para ela. Quando uma especificação de auditoria de servidor é criada, ela fica em um estado desabilitado.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219595"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] As operações continuam. Os registros de auditoria não são retidos. A auditoria retomará tentando registrar eventos em log e será retomada se a condição de falha for resolvida. A seleção da opção **Continuar** pode permitir atividade não auditada, o que pode violar suas políticas de segurança. Selecionar essa opção ao continuar a operação do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] é mais importante do que manter uma auditoria completa. Essa é a seleção padrão.  
   
      **Desligar servidor**  
-     Força o desligamento de um servidor quando a instância do servidor que grava no destino não puder gravar dados no destino de auditoria. O logon que emite isso deve ter o `SHUTDOWN` permissão. Se o logon não tiver essa permissão, essa função apresentará falha e será exibida uma mensagem de erro. Não ocorre nenhum evento auditado. Selecione essa opção quando uma falha de auditoria puder comprometer a segurança ou a integridade do sistema.  
+     Força o desligamento de um servidor quando a instância do servidor que grava no destino não puder gravar dados no destino de auditoria. O logon que emite isso deve ter a permissão `SHUTDOWN`. Se o logon não tiver essa permissão, essa função apresentará falha e será exibida uma mensagem de erro. Não ocorre nenhum evento auditado. Selecione essa opção quando uma falha de auditoria puder comprometer a segurança ou a integridade do sistema.  
   
      **Operação com falha**  
      Em casos onde o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit não pode gravar no log de auditoria, essa opção provocará falha nas ações de banco de dados se elas forem, de outra forma, provocar eventos auditados. Não ocorre nenhum evento auditado. As ações que não provocam eventos auditados podem continuar. A auditoria retomará tentando registrar eventos em log e será retomada se a condição de falha for resolvida. Selecione essa opção quando manter uma auditoria completa for mais importante do que o acesso total ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "48219595"
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre a caixa de diálogo **Localizar Pasta –***server_name* para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
+     Abre o **localizar pasta – * * * nome_do_servidor* caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  
@@ -154,7 +154,7 @@ ms.locfileid: "48219595"
   
 3.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48219595"
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -179,11 +179,11 @@ ms.locfileid: "48219595"
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

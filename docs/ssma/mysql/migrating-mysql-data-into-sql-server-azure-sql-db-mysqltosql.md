@@ -13,12 +13,12 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681264"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400199"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migrar dados do MySQL para o SQL Server – BD SQL do Azure (MySQLToSQL)
 Depois de ter sincronizado com êxito com objetos convertidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, você pode migrar os dados do MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -92,10 +92,10 @@ Para exibir mensagens de migração, certifique-se de que o painel de saída est
   
     -   Para realizar **migração de dados do lado do servidor**, selecione o **mecanismo de migração de dados do lado do servidor** opção o **configurações de projeto** caixa de diálogo.  
   
-4.  Clique com botão direito **esquemas** no Gerenciador de metadados do MySQL e clique **migrar dados**. Também é possível migrar dados para objetos individuais ou categorias de objetos: clique com botão direito do objeto ou sua pasta pai; Selecione o **migrar dados** opção.  
+4.  Clique com botão direito **esquemas** no Gerenciador de metadados do MySQL e clique **migrar dados**. Também é possível migrar dados para objetos individuais ou categorias de objetos: Clique com botão direito do objeto ou sua pasta pai; Selecione o **migrar dados** opção.  
   
     > [!NOTE]  
-    > Se o SSMA para o pacote de extensão MySQL não está instalado na instância do SQL Server e se **mecanismo de migração de dados do lado do servidor** estiver selecionada, ao migrar os dados para o banco de dados de destino, o seguinte erro é encontrado: ' SSMA Componentes de migração de dados não foram encontrados no SQL Server, não será possível realizar a migração de dados do lado do servidor. Verifique se o pacote de extensão está instalado corretamente '. Clique em **Cancelar** para finalizar a migração de dados.  
+    > Se o SSMA para o pacote de extensão MySQL não está instalado na instância do SQL Server e se **mecanismo de migração de dados do lado do servidor** estiver selecionada, ao migrar os dados para o banco de dados de destino, o seguinte erro é encontrado: ' Componentes SSMA de migração de dados não foram encontrados no SQL Server, não será possível realizar a migração de dados do lado do servidor. Verifique se o pacote de extensão está instalado corretamente '. Clique em **Cancelar** para finalizar a migração de dados.  
   
 5.  No **conectar-se ao MySQL** caixa de diálogo, insira as credenciais de conexão e, em seguida, clique em **Connect**. Para obter mais informações sobre como se conectar ao MySQL, consulte [conectar-se ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   

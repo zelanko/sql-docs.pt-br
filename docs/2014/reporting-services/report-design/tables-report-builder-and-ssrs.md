@@ -11,12 +11,12 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df19fffaec69eac9c3a80fe7fee1899994682a0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354546"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelas (Construtor de Relatórios e SSRS)
   Use uma tabela para exibir dados detalhados ou dados agrupados, ou uma combinação de ambos. É possível agrupar dados por um campo único, vários campos ou escrevendo uma expressão própria. Você pode criar grupos aninhados ou adjacentes, independentes. Para exibir valores agregados em relação aos dados agrupados, adicione totais aos grupos. Formate as linhas e as colunas para realçar os dados que você deseja enfatizar. Inicialmente, é possível ocultar dados detalhados ou agrupados e incluir alternâncias de detalhamento para permitir que um usuário escolha interativamente quantos dados devem ser mostrados.  
@@ -24,9 +24,9 @@ ms.locfileid: "48180666"
 > [!NOTE]  
 >  É possível publicar tabelas separadamente de um relatório como partes do relatório.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para começar rapidamente a usar tabelas, consulte [Tutorial: criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Para começar rapidamente com tabelas, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) ou [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
- Os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem vários relatórios que usam tabelas. Você pode saber sobre tabelas explorando a definição de relatório de um relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualizando o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem vários relatórios que usam tabelas. Você pode saber sobre tabelas explorando a definição de relatório de um relatório de exemplo no Construtor de Relatórios ou no Designer de Relatórios, ou visualizando o relatório renderizado no Construtor de Relatórios ou no Designer de Relatórios. Para obter mais informações sobre o download de relatórios de exemplo, consulte os [exemplos do Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48180666"
   
  ![Modelo de tabela na área de design, selecionado](../media/rs-tabletemplatenewselected.gif "Modelo de tabela na área de design, selecionado")  
   
- O identificador de linha da Linha de dados mostra o símbolo de detalhes (![identificador de linha com três linhas paralelas da linha de detalhes](../media/rs-icontablix-detailsrow.gif "identificador de linha com três linhas paralelas da linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O seguinte diagrama mostra uma região de dados de tabela com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.  
+ O identificador de linha da Linha de dados mostra o símbolo de detalhes (![identificador de linha com três linhas paralelas da linha de detalhes](../media/rs-icontablix-detailsrow.gif "identificador de linha com três linhas paralelas da linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O diagrama a seguir mostra uma região de dados de tabela com estes campos: Data, ordem, produto, quantidade e Total da linha.  
   
  ![Design, tabela com cabeçalhos de coluna em negrito](../media/rs-basictabledetailsformatteddesign.gif "Design, tabela com cabeçalhos de coluna em negrito")  
   

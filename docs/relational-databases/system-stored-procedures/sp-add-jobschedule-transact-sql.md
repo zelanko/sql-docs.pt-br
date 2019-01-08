@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834484"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591580"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Número de identificação do trabalho para o qual a agenda é adicionada. *job_id* está **uniqueidentifier**, sem padrão.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nome do trabalho ao qual a agenda é adicionada. *job_name* está **nvarchar (128)**, sem padrão.  
   
 > [!NOTE]  
 >  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_nome_**'**  
  Nome da agenda. *nome da* está **nvarchar (128)**, sem padrão.  
   
  [  **@enabled=** ] *enabled_flag*  
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  Valor que indica quando o trabalho será executado. *frequency_type* está **int**, com um padrão de **0**, e pode ser um dos seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**4**|Diariamente|  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Hora em qualquer dia entre *active_start_date* e *active_end_date* para iniciar a execução do trabalho. *active_start_time* está **int**, sem padrão. A hora é formatada como HHMMSS em um relógio de 24 horas.  
   
- [**@active_end_time= * * * active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  Hora em qualquer dia entre *active_start_date* e *active_end_date* para execução do trabalho final. *active_end_time* está **int**, sem padrão. A hora é formatada como HHMMSS em um relógio de 24 horas.  
   
- [  **@schedule_id=***schedule_id***saída**  
+ [  **@schedule_id=**_schedule_id_**saída**  
  Número de identificação atribuído à agenda se ela for criada com êxito. *schedule_id* é uma variável de saída do tipo **int**, sem padrão.  
   
- [ **@schedule_uid**=] *schedule_uid * * * saída**  
+ [ **@schedule_uid**=] _schedule_uid_**saída**  
  Um identificador exclusivo da agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

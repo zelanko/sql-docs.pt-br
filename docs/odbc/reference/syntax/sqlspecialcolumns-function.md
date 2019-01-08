@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204365"
 ---
 # <a name="sqlspecialcolumns-function"></a>Função SQLSpecialColumns
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: Open Group  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: Open Group  
   
  **Resumo**  
  **SQLSpecialColumns** recupera as seguintes informações sobre colunas dentro de uma tabela especificada:  
@@ -99,12 +99,12 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_SCOPE_SESSION: Rowid é garantido que seja válido para a duração da sessão (nos limites da transação).  
   
- *Anulável*  
+ *Permite valor nulo*  
  [Entrada] Determina se é necessário retornar colunas especiais que podem ter um valor nulo. Deve ser uma destas opções:  
   
- SQL_NO_NULLS: Excluir as colunas especiais que podem ter valores nulos. Alguns drivers não dá suporte ao SQL_NO_NULLS e esses drivers retornará um resultado vazio definido se SQL_NO_NULLS foi especificado. Aplicativos devem estar preparados para esse caso e a solicitação SQL_NO_NULLS somente se for absolutamente necessário.  
+ SQL_NO_NULLS: Exclua colunas especiais que podem ter valores nulos. Alguns drivers não dá suporte ao SQL_NO_NULLS e esses drivers retornará um resultado vazio definido se SQL_NO_NULLS foi especificado. Aplicativos devem estar preparados para esse caso e a solicitação SQL_NO_NULLS somente se for absolutamente necessário.  
   
- SQL_NULLABLE: Retornar colunas especiais, mesmo se eles podem ter valores nulos.  
+ SQL_NULLABLE: Retorne colunas especiais, mesmo se eles podem ter valores nulos.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -112,7 +112,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLSpecialColumns** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSpecialColumns** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
@@ -172,7 +172,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|O tamanho da coluna na fonte de dados. Para obter mais informações sobre o tamanho da coluna, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|O comprimento em bytes dos dados transferidos em uma **SQLGetData** ou **SQLFetch** operação se SQL_C_DEFAULT for especificado. Para dados numéricos, esse tamanho pode ser diferente do que o tamanho dos dados armazenados na fonte de dados. Esse valor é o mesmo que a coluna COLUMN_SIZE para caracteres ou dados binários. Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Os dígitos decimais da coluna na fonte de dados. NULL é retornado para os tipos de dados em que os dígitos decimais não são aplicáveis. Para obter mais informações sobre os dígitos decimais, consulte [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se a coluna é uma coluna de pseudo, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Observação:** para interoperabilidade máxima, pseudo colunas devem não ser colocado entre aspas com o caractere de aspas de identificador retornado por **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se a coluna é uma coluna de pseudo, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Observação:**  Para interoperabilidade máxima, pseudo colunas devem não ser colocado entre aspas com o caractere de aspas de identificador retornado por **SQLGetInfo**.|  
   
  Depois que o aplicativo recupera os valores para SQL_BEST_ROWID, o aplicativo pode usar esses valores para selecionar novamente essa linha dentro do escopo definido. O **selecionar** é a garantia de instrução para retornar nenhuma linha ou uma linha.  
   

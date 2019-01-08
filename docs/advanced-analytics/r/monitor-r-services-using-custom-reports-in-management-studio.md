@@ -1,5 +1,5 @@
 ---
-title: Monitorar os serviços do R usando relatórios personalizados no Management Studio | Microsoft Docs
+title: Monitorar o R Services usando relatórios personalizados no Management Studio - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48c0912794f1aac0712a529f4cf8dde10735c9d8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201958"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432599"
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitorar os serviços de aprendizado de máquina usando relatórios personalizados no Management Studio
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitorar os Serviços de Machine Learning usando relatórios personalizados no Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Para tornar mais fácil de gerenciar a instância usada para aprendizado de máquina, a equipe de produto forneceu um número de exemplos de relatórios personalizados que você pode adicionar ao SQL Server Management Studio. Esses relatórios, você pode exibir detalhes como:
 
-- Sessões de R ativo ou Python
+- Sessões de R ativas ou Python
 - Definições de configuração para a instância
 - Estatísticas de execução de trabalhos de aprendizado de máquina
-- Eventos estendidos para R Services
+- Eventos estendidos para serviços de R
 - Pacotes de R ou Python instalados na instância atual
 
-Este artigo explica como instalar e usar os relatórios personalizados fornecidos especificamente para a máquina leaerning. 
+Este artigo explica como instalar e usar os relatórios personalizados fornecidos especificamente para leaerning de máquina. 
 
-Para obter uma introdução geral aos relatórios no Management Studio, consulte [relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+Para obter uma introdução geral para relatórios no Management Studio, consulte [relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## <a name="how-to-install-the-reports"></a>Como instalar os relatórios
 
@@ -42,12 +42,12 @@ Para usar esses relatórios:
 
 ### <a name="step-1-download-the-reports"></a>Etapa 1. Baixe os relatórios
 
-1. Abrir o repositório do GitHub que contém [exemplos de produto do SQL Server](https://github.com/Microsoft/sql-server-samples)e baixar os relatórios de exemplo. 
+1. Abra o repositório do GitHub que contém [amostras de produto do SQL Server](https://github.com/Microsoft/sql-server-samples)e baixe os relatórios de exemplo. 
 
-    + [Relatórios personalizados do SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+    + [Relatórios personalizados SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > Os relatórios podem ser usados com serviços de aprendizado do SQL Server de 2017 Machiine ou SQL Server 2016 R Services.
+    > Os relatórios podem ser usados com o SQL Server 2017 Machiine Learning Services ou SQL Server 2016 R Services.
 
 2. Para baixar os exemplos, você também pode fazer logon no GitHub e fazer uma bifurcação local dos exemplos. 
 
@@ -74,15 +74,15 @@ Para usar esses relatórios:
 
 ## <a name="report-list"></a>Lista de relatórios
 
-O repositório de exemplos de produto no GitHub atualmente inclui os seguintes relatórios:
+O repositório de amostras de produto no GitHub atualmente inclui os seguintes relatórios:
 
 + **Serviços R – sessões ativas**
 
-  Use este relatório para exibir os usuários que estão conectados no momento para a instância do SQL Server e os trabalhos de aprendizado de máquina em execução. 
+  Use esse relatório para exibir os usuários atualmente conectados à instância do SQL Server e trabalhos de aprendizagem de máquina em execução. 
   
 + **Serviços R – configuração**
 
-  Use esse relatório para exibir a configuração do tempo de execução do script externo e serviços relacionados. O relatório indica se uma reinicialização é necessária e verificará se há protocolos de rede necessários. 
+  Use este relatório para exibir a configuração de tempo de execução do script externo e serviços relacionados. O relatório indica se uma reinicialização é necessária e verificará se há protocolos de rede necessários. 
   
   Autenticação implícita é necessária para tarefas de aprendizado de máquina que são executados no SQL Server como um contexto de computação. Para verificar que a autenticação implícita é configurada, o relatório verifica se existe um logon de banco de dados para o grupo SQLRUserGroup.
 
@@ -92,23 +92,23 @@ O repositório de exemplos de produto no GitHub atualmente inclui os seguintes r
  
 + **Serviços R – Estatísticas de execução**
 
-  Use este relatório para exibir estatísticas de execução de trabalhos de aprendizado de máquina. Por exemplo, você pode obter o número total de scripts R que foram executados, o número de execuções paralelas e as funções de RevoScaleR usadas com mais frequência. Clique em **exibição SQL Script** para obter o código T-SQL completo por trás desse relatório.
+  Use esse relatório para exibir estatísticas de execução de trabalhos de aprendizado de máquina. Por exemplo, você pode obter o número total de scripts R que foram executados, o número de execuções paralelas e as funções de RevoScaleR usadas com mais frequência. Clique em **Exibir SQL Script** para obter o código T-SQL completo por trás desse relatório.
 
   Atualmente o relatório monitora somente as estatísticas para funções do pacote RevoScaleR.
 
 + **Serviços R – eventos estendidos**
 
-  Use esse relatório para exibir uma lista de eventos estendidos que estão disponíveis para o monitoramento de tarefas relacionadas a tempos de execução do script externo. Clique em **exibição SQL Script** para obter o código T-SQL completo por trás desse relatório.
+  Use este relatório para exibir uma lista de eventos estendidos que estão disponíveis para monitorar as tarefas relacionadas a tempos de execução do script externo. Clique em **Exibir SQL Script** para obter o código T-SQL completo por trás desse relatório.
 
 + **Serviços R – pacotes**
 
-  Use este relatório para exibir uma lista dos pacotes de R ou Python instalado na instância do SQL Server.
+  Use esse relatório para exibir uma lista dos pacotes de R ou Python instalado na instância do SQL Server.
 
 + **Serviços R – utilização de recursos**
 
-  Use este relatório para exibir o consumo de recursos de CPU, memória e e/s por execução do script externo. Você também pode exibir a configuração de memória de pools de recursos externos.
+  Use esse relatório para exibir o consumo de recursos de CPU, memória e e/s por execução de script externo. Você também pode exibir a configuração de memória de pools de recursos externos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Serviços de monitoramento](managing-and-monitoring-r-solutions.md)
 

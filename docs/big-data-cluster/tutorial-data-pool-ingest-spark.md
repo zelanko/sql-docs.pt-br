@@ -1,18 +1,20 @@
 ---
-title: A inclusão de dados em um pool de dados do SQL Server com trabalhos do Spark | Microsoft Docs
+title: Ingestão de dados com trabalhos do Spark
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial demonstra como ingestão de dados para o pool de dados de um cluster de big data de 2019 do SQL Server (versão prévia) usando trabalhos do Spark no estúdio de dados do Azure.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221472"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432359"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com trabalhos do Spark
 
@@ -30,17 +32,17 @@ Neste tutorial, você aprenderá como:
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-* [Implantar um cluster de big data no Kubernetes](deployment-guidance.md).
-* [Instalar o Studio de dados do Azure e a extensão do SQL Server 2019](deploy-big-data-tools.md).
-* [Carregar dados de exemplo no cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Ferramentas de big data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Criar uma tabela externa no pool de dados
 
 As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clickstreams_spark_results**. Esta tabela, em seguida, pode ser usada como um local para ingerir dados para o cluster de big data.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](deploy-big-data-tools.md#master).
+1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
 
@@ -61,13 +63,13 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 2.1, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 2.2, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar um trabalho de streaming do Spark
 
 A próxima etapa é criar um trabalho que carrega dados de sequência de cliques da web do pool de armazenamento (HDFS) de streaming do Spark para a tabela externa que você criou no pool de dados.
 
-1. No estúdio de dados do Azure, conecte-se ao gateway de HDFS/Spark do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. No estúdio de dados do Azure, conecte-se a **gateway HDFS/Spark** do seu cluster de big data. Para obter mais informações, consulte [conectar-se ao gateway de HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Clique duas vezes na conexão de gateway de HDFS/Spark na **servidores** janela. Em seguida, selecione **novo trabalho de Spark**.
 
@@ -81,15 +83,17 @@ A próxima etapa é criar um trabalho que carrega dados de sequência de cliques
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. No **classe principal** , insira `FileStreaming`.
+
 1. No **argumentos** , insira o texto a seguir, especificando a senha para a instância mestre do SQL Server no `<your_password>` espaço reservado. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    A tabela a seguir descreve cada argumento:
 
-   | Argumento | Description |
+   | Argumento | Descrição |
    |---|---|
    | nome do servidor | Uso do SQL Server para ler o esquema da tabela |
    | Número da porta | Porta SQL Server está escutando (padrão 1433) |
@@ -100,6 +104,7 @@ A próxima etapa é criar um trabalho que carrega dados de sequência de cliques
    | Diretório de origem de streaming | Isso deve ser um URI completo, como "hdfs: / / / clickstream_data" |
    | formato de entrada | Isso pode ser "csv", "parquet" ou "json" |
    | Habilitar o ponto de verificação | true ou false |
+   | tempo limite | tempo para executar o trabalho para em milissegundos antes de sair |
 
 1. Pressione **enviar** para enviar o trabalho.
 
@@ -113,7 +118,7 @@ As etapas a seguir mostram que o trabalho de streaming do Spark carregou os dado
 
    ![Histórico de trabalhos do Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Retornar à janela de consulta de instância mestre do SQL Server que você abriu no início deste tutorial...
+1. Retornar à janela de consulta de instância mestre do SQL Server que você abriu no início deste tutorial.
 
 1. Execute a seguinte consulta para inspecionar os dados ingeridos.
 

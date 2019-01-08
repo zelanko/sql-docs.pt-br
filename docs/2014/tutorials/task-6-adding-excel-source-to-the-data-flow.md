@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 6: Adicionando a origem do Excel ao fluxo de dados | Microsoft Docs'
+title: 'Tarefa 6: Adicionar origem do Excel ao fluxo de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071752"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356545"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarefa 6: Adicionando a origem do Excel ao fluxo de dados
   Nesta tarefa, você adicionará uma Origem do Excel ao fluxo de dados para ler dados do fornecedor do arquivo de origem do Excel. A Origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do Microsoft Excel. Consulte o tópico [Origem do Excel](../integration-services/data-flow/excel-source.md) para obter mais detalhes.  
@@ -45,9 +45,9 @@ ms.locfileid: "48071752"
   
 9. Clique em **OK** para fechar a caixa de diálogo.  
   
-10. Arraste e solte a transformação **Limpeza DQS** em **Outras Transformações** na **Caixa de Ferramentas do SSIS** para a guia **Fluxo de Dados** em **Ler Dados do Fornecedor de Arquivo do Excel**. A transformação Limpeza DQS usa o DQS (Data Quality Services) para corrigir dados aplicando regras aprovadas na base de dados de conhecimento. Essa transformação, em tempo de execução, cria um projeto de limpeza DQS no servidor DQS. Consulte o tópico [Transformação Limpeza DQS](http://msdn.microsoft.com/library/ee677619.aspx) para obter mais detalhes.  
+10. Arraste e solte a transformação **Limpeza DQS** em **Outras Transformações** na **Caixa de Ferramentas do SSIS** para a guia **Fluxo de Dados** em **Ler Dados do Fornecedor de Arquivo do Excel**. A transformação Limpeza DQS usa o DQS (Data Quality Services) para corrigir dados aplicando regras aprovadas na base de dados de conhecimento. Essa transformação, em tempo de execução, cria um projeto de limpeza DQS no servidor DQS. Consulte o tópico [Transformação Limpeza DQS](https://msdn.microsoft.com/library/ee677619.aspx) para obter mais detalhes.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 7: Adicionando a Transformação de Limpeza DQS ao fluxo de dados](../integration-services/data-flow/data-flow.md)  
+ [Tarefa 7: A transformação de limpeza do DQS adição ao fluxo de dados](../integration-services/data-flow/data-flow.md)  
   
   

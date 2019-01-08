@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205745"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para o SQL Server no Linux
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 Um grupo de disponibilidade usa pontos de extremidade TCP para comunicação. No Linux, só há suporte para pontos de extremidade para um grupo de disponibilidade se forem usados certificados para autenticação. Isso significa que o certificado de uma instância deve ser restaurado em todas as outras instâncias que serão réplicas que participam no mesmo AG. O processo de certificado é necessário até mesmo para uma réplica somente de configuração. 
 
-Criando pontos de extremidade e restaurar certificados só podem ser feitos por meio do Transact-SQL. Você pode usar não -[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-gerado também certificados. Você também precisará de um processo para gerenciar e substituir todos os certificados que expiram.
+Criando pontos de extremidade e restaurar certificados só podem ser feitos por meio do Transact-SQL. Você pode usar não - [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-gerado também certificados. Você também precisará de um processo para gerenciar e substituir todos os certificados que expiram.
 
 > [!IMPORTANT]
 > Se você planeja usar o [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] Assistente para criar o grupo de disponibilidade, você ainda precisará criar e restaurar os certificados usando o Transact-SQL no Linux.
@@ -315,7 +315,7 @@ Este exemplo criará certificados para uma configuração de três nós. Os nome
 
 Esta seção aborda como usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) ou o Transact-SQL para criar o grupo de disponibilidade para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
 Esta seção mostra como criar um grupo de disponibilidade com um tipo de cluster externo usando o SSMS com o Assistente de novo grupo de disponibilidade.
 
@@ -353,9 +353,9 @@ Esta seção mostra como criar um grupo de disponibilidade com um tipo de cluste
 
 11. Se um ouvinte é criado para cenários legíveis, o SSMS 17.3 ou posterior permite a criação do roteamento somente leitura no assistente. Ele também pode ser adicionado posteriormente por meio do SSMS ou Transact-SQL. Para adicionar o roteamento somente leitura agora:
 
-    A.  Selecione a guia roteamento somente leitura.
+    a.  Selecione a guia roteamento somente leitura.
 
-    B.  Insira as URLs para as réplicas somente leitura. Essas URLs são semelhantes aos pontos de extremidade, exceto que eles usam a porta da instância, não o ponto de extremidade.
+    b.  Insira as URLs para as réplicas somente leitura. Essas URLs são semelhantes aos pontos de extremidade, exceto que eles usam a porta da instância, não o ponto de extremidade.
 
     c.  Selecione cada URL e na parte inferior, selecione as réplicas legíveis. Para selecionar vários, mantenha pressionada a tecla SHIFT ou clique e arraste.
 
@@ -378,7 +378,7 @@ Esta seção mostra exemplos de criação de um grupo de disponibilidade usando 
 -   [Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas de exemplo 1 – 2 com uma réplica somente de configuração (tipo de cluster externo)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas de exemplo um dois com uma réplica somente de configuração (tipo de cluster externo)
 
 Este exemplo mostra como criar um grupo de disponibilidade de duas réplicas que usa uma réplica somente de configuração.
 
@@ -424,7 +424,7 @@ Este exemplo mostra como criar um grupo de disponibilidade de duas réplicas que
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas de duas a três de exemplo com o roteamento de somente leitura (tipo de cluster externo)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas de exemplo dois e três com roteamento de somente leitura (tipo de cluster externo)
 
 Este exemplo mostra três completo réplicas e o roteamento como somente leitura podem ser configurados como parte da criação inicial do grupo de disponibilidade.
 
@@ -482,7 +482,7 @@ Este exemplo mostra três completo réplicas e o roteamento como somente leitura
     
 3.  Repita a etapa 2 para a terceira réplica.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de exemplo – dois a três com roteamento somente leitura (nenhum tipo de cluster)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de exemplo dois a três com roteamento somente leitura (nenhum tipo de cluster)
 
 Este exemplo mostra a criação de uma configuração de duas réplicas usando um tipo de cluster nenhum. Ele é usado para o cenário de escala de leitura em que nenhum failover é esperada. Isso cria o ouvinte que está, na verdade, a réplica primária, bem como o roteamento somente leitura, usando a funcionalidade de round robin.
 

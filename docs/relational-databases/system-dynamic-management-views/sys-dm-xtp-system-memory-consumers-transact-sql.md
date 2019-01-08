@@ -19,12 +19,12 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8341ac09af815f2e96eadd1616fd02cc75810644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544028"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interna do consumidor de memória.|  
-|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – Não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 – LOOKASIDE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
-|memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – Não deve ser exibido.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s pools lá são três pool de página de 4K do sistema de tamanhos diferentes, o pool de página do sistema 64K e pool da página de 256K do sistema.|  
+|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 - À PARTE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: Rastreia o consumo de memória para um pool da página do sistema usado para operações de E/S.|  
+|memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – não deve ser exibido.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para pools do sistema de E/S, há três tamanhos diferentes: pool de página do sistema 4K, pool de página do sistema 64K e pool de página do sistema 256K.|  
 |lookaside_id|**bigint**|A ID do provedor de memória de direções de local de thread.|  
 |pagepool_id|**bigint**|A ID do provedor de memória do pool de páginas de local de thread.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  

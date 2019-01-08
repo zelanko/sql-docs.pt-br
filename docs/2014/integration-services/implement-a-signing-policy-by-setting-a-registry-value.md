@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103016"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353207"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar uma política de assinatura por meio da configuração de um valor do Registro
   Você pode usar um valor opcional do Registro para gerenciar uma política da organização para carregar pacotes assinados ou não assinados. Se você usar o valor do Registro, será preciso criar esse valor em cada computador em que os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] serão executados e no qual deseja aplicar a política. Depois que o valor do Registro tiver sido definido, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verificará as assinaturas antes de carregar pacotes.  
@@ -35,7 +35,7 @@ ms.locfileid: "48103016"
   
  A tabela a seguir lista os valores válidos dos dados de DWORD e sua política associada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Nenhuma restrição administrativa.|  
 |1|Bloquear assinaturas inválidas.<br /><br /> Essa configuração não bloqueia pacotes não assinados.|  
@@ -43,7 +43,7 @@ ms.locfileid: "48103016"
 |3|Bloquear assinaturas inválidas e não confiáveis e pacotes não assinados<br /><br /> Essa configuração também bloqueia assinaturas geradas automaticamente.|  
   
 > [!NOTE]  
->  A configuração recomendada para é `BlockedSignatureStates` é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](http://go.microsoft.com/fwlink/?LinkId=51414)", na biblioteca do MSDN.  
+>  A configuração recomendada para é `BlockedSignatureStates` é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](https://go.microsoft.com/fwlink/?LinkId=51414)", na biblioteca do MSDN.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar uma política de assinatura para pacotes  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103016"
   
 4.  Clique com o botão direito do mouse em **MSDTS**, aponte para **Novo**e clique em **Valor DWORD**.  
   
-5.  Atualize o nome do novo valor para `BlockedSignatureStates`.  
+5.  Atualize o nome do valor novo para `BlockedSignatureStates`.  
   
 6.  Clique com botão direito `BlockedSignatureStates` e clique em **modificar**.  
   

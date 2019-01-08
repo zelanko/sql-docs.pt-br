@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - FlagName Property (ClientSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a441eea7b24b5427387613b9e5f4d390ec2c964c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352732"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Propriedade FlagName (classe ClientSettingsGeneralFlag)
   Obtém o nome do sinalizador.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

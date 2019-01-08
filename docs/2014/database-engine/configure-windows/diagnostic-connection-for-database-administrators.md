@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -21,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147547"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377558"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma conexão diagnóstica especial para administradores quando conexões padrão com o servidor não são possíveis. Esta conexão diagnóstica permite que um administrador acesse o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar consultas diagnósticas e resolver problemas mesmo quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está respondendo às solicitações de conexão padrão.  
@@ -37,7 +36,7 @@ ms.locfileid: "48147547"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="connecting-with-dac"></a>Conectando com DAC  
  Por padrão, a conexão só é permitida de um cliente executando no servidor. As conexões de rede apenas são permitidas se forem configuradas com o procedimento armazenado sp_configure com a [opção de conexões admin remotas](remote-admin-connections-server-configuration-option.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "48147547"
   
 -   Inicialmente, o DAC tenta se conectar ao banco de dados padrão associado ao logon. Após uma conexão bem-sucedida, você pode se conectar ao banco de dados mestre. Se o banco de dados padrão estiver offline ou não estiver disponível, a conexão retornará o erro 4060. Entretanto, ela terá êxito se você substituir o banco de dados padrão para se conectar ao banco de dados mestre em vez de usar o seguinte comando:  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      Recomendamos que você se conecte ao banco de dados mestre com o DAC porque esse mestre estará com certeza disponível se a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] for iniciada.  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48147547"
   
  A porta DAC é atribuída dinamicamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a inicialização. Ao conectar-se à instância padrão, o DAC evita usar uma solicitação do Protocolo de Resolução (SSRP) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao serviço SQL Server Browser. Primeiro ele se conecta usando a porta TCP 1434. Se isso falhar, ele faz uma chamada ao SSRP para obter a porta. Se o navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver escutando as solicitações de SSRP, a solicitação de conexão retornará um erro. Consulte o log de erros para localizar o número da porta que o DAC está escutando. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for configurado para aceitar conexões de administração remotas, o DAC deverá ser iniciado com um número de porta explícito:  
   
- **sqlcmd–Stcp:** *\<server>,\<port>*  
+ **Sqlcmd Stcp:**  *\<server >,\<porta >*  
   
  O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lista o número da porta para o DAC, que, por padrão, é 1434. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para aceitar apenas conexões DAC locais, conecte usando o adaptador de loopback com o seguinte comando:  
   
- **Sqlcmd – S127.0.0.1**,`1434`  
+ **Sqlcmd S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Exemplo  
  Neste exemplo, um administrador nota que o servidor `URAN123` não está respondendo e deseja diagnosticar o problema. Para isso, o usuário ativa o utilitário de prompt de comando `sqlcmd` e se conecta ao servidor `URAN123` usando `-A` para indicar o DAC.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  Agora o administrador pode executar consultas para diagnosticar o problema e possivelmente encerrar as sessões sem-resposta.  
   

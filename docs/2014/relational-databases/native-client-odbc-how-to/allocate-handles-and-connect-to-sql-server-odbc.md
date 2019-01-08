@@ -14,12 +14,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7983b5ef294fadbad7fe5fdbfafc1170f1ac485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083196"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376349"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Alocar identificadores e se conectar ao SQL Server (ODBC)
     
@@ -29,13 +29,13 @@ ms.locfileid: "48083196"
   
 2.  Inclua o arquivo de cabeçalho específico do driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Odbcss.h.  
   
-3.  Chame [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) com um `HandleType` SQL_HANDLE_ENV para inicializar o ODBC e alocar um identificador de ambiente.  
+3.  Chame [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) com um `HandleType` SQL_HANDLE_ENV para inicializar o ODBC e alocar um identificador de ambiente.  
   
 4.  Chame [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) com `Attribute` definido como SQL_ATTR_ODBC_VERSION e `ValuePtr` definido como SQL_OV_ODBC3 para indicar que o aplicativo irá usar chamadas de função ODBC 3. x-format.  
   
-5.  Opcionalmente, chame [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) para definir outro ambiente de opções ou chamada [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) para obter opções de ambiente.  
+5.  Opcionalmente, chame [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) para definir outro ambiente de opções ou chamada [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) para obter opções de ambiente.  
   
-6.  Chame [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) com um `HandleType` SQL_HANDLE_DBC para alocar um identificador de conexão.  
+6.  Chame [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) com um `HandleType` SQL_HANDLE_DBC para alocar um identificador de conexão.  
   
 7.  Opcionalmente, chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) para definir opções de conexão ou chamada [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) para obter opções de conexão.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48083196"
 13. Chame `SQLFreeHandle` com um `HandleType` SQL_HANDLE_ENV para liberar o identificador de ambiente.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra uma chamada de `SQLDriverConnect` para conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem exigir uma fonte de dados ODBC existente. A passagem de uma cadeia de conexão incompleta a `SQLDriverConnect`, faz o driver ODBC solicitar que o usuário digite as informações ausentes.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353982"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O `SSISDB` catálogo é o ponto central para trabalhar com [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projetos (SSIS) que você implantou o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48201336"
   
  Para manter o banco de dados `SSISDB`, é recomendado que você aplique políticas empresariais padrão para gerenciar os bancos de dados de usuários. Para obter informações sobre como criar planos de manutenção, consulte [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- O `SSISDB` catálogo e o `SSISDB` banco de dados dão suporte ao Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)em blogs.msdn.com.  
+ O `SSISDB` catálogo e o `SSISDB` banco de dados dão suporte ao Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)em blogs.msdn.com.  
   
  Para obter mais informações sobre como exibir dados de operações, consulte [monitoramento para execuções de pacote e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -106,7 +105,7 @@ ms.locfileid: "48201336"
  O valor mínimo é um dia. O valor máximo é limitado somente pelo valor máximo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dados. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Remover Periodicamente Versões Antigas**  
- A etapa de trabalho para limpeza de versão do projeto é executado quando esta propriedade é definida como `True`.  
+ A etapa de trabalho para limpeza de versão de projeto é executada quando esta propriedade é definida como `True`.  
   
  **Número Máximo de Versões por Projeto**  
  Define quantas versões de um projeto são armazenadas no catálogo. As versões de projetos mais antigas são removidas.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201336"
   
 -   DES  
   
- Quando você implantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o catálogo criptografará automaticamente os dados do pacote e os valores confidenciais. O catálogo também descriptografa automaticamente os dados quando você recupera-os. O catálogo SSISDB usa o `ServerStorage` nível de proteção. Para obter mais informações, consulte [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ Quando você implantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o catálogo criptografará automaticamente os dados do pacote e os valores confidenciais. O catálogo também descriptografa automaticamente os dados quando você recupera-os. O catálogo SSISDB usa o nível de proteção `ServerStorage`. Para obter mais informações, consulte [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  Alterar o algoritmo de criptografia é uma operação demorada. Primeiro, o servidor tem que usar o algoritmo previamente especificado para descriptografar todos os valores de configuração. Em seguida, o servidor tem que usar o novo algoritmo para criptografar novamente os valores. Durante este momento, não pode haver outras operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor. Assim, para permitir que operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continuem ininterruptas, o algoritmo de criptografia deverá ser um valor somente leitura na caixa de diálogo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -284,10 +283,10 @@ ms.locfileid: "48201336"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [SSIS e PowerShell no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), em blogs.msdn.com.  
+-   Entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), em blogs.msdn.com.  
   
--   Entrada de blog, [Digas de controle de acesso ao catálogo do SSIS](http://go.microsoft.com/fwlink/?LinkId=246669), em blogs.msdn.com.  
+-   Entrada de blog, [Digas de controle de acesso ao catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=246669), em blogs.msdn.com.  
   
--   Entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)em blogs.msdn.com.  
+-   Entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)em blogs.msdn.com.  
   
   

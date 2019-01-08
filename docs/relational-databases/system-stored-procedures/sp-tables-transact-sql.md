@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688504"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589772"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@table_name=** ] **'***name***'**  
+ [  **@table_name=** ] **'**_nome_**'**  
  É a tabela usada para retornar informações do catálogo. *nome da* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
   
- [  **@table_owner=** ] **'***proprietário***'**  
+ [  **@table_owner=** ] **'**_proprietário_**'**  
  É o proprietário da tabela usada para retornar informações de catálogo. *proprietário* está **nvarchar(384)**, com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o proprietário não estiver especificado e o usuário atual não possuir uma tabela com o nome especificado, este procedimento procurará uma tabela com o nome especificado, pertencente ao proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
- [  **@table_qualifier=** ] **'***qualificador***'**  
- É o nome do qualificador da tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+ [  **@table_qualifier=** ] **'**_qualificador_**'**  
+ É o nome do qualificador da tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [ **,** [  **@table_type=** ] **"'***tipo***'**, **'** tipo **'"** ]  
+ [ **,** [  **@table_type=** ] **"'**_tipo_**'**, **'** tipo **'"** ]  
  É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela que estão especificados. Eles incluem **tabela**, **SYSTEMTABLE**, e **exibição**. *tipo de* está **varchar(100)**, com um padrão NULL.  
   
 > [!NOTE]  
 >  Aspas simples devem incluir cada tipo de tabela e aspas duplas devem incluir o parâmetro inteiro. Os tipos de tabela devem ser em maiúsculas. Se SET QUOTED_IDENTIFIER for ON, cada aspa simples deverá ser duplicada e o parâmetro inteiro deverá ser incluído entre aspas duplas.  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determina se os caracteres sublinhado ( _ ), porcentagem ( % ) e colchetes ( [ ou ] ) são interpretados como curingas. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* está **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -74,7 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nome do qualificador de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Esse campo pode ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome do proprietário de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
@@ -101,7 +101,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 EXEC sp_tables ;  
 ```  
   
-### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. Retornando informações sobre as tabelas em um esquema especificado  
+### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>b. Retornando informações sobre as tabelas em um esquema especificado  
  O exemplo a seguir retorna informações sobre as tabelas que pertencem ao esquema `Person` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

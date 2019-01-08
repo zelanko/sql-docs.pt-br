@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criar a conta de armazenamento do Azure do Windows e o contêiner | Microsoft Docs'
+title: 'Lição 1: Criar conta de armazenamento do Azure do Windows e contêiner | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367148"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lição 1: Criar conta e contêiner de armazenamento do Windows Azure
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lição 1: criar conta e contêiner de Armazenamento do Microsoft Azure
   Para que possa iniciar o armazenamento de arquivos de dados do SQL Server no Armazenamento do Windows Azure, você deve primeiro criar uma conta de Armazenamento do Windows Azure e um contêiner de blob e uma assinatura de acesso compartilhado. A lição 1 conduzirá você pelas etapas do registro em log no Portal de Gerenciamento do Windows Azure, criando uma conta de armazenamento, um contêiner de blob e uma assinatura de acesso compartilhado.  
   
  Por padrão, somente o proprietário da conta de armazenamento pode acessar blobs, tabelas e filas nessa conta. Para acessar esses recursos usando esse novo aprimoramento do SQL Server sem compartilhar a chave de acesso da conta de armazenamento, será necessário fazer o seguinte:  
@@ -29,7 +29,7 @@ ms.locfileid: "48143636"
   
 -   Use uma política de acesso armazenado para gerenciar assinaturas de acesso compartilhado para um contêiner ou seus blobs. A política de acesso armazenado oferece a você uma medida adicional de controle sobre suas assinaturas de acesso compartilhado, além de fornecer um meio simples de revogá-los.  
   
- Para obter mais informações, consulte [gerenciar o acesso aos recursos de armazenamento do Windows Azure](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Para obter mais informações, consulte [gerenciar o acesso aos recursos de armazenamento do Windows Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Criar uma conta de armazenamento  
  Para criar uma conta de armazenamento no Portal de Gerenciamento do Windows Azure, execute estas etapas:  
@@ -58,7 +58,7 @@ ms.locfileid: "48143636"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Para criar uma contêiner de modo programático, você também poderá usar as APIs REST. Para obter mais informações, consulte [criar contêiner](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) e também [referência da API de REST de serviços do Windows Azure Storage](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Para criar uma contêiner de modo programático, você também poderá usar as APIs REST. Para obter mais informações, consulte [criar contêiner](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) e também [referência da API de REST de serviços do Windows Azure Storage](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Próxima lição:**  
   

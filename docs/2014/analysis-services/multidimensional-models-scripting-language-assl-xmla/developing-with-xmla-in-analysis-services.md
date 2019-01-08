@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145561"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374468"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Desenvolvendo com XMLA no Analysis Services
   O XMLA (XML for Analysis) é um protocolo XML baseado em SOAP, criado especificamente para acesso a dados universal para qualquer fonte de dados multidimensional padrão que pode ser acessado por meio de uma conexão HTTP. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa o XMLA como seu único protocolo para se comunicar com aplicativos cliente. Basicamente, todas as bibliotecas de cliente com suporte do Analysis Services formulam solicitações e respostas em XMLA.  
@@ -35,7 +35,7 @@ ms.locfileid: "50145561"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Gerenciando conexões e sessões &#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)|Descreve como se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e como gerenciar sessões e a capacidade de manutenção de status do processo no XMLA.|  
 |[Tratamento de erros e avisos &#40;XMLA&#41;](handling-errors-and-warnings-xmla.md)|Descreve como o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna informações de erro e de aviso para métodos e comandos no XMLA.|  
@@ -62,7 +62,7 @@ ms.locfileid: "50145561"
 ## <a name="namespace-and-schema"></a>Namespace e esquema  
   
 ### <a name="namespace"></a>Namespace  
- O esquema definido nesta especificação usa o namespace XML http://schemas.microsoft.com/AnalysisServices/2003/Engine e a abreviação padrão "DDL".  
+ O esquema definido nesta especificação usa o namespace XML https://schemas.microsoft.com/AnalysisServices/2003/Engine e a abreviação padrão "DDL".  
   
 ### <a name="schema"></a>esquema  
  A definição de um esquema da linguagem XSD para a linguagem de definição do objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se na definição dos elementos de esquema e na hierarquia desta seção.  

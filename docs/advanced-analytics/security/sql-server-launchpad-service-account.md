@@ -1,5 +1,5 @@
 ---
-title: Configuração de conta de serviço do Launchpad do SQL Server | Microsoft Docs
+title: Configuração de conta de serviço do Launchpad do SQL Server – serviços do SQL Server Machine Learning
 description: Como modificar a conta de serviço do Launchpad do SQL Server usada para a execução do script externo no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8af27f3bc9fb3e5b602ef6ad5555d9bd8c6720ca
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419106"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596369"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuração do serviço Launchpad do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,10 +64,12 @@ A tabela a seguir lista as configurações avançadas para [!INCLUDE[ssCurrent](
 
 |**Nome da configuração**|**Tipo**|**Descrição**|
 |----|----|----|
-|TRABALHO\_LIMPEZA\_ON\_SAIR|Integer |Isso é uma configuração interna apenas, não altere esse valor. </br></br>Especifica se a pasta de trabalho temporária criada para cada sessão de tempo de execução externos deve ser limpos após o término da sessão. Essa configuração é útil para depuração. </br></br>Valores com suporte são **0** (desativado) ou **1** (habilitado). </br></br>O padrão é 1, arquivos de log do significado são removidos ao sair.|
-|RASTREAMENTO\_NÍVEL|Integer |Configura o nível de detalhamento do rastreamento de MSSQLLAUNCHPAD para fins de depuração. Isso afeta os arquivos de rastreamento no caminho especificado pela configuração LOG_DIRECTORY. </br></br>Valores com suporte são: **1** (erro), **2** (desempenho), **3** (aviso) **4** (informações). </br></br>O padrão é 1, que significa que somente os erros de saída.|
+|TRABALHO\_LIMPEZA\_ON\_SAIR|Integer |Esta é uma configuração interna apenas – não altere esse valor. </br></br>Especifica se a pasta de trabalho temporária criada para cada sessão de tempo de execução externos deve ser limpos após o término da sessão. Essa configuração é útil para depuração. </br></br>Valores com suporte são **0** (desativado) ou **1** (habilitado). </br></br>O padrão é 1, arquivos de log do significado são removidos ao sair.|
+|RASTREAMENTO\_NÍVEL|Integer |Configura o nível de detalhamento do rastreamento de MSSQLLAUNCHPAD para fins de depuração. Isso afeta os arquivos de rastreamento no caminho especificado pela configuração LOG_DIRECTORY. </br></br>Os valores com suporte são: **1** (erro), **2** (desempenho), **3** (aviso), **4** (informações). </br></br>O padrão é 1, que significa que somente os erros de saída.|
 
 Todas as configurações assumem a forma de um par chave-valor, com cada configuração em uma linha separada. Por exemplo, para alterar o nível de rastreamento, você adicionaria a linha `Default: TRACE_LEVEL=4`.
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## <a name="enforcing-password-policy"></a>Imposição de política de senha
 

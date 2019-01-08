@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e418dc2ba40965b3eb25382c0f9438edc2e6b0bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846434"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590310"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,22 +44,22 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@triggername=** ] **'**[ *triggerschema ***.**] *triggername * * * '**  
- É o nome do gatilho e do esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [*triggerschema ***.**]* triggername * é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
+ [  **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
+ É o nome do gatilho e do esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [_triggerschema_**.**] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
   
- [ **@order=** ] **'***value***'**  
+ [ **@order=** ] **'**_value_**'**  
  É a configuração da nova ordem do disparador. *valor* está **varchar(10)** e pode ser qualquer um dos valores a seguir.  
   
 > [!IMPORTANT]  
 >  O **primeira** e **última** gatilhos devem ser dois disparadores diferentes.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Primeiro**|O disparador é acionado em primeiro lugar.|  
+|**First**|O disparador é acionado em primeiro lugar.|  
 |**Last**|O disparador é acionado em último lugar.|  
-|**Nenhuma**|O disparador é acionado em ordem indefinida.|  
+|**Nenhum**|O disparador é acionado em ordem indefinida.|  
   
- [  **@stmttype=** ] **'***statement_type***'**  
+ [  **@stmttype=** ] **'**_statement_type_**'**  
  Especifica a instrução SQL que aciona o gatilho. *statement_type* está **varchar (50)** e pode ser INSERT, UPDATE, DELETE, LOGON ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado na [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
  Um gatilho pode ser designado como o **primeira** ou **última** gatilho para um tipo de instrução somente depois que o disparador foi definido como um gatilho para esse tipo de instrução. Por exemplo, disparar **TR1** pode ser designada **primeiro** para inserção na tabela **T1** se **TR1** é definido como um gatilho INSERT. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro se **TR1**, que foi definido somente como um gatilho de inserção está definido como um **primeiro**, ou **último**, gatilho para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
@@ -121,7 +121,7 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. Definindo a ordem de acionamento para um disparador DDL  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>b. Definindo a ordem de acionamento para um disparador DDL  
  O exemplo a seguir especifica que o disparador `ddlDatabaseTriggerLog` será o primeiro disparador a ser acionado depois que um evento `ALTER_TABLE` ocorrer no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

@@ -20,12 +20,12 @@ ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d520a84d45e3552f5e260778b5cacf2ac91f05a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a10ec8f8fa6ef2b0e310680f58252f98628ff045
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654374"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215605"
 ---
 # <a name="sqlsetconfigmode-function"></a>Função SQLSetConfigMode
 **Conformidade com**  
@@ -39,7 +39,7 @@ ms.locfileid: "47654374"
 ```  
   
 BOOL SQLSetConfigMode(  
-     UWORD     wConfigMode);  
+     UWORD     wConfigMode);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -58,7 +58,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLSetConfigMode** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequência de parâmetro inválido|O *wConfigMode* argumento não continha ODBC_USER_DSN, ODBC_SYSTEM_DSN ou ODBC_BOTH_DSN.|  
   

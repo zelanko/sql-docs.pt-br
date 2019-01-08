@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8b4d17968d91d8b6c90a49730cbab9f4e422d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31f3e298fb708d025bcbd3fccae5ada961a6ca0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814368"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>Alterar o nome de uma entidade (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], é possível alterar o nome de uma entidade.  
@@ -31,7 +30,7 @@ ms.locfileid: "48228406"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-entity-name"></a>Para alterar um nome de entidade  
   

@@ -22,12 +22,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b9aad137958510f623308ef83f5d18c74d02164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fe55455a8302f4ca8a2784899211b772f2f09e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148926"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213485"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
   Uma assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório.  
@@ -38,7 +38,7 @@ ms.locfileid: "48148926"
   
  As assinaturas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>e [usar o PowerShell para a alteração e lista Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **Neste tópico:**  
@@ -82,7 +82,7 @@ ms.locfileid: "48148926"
   
  A tabela a seguir descreve os cenários comuns de assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-|Cenário|Description|  
+|Cenário|Descrição|  
 |--------------|-----------------|  
 |Relatórios de email|Relatórios de email a usuários individuais e grupos. Crie uma assinatura e especifique um alias de grupo ou de email para receber um relatório que queira distribuir. Você pode fazer com que o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] determine os dados da assinatura em tempo de execução. Se você quiser enviar o mesmo relatório a um grupo que tenha uma lista mutante de membros, poderá usar uma consulta para derivar a lista de assinaturas em tempo de execução.|  
 |Exibir os relatórios offline|Os relatórios que você deseja arquivar podem ser enviados diretamente a uma pasta compartilhada cujo backup é feito em uma agenda noturna. Relatórios grandes cujo carregamento é muito demorado em um navegador podem ser enviados a uma pasta compartilhada em um formato que pode ser exibido em um aplicativo de área de trabalho. Você pode selecionar um dos seguintes formatos para a saída de assinatura:<br /><br /> Arquivo XML com dados de relatório<br /><br /> CSV (delimitado por vírgulas)<br /><br /> PDF<br /><br /> MHTML (arquivo da Web)<br /><br /> Microsoft Excel<br /><br /> Arquivo TIFF<br /><br /> Microsoft Word|  
@@ -101,11 +101,11 @@ ms.locfileid: "48148926"
 ##  <a name="bkmk_subscription_requirements"></a> Requisitos de assinatura  
  Antes de criar uma assinatura para um relatório, os seguintes pré-requisitos devem ser cumpridos:  
   
-|Requisito|Description|  
+|Requisito|Descrição|  
 |-----------------|-----------------|  
 |Permissões|Você deve ter acesso ao relatório. Antes de assinar um relatório, você deve ter permissão para exibi-lo.<br /><br /> Sua atribuição de função devem incluir a tarefa “Gerenciar assinaturas individuais”.|  
-|Credenciais armazenadas|Para criar uma assinatura, o relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar dados em tempo de execução. Você não pode assinar um relatório que é configurado para usar as credenciais representadas ou delegadas do usuário atual para conectar-se a uma fonte de dados externa. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> É necessário ter permissão para exibir o relatório e criar assinaturas individuais. É necessário habilitar**Eventos Agendados e Entrega de Relatórios** no servidor de relatórios. Para obter mais informações, consulte [crie e gerencie assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Valores dependentes do usuário em um relatório|Somente para assinaturas padrão, você pode criar assinaturas para relatórios que incorporam informações da conta de usuário em um filtro ou como texto que aparece no relatório. No relatório, o nome da conta de usuário é especificado por um `User!UserID` expressão que resolve para o usuário atual. Ao criar uma assinatura, o usuário que cria a assinatura é considerado o usuário atual.|  
+|Credenciais armazenadas|Para criar uma assinatura, o relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar dados em tempo de execução. Você não pode assinar um relatório que é configurado para usar as credenciais representadas ou delegadas do usuário atual para conectar-se a uma fonte de dados externa. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> É necessário ter permissão para exibir o relatório e criar assinaturas individuais. É necessário habilitar**Eventos Agendados e Entrega de Relatórios** no servidor de relatórios. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
+|Valores dependentes do usuário em um relatório|Somente para assinaturas padrão, você pode criar assinaturas para relatórios que incorporam informações da conta de usuário em um filtro ou como texto que aparece no relatório. No relatório, o nome da conta de usuário é especificado por uma expressão `User!UserID` resolvida no usuário atual. Ao criar uma assinatura, o usuário que cria a assinatura é considerado o usuário atual.|  
 |Nenhuma segurança do item de modelo|Não é possível assinar um relatório do Construtor de Relatórios que use um modelo como uma fonte de dados se o modelo contiver configurações de segurança do item de modelo. Somente relatórios que usam a segurança do item de modelo são incluídos nesta restrição.|  
 |Valores de parâmetro|Se o relatório usar parâmetros, um valor de parâmetro deverá ser especificado com o próprio relatório ou na assinatura definida. Se valores padrão forem definidos no relatório, você poderá definir o valor de parâmetro a ser usado como o padrão.|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48148926"
   
  Quando cria uma assinatura, o usuário pode escolher uma das extensões de entrega disponíveis para determinar como o relatório será entregue. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui as seguintes extensões de entrega.  
   
-|Extensão de entrega|Description|  
+|Extensão de entrega|Descrição|  
 |------------------------|-----------------|  
 |Compartilhamento de Arquivos do Windows|Entrega um relatório como um arquivo de aplicativo estático para uma pasta compartilhada que pode ser acessada na rede.|  
 |Email|Entrega uma notificação ou um relatório como um anexo de email ou link de URL.|  
@@ -175,7 +175,7 @@ ms.locfileid: "48148926"
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Agendas](schedules.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Monitorar assinaturas do Reporting Services](monitor-reporting-services-subscriptions.md)  
   
   

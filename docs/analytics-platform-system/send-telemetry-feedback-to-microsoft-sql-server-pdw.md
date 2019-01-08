@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701724"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591132"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentários de telemetria à Microsoft para o Analytics Platform System
 O Analytics Platform System tem um recurso de telemetria opcional que envia dados do Console do administrador para a Microsoft. 
@@ -26,14 +26,14 @@ O Analytics Platform System tem um recurso de telemetria opcional que envia dado
 Para fornecer a proteção de privacidade máximo, APS é fornecido sem habilitar a telemetria. Antes de habilitar esse recurso, primeiro examine os [declaração de privacidade do Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Para aceitar, execute o script do PowerShell descrito abaixo.  
   
 ## <a name="enable"></a>Habilitar a Telemetria  
-**O encaminhamento de DNS:** enviando dados de telemetria para a Microsoft exige o Analytics Platform System para se conectar à internet através de um encaminhador DNS. Para habilitar esse recurso, você deve habilitar o DNS de encaminhamento em todos os hosts e VMs da carga de trabalho. Invocar o `Enable-RemoteMonitoring` com o `SetupDnsForwarder` opção para configurar o encaminhamento de DNS e habilitar a telemetria corretamente. Invocar o `Enable-RemoteMonitoring` comando sem o `SetupDnsForwarder` opção quando o encaminhamento de DNS já está configurado e você deseja habilitar o monitoramento de pulsação.  
+**Encaminhamento de DNS:** Enviando dados de telemetria para a Microsoft exige o Analytics Platform System para se conectar à internet através de um encaminhador DNS. Para habilitar esse recurso, você deve habilitar o DNS de encaminhamento em todos os hosts e VMs da carga de trabalho. Invocar o `Enable-RemoteMonitoring` com o `SetupDnsForwarder` opção para configurar o encaminhamento de DNS e habilitar a telemetria corretamente. Invocar o `Enable-RemoteMonitoring` comando sem o `SetupDnsForwarder` opção quando o encaminhamento de DNS já está configurado e você deseja habilitar o monitoramento de pulsação.  
   
 > [!IMPORTANT]  
 > Habilitar o encaminhamento de DNS, a conexão de internet para todos os hosts e VMs da carga de trabalho é aberta.  
   
 #### <a name="to-enable-feedback"></a>Para habilitar os comentários  
   
-1.  Usando uma conta de administrador de domínio do dispositivo, conecte-se ao nó de controle (***appliance_domain *-CTL01**) e abra um prompt de comando usando suas credenciais de administrador do Windows.  
+1.  Usando uma conta de administrador de domínio do dispositivo, conecte-se ao nó de controle (<strong>*appliance_domain*-CTL01</strong>) e abra um prompt de comando usando suas credenciais de administrador do Windows.  
   
 2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -83,7 +83,7 @@ Desabilitando a telemetria interromperá todas as operações que se comunicam i
   
 #### <a name="to-disable-telemetry"></a>Para desabilitar a Telemetria  
   
-1.  Usando uma conta de administrador de domínio do dispositivo, conecte-se ao nó de controle (***appliance_domain *-CTL01**) e abra uma janela do PowerShell com privilégios de administrador.  
+1.  Usando uma conta de administrador de domínio do dispositivo, conecte-se ao nó de controle (<strong>*appliance_domain*-CTL01</strong>) e abra uma janela do PowerShell com privilégios de administrador.  
   
 2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

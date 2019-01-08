@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093626"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370648"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades de Ação (Construtor de Relatórios e SSRS)
   A caixa de diálogo **Ação** pode ser usada para habilitar opções de hiperlink para um gráfico, um medidor e elementos de mapa com suporte para links. Defina uma ação para que um usuário possa clicar no relatório e vincular a uma URL, para um relatório diferente no mesmo servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório ou para um local diferente no mesmo relatório.  
@@ -48,7 +48,7 @@ ms.locfileid: "48093626"
  **Habilitar como uma ação**  
  Selecione uma opção para indicar a ação que será executada quando o usuário clicar no item.  
   
- **Nenhuma**  
+ **Nenhum**  
  Escolha esta opção para indicar que o item não tem nenhuma ação.  
   
  **Ir para o relatório**  
@@ -61,7 +61,7 @@ ms.locfileid: "48093626"
   
  Para um relatório publicado em um servidor de relatórios configurado para o modo integrado do SharePoint, use uma URL totalmente qualificada incluindo a extensão do nome de arquivo (.rdl). Por exemplo, http://*\<SharePointservername > /\<site >* Relatório1. Não há suporte para caminhos relativos.  
   
- Para obter mais informações, consulte [Como especificar caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Para obter mais informações, consulte [Como especificar caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
  **Use estes parâmetros para executar o relatório**  
  Adicione uma lista de parâmetros para passar para o relatório detalhado. Os nomes de parâmetro devem corresponder aos parâmetros definidos para o relatório de destino. Use os botões **Adicionar** e **Excluir** para adicionar ou remover parâmetros e use as setas para cima e para baixo para ordenar a lista de parâmetros.  
@@ -106,6 +106,6 @@ ms.locfileid: "48093626"
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Classificação interativa, mapas de documentos e Links &#40;relatórios e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

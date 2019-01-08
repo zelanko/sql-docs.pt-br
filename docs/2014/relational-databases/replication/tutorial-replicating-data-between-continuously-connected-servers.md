@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: replicando dados entre servidores que estão continuamente conectados | Microsoft Docs'
+title: 'Tutorial: Replicando dados entre continuamente servidores conectados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,14 +14,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753918"
 ---
-# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicando dados entre servidores que estão continuamente conectados
+# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicando dados entre servidores conectados continuamente
   Replicação é uma boa solução ao problema de mover dados entre servidores que estão continuamente conectados. Usando os assistentes de replicação, você pode configurar e administrar uma topologia de replicação facilmente. Este tutorial mostra a você como configurar uma topologia de replicação para servidores continuamente conectados.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
@@ -53,7 +52,7 @@ ms.locfileid: "48094616"
   
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
   
--   [Lição 1: publicando dados que usam replicação transacional](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [Lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md)  
   
 -   [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   

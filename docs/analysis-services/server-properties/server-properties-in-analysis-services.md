@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975094"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785817"
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriedades do servidor do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ As páginas de propriedades do SQL Server Management Studio mostram um subconjun
 > 
 > Outras propriedades que afetam a configuração do servidor incluem as propriedades de configuração de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações sobre essas propriedades, consulte [Especificando definições de configuração para implantação de solução](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
-##  <a name="bkmk_config"></a> Configurar as propriedades no Management Studio 
+## <a name="configure-properties-in-management-studio"></a>Configurar as propriedades no Management Studio 
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -40,12 +40,11 @@ As páginas de propriedades do SQL Server Management Studio mostram um subconjun
   
      Modificar as propriedades de servidor tem suporte somente para servidores de modos de tabela e modos multidimensionais. Se você instalou o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], sempre use os valores padrão, a menos que seja de outra forma direcionado pelo Suporte da Microsoft.  
   
-     Para obter orientação sobre como resolver problemas operacionais ou de desempenho por meio de propriedades de servidor, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Você também pode ler sobre as propriedades de servidor (basicamente, muitas delas permanecem inalteradas nas últimas versões) neste white paper da Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(Propriedades de servidor do SSAS [SQL Server 2005 Analysis Services]).    
+## <a name="configure-properties-in-msmdsrvini"></a>Configurar as propriedades no msmdsrv.ini
   
-##  <a name="bkmk_msmdsrvini"></a> Configurar as propriedades no msmdsrv.ini
-  Algumas propriedades só podem ser definidas no msmdrsrv.ini arquivo. Se a propriedade que você deseja definir não for nem sequer visível que depois que você mostrar propriedades avançadas, precisará editar o msmdsrv.ini arquivo diretamente.
+Algumas propriedades só podem ser definidas no msmdrsrv.ini arquivo. Essas propriedades não se aplicam ao Azure Analysis Services.
+Se a propriedade que você deseja definir não for nem sequer visível que depois que você mostrar propriedades avançadas, precisará editar o msmdsrv.ini arquivo diretamente. 
   
 1.  Verifique a propriedade **DataDir** na página de propriedades Geral em Management Studio para verificar o local dos arquivos de programa de Analysis Services, incluindo o arquivo msmdsrv.ini.
 
@@ -59,11 +58,11 @@ As páginas de propriedades do SQL Server Management Studio mostram um subconjun
   
 5.  Salve o arquivo e reinicie o serviço.  
   
-##  <a name="bkmk_ref"></a> Referência à propriedade de servidor  
+##  <a name="server-property-reference"></a>Referência à propriedade de servidor  
   
  Os seguintes tópicos descrevem as várias propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Propriedades gerais](../../analysis-services/server-properties/general-properties.md)|As propriedades gerais são básicas e avançadas e, incluem propriedades que definem o diretório de dados, diretório de backup e outros comportamentos do servidor.|  
 |[Propriedades de mineração de dados](../../analysis-services/server-properties/data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.| 

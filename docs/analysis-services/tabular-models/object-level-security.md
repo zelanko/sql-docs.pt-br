@@ -1,5 +1,5 @@
 ---
-title: Segurança em nível de objeto modelo de tabela | Microsoft Docs
+title: Segurança em nível de objeto de modelo de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54384e050f4e45ad5d89d66111ecdcc851076d76
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 13baecb045e9e9952b2cee43541dfb8991dfae33
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148201"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071983"
 ---
 # <a name="object-level-security"></a>Segurança em nível de objeto
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

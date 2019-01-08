@@ -11,12 +11,12 @@ ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197116"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374838"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Orientação para usar os recursos de BI do SQL Server em um farm do SharePoint 2010
   Este tópico resume a disponibilidade de recursos com base nas versões e nas edições do software que você está usando. Também explica os requisitos de instalação do SharePoint 2010 para o uso de recursos específicos do SQL Server. Para obter informações relacionadas ao SharePoint 2013, consulte [topologias de implantação para recursos de BI do SQL Server no SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48197116"
   
 -   O Reporting Services inclui um suplemento para produtos do SharePoint. As configurações com suporte para o suplemento e o servidor de relatório estão disponíveis em um nível mais granular do que o indicado aqui. Para obter mais informações, consulte [combinações do SharePoint e com suporte e servidor do Reporting Services Add-in &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   As ferramentas de desenvolvedor do SharePoint só dão suporte a uma configuração autônoma do SharePoint.  Para obter mais informações, consulte a documentação do SharePoint: [requisitos para desenvolver soluções do SharePoint](http://msdn.microsoft.com/library/ee231582.aspx).  
+-   As ferramentas de desenvolvedor do SharePoint só dão suporte a uma configuração autônoma do SharePoint.  Para obter mais informações, consulte a documentação do SharePoint: [Requisitos para desenvolver soluções do SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> Suporte a edições do SharePoint e o recurso de BI  
  Alguns recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence só têm suporte nas edições específicas dos produtos do SharePoint.  
@@ -49,7 +49,7 @@ ms.locfileid: "48197116"
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], um recurso do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
 |Integração geral de recursos e exibição de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard e Enterprise Editions.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
- Para obter mais informações, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obter mais informações, consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_sp1"></a> SharePoint 2010 Service Pack 1 (SP1)  
  É recomendado que você atualize sua instalação do SharePoint 2010 para SharePoint 2010 Service Pack 1 (SP1). O SharePoint SP1 é obrigatório nos casos a seguir:  
@@ -61,16 +61,16 @@ ms.locfileid: "48197116"
  Um dos principais motivos SP1 é necessário para instalações do SharePoint em execução com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] é o recurso de mecanismo de banco de dados **sp_dboption**, que foi preterido em uma versão anterior, foi descontinuado a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versão. Para obter mais informações, consulte [funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Orientação de instalação do SharePoint 2010 SP1  
- [Baixe o SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) e aplicá-lo em todos os servidores no farm.  
+ [Baixe o SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) e aplicá-lo em todos os servidores no farm.  
   
 > [!NOTE]  
->  Em um farm existente, você precisará usar um dos seguintes **adicionais** atualizam etapas para concluir o SharePoint SP1. Para obter mais informações, consulte [problemas conhecidos quando você instala o Office 2010 SP1 e o SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126) e [descrição do SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
+>  Em um farm existente, você precisará usar um dos seguintes **adicionais** atualizam etapas para concluir o SharePoint SP1. Para obter mais informações, consulte [problemas conhecidos quando você instala o Office 2010 SP1 e o SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126) e [descrição do SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **Assistente de configuração de produtos do SharePoint:** executar o Assistente para concluir a atualização do SP1 e a configuração.  
+-   **Assistente de configuração de produtos do SharePoint:** Execute o assistente para concluir a atualização e configuração do SP1.  
   
--   **Concluir a atualização com psconfig:** execute o comando `psconfig –upgrade` para concluir a atualização do SP1  
+-   **Conclua a atualização com psconfig:** Execute o comando `psconfig -upgrade` para concluir a atualização do SP1  
   
- Para obter mais informações, consulte a seção "atualização" do [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) e [Central de recursos: atualizações para produtos do SharePoint 2010](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ Para obter mais informações, consulte a seção "atualização" do [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) e [Central de recursos: Atualizações para produtos do SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Instalação do SharePoint com recursos de BI do SQL Server  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48197116"
   
 |Componente|Ação|  
 |---------------|------------|  
-|Suplemento Reporting Services|A ferramenta de preparação de produtos do SharePoint 2010 instala o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do suplemento Reporting Services. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclui uma versão mais nova do suplemento que é necessária para recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O suplemento pode ser instalado com o uso do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bem como pode ser baixado do MSDN. Para obter mais informações sobre onde obter a versão atual do suplemento e como instalá-lo, consulte [onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) e [instalar ou desinstalar o Reporting Services Suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
+|Suplemento Reporting Services|A ferramenta de Preparação de Produtos do SharePoint 2010 instala a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do suplemento Reporting Services. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclui uma versão mais nova do suplemento que é necessária para recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O suplemento pode ser instalado com o uso do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bem como pode ser baixado do MSDN. Para obter mais informações sobre onde obter a versão atual do suplemento e como instalá-lo, consulte [onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) e [instalar ou desinstalar o Reporting Services Suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
 |Provedor OLE DB do Analysis Services (MSOLAP)|O SharePoint 2010 instala a versão SQL Server 2008 do provedor OLE DB como parte de uma implantação dos Serviços do Excel. Essa versão não tem suporte para o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Você deve instalar versões mais recentes do provedor nos SharePoint Servers que tenham suporte para conexões de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Para obter mais informações, consulte [instalar o Analysis Services OLE DB Provider em servidores SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|  
 |Serviços ADO.NET|O SharePoint 2010 lista serviços ADO.NET na lista de pré-requisitos, mas o instalador de pré-requisitos não instala esse item. Para adicionar serviços ADO.NET, você deve instalá-los manualmente. A instalação dos serviços ADO.NET será necessária se você quiser usar listas do SharePoint como feeds de dados para pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou relatórios do Reporting Services. Para obter instruções, consulte [exportações das listas do SharePoint do feed de instalar o ADO.NET Data Services para dar suporte a dados](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48197116"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalação e implantação do SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
- [Vários servidores para um farm de três camadas (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
+ [Instalação e implantação do SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [Vários servidores para um farm de três camadas (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

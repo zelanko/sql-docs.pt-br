@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], deleting
@@ -14,12 +13,12 @@ ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 63f0f2f1b55bbb56b17357d58404815af496ac49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75d6719219a41dfc42071a82375a66bdd877a57
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822997"
 ---
 # <a name="delete-a-version-master-data-services"></a>Excluir uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma versão quando tiver certeza de que já não precisa dos dados mestres associados à versão. Depois de excluir uma versão, você não poderá recuperar os dados mestres associados.  
@@ -54,7 +53,7 @@ ms.locfileid: "48205436"
     >  Talvez seja necessário aguardar alguns minutos para que o aplicativo Web reflita a alteração.  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Copiar uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
   

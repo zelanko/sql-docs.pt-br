@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194706"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368878"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usando uma versão modificada do projeto do Tutorial do Analysis Services
   As demais lições neste tutorial tem como base uma versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194706"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Baixando e extraindo o Arquivo do Projeto  
   
-1.  [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
+1.  [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
   
 2.  Clique em **Tutorial do Analysis Services do SQL Server 2012** para baixar o pacote que contém os projetos para este tutorial.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194706"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Carregando e processando o projeto aprimorado  
   
-1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Fechar Solução** para fechar os arquivos que não serão usados.  
+1.  Na [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]diante a **arquivo** menu, clique em **fechar solução** para fechar os arquivos que não serão usados.  
   
-2.  No menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.  
+2.  No menu **Arquivo** , aponte para **Abrir**e clique em **Projeto/Solução**.  
   
 3.  Navegue até o local onde você extraiu os arquivos de projeto do tutorial.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48194706"
   
 -   **Cliente**  
   
--   **Date**  
+-   **Data**  
   
 -   **Product**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48194706"
   
 -   **Geografia**  
   
--   **Date**  
+-   **Data**  
   
 -   **Product**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48194706"
  O cubo **Tutorial do Analysis Services** agora tem dois grupos de medidas: o grupo de medidas original, baseado na tabela **InternetSales** , e um segundo grupo de medidas, baseado na tabela **ResellerSales** da exibição da fonte de dados **Adventure Works DW 2012** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Definindo propriedades de atributo pai em uma hierarquia pai–filho](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [Definindo propriedades de atributo pai em uma hierarquia pai-filho](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Consulte também  
  [Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

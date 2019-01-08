@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, annotations listed
@@ -15,17 +13,17 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f873df18b11c3f1eef784e03f43a0cbcb0c9fcfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cfb0078672a56ba85692fdb836a17ea9c9db302
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758058"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Anotações XSD (SQLXML 4.0)
   A tabela a seguir lista as anotações XSD introduzidas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e as compara com as anotações XDR introduzidas no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
-|Anotação XSD|Description|Link do tópico|Anotação XDR|  
+|Anotação XSD|Descrição|Link do tópico|Anotação XDR|  
 |--------------------|-----------------|----------------|--------------------|  
 |`sql:encode`|Quando um elemento ou atributo XML é mapeado para uma coluna BLOB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permite solicitar um URI de referência. Esse URI pode ser usado posteriormente para retornar dados BLOB.|[Solicitando referências URL a dados BLOB usando sql: codificar &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|`url-encode`|  
 |`sql:guid`|Permite especificar se será usado um valor de GUID gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o valor fornecido pelo updategram daquela coluna.|[Usando as anotações sql:identity e sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Sem suporte|  

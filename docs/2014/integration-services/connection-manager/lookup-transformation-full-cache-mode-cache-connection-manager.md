@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364018"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões de cache. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  
@@ -50,11 +49,11 @@ ms.locfileid: "48152181"
   
 -   Configure os gerenciadores de conexões do cache em pacotes diferentes para usar o mesmo arquivo de cache.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para mais informações, consulte os seguintes tópicos:  
   
 -   [Transformação Cache](../data-flow/transformations/cache-transform.md)  
   
--   [Gerenciador de Conexões de Cache](cache-connection-manager.md)  
+-   [Gerenciador de conexões de cache](cache-connection-manager.md)  
   
 -   [Restrições de precedência](../control-flow/precedence-constraints.md)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48152181"
   
 -   [Contêiner da Sequência](../control-flow/sequence-container.md)  
   
- Para obter um vídeo que demonstre como implementar uma transformação Pesquisa no modo Cache Cheio usando o gerenciador de conexões de Cache, consulte [Como implementar a transformação Pesquisa no modo de Cache Cheio (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para obter um vídeo que demonstra como implementar uma transformação pesquisa em modo Cache cheio usando o Gerenciador de conexão de Cache, consulte [como: Implementar uma transformação pesquisa em modo Cache cheio (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Para implementar uma transformação Pesquisa em modo cache cheio em um pacote usando o gerenciador de conexões de cache e uma fonte de dados no fluxo de dados  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48152181"
 9. Execute o pacote.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementar uma Transformação Pesquisa em Modo de Cache Cheio por meio do gerenciador de conexões OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

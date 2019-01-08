@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60bc8c4cbd2166a302a0f61176fa198787575f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356749"
 ---
 # <a name="recommendation-element-dta"></a>Elemento de recomendação (DTA)
   Contém informações sobre os índices hipotéticos que integram a configuração especificada pelo usuário.  
@@ -40,21 +39,21 @@ ms.locfileid: "48107048"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `Table` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `Table`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de tabela para esquema de &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Elementos filho**|[Criar o elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` elemento. Para obter mais informações, consulte o esquema XML do [Orientador de Otimização do Mecanismo de Banco de Dados](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Elemento pai**|[Elemento Table para Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**Elementos filho**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Para obter mais informações, consulte o esquema XML do [Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento tem o nome **RecommendationTypecomplexType** no esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. É usado para especificar os índices de uma configuração hipotética. Não confunda esse `Recommendation` elemento com os outros tipos que podem ser usados para especificar particionamento (`RecommendationPType`) ou exibições (`RecommendationViewType`). Para obter informações sobre esses outros `Recommendation` tipos de elemento, consulte a [esquema XML do Orientador de otimização de mecanismo de banco de dados](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Esse elemento tem o nome **RecommendationTypecomplexType** no esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. É usado para especificar os índices de uma configuração hipotética. Não confunda esse elemento `Recommendation` com os outros tipos que podem ser usados para especificar particionamento (`RecommendationPType`) ou exibições (`RecommendationViewType`). Para obter informações sobre esses outros `Recommendation` tipos de elemento, consulte a [esquema XML do Orientador de otimização de mecanismo de banco de dados](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  

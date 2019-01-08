@@ -1,22 +1,24 @@
 ---
-title: Como a consulta de HDFS em um cluster de big data do SQL Server | Microsoft Docs
+title: Consultar dados do HDFS no pool de armazenamento
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial demonstra como consultar dados do HDFS em um cluster de big data do SQL Server 2019 (visualização). Criar uma tabela externa nos dados no pool de armazenamento e, em seguida, executar uma consulta.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644083"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432169"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o HDFS em um cluster de big data do SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta HDFS em um cluster de big data do SQL Server
 
-Este tutorial demonstra como consultar dados do HDFS em um cluster de big data do SQL Server de 2019.
+Este tutorial demonstra como consultar dados do HDFS em um cluster de big data do SQL Server 2019 (visualização).
 
 Neste tutorial, você aprenderá como:
 
@@ -27,19 +29,19 @@ Neste tutorial, você aprenderá como:
 > [!TIP]
 > Se você preferir, você pode baixar e executar um script para os comandos neste tutorial. Para obter instruções, consulte a [exemplos de virtualização de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) no GitHub.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a id="prereqs"></a> Pré-requisitos
 
-- [Implantar um cluster de big data no Kubernetes](deployment-guidance.md).
-- [Instalar o Studio de dados do Azure e a extensão do SQL Server 2019](deploy-big-data-tools.md).
-- [Carregar dados de exemplo no cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Ferramentas de big data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Criar uma tabela externa para o HDFS
 
 O pool de armazenamento contém dados de sequência de cliques da web em um arquivo CSV armazenado em HDFS. Use as etapas a seguir para definir uma tabela externa que pode acessar os dados nesse arquivo.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](deploy-big-data-tools.md#master).
+1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
 2. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
 

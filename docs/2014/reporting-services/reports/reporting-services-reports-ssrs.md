@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362898"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   Os relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são definições de relatório baseadas em XML que incluem elementos de dados e layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que um relatório é publicado, ele se torna um item de relatório armazenada no servidor de relatório ou no site do SharePoint. Relatórios são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "48077816"
 ## <a name="create-reports"></a>Criar relatórios  
  Para criar um relatório:  
   
--   **Determine o objetivo do relatório.** Identifique o propósito do relatório para o público que o usará. Um relatório bem-elaborado fornece informações aos leitores que proporcionam perspicácia e ação. As decisões tomadas durante a etapa de elaboração influenciam na escolha dos parâmetros do seu relatório, no layout e na experiência de exibição de relatório. Para obter mais informações, consulte [Planejando um relatório &#40;Construtor de Relatórios&#41;](../report-design/planning-a-report-report-builder.md) e [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+-   **Determine o objetivo do relatório.** Identifique o propósito do relatório para o público que o usará. Um relatório bem-elaborado fornece informações aos leitores que proporcionam perspicácia e ação. As decisões tomadas durante a etapa de elaboração influenciam na escolha dos parâmetros do seu relatório, no layout e na experiência de exibição de relatório. Para obter mais informações, consulte [Planejando um relatório &#40;Construtor de Relatórios&#41;](../report-design/planning-a-report-report-builder.md) e [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
 -   **Escolha o tipo de consulta.** Determine se usará uma consulta de conjuntos de dados generalizada e compartilhada ou uma consulta de dados específica do seu conjunto de relatórios. Um conjunto de dados compartilhado com uma consulta generalizada é fácil de manter para uso por vários relatórios, mas cada designer de relatório deve filtrar os dados conforme necessário para seu conjunto específico de relatórios. Para obter mais informações, consulte [Dados de relatório &#40;SSRS&#41;](../report-data/report-data-ssrs.md).  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48077816"
   
     -   **Escolha os dados que serão usados em cada origem.** Para cada fonte de dados, defina conjuntos de dados de relatório. Cada conjunto de dados inclui uma consulta para especificar os dados que serão usados. Se você tiver parâmetros de relatório, defina um conjunto de dados para preencher a lista de valores disponíveis para cada parâmetro. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md) e [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Escolha uma visualização de dados.** Para cada conjunto de dados, escolha a região de dados que será usada para exibir os dados. Escolha entre lista de tabelas, gráficos, medidores e mapas. Para obter mais informações, consulte os tópicos a seguir:  
+    -   **Escolha uma visualização de dados.** Para cada conjunto de dados, escolha a região de dados que será usada para exibir os dados. Escolha entre lista de tabelas, gráficos, medidores e mapas. Para mais informações, consulte os seguintes tópicos:  
   
         -   [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Gráficos de &#40;relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48077816"
   
         -   [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para obter mais informações, consulte os tópicos a seguir:  
+    -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para mais informações, consulte os seguintes tópicos:  
   
-        -   [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48077816"
   
         -   [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Layout de página e renderização &#40;relatórios e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configure recursos de interatividade.** Adicione recursos de interatividade para os leitores dos seus relatórios. Por exemplo, adicione botões de classificação ou itens de alternância de exibição das consultas. Para obter mais informações, consulte [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077816"
 -   **Considere os componentes que podem reutilizados.**  Determine se alguma das fontes de dados ou consultas de conjunto de dados pode ser compartilhada para reutilização. Se puder, no servidor de relatório ou no site do SharePoint, crie fontes de dados ou conjuntos de dados compartilhados. Determine se as regiões de dados são adequadas para reutilização como partes de relatório. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Visualizar relatórios  
- Cada ferramenta de criação de relatório oferece suporte à visualização de relatórios. Para obter mais informações, consulte [Visualização](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Construtor de Relatórios &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Visualizando relatórios no Construtor de Relatórios](../report-builder/previewing-reports-in-report-builder.md) na [documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Cada ferramenta de criação de relatório oferece suporte à visualização de relatórios. Para obter mais informações, consulte [Visualização](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Construtor de Relatórios &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Visualizando relatórios no Construtor de Relatórios](../report-builder/previewing-reports-in-report-builder.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
 ## <a name="save-or-publish-reports"></a>Salvar ou publicar relatórios  
- Cada ferramenta de criação oferece suporte para salvar relatórios localmente ou publicá-los em um servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [Salvar e implantar](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Construtor de Relatórios &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Salvando relatórios &#40;Construtor de Relatórios&#41;](../report-builder/saving-reports-report-builder.md) na [documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Cada ferramenta de criação oferece suporte para salvar relatórios localmente ou publicá-los em um servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [Salvar e implantar](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Construtor de Relatórios &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Salvando relatórios &#40;Construtor de Relatórios&#41;](../report-builder/saving-reports-report-builder.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
 ## <a name="view-reports"></a>Exibir relatórios  
  Além de visualizar um relatório salvo localmente ou publicado em um servidor de relatório, você pode fornecer uma variedade de experiências de exibição para os leitores de seus relatórios. Para exibir um relatório:  
@@ -133,7 +133,7 @@ ms.locfileid: "48077816"
   
 -   **Imprimir.**  O leitor do relatório pode imprimir um relatório ou páginas do documento dependendo do modo no qual é exibido. Para obter mais informações, consulte [Imprimir Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo ASP.NET AJAX ou Windows Form que hospede o controle do Visualizador de Relatórios. O controle pode apontar para relatórios publicados em um servidor de relatório. Para obter mais informações, consulte [Relatórios da Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web ou aplicativo Windows Form.**  Use o Visual Studio para desenvolver um aplicativo ASP.NET AJAX ou Windows Form que hospede o controle do Visualizador de Relatórios. O controle pode apontar para relatórios publicados em um servidor de relatório. Para obter mais informações, consulte [Relatórios da Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gerenciar relatórios  
  Para gerenciar um relatório publicado:  
@@ -157,13 +157,13 @@ ms.locfileid: "48077816"
 ##  <a name="bkmk_SecureReportsSummary"></a> Relatórios seguros  
  Para proteger um relatório:  
   
--   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Por padrão, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, a segurança integrada e atribuição de função para ajudar a controlar o acesso a relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Criar notificações com base em dados de relatório  
  Você pode criar alertas de dados para relatórios publicados em um site do SharePoint. Os alertas de dados são baseados em feeds de dados de regiões de dados no relatório. Por padrão, as regiões de dados são nomeadas automaticamente. Os autores de relatório podem facilitar a criação de alertas de dados em seus relatórios nomeando regiões de dados com base no propósito de negócios. Ao criar um alerta de dados, você é notificado por email quando os dados atendem às condições especificadas. Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Criar um alerta de dados no Designer de Alertas de Dados](../create-a-data-alert-in-data-alert-designer.md) e [Alertas de dados do Reporting Services](../reporting-services-data-alerts.md).  
   
 ## <a name="upgrade-reports"></a>Upgrade Reports  
- O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:  
   
 -   Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   

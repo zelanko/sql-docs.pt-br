@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048346"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766658"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
@@ -46,7 +45,7 @@ ms.locfileid: "48048346"
     > [!IMPORTANT]  
     >  Para evitar erros de validação conforme você configura tarefas e componentes de fluxo de dados que usam esse gerenciador de conexões do Excel, selecione uma pasta de trabalho existente do Excel no **Editor do Gerenciador de Conexões do Excel**. O gerenciador de conexões não usará esta pasta de trabalho em tempo de execução depois que você configurar uma expressão para a propriedade `ConnectionString` conforme descrito nas etapas a seguir. Após criar e configurar o pacote, você pode limpar o valor da propriedade `ConnectionString` na janela Propriedades. No entanto, se você limpar esse valor, a propriedade da cadeia de conexão do gerenciador de conexões do Excel não será mais válida até que Loop Foreach seja executado. Portanto você deve definir a propriedade `DelayValidation` como `True` nas tarefas ou no pacote em que o gerenciador de conexões é usado para evitar erros de validação.  
     >   
-    >  Você também deve usar o valor padrão de `False` para o `RetainSameConnection` propriedade do Gerenciador de conexão do Excel. Se você alterar esse valor para `True`, cada iteração do loop continuará a abrir a primeira pasta de trabalho do Excel.  
+    >  Você também deve usar o valor padrão de `False` para a propriedade `RetainSameConnection` do gerenciador de conexões do Excel. Se você alterar esse valor para `True`, cada iteração do loop continuará a abrir a primeira pasta de trabalho do Excel.  
   
 8.  Selecione o novo gerenciador de conexões do Excel, clique na propriedade **Expressões** na janela Propriedades e clique nas reticências.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48048346"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   
@@ -97,6 +96,6 @@ ms.locfileid: "48048346"
  [Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)   
  [Origem do Excel](../data-flow/excel-source.md)   
  [Destino do Excel](../data-flow/excel-destination.md)   
- [Trabalhar com arquivos do Excel com a tarefa Script](script-task.md)  
+ [Trabalhando com arquivos do Excel com a tarefa Script](script-task.md)  
   
   

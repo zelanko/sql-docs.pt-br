@@ -18,15 +18,15 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525754"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell. A preparação de um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados primário e os backups de log subsequentes em cada instância do servidor que hospede a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado ao grupo de disponibilidade.  
+  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. Preparar um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados do banco de dados primário e backups de log subsequentes em cada instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado para o grupo de disponibilidade.  
   
 > [!TIP]  
 >  Se você tiver uma configuração de envio de logs existente, poderá ser capaz de converter o banco de dados primários de envio de logs junto com um ou mais de seus bancos de dados secundários em um banco de dados primário AlwaysOn e um ou mais bancos de dados secundários AlwaysOn. Para obter mais informações, consulte [pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "48189666"
   
 -   [Tarefas relacionadas a backup e restauração](#RelatedTasks)  
   
--   **Acompanhamento** [depois de preparar um banco de dados secundário](#FollowUp)  
+-   **Acompanhamento:** [Depois de preparar um banco de dados secundário](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48189666"
 ####  <a name="Permissions"></a> Permissões  
  As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** . Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
- Quando o banco de dados que está sendo restaurado não existir na instância do servidor, a instrução RESTORE exigirá as permissões CREATE DATABASE. Para obter mais informações, consulte [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+ Quando o banco de dados que está sendo restaurado não existir na instância do servidor, a instrução RESTORE exigirá as permissões CREATE DATABASE. Para obter mais informações, veja [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48189666"
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para preparar um banco de dados secundário**  
   
 > [!NOTE]  
@@ -159,7 +159,7 @@ ms.locfileid: "48189666"
     GO  
     ```  
   
-2.  Depois de modificar o modelo de recuperação do banco de dados de SIMPLE para FULL, crie um backup completo, que pode ser usado para criar o banco de dados secundário. Como o modelo de recuperação acabou de ser alterado, a opção WITH FORMAT estará especificada para criar um novo conjunto de mídias. Isso é útil para separar os backups sob o modelo de recuperação completa de qualquer backup anterior feito sob o modelo de recuperação simples. Para a finalidade deste exemplo, o arquivo de backup (C:\\\[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].bak) será criado na mesma unidade que o banco de dados.  
+2.  Depois de modificar o modelo de recuperação do banco de dados de SIMPLE para FULL, crie um backup completo, que pode ser usado para criar o banco de dados secundário. Como o modelo de recuperação acabou de ser alterado, a opção WITH FORMAT estará especificada para criar um novo conjunto de mídias. Isso é útil para separar os backups sob o modelo de recuperação completa de qualquer backup anterior feito sob o modelo de recuperação simples. Para a finalidade deste exemplo, o arquivo de backup (C:\\[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].bak) será criado na mesma unidade que o banco de dados.  
   
     > [!NOTE]  
     >  Em um banco de dados de produção, você deve sempre fazer backup em um dispositivo separado.  
@@ -245,16 +245,16 @@ ms.locfileid: "48189666"
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para preparar um banco de dados secundário**  
   
-1.  Se você precisar criar um backup recente do banco de dados primário, altere o diretório (`cd`) para a instância de servidor que hospeda a réplica primária.  
+1.  Se você precisar criar um backup recente do banco de dados primário, altere o diretório (`cd`) para a instância do servidor que hospeda a réplica primária.  
   
 2.  Use o cmdlet `Backup-SqlDatabase` para criar cada um dos backups.  
   
-3.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica secundária.  
+3.  Altere o diretório (`cd`) para a instância de servidor que hospeda a réplica secundária.  
   
 4.  Para restaurar os backups do banco de dados e de log de cada banco de dados primário, use o cmdlet `restore-SqlDatabase`, especificando o parâmetro de restauração `NoRecovery`. Se os caminhos dos arquivos forem diferentes nos computadores que hospedam a réplica primária e a réplica secundária de destino, use também o parâmetro de restauração `RelocateFile`.  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Para concluir a configuração do banco de dados secundário, você precisa uni-lo ao grupo de disponibilidade. Para obter mais informações, veja [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -273,11 +273,11 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de preparar um banco de dados secundário  
+##  <a name="FollowUp"></a> Acompanhar: Depois de preparar um banco de dados secundário  
  Para concluir a configuração do banco de dados secundário, una o banco de dados recém-restaurado ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  

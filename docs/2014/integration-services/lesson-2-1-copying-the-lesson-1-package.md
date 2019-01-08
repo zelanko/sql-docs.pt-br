@@ -1,24 +1,23 @@
 ---
-title: 'Etapa 1: copiar o pacote da Lição 1 | Microsoft Docs'
+title: 'Etapa 1: Copiando o pacote da lição 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118638"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376058"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiando o pacote da Lição 1
+# <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiando o pacote da lição 1
   Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para criar o pacote da lição 2  
@@ -49,11 +48,11 @@ ms.locfileid: "48118638"
   
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
-4.  Clique no botão Procurar **(…)** , navegue até **Lesson 1.dtsx** no computador e clique em **Abrir**.  
+4.  Clique no botão Procurar **(…)**, navegue até **Lesson 1.dtsx** no computador e clique em **Abrir**.  
   
      Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   
-    1.  Navegue para os [Exemplos de Produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Clique na guia **DOWNLOADS** .  
   

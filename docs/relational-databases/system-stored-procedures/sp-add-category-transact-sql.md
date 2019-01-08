@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792056"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591010"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class =** ] **'***classe***'**  
+ [  **@class =** ] **'**_classe_**'**  
  O classe da categoria a ser adicionada. *classe* está **varchar(8)** com um valor padrão de trabalho, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |JOB|Adiciona uma categoria de trabalho.|  
 |ALERT|Adiciona uma categoria de alerta.|  
 |OPERATOR|Adiciona uma categoria de operador.|  
   
- [  **@type =** ] **'***tipo***'**  
+ [  **@type =** ] **'**_tipo_**'**  
  O tipo de categoria a ser adicionado. *tipo de* está **varchar(12)**, com um valor padrão de **LOCAL**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |LOCAL|Uma categoria de trabalho local.|  
 |VÁRIOS SERVIDORES|Uma categoria de trabalho multisservidor.|  
 |Nenhuma|Uma categoria para uma classe diferente de JOB **.**|  
   
- [  **@name =** ] **'***nome***'**  
+ [  **@name =** ] **'**_nome_**'**  
  O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. *nome da* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

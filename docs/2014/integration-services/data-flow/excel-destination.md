@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905240"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375598"
 ---
 # <a name="excel-destination"></a>Destino do Excel
   O destino do Excel carrega dados em planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -41,13 +40,13 @@ ms.locfileid: "48905240"
 ## <a name="usage-considerations"></a>Considerações de uso  
  O Gerenciador de Conexões do Excel usa o Provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Jet 4.0 e driver ISAM do Excel com suporte para se conectar, além de ler e gravar dados nas fontes de dados do Excel.  
   
- Muitos artigos da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentam o comportamento desse provedor e driver e, embora esses artigos não sejam específicos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou de seus serviços de transformação de dados anteriores, talvez você queira obter mais informações sobre determinados comportamentos que podem levar a resultados inesperados. Para obter informações gerais sobre o uso e comportamento do driver do Excel, consulte [Como usar ADO com dados do Excel do Visual Basic ou do VBA](http://support.microsoft.com/kb/257819).  
+ Muitos artigos da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentam o comportamento desse provedor e driver e, embora esses artigos não sejam específicos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou de seus serviços de transformação de dados anteriores, talvez você queira obter mais informações sobre determinados comportamentos que podem levar a resultados inesperados. Para obter informações gerais sobre o uso e o comportamento do driver do Excel, consulte [HOWTO: Usar o ADO com dados do Excel do Visual Basic ou VBA](https://support.microsoft.com/kb/257819).  
   
  Os seguintes comportamentos do provedor Jet que está incluído no driver do Excel podem levar a resultados inesperados ao salvar dados em um destino do Excel.  
   
 -   **Salvando dados de texto**. Quando o driver do Excel salva valores de dados de texto em um destino do Excel, o driver coloca aspas simples (') antes do texto de cada célula para garantir que os valores salvos serão interpretados como texto. Se você tem ou desenvolve outros aplicativos que leem ou processam os dados salvos, será necessário incluir um tratamento especial para as aspas simples que precedem cada texto.  
   
-     Para obter informações sobre como evitar incluir aspas simples, consulte esta postagem no blog, [Aspas simples são acrescentadas a todas as cadeias de caracteres quando os dados são transformados para Excel ao usar o componente de fluxo de dados de destino do Excel no pacote SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), no msdn.com.  
+     Para obter informações sobre como evitar incluir aspas simples, consulte esta postagem no blog, [Aspas simples são acrescentadas a todas as cadeias de caracteres quando os dados são transformados para Excel ao usar o componente de fluxo de dados de destino do Excel no pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), no msdn.com.  
   
 -   **Salvando dados de memorando (ntext)**. Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**. Se a tabela de destino já contém linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando. Se a tabela de destino for criada durante o desenvolvimento de pacote ou em tempo de execução, a instrução CREATE TABLE deve usar LONGTEXT (ou um de seus sinônimos) como o tipo de dados da coluna de memorando.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "48905240"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [Excel no Integration Services, Parte 1 de 3: conexões e componentes](http://go.microsoft.com/fwlink/?LinkId=217674), em dougbert.com  
+-   Entrada de blog, [Excel no Integration Services, parte 1 de 3: Conexões e componentes](https://go.microsoft.com/fwlink/?LinkId=217674), em dougbert.com  
   
--   Entrada de blog, [Excel no Integration Services, Parte 2 de 3: tabelas e tipos de dados](http://go.microsoft.com/fwlink/?LinkId=217675), em dougbert.com.  
+-   Entrada de blog, [Excel no Integration Services, parte 2 de 3: Tipos de dados e tabelas](https://go.microsoft.com/fwlink/?LinkId=217675), em dougbert.com.  
   
--   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
+-   Entrada de blog, [Excel no Integration Services, parte 3 de 3: Problemas e alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), em dougbert.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [Origem do Excel](excel-source.md)   

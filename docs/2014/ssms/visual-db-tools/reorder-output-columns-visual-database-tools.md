@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - reordering output columns [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf9e5df62a61993fbfc5812715671042ae721e70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162392"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767618"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Reordenar colunas de saída (Visual Database Tools)
   A ordem na qual as colunas de dados são adicionadas a uma consulta Selecionar determina a ordem em que elas aparecerão nos resultados. A primeira coluna que você adicionar à consulta aparecerá na extremidade esquerda dos resultados, a segunda coluna ao lado, e assim por diante.  

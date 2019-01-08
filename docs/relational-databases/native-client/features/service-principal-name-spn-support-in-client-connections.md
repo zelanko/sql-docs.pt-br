@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfc358b13db1d2f590f2c71c54d9c918326dc504
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673295"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979955"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51673295"
 ## <a name="usage"></a>Uso  
  A tabela a seguir descreve os cenários mais comuns nos quais os aplicativos cliente podem habilitar a autenticação segura.  
   
-|Cenário|Description|  
+|Cenário|Descrição|  
 |--------------|-----------------|  
 |Um aplicativo herdado não especifica um SPN.|Este cenário de compatibilidade garante que não haverá nenhuma alteração de comportamento para aplicativos desenvolvidos para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se nenhum SPN for especificado, o aplicativo confiará nos SPNs gerados e não terá nenhum conhecimento de qual método de autenticação será usado.|  
 |Um aplicativo cliente que usa a versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client especifica um SPN na cadeia de conexão como um usuário do domínio ou uma conta de computador, como um SPN específico da instância ou uma cadeia definida pelo usuário.|A palavra-chave **ServerSPN** pode ser usada em um provedor, uma inicialização ou uma cadeia de conexão para fazer o seguinte:<br /><br /> – Especificar a conta usada pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma conexão. Isto simplifica o acesso à autenticação Kerberos. Se um KDC (Centro de Distribuição de Chaves) Kerberos estiver presente e a conta correta for especificada, a autenticação Kerberos provavelmente será mais usada que NTLM. O KDC normalmente reside no mesmo computador que o controlador de domínio.<br /><br /> – Especificar um SPN para pesquisar a conta de serviço para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], são gerados dois SPNs padrão que podem ser usados para essa finalidade. Não há garantia de que estas chaves estejam presentes no Active Directory. Entretanto, nesta situação, a autenticação Kerberos não é garantida.<br /><br /> – Especificar um SPN que será usado para pesquisar a conta de serviço para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta poderá ser qualquer cadeia de caracteres definida pelo usuário que mapeia para a conta de serviço. Neste caso, a chave deve ser registrada manualmente no KDC e deve satisfazer as regras para um SPN definido pelo usuário.<br /><br /> A palavra-chave **FailoverPartnerSPN** pode ser usada para especificar o SPN para o servidor de parceiro de failover. O intervalo de conta e valores de chave do Active Directory é igual aos valores que você pode especificar para o servidor principal.|  
@@ -73,18 +73,18 @@ ms.locfileid: "51673295"
  O novo comportamento de conexão é implementado pelo cliente; portanto, ele não é específico para uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados e delegação  
- Quando servidores vinculados são criados, o parâmetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) pode ser usado para especificar os SPNs do servidor e do parceiro de failover. Os benefícios disso é o mesmo que especificar SPNs em cadeias de conexão de cliente. É mais simples e confiável estabelecer conexões que usam autenticação Kerberos.  
+ Quando servidores vinculados são criados, o parâmetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) pode ser usado para especificar os SPNs do servidor e do parceiro de failover. Os benefícios de fazer isso são o mesmo que especificar SPNs em cadeias de conexão de cliente: É mais simples e confiável para estabelecer conexões que usam a autenticação Kerberos.  
   
  A delegação com servidores vinculados exige a autenticação Kerberos.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspectos de gerenciamento de SPNs especificados por aplicativos  
  Ao escolher se deseja especificar SPNs em um aplicativo (por meio de cadeias de conexão) ou, programaticamente, por meio de propriedades de conexão (em vez de confiar no provedor padrão gerado por SPNs), considere os seguintes fatores:  
   
--   Segurança: o SPN especificado divulga informações que estão protegidas?  
+-   Segurança: O SPN especificado divulga informações protegidas?  
   
--   Confiabilidade: para permitir o uso de SPNs padrão, a conta de serviço em que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
+-   Confiabilidade: Para habilitar o uso de SPNs padrão, a conta de serviço em que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executada deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
   
--   Conveniência e transparência de local: como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
+-   Conveniência e transparência de local: Como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
   
 ## <a name="specifying-the-spn"></a>Especificando o SPN  
  Você pode especificar um SPN em caixas de diálogo e em código. Esta seção discute como você pode especificar um SPN.  
@@ -93,7 +93,7 @@ ms.locfileid: "51673295"
   
  A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a seguinte:  
   
-|Sintaxe|Description|  
+|Sintaxe|Descrição|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado.<br /><br /> *fqdn* é um nome de domínio totalmente qualificado.|  
 |MSSQLSvc/*fqdn*:*port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado.<br /><br /> *port* é um número de porta TCP.|  

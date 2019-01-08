@@ -13,15 +13,15 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141702"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366698"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
-  Este tópico descreve os contadores de desempenho dos seguintes objetos de desempenho do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:  
+  Este tópico descreve os contadores de desempenho dos seguintes objetos de desempenho do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
 -   `ReportServer:Service`  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48141702"
 > [!NOTE]  
 >  Os objetos de desempenho são usados para monitorar eventos no servidor de relatório local. Se você estiver executando um servidor de relatório em uma implantação em expansão, as contagens se aplicarão ao servidor atual e não à implantação em expansão como um todo.  
   
- Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Criação de perfis de tempo de execução](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Criação de perfis de tempo de execução](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Neste tópico:  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48141702"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo do SharePoint | Modo nativo.  
   
 ##  <a name="bkmk_ReportServer"></a> Contadores de Desempenho ReportServer:Service (servidor de relatório no modo nativo)  
- O objeto de desempenho `ReportServer:Service` inclui uma coleção de contadores a fim de controlar os eventos relativos ao HTTP e à memória de uma instância do servidor de relatório. Esse objeto aparece uma vez para cada [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instância no computador e você pode adicionar ou remover contadores do objeto de desempenho para cada instância. Os contadores da instância padrão aparecem no formato `ReportServer:Service`. Os contadores das instâncias nomeadas aparecem no formato `ReportServer$<` *nome_instância*`>:Service`.  
+ O objeto de desempenho `ReportServer:Service` inclui uma coleção de contadores a fim de controlar os eventos relativos ao HTTP e à memória de uma instância do servidor de relatório. Esse objeto aparece uma vez para cada instância do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no computador, e é possível adicionar ou remover contadores do objeto para cada instância. Os contadores da instância padrão aparecem no formato `ReportServer:Service`. Os contadores das instâncias nomeadas aparecem no formato `ReportServer$<` *nome_instância*`>:Service`.  
   
- O `ReportServer:Service` objeto de desempenho era novo no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], e fornece um subconjunto de contadores incluídos com os serviços de informações da Internet (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nas versões anteriores do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Esses novos contadores são específicos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e controlam eventos relacionados ao HTTP do servidor de relatório, como solicitações, conexões e tentativas de logon. Adicionalmente, ele inclui contadores para controlar eventos de gerenciamento de memória.  
+ O `ReportServer:Service` objeto de desempenho era novo no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], e fornece um subconjunto de contadores incluídos com os serviços de informações da Internet (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nas versões anteriores do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Esses novos contadores são específicos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP do servidor de relatório, como solicitações, conexões e tentativas de logon. Adicionalmente, ele inclui contadores para controlar eventos de gerenciamento de memória.  
   
- A tabela a seguir lista os contadores que estão incluídos no `ReportServer:Service` objeto de desempenho.  
+ A tabela a seguir lista os contadores incluídos no objeto de desempenho `ReportServer:Service`.  
   
  ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48141702"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active connections`|O número de conexões atualmente ativas no servidor.|  
 |`Bytes Received Total`|O número de bytes recebidos pelo servidor. Esse contador calcula o total de bytes brutos recebidos pelo Gerenciador de Relatórios e pelo servidor de relatório.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48141702"
 |`Memory Shrink Notifications/Sec`|  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName “ReportServerSharePoint:Service”:  
+ ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

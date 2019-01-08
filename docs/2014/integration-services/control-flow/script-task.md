@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371318"
 ---
 # <a name="script-task"></a>Tarefa Script
   A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  
@@ -67,15 +66,15 @@ ms.locfileid: "48224406"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurando a tarefa Script no Designer  
  A tabela a seguir descreve o evento `ScriptTaskLogEntry` que pode ser registrado para a tarefa Script. O `ScriptTaskLogEntry` evento é selecionado para o logon a **detalhes** guia dos **configurar Logs de SSIS** caixa de diálogo. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. A tarefa grava uma entrada de log para cada chamada para o `Log` método da `Dts` objeto. A tarefa grava essas entradas quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. A tarefa grava uma entrada de log para cada chamada ao método `Log` do objeto `Dts`. A tarefa grava essas entradas quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, consulte os tópicos a seguir:  
   
--   [Editor da tarefa script &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Script &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa script &#40;página Script&#41;](../script-task-editor-script-page.md)  
+-   [Editor da Tarefa Script &#40;Página Script&#41;](../script-task-editor-script-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224406"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
+-   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](https://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
   
   

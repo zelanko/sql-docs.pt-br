@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Criando uma assinatura na publicação de mesclagem | Microsoft Docs'
+title: 'Lição 2: Criando uma assinatura para a publicação de mesclagem | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7f1ab51a53e91a069e4d2a137d4908fa820df0f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8634606ba3eaba8a38aefb66043c0d00e33660a2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186606"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590990"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
-  Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  
+  Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Para criar a assinatura  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48186606"
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , insira **SalesOrdersReplica** na caixa **Nome do banco de dados** , clique em **OK**e em **Avançar**.  
   
-8.  Na página Segurança do Agente de Mesclagem, clique no botão de reticências (**…**), insira \<*Machine_Name>***\repl_merge** na caixa **Conta de processo** e forneça a senha dessa conta. Em seguida, clique em **OK**, em **Avançar** e, em seguida, **Avançar** novamente.  
+8.  Na página segurança do Merge Agent, clique no botão de reticências (**...** ) botão, digite \< _Machine_Name >_**\repl_merge** no **conta de processo** caixa, forneça a senha para essa conta, clique em **Okey**, clique em **próxima**e, em seguida, clique em **próxima** novamente.  
   
 9. Na página Inicializar Assinaturas, selecione **Na primeira sincronização** na lista **Inicializar Quando** , clique em **Avançar**e em **Avançar** novamente.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48186606"
   
 1.  Conecte-se ao Assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bancos de Dados**, **SalesOrdersReplica**e **Segurança**, clique com o botão direito do mouse em **Usuários**e selecione **Novo Usuário**.  
   
-2.  Na página **Geral**, insira \<*Machine_Name>***\repl_merge** na caixa **Nome de usuário**, clique no botão de reticências (**…**); clique em **Procurar**, selecione \<*Machine_Name>***\repl_merge**. Em seguida, clique em **OK**, em **Verificar Nomes** e, em seguida, em **OK**.  
+2.  No **gerais** , insira \< _Machine_Name >_**\repl_merge** no **nome de usuário** , clique no botão reticências ( **...** ), clique em **navegue**, selecione \< _Machine_Name >_**\repl_merge**, clique em **Okey**, clique em **verificar nomes**e, em seguida, clique em **Okey**.  
   
 3.  Em **Associação à função do banco de dados**, selecione **db_owner**e clique em **OK** para criar o usuário.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48186606"
 5.  Selecione a partição recém-adicionada, clique em **Gerar os instantâneos selecionados agora**e em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou com êxito uma assinatura para a publicação mesclada e gerou o instantâneo filtrado para a partição de dados da nova assinatura, de modo que ele esteja disponível no momento da inicialização das assinaturas. Em seguida, conceda direitos ao Merge Agent no banco de dados de assinatura e execute o Merge Agent para iniciar a sincronização e iniciar a assinatura. Consulte [Lição 3: Sincronizando a assinatura com a publicação de mesclagem](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
+ Você criou com êxito uma assinatura para a publicação mesclada e gerou o instantâneo filtrado para a partição de dados da nova assinatura, de modo que ele esteja disponível no momento da inicialização das assinaturas. Em seguida, conceda direitos ao Merge Agent no banco de dados de assinatura e execute o Merge Agent para iniciar a sincronização e iniciar a assinatura. Consulte [lição 3: Sincronizando a assinatura com a publicação de mesclagem](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Subscribe to Publications](subscribe-to-publications.md)   

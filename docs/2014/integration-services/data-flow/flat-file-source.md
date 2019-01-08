@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -18,12 +17,12 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0b353cfb1aef011d6fc63a3bea252685b38a42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771328"
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
   A fonte de Arquivo Simples lê dados de um arquivo de texto. O arquivo de texto pode ser delimitado, ter largura fixa ou formato misto.  
@@ -56,11 +55,11 @@ ms.locfileid: "48125406"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
   
--   [Editor de origem de arquivo simples &#40;página do Gerenciador de Conexão&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor de origem de arquivo simples &#40;página de colunas&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Colunas&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor de origem de arquivo simples &#40;página de saída de erro&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Saída de Erro&#41;](../flat-file-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

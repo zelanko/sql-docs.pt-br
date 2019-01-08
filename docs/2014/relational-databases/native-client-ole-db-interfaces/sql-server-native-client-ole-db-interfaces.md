@@ -15,19 +15,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38957be6a022a3f3837a9f7b2539423dd48b3ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184806"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374478"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Referência do SQL Server Native Client (OLE DB)
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe interfaces para consumidores que desejam acessar dados em um ou mais computadores que executam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é compatível com o OLE DB versão 2.0.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe interfaces para consumidores que desejam acessar dados em um ou mais computadores que executam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client é um provedor compatível com 2.0 de versão do OLE DB.  
   
  Isso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referência de programação do provedor de OLE DB do Native Client não documenta todas as interfaces OLE DB e os métodos, somente essas interfaces e métodos que exibem um comportamento específico do provedor ao usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provedor.  
   
- Para obter uma descrição completa das principais interfaces e métodos OLE DB, confira [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Para obter uma descrição completa das principais interfaces e métodos OLE DB, confira [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

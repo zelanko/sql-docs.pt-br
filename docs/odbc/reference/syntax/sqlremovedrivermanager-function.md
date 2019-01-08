@@ -20,16 +20,16 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794264"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206655"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Função SQLRemoveDriverManager
 **Conformidade com**  
- Versão introduzidos: ODBC 3.0: preteridos no Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemas operacionais posteriores.  
+ Versão introduzida: ODBC 3.0: Preterido no Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemas operacionais posteriores.  
   
  **Resumo**  
  **SQLRemoveDriverManager** altera ou remove informações sobre os principais componentes ODBC da entrada Odbcinst. ini nas informações do sistema.  
@@ -39,7 +39,7 @@ ms.locfileid: "47794264"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLRemoveDriverManager** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Não foi encontrado no registro do componente|O instalador não foi possível remover as informações do Gerenciador de Driver porque ele não existe no registro ou não pôde ser encontrado no registro.|  

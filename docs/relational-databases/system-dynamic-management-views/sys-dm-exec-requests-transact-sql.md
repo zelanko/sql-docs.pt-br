@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,28 +21,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309970ba762b5e616cce10a21d1ef23bfd9097e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740464"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590110"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
->  Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo. Os valores de tempo retornados por essa exibição de gerenciamento dinâmico não incluem o tempo gasto no modo preventivo.  
-  
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID da sessão a que esta solicitação está relacionada. Não permite valor nulo.|  
 |request_id|**int**|ID da solicitação. Exclusiva no contexto da sessão. Não permite valor nulo.|  
 |start_time|**datetime**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
 |status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Plano de fundo<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
-|command|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete (excluir)<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
+|command|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
 |sql_handle|**varbinary(64)**|Mapa de hash do texto SQL da solicitação. Permite valor nulo.|  
 |statement_start_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
 |statement_end_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
@@ -99,60 +97,97 @@ ms.locfileid: "47740464"
 |is_resumable |**bit** |**Aplica-se a**: do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se a solicitação é uma operação de índice retomável. |  
 |page_resource |**binary(8)** |**Aplica-se ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Uma representação hexadecimal de 8 bytes do recurso da página se o `wait_resource` coluna contém uma página. |
 
-## <a name="permissions"></a>Permissões  
- Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE` não pode ser concedida na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] forma `sys.dm_exec_requests` estará sempre limitado para a conexão atual. 
+## <a name="remarks"></a>Comentários 
+Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo. Os valores de tempo retornados por essa exibição de gerenciamento dinâmico não incluem o tempo gasto no modo preventivo.
+
+Ao executar solicitações paralelas no [modo de linha](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui um thread de trabalho para coordenar os threads de trabalho responsáveis pela conclusão de tarefas atribuídas a eles. Essa DMV somente o thread coordenador é visível para a solicitação. As colunas **lê**, **grava**, **logical_reads**, e **row_count** são **não atualizado** para o thread coordenador. As colunas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**, e **granted_query_memory** estão **atualizados somente** para o thread coordenador. Para obter mais informações, consulte o [guia de arquitetura de tarefa e Thread](../../relational-databases/thread-and-task-architecture-guide.md).
+
+## <a name="permissions"></a>Permissões
+Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE` não pode ser concedida na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] forma `sys.dm_exec_requests` estará sempre limitado para a conexão atual.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. Localizando o texto da consulta para um lote em execução  
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. Localizando o texto da consulta para um lote em execução
+
  O exemplo a seguir consulta `sys.dm_exec_requests` para localizar a consulta interessante e copiar o `sql_handle` da saída.  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- Em seguida, para obter o texto da instrução, use o `sql_handle` copiado com a função do sistema `sys.dm_exec_sql_text(sql_handle)`.  
-  
-```  
+
+Em seguida, para obter o texto da instrução, use o `sql_handle` copiado com a função do sistema `sys.dm_exec_sql_text(sql_handle)`.  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução  
- A exemplo a seguir consulta **. DM exec_requests** para localizar o lote interessante e copiar seu `transaction_id` da saída.  
-  
-```  
+```
+
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>b. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução
+
+A exemplo a seguir consulta **. DM exec_requests** para localizar o lote interessante e copiar seu `transaction_id` da saída.
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+Em seguida, para localizar informações de bloqueio, use copiado `transaction_id` com a função de sistema **DM tran_locks**.  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- Em seguida, para localizar informações de bloqueio, use copiado `transaction_id` com a função de sistema **DM tran_locks**.  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### <a name="c-finding-all-currently-blocked-requests"></a>C. Localizando todas as solicitações bloqueadas atualmente  
- A exemplo a seguir consulta **. DM exec_requests** para encontrar informações sobre solicitações bloqueadas.  
-  
-```  
+```
+
+### <a name="c-finding-all-currently-blocked-requests"></a>C. Localizando todas as solicitações bloqueadas atualmente
+
+A exemplo a seguir consulta **. DM exec_requests** para encontrar informações sobre solicitações bloqueadas.  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## <a name="see-also"></a>Consulte também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. Ordenação de solicitações existentes por CPU
+
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
+
+## <a name="see-also"></a>Consulte também
+
+- [Exibições e funções de gerenciamento dinâmico](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Funções e exibições de gerenciamento dinâmico relacionadas à execução](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [DM exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

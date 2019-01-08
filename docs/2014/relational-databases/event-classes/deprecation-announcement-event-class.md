@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,26 +15,26 @@ ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 362e5046207d28be934c382b5e5dd2054d5f2a97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799058"
 ---
 # <a name="deprecation-announcement-event-class"></a>classe de evento Deprecation Announcement
   A classe de evento **Deprecation Announcement** ocorre quando você usa um recurso que será removido de uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não será removido da próxima versão principal. Para que seus aplicativos tenham tempo de vida mais longo, evite usar recursos que provocam a classe de evento **Deprecation Announcement** ou a **Deprecation Final Support** .  
   
 ## <a name="deprecation-announcement-event-class-data-columns"></a>Colunas de dados da classe de evento Deprecation Announcement  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Exibe o nome do banco de dados se o `ServerName` coluna de dados for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados `ServerName` for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|`int`|Tipo de evento = 125.|27|não|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|`int`|Tipo de evento = 125.|27|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData2|`int`|Deslocamento final (em bytes) da instrução que está sendo executada.|55|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -47,7 +46,7 @@ ms.locfileid: "48204656"
 |ObjectName|`nvarchar`|Nome do recurso preterido.|34|Sim|  
 |Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando Login1 e executar uma instrução como Login2, `SessionLoginName` mostrará Login1 e `LoginName` mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |SqlHandle|`image`|Identificador binário que pode ser usado para identificar lotes SQL ou procedimentos armazenados.|63|Sim|  

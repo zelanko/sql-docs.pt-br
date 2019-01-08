@@ -14,17 +14,17 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054986"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369838"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Para instruções executadas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client não precisa consultar o servidor para descrever colunas em um conjunto de resultados. Nesse caso, `SQLDescribeCol` não causa uma ida e volta do servidor. Como o [SQLColAttribute](sqlnumresultcols.md), chamar `SQLDescribeCol` diante preparadas, mas instruções não executadas gera uma ida e volta do servidor.  
   
- Quando uma instrução ou um lote de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] retorna vários conjuntos de linha de resultado, é possível para uma coluna referenciada por ordinal ser originada em uma tabela separada ou consultar uma coluna inteiramente diferente no conjunto de resultados. `SQLDescribeCol` deve ser chamado para cada conjunto. Quando o conjunto de resultados for alterado, o aplicativo deverá associar novamente os valores de dados antes de buscar os resultados da linha. Para obter mais informações sobre como lidar com resultados múltiplos retornos de conjunto, consulte [SQLMoreResults](sqlmoreresults.md).  
+ Quando uma instrução ou um lote de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] retorna vários conjuntos de linha de resultado, é possível para uma coluna referenciada por ordinal ser originada em uma tabela separada ou consultar uma coluna inteiramente diferente no conjunto de resultados. `SQLDescribeCol` deve ser chamado para cada conjunto. Quando o conjunto de resultados for alterado, o aplicativo deverá associar novamente os valores de dados antes de buscar os resultados da linha. Para obter mais informações sobre como manipular vários retornos de conjunto de resultados, consulte [SQLMoreResults](sqlmoreresults.md).  
   
  Os atributos de coluna são informados somente para o primeiro conjunto de resultados quando vários conjuntos são gerados por um lote preparado de instruções SQL.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48054986"
  `SQLDescribeCol` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLDescribeCol](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [Função SQLDescribeCol](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

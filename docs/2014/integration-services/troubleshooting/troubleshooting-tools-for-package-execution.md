@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377628"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  
@@ -55,7 +54,7 @@ ms.locfileid: "48132406"
   
      **Adicionar a descrição do erro**. É fácil procurar pela descrição do erro usando um componente Script. Para obter mais informações, consulte [aprimorando uma saída de erro para o componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Adicione o nome da coluna de erro**. A pesquisa pelo nome de coluna que corresponde à ID da coluna salva pela saída de erro não pode ser feita facilmente no componente Script e requer etapas adicionais. Cada ID de coluna em um fluxo de dados é exclusivo dentro da tarefa Fluxo de Dados e persiste no pacote no momento da criação. A abordagem a seguir é uma sugestão para adicionar o nome de coluna à saída do erro. Para obter um exemplo de como usar essa abordagem, consulte [adicionando o nome de coluna de erro para uma saída de erro](http://go.microsoft.com/fwlink/?LinkId=261546) em dougbert.com.  
+     **Adicione o nome da coluna de erro**. A pesquisa pelo nome de coluna que corresponde à ID da coluna salva pela saída de erro não pode ser feita facilmente no componente Script e requer etapas adicionais. Cada ID de coluna em um fluxo de dados é exclusivo dentro da tarefa Fluxo de Dados e persiste no pacote no momento da criação. A abordagem a seguir é uma sugestão para adicionar o nome de coluna à saída do erro. Para obter um exemplo de como usar essa abordagem, consulte [adicionando o nome de coluna de erro para uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546) em dougbert.com.  
   
     1.  **Criar uma tabela de pesquisa de nomes de coluna**. Crie outro aplicativo separado que use a API do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para iterar com cada pacote salvo, cada fluxo do pacote, cada objeto do fluxo de dados, e cada entrada e saída do objeto de fluxo de dados. O aplicativo deve persistir a ID de coluna e o nome de cada coluna a uma tabela de pesquisa, com a ID da tarefa Fluxo de Dados pai e a ID do pacote.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48132406"
   
     3.  **Considerar a captura de dados de contagem de linhas**. Considere a criação de tabelas separadas para as informações de contagem de linhas, onde cada instância de execução de pacote possa ser identificada por ExecutionID. Use a transformação Contagem de Linhas para salvar a contagem de linhas em uma série de variáveis em pontos críticos no fluxo de dados. Após o término do fluxo de dados, use uma tarefa Executar SQL para inserir as séries de valores em uma linha na tabela para análise e geração de relatório posterior.  
   
-     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(Projeto REAL: práticas de design ETL de Business Intelligence).  
+     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging," a [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper sobre [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solucionar problemas de execução de pacotes por meio de arquivos de despejo de depuração  
  No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. Para obter mais informações, consulte [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -94,12 +93,12 @@ ms.locfileid: "48132406"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Solucionar problemas de validação em tempo de execução  
  Às vezes, você não poderá se conectar às suas fontes de dados ou validar partes de seu pacote até que as tarefas anteriores no pacote tenham sido executadas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os seguintes recursos para ajudar a evitar os erros de validação que resultam dessas condições:  
   
--   **Configurar uma propriedade DelayValidation em elementos de pacote que não são válidos quando o pacote estiver carregado**. Você pode definir `DelayValidation` para `True` em elementos do pacote cujas configurações não são válidas para evitar erros de validação quando o pacote é carregado. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. O `DelayValidation` propriedade pode ser habilitada no nível do pacote ou no nível das tarefas individuais e contêineres que inclui o pacote.  
+-   **Configurar uma propriedade DelayValidation em elementos de pacote que não são válidos quando o pacote estiver carregado**. `DelayValidation` pode ser definida como `True` em elementos do pacote cujas configurações não são válidas para evitar erros de validação quando o pacote for carregado. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade `DelayValidation` pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui.  
   
-     O `DelayValidation` propriedade pode ser definida em uma tarefa de fluxo de dados, mas não em dados individuais componentes de fluxo. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como `false`. No entanto, quando o valor dessa propriedade é `false`, o componente não está ciente das alterações aos metadados de fontes de dados externas. Quando definido como `true`, o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propriedade pode ajudar a evitar problemas de bloqueio causados por bloqueios no banco de dados, especialmente quando o pacote estiver usando transações.  
+     A propriedade `DelayValidation` pode ser definida em uma tarefa de Fluxo de Dados, mas não em componentes de fluxo de dados individuais. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como `false`. Entretanto, quando o valor dessa propriedade for `false`, o componente não reconhecerá as alterações para o metadados de fontes de dados externas. Ao definir como `true`, a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> poderá ajudar a evitar os problemas de bloqueio causados por bloqueios no banco de dados, especialmente quando o pacote estiver usando as transações.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Solucionar problemas de permissões em tempo de execução  
- Se você encontrar erros ao tentar executar os pacotes implantados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, as contas usadas pelo Agent poderão não ter as permissões necessárias. Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado ao chamar o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](http://support.microsoft.com/kb/918760). Para obter mais informações sobre como executar pacotes por meio de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).  
+ Se você encontrar erros ao tentar executar os pacotes implantados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, as contas usadas pelo Agent poderão não ter as permissões necessárias. Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Um pacote SSIS não é executado ao chamar o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760). Para obter mais informações sobre como executar pacotes por meio de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Para se conectar a fontes de dados do Excel ou do Access, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent requer uma conta com permissão para ler, gravar, criar e excluir arquivos temporários na pasta especificada pelas variáveis de ambiente TEMP e TMP.  
   
@@ -114,6 +113,6 @@ ms.locfileid: "48132406"
  [Configurar uma saída de erro em um componente de fluxo de dados](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](http://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  
+ Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  
   
   

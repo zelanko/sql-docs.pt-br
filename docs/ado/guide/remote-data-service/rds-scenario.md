@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539700"
 ---
 # <a name="rds-scenario"></a>Cenário RDS
 > [!IMPORTANT]
 >  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O aplicativo de catálogo de endereços é um cenário que mostra como usar o serviço de dados remota (RDS) para compilar um aplicativo Web simple e reconhecimento de dados — um catálogo de endereços da empresa online. Esse cenário é útil para Microsoft Visual Basic Scripting Edition (VBScript) e programadores de COM que desejam saber como usar controles ActiveX do reconhecimento de dados com o RDS e para o software experiente com mais desenvolvedores que desejam criar aplicativos Web centrados em dados.  
+ O aplicativo de catálogo de endereços é um cenário que mostra como usar o serviço de dados remota (RDS) para compilar um aplicativo Web simple e reconhecimento de dados - um catálogo de endereços da empresa online. Esse cenário é útil para Microsoft Visual Basic Scripting Edition (VBScript) e programadores de COM que desejam saber como usar controles ActiveX do reconhecimento de dados com o RDS e para o software experiente com mais desenvolvedores que desejam criar aplicativos Web centrados em dados.  
   
  Este cenário pressupõe que você sabe como usar marcas de layout HTML básica, técnicas de associação de dados do uso DHTML e programa com controles ActiveX.  
   

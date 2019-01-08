@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table creation [SQL Server], Visual Database Tools
@@ -13,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 411599f503b13ed5f6000963da7b25cf73260e7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377428"
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
   Você pode criar uma nova tabela, nomeá-la e adicioná-la a um banco de dados existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948)(em inglês).  
+>  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948)(em inglês).  
   
  **Neste tópico**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48081046"
   
 11. Para exibir a nova tabela, em **Pesquisador de Objetos**, expanda o nó **Tabelas** e pressione **F5** para atualizar a lista de objetos. A nova tabela é exibida na lista de tabelas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>Para criar uma tabela no Editor de Consultas  
   

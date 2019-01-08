@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855074"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591810"
 ---
 # <a name="sqlgetcursorname-function"></a>Função SQLGetCursorName
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetCursorName** retorna o nome de cursor associado a uma instrução especificada.  
@@ -66,7 +66,7 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLGetCursorName** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType*sql_handle_stmt e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetCursorName** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *CursorName* não era grande o suficiente para retornar o nome de cursor inteiro, portanto, o nome de cursor foi truncado. O comprimento do nome completo do cursor é retornado no **NameLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *StatementHandle* não suporta a função.|  
   
 ## <a name="comments"></a>Comentários  
- Nomes de cursor são usados apenas na atualização posicionadas e instruções delete (por exemplo, **atualize** *nome da tabela* ... **WHERE CURRENT OF** *nome de cursor*). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chama **SQLSetCursorName** para definir um nome de cursor, o driver gerará um nome. Esse nome começa com as letras SQL_CUR.  
+ Nomes de cursor são usados apenas na atualização posicionadas e instruções delete (por exemplo, **atualize** _nome da tabela_ ... **WHERE CURRENT OF** _nome de cursor_). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chama **SQLSetCursorName** para definir um nome de cursor, o driver gerará um nome. Esse nome começa com as letras SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  No ODBC 2 *. x*, quando não havia nenhum cursor aberto e nenhum nome foi definido por uma chamada para **SQLSetCursorName**, uma chamada para **SQLGetCursorName** retornado SQLSTATE HY015 (nenhum nome de cursor disponível). Em ODBC 3 *. x*, isso não é mais verdadeiro, independentemente de quando **SQLGetCursorName** é chamado, o driver retorna o nome do cursor.  
   
  **SQLGetCursorName** retorna o nome de um cursor ou não o nome foi criado explicitamente ou implicitamente. Um nome de cursor implicitamente será gerado se **SQLSetCursorName** não é chamado. **SQLSetCursorName** pode ser chamado para renomear um cursor em uma instrução, contanto que o cursor estiver em um estado preparado ou alocado.  

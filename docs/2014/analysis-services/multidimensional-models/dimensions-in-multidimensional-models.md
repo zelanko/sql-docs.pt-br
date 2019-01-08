@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ffa8ddeeb208be956fc072d45f10edacf97b52be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148261"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365678"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensões em modelos multidimensionais
   Uma dimensão do banco de dados é uma coleção de objetos relacionados, chamados atributos, que podem ser usados para fornecer informações sobre dados de fatos de um ou mais cubos. Por exemplo, seriam atributos comuns de uma dimensão de produto o nome do produto, sua categoria, linha de produtos, tamanho e preço. Esses objetos são vinculados a uma ou mais colunas de uma ou mais tabelas de uma exibição da fonte de dados. Por padrão, esses atributos são visíveis como hierarquias de atributo e podem ser usados no entendimento dos dados de fatos de um cubo. Os atributos podem ser organizados em hierarquias definidas pelo usuário que fornecem os caminhos de navegação para ajudar os usuários durante pesquisas dos dados de um cubo.  
@@ -28,7 +28,7 @@ ms.locfileid: "50148261"
  Os cubos contêm todas as dimensões que servem de base para os usuários realizarem análises dos dados de fatos. Uma instância de uma dimensão do banco de dados de um cubo é chamada dimensão do cubo e se relaciona a um ou mais grupos de medidas do cubo. Uma dimensão do banco de dados pode ser usada várias vezes em um cubo. Por exemplo, uma tabela de fatos pode ter diversos fatos relacionados ao tempo, sendo possível definir uma dimensão de cubo separada para auxiliar na análise de cada um deles. No entanto, é preciso haver apenas uma dimensão do banco de dados relacionada ao tempo, ou seja, também é necessário que haja somente uma tabela do banco de dados relacional associada ao tempo para oferecer suporte a várias dimensões do cubo baseadas no tempo.  
   
 > [!NOTE]  
->  Para obter informações sobre questões de desempenho relacionadas ao design da dimensão, consulte o [SQL Server 2008 R2 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=306717).  
+>  Para obter informações sobre questões de desempenho relacionadas ao design da dimensão, consulte o [SQL Server 2008 R2 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=306717).  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>Definindo dimensões, atributos e hierarquias.  
  O método mais simples para definir dimensões, atributos e hierarquias de bancos de dados e cubos é usar o Assistente para Cubos para criar as dimensões ao mesmo tempo em que você define o cubo. O Assistente para Cubos criará dimensões com base nas tabelas de dimensões da exibição da fonte de dados que o assistente identificar ou que você especificar para uso no cubo. O assistente então criará as dimensões do banco de dados e as adicionará ao novo cubo, criando as dimensões do cubo.  

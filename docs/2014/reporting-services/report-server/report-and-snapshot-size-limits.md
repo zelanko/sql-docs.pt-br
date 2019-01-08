@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119322"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374118"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -53,14 +53,14 @@ ms.locfileid: "49119322"
  O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre os limites de arquivo do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planning for Scalability and Performance with Reporting Services (Planejamento de escalabilidade e desempenho com o Reporting Services)](http://go.microsoft.com/fwlink/?LinkID=70650) e [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server (Usando o Visual Studio 2005 para realizar o teste de carga em um servidor de relatórios do Reporting Services do SQL Server 2005)](http://go.microsoft.com/fwlink/?LinkID=77519).  
+>  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planejando escalabilidade e desempenho com o Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) e [usando o Visual Studio 2005 para realizar testes de carga em um SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medindo o armazenamento de instantâneos  
  O tamanho de qualquer instantâneo é diretamente proporcional à quantidade de dados no relatório. Os instantâneos normalmente são muito maiores que outros itens armazenados em um servidor de relatório. O tamanho do instantâneo varia, em geral, de alguns megabytes a dezenas de megabytes. Se você tiver relatórios muito grandes, espere para ver instantâneos que são ainda muito maiores. Dependendo da frequência de uso dos instantâneos e da configuração do histórico de relatórios, a quantidade de espaço em disco necessária para o banco de dados do servidor de relatório pode aumentar rapidamente em um curto período de tempo.  
   
  Por padrão, os bancos de dados **reportserver** e **reportservertempdb** são definidos como autogrow. Embora o tamanho do banco de dados possa aumentar automaticamente, nunca é diminuído automaticamente. Se o banco de dados **reportserver** tiver um excesso de capacidade devido à exclusão de instantâneos, reduza-o manualmente para recuperar o espaço em disco. Similarmente, se **reportservertempdb** tiver aumentado para acomodar um volume extremamente grande de relatórios interativos, a alocação do espaço em disco permanecerá nessa configuração até ser diminuída.  
   
- Para medir o tamanho dos bancos de dados do servidor de relatório, execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . O cálculo do tamanho total do banco de dados em intervalos regulares pode ajudar você a desenvolver estimativas razoáveis de como alocar espaço para o banco de dados do servidor de relatórios com o passar do tempo. As seguintes instruções medem a quantidade de espaço usada atualmente (as instruções pressupõem o uso de nomes de banco de dados padrão):  
+ Para medir o tamanho dos bancos de dados do servidor de relatório, execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . O cálculo do tamanho total do banco de dados em intervalos regulares pode ajudar você a desenvolver estimativas razoáveis de como alocar espaço para o banco de dados do servidor de relatórios com o passar do tempo. As seguintes instruções medem a quantidade de espaço usada atualmente (as instruções supõem que você está usando os nomes padrão de banco de dados):  
   
 ```  
 USE ReportServer  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363158"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
@@ -54,7 +53,7 @@ ms.locfileid: "48189169"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Mensagens de log personalizadas disponíveis na tarefa Serviço da Web  
  A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviço da Web. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WSTaskBegin`|A tarefa começou a acessar um serviço Web.|  
 |`WSTaskEnd`|A tarefa completou um método de serviço Web.|  
@@ -83,8 +82,8 @@ ms.locfileid: "48189169"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
+ Vídeo, [como: Chamar um serviço Web usando a tarefa de serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), em technet.microsoft.com.  
   
- Resposta da Curadoria, [Consumir serviços Web no SSIS usando scripts](http://go.microsoft.com/fwlink/?LinkId=321996), em curatedviews.cloudapp.net.  
+ Resposta da Curadoria, [Consumir serviços Web no SSIS usando scripts](https://go.microsoft.com/fwlink/?LinkId=321996), em curatedviews.cloudapp.net.  
   
   

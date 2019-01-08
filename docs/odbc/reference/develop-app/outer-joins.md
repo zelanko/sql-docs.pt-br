@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513988"
 ---
 # <a name="outer-joins"></a>Junções externas
 ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à direita. É a sequência de escape de junções externas  
   
- **{oj** *outer-join * * *}**  
+ **{oj** _junção externa_**}**  
   
  em que *junção externa* é  
   
@@ -32,7 +32,7 @@ ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à dir
   
  *referência de tabela* Especifica um nome de tabela, e *critério de pesquisa* Especifica a condição de junção entre as *referências de tabela*.  
   
- Uma solicitação de junção externa deve aparecer após o **FROM** palavra-chave e antes do **onde** cláusula (se houver). Para obter informações de sintaxe completa, consulte [Outer Join sequência de Escape](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) na gramática do apêndice c: SQL.  
+ Uma solicitação de junção externa deve aparecer após o **FROM** palavra-chave e antes do **onde** cláusula (se houver). Para obter informações de sintaxe completa, consulte [Outer Join sequência de Escape](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) no Apêndice c: Gramática SQL.  
   
  Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados que lista todos os clientes e mostra que tem pedidos abertos. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativa para Oracle e não é interoperável.  
   

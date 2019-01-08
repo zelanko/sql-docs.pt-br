@@ -1,7 +1,8 @@
 ---
-title: 'Guia de início rápido: Conectar e consultar o SQL Server usando o Studio de dados do Azure | Microsoft Docs'
+title: 'Guia de início rápido: Conectar e consultar o SQL Server'
+titleSuffix: Azure Data Studio
 description: Neste início rápido mostra como usar o Studio de dados do Azure para se conectar ao SQL Server e executar uma consulta
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356087"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030280"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando o SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -43,11 +44,11 @@ Se você não tiver acesso a um SQL Server, selecione sua plataforma nos links a
 1. Este artigo usa *logon do SQL*, mas *autenticação do Windows* tem suporte. Preencha os campos da seguinte maneira:
  
     - **Nome do servidor:** localhost
-    - **Tipo de autenticação:** logon do SQL  
-    - **Nome de usuário:** nome de usuário para o SQL Server  
-    - **Senha:** senha para o SQL Server  
+    - **Tipo de autenticação:** Logon do SQL  
+    - **Nome de usuário:** Nome de usuário para o SQL Server  
+    - **Senha:** Senha para o SQL Server  
     - **Nome do banco de dados:** deixe esse campo em branco 
-    - **Grupo de servidor:** \<padrão\>  
+    - **Grupo de servidores:** \<Default\>  
 
    ![Nova tela de Conexão](media/quickstart-sql-server/new-connection-screen.png)
 
