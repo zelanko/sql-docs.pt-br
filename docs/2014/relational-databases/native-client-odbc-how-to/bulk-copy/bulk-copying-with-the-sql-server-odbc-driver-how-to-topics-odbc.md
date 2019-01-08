@@ -13,15 +13,15 @@ ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65628b1d37c0a15ab67ba26baa787e2d76103e90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c2cca868cbbdeddc98264160e646dde3676c585
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050043"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766303"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Tópicos de instrução sobre cópia em massa com o driver ODBC do SQL Server (ODBC)
-  Quando usado com o Microsoft® SQL Server™ 2005, o driver ODBC do SQL Server dá suporte às mesmas funções de cópia em massa com suporte na API DB-Library.  
+  Quando usado com a Microsoft?? SQL Server??? 2005, o driver ODBC do SQL Server oferece suporte as mesmas funções de cópia em massa com suporte na API DB-Library.  
   
  Para obter informações sobre uma grande alteração na partir de cópia em massa [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [executando operações de cópia em massa &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

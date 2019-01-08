@@ -14,15 +14,15 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be194c8e730f1ef797d0db30ff9942735f51617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523686"
 ---
 # <a name="statement-handles"></a>Identificadores de instrução
-Um *instrução* é mais fácil pensar de como uma instrução SQL, tais como **selecionar \* do funcionário**. No entanto, uma instrução é mais do que apenas uma instrução SQL — ele consiste em todas as informações associadas a essa instrução SQL, como conjuntos de resultados criados pela instrução e os parâmetros usados na execução da instrução. Uma instrução não ainda precisa ter uma instrução de SQL definido pelo aplicativo. Por exemplo, quando uma função de catálogo, como **SQLTables** é executado em uma instrução, ele executa uma instrução SQL predefinida que retorna uma lista de nomes de tabela.  
+Um *instrução* é mais fácil pensar de como uma instrução SQL, tais como **selecionar \* do funcionário**. No entanto, uma instrução é mais do que apenas uma instrução SQL – ele consiste em todas as informações associadas a essa instrução SQL, como conjuntos de resultados criados pela instrução e os parâmetros usados na execução da instrução. Uma instrução não ainda precisa ter uma instrução de SQL definido pelo aplicativo. Por exemplo, quando uma função de catálogo, como **SQLTables** é executado em uma instrução, ele executa uma instrução SQL predefinida que retorna uma lista de nomes de tabela.  
   
  Cada instrução é identificada por um identificador de instrução. Uma instrução é associada uma única conexão e pode haver várias instruções em que a conexão. Alguns drivers de limitam o número de instruções ativas que dar suporte a eles; opção o SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** Especifica quantas instruções ativas que oferece suporte a um driver em uma única conexão. Uma instrução é definida para ser *active* se ela tiver resultados pendentes, onde os resultados são um conjunto de resultados ou a contagem de linhas afetadas por uma **inserir**, **atualização**, ou **Excluir** instrução ou dados que estão sendo enviados com várias chamadas para **SQLPutData**.  
   

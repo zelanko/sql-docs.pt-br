@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661745"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417367"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer os serviços de pooling de conexão.  
@@ -44,8 +44,8 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
 |Função|Funcionalidade adicionada|  
 |--------------|-------------------------|  
-|[Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Suporte ao tipo de identificador novo: SQL_HANDLE_DBC_INFO_TOKEN (consulte a descrição abaixo).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Suporta o atributo de conexão somente conjunto novo: SQL_ATTR_DBC_INFO_TOKEN para redefinir a conexão (consulte a descrição abaixo).|  
+|[Falha de SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Suporte para o novo tipo de identificador: SQL_HANDLE_DBC_INFO_TOKEN (consulte a descrição abaixo).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Suporte para o novo atributo de conexão somente conjunto: SQL_ATTR_DBC_INFO_TOKEN para redefinir a conexão (consulte a descrição abaixo).|  
   
 > [!NOTE]  
 >  Funções preteridas, como **SQLError** e **SQLSetConnectOption** não têm suporte para o pool de conexão de reconhecimento de driver.  
@@ -87,7 +87,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  Como as informações de conexão podem vir de várias fontes (cadeia de caracteres de conexão, os atributos de conexão e DSN), o driver seja necessário analisar a cadeia de caracteres de conexão e resolver o conflito entre essas fontes em cada chamada de função acima.  
   
- Portanto, um novo identificador ODBC é introduzido: SQL_HANDLE_DBC_INFO_TOKEN. Com SQL_HANDLE_DBC_INFO_TOKEN, um driver não precisa analisar a cadeia de conexão e resolver conflitos em informações de conexão de mais de uma vez. Como essa é uma estrutura de dados específicos do driver, o driver pode armazenar dados, como informações de conexão ou ID do pool.  
+ Portanto, foi introduzido um novo identificador ODBC: SQL_HANDLE_DBC_INFO_TOKEN. Com SQL_HANDLE_DBC_INFO_TOKEN, um driver não precisa analisar a cadeia de conexão e resolver conflitos em informações de conexão de mais de uma vez. Como essa é uma estrutura de dados específicos do driver, o driver pode armazenar dados, como informações de conexão ou ID do pool.  
   
  Esse identificador é usado apenas como uma interface entre o Gerenciador de Driver e o driver. Um aplicativo não pode alocar esse identificador diretamente.  
   

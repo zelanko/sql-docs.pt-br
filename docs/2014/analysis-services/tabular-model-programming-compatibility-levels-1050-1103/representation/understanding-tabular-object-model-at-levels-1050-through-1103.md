@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525792"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Compreendendo o modelo de objeto de tabela
   Um modelo de tabela é uma representação lógica de tabelas, relações, hierarquias, perspectivas, medidas, e Chave de Desempenho. Esta seção apresenta a implementação interna usando AMO. Ver [desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) se você não tiver usado AMO antes.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148421"
   
  Ver [representação de hierarquia &#40;tabela&#41; ](tables-hierarchy-representation.md) para obter uma explicação detalhada sobre como criar e manipular a representação de hierarquia.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Representação de KPI (indicador chave de desempenho)  
+### <a name="key-performance-indicator--kpi--representation"></a>Chave de desempenho – KPI-representação de indicador  
  Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino. Em termos de objetos AMO, uma representação de KPI tem uma relação de mapeamento um-para-muitos. Um KPI é representado pelo uso dos seguintes objetos AMO: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>e <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> são os principais objetos necessários.  É importante observar que isso não significa que todos os objetos contidos nos objetos AMO mencionados anteriormente podem ser usados durante a modelagem.  
   
 > [!NOTE]  

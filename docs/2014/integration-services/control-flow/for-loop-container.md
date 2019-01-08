@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203726"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761798"
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
-  O contêiner Loop For define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **For** em linguagens de programação. Em cada repetição do loop, o contêiner Loop For avalia uma expressão e repete seu fluxo de trabalho até que a expressão é avaliada como `False`.  
+  O contêiner Loop For define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **For** em linguagens de programação. Em cada repetição do loop, o contêiner Loop For avalia uma expressão e repete seu fluxo de trabalho até a expressão ser avaliada como `False`.  
   
  O contêiner Loop For usa os seguintes elementos para definir o loop:  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48203726"
 -   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Fluxo de controle](control-flow.md)   
- [Expressões do SSIS &#40;Integration Services&#41;](../expressions/integration-services-ssis-expressions.md)  
+ [Fluxo de Controle](control-flow.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)  
   
   

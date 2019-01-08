@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542288"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
   Para criar um gráfico de precisão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha os dados que serão usados para testar o modelo e mapeie os dados para o modelo.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166346"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e criar a definição do conjunto de dados externo.  
+4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e criar a definição do conjunto de dados externa.  
   
 5.  Na caixa de diálogo **Selecionar Estrutura de Mineração** , selecione a estrutura de mineração que contém os modelos com os quais deseja trabalhar e, em seguida, clique em **OK**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166346"
   
 4.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-5.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
+5.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
   
 6.  Na caixa de diálogo **Especificar Mapeamento de Coluna** , clique em **Selecionar Tabela de Casos**.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48166346"
      Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna** . Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

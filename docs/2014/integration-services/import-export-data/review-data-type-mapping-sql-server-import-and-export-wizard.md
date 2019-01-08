@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
@@ -13,19 +12,19 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaa7a1ffd22de93ade868ad10c8bcf3db8eb7d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdc6c232814f3d45330a1cb0982f207272f39c3f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764088"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
   Use o **revisar mapeamento de tipo de dados** página para examinar informações detalhadas sobre conversões de tipo de dados que o assistente precisa executar para tornar a fonte de dados compatíveis com o destino. As informações incluem dicas visuais para fazer distinção entre conversões que se espera sejam bem sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, é possível decidir se deseja aceitar a conversão sugerida pelo assistente, além de especificar como manipular qualquer eventual erro.  
   
- Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ O objetivo do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opções  
  A página **Revisar Mapeamento de Tipo de Dados** consiste de uma lista **Tabela** , uma lista de **Mapeamento de tipo de dados** e opções de tratamento de erros.  
@@ -33,7 +32,7 @@ ms.locfileid: "48200187"
 ### <a name="table-list"></a>Lista Tabela  
  A parte superior do **revisar problemas de tipo de dados** página é um **tabela** lista que lista as tabelas a serem transferidos da origem para o destino. A tabela a seguir descreve as colunas nessa lista.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |Ícone da fonte|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /><br /> Um ícone de sinal de verificação, verde, indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br /><br /> Um ícone de advertência, amarelo, indica que você deveria revisar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br /><br /> Um ícone de erro, vermelho, indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
 |**Origem**|Exibe o nome da tabela de origem.|  
@@ -45,7 +44,7 @@ ms.locfileid: "48200187"
 ### <a name="data-type-mapping-list"></a>Lista Mapeamento de tipo de dados  
  A parte inferior a **revisar problemas de tipo de dados** página é a **mapeamento de tipo de dados** lista. Esta grade fornece informações detalhadas de conversão sobre as colunas na tabela selecionada na lista **Tabela** . A tabela a seguir descreve as colunas nessa lista.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |Ícone de conversão|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /><br /> Um ícone de sinal de verificação, verde,  indica que o assistente espera que a conversão de tipo de dados da coluna sejam bem sucedida.<br /><br /> Um ícone de advertência, amarelo, indica que você deveria revisar a conversão que o assistente executará. Para examinar a conversão, clique duas vezes na coluna para exibir a caixa de diálogo **Detalhes da Conversão de Coluna** .<br /><br /> Um ícone de erro, vermelho, indica que o assistente não pode executar a conversão de maneira segura.|  
 |**Coluna de Origem**|Exibe o nome da coluna de origem.|  

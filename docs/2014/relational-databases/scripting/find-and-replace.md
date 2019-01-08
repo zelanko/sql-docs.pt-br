@@ -7,22 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328816"
 ---
 # <a name="find-and-replace"></a>Localizar e Substituir
   Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  
@@ -127,5 +123,3 @@ ms.locfileid: "48152516"
   
 ## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

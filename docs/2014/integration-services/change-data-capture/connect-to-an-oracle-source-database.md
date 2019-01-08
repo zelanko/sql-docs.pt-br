@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114216"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202185"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
   Use a página do Oracle de origem para fornecer as informações necessárias para conectar-se ao banco de dados de origem Oracle. A instância CDC lerá os logs de refazer do banco de dados Oracle aos quais você está conectado.  
@@ -35,13 +34,13 @@ ms.locfileid: "48114216"
  **Autenticação de mineração de logs da Oracle**  
  Para inserir as credenciais para o usuário de banco de dados Oracle que está autorizado para mineração de logs, siga um destes procedimentos:  
   
--   **Autenticação do Windows**: selecione isto para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
+-   **Autenticação do Windows**: Selecione esta opção para usar as credenciais de domínio do Windows atual. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: se você selecionou esta opção, deve digitar o **Nome de usuário** e **Senha** para o usuário no banco de dados Oracle ao qual você está se conectando.  
+-   **Autenticação do Oracle**: Se você selecionar essa opção, você deve digitar o **nome de usuário** e **senha** para o usuário no banco de dados Oracle, você está se conectando.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Um usuário deve ter os privilégios a seguir concedidos no banco de dados Oracle para ser um usuário da mineração de logs.  
->   
+> 
 >  -   SELECT em \<qualquer-tabela-capturada>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE em DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114216"
 > -   SELECT em ALL OBJECTS  
 > -   SELECT em DBA OBJECTS  
 > -   SELECT em ALL TABLES  
->   
+> 
 >  Se algum destes privilégios não puder ser concedido a um V$xxx, conceda a eles o V_S$xxx.  
   
  **Testar Conexão**  

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criar um novo site | Microsoft Docs'
+title: 'Lição 1: Criar um novo Site | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79cb440796801e7557b59d75c07b72ed7fc06f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11fb6cf816a665bb641671cb79b575367e63e63f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403821"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lição 1: Criar um novo site
-  Nesta lição, você aprenderá a criar um novo projeto do site usando o modelo de site ASP.NET para o Visual C #.  
+# <a name="lesson-1-create-a-new-web-site"></a>Lição 1: Criar um novo Site
+  Nesta lição, você aprenderá a criar um novo projeto do site usando o modelo de site ASP.NET para o Visual C#.  
   
 ### <a name="to-create-a-new-website"></a>Para criar um novo site  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48121276"
  O projeto do site é aberto.  
   
 ## <a name="next-task"></a>Próxima tarefa  
- Você criou um novo projeto de site com êxito. Em seguida, você criará uma conexão de dados e uma tabela de dados para o relatório pai. Ver [lição 2: definir uma Conexão de dados e uma tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Você criou um novo projeto de site com êxito. Em seguida, você criará uma conexão de dados e uma tabela de dados para o relatório pai. Consulte [lição 2: Definir uma Conexão de dados e uma tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

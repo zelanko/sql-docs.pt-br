@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823300"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
-  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](frequently-asked-questions-for-replication-administrators.md).  
+  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além de seguir as diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para se familiarizar com os problemas e perguntas comuns: [Perguntas frequentes para os administradores de replicação](frequently-asked-questions-for-replication-administrators.md).  
   
  É útil dividir as diretrizes de prática recomendada em duas áreas:  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48079276"
  É recomendado que a validação seja executada de acordo com a agenda de backup do banco de dados de publicação. Por exemplo, se o banco de dados de publicação tem um backup completo uma vez por semana, a validação poderia ser executada uma vez por semana após o backup ser completado. Para obter mais informações, consulte [Validar os dados replicados](../validate-replicated-data.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Use perfis de agente para alterar os parâmetros de agente, se necessário  
- Os perfis de agente fornecem um método conveniente de definir parâmetros do agente de replicação. Os parâmetros podem também ser especificados na linha de comando do agente, mas é normalmente mais apropriado usar um perfil predefinido de agente ou criar um novo perfil se for necessário alterar o valor do parâmetro. Por exemplo, se estiver usando uma replicação de mesclagem e o Assinante mudar de uma conexão de banda larga para uma conexão discada, considere usar o perfil **vínculo lento** para o Agente de Mesclagem; esse perfil usa um conjunto de parâmetros que são mais adequados para vínculos de comunicações mais lentas. Para obter mais informações, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
+ Os perfis de agente fornecem um método conveniente de definir parâmetros do agente de replicação. Os parâmetros podem também ser especificados na linha de comando do agente, mas é normalmente mais apropriado usar um perfil predefinido de agente ou criar um novo perfil se for necessário alterar o valor do parâmetro. Por exemplo, se estiver usando uma replicação de mesclagem e o Assinante mudar de uma conexão de banda larga para uma conexão discada, considere usar o perfil **vínculo lento** para o Agente de Mesclagem; esse perfil usa um conjunto de parâmetros que são mais adequados para vínculos de comunicações mais lentas. Para saber mais, confira [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>Ajuste a publicação e os períodos de retenção da distribuição, se necessário  
  A replicação transacional e a replicação de mesclagem usam os períodos de retenção para determinar, respectivamente, quanto tempo as transações são armazenadas no banco de dados de distribuição e com que frequência uma assinatura precisa ser sincronizada. Recomenda-se usar inicialmente os valores padrão, porém é necessário monitorar a topologia para determinar se a configuração requer ajustes. Por exemplo, no caso da replicação de mesclagem, o período de retenção da publicação (que por padrão é de 14 dias) determina quanto tempo os metadados são armazenados nas tabelas do sistema. Se as assinaturas sempre são sincronizadas a cada cinco dias, considere ajustar a configuração para um número menor, o que reduzirá os metadados e possivelmente melhorará o desempenho. Para obter mais informações, consulte [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  

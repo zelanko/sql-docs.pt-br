@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771878"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
   A transformação Dinâmica transforma um conjunto de dados normalizado em um conjunto menos normalizado, em uma versão mais compacta, tornando dinâmicos os dados de entrada em um valor de coluna. Por exemplo, um conjunto de dados **Orders** normalizado que lista nome de cliente, produto e quantidade adquirida normalmente tem várias linhas para qualquer cliente que tenha comprado diversos produtos, sendo que cada linha daquele cliente apresenta detalhes do pedido para um produto diferente. Ao dinamizar o conjunto de dados na coluna de produto, a transformação dinâmica pode produzir um conjunto de dados com uma única linha por cliente. Aquela única linha lista todas as compras realizadas pelo cliente, com os nomes de produto mostrados como nomes de coluna, e a quantidade exibida como um valor na coluna de produto. Como nem todo cliente compra todos os produtos, muitas colunas podem conter valores nulos.  
@@ -98,7 +97,7 @@ ms.locfileid: "48157586"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Tubo de pneu de estrada|35920.50|  
-|2004|Garrafa de Água – 30 oz.|2805.00|  
+|2004|Garrafa de Água – 887 ml|2805.00|  
 |2002|Pneu de Passeio|62364.225|  
   
  A tabela a seguir mostra um conjunto de dados depois de os dados serem dinamizados na coluna **Ano** .  
@@ -107,7 +106,7 @@ ms.locfileid: "48157586"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Tubo de pneu de estrada|3592.05|35920.50|89801.25|  
-|Garrafa de Água – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Garrafa de Água – 887 ml|*NULL*|*NULL*|2805.00|  
 |Pneu de Passeio|62364.225|375051.60|1041810.00|  
   
  Para dinamizar os dados na coluna **Ano** , como mostrado acima, as opções a seguir são definidas na caixa de diálogo **Dinâmica** .  

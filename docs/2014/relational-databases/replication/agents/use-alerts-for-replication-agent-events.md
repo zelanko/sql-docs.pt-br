@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -22,12 +21,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60976006bb9c26a6b3bae613ddfa96f52113dced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129427"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762578"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
   Os Agentes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionam um modo para monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
@@ -39,10 +38,10 @@ ms.locfileid: "48129427"
 |14150|**Replicação: êxito do agente**|Agente é encerrado com êxito.|Sim|  
 |14151|**Replicação: falha do agente**|Agente é desligado com um erro.|Sim|  
 |14152|**Replicação: repetição do agente**|O agente desliga após repetir uma operação sem-êxito (agente encontra erro, como servidor não disponível, deadlock, falha de conexão ou falha de tempo limite).|Sim|  
-|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|não|  
-|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|não|  
-|20574|**Replicação: falha na validação de dados do assinante**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
-|20575|**Replicação: êxito na validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
+|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|Não|  
+|20572|**Replicação: Assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
+|20574|**Replicação: Assinante Falha na validação de dados**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
+|20575|**Replicação: Validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
 |20578|**Replicação: desligamento personalizado do agente**|||  
 |22815|**Alerta de detecção de conflito ponto a ponto**|O Agente de Distribuição detectou um conflito ao tentar aplicar uma alteração a um nó ponto a ponto.|Sim|  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48129427"
   
  **Para configurar os alertas de replicação predefinidos**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos – &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Exibindo o log do aplicativo diretamente  
  Para visualizar o log do aplicativo do Windows, use o recurso Visualizador de Eventos do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . O log do aplicativo contém mensagens de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , assim como mensagens para muitas outras atividades no computador. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um novo aplicativo não é criado a cada vez que se inicia o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cada sessão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava novos eventos a um log de aplicativos existente); entretanto, é possível especificar quanto tempo os eventos registrados serão retidos. Ao exibir o log do aplicativo do Windows, é possível filtrar o log para eventos específicos. Para obter mais informações, consulte a documentação do Windows.  
@@ -61,7 +60,7 @@ ms.locfileid: "48129427"
 ### <a name="framework-for-automating-responses"></a>Estrutura para automatizar respostas  
  Normalmente, quando ocorre um alerta, a única informação se tem que o ajuda a entender o que causou o alerta e a ação apropriada a tomar está na própria mensagem de alerta. A análise dessas informações pode ser suscetível a erros e ser demorada. A replicação torna as respostas automáticas mais fáceis ao fornecer informações adicionais sobre o alerta na tabela do sistema **sysreplicationalerts** ; a informação fornecida já é analisada em um formato simples usado por programas personalizados.  
   
- Por exemplo, se a validação dos dados na tabela **Sales.SalesOrderHeader** no Assinante A falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acionar a mensagem 20574, notificando essa falha. A mensagem recebida será: "A assinatura do Assinante 'A', para o artigo 'SalesOrderHeader' na publicação 'MyPublication' falhou na validação de dados".  
+ Por exemplo, se a validação dos dados na tabela **Sales.SalesOrderHeader** no Assinante A falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acionar a mensagem 20574, notificando essa falha. A mensagem recebida será: "Assinante 'A', assinatura para o artigo 'SalesOrderHeader' na publicação 'MyPublication' falhou na validação de dados."  
   
  Ao criar uma resposta baseada nessa mensagem, é necessário analisar manualmente o nome do Assinante, nome do artigo e nome da publicação e erro da mensagem. Entretanto, como o Agente de Distribuição e o Agente de Mesclagem gravam a mesma informação no **sysreplicationalerts** (junto com detalhes como tipo de agente, hora do alerta, banco de dados de publicação, banco de dados do Assinante e tipo de publicação) o trabalho de resposta pode consultar diretamente a informação relevante da tabela. Embora a linha exata não possa ser associada com a instância específica do alerta, a tabela tem a coluna de **status** , que pode ser usada para controlar as entradas atendidas. As entradas nessa tabela serão mantidas pelo período de retenção do histórico.  
   

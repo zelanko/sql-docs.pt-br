@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - global trace options [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46ddc342a3b10a757215882b08032eaee1f0f44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219615"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775378"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Definir opções de rastreamento globais (SQL Server Profiler)
   Este tópico descreve como definir opções que se aplicam a todos os rastreamentos criados com uma instância específica do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48219615"
   
     -   **Número padrão de threads de reprodução** controla o número de threads de processador a ser usado durante a reprodução. Um número maior de threads faz com que a repetição se conclua mais rápido, mas degrada o desempenho do servidor durante a repetição. A configuração recomendada é **4**. A tabela a seguir lista as opções disponíveis:  
   
-        |Valor|Description|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |**2**|Valor mínimo. Usar dois threads na repetição.|  
         |**4**|Valor padrão.|  
@@ -53,7 +52,7 @@ ms.locfileid: "48219615"
   
     -   **Intervalo de espera padrão do monitor de integridade (s)** define o período máximo, em segundos, durante o qual um thread de repetição pode bloquear outro processo. A tabela a seguir explica os valores.  
   
-        |Valor|Description|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |**0**|Valor mínimo. Uma configuração **0** significa que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nunca interromperá um processo de bloqueio.|  
         |**3600**|Valor padrão. Permite processos de bloqueio que não excedam **3600** segundos, ou uma hora.|  
@@ -61,7 +60,7 @@ ms.locfileid: "48219615"
   
     -   **Intervalo de sondagem padrão do monitor de integridade (s)** define a frequência de sondagem dos threads de reprodução para processos de bloqueio. A tabela a seguir explica os valores.  
   
-        |Valor|Description|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |**1**|Valor mínimo. Uma configuração **1** significa que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sondará processos de bloqueio uma vez a cada segundo.|  
         |**60**|Valor padrão. Sondar processos de bloqueio uma vez por minuto.|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798018"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617617"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ WideWorldImporters usa esquemas para finalidades diferentes, como armazenamento 
 
 Esses esquemas contenham os dados. Um número de tabelas é necessários para todos os outros esquemas e está localizado no esquema do aplicativo.
 
-|esquema|Description|
+|esquema|Descrição|
 |-----------------------------|---------------------|
 |Aplicativo|Todo o aplicativo de usuários, contatos e parâmetros. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
 |Purchasing|Item de estoque compras de fornecedores e detalhes sobre fornecedores.|  
@@ -40,7 +40,7 @@ Esses esquemas contenham os dados. Um número de tabelas é necessários para to
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Eles contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|esquema|Description|
+|esquema|Descrição|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é por meio desse esquema.|
 |Relatórios|Todo o acesso ao banco de dados de relatórios do Reporting Services é por meio desse esquema.|
@@ -52,7 +52,7 @@ Observe que os relatórios e o Power BI esquemas não são usados na versão ini
 
 Esquemas de finalidade especial
 
-|esquema|Description|
+|esquema|Descrição|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do depósito de dados (ou seja, migrando os dados para o banco de dados WideWorldImportersDW).|
 |Sequências|Contém sequências usadas por todas as tabelas no aplicativo.|
@@ -65,7 +65,7 @@ Todas as tabelas no banco de dados estão em esquemas de dados.
 
 Detalhes de parâmetros e as pessoas (usuários e contatos), juntamente com as tabelas de referência comum (comuns a vários outras esquemas).
 
-|Table|Description|
+|Table|Descrição|
 |-----------------------------|---------------------|
 |SystemParameters|Contém os parâmetros configuráveis de todo o sistema.|
 |Pessoas|Contém os nomes de usuário, informações de contato para todos que usam o aplicativo e para as pessoas que se trata da Wide World Importers em organizações do cliente. Isso inclui todos os outros contatos, clientes, fornecedores e equipe. Para as pessoas que receberam permissão para usar o sistema ou o site, as informações incluem detalhes de logon.|
@@ -80,7 +80,7 @@ Detalhes de parâmetros e as pessoas (usuários e contatos), juntamente com as t
 
 Detalhes de fornecedores e de compras de item de estoque.
 
-|Table|Description|
+|Table|Descrição|
 |-----------------------------|---------------------|
 |Suppliers|Tabela de entidade principal para fornecedores (organizações)|
 |SupplierCategories|Categorias de fornecedores (por exemplo, novelties, brinquedos, roupas, empacotamento, etc.)|
@@ -93,7 +93,7 @@ Detalhes de fornecedores e de compras de item de estoque.
 
 Detalhes de clientes, vendedores e das vendas do item de estoque.
 
-|Table|Description|
+|Table|Descrição|
 |-----------------------------|---------------------|
 |Customers|Tabelas de entidade principal para clientes (organizações ou indivíduos)|
 |CustomerCategories|Categorias para os clientes (ou seja novidade armazenamentos, supermercados, etc.)|
@@ -109,7 +109,7 @@ Detalhes de clientes, vendedores e das vendas do item de estoque.
 
 Detalhes de itens de estoque, holdings e transações.
 
-|Table|Description|
+|Table|Descrição|
 |-----------------------------|---------------------|
 |StockItems|Tabela de entidade principal para itens de estoque|
 |StockItemHoldings|Colunas não temporal para itens de estoque. Essas são as colunas atualizadas com frequência.|
@@ -187,7 +187,7 @@ Simula uma carga de trabalho que insere a vendas e compras. O procedimento armaz
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Recria os procedimentos necessários para os dados de simulação carregar. Isso é necessário para colocar dados até a data atual.|
 |Configuration_RemoveDataLoadSimulationProcedures|Isso remove os procedimentos novamente após a conclusão da simulação de dados.|
-|DeactiveTemporalTablesBeforeDataLoad|Remove a natureza temporal de todas as tabelas temporais e onde aplicável, aplica um gatilho para que as alterações podem ser feitas, como se eles foram aplicados em uma data anterior não permita que as tabelas temporais de sys.|
+|DeactivateTemporalTablesBeforeDataLoad|Remove a natureza temporal de todas as tabelas temporais e onde aplicável, aplica um gatilho para que as alterações podem ser feitas, como se eles foram aplicados em uma data anterior não permita que as tabelas temporais de sys.|
 |PopulateDataToCurrentDate|Usada para trazer os dados até a data atual. Deve ser executado antes de quaisquer outras opções de configuração depois de restaurar o banco de dados de um backup inicial.|
 |ReactivateTemporalTablesAfterDataLoad|Restabelece as tabelas temporais, incluindo a verificação de consistência dos dados. (Remove os disparadores associados).|
 

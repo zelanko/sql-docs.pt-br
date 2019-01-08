@@ -13,12 +13,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc2a15cda3c63b1f4b29510192a28f962ffe93c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519198"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
@@ -26,9 +26,9 @@ ms.locfileid: "51032763"
 > [!WARNING]  
 >  O domínio composto anexado a um serviço de dados de referência está disponível na lista suspensa dos domínios ao mapear domínios para colunas no esquema de serviço de dados de referência. Não mapeie o domínio composto para uma coluna no esquema do serviço de dados de referência; mapeie apenas domínios individuais em um domínio composto para as colunas apropriadas no esquema de serviço de dados de referência. Caso contrário, isso resultará em um erro.  
   
- Um esquema de serviço de dados de referência pode ter uma coluna obrigatória que deverá ser mapeada com o domínio apropriado se você optar por usar o serviço de dados de referência. A coluna obrigatória em um esquema de dados de referência é identificada com “(M)” no nome da coluna. Por exemplo, **AddressLine** é a coluna de esquema obrigatória em **Melissa Data – Dados de Endereço** e **CompanyName** é a coluna de esquema obrigatória em **Digital Trowel Inc. – Dados de empresas norte-americanas e de profissionais para usuários do SQL**.  
+ Um esquema de serviço de dados de referência pode ter uma coluna obrigatória que deverá ser mapeada com o domínio apropriado se você optar por usar o serviço de dados de referência. A coluna obrigatória em um esquema de dados de referência é identificada com "(M)" no nome da coluna. Por exemplo, **AddressLine** é a coluna de esquema obrigatória em **Melissa Data – Dados de Endereço** e **CompanyName** é a coluna de esquema obrigatória em **Digital Trowel Inc. – Dados de empresas norte-americanas e de profissionais para usuários do SQL**.  
   
- Neste tópico, criaremos quatro domínios: **Linha de endereço**, **Cidade**, **Estado**e **CEP**, em um domínio composto, **Verificação de Endereço**, anexaremos o domínio composto para o serviço de dados de referência de **Melissa Data – Dados de Endereço** , e mapearemos os domínios individuais no domínio composto para as colunas no esquema de serviço de dados de referência.  
+ Neste tópico, criaremos quatro domínios: **Linha de endereço**, **City**, **estado**, e **Zip**, em um domínio composto, **verificação de endereço**, anexar o um domínio composto para o **Melissa Data – Address Check** serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -48,7 +48,7 @@ ms.locfileid: "51032763"
   
 3.  Na tela **Nova base de dados de conhecimento** , digite um nome para a nova base de dados de conhecimento, clique na atividade **Gerenciamento de Domínio** e clique em **Criar**.  
   
-4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro domínios a seguir: **Linha de Endereço**, **Cidade**, **Estado**e **CEP**.  
+4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro domínios a seguir: **Linha de endereço**, **City**, **estado**, e **Zip**.  
   
 5.  Clique no ícone **Criar um domínio composto** para criar um domínio composto. Na caixa de diálogo **Criar um domínio composto** , digite **Verificação de Endereço** na caixa **Nome de Domínio Composto** e inclua todos os domínios criados na etapa 3 no domínio composto. Clique em **OK**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "51032763"
   
 8.  Caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** :  
   
-    1.  Em **DataMarket Data Quality Services**, selecione a caixa **Melissa Data – Verificação de Endereço** .  
+    1.  Em **DataMarket Data Quality Services**, selecione a caixa **Melissa Data – Verificação de Endereço**.  
   
-    2.  Mapeie as colunas do serviço de dados de referência de Melissa Data - Verificação de Endereço com os domínios apropriados (Linha de Endereço, Cidade, Estado e CEP). Você mapeia as colunas selecionando uma coluna de serviço de dados de referência na coluna **Esquema RDS** e, depois, selecionando o domínio apropriado na coluna **Domínio** . Para adicionar mais linhas à tabela, clique no ícone **Adicionar Entrada de Esquema** .  
+    2.  Mapeie as colunas do serviço de dados de referência de Melissa Data – Verificação de Endereço com os domínios apropriados (Linha de Endereço, Cidade, Estado e CEP). Você mapeia as colunas selecionando uma coluna de serviço de dados de referência na coluna **Esquema RDS** e, depois, selecionando o domínio apropriado na coluna **Domínio** . Para adicionar mais linhas à tabela, clique no ícone **Adicionar Entrada de Esquema** .  
   
     3.  Clique em **OK** para salvar as alterações e fechar a caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** .  
   
@@ -71,17 +71,17 @@ ms.locfileid: "51032763"
   
 9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
   
-    -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de correção automática**: Correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos Sugeridos**: número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
+    -   **Candidatos sugeridos**: Número de candidatos sugeridos para exibir o dados do serviço de referência.  
   
-    -   **Confiança Mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança mínima**: Sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignorados. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   
  Você pode usar essa base de dados de conhecimento agora na atividade de limpeza de um projeto de qualidade de dados para padronizar e limpar os endereços americanos na fonte de dados com base no conhecimento fornecido por Melissa Data através do Windows Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
+##  <a name="FollowUp"></a> Acompanhar: Após mapear um domínio para os dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Consulte também  

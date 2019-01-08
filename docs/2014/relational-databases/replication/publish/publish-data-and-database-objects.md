@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227106"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777128"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
@@ -58,14 +57,14 @@ ms.locfileid: "48227106"
 |Tabelas particionadas|X|X|  
 |Procedimentos armazenados – Definição ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
 |Procedimentos armazenados – Execução ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|não|  
-|exibições|X|X|  
+|Exibições|X|X|  
 |Exibições indexadas|X|X|  
 |Exibições indexadas como tabelas|X|não|  
 |Tipos definidos pelo usuário (CLR)|X|X|  
 |Funções definidas pelo usuário ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
 |Tipos de dados de alias|X|X|  
 |Índices de texto completo|X|X|  
-|Objetos de esquema (restrições, índices, gatilhos DML de usuário, propriedades estendidas e agrupamento)|X|X|  
+|Objetos de esquema (restrições, índices, gatilhos DML de usuário, propriedades estendidas e ordenação)|X|X|  
   
 ## <a name="creating-publications"></a>Criando publicações  
  Para criar uma publicação, forneça as seguintes informações:  
@@ -116,7 +115,7 @@ ms.locfileid: "48227106"
   
 -   [Replicar colunas de identidade](replicate-identity-columns.md)  
   
- Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e agrupamento. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
+ Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e ordenação. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
   
  Para especificar opções de esquema, consulte [Especificar opções de esquema](specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48227106"
 ## <a name="publishing-stored-procedures"></a>Publicando procedimentos armazenados  
  Todos os tipos de replicação permitem que você reproduza definições de procedimentos armazenados: o CREATE PROCEDURE é copiado para cada Assinante. No caso de procedimentos armazenados CLR (Common Language Runtime), o assembly associado também é copiado. As alterações a procedimentos são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
   
- Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="publishing-views"></a>Publicando exibições  
  Todos os tipos de replicação permitem que você reproduza exibições. A exibição (e o índice correspondente, se for uma exibição indexada) pode ser copiada para o Assinante, mas a tabela base também deve ser replicada.  
@@ -248,7 +247,7 @@ ms.locfileid: "48227106"
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
--   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar e remover artigos de publicações existentes](add-articles-to-and-drop-articles-from-existing-publications.md)   

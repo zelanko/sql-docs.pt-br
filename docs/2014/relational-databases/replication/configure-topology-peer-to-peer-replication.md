@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208216"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776458"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar Topologia (replicação ponto a ponto)
   Use a página **Configurar Topologia** para executar tarefas de configuração comuns, como adicionar novos nós, excluir nós e adicionar novas conexões entre nós existentes. O nó selecionado na página **Publicação** desse assistente é exibido na superfície de design. Para especificar opções de configuração, clique com o botão direito do mouse em um nó, em uma conexão ou na superfície de design.  
@@ -29,7 +28,7 @@ ms.locfileid: "48208216"
 ## <a name="options"></a>Opções  
  A página **Configurar topologia** contém elementos de interface e opções disponíveis ao clicar com o botão direito do mouse em um elemento. A tabela a seguir descreve cada elemento de interface.  
   
-|Elemento de interface|Description|  
+|Elemento de interface|Descrição|  
 |-----------------------|-----------------|  
 |Superfície de design|Exibe outros elementos de interface. Para adicionar elementos, clique com o botão direito do mouse na superfície de design.|  
 |![O primeiro nó em uma topologia](media/p2pwizard-firstnode.gif "O primeiro nó em uma topologia")|O nó original na topologia. Novos nós são iniciados usando uma cópia do banco de dados de publicação do nó original.|  
@@ -63,7 +62,7 @@ ms.locfileid: "48208216"
   
 ### <a name="options-for-each-node"></a>Opções para cada nó  
  **Adicionar Nova Conexão de Computador Par**  
- Adicione uma conexão entre dois nós. Por exemplo, se você adicionar uma conexão entre o Nó A e o Nó B, a replicação adicionará duas assinaturas: a primeira habilitará o Nó A a receber alterações de publicação no Nó B e a segunda habilitará o Nó B a receber alterações de publicação no Nó A.  
+ Adicione uma conexão entre dois nós. Por exemplo, se você adicionar uma conexão entre o nó A e nó B, a replicação adicionará duas assinaturas: A primeira permite que o nó à receber alterações de publicação no nó B e a segunda habilitará o nó B a receber alterações de publicação no nó A.  
   
  **Excluir Nó de Computador Par**  
  Remove um nó da topologia. Por exemplo, se você remover Nó C, a publicação desse nó será removida. As assinaturas entre Nó A e Nó C, Nó B e Nó C também serão removidas. O banco de dados no Nó C não é excluído, e, a publicação e a distribuição não são desabilitadas.  

@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688294"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405913"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionar e configurar os objetos afetados (OracleToSQL)
 Nessa página, você pode selecionar tabelas e chaves estrangeiras, as alterações no qual devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -50,7 +50,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
 ## <a name="sql"></a>Sql  
 Guia SQL contém a tabela"criar" SQL da tabela selecionada.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Dados  
 Guia de dados exibe dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623394"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205465"
 ---
 # <a name="support-for-large-udts"></a>Suporte a UDTs grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47623394"
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código é o código de origem C#. Cole-a em um arquivo chamado LargeStringUDT.cs e compile-a para uma DLL. Copie LargeStringUDT.dll no diretório raiz da unidade C.  
   
- A segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria o assembly no banco de dados mestre.  
+ A segunda ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código cria o assembly no banco de dados mestre.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e user32.lib. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47623394"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A quarta listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) excluir o assembly do banco de dados mestre.  
+ O quarto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código exclui o assembly de banco de dados mestre.  
   
 ```  
 // LargeStringUDT.cs  

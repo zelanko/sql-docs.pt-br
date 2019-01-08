@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539018"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propriedades de atributo - modificar a propriedade KeyColumn
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propriedades do atributo – Modificar a propriedade KeyColumn
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Você pode modificar a propriedade **KeyColumns** de um atributo. Por exemplo, convém especificar uma chave composta em vez de uma chave única como a chave para o atributo.  
   
@@ -28,11 +28,11 @@ ms.locfileid: "34021483"
   
     -   No **Gerenciador de Soluções**, clique com o botão direito do mouse na dimensão na pasta **Dimensões** e, em seguida, clique em **Abrir** ou **Designer de Exibição**.  
   
-         — ou —  
+         -ou-  
   
-    -   No Designer de cubo no **estrutura do cubo** guia, expanda a dimensão do cubo no **dimensões** painel e clique em **editar \<dimensão >**.  
+    -   No Designer de cubo, sobre o **estrutura do cubo** guia, expanda a dimensão do cubo na **dimensões** painel e clique em **editar \<dimensão >**.  
   
-3.  Na guia **Estrutura da Dimensão**, no painel **Atributos**, clique no atributo cuja propriedade **KeyColumns** você quer modificar.  
+3.  Na guia **Estrutura da Dimensão** , no painel **Atributos** , clique no atributo cuja propriedade **KeyColumns** você quer modificar.  
   
 4.  Na janela **Propriedades** , clique o valor da propriedade **KeyColumns** .  
   

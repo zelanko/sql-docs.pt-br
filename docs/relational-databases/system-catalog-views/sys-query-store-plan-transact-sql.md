@@ -1,7 +1,7 @@
 ---
 title: query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78aa727d23810524d5bceba6865c7f14ce1eca14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770214"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710767"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contém informações sobre cada plano de execução associado a uma consulta.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Chave primária.|  
 |**query_id**|**bigint**|Chave estrangeira. Ingressa [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
@@ -50,7 +50,7 @@ ms.locfileid: "47770214"
 |**is_natively_compiled**|**bit**|Plano inclui procedimentos compilados nativamente com otimização de memória. (0 = FALSE, 1 = TRUE).|  
 |**force_failure_count**|**bigint**|Número de vezes que impor esse plano falhou. Ele pode ser incrementado somente quando a consulta é recompilada (*não em cada execução*). Ele é redefinido como 0 sempre **is_plan_forced** é alterado de **falso** para **TRUE**.|  
 |**last_force_failure_reason**|**int**|Motivo pelo qual a imposição de plano falhou.<br /><br /> 0: não falha, caso contrário, número do erro do erro que causou a imposição de falha<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<outro valor >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrição textual do last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta tenta modificar dados enquanto a tabela de destino tem um índice que está sendo criado online<br /><br /> INVALID_STARJOIN: o plano contém especificação inválida de StarJoin<br /><br /> TIME_OUT: Otimizador excedida o número de operações permitidas ao procurar o plano especificado pelo plano forçado<br /><br /> NO_DB: Um banco de dados especificado no plano não existe<br /><br /> HINT_CONFLICT: A consulta não pode ser compilada porque o plano está em conflito com uma dica de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: Não é possível executar a consulta porque o plano está em conflito com o uso de consulta distribuída ou operações de texto completo.<br /><br /> NO_PLAN: O processador de consultas não pôde produzir o plano de consulta porque o plano forçado não pôde ser verificado para ser válido para a consulta<br /><br /> NO_INDEX: O índice especificado no plano não existe<br /><br /> VIEW_COMPILE_FAILED: Não foi possível forçar o plano de consulta devido a um problema em uma exibição indexada referenciada no plano<br /><br /> GENERAL_FAILURE: erro geral de imposição (não abordado com motivos acima)|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrição textual do last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta tenta modificar dados enquanto a tabela de destino tem um índice que está sendo criado online<br /><br /> INVALID_STARJOIN: o plano contém especificação inválida de StarJoin<br /><br /> TIME_OUT: Otimizador excedida o número de operações permitidas ao procurar o plano especificado pelo plano forçado<br /><br /> NO_DB: Um banco de dados especificado no plano não existe<br /><br /> HINT_CONFLICT: A consulta não pode ser compilada porque o plano está em conflito com uma dica de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: Não é possível executar a consulta porque o plano está em conflito com o uso de consulta distribuída ou operações de texto completo.<br /><br /> NO_PLAN: Processador de consultas não pôde produzir o plano de consulta porque o plano forçado não pôde ser verificado para ser válido para a consulta<br /><br /> NO_INDEX: O índice especificado no plano não existe<br /><br /> VIEW_COMPILE_FAILED: Não foi possível forçar o plano de consulta devido a um problema em uma exibição indexada referenciada no plano<br /><br /> GENERAL_FAILURE: erro geral de imposição (não abordado com motivos acima)|  
 |**count_compiles**|**bigint**|Planeje as estatísticas de compilação.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planeje as estatísticas de compilação.|  
 |**last_compile_start_time**|**datetimeoffset**|Planeje as estatísticas de compilação.|  

@@ -16,12 +16,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535717"
 ---
 # <a name="browsing-a-clustering-model"></a>Procurando um modelo de clustering
   Quando você abre um modelo de clustering usando **navegue**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de clustering no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar os clusters que foram criados e compreender características do cluster. Você também pode comparar e contrastar segmentos individuais com outros segmentos ou com a população.  
@@ -29,17 +29,17 @@ ms.locfileid: "48060406"
 ##  <a name="BKMK_Tabs"></a> Explorar o modelo  
  O **procurar** janela inclui as seguintes ferramentas para ajudá-lo a entender o modelo de clustering e explorar os atributos dos grupos de dados subjacente:  
   
--   [Diagrama de cluster](#BKMK_ClusterDiagram)  
+-   [Diagrama de Cluster](#BKMK_ClusterDiagram)  
   
--   [Perfis de cluster](#BKMK_ClusterProfiles)  
+-   [Perfis de Cluster](#BKMK_ClusterProfiles)  
   
--   [Características do cluster](#BKMK_ClusterCharacteristics)  
+-   [Características do Cluster](#BKMK_ClusterCharacteristics)  
   
--   [Discriminação do cluster](#BKMK_ClusterDiscrimination)  
+-   [Discriminação do Cluster](#BKMK_ClusterDiscrimination)  
   
  Para fazer experiências com um modelo de clustering, você pode usar os dados de exemplo na guia treinamento da pasta de trabalho de dados de exemplo e criar um modelo de clustering usando [Assistente de Cluster &#40;Data Mining Add-ins para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e todos os padrões .  
   
-###  <a name="BKMK_ClusterDiagram"></a> Diagrama de cluster  
+###  <a name="BKMK_ClusterDiagram"></a> Diagrama de Cluster  
  O **diagrama de Cluster** guia exibe todos os clusters que estão em um modelo de mineração. Aqui você pode ver quantos agrupamentos diferentes foram encontrados no conjunto de dados e a distância entre eles.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Explorar o diagrama de cluster  
@@ -86,7 +86,7 @@ ms.locfileid: "48060406"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a> Perfis de cluster  
+###  <a name="BKMK_ClusterProfiles"></a> Perfis de Cluster  
  O **perfis de Cluster** guia permite que você compare a composição de todos os clusters em um relance. Este é um bom local para iniciar quando você estiver se familiarizado com o modelo. Esta exibição também será útil posteriormente, se você explorou um cluster específico e decidir que precisa localizar os relacionados.  
   
  **Perfis de cluster** também lhe dá uma boa visão geral de como os clusters são diferentes uns dos outros. Consequentemente, pode ser conveniente usar essa exibição para dar a cada cluster um nome descritivo.  
@@ -121,7 +121,7 @@ ms.locfileid: "48060406"
   
     -   A largura do losango representa a variação do atributo nesse nó. Portanto, um losango mais estreito indica que o nó pode criar uma previsão mais precisa.  
   
-5.  Para ter mais espaço no gráfico, clique com botão direito um cluster que você não precisa exibir imediatamente e, em seguida, selecione **Ocultar coluna**. Isso não a exclui do modelo, apenas recolhe a coluna temporariamente.  
+5.  Para ter mais espaço no gráfico, clique com botão direito um cluster que você não precisa exibir imediatamente e, em seguida, selecione **Ocultar coluna**. Isso não o exclui do modelo, apenas recolhe a coluna temporariamente.  
   
      Para exibir clusters que você ocultou, você pode clique e arraste a borda da coluna ou selecione o nome do cluster na lista, **mais clusters**.  
   
@@ -145,11 +145,11 @@ ms.locfileid: "48060406"
   
 -   Clique com botão direito da coluna do cluster título e selecione **detalhamento para estruturar dados** para obter informações detalhadas sobre os membros do cluster que não estavam incluídas no modelo.  
   
-     Por exemplo, se você estiver criando perfis de clientes, poderá deixar as informações de contato nos dados subjacentes (a estrutura de mineração), mas não a incluir no modelo, pois não é útil para a análise. Entretanto, depois que os clientes foram atribuídos aos clusters, você poderá exibir os dados detalhados usando o detalhamento.  
+     Por exemplo, se você estiver analisando clientes, você pode deixar as informações de contato nos dados subjacentes (a estrutura de mineração) mas não incluí-lo no modelo, pois não é útil para análise. Entretanto, depois que os clientes foram atribuídos aos clusters, você poderá exibir os dados detalhados usando o detalhamento.  
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a> Características do cluster  
+###  <a name="BKMK_ClusterCharacteristics"></a> Características do Cluster  
  A exibição Características do Cluster permite que você realmente explore um único cluster, para localizar os atributos que caracterizam mais fortemente esse grupo de dados.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Explorar as características do cluster  
@@ -180,13 +180,13 @@ ms.locfileid: "48060406"
   
  **Dicas**  
   
--   Observe que a característica principal do cliente no cluster Mais de 65 é que ele não compra seu produto! Se você quiser saber por que isso acontece, poderá procurar clusters e comparar grupos ou poderá criar um modelo relacionado usando um algoritmo que é bom em explorar causas e resultados, como, por exemplo, um modelo de árvore de decisão ou um modelo Naïve Bayes.  
+-   Observe que a característica principal do cliente no cluster mais de 65 é que ele não compra seu produto! Se você quiser saber por que isso acontece, poderá procurar clusters e comparar grupos ou poderá criar um modelo relacionado usando um algoritmo que é bom em explorar causas e resultados, como, por exemplo, um modelo de árvore de decisão ou um modelo Naïve Bayes.  
   
 -   Se você quiser obter uma lista completa de atributos e probabilidades para este cluster (ou todos os clusters) poderá criar uma consulta. Para obter exemplos de consultas em modelos de clustering, consulte [exemplos de consulta de modelo de Clustering](data-mining/clustering-model-query-examples.md).  
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a> Discriminação do cluster  
+###  <a name="BKMK_ClusterDiscrimination"></a> Discriminação do Cluster  
  Você usa o **discriminação do Cluster** guia para comparar atributos entre dois clusters ou entre um cluster e todos os outros casos no conjunto de dados.  
   
  Para realçar os recursos deste visualizador, vamos compará-lo para as tabelas de lado a lado no Excel que você criou com base nas **características do Cluster** modo de exibição.  
@@ -205,7 +205,7 @@ ms.locfileid: "48060406"
   
      Observe que, nos bastidores, o **discriminação do Cluster** visualizador envia consultas complexas para o servidor de mineração de dados, para extrair os atributos que são mais importantes na distinção entre os dois grupos, tornando mais fácil comparar dois conjuntos de clientes.  
   
-2.  Clique em qualquer uma da **favorece...** colunas.  
+2.  Clique em qualquer uma da **favorece...**  colunas.  
   
      A barra à direita do atributo e da lista de valores mostra quais recursos ou valores são mais importantes como uma característica do cluster selecionado.  
   

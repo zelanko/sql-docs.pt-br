@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d43af8f9ffc64eb7fcfaba5aff7434696376321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748218"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [  **@publication=** ] **'***publicação***'**  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=** ] **'***artigo***'**  
+ [ **@article=** ] **'***artigo***'**  
  É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
  [  **@filtername=** ] **'***filtername***'**  
@@ -62,7 +61,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
@@ -73,7 +72,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
 ||**false**|A junção não está em uma chave exclusiva.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  

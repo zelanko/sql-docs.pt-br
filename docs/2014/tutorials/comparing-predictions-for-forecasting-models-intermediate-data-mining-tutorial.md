@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395369"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparando previsões para modelos de previsão (Tutorial de mineração de dados intermediário)
   Nas etapas anteriores deste tutorial, você criou vários modelos de série temporal:  
@@ -36,7 +36,7 @@ ms.locfileid: "48206476"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> Comparando os resultados originais com os resultados depois de adicionar dados  
- Vamos observar os dados apenas da linha de produto M200 na região do Pacífico, para ver como atualizar o modelo com novos dados afeta os resultados. Lembre-se de que a série de dados original terminava em junho de 2004, e nós obtivemos novos dados para julho, agosto e setembro.  
+ Vamos examinar os dados para apenas a linha de produto M200 na região do Pacífico, para ver como atualizar o modelo com novos dados afeta os resultados. Lembre-se de que a série de dados original terminava em junho de 2004, e nós obtivemos novos dados para julho, agosto e setembro.  
   
 -   A primeira coluna mostra os novos dados que foram adicionados.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206476"
  Em geral, o algoritmo pondera as alterações nos novos dados mais fortemente do que nos dados iniciais do modelo. Porém, neste caso, os novos números de vendas representam um aumento de apenas 20-30% sobre o período anterior. Então, só houve um pequeno aumento nas vendas projetadas, depois das quais as projeções de vendas caíram novamente, mais alinhados com a tendência dos meses anteriores aos novos dados.  
   
 ##  <a name="bkmk_REPLACE"></a> Comparando os resultados originais e a previsão cruzada  
- Lembre-se de que o modelo de mineração original revelou grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas para o modelo M200 foram muito fortes, ao passo que as vendas para o modelo T1000 foram bastante baixas em todas as regiões. Além disso, algumas séries não tinham muitos dados. As séries ficaram em desvantagem, o que significa que não tinham o mesmo ponto de partida.  
+ Lembre-se de que o modelo de mineração original revelou grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas para o modelo M200 foram muito fortes, ao passo que as vendas para o modelo T1000 foram bastante baixas em todas as regiões. Além disso, algumas séries não tinham muitos dados. Séries ficaram em desvantagem, o que significa que eles não têm o mesmo ponto de partida.  
   
  ![Séries que preveem a quantidade M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "séries que preveem a quantidade M200 e T1000")  
   

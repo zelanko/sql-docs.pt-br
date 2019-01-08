@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527998"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  Observe que o **namespace** palavra-chave é usada para definir um novo prefixo de namespace, "AWMI:". Esse prefixo deve, então, ser usado na consulta para todos os elementos que estejam dentro do escopo desse namespace.  
   
-### <a name="b-declaring-a-default-namespace"></a>B. Declarando um namespace padrão  
+### <a name="b-declaring-a-default-namespace"></a>b. Declarando um namespace padrão  
  Na consulta anterior, um novo prefixo de namespace foi definido. Depois, esse prefixo teve de ser usado na consulta para selecionar as estruturas XML planejadas. Alternativamente, você pode declarar um namespace como o namespace padrão, como mostrado na seguinte consulta modificada:  
   
 ```  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  Observe neste exemplo que o namespace definido, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, foi criado para anular o namespace padrão ou vazio. Por causa disso, você não tem mais um prefixo de namespace na expressão de caminho usada para a consulta. Você também não tem mais um prefixo de namespace nos nomes de elemento que aparecem nos resultados. Adicionalmente, o namespace padrão é aplicado a todos os elementos, mas não a seus atributos.  
@@ -88,7 +88,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
   
@@ -130,7 +130,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
   

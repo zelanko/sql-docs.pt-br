@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508008"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selecionar atributos de dimensão (Assistente para Dimensões)
   Use a página **Selecionar Atributos de Dimensão** para selecionar e modificar os atributos para a dimensão a ser criada.  
@@ -49,13 +49,13 @@ ms.locfileid: "48218941"
  **Habilitar navegação**  
  Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar Navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
   
- Na maioria dos casos, o atributo se torna disponível ou não está disponível para navegação definindo a `AttributeHierarchyEnabled` propriedade para `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
+ Na maioria dos casos, o atributo se torna disponível ou não disponível para navegação definindo-se a propriedade `AttributeHierarchyEnabled` como `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
   
 |Caso|Configurações|  
 |----------|--------------|  
-|Uma dimensão contém uma hierarquia pai-filho e **Habilitar Navegação** não é selecionado|O assistente deixa a `AttributeHierarchyEnabled` propriedade definida como `True`e define o `AttributeHierarchyVisible` atributo `False` para o atributo de chave.|  
+|Uma dimensão contém uma hierarquia pai-filho e **Habilitar Navegação** não é selecionado|O assistente deixa a propriedade `AttributeHierarchyEnabled` definida como `True` e define o atributo `AttributeHierarchyVisible` como `False` para o atributo de chave.|  
 |Uma tabela em uma dimensão contém uma chave estrangeira para uma tabela que não está na dimensão|O assistente seleciona a chave estrangeira como um atributo a ser incluído, mas não selecionará **Habilitar Navegação**. Se você mantiver estas configurações, a propriedade `AttributeHiearchyEnabled` do atributo será definida como `True` e a propriedade `AttributeHieararchyVisible` será definida como `False`.|  
-|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> —e—<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem o `AttributeHiearchyEnabled` propriedade definida como `True`e o `AttributeHieararchyVisible` propriedade definida como `False`.|  
+|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> - e -<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem a propriedade `AttributeHiearchyEnabled` definida como `True` e a propriedade `AttributeHieararchyVisible` definida como `False`.|  
   
  **Tipo de atributo**  
  (Opcional) Defina o tipo para o atributo. O valor padrão é **Regular**. O tipo de atributo fornece orientação a aplicativos clientes quanto a quais informações o atributo poderia conter.  

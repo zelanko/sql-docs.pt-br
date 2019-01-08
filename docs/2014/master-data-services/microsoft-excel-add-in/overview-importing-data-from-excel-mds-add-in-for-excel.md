@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aaeab2123eba4cfe19c03094bef6dac5a013e418
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ed014aaed74ea9da70485b73d089e8ddaae0f43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760258"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicando dados (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publique dados no repositório do MDS quando quiser compartilhá-lo com outros usuários. Assim que os dados são publicados, eles ficam disponíveis para outros usuários do suplemento para download.  
   
- Ao publicar dados, qualquer dado que você adicionar ou atualizar será publicado no repositório do MDS. Os dados que você excluir não serão publicados – você deverá excluir os dados separadamente. Para obter mais informações, consulte [Excluir uma linha &#40;Suplemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md).  
+ Ao publicar dados, qualquer dado que você adicionou ou atualizou será publicado no repositório do MDS. Os dados que você excluiu não são publicados – é necessário excluir os dados separadamente. Para obter mais informações, consulte [Excluir uma linha &#40;Suplemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
 >  A publicação não pode ser usada para criar uma nova entidade. Para obter mais informações sobre como criar entidades, consulte [Criar uma entidade &#40;Suplemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "48100786"
   
 -   Se você alterar o **código** valor para um membro, ele não será registrado como uma transação e todas as transações anteriores para o membro não estão disponíveis.  
   
--   Você pode ver as transações feitas em um membro por outros usuários. Você também pode ver todas as transações que você fez em um membro, mesmo se não tiver mais permissão para atributos específicos.  
+-   Você pode ver as transações feitas em um membro por outros usuários. Também será possível exibir todas as transações que você fez em um membro, mesmo se não tiver mais permissão para atributos específicos.  
   
  Você pode ver todas as transações feitas em um membro. Para obter mais informações, consulte [Exibir todas as anotações ou transações de um membro &#40;Suplemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48100786"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Publique dados da planilha ativa novamente no repositório do MDS.|[Publicar dados do Excel no MDS &#40;suplemento do MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Exclua uma linha do repositório do MDS e da planilha ao mesmo tempo.|[Excluir uma linha &#40;suplemento do MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Exclua uma linha do repositório do MDS e da planilha ao mesmo tempo.|[Excluir uma linha &#40;Suplemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Atualizar dados &#40;Suplemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Atualizando dados &#40;Suplemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Suplemento do Master Data Services para Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

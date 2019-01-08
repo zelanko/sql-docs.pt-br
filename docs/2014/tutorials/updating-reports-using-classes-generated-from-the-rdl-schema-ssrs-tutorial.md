@@ -15,12 +15,12 @@ ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349382"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Atualizando Relatórios por Meio de Classes Geradas a Partir do Esquema RDL (Tutorial SSRS)
   Este tutorial mostra como usar a definição de ferramenta de esquema XML (Xsd.exe) para gerar classes que permitem a você serializar e desserializar os arquivos de definição de relatório (. RDL e. rdlc) com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
@@ -54,21 +54,21 @@ ms.locfileid: "48136046"
   
 -   O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] instalado em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Um relatório instalado no servidor de relatório. Este tutorial usa o relatório de exemplo, Company Sales 2012. Para obter mais informações sobre relatórios de exemplo, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Um relatório instalado no servidor de relatório. Este tutorial usa o relatório de exemplo, Company Sales 2012. Para obter mais informações sobre relatórios de exemplo, consulte [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Os exemplos não são instalados automaticamente durante a instalação, mas podem ser instalados a qualquer momento. Para obter informações sobre exemplos, consulte [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Os exemplos não são instalados automaticamente durante a instalação, mas podem ser instalados a qualquer momento. Para obter informações sobre exemplos, consulte [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Tempo estimado para concluir o tutorial:** 30 minutos  
   
 ## <a name="tasks"></a>Tarefas  
  [Lição 1: Criar o projeto do Visual Studio de esquema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Lição 2: Gerar classes do esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Lição 2: Gerar Classes de esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Lição 3: Carregar uma definição de relatório do Servidor de Relatório](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Lição 3: Carregar uma definição de relatório do servidor de relatório](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Lição 4: Atualizar a definição do relatório programaticamente](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Lição 4: Atualizar a definição de relatório programaticamente](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
  [Lição 5: Publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   

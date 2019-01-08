@@ -10,12 +10,12 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b4ffde9828a2136dc01dbb37dd4009f9a2783001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4f819a92885cf5d173bcdda53ebf3291c958eac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520961"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Remover o SSMA para componentes do DB2 (DB2ToSQL)
 Quando você terminar de migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], talvez você queira desinstalar os componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, você não deve desinstalar o pacote de extensão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que seus bancos de dados migrados não usam funções na **ssma_DB2** esquema dos **sysdb** banco de dados.  
@@ -32,7 +32,7 @@ Você pode desinstalar o SSMA usando **adicionar ou remover programas**.
 3.  Para confirmar que você deseja desinstalar o SSMA, clique em **Sim**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Desinstalando o pacote de extensão  
-Se você tiver certeza seus bancos de dados migrados não usam objetos de **sysdb.ssma_DB2** esquema, você pode remover o pacote de extensão, excluindo-o do esquema – não há é nenhuma desinstalação do Windows  
+Se você tiver certeza seus bancos de dados migrados não usam objetos de **sysdb.ssma_DB2** esquema, você pode remover o pacote de extensão, excluindo-o do esquema - não há é nenhuma desinstalação do Windows  
   
 ## <a name="see-also"></a>Consulte também  
 [Instalar o SSMA para cliente DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

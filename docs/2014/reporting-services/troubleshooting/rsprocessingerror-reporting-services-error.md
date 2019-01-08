@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403603"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
     
@@ -56,7 +56,7 @@ ms.locfileid: "48207316"
   
 -   Um parâmetro que tem a propriedade Nullable definida como `False` detectou um valor nulo no parâmetro.  
   
--   Uma expressão da propriedade Hidden de uma região de dados que contém um erro: a referência do objeto não foi definida para uma instância de um objeto.  
+-   Uma expressão para a propriedade Hidden de uma região de dados contém um erro: Referência de objeto não definida para uma instância de objeto.  
   
 -   Expressão que incluiu uma chamada de função inválida ou erro de sintaxe.  
   
@@ -82,12 +82,12 @@ ms.locfileid: "48207316"
  Verifique a ortografia nas expressões. Os nomes de campos e parâmetros globais e incorporados fazem distinção entre maiúsculas e minúsculas. Se a expressão estiver causando o erro, verifique se o nome real já existe no relatório e se ele está escrito corretamente. Para obter mais informações, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Valor nulo e propriedades de parâmetro  
- Um parâmetro de vários valores não pode ser Nulo. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Um parâmetro de vários valores não pode ser Nulo. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Relatório principal com sub-relatório que não possa ser processado  
  Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a mensagem a seguir será exibida: "Não foi possível processar o sub-relatório".  
   
- Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre por que um relatório Falha ao atualizar, consulte [atualizar relatórios](../install-windows/upgrade-reports.md).  
+ Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre o motivo pelo qual um relatório falha ao ser atualizado, consulte [Atualizar relatórios](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Verifique se as chamadas de função são do Visual Basic e não do SQL  
  Você pode usar as funções do SQL em texto de consulta em um banco de dados relacional. As funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] não podem ser usadas em texto de consulta.  
@@ -112,7 +112,7 @@ ms.locfileid: "48207316"
   
  Você também pode passar o nome de um escopo específico para uma função de agregação. O escopo pode se referir ao nome de um conjunto de dados, uma região de dados ou ao nome de um escopo superior na hierarquia de dados. Isso se aplica às seguintes mensagens:  
   
--   O '*\<report item name>*' do *\<report item type>* tem um escopo inválido “*\<scope name>*”. O escopo deve ser o escopo atual ou estar contido no escopo atual.  
+-   O '*\<nome do item de relatório>*' do *\<tipo de item de relatório>* tem um escopo inválido "*\<nome do escopo>*". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
   
 -   A expressão *\<property name>* do '*\<report item name>*' do *\<report item type>* tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
   
@@ -127,12 +127,12 @@ ms.locfileid: "48207316"
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Referência de funções de agregação &#40;relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros geralmente usados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referências de coleção de parâmetros &#40;relatórios e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referências de coleções de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

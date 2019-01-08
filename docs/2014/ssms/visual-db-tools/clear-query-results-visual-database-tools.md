@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -16,12 +16,12 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 424d923593de62afc96988730e88bf052504f210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812529"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Limpar resultados da consultas (Visual Database Tools)
   Depois de executar uma consulta no **Designer de Consulta e Exibição**, você pode limpar o painel de Resultados. Esse procedimento aplica-se a consultas criadas usando as opções **Abrir Exibição** ou **Abrir Tabela** do Pesquisador de Objetos. No[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], após executar uma consulta no Editor de Consultas, o painel de Resultados não pode ser apagado, exceto se a janela do Editor de Consultas for fechada ou se outra consulta for executada.  

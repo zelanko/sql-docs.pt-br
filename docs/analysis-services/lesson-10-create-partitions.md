@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791927"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416390"
 ---
 # <a name="lesson-10-create-partitions"></a>Lição 10: Criar partições
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Nesta lição, você criará partições dividir a tabela FactInternetSales em partes lógicas menores que podem ser processadas (atualizadas) independentemente de outras partições. Por padrão, cada tabela que você inclui no modelo tem uma partição que contém todas as colunas e linhas da tabela. Para a tabela FactInternetSales, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela. Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+Nesta lição, você criará partições dividir a tabela FactInternetSales em partes lógicas menores que podem ser processadas (atualizadas) independentemente de outras partições. Por padrão, cada tabela incluída em seu modelo tem uma partição que inclui todas as linhas e colunas da tabela. Para a tabela FactInternetSales, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela. Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 9: criar hierarquias](../analysis-services/lesson-9-create-hierarchies.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 9: Criar hierarquias](../analysis-services/lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Criar partições  
   
@@ -144,4 +144,4 @@ No Gerenciador de partições, observe os **último processamento** coluna para 
     ![como tabular-lesson10-processo-preenchimento](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 11: criar funções](../analysis-services/lesson-11-create-roles.md). 
+Vá para a próxima lição: [Lição 11: Criar funções](../analysis-services/lesson-11-create-roles.md). 

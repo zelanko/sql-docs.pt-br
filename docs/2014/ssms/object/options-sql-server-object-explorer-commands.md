@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
@@ -12,12 +12,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46f40b9da6e127ab295848aa67f9b8588e33fdb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772728"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Opções (SQL Server Pesquisador de objetos – comandos)
   Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as seguintes duas opções para exibição de linhas na tabela:  

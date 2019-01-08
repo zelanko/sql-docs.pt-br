@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785228"
 ---
 # <a name="integration-services-transformations"></a>Transformações do Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] transformações são os componentes no fluxo de dados de um pacote que agregam, mesclam, distribuem e modificam dados. As transformações também podem executar operações de pesquisa e gerar conjuntos de dados de exemplo. Esta seção descreve as transformações que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui e explica como elas funcionam.  
@@ -35,26 +34,26 @@ ms.locfileid: "48140707"
 ## <a name="business-intelligence-transformations"></a>Transformações de Business Intelligence  
  As transformações a seguir executam operações de business intelligence, como limpeza de dados, mineração de texto e execução de consultas de previsão de mineração de dados.  
   
-|Transformation|Description|  
+|Transformation|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Dimensão de Alteração Lenta](slowly-changing-dimension-transformation.md)|A transformação que configura a atualização de uma dimensão variável lenta.|  
 |[Transformação Agrupamento Difuso](fuzzy-grouping-transformation.md)|A transformação que padroniza valores em dados de coluna.|  
 |[Transformação Pesquisa Difusa](lookup-transformation.md)|A transformação que pesquisa valores em uma tabela de referência usando uma correspondência difusa.|  
 |[Transformação Extração de Termos](term-extraction-transformation.md)|A transformação que extrai termos do texto.|  
-|[Transformação Pesquisa de Termos](term-lookup-transformation.md)|A transformação que pesquisa termos em uma tabela de referência e considera os termos extraídos do texto.|  
+|[Transformação Pesquisa de Termo](term-lookup-transformation.md)|A transformação que pesquisa termos em uma tabela de referência e considera os termos extraídos do texto.|  
 |[Transformação Consulta de Mineração de Dados](data-mining-query-transformation.md)|A transformação que executa consultas de previsão de mineração de dados.|  
-|[Transformação Limpeza DQS](dqs-cleansing-transformation.md)|A transformação que corrige dados de uma fonte de dados conectada aplicando regras que foram criadas para a fonte de dados.|  
+|[Transformação de Limpeza DQS](dqs-cleansing-transformation.md)|A transformação que corrige dados de uma fonte de dados conectada aplicando regras que foram criadas para a fonte de dados.|  
   
 ## <a name="row-transformations"></a>Transformações de linha  
  A coluna de atualização de transformações a seguir avalia e cria novas colunas. A transformação é aplicada a cada linha na entrada de transformação.  
   
-|Transformation|Description|  
+|Transformation|Descrição|  
 |--------------------|-----------------|  
-|[Transformação Mapa de Caracteres](character-map-transformation.md)|A transformação que se aplica às funções de cadeia para dados de caractere.|  
+|[Transformação Mapas de Caracteres](character-map-transformation.md)|A transformação que se aplica às funções de cadeia para dados de caractere.|  
 |[Transformação Copiar Coluna](copy-column-transformation.md)|A transformação que adiciona cópias de colunas de entrada à saída de transformação.|  
 |[Transformação Conversão de Dados](data-conversion-transformation.md)|A transformação que converte o tipo de dados de uma coluna a um tipo de dados diferente.|  
 |[Transformação Coluna Derivada](derived-column-transformation.md)|A transformação que popula colunas com os resultados de expressões.|  
-|[Transformação Exportar Coluna](export-column-transformation.md)|A transformação que insere dados de um fluxo de dados em um arquivo.|  
+|[Transformação Exportar Colunas](export-column-transformation.md)|A transformação que insere dados de um fluxo de dados em um arquivo.|  
 |[Transformação Importar Coluna](import-column-transformation.md)|A transformação que lê dados de um arquivo e os adiciona a um fluxo de dados.|  
 |[Componente Script](script-component.md)|A transformação que usa script para extrair, transformar ou carregar dados.|  
 |[Transformação Comando OLE DB](ole-db-command-transformation.md)|A transformação que executa comandos SQL para cada linha em um fluxo de dados.|  
@@ -62,7 +61,7 @@ ms.locfileid: "48140707"
 ## <a name="rowset-transformations"></a>Transformações de conjunto de linhas  
  As transformações a seguir criam novos conjuntos de linhas. O conjunto de linhas pode incluir valores agregados e classificados, conjuntos de linhas de exemplo, ou conjuntos de linhas dinâmicas e não dinâmicas.  
   
-|Transformation|Description|  
+|Transformation|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Agregação](aggregate-transformation.md)|A transformação que executa agregações como AVERAGE, SUM e COUNT.|  
 |[Transformação Classificação](sort-transformation.md)|A transformação que classifica dados.|  
@@ -74,21 +73,21 @@ ms.locfileid: "48140707"
 ## <a name="split-and-join-transformations"></a>Transformações de divisão e junção  
  As seguintes transformações distribuem linhas para saídas diferentes, cria cópias de entradas de transformação, une várias entradas em uma saída e executa operações de pesquisa.  
   
-|Transformation|Description|  
+|Transformation|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Divisão Condicional](conditional-split-transformation.md)|A transformação que roteia linhas de dados para saídas diferentes.|  
-|[Transformação Multicast](multicast-transformation.md)|A transformação que distribui conjuntos de dados para várias saídas.|  
+|[Transformação Difusão Seletiva](multicast-transformation.md)|A transformação que distribui conjuntos de dados para várias saídas.|  
 |[Transformação Unir Tudo](union-all-transformation.md)|A transformação que mescla vários conjuntos de dados.|  
-|[Transformação Mesclagem](merge-transformation.md)|A transformação que mescla dois conjuntos de dados classificados.|  
+|[Transformação Mesclar](merge-transformation.md)|A transformação que mescla dois conjuntos de dados classificados.|  
 |[Transformação Junção de Mesclagem](merge-join-transformation.md)|A transformação que une dois conjuntos de dados usando uma junção FULL, LEFT ou INNER.|  
 |[Transformação Pesquisa](lookup-transformation.md)|A transformação que pesquisa valores em uma tabela de referência usando uma correspondência exata.|  
 |[Transformação Cache](cache-transform.md)|A transformação que grava dados de uma fonte de dados conectada no fluxo de dados em um gerenciador de conexões de cache que salva os dados em um arquivo de cache. A transformação Pesquisa executa pesquisas nos dados no arquivo de cache.|  
-|[Transformação Distribuidor de Dados Equilibrado](balanced-data-distributor-transformation.md)|A transformação distribui uniformemente buffers de linhas de entrada em saídas em threads separados para melhorar o desempenho de pacotes SSIS que são executados em servidores com vários núcleos e vários processadores.|  
+|[Transformação de BDD (Balanced Data Distributor)](balanced-data-distributor-transformation.md)|A transformação distribui uniformemente buffers de linhas de entrada em saídas em threads separados para melhorar o desempenho de pacotes SSIS que são executados em servidores com vários núcleos e vários processadores.|  
   
 ## <a name="auditing-transformations"></a>Transformações Auditoria  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui as transformações a seguir para adicionar informações de auditoria e linhas de contagem.  
   
-|Transformation|Description|  
+|Transformation|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Auditoria](audit-transformation.md)|A transformação que cria informações sobre o ambiente disponível para o fluxo de dados em um pacote.|  
 |[Transformação Contagem de Linhas](row-count-transformation.md)|A transformação que conta as linhas conforme se move por elas e armazena a contagem final em uma variável.|  

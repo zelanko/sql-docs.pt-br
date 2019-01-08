@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
@@ -14,12 +14,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b17fbcdbc882041cf378a629452c57bc6c3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769068"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
   A autojunção de uma tabela pode ser feita, mesmo se a tabela não tiver uma relação reflexiva no banco de dados. Por exemplo, você pode usar uma autojunção para encontrar pares de autores que moram na mesma cidade.  
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Clique com o botão direito do mouse na linha de junção e escolha **Propriedades** no menu de atalho.  
   
-4.  Na janela Propriedades, clique em **Condição e Tipo de Junção** e clique nas reticências **(…)** à direita da propriedade.  
+4.  Na janela Propriedades, clique em **Condição e Tipo de Junção** e clique nas **reticências (…)** à direita da propriedade.  
   
 5.  Na caixa de diálogo [Junção](join-dialog-box-visual-database-tools.md) , altere o operador de comparação entre as chaves primárias conforme requerido. Por exemplo, você pode alterar o operador para menor que (<).  
   

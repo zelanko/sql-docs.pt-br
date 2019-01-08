@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f40a4729e0d4a76eae340fdc964f28283908bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e8c773792e762c39f65fc10a12c4e3a6b5eec2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779248"
 ---
 # <a name="select-a-package"></a>Selecionar um Pacote
   Use a caixa de diálogo **Selecionar um Pacote** para especificar o pacote do qual a tarefa Fila de Mensagens pode receber mensagens.  
@@ -29,7 +28,7 @@ ms.locfileid: "48092746"
  **Local**  
  Especifique o local do pacote. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao selecionar esse valor, as opções dinâmicas **Servidor**, **Usar Autenticação do Windows**, **Usar Autenticação do SQL Server**, **Nome de usuário**e **Senha**são exibidas.|  
 |Arquivo DTSX|Defina o local para um arquivo DTSX. Ao selecionar este valor,a opção dinâmica **Nome do arquivo**será exibida.|  
@@ -57,7 +56,7 @@ ms.locfileid: "48092746"
   
 ### <a name="location--dtsx-file"></a>Local = arquivo DTSX  
  **Nome do arquivo**  
- Forneça o caminho de um pacote ou clique no botão Procurar **(...)** e localize o pacote.  
+ Forneça o caminho de um pacote ou clique no botão Procurar **(…)** e localize o pacote.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Fila de Mensagens](message-queue-task.md)  

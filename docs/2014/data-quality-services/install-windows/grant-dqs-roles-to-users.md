@@ -10,12 +10,12 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2c85c5589ba0e7d2def29f4038b77ac4061d70fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541301"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
   Este tópico descreve como criar logons do SQL Server com base em uma entidade do Windows e conceder as funções de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] no banco de dados DQS_MAIN.  
@@ -34,13 +34,13 @@ ms.locfileid: "51032803"
   
 3.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e clique em **Logon**.  
   
-4.  Na caixa de diálogo **Logon – Novo** , especifique o nome de um usuário do Windows na caixa **Nome de Logon** , especifique o tipo de autenticação como **Autenticação do Windows**e clique em **Pesquisar** para validar o usuário.  
+4.  Na caixa de diálogo **Logon – Novo**, especifique o nome de um usuário do Windows na caixa **Nome de Logon**, especifique o tipo de autenticação como **Autenticação do Windows** e clique em **Pesquisar** para validar o usuário.  
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [DQS Security](../dqs-security.md).  
+6.  No painel direito, marque a caixa de seleção sob o **mapa** coluna para o **DQS_MAIN** do banco de dados e, em seguida, selecione o **dqs_administrator**, **dqs_kb_editor** , ou **dqs_kb_operator** caixa de seleção o **associação de função para o banco de dados: DQS_MAIN** painel, dependendo do nível de acesso necessário para o usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../dqs-security.md).  
   
-7.  Na caixa de diálogo **Logon – Novo** , clique em **OK** para aplicar as alterações.  
+7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   
     > [!NOTE]  
     >  Se você conceder a função **dqs_administrator** a um usuário, aplique as alterações e verifique novamente as permissões de usuário; as outras duas caixas de seleção de funções DQS (**dq_kb_editor** e **dqs_kb_operator**) também serão marcadas.  

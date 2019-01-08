@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522858"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Usando as anotações sql:identity e sql:guid
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855894"
  O **: Identity** e **SQL: GUID** anotações podem ser definidas em um elemento de conteúdo complexo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotação sql:identity  
- Você pode especificar o **: Identity** anotação no esquema XSD em qualquer nó que mapeia para uma coluna de banco de dados do tipo de identidade. O valor especificado para esta anotação define como a coluna do tipo IDENTITY é atualizada (usando o valor fornecido no diagrama de atualização para modificar a coluna ou ignorando o valor; nesse caso, um valor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado para esta coluna).  
+ Você pode especificar o **: Identity** anotação no esquema XSD em qualquer nó que mapeia para uma coluna de banco de dados do tipo de identidade. O valor especificado para esta anotação define como a coluna de tipo de identidade é atualizada (usando-se o valor fornecido no diagrama de atualização para modificar a coluna ou ignorando o valor, caso em que um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valor gerado é usado para esta coluna).  
   
  O **: Identity** anotação pode ser atribuída a dois valores:  
   

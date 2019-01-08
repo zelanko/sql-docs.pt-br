@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439518"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios de que você precisa. A superfície de design fica no centro da janela, com a Faixa de Opções acima e os painéis Dados do Relatório, Agrupamento e Propriedades, além da Galeria de Partes de Relatório, à esquerda, abaixo e à direita. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. A Faixa de Opções organiza itens de menu tradicionais em categorias que você pode localizar e usar facilmente. Os painéis ajudam a adicionar, selecionar e organizar os recursos de relatório e alteram as propriedades de item de relatório.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225026"
 ##  <a name="Ribbon"></a> A Faixa de Opções  
  A Faixa de Opções foi criada para ajudá-lo a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados em grupos lógicos, que são coletados em conjunto sob guias. Cada guia está relacionada a um tipo de atividade, como a inserção de itens de relatório ou a formatação de texto.  
   
- Na exibição de design de relatório, a Faixa de Opções é dividida nas seguintes guias: Página Inicial, Inserir e Exibir. Se não conseguir localizar uma tarefa na Faixa de Opções, alguns grupos dela têm uma caixa de diálogo relacionada que você pode abrir clicando na seta no canto direito inferior do grupo. Você não pode minimizar ou excluir a Faixa de Opções ou substituí-la por barras de ferramentas e menus.  
+ No modo de design do relatório, a faixa de opções é dividida nas seguintes guias: Página inicial, inserir e exibir. Se não conseguir localizar uma tarefa na Faixa de Opções, alguns grupos dela têm uma caixa de diálogo relacionada que você pode abrir clicando na seta no canto direito inferior do grupo. Você não pode minimizar ou excluir a Faixa de Opções ou substituí-la por barras de ferramentas e menus.  
   
  No modo de execução, a faixa de opções tem apenas uma guia, **executar**.  
   
@@ -101,11 +101,11 @@ ms.locfileid: "48225026"
   
  Para obter mais informações sobre itens no painel de dados do relatório, consulte os seguintes tópicos:  
   
--   [Referências globais internas e referências de usuários &#40;relatórios e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Imagens &#40;relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -144,13 +144,13 @@ ms.locfileid: "48225026"
  Dependendo da propriedade, você pode definir um valor de propriedade usando uma lista suspensa, digitando o valor ou clicando em `<Expression>` para criar uma expressão.  
   
 ### <a name="changing-the-properties-pane-view"></a>Alterando a exibição do painel Propriedades  
- Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as seguintes propriedades são listadas na categoria Fonte: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
+ Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as propriedades a seguir são listadas na categoria fonte: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
   
- Existem três botões na parte superior do painel Propriedades: Categoria, Ordem Alfabética e Páginas de Propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
+ O painel de propriedades tem três botões na parte superior do painel: Categoria, classificar em ordem alfabética e páginas de propriedade. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
   
   
 ##  <a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
- Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel Agrupamento possui dois painéis: Grupos de Linhas e Grupos de Colunas. Quando você selecionar uma região de dados, o painel Agrupamento exibirá todos os grupos dessa região de dados no formato de uma lista hierárquica: grupos filho aparecem recuados abaixo dos grupos pai.  
+ Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel agrupamento possui dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel agrupamento exibe todos os grupos dentro dessa região de dados como uma lista hierárquica: Grupos filho aparecem recuados abaixo dos grupos pai.  
   
  ![Painel Agrupamento para grupos de linhas e colunas aninhadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Painel Agrupamento para grupos de linhas e colunas aninhadas")  
   

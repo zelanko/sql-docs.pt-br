@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514508"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Adicionar ou excluir uma hierarquia definida pelo usuário
   Você adiciona ou remove uma hierarquia definida pelo usuário de uma dimensão na guia **Estrutura da Dimensão** no Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -54,16 +54,16 @@ ms.locfileid: "48183976"
   
 -   Na guia **Estrutura da Dimensão** , clique na hierarquia definida pelo usuário que deseja remover do painel **Hierarquias** . Na barra de ferramentas, clique em **Excluir**.  
   
-     — ou —  
+     - ou –  
   
 -   Clique com o botão direito do mouse na hierarquia definida pelo usuário que você quer remover do painel **Hierarquias** e clique em **Excluir**.  
   
-     — ou —  
+     - ou –  
   
 -   Arraste a hierarquia definida pelo usuário para fora da superfície de design.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hierarquias de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)  
   
   

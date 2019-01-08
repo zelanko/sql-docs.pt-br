@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
@@ -13,12 +12,12 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccdf69264de1531c1296763eb95e2e0369ce034b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd7abb585c8f6a44fa8a3e107146e7f74dcbb11c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821951"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
   Use o **detalhes da conversão de coluna** caixa de diálogo para examinar as informações detalhadas de conversão sobre uma coluna individual. Essas informações de conversão contêm o tipo de dados da coluna na origem e no destino, além da conversão a ser realizada pelo assistente. Essa página também relaciona os arquivos de mapeamento de tipo de dados usados pelo assistente para determinar as conversões de tipo de dados necessárias. O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala esses tipos de dados com o mapeamento de arquivos durante a instalação.  
@@ -31,6 +30,6 @@ ms.locfileid: "48215746"
   
  Para saber mais sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ O objetivo do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
   

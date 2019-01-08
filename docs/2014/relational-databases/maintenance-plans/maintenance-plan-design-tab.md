@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.planeditor.f1
@@ -15,12 +14,12 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b50ff05de00f342c8a53bdb7286314014d54f6b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763738"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
   Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -116,6 +115,6 @@ ms.locfileid: "48073558"
   
 ## <a name="see-also"></a>Consulte também  
  [Planos de manutenção](maintenance-plans.md)   
- [Criar um Plano de Manutenção](create-a-maintenance-plan.md)  
+ [Criar um plano de manutenção](create-a-maintenance-plan.md)  
   
   

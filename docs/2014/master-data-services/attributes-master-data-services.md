@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23f989190b4b164385e790b01cfad7d0f759b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748058"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , atributos são objetos contidos em entidades. Os valores de atributos descrevem os membros da entidade. Um atributo pode ser usado para descrever um membro folha, um membro consolidado ou uma coleção.  
@@ -59,7 +58,7 @@ ms.locfileid: "48129616"
 -   Um valor poderá não fazer uma *viagem de ida e volta* se um número de ponto flutuante estiver envolvido. Diz-se que um valor faz uma viagem de ida e volta quando uma operação converte um número de ponto flutuante original para outra forma, uma operação inversa transforma a forma convertida de volta para um número de ponto flutuante e o número de ponto flutuante final é igual ao número de ponto flutuante original. A viagem de ida e volta pode falhar porque um ou mais dígitos menos significantes são perdidos ou alterados na conversão.  
   
 ## <a name="attribute-examples"></a>Exemplos de atributos  
- No exemplo a seguir, a entidade tem os atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
+ No exemplo a seguir, a entidade tem os atributos: Nome, código, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
   
  ![Tabela de entidade de produto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48129616"
 |----------------------|-----------|  
 |Criar um novo atributo de texto de formato livre|[Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
 |Criar um novo atributo numérico de formato livre|[Criar um atributo numérico &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|Criar um novo atributo de link de formato livre|[Criar um atributo de Link &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|Criar um novo atributo de link de formato livre|[Criar um atributo de vínculo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
 |Criar um novo atributo de arquivo.|[Criar um atributo de arquivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Criar um novo atributo baseado em domínio.|[Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Alterar o nome de um atributo existente.|[Alterar um nome de atributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Adicionar atributos existentes a um grupo de rastreamento de alterações.|[Adicionar atributos a um grupo de controle de alteração &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Adicionar atributos existentes a um grupo de rastreamento de alterações.|[Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Excluir um atributo existente.|[Excluir um atributo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Alterar a ordem dos atributos.|[Alterar a ordem dos atributos](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   

@@ -12,12 +12,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396493"
 ---
 # <a name="create-a-linked-domain"></a>Criar um domínio vinculado
   Este tópico descreve como criar um domínio vinculado em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio vinculado é criado a partir de outro domínio já existente e herda todos os valores, regras e propriedades do domínio ao qual é vinculado, com a exceção do nome e da descrição. Você pode gerenciar um conjunto de domínios vinculados como um. Ao vincular um domínio ao outro, você cria um domínio que herda seu conteúdo de outro domínio.  
@@ -31,7 +31,7 @@ ms.locfileid: "51032393"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Controlando o fluxo de dados para domínios compostos  
  Os domínios vinculados permitem que você controle o fluxo de dados entre campos e entre domínios compostos. Você pode diferenciar quando dados de um campo fluem para um domínio composto e quando dados de outro campo bastante semelhante não fluem para o domínio composto. Você faz isso ao especificar que, de dois domínios vinculados, um faz parte de um domínio composto e outro não faz. De uma perspectiva de domínio, os domínios vinculados são idênticos. Eles contêm o mesmo conhecimento. Entretanto, de uma perspectiva de um domínio composto, os domínios vinculados são diferentes. Um participa do domínio composto, o outro não.  
   
- Um exemplo é um registro que contém os seguintes campos: Nome do Cliente, Sobrenome do Cliente e Nome do Pai. Suponha você mapeie o nome do cliente e o nome do pai para um domínio Nome, e faça com que o domínio Nome e o domínio Sobrenome façam parte de um domínio composto Nome Completo. O problema é que o nome do pai será adicionado ao domínio composto sem um sobrenome. Se, no entanto, você vincular cada um dos dois campos de nome a um domínio, e vincular os dois domínios, então poderá adicionar o domínio Nome do Cliente ao domínio composto Nome Completo e não adicionar o campo Nome do Pai ao domínio composto, impedindo que o Nome do Pai seja adicionado ao domínio composto.  
+ Um exemplo é um registro que contém os seguintes campos: Nome do primeiro nome do cliente, o sobrenome do cliente e o do pai. Suponha você mapeie o nome do cliente e o nome do pai para um domínio Nome e faça com que o domínio Nome e o domínio Sobrenome façam parte de um domínio composto Nome Completo. O problema é que o nome do pai será adicionado ao domínio composto sem um sobrenome. Se, no entanto, você vincular cada um dos dois campos de nome a um domínio e vincular os dois domínios, então poderá adicionar o domínio Nome do Cliente ao domínio composto Nome Completo e não adicionar o campo Nome do Pai ao domínio composto, impedindo que o Nome do Pai seja adicionado ao domínio composto.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51032393"
   
 4.  Na caixa de diálogo Criar Domínio, insira um nome de domínio e uma descrição e clique em OK.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após a criação de um domínio vinculado  
+##  <a name="FollowUp"></a> Acompanhar: Depois de criar um domínio vinculado  
  Depois que você criar um domínio vinculado, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Comportamento de um domínio vinculado  

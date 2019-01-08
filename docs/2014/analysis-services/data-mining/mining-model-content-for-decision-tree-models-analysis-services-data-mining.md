@@ -15,15 +15,15 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217566"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351950"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
+  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
   
 ##  <a name="bkmk_Top"></a> Entendendo a estrutura de um modelo de árvores de decisão  
  Um modelo de árvores de decisão tem um nó pai único que representa o modelo e seus metadados. Sob o nó pai há árvores independentes que representam os atributos previsíveis que você selecionou. Por exemplo, caso você tenha configurado o modelo de árvore de decisão para prever se os clientes comprarão algo e forneça entradas para sexo e renda, o modelo criará uma única árvore para o atributo de compra, com muitas ramificações divididas em condições relacionadas a sexo e renda.  
@@ -73,7 +73,7 @@ ms.locfileid: "48217566"
  NODE_TYPE  
  Em modelos de árvore de decisão, os seguintes tipos de nós são criados:  
   
-|Tipo de nó|Description|  
+|Tipo de nó|Descrição|  
 |---------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |2 (Árvore)|Nó pai de árvores de classificação no modelo. Rotulado como **"Tudo"**.|  
@@ -246,7 +246,7 @@ ms.locfileid: "48217566"
   
  Dos tipos na enumeração <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , os seguintes são usados em árvores de classificação.  
   
-|Tipo de valor|Description|  
+|Tipo de valor|Descrição|  
 |----------------|-----------------|  
 |1 (Ausente)|Indica uma contagem, probabilidade ou outra estatística relacionada a valores ausentes.|  
 |4 (Discreto)|Indica uma contagem, probabilidade ou outra estatística relacionada a um valor discreto ou diferenciado.|  
@@ -262,7 +262,7 @@ ms.locfileid: "48217566"
   
  Para todos os nós na árvore (exceto nós folha), a pontuação de cada nó representa a melhor pontuação de divisão do nó atual, menos a pontuação de divisão do nó pai. Em geral, a pontuação de divisão de um nó pai sempre deve ser melhor do que a pontuação de divisão de qualquer um de seus nós filho. Isso ocorre porque um modelo de árvores de decisão teoricamente se divide primeiro nos atributos mais importantes.  
   
- Há muitos modos de calcular uma pontuação para uma divisão, dependendo do parâmetro de algoritmo escolhido. Uma discussão de como as pontuações são calculadas para cada método de pontuação está além do escopo deste tópico. Para obter mais informações, consulte "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", no site de Pesquisa da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Há muitos modos de calcular uma pontuação para uma divisão, dependendo do parâmetro de algoritmo escolhido. Uma discussão de como as pontuações são calculadas para cada método de pontuação está além do escopo deste tópico. Para obter mais informações, consulte "[Learning Bayesian Networks: O Combination of Knowledge and Statistical Data](https://go.microsoft.com/fwlink/?LinkId=45963)", no [!INCLUDE[msCoName](../../includes/msconame-md.md)] site de pesquisa da Web.  
   
 > [!NOTE]  
 >  Se você criar um modelo de árvores de decisão que tenha atributos contínuos e previsíveis discretos, verá pontuações completamente diferentes nos nós (Tudo) que representam cada tipo de árvore. Cada modelo deve ser considerado de modo independente, e os métodos usados para regressão de pontuação são completamente diferentes daqueles usados para classificação de pontuação. Não é possível comparar os valores de pontuação de nó.  
@@ -283,8 +283,8 @@ ms.locfileid: "48217566"
  Para obter mais informações sobre os nós de regressão, consulte [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração de dados](data-mining-model-viewers.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)  
   

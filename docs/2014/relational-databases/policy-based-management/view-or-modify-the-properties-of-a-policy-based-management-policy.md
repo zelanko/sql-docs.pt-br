@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, modify policies
@@ -13,12 +13,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c91f26c029b9ade0b6f69e18220de458d0c708ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a61e48294d39c955e806b8dd4f127bf8bfec2027
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758148"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas
   Este tópico descreve como exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48093656"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Para exibir as propriedades de todas as políticas em um objeto  
   
-1.  Em Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, objeto de servidor, banco de dados ou objeto de banco de dados, aponte para **Políticas** e selecione **Exibir**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Exibir políticas –***object_name*, veja [Caixa de diálogo Exibir Políticas](view-policies-dialog-box.md).  
+1.  Em Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, objeto de servidor, banco de dados ou objeto de banco de dados, aponte para **Políticas** e selecione **Exibir**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Exibir políticas – ***nome_do_objeto*, confira [Caixa de diálogo Exibir Políticas](view-policies-dialog-box.md).  
   
 2.  Quando terminar, clique em **Fechar**.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "48093656"
   
 4.  Clique no sinal de adição para expandir a pasta **Políticas** .  
   
-5.  Clique com o botão direito do mouse na política que você deseja exibir ou modificar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Política –***policy_name*, consulte [Caixa de diálogo Criar Nova Política ou Abrir Política, Página Geral](../../integration-services/general-page-of-integration-services-designers-options.md) e [Caixa de diálogo Criar Nova Política ou Abrir Política, Página Descrição](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Clique com o botão direito do mouse na política que você deseja exibir ou modificar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Política –***nome_da_política*, confira [Caixa de diálogo Criar Política ou Abrir Política, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md) e [Caixa de diálogo Criar Política ou Abrir Política, página Descrição](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>Para exibir as propriedades de uma política  
   

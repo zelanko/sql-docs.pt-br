@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541397"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, os bancos de dados são habilitados para texto completo. No entanto, para usar um índice de texto completo em uma tabela, você deve configurar o recurso de indexação de texto completo nas colunas das tabelas que deseja acessar usando o Mecanismo de Texto Completo.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125036"
   
 2.  Crie um índice de texto completo na tabela ou exibição indexada.  
   
-     Um índice de texto completo consiste em um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo. Para criar uma pesquisa de texto completo em uma tabela ou exibição, ele deve ter um índice não nulo exclusivo de uma só coluna. O Mecanismo de Texto Completo exige que esse índice exclusivo mapeie cada linha da tabela para uma chave exclusiva e compactável. Um índice de texto completo pode incluir `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` colunas. Para obter mais informações, veja [Criar e gerenciar índices de texto completo](create-and-manage-full-text-indexes.md).  
+     Um índice de texto completo consiste em um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo. Para criar uma pesquisa de texto completo em uma tabela ou exibição, ele deve ter um índice não nulo exclusivo de uma só coluna. O Mecanismo de Texto Completo exige que esse índice exclusivo mapeie cada linha da tabela para uma chave exclusiva e compactável. Um índice de texto completo pode incluir as colunas `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` e `varbinary(max)`. Para obter mais informações, veja [Criar e gerenciar índices de texto completo](create-and-manage-full-text-indexes.md).  
   
  Antes de aprender a criar índices de texto completo, é importante considerar a diferença entre eles e os índices regulares do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela a seguir lista as diferenças.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "48125036"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associando uma lista de palavras irrelevantes (stoplist) ao índice de texto completo  
  O [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduz as listas de palavras irrelevantes (stoplists). Uma *lista de palavras irrelevantes* também é conhecida como lista de palavras de ruído. Uma lista de palavras irrelevantes é associada a cada índice de texto completo, e as palavras dessa lista são aplicadas a consultas de texto completo nesse índice. Por padrão, a lista de palavras irrelevantes do sistema é associada a um novo índice de texto completo. Porém, você pode criar e usar sua própria lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Por exemplo, a seguinte [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução cria um novo stoplist de texto completo chamado myStoplist3 copiando-se a lista de palavras irrelevantes do sistema:  
+ Por exemplo, a seguinte instrução [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] cria uma nova lista de palavras irrelevantes de texto completo chamada myStoplist3 copiando da lista de palavras irrelevantes do sistema:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- O seguinte [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução altera uma lista de palavras irrelevantes chamada myStoplist, adicionando a palavra 'en', primeiro para espanhol e depois para francês:  
+ A seguinte instrução [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] altera uma lista de palavras irrelevantes chamada myStoplist, adicionando a palavra 'en', primeiro para espanhol e depois para francês:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>Atualizando um índice de texto completo  
- Como os índices normais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os índices de texto completo podem ser atualizados automaticamente à medida que dados são modificados nas tabelas associadas. Esse é o comportamento padrão. Se preferir, você pode manter seus índices de texto completo atualizados manualmente ou em intervalos agendados específicos. Preencher um índice de texto completo pode ser um procedimento demorado e usar muitos recursos, por isso a atualização de índices geralmente é feita como um processo assíncrono em segundo plano e mantém o índice de texto completo atualizado após modificações na tabela base. Atualizar um índice de texto completo imediatamente depois de cada alteração na tabela base pode demandar muitos recursos. Por isso, se você tiver uma taxa de atualização/inserção/exclusão muito alta, poderá observar alguma diminuição no desempenho de consulta. Se isso ocorrer, considere agendar atualizações manuais do controle de alterações para acompanhar o ritmo das inúmeras alterações periódicas, em vez de competir por recursos com as consultas.  
+ Como os índices normais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os índices de texto completo podem ser atualizados automaticamente à medida que dados são modificados nas tabelas associadas. Esse é o comportamento padrão. Se preferir, você pode manter seus índices de texto completo atualizados manualmente ou em intervalos agendados específicos. Preencher um índice de texto completo pode ser um procedimento demorado e usar muitos recursos, por isso a atualização de índices geralmente é feita como um processo assíncrono em segundo plano e mantém o índice de texto completo atualizado após modificações na tabela base. Atualizar um índice de texto completo imediatamente depois de cada alteração na tabela base pode demandar muitos recursos. Por isso, se você tiver uma taxa de atualização/inserção/exclusão muito alta, poderá observar alguma diminuição no desempenho de consulta. Se isso ocorrer, considere agendar atualizações manuais do controle de alterações para acompanhar o ritmo das inúmeras alterações periódicas, em vez de competir por recursos com as consultas.  
   
  Para monitorar o status de população, use as funções FULLTEXTCATALOGPROPERTY ou OBJECTPROPERTYEX. Para obter o status de população de catálogo, execute a seguinte instrução:  
   
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     TYPE COLUMN definido neste exemplo especifica a coluna de tipo da tabela que contém o tipo do documento em cada linha da coluna 'Document' (que é do tipo binário). A coluna de tipo armazena a extensão de arquivo fornecida pelo usuário — ".doc", ".xls" etc. — do documento em uma dada linha. O Mecanismo de Texto Completo usa a extensão de arquivo de uma dada linha para chamar o filtro correto a ser usado para analisar os dados contidos nessa linha. Depois que o filtro analisar os dados binários da linha, o separador de palavras especificado analisará o conteúdo (neste exemplo, é usado o separador de palavras do inglês britânico). Observe que o processo de filtragem ocorre apenas durante a indexação ou se um usuário inserir ou atualizar uma coluna na tabela base enquanto o controle automático de alterações está habilitado para o índice de texto completo. Para obter mais informações, veja [Configurar e gerenciar filtros para pesquisa](configure-and-manage-filters-for-search.md).  
+     TYPE COLUMN definido neste exemplo especifica a coluna de tipo da tabela que contém o tipo do documento em cada linha da coluna 'Document' (que é do tipo binário). A coluna de tipo armazena o arquivo fornecido pelo usuário - extensão ". doc", ". xls" e assim por diante – do documento em uma determinada linha. O Mecanismo de Texto Completo usa a extensão de arquivo de uma dada linha para chamar o filtro correto a ser usado para analisar os dados contidos nessa linha. Depois que o filtro analisar os dados binários da linha, o separador de palavras especificado analisará o conteúdo (neste exemplo, é usado o separador de palavras do inglês britânico). Observe que o processo de filtragem ocorre apenas durante a indexação ou se um usuário inserir ou atualizar uma coluna na tabela base enquanto o controle automático de alterações está habilitado para o índice de texto completo. Para obter mais informações, veja [Configurar e gerenciar filtros para pesquisa](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Tarefas comuns  
@@ -190,7 +190,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 ### <a name="to-view-information-about-a-full-text-index"></a>Para exibir informações sobre um índice de texto completo  
   
-|Exibição de catálogo ou de gerenciamento dinâmico|Description|  
+|Exibição de catálogo ou de gerenciamento dinâmico|Descrição|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|Contém uma linha para cada coluna que faz parte de um índice de texto completo.|  

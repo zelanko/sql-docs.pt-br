@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118296"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513026"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar propriedades do projeto do Analysis Services (SSDT)
   No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido com certas propriedades padrão que afetam a construção e a implantação do projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "48118296"
 ## <a name="property-description"></a>Descrição da Propriedade  
  A tabela a seguir descreve cada propriedade do projeto, lista seu valor padrão e fornece informações sobre como alterar seu valor.  
   
-|Propriedade|Configuração padrão|Description|  
+|Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
 |Construir / Deployment Server Edition|A edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para desenvolver o projeto.|Especifica a edição do servidor no qual os projetos serão finalmente implantados. Quando houver vários desenvolvedores trabalhando em um projeto, eles precisam entender a edição do servidor para saber quais recursos incorporar ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Construir / Deployment Server Edition|A versão usada para desenvolver os projetos.|Especifica a versão do servidor no qual os projetos serão finalmente implantados.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48118296"
   
  Um projeto é criado inicialmente com uma única configuração, chamada Desenvolvimento. Você pode criar configurações adicionais e alternar entre as configurações usando o Gerenciador de Configurações.  
   
- Enquanto não são criadas configurações adicionais, todos os desenvolvedores usam essa configuração comum. No entanto, durante as várias fases de desenvolvimento do projeto — como durante o desenvolvimento inicial e o teste de um projeto — desenvolvedores diferentes poderão usar fontes de dados distintas e implantar o projeto em servidores variados com objetivos diferentes. Com as configurações, é possível manter esses parâmetros distintos em arquivos de configuração diferentes.  
+ Enquanto não são criadas configurações adicionais, todos os desenvolvedores usam essa configuração comum. No entanto, durante as várias fases de desenvolvimento - do projeto, como durante o desenvolvimento inicial e teste de um projeto - diferentes desenvolvedores será podem usar diferentes fontes de dados e implantar o projeto em servidores diferentes para diferentes finalidades. Com as configurações, é possível manter esses parâmetros distintos em arquivos de configuração diferentes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar projetos do Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   

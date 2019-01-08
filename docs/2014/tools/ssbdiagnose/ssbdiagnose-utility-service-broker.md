@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823680"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
   O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111166"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita verificação se o diálogo está configurado corretamente para o nível especificado de criptografia:  
   
- **ON**: sem configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
+ **ON**: Configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
   
- **OFF**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
+ **DESATIVAR**: Nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
   
- **ANONYMOUS**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
+ **ANÔNIMO**: Segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
   
  **RUNTIME**  
  Solicita um relatório de problemas que causam erros de tempo de execução para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  Especifica as informações de conexão para os bancos de dados que contêm os serviços associados aos elementos de conversa sendo monitorados. Se todos os serviços estiverem no mesmo banco de dados, você terá de especificar apenas uma cláusula **CONNECT TO** . Se os serviços estiverem em bancos de dados separados, você deverá fornecer uma cláusula **CONNECT TO** para cada banco de dados. Se **runtimeconnectionoptions** não for especificado, **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Abra uma conexão de Autenticação do Windows com uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando sua conta atual do Windows como ID de logon. O logon deve ser membro da função de servidor fixa **sysadmin** .  
   
  A opção -E ignora as configurações de usuário e senha das variáveis de ambiente SQLCMDUSER e SQLCMDPASSWORD.  
@@ -220,7 +219,7 @@ WHERE database_id = DB_ID();
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** tentará se conectar usando o modo de Autenticação do Windows com base na conta do Windows do usuário que está executando **ssbdiagnose**.  
   
- Se a opção **-U** for usada junto com **-E** , uma mensagem de erro será gerada. Será gerada uma mensagem de erro e o programa será encerrado se a opção **–U** for seguida por mais de um argumento.  
+ Se a opção **-U** for usada junto com **-E** , uma mensagem de erro será gerada. Se a opção **-U** for seguida de mais de um argumento, uma mensagem de erro será gerada e o programa será encerrado.  
   
  **-P** *password*  
  Especifica a senha para a ID de logon **-U** . Senhas diferenciam maiúsculas e minúsculas. Se a opção **-U** for usada e **-P** não, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDPASSWORD. Se SQLCMDPASSWORD também não for definido, **ssbdiagnose** solicitará uma senha ao usuário.  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  Se a opção **-P** for especificada sem uma senha, **ssbdiagnose** usará o valor padrão (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obter mais informações, confira [Senhas fortes](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  O prompt de senha é exibido imprimindo-se o prompt de senha no console, como a seguir: `Password:`  
   
@@ -330,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Verificando a configuração de dois serviços em computadores separados que não usam logon  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Verificando a configuração de dois serviços em computadores separados que não usam logon  
  O exemplo a seguir mostra como solicitar um relatório de configuração quando os serviços iniciador e de destino estão em computadores separados, mas podem ser acessados com o uso do mesmo logon de Autenticação do Windows.  
   
 ```  

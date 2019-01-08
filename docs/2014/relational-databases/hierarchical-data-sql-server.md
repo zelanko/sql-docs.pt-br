@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817558"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
   Interno `hierarchyid` tipo de dados torna mais fácil de armazenar e consultar dados hierárquicos. `hierarchyid` é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
@@ -43,7 +42,7 @@ ms.locfileid: "48154746"
  Use [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
   
 ##  <a name="keyprops"></a> Propriedades chave de hierarchyid  
- Um valor da `hierarchyid` tipo de dados representa uma posição em uma hierarquia de árvore. Os valores para `hierarchyid` têm as seguintes propriedades:  
+ Um valor do tipo de dados `hierarchyid` representa uma posição em uma hierarquia de árvore. Os valores para `hierarchyid` têm as seguintes propriedades:  
   
 -   Extremamente compacto  
   
@@ -61,11 +60,11 @@ ms.locfileid: "48154746"
 ##  <a name="limits"></a> Limitações de hierarchyid  
  O `hierarchyid` tipo de dados tem as seguintes limitações:  
   
--   Uma coluna do tipo `hierarchyid` não representa automaticamente uma árvore. Depende do aplicativo gerar e atribuir valores `hierarchyid` de maneira que a relação desejada entre as linhas seja refletida nos valores. Alguns aplicativos podem ter uma coluna do tipo `hierarchyid` que indica o local em uma hierarquia definida em outra tabela.  
+-   Uma coluna de tipo `hierarchyid` não representa automaticamente uma árvore. Depende do aplicativo gerar e atribuir valores `hierarchyid` de maneira que a relação desejada entre as linhas seja refletida nos valores. Alguns aplicativos podem ter uma coluna do tipo `hierarchyid` que indica o local em uma hierarquia definida em outra tabela.  
   
--   É responsabilidade do aplicativo para gerenciar a simultaneidade gerando e atribuindo `hierarchyid` valores. Não há nenhuma garantia que valores `hierarchyid` em uma coluna sejam exclusivos a menos que o aplicativo use uma restrição chave exclusiva ou force sua exclusividade em sua própria lógica.  
+-   Depende de o aplicativo gerenciar a simultaneidade gerando e atribuindo valores `hierarchyid`. Não há nenhuma garantia que valores `hierarchyid` em uma coluna sejam exclusivos a menos que o aplicativo use uma restrição chave exclusiva ou force sua exclusividade em sua própria lógica.  
   
--   Relações hierárquicas representadas por `hierarchyid` valores não são impostos como uma relação de chave estrangeira. É possível e, às vezes, apropriado ter uma relação hierárquica onde A tem um filho B e, depois, A é excluído deixando B com uma relação para um registro inexistente. Se esse comportamento for inaceitável, o aplicativo deverá fazer a consulta por descendentes antes de excluir os pais.  
+-   Relações hierárquicas representadas por valores `hierarchyid` não são impostas como uma relação de chave estrangeira. É possível e, às vezes, apropriado ter uma relação hierárquica onde A tem um filho B e, depois, A é excluído deixando B com uma relação para um registro inexistente. Se esse comportamento for inaceitável, o aplicativo deverá fazer a consulta por descendentes antes de excluir os pais.  
   
   
 ##  <a name="alternatives"></a> Quando usar alternativas para hierarchyid  
@@ -99,13 +98,13 @@ GO
   
 -   Consultas de descendente direto são ligeiramente mais lentas com `hierarchyid`.  
   
--   Movimentação de nós não folha é mais lenta com `hierarchyid`.  
+-   A movimentação de nós é mais lenta com `hierarchyid`.  
   
 -   A inserção de nós não folha e a inserção ou a movimentação de nós folha têm a mesma complexidade com `hierarchyid`.  
   
  Pai/Filho pode ser superior quando existem as seguintes:  
   
--   O tamanho da chave é crítico. Para o mesmo número de nós, um `hierarchyid` valor é igual ou maior do que uma família de inteiros (`smallint`, `int`, `bigint`) valor. Isso é a única razão para usar pai/filho em casos raros, porque `hierarchyid` tem localidade significativamente melhor de e/s e complexidade de CPU que as expressões de tabela comuns exigidas quando você estiver usando uma estrutura pai/filho.  
+-   O tamanho da chave é crítico. Para o mesmo número de nós, um valor `hierarchyid` é igual ou maior que um valor família inteiro (`smallint`, `int`, `bigint`). Essa é a única razão para usar Pai/Filho em casos raros, porque `hierarchyid` tem localidade significativamente melhor de E/S e complexidade de CPU que as expressões de tabela comuns exigidas quando você está usando uma estrutura Pai/Filho.  
   
 -   Consultas raramente examinam por seções da hierarquia. Em outras palavras, as consultas normalmente se dirigem apenas a um único ponto na hierarquia. Nesses casos, a colocação não é importante. Por exemplo, Pai/Filho é superior quando a tabela de organização é usada somente para processar a folha de pagamento de funcionários individuais.  
   
@@ -160,7 +159,7 @@ GO
   
      Em um índice por amplitude todos os filhos diretos de um nós são colocados. Índices por amplitude são, portanto, eficientes para responder consultas sobre filhos diretos, como "Localizar todos os empregados que se reportam diretamente a esse gerente".  
   
- Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Criando índices  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tarefas relacionadas  
   
 ###  <a name="migrating"></a> Migrando de Pai/Filho para hierarchyid  
- A maioria das árvores é representada usando Pai/Filho. A maneira mais fácil para migrar de uma estrutura pai/filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para controlar o número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela pai/filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
- Embora um `hierarchyid` coluna não represente necessariamente uma árvore, um aplicativo pode garantir facilmente que ele faz.  
+ Embora uma coluna `hierarchyid` não represente necessariamente uma árvore, um aplicativo pode garantir facilmente que essa representação ocorra.  
   
 -   Para gerar novos valores, execute uma das ações abaixo:  
   
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de método de tipo de dados hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usando o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

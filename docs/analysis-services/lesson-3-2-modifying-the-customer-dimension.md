@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514706"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lição 3-2-modificando a dimensão cliente
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lição 3-2: modificando a dimensão cliente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Há várias formas de aumentar a facilidade de uso e melhorar a funcionalidade das dimensões em um cubo. Nas tarefas deste tópico, você modificará a dimensão Customer.  
@@ -32,11 +32,11 @@ Você pode alterar nomes de atributo na guia **Estrutura da Dimensão** do Desig
   
 3.  Altere os nomes dos seguintes atributos da mesma maneira:  
   
-    -   **Educação em Inglês** – altere para **Educação**  
+    -   **Educação em inglês** do atributo – altere para **educação**  
   
-    -   **Ocupação em Inglês** – altere para **Ocupação**  
+    -   **Ocupação em inglês** do atributo – altere para **ocupação**  
   
-    -   **Nome do Estado ou da Província** – altere para **Estado/Província**  
+    -   **State Province Name** do atributo – altere para **estado / província**  
   
 4.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -106,7 +106,7 @@ Depois de criar um cálculo nomeado na exibição da fonte de dados, você pode 
   
 4.  No campo de propriedade **Name** , digite **Full Name**.  
   
-5.  Clique no campo de propriedade **NameColumn** na parte inferior e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+5.  Clique na **NameColumn** propriedade de campo na parte inferior e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 6.  Selecione **FullName** na parte inferior da lista **Coluna de origem** e clique em **OK**.  
   

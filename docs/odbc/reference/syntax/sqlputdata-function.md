@@ -20,16 +20,16 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809064"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517409"
 ---
 # <a name="sqlputdata-function"></a>Função SQLPutData
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLPutData** permite que um aplicativo enviar dados para uma coluna ou parâmetro para o driver durante o tempo de execução de instrução. Essa função pode ser usada para enviar caracteres ou valores de dados binários em partes para uma coluna com um tipo específico de fonte de dados character, binary ou dados (por exemplo, os parâmetros dos tipos SQL_LONGVARBINARY ou SQL_LONGVARCHAR). **SQLPutData** dá suporte à associação a um tipo de dados C Unicode, mesmo se o driver subjacente não oferece suporte a dados Unicode.  
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   O tipo de dados C é SQL_C_DEFAULT e o tipo de dados C padrão para o tipo de dados SQL especificado é SQL_C_CHAR ou SQL_C_BINARY.  
   
- Para todos os outros tipos de dados de C, se *StrLen_or_Ind* não é SQL_NULL_DATA ou SQL_DEFAULT_PARAM, o driver pressupõe que o tamanho do \* *DataPtr* buffer é o tamanho do tipo de dados C especificado com o *ValueType* ou *TargetType* e envia o valor de dados inteiro. Para obter mais informações, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) apêndice d: tipos de dados.  
+ Para todos os outros tipos de dados de C, se *StrLen_or_Ind* não é SQL_NULL_DATA ou SQL_DEFAULT_PARAM, o driver pressupõe que o tamanho do \* *DataPtr* buffer é o tamanho do tipo de dados C especificado com o *ValueType* ou *TargetType* e envia o valor de dados inteiro. Para obter mais informações, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) no Apêndice d: Tipos de dados.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -68,14 +68,14 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLPutData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLPutData** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para um parâmetro de saída resultaram em truncamento de caractere não vazios ou nulos de dados binários. Se fosse um valor de cadeia de caracteres, ele era truncados à direita. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|O valor de dados identificado pela *ValueType* argumento **SQLBindParameter** para o parâmetro associado não pôde ser convertido para o tipo de dados identificado pelo *ParameterType*argumento na **SQLBindParameter**.|  
 |07S01|Uso inválido de parâmetro padrão|Um valor de parâmetro definido com **SQLBindParameter**, foi SQL_DEFAULT_PARAM, e o parâmetro correspondente não tem um valor padrão.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
-|22001|Dados de cadeia de caracteres, truncamento à direita|A atribuição de um caractere ou valor binário para uma coluna resultou em truncamento de não vazio (caractere) ou não nulo caracteres (binários) ou bytes.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e mais dados que foi enviados para um parâmetro longo (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados de específico da fonte de dados longos) que foi especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e mais dados que foi enviados para uma coluna long (tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados de específico da fonte de dados longos) que foi especificada no buffer de comprimento correspondente a uma coluna em uma linha de dados que foram adicionados ou atualizados com **SQLBulkOperations** ou foram atualizados com **SQLSetPos**.|  
+|22001|Dados de cadeia de caracteres, truncamento à direita|A atribuição de um caractere ou valor binário para uma coluna resultou em truncamento de não vazio (caractere) ou não nulo caracteres (binários) ou bytes.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e mais dados que foi enviados para um parâmetro longo (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados longos) que foi especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e mais dados que foi enviados para uma coluna long (tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados longos) que foi especificada no buffer de comprimento correspondente a uma coluna em uma linha de dados que foram adicionados ou atualizados com **SQLBulkOperations** ou foram atualizados com **SQLSetPos**.|  
 |22003|Valor numérico fora do intervalo|Os dados enviados para um parâmetro numérico associado ou coluna fez parte inteira (em vez de fracionários) o número a ser truncado quando atribuído à coluna da tabela associada.<br /><br /> Retornar um valor numérico (como numérico ou cadeia de caracteres) para um ou mais parâmetros de entrada/saída ou de saída teria causado parte inteira (em vez de fracionários) o número a ser truncado.|  
 |22007|Formato de data/hora inválido|Os dados enviados para uma coluna que foi associada a uma data, hora ou estrutura de carimbo de hora ou um parâmetro eram, respectivamente, uma data inválida, hora ou carimbo de hora.<br /><br /> Um parâmetro de entrada/saída ou de saída foi associado a uma data, hora ou estrutura de carimbo de hora C, e um valor no parâmetro retornado era, respectivamente, uma data inválida, hora ou carimbo de hora. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |22008|Estouro no campo de data e hora|Uma expressão de data e hora é calculado para uma entrada/saída ou parâmetro de saída resultou em uma data, hora ou estrutura de carimbo de hora C que era inválida.|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|Uso inválido de ponteiro nulo|(DM) o argumento *DataPtr* era um ponteiro nulo e o argumento *StrLen_or_Ind* não era 0, SQL_DEFAULT_PARAM ou SQL_NULL_DATA.|  
 |HY010|Erro de sequência de função|(DM) a chamada de função anterior não era uma chamada para **SQLPutData** ou **SQLParamData**.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando a função SQLPutData foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** foi chamado para o *StatementHandle* e retornado SQL_PARAM_DATA_ DISPONÍVEL. Essa função foi chamada antes de dados foram recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) uma função de execução assíncrona (não desse último) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY019|Dados não caracteres e não binários enviados em partes|**SQLPutData** foi chamado mais de uma vez para uma coluna ou parâmetro e não estava sendo usado para enviar dados de caractere C para uma coluna com um tipo específico da fonte de dados de caractere, binária ou dados ou para enviar dados binários de C para uma coluna com um caractere , binário ou tipo de dados específico da fonte de dados.|  
+|HY019|Dados não caracteres e não binários enviados em partes|**SQLPutData** foi chamado mais de uma vez para uma coluna ou parâmetro e não estava sendo usado para enviar dados de caractere C para uma coluna com um tipo específico de fonte de dados character, binary ou dados ou para enviar dados binários de C para uma coluna com um caractere , binário ou tipo de dados específicos da fonte de dados.|  
 |HY020|Tentativa de concatenar um valor nulo|**SQLPutData** foi chamado mais de uma vez desde a chamada que retornado SQL_NEED_DATA e em uma dessas chamadas, o *StrLen_or_Ind* argumento contidos SQL_NULL_DATA ou SQL_DEFAULT_PARAM.|  
 |HY090|Comprimento de buffer ou cadeia de caracteres inválido|O argumento *DataPtr* não era um ponteiro nulo e o argumento *StrLen_or_Ind* era menor que 0, mas não é igual a SQL_NTS ou SQL_NULL_DATA.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -109,7 +109,7 @@ SQLRETURN SQLPutData(
  Para obter mais informações sobre os dados de parâmetro como dados em execução são passadas em tempo de execução de instrução, consulte "Passando valores de parâmetro" na [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [enviando dados Long](../../../odbc/reference/develop-app/sending-long-data.md). Para obter mais informações sobre os dados da coluna como dados em execução são atualizadas ou adicionadas, consulte a seção "Usando SQLSetPos" em [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Executando em massa atualizações usando indicadores" no [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), e [Dados long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
 > [!NOTE]  
->  Um aplicativo pode usar **SQLPutData** para enviar dados em partes somente ao enviar dados de caractere C para uma coluna com um tipo específico da fonte de dados de caractere, binária ou dados ou ao enviar dados binários de C para uma coluna com um caractere, binária, ou dados tipo de dados específico da fonte. Se **SQLPutData** é chamado mais de uma vez em outras condições, ela retornará SQL_ERROR e SQLSTATE HY019 (não caracteres e não binários dados enviados em partes).  
+>  Um aplicativo pode usar **SQLPutData** para enviar dados em partes somente ao enviar dados de caractere C para uma coluna com um tipo específico de fonte de dados character, binary ou dados ou ao enviar dados binários de C para uma coluna com um caractere, binária, ou dados tipo de dados de origem específicos. Se **SQLPutData** é chamado mais de uma vez em outras condições, ela retornará SQL_ERROR e SQLSTATE HY019 (não caracteres e não binários dados enviados em partes).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir pressupõe que um nome de fonte de dados chamado teste. O banco de dados associado deve ter uma tabela que você pode criar, da seguinte maneira:  

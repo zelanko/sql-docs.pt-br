@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_setdefaultdatatypemapping
@@ -17,17 +16,17 @@ ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1141ee71da9a16b50a9362e7c96272bdb12ebe4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c229fe6355e4fe463038dd7ef44d89217b0de77
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202225"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marca um mapeamento de tipo de dados existente entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados (DBMS) do sistema de gerenciamento como o padrão. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Marca um mapeamento de tipo de dados existente entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados (DBMS) do sistema de gerenciamento como o padrão. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +61,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@source_dbms**=] **'***source_dbms***'**  
  É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
@@ -100,7 +99,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  O nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
@@ -130,7 +129,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_setdefaultdatatypemapping** é usado em todos os tipos de replicação entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
+ **sp_setdefaultdatatypemapping** é usado em todos os tipos de replicação entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  Os mapeamentos de tipo de dados padrão se aplicam a todas as topologias de replicação que incluem o DBMS especificado.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, about annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a0e3356b4c83832ce40adabb00bdfdc671ec8ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46d1a7ad03b30159b2efe10c0b215665a37f5a70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756098"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Usando anotações em esquemas XSD (SQLXML 4.0)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, a linguagem de esquema XSD dá suporte a anotações de forma semelhante às anotações introduzidas na linguagem de esquema XDR (XML-Data Reduced). Há anotações adicionais introduzidas no XSD para as quais não há suporte no XDR.  
@@ -33,7 +31,7 @@ ms.locfileid: "48099696"
   
  Se você não especificar as anotações, será utilizado o mapeamento padrão. Por padrão, um elemento XSD com um tipo complexo é mapeado para um nome de tabela (exibição) no banco de dados especificado, e um elemento ou atributo com um tipo simples é mapeado para a coluna com o mesmo nome que o elemento ou o atributo.  
   
- Essas anotações também podem ser usadas para especificar as relações hierárquicas em XML, representando assim as relações no banco de dados, pois um esquema XSD é simplesmente uma exibição XML de dados relacionais.  
+ Essas anotações também podem ser usadas para especificar as relações hierárquicas em XML, o que representa as relações no banco de dados, como um esquema XSD é simplesmente uma exibição XML de dados relacionais.  
   
  Esta seção fornece descrições das anotações que podem ser usadas com esquemas XSD e exemplos de sua utilização.  
   

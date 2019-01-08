@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532507"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
   
--   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O Assistente de aplicativo da camada de dados de registro](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Ao excluir uma instância de DAC (aplicativo da camada de dados), você escolhe uma das três opções que especificam o que será feito com o banco de dados associado ao aplicativo da camada de dados. Todas as três opções excluem os metadados da definição do DAC. As opções diferem no que fazem com o banco de dados associado ao aplicativo da camada de dados. O assistente não exclui nenhum dos objetos do nível de instância associados ao DAC ou banco de dados, como logons.  
@@ -132,22 +132,22 @@ ms.locfileid: "48183696"
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC a ser excluído.  
   
-2.  Abra um `ServerConnection` do objeto e conecte-se à mesma instância.  
+2.  Abra um objeto `ServerConnection` e conecte-se à mesma instância.  
   
-3.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar eventos de atualização de DAC.  
+3.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar os eventos de atualização do DAC.  
   
 4.  Especifique o DAC a ser excluído.  
   
 5.  Use um destes três conjuntos de códigos, dependendo da opção de exclusão apropriada:  
   
-    -   Para excluir o registro do DAC, mas deixar o banco de dados intacto, use o `Unmanage()` método.  
+    -   Para excluir o registro do DAC, mas deixar o banco de dados intacto, use o método `Unmanage()`.  
   
     -   Para excluir o registro do DAC e desanexar o banco de dados, use o método `Uninstall()` e especifique `DetachDatabase`.  
   
-    -   Para excluir o registro do DAC e descartar o banco de dados, use o `Uninstall()` método e especificar `DropDatabase`.  
+    -   Para excluir o registro do DAC e remover o banco de dados, use o método `Uninstall()` e especifique `DropDatabase`.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemplo Excluindo o DAC mas deixando o banco de dados (PowerShell)  
- O exemplo a seguir exclui um DAC chamado MyApplication usando o `Unmanage()` método para excluir o DAC, mas deixar o banco de dados intacto.  
+ O exemplo a seguir exclui um DAC chamado MyApplication usando o método `Unmanage()` para excluir o DAC, mas deixar o banco de dados intacto.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Exemplo Excluindo o DAC e desanexando o banco de dados (PowerShell)  
- O exemplo a seguir exclui um DAC chamado MyApplication usando o `Uninstall()` método para excluir o DAC e desanexar o banco de dados.  
+ O exemplo a seguir exclui um DAC chamado MyApplication usando o método `Uninstall()` para excluir o DAC e desanexar o banco de dados.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -220,10 +220,10 @@ $dacName  = "MyApplication"
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos da Camada de Dados](data-tier-applications.md)   
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Registrar um banco de dados como um DAC](register-a-database-as-a-dac.md)   
- [Backup e Restauração de bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
   
   

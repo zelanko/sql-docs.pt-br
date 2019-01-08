@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbfc4b20c774becb45570c6ec00c1427a1a87be2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210556"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760748"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
   Um operador à prova de falhas é um usuário que recebe o alerta caso o operador designado não possa ser localizado. Este tópico descreve como configurar um operador à prova de falhas para receber notificações de alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "48210556"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
@@ -59,14 +59,14 @@ ms.locfileid: "48210556"
 1.  No **Pesquisador de Objetos** , clique no sinal de adição para expandir o servidor contém operador do SQL Server Agent que você deseja designar como à prova de falhas.  
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
-  
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –***server_name*, em **Selecionar uma página**, selecione **Sistema de Alerta**.  
-  
+
+3.  No **propriedades do SQL Server Agent -**_nome_do_servidor_ caixa de diálogo **selecionar uma página**, selecione **sistema de alerta**.  
+ 
 4.  Em **Operador à prova de falhas**, selecione **Habilitar operador à prova de falhas**.  
   
 5.  Na lista **Operador** , selecione o operador que você deseja tornar à prova de falhas.  
   
-6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager**ou **Net send**.  
+6.  Marque uma ou todas as seguintes caixas de seleção para especificar como o operador será notificado: **E-mail**, **Pager**, ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  
   

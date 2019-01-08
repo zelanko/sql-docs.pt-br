@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc86764dce10dfad5c25ca7a1bd7f3d2bc519c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759788"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
   Especifica a carga de trabalho a ser usada em uma sessão de ajuste.  
@@ -37,23 +36,23 @@ ms.locfileid: "48087296"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Exigido uma vez para cada `DTAInput` elemento.|  
+|**Ocorrência**|Necessário uma vez para cada elemento `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Elementos filho**|[Elemento de arquivo &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Elemento de banco de dados para carga de trabalho &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)|  
+|**Elementos filho**|[Elemento File &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Elemento Database para Workload &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Comentários  
  A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados pode usar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , arquivos de rastreamento e tabelas de rastreamento como cargas de trabalho.  
   
- Se você especificar uma carga de trabalho em arquivo de entrada XML e uma carga de trabalho na linha de comando com a ferramenta **dta** , a carga de trabalho especificada na linha de comando será usada para ajuste. Todas as opções de ajuste especificadas na linha de comando substituem as que foram especificadas no arquivo de entrada XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se uma configuração for digitada na `Configuration` elemento do arquivo de entrada XML e o `EvaluateConfiguration` elemento também for especificado como uma das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão as opções de ajuste inseridas no a linha de comando.  
+ Se você especificar uma carga de trabalho em arquivo de entrada XML e uma carga de trabalho na linha de comando com a ferramenta **dta** , a carga de trabalho especificada na linha de comando será usada para ajuste. Todas as opções de ajuste especificadas na linha de comando substituem as que foram especificadas no arquivo de entrada XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se a configuração digitada no elemento `Configuration` do arquivo de entrada XML do elemento `EvaluateConfiguration` também for especificada como uma das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão todas as opções de ajuste da linha de comando.  
   
  É preciso especificar uma carga de trabalho para cada sessão de ajuste.  
   

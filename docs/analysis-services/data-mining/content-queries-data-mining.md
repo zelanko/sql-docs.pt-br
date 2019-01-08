@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529059"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- A consulta a seguir é criada com base nestas informações. A consulta retorna três colunas: a ID do nó, a regra completa e o produto na lateral direita do conjunto de itens, isto é, o produto previsto para ser associado a alguns outros produtos como parte de um conjunto de itens.  
+ A consulta a seguir é criada com base nestas informações. A consulta retorna três colunas: a ID do nó, a regra completa e o produto no lado direito do conjunto de itens-ou seja, o produto previsto para ser associado a alguns outros produtos como parte de um conjunto de itens.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -196,7 +196,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Para obter mais informações sobre como trabalhar com conjuntos de linhas hierárquicas, consulte a especificação OLEDB no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Compreendendo a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

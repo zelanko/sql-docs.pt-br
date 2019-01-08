@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
@@ -12,12 +12,12 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9faa987b5cd7dc00cde0d691177c722bd73eaa26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767428"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
   Se uma tabela tiver um esquema de partição associado, você poderá usar esta caixa de diálogo para escolher a coluna (ou colunas) à qual será aplicada a função de partição. Para a função funcionar direito, o tipo de dados da coluna que você vai trocar deve ser igual ao tipo de dados da coluna definido na função de partição.  

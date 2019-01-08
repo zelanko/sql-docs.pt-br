@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540118"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
-  Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tabelas, exibições e objetos de instância, incluindo logons, associados a um banco de dados de usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
+  Um aplicativo da camada de dados (DAC) é uma entidade de gerenciamento de banco de dados lógico que define todos os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assim como tabelas, exibições e objetos de instância, inclusive logons, associados do banco de dados do usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
   
  Um BACPAC é um artefato relacionado que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados.  
   
@@ -34,16 +34,16 @@ ms.locfileid: "48214726"
   
  A vantagem de uma implantação orientada por DAC em relação a um exercício orientado por script é que a ferramenta ajuda o DBA a identificar e validar comportamentos de bancos de dados de origem e destino diferentes. Durante atualizações, a ferramenta avisa o DBA se a atualização pode causar perda de dados, e também fornece um plano de atualização. O DBA pode avaliar o plano e, em seguida, utilizar a ferramenta para continuar com a atualização.  
   
- O DAC também dá suporte a controle de versão para ajudar o desenvolvedor e o DBA a manter e gerenciar a linhagem de banco de dados em todo o seu ciclo de vida.  
+ Os DACs também dão suporte a controle de versão para ajudar o desenvolvedor e o DBA a manter e gerenciar a linhagem de banco de dados em todo o seu ciclo de vida.  
   
 ## <a name="dac-concepts"></a>Conceitos de DAC  
  Um DAC simplifica o desenvolvimento, a implantação e o gerenciamento dos elementos da camada de dados que oferecem suporte a um aplicativo.  
   
 -   Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos SQL Server como tabelas, exibições e objetos de instância, associados a um banco de dados de usuário. Se uma unidade autossuficiente de implantação de banco de dados do SQL Server que permite que desenvolvedores da camada de dados e DBAs empacotem objetos SQL Server em um artefato portátil chamado pacote de DAC, ou arquivo .dacpac.  
   
--   Para que um banco de dados do SQL Server seja tratado como um DAC, ele deverá ser registrado ou explicitamente por uma operação de usuário, ou implicitamente por uma das operações de DAC. Quando um banco de dados é registrado, a versão do DAC e outras propriedades são registradas como parte dos metadados do banco de dados. De maneira recíproca, um banco de dados também pode ter o registro cancelado e ter suas propriedades do DAC removidas.  
+-   Para que um banco de dados do SQL Server seja tratado como um DAC, ele deverá ser registrado ou explicitamente por uma operação de usuário ou implicitamente por uma das operações de DAC. Quando um banco de dados é registrado, a versão do DAC e outras propriedades são registradas como parte dos metadados do banco de dados. De maneira recíproca, um banco de dados também pode ter o registro cancelado e ter suas propriedades do DAC removidas.  
   
--   Em geral, as ferramentas do DAC são capazes de ler arquivos do DACPAC gerados por ferramentas de DAC de versões anteriores do SQL Server, e também podem implantar o DACPAC em versões anteriores do SQL Server. No entanto, as ferramentas de DAC de versões anteriores não podem ler arquivos DACPAC gerados por ferramentas do DAC de versões posteriores. Especificamente:  
+-   Em geral, as ferramentas do DAC são capazes de ler arquivos do DACPAC gerados por ferramentas de DAC de versões anteriores do SQL Server e também podem implantar o DACPAC em versões anteriores do SQL Server. No entanto, as ferramentas de DAC de versões anteriores não podem ler arquivos DACPAC gerados por ferramentas do DAC de versões posteriores. Especificamente:  
   
     -   As operações do DAC foram introduzidas no SQL Server 2008 R2. Além de bancos de dados do SQL Server 2008 R2, as ferramentas dão suporte à geração de arquivos DACPAC de bancos de dados do SQL Server 2008, do SQL Server 2005 e do SQL Server 2000.  
   
@@ -98,20 +98,20 @@ ms.locfileid: "48214726"
 ## <a name="backup-package-bacpac"></a>Pacote de backup (.bacpac)  
  Um BACPAC é um artefato que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados. O BACPAC é um arquivo do Windows com uma extensão .bacpac. Semelhante ao DACPAC, o formato de arquivo do BACPAC é aberto – o conteúdo de esquema do BACPAC é idêntico ao do DACPAC. Os dados são armazenados em formato JSON.  
   
- DACPAC e BACPAC são semelhantes, mas eles se destinam a cenários diferentes. Um DACPAC destina-se a capturar e implantar esquema, inclusive atualizar um banco de dados existente. O caso de uso primário para um DACPAC é implantar um esquema altamente definido para desenvolvimento, teste e ambientes de produção, e o contrário: capturar o esquema de produção e aplicá-lo de volta em ambientes de teste e desenvolvimento.  
+ DACPAC e BACPAC são semelhantes, mas eles se destinam a cenários diferentes. Um DACPAC destina-se a capturar e implantar esquema, inclusive atualizar um banco de dados existente. Caso de uso primário para um DACPAC é implantar um esquema altamente definido para desenvolvimento, teste e, em seguida, ambientes de produção e o inverso: capturar o esquema de produção e aplicá-lo novamente para teste e ambientes de desenvolvimento.  
   
  Por outro lado, um BACPAC destina-se a capturar esquema e dados. Um BACPAC é o equivalente lógico de um backup de banco de dados e não pode ser usado para atualizar bancos de dados existentes. O caso de uso primário para um BACPAC é mover um banco de dados de um servidor para outro - ou de um servidor local para a nuvem - e arquivar um banco de dados existente em um formato aberto.  
   
  Um BACPAC dá suporte a duas operações principais:  
   
--   **EXPORT**– O usuário pode exportar o esquema e os dados de um banco de dados para um BACPAC.  
+-   **EXPORT**– o usuário pode exportar o esquema e os dados de um banco de dados para um BACPAC.  
   
--   **IMPORT** – O usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
+-   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
- Estes recursos têm suporte pelas ferramentas de gerenciamento de banco de dados: o Servidor Management Studio, o portal de gerenciamento para o SQL Azure e a API do DACFx.  
+ Estes recursos têm suporte pelas ferramentas de gerenciamento de banco de dados: Server Management Studio, o Portal de gerenciamento para SQL Azure e a API DACFx.  
   
 ## <a name="permissions"></a>Permissões  
- Você deve ser um membro do `dbmanager` função ou atribuídos `CREATE DATABASE` permissões para criar um banco de dados, incluindo a criação de um banco de dados implantando um pacote DAC. Você deve ser um membro do `dbmanager` função, ou que receberam `DROP DATABASE` permissões para remover um banco de dados.  
+ Você deve ser membro da função `dbmanager` ou ter permissões `CREATE DATABASE` atribuídas para criar um banco de dados, incluindo criar um banco de dados implantando um pacote de DAC. Você deve ser um membro da função `dbmanager` ou ter permissões `DROP DATABASE` atribuídas para remover um banco de dados.  
   
 ## <a name="data-tier-application-tasks"></a>Tarefas do aplicativo da camada de dados  
   

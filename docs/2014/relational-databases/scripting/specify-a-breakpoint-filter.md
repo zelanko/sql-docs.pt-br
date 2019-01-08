@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219566"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328706"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
   Um filtro de ponto de interrupção limita o ponto de interrupção para atuar somente em computadores, sistemas operacionais, processos e threads especificados. Filtros de ponto de interrupção são normalmente usados ao depurar aplicativos paralelos.  
@@ -40,9 +38,9 @@ ms.locfileid: "48219566"
   
     -   `MachineName` é o computador que está executando a instância do Mecanismo de Banco de Dados.  
   
-    -   `ProcessID`, e `ProcessName` são o processo do sistema operacional que executa a instância do mecanismo de banco de dados.  
+    -   `ProcessID` e `ProcessName` são o processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados.  
   
-    -   `ThreadID` e `ThreadName` são o thread de sistema operacional que executa o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, procedimento ou função na instância do mecanismo de banco de dados.  
+    -   `ThreadID` e `ThreadName` são o thread do sistema operacional que executa o lote [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimento ou função na instância do Mecanismo de Banco de Dados.  
   
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
@@ -50,5 +48,3 @@ ms.locfileid: "48219566"
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
  [Especificar uma contagem de ocorrências](specify-a-hit-count.md)   
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438c037c52e3cdefda7bfdac4138ef10f75063e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767608"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados
+# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Database Engine Tuning Advisor
   Bem-vindo ao tutorial do Orientador de Otimização do Mecanismo de Banco de Dados. O Orientador de Otimização do Mecanismo de Banco de Dados examina como são processadas as consultas nos bancos de dados que você especifica e recomenda meios de aprimorar o desempenho de processamento de consultas, modificando as estruturas do banco de dados, como índices, exibições indexadas e particionamento.  
   
  O Orientador de Otimização do Mecanismo de Banco de Dados fornece duas interfaces do usuário: uma GUI (interface gráfica do usuário) e o utilitário de prompt de comando **dta** . A GUI facilita a exibição rápida dos resultados das sessões de ajuste, enquanto o utilitário **dta** facilita a inserção da funcionalidade Orientador de Otimização do Mecanismo de Banco de Dados em scripts para ajuste automatizado. Além disso, o Orientador de Otimização do Mecanismo de Banco de Dados aceita entrada XML, o que oferece mais controle sobre o processo de ajuste.  
@@ -29,13 +28,13 @@ ms.locfileid: "48047897"
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial vai ensiná-lo a navegar na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e executar algumas tarefas básicas com a GUI e o utilitário **dta** . Ele contém as seguintes lições:  
   
- [Lição 1: navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lição 1: Navegação básica no orientador de otimização do mecanismo de banco de dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  Nessa lição, você se acostumará com a nova interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados e aprenderá a definir opções de display e layout.  
   
- [Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lição 2: Usando o orientador de otimização do mecanismo de banco de dados](lesson-2-using-database-engine-tuning-advisor.md)  
  Nessa lição, você aprenderá a executar tarefas básicas de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
- [Lição 3: usar o utilitário de prompt de comando DTA](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lição 3: Usando o utilitário de Prompt de comando dta](lesson-3-using-the-dta-command-prompt-utility.md)  
  Nesta lição, você aprenderá a iniciar o utilitário de prompt de comando **dta** e executar alguns comandos de ajuste simples.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -51,6 +50,6 @@ ms.locfileid: "48047897"
 -   [dta Utility](dta-utility.md) para obter material de referência sobre o utilitário de prompt de comando e o arquivo XML opcional que você pode usar para controlar a operação do utilitário.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 1: navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lição 1: Navegação básica no orientador de otimização do mecanismo de banco de dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

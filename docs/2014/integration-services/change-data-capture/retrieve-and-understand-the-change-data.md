@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
@@ -13,12 +12,12 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19ad6aba7f81094c08a93c1bcccd1bca466f80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc856bcee4aa873d2359c444af6147b0ca0909d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762048"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recuperar e compreender os dados de alteração
   No fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a primeira tarefa é executar a consulta que recupera os dados de alteração. Você executa esta consulta dentro de um componente de origem em uma tarefa Fluxo de Dados. As transformações downstream e os destinos podem ser usados para aplicar os dados de alteração em seu destino.  

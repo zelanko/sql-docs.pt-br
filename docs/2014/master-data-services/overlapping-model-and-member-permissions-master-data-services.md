@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -15,12 +14,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 964fdfbb739d03ca20c55b3d1009fcb762aa54b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814558"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
   A permissão atribuída a um membro pode sobrepor a permissão atribuída a um objeto de modelo. Quando ocorrem sobreposições, a permissão mais restritiva tem efeito.  
@@ -42,7 +41,7 @@ ms.locfileid: "48201836"
   
  Na guia **Membros da Hierarquia** , o nó da subcategoria Mountain Bikes em uma hierarquia derivada tem a permissão **Atualizar** atribuída.  
   
- Resultado: no **Explorer**, o usuário tem a permissão **Atualizar** para todos os valores do atributo para todos os membros do nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
+ Resultado: Na **Explorer**, o usuário tem **atualização** permissão a todos os valores de atributo para todos os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48201836"
   
  Sobre o **membros da hierarquia** guia, o nó da subcategoria Mountain Bikes em uma hierarquia derivada recebe explicitamente **somente leitura** permissão.  
   
- Resultado: No **Explorer**, o usuário tem **somente leitura** permissão para os valores do atributo Subcategory para os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
+ Resultado: Na **Explorer**, o usuário tem **somente leitura** permissão para os valores do atributo Subcategory para os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48201836"
   
  Na guia **Membros da Hierarquia** , o nó da subcategoria Mountain Bikes em uma hierarquia derivada recebe explicitamente a permissão **Atualizar** .  
   
- Resultado: No **Explorer**, o usuário tem **somente leitura** permissão para os valores de atributo. Todos os outros membros e atributos estão ocultados.  
+ Resultado: Na **Explorer**, o usuário tem **somente leitura** permissão para os valores de atributo. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

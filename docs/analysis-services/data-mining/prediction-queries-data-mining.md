@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506037"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017843"
 ###  <a name="bkmk_PredFunc"></a> Adicionando funções de previsão  
  Além de prever um valor, é possível personalizar uma consulta de previsão para retornar vários tipos de informações relacionadas à previsão. Por exemplo, se a previsão criar uma lista de produtos para recomendar a um cliente, talvez você também queira retornar a probabilidade para cada previsão, de forma que possa classificá-las e apresentar somente as principais recomendações para o usuário.  
   
- Para fazer isso, adicione *funções de previsão* à consulta. Cada modelo ou tipo de consulta dá suporte a funções específicas. Por exemplo, os modelos de clustering oferecem suporte a funções de previsão especiais que fornecem detalhes adicionais sobre os clusters criados pelo modelo, ao passo que modelos de série temporal têm funções que calculam diferenças com o passar do tempo. Também há funções de previsão gerais que funcionam com quase todos os tipos de modelo. Para obter uma lista das funções de previsão com suporte em tipos diferentes de consultas, consulte esse tópico sobre a referência DMX: [Funções de previsão gerais &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
+ Para fazer isso, adicione *funções de previsão* à consulta. Cada modelo ou tipo de consulta dá suporte a funções específicas. Por exemplo, os modelos de clustering oferecem suporte a funções de previsão especiais que fornecem detalhes adicionais sobre os clusters criados pelo modelo, ao passo que modelos de série temporal têm funções que calculam diferenças com o passar do tempo. Também há funções de previsão gerais que funcionam com quase todos os tipos de modelo. Para obter uma lista das funções de previsão com suporte em tipos diferentes de consultas, consulte este tópico de referência DMX:  [Funções de previsão gerais &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Criando consultas de previsão singleton  
  Uma consulta de previsão singleton é útil quando você deseja criar previsões rápidas em tempo real. Um cenário comum pode ser que você obteve informações de um cliente, talvez usando um formulário em um site e, em seguida, quer enviar esses dados como a entrada para uma consulta de previsão singleton. Por exemplo, quando um cliente escolher um produto de uma lista, você poderá usar a seleção como a entrada para uma consulta que prevê os melhores produtos para recomendar.  
@@ -68,7 +68,7 @@ ms.locfileid: "34017843"
  As consultas de previsão singleton não exigem uma tabela separada que contém entrada. Você fornece uma ou várias linhas de valores como entrada para o modelo e as previsões são retornadas em tempo real.  
   
 > [!WARNING]  
->  Apesar do nome, consultas de previsão singleton não fazem apenas previsões únicas. Você pode gerar várias previsões para cada conjunto de entradas. Forneça vários casos de entrada criando uma instrução SELECT para cada caso de entrada e combinando-os com o operador UNION.  
+>  Apesar do nome, consultas de previsão singleton não fazem apenas previsões únicas-você pode gerar várias previsões para cada conjunto de entradas. Forneça vários casos de entrada criando uma instrução SELECT para cada caso de entrada e combinando-os com o operador UNION.  
   
  Ao criar uma consulta de previsão singleton, é necessário fornecer os novos dados ao modelo na forma de uma PREDICTION JOIN. Isso significa que, mesmo que não esteja mapeando para uma tabela real, você deve verificar se os novos dados correspondem às colunas existentes no modelo de mineração. Se as colunas dos novos dados e os novos dados corresponderem de modo exato, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mapeará as colunas. Isto é chamado de *JUNÇÃO DE PREVISÃO NATURAL*. No entanto, se as colunas não coincidirem ou se os novos dados não tiverem o mesmo tipo e quantidade de dados do modelo, especifique quais colunas do modelo devem ser mapeadas para os novos dados ou especifique os valores ausentes.  
   
@@ -148,7 +148,7 @@ FROM
  Se o provedor não puder manipular conjuntos de linhas hierárquicos, você poderá mesclar os resultados usando a palavra-chave FLATTEN na consulta de previsão. Para obter mais informações, inclusive exemplos de conjuntos de linhas bidimensionais, consulte [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo de consultas & #40; mineração de dados & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Consultas de definição de dados & #40; mineração de dados & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Consultas de conteúdo &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Consultas de definição de dados &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

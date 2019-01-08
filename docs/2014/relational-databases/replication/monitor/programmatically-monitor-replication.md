@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813908"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
   O Replication Monitor é uma ferramenta gráfica que permite monitorar uma topologia de replicação. É possível acessar os mesmos dados de monitoração programaticamente usando o RMO (Replication Management Objects) ou procedimentos armazenados de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Esses objetos permitem programar as seguintes tarefas:  
@@ -173,7 +172,7 @@ ms.locfileid: "48137276"
   
 2.  Consiga um objeto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> em um desses modos.  
   
-    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> para o Publicador e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criada na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, o nome do publicador estava definido incorretamente ou a publicação não existe.  
+    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> para o Publicador e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criada na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, o nome do Publicador estava definido incorretamente ou a publicação não existe.  
   
     -   Do <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> acessado por meio da propriedade <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> de um objeto existente <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   
@@ -267,15 +266,15 @@ ms.locfileid: "48137276"
   
     -   *metricID* - um valor <xref:System.Int32> que representa a métrica de limite de monitoração da tabela a seguir:  
   
-        |Valor|Description|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
-        |1|`expiration` -monitora a expiração iminente de assinaturas para publicações transacionais.|  
-        |2|`latency` -monitora o desempenho de assinaturas para publicações transacionais.|  
-        |4|`mergeexpiration` -monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
-        |5|`mergeslowrunduration` -monitora a duração de sincronizações de mesclagem em conexões de baixa largura de banda (discadas).|  
-        |6|`mergefastrunduration` -monitora a duração de sincronizações de mesclagem em conexões de alta largura de banda (LAN).|  
+        |1|`expiration` - monitora a expiração iminente de assinaturas para publicações transacionais.|  
+        |2|`latency` - monitora o desempenho de assinaturas para publicações transacionais.|  
+        |4|`mergeexpiration` - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
+        |5|`mergeslowrunduration`- monitora a duração de sincronizações de mesclagem em conexões da baixa largura da banda (discadas).|  
+        |6|`mergefastrunduration` - monitora a duração de sincronizações de mesclagem em conexões da alta largura da banda (LAN).|  
         |7|`mergefastrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
-        |8|`mergeslowrunspeed` -monitora a taxa de sincronizações de mesclagem em conexões de baixa largura de banda (discadas).|  
+        |8|`mergeslowrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de baixa largura da banda (discadas).|  
   
     -   *enable* - <xref:System.Boolean> valor que indica se a métrico está habilitado para a publicação.  
   

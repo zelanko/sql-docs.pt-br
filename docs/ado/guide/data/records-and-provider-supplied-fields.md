@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679964"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538040"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto, sua origem pode ser a linha atual de um aberto [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -41,7 +41,7 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 ## <a name="special-fields-for-document-source-providers"></a>Provedores de fonte de campos especiais para documento  
  Uma classe especial de provedores, chamado *provedores de origem de documento*, gerencia pastas e documentos. Quando um **registro** objeto representa um documento ou uma **Recordset** objeto representa uma pasta de documentos, o provedor de código-fonte do documento preenche esses objetos com um conjunto exclusivo de campos que descrevem características do documento em vez disso, de real próprio documento. Normalmente, um campo contém uma referência para o **Stream** que representa o documento.  
   
- Esses campos constituem um recurso **registro** ou **conjunto de registros** e são listadas para os provedores específicos que dão suporte a eles no [apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Esses campos constituem um recurso **registro** ou **conjunto de registros** e são listadas para os provedores específicos que dão suporte a eles no [apêndice a: Provedores de](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
  Índice de duas constantes a **campos** coleção de um recurso **registro** ou **Recordset** para recuperar um par de campos comumente usados. O **campo** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade retorna o conteúdo desejado.  
   
@@ -56,14 +56,14 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 ## <a name="resource-recordset-columns"></a>Colunas do conjunto de registros de recursos  
  Um *conjunto de registros de recurso* consiste nas seguintes colunas.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Somente leitura. Indica a URL do recurso.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Somente leitura. Indica a URL absoluta do registro pai.|  
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Somente leitura. Indica a URL absoluta do recurso, que é a concatenação de PARENTNAME e PARSENAME.|  
 |RESOURCE_ISHIDDEN|adBoolean|True se o recurso está oculto. Nenhuma linha será retornada, a menos que o comando que cria o conjunto de linhas explicitamente seleciona linhas onde RESOURCE_ISHIDDEN é True.|  
 |RESOURCE_ISREADONLY|adBoolean|True se o recurso for somente leitura. Tenta abrir este recurso com DBBINDFLAG_WRITE e vai falha com DB_E_READONLY. Essa propriedade pode ser editada, mesmo quando o recurso só foi aberto para leitura.|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|Indica o probabilidade de uso do documento — por exemplo, um advogado do breve. Isso pode corresponder ao modelo do Office que foi usado para criar o documento.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indica o probabilidade de uso do documento-por exemplo, um advogado do breve. Isso pode corresponder ao modelo do Office que foi usado para criar o documento.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica o tipo MIME do documento, que indica o formato como "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica o idioma no qual o conteúdo é armazenado.|  
 |RESOURCE_CREATIONTIME|adFileTime|Somente leitura. Indica uma estrutura FILETIME que contém a hora em que o recurso foi criado. A hora é relatada no formato Tempo Universal Coordenado (UTC).|  
@@ -79,4 +79,4 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

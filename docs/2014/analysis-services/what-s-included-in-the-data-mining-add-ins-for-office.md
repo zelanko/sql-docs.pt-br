@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519095"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>O que&#39;s incluídos na mineração de dados suplementos para Office
   Quando você instalar os Suplementos de Mineração de Dados para Office 2013, e selecionar todas as opções de instalação, as seguintes barras de ferramentas e modelos serão adicionados:  
@@ -31,7 +31,7 @@ ms.locfileid: "48157626"
   
 -   [Cliente de mineração de dados para Excel &#40;suplementos de mineração de dados do SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Esse suplemento fornece ferramentas a todas as tarefas de mineração de dados necessárias, desde limpeza e amostragem dos dados até execução de modelos de construção, teste de precisão do modelo e execução da validação cruzada. Você também pode gerenciar e documentar modelos e criar consultas DMX dos modelos.  
+     Esse suplemento fornece ferramentas para praticamente qualquer tarefa de mineração de dados que talvez seja necessário – desde a limpeza e amostragem dos dados para a criação de modelos, testando a precisão do modelo e executar a validação cruzada. Você também pode gerenciar e documentar modelos e criar consultas DMX dos modelos.  
   
      Os mineradores de dados experientes apreciarão o acesso a todas as ferramentas disponíveis na mineração de dados do SQL Server, incluindo a importação e exportação de modelos, as consultas de previsão e as consultas de conteúdo.  
   

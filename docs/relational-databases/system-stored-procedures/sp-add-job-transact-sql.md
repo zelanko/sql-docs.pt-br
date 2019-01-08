@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537866"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,31 +55,31 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*está **nvarchar (128)**, sem padrão.  
   
  [  **@enabled =** ] *habilitado*  
  Indica o status do trabalho adicionado. *habilitada*está **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com a sua agenda; no entanto, ele pode ser executado manualmente.  
   
- [  **@description =** ] **'***descrição***'**  
+ [  **@description =** ] **'**_descrição_**'**  
  A descrição do trabalho. *Descrição* está **nvarchar(512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
   
  [  **@start_step_id =** ] *step_id*  
  O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**, com um padrão de 1.  
   
- [  **@category_name =** ] **'***categoria***'**  
+ [  **@category_name =** ] **'**_categoria_**'**  
  A categoria do trabalho. *categoria*está **sysname**, com um padrão NULL.  
   
  [  **@category_id =** ] *category_id*  
  Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*está **int**, com um padrão NULL.  
   
- [  **@owner_login_name =** ] **'***logon***'**  
+ [  **@owner_login_name =** ] **'**_logon_**'**  
  O nome do logon que é o proprietário do trabalho. *login*está **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente os membros dos **sysadmin** função de servidor fixa pode definir ou alterar o valor para **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, falha na execução deste procedimento armazenado e um erro será retornado.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
  Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Caso haja êxito|  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_page =** ] *page_level*  
  Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'**_email_name_**'**  
  O nome de email da pessoa para enviar email quando *email_level* for atingido. *email_name* está **sysname**, com um padrão NULL.  
   
- [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  O nome do operador para quem a mensagem da rede será enviada após a conclusão deste trabalho. *netsend_name*está **sysname**, com um padrão NULL.  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  O nome da pessoa para quem uma mensagem de pager será enviada após a conclusão deste trabalho. *page_name*está **sysname**, com um padrão NULL.  
   
  [  **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Quando *delete_level* é **3**, o trabalho é executado apenas uma vez, independentemente de quaisquer agendas definidas para o trabalho. Além disso, se um trabalho excluir a si próprio, todo o histórico do trabalho também será excluído.  
   
- [  **@job_id =** ] *job_id * * * saída**  
+ [  **@job_id =** ] _job_id_**saída**  
  O número de identificação atribuído ao trabalho caso ele seja criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -155,7 +155,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. Adicionando um trabalho com informações de pager, email e net send  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>b. Adicionando um trabalho com informações de pager, email e net send  
  Este exemplo cria um trabalho denominado `Ad hoc Sales Data Backup` que notifica `François Ajenstat` (por pager, email ou mensagem pop-up de rede) se o trabalho falhar, excluindo o trabalho após a conclusão com êxito.  
   
 > [!NOTE]  

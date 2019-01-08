@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207550"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414083"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
@@ -30,7 +30,7 @@ ms.locfileid: "48207550"
   
  **(Para cargas de trabalho somente leitura)**. A função de réplica secundária deve ser configurada para conexões somente leitura; o grupo de disponibilidade deve ter uma lista de roteamento e a conexão na fonte de dados do Analysis Services deve especificar o ouvinte de grupo de disponibilidade. As instruções são fornecidas neste tópico.  
   
-##  <a name="bkmk_UseSecondary"></a> Lista de verificação: use uma réplica secundária para operações somente leitura  
+##  <a name="bkmk_UseSecondary"></a> Lista de verificação: Use uma réplica secundária para operações somente leitura  
  A menos que a solução Analysis Services inclua writeback, você pode configurar uma conexão da fonte de dados para usar uma réplica secundária legível. Se você tiver uma conexão de rede rápida, a réplica secundária terá latência de dados muito baixa, fornecendo dados quase idênticos aos da réplica primária. Usando a réplica secundária em operações do Analysis Services, você pode reduzir a contenção de leitura/gravação na réplica primária e obter uma melhor utilização de réplicas secundárias em seu grupo de disponibilidade.  
   
  Por padrão, tanto o acesso de leitura-gravação quanto o acesso de intenção de leitura são permitidos para a réplica primária e nenhuma conexão é permitida para as réplicas secundárias. Uma configuração adicional é exigida para definir uma conexão de cliente somente leitura com uma réplica secundária. A configuração requer a definição de propriedades na réplica secundária e a execução de um script T-SQL que define uma lista de roteamento somente leitura. Use os procedimentos a seguir para garantir que você executou ambas as etapas.  
@@ -38,7 +38,7 @@ ms.locfileid: "48207550"
 > [!NOTE]  
 >  As etapas a seguir pressupõem a existência de um grupo de disponibilidade AlwaysOn e de bancos de dados. Se você estiver configurando um novo grupo, use o Assistente Novo Grupo de Disponibilidade para criar o grupo e unir os bancos de dados. O assistente verifica pré-requisitos, fornece orientação para cada etapa e executa a sincronização inicial. Para obter mais informações, consulte [Usar a caixa de diálogo Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>Etapa 1: configurar o acesso em uma réplica de disponibilidade  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Etapa 1: Configurar o acesso em uma réplica de disponibilidade  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48207550"
   
          Esta propriedade também é um requisito para failover planejado. Se você desejar executar um failover manual planejado para fins de testes, defina **Modo de disponibilidade** como **Confirmação síncrona** para as réplicas primária e secundária.  
   
-#### <a name="step-2-configure-read-only-routing"></a>Etapa 2: configurar o roteamento somente leitura  
+#### <a name="step-2-configure-read-only-routing"></a>Etapa 2: Configurar roteamento somente leitura  
   
 1.  Conecte-se à réplica primária.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "48207550"
   
 3.  Modifique o script, substituindo espaços reservados por valores que são válidos para sua implantação:  
   
-    -   Substitua ‘Computer01’ pelo nome da instância do servidor que hospeda a réplica primária.  
+    -   Substitua 'Computer01' pelo nome da instância do servidor que hospeda a réplica primária.  
   
-    -   Substitua ‘Computer02’ pelo nome da instância do servidor que hospeda a réplica secundária.  
+    -   Substitua 'Computer02' pelo nome da instância do servidor que hospeda a réplica secundária.  
   
-    -   Substitua 'contoso.com' pelo nome de seu domínio, ou omita-o do script se todos os computadores estiverem no mesmo domínio. Mantenha o número da porta se o ouvinte estiver usando a porta padrão. A porta que é usada de fato pelo ouvinte é listada na página de propriedades no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Substitua 'contoso.com' pelo nome de seu domínio ou omita-o do script se todos os computadores estiverem no mesmo domínio. Mantenha o número da porta se o ouvinte estiver usando a porta padrão. A porta que é usada de fato pelo ouvinte é listada na página de propriedades no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Execute o script.  
   
@@ -151,11 +151,11 @@ ms.locfileid: "48207550"
 ##  <a name="bkmk_test"></a> Testar a configuração  
  Depois que você configurar a réplica secundária e criar uma conexão da fonte de dados no Analysis Services, poderá confirmar esse processamento e comandos de consulta serão redirecionados para a réplica secundária. Você também pode executar um failover manual planejado para verificar seu plano de recuperação para este cenário.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: confirmar que a conexão da fonte de dados é redirecionada para a réplica secundária  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: Confirme se que a conexão de fonte de dados é redirecionada para a réplica secundária  
   
 1.  Inicie o SQL Server Profiler e conecte à instância do SQL Server que hospeda a réplica secundária.  
   
-     Quando o rastreamento for executado, o `SQL:BatchStarting` e `SQL:BatchCompleting` eventos mostrarão as consultas emitidas do Analysis Services que estão em execução na instância do mecanismo de banco de dados. Estes eventos são selecionados por padrão; portanto, você só precisa iniciar o rastreamento.  
+     Quando o rastreamento for executado, os eventos `SQL:BatchStarting` e `SQL:BatchCompleting` mostrarão as consultas emitidas do Analysis Services que são executadas na instância do mecanismo de banco de dados. Estes eventos são selecionados por padrão; portanto, você só precisa iniciar o rastreamento.  
   
 2.  No [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], abra o projeto ou a solução do Analysis Services que contém uma conexão da fonte de dados a ser testada. Verifique se a fonte de dados especificou o ouvinte de grupo de disponibilidade e não uma instância no grupo.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "48207550"
   
 4.  Implante a solução e quando concluir, pare o rastreamento.  
   
-     Na janela de rastreamento, você deve consultar eventos do aplicativo **Microsoft SQL Server Analysis Services**. Você deve ver `SELECT` instruções que recuperam dados de um banco de dados na instância do servidor que hospeda a réplica secundária, provando que a conexão foi feita através do ouvinte para a réplica secundária.  
+     Na janela de rastreamento, você deve consultar eventos do aplicativo **Microsoft SQL Server Analysis Services**. Você deve consultar instruções `SELECT` que recuperam dados de um banco de dados na instância do servidor que hospeda a réplica secundária, provando que a conexão foi feita através do ouvinte para a réplica secundária.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Etapa 2: executar um failover planejado para testar a configuração  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Etapa 2: Executar um failover planejado para testar a configuração  
   
 1.  No [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , verifique as réplicas primária e secundária para garantir que ambas estão configuradas para o modo de confirmação síncrona e estão sincronizadas no momento.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "48207550"
 ##  <a name="bkmk_whathappens"></a> O que acontece depois que um failover ocorre  
  Durante um failover, uma réplica secundária faz a transição para a função primária e a réplica primária antiga faz a transição para a réplica secundária. Todas as conexões de cliente são finalizadas, a propriedade do ouvinte de grupo de disponibilidade é movida com a função de réplica primária para uma nova instância do SQL Server e o ponto de extremidade do ouvinte é associado aos endereços IP virtuais da nova instância e a portas TCP. Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Se o failover ocorrer durante o processamento, o seguinte erro ocorrerá no Analysis Services no arquivo de log ou na janela de saída: erro de OLE DB ou de ODBC: falha de link de comunicação; 08S01; Provedor de TPC: uma conexão existente foi fechada forçosamente pelo host remoto. ; 08S01."  
+ Se ocorrer um failover durante o processamento, o seguinte erro ocorrerá no Analysis Services na janela de saída ou de arquivo de log: "Erro de OLE DB: Erro de OLE DB ou ODBC: Falha de link de comunicação; 08S01; Provedor TPC: Uma conexão existente foi fechada forçadamente pelo host remoto. ; 08S01."  
   
  Este erro deverá ser resolvido se você aguardar um minuto e tentar novamente. Se o grupo de disponibilidade for configurado corretamente para a réplica secundária legível, o processando será retomado na nova réplica secundária quando você tentar novamente processar.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48207550"
 ##  <a name="bkmk_writeback"></a> Write-back ao usar um banco de dados de disponibilidade do AlwaysOn  
  Writeback é um recurso do Analysis Services que oferece suporte à análise E-Se no Excel. Ele também costuma ser usado para orçar e prever tarefas em aplicativos personalizados.  
   
- O suporte ao writeback exige uma conexão de cliente READWRITE. No Excel, se você tentar fazer o write-back em uma conexão somente leitura, o seguinte erro ocorrerá: "Não foi possível recuperar dados da fonte de dados externa." "Não foi possível recuperar dados da fonte de dados externa."  
+ O suporte ao writeback exige uma conexão de cliente READWRITE. No Excel, se você tentar fazer write-back em uma conexão somente leitura, o seguinte erro ocorrerá: "Não foi possível recuperar dados da fonte de dados externa." "Não foi possível recuperar dados da fonte de dados externa."  
   
  Se você configurou uma conexão para sempre acessar uma réplica secundária legível, configure uma nova conexão que usa uma conexão READWRITE para a réplica primária.  
   

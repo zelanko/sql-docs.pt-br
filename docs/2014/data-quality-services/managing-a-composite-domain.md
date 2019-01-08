@@ -10,19 +10,19 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: beb1b18d03b557aad4709ee024be888c712c2c12
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f40a2df471dc1e0593d25f96c1b04837822725d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544530"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
   Este tópico descreve o uso dos domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Às vezes, um domínio único não representa os dados de um campo satisfatoriamente, e você pode representar os dados apenas agrupando domínios únicos. Para fazer isso, crie um domínio composto. Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados que não são analisados, mas são incluídos em um valor composto único. Cada termo no valor será representado por um único domínio diferente. Quando você incluir domínios únicos em domínios compostos e mapear o domínio composto para o campo de dados, poderá compilar o conhecimento sobre os dados nesse campo da base de dados de conhecimento, compilando o conhecimento nos domínios únicos. Um domínio composto, assim como um domínio único, é uma representação semântica dos dados em um único campo de dados.  
   
  Os domínios únicos em um domínio composto devem ter uma área comum de conhecimento. Um exemplo é o campo de endereço que tem rua, cidade, estado, país e dados de código postal. Os termos diferentes neste campo podem ter tipos de dados diferentes. Para lidar com isso, você mapeia esses termos para domínios únicos diferentes. Outro exemplo é um campo de nome completo que tem nome, segundo nome e sobrenome. Para usar um domínio composto, você precisa analisar os dados no campo em domínios únicos diferentes, criando um domínio composto para o campo e um domínio único para parte do campo.  
   
- Os domínios compostos têm recursos diferentes dos recursos dos domínios únicos. Você não pode alterar os valores no domínio composto; você deve fazer isso em um domínio único. Com os domínios compostos, você pode usar regras de domínio cruzado para testar os valores nos domínios únicos do domínio composto. Você também pode exibir as combinações de valor encontradas nos domínios compostos.  
+ Os domínios compostos têm recursos diferentes dos recursos dos domínios únicos. Você não pode alterar os valores no domínio composto, você deve fazer isso em um domínio único. Com os domínios compostos, você pode usar regras de domínio cruzado para testar os valores nos domínios únicos do domínio composto. Você também pode exibir as combinações de valor encontradas nos domínios compostos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Com um domínio composto, você pode fazer o seguinte:  

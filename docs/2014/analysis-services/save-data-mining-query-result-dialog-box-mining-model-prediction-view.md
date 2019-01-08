@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511211"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Caixa de diálogo Salvar Resultado da Consulta de Mineração de Dados (Exibição de Previsão do Modelo de Mineração)
   Use a caixa de diálogo **Salvar Resultado da Consulta da Mineração de Dados** para salvar os resultados de uma consulta de mineração de dados em uma nova tabela.  
@@ -53,10 +53,10 @@ ms.locfileid: "48090267"
  **Adicione à DSV**  
  (Opcional) Selecione uma exibição de fonte de dados contida no projeto se quiser adicionar a tabela a uma fonte de dados existente.  
   
- Esta opção será útil se você quiser manter todas as tabelas relacionadas para um modelo, por exemplo, dados de treinamento, dados de origem de previsão e resultados de consulta, na mesma fonte de dados.  
+ Essa opção é útil se você quiser manter todas as tabelas relacionadas para um modelo, como dados de treinamento, dados de origem de previsão e consulta os resultados-na mesma fonte de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)   
+ [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770708"
 ---
 # <a name="dta-utility"></a>utilitário dta
   O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -41,7 +40,7 @@ ms.locfileid: "48091727"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091727"
  Especifica o nome de cada banco de dados que será ajustado. O primeiro banco de dados é o banco de dados padrão. É possível especificar bancos de dados múltiplos separando os nomes do banco de dados com vírgulas, por exemplo:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- Como alternativa, você pode especificar bancos de dados múltiplos usando o argumento **–D** para cada nome de banco de dados, por exemplo:  
+ Como alternativa, é possível especificar bancos de dados múltiplos usando o argumento **-D** para cada nome de banco de dados, por exemplo:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  O argumento **-D** é obrigatório. Se o argumento **-d** não foi especificado, **dta** se conectará inicialmente ao banco de dados que é especificado com a primeira cláusula `USE database_name` na carga de trabalho. Se não houver a cláusula explícita `USE database_name` na carga de trabalho, será necessário usar o argumento **-d** .  
@@ -135,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  Se forem especificados vários nomes de banco de dados, **dta** retornará um erro. O argumento **-d** é opcional.  
   
- Se você estiver usando um arquivo de entrada XML, você pode especificar o primeiro banco de dados ao qual **dta** conecta-se usando o `DatabaseToConnect` elemento que está localizado sob o `TuningOptions` elemento. Para saber mais, confira [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Se você estiver usando um arquivo de entrada XML, você pode especificar o primeiro banco de dados ao qual **dta** conecta-se usando o `DatabaseToConnect` elemento que está localizado sob o `TuningOptions` elemento. Para obter mais informações, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Se você estiver ajustando apenas um banco de dados, o argumento **-d** fornecerá uma funcionalidade que é semelhante ao argumento **-d** no utilitário **sqlcmd** , mas não executará a instrução USE *database_name* . Para saber mais, confira [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado com a opção **–D**|  
+|*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**|  
 |*owner_name*|**dbo**<br /><br /> Observação: *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
 |*table_name*|None|  
   
@@ -164,7 +163,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor for especificado, **dta** usa o padrão **-fa**`IDX`.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
@@ -177,7 +176,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -188,7 +187,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  Especifica um identificador numérico para a sessão de ajuste. Se não estiver especificado, **dta** gerará um número de identificação. Você pode usar esse identificador para exibir informações para sessões de ajuste existentes. Se você não especificar um valor para **-ID**, um nome de sessão deverá ser especificado com **-s**.  
   
  **-ip**  
- Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  
+ Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n**.  
   
  **-ipf**  
- Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **–n** .  
+ Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **-n**.  
   
  **-if** *workload_file*  
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo de SQL) ou .log (arquivo de rastreamento do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado com a opção **–D** .|  
+|*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**.|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Nenhum.|  
   
@@ -234,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
 |ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  Esse exemplo usa uma conexão segura (`-E`) para se conectar ao banco de dados **tpcd1G** no MyServer para analisar uma carga de trabalho e criar recomendações. Grava a saída em um arquivo de script nomeado script.sql. Se o script.sql já existir, **dta** substituirá o arquivo porque o argumento `-F` foi especificado. A sessão de ajuste é executada por um tempo ilimitado para garantir uma análise completa da carga de trabalho (`-A 0`). A recomendação deve fornecer uma melhoria mínima de 5% (`-m 5`). **dta** deve incluir índices e exibições indexadas em sua recomendação final (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limitar o uso do disco**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Esse exemplo limita o tamanho de banco de dados total, que inclui os dados brutos e os índices adicionais, a 3 gigabytes (GB) (`-B 3000`) e direciona a saída para d:\result_dir\script1.sql. Ele é executado por no máximo 1 hora (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limitar o número de consultas ajustadas**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Esse exemplo limita o número de consultas lidas do arquivo orders_wkld.sql a um máximo de 10 (`-n 10`) e é executado por 15 minutos (`-A 15`), o que ocorrer primeiro. Para garantir que todas as 10 consultas sejam ajustadas, especifique um tempo de ajuste ilimitado com `-A 0`. Se o tempo for importante, determine um prazo apropriado, especificando o número de minutos que estão disponíveis para ajuste com o argumento `-A` , como mostrado neste exemplo.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Ajustar tabelas específicas listadas em um arquivo**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  O tempo de ajuste é de 2 horas (`-A 120`) e a saída é gravada em um arquivo XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de utilitários de Prompt de comando &#40;mecanismo de banco de dados&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147396"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749868"
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
@@ -63,7 +62,7 @@ ms.locfileid: "48147396"
 |Termos de referência|Windows, Windows 7 Professional|  
 |Saída|Windows|  
   
- A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+ A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
 ## <a name="data-types"></a>Tipos de dados  
  A transformação pesquisa de termos só pode usar uma coluna que tenha tipo de dados DT_WSTR ou DT_NTEXT. Se uma coluna contiver texto, mas não tiver um desses tipos de dados, a transformação Conversão de Dados poderá adicionar uma coluna com tipo de dados DT_WSTR ou DT_NTEXT para o fluxo de dados e copiar os valores da coluna para a coluna nova. A saída da transformação Conversão de Dados pode ser usada, então, como entrada para a transformação pesquisa de termos. Para obter mais informações, consulte [Data Conversion Transformation](data-conversion-transformation.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "48147396"
   
  As colunas de saída da transformação cuja propriedade InputColumnType é definida como 0 ou 2 incluem a propriedade CustomLineageID para uma coluna, que contém o identificador de linhagem atribuído à coluna por um componente de fluxo de dados upstream.  
   
- A transformação pesquisa de termos adiciona duas colunas à saída da transformação, chamada por padrão `Term` e `Frequency`. A coluna `Term` contém um termo da tabela de pesquisa e a `Frequency` contém o número de vezes que o termo na tabela de referência ocorre no conjunto de dados de entrada. Essas colunas não incluem a propriedade CustomLineageID.  
+ A transformação Pesquisa de Termos adiciona duas colunas à saída da transformação; por padrão elas são nomeadas como `Term` e `Frequency`. A coluna `Term` contém um termo da tabela de pesquisa e a `Frequency` contém o número de vezes que o termo na tabela de referência ocorre no conjunto de dados de entrada. Essas colunas não incluem a propriedade CustomLineageID.  
   
  A tabela de pesquisa deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do Access. Se a saída da transformação extração de termos for salva em uma tabela, esta tabela poderá ser usada como tabela de referência, mas outras tabelas também poderão ser usadas. Texto em arquivos simples, pastas de trabalho do Excel ou outras fontes precisam ser importadas em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou em um banco de dados do Access antes de você poder usar a transformação pesquisa de termos.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "48147396"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação de pesquisa de termo &#40;guia da tabela de referência&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de Transformação Pesquisa de Termos &#40;Guia Tabela de Referência&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor de transformação de pesquisa de termo &#40;guia de pesquisa de termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Editor de transformação de pesquisa de termo &#40;guia Avançado&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Pesquisa de Termos &#40;Guia Avançado&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

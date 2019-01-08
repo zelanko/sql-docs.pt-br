@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662972"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503942"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC (Open Database Connectivity)
 A interface do Microsoft ODBC Open Database Connectivity () é uma C language interface de programação que permite que aplicativos acessem dados de uma variedade de sistemas de gerenciamento de banco de dados (DBMSs). O ODBC é uma interface de nível baixo, alto desempenho que é projetada especificamente para armazenamentos de dados relacionais.  
   
- A interface ODBC permite a interoperabilidade máxima, um aplicativo pode acessar dados em diversos DBMSs por meio de uma única interface. Além disso, esse aplicativo poderá ser independente de qualquer DBMS do qual ela acessa dados. Os usuários do aplicativo podem adicionar componentes de software chamados drivers, que fazem interface entre um aplicativo e um DBMS específico.  
+ A interface ODBC permite a máximo interoperabilidade um aplicativo pode acessar dados em DBMSs diversificados por meio de uma única interface. Além disso, esse aplicativo poderá ser independente de qualquer DBMS do qual ela acessa dados. Os usuários do aplicativo podem adicionar componentes de software chamados drivers, que fazem interface entre um aplicativo e um DBMS específico.  
   
 ## <a name="documentation"></a>Documentação  
  [Referência do programador ODBC](../odbc/reference/odbc-programmer-s-reference.md)  

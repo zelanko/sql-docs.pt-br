@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766608"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
@@ -82,9 +81,9 @@ ms.locfileid: "49120203"
     > [!NOTE]  
     >  Se a instância do **SQL Server** for a instância padrão, digite o nome do computador que hospeda a instância do **SQL Server**. Se o **SQL Server** for uma instância nomeada, digite o nome do computador e o nome da instância, como **Accounting\SQLExpress**.  
   
-3.  No **tipo de servidor** área, selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
+3.  Na área **Tipo de servidor**, selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
   
-4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio onde os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon** . Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
+4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio em que os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon**. Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
   
      **Logon local**  
      Especifique o logon local que pode se conectar ao servidor vinculado. O logon local pode ser um logon que usa a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon de Autenticação do Windows. Use essa lista para restringir a conexão a logons específicos ou permitir alguns logons para serem conectados como um logon diferente.  
@@ -120,8 +119,8 @@ ms.locfileid: "49120203"
   
 5.  Opcionalmente, para exibir ou especificar opções de servidor, clique na página **Opções de Servidor**  .  
   
-     **Compatível com Agrupamento**  
-     Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção estiver definida como true, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, no que diz respeito ao conjunto de caracteres e à sequência do agrupamento (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.  
+     **Compatível com Ordenação**  
+     Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção estiver definida como true, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, no que diz respeito ao conjunto de caracteres e à sequência da ordenação (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.  
   
      Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.  
   
@@ -134,19 +133,19 @@ ms.locfileid: "49120203"
      **RPC Out**  
      Habilita o RPC para o servidor especificado.  
   
-     **Usar Agrupamento Remoto**  
-     Determina se o agrupamento de uma coluna remota ou de um servidor local será usado.  
+     **Usar Ordenação Remota**  
+     Determina se a ordenação de uma coluna remota ou de um servidor local será usada.  
   
-     Se verdadeiro, o agrupamento de colunas remotas será usado para as fontes dos dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o agrupamento especificado no nome será usado para fontes de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Se true, a ordenação de colunas remotas será usada para as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a ordenação especificada no nome da ordenação será usada para fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Se falso, as consultas distribuídas usarão sempre o agrupamento padrão do servidor local, enquanto que o nome do agrupamento e o agrupamento de colunas remotas serão ignorados. O padrão é falso.  
+     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é falso.  
   
-     **Nome do Agrupamento**  
-     Especifica o nome do agrupamento usado pela fonte de dados remotos se o uso do agrupamento remoto for verdadeiro e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O nome deve ser um dos agrupamentos que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     **Nome da Ordenação**  
+     Especifica o nome da ordenação usado pela fonte de dados remota se o uso da ordenação remota for true e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome deve ser uma das ordenações que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cujo agrupamento coincide com um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cuja ordenação coincide com uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     O servidor vinculado deve fornecer suporte a um único agrupamento a ser usado para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a vários agrupamentos dentro de uma única fonte de dados ou se o agrupamento do servidor vinculado não puder ser determinado para corresponder a um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     O servidor vinculado deve fornecer suporte a uma única ordenação a ser usada para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a várias ordenações dentro de uma única fonte de dados ou se a ordenação do servidor vinculado não puder ser determinada para corresponder a uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      **Tempo-limite da conexão**  
      O valor do tempo limite em segundos para conexão a um servidor vinculado.  
@@ -193,7 +192,7 @@ ms.locfileid: "49120203"
      **Oferece suporte ao operador 'Like'**  
      Indica que o provedor oferece suporte a consultas que usam a palavra-chave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Para criar um servidor vinculado usando [!INCLUDE[tsql](../../includes/tsql-md.md)], use as instruções [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
@@ -221,7 +220,7 @@ ms.locfileid: "49120203"
   
     ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: tarefas a serem executadas após a criação de um servidor vinculado  
+##  <a name="FollowUp"></a> Acompanhar: tarefas a serem executadas após a criação de um servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para testar o servidor vinculado  
   

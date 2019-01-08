@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distpubproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0b1cddd1c5849f43aac7f41a2f4b679af21760b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6425c4e0dc5175fd9404c1654168e6d79c7b7b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057952"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764858"
 ---
 # <a name="publisher-properties---distributor"></a>Propriedades do Publicador - Distribuidor
   A caixa de diálogo **Propriedades do Publicador** permite exibir e modificar propriedades associadas com a relação entre o Publicador e seu Distribuidor.  

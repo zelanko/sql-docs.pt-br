@@ -4,32 +4,31 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 163cdbfdf8a2813530dfbde7ad651a19da486bb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03ccf5f5bae37238e59a0e96b4d53314b0e4906f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154227"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769088"
 ---
 # <a name="the-oracle-cdc-instance"></a>A instância Oracle CDC
   A Instância Oracle CDC é um processo criado pelo Serviço Oracle CDC para processar alterações capturadas de um único banco de dados de origem Oracle. A Instância Oracle CDC recupera sua configuração da tabela **cdc.xdbcdc_config** e mantém seu estado na tabela **cdc.xdbcdc_state** . Estas tabelas fazem parte do banco de dados CDC, que define a Instância Oracle CDC. Para obter mais informações sobre o banco de dados e as tabelas xdbcdc, consulte [The CDC Databases](the-oracle-cdc-service.md).  
   
  Veja a seguir a descrição das tarefas realizadas pela instância Oracle CDC:  
   
--   **Tratando verificação de inicialização de serviço**: quando iniciado, a instância CDC carrega sua configuração da tabela **xdbcdc_config** e executa uma série de verificações de status que garantem que o estado persistido da instância CDC seja consistente e que possa iniciar alterações de processamento.  
+-   **Tratando verificação de inicialização do serviço**: Quando iniciado, a instância CDC carrega sua configuração a partir de **xdbcdc_config** de tabela e executa uma série de verificações de status que garantem que a instância CDC estado persistente é consistente e que ele pode iniciar o processamento alterações.  
   
--   **Preparando para captura de alterações**: quando a verificação for passada com êxito, a Instância Oracle CDC examinará todas as instâncias de captura definidas no momento e preparará as consultas do Oracle LogMiner e outras estruturas de suporte necessárias para a captura de alterações. Além disso, a instância Oracle recarrega o estado de captura interno que foi salvo da última vez que a Instância Oracle CDC foi executada.  
+-   **Preparando para captura de alteração**: Quando a verificação passada com êxito, a instância Oracle CDC examinará todas as instâncias de captura definidas no momento e preparará as consultas do Oracle LogMiner e outras estruturas de suporte necessárias para a captura de alteração. Além disso, a instância Oracle recarrega o estado de captura interno que foi salvo da última vez que a Instância Oracle CDC foi executada.  
   
--   **Capturando alterações do Oracle**: a Instância Oracle CDC agrupa as alterações do Oracle por meio da facilidade Oracle LogMiner, ordena-as de acordo com a confirmação de transação e, em seguida, altera a hora em uma transação e grava-as nas tabelas de alteração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados CDC.  
+-   **Capturando alterações do Oracle**: A instância Oracle CDC agrupa as alterações do Oracle por meio da Oracle logminer, ordena-as de acordo com a confirmação de transação e, em seguida, altera a hora em uma transação e grava-o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alterar tabelas no banco de dados CDC.  
   
--   **Tratando o desligamento de serviço**: o ciclo de vida da Instância Oracle CDC é gerenciado pelo Serviço Oracle CDC. Quando a Instância Oracle CDC é solicitada para desligar, ela executa as tarefas a seguir:  
+-   **Tratando o desligamento de serviço**: O ciclo de vida da instância Oracle CDC é gerenciado pelo serviço Oracle CDC. Quando a Instância Oracle CDC é solicitada para desligar, ela executa as tarefas a seguir:  
   
     -   Para de ler do log de transação do Oracle.  
   
@@ -39,11 +38,11 @@ ms.locfileid: "48154227"
   
     -   Em um thread separado, grava o maior número de registros armazenados em cache de memória possível na tabela de transações preparadas por até 30 segundos (da transação mais antiga para a mais nova) e, em seguida, atualiza a tabela **xdbcdc_state** e confirma todas as alterações.  
   
--   **Tratando alterações de configuração**: a Instância Oracle CDC é notificada sobre as alterações de configuração pelo Serviço CDC ou detectando uma nova versão na tabela **cdc.xdbcdc_config** . A maioria das alterações não exige a reinicialização da Instância Oracle CDC (por exemplo, adicionar ou remover instâncias de captura). Porém, algumas alterações, como alterar a cadeia de conexão do Oracle ou credenciais de acesso, exigem a reinicialização da Instância CDC.  
+-   **Tratando alterações de configuração**: A instância Oracle CDC é notificada sobre as alterações de configuração do serviço CDC ou Detectando uma nova versão na **xdbcdc_config** tabela. A maioria das alterações não exige a reinicialização da Instância Oracle CDC (por exemplo, adicionar ou remover instâncias de captura). Porém, algumas alterações, como alterar a cadeia de conexão do Oracle ou credenciais de acesso, exigem a reinicialização da Instância CDC.  
   
--   **Tratando recuperação**: quando uma Instância Oracle CDC inicia, seu estado interno é restaurado das tabelas **xdbcdc_state** e **xdbcdc_staged_transactions** . Quando o estado é restaurado, a instância CDC continua como sempre.  
+-   **Tratando recuperação**: Quando uma instância Oracle CDC inicia seu estado interno é restaurado a partir de **xdbcdc_state** e o **xdbcdc_staged_transactions** tabelas. Quando o estado é restaurado, a instância CDC continua como sempre.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tratamento de erro](error-handling.md)  
+ [Tratamento de erros](error-handling.md)  
   
   

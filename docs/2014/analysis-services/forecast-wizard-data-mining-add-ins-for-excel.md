@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543698"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistente de Previsão (Suplementos de Mineração de Dados para Excel)
   ![Assistente para associação na faixa de opções mineração de dados](media/dmc-forecast.gif "Assistente para associação na faixa de opções mineração de dados")  

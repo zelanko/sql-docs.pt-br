@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
@@ -14,12 +13,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760588"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  
@@ -94,7 +93,7 @@ ms.locfileid: "48180656"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserindo ou modificando dados em um conjunto de colunas  
  A manipulação de dados de uma coluna esparsa pode ser executada usando o nome de colunas individuais ou referenciando o nome do conjunto de colunas e especificando seus valores usando o formato XML do conjunto de colunas. As colunas esparsas podem ser exibidas em qualquer ordem na coluna XML.  
   
- Quando valores de colunas esparsas são inseridas ou atualizadas usando o conjunto de colunas XML, os valores que são inseridos em colunas esparsas subjacentes são implicitamente convertidos do `xml` tipo de dados. No caso de colunas numéricas, um valor em branco no XML para a coluna numérica é convertido em uma cadeia de caracteres vazia. Isso faz com que um zero seja inserido na coluna numérica, como mostrado no exemplo a seguir.  
+ Quando os valores de colunas esparsas são inseridos ou atualizados usando o conjunto de colunas XML, os valores inseridos nas colunas esparsas subjacentes são implicitamente convertidos do tipo de dados `xml`. No caso de colunas numéricas, um valor em branco no XML para a coluna numérica é convertido em uma cadeia de caracteres vazia. Isso faz com que um zero seja inserido na coluna numérica, como mostrado no exemplo a seguir.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -108,7 +107,7 @@ GO
  Nesse exemplo, nenhum valor foi especificado para a coluna `i`, mas o valor `0` foi inserido.  
   
 ## <a name="using-the-sqlvariant-data-type"></a>Usando o tipo de dados sql_variant  
- O `sql_variant` tipo de data pode armazenar vários tipos de dados diferentes, como `int`, `char`, e `date`. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor `sql_variant` como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
+ O tipo de dados `sql_variant` pode armazenar vários tipos de dados diferentes, como `int`, `char` e `date`. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor `sql_variant` como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
 |Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Comprimento máximo|Precisão|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -161,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
  Os exemplos a seguir inserem duas linhas na tabela criada no exemplo A. Os exemplos usam os nomes das colunas esparsas e não referenciam o conjunto de colunas.  
   
 ```  

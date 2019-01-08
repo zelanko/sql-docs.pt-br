@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e05d6734333e6863d2f487cf77943763fdd8229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521369"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  As alterações feitas por instruções e blocos atômicos são intercalados são isoladas uns dos outros. Por exemplo, se uma instrução ou bloco atômico faz algumas alterações e, em seguida, gera a execução para outra instrução, a nova instrução não verão as alterações feitas pela primeira instrução. Além disso, quando a primeira instrução retoma a execução, ele não verá as alterações feitas por quaisquer outras instruções. Instruções só verá as alterações que são terminadas e confirmadas antes que a instrução se inicia.  
   
- Uma nova transação de usuário pode ser iniciada dentro da transação do usuário atual usando a instrução BEGIN TRANSACTION – isso é suportado apenas no modo de interoperabilidade para que BEGIN TRANSACTION só pode ser chamado em uma instrução T-SQL e não de dentro de um nativamente armazenado procedimento. Você pode criar uma consulta salva em uma transação usando SAVE TRANSACTION ou uma chamada à API a transação do ponto. Save(save_point_name) para reverter ao ponto de salvamento. Esse recurso também é habilitado somente de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
+ Uma nova transação de usuário pode ser iniciada dentro da transação do usuário atual usando a instrução BEGIN TRANSACTION - isso é suportado apenas no modo de interoperabilidade para que BEGIN TRANSACTION só pode ser chamado em uma instrução T-SQL e não de dentro de um nativamente armazenado procedimento. Você pode criar uma consulta salva em uma transação usando SAVE TRANSACTION ou uma chamada à API a transação do ponto. Save(save_point_name) para reverter ao ponto de salvamento. Esse recurso também é habilitado somente de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
   
  **Índices columnstore e MARS**  
   
@@ -226,8 +226,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

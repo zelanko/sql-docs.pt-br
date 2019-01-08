@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b3d257560caebf2d52ee3cb01875302584f598b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502049"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
   Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
@@ -31,14 +31,14 @@ ms.locfileid: "50145041"
   
  [Objetos de cubo &#40;Analysis Services - dados multidimensionais&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [Mais…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Mais...](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **arquitetura física**  
  [Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)  
   
  [Cubos locais &#40;Analysis Services - dados multidimensionais&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
- [Mais…](understanding-microsoft-olap-physical-architecture.md)  
+ [Mais...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **arquitetura de programação**  
  [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  

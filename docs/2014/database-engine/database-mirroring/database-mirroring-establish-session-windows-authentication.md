@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5b14f73b3691bb194a0cc5b77401cb7a3fdde70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508415"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows (Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "48072976"
      Cada instância do servidor em uma sessão de espelhamento de banco de dados exige um ponto de extremidade de espelhamento de banco de dados. Se o ponto de extremidade não existir, você deve criá-lo.  
   
     > [!NOTE]  
-    >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: A autenticação do Windows ou autenticação baseada em certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância do servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você poderá atribuir a função de parceiro ao ponto de extremidade (ROLE**=** PARTNER). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48072976"
     ```  
   
     > [!IMPORTANT]  
-    >  Não reconfigure um ponto de extremidade de espelhamento de banco de dados em uso. Se um ponto de extremidade do espelhamento de banco de dados já existir e estiver em uso, recomendamos que você use esse ponto de extremidade para cada sessão na instância do servidor. Cancelando um ponto de extremidade em uso pode fazer o ponto de extremidade reinicializar, interrompendo as conexões das sessões existentes, que podem aparecer como um erro às outras instâncias do servidor. Isso é particularmente importante em modo de alta segurança com failover automático no qual a reconfiguração de um ponto de extremidade em um parceiro poderia provocar um failover. Além disso, se uma testemunha foi definida para uma sessão, cancelar o ponto de extremidade de espelhamento de banco de dados poderá fazer com que o servidor principal daquela sessão perca quorum; se isso acontecer, o banco de dados será colocado offline e seus usuários serão desconectados. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Não reconfigure um ponto de extremidade de espelhamento de banco de dados em uso. Se um ponto de extremidade do espelhamento de banco de dados já existir e estiver em uso, recomendamos que você use esse ponto de extremidade para cada sessão na instância do servidor. Cancelando um ponto de extremidade em uso pode fazer o ponto de extremidade reinicializar, interrompendo as conexões das sessões existentes, que podem aparecer como um erro às outras instâncias do servidor. Isso é particularmente importante em modo de alta segurança com failover automático no qual a reconfiguração de um ponto de extremidade em um parceiro poderia provocar um failover. Além disso, se uma testemunha foi definida para uma sessão, cancelar o ponto de extremidade de espelhamento de banco de dados poderá fazer com que o servidor principal daquela sessão perca quorum; se isso acontecer, o banco de dados será colocado offline e seus usuários serão desconectados. Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Se o parceiro não tiver um ponto de extremidade, consulte [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48072976"
   
      em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome de banco de dados é **AdventureWorks**, o endereço de sistema é DBSERVER1 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
+     Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER1 – o nome de sistema do parceiro – e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -88,7 +88,7 @@ ms.locfileid: "48072976"
   
      Para obter mais informações, consulte a etapa 4.  
   
-     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor espelho original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER2 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7025:  
+     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor espelho original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER2 – o nome de sistema do parceiro – e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -107,7 +107,7 @@ ms.locfileid: "48072976"
          Alternativamente, se você não quiser failover automático e preferir enfatizar o desempenho em vez da disponibilidade, desative a segurança de transação. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  Em modo de alto desempenho, WITNESS deverá ser definido como OFF. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  Em modo de alto desempenho, WITNESS deverá ser definido como OFF. Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -220,6 +220,6 @@ ms.locfileid: "48072976"
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Modos de operação de espelhamento de banco de dados](database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

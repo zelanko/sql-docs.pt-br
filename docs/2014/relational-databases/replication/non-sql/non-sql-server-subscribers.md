@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -21,12 +20,12 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071056"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763218"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Os seguintes Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem assinar as publicações de instantâneo e transacionais usando assinaturas push. As assinaturas oferecem suporte para as duas versões mais recentes de cada banco de dados listadas usando a mais recente versão do provedor OLE DB listado.  
@@ -66,11 +65,11 @@ ms.locfileid: "48071056"
   
 -   Se o Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver executando em uma plataforma de 64-bit, você deve usar a versão de 64-bit do provedor OLE DB do Oracle apropriado.  
   
--   A replicação move dados em formato Unicode independentemente do agrupamento e das páginas de código usadas no Publicador e no Assinante. É recomendado que você escolha um agrupamento/página de código compatível ao replicar entre Publicadores e Assinantes.  
+-   A replicação move dados em formato Unicode independentemente da ordenação e das páginas de código usadas no Publicador e no Assinante. É recomendado que você escolha uma ordenação/página de código compatível ao replicar entre Publicadores e Assinantes.  
   
 -   Se um artigo for adicionado ou excluído de uma publicação, assinaturas para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem ser reinicializadas.  
   
--   As únicas restrições que oferecem suporte para todos os Assinantes não -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
+-   As únicas restrições que tem suportadas para todos os não -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
   
 -   O valor NULL é tratado de forma diferente por bancos de dados diferentes, o que afeta como um valor em branco, uma cadeia de caracteres vazia e um NULL são representados. Isto, por sua vez, afeta o comportamento de valores inseridos em colunas com restrições exclusivas definidas. Por exemplo, o Oracle permite valores múltiplos de NULL em uma coluna que é considerada exclusiva, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite apenas um único valor NULL em uma coluna exclusiva.  
   

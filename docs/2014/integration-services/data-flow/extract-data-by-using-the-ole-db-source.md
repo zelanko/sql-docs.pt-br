@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e962d06aef1c4b5ba282ba285f7ef7a72a464a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693f2b9cdae948d42eaf795610254af3257f9a9d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749700"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrair dados por meio da origem OLE DB
   Para adicionar e configurar uma origem OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -66,7 +65,7 @@ ms.locfileid: "48172506"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Origem OLE DB](ole-db-source.md)   
+ [Origem de OLE DB](ole-db-source.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](../control-flow/data-flow-task.md)  

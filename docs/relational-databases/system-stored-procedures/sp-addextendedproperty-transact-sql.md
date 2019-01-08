@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321742"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,8 +72,7 @@ sp_addextendedproperty
  É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* está **sysname** com um padrão NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
-  
+ É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são AGREGADOS, padrão, função, LOGICAL FILE NAME, procedimento, fila, regra, SEQUÊNCIA, sinônimo, tabela, TABLE_TYPE, tipo, exibição, XML SCHEMA COLLECTION e NULL.    
  [ @level1name=] {'*level1_object_name*'}  
  É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* está **sysname**, com um padrão NULL.  
   
@@ -100,7 +99,7 @@ sp_addextendedproperty
 ## <a name="replicating-extended-properties"></a>Replicando propriedades estendidas  
  As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada. Para obter mais informações sobre como replicar objetos de banco de dados, consulte [publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-## <a name="schema-vs-user"></a>Esquema x  Usuário  
+## <a name="schema-vs-user"></a>Esquema x  User  
  Não recomendamos a especificação de USER como um tipo de nível 0 ao aplicar uma propriedade estendida a um objeto de banco de dados, pois poderá criar ambiguidade na resolução de nome. Por exemplo, suponha que o usuário Mary seja proprietário dois esquemas (Mary e MySchema) e esses esquemas contenham ambos uma tabela chamada MyTable. Se Mary adicionar uma propriedade estendida à tabela MyTable e especifica  **@level0type = n'User'**,  **@level0name = Mary**, não ficará claro à qual tabela a propriedade estendida é aplicada. Para manter compatibilidade com versões anteriores, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará a propriedade à tabela contida no esquema chamado Mary.  
   
 ## <a name="permissions"></a>Permissões  
@@ -122,7 +121,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. Adicionando uma propriedade estendida a uma coluna em uma tabela  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>b. Adicionando uma propriedade estendida a uma coluna em uma tabela  
  O exemplo a seguir adiciona uma propriedade de legenda à coluna `PostalCode` na tabela `Address`.  
   
 ```  

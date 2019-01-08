@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811628"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -27,7 +26,7 @@ ms.locfileid: "48072557"
   
  A tabela a seguir fornece uma descrição de alto nível dos componentes do valor da variável de estado CDC.  
   
-|Componente|Description|  
+|Componente|Descrição|  
 |---------------|-----------------|  
 |`<state-name>`|Este é o nome do estado CDC atual.|  
 |`CS`|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
@@ -46,14 +45,14 @@ ms.locfileid: "48072557"
   
  A tabela a seguir descreve os valores de estado CDC possíveis.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de `MarkInitialLoadStart` para a tarefa Controle CDC.|  
-|ILEND (Initial Load Ended)|Este é o estado quando o pacote da carga inicial termina com êxito, depois que o `MarkInitialLoadEnd` chamada de operação para a tarefa controle CDC.|  
-|ILUPDATE (Initial Load Update)|Este é o estado nas execuções do pacote de atualização trickle feed depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isso é após o `GetProcessingRange` chamada de operação para a tarefa controle CDC.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
+|ILEND (Initial Load Ended)|Esse é o estado do término bem-sucedido do pacote de carga inicial, depois da chamada da operação de `MarkInitialLoadEnd` para a tarefa Controle CDC.|  
+|ILUPDATE (Initial Load Update)|Este é o estado nas execuções do pacote de atualização trickle feed depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isto ocorre depois da chamada da operação `GetProcessingRange` para a tarefa Controle CDC.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
 |TFEND (Trickle-Feed Update Ended)|Este é o estado esperado para execuções regulares de CDC. Ele indica que a execução anterior foi concluída com êxito e que uma nova execução com um novo intervalo de processamento pode ser iniciada.|  
-|TFSTART|Este é o estado em uma execução não inicial do pacote trickle feed de atualização, após o `GetProcessingRange` chamada de operação para a tarefa controle CDC.<br /><br /> Isso indica que uma execução CDC regular é iniciada, mas não foi concluída ou ainda não foi concluída, corretamente (`MarkProcessedRange`).|  
+|TFSTART|Este é o estado em uma execução não inicial do pacote de atualização trickle feed depois que a operação `GetProcessingRange` chama a tarefa Controle CDC.<br /><br /> Isto indica que uma execução CDC regular foi iniciada, mas não foi concluída ou ainda não foi concluída completamente (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Este é o estado em um `GetProcessingRange` que ocorre depois de TFSTART. Isto indica que a execução anterior não foi concluída com êxito.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
 |ERROR|O grupo de CDC está em um estado de ERROR.|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072557"
  Se você não estiver usando a tarefa de Controle CDC com a Persistência de Estado Automática, deverá carregar o valor da variável a partir do repositório persistente em que seu valor foi salvo da última vez que o pacote foi executado e gravá-la no repositório persistente quando o processamento do intervalo atual for concluído.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefa controle CDC](../control-flow/cdc-control-task.md)   
+ [Tarefa Controle de CDC](../control-flow/cdc-control-task.md)   
  [Editor da Tarefa Controle de CDC](../cdc-control-task-editor.md)  
   
   

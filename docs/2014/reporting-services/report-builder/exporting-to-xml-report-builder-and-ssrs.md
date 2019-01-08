@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116389"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204745"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
@@ -35,7 +35,7 @@ ms.locfileid: "48116389"
 |Caixa de texto|Renderiza como um atributo ou elemento do respectivo contêiner.|  
 |Retângulo|Renderiza como um elemento dentro do respectivo contêiner.|  
 |Grupos de colunas de matriz|Renderiza como elementos dentro de grupos de linhas.|  
-|Mapeamento|Renderiza como um elemento dentro do elemento do respectivo contêiner. As camadas do mapa são elementos filho do mapa e cada uma delas contém elementos para seus membros de mapa e atributos de membros de mapa.|  
+|Mapa|Renderiza como um elemento dentro do elemento do respectivo contêiner. As camadas do mapa são elementos filho do mapa e cada uma delas contém elementos para seus membros de mapa e atributos de membros de mapa.|  
 |Gráfico|Renderiza como um elemento dentro do elemento do respectivo contêiner. Séries são elementos filho do gráfico e categorias são elementos filho de uma série. Renderiza todos os rótulos de gráfico para cada valor de gráfico. Rótulos e valores são incluídos como atributos.|  
 |Barra de dados|Renderiza como um elemento dentro do elemento do respectivo contêiner, semelhante a um gráfico. Normalmente, uma barra de dados não inclui hierarquias ou rótulos, apenas valores.|  
 |Minigráficos|Renderiza como um elemento dentro do elemento do respectivo contêiner, semelhante a um gráfico. Normalmente, um minigráfico não inclui hierarquias ou rótulos, apenas valores.|  
@@ -81,7 +81,7 @@ ms.locfileid: "48116389"
   
  As definições do namespace XML e os atributos de referência do esquema também estão incluídos no elemento do relatório. As variáveis estão destacadas em negrito:  
   
- \<**Relatório** xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;3aSchema rc % = True"nome ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Os valores das variáveis são os seguintes:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48116389"
 ### <a name="tables-matrices-and-lists"></a>Tabelas, matrizes e listas  
  Tabelas, matrizes e listas são renderizadas como um elemento. O nome do elemento é obtido da propriedade RDL DataElementName do Tablix.  
   
-#### <a name="rows-and-columns"></a>Linhas e Colunas  
+#### <a name="rows-and-columns"></a>Linhas e colunas  
  As colunas são renderizadas dentro das linhas.  
   
 #### <a name="tablix-corner"></a>Canto do Tablix  
@@ -200,7 +200,7 @@ ms.locfileid: "48116389"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

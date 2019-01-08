@@ -11,12 +11,12 @@ ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6def0344726c2b4427d12b548e60d3b68135369d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3fd3692049ef1a5fb85ef188a73d453762d4daf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099706"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420187"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelas e colunas (SSAS tabular)
   Depois de ter adicionado tabelas e os dados em um modelo usando o Assistente de Importação de Tabela, você pode começar a trabalhar com as tabelas adicionando novas colunas de dados, criando relacionamentos entre tabelas, definindo cálculos que estendem os dados e filtrando e classificando dados nas tabelas para facilitar a exibição.  
@@ -58,18 +58,18 @@ ms.locfileid: "48099706"
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Adicionar colunas a uma tabela &#40;Tabular do SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)|Descreve como adicionar uma coluna de origem a uma definição de tabela.|  
-|[Excluir uma coluna &#40;Tabular do SSAS&#41;](delete-a-column-ssas-tabular.md)|Descreve como excluir uma coluna de tabela modelo usando o designer de modelos ou usando a caixa de diálogo de Propriedades de Tabela.|  
-|[Alterar tabela, coluna ou mapeamentos de filtro de linha &#40;tabela do SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Descreve como alterar tabela, coluna ou mapeamentos de filtro de linha usando a visualização de tabela ou editor de consulta SQL na caixa de diálogo Editar Propriedades de Tabela.|  
-|[Especifique marcar como tabela de data para uso com inteligência de tempo &#40;tabela do SSAS&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Descreve como usar a caixa de diálogo Marcar como Tabela de Data para especificar uma tabela de data e coluna de identificador exclusivo. A especificação de uma tabela de data e identificador exclusivo é necessária durante o uso das funções de inteligência de tempo nas fórmulas DAX.|  
-|[Adicionar uma tabela &#40;Tabular do SSAS&#41;](add-a-table-ssas-tabular.md)|Descreve como adicionar uma tabela de uma fonte de dados usando uma conexão de fonte de dados existente.|  
-|[Excluir uma tabela &#40;Tabular do SSAS&#41;](delete-a-table-ssas-tabular.md)|Descreve como excluir tabelas em seu banco de dados de espaço de trabalho modelo que você não precisa mais.|  
-|[Renomear uma tabela ou coluna &#40;Tabular do SSAS&#41;](rename-a-table-or-column-ssas-tabular.md)|Descreve como renomear uma tabela ou coluna para torná-la mais identificável em seu modelo.|  
-|[Defina o tipo de dados de uma coluna &#40;Tabular do SSAS&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Descreve como alterar o tipo de dados de uma coluna. O tipo de dados define como dados na coluna são armazenados e apresentados.|  
-|[Ocultar ou congelar colunas &#40;Tabular do SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)|Descreve como ocultar colunas que você não deseja exibir e como manter uma área de um modelo visível enquanto você rola para outra área do modelo congelando (bloqueando) colunas específicas em uma área.|  
-|[Colunas calculadas &#40;Tabular do SSAS&#41;](ssas-calculated-columns.md)|Os tópicos nesta seção descrevem como você pode usar colunas calculadas para adicionar dados agregados a seu modelo.|  
-|[Filtrar e classificar dados &#40;Tabular do SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)|Os tópicos nesta seção descrevem como você pode filtrar ou classificar dados usando controles no designer de modelo.|  
+|[Adicionar colunas a uma tabela &#40;SSAS de Tabela&#41;](add-columns-to-a-table-ssas-tabular.md)|Descreve como adicionar uma coluna de origem a uma definição de tabela.|  
+|[Excluir uma coluna &#40;SSAS Tabular&#41;](delete-a-column-ssas-tabular.md)|Descreve como excluir uma coluna de tabela modelo usando o designer de modelos ou usando a caixa de diálogo de Propriedades de Tabela.|  
+|[Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS Tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Descreve como alterar tabela, coluna ou mapeamentos de filtro de linha usando a visualização de tabela ou editor de consulta SQL na caixa de diálogo Editar Propriedades de Tabela.|  
+|[Especifique Marcar como Tabela de Data para uso com Inteligência de Tempo &#40;SSAS Tabular&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Descreve como usar a caixa de diálogo Marcar como Tabela de Data para especificar uma tabela de data e coluna de identificador exclusivo. A especificação de uma tabela de data e identificador exclusivo é necessária durante o uso das funções de inteligência de tempo nas fórmulas DAX.|  
+|[Adicionar uma tabela &#40;SSAS Tabular&#41;](add-a-table-ssas-tabular.md)|Descreve como adicionar uma tabela de uma fonte de dados usando uma conexão de fonte de dados existente.|  
+|[Excluir uma tabela &#40;SSAS Tabular&#41;](delete-a-table-ssas-tabular.md)|Descreve como excluir tabelas em seu banco de dados de workspace modelo que você não precisa mais.|  
+|[Renomear uma tabela ou coluna &#40;SSAS tabular&#41;](rename-a-table-or-column-ssas-tabular.md)|Descreve como renomear uma tabela ou coluna para torná-la mais identificável em seu modelo.|  
+|[Definir o tipo de dados de uma coluna &#40;SSAS de Tabela&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Descreve como alterar o tipo de dados de uma coluna. O tipo de dados define como dados na coluna são armazenados e apresentados.|  
+|[Ocultar ou congelar colunas &#40;SSAS de Tabela&#41;](hide-or-freeze-columns-ssas-tabular.md)|Descreve como ocultar colunas que você não deseja exibir e como manter a área de um modelo visível enquanto você rola para outra área do modelo congelando (bloqueando) colunas específicas em uma área.|  
+|[Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md)|Os tópicos nesta seção descrevem como você pode usar colunas calculadas para adicionar dados agregados a seu modelo.|  
+|[Filtrar e classificar dados &#40;SSAS de Tabela&#41;](../filter-and-sort-data-ssas-tabular.md)|Os tópicos nesta seção descrevem como você pode filtrar ou classificar dados usando controles no designer de modelo.|  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219236"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352880"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar propriedades de comportamento de tabela para relatórios de Power View (SSAS tabular)
   Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
@@ -41,7 +41,7 @@ ms.locfileid: "48219236"
 -   **Imagem Padrão** ─ especifica qual coluna fornece uma imagem que representa os dados de linha (por exemplo, uma ID de foto em um registro de funcionário).  
   
 > [!NOTE]  
->  Veja a seção a seguir para obter otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para layouts específicos](#bkmk_optimizeforlayout).  
+>  Consulte a seção a seguir para otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para Layouts específicos](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrindo a caixa de diálogo de Comportamento da Tabela  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219236"
 3.  Na caixa de diálogo **Comportamento da Tabela** , defina o **Identificador de Linha**e especifique outras propriedades nesta caixa de diálogo.  
   
 ## <a name="setting-the-row-identifier-property"></a>Definindo a propriedade Identificador de Linha  
- Dentro da tabela, o identificador de linha especifica uma única coluna que só contém valores exclusivos e nenhum valor em branco. A propriedade Identificador de Linha é usada para alterar o agrupamento para que um grupo não seja baseado na composição de campo de uma linha, mas em uma coluna fixa que sempre é usada para identificar uma linha exclusivamente, independentemente dos campos usados em um layout de relatório específico.  
+ Dentro da tabela, o identificador de linha especifica uma única coluna que só contém valores exclusivos e nenhum valor em branco. A propriedade do identificador de linha é usada para alterar o agrupamento para que um grupo não é baseado na composição de campo de uma linha, mas em vez disso, em uma coluna fixa que sempre é usada para identificar exclusivamente uma linha, independentemente dos campos usados em um layout de relatório específico.  
   
  Definir esta propriedade altera o comportamento de agrupamento padrão de agrupamento dinâmico baseado nas colunas presentes na tela, para um comportamento de agrupamento fixo que é resumido com base no identificador de linha. Alterar o comportamento do agrupamento padrão é pertinente para layouts de relatório, como uma matriz, que, de outro modo, agruparia (ou mostraria subtotais) para cada coluna na linha.  
   
- No [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], definir um identificador de linha habilita as seguintes propriedades adicionais: **Manter Linhas Exclusivas** , **Rótulo Padrão** e **Imagem Padrão** .  
+ No [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], definir um identificador de linha habilita as seguintes propriedades adicionais: **Manter linhas exclusivas** propriedade, **rótulo padrão** propriedade, e **Default Image** propriedade.  
   
  Você também pode usar **Identificador de Linha** sozinho, como uma propriedade autônoma, para habilitar o seguinte:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219236"
  Ao definir a propriedade **Manter Linhas Exclusivas** , você pode designar uma ou mais colunas que sempre devem se repetir, mesmo se houver instâncias duplicadas, sempre que acrescentar essa coluna à tela de relatório. Valores calculados associados à linha agora serão alocados com base em cada linha individual em vez de acumulados em uma única linha. Ao escolher colunas para a propriedade  **Manter Linhas Exclusivas** , escolha as que contiverem valores exclusivos ou quase exclusivos.  
   
 > [!NOTE]  
->  Como as colunas que o usuário final seleciona podem afetar o agrupamento, o que altera o contexto de filtro para cálculos de expressão, os designers de modelo devem procurar criar medidas que retornem os resultados corretos. Para obter mais informações, consulte [Perguntas frequentes do Power View](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Como as colunas que o usuário final seleciona podem afetar o agrupamento, o que altera o contexto de filtro para cálculos de expressão, os designers de modelo devem procurar criar medidas que retornem os resultados corretos. Para obter mais informações, consulte [Perguntas frequentes do Power View](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## <a name="setting-a-default-label"></a>Definindo um rótulo padrão  
  Esta propriedade especifica um rótulo que aparece na tira de navegação de um relatório de peças. Quando usado com uma imagem padrão, o rótulo padrão aparece abaixo da imagem. Sem uma imagem, o rótulo padrão aparece sozinho. Ao escolher um rótulo padrão, escolha a coluna que transmite a maioria das informações sobre a linha (por exemplo, um nome).  
@@ -113,11 +113,11 @@ ms.locfileid: "48219236"
   
  Compare as seguintes imagens de antes e depois que mostram o efeito de definir esta propriedade para um layout de matriz.  
   
- **Antes: agrupamento padrão com base em campos na matriz**  
+ **Antes: Agrupamento padrão com base em campos na matriz**  
   
  ![Layout de matriz agrupado em identificador de linha](../media/ssas-rptprop-matrixrowid.gif "layout de matriz agrupado em identificador de linha")  
   
- **Depois: agrupamento em identificador de linha**  
+ **Depois de: Agrupamento em identificador de linha**  
   
  ![Layout de matriz agrupado em identificador de linha](../media/ssas-rptprop-matrixrowid.gif "layout de matriz agrupado em identificador de linha")  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48219236"
   
  Compare as seguintes imagens de antes e depois que mostram o efeito de definir esta propriedade para um layout de gráfico. É o mesmo relatório, com campos e apresentação idênticos. A única diferença é que a imagem inferior mostra um relatório depois que **Identificador de Linha** foi definido na tabela de Itens.  
   
- **Antes: agrupamento padrão com base em campos em um gráfico**  
+ **Antes: Agrupamento padrão com base em campos em um gráfico**  
   
  ![Gráfico baseado em agrupamento no nível de campo padrão](../media/ssas-rptprop-chartfieldgroup.gif "gráfico baseado em agrupamento no nível de campo padrão")  
   
- **Depois: agrupamento em identificador de linha (o identificador de linha torna-se o eixo)**  
+ **Depois de: Agrupamento em identificador de linha (identificador de linha se torna o eixo)**  
   
  ![Gráfico com base no agrupamento de identificação de linhas](../media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de identificação de linha")  
   

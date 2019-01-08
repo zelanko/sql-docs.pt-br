@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170282"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518111"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Botão previsão na análise de tabela da faixa de opções de ferramentas](media/tat-forecast.gif "botão previsão na faixa de opções de ferramentas de análise de tabela")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170282"
   
 2.  Clique em **previsão** sobre o **analisar** guia.  
   
-3.  Especifique as colunas a serem previstas. A ferramenta seleciona automaticamente colunas nos dados que tenham um tipo de dados previsível — ou seja, dados numéricos contínuos. Talvez a ferramenta não selecione algumas colunas que tenham dados numéricos contínuos caso elas contenham muitos valores de zero ou nulos, porque os dados ausentes podem afetar os resultados. Se isso acontecer, você poderá corrigir os dados usando o [rotular novamente &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta.  
+3.  Especifique as colunas a serem previstas. A ferramenta seleciona automaticamente colunas nos dados que têm um tipo de dados previsível-ou seja, dados numéricos contínuos. Talvez a ferramenta não selecione algumas colunas que tenham dados numéricos contínuos caso elas contenham muitos valores de zero ou nulos, porque os dados ausentes podem afetar os resultados. Se isso acontecer, você poderá corrigir os dados usando o [rotular novamente &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta.  
   
 4.  Especifique a coluna que contém um identificador de data, tempo ou outra série. Se você selecionar a opção  **\<nenhum carimbo de data / hora >** a ferramenta criará uma série com base na sequência de linhas na fonte de dados.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170282"
 ### <a name="requirements"></a>Requisitos  
  As colunas previstas devem conter dados numéricos contínuos, como moeda ou outros números.  
   
- Se possível, os dados também devem incluir uma coluna que contenha uma série de horários ou datas. Use uma série numérica (1,2,3….), em vez de dados de data e hora. No entanto, os valores na coluna da série devem ser exclusivos. Ocorrerá um erro se o **previsão** ferramenta encontrar valores duplicados na coluna da série.  
+ Se possível, os dados também devem incluir uma coluna que contenha uma série de horários ou datas. Você pode usar uma série numérica (1,2, 3...) em vez de dados de data e hora. No entanto, os valores na coluna da série devem ser exclusivos. Ocorrerá um erro se o **previsão** ferramenta encontrar valores duplicados na coluna da série.  
   
  Você não pode prever uma data usando o **previsão** ferramenta. Embora talvez não ocorra um erro, esse algoritmo não foi projetado para usar datas como valores previsíveis.  
   

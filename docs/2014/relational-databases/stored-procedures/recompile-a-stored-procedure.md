@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098206"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406535"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
   Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, o `RECOMPILE` dica de consulta em instruções individuais ou usando o `sp_recompile` procedimento armazenado do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
@@ -65,7 +65,7 @@ ms.locfileid: "48098206"
  `sp_recompile` Procedimento armazenado do sistema  
  Exige a permissão ALTER no procedimento especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE  
   

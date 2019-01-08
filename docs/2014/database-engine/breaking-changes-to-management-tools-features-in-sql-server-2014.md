@@ -1,7 +1,7 @@
 ---
 title: Alterações significativas ao gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 11/27/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,12 +10,12 @@ ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f3e0df9dc3f9c81907d4c230a36586a5953baf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545302"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
   Este tópico descreve alterações de quebra feitas em recursos das ferramentas de gerenciamento. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -30,8 +30,13 @@ ms.locfileid: "48079426"
   
 ### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>O SMO foi revertido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  O código desenvolvido com o SMO do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ou de versões anteriores talvez não seja criado no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sem pequenas modificações. Para obter mais informações, consulte [Backward Compatibility in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
-  
+
+## <a name="previous-versions"></a> Alterações recentes no SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Consulte também  
  [Compatibilidade com versões anteriores](../../2014/getting-started/backward-compatibility.md)  
+ [Mais informações sobre alterações recentes em recursos das ferramentas de gerenciamento do SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

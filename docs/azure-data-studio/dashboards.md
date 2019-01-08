@@ -1,7 +1,8 @@
 ---
-title: Acessar rapidamente informações e tarefas comuns no estúdio de dados do Azure | Microsoft Docs
-description: Saiba mais sobre como exibir widgets criteriosos no estúdio de dados do Azure.
-ms.custom: tools|sos
+title: Acessar rapidamente informações e tarefas comuns
+titleSuffix: Azure Data Studio
+description: Saiba mais sobre como exibir widgets no painel de banco de dados no Studio de dados do Azure.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356189"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030480"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Painéis no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ Depois de seguir este tutorial, continue lendo para saber mais sobre widgets esp
 O submenu de detalhes de informações fornece informações mais detalhadas para um widget de informações relacionadas. 
 - Um widget de Insight renderiza uma exibição de resumo de uma visão geral com contagem, linha, gráfico etc. 
 - O submenu de detalhes de informações fornece detalhes "analisar", listando as informações mais aprofundadas de dados para cada item listado no widget de Insight de alto nível. 
-  - O conteúdo do menu suspenso de detalhes é definido com uma consulta SQL separada para consulta do widget principal. 
+  - O conteúdo do menu suspenso de detalhes é definido com uma consulta SQL separada para consulta do widget principal.
 
 Não há nenhum requisito de conjunto para uma consulta de detalhes do Insight, mas o layout é o padrão.
 - A metade superior do modo de exibição é sempre um modo de exibição "Resumo" 2 colunas. Quais colunas usar são definidas pelas propriedades da configuração do JSON "label" e "value"
@@ -88,11 +89,11 @@ Exemplo de configuração de submenu Insight detalhes
 |detalhes|objeto JSON|||propriedade obrigatória para definir as definições de detalhes de informações dentro de sua estrutura||
 |queryFile|cadeia de caracteres|||o caminho do arquivo de consulta do insight detalhes sql e o nome do arquivo relativo ao local do Package. JSON||
 |Rótulo|objeto JSON|||propriedade obrigatória para definir cada item de linha na exibição de lista de resumo|no futuro, o nome dessa propriedade para alterar, como 'summaryList'|
-|Ícone|cadeia de caracteres|||indica o nome do ícone para renderização para cada item de exibição de lista de resumo.|lista (tbd) dos ícones com suporte será documentada|
+|Ícone|cadeia de caracteres|||Indique o nome do ícone a ser renderizado para cada item de exibição de lista de resumo.|lista (tbd) dos ícones com suporte será documentada|
 |column|cadeia de caracteres|||Indique o nome da primeira coluna na exibição de lista de resumo do conjunto de resultados de consulta|no futuro o nome dessa propriedade será alterado para um nome mais intuitivo|
-|value|cadeia de caracteres|||Indique o nome da segunda coluna na exibição de lista de resumo do conjunto de resultados de consulta. O valor desta coluna é usado para verificar condições e definir a cor de ponto de cor do cada lista de resumo exibir itens|no futuro, o nome dessa propriedade será alterado para algo mais intuitiva|
+|value|cadeia de caracteres|||Indique o nome da segunda coluna na exibição de lista de resumo do conjunto de resultados de consulta. O valor desta coluna é usado para verificar condições e definir a cor para cada ponto de cor de itens de exibição lista de resumo|no futuro, o nome dessa propriedade será alterado para algo mais intuitiva|
 |Condição|objeto JSON|||Define o valor da coluna a verificação de condição e determinar a cor para cada item de exibição de lista de resumo||
-|if|cadeia de caracteres|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||operador de seleção de condição|no futuro, o nome da propriedade será alterado para operador|
+|if|cadeia de caracteres|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de seleção de condição|no futuro, o nome da propriedade será alterado para operador|
 |equals|cadeia de caracteres|||valor de verificação de condição|no futuro o nome da propriedade será alterado para 'value'|
 
 ## <a name="insight-actions"></a>Ações de Insight
@@ -104,7 +105,7 @@ Usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]da configuração de a
 
 ## <a name="sample-insight-action-definition"></a>Exemplo de definição de ação de análise
 
-```"actions"{}``` define uma ação de análise. Ação pode ser definida em um escopo específico, como ```"server"```, ```"database"``` e assim por diante e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa as informações de contexto de conexão atual para a ação. 
+```"actions"{}``` define uma ação de análise. Ação pode ser definida em um escopo específico, como ```"server"```, ```"database"``` e assim por diante e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa as informações de contexto de conexão atual para a ação.
 
 Por exemplo, quando a ação de restauração for iniciada para o banco de dados de WideWorldImporters ```"database": "${Database}"``` definição indica para passar ```Database``` valor da coluna em que o resultado da consulta para a ação de restauração. Em seguida, restaure o início da ação para o banco de dados. ```"types"``` é uma matriz json e várias ações podem ser listadas na matriz. Basicamente, torna-se um menu de contexto na caixa de diálogo de detalhes de informações que o usuário pode clicar e executar a ação. 
 

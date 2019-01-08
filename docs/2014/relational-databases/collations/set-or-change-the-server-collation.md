@@ -1,11 +1,10 @@
 ---
-title: Definir ou alterar o agrupamento de servidor | Microsoft Docs
+title: Definir ou alterar a ordenação do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server collations [SQL Server]
@@ -14,18 +13,18 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78e69d6fab18f466d6d75f0ab89b43d0d7ae683e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778728"
 ---
-# <a name="set-or-change-the-server-collation"></a>Definir ou alterar o agrupamento do servidor
-  O agrupamento do servidor atua como o agrupamento padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. O agrupamento do servidor é especificado durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](collation-and-unicode-support.md).  
+# <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
+  A ordenação do servidor atua como a ordenação padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. A ordenação do servidor é especificada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](collation-and-unicode-support.md).  
   
-## <a name="changing-the-server-collation"></a>Alterando o agrupamento do servidor  
- A alteração do agrupamento padrão para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser uma operação complexa e engloba as seguintes etapas:  
+## <a name="changing-the-server-collation"></a>Alterando a ordenação do servidor  
+ A alteração da ordenação padrão para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser uma operação complexa e engloba as seguintes etapas:  
   
 -   Verifique se você tem todas as informações ou scripts necessários para recriar seus bancos de dados de usuário e todos os objetos neles.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "48140166"
   
 -   Descarte todos os bancos de dados de usuário.  
   
--   Reconstrua o banco de dados mestre especificando o novo agrupamento na propriedade SQLCOLLATION do comando **setup** . Por exemplo:  
+-   Reconstrua o banco de dados mestre especificando a nova ordenação na propriedade SQLCOLLATION do comando **setup** . Por exemplo:  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
@@ -48,12 +47,12 @@ ms.locfileid: "48140166"
 -   Importe todos os dados.  
   
 > [!NOTE]  
->  Em vez de alterar o agrupamento padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar um agrupamento para cada novo banco de dados que criar.  
+>  Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar uma ordenação para cada novo banco de dados que criar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
- [Definir ou alterar o agrupamento de banco de dados](set-or-change-the-database-collation.md)   
- [Definir ou alterar o agrupamento de coluna](set-or-change-the-column-collation.md)   
- [Recompilar bancos de dados do sistema](../databases/system-databases.md)  
+ [Suporte a ordenações e a Unicode](collation-and-unicode-support.md)   
+ [Definir ou alterar a ordenação de banco de dados](set-or-change-the-database-collation.md)   
+ [Definir ou alterar a ordenação de coluna](set-or-change-the-column-collation.md)   
+ [Recriar bancos de dados do sistema](../databases/system-databases.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517349"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e sem resultados
 Instruções SQL podem ser livremente divididas nas seguintes cinco categorias:  
@@ -37,4 +37,4 @@ Instruções SQL podem ser livremente divididas nas seguintes cinco categorias:
   
 -   **Instruções administrativas** essas são instruções SQL usadas para fins administrativos em um banco de dados. Por exemplo, **GRANT** e **REVOGAR**.  
   
- Instruções SQL em que as duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultado*. Instruções SQL em três categorias de segundo são coletivamente conhecidas como *livres de resultado instruções*. ODBC define a semântica de lotes que incluem as instruções de apenas gerar resultados. Essa semântica variar muito e, portanto, específico da fonte de dados. Por exemplo, o driver do SQL Server não oferece suporte a descartar um objeto e, em seguida, referindo-se a ou recriando o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado deste manual refere-se somente a lotes de geração de resultado de instruções.
+ Instruções SQL em que as duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultado*. Instruções SQL em três categorias de segundo são coletivamente conhecidas como *livres de resultado instruções*. ODBC define a semântica de lotes que incluem as instruções de apenas gerar resultados. Essa semântica variar muito e, portanto, específico de fonte de dados. Por exemplo, o driver do SQL Server não oferece suporte a descartar um objeto e, em seguida, referindo-se a ou recriando o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado deste manual refere-se somente a lotes de geração de resultado de instruções.

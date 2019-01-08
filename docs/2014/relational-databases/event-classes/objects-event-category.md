@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20242ab56cf6320bd00af44f67278830e3061a9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125146"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778420"
 ---
 # <a name="objects-event-category"></a>Categoria de evento Objects
   A categoria de evento **Objects** contém eventos gerais de objetos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Auto Stats](auto-stats-event-class.md)|Indica que houve uma atualização automática de índice e estatísticas de coluna.|  
 |[Classe de evento Object:Altered](object-altered-event-class.md)|Indica que um objeto foi alterado; por exemplo, pela instrução ALTER DATABASE ou ALTER TABLE.|  

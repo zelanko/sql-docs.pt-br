@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.download.f1
@@ -12,12 +12,12 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2ebcf08d7fb6826c8274a97bf0e629544effef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057312"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768518"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de Destino (guia Instruções de Download)
   Use esta página para exibir e atualizar as instruções de download de um ou mais servidores de destino.  

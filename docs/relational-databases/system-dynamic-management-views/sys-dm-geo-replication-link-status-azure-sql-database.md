@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809074"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396010"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de replicação geográfica. Isso inclui bancos de dados primários e secundários. Se houver mais de um link de replicação contínua para um determinado banco de dados primário, esta tabela contém uma linha para cada uma das relações. A exibição é criada em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID exclusiva do link de replicação.|  
 |partner_server|**sysname**|Nome do servidor lógico que contém o banco de dados vinculado.|  
@@ -44,7 +44,7 @@ ms.locfileid: "47809074"
 |função|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo de secundário, um dos:<br /><br /> 0 não = nenhuma direct conexões são permitidas para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas no banco de dados no secundário repl; Autent para acesso somente leitura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|não<br /><br /> Todos|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
 |last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se recuperado no banco de dados secundário quando o primário do link de replicação está inativo, ele indica até que ponto o secundário for atualizado.|
   
 > [!NOTE]  

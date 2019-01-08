@@ -1,5 +1,5 @@
 ---
-title: Configurar propriedades de comportamento de tabela para relatórios do Power View | Microsoft Docs
+title: Configurar propriedades da tabela do Analysis Services para relatórios do Power View | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 13d2213746c79a396d681796cb863174248f54ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044860"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072534"
 ---
-# <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurar propriedades de comportamento de tabela para relatórios
+# <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View – configurar propriedades de comportamento de tabela para relatórios
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design de relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design do relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.  
   
  Definir propriedades de comportamento de tabela é recomendado para tabelas onde as linhas individuais são de interesse primário, como registros de funcionário ou cliente. Em contraste, as tabelas que não se beneficiam destas propriedades incluem as que agem como uma tabela de pesquisa (por exemplo, uma tabela de data, uma tabela de categoria de produto ou uma tabela de departamento, onde a tabela consiste em um número relativamente pequeno de linhas e colunas) ou tabelas resumidas que contêm linhas que só são interessantes quando resumidas (por exemplo, dados de censo que acumulam por gênero, idade ou geografia). Para tabelas de pesquisa e resumo, o comportamento do agrupamento padrão gera o melhor resultado.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34044860"
 -   **Imagem Padrão** ─ especifica qual coluna fornece uma imagem que representa os dados de linha (por exemplo, uma ID de foto em um registro de funcionário).  
   
 > [!NOTE]  
->  Veja a seção a seguir para obter otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para layouts específicos](#bkmk_optimizeforlayout).  
+>  Consulte a seção a seguir para otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para Layouts específicos](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrindo a caixa de diálogo de Comportamento da Tabela  
   
@@ -49,11 +49,11 @@ ms.locfileid: "34044860"
 3.  Na caixa de diálogo **Comportamento da Tabela** , defina o **Identificador de Linha**e especifique outras propriedades nesta caixa de diálogo.  
   
 ## <a name="setting-the-row-identifier-property"></a>Definindo a propriedade Identificador de Linha  
- Dentro da tabela, o identificador de linha especifica uma única coluna que só contém valores exclusivos e nenhum valor em branco. A propriedade Identificador de Linha é usada para alterar o agrupamento para que um grupo não seja baseado na composição de campo de uma linha, mas em uma coluna fixa que sempre é usada para identificar uma linha exclusivamente, independentemente dos campos usados em um layout de relatório específico.  
+ Dentro da tabela, o identificador de linha especifica uma única coluna que só contém valores exclusivos e nenhum valor em branco. A propriedade do identificador de linha é usada para alterar o agrupamento para que um grupo não é baseado na composição de campo de uma linha, mas em vez disso, em uma coluna fixa que sempre é usada para identificar exclusivamente uma linha, independentemente dos campos usados em um layout de relatório específico.  
   
  Definir esta propriedade altera o comportamento de agrupamento padrão de agrupamento dinâmico baseado nas colunas presentes na tela, para um comportamento de agrupamento fixo que é resumido com base no identificador de linha. Alterar o comportamento do agrupamento padrão é pertinente para layouts de relatório, como uma matriz, que, de outro modo, agruparia (ou mostraria subtotais) para cada coluna na linha.  
   
- No [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], definir um identificador de linha habilita as seguintes propriedades adicionais: **Manter Linhas Exclusivas** , **Rótulo Padrão** e **Imagem Padrão** .  
+ No [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], definir um identificador de linha habilita as seguintes propriedades adicionais: **Manter linhas exclusivas** propriedade, **rótulo padrão** propriedade, e **Default Image** propriedade.  
   
  Você também pode usar **Identificador de Linha** sozinho, como uma propriedade autônoma, para habilitar o seguinte:  
   
@@ -103,18 +103,18 @@ ms.locfileid: "34044860"
   
  Para alterar o comportamento de agrupamento padrão, defina as propriedades **Identificador de Linha** e **Manter Linhas Exclusivas** . Em **Manter Linhas Exclusivas**, escolha a coluna Sobrenome para que este valor seja repetido para uma linha, mesmo que já apareça em uma linha diferente. Depois de alterar as propriedades e republicar a pasta de trabalho, você pode criar o mesmo relatório, só que, desta vez, verá os dois clientes chamados **Davi Barros**, com a **Renda Anual** corretamente alocada para cada um.  
   
- ![Linha contendo duplicatas baseadas na ID de linha de dados](../../analysis-services/tabular-models/media/ssas-jonyang.gif "linha contendo duplicatas baseadas na ID de linha de dados")  
+ ![Linha contendo duplicatas baseadas na ID da linha de dados](../../analysis-services/tabular-models/media/ssas-jonyang.gif "linha contendo duplicatas baseadas na ID da linha de dados")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>O layout de matriz está cheio demais  
  Quando você apresenta uma tabela de detalhes em uma matriz, o agrupamento padrão fornece um valor resumido para cada coluna. Dependendo de seus objetivos, podem ser mais resumos do que você deseja. Para alterar este comportamento, defina **Identificador de Linha**. Nenhuma propriedade adicional precisa ser definida; apenas definir o identificador de linha é suficiente para alterar o agrupamento de forma que os resumos sejam calculados para cada linha com base em seu identificador de linha exclusivo.  
   
  Compare as seguintes imagens de antes e depois que mostram o efeito de definir esta propriedade para um layout de matriz.  
   
- **Antes: agrupamento padrão com base em campos na matriz**  
+ **Antes: Agrupamento padrão com base em campos na matriz**  
   
  ![Layout de matriz agrupado em identificador de linha](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "layout de matriz agrupado em identificador de linha")  
   
- **Depois: agrupamento em identificador de linha**  
+ **Depois de: Agrupamento em identificador de linha**  
   
  ![Layout de matriz agrupado em identificador de linha](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "layout de matriz agrupado em identificador de linha")  
   
@@ -123,13 +123,13 @@ ms.locfileid: "34044860"
   
  Compare as seguintes imagens de antes e depois que mostram o efeito de definir esta propriedade para um layout de gráfico. É o mesmo relatório, com campos e apresentação idênticos. A única diferença é que a imagem inferior mostra um relatório depois que **Identificador de Linha** foi definido na tabela de Itens.  
   
- **Antes: agrupamento padrão com base em campos em um gráfico**  
+ **Antes: Agrupamento padrão com base em campos em um gráfico**  
   
- ![Gráfico baseado em agrupamento no nível de campo padrão](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "gráfico com base no agrupamento no nível de campo padrão")  
+ ![Gráfico baseado em agrupamento no nível de campo padrão](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "gráfico baseado em agrupamento no nível de campo padrão")  
   
- **Depois: agrupamento em identificador de linha (o identificador de linha torna-se o eixo)**  
+ **Depois de: Agrupamento em identificador de linha (identificador de linha se torna o eixo)**  
   
- ![Gráfico com base no agrupamento de ID de linha](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de ID de linha")  
+ ![Gráfico com base no agrupamento de identificação de linhas](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de identificação de linha")  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Depois de avaliar as tabelas em seu modelo e definir as propriedades de comportamento da tabela nelas contendo linhas de detalhes que sempre devem aparecer como itens individuais, você poderá otimizar ainda mais o modelo por meio de propriedades ou configurações adicionais.  

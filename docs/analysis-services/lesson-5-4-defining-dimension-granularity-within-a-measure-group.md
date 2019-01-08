@@ -1,5 +1,5 @@
 ---
-title: Definir a granularidade da dimensão dentro de um grupo de medidas | Microsoft Docs
+title: Definindo a granularidade da dimensão dentro de um grupo de medidas | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018813"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542238"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lição 5-4-Definindo granularidade da dimensão dentro de um grupo de medidas
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lição 5-4: definindo granularidade da dimensão dentro de um grupo de medidas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Os usuários podem dimensionar dados de fatos em diferentes granularidades ou especificidades para diversas finalidades. Por exemplo, dados de vendas de revendedores ou pela Internet podem ser gravados diariamente, enquanto que informações sobre cotas de vendas podem ser registradas apenas mensal ou trimestralmente. Nesses cenários, os usuários terão uma dimensão de tempo com granulação ou nível de detalhes diferente para cada uma dessas tabelas de fatos diferentes. Apesar de ser possível definir uma nova dimensão de banco de dados como uma dimensão de tempo com essa granulação diferente, há uma forma mais fácil de fazer isso com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -87,7 +87,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Observe que a dimensão do cubo Sales Territory não está relacionada, direta ou indiretamente, à tabela Fact Sales Quota, como mostra a imagem a seguir:  
   
-    ![Dimensão de cubo região de vendas](../analysis-services/media/l5-granularity-2.gif "dimensão de cubo região de vendas")  
+    ![Dimensão do cubo Sales Territory](../analysis-services/media/l5-granularity-2.gif "dimensão de cubo região de vendas")  
   
     Na próxima série de etapas deste tópico, você definirá uma relação de dimensão de referência entre essa dimensão e essa tabela de fatos.  
   
@@ -95,11 +95,11 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
 7.  Na lista Campos da Tabela Dinâmica, selecione a hierarquia **Sales Territories** definida pelo usuário e clique na seta para baixo à direita.  
   
-    ![Hierarquia de regiões de vendas na lista de campos](../analysis-services/media/l5-granularity-1a.png "hierarquia região de vendas na lista de campos")  
+    ![Hierarquia da região de vendas na lista de campos](../analysis-services/media/l5-granularity-1a.png "hierarquia região de vendas na lista de campos")  
   
 8.  No filtro, clique na caixa de seleção Selecionar Tudo para desmarcar todas as seleções e escolha somente **América do Norte**.  
   
-    ![Painel de filtro para selecionar América do Norte](../analysis-services/media/l5-granularity-1b.png "painel de filtro para selecionar América do Norte")  
+    ![Painel de filtro para a seleção de América do Norte](../analysis-services/media/l5-granularity-1b.png "painel de filtro para a seleção de América do Norte")  
   
 9. Na Lista de Campos da Tabela Dinâmica, expanda **Data**.  
   
@@ -113,7 +113,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     A imagem a seguir mostra os valores de **Cota do Valor de Vendas**.  
   
-    ![Cota do valor de valores de vendas](../analysis-services/media/l5-granularity-3.png "cota do valor de valores de vendas")  
+    ![Valores de vendas Amount Quota](../analysis-services/media/l5-granularity-3.png "cota do valor de valores de vendas")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definindo propriedades de uso de dimensão para o grupo de medidas Sales Quotas  
   
@@ -127,7 +127,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Observe que as dimensões do cubo **Funcionário** e **Data** são vinculadas aos grupos de medidas **Cotas de Vendas e Cotas de Vendas 1** por meio de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
   
-4.  Clique na célula, na interseção da dimensão **Região de Vendas** e do grupo de medidas **Cotas de Vendas** e clique no botão Procurar (**…**). A caixa de diálogo **Definir Relação** é aberta.  
+4.  Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas** grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -141,7 +141,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
 10. Clique em **OK**.  
   
-11. Clique na célula, na interseção da dimensão **Região de Vendas** e do grupo de medidas **Cotas de Vendas 1** e clique no botão Procurar (**…**). A caixa de diálogo **Definir Relação** é aberta.  
+11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar (**...** ). A caixa de diálogo **Definir Relação** é aberta.  
   
 12. Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -163,7 +163,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Renomear a dimensão do cubo **Order Date** como **Date** faz com que os usuários entendam com mais facilidade que essa é a dimensão de data primária desse cubo.  
   
-20. Clique no botão Procurar (**…**) na célula, na intersecção do grupo de medidas **Sales Quotas** e da dimensão **Date** .  
+20. Clique no botão Procurar (**...** ) na célula na interseção de **cotas de vendas** grupo de medidas e a **data** dimensão.  
   
 21. Na caixa de diálogo **Definir Relação** , selecione **Regular** na lista **Selecionar tipo de relação** .  
   
@@ -218,7 +218,7 @@ Nas tarefas deste tópico, você adicionará um grupo de medidas Cotas de Vendas
   
     Observe também que todos os membros do nível trimestre fiscal contêm o mesmo valor que o nível trimestral. Usando **Q1 FY 2008** como exemplo, a cota de US$ 9.180.000,00 para **Q1 FY 2008** também é o valor de cada um de seus membros. Isso acontece porque a granulação dos dados na tabela de fatos é trimestral e a granulação da dimensão Date também é trimestral. Na Lição 6, você aprenderá a alocar a quantia trimestral proporcionalmente a cada mês.  
   
-    ![Grupo de medidas cota vendas dimensionado corretamente](../analysis-services/media/l5-granularity-7.gif "grupo de medidas cota de vendas dimensionado corretamente")  
+    ![Grupo de medidas cota vendas dimensionado corretamente](../analysis-services/media/l5-granularity-7.gif "grupo de medidas Sales Quota dimensionado corretamente")  
   
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 6: Definindo cálculos](../analysis-services/lesson-6-defining-calculations.md)  

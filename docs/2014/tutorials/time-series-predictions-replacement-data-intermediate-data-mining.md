@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120278"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419037"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Previsões de série temporal usando dados de substituição (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você criará um novo modelo com base em dados de vendas mundiais. Depois, você criará uma consulta de previsão que aplica o modelo de vendas mundial a uma das regiões individuais.  
   
 ## <a name="building-a-general-model"></a>Criando um modelo geral  
- Lembre-se de que sua análise dos resultados do modelo de mineração original revelaram grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas na América do Norte eram fortes para o modelo M200, enquanto que as vendas do modelo de T1000 não iam tão bem. Porém, a análise é complicada pelo fato de que algumas séries não tinham muitos dados, ou os dados iniciavam em um ponto no tempo diferente. Alguns dados também estavam faltando.  
+ Lembre-se de que sua análise dos resultados do modelo de mineração original revelaram grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas na América do Norte eram fortes para o modelo M200, enquanto que as vendas do modelo de T1000 não iam tão bem. No entanto, a análise é complicada pelo fato de que algumas séries não tinham muitos dados ou dados iniciavam em um ponto diferente no tempo. Alguns dados também estavam faltando.  
   
  ![Séries que preveem a quantidade M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "séries que preveem a quantidade M200 e T1000")  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120278"
   
     -   Escolha as seguintes colunas para a chave de série e chave de tempo:  
   
-         Hora da chave: ReportingDate  
+         Tempo-chave: ReportingDate  
   
-         Chave: região  
+         Chave: Região  
   
     -   Escolha as seguintes colunas para `Input` e `Predict`:  
   

@@ -13,18 +13,18 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 63fd25aa796be6f0fce27bfbfa5b7da36d35e2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516778"
 ---
 # <a name="context-connections-vs-regular-connections"></a>Conexões de contexto vs. conexões normais
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Se você estiver conectando a um servidor remoto, sempre use conexões normais, em vez de conexões de contexto. Se você precisar se conectar ao mesmo servidor em que o procedimento armazenado ou a função está sendo executado, use a conexão de contexto na maioria dos casos. Isto tem benefícios, como executar no mesmo espaço de transação e não precisar se autenticar novamente.  
   
- Além disso, o uso da conexão de contexto normalmente resulta em melhor desempenho e menos uso de recurso. A conexão de contexto é uma conexão apenas em processo, portanto, ela pode contatar o servidor "diretamente", ignorando o protocolo de rede e as camadas de transporte, para enviar instruções Transact-SQL e receber resultados. O processo de autenticação é ignorado também. A figura a seguir mostra os principais componentes do **SqlClient** gerenciados provedor, bem como os diferentes componentes interagem entre si ao usar uma conexão regular e, ao usar a conexão de contexto.  
+ Além disso, o uso da conexão de contexto normalmente resulta em melhor desempenho e menos uso de recurso. A conexão de contexto é um processo somente na conexão, para que ele possa contatar o servidor "diretamente", ignorando as camadas de transporte e protocolo de rede para enviar instruções Transact-SQL e receber resultados. O processo de autenticação é ignorado também. A figura a seguir mostra os principais componentes do **SqlClient** gerenciados provedor, bem como os diferentes componentes interagem entre si ao usar uma conexão regular e, ao usar a conexão de contexto.  
   
  ![Caminhos de código de um contexto e uma conexão regular. ](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Caminhos de código de um contexto e uma conexão regular.")  
   

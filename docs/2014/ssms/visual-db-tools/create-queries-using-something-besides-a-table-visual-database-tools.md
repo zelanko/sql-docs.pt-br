@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159996"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768538"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
   Sempre que você escreve uma consulta de recuperação, você articula as colunas e as linhas que você quer, e onde o processador de consulta deve procurar os dados originais. Tipicamente, esses dados originais consistem em uma tabela ou várias tabelas unidas. Mas os dados originais podem vir de fontes diferentes de tabelas. Na realidade, podem vir de exibições, consultas, sinônimos ou funções definidas pelo usuário que retornam uma tabela.  
@@ -57,7 +57,7 @@ FROM sales
  Para obter mais informações sobre como adicionar um modo de exibição a uma consulta, veja [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>Usando uma consulta no lugar de uma tabela  
- Você pode selecionar linhas de uma consulta. Por exemplo, suponha você já escreveu uma consulta que recupera títulos e identificadores dos livros com coautoria – os livros com mais de um autor. O SQL pode ter esta aparência:  
+ Você pode selecionar linhas de uma consulta. Por exemplo, suponha você já escreveu uma consulta que recupera títulos e identificadores dos livros de coautoria, ou seja, livros com mais de um autor. O SQL pode ter esta aparência:  
   
 ```  
 SELECT   
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Usando uma função definida pelo usuário no lugar de uma tabela  
  No SQL Server 2000 ou superior, você pode criar uma função definida pelo usuário que retorna uma tabela. Tais funções são úteis para executar lógica complexa ou de procedimento.  
   
- Por exemplo, suponha que a tabela de funcionários contenha uma coluna adicional, employee.manager_emp_id, e que exista uma chave estrangeira de manager_emp_id a employee.emp_id. Dentro de cada linha da tabela de funcionários, a coluna manager_emp_id indica o chefe do funcionário. Mais precisamente, indica a emp_id do chefe do funcionário. Você pode criar uma função definida pelo usuário que retorna a tabela contendo uma linha para cada funcionário que trabalha em uma determinada hierarquia organizacional de gerenciamento de alto nível. Você poderia chamar a função fn_GetWholeTeam e projetar isto para aceitar uma variável de entrada – a emp_id do administrador cuja equipe você quer recuperar.  
+ Por exemplo, suponha que a tabela de funcionários contenha uma coluna adicional, employee.manager_emp_id, e que exista uma chave estrangeira de manager_emp_id a employee.emp_id. Dentro de cada linha da tabela de funcionários, a coluna manager_emp_id indica o chefe do funcionário. Mais precisamente, indica a emp_id do chefe do funcionário. Você pode criar uma função definida pelo usuário que retorna a tabela contendo uma linha para cada funcionário que trabalha em uma determinada hierarquia organizacional de gerenciamento de alto nível. Você pode chamar a função fn_GetWholeTeam e projetá-la para aceitar uma variável de entrada, ou seja, a emp_id do administrador cuja equipe você quer recuperar.  
   
  Você pode escrever uma consulta que use a função fn_GetWholeTeam como uma fonte de dados. O SQL resultante pode ter esta aparência:  
   

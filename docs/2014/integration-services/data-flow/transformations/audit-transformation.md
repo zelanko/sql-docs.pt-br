@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6609cda18e6fc0f2942bb37e6939af6123b213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3fd2e357d58d77bc82a551ab88f01db2c1c693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771268"
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
   A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
@@ -29,7 +28,7 @@ ms.locfileid: "48156896"
 ## <a name="system-variables"></a>Variáveis do sistema  
  A tabela a seguir descreve as variáveis do sistema que podem ser usadas por Auditar Transformação.  
   
-|Variável do sistema|Índice|Description|  
+|Variável do sistema|Índice|Descrição|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|O GUID que identifica a instância de execução do pacote.|  
 |`PackageID`|1|O identificador exclusivo do pacote.|  

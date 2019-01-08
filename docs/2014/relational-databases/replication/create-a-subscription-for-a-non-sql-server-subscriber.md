@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077686"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774908"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
   Este tópico descreve como criar uma assinatura para um Assinante não SQL Server no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dados de publicação de suporte a replicação transacional e de instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre plataformas de Assinantes com suporte, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -97,7 +96,7 @@ ms.locfileid: "48077686"
   
     -   Para a IBM DB2, o banco de dados é especificado na propriedade **Catálogo Inicial** da cadeia de caracteres da conexão DB2, que pode ser digitada no campo **Opções de conexões adicionais** descrito mais adiante neste processo.  
   
-8.  Na página **Segurança do Distribution Agent** , clique no botão de propriedades (**…**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Distribution Agent** .  
+8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades (**...**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
   
 9. Na caixa de diálogo **Segurança do Distribution Agent** :  
   
@@ -142,7 +141,7 @@ ms.locfileid: "48077686"
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Crie assinaturas push para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma programática, usando procedimentos armazenados de replicação.  
   
 > [!IMPORTANT]  
@@ -154,12 +153,12 @@ ms.locfileid: "48077686"
   
 2.  No Publicador do banco de dados de publicação, verifique se a publicação dá suporte a assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], executando [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
-    -   Se o valor de `enabled_for_het_sub` for 1, não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] há suporte para assinantes.  
+    -   Se o valor de `enabled_for_het_sub` for 1, os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terão suporte.  
   
     -   Se o valor de `enabled_for_het_sub` é 0, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** e `true` para  **@value**.  
   
         > [!NOTE]  
-        >  Antes de alterar `enabled_for_het_sub` para `true`, você deve descartar todas as assinaturas existentes na publicação. Não é possível definir  `enabled_for_het_sub` como `true` quando a publicação oferecer suporte também a assinaturas de atualização. Alterar `enabled_for_het_sub` afetará outras propriedades de publicação. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Antes de alterar `enabled_for_het_sub` para `true`, é preciso ignorar todas as assinaturas existentes para a publicação. Não é possível definir  `enabled_for_het_sub` como `true` quando a publicação oferecer suporte também a assinaturas de atualização. Alterar `enabled_for_het_sub` afetará outras propriedades de publicação. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**; um valor de **(destino padrão)** para **@destination_db**; um valor de **push** para **@subscription_type**, e um valor de 3 para **@subscriber_type** (especifica um provedor OLE DB).  
   

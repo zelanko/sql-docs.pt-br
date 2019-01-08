@@ -1,5 +1,5 @@
 ---
-title: Agregações e Designs de agregação | Microsoft Docs
+title: As agregações e Designs de agregação | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af9eab2fb7d3df0fcb8a7416b43dd387583f4762
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: af8d18e2fe99d7d2e16f785577cfe72ec73909fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519361"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Agregações e designs de agregação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34027373"
   
  Outras perguntas podem retornar vários valores. Por exemplo, "De quanto eram as vendas de produtos de hardware por trimestre, por região, em 1998?" Tais consultas retornam conjuntos de células das coordenadas que atendem às condições especificadas. O número de células retornado pela consulta depende do número de itens no nível Hardware da dimensão Produto, os quatro trimestres em 1998 e o número de regiões na dimensão Geografia. Se todos os dados de resumo tiverem sido pré-calculados em agregações, o tempo de resposta da consulta dependerá apenas do tempo necessário para extrair as células específicas. Nenhum cálculo ou leitura de dados da tabela de fatos é necessário.  
   
- Apesar do pré-cálculo de todas as agregações possíveis em um cubo fornecer o tempo de resposta mais rápido possível para todas as consultas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode facilmente calcular alguns valores de agregação de outras agregações pré-calculadas. Além disso, calcular todas as agregações possíveis requer tempo de processamento e armazenamento significativos. Portanto, há um equilíbrio entre requisitos de armazenamento e a porcentagem de possíveis agregações que são pré-calculadas. Se nenhuma agregação for pré-calculada (0%), a quantidade de tempo de processamento e espaço de armazenamento, necessários para um cubo, serão reduzidos mas o tempo de resposta da consulta será maior, pois os dados necessários para responder a cada consulta deverão ser recuperados de células folha e, em seguida, agregados na consulta. Por exemplo, retornar um único número que responda à questão feita anteriormente ("Quais são as vendas do produto X em 1998 para a região noroeste"), pode exigir a leitura de milhares de linhas de dados, extraindo o valor da coluna usada para fornecer a medida Vendas de cada linha e, então, calcular a soma. Além disso, o tempo necessário para recuperar os dados variará, dependendo do modo de armazenamento escolhido para os dados — MOLAP, HOLAP ou ROLAP.  
+ Apesar do pré-cálculo de todas as agregações possíveis em um cubo fornecer o tempo de resposta mais rápido possível para todas as consultas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode facilmente calcular alguns valores de agregação de outras agregações pré-calculadas. Além disso, calcular todas as agregações possíveis requer tempo de processamento e armazenamento significativos. Portanto, há um equilíbrio entre requisitos de armazenamento e a porcentagem de possíveis agregações que são pré-calculadas. Se nenhuma agregação for pré-calculada (0%), a quantidade de tempo de processamento e espaço de armazenamento, necessários para um cubo, serão reduzidos mas o tempo de resposta da consulta será maior, pois os dados necessários para responder a cada consulta deverão ser recuperados de células folha e, em seguida, agregados na consulta. Por exemplo, retornar um único número que responda à questão feita anteriormente ("Quais são as vendas do produto X em 1998 para a região noroeste"), pode exigir a leitura de milhares de linhas de dados, extraindo o valor da coluna usada para fornecer a medida Vendas de cada linha e, então, calcular a soma. Além disso, o período de tempo necessário para recuperar esses dados irão variar dependendo do modo de armazenamento escolhido para os dados-MOLAP, HOLAP ou ROLAP.  
   
 ## <a name="designing-aggregations"></a>Projetando agregações  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorpora um algoritmo sofisticado para selecionar agregações para pré-cálculo para que outras agregações podem ser rapidamente computadas a partir de valores pré-calculados. Por exemplo, se as agregações forem pré-calculadas para o nível Mês da hierarquia Tempo, o cálculo do nível Trimestre exigirá apenas o resumo de três números, os quais podem ser rapidamente computados sob demanda. Essa técnica economiza tempo de processamento e reduz os requisitos de armazenamento, com efeito mínimo sobre o tempo de resposta de consulta.  
@@ -40,6 +40,6 @@ ms.locfileid: "34027373"
  As agregações são projetadas usando os assistentes, mas não são calculadas até que a partição para a qual as agregações são projetadas seja processada. Depois que a agregação tiver sido criada, se a estrutura do cubo mudar alguma vez ou se forem adicionados ou alterados dados nas tabelas de origem do cubo, geralmente será necessário examinar as agregações do cubo e processá-lo novamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modos de armazenamento de partição e processamento](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
+ [Modos e processamento de armazenamento de partição](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

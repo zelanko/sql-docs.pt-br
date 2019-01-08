@@ -1,37 +1,41 @@
 ---
-title: Como usar blocos de anotações na visualização do SQL Server 2019 | Microsoft Docs
-description: ''
+title: Execute blocos de anotações no estúdio de dados do Azure
+titleSuffix: SQL Server 2019 big data clusters
+description: Este artigo explica como executar blocos de anotações do Jupyter no Azure Data Studio conneected para um cluster de big data do SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221632"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246605"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Como usar blocos de anotações na visualização do SQL Server de 2019
 
-Este artigo descreve como iniciar os blocos de anotações do Jupyter no cluster e começar a criar seus próprios blocos de anotações. Ele também mostra como enviar trabalhos no cluster.
+Este artigo descreve como iniciar o Jupyter Notebooks em um cluster de big data e como começar a criar seus próprios blocos de anotações. Ele também mostra como enviar trabalhos no cluster.
 
 ## <a name="prerequisites"></a>Prerequisites
 
 Para usar os blocos de anotações, você deve instalar os seguintes pré-requisitos:
 
 - [Um cluster de big data do SQL Server de 2019](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [A extensão de 2019 do SQL Server (versão prévia)](../azure-data-studio/sql-server-2019-extension.md).
+- [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+   - **Kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Conectar-se ao ponto de extremidade Hadoop Gateway Knox
 
-Você pode se conectar aos pontos de extremidade diferentes no cluster. Você pode conectar-se para o tipo de conexão do Microsoft SQL Server ou para o ponto de extremidade de Gateway HDFS/Spark.
-No estúdio de dados do Azure (visualização), pressione F1 e clique em **nova Conexão** e você pode se conectar ao ponto de extremidade do Gateway HDFS/Spark.
+Você pode se conectar aos pontos de extremidade diferentes no cluster. Você pode conectar-se para o tipo de conexão do Microsoft SQL Server ou para o ponto de extremidade de gateway HDFS/Spark.
+No estúdio de dados do Azure (visualização), pressione F1 e clique em **nova Conexão** e você pode se conectar ao ponto de extremidade de gateway do HDFS/Spark.
 
 ![Image1](media/notebooks-guidance/image1.png)
 
@@ -74,13 +78,13 @@ Oferece suporte a instalação de Notebook PySpark e Spark, os kernels de mágic
 
 Quando você seleciona um desses kernels, vamos instalar esse kernel no ambiente virtual e você pode começar a escrever código no idioma com suporte.
 
-|Kernel|Description
+|Kernel|Descrição
 |:-----|:-----
 |Kernel PySpark|Para escrever o código do Python usando computação Spark do cluster.
 |Kernel Spark|Para escrever código Scala usando computação Spark do cluster.
 |Kernel Python|Para escrever o código do Python para o desenvolvimento local.
 
-O `Attach to` fornece o contexto para o Kernel anexar. Quando você está conectado ao final HDFS/Spark Gateway (Knox), aponte o padrão `Attach to` é esse ponto de extremidade do cluster.
+O `Attach to` fornece o contexto para o Kernel anexar. Quando você está conectado ao final de gateway (Knox) de HDFS/Spark aponte o padrão `Attach to` é esse ponto de extremidade do cluster.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -105,15 +109,15 @@ Adicionar uma nova célula de código clicando o **+ código** comando na barra 
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-Você também pode exibir as opções"célula" quando você clica no ícone de opções abaixo –
+Você também pode exibir as opções"célula" quando você clica no ícone de opções abaixo-
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-Aqui estão as opções para cada célula –
+Aqui estão as opções para cada célula-
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-Agora, escolha o Kernel do Spark na lista suspensa para os kernels e no tipo/colar de célula no –
+Agora, escolha o Kernel do Spark na lista suspensa para os kernels e no tipo/colar de célula no-
 
 ![Image15](media/notebooks-guidance/image15.png)
 

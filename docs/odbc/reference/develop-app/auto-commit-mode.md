@@ -18,12 +18,12 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87a5bababd2129ffb7e0aad36a2ceb3362d4acd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514586"
 ---
 # <a name="auto-commit-mode"></a>Modo de confirmação automática
 *No modo de confirmação automática,* cada operação de banco de dados é uma transação é confirmada quando executada. Esse modo é adequado para muitas transações reais que consistem em uma única instrução SQL. Não é necessário delimitar ou especificar a conclusão dessas transações. Em bancos de dados sem suporte a transações, o modo de confirmação automática é o único modo com suporte. Nesses bancos de dados, as instruções são confirmadas quando eles são executados e não é possível revertê-los; eles são, portanto, sempre no modo de confirmação automática.  

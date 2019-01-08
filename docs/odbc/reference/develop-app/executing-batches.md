@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541218"
 ---
 # <a name="executing-batches"></a>Lotes em execução
-Antes de um aplicativo executa um lote de instruções, ele deve primeiro verificar se eles têm suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se gerar – contagem de linha e o resultado – gerar conjunto de instruções são suportadas em lotes explícitas e procedimentos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e o resultado define em parametrizada execução.  
+Antes de um aplicativo executa um lote de instruções, ele deve primeiro verificar se eles têm suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se geradores de contagem de linha e o resultado da geração de conjunto de instruções são suportadas em lotes explícitas e procedimentos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e o resultado define em parametrizadas execução.  
   
  Lotes de instruções são executadas por meio **SQLExecute** ou **SQLExecDirect**. Por exemplo, a chamada a seguir executa um lote explícito de instruções para abrir uma nova ordem de venda.  
   

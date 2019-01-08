@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349663"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
@@ -38,7 +37,7 @@ ms.locfileid: "48063456"
   
  ![Restrições de precedência em um pacote](../media/mw-dts-12.gif "Restrições de precedência em um pacote")  
   
- Como o pacote está no topo da hierarquia de contêineres do [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vários pacotes não podem ser vinculados por restrições de precedência; entretanto, é possível adicionar uma tarefa Executar Pacote a um pacote e, indiretamente, vincular outro pacote ao fluxo de controle.  
+ Como o pacote está no topo da hierarquia de contêineres do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vários pacotes não podem ser vinculados por restrições de precedência; entretanto, é possível adicionar uma tarefa Executar Pacote a um pacote e, indiretamente, vincular outro pacote ao fluxo de controle.  
   
  É possível configurar restrições de precedência adotando um dos seguinte procedimentos:  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48063456"
   
 -   Uma expressão ou restrição que usa os resultados da execução do executável de precedência ou os resultados de retorno da avaliação da expressão.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer usa cores para identificar o tipo de restrição de precedência. A restrição Bem-sucedida é verde, a restrição Falha é vermelha, e a restrição Conclusão é azul. Para exibir rótulos de texto no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer que mostrem o tipo de restrição, você deve configurar os recursos de acessibilidade do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O Designer usa cores para identificar o tipo de restrição de precedência. A restrição Bem-sucedida é verde, a restrição Falha é vermelha, e a restrição Conclusão é azul. Para exibir rótulos de texto no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer que mostrem o tipo de restrição, você deve configurar os recursos de acessibilidade do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
   
  A expressão deve ser uma expressão válida do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] e pode incluir funções, operadores e, variáveis do sistema e personalizadas. Para obter informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48063456"
 -   A falha requer que o executável de precedência falhe para que o executável restrito seja executado.  
   
 > [!NOTE]  
->  Somente as restrições de precedência que são membros do mesmo `Precedence Constraint` coleção pode ser agrupada em uma condição AND lógica. Por exemplo, você não pode combinar restrições de precedência de dois contêineres Loop Foreach.  
+>  Somente as restrições de precedência que forem membros da mesma coleção `Precedence Constraint` poderão ser agrupadas em uma condição AND lógica. Por exemplo, você não pode combinar restrições de precedência de dois contêineres Loop Foreach.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configuração da restrição de precedência  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
@@ -96,7 +95,7 @@ ms.locfileid: "48063456"
      Este tópico fornece informações sobre como definir o comportamento padrão de restrições de precedência e como conectar executáveis usando as restrições de precedência padrão, consulte.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+ Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar expressões a restrições de precedência](../add-expressions-to-precedence-constraints.md)   

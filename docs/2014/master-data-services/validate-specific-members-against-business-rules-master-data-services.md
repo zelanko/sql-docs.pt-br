@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - applying business rules [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66709a95b876f34cf7ee05de63caf6661a19197f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2cded1fccc1e6d6ee5229fbec0c786ab35170de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814628"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Validar membros específicos em relação a regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], aplique regras de negócio seletivamente quando desejar atualizar ou validar subconjuntos de membros com base em regras de negócio.  
@@ -47,7 +46,7 @@ ms.locfileid: "48058846"
 5.  Clique em **Aplicar regras de negócio**. As regras de negócio são aplicadas apenas aos membros exibidos na grade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Validar uma versão em relação às regras de negócios &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+ [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

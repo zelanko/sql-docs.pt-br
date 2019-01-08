@@ -13,12 +13,12 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8cdb580a5a4221dd792d8d298ac4da3c4a333182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d42e8166198cbf97b2589b55f77d40514e56dee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756154"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534696"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Criar os arquivos de Conexão de servidor (SybaseToSQL)
 Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição de servidor no arquivo de script é considerada.  
@@ -70,7 +70,7 @@ Informações do servidor podem ser especificadas na seção de servidores do ar
 ```  
   
 ```  
-2.<!—Sample of server connection file commands-->  
+2.<!-Sample of server connection file commands-->  
 <sybase name="<source-server-unique-name>">  
   
   <advanced-mode>  

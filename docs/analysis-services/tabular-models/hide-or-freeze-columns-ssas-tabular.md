@@ -1,5 +1,5 @@
 ---
-title: Ocultar ou congelar colunas | Microsoft Docs
+title: Ocultar ou congelar colunas em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e588e16549a609fe15f0f7d7eaf89a010a5bde2c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 624216b190b0a408305c90224087b1f65a4a8286
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042470"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071963"
 ---
 # <a name="hide-or-freeze-columns"></a>Ocultar ou congelar colunas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

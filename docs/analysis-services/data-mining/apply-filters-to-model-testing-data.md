@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539951"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020033"
   
  Para determinar se um modelo contém um filtro predefinido que possa afetar os resultados, você pode procurar a propriedade **Filter** no painel **Propriedade** ou consultar o modelo usando os conjuntos de linhas do esquema de mineração de dados. Por exemplo, esta consulta retorna o texto de filtro para o modelo especificado:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Se desejar remover o filtro de um modelo de mineração existente ou alterar as condições do filtro, reprocesse o modelo de mineração.  
@@ -57,7 +57,7 @@ ms.locfileid: "34020033"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(…)** para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
+4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
   
 5.  Escolha a tabela de caso e adicione uma tabela aninhada, caso necessário. Mapeie colunas no modelo para colunas no conjunto de dados externo, caso necessário. Feche a caixa de diálogo **Especificar Mapeamento de Coluna** para salvar a definição de tabela de origem.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020033"
   
 9. Clique na caixa de texto **E/Ou** e selecione um operador lógico para definir como combinar várias condições.  
   
-10. Se desejar, clique no botão Procurar **(…)** à direita da caixa de texto **Valor** para abrir a caixa de diálogo **Filtrar** e defina as condições na tabela aninhada ou nas colunas da tabela de casos individuais.  
+10. Opcionalmente, clique no botão Procurar **(...)**  à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
   
 11. Verifique se as condições de filtro atendidas estão corretas exibindo o texto no painel **Expressão** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34020033"
   
 ## <a name="see-also"></a>Consulte também  
  [Escolher e mapear dados de testes modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Usando dados tabela aninhada como entrada para um gráfico de precisão](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Escolha um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Usando dados de uma tabela aninhada como entrada para um gráfico de precisão](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Escolher um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

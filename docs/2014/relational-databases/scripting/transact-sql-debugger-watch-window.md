@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328746"
 ---
 # <a name="watch-window"></a>Janela de Observação
-  A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
+  A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas de inspeção: **Assista a 1**, **Assista a 2, 3 de assistir**, e **Assista 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar as janelas Inspecionar**  
@@ -46,7 +44,7 @@ ms.locfileid: "48213477"
   
 -   Expressões criadas pela aplicação de operadores a uma ou mais variáveis, parâmetros ou funções do sistema, como @IntegerCounter + 1 ou FirstName + LastName.  
   
--   Instruções Transact-SQL que retornam um único valor, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Instruções Transact-SQL que retornam um único valor, como: SELECT CharacterCol FROM MyTable onde PrimaryKey = 1.  
   
  **Value**  
  Exibe o valor retornado depois que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] avalia a expressão especificada em **Nome**.  
@@ -65,5 +63,3 @@ ms.locfileid: "48213477"
  [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressões &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520710"
 ---
 # <a name="script-task-editor-script-page"></a>Editor da Tarefa Script (página Script)
   Use a página **Script** da caixa de diálogo **Editor da Tarefa Script** para definir propriedades de script e especificar variáveis que podem ser acessados pelo script.  
@@ -44,13 +44,13 @@ ms.locfileid: "48198076"
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências (**...**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis** .  
+ Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências (**...**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
   
  **ReadWriteVariables**  
- Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências (**…**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis** .  
+ Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências (**…**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
@@ -60,11 +60,11 @@ ms.locfileid: "48198076"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página geral](general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa script &#40;página geral&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [Página expressões](expressions/expressions-page.md)   
- [Exemplos de tarefa script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Script &#40;Página Geral&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
+ [Exemplos de tarefa Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

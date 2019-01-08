@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851802"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413003"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
   O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
- **Modo nativo:** no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de “ReportServer e ReportServerTempDB.”  
+ **Modo nativo:** No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo nativo, o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm nomes padrão de "ReportServer e ReportServerTempDB".  
   
- **Modo do SharePoint:** na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint, o banco de dados do servidor de relatório é na verdade uma coleção de bancos de dados é criada para cada instância da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativo de serviço.  
+ **Modo SharePoint:** Na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint, o banco de dados do servidor de relatório é na verdade uma coleção de bancos de dados é criada para cada instância da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativo de serviço.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo  
  A seguinte lista identifica as condições nas quais um banco de dados do servidor de relatório é atualizado:  

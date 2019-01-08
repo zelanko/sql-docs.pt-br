@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113270"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400509"
 ---
 # <a name="choosing-a-model"></a>Escolhendo um modelo
-  **Algoritmo de mineração:** mineração de dados *algoritmo* é o mecanismo que cria padrões a partir de dados. Esse algoritmo define o modo como os dados são contados, como as relações são derivadas e como os padrões são armazenados. A seleção de um algoritmo depende parcialmente do tipo de dados que você deseja analisar. Por exemplo, alguns algoritmos só podem funcionar com números contínuos, enquanto que outros funcionam melhor com um número limitado de valores distintos.  
+  **Algoritmo de mineração:** O data mining *algoritmo* é o mecanismo que cria padrões a partir de dados. Esse algoritmo define o modo como os dados são contados, como as relações são derivadas e como os padrões são armazenados. A seleção de um algoritmo depende parcialmente do tipo de dados que você deseja analisar. Por exemplo, alguns algoritmos só podem funcionar com números contínuos, enquanto que outros funcionam melhor com um número limitado de valores distintos.  
   
- **Modelo de mineração:** o resultado da análise de dados por um algoritmo é salvo em um *modelo de mineração*. Um modelo de mineração é uma coleção de regras, estatísticas e padrões. O *conteúdo* do modelo de mineração depende do algoritmo usado para processar os dados, mas pode incluir o seguinte:  
+ **Modelo de mineração:** O resultado da análise de dados por um algoritmo é salvo em um *modelo de mineração*. Um modelo de mineração é uma coleção de regras, estatísticas e padrões. O *conteúdo* do modelo de mineração depende do algoritmo usado para processar os dados, mas pode incluir o seguinte:  
   
 -   Regras Se-então que descrevem como são agrupados produtos em uma transação.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113270"
   
 -   *Nós* em uma rede, conectada por *bordas*. Os nós representam itens ou grupos de itens. As bordas são pontuadas de acordo com a intensidade das relações entre os nós.  
   
- **Usando o modelo:** após você ter criado um modelo, você pode usar os visualizadores fornecidos para explorá-lo ou você pode criar uma consulta para o modelo. As consultas podem ser usadas para:  
+ **Usando o modelo:** Depois que você criou um modelo, você pode usar os visualizadores fornecidos para explorá-lo, ou você pode criar uma consulta para o modelo. As consultas podem ser usadas para:  
   
 -   Prever valores futuros.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48113270"
 ## <a name="list-of-supported-algorithms"></a>Lista de algoritmos com suporte  
  Os seguintes algoritmos são fornecidos por padrão.  
   
-|Nome do algoritmo|Description|Usado em|  
+|Nome do algoritmo|Descrição|Usado em|  
 |--------------------|-----------------|-------------|  
 |Regras de Associação da Microsoft|Cria regras que descrevem quais itens provavelmente aparecem juntos em uma transação.|[Assistente para associação &#40;cliente de mineração de dados para Excel&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Análise da cesta de compras &#40;ferramentas de análise de tabela para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Identifica relações em um conjunto de dados que talvez não sejam derivadas de forma lógica por meio de observação casual. Usa técnicas iterativas para agrupar registros em clusters que contenham características semelhantes.|[Detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Assistente de cluster &#40;Data Mining Add-ins para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543588"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluções de alta disponibilidade (SQL Server)
   Este tópico apresenta várias soluções de alta disponibilidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que melhoram a disponibilidade de servidores ou bancos de dados. Uma solução de alta disponibilidade mascara os efeitos da falha de um hardware ou software e mantém a disponibilidade dos aplicativos, de modo a minimizar o tempo de inatividade percebido pelos usuários.  
@@ -34,7 +34,7 @@ ms.locfileid: "48091516"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias opções para a criação de alta disponibilidade para um servidor ou banco de dados. As opções de alta disponibilidade incluem o seguinte:  
   
  Instâncias do cluster de failover do AlwaysOn  
- Como parte da oferta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, as instâncias de cluster de failover do AlwaysOn aproveitam a funcionalidade WSFC (Windows Server Failover Clustering) para fornecer alta disponibilidade local por meio de redundância na instância de nível de servidor, uma FCI ( *instância de cluster de failover* ). Uma FCI é uma instância única do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é instalada em nós de WSFC (Windows Server Failover Clustering) e, possivelmente, em várias sub-redes. Na rede, uma FCI aparece ser uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendo executada em um único computador, mas proporciona failover de um nó do WSFC para outro se o nó atual se tornar indisponível.  
+ Como parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferta, instâncias de Cluster de Failover do AlwaysOn aproveitam a funcionalidade de Clustering de Failover do Windows Server (WSFC) para fornecer alta disponibilidade local por meio de redundância na instância do servidor um nível AlwaysOn  *instância de cluster de failover* (FCI). Uma FCI é uma instância única do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é instalada em nós de WSFC (Windows Server Failover Clustering) e, possivelmente, em várias sub-redes. Na rede, uma FCI aparece ser uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendo executada em um único computador, mas proporciona failover de um nó do WSFC para outro se o nó atual se tornar indisponível.  
   
  Para obter mais informações, consulte [ instâncias de Cluster de Failover do AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48091516"
   
 ## <a name="see-also"></a>Consulte também  
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Espelhamento de banco de dados: Interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

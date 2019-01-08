@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
@@ -21,12 +21,12 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14e3d90b8406dc5411c1325038afee184684b7b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210566"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752599"
 ---
 # <a name="make-a-master-server"></a>Criar um servidor mestre
   Este tópico descreve como criar um servidor mestre do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "48210566"
      Para resolver este erro, certifique-se de que existe uma conta proxy no servidor de destino com o mesmo nome da conta proxy do servidor mestre sob a qual a etapa de trabalho é executada.  
   
 ####  <a name="Permissions"></a> Permissões  
- As permissões para executar esse procedimento usam como padrão os membros de `sysadmin` função de servidor fixa.  
+ As permissões para executar esse procedimento para membros da função de servidor fixa `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210566"
      **Criar um novo logon, se necessário, e atribuir-lhe direitos ao MSX**  
      Cria um novo logon no servidor de destino se o logon especificado ainda não existir.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-make-a-master-server"></a>Para criar um servidor mestre  
   

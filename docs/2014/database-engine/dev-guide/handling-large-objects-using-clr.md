@@ -12,12 +12,12 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c54fd3944d41e1522e792d649ea3d9fbcd331b95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350277"
 ---
 # <a name="handling-large-objects-using-clr"></a>Manipulando objetos grandes usando CLR
   O exemplo `HandlingLOBUsingCLR` do SQL Server demonstra a transferência de LOBs (objetos grandes) entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um sistema de arquivos que está disponível para o servidor com o uso dos procedimentos armazenados CLR (Common Language Runtime). Esse exemplo demonstra como acessar arquivos em código de servidor e, em seguida, invocar consultas dinâmicas e procedimentos armazenados a partir de procedimentos armazenados baseados em CLR. Ele também demonstra como cancelar o registro e registrar métodos e assemblies CLR usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -25,9 +25,9 @@ ms.locfileid: "48092847"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   

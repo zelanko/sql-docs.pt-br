@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825934"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213085"
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLFetch** busca o próximo conjunto de linhas de dados do conjunto de resultados e retorna dados para todas as colunas associadas.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825934"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -54,7 +54,7 @@ SQLRETURN SQLFetch(
   
  Para todos esses SQLSTATEs que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx SQLSTATEs), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em um ou mais, mas nem todas as linhas de uma operação de várias linhas, e SQL_ERROR será retornado se ocorrer um erro em um operação de uma única linha.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para uma coluna resultaram em truncamento de caractere não vazios ou nulos de dados binários. Se fosse um valor de cadeia de caracteres, ele era truncados à direita.|  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22001|Dados de cadeia de caracteres truncados à direita|Um indicador de comprimento variável retornado para uma coluna foi truncado.|  
 |22002|Variável de indicador necessária, mas não fornecida|Dados nulos foi buscados em uma coluna cuja *StrLen_or_IndPtr* definido por **SQLBindCol** (ou SQL_DESC_INDICATOR_PTR definido pela **SQLSetDescField** ou  **SQLSetDescRec**) é um ponteiro nulo.|  
-|22003|Valor numérico fora do intervalo|Retornar o valor numérico como numérico ou cadeia de caracteres para um ou mais colunas associadas teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) apêndice d: tipos de dados.|  
+|22003|Valor numérico fora do intervalo|Retornar o valor numérico como numérico ou cadeia de caracteres para um ou mais colunas associadas teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice d: Tipos de dados.|  
 |22007|Formato de data/hora inválido|Uma coluna de caractere no conjunto de resultados foi associada a uma data, hora ou estrutura de carimbo de hora C, e um valor na coluna foi, respectivamente, uma data inválida, hora ou carimbo de hora.|  
 |22012|Divisão por zero|Um valor de uma expressão aritmética foi retornado, que resultou na divisão por zero.|  
 |22015|Estouro no campo de intervalo|A atribuição de um numérico exato ou o intervalo de tipo SQL para um tipo de intervalo C causou uma perda de dígitos significativos no campo à esquerda.<br /><br /> Ao buscar dados para um tipo de intervalo de C, não houve nenhuma representação do valor do tipo SQL no tipo de intervalo de C.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Se um ODBC 3 *. x* aplicativo funciona com um ODBC 2 *. x* driver, o Gerenciador de Driver mapeia **SQLFetch** chama **SQLExtendedFetch** para um 2 de ODBC *. x* driver que suporta **SQLExtendedFetch**. Se o ODBC 2 *. x* driver não oferece suporte **SQLExtendedFetch**, o Gerenciador de Driver mapeia **SQLFetch** chamadas para **SQLFetch** no ODBC 2 *. x* driver, que pode ser apenas uma única linha.  
   
- Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+ Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="positioning-the-cursor"></a>Posicionando o Cursor  
  Quando o conjunto de resultados é criado, o cursor é posicionado antes do início do conjunto de resultados. **SQLFetch** busca o próximo conjunto de linhas. Ele é equivalente a chamar **SQLFetchScroll** com *FetchOrientation* definido como SQL_FETCH_NEXT. Para obter mais informações sobre cursores, consulte [cursores](../../../odbc/reference/develop-app/cursors.md) e [cursores em bloco](../../../odbc/reference/develop-app/block-cursors.md).  
   
- O atributo da instrução SQL_ATTR_ROW_ARRAY_SIZE Especifica o número de linhas no conjunto de linhas. Se o conjunto de linhas que estão sendo buscadas por **SQLFetch** sobrepõe o final do conjunto de resultados, **SQLFetch** retorna um conjunto de linhas parcial. Ou seja, se S + R – 1 é maior que L, onde S é a linha inicial do conjunto de linhas que estão sendo buscada, R é o tamanho do conjunto de linhas e L é a última linha no conjunto de resultados, em seguida, somente o primeiro L – S + 1 linhas do conjunto de linhas são válidos. As linhas restantes estão vazias e têm um status de SQL_ROW_NOROW.  
+ O atributo da instrução SQL_ATTR_ROW_ARRAY_SIZE Especifica o número de linhas no conjunto de linhas. Se o conjunto de linhas que estão sendo buscadas por **SQLFetch** sobrepõe o final do conjunto de resultados, **SQLFetch** retorna um conjunto de linhas parcial. Ou seja, se S + R - 1 é maior que L, onde S é a linha inicial do conjunto de linhas que estão sendo buscada, R é o tamanho do conjunto de linhas e L é a última linha no conjunto de resultados, em seguida, somente o primeiro L - S + 1 linhas do conjunto de linhas são válidos. As linhas restantes estão vazias e têm um status de SQL_ROW_NOROW.  
   
  Após **SQLFetch** retorna, a linha atual é a primeira linha do conjunto de linhas.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |Antes de iniciar|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|Após o fim|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Após o fim|  
 |Após o fim|Após o fim|  
   
  [1] se o tamanho do conjunto de linhas é alterado entre buscas, esse é o tamanho do conjunto de linhas que foi usado com a busca anterior.  
@@ -177,7 +177,7 @@ SQLRETURN SQLFetch(
   
  Os seguintes valores são retornados na matriz de status de linha.  
   
-|Valor de matriz de status de linha|Description|  
+|Valor de matriz de status de linha|Descrição|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|A linha foi obtida com êxito e não foi alterado desde que foi buscada pela última vez deste conjunto de resultados.|  
 |SQL_ROW_SUCCESS_WITH_INFO|A linha foi obtida com êxito e não foi alterado desde que foi buscada pela última vez deste conjunto de resultados. No entanto, um aviso sobre a linha foi retornado.|  

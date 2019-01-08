@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414793"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
@@ -48,9 +48,9 @@ ms.locfileid: "51032115"
   
  A limpeza de dados no DQS é feita com base no conhecimento em uma base de dados de conhecimento do DQS. A limpeza de dados no DQS é um processo de duas etapas:  
   
--   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
+-   **Limpeza auxiliada por computador**: O DQS usa o conhecimento na base de dados de Conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
   
--   **Limpeza interativa**: o administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistida por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
+-   **Limpeza interativa**: O administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistido por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
   
  Depois de limpar dados, o administrador de dados pode exportar os dados processados para um banco de dados do SQL Server, .csv ou um arquivo do Excel. Para obter mais informações, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   

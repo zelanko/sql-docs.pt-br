@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622324"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540445"
 ---
 # <a name="what-is-odbc"></a>O que é o ODBC?
 Existem muitos erros de concepção sobre ODBC no mundo da informática. Para o usuário final, ele é um ícone no painel de controle do Microsoft® Windows®. Para o programador de aplicativo, é uma biblioteca que contém as rotinas de acesso de dados. Para muitos outros, é a resposta para todos os problemas de acesso de banco de dados nunca tenha imaginado.  
   
- Primeiramente, o ODBC é uma especificação para um banco de dados de API. Essa API é independente de qualquer um DBMS ou sistema operacional. Embora esse manual usa C, a API de ODBC é independente de linguagem. A API de ODBC é baseada nas especificações do Open Group e ISO/IEC CLI. ODBC 3. *x* implementa ambas essas especificações totalmente – versões anteriores do ODBC foram baseadas em versões preliminares dessas especificações, mas não implementou totalmente-los — e adiciona recursos comumente necessários por desenvolvedores de baseado em tela aplicativos de banco de dados, como cursores roláveis.  
+ Primeiramente, o ODBC é uma especificação para um banco de dados de API. Essa API é independente de qualquer um DBMS ou sistema operacional. Embora esse manual usa C, a API de ODBC é independente de linguagem. A API de ODBC é baseada nas especificações do Open Group e ISO/IEC CLI. ODBC 3. *x* totalmente implementa ambas essas especificações - versões anteriores do ODBC eram baseadas em versões anteriores dessas especificações, mas não os implementou totalmente - e adiciona recursos comumente necessários por desenvolvedores de baseada em telas aplicativos de banco de dados, como cursores roláveis.  
   
  As funções na API do ODBC são implementadas pelos desenvolvedores de drivers específicos de DBMS. Aplicativos chamam as funções desses drivers para acessar dados de maneira independente do DBMS. Um Gerenciador de Driver gerencia a comunicação entre aplicativos e drivers.  
   

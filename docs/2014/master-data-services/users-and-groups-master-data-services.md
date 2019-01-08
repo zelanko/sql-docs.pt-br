@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 301b570ca52780222c97091db6b8fe6ec138e452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf9ef55412c2111acf777e3b428bcb250798b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814629"
 ---
 # <a name="users-and-groups-master-data-services"></a>Usuários e grupos (Master Data Services)
   Para acessar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , o usuário deve ter uma conta de domínio do Windows ou uma conta no computador servidor em que o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está instalado. Para conceder acesso ao [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , você pode:  
@@ -35,7 +34,7 @@ ms.locfileid: "48154196"
   
  Para executar qualquer ação na área funcional **Explorer** da interface do usuário, o grupo ou usuário deverá ter recebido acesso à área funcional **Explorer** e permissão aos objetos de modelo.  
   
- Se um usuário ou grupo precisar de acesso a outras áreas funcionais, o usuário ou grupo deverá ser um administrador. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Se um usuário ou grupo precisar de acesso a outras áreas funcionais, o usuário ou grupo deverá ser um administrador. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="best-practice"></a>Prática recomendada  
  Para simplificar a administração, crie grupos e atribua cada permissão de grupo para áreas funcionais e objetos modelo. Em seguida, você pode adicionar e remover usuários dos grupos sem acessar a interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  

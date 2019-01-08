@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069736"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772568"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -83,7 +82,7 @@ ms.locfileid: "48069736"
 > [!NOTE]  
 >  A única opção configurável em variáveis de sistema é especificar se elas geram um evento quando alteram o valor.  
   
- Description  
+ Descrição  
  Especifica a descrição da variável.  
   
  EvaluateAsExpression  
@@ -141,9 +140,9 @@ ms.locfileid: "48069736"
 ## <a name="configuring-variables"></a>Configurando variáveis  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)], consulte [Janela de Variáveis](../../2014/integration-services/variables-window.md).  
+ Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , consulte [Janela de Variáveis](../../2014/integration-services/variables-window.md).  
   
- Para saber mais sobre as propriedades de variáveis e para obter mais informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Para obter mais informações sobre propriedades variáveis e sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

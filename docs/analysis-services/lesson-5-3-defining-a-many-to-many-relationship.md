@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518020"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lição 5-3-definir uma relação muitos-para-muitos
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lição 5-3: definindo uma relação muitos-para-muitos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
@@ -26,7 +26,7 @@ No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você define uma 
 Com uma dimensão muitos para muitos, os valores são somados distintamente, o que significa que eles não se agregam mais de uma vez ao membro Todos.  
   
 > [!NOTE]  
-> Para oferecer suporte a uma relação da dimensão muitos para muitos, a relação de chave estrangeira-chave primária deve ser definida na exibição da fonte de dados entre todas as tabelas envolvidas. Caso contrário, não será possível selecionar o grupo de medidas intermediário correto ao estabelecer a relação na guia **Uso da Dimensão** do Designer de Cubo.  
+> Para dar suporte a uma relação de dimensão muitos-para-muitos, uma relação de chave estrangeira de chave primária deve ser definida na exibição da fonte de dados entre todas as tabelas que estão envolvidos. Caso contrário, não será possível selecionar o grupo de medidas intermediário correto ao estabelecer a relação na guia **Uso da Dimensão** do Designer de Cubo.  
   
 Para obter mais informações, consulte [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)e [Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
 5.  Na caixa de diálogo **Adicionar/Remover Tabelas** , adicione as tabelas **DimSalesReason** e **FactInternetSalesReason** à lista **Objetos incluídos** e clique em **OK**.  
   
-    Observe que as relações de chave estrangeira-chave primária entre as tabelas envolvidas foram estabelecidas automaticamente porque aquelas relações são definidas no banco de dados relacional subjacente. Se essas relações não foram definidas em um banco de dados relacional subjacente, talvez seja necessário defini-las na exibição da fonte de dados.  
+    Observe que as relações de chave estrangeira de chave primárias entre as tabelas envolvidas foram estabelecidas automaticamente porque aquelas relações são definidas no banco de dados relacional subjacente. Se essas relações não foram definidas em um banco de dados relacional subjacente, talvez seja necessário defini-las na exibição da fonte de dados.  
   
 6.  No menu **Formatar** , aponte para **Layout Automático**e, em seguida, clique em **Diagrama**.  
   
@@ -80,7 +80,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
 5.  Selecione **Contagem de Motivo de Vendas pela Internet** e revise as propriedades dessa medida na janela Propriedades.  
   
-    Observe que a propriedade **AggregateFunction** dessa medida é definida como **Contagem** em vez de **Soma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]escolher **contagem** porque o tipo de dados é um tipo de dados de cadeia de caracteres. As outras duas colunas da tabela de fatos subjacente não foram selecionadas como medidas porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] identificou-as como chaves numéricas em vez de medidas reais. Para obter mais informações, consulte [Definir um comportamento semiaditivo](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Observe que a propriedade **AggregateFunction** dessa medida é definida como **Contagem** em vez de **Soma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] escolheu **Contagem** porque o tipo de dados subjacentes é um tipo de dados de cadeia de caracteres. As outras duas colunas da tabela de fatos subjacente não foram selecionadas como medidas porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] identificou-as como chaves numéricas em vez de medidas reais. Para obter mais informações, consulte [Definir um comportamento semiaditivo](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Na janela Propriedades, altere a propriedade **Visible** da medida **Contagem do Motivo de Vendas pela Internet** para **False**.  
   
@@ -88,7 +88,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
     A imagem a seguir mostra as propriedades da medida **Contagem do Motivo de Vendas pela Internet** .  
   
-    ![Propriedades de medida de contagem de motivo de vendas pela Internet](../analysis-services/media/l5-many-to-many-2.gif "propriedades para a medida de contagem de motivo de vendas pela Internet")  
+    ![Propriedades para a medida de contagem de motivo de vendas pela Internet](../analysis-services/media/l5-many-to-many-2.gif "propriedades para a medida de contagem de motivo de vendas pela Internet")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definindo a dimensão muitos para muitos  
   
@@ -168,13 +168,13 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
     A imagem a seguir mostra os painéis **Filtro** e **Dados** do Designer de Cubo:  
   
-    ![Painéis de filtro e dados do Designer de cubo](../analysis-services/media/l5-many-to-many-5.gif "painéis filtro e dados do Designer de cubo")  
+    ![Painéis filtro e dados do Designer de cubo](../analysis-services/media/l5-many-to-many-5.gif "painéis filtro e dados do Designer de cubo")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Definir a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Trabalhar com diagramas em Designer de exibição de fonte de dados & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

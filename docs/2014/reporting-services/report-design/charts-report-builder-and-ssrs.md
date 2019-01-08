@@ -21,12 +21,12 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: feab5870c703fbe253923006a6f6ba84c4959cdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528687"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual, use a região de dados do gráfico. Os gráficos permitem apresentar grandes volumes de informações agregadas em um relance. É importante preparar e entender cuidadosamente os dados antes de criar um gráfico, pois isso ajuda a projetar os gráficos de maneira rápida e eficiente. Para obter mais informações, consulte [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para começar a usar logo um gráfico, consulte a barra, coluna, Minigráfico e tutoriais de gráfico de pizza [tutoriais &#40;construtor de relatórios&#41; ](../report-builder-tutorials.md) ou a barra e os tutoriais de gráfico de pizza na [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "48120036"
   
   
 ##  <a name="AggregateValues"></a> Agregando valores de um campo de dados no gráfico  
- Por padrão, quando um campo é adicionado à área Valores do gráfico, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo. Se você arrastar um campo para o gráfico sem soltá-lo em uma área específica, o gráfico determinará se esse campo pertence ao eixo da categoria (x) ou ao eixo de valor (y) com base no tipo de dados do campo. Campos numéricos que são soltos na área Valores são agregados usando a função SUM. Se o tipo de dados do campo de valor for String na área Valores, o gráfico não poderá exibir um valor numérico, mesmo que haja números nos campos, portanto o gráfico exibirá a função COUNT. Para evitar esse comportamento, verifique se os campos usados têm tipos de dados numéricos, em vez de cadeias de caracteres que contêm números formatados. Você pode usar uma expressão do Visual Basic para converter valores de cadeia de caracteres em um tipo de dados numéricos usando o `CDbl` ou `CInt` constante. Por exemplo, a expressão complexa a seguir converte um campo denominado `MyField` que contém valores numéricos que são formatados como cadeias de caracteres.  
+ Por padrão, quando um campo é adicionado à área Valores do gráfico, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo. Se você arrastar um campo para o gráfico sem soltá-lo em uma área específica, o gráfico determinará se esse campo pertence ao eixo da categoria (x) ou ao eixo de valor (y) com base no tipo de dados do campo. Campos numéricos que são soltos na área Valores são agregados usando a função SUM. Se o tipo de dados do campo de valor for String na área Valores, o gráfico não poderá exibir um valor numérico, mesmo que haja números nos campos, portanto o gráfico exibirá a função COUNT. Para evitar esse comportamento, verifique se os campos usados têm tipos de dados numéricos, em vez de cadeias de caracteres que contêm números formatados. É possível usar uma expressão do Visual Basic para converter valores de cadeia de caracteres em tipo de dados numéricos usando a constante `CDbl` ou `CInt`. Por exemplo, a expressão complexa a seguir converte um campo denominado `MyField` que contém valores numéricos que são formatados como cadeias de caracteres.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -118,42 +118,42 @@ ms.locfileid: "48120036"
   
   
 ##  <a name="InThisSection"></a> Nesta seção  
- [Adicionar um gráfico a um relatório &#40;relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Descreve as primeiras etapas para adicionar um gráfico ao relatório.  
   
- [Tipos de gráfico &#40;relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Descreve todos os tipos e subtipos de gráficos disponíveis no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], incluindo considerações e práticas recomendadas para uso de vários tipos de gráficos.  
   
- [Formatando um gráfico &#40;relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Use formatação para melhorar a aparência global e realçar pontos de dados importantes de seu gráfico.  
   
- [Pontos de dados em gráficos vazios e nulos &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Descreve considerações ao trabalhar com gráficos baseados em campos com valores vazios ou nulos.  
   
- [Exibindo uma série com vários intervalos de dados em um gráfico &#40;relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Como exibir uma série com vários intervalos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  Descreve como adicionar quebras de escala a uma série que contém mais de um intervalo de dados.  
   
- [Várias séries em um gráfico &#40;relatórios e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [Várias séries em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Descreve vários métodos de como mostrar várias séries no mesmo gráfico, incluindo como combinar tipos de gráfico, como usar o eixo secundário, como especificar diferentes tipos de gráfico e como usar várias áreas do gráfico.  
   
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Forneça exibições de dados diferentes do mesmo conjunto de dados de relatório.  
   
- [Adicionar ou excluir um grupo em um gráfico &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Descreve a adição de grupos e grupos aninhados para um gráfico.  
   
- [Adicionar uma média móvel a um gráfico &#40;relatórios e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar uma média móvel a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Descreve o uso da fórmula Média Móvel para calcular a média dos dados em sua série.  
   
- [Solucionar problemas de gráficos &#40;relatórios e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Solução de problemas de gráficos &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Descreve dicas para trabalhar com gráficos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imagens, caixas de texto, retângulos e linhas de &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Adicionar um gráfico de barras ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um gráfico de barras ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

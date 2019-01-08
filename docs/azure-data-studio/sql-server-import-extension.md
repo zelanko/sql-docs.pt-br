@@ -1,7 +1,8 @@
 ---
-title: Extensão de importação do Azure Data Studio SQL Server | Microsoft Docs
-description: Extensão de SQL Server Import (visualização) para o Studio de dados do Azure
-ms.custom: tools|sos
+title: Extensão de importação do SQL Server
+titleSuffix: Azure Data Studio
+description: Instalar e usar a extensão de importação do SQL Server (versão prévia) para o Studio de dados do Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460611"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030740"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extensão de importação do SQL Server (versão prévia)
 
@@ -26,13 +27,13 @@ Para saber mais sobre a versão do SSMS desse recurso, você pode ler [deste art
 
 ## <a name="install-the-sql-server-import-extension"></a>Instalar a extensão de importação do SQL Server
 
-1. Para abrir o Gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione **extensões** na **exibição** menu.
+1. Para abrir o Gerenciador de extensões e acessar as **extensões** disponíveis, selecione o ícone de extensões ou selecione extensões no menu **Exibição**.
 2. Selecione uma extensão disponível para exibir seus detalhes.
 
    ![Gerenciador de extensões de importação](media/sql-server-import-extension/import-wizard-install.png)
 
-1. Selecione a extensão desejada e **instalar** -lo.
-2. Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
+1. Selecione a extensão desejada e **instale-a**.
+2. Selecione **Recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
 
 ## <a name="start-import-wizard"></a>Iniciar Assistente de importação
 

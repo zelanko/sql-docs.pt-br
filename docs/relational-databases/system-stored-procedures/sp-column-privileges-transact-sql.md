@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538060"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *table_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *table_name*, procurará uma tabela com os privilégios de sp_column *table_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- É o nome do qualificador da tabela. *table_qualifier* está *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *table_qualifier* está *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @column_name=] '*coluna*'  
  É uma única coluna usada quando somente uma coluna de informações do catálogo é obtida. *coluna* está **nvarchar (** 384 **)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na tabela sys. Columns. *coluna* pode incluir caracteres curinga usando padrões do DBMS subjacente de correspondência de curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
@@ -61,7 +61,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_column_privileges é equivalente a SQLColumnPrivileges no ODBC. Os resultados retornados são ordenados por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME e PRIVILEGE.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nome do qualificador de tabela. Esse campo pode ser NULL.|  
 |TABLE_OWNER|**sysname**|Nome do proprietário de tabela. Esse campo sempre retorna um valor.|  

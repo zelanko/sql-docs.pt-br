@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543819"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "47601364"
   
 -   Tipos. Os tipos encapsulam o comprimento e as características da coleção de bytes que é exigida para interpretar os dados.  
 
- |Nome da coluna|Tipo de dados|Description|  
+ |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |nome|**nvarchar(60)**|O nome do objeto. nome é exclusivo dentro de um pacote para um tipo de objeto específico. Não permite valor nulo.|  
 |object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Tipo<br /><br /> Não permite valor nulo.|  
 |package_guid|**uniqueidentifier**|A GUID para o pacote que expõe esta ação. Há uma relação muitos para uma com sys.dm_xe_packages.package_id. Não permite valor nulo.|  
 |descrição|**nvarchar(256)**|Uma descrição da ação. Descrição é definida pelo autor do pacote. Não permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as funcionalidades do objeto. Permite valor nulo.|  
-|capabilities_desc|**nvarchar(256)**|Lista todas as funcionalidades do objeto. Permite valor nulo.<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> —<br />                                **Privado**. O único objeto disponível para uso interno e que não pode ser acessado via CREATE/ALTER EVENT SESSION DDL. Audite eventos e destinos nesta categoria além de um número pequeno de objetos usados internamente.<br /><br /> ===============<br /><br /> **Recursos de eventos**<br /><br /> —<br />                                **No_block**. O evento está em um caminho de código crítico que não pode ser bloqueado por nenhuma razão. Eventos com essa capacidade não podem ser adicionados a nenhuma sessão de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> —<br />                                **Process_whole_buffers**. O destino consome buffers de eventos de uma vez, em vez de evento após evento.<br /><br /> —<br />                        **Singleton**. Somente uma instância do destino pode existir em um processo. Embora várias sessões de evento possam referenciar o mesmo destino singleton, há realmente só uma instância e essa instância visualizará cada evento exclusivo somente uma vez. Isso será importante se o destino for adicionado a várias sessões que coletam o mesmo evento.<br /><br /> —<br />                                **Synchronous**. O destino é executado no thread que está gerando o evento, antes de o controle ser retornado à linha de código de chamada.|  
+|capabilities_desc|**nvarchar(256)**|Lista todas as funcionalidades do objeto. Permite valor nulo.<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> -<br />                                **Privado**. O único objeto disponível para uso interno e que não pode ser acessado via CREATE/ALTER EVENT SESSION DDL. Audite eventos e destinos nesta categoria além de um número pequeno de objetos usados internamente.<br /><br /> ===============<br /><br /> **Recursos de eventos**<br /><br /> -<br />                                **No_block**. O evento está em um caminho de código crítico que não pode ser bloqueado por nenhuma razão. Eventos com essa capacidade não podem ser adicionados a nenhuma sessão de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> -<br />                                **Process_whole_buffers**. O destino consome buffers de eventos de uma vez, em vez de evento após evento.<br /><br /> -<br />                        **Singleton**. Somente uma instância do destino pode existir em um processo. Embora várias sessões de evento possam referenciar o mesmo destino singleton, há realmente só uma instância e essa instância visualizará cada evento exclusivo somente uma vez. Isso será importante se o destino for adicionado a várias sessões que coletam o mesmo evento.<br /><br /> -<br />                                **Synchronous**. O destino é executado no thread que está gerando o evento, antes de o controle ser retornado à linha de código de chamada.|  
 |type_name|**nvarchar(60)**|O nome para objetos pred_source e pred_compare. Permite valor nulo.|  
 |type_package_guid|**uniqueidentifier**|O GUID do pacote que expõe o tipo no qual este objeto opera. Permite valor nulo.|  
 |type_size|**int**|O tamanho, em bytes, do tipo de dados. Isto só é para tipos de objeto válidos. Permite valor nulo.|  

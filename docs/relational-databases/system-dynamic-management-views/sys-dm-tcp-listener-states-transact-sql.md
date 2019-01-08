@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee55ca66cdddcc6fcb2a130bfd3427d210297aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806844"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409633"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47806844"
 > [!NOTE]
 > O ouvinte de grupo de disponibilidade pode escutar na mesma porta que o ouvinte da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Neste caso, os ouvintes são listados separadamente, o mesmo que para um ouvinte do Service Broker.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**int**|A ID interna do ouvinte. Não permite valor nulo.<br /><br /> Chave primária.|  
-|**ip_address**|**nvarchar48**|O endereço IP do ouvinte que está online e está sendo escutando no momento. IPv4 ou IPv6 é permitido. Se um ouvinte possuir os dois tipos de endereços, eles serão listados separadamente. Um curinga de IPv4, exibido como "0.0.0.0". Um curinga de IPv6, exibido como “::”.<br /><br /> Não permite valor nulo.|  
+|**listener_id**|**int**|ID interna de. um ouvinte Não permite valor nulo.<br /><br /> Chave primária.|  
+|**ip_address**|**nvarchar48**|O endereço IP do ouvinte que está online e está sendo escutando no momento. IPv4 ou IPv6 é permitido. Se um ouvinte possuir os dois tipos de endereços, eles serão listados separadamente. Um curinga de IPv4, é exibido como "0.0.0.0". Um curinga de IPv6, é exibido como "::".<br /><br /> Não permite valor nulo.|  
 |**is_ipv4**|**bit**|Tipo de endereço IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|O número da porta na qual o ouvinte está escutando. Não permite valor nulo.|  
 |**type**|**tinyint**|Tipo de ouvinte, um dos seguintes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Espelhamento do banco de dados<br /><br /> Não permite valor nulo.|  

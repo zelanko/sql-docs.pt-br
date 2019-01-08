@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189066"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400539"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
   A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gerenciar um Reporting Services modo de servidor de relatório nativo](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189066"
 2.  Clique em **Configurações de Site** no canto superior da Página Inicial.  
   
     > [!TIP]  
-    >  **Observação:** se a opção **Configurações de Site** não for exibida, feche e reabra o navegador, e navegue até o gerenciador de relatórios com privilégios administrativos.  
+    >  **Observação:** Se você não vir as **configurações de Site** opção, feche e reabra o navegador e navegue até o Gerenciador de relatórios com privilégios administrativos.  
   
 3.  Clique em **segurança**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48189066"
   
 -   Quando você tentar implantar itens de relatório no servidor de relatório local, verá uma mensagem de erro semelhante à seguinte na janela **Lista de Erros** :  
   
-    -   As permissões concedidas ao usuário ‘Domain\\<nome de usuário\>’ são insuficientes para a execução dessa operação.  
+    -   As permissões concedidas ao usuário 'Domain\\<nome de usuário\>' são insuficientes para a execução dessa operação.  
   
  **Para executar com permissões elevadas a cada vez que você abrir o SSDT:**  
   
@@ -184,9 +184,9 @@ ms.locfileid: "48189066"
 -   Consulte as seções [Configurações da pasta do Gerenciador de Relatórios](#bkmk_configure_folder_settings) e [Configurações do Site do Gerenciador de Relatórios](#bkmk_configure_site_settings) anteriormente neste tópico.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informações adicionais  
- Uma etapa de configuração adicional e comum relacionada à administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é abrir a porta 80 no Windows Firewall para permitir o acesso ao computador do servidor de relatório. Para obter instruções, consulte [configurar um Firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md).  
+ Uma etapa de configuração adicional e comum relacionada à administração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é abrir a porta 80 no Windows Firewall para permitir o acesso ao computador do servidor de relatório. Para obter instruções, consulte [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
+ [Gerenciar um servidor de relatório de modo nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   
   

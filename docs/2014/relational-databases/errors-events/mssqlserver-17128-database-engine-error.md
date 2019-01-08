@@ -12,12 +12,12 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c03a181ee815af7b84a5019719c1ff7b532a0198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507039"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,12 +30,12 @@ ms.locfileid: "48169246"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|INIT_NOBUFSPACE|  
-|Texto da mensagem|initdata: Nenhuma memória para buffers de kernel.|  
+|Texto da mensagem|initdata: Sem memória para buffers de kernel.|  
   
 ## <a name="explanation"></a>Explicação  
- Ocorreu uma falha nas alocações ou reservas de memória iniciais do pool de buffers e o SQL Server foi encerrado.  
+ Falha nas alocações ou reservas de memória iniciais do pool de buffers. O SQL Server foi encerrado.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Isso geralmente ocorre ao iniciar o SQL Server em um computador extremamente pequeno – bem menor que os requisitos mínimos de sistema.  
+ Isso geralmente ocorre ao iniciar o SQL Server em um computador extremamente pequeno (bem menor que os requisitos mínimos do sistema).  
   
   

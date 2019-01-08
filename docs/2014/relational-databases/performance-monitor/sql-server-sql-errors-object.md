@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Errors object
@@ -13,19 +13,19 @@ ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe5f022f72126209370e1bc1adc919ceb2009772
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747182"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, objeto SQL Errors
   O objeto **SQLServer:SQL Errors** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar **Erros SQL**.  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Erros SQL** .  
   
-|Contadores de Erros SQL do SQL Server|Description|  
+|Contadores de Erros SQL do SQL Server|Descrição|  
 |------------------------------------|-----------------|  
 |**Erros/s**|Número de erros/segundo.|  
   

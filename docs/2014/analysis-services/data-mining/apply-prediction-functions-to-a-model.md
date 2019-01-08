@@ -13,17 +13,17 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acb86931d7343d375718efbae0186c67d7a38156
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519920"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funções de previsão a um modelo
   Para criar uma consulta de previsão, você primeiro deve selecionar o modelo de mineração no qual a consulta será baseada. Você pode selecionar qualquer modelo de mineração existente no projeto atual.  
   
- Depois de selecionar um modelo, adicione uma *função de previsão* à consulta. É importante entender que as funções de previsão são usadas para muitas finalidades — sim, você pode prever valores, mas também pode obter estatísticas relacionadas, assim como informações que foram usadas para gerar a previsão. As funções de previsão podem retornar os seguintes tipos de valores:  
+ Depois de selecionar um modelo, adicione uma *função de previsão* à consulta. É importante entender que as funções de previsão são usadas para muitos fins-Sim, você pode prever valores, mas você também pode obter estatísticas relacionadas, bem como informações que foram usadas ao gerar a previsão. As funções de previsão podem retornar os seguintes tipos de valores:  
   
 -   O nome do atributo previsível e o valor previsto.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48106668"
     |||  
     |-|-|  
     |**\<nome do modelo >**|Selecione esta opção para incluir os valores do modelo de mineração na saída. Somente é possível adicionar colunas previsíveis.<br /><br /> Quando você adicionar uma coluna do modelo, o resultado retornado é a lista não distinta de valores nessa coluna.<br /><br /> As colunas que você adiciona com esta opção são incluídas na parte de SELECT da instrução DMX resultante.|  
-    |**Prediction Function**|Selecione esta opção para procurar uma lista de funções de previsão.<br /><br /> Os valores ou funções que você seleciona são adicionados à parte SELECT da instrução DMX resultante.<br /><br /> A lista de funções de previsão não é filtrada ou restringida pelo tipo de modelo que você selecionou. Portanto, se você tiver alguma dúvida sobre se a função tem suporte para o tipo modelo atual, bastará adicionar a função à lista e ver se há erro.<br /><br /> Itens de lista que são precedidos por $ (como $AdjustedProbability) representam colunas da tabela aninhada que é produzida quando você usa a função, `PredictHistogram`. Estes são atalhos que você pode usar para retornar uma única coluna e não uma tabela aninhada.|  
+    |**Prediction Function**|Selecione esta opção para procurar uma lista de funções de previsão.<br /><br /> Os valores ou funções que você seleciona são adicionados à parte SELECT da instrução DMX resultante.<br /><br /> A lista de funções de previsão não é filtrada ou restringida pelo tipo de modelo que você selecionou. Portanto, se você tiver alguma dúvida sobre se a função tem suporte para o tipo modelo atual, bastará adicionar a função à lista e ver se há erro.<br /><br /> Os itens de lista que são precedidos por $ (como $AdjustedProbability) representam colunas da tabela aninhada que são produzidas quando você usa a função `PredictHistogram`. Estes são atalhos que você pode usar para retornar uma única coluna e não uma tabela aninhada.|  
     |**Expressão personalizada**|Selecione essa opção para digitar uma expressão personalizada e atribuir um alias à saída.<br /><br /> A expressão personalizada é adicionada à parte SELECT da consulta de previsão DMX resultante.<br /><br /> Esta opção será útil se você desejar adicionar texto para saída com cada linha, chamar funções VB ou chamar procedimentos armazenados personalizados.<br /><br /> Para obter mais informações sobre como usar funções VBA e Excel no DMX, consulte [Funções VBA no MDX e no DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Depois de adicionar cada função ou expressão, alterne para a exibição do DMX para ver como a função é adicionada dentro da instrução DMX.  
@@ -77,7 +77,7 @@ ms.locfileid: "48106668"
     > [!WARNING]  
     >  O Construtor de Consultas de Previsão não valida o DMX até você clicar em **Resultados**. Você poderá eventualmente descobrir que a expressão gerada pelo construtor de consultas não é um DMX válido. As causas típicas fazem referência a uma coluna que não está relacionada à coluna previsível ou tentando prever uma coluna em uma tabela aninhada, que requer uma instrução sub-SELECT. Neste momento, você pode alternar a exibição do DMX e continuar editando a instrução.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Exemplo: criar uma consulta em um modelo de clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Exemplo: Criar uma consulta em um modelo de clustering  
   
 1.  Se você não tiver um modelo de clustering disponível para criar esta consulta de exemplo, crie o modelo [TM_Clustering] usando o [Tutorial Básico de Data Mining](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48106668"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Se você quiser adicionar outras cláusulas em outro lugar na instrução — por exemplo, se quiser adicionar uma cláusula WHERE — não poderá adicioná-las usando a grade; deverá primeiro alternar para a exibição DMX.  
+ Se você deseja adicionar outras cláusulas em outro lugar na instrução-por exemplo, se você deseja adicionar uma cláusula WHERE-não é possível adicioná-lo usando a grade; Você deve alternar para a exibição DMX pela primeira vez.  
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](data-mining-queries.md)  

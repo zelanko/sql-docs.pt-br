@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777558"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar um instantâneo pelo FTP
   Este tópico descreve como entregar um instantâneo pelo FTP no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "48192576"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se forem usadas assinaturas pull, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\ftpserver\home\snapshots. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../security/secure-the-snapshot-folder.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48192576"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  A opção para tornar os arquivos de instantâneo disponíveis em um servidor FTP podem ser definidas, e essas configurações FTP podem ser modificadas programaticamente usando procedimentos de armazenamento. O procedimento usado depende do tipo de publicação. A entrega de instantâneo FTP é usada apenas com assinaturas pull.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Par habilitar a entrega de instantâneo FTP para um instantâneo ou publicação transacional  
@@ -102,7 +101,7 @@ ms.locfileid: "48192576"
   
     -   (Opcional) **@ftp_password** - a senha para o logon no FTP.  
   
-     Isso cria uma publicação que usa FTP. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+     Isso cria uma publicação que usa FTP. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Para habilitar a entrega de instantâneo FTP para uma publicação de mesclagem  
   
@@ -118,7 +117,7 @@ ms.locfileid: "48192576"
   
     -   (Opcional) **@ftp_password** - a senha para o logon no FTP.  
   
-     Isso cria uma publicação que usa FTP. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+     Isso cria uma publicação que usa FTP. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Para criar uma assinatura pull para um instantâneo ou publicação transacional que use a entrega de instantâneo FTP  
   
@@ -140,11 +139,11 @@ ms.locfileid: "48192576"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique um dos valores seguintes para **@property** e um valor novo dessa configuração para **@value**:  
   
-    -   `ftp_address` -o endereço do servidor FTP usado para entregar o instantâneo.  
+    -   `ftp_address` - o endereço do servidor FTP usado para entregar o instantâneo.  
   
-    -   `ftp_port` -a porta usada pelo servidor FTP.  
+    -   `ftp_port` - a porta usada pelo servidor FTP.  
   
-    -   `ftp_subdirectory` -o subdiretório do diretório FTP padrão usado para o instantâneo FTP.  
+    -   `ftp_subdirectory`- o subdiretório do diretório de FTP padrão usado para o instantâneo de FTP.  
   
     -   `ftp_login` - um logon usado para conectar-se ao servidor FTP.  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192576"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique um dos valores seguintes para **@property** e um valor novo dessa configuração para **@value**:  
   
-    -   `ftp_address` -o endereço do servidor FTP usado para entregar o instantâneo.  
+    -   `ftp_address` - o endereço do servidor FTP usado para entregar o instantâneo.  
   
-    -   `ftp_port` -a porta usada pelo servidor FTP.  
+    -   `ftp_port` - a porta usada pelo servidor FTP.  
   
-    -   `ftp_subdirectory` -o subdiretório do diretório FTP padrão usado para o instantâneo FTP.  
+    -   `ftp_subdirectory`- o subdiretório do diretório de FTP padrão usado para o instantâneo de FTP.  
   
     -   `ftp_login` - um logon usado para conectar-se ao servidor FTP.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
@@ -16,12 +15,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91b99df60b08f079f445fe0e4a64f4b4dd087522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108936"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771648"
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
   Este tópico descreve como excluir uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -47,7 +46,7 @@ ms.locfileid: "48108936"
   
 3.  Clique com o botão direito na publicação que você deseja excluir e clique em **Excluir**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  As publicações podem ser excluídas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados que você usar dependerão do tipo de publicação a ser excluída.  
   
 > [!NOTE]  
@@ -103,19 +102,19 @@ ms.locfileid: "48108936"
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
-4.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para saber se a publicação existe. Se o valor dessa propriedade é `false`, significa que as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
+4.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para saber se a publicação existe. Se o valor dessa propriedade for `false`, as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
   
 6.  (Opcional) Se nenhuma outra publicação transacional existir para esse banco de dados, ele pode ser desabilitado para a publicação transacional, como se segue:  
   
     1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
-    2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, confirme se o banco de dados existe.  
+    2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retorna `false`, confirme que o banco de dados existe.  
   
-    3.  Defina as <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> propriedade para `false`.  
+    3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> como `false`.  
   
-    4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
+    4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 7.  Feche as conexões.  
   
@@ -127,19 +126,19 @@ ms.locfileid: "48108936"
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
-4.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para saber se a publicação existe. Se o valor dessa propriedade é `false`, significa que as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
+4.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para saber se a publicação existe. Se o valor dessa propriedade for `false`, as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
   
 6.  (Opcional) Se nenhuma outra publicação de mesclagem existir para esse banco de dados, ele pode ser desabilitado para a publicação de mesclagem, como se segue:  
   
     1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
-    2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, verifique se o banco de dados existe.  
+    2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar `false`, verifique se o banco de dados existe.  
   
-    3.  Defina as <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> propriedade para `false`.  
+    3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> como `false`.  
   
-    4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
+    4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 7.  Feche as conexões.  
   

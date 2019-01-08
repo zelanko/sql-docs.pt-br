@@ -15,12 +15,12 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514496"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape no ODBC
 Um número de recursos de linguagem, como junções externas e chamadas de função escalar, normalmente é implementado pelos DBMSs. No entanto, as sintaxes para esses recursos costumam ser específicos de DBMS, mesmo quando as sintaxes padrão são definidas por vários órgãos de padrões. Por isso, o ODBC define sequências de escape que contêm as sintaxes padrão para os seguintes recursos de idioma:  
@@ -44,12 +44,12 @@ Um número de recursos de linguagem, como junções externas e chamadas de funç
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A sequência de escape é reconhecida e analisada por drivers, que substituem as sequências de escape com gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) na gramática do apêndice c: SQL.  
+ A sequência de escape é reconhecida e analisada por drivers, que substituem as sequências de escape com gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) no Apêndice c: Gramática SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (***nome do fornecedor***), produto (***nome do produto***) * * * extensão*  **\*)--**  
+>  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (**_nome do fornecedor_**), produto (** _nome do produto_**)**_extensão_  **\*) –**  
 >   
->  Essa sintaxe, além de uma sintaxe abreviada foi definida no formato: **{***extensão***}**  
+>  Essa sintaxe, além de uma sintaxe abreviada foi definida no formato: **{**_extensão_**}**  
 >   
 >  Em ODBC 3. *x*, a forma longa da sequência de escape foi preterida e a forma abreviada é usada exclusivamente.  
   

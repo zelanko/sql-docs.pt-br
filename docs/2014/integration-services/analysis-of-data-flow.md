@@ -11,12 +11,12 @@ ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515824"
 ---
 # <a name="analysis-of-data-flow"></a>Análise do Fluxo de Dados
   Você pode usar o [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` para analisar o fluxo de dados de pacotes do banco de dados. Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream. As informações podem ser usadas para obter um entendimento mais profundo das linhas que são enviadas para cada componente.  
@@ -60,7 +60,7 @@ order by source_component_name desc
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
  [Ferramentas de solução de problemas de execução de pacote](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906056"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407093"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS tabular)
   Um *KPI* (indicador chave de desempenho), em um modelo de tabela, é usado para medir o desempenho de um valor, definido por uma medida *Base*, em relação a um valor de *Destino*, também definido por uma medida ou por um valor absoluto. Este tópico oferece aos autores de modelo de tabela uma compreensão básica de KPIs em um modelo de tabela.  
@@ -48,7 +48,7 @@ ms.locfileid: "48906056"
 ##  <a name="bkmk_example"></a> Exemplo  
  A gerente de vendas da Adventure Works quer criar uma Tabela Dinâmica que possa ser usada para exibir rapidamente se os funcionários de vendas estão atingindo suas cotas de vendas para um determinado período (ano). Para cada funcionário de vendas, ela deseja da tabela dinâmica para exibir o valor de vendas real em dólares, o valor da cota de vendas em dólares e uma exibição gráfica simples mostrando o status do se é ou não cada funcionário de vendas abaixo, acima ou suas cotas de vendas. Ela deseja poder segmentar os dados por ano.  
   
- Para fazer isto, o gerente de vendas pede a ajuda do desenvolvedor de solução de BI da organização para adicionar um KPI de Vendas ao Modelo Tabular do AdventureWorks. A gerente de vendas em seguida usará o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectar-se ao Modelo tabular do Adventure Works como uma fonte de dados e criará uma Tabela Dinâmica com os campos (medidas e KPI) e segmentações de dados para analisar se a força de vendas está atingindo as cotas.  
+ Para fazer isso, o gerente de vendas pede a Ajuda do desenvolvedor de soluções de BI da organização para adicionar um KPI de vendas ao modelo de tabela AdventureWorks. A gerente de vendas em seguida usará o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectar-se ao Modelo tabular do Adventure Works como uma fonte de dados e criará uma Tabela Dinâmica com os campos (medidas e KPI) e segmentações de dados para analisar se a força de vendas está atingindo as cotas.  
   
  No modelo, é criada uma medida na coluna SalesAmount na tabela FactResellerSales, que dá o valor de vendas real em dólares para cada funcionário de vendas. Esta medida definirá o Valor base do KPI.  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Agora que as medidas foram criadas para servir como o Valor base e o Valor de destino do KPI, a medida Sales é estendida para um novo KPI de vendas. No KPI de vendas, a medida de destino SalesAmountQuota é definida como o Valor de destino. O Limite de status é definido como um intervalo por percentual, o destino do qual é 100%, que significa as vendas reais definidas pela medida Sales que atingiu a quantidade de cota definida na medida de destino SalesAmountQuota. Os percentuais Baixo e Alto são definidos na barra de status e um tipo de gráfico é selecionado.  
   
- A gerente de vendas agora pode criar uma Tabela Dinâmica adicionando o Valor base do KPI, o Valor de destino e o Status ao campo Valores. A coluna Employees é adicionada ao campo RowLabel e a coluna CalendarYear é adicionada como uma segmentação de dados.  
+ O gerente de vendas agora pode criar uma tabela dinâmica adicionando o valor Base do KPI, valor de destino e Status ao campo valores. A coluna Employees é adicionada ao campo RowLabel e a coluna CalendarYear é adicionada como uma segmentação de dados.  
   
  A gerente de vendas agora pode fatiar por ano o valor de vendas real, o valor da cota de vendas e o status para cada funcionário de vendas. Ela pode analisar tendências de vendas ao longo de anos para determinar se precisa ajustar a cota para um funcionário de vendas.  
   
@@ -82,7 +82,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar e gerenciar KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)|Descreve como criar um KPI com uma medida Base, uma medida de Destino e limites de status.|  
   

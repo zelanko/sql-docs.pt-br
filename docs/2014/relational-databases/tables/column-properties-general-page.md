@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.columnproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f73bbec32dc8f5d8d20e443428589a3aa45980ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772258"
 ---
 # <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
   Use esta página para exibir as propriedades da coluna selecionada.  
@@ -71,8 +70,8 @@ ms.locfileid: "48109879"
  **Comprimento**  
  Indica o número máximo de caracteres ou bytes aceito pela coluna.  
   
- **Agrupamento**  
- Exibe o agrupamento atual para a coluna. Se estiver em branco, a propriedade de agrupamento é herdada do objeto.  
+ **Ordenação**  
+ Exibe a ordenação atual para a coluna. Se estiver em branco, a propriedade de ordenação é herdada do objeto.  
   
  **Precisão Numérica**  
  Indica o número máximo de dígitos em um tipo de dados numérico de precisão fixa.  

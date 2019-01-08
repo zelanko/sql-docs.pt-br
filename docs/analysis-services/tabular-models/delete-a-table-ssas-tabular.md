@@ -1,5 +1,5 @@
 ---
-title: Excluir uma tabela | Microsoft Docs
+title: Excluir uma tabela em um modelo tabular do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: de1fa5d58beb36a5f3a7ce6eee0c09c5636acfd4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f47b8eec9642fa9553f6b2e25196b82b38b56a91
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039980"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072113"
 ---
 # <a name="delete-a-table"></a>Excluir uma tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  No designer de modelo, você pode excluir tabelas em seu banco de dados de espaço de trabalho modelo que você não precisa mais. A exclusão de uma tabela não afeta os dados de origem originais, somente os dados que você importou e com os quais estava trabalhando. Não é possível desfazer a exclusão de uma tabela.  
+  No designer de modelo, você pode excluir tabelas em seu banco de dados de workspace modelo que você não precisa mais. A exclusão de uma tabela não afeta os dados de origem originais, somente os dados que você importou e com os quais estava trabalhando. Não é possível desfazer a exclusão de uma tabela.  
   
 ### <a name="to-delete-a-table"></a>Para excluir uma tabela  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34039980"
   
 -   Se você criou qualquer coluna calculada usando essa tabela, as colunas dessa tabela também serão excluídas; as colunas calculadas de outras tabelas que usam colunas da tabela excluída exibirão um erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Tabelas e colunas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

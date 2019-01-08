@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e17ad0f4f73ccec1875a57fc3263c4320c0625a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076710"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760898"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lição 2: Criando e gerenciando dados em uma tabela hierárquica
   Na Lição 1, você modificou uma tabela existente para usar o tipo de dados `hierarchyid` e populou a coluna `hierarchyid` com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos.  
@@ -33,7 +32,7 @@ ms.locfileid: "48076710"
   
 -   [Reordenando dados em tabela hierárquica por meio de métodos hierárquicos](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Resumo: Gerenciando dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [Resumo: Gerenciamento de dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Criando uma tabela por meio de um tipo de dados hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595694"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507638"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_describe_parameter_encryption
   
  Cada linha do primeiro conjunto de resultados descreve um par de chaves; uma chave de criptografia de coluna criptografada e sua chave mestra de coluna correspondente.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID da linha no conjunto de resultados.|  
 |**database_id**|**int**|Id do banco de dados.|  
@@ -75,12 +75,12 @@ sp_describe_parameter_encryption
   
  Cada linha do segundo conjunto de resultados contém metadados de criptografia para um parâmetro.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID da linha no conjunto de resultados.|  
 |**parameter_name**|**sysname**|Nome de um dos parâmetros especificados na  *\@params* argumento.|  
 |**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte no momento são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte são:<br /><br /> 0 – texto sem formatação (a coluna não é criptografada)<br /><br /> 1 – a criptografia aleatória<br /><br /> 2 – a criptografia determinística.|  
+|**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte são:<br /><br /> 0 - texto sem formatação (a coluna não é criptografada)<br /><br /> 1 - a criptografia aleatória<br /><br /> 2 - a criptografia determinística.|  
 |**column_encryption_key_ordinal**|**int**|O código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versão do algoritmo de normalização de tipo.|  
   

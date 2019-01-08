@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergesubscription
@@ -17,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e74e6b5b921439f905197795aa50e5c0f8181f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779368"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [  **@subscription_type=**] **'***subscription_type***'**  
  É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**envio por push** (padrão)|Assinatura push.|  
 |**Pull**|Assinatura Pull|  
@@ -74,7 +73,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|O nome da assinatura.|  
 |**publicação**|**sysname**|Nome da publicação.|  
@@ -87,7 +86,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
 |**priority**|**float(8)**|Número que indica a prioridade da assinatura.|  
 |**sync_type**|**tinyint**|Tipo de sincronização da Assinatura.|  
-|**Descrição**|**nvarchar(255)**|Descrição breve da assinatura de mesclagem.|  
+|**description**|**nvarchar(255)**|Descrição breve da assinatura de mesclagem.|  
 |**merge_jobid**|**binary(16)**|ID do trabalho do Merge Agent.|  
 |**full_publication**|**tinyint**|Se a assinatura é para uma publicação completa ou filtrada.|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante. Se for NULL, a execução será executada no Publicador.|  

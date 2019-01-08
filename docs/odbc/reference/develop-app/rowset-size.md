@@ -17,17 +17,17 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695214"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510589"
 ---
 # <a name="rowset-size"></a>Tamanho do conjunto de linhas
 Qual tamanho de conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela comumente siga uma das duas estratégias. A primeira é definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário redimensiona a tela, o aplicativo altera o tamanho do conjunto de linhas adequadamente. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo localmente rola dentro do conjunto de linhas quando possível e busca de novas linhas somente quando ele rola fora do conjunto de linhas.  
   
- Outros aplicativos, como relatórios, tendem a definir o tamanho do conjunto de linhas para o maior número de linhas que o aplicativo pode manipular razoavelmente — com um conjunto de linhas maior, a rede sobrecarga por linha, às vezes, é reduzida. Exatamente um conjunto de linhas como grandes pode ser depende do tamanho de cada linha e a quantidade de memória disponível.  
+ Outros aplicativos, como relatórios, tendem a definir o tamanho do conjunto de linhas para o maior número de linhas que o aplicativo pode manipular razoavelmente - com um conjunto de linhas maior, a rede sobrecarga por linha, às vezes, é reduzida. Exatamente um conjunto de linhas como grandes pode ser depende do tamanho de cada linha e a quantidade de memória disponível.  
   
  Tamanho do conjunto de linhas é definido por uma chamada para **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_ROW_ARRAY_SIZE. O aplicativo pode alterar o tamanho do conjunto de linhas, associar os buffers do novo conjunto de linhas (chamando **SQLBindCol** ou especificando um deslocamento de associação), mesmo depois de linhas foram buscadas, ou ambos. As implicações de alterar o tamanho do conjunto de linhas dependem da função:  
   

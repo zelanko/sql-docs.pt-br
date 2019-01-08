@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509234"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
   Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela, portanto, você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
@@ -77,7 +77,7 @@ GO
   
  **Memória para as linhas da tabela**  
   
- Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes, ou 1,280,000,000 bytes – aproximadamente 1.28 GB.  
+ Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes ou 1.280.000.000 bytes – aproximadamente 1,28 GB.  
   
 ##  <a name="bkmk_IndexMeemory"></a> Memória para índices  
  **Memória para cada índice de hash**  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](../../database-engine/hash-indexes.md).  
   
- **Observação:** você não pode alterar dinamicamente o tamanho da matriz de índice de hash. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
+ **Observação:** Você não pode alterar o tamanho da matriz de índice de hash rapidamente. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
   
  **Definindo o tamanho de matriz de índice de hash**  
   

@@ -1,26 +1,28 @@
 ---
-title: Configurar o Minikube para implantações de cluster do SQL Server 2019 big data | Microsoft Docs
-description: Saiba como configurar o Minikube para implantações de cluster (versão prévia) de big data de 2019 do SQL Server em um único computador.
+title: Configurar o minikube
+titleSuffix: SQL Server 2019 big data clusters
+description: Saiba como configurar o minikube para implantações de cluster (versão prévia) do SQL Server 2019 big data em um único computador.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702344"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246565"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurar o Minikube para implantações de cluster do SQL Server 2019 big data
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurar o minikube para implantações de cluster do SQL Server 2019 big data
 
 Este artigo descreve como configurar **minikube** em um único computador para implantações de cluster (versão prévia) do SQL Server 2019 big data. Minikube é uma ferramenta que torna mais fácil de executar Kubernetes em um único computador, como um laptop ou desktop. Minikube executa um cluster do Kubernetes de nó único dentro de uma VM em seu laptop para usuários que desejam experimentar Kubernetes ou desenvolver com ele diárias. 
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Para executar um cluster Minikube para SQL Server 2019 CTP 2.1 em uma configuração de cluster de big data do SQL, é recomendável que seu computador tenha pelo menos 32 GB de RAM.
+- Para executar um cluster Minikube para SQL Server 2019 (visualização) para clusters de big data, é recomendável que seu computador tenha pelo menos 32 GB de RAM.
 
    > [!TIP] 
    > Se o computador tem apenas o mínimo recomendado de memória, em seguida, configure a implantação do cluster para ter apenas 1 instância de pool de computação, 1 instância de pool de dados e instância de pool de armazenamento de 1. Essa configuração só deve ser usada para ambientes de avaliação em que a durabilidade e disponibilidade dos dados são importantes. Consulte a [documentação de implantação](deployment-guidance.md#define-environment-variables) para obter mais informações sobre as variáveis de ambiente para configurar o número de réplicas para pools de dados, computação pools e pools de armazenamento.
@@ -28,8 +30,6 @@ Este artigo descreve como configurar **minikube** em um único computador para i
 - Virtualização x VT ou AMD-v deve ser habilitada no BIOS do computador.
 
 ## <a name="install-dependencies"></a>Instale as dependências
-
-1. Se não estiver instalado, instale o git localmente no [Windows](https://git-for-windows.github.io/), [Linux ou Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 1. Instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -44,7 +44,7 @@ Este artigo descreve como configurar **minikube** em um único computador para i
 
 ## <a name="install-minikube"></a>Instalar o Minikube
 
-Instalar o Minikube acordo com as instruções para o [v0.28.2 versão](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). O cluster de big data do SQL Server de 2019 CTP 2.1 só funciona com a versão v0.24.1 e backup.
+Instalar o Minikube acordo com as instruções para o [v0.28.2 versão](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). O cluster de big data de 2019 do SQL Server (versão prévia) funciona somente com a versão v0.24.1 e backup.
 
 ## <a name="create-a-minikube-cluster"></a>Criar um cluster do Minikube
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 As etapas neste artigo configurado um cluster Minikube. A próxima etapa é implantar um cluster de big data do SQL Server 2019. Para obter instruções, consulte o artigo a seguir:
 
-[Implantar o SQL Server de 2019 CTP 2.1 no Kubernetes](deployment-guidance.md#deploy)
+[Implantar clusters de grandes dados do SQL Server 2019 no Kubernetes](deployment-guidance.md#deploy)

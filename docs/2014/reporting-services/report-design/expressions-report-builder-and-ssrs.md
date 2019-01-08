@@ -11,17 +11,17 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec516a74d28ff868e8a20d1c3d5cd568d3420ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110844"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352791"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
-  As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatório quando você executa o relatório.  
+  As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatórios quando você executa o relatório.  
   
- Ao contrário de aplicativos, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, onde você trabalha diretamente com dados em uma planilha, em um relatório, você trabalha com expressões que são espaços reservados para os dados. Para ver os dados reais das expressões avaliadas, visualize o relatório. Quando você executa o relatório, o processador de relatório avalia cada expressão pois combina dados de relatório e elementos de layout de relatório, tais como tabelas e gráficos.  
+ Em aplicativos como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, você trabalha com dados diretamente em uma planilha. Já em um relatório, você trabalha com expressões que são espaços reservados de dados. Para ver os dados reais das expressões avaliadas, visualize o relatório. Quando você executa o relatório, o processador de relatório avalia cada expressão pois combina dados de relatório e elementos de layout de relatório, tais como tabelas e gráficos.  
   
  À medida que você cria um relatório, muitas expressões para itens de relatório são definidas. Por exemplo, quando você arrasta um campo do painel de dados para uma célula da tabela na superfície de design de relatório, o valor da caixa de texto é definido como uma expressão simples para o campo. Na figura a seguir, o painel Dados do Relatório exibe os campos do conjunto de dados ID, Name, SalesTerritory, Code e Sales. Três campos foram adicionados à tabela: [Name], [Code] e [Sales]. A notação [Name] na superfície de design representa a expressão subjacente `=Fields!Name.Value`.  
   
@@ -33,19 +33,19 @@ ms.locfileid: "48110844"
   
  Para obter mais informações e exemplos, consulte os seguintes tópicos:  
   
--   [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
 -   [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
--   [Exemplos de relatório (Construtor de Relatórios e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  Para desenvolver expressões complexas ou expressões que usam código personalizado ou assemblies personalizados, recomendamos o uso do Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48110844"
   
  ![rs_ExpressionSampleValuesFormat](../media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
   
- Para obter mais informações, consulte [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 
   
@@ -99,18 +99,18 @@ ms.locfileid: "48110844"
 ##  <a name="References"></a> Escrevendo expressões complexas  
  Expressões podem incluir referências a funções, operadores, constantes, campos, parâmetros, itens das coleções internas, e ao código personalizado interno ou assemblies personalizados.  
   
-> [!NOTE]  
->  Para desenvolver expressões complexas ou expressões que usam código personalizado ou assemblies personalizados, recomendamos que você use o Designer de relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+> [!NOTE]
+>  Para desenvolver expressões complexas ou expressões que usam código personalizado ou assemblies personalizados, recomendamos o uso do Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  A seguinte tabela lista os tipos de referências que podem ser incluídos em uma expressão:  
   
-|Referências|Description|Exemplo|  
+|Referências|Descrição|Exemplo|  
 |----------------|-----------------|-------------|  
 |[Constantes](expressions-report-builder-and-ssrs.md)|Descreve as constantes acessadas interativamente para propriedades que exigem valores de constantes, tais como cores de fontes.|`="Blue"`|  
-|[Operadores](operators-in-expressions-report-builder-and-ssrs.md)|Descreve os operadores a serem usados para combinar referências em uma expressão. Por exemplo, o `&` operador é usado para concatenar cadeias de caracteres.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[Operadores](operators-in-expressions-report-builder-and-ssrs.md)|Descreve os operadores a serem usados para combinar referências em uma expressão. Por exemplo, o operador `&` é usado para concatenar cadeias de caracteres.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Coleções internas](built-in-collections-in-expressions-report-builder.md)|Descreve as coleções internas que podem ser incluídas em uma expressão, tais como `Fields`, `Parameters`e `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Relatório interno e funções de agregação](report-builder-functions-aggregate-functions-reference.md)|Descreve as funções internas, tais como `Sum` ou `Previous`, que podem ser acessadas de uma expressão.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Código personalizado e referências de Assembly em expressões no Designer de relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Descreve como é possível acessar as classes CLR internas <xref:System.Math> e <xref:System.Convert>, outras classes CLR, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou métodos de um assembly externo.<br /><br /> Descreve como é possível acessar o código personalizado que é inserido no relatório, ou que é compilado e instalado como um assembly personalizado no cliente de relatório e no servidor de relatório.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Descreve como é possível acessar as classes CLR internas <xref:System.Math> e <xref:System.Convert>, outras classes CLR, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou métodos de um assembly externo.<br /><br /> Descreve como é possível acessar o código personalizado que é inserido no relatório, ou que é compilado e instalado como um assembly personalizado no cliente de relatório e no servidor de relatório.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -123,23 +123,23 @@ ms.locfileid: "48110844"
   
 -   A sintaxe da expressão é validada no tempo de design. A validação do escopo da expressão ocorre quando você publica o relatório. Para a validação que depende dos dados reais, erros só podem ser detectados no tempo de execução. Algumas dessas expressões geram #Error como uma mensagem de erro no relatório renderizado. Para ajudar a determinar os problemas desse tipo de erro, use o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. O Designer de Relatórios fornece uma janela de Saída que fornece mais informações sobre esses erros.  
   
- Para obter mais informações, consulte [Referência de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-reference-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Referência de expressões &#40;Construtor de Relatórios e SSRS &#41;](expression-reference-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="Section"></a> Nesta seção  
  [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Referência de expressões &#40;relatórios e SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [Referência de expressões &#40;Construtor de Relatórios e SSRS &#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo expressão](../expression-dialog-box.md)   
+ [Caixa de diálogo Expressão](../expression-dialog-box.md)   
  [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)  
   
   

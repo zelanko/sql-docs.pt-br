@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606807"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205175"
 ---
 # <a name="sqlparamdata-function"></a>Função SQLParamData
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLParamData** é usada junto com **SQLPutData** para fornecer dados de parâmetro durante o tempo de execução de instrução e com **SQLGetData** para recuperar dados de parâmetro de saída transmitidos.  
@@ -56,12 +56,12 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLParamData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLParamData** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|O valor de dados identificado pela *ValueType* argumento **SQLBindParameter** para o parâmetro associado não pôde ser convertido para o tipo de dados identificado pelo *ParameterType*argumento na **SQLBindParameter**.<br /><br /> O valor dos dados retornados para um parâmetro associado como SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT não pôde ser convertido para o tipo de dados identificado pelo *ValueType* argumento **SQLBindParameter**.<br /><br /> (Se os valores de dados para uma ou mais linhas não pôde ser convertidos, mas uma ou mais linhas foram retornadas com êxito, essa função retorna SQL_SUCCESS_WITH_INFO).|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
-|22026|Incompatibilidade de comprimento de dados String|O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e menos dados foi enviados para um parâmetro longo (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados de específico da fonte de dados longos) que foi especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e menos dados foi enviados para uma coluna long (tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados de específico da fonte de dados longos) que foi especificada no buffer de comprimento correspondente a uma coluna em uma linha de dados que foram adicionados ou atualizados com **SQLBulkOperations** ou foram atualizados com **SQLSetPos**.|  
+|22026|Incompatibilidade de comprimento de dados String|O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e menos dados foi enviados para um parâmetro longo (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados longos) que foi especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**.<br /><br /> O tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "Y", e menos dados foi enviados para uma coluna long (tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados longos) que foi especificada no buffer de comprimento correspondente a uma coluna em uma linha de dados que foram adicionados ou atualizados com **SQLBulkOperations** ou foram atualizados com **SQLSetPos**.|  
 |40001|Falha na serialização|A transação foi revertida devido a um deadlock de recursos com outra transação.|  
 |40003|Conclusão desconhecida de declaração|A conexão associada falhou durante a execução dessa função e o estado da transação não pode ser determinado.|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  
@@ -82,11 +82,11 @@ SQLRETURN SQLParamData(
   
  Quando um aplicativo chama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos**, o driver retorna SQL_NEED_ DADOS se precisar de dados de dados em execução. Um aplicativo, em seguida, chama **SQLParamData** para determinar quais dados a serem enviados. Se o driver requer dados de parâmetro, o driver retorna na  *\*ValuePtrPtr* o valor que o aplicativo é colocado no buffer de conjunto de linhas do buffer de saída. O aplicativo pode usar esse valor para determinar quais dados de parâmetro, o driver está solicitando. Se o driver requer dados da coluna, o driver retorna na  *\*ValuePtrPtr* armazenar em buffer o endereço ao qual a coluna foi originalmente vinculada, da seguinte maneira:  
   
- *Ligado a endereço* + *associação deslocamento* + ((*número de linha* – 1) x *tamanho do elemento*)  
+ *Ligado a endereço* + *associação deslocamento* + ((*número de linha* - 1) x *tamanho do elemento*)  
   
  onde as variáveis são definidas como indicado na tabela a seguir.  
   
-|Variável|Description|  
+|Variável|Descrição|  
 |--------------|-----------------|  
 |*Ligado a endereço*|O endereço especificado com o *TargetValuePtr* argumento **SQLBindCol**.|  
 |*Deslocamento de associação*|O valor armazenado no endereço especificado com o atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR.|  

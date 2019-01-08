@@ -11,12 +11,12 @@ ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082272"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349390"
 ---
 # <a name="troubleshoot-report-builder"></a>Solução de problemas do Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que pode ser usada para criar relatórios a partir de muitos tipos diferentes de fontes de dados e para publicar os relatórios em um servidor de relatório ou site do SharePoint. Os relatórios criados por você podem ser exibidos no construtor de relatórios em um navegador da Web ou como parte de um [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicativo do Windows ou site do SharePoint.  
@@ -30,12 +30,12 @@ ms.locfileid: "48082272"
   
  [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de gráficos &#40;relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Solução de problemas de gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administradores  
  [Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Além disso, consulte os tópicos a seguir na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Além disso, consulte os tópicos a seguir na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Planejar para suporte ao relatório de mapa](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48082272"
   
  Por exemplo, participe dos grupos de discussão para conversar online com um grupo de usuários experientes do Construtor de Relatórios, inclusive MVPs (Most Valued Professionals) do Reporting Services, os quais compartilham seu tempo com boa vontade para responder perguntas e fornecer soluções, dicas e experiência.  
   
- Leia o que os membros da equipe do Reporting Services têm a dizer na [blog da equipe do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=118788).
+ Leia o que os membros da equipe do Reporting Services têm a dizer na [blog da equipe do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=118788).
   
- Se você ainda não encontrou uma resposta [enviar comentários](http://go.microsoft.com/fwlink/?LinkId=118791).  
+ Se você ainda não encontrou uma resposta [enviar comentários](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
