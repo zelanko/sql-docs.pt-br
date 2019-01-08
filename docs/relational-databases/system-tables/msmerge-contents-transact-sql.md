@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_contents
@@ -19,19 +18,19 @@ ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cca5ee44df0c0e28852c87c4fb6bbafb7281ac1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750378"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSmerge_contents** tabela contém uma linha para cada linha modificada no banco de dados atual desde que foi publicado. Essa tabela é usada pelo processo de mesclagem para determinar as linhas que foram alteradas. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  

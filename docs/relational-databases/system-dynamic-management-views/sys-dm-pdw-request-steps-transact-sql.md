@@ -13,23 +13,23 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832114"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393590"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as etapas que compõem uma determinada solicitação ou consulta no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Ele lista uma linha para cada etapa de consulta.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id e step_index constituem a chave para esta exibição.<br /><br /> Id numérico exclusivo associado com a solicitação.|Consulte request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index constituem a chave para esta exibição.<br /><br /> A posição dessa etapa na sequência de etapas que formam a solicitação.|0 (n-1) para uma solicitação de n etapas.|  
-|operation_type|**nvarchar(35)**|Tipo de operação representada por essa etapa.|**Operações de plano de consulta do DMS:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operações de plano de consulta SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Outras operações do plano de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operações externas para leituras:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operações externas para o MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operações externas para gravações:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obter mais informações, consulte "Noções básicas sobre planos de consulta" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|operation_type|**nvarchar(35)**|Tipo de operação representada por essa etapa.|**Operações de plano de consulta do DMS:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operações do plano de consulta SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Outras operações do plano de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operações externas para leituras:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operações externas para o MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operações externas para gravações:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obter mais informações, consulte "Noções básicas sobre planos de consulta" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Tipo de distribuição que passará por essa etapa.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|Em que a etapa está em execução.|'Calcular', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Status desta etapa.|Pendente, executando, completo e com falha, UndoFailed, PendingCancel, cancelado, desfeita, anulada|  

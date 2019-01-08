@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a7ec2e5b85d7868389bd1bde7aa2f279d1271a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3671b2fe3480869df4acf32b6e7b5003da1cd23e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758508"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Componentes do Microsoft Connector 1.1 for SAP BW
   Esta seção contém os tópicos que descrevem os três componentes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 para SAP BW:  
@@ -31,13 +30,13 @@ ms.locfileid: "48163156"
 >  A documentação do Microsoft Connector 1.1 for SAP BW supõe familiaridade com o ambiente do SAP Netweaver BW. Para obter mais informações sobre o SAP Netweaver BW ou para obter informações sobre como configurar objetos e processos do SAP Netweaver BW, consulte sua documentação do SAP.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Gerenciador de Conexões SAP BW](connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW Connection Manager](connection-manager/sap-bw-connection-manager.md)  
  Descreve o gerenciador de conexões SAP BW. O gerenciador de conexões conecta a origem SAP BW ou o destino SAP BW a um sistema SAP Netweaver BW versão 7.  
   
- [Origem SAP BW](data-flow/sap-bw-source.md)  
+ [SAP BW Source](data-flow/sap-bw-source.md)  
  Descreve a origem SAP BW que permite extrair dados de um sistema SAP Netweaver BW.  
   
- [Destino SAP BW](data-flow/sap-bw-destination.md)  
+ [SAP BW Destination](data-flow/sap-bw-destination.md)  
  Descreve o destino SAP BW que permite carregar dados em um sistema SAP Netweaver BW.  
   
   

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643944"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410403"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 Este artigo lista as adições em cada versão de DMA Data Migration Assistant ().
@@ -33,9 +33,9 @@ O fluxo de trabalho de avaliação ajuda a detectar os problemas a seguir, que p
 
 - **Problemas de compatibilidade**. O DMA também identifica problemas de compatibilidade relacionados às áreas a seguir:
 
-    - Alterações significativas: os objetos de esquema específico que podem interromper a funcionalidade de migração para o banco de dados de destino.  É recomendável corrigir esses objetos de esquema após a migração de banco de dados.
-    - Alterações de comportamento: os objetos de esquema relatados podem continuar a funcionar, mas eles podem apresentar um comportamento diferente, por exemplo degradação do desempenho.
-    - Problemas de informação: estes objetos não terá impacto sobre a migração, mas foi preteridos do recurso de versões do SQL Server.
+    - As alterações recentes:  Os objetos de esquema específico que podem interromper a funcionalidade de migração para o banco de dados de destino.  É recomendável corrigir esses objetos de esquema após a migração de banco de dados.
+    - Alterações de comportamento: Os objetos de esquema relatados podem continuar a funcionar, mas eles podem apresentar um comportamento diferente, por exemplo degradação do desempenho.
+    - Problemas de informação:  Esses objetos não terá impacto sobre a migração, mas foi preteridos do recurso de que versões do SQL Server.
 
 Depois que a avaliação for concluída, use nosso [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de bancos de dados do SQL Server para o banco de dados de instância gerenciada do SQL.  DMS dá suporte a ambos [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (uma vez) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) migrações de banco de dados (tempo de inatividade mínimo) para o banco de dados de instância gerenciada do SQL.
 

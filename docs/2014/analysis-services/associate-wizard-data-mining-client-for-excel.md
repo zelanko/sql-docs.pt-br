@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179426"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400469"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Assistente para Associação (Cliente de Mineração de Dados para Excel)
   ![Assistente para associação na faixa de opções mineração de dados](media/dmc-associate.gif "Assistente para associação na faixa de opções mineração de dados")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179426"
   
     -   À medida que você reduz a probabilidade de uma regra, diminui os requisitos que uma combinação precisa atender para ser considerara importante no contexto do conjunto de dados total.  
   
-     **Dica:** é uma boa ideia criar vários modelos de mineração usando combinações diferentes de suporte e probabilidade. Para controlar as configurações utilizadas para cada modelo, você pode usar o **modelo de documento** wizard, disponível no cliente de mineração de dados para Excel e use o **Detailed** opção de relatório. Para obter mais informações, consulte [documentando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Dica:** É uma boa ideia criar vários modelos de mineração usando combinações diferentes de suporte e probabilidade. Para controlar as configurações utilizadas para cada modelo, você pode usar o **modelo de documento** wizard, disponível no cliente de mineração de dados para Excel e use o **Detailed** opção de relatório. Para obter mais informações, consulte [documentando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Opcionalmente, clique em **parâmetros** para alterar os parâmetros de algoritmo e personalizar o comportamento do modelo de mineração.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179426"
   
          O detalhamento é útil, por exemplo, se você quiser clicar em um determinado conjunto de itens e ver os dados de origem.  
   
-    -   **Usar modelo temporário**. Selecione esta opção se não quiser que o modelo seja salvo no servidor. Os modelos temporários serão excluídos quando você fechar o Excel.  
+    -   **Usar modelo temporário**. Selecione esta opção se não quiser que o modelo salvo no servidor. Os modelos temporários serão excluídos quando você fechar o Excel.  
   
 9. O assistente analisa todas as combinações possíveis e cria um relatório que contém os conjuntos de itens e as regras.  
   

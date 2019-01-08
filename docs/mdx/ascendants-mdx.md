@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ef9cccb488cebb08c1b9721c40cb8037ea8687a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3122b3aa2f53da69f88e6ffad508f12c8e10da1c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739615"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404341"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 
@@ -32,8 +32,8 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- O **ascendentes** função retorna todos os ancestrais de um membro do membro até a parte superior da hierarquia de membros; mais especificamente, ele executa um passagem pós-pedido da hierarquia para o membro especificado e, em seguida, retorna todos os membros ascendentes relacionados ao membro, incluindo ele mesmo, em um conjunto. Isso é, em comparação com o [ancestral](../mdx/ancestor-mdx.md) função, que retorna um membro ascendente específico, ou ancestral, em um nível específico.  
+## <a name="remarks"></a>Comentários  
+ O **ascendentes** função retorna todos os ancestrais de um membro do membro até a parte superior da hierarquia do membro; mais especificamente, ele executa uma passagem pós-pedido da hierarquia para o membro especificado e, em seguida, Retorna que todos os membros ascendentes relacionados ao membro, incluindo ele mesmo, em um conjunto. Isso está em contraste com o [ancestral](../mdx/ancestor-mdx.md) função, que retorna um membro ascendente específico, ou ancestral, em um nível específico.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a contagem de pedidos do revendedor para o `[Sales Territory].[Northwest]` membro e todos os descendentes daquele membro a partir de **Adventure Works** cubo. O **ascendentes** função constrói o conjunto que inclui o `[Sales Territory].[Northwest]` membro e seus ascendentes para o eixo de linhas.  
@@ -52,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

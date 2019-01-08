@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727154"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396179"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47727154"
  *is_full_path*  
  Uma expressão de inteiro que especifica se um caminho relativo ou absoluto deve ser retornado. *is_full_path* pode ter um dos seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Retorna o caminho relativo dentro do diretório no nível do banco de dados.<br /><br /> Esse é o valor padrão.|  
 |**1**|Retorna o caminho UNC completo, a partir do `\\computer_name`.|  
@@ -54,7 +54,7 @@ ms.locfileid: "47727154"
  *@option*  
  Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option* Pode ter um dos seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -72,7 +72,7 @@ ms.locfileid: "47727154"
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- Esse caminho lógico não corresponde diretamente a um caminho NTFS físico. Ele é convertido no caminho físico pelo driver de filtro do sistema de arquivos do FILESTREAM e pelo agente de FILESTREAM. Esta separação entre os caminhos lógico e físico permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganize dados internamente sem afetar a validade do caminho.  
+ Esse caminho lógico não corresponde diretamente a um caminho NTFS físico. Ele é convertido para o caminho físico pelo driver de filtro do sistema de arquivos de FILESTREAM e pelo agente FILESTREAM. Esta separação entre os caminhos lógico e físico permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganize dados internamente sem afetar a validade do caminho.  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funciona em conjunto, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  Os exemplos a seguir mostram como chamar o **GetFileNamespacePath** função para obter o caminho UNC para um arquivo ou diretório em uma FileTable.  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

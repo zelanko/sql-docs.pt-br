@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145906"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401361"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorando o modelo de árvore de decisão (Tutorial de mineração de dados básico)
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)] prevê que colunas influenciam a decisão de compra de uma bicicleta com base nas colunas restantes do conjunto de treinamento.  
@@ -28,7 +28,7 @@ ms.locfileid: "48145906"
   
  Nesse caso, o modelo prevê somente uma coluna, comprador de bicicleta, portanto, há apenas uma única árvore para exibir. Se houver mais árvores, você pode usar o **árvore** caixa para escolher outra árvore.  
   
- Quando você exibir o `TM_Decision_Tree` modelo no Visualizador de árvore de decisão, você pode ver os atributos mais importantes no lado esquerdo do gráfico. “Mais importantes” significa que esses atributos têm a maior influência sobre o resultado. Os atributos mais abaixo na árvore (à direita do gráfico) têm menos influência.  
+ Quando você exibir o `TM_Decision_Tree` modelo no Visualizador de árvore de decisão, você pode ver os atributos mais importantes no lado esquerdo do gráfico. "Mais importantes" significa que esses atributos têm a maior influência no resultado. Os atributos mais abaixo na árvore (à direita do gráfico) têm menos influência.  
   
  Neste exemplo, a idade é o fator mais importante na previsão da compra de bicicletas. O modelo agrupa os clientes por idade e depois mostra o próximo atributo mais importante de cada faixa etária. Por exemplo, no grupo de clientes com idades entre 34 e 40 anos, o número de carros é o fator de previsão mais importante depois da idade.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48145906"
   
  Como você habilitou o detalhamento quando criou a estrutura e o modelo, poderá recuperar informações detalhadas dos casos de modelo e da estrutura de mineração, incluindo as colunas não incluídas no modelo de mineração (por exemplo, emailAddress, FirstName).  
   
- Para obter mais informações, consulte [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-case-data"></a>Para detalhar os dados de caso  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48145906"
  [Explorando o modelo de Clustering &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Guia árvore de decisão &#40;Visualizador do modelo de mineração&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Guia rede de dependências &#40;Visualizador do modelo de mineração&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Procurar um modelo usando a Exibição de Árvore da Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983461"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402641"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticação e autorização do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983461"
 |Administrador de farm ou serviço|Instalar, habilitar e configurar serviços e aplicativos.<br /><br /> Usar o Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e exibir relatórios administrativos.|  
 |Controle total|Ativar a integração de recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no nível de conjunto de sites.<br /><br /> Criar uma biblioteca da Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Criar uma biblioteca de feeds de dados.|  
 |Contribuir|Adicionar, editar, excluir e baixar as pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurar a atualização de dados<br /><br /> Criar novas pastas de trabalho e relatórios com base em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint.<br /><br /> Criar documentos de serviço de dados em uma biblioteca de feed de dados|  
-|leitura|Acessar pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de Dados do Excel).|  
+|leitura|Acesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de dados do Excel).|  
 |Exibir Apenas|Exibir pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibir o histórico de atualizações de dados.<br /><br /> Conectar uma pasta de trabalho local a uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint, para adaptar seus dados de outros modos.<br /><br /> Baixar um instantâneo da pasta de trabalho. O instantâneo é uma cópia estática dos dados, sem segmentações de dados, fórmulas ou conexões de dados. O conteúdo do instantâneo é semelhante à cópia de valores de células da janela do navegador.|  
   
 ##  <a name="excel"></a> Considerações de segurança dos Serviços do Excel para pastas de trabalho do Power Pivot  
@@ -100,19 +100,19 @@ ms.locfileid: "38983461"
 > [!NOTE]  
 >  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Criar um local confiável para sites do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Área|Configuração|Description|  
+|Área|Configuração|Descrição|  
 |----------|-------------|-----------------|  
 |Aplicativo Web|Provedor de autenticação do Windows|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] converte um token de declaração obtido dos Serviços do Excel em uma identidade de usuário do Windows. Qualquer aplicativo Web que utilize os Serviços do Excel como um recurso deve ser configurado para usar o provedor de autenticação do Windows.|  
 |Local confiável|Tipo de local|Este valor deve ser definido como **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recuperam uma cópia do arquivo .xlsx e o carregam em um servidor de Serviços de Análise no farm. O servidor só pode recuperar arquivos .xlsx de uma biblioteca de conteúdo.|  
 ||Permitir dados externos|Esse valor deve ser definido como **Bibliotecas confiáveis e incorporadas de conexão de dados**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são inseridas na pasta de trabalho. Se você não permitir conexões inseridas, os usuários poderão exibir o cache de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas não poderão interagir com o dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Aviso de Atualização|Este valor deverá ser desabilitado se você estiver usando a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para armazenar pastas de trabalho e relatórios. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inclui um recurso de visualização de documentos que funciona melhor se a atualização na abertura e a Advertência na Atualização estiverem desabilitados.|  
-|Provedores de dados confiáveis|MSOLAP.4<br /><br /> MSOLAP.5|O MSOLAP.4 está incluído por padrão, mas o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exige que o provedor de MSOLAP.4 seja a versão SQL Server 2008 R2.<br /><br /> O MSOLAP.5 está instalado com a versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.<br /><br /> Não remova esses provedores da lista de provedores de dados confiáveis. Em alguns casos, você pode precisar instalar cópias adicionais deste provedor em outros servidores do SharePoint em seu farm. Para obter mais informações, consulte [Instalar o Provedor OLE DB do Analysis Services nos Servidores SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
+|Provedores de dados confiáveis|MSOLAP.4<br /><br /> MSOLAP.5|O MSOLAP.4 está incluído por padrão, mas o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exige que o provedor de MSOLAP.4 seja a versão SQL Server 2008 R2.<br /><br /> O MSOLAP.5 está instalado com a versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.<br /><br /> Não remova esses provedores da lista de provedores de dados confiáveis. Em alguns casos, você pode precisar instalar cópias adicionais deste provedor em outros servidores do SharePoint em seu farm. Para saber mais, confira [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)(Instalar o provedor OLE DB do Analysis Services em SharePoint Servers).|  
 |Bibliotecas de conexão de dados confiáveis|Opcional.|Você pode usar os arquivos da Conexão de Dados do Office (.odc) em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você usar arquivos .odc para fornecer informações de conexão a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locais, poderá adicionar os mesmos arquivos .odc a essa biblioteca.|  
 |Assembly de função definida pelo usuário|Não aplicável.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint ignora os assemblies de funções definidas pelo usuário que você implanta para os Serviços do Excel. Se você confiar em assemblies definidos pelo usuário para um comportamento específico, saiba que o processamento de consultas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não usará as funções definidas pelo usuário que você criou.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configurar o Power Pivot (Power Pivot para SharePoint) da conta de atualização de dados autônoma](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configurar a conta autônoma de atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Arquitetura de segurança do Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   

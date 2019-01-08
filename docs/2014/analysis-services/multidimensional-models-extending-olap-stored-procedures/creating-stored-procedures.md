@@ -18,15 +18,15 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506268"
 ---
 # <a name="creating-stored-procedures"></a>Criando procedimentos armazenados
-  Todos os procedimentos armazenados devem ser associados a uma classe CLR (Common Language Runtime) ou COM (Component Object Model) para poderem seu usados. A classe deve ser instalada no servidor — geralmente na forma de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® biblioteca de vínculo dinâmico (DLL) — e registrada como um assembly no servidor ou em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.  
+  Todos os procedimentos armazenados devem ser associados a uma classe CLR (Common Language Runtime) ou COM (Component Object Model) para poderem seu usados. A classe deve ser instalada no servidor - geralmente na forma de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dynamic link library (DLL) - e registrado como um assembly no servidor ou em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.  
   
  Procedimentos armazenados são registrados em um servidor ou em um banco de dados. Procedimentos armazenados do servidor podem ser chamados a partir de qualquer contexto de consulta. Procedimentos armazenados do banco de dados podem ser acessados somente se o contexto do banco de dados for o banco de dados no qual o procedimento armazenado foi definido. Se as funções de um assembly chamarem funções de um assembly diferente, registre ambos no mesmo contexto (servidor ou banco de dados). Para um servidor ou implantado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados em um servidor, você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para registrar um assembly. Para um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Designer do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar um assembly no projeto.  
   

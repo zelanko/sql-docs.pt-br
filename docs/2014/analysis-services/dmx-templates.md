@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504688"
 ---
 # <a name="dmx-templates"></a>Modelos DMX
   Os modelos de mineração de dados o ajudam a criar rapidamente consultas sofisticadas. Embora a sintaxe geral para consultas DMX seja bem-documentada, usar os modelos torna mais fácil criar consultas clicando e apontando para argumentos e fontes de dados.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048245"
   
 3.  Na página de **Selecionar modelo**, clique em **avançado**.  
   
-     **Dica:** se você pretende criar uma consulta de previsão em um modelo, selecione o modelo primeiro e, em seguida, clique em **Advanced**para pré-popular o modelo com o nome do modelo.  
+     **Dica:** Se você pretende criar uma consulta de previsão em um modelo, selecione o modelo primeiro e, em seguida, clique em **avançado**para pré-popular o modelo com o nome do modelo.  
   
 4.  No **dados Editor avançada de mineração consulta**, clique em **modelos DMX**e selecione um modelo.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048245"
   
  **Criar**  
   
- Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos com suporte dos assistentes – é possível usar qualquer algoritmo de mineração de dados com suporte da instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a qual você está conectado, inclusive algoritmos de plug-in.  
+ Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos de suporte dos assistentes - você pode usar qualquer algoritmo de mineração de dados com suporte pela instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está conectado, incluindo algoritmos de plug-in.  
   
 -   modelo de mineração  
   

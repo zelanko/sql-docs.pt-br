@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643834"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395419"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Atualizar o local SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados
 
 O Assistente de migração de dados fornece perfeitas avaliações do SQL Server local e as atualizações para versões posteriores do SQL Server ou as migrações para o SQL Server em VMs do Azure ou banco de dados SQL.
 
-Este artigo fornece instruções passo a passo para a atualização do SQL Server local para a versão mais recente do SQL Server ou ao SQL Server em VMs do Azure usando o Assistente de migração de dados.   
+Este artigo fornece instruções passo a passo para a atualização do SQL Server local para a versão mais recente do SQL Server ou ao SQL Server em VMs do Azure usando o Assistente de migração de dados.   
 
 ## <a name="create-a-new-migration-project"></a>Criar um novo projeto de migração
 
@@ -65,9 +65,9 @@ Este artigo fornece instruções passo a passo para a atualização do SQL Serve
    > [!NOTE]
    > Você pode aplicar as configurações de migração para todos os bancos de dados que você está migrando, selecionando o servidor no painel esquerdo. Você também pode configurar um banco de dados individual com configurações específicas, selecionando o banco de dados no painel esquerdo.
 
-    A. Especifique o **compartilhado local acessível por servidores SQL de origem e destino para a operação de backup**. Certifique-se de que a conta de serviço executando o código-fonte tem de instância do SQL Server gravar privilégios em um local compartilhado e a conta de serviço de destino tem privilégios de leitura no local compartilhado.
+    a. Especifique o **compartilhado local acessível por servidores SQL de origem e destino para a operação de backup**. Certifique-se de que a conta de serviço executando o código-fonte tem de instância do SQL Server gravar privilégios em um local compartilhado e a conta de serviço de destino tem privilégios de leitura no local compartilhado.
 
-    B. Especifique o local para restaurar os dados e arquivos de log transacional no servidor de destino.
+    b. Especifique o local para restaurar os dados e arquivos de log transacional no servidor de destino.
 
     ![Adicionar página bancos de dados](../dma/media/AddDatabases.png)
 

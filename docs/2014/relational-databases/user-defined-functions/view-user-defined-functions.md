@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505449"
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
   Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
@@ -68,7 +68,7 @@ ms.locfileid: "48223166"
   
 4.  Clique com o botão direito do mouse na função da qual você deseja ver as propriedades e selecione **Propriedades**.  
   
-     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name* .  
+     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name*.  
   
      **Backup de banco de dados**  
      Nome do banco de dados que contém essa função.  
@@ -109,7 +109,7 @@ ms.locfileid: "48223166"
      **Ligado a esquema**  
      Indica se a função é ligada a esquema. Os valores são True e False. Para obter informações sobre funções associadas ao esquema, veja a seção SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obter a definição e as propriedades de uma função  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
@@ -18,12 +18,12 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deef45ad1f173b4da056a203de198c4b2c40ce7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757530"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
   Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  

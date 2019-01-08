@@ -16,12 +16,12 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8806b2c00a839e11d5d3ff7be1d4c3cbbdcc059c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662205"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420497"
 ---
 # <a name="aggregate-functions---sum"></a>Funções de Agregação – sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Não há suporte para sequências que misturam tipos, atravessando os limites de tipo base.  
   
--   sum((xs:double ("INF"), xs:double ("- INF"))) gera um erro de domínio.  
+-   Sum, xs gera um erro de domínio.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
+ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221532"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52282018"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51221532"
   
  Para obter mais informações, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto contentor. É exclusivo em um banco de dados.|  
 |**Definição**|**nvarchar(max)**|Texto SQL que define esse módulo. Esse valor também pode ser obtido usando o [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função interna.<br /><br /> NULL = Criptografado.|  
@@ -47,8 +47,8 @@ ms.locfileid: "51221532"
 |**null_on_null_input**|**bit**|O módulo foi declarado para produzir uma saída NULL em qualquer entrada NULL.|  
 |**execute_as_principal_id**|**Int**|A identificação do principal de banco de dados EXECUTE AS.<br /><br /> NULL por padrão ou se EXECUTE AS CALLER.<br /><br /> ID da entidade especificada se EXECUTE AS SELF ou EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = não compilado originalmente<br /><br /> 1 = é compilado originalmente<br /><br /> O valor padrão é 0.|  
-|**is_inlineable**|**bit**|**Aplica-se ao**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] em diante.<br/><br />Indica se o módulo é inlineable ou não. Capacidade de embutir baseia-se nas condições especificadas [aqui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = não inlineable<br /><br /> 1 = é inlineable. <br /><br /> Para UDFs escalares, o valor será 1 se a UDF for inlineable e 0, caso contrário. Ele sempre contém um valor de 1 para TVFs embutidos e 0 para todos os outros tipos de módulo.<br />|  
-|**inline_type**|**bit**|**Aplica-se ao**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] em diante.<br /><br />Indica se o inlining é ativada para o módulo no momento. <br /><br />0 = inlining está desativado<br /><br /> 1 = inlining é ativado.<br /><br /> Para UDFs escalares, o valor será 1 se o inlining é ativado (explícita ou implicitamente). O valor será sempre 1 para embutido TVFs e 0 para outros tipos de módulo.<br />|  
+|**is_inlineable**|**bit**|**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versões posteriores.<br/><br />Indica se o módulo é inlineable ou não. Capacidade de embutir baseia-se nas condições especificadas [aqui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = não inlineable<br /><br /> 1 = é inlineable. <br /><br /> Para UDFs escalares, o valor será 1 se a UDF for inlineable e 0, caso contrário. Ele sempre contém um valor de 1 para TVFs embutidos e 0 para todos os outros tipos de módulo.<br />|  
+|**inline_type**|**bit**|**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versões posteriores.<br /><br />Indica se o inlining é ativada para o módulo no momento. <br /><br />0 = inlining está desativado<br /><br /> 1 = inlining é ativado.<br /><br /> Para UDFs escalares, o valor será 1 se o inlining é ativado (explícita ou implicitamente). O valor será sempre 1 para embutido TVFs e 0 para outros tipos de módulo.<br />|  
 
   
 ## <a name="remarks"></a>Comentários  

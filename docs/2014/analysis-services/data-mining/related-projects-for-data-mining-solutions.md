@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106866"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400650"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
   O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
@@ -88,7 +88,7 @@ ms.locfileid: "48106866"
   
 -   [Transformação Extração de Termos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Transformação Pesquisa de Termos](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+-   [Transformação Pesquisa de Termo](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
 ##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não seja visto normalmente como um componente crítico de soluções de mineração de dados, ele fornece os recursos a seguir que são úteis para a apresentação de soluções de mineração de dados.  
@@ -162,7 +162,7 @@ ms.locfileid: "48106866"
   
  Para obter mais informações, veja [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- A versão de uma palavra que está armazenada depois que a indexação de texto completo seja um token em uma forma compactada. As consultas subsequentes para o índice de texto completo geram várias formas flexivas de uma palavra específica baseada nas regras desse idioma, para assegurar que todas as correspondências prováveis sejam feitas. Por exemplo, embora o token que está armazenado possa ser "run", o mecanismo de consulta também procura os termos "running", "ran" e "runner", porque eles são variações morfológicas derivadas regularmente da palavra raiz "run".  
+ A versão de uma palavra que está armazenada depois que a indexação de texto completo seja um token em uma forma compactada. As consultas subsequentes para o índice de texto completo geram várias formas flexivas de uma palavra específica baseada nas regras desse idioma, para assegurar que todas as correspondências prováveis sejam feitas. Por exemplo, embora o token que está armazenado possa ser "run", o mecanismo de consulta também procura os termos "running", "ran" e "executor", porque essas são variações morfológicas derivadas regularmente da palavra raiz "run".  
   
  Você também pode criar e compilar um dicionário de sinônimos de usuário para armazenar sinônimos e habilitar melhores resultados de pesquisa ou categorização de termos. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados. Para obter mais informações, veja [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -203,6 +203,6 @@ ms.locfileid: "48106866"
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções de modelo multidimensional &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluções de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

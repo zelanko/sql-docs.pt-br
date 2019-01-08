@@ -13,15 +13,15 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134106"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405141"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Criar e Gerenciar KPIs (SSAS tabular)
-  Este tópico descreve como criar, editar ou excluir um KPI (Indicador chave de desempenho) em um modelo tabular. Para criar um KPI, selecione uma medida que seja avaliada como o valor base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
+  Este tópico descreve como criar, editar ou excluir um KPI (Indicador chave de desempenho) em um modelo tabular. Para criar um KPI, você deve selecionar uma medida que é avaliada como valor Base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
   
  Este tópico inclui as seguintes tarefas:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48134106"
 5.  Clique em **Descrições**e digite as descrições para KPI, Valor, Status e Destino.  
   
 > [!TIP]  
->  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
+>  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> Para editar um KPI  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48134106"
 |Tendência|ALT+T|  
   
 ## <a name="see-also"></a>Consulte também  
- [KPIs &#40;Tabular do SSAS&#41;](kpis-ssas-tabular.md)   
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
- [Criar e gerenciar medidas &#40;Tabular do SSAS&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)   
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
+ [Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

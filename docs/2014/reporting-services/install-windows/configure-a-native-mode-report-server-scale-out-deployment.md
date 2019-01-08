@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395229"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar uma implantação de expansão do servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606846"
 3.  Na página implantação em expansão, selecione a instância de servidor de relatório que está aguardando para se unir à implantação e, em seguida, clique em **Adicionar servidor**.  
   
     > [!NOTE]  
-    >  **Problema:** quando você tenta unir uma instância do servidor de relatório do Reporting Services à implantação em expansão, pode receber mensagens de erro semelhantes a “Acesso negado”.  
+    >  **Problema:** Quando você tenta unir uma instância de servidor de relatório do Reporting Services à implantação em expansão, você pode receber mensagens de erro semelhantes a "Acesso negado".  
     >   
-    >  **Solução alternativa:** faça backup da chave de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da primeira instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e restaure a chave para o segundo servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Tente unir o segundo servidor à implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solução alternativa:** Fazer backup de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] chave de criptografia da primeira [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da instância e restaurar a chave para o segundo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório. Tente unir o segundo servidor à implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Agora, deverá ser possível verificar que ambas as instâncias do servidor de relatório estão operacionais. Para verificar a segunda instância, você pode usar a ferramenta Configuração do Reporting Services para se conectar ao servidor de relatório e clicar na URL do Serviço da Web ou na URL do Gerenciador de Relatórios.  
   

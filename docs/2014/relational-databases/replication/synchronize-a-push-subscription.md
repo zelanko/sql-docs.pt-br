@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4db6c772d7b40daadbded626bcd778356de2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225452"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752578"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar uma assinatura push
   Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](agents/replication-agents-overview.md), ou RMO (Replication Management Objects).  
@@ -33,7 +32,7 @@ ms.locfileid: "48225452"
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Para sincronizar uma assinatura push sob demanda no Management Studio (no Publicador)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   

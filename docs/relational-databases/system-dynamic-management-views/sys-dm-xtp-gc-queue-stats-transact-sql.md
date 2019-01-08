@@ -19,12 +19,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb836b93a48317ad6573cace0546cb90fa9f370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603714"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413733"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "47603714"
   
  O thread principal de coleta de lixo (thread inativo) rastreia linhas atualizadas, excluídas e inseridas de todas as transações concluídas desde a última chamada do thread principal de coleta de lixo. Quando o thread de coleta de lixo é ativado, ele determina se o carimbo de data/hora da transação ativa mais antiga foi alterado. Se a transação ativa mais antiga tiver sido alterada, o thread inativo enfileirará os itens de trabalho (em partes de 16 linhas) para transações cujos conjuntos de gravações não são mais necessários. Por exemplo, se você excluir 1.024 linhas, acabará vendo 64 itens de trabalho de coleta de lixo enfileirados, cada um contendo 16 linhas excluídas.  Depois que uma transação de usuário é confirmada, ela seleciona todos os itens enfileirados em seu agendador. Se não houver itens enfileirados no agendador, a transação do usuário realizará a pesquisa em qualquer fila do nó NUMA atual.  
   
- Você pode determinar se a coleta de lixo está liberando memória para as linhas excluídas executando sys.dm_xtp_gc_queue_stats para saber se o trabalho enfileirado está sendo processado. Se as entradas em current_queue_depth não estiverem sendo processadas ou se novos itens de trabalho não estão sendo adicionados ao current_queue_depth, isso é uma indicação de que a coleta de lixo não está liberando memória. Por exemplo, a coleta de lixo não poderá ser feita se houver uma transação demorada.  
+ Você pode determinar se a coleta de lixo está liberando memória para as linhas excluídas executando sys.dm_xtp_gc_queue_stats para saber se o trabalho enfileirado está sendo processado. Se as entradas em current_queue_depth não estiverem sendo processadas ou se novos itens de trabalho não estão sendo adicionados ao current_queue_depth, isso é uma indicação de que a coleta de lixo não está liberando memória. Por exemplo, a coleta de lixo não pode ser feita se houver uma transação de longa execução.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|O identificador exclusivo da fila.|  
 |total_enqueues|**bigint**|O número total de itens de trabalho de coleta de lixo enfileirados para essa fila desde que o servidor foi iniciado.|  

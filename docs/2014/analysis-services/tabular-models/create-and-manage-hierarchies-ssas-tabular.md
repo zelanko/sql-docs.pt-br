@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149626"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404881"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Criar e Gerenciar hierarquias (SSAS tabular)
   As hierarquias podem ser criadas e gerenciadas no designer modelo em Exibição de Diagrama. Par exibir o designer de modelos na Exibição de Diagrama no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Model** , aponte para **Exibição de Modelo**e clique em **Exibição de Diagrama**.  
@@ -42,7 +42,7 @@ ms.locfileid: "48149626"
   
 2.  Digite um nome para a hierarquia.  
   
- Você pode arrastar colunas adicionais no nível pai de sua hierarquia, que copia as colunas. Remova o nível filho para colocá-lo onde você desejar que ele seja exibido na hierarquia.  
+ Você pode arrastar colunas adicionais para o nível pai da sua hierarquia, que copia as colunas. Remova o nível filho para colocá-lo onde você desejar que ele seja exibido na hierarquia.  
   
 > [!NOTE]  
 >  O comando Criar Hierarquia estará desabilitado no menu de contexto se você fizer multisseleção de uma medida junto com uma ou mais colunas, ou se você selecionar colunas de várias tabelas.  
@@ -96,7 +96,7 @@ ms.locfileid: "48149626"
   
 ## <a name="see-also"></a>Consulte também  
  [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Hierarquias &#40;Tabular do SSAS&#41;](hierarchies-ssas-tabular.md)   
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)  
+ [Hierarquias &#40;SSAS de Tabela&#41;](hierarchies-ssas-tabular.md)   
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)  
   
   

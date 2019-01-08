@@ -22,21 +22,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7052eec4984d89bd9dfa4c0e94a6e35ed4f4222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794baaa127019eb13a77cb98bf90be71d33917b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605475"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407443"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações resumidas sobre grupos de índices ausentes, excluindo índices espaciais.  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.  
     
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
 |**unique_compiles**|**bigint**|Número de compilações e recompilações que se beneficiariam deste grupo de índice ausente. Compilações e recompilações de muitas consultas diferentes podem contribuir para esse valor de coluna.|  
@@ -74,7 +74,7 @@ FROM sys.dm_db_missing_index_group_stats
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
 ```  
   
-### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. Localizar os índices ausentes individuais e seus detalhes de coluna de um determinado grupo de índice ausente  
+### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>b. Localizar os índices ausentes individuais e seus detalhes de coluna de um determinado grupo de índice ausente  
  A consulta seguinte determina quais índices ausentes fazem parte de um determinado grupo de índices ausentes e exibe os detalhes de sua coluna. Por esse exemplo, o identificador de grupo de índices ausentes é 24.  
   
 ```  

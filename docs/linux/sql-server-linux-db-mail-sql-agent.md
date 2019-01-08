@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 0cc6e892741bd29b0953e9b9dfc6cab81244b539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d9abbc37a576ad86823cfd8b3cb5f8401dca71d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728205"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394839"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail e alertas de Email com o SQL Agent no Linux
 

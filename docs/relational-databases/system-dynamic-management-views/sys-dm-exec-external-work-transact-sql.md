@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71963d15dbd457dc7732427b4a384ab3cd7c5561
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661645"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418617"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51661645"
   
  Sys.dm_exec_external_work de consulta para identificar o trabalho é rotacionado para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou SQL Server externo).  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Identificador exclusivo para a consulta do PolyBase associado.|Ver *request_ID* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|A solicitação em que este trabalhador está executando.|Ver *step_index* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  

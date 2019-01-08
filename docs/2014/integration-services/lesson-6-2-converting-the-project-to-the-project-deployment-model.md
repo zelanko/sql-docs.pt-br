@@ -1,24 +1,23 @@
 ---
-title: 'Etapa 2: converter o projeto para o modelo de implantação de projeto | Microsoft Docs'
+title: 'Etapa 2: Convertendo o projeto para o modelo de implantação de projeto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752548"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Etapa 2: Convertendo o projeto para o modelo de implantação de projetos
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Etapa 2: Convertendo o projeto para o modelo de implantação de projeto
   Nesta tarefa, você usará o Assistente de conversão de projeto do Integration Services para converter o projeto para o modelo de implantação do projeto.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Convertendo o projeto para o modelo de implantação de projeto  
@@ -52,6 +51,6 @@ ms.locfileid: "48093926"
 13. Clique na guia parâmetros e verifique se o pacote agora contém um parâmetro para VarFolderName e o valor é o mesmo caminho especificado para a pasta Novos dados de exemplo, do arquivo de configuração da Lição 5.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 3: Testando o pacote da Lição 6](lesson-6-3-testing-the-lesson-6-package.md)  
+ [Etapa 3: Testando o pacote da lição 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

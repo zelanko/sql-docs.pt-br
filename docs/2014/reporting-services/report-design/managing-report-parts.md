@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393749"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], partes de relatório podem ser publicadas em servidores de relatório e reutilizadas em outros relatórios e por outros usuários se eles tiverem as permissões apropriadas.  
@@ -52,10 +52,10 @@ ms.locfileid: "48123246"
   
  (*) indica que isso é novo para esta versão.  
   
-|Propriedade|Description|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
+|Propriedade|Descrição|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
 |--------------|-----------------|---------------------------------------------|  
 |Nome|Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
-|Description|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
+|Descrição|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
 |CreatedBy|A ID do usuário que adicionou originalmente a parte de relatório ao banco de dados do servidor de relatório. O formato exato depende do método de autenticação. Por exemplo, alguns métodos de autenticação mostrarão o domínio\nome de usuário completo nos campos CreatedBy e ModifiedBy.|Sim|  
 |CreationDate|As data em que a parte de relatório foi criada originalmente.<br /><br /> Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
 |ModifiedBy|ModifiedBy é a ID do usuário que modificou por último a parte do relatório.|Sim|  
@@ -92,10 +92,10 @@ ms.locfileid: "48123246"
 -   As partes de relatório usam as mesmas políticas de permissão que as existentes no tipo de item "Resource". Dentro de uma pasta, não há nenhuma diferenciação entre itens de recurso tradicionais e partes de relatório a partir de uma perspectiva de herança de segurança. A parte de relatório herdará a mesma política de permissão que as imagens na mesma pasta. Quando esta distinção é necessária, a segurança de nível de item pode ser configurada para as partes de relatório desejadas. Ou você pode colocar partes de relatório que deveriam estar em pastas separadas e que têm as permissões corretas configuradas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Página Propriedades gerais, partes de relatório &#40;Gerenciador de relatórios&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Mover itens de página &#40;Gerenciador de relatórios&#41;](../move-items-page-report-manager.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

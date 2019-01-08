@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
@@ -15,12 +14,12 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd11a6f4e54fc835ac35e9d3864fe4190701448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174953"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752248"
 ---
 # <a name="choose-a-resolver"></a>Escolher um resolvedor
   Ao escolher um resolvedor, considere a importância da resolução de conflito em sua aplicação e se você pode usar o resolvedor padrão baseado em prioridades ou se precisa usar um resolvedor de artigo.  
@@ -44,7 +43,7 @@ ms.locfileid: "48174953"
   
 ## <a name="see-also"></a>Consulte também  
  [Detectando e solucionando conflitos em registros lógicos](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republicar dados](../republish-data.md)  
   
   

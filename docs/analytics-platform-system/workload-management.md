@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100361"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419870"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
 
@@ -58,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descrições de classes de recurso  
 A tabela a seguir descreve as classes de recursos e suas alocações de recursos do sistema.  
   
-|Classe de recurso|Importância da solicitação|Uso máximo da memória *|Slots de simultaneidade (máximo = 32)|Description|  
+|Classe de recurso|Importância da solicitação|Uso máximo da memória *|Slots de simultaneidade (máximo = 32)|Descrição|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |padrão|Média|400 MB|1|Por padrão, cada logon é permitida uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe terá precedência. Quando um logon é descartado de todas as classes de recursos, o logon reverterá para a alocação de recurso padrão.|  
 |MediumRC|Média|1200 MB|3|Exemplos de solicitações que talvez seja necessário a classe de recursos de mídia:<br /><br />Operações de CTAS que tenham grandes junções de hash.<br /><br />Selecione as operações que precisam de mais memória para evitar o armazenamento em cache em disco.<br /><br />Carregar dados em índices columnstore clusterizados.<br /><br />Compilar, recompilar e reorganizar índices de columnstore clusterizado para tabelas menores com 10 a 15 colunas.|  
@@ -131,7 +131,7 @@ Instruções SQL e operações governadas por classes de recursos:
   
 -   UPDATE  
   
--   Delete (excluir)  
+-   DELETE  
   
 -   RESTAURAR banco de dados ao restaurar em um dispositivo com mais nós de computação.  
   

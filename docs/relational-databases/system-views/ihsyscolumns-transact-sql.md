@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHsyscolumns
@@ -19,19 +18,19 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747880"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **IHsyscolumns** exibição expõe informações de coluna para artigos publicados a partir de um publicador não SQL Server. Essa exibição é armazenada no distributiondatabase.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da coluna ou do parâmetro do procedimento.|  
 |**id**|**int**|A ID de objeto da tabela à qual essa coluna pertence ou a ID do procedimento armazenado com a qual esse parâmetro está associado.|  
@@ -52,7 +51,7 @@ ms.locfileid: "47668874"
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|O deslocamento para a linha na qual essa coluna aparece.|  
-|**collationid**|**int**|A ID de agrupamento da coluna. NULL para colunas que não são baseadas em caracteres.|  
+|**collationid**|**int**|A ID de ordenação da coluna. NULL para colunas que não são baseadas em caracteres.|  
 |**language**|**int**|O identificador de idioma para a coluna.|  
 |**status**|**int**|O bitmap usado para descrever uma propriedade da coluna ou do parâmetro:<br /><br /> **0x08** = coluna permite valores nulos.<br /><br /> **0x10** = o preenchimento ANSI estava em vigor quando **varchar** ou **varbinary** colunas foram adicionadas. Espaços em branco são preservados por **varchar** e zeros à direita são preservados por **varbinary** colunas.<br /><br /> **0x40** = parâmetro é um parâmetro de saída.<br /><br /> **0x80** = coluna é uma coluna de identidade.|  
 |**type**|**int**|O tipo de armazenamento físico de [sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
@@ -63,8 +62,8 @@ ms.locfileid: "47668874"
 |**iscomputed**|**int**|O sinalizador que indica se a coluna é computada:<br /><br /> **0** = não computada.<br /><br /> **1** = computada.|  
 |**isoutparam**|**int**|Indica se o parâmetro de procedimento é de saída:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
 |**isnullable**|**int**|Indica se a coluna permite valores nulos:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
-|**Agrupamento**|**int**|O nome de agrupamento da coluna. NULL para colunas que não são baseadas em caracteres.|  
-|**tdscollation**|**int**|O nome do agrupamento da coluna quando retornado em um protocolo TDS (Tabular Data Stream).|  
+|**Agrupamento**|**int**|O nome de ordenação da coluna. NULL para colunas que não são baseadas em caracteres.|  
+|**tdscollation**|**int**|O nome da ordenação da coluna quando retornado em um protocolo TDS (Tabular Data Stream).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

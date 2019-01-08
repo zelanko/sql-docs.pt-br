@@ -10,12 +10,12 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673154"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399899"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectar-se ao MySQL (MySQLToSQL)
 Use o **conectar-se ao MySQL** caixa de diálogo para se conectar ao banco de dados MySQL que você deseja migrar.  

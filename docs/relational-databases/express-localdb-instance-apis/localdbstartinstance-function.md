@@ -16,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 61dc56c503e580d90b17b1b04c5e80ea6fb10d70
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418777"
 ---
 # <a name="localdbstartinstance-function"></a>Função LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +110,10 @@ HRESULT LocalDBStartInstance(
   
 |Buffer|Tamanho do buffer|Fundamento|Ação|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|O usuário deseja iniciar a instância e não precisa de um nome de pipe.|Inicia uma instância (sem retorno de pipe e sem retorno do tamanho de buffer necessário).|  
+|NULL|NULL|Deseja iniciar a instância de usuário e não precisa de um pipe de nome.|Inicia uma instância (sem retorno de pipe e sem retorno do tamanho de buffer necessário).|  
 |NULL|Presente|O usuário solicita o tamanho do buffer de saída. (Na próxima chamada, o usuário provavelmente solicitará uma inicialização real.)|Retorna um tamanho de buffer necessário (sem inicialização e sem retorno de pipe). O resultado é S_OK.|  
 |Presente|NULL|Não permitido; entrada incorreta.|O resultado retornado é LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Presente|Presente|O usuário deseja iniciar a instância e precisa do nome do pipe para se conectar a ela após a inicialização.|Verifica o tamanho do buffer, inicia a instância e retorna o nome do pipe no buffer. <br />O argumento de tamanho do buffer retorna o comprimento da cadeia de caracteres “server=”, sem incluir caracteres nulos de terminação.|  
+|Presente|Presente|O usuário deseja iniciar a instância e precisa do nome do pipe para se conectar a ela após a inicialização.|Verifica o tamanho do buffer, inicia a instância e retorna o nome do pipe no buffer. <br />O argumento de tamanho do buffer retorna o comprimento do "server =" cadeia de caracteres, sem incluir caracteres nulos de terminação.|  
   
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   

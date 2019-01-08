@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111492"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414783"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Uma assinatura padrão sempre é definida pelo relatório no qual se baseia.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111492"
  Um usuário que cria uma assinatura possui essa assinatura. Cada usuário pode modificar ou excluir as assinaturas que possui.  
   
 > [!NOTE]  
->  Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
  Dependendo da **rsreportserver. config** configurações do arquivo de configuração, os usuários podem até conseguir adicionar mais usuários a uma assinatura (por exemplo, um gerente adiciona os endereços de email ou seus relatórios diretos para que cada um receba uma cópia das relatório). O suporte a esse recurso depende da visibilidade do campo Para: durante a definição de assinaturas individuais. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111492"
   
 -   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [Store credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
+ Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [Armazenar credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
   
  Este tópico não explica como criar uma assinatura controlada por dados. Para obter instruções sobre como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou a Ajuda online da página Criar uma Assinatura Controlada por Dados no Gerenciador de Relatórios.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48111492"
 >  Um administrador de servidor de relatório não pode gerenciar a partir de um lugar todas as assinaturas individuais que estão sendo usadas em um servidor de relatório específico. No entanto, os administradores de servidor de relatório podem acessar cada assinatura individual para modificá-la ou excluí-la.  
   
 ##  <a name="bkmk_delete_subscription"></a> Para excluir uma assinatura  
- Para excluir uma assinatura”  
+ Para excluir uma assinatura"  
   
 1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -173,11 +173,11 @@ ms.locfileid: "48111492"
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
- [Criar e gerenciar assinaturas de servidores de relatório do modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Assinaturas controladas por dados](data-driven-subscriptions.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Usar Minhas Assinaturas](use-my-subscriptions-native-mode-report-server.md)  
   
   
