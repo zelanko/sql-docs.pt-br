@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201435"
 ---
 # <a name="save-as"></a>Salvar como
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,8 @@ Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pa
 **Nome do arquivo**  
 Use esta opção para exibir o nome atual do arquivo, alterar o nome do arquivo ou filtrar os arquivos e pastas que são exibidos. Para filtrar os arquivos e pastas que são exibidos, digite um nome de arquivo completo ou parcial para filtrar. Você pode usar o asterisco (`*`) como um curinga.  
   
-> [!TIP]  
-> Para exibir arquivos na Web e locais de rede, digite uma URL ou um caminho de rede na caixa **Nome do arquivo** . Por exemplo, "https://mywebsite" exibe os arquivos disponíveis no local da Web "meusite" e "\\\meuservidor\meucompartilhamento" exibe os arquivos disponíveis no local "meucompartilhamento" em "meuservidor".  
+> [!TIP]
+> Para exibir arquivos na Web e locais de rede, digite uma URL ou um caminho de rede na caixa **Nome do arquivo** . Por exemplo, "<https://mywebsite>" exibe os arquivos disponíveis no local da Web "meusite" e "\\\meuservidor\meucompartilhamento" exibe os arquivos disponíveis no local "meucompartilhamento" em "meuservidor".  
   
 **Salvar como tipo**  
 Use essa opção para selecionar um tipo de arquivo novo para o item selecionado. Os tipos de arquivo exibidos incluem todos os tipos de arquivo disponíveis para os quais o item selecionado pode ser convertido.  

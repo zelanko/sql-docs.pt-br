@@ -1,5 +1,5 @@
 ---
-title: Nome de agrupamento do SQL Server (Transact-SQL) | Microsoft Docs
+title: Nome de ordenação do SQL Server (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f9c71473034dd4787de1862752c274d9e8dd740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 765f825a690af65ec4740975cc21c5364d133bb5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810584"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211395"
 ---
-# <a name="sql-server-collation-name-transact-sql"></a>Nome de agrupamento do SQL Server (Transact-SQL)
+# <a name="sql-server-collation-name-transact-sql"></a>Nome de ordenação do SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  É uma única cadeia de caracteres que especifica o nome de agrupamento para um agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  É uma única cadeia de caracteres que especifica o nome de ordenação para uma ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a agrupamentos do Windows. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também oferece suporte a um número limitado (<80) de agrupamentos chamados de agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram desenvolvidos antes de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar suporte a agrupamentos do Windows. Os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre o agrupamento do Windows, veja [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também oferece suporte a um número limitado (&lt;80) de ordenações chamados de ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram desenvolvidos antes de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar suporte a ordenações do Windows. As ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
  Especifica a preferência por maiúsculas. Mesmo se a comparação diferenciar maiúsculas de minúsculas, a versão em maiúsculas de uma letra vem antes da versão em minúsculas, quando não há outra distinção.  
   
  *Codepage*  
- Especifica um número de um a quatro dígitos que identifica a página de código usada pelo agrupamento. **CP1** especifica a página de código 1252 para todas as outras páginas de código para as quais o número de página de código completo é especificado. Por exemplo, **CP1251** especifica a página de código 1251 e **CP850** especifica a página de código 850.  
+ Especifica um número de um a quatro dígitos que identifica a página de código usada pela ordenação. **CP1** especifica a página de código 1252 para todas as outras páginas de código para as quais o número de página de código completo é especificado. Por exemplo, **CP1251** especifica a página de código 1251 e **CP850** especifica a página de código 850.  
   
  *CaseSensitivity*  
  **CI** especifica que não diferencia maiúsculas de minúsculas, **CS** especifica que diferencia maiúsculas de minúsculas.  
@@ -64,15 +64,15 @@ _CaseSensitivity_AccentSensitivity | _BIN
  Especifica a ordem de classificação binária que será usada.  
   
 ## <a name="remarks"></a>Remarks  
- Para listar os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suportados pelo servidor, execute a seguinte consulta.  
+ Para listar as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suportados pelo servidor, execute a seguinte consulta.  
   
 ```  
 SELECT * FROM sys.fn_helpcollations()   
 WHERE name LIKE 'SQL%';  
 ```  
 
->  [!NOTE]  
->  Para a ID de Ordem de Classificação 80, use qualquer agrupamento do Windows com a página de código 1250 e ordem binária. Por exemplo: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
+> [!NOTE]
+>  Para a ID de Ordem de Classificação 80, use qualquer ordenação do Windows com a página de código 1250 e ordem binária. Por exemplo: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

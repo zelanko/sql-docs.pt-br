@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642353"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214877"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
   Se o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ou posterior estiver atualmente instalado no computador, você poderá atualizar para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -36,16 +36,16 @@ ms.locfileid: "51642353"
 ## <a name="before-upgrading-integration-services"></a>Antes de atualizar o Integration Services  
  Recomenda-se executar o Supervisor de Atualização antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização reporta problemas que você poderá encontrar se migrar pacotes existentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o novo formato de pacote utilizado pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-> [!NOTE]  
+> [!NOTE]
 >  O suporte para a migração ou a execução de pacotes de DTS (Data Transformation Services) foi descontinuado no SQL Server 2012. A seguinte funcionalidade do DTS foi descontinuada:  
->   
+> 
 >  -   Tempo de execução DTS  
 > -   API DTS  
 > -   O Assistente de Migração de Pacotes para migração de pacotes DTS para a próxima versão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Suporte para manutenção de pacote DTS no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Tarefa Executar Pacote DTS 2000  
 > -   Exame de pacotes DTS do Supervisor de Atualização  
->   
+> 
 >  Para obter informações sobre outros recursos descontinuados, consulte [Funcionalidade do Integration Services descontinuada no SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>atualizando o Integration Services  
