@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756234"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213455"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47756234"
   
 -   Funções de partição  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
 |referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes de várias partes, consulte [convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para dependências não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e portanto, só podem ser definidas usando uma de duas partes (*Schema*) nome.|  
@@ -91,13 +91,13 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|Classe da entidade referenciada.<br /><br /> 1 = Objeto ou coluna<br /><br /> 6 = Tipo<br /><br /> 10 = Coleção de esquema XML<br /><br /> 21 = Função de partição|  
 |referenced_class_desc|**nvarchar(60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica que a associação de esquema para a entidade referenciada ocorre em tempo de execução; portanto, a resolução da ID da entidade depende do esquema do chamador. Isso ocorre quando a entidade referenciada é um procedimento armazenado, um procedimento armazenado estendido ou uma função definida pelo usuário chamada em uma instrução EXECUTE.<br /><br /> 1 = A entidade referenciada depende do chamador e é resolvida em tempo de execução. Nesse caso, referenced_id é NULL.<br /><br /> 0 = A ID da entidade referenciada não é dependente do chamador. Sempre 0 para referências associadas a esquema e referências entre bancos de dados e entre servidores que especificam explicitamente um nome de esquema. Por exemplo, uma referência para uma entidade no formato `EXEC MyDatabase.MySchema.MyProc` não é dependente do chamador. Porém, uma referência no formato `EXEC MyDatabase..MyProc` é dependente do chamador.|  
-|is_ambiguous|**bit**|Indica a referência é ambígua e pode ser resolvida em tempo de execução para uma função definida pelo usuário, um tipo definido pelo usuário (UDT) ou uma referência xquery para uma coluna do tipo **xml**. Por exemplo, suponha que a instrução `SELECT Sales.GetOrder() FROM Sales.MySales` é definido em um procedimento armazenado. Até que o procedimento armazenado seja executado, não se sabe se `Sales.GetOrder()` é uma função definida pelo usuário no esquema `Sales` ou é uma coluna denominada `Sales` do tipo UDT com um método denominado `GetOrder()`.<br /><br /> 1 = A referência a uma função definida pelo usuário ou a um método UDT (Tipo Definido pelo Usuário) de coluna é ambígua.<br /><br /> 0 = A referência não é ambígua ou a entidade pode ser associada com êxito quando a função é chamada.<br /><br /> Sempre 0 para referências associadas a esquema.|  
+|is_ambiguous|**bit**|Indica a referência é ambígua e pode ser resolvida em tempo de execução para uma função definida pelo usuário, um tipo definido pelo usuário (UDT) ou uma referência xquery para uma coluna do tipo **xml**. Por exemplo, suponha que a instrução `SELECT Sales.GetOrder() FROM Sales.MySales` esteja definida em um procedimento armazenado. Até que o procedimento armazenado seja executado, não se sabe se `Sales.GetOrder()` é uma função definida pelo usuário no esquema `Sales` ou é uma coluna denominada `Sales` do tipo UDT com um método denominado `GetOrder()`.<br /><br /> 1 = A referência a uma função definida pelo usuário ou a um método UDT (Tipo Definido pelo Usuário) de coluna é ambígua.<br /><br /> 0 = A referência não é ambígua ou a entidade pode ser associada com êxito quando a função é chamada.<br /><br /> Sempre 0 para referências associadas a esquema.|  
 |is_selected|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O objeto ou coluna é selecionada.|  
 |is_updated|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O objeto ou coluna é modificada.|  
 |is_select_all|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O objeto é usado em uma cláusula SELECT * (somente no nível do objeto).|  
 |is_all_columns_found|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Todas as dependências de colunas do objeto poderiam ser encontradas.<br /><br /> 0 = As dependências de colunas do objeto não poderiam ser encontradas.|
 |is_insert_all|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = o objeto é usado em uma instrução INSERT sem uma lista de colunas (nível de objeto somente).|  
-|is_incomplete|**bit**|**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = o objeto ou coluna tem um erro de associação e está incompleta.|
+|is_incomplete|**bit**|**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = o objeto ou coluna tem um erro de associação e está incompleta.|
   
 ## <a name="exceptions"></a>Exceções  
  Retorna um conjunto de resultados vazio em qualquer uma das seguintes condições:  
@@ -124,19 +124,19 @@ sys.dm_sql_referenced_entities (
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
-|procedimento armazenado CLR|não|Sim|  
+|procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
-|Função CLR definida pelo usuário|não|Sim|  
-|Gatilho CLR (DML e DDL)|não|não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
-|Procedimentos armazenados estendidos|não|Sim|  
-|Fila|não|Sim|  
-|Sinônimo|não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|não|Sim|  
-|Coleção de esquemas XML|não|Sim|  
-|Função de partição|não|Sim|  
+|Função CLR definida pelo usuário|Não|Sim|  
+|Gatilho CLR (DML e DDL)|Não|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Procedimentos armazenados estendidos|Não|Sim|  
+|Fila|Não|Sim|  
+|Sinônimo|Não|Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
+|Coleção de esquemas XML|Não|Sim|  
+|Função de partição|Não|Sim|  
   
  \* Uma tabela é controlada como entidade de referência somente quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de uma coluna computada, restrição CHECK ou restrição padrão.  
   
@@ -159,7 +159,7 @@ FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIG
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Retornando entidades referenciadas por um objeto  
+### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>b. Retornando entidades referenciadas por um objeto  
  O exemplo seguinte retorna as entidades referenciadas pela função `dbo.ufnGetContactInformation` definida pelo usuário.  
   
 ```sql  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Retornando o uso de objeto ou de coluna  
- O exemplo a seguir retorna os objetos e as dependências de coluna do procedimento armazenado `HumanResources.uspUpdateEmployeePersonalInfo`. Esse procedimento atualiza as colunas `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` da `Employee` tabela com base em uma `BusinessEntityID` valor. Outro procedimento armazenado, `upsLogError` é definido em um bloco TRY.CATCH para capturar qualquer erro de execução. As colunas `is_selected`, `is_updated`e `is_select_all` retornam informações sobre como são usados esses objetos e colunas dentro do objeto de referência. A tabela e colunas que são modificadas são indicadas por um 1 na coluna is_updated. A coluna `BusinessEntityID` só é selecionada e o procedimento armazenado `uspLogError` não é selecionado, nem modificado.  
+ O exemplo a seguir retorna os objetos e as dependências de coluna do procedimento armazenado `HumanResources.uspUpdateEmployeePersonalInfo`. Esse procedimento atualiza as colunas `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` da `Employee` tabela com base em uma `BusinessEntityID` valor. Outro procedimento armazenado, `upsLogError` é definido em um bloco TRY... CATCH para capturar qualquer erro de execução. As colunas `is_selected`, `is_updated`e `is_select_all` retornam informações sobre como são usados esses objetos e colunas dentro do objeto de referência. A tabela e colunas que são modificadas são indicadas por um 1 na coluna is_updated. A coluna `BusinessEntityID` só é selecionada e o procedimento armazenado `uspLogError` não é selecionado, nem modificado.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794728"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
   O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , com atalhos de teclado com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
@@ -185,7 +184,7 @@ ms.locfileid: "48085836"
 |Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou em<br /><br /> CTRL+Y<br /><br /> ou em<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou em<br /><br /> CTRL+Y<br /><br /> ou em<br /><br /> ALT+SHIFT+BACKSPACE|  
 |Salvar o item selecionado|CTRL+S|CTRL+S|  
 |Salvar tudo|CTRL+SHIFT+S|CTRL+SHIFT+S|  
-|Fechar|CTRL+F4|CTRL+F4|  
+|Feche|CTRL+F4|CTRL+F4|  
 |Imprimir|CTRL+P|CTRL+P|  
 |Sair|ALT+F4|ALT+F4|  
 |Abrir o arquivo atual em um navegador|CTRL+SHIFT+W|Sem equivalente|  
@@ -235,7 +234,7 @@ ms.locfileid: "48085836"
 |------------|-----------------------------|---------------------------------|  
 |Inserir uma linha nova|ENTER ou SHIFT+ENTER|ENTER ou SHIFT+ENTER|  
 |Trocar os caracteres nos dois lados do cursor (não se aplica ao Editor SQL)|CTRL+T|CTRL+T|  
-|Excluir um caractere à direita do cursor|Delete (excluir)|Delete (excluir)|  
+|Excluir um caractere à direita do cursor|DELETE|DELETE|  
 |Excluir um caractere à esquerda do cursor|BACKSPACE<br /><br /> ou em<br /><br /> SHIFT+<br /><br /> BACKSPACE|BACKSPACE<br /><br /> ou em<br /><br /> SHIFT+<br /><br /> BACKSPACE|  
 |Excluir o espaço em branco na seleção ou exclui o espaço em branco adjacente ao cursor se não houver nenhuma seleção|CTRL+K, C|Sem equivalente|  
 |Inserir o número de espaços configurados para o editor|TAB|TAB|  

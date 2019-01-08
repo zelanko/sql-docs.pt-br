@@ -16,12 +16,12 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c8160defa69bd4623424bcdcc1c968c3d376e3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540619"
 ---
 # <a name="context-functions---position-xquery"></a>Funções de Contexto – position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ WHERE CatalogDescription is not null
   </p2:Maintenance>  
   <there-is-more/>  
 </Product>   
-…  
+...  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

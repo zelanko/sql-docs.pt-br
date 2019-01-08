@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761744"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210455"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foi obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma **varchar (max)** coluna, ele será salvo como colunas de texto são salvos na [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+ O número de versão do formato de arquivo de dados. Isso pode ser 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), ou 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foi obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma **varchar (max)** coluna, ele será salvo como colunas de texto são salvos na [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  É a primeira linha de dados a ser copiada em um arquivo ou tabela. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.  
@@ -99,7 +99,7 @@ RETCODE bcp_control (
  Quando *iValue* for TRUE, especifica que as funções de cópia em massa inserem valores de dados fornecidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
   
  BCPKEEPNULLS  
- Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando *iValue* for TRUE, valores vazios serão convertidos para NULL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
+ Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando *iValue* for TRUE, valores vazios serão convertidos para NULL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
   
  BCPLAST  
  É a última linha a ser copiada. O padrão é copiar todas as linhas; um valor menor que 1 redefine essa opção para seu padrão.  

@@ -20,12 +20,12 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76b65b1382db3954094d0a22913edf2f8b912be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677104"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208271"
 ---
 # <a name="sqlinstallererror-function"></a>Função SQLInstallerError
 **Conformidade com**  

@@ -1,5 +1,5 @@
 ---
-title: Designer de modelo de tabela no SQL Server Data Tools | Microsoft Docs
+title: O designer de modelo tabular do Analysis Services no SQL Server Data Tools | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044840"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072563"
 ---
-# <a name="tabular-model-designer"></a>Designer de modelo de tabela
+# <a name="tabular-model-designer"></a>Designer de modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado com o Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], com modelos adicionais de tipo de projeto especificamente para desenvolver soluções profissionais de modelo tabular.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é instalado como um download gratuito da Web. Consulte [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) para obter detalhes.    
   
@@ -42,7 +42,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
 ##  <a name="bkmk_wind_men"></a> Janelas e menus  
  O ambiente de criação de modelo tabular do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui o seguinte:  
   
-### <a name="designer-window"></a>Janela Designer  
+### <a name="designer-window"></a>Janela do Designer  
  A janela do designer é usada para criar modelos tabulares fornecendo uma representação visual do modelo. Quando você abre o arquivo Model.bim, o modelo é aberto na janela do designer. Você pode criar um modelo na janela de designer usando dois modos de exibição diferentes:  
   
  **Exibição de dados**  
@@ -54,7 +54,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  A maioria das tarefas de criação de modelos podem ser executadas em qualquer exibição.  
   
 ### <a name="view-code-window"></a>Exibir a janela de código  
- Você pode exibir o código por trás de um arquivo Model.bim clicando com o botão direito do mouse para selecionar **Exibir Código** no arquivo do Gerenciador de Soluções. Para modelos de tabela no nível de compatibilidade 1200 e posterior, a definição do modelo é expressa em JSON.  
+ Você pode exibir o código por trás de um arquivo Model.bim clicando com o botão direito do mouse para selecionar **Exibir Código** no arquivo do Gerenciador de Soluções. Para modelos tabulares no nível de compatibilidade 1200 e posterior, a definição do modelo é expresso em JSON.  
   
  Observe que você precisará de uma versão completa do Visual Studio que forneça o editor de JSON. Você poderá baixar e instalar o [Visual Studio Community Edition gratuito](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) se não precisar dos recursos adicionais das edições comerciais.  
   
@@ -66,13 +66,13 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  Para exibir o Gerenciador de Soluções, clique no menu **Exibir** e clique no **Gerenciador de Soluções**.  
 
 ### <a name="tabular-model-explorer"></a>Gerenciador de Modelos de Tabela
-  Primeira disponível na versão de agosto de 2016 (14.0.60812.0) do [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Gerenciador de modelos de tabela ajuda você a navegar objetos de metadados em modelos de tabela.
+  Primeira disponível na versão de agosto de 2016 (14.0.60812.0) do [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Gerenciador de modelos tabulares ajuda você a navegar objetos de metadados em modelos de tabela.
 
  Para mostrar o Gerenciador de Modelos de Tabela, clique em **Exibir** > **Outras Janelas**e em **Gerenciador de Modelos de Tabela**.
    
   ![Gerenciador de Modelos de Tabela](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Gerenciador de modelos de tabela organiza os objetos de metadados em uma estrutura de árvore que é parecido com o esquema de um modelo de tabela. Fontes de dados, perspectivas, relações, funções, tabelas e traduções correspondem aos objetos de esquema de nível superior. Há algumas exceções, especificamente KPIs e Medidas, que tecnicamente não são objetos de nível superior, mas objetos filho de várias tabelas no modelo. No entanto, a consolidação de contêineres de nível superior para todos os KPIs e Medidas facilita o trabalho com esses objetos, especialmente se seu modelo incluir um número muito grande de tabelas. As medidas também são listadas em suas tabelas pai correspondentes, para que você tenha uma visão clara das relações pai-filho reais. Se você selecionar uma medida no contêiner Medidas de nível superior, a mesma medida também será selecionada na coleção filho em sua tabela e vice-versa.  
+ Gerenciador de modelos tabular organiza objetos de metadados em uma estrutura de árvore que se assemelha ao esquema de um modelo de tabela. Fontes de dados, perspectivas, relações, funções, tabelas e traduções correspondem aos objetos de esquema de nível superior. Há algumas exceções, especificamente KPIs e medidas, que tecnicamente não são objetos de nível superior, mas objetos filho de várias tabelas no modelo. No entanto, a consolidação de contêineres de nível superior para todos os KPIs e Medidas facilita o trabalho com esses objetos, especialmente se seu modelo incluir um número muito grande de tabelas. As medidas também são listadas em suas tabelas pai correspondentes, para que você tenha uma visão clara das relações pai-filho reais. Se você selecionar uma medida no contêiner Medidas de nível superior, a mesma medida também será selecionada na coleção filho em sua tabela e vice-versa.  
  
  Os nós de objeto no Gerenciador de Modelos de Tabela são vinculados às opções de menu apropriadas que até agora estavam ocultas nos menus Modelo, Tabela e Coluna do Visual Studio. É possível clicar com o botão direito do mouse em um objeto para explorar as opções do tipo de objeto. Nem todos os tipos de nó de objeto ainda têm um menu de contexto, mas em breve, as próximas versões terão melhorias e outras opções. 
 
@@ -85,11 +85,11 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
 -   Table  
   
--   Coluna  
+-   coluna  
   
 -   Measure  
   
- Propriedades do projeto exibem somente o nome do projeto e a pasta do projeto na janela Propriedades. Projetos também têm opções de implantação adicionais e configurações de servidor de implantação que você pode definir usando uma caixa de diálogo de propriedades modais. Para exibir essas propriedades, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
+ Propriedades do projeto exibem somente o nome do projeto e a pasta de projeto na janela Propriedades. Projetos também têm opções de implantação adicionais e configurações de servidor de implantação que você pode definir usando uma caixa de diálogo de propriedades modais. Para exibir essas propriedades, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
  Os campos na janela Propriedades têm controles inseridos que são abertos quando você clica neles. O tipo de controle de edição depende da propriedade específica. Esses controles incluem caixas de edição, listas suspensas e links para caixas de diálogo personalizadas. Propriedades que são mostradas esmaecidas são somente leitura.  
   
@@ -112,7 +112,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  As informações de build e implantação são exibidas na janela **Saída** (além da caixa de diálogo de andamento modal). Para exibir a janela **Saída** , clique no menu **Exibir** e clique em Saída.  
   
 ### <a name="menu-items"></a>Itens de menu  
- Quando você instala o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], itens de menu adicionais especificamente para criação de modelos tabulares são adicionados à barra de menus do Visual Studio. O menu **Modelo** pode ser usado para iniciar o Assistente de Importação de Dados, exibir as conexões existentes, processar dados do espaço de trabalho e navegar no espaço de trabalho de modelo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. O menu **Tabela** é usado para criar e gerenciar relações entre tabelas, criar e gerenciar medidas, especificar configurações de tabelas de dados, especificar opções de cálculo e especificar outras propriedades de tabela. Com o menu **Coluna** é possível adicionar e excluir colunas em uma tabela, ocultar e reexibir colunas e especificar outras propriedades de coluna, como tipos de dados e filtros. Você pode criar e implantar soluções de modelo de tabela no menu **Criar** . As funções Copiar/Colar são incluídas no menu **Editar** .  
+ Quando você instala o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], itens de menu adicionais especificamente para criação de modelos tabulares são adicionados à barra de menus do Visual Studio. O menu **Modelo** pode ser usado para iniciar o Assistente de Importação de Dados, exibir as conexões existentes, processar dados do workspace e navegar no workspace de modelo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. O menu **Tabela** é usado para criar e gerenciar relações entre tabelas, criar e gerenciar medidas, especificar configurações de tabelas de dados, especificar opções de cálculo e especificar outras propriedades de tabela. Com o menu **Coluna** é possível adicionar e excluir colunas em uma tabela, ocultar e reexibir colunas e especificar outras propriedades de coluna, como tipos de dados e filtros. Você pode criar e implantar soluções de modelo de tabela no menu **Criar** . As funções Copiar/Colar são incluídas no menu **Editar** .  
   
  Além desses itens de menu, mais configurações foram adicionadas às opções do Analysis Services nos itens do menu Ferramentas.  
   
@@ -129,7 +129,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  **Atalhos de teclado**  
  Os atalhos de teclado do Analysis Services podem ser configurados/remapeados pela caixa de diálogo Ferramentas->Opções->Teclado. Alguns atalhos globais [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como criar, salvar, depurar, novo projeto, etc. têm suporte no contexto do designer de modelo de tabela. Outros atalhos específicos do designer de modelo tabular estão no contexto do Analysis Services.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Projetos de modelo de tabela](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

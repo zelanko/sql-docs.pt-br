@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538884"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de detalhamento (mineração de dados)
   Uma *consulta de detalhamento* permite que você recupere detalhes de casos subjacentes ou estrutura de dados, enviando uma consulta ao modelo de mineração. O detalhamento é útil se você quiser exibir os casos que foram utilizados para treinar o modelo, versus os casos utilizados para testar o modelo, ou se você quiser ver detalhes adicionais dos dados dos casos.  
@@ -29,7 +29,7 @@ ms.locfileid: "50147612"
   
 -   Detalhamento para os **casos de modelo**  
   
-     O detalhamento para casos de modelo é usado quando você quer analisar um padrão específico no modelo, por exemplo, um cluster ou ramificação de uma árvore de decisão, e exibir mais detalhes sobre casos individuais.  
+     Detalhamento para casos de modelo é usado quando você deseja ir de um padrão específico no modelo – como como um cluster ou ramificação de uma árvore de decisão – e exibir detalhes sobre casos individuais.  
   
 -   Detalhamento para os **casos de estrutura**  
   

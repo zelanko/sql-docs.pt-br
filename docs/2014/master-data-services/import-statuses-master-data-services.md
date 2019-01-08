@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab4dd37863bfea66c472f33213896927e4e39600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc1a379d2e171855f616482d4bb3029c6708f800
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799007"
 ---
 # <a name="import-statuses-master-data-services"></a>Importar status (Master Data Services)
   Na área funcional **Gerenciamento de Integração** da página **Lote de Preparação** , os status a seguir são possíveis.  
   
-|Status|Description|Status_ID|  
+|Status|Descrição|Status_ID|  
 |------------|-----------------|----------------|  
 |Enfileirados para execução|O lote não iniciou o processamento.|1|  
 |Executando|O lote está em processamento.|2|  

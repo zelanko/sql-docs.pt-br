@@ -1,5 +1,5 @@
 ---
-title: Habilitar o modo DirectQuery no SSMS | Microsoft Docs
+title: Habilitar o modo DirectQuery do Analysis Services no SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700584"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072203"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar o modo DirectQuery no SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51700584"
   
  Quando você altera um modelo de tabela para o modo DirectQuery, o novo modo de armazenamento de dados entra em vigor imediatamente.  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Etapa 2a: Mudar um banco de dados de tabela 1200 para o modo DirectQuery  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Etapa 2a: Alternar um banco de dados tabular 1200 para o modo DirectQuery  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados > **Propriedades** > **Modelo** > **Modo Padrão**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51700584"
     |**DirectQuery**|Consultas são executadas em um banco de dados relacional back-end, usando a conexão da fonte de dados definida para o modelo.<br /><br /> Consultas ao modelo são convertidas em consultas de banco de dados nativo e redirecionadas para a fonte de dados.<br /><br /> Quando você processa um modelo definido para o modo DirectQuery, somente metadados são compilados e implantados. Os dados em si são externos ao modelo, residindo nos arquivos de banco de dados da fonte de dados em funcionamento.|  
     |**Importar**|Consultas são executadas no banco de dados de tabela em MDX ou DAX.<br /><br /> Quando você processa um modelo definido para modo de Importação, os dados são recuperados de uma fonte de dados back-end e armazenados em disco. Quando o banco de dados é carregado, os dados são copiados totalmente para a memória para tornar verificações e consultas de tabela muito mais rápidas.<br /><br /> Esse é o modo padrão para modelos de tabela e é o único modo para certas fontes de dados (não relacionais).|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Etapa 2b: Mudar um banco de dados de tabela 1100-1103 para o modo DirectQuery  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Etapa 2b: Alternar um banco de dados de tabela 1100-1103 para o modo DirectQuery  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados > **Propriedades** > **Banco de Dados** > **DirectQueryMode**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51700584"
   
 -   Após a implantação do modelo, você pode alterar o método de conexão preferencial. Por exemplo, você pode usar um modo híbrido para testes e alternar o modelo para **apenas DirectQuery** somente depois de testar bem relatórios ou consultas que usam o modelo. Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>Etapa 3: Verificar as propriedades de conexão do banco de dados  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Etapa 3: Verifique as propriedades de conexão no banco de dados  
  Dependendo de como a conexão da fonte de dados seja configurada, alternar para o modo DirectQuery pode alterar o contexto de segurança da conexão. Ao alterar o modo de acesso de dados, examine as propriedades da cadeia de conexão e de representação para verificar se o logon é válido para conexões contínuas com o banco de dados de back-end.  
   
  Examine a seção **Configurar o Analysis Services para delegação confiável** em [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) para obter informações básicas sobre a delegação de uma identidade de usuário para cenários de DirectQuery.  

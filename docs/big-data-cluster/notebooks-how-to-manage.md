@@ -1,18 +1,20 @@
 ---
-title: Como gerenciar notebooks no estúdio de dados do Azure | Microsoft Docs
-description: ''
+title: Gerenciar notebooks no estúdio de dados do Azure
+titleSuffix: SQL Server 2019 big data clusters
+description: Saiba como gerenciar notebooks no estúdio de dados do Azure. Isso inclui a abertura de blocos de anotações, salvando-os e alterar sua conexão de cluster de big data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48795877"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246585"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Como gerenciar notebooks no estúdio de dados do Azure
 
@@ -22,8 +24,11 @@ Este artigo mostra como abrir e salvar arquivos de notebook no estúdio de dados
 
 Este artigo pressupõe que você já tenha um bloco de anotações que você deseja usar no estúdio de dados do Azure. Se você quiser criar um bloco de anotações, consulte [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md). Para usar notebooks no estúdio de dados do Azure, você deve cumprir os seguintes pré-requisitos:
 
-- [Instalar as ferramentas mais recentes de grandes dados para visualização do SQL Server 2019](deploy-big-data-tools.md).
 - [Implantar um cluster de big data](quickstart-big-data-cluster-deploy.md).
+- [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+   - **Kubectl**
 
 ## <a name="open-a-notebook"></a>Abra um bloco de anotações
 
@@ -57,7 +62,7 @@ Atualmente, há uma maneira de salvar um bloco de anotações. Você deve seleci
 > Os métodos a seguir no momento não salvar as alterações a blocos de anotações:
 >
 > - **Salvar arquivo**, **salvar arquivo como...**  e **arquivo Salvar tudo** comandos no menu arquivo.
-> - **O arquivo: Salve** comandos inseridos na paleta de comandos.
+> - **Arquivo: Salvar** comandos inseridos na paleta de comandos.
 
 ## <a name="change-the-big-data-cluster"></a>Alterar o cluster de big data
 

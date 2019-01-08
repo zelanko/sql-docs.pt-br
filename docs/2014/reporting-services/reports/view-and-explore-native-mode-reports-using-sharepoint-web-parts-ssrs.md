@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095366"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350019"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece várias Web Parts que funcionam com versões específicas de um servidor de relatório e em modos de implantação específicos.  
   
--   **Modo nativo:** para acessar o conteúdo do servidor de relatório em um site do SharePoint a partir de um servidor de relatório em modo nativo, use as Web Parts do Navegador de Relatórios e Visualizador de Relatórios do SharePoint 2.0 que estão incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As instruções para instalação e uso de Web Parts 2.0 são fornecidas neste tópico.  
+-   **Modo Nativo:** para acessar o conteúdo do servidor de relatório em um site do SharePoint em um servidor de relatório em modo nativo, use as Web Parts do Navegador de Relatórios e Visualizador de Relatórios do SharePoint 2.0 que estão incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As instruções para instalação e uso de Web Parts 2.0 são fornecidas neste tópico.  
   
--   **Modo do SharePoint:** se você quiser acessar um servidor de relatório executado em modo do SharePoint, use as Web Parts instaladas pelo Suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. Para obter mais informações sobre o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Modo SharePoint:** se você quiser acessar um servidor de relatório que é executado em modo do SharePoint, use as Web Parts que são instaladas pelo Suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. Para obter mais informações sobre o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  A Web Part do visualizador de relatórios para modo nativo (SPViewer.dwp) é uma Web Part diferente de um (ReportViewer.dwp) instalado pelo Suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. As Web Parts têm esquemas e implementações diferentes, mas ambos podem ser instalados no mesmo farm do SharePoint. Visualmente, você pode distinguir as duas Web Parts pela seguinte característica: a Web Part do Visualizador de Relatórios que é instalada por meio do suplemento tem um menu **Ações** na barra de ferramentas.  
@@ -97,7 +97,7 @@ ms.locfileid: "48095366"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Para saber mais sobre como usar o PowerShell, veja [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     Para saber mais sobre como usar o PowerShell, veja [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Instale as Web Parts usando STSADM.exe  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095366"
   
 7.  Na **URL do Gerenciador de Relatórios**, digite uma URL para uma instância do Gerenciador de Relatórios associada ao servidor de relatório de modo nativo que deseja acessar. Por padrão, uma URL do Gerenciador de Relatórios tem a seguinte sintaxe: **http://\<nomedoservidor>/reports**.  
   
-8.  Em **Caminho do Relatório**, especifique uma barra invertida, seguida pelo caminho da pasta e o nome do relatório. **Not** inclua o nome do servidor nem o diretório virtual do Gerenciador de Relatórios. Por exemplo, para abrir o relatório de Vendas de Empresa na pasta do Aventure Works, especifique **/Adventure Works/Vendas da Empresa**. Veja a seguir outro exemplo no qual o relatório 'Produtos' está na pasta raiz **/Produtos**no servidor de relatório.  
+8.  Em **Caminho do Relatório**, especifique uma barra invertida, seguida pelo caminho da pasta e o nome do relatório. **Not** inclua o nome do servidor nem o diretório virtual do Gerenciador de Relatórios. Por exemplo, para abrir o relatório de 'Vendas de Empresa' na pasta do Aventure Works, especifique **/Adventure Works/Vendas da Empresa**. Veja a seguir outro exemplo no qual o relatório 'Produtos' está na pasta raiz **/Produtos**no servidor de relatório.  
   
 9. Clique em **OK**.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48095366"
     3.  Clique em **Visualizador de Relatórios**.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server &#40;modo do SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
- [Servidor de Relatório do Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo do SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

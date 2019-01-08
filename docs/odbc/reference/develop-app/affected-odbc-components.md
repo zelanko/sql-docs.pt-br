@@ -17,12 +17,12 @@ ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ebe10a73dfbb5436156518b2a3e4d8388cc84b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769336"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208565"
 ---
 # <a name="affected-odbc-components"></a>Componentes ODBC afetados
 Compatibilidade com versões anteriores descreve como os aplicativos, o Gerenciador de Driver e os drivers são afetados pela introdução de uma nova versão do Gerenciador de Driver. Isso afeta aplicativos e o driver quando um ou ambos, eles permanecem na versão antiga. Há, portanto, três tipos de compatibilidade com versões anteriores a serem consideradas, conforme mostrado na tabela a seguir.  
@@ -33,7 +33,7 @@ Compatibilidade com versões anteriores descreve como os aplicativos, o Gerencia
 |Compatibilidade com versões anteriores do Driver [1]|3 *. x*|2.*x*|3.*x*|  
 |Compatibilidade com versões anteriores do aplicativo|3.*x*|3.*x*|2.*x*|  
   
- [1] a compatibilidade com versões anteriores dos drivers principalmente é discutida nas diretrizes de Driver do apêndice g: para compatibilidade com versões anteriores.  
+ [1] a compatibilidade com versões anteriores dos drivers principalmente é discutida no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
-> [!NOTE]  
->  Um aplicativo compatível com os padrões — por exemplo, um aplicativo que tenha sido gravado de acordo com os padrões Open Group ou a CLI de ISO — é garantido para trabalhar com um ODBC 3 *. x* driver por meio de ODBC 3 *. x*Gerenciador de driver. Supõe-se que a funcionalidade que o aplicativo está usando está disponível no driver. Também supõe que o aplicativo compatível com os padrões foi compilado com o ODBC 3 *. x* arquivos de cabeçalho.
+> [!NOTE]
+>  Um aplicativo compatível com os padrões - por exemplo, um aplicativo que tenha sido gravado de acordo com os padrões Open Group ou a CLI de ISO - é garantido para trabalhar com um ODBC 3 *. x* driver por meio de ODBC 3 *. x*Gerenciador de driver. Supõe-se que a funcionalidade que o aplicativo está usando está disponível no driver. Também supõe que o aplicativo compatível com os padrões foi compilado com o ODBC 3 *. x* arquivos de cabeçalho.

@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados de modelo de tabela | Microsoft Docs
+title: Conectar-se um banco de dados de modelo tabular do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045290"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072413"
 ---
-# <a name="connect-to-a-tabular-model-database"></a>Conecte-se a um banco de dados de modelo de tabela  
+# <a name="connect-to-a-tabular-model-database"></a>Conectar-se a um modelo de banco de dados tabular  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este artigo explica como conceder permissões e como se conectar a um banco de dados de aplicativos cliente.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "34045290"
 ##  <a name="bkmk_userpermissions"></a> Permissões de usuário no banco de dados  
  Usuários que conectam-se a bancos de dados de tabela devem ter associação em uma função de banco de dados que especifica o acesso de leitura.  
   
- Funções, e às vezes associação de função, são definidas quando um modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou para modelos implantados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como criar funções usando o Gerenciador de função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obter mais informações sobre como criar e gerenciar funções para um modelo implantado, consulte [funções de modelo de tabela](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Funções, e às vezes associação de função, são definidas quando um modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou para modelos implantados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como criar funções usando o Gerenciador de função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obter mais informações sobre como criar e gerenciar funções para um modelo implantado, consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Reimplantar um projeto de modelo de tabela com funções definidas usando o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] substituirá as funções definidas em um modelo de tabela implantado.  
@@ -40,7 +40,7 @@ ms.locfileid: "34045290"
   
 1.  Na Administração Central, abra a página Configurar contas de serviço.  
   
-2.  Selecione o pool de aplicativos de serviço usados por Serviços do Excel. Ele pode ser um **Pool de Aplicativos de Serviço - Sistema de Serviços Web do SharePoint** ou um pool de aplicativos personalizados. A conta gerenciada usada por Serviços do Excel aparecerá na página.  
+2.  Selecione o pool de aplicativos de serviço usados por Serviços do Excel. Ele pode ser **Pool de aplicativos de serviço - sistema de serviços Web do SharePoint** ou um pool de aplicativos personalizados. A conta gerenciada usada por Serviços do Excel aparecerá na página.  
   
      Para farms do SharePoint que incluem o Reporting Services em modo do SharePoint, obtenha as informações de conta também para o aplicativo de serviço do Reporting Services.  
   
@@ -84,18 +84,18 @@ ms.locfileid: "34045290"
 ##  <a name="bkmk_sharepoint"></a> Conectar do SharePoint  
  Se estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o SharePoint, você poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que fornece redirecionamento a um banco de dados executado em um servidor de modo tabular do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_Tshoot"></a> Solucionando problemas de conexão  
+##  <a name="bkmk_Tshoot"></a> Solução de problemas de conexão  
  Esta seção apresenta a causa e etapas de resolução de problemas que ocorrem na conexão a um banco de dados de modelo de tabela.  
   
  **O Assistente de Conexão de Dados não pode obter uma lista de bancos de dados da fonte de dados especificada.**  
   
- Ao importar dados, este erro do Microsoft Excel ocorre quando você tentar usar o Assistente para conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
+ Ao importar dados, este erro do Microsoft Excel ocorre quando você tentar usar o Assistente para conectar-se ao banco de dados de um modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
  **Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: \<nome do modelo > área restrita**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque você não tem permissões suficientes no servidor remoto do Analysis Services. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Ocorreu um erro durante a tentativa de executar esta operação. Recarregar a pasta de trabalho e, em seguida, tente executar a operação novamente.**  
+ **Ocorreu um erro durante a tentativa de executar esta operação. Recarregar a pasta de trabalho e, em seguida, tente executar esta operação novamente.**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque os Serviços do Excel não são confiáveis para a instância do Analysis Services na qual os dados modelo são implantados. Para resolver este erro, conceda permissão administrativa de Serviços do Excel na instância do serviço Analysis Services. Consulte as instruções apresentadas antes neste tópico para conceder permissões de administrador. Se o erro persistir, recicle o pool de aplicativos de Serviços do Excel.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "34045290"
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Implantação de solução de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

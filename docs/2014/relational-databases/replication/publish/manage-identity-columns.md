@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816638"
 ---
 # <a name="manage-identity-columns"></a>Gerenciar colunas de identidade
   Este tópico descreve como gerenciar colunas de identidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando as inserções de Assinante são replicadas de volta ao Publicador, as colunas de identidade devem ser gerenciadas para evitar a atribuição do mesmo valor de identidade para o Assinante e o Publicador. A Replicação pode gerenciar intervalos de identidade automaticamente ou você pode escolher controlar o gerenciamento de intervalo de identidade manualmente.  Para obter informações sobre as opções de gerenciamento de intervalos de identidade fornecidas pela replicação, consulte [Replicar colunas de identidade](replicate-identity-columns.md).  
@@ -57,11 +56,11 @@ ms.locfileid: "48198256"
   
 5.  Se você selecionou **Automático** ou **Verdadeiro** na etapa 4, digite valores para as opções na tabela a seguir. Para obter mais informações sobre como essas configurações são usadas, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](replicate-identity-columns.md).  
   
-    |Opção|Valor|Description|  
+    |Opção|Valor|Descrição|  
     |------------|-----------|-----------------|  
     |**Tamanho do intervalo do Publicador**|Valor inteiro para o tamanho do intervalo (por exemplo, 20000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](replicate-identity-columns.md).|  
     |**Tamanho do intervalo do assinante**|Valor inteiro para tamanho de intervalo (por exemplo, 10000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](replicate-identity-columns.md).|  
-    |**Porcentagem do limite de intervalo**|Valor inteiro para porcentagem do limite (por exemplo, 90 equivale a 90 por cento).|Porcentagem de valores de identidade totais usados em um nó antes que um novo intervalo de identidade seja atribuído.<br /><br /> Observação: esse valor deve ser especificado, mas é usado somente por: Assinantes usando assinaturas de atualização enfileiradas, e Assinantes para publicações de mesclagem executando [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou versões anteriores de outras edições do SQL Server. Para obter mais informações, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](replicate-identity-columns.md).|  
+    |**Porcentagem do limite de intervalo**|Valor inteiro para porcentagem do limite (por exemplo, 90 equivale a 90 por cento).|Porcentagem de valores de identidade totais usados em um nó antes que um novo intervalo de identidade seja atribuído.<br /><br /> Observação: Esse valor deve ser especificado, mas ele é usado somente por: Os assinantes usando assinaturas de atualização; de enfileirada e os assinantes para publicações de mesclagem executando [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou versões anteriores de outras edições do SQL Server. Para obter mais informações, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](replicate-identity-columns.md).|  
     |**Valor inicial do intervalo seguinte**|Valor inteiro. Somente leitura.|O valor no qual o próximo intervalo terá início. Por exemplo, se o intervalo atual for 5001-6000, esse valor será 6001.|  
     |**Valor de identidade máximo**|Valor inteiro. Somente leitura.|O valor maior para a coluna de identidade. Determinado pelo tipo de dados base da coluna.|  
     |**Incremento**|Valor inteiro. Somente leitura.|A quantidade pela qual o número na coluna de identidade deve ser aumentado ou diminuído para cada inserção: normalmente definido como 1.|  
@@ -74,13 +73,13 @@ ms.locfileid: "48198256"
   
 2.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
-3.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>**, na seção **Gerenciamento de Intervalos de Identidade**, insira valores para uma ou mais das seguintes propriedades: **Tamanho do intervalo do Publicador**, **Tamanho do intervalo do Assinante** e **Percentual do limite de intervalo**.  
+3.  No **propriedades** guia da **propriedades do artigo – \<artigo >** na caixa a **gerenciamento de intervalo de identidade** seção, insira valores para uma ou mais as seguintes propriedades: **Tamanho do intervalo do publicador**, **tamanho do intervalo do assinante**, e **porcentagem do limite de intervalo**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publicação >**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Você pode usar os procedimentos armazenados de replicação para especificar as opções de gerenciamento de intervalo da identidade, quando um artigo é criado.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para habilitar o gerenciamento automático de intervalo de identidade ao definir artigos para uma publicação transacional  

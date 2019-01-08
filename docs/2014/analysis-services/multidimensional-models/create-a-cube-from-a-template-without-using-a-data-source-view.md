@@ -11,12 +11,12 @@ ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504984"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
   Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -40,12 +40,12 @@ ms.locfileid: "48104886"
   
  As grades **Selecionar medidas do modelo** e **Adicionar novas medidas** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
-|**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a `Name` propriedade no objeto de medida.|  
-|**Grupo de Medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a `Name` propriedade para o objeto de grupo de medidas.|  
-|**Tipo de Dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a `DataType` propriedade no objeto de medida.|  
-|**Agregação**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a `AggregationFunction` propriedade no objeto de medida.|  
+|**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
+|**Grupo de Medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade `Name` para o objeto do grupo de medida.|  
+|**Tipo de Dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
+|**Agregação**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definindo novas dimensões  
  Use a página **Definir Novas Dimensões** do assistente para especificar as dimensões no novo cubo.  
@@ -56,7 +56,7 @@ ms.locfileid: "48104886"
   
  As grades **Selecionar dimensões do modelo** e **Adicionar novas dimensões** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
 |`Name`|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define o `Name` propriedade para o objeto de dimensão.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48104886"
 |**Atributos**|Exibe os atributos que devem ser criados para a dimensão. Cada nome de atributo na lista é precedido pelo nome de dimensão. Esta lista é somente leitura. Você pode editar os atributos usando o Designer de Dimensão depois de concluir o assistente.|  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
- Use a página **Definir Períodos de Tempo** do assistente para especificar o intervalo de datas que deseja incluir na dimensão. Por exemplo, você pode escolher um intervalo iniciando no dia 1 de janeiro do ano mais cedo em seus dados e estendendo anos além da sua transação mais atual. As transações que estão fora do intervalo não aparecem ou aparecem como membros desconhecidos na dimensão, dependendo do `UnknownMemberVisible` configuração de propriedade para a dimensão. O `UnknownMemberName` propriedade especifica a legenda do membro desconhecido. Também é possível alterar o primeiro dia da semana usado por seus dados (o padrão é domingo).  
+ Use a página **Definir Períodos de Tempo** do assistente para especificar o intervalo de datas que deseja incluir na dimensão. Por exemplo, você pode escolher um intervalo iniciando no dia 1 de janeiro do ano mais cedo em seus dados e estendendo anos além da sua transação mais atual. As transações que estão fora do intervalo não aparecem ou aparecem como membros desconhecidos na dimensão, dependendo da configuração da propriedade `UnknownMemberVisible` da dimensão. A propriedade `UnknownMemberName` especifica a legenda do membro desconhecido. Também é possível alterar o primeiro dia da semana usado por seus dados (o padrão é domingo).  
   
 > [!NOTE]  
 >  A página **Definir Períodos de Tempo** somente será exibida se você incluir uma dimensão de tempo em seu cubo na página **Definir Novas Dimensões** do assistente.  
@@ -80,10 +80,10 @@ ms.locfileid: "48104886"
 ## <a name="specifying-additional-calendars"></a>Especificando calendários adicionais  
  Na página **Especificar Calendários Adicionais** do assistente, selecione os calendários nos quais as hierarquias na dimensão se baseiam. Você pode escolher um dos seguintes calendários.  
   
-|Calendário|Description|  
+|Calendário|Descrição|  
 |--------------|-----------------|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Se você selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.|  
-|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar esse calendário, especifique o dia e o mês iniciais e o padrão trimestral de 4–4–5, 4–5–4 ou 5–4–4 semanas, sendo que cada dígito representa o número de semanas do mês.|  
+|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar esse calendário, especifique o dia e mês iniciais e o padrão de três meses de 4-4-5, 4-5 – 4 ou 5 – 4 – 4 semanas, sendo que cada dígito representa o número de semanas do mês.|  
 |Calendário de produção|Um calendário que usa 13 períodos de quatro semanas, dividido em três trimestres de quatro períodos e um trimestre de cinco períodos. Se você selecionar esse calendário, especifique a semana (entre 1 e 4) e o mês iniciais para o ano de produção e o trimestre com períodos extras.|  
 |Calendário ISO 8601|O calendário padrão de representação de datas e hora da Organização Internacional de Padronização (ISO) (8601). Esse calendário possui um número integrante de semanas de 7 dias. Para evitar dividir uma semana, este calendário inicia um ano novo até vários dias antes ou depois de 1 de janeiro.|  
   

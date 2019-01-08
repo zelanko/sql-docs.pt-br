@@ -11,18 +11,18 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351262"
 ---
 # <a name="lesson-8-defining-actions"></a>Lição 8: Definindo ações
   Nesta lição, você aprenderá a definir ações em seu projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Uma ação é como uma instrução MDX que é armazenada no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e que pode ser incorporada em aplicativos cliente e iniciada por um usuário.  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte aos tipos de ações descritos na tabela a seguir.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48174336"
  Nesta tarefa, você definirá, usará e modificará uma ação de detalhamento através da relação de dimensão de fatos definida anteriormente neste tutorial.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 9: definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
+ [Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário do Tutorial do Analysis Services](analysis-services-tutorial-scenario.md)   

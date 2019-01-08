@@ -20,12 +20,12 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd56404bfedece75d78ebaabd670cf25f19cbb0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206585"
 ---
 # <a name="sqlreadfiledsn-function"></a>Função SQLReadFileDSN
 **Conformidade com**  
@@ -74,7 +74,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLReadFileDSN** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *lpszString* argumento era nulo.<br /><br /> O *cbString* argumento era menor que ou igual a 0.|  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,23 +12,23 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788638"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
-  A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um dos seguintes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  
+  A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um destes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  
   
  As consultas de texto completo executam pesquisas linguísticas nos dados de texto em índices de texto completo trabalhando em palavras e frases com base em regras de um idioma específico, como inglês ou japonês. As consultas de texto completo podem incluir palavras e frases simples ou várias formas de uma palavra ou frase. Uma consulta de texto completo retorna todos os documentos que contiverem, pelo menos, uma correspondência (também conhecida como uma *ocorrência*). Uma correspondência ocorre quando um documento de destino contém todos os termos especificados na consulta de texto completo e atende a quaisquer outros critérios de pesquisa, como a distância entre os termos correspondentes.  
   
 > [!NOTE]  
->  Pesquisa de texto completo é um componente opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados. Para obter mais informações, consulte [instalar o SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
+>  A pesquisa de texto completo é um componente opcional do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [instalar o SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> O que pode fazer com a pesquisa de texto completo?  
- A pesquisa de texto completo é aplicável a uma grande variedade de cenários comerciais, como e-business, para procurar por itens em um site; escritórios de advocacia, para procurar por históricos de casos em um repositório de dados legais; ou departamentos de RH, para comparar descrições de vagas de trabalho a currículos armazenados. As tarefas básicas de administração e desenvolvimento da pesquisa de texto completo são equivalentes, independentemente dos cenários comerciais. No entanto, em um dado cenário comercial, as consultas e o índice de texto completo podem ser ajustados para atender a metas comerciais. Por exemplo, em um cenário de e-business, maximizar o desempenho deve ser mais importante do que a classificação de resultados, a precisão da recuperação (quantas correspondências existentes são de fato retornadas por uma consulta de texto completo) ou o suporte a vários idiomas. Em um escritório de advocacia, retornar cada acerto possível (*recuperação total* de informações) deve ser o aspecto mais importante a ser considerado.  
+ Pesquisa de texto completo é aplicável a uma ampla variedade de cenários comerciais, como e-empresas-procurar por itens em um site da web; lei pesquisando por empresas para estudos de caso em um repositório de dados legais; ou descrições de trabalho de correspondência de departamentos de recursos humanos com currículos armazenados. As tarefas básicas de administração e desenvolvimento da pesquisa de texto completo são equivalentes, independentemente dos cenários comerciais. No entanto, em um dado cenário comercial, as consultas e o índice de texto completo podem ser ajustados para atender a metas comerciais. Por exemplo, em um cenário de e-business, maximizar o desempenho deve ser mais importante do que a classificação de resultados, a precisão da recuperação (quantas correspondências existentes são de fato retornadas por uma consulta de texto completo) ou o suporte a vários idiomas. Em um escritório de advocacia, retornar cada acerto possível (*recuperação total* de informações) deve ser o aspecto mais importante a ser considerado.  
   
  [Neste tópico](#top)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48144186"
   
  As consultas de texto completo usam um pequeno conjunto de predicados [!INCLUDE[tsql](../../../includes/tsql-md.md)] (CONTAINS e FREETEXT) e funções (CONTAINSTABLE e FREETEXTTABLE). Entretanto, as metas de pesquisa de um determinado cenário comercial influenciam a estrutura das consultas de texto completo. Por exemplo:  
   
--   E-business — procurar por um produto em um site:  
+-   Comércio eletrônico – procurando por um produto em um site:  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144186"
     AND product_cost < 200 ;  
     ```  
   
--   Cenário de recrutamento — procurar candidatos a uma vaga de trabalho que tenham experiência prática com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+-   Cenário de recrutamento – procurando candidatos a uma vaga de trabalho que tenham experiência prática com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   

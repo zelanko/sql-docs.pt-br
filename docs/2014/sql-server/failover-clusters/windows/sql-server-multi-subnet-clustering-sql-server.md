@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71635386de926bcf74b108f6bbebaacd3b10282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133356"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349215"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
   Um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma configuração em que cada nó de cluster de failover é conectado a uma sub-rede diferente ou a um conjunto diferente de sub-redes. Essas sub-redes podem estar no mesmo local ou em sites geograficamente dispersos. O clustering em sites geograficamente dispersos é às vezes chamado de clusters expansíveis. Como não há um armazenamento compartilhado que todos os nós possam acessar, os dados devem ser replicados entre o armazenamento de dados nas várias sub-redes. Com a replicação de dados, há mais de uma cópia dos dados disponíveis. Portanto, um cluster de failover de várias sub-redes fornece uma solução de recuperação de desastres além de alta disponibilidade.  
@@ -69,7 +69,7 @@ ms.locfileid: "48133356"
 ##  <a name="DNS"></a> Latência de recuperação de cliente durante failover  
  Um FCI de várias sub-redes por padrão habilitam o recurso de cluster de RegisterAllProvidersIP para seu nome de rede. Em uma configuração de várias sub-redes, os endereços de IP online e offline do nome de rede serão registrados no servidor DNS. O aplicativo cliente em seguida recupera todos os endereços IP registrados do servidor DNS tenta se conectar aos endereços na ordem ou em paralelo. Isto significa que o tempo de recuperação de cliente em failovers de várias sub-redes já não dependem de latências de atualização de DNS. Por padrão, o cliente tenta os endereços IP na ordem. Quando o cliente usar o novo parâmetro opcional `MultiSubnetFailover=True` em sua cadeia de conexão, tentará os endereços IP simultaneamente e conectará ao primeiro servidor que responder. Isto pode ajudar a minimizar a latência de recuperação de cliente quando ocorrerem failovers. Para obter mais informações, consulte [conectividade de cliente AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) e [criar ou configurar um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- Com bibliotecas de cliente herdadas ou provedores de dados de terceiros, você não pode usar o `MultiSubnetFailover` parâmetro em sua cadeia de conexão. Para ajudar a assegurar que seu aplicativo cliente funcione de maneira ideal com FCI de várias sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], tente ajustar o tempo limite de conexão na cadeia de conexão de cliente antes de 21 segundos para cada endereço IP adicional. Isto assegura que a tentativa de reconexão do cliente não excede o tempo limite antes de ser capaz de realizar um ciclo por todos os endereços IP em seu FCI de várias sub-redes.  
+ Com bibliotecas de cliente herdadas ou provedores de dados de terceiros, você não pode usar o parâmetro `MultiSubnetFailover` em sua cadeia de conexão. Para ajudar a assegurar que seu aplicativo cliente funcione de maneira ideal com FCI de várias sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], tente ajustar o tempo limite de conexão na cadeia de conexão de cliente antes de 21 segundos para cada endereço IP adicional. Isto assegura que a tentativa de reconexão do cliente não excede o tempo limite antes de ser capaz de realizar um ciclo por todos os endereços IP em seu FCI de várias sub-redes.  
   
  O período de tempo limite da conexão cliente padrão para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio e o **sqlcmd** é de 15 segundos.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48133356"
 |Instalando um cluster de failover do SQL Server|[Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Atualização in-loco de seu cluster de failover do SQL Server existente|[Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Manutenção do seu cluster de failover existente do SQL Server|[Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clustering de failover do Windows|[Windows 2008 R2 Failover Clustering multissite](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
-|Use o snap-in Gerenciamento de Cluster de Failover para exibir eventos e logs do WSFC|[Exibir eventos e logs de um cluster de failover](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Use o Windows PowerShell para criar um arquivo de log para todos os nós (ou um nó específico) em um cluster de failover do WSFC|[Cluster de failover Get-ClusterLog do cmdlet](http://technet.microsoft.com/library/ee461045.aspx)|  
+|Clustering de failover do Windows|[Windows 2008 R2 Failover Clustering multissite](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|Use o snap-in Gerenciamento de Cluster de Failover para exibir eventos e logs do WSFC|[Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Use o Windows PowerShell para criar um arquivo de log para todos os nós (ou um nó específico) em um cluster de failover do WSFC|[Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

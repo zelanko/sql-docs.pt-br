@@ -1,5 +1,5 @@
 ---
-title: Propriedades gerais | Microsoft Docs
+title: Propriedades gerais do Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906206"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072383"
 ---
 # <a name="general-properties"></a>Propriedades gerais
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Este tópico documenta essas propriedades de servidor no arquivo msmdsrv.ini que não são incluídas em uma seção específica, como Segurança, Rede ou ThreadPool. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** modo de servidor Multidimensional e de Tabela, a menos que indicado em contrário  
+ **Aplica-se a:** Modo de servidor multidimensional e Tabular, a menos que indicado o contrário  
   
 ## <a name="non-specific-category"></a>Categoria não específica  
  **AdminTimeout**  
@@ -36,7 +36,7 @@ ms.locfileid: "48906206"
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
   
  **CollationName**  
- Uma propriedade de cadeia de caracteres que identifica o agrupamento do servidor. Para obter mais informações, consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
+ Uma propriedade de cadeia de caracteres que identifica a ordenação do servidor. Para obter mais informações, consulte [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
   
  **CommitTimeout**  
  Uma propriedade integer que especifica quanto tempo (em milissegundos) o servidor aguardará para adquirir um bloqueio de gravação visando confirmar uma transação. Um período de espera costuma ser necessário porque o servidor precisa aguardar que outros bloqueios sejam liberados para usar um bloqueio de gravação que confirme a transação.  
@@ -64,11 +64,11 @@ ms.locfileid: "48906206"
  Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os dados são armazenados.  
   
  **DeploymentMode**  
- Determina o contexto operacional de uma instância de servidor do Analysis Services. Esta propriedade é referenciada como 'modo de servidor' em caixas de diálogo, mensagens e documentação. Esta propriedade é configurada pela Instalação do SQL Server com base no modo de servidor selecionado ao instalar o Analysis Services. Esta propriedade deve ser considerada apenas interna, sempre usando o valor especificado pela Instalação.  
+ Determina o contexto operacional de uma instância de servidor do Analysis Services. Essa propriedade é conhecida como 'modo de servidor' em caixas de diálogo, mensagens e documentação. Esta propriedade é configurada pela Instalação do SQL Server com base no modo de servidor selecionado ao instalar o Analysis Services. Esta propriedade deve ser considerada apenas interna, sempre usando o valor especificado pela Instalação.  
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Este é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
 |1|Especifica instâncias do Analysis Services que foram instaladas como parte de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para implantação do SharePoint. Não altere a propriedade de modo de implantação da instância do Analysis Services que faz parte de uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não serão mais executados no servidor se você alterar o modo.|  

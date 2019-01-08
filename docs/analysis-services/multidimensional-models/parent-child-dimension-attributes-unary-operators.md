@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b7f38bb378650fbd243441086df043295376581
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539737"
 ---
-# <a name="parent-child-dimension-attributes---unary-operators"></a>Atributos de dimensão pai-filho - operadores unários
+# <a name="parent-child-dimension-attributes---unary-operators"></a>Atributos de dimensão pai-filho – Operadores unários
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Em uma dimensão que contém uma relação pai-filho no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você especifica um operador unário (ou rollup personalizado) que determina o rollup personalizado para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados. A **UnaryOperatorColumn** em um atributo pai (**Usage**=Pai) especifica a coluna de uma tabela da exibição da fonte de dados que contém operadores unários. Os valores dos operadores de acúmulo personalizado armazenados nessa coluna são aplicados a cada membro do atributo.  
   
@@ -26,10 +26,10 @@ ms.locfileid: "34023123"
   
  A configuração padrão para a propriedade **UnaryOperatorColumn** de um atributo pai é (nenhum), que desabilita os operadores de rollup personalizado. A tabela a seguir lista os operadores unários e descreve como eles se comportam quando são aplicados a um nível.  
   
-|Operador unário|Description|  
+|Operador unário|Descrição|  
 |--------------------|-----------------|  
 |+ (sinal de mais)|O valor do membro é adicionado ao valor de agregação dos membros irmãos que ocorrem antes do membro. Esse operador será o operador padrão se nenhuma coluna de operador unário for definida para um atributo.|  
-|– (sinal de subtração)|O valor do membro é subtraído do valor de agregação dos membros irmãos que ocorrem antes do membro.|  
+|-(sinal de subtração)|O valor do membro é subtraído do valor de agregação dos membros irmãos que ocorrem antes do membro.|  
 |* (asterisco)|O valor do membro é multiplicado pelo valor de agregação dos membros irmãos que ocorrem antes do membro.|  
 |/ (barra)|O valor do membro é dividido pelo valor de agregação dos membros irmãos que ocorrem antes do membro.|  
 |~ (til)|O valor do membro é ignorado.|  
@@ -42,7 +42,7 @@ ms.locfileid: "34023123"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Operadores de Rollup personalizados em dimensões pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
- [Iniciar o Assistente de Business Intelligence no Designer de dimensão](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [Operadores de rollup personalizados em dimensões pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Iniciar o Assistente de Business Intelligence no Designer de Dimensão](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

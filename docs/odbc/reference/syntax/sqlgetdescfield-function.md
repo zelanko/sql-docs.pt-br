@@ -20,16 +20,16 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c89da6f3b5b531b311d81c9d89aacb8c52320d01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840665"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204080"
 ---
 # <a name="sqlgetdescfield-function"></a>Função SQLGetDescField
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetDescField** retorna a configuração atual ou o valor de um único campo de um registro do descritor.  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetDescField(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLGetDescField** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetDescField** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *ValuePtr* não era grande o suficiente para retornar o campo do descritor de inteiro, portanto, o campo foi truncado. O comprimento do campo de descritor completo será retornado no **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

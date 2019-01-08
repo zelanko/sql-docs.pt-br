@@ -1,5 +1,5 @@
 ---
-title: Funções | Microsoft Docs
+title: Funções de modelo de tabela do Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975685"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072163"
 ---
 # <a name="roles"></a>Funções
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "45975685"
 > [!IMPORTANT]  
 >  Para que os usuários a se conectar a um modelo implantado por meio de um aplicativo cliente de relatório, você deve criar pelo menos uma função pelo menos a permissão para que esses usuários são membros de leitura.  
   
- Informações neste tópico se destina a autores de modelos tabulares que definem funções usando a caixa de diálogo Gerenciador de funções no SSDT. As funções definidas durante a criação do modelo aplicam-se ao banco de dados de espaço de trabalho do modelo. Depois de um banco de dados de modelo foi implantado, os administradores de banco de dados de modelo podem gerenciar (Adicionar, editar e excluir) membros da função usando o SSMS. Para saber mais sobre como gerenciar os membros das funções em um banco de dados implantado, consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Informações neste tópico se destina a autores de modelos tabulares que definem funções usando a caixa de diálogo Gerenciador de funções no SSDT. As funções definidas durante a criação do modelo aplicam-se ao banco de dados de workspace do modelo. Depois de um banco de dados de modelo foi implantado, os administradores de banco de dados de modelo podem gerenciar (Adicionar, editar e excluir) membros da função usando o SSMS. Para saber mais sobre como gerenciar os membros das funções em um banco de dados implantado, consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_underst"></a> Understanding roles  
  As funções são usadas no Analysis Services para gerenciar o acesso de dados de modelo. Existem dois tipos de funções:  
@@ -41,7 +41,7 @@ ms.locfileid: "45975685"
   
  As funções em modelos tabulares podem ser definidas posteriormente com filtros de linha. Os filtros de linha usam expressões DAX para definir as linhas em uma tabela, e as linhas relacionadas nas muitas direções, que um usuário pode consultar. Os filtros de linha que usam expressões DAX somente podem ser definidos para as permissões de Leitura e Leitura e Processo. Para obter mais informações, consulte [filtros de linha](#bkmk_rowfliters) mais adiante neste tópico.  
   
- Por padrão, quando você cria um novo projeto de modelo de tabela, o projeto de modelo não tem nenhuma função. As funções podem ser definidas usando a caixa de diálogo Gerenciador de funções no SSDT. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de espaço de trabalho do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo tiver sido implantado, os membros da função de servidor ([administrador do Analysis Services) e os administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o SSMS.  
+ Por padrão, quando você cria um novo projeto de modelo de tabela, o projeto de modelo não tem nenhuma função. As funções podem ser definidas usando a caixa de diálogo Gerenciador de funções no SSDT. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de workspace do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo tiver sido implantado, os membros da função de servidor ([administrador do Analysis Services) e os administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o SSMS.  
   
 ##  <a name="bkmk_permissions"></a> Permissões  
  Cada função tem uma única permissão de banco de dados definida (exceto para a permissão de Ler e Processar combinada). Por padrão, uma nova função terá a permissão Nenhum. Ou seja, quando os membros são adicionados à função com a permissão Nenhum, eles não podem modificar o banco de dados, executar uma operação de processo, consultar dados ou ver o banco de dados a menos que uma permissão diferente seja concedida.  
@@ -50,7 +50,7 @@ ms.locfileid: "45975685"
   
  Cada função pode ter uma das seguintes permissões definidas:  
   
-|Permissões|Description|Filtros de linha usando DAX|  
+|Permissões|Descrição|Filtros de linha usando DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
 |leitura|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
@@ -63,15 +63,15 @@ ms.locfileid: "45975685"
   
  Os filtros de linha podem ser definidos somente para funções com permissões de Leitura e Leitura e Processo. Por padrão, se um filtro de linha não for definido para uma tabela específica, os membros de uma função que têm permissão de Leitura ou Leitura e Processo poderão consultar todas as linhas na tabela a menos que a filtragem cruzada seja aplicada de outra tabela.  
   
- Quando um filtro de linha é definido para uma tabela específica, uma fórmula DAX, que deve ser avaliada como um valor TRUE/FALSE, define as linhas que poderão ser consultadas por membros daquela função específica. As linhas não incluídas na fórmula DAX não poderão ser consultadas. Por exemplo, para membros da função de Vendas, a tabela Customers com a seguinte expressão de filtros de linha, *=Customers [Country] = “USA”*, os membros da função de Vendas só poderão consultar clientes nos EUA.  
+ Quando um filtro de linha é definido para uma tabela específica, uma fórmula DAX, que deve ser avaliada como um valor TRUE/FALSE, define as linhas que poderão ser consultadas por membros daquela função específica. As linhas não incluídas na fórmula DAX não poderão ser consultadas. Por exemplo, para membros da função vendas, a tabela Customers com a linha seguinte expressão de filtros, *= Customers [Country] = "USA"*, os membros da função vendas, só poderão consultar clientes nos EUA.  
   
  Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tiver várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas, por exemplo:  
   
 |Table|Expressão DAX|  
 |-----------|--------------------|  
-|Região|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
-|Transactions|=Transactions[Year]=2008|  
+|Região|= Região [País] = "USA"|  
+|ProductCategory|= ProductCategory [Name] = "Bicicletas"|  
+|Transações|=Transactions[Year]=2008|  
   
  O efeito líquido destas permissões na tabela de Transações é que os membros terão permissão de consultar as linhas de dados quando o cliente estiver nos EUA, e a categoria de produto for bicicletas e o ano for 2008. Os usuários não poderiam consultar nenhuma transação fora dos EUA ou nenhuma transação que não fosse bicicletas nem em 2008, a menos que fossem membros de outra função que concede estas permissões.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "45975685"
   
  Para implementar uma segurança dinâmica, você pode usar as funções a seguir como parte de uma fórmula DAX para retornar o nome de usuário do usuário conectado atualmente ou a propriedade CustomData em uma cadeia de conexão:  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
 |[Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
@@ -117,11 +117,11 @@ ms.locfileid: "45975685"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- Ao criar um projeto de modelo, você pode usar o recurso Analisar no Excel para testar a eficácia das funções que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o nome de usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao modelo de espaço de trabalho como uma fonte de dados. Para obter mais informações, consulte [analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Ao criar um projeto de modelo, você pode usar o recurso Analisar no Excel para testar a eficácia das funções que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o nome de usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao modelo de workspace como uma fonte de dados. Para obter mais informações, consulte [Analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|As tarefas neste tópico descrevem como criar e gerenciar funções usando a caixa de diálogo **Gerenciador de Funções** .|  
   

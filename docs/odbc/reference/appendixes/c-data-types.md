@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208456"
 ---
 # <a name="c-data-types"></a>Tipos de dados do C
 Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazenar dados no aplicativo.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] um número é armazenado na *val* campo da estrutura SQL_NUMERIC_STRUCT como um inteiro dimensionado, no modo little endian (o byte mais à esquerda que está sendo o byte menos significativo). Por exemplo, o número de 10.001 base 10, com uma escala de 4, é dimensionado para um valor inteiro de 100010. Como esse é o 186AA em formato hexadecimal, o valor no SQL_NUMERIC_STRUCT seria "AA 86 01 00 00... 00" com o número de bytes definido pelo SQL_MAX_NUMERIC_LEN **#define**.  
   
- Para obter mais informações sobre **SQL_NUMERIC_STRUCT**, consulte [HOWTO: recuperando dados numéricos com SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Para obter mais informações sobre **SQL_NUMERIC_STRUCT**, consulte [HOWTO: Recuperando dados numéricos com SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] os campos de precisão e escala dos dados SQL_C_NUMERIC digite areused para entrada de um aplicativo e para a saída de driver para o aplicativo. Quando o driver grava um valor numérico para o SQL_NUMERIC_STRUCT, ele usará seu próprio padrão específicos do driver como o valor para o *precisão* campo e ele usará o valor no campo SQL_DESC_SCALE no (descritor de aplicativo cujo padrão é 0) para o *escala* campo. Um aplicativo pode fornecer seus próprios valores para a precisão e escala, definindo os campos SQL_DESC_PRECISION e SQL_DESC_SCALE do descritor de aplicativo.  
   
@@ -148,7 +148,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK foi preterido no ODBC 3 *. x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT foram substituídos no ODBC pelos tipos assinados e não assinados: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG, SQL_C_STINYINT e SQL_C_UTINYINT. Um ODBC 3 *. x* driver deve funcionar com o ODBC 2. *x* aplicativos devem dar suporte a SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT, porque quando eles são chamados, o Gerenciador de Driver os passa para o driver.  
+ [j] _SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT foram substituídos no ODBC pelos tipos assinados e não assinados: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG e SQL_C_STINYINT e SQL_C_UTINYINT. Um ODBC 3 *. x* driver deve funcionar com o ODBC 2. *x* aplicativos devem dar suporte a SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT, porque quando eles são chamados, o Gerenciador de Driver os passa para o driver.  
   
  [k] SQL_C_GUID podem ser convertidos somente para SQL_CHAR ou SQL_WCHAR.  
   

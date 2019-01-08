@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787828"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -85,7 +84,7 @@ ms.locfileid: "48057186"
   
 -   Criar o mapeamento equivalente da unidade/diretório no computador de destino.  
   
--   Mover os arquivos de catálogo para um novo local durante a operação de restauração, usando a cláusula WITH MOVE em sua instrução RESTORE DATABASE. Para obter mais informações, consulte [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+-   Mover os arquivos de catálogo para um novo local durante a operação de restauração, usando a cláusula WITH MOVE em sua instrução RESTORE DATABASE. Para obter mais informações, veja [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
  Para obter informações sobre opções alternativas para atualizar índices de texto completo, veja [Atualizar pesquisa de texto completo](../search/upgrade-full-text-search.md).  
   

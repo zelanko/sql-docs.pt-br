@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185812"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408953"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar o serviço Integration Services como um recurso de cluster
   Para os clientes que chegaram à conclusão de que as vantagens dessa configuração do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como um recurso de cluster sobrepõem-se às desvantagens, esta seção contém as instruções de configuração necessárias. Entretanto, o [!INCLUDE[msCoName](../includes/msconame-md.md)] não recomenda que o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seja configurado como um recurso de cluster.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185812"
   
 4.  No menu **Arquivo** , aponte para **Novo**e clique em **Recurso**.  
   
-5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **“Serviço Genérico”** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Avançar**.  
+5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **"Serviço Genérico"** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Avançar**.  
   
 6.  Na página **Possíveis Proprietários** , adicione ou remova os nós do cluster como os possíveis proprietários do recurso. Clique em **Avançar**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185812"
   
 2.  No disco compartilhado, crie uma nova pasta chamada **Pacotes** para servir como o local do repositório de pacotes. Conceda as permissões de gravação e pastas de listas na nova pasta para usuários e grupos apropriados.  
   
-3.  No disco compartilhado, abra o arquivo de configuração em um editor de texto ou XML. Altere o valor da `ServerName` elemento para o nome virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está no mesmo grupo de recursos.  
+3.  No disco compartilhado, abra o arquivo de configuração em um editor de texto ou XML. Altere o valor do elemento `ServerName` para o nome do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual que é igual ao grupo de recursos.  
   
 4.  Altere o valor da `StorePath` elemento para o caminho totalmente qualificado do **pacotes** pasta criada no disco compartilhado em uma etapa anterior.  
   

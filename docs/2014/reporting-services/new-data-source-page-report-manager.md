@@ -11,12 +11,12 @@ ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349965"
 ---
 # <a name="new-data-source-page-report-manager"></a>Página Nova Fonte de Dados (Gerenciador de Relatórios)
   Use a página Nova Fonte de Dados para criar um item fonte de dados compartilhada. Uma fonte de dados compartilhada define uma conexão com uma fonte de dados externa. Com uma fonte de dados compartilhada, você pode criar e manter as configurações de conexão da fonte de dados separadas dos relatórios, modelos e assinaturas controladas por dados que usam a fonte de dados.  
@@ -44,14 +44,14 @@ ms.locfileid: "48073726"
  Selecione para habilitar ou desabilitar a fonte de dados compartilhada. Você pode desabilitar a fonte de dados compartilhada para evitar o processamento de todos os relatórios e modelos que referenciam o item.  
   
  **Tipo de fonte de dados**  
- Especifique a extensão de processamento de dados usada para processar dados da fonte de dados. Servidor de relatórios inclui extensões de processamento de dados para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC e OLE DB. Extensões de processamento de dados adicionais podem estar disponíveis em fornecedores de terceiros.  
+ Especifique a extensão de processamento de dados usada para processar dados da fonte de dados. O servidor de relatórios inclui extensões de processamento de dados para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC e OLE DB. Extensões de processamento de dados adicionais podem estar disponíveis em fornecedores de terceiros.  
   
- Para obter mais informações sobre o suporte de fonte de dados remota e não-SQL, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) e [dados de fontes com suporte pela emissão de relatórios Serviços &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Para obter mais informações sobre o suporte de fonte de dados remota e não-SQL, consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "<https://go.microsoft.com/fwlink/?linkid=232473>" <https://go.microsoft.com/fwlink/?linkid=232473>) e [dados de fontes com suporte pela emissão de relatórios Serviços &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Cadeia de conexão**  
  Especifique a cadeia de conexão que o servidor de relatório utiliza para conectar-se à fonte de dados. O tipo de conexão determina a sintaxe que você deve usar. Por exemplo, uma cadeia de caracteres de conexão da extensão do processamento de dados XML é uma URL para um documento XML. Na maioria dos casos, uma cadeia de caracteres de conexão típica especifica o servidor de banco de dados e um arquivo de dados.  
   
- O exemplo a seguir ilustra uma cadeia de caracteres de conexão usada para conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] banco de dados:  
+ O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,14 +68,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenciais fornecidas pelo usuário que executa o relatório (conectar usando)**  
  Cada usuário é solicitado a digitar um nome de usuário e senha para acessar a fonte de dados. Você pode definir o texto do prompt que solicita as credenciais do usuário. A cadeia de caracteres de texto padrão é "Digite um nome de usuário e uma senha para acessar a fonte de dados".  
   
- Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais que o usuário fornecer forem credenciais de Autenticação do Windows. Não selecione essa caixa de seleção se você estiver usando a autenticação de banco de dados (por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação).  
+ Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais que o usuário fornecer forem credenciais de Autenticação do Windows. Não marque esta caixa de seleção se você estiver usando autenticação de banco de dados (por exemplo, Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Credenciais armazenadas com segurança no servidor de relatório (conectar usando)**  
  Armazene um nome de usuário criptografado e a senha no banco de dados do servidor de relatórios. Escolha esta opção para executar um relatório autônomo (por exemplo, relatórios iniciados por agendas ou eventos em vez de ação do usuário). Se você estiver usando segurança padrão, o nome de usuário deve ser uma conta de domínio do Windows. Especifique a conta neste formato: \<domínio >\\< nome de usuário\>. A conta especificada deve ter permissões locais de logon no computador que hospeda a fonte de dados usada pelo relatório.  
   
- Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não selecione essa caixa de seleção se você estiver usando a autenticação de banco de dados (por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação).  
+ Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não marque esta caixa de seleção se você estiver usando autenticação de banco de dados (por exemplo, Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Se você estiver usando a autenticação de banco de dados, selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados** para permitir a delegação de credenciais de banco de dados, mas somente se um servidor de banco de dados der suporte à representação. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados, essa opção define a função SETUSER.  
+ Se você estiver usando a autenticação de banco de dados, selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados** para permitir a delegação de credenciais de banco de dados, mas somente se um servidor de banco de dados der suporte à representação. No caso de bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , essa opção define a função SETUSER.  
   
  **Segurança integrada do Windows (conectar usando)**  
  Use as credenciais do Windows do usuário atual para acessar a fonte de dados. Selecione essa opção quando as credenciais usadas para acessar a fonte de dados forem as mesmas que as usadas para fazer logon no domínio de rede. Essa opção funciona melhor quando a autenticação Kerberos está habilitada para seu domínio ou quando a fonte de dados está no mesmo computador que o servidor de relatórios. Se a autenticação Kerberos não estiver habilitada, as credenciais do Windows poderão ser transmitidas para outro computador. Se forem necessárias conexões de computador adicionais, ocorrerá um erro em vez da exibição dos dados esperados.  
@@ -93,10 +93,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Clique para salvar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

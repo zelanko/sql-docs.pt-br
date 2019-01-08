@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -28,12 +26,12 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808168"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
   Quando você atualiza os dados existentes, você deve especificar ambos os  **\<antes de >** e  **\<depois >** blocos. Os elementos especificados na  **\<antes de >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados na  **\<antes de >** bloco para identificar os registros existentes no banco de dados. O elemento (s) correspondente na  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Com essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
@@ -121,7 +119,7 @@ ms.locfileid: "48222827"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Atualizando vários registros usando o atributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Atualizando vários registros usando o atributo updg:id  
  Neste exemplo, o diagrama de atualização executa duas atualizações na tabela HumanResources.Shift no banco de dados do AdventureWorks:  
   
 -   Ele altera o nome do turno do dia original que inicia às 7h00 do "Dia" até a "Madrugada".  

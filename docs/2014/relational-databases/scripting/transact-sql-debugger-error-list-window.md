@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,15 +16,15 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216356"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328466"
 ---
 # <a name="error-list-window-management-studio"></a>Janela Lista de Erros (Management Studio)
-  A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+  A **Lista de Erros** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe os erros de sintaxe e semântica gerados no código IntelliSense do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Recursos da Lista de Erros  
  A **Lista de Erros** fornece a seguinte funcionalidade:  
@@ -90,5 +88,3 @@ ms.locfileid: "48216356"
   
  **Projeto**  
  Exibe o nome do projeto que inclui o arquivo de script.  
-  
-  

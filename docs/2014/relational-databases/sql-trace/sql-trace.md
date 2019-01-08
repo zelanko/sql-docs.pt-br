@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823480"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
   No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -71,11 +70,11 @@ ms.locfileid: "48193186"
 ## <a name="use-data-columns-to-describe-returned-events"></a>Use colunas de dados para descrever eventos retornados  
  O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descrever os eventos retornados por sua execução. A tabela a seguir descreve as colunas de dados do [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] , que são as mesmas usadas pelo Rastreamento do SQL, e indica as colunas selecionadas por padrão.  
   
-|Coluna de dados|Número da coluna|Description|  
+|Coluna de dados|Número da coluna|Descrição|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome do programa.|  
-|**BigintData1**|52|Valor (`bigint` tipo de dados), que depende da classe de evento especificada no rastreamento.|  
-|**BigintData2**|53|Valor (`bigint` tipo de dados), que depende da classe de evento especificada no rastreamento.|  
+|**BigintData1**|52|Valor (tipo de dados `bigint` ) que depende da classe de evento especificada no rastreamento.|  
+|**BigintData2**|53|Valor (tipo de dados `bigint` ) que depende da classe de evento especificada no rastreamento.|  
 |**Binary Data**|2|Valor binário dependente da classe de evento capturada no rastreamento.|  
 |**ClientProcessID** <sup>1</sup>|9|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|  
 |**ColumnPermissions**|44|Indica se uma permissão de coluna foi definida ou não. Você pode analisar o texto da instrução para determinar quais permissões foram aplicadas a quais colunas.|  

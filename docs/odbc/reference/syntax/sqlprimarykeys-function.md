@@ -20,16 +20,16 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205252"
 ---
 # <a name="sqlprimarykeys-function"></a>Função SQLPrimaryKeys
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLPrimaryKeys** retorna os nomes das colunas que compõem o primário da chave para uma tabela. O driver retorna as informações como um conjunto de resultados. Essa função não oferece suporte para retornar as chaves primárias de várias tabelas em uma única chamada.  
@@ -82,7 +82,7 @@ SQLRETURN SQLPrimaryKeys(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLPrimaryKeys** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLPrimaryKeys** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  

@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825664"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201905"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Especifica se o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será descartado durante a operação de desanexação. *KeepFulltextIndexFile* é um **nvarchar (10)** valor com um padrão de **true**. Se *KeepFulltextIndexFile* é **falso**, todos os arquivos de índice de texto completo associado com o banco de dados e os metadados do índice de texto completo são descartados, a menos que o banco de dados é somente leitura. Se for NULL ou **verdadeira**, texto completo relacionadas a metadados são mantidos.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  O**@keepfulltextindexfile** parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forçar o atual usuários fora do banco de dados imediatamente ou em um número especificado de segundos, também usam a opção ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um número especificado de segundos, também pode usar a opção ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Reanexando um banco de dados  
  Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE (com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  

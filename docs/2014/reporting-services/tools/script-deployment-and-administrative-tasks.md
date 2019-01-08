@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398869"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Implantação de script e tarefas administrativas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao uso de scripts para automatizar a instalação, a implantação e as tarefas administrativas de rotina. A implantação de um servidor de relatórios é um processo de várias etapas. É preciso usar diversos processos e ferramentas para configurar uma implantação. Não existe nenhum programa ou abordagem que possa ser usado para automatizar todas as tarefas.  
@@ -70,7 +70,7 @@ ms.locfileid: "48167276"
   
 -   A ferramenta de host de script (rs.exe) do servidor de relatório pode executar o código personalizado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que você talvez escreva para recriar ou transferir o conteúdo existente de um servidor de relatório para outro. Por essa abordagem, você escreve o script em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], o salva como arquivo .rss e usa o rs.exe para executar o script em um servidor de relatório de destino. O script escrito pode chamar a interface SOAP para o serviço Web do Servidor de Relatórios. Os scripts de implantação são escritos por meio dessa abordagem porque permitem recriar um espaço de trabalho e conteúdo de uma pasta de servidor de relatórios e recriar a segurança baseada na função.  
   
--   A versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduziu cmdlets do PowerShell para modo integrado do SharePoint. Você pode usar o PowerShell para configurar e administrar a integração com o SharePoint.  Para obter mais informações, consulte [cmdlets do PowerShell para o Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   A versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduziu cmdlets do PowerShell para modo integrado do SharePoint. Você pode usar o PowerShell para configurar e administrar a integração com o SharePoint.  Para obter mais informações, consulte [Cmdlets do PowerShell para o modo SharePoint do Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Usar scripts para migrar conteúdo e pastas do servidor de relatório  
  Você pode escrever scripts que duplicam um ambiente de servidor de relatórios em outra instância de servidor de relatórios. Os scripts de implantação são, em geral, escritos em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e então processados usando o utilitário host do script do servidor de relatórios.  
@@ -94,10 +94,10 @@ ms.locfileid: "48167276"
 > [!NOTE]  
 >  Os scripts executados sob as credenciais do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows do usuário que está executando o script a menos que as credenciais estejam explicitamente configuradas.  
   
- Para obter mais informações sobre como formatar e executar um arquivo de script, consulte [utilitário e o serviço Web de Script com o rs.exe](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Para obter mais informações sobre como formatar e executar um arquivo de script, consulte [Gerar scripts com o utilitário rs.exe e o serviço Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Usando scripts para configurar propriedades do servidor  
- Você pode escrever scripts que configuram as propriedades do sistema no servidor de relatórios. O script .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a seguir exibe um modo de configurar as propriedades. Este exemplo desabilita o controle ActiveX de RSClientPrint, mas você pode substituir `EnableClientPrinting` e `False` com qualquer valor e nome de propriedade válido. Para exibir uma lista completa das propriedades do servidor, consulte [propriedades de sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Você pode escrever scripts que configuram as propriedades do sistema no servidor de relatórios. O script .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a seguir exibe um modo de configurar as propriedades. Este exemplo desabilita o controle ActiveX de RSClientPrint, mas é possível substituir `EnableClientPrinting` e `False` por qualquer nome e valor válido da propriedade. Para exibir uma lista completa das propriedades do servidor, consulte [Propriedades do sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Para usar o script, salve-o em um arquivo com extensão .rss e, em seguida, use o utilitário de prompt de comando rs.exe para executar o arquivo no servidor de relatórios. O script não é compilado, logo não é necessário ter uma instalação de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Este exemplo supõe que você possui permissões no computador local que hospeda o servidor de relatórios. Caso não esteja conectado por uma conta que possua permissões, é preciso especificar as informações de conta por meio de argumentos de linha de comando adicionais. Para obter mais informações, consulte [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método GenerateDatabaseCreationScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [Método GenerateDatabaseRightsScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [Método GenerateDatabaseUpgradeScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [Método GenerateDatabaseCreationScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [Método GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Instalar o servidor de relatório de modo nativo do Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Instalar o servidor de relatórios de modo nativo do Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilitários de Prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Ferramentas do Reporting Services](reporting-services-tools.md)  
   

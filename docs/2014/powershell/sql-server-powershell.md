@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8a161aeef437e04a3d6e7300a79af5fa0671568
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 481e31b23dde3f1fd37ac1af513cf7790dc31250
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068736"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349656"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] oferece suporte ao Windows PowerShell, que é um shell de geração de script avançado que permite aos administradores e desenvolvedores automatizarem a administração de servidor e a implantação de aplicativo. A linguagem do Windows PowerShell suporta uma lógica mais complexa que os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , fornecendo aos administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a capacidade de criar scripts de administração avançados. Os scripts do Windows PowerShell também podem ser usados para administrar outros produtos de servidor do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Isso fornece aos administradores uma linguagem de criação de scripts comum aos servidores.  
@@ -28,7 +27,7 @@ ms.locfileid: "48068736"
   
 -   Um conjunto de cmdlets, que são comandos usados em scripts do Windows PowerShell para especificar uma ação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O módulo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferecem suporte a ações, como, por exemplo, a execução de um script **sqlcmd** que contém instruções [!INCLUDE[tsql](../includes/tsql-md.md)] ou XQuery.  
   
- Para saber mais sobre o Windows PowerShell, consulte o [Guia de Introdução do Windows PowerShell](http://msdn.microsoft.com/library/hh857337.aspx).  
+ Para saber mais sobre o Windows PowerShell, consulte o [Guia de Introdução do Windows PowerShell](https://msdn.microsoft.com/library/hh857337.aspx).  
   
 ## <a name="sql-server-versions"></a>Versões do SQL Server  
  Os componentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell podem ser usados para gerenciar instâncias do [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] ou posterior. Instâncias do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] devem estar executando o SP2 ou posterior. Instâncias do [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] devem estar executando o SP4 ou posterior. Quando os componentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell são usados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], eles ficam limitados à funcionalidade disponível nessas versões.  
@@ -37,7 +36,7 @@ ms.locfileid: "48068736"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve o mecanismo preferencial para executar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] componentes do PowerShell; para abrir uma sessão do PowerShell e carregar o `sqlps` módulo. O módulo `sqlps` carrega o provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, e os assemblies SMO (SQL Server Management Object) usados pelo provedor e cmdlets.|[Importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
+|Descreve o mecanismo preferido para executar componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell; para abrir uma sessão do PowerShell e carregar o módulo `sqlps`. O módulo `sqlps` carrega o provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, e os assemblies SMO (SQL Server Management Object) usados pelo provedor e cmdlets.|[Importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Descreve como carregar apenas os assemblies SMO sem o provedor ou cmdlets.|[Carregar os assemblies SMO no Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Descreve como executar uma sessão do Windows PowerShell clicando com o botão direito do mouse em um nó no **Pesquisador de Objeto**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] inicia uma sessão do Windows PowerShell, carrega o `sqlps` módulo e define o caminho do provedor do SQL Server para o objeto selecionado.|[Executar o Windows PowerShell no SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
 |Descreve como criar as etapas de trabalho do SQL Server Agent que executam um script do Windows PowerShell. Os trabalhos podem ser agendados para execução em horários específicos ou em resposta a eventos.|[Executar etapas do Windows PowerShell no SQL Server Agent] (run-windows-powershell-steps-in-sql-server-agent.md
@@ -47,6 +46,6 @@ ms.locfileid: "48068736"
 |Descreve como especificar identificadores delimitados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contêm caracteres sem suporte do Windows PowerShell.|[Identificadores do SQL Server no PowerShell](sql-server-identifiers-in-powershell.md)|  
 |Descreve como fazer conexões para Autenticação do SQL Server. Por padrão, os componentes do SQL Server PowerShell usam conexões de Autenticação do Windows que usam as credenciais do Windows do processo que executa o Windows PowerShell.|[Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell](manage-authentication-in-database-engine-powershell.md)|  
 |Descreve como usar variáveis implementadas pelo provedor do SQL Server PowerShell para controlar quantos objetos são listados ao usar a conclusão de guia do Windows PowerShell. Isso é particularmente útil ao trabalhar em bancos de dados que contêm um grande número de objetos.|[Gerenciar preenchimento com Tab &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
-|Descreve como usar o Get-Help para obter informações sobre componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no ambiente Windows PowerShell.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
+|Descreve como usar o Get-Help para obter informações sobre componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no ambiente Windows PowerShell.|[Obter Ajuda do SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   
   

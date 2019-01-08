@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221306"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327396"
 ---
 # <a name="locals-window"></a>Janela Locais
   A janela **Locais** exibe informações sobre as expressões locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  
@@ -55,5 +53,3 @@ ms.locfileid: "48221306"
  [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressões &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203905"
 ---
 # <a name="sqlfreehandle-function"></a>Função SQLFreeHandle
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLFreeHandle** libera recursos associados a um identificador de ambiente, conexão, instrução ou descritor específico.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Essa função é uma função genérica para liberar identificadores. Ele substitui as funções ODBC 2.0 **SQLFreeConnect** (para liberar um identificador de conexão) e **SQLFreeEnv** (para liberar um identificador de ambiente). **SQLFreeConnect** e **SQLFreeEnv** foram preteridos em ODBC 3 *. x*. **SQLFreeHandle** também substitui a função ODBC 2.0 **SQLFreeStmt** (com o SQL_DROP *opção*) para liberar um identificador de instrução. Para obter mais informações, consulte "Comentários". Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3 *. x* aplicativo está funcionando com um ODBC 2 *. x* driver, consulte [funções de mapeamento de substituição para trás Compatibilidade de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,7 +75,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLFreeHandle** retorna SQL_ERROR, um valor SQLSTATE associado pode ser obtida da estrutura de dados de diagnóstico para o identificador que **SQLFreeHandle** tentou gratuito, mas não foi possível. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFreeHandle** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou a conclusão da função.|  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>Liberando um identificador do descritor  
  Uma chamada para **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC libera o identificador do descritor na *manipular*. A chamada para **SQLFreeHandle** não libere toda a memória alocada pelo aplicativo que pode ser referenciado por um campo de ponteiro (incluindo SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR) de qualquer registro do descritor de *manipular*. A memória alocada pelo driver para os campos que não são campos de ponteiro é liberada quando o identificador é liberado. Quando um identificador do descritor alocado pelo usuário é liberado, todas as instruções que a alça liberada tinha sido associada com revertem para os identificadores de descritor alocado automaticamente respectivo.  
   
-> [!NOTE]  
+> [!NOTE]
 >  2 de ODBC *. x* drivers não dão suporte a identificadores de descritor liberando, assim que eles não dão suporte ao alocar identificadores de descritor.  
   
  Observe que **SQLDisconnect** descarta automaticamente quaisquer instruções e descritores de abrir a conexão. Quando um aplicativo libera um identificador de instrução, o driver libera todos os descritores de gerado automaticamente associados com esse identificador.  
