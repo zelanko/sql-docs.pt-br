@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -13,12 +12,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0125d230652e124d8dbe6fc02fd35a842f6ae386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822350"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
@@ -31,10 +30,10 @@ ms.locfileid: "48142486"
 |210032|O nome da hierarquia está ausente ou não é válido.|A hierarquia explícita não foi encontrada ou o valor de **HierarchyName** estava em branco.|Consolidado<br /><br /> Relação|  
 |210035|Como não existe uma regra de negócio de geração de código, o **MemberCode** é necessário.|Ao criar ou atualizar membros, um **MemberCode** sempre é necessário, a menos que você esteja usando a geração de código automática. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
 |210036|Como existe uma regra de negócio de geração de código, o **MemberCode** não é necessário.|Ao criar ou atualizar membros, um **MemberCode** não é necessário quando você está usando a geração de código automática. Porém, se preferir, você poderá especificar um código. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
-|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra “ROOT”.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
-|210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra “MDMUNUSED”.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **ImportType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
-|300002|O código de membro não é válido.|Relações: o código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|300002|O código de membro não é válido.|Relações: Código do membro pai ou filho não existe.<br /><br /> Folha ou consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |300004|O código de membro já existe.|**ImportType** = **1** e você usou um código de membro que já existe na entidade.|Folha<br /><br /> Consolidado|  
 |210011|Quando **RelationshipType** é **1**, o **ParentCode** não pode ser um membro folha.|Verifique se o valor de **ParentCode** é um código de membro consolidado.|Relação|  
 |210015|O código de membro existe várias vezes na tabela de preparo para uma hierarquia e um lote.|Para uma hierarquia explícita, você especificou o local do mesmo membro várias vezes no mesmo lote.|Relação|  

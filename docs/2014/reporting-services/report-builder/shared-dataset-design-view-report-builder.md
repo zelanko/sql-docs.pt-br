@@ -11,12 +11,12 @@ ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: aff516055e1bfce27408aed1d0779d3956424b82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354191"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   A janela Design do Conjunto de Dados Compartilhado ajuda a criar uma consulta de conjunto de dados que você pode compartilhar com os outros. A janela permite selecionar uma fonte de dados compartilhada, especificar propriedades para o conjunto de dados compartilhado e criar uma consulta no designer de consulta.  
@@ -26,22 +26,22 @@ ms.locfileid: "48057747"
  Para obter mais informações sobre como trabalhar com dados em um relatório, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> A Faixa de Opções  
- A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de Dados e Designer de Consulta.  
+ A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de dados e Designer de consultas.  
   
 ### <a name="connection"></a>Conexão  
  Use o botão **Selecionar** no grupo Conexão para selecionar uma fonte de dados compartilhada no relatório ou navegar até uma fonte de dados compartilhada no servidor de relatório.  
   
 > [!NOTE]  
->  Um conjunto de dados compartilhado deve ser baseado em uma fonte de dados compartilhada. Se a fonte de dados da que você precisa não estiver disponível, você deve criar uma no servidor de relatório. Para obter mais informações, consulte [criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+>  Um conjunto de dados compartilhado deve ser baseado em uma fonte de dados compartilhada. Se a fonte de dados da que você precisa não estiver disponível, você deve criar uma no servidor de relatório. Para obter mais informações, consulte [criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
  Use o botão **Definir Opções** para definir propriedades de conjunto de dados compartilhadas. Entre elas estão as seguintes:  
   
 -   Campos. Você pode adicionar ou editar um campo na coleção de campos.  
   
--   Opções de dados. Você pode definir opções que afetam os critérios de correspondência e a ordem de classificação, como diferenciar maiúsculas de minúsculas e agrupamento.  
+-   Opções de dados. Você pode definir opções que afetam os critérios de correspondência e a ordem de classificação, como diferenciar maiúsculas de minúsculas e ordenação.  
   
 -   Filtros. Você pode definir filtros que limitam os dados em um relatório depois que eles são recuperados da conexão de dados.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "48057747"
   
  Os valores que você define tornam-se parte da definição do conjunto de dados compartilhado no servidor de relatório. Quando um autor de relatório inclui o conjunto de dados compartilhado em um relatório, as opções que você especifica se aplicam a essa instância de conjunto de dados.  
   
- Depois que um conjunto de dados compartilhado é adicionado a um relatório, o autor do relatório pode substituir as seguintes opções: agrupamento, diferenciação de maiúsculas e minúsculas, diferenciação de acentuação, diferenciação de kanatype, diferenciação de largura, subtotais. Eles também podem criar filtros de conjunto de dados adicionais para limitar os dados no relatório.  
+ Depois que um conjunto de dados compartilhado é adicionado a um relatório, o autor do relatório pode substituir as seguintes opções: ordenação, diferenciação de maiúsculas e minúsculas, diferenciação de acentuação, diferenciação de kanatype, diferenciação de largura, subtotais. Eles também podem criar filtros de conjunto de dados adicionais para limitar os dados no relatório.  
   
  Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre planos de atualização de cache, consulte [conjuntos de dados do Cache compartilhado &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Para obter mais informações sobre planos de atualização de cache, consulte [conjuntos de dados do Cache compartilhado &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Designer de Consulta  
  Use a barra de ferramentas do designer de consulta para ajudar criar uma consulta que especifique quais dados serão recuperados da conexão de dados. A barra de ferramentas exibida depende do designer de consulta associado ao tipo de fonte de dados na conexão de dados.  
@@ -69,7 +69,7 @@ ms.locfileid: "48057747"
   
  Alguns tipos de fonte de dados dão suporte a um designer de consultas baseadas em texto que você pode usar para colar nas consultas que você criou em outras ferramentas, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Cada tipo de fonte de dados possui requisitos específicos para a consulta que funcionará na fonte de dados externa. Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados na [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [dados de fontes com suporte no Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Cada tipo de fonte de dados possui requisitos específicos para a consulta que funcionará na fonte de dados externa. Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados na [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [dados de fontes com suporte no Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online do](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -87,7 +87,7 @@ ms.locfileid: "48057747"
   
  Se um relatório contiver parâmetros, todos os parâmetros deverão ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão, quando o relatório for executado, você deverá escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia **Executar** .  
   
- Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   

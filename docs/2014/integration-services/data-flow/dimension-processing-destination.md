@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749458"
 ---
 # <a name="dimension-processing-destination"></a>Destino de processamento de dimensões
   O Destino de Processamento de Dimensões carrega e processa uma dimensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre dimensões, consulte [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "48135416"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino de Processamento de Dimensões** , clique em um dos seguintes tópicos:  
   
--   [Editor de destino de processamento de dimensões &#40;página do Gerenciador de Conexão&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Editor de Destino de Processamento de Dimensões &#40;Página Gerenciador de Conexões&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de processamento de dimensões &#40;página mapeamentos&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor de Destino de Processamento de Dimensões &#40;página Mapeamentos&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor de destino de processamento de dimensões &#40;página Avançado&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor de Destino de Processamento de Dimensões &#40;Página Avançado&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

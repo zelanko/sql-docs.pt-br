@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.runnow.f1
@@ -12,12 +12,12 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3c45cc239c1c8fa3539b168ab3f322cd757e25f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780948"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
   Use esta caixa de diálogo para avaliar políticas do Gerenciamento Baseado em Políticas. Ao selecionar a página **Resultados da Avaliação** , você pode aplicar políticas aos itens em um conjunto de destino que não esteja em conformidade com as políticas.  
@@ -35,7 +35,7 @@ ms.locfileid: "48151576"
  **Políticas: Política**  
  Clique para abrir a caixa de diálogo da política especificada.  
   
- **Políticas: Categoria**  
+ **Políticas: categoria**  
  A categoria da política. Essa caixa é somente leitura.  
   
  **Políticas: Faceta**  

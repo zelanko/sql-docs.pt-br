@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18872dee35e55da6af067f9459e15f99f9402bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae9c89b3fa3d9392e27cce9199f7c1b1b8f31dee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771418"
 ---
 # <a name="monitoring-replication"></a>Replicação de monitoramento
   O Replication Monitor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma ferramenta gráfica que permite monitorar a integridade geral de uma topologia de replicação. O Replication Monitor fornece informações detalhadas sobre o status e o desempenho das publicações e das assinaturas, permitindo responder a perguntas comuns tais como:  
@@ -65,7 +64,7 @@ ms.locfileid: "48165436"
  [Monitorar agentes de replicação](../agents/replication-agents.md)  
  Descreve como localizar informações sobre cada agente de replicação.  
   
- [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Definir limites e avisos no Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
  Descreve os avisos, limiares e alertas que você pode definir no Replication Monitor. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  [Desempenho de Cache, da atualização e do Replication Monitor](caching-refresh-and-replication-monitor-performance.md)  

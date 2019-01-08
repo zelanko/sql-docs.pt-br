@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781188"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
@@ -62,11 +61,11 @@ ms.locfileid: "48133246"
   
 2.  Clique na guia **Avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** na barra de menus.  
   
-3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avise se uma assinatura for expirar dentro do limite** ou **Avise se a latência exceder o limite**.  
+3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avisar se uma assinatura for expirar dentro do limite** ou **Avisar se a latência exceder o limite**.  
   
 4.  Defina um limite para os avisos na coluna **Limite** . Por exemplo, ao selecionar **Avise se a latência exceder o limite** na etapa 3, é possível selecionar uma latência de **60 segundos** na coluna **Limite** .  
   
-5.  Clique em **Salvar Alterações**.  
+5.  Clique em **salvar alterações**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48133246"
   
 4.  Defina um limite para o aviso na coluna **Limite** . Por exemplo, você pode selecionar um valor de **70%** na coluna **Limite** .  
   
-5.  Clique em **Salvar Alterações**.  
+5.  Clique em **salvar alterações**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   

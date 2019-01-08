@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509680"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Executando o Assistente para Implantação do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050784"
 -   **No prompt de comando** quando executado no prompt de comando, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação gera um script de implantação baseado nas opções que você pode usar para executar o assistente. O assistente pode executar qualquer uma destas ações: alertá-lo para entrada de usuário e modificar arquivos de entrada com base naquela entrada; executar uma implantação autônoma silenciosa, que usa os arquivos de entrada como são; ou criar um script de implantação que você pode usar depois.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Executando o Assistente para Implantação do Analysis Services interativamente  
- Quando executado interativamente, o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lê os valores dos arquivos de entrada e apresenta estas informações a você. Você pode modificar esses valores de entrada - como, destino de implantação, parâmetros de configuração, opções de implantação e senhas de cadeia de caracteres de conexão - ou deixá-los assim. Se você alterar quaisquer valores de entrada, o assistente usará essas mudanças ao gerar o script de implantação. Porém, o assistente não faz nenhuma alteração nos valores do arquivo de entrada.  
+ Quando executado interativamente, o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lê os valores dos arquivos de entrada e apresenta estas informações a você. Você pode modificar esses valores – como de entrada como destino de implantação, as definições de configuração, as opções de implantação e as senhas de cadeia de caracteres de conexão- ou deixá-los como está. Se você alterar quaisquer valores de entrada, o assistente usará essas mudanças ao gerar o script de implantação. Porém, o assistente não faz nenhuma alteração nos valores do arquivo de entrada.  
   
 > [!NOTE]  
 >  Se você quiser que o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifique os valores de entrada, execute o assistente no prompt de comando e defina o assistente para ser executado no modo de arquivo de resposta.  
@@ -37,7 +37,7 @@ ms.locfileid: "38050784"
   
 -   Clique em **inicie** > **Microsoft SQL Server** > **o Assistente de implantação**.  
   
-     — ou —  
+     -ou-  
   
 -   No **projetos** pasta da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto, clique duas vezes o \<nome do projeto >. asdatabase.
     > [!NOTE]  
@@ -73,6 +73,6 @@ ms.locfileid: "38050784"
   
 ## <a name="see-also"></a>Consulte também  
  [Compreendendo o script de implantação do Analysis Services](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [Implantar soluções de modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

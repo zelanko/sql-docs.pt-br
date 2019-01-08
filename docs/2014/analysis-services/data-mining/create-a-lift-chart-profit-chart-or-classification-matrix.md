@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529361"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Criar um gráfico de comparação de precisão, gráfico de lucro ou matriz de classificação
   Você pode criar um gráfico de precisão de um modelo de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em cinco etapas básica:  
@@ -70,7 +70,7 @@ ms.locfileid: "48069426"
   
     -   Selecione a opção, **Usar casos de teste da estrutura de mineração**, para usar o conjunto completo de casos de teste definido como parte do conjunto de dados de controle de estruturas de mineração.  
   
-    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão procurar (**…**) para escolher as tabelas de dados a serem usadas para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md).  
+    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão Procurar (**...** ) botão para escolher as tabelas de dados a ser usado para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md).  
   
          Se você estiver usando um conjunto de dados externo, poderá filtrar, se desejar, o conjunto de dados de entrada. Para obter mais informações, consulte [Aplicar filtros aos dados de teste de modelo](apply-filters-to-model-testing-data.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069426"
      A receita associada a cada venda bem sucedida.  
   
 ## <a name="see-also"></a>Consulte também  
- [Lift Chart &#40;Analysis Services - mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matriz de classificação &#40;Analysis Services - mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

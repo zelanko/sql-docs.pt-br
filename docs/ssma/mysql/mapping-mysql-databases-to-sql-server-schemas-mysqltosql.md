@@ -13,12 +13,12 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ba413a15f0d201ecaddadf83e353d28ee3010c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721944"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408703"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapear bancos de dados MySQL para esquemas SQL Server (MySQLToSQL)
 Por padrão, o SSMA para MySQL migra todos os objetos em um esquema de MySQL para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou nomeado para o esquema de banco de dados do SQL Azure. No entanto, você pode personalizar o mapeamento entre os esquemas de MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou bancos de dados do SQL Azure.  

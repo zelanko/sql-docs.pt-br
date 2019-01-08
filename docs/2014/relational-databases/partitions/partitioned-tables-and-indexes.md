@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353400"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. As tabelas e os índices particionados não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -45,13 +45,13 @@ ms.locfileid: "48229816"
  As condições a seguir são aplicáveis ao particionamento de tabela e de índice.  
   
  Função de partição  
- Um objeto de banco de dados que define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de determinada coluna, chamada de coluna de particionamento. Ou seja, a função de partição define o número de partições que a tabela terá e como serão definidos os limites das partições. Por exemplo, considerando uma tabela que contém dados de ordem de venda, você talvez queira particionar a tabela em doze (mensalmente) partições com base em um `datetime` coluna como uma data de vendas.  
+ Um objeto de banco de dados que define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de determinada coluna, chamada de coluna de particionamento. Ou seja, a função de partição define o número de partições que a tabela terá e como serão definidos os limites das partições. Por exemplo, considerando uma tabela que contém dados de ordem de venda, você pode desejar particionar a tabela em doze (mensalmente) partições com base em uma coluna `datetime` como uma data de vendas.  
   
  Esquema de partição  
  Um objeto de banco de dados que mapeia as partições de uma função de partição para um conjunto de grupos de arquivos. O principal motivo para colocar suas partições em grupos de arquivos separados é para garantir que poderá efetuar operações de backup em partições de forma independente. Isso porque se pode executar backups em grupos de arquivos individuais.  
   
  Coluna de particionamento  
- A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para usam como colunas de índice podem ser usadas como uma coluna de particionamento, exceto `timestamp`. Os tipos de dados `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` ou `varbinary(max)` não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
+ A coluna de uma tabela ou índice que uma função de partição usa para particionar a tabela ou índice. Colunas computadas que participam de uma função de partição devem ser marcadas explicitamente como PERSISTED. Todos os tipos de dados que são válidos para uso como colunas de índice podem ser usados como uma coluna de particionamento, exceto `timestamp`. Os tipos de dados `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` ou `varbinary(max)` não podem ser especificados. Também, não podem ser especificados o tipo definido pelo usuário do CLR (Common Language Runtime) do Microsoft .NET Framework e colunas de tipo de dados do alias.  
   
  Índice alinhado  
  Um índice que é baseado no mesmo esquema de partição que sua tabela correspondente. Quando uma tabela e seus índices estão em alinhamento, o SQL Server pode alternar partições rápida e eficientemente e, ao mesmo tempo, manter a estrutura de partição da tabela e de seus índices. Um índice não precisa participar na mesma função de partição nomeada para ser alinhado com sua tabela base. Entretanto, a função de partição de um índice e a tabela base devem ser essencialmente as mesmas, em que 1) os argumentos das funções de partição têm o mesmo tipo de dados, 2) eles definem o mesmo número de partições, e 3) eles definem os mesmos valores de limite para as partições.  
@@ -81,7 +81,7 @@ ms.locfileid: "48229816"
   
  A criação e a recompilação de índices alinhados poderão demorar mais para serem executadas à medida que aumentar o número de partições. É recomendável não executar vários comandos de índice de criação e recriação ao mesmo tempo porque você pode encontrar problemas de desempenho e memória.  
   
- Quando o SQL Server executar uma classificação para criar índices particionados, ele criará primeiro uma tabela de classificação para cada partição. Ele então cria as tabelas de classificação no respectivo grupo de arquivos de cada partição ou no `tempdb`, se a opção de índice SORT_IN_TEMPDB for especificada. Cada tabela de classificação exige uma quantia mínima de memória para construir. Quando você estiver construindo um índice particionado que está alinhado com a tabela base, uma tabela de classificação por vez será criada, usando menos memória. Porém, quando você estiver construindo um índice particionado não alinhado, as tabelas de classificação serão criadas ao mesmo tempo. Como resultado, deve haver memória suficiente para controlar essas classificações simultâneas. Quanto maior o número de partições, mais memória será necessária. O tamanho mínimo para cada tabela de classificação, para cada partição é de 40 páginas, com 8 quilobites por página. Por exemplo, um índice particionado não alinhado com 100 partições requer memória suficiente para classificar serialmente 4.000 (40 x 100) páginas ao mesmo tempo. Se essa memória estiver disponível, a operação de construção terá sucesso, mas o desempenho poderá ser afetado. Se essa memória não estiver disponível, a operação de criação falhará. Como alternativa, um índice particionado alinhado com 100 partições requer apenas memória suficiente para classificar serialmente 40 páginas, porque as classificações não são executadas ao mesmo tempo.  
+ Quando o SQL Server executar uma classificação para criar índices particionados, ele criará primeiro uma tabela de classificação para cada partição. Ele criará as tabelas de classificação no respectivo grupo de arquivos de cada partição ou no `tempdb`, se a opção de índice SORT_IN_TEMPDB for especificada. Cada tabela de classificação exige uma quantia mínima de memória para construir. Quando você estiver construindo um índice particionado que está alinhado com a tabela base, uma tabela de classificação por vez será criada, usando menos memória. Porém, quando você estiver construindo um índice particionado não alinhado, as tabelas de classificação serão criadas ao mesmo tempo. Como resultado, deve haver memória suficiente para controlar essas classificações simultâneas. Quanto maior o número de partições, mais memória será necessária. O tamanho mínimo para cada tabela de classificação, para cada partição é de 40 páginas, com 8 quilobites por página. Por exemplo, um índice particionado não alinhado com 100 partições requer memória suficiente para classificar serialmente 4.000 (40 x 100) páginas ao mesmo tempo. Se essa memória estiver disponível, a operação de construção terá sucesso, mas o desempenho poderá ser afetado. Se essa memória não estiver disponível, a operação de criação falhará. Como alternativa, um índice particionado alinhado com 100 partições requer apenas memória suficiente para classificar serialmente 40 páginas, porque as classificações não são executadas ao mesmo tempo.  
   
  Para ambos os índices, alinhados e não alinhados, os requisitos de memória poderão ser maiores se o SQL Server aplicar graus de paralelismo à operação de criação em um computador com multiprocessador. Isso ocorre porque quanto maior os graus de paralelismo, maior será o requisito de memória. Por exemplo, se o SQL Server define os graus de paralelismo como 4, um índice particionado não alinhado com 100 partições requer memória suficiente para quatro processadores para classificar serialmente 4.000 páginas, ao mesmo tempo, ou 16.000 páginas. Se o índice particionado for alinhado, o requisito de memória será reduzido para quatro processadores classificando 40 páginas, 160 (4 x 40) páginas. Você pode usar a opção de índice MAXDOP para reduzir os graus de paralelismo manualmente.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229816"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Você pode localizar os livros brancos a seguir em estratégias e implementações úteis de tabelas e índices particionados.  
   
--   [Estratégias de tabelas e índices particionados usando o SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Estratégias de tabelas e índices particionados usando o SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Como implementar uma janela deslizante automática](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [Como implementar uma janela deslizante automática](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Carregamento em massa em uma tabela particionada](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Carregamento em massa em uma tabela particionada](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Projeto REAL: ciclo de vida de dados -- particionamento](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Projeto REAL: Ciclo de vida de dados - particionamento](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [10 principais práticas recomendadas para a criação de um Data Warehouse relacional em grande escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

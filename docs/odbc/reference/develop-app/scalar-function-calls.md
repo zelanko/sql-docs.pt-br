@@ -13,19 +13,19 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54615676558165e4044e99bf9452ce8e8a333170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e02a217579e70a3b7461037750a919efec14458
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515473"
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
   
  **{fn** *função escalar* **}**  
   
- em que *função escalar* é uma das funções listadas na [funções escalares do apêndice e:](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) na gramática do apêndice c: SQL.  
+ em que *função escalar* é uma das funções listadas no [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) no Apêndice c: Gramática SQL.  
   
  Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados de cliente em maiusculas nomes. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativa para Ingres para o sistema operacional/2 e não é interoperável.  
   
@@ -38,14 +38,14 @@ SELECT uppercase(Name) FROM Customers
  Um aplicativo pode misturar chamadas para funções escalares que usam sintaxe nativo e chamadas para funções escalares que usam a sintaxe ODBC. Por exemplo, suponha que os nomes na tabela de funcionários são armazenados como um nome, uma vírgula e um sobrenome. A instrução SQL a seguir cria um conjunto de resultados de sobrenomes de funcionários na tabela de funcionários. A instrução usa a função escalar de ODBC **subcadeia de caracteres** e a função escalar do SQL Server **CHARINDEX** e será executado corretamente apenas no SQL Server.  
   
 ```  
-SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers  
+SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers  
 ```  
   
  Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo solicitado. O **converter** função converte dados de um tipo de dados SQL para o tipo de dados SQL especificado. A sintaxe do **converter** é de função  
   
- **Converter(** *value_exp* **,** *data_type * * *)**  
+ **Converter (** *value_exp* **,** _data_type_**)**  
   
- em que *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponda a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a seguinte instrução SQL usa o **converter** função para ter certeza de que a saída da **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
+ em que *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponda a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a seguinte instrução SQL usa o **converter** função para ter certeza de que a saída da **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

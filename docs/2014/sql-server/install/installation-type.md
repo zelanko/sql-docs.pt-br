@@ -11,12 +11,12 @@ ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c91331f93347a860946741229f9b6a287796e03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2d849a4ce57397e2031b9d347c3e9f7577035fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539082"
 ---
 # <a name="installation-type"></a>Tipo de Instalação
   Use a página Tipo de Instalação do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se deseja instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou adicionar recursos a uma instância existente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48105606"
   
      Se você selecionar a opção para adicionar recursos a uma instância existente, use a lista suspensa para selecionar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser atualizada.  
   
- Você somente pode adicionar os recursos com suporte do SysPrep —[!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]— a imagem preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Outros recursos aos quais o SysPrep não oferece suporte só poderão ser adicionados depois que a instância preparada for concluída.  
+ Você só pode adicionar os recursos com suporte do SysPrep -[!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-para uma imagem preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Outros recursos aos quais o SysPrep não oferece suporte só poderão ser adicionados depois que a instância preparada for concluída.  
   
  **Observação** Você não poderá adicionar recursos a uma instância de cluster de failover depois que ela for instalada. Para adicionar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um cluster de failover existente, você deve executar uma nova instalação para instalar uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

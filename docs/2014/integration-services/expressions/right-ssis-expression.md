@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
@@ -13,12 +12,12 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ea1ca12b442116ff191bb7fbd6ac9a96b0128b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e8d1cfdda299c786aa926aad26f724009a683ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796099"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (Expressão SSIS)
   Retorna o número especificado de caracteres da parte mais à direita da expressão character especificada.  
@@ -73,7 +72,7 @@ RIGHT(Name, (DT_I2)@Times))
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ESQUERDA &#40;expressão do SSIS&#41;](left-ssis-expression.md)   
- [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
+ [LEFT &#40;Expressão SSIS&#41;](left-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

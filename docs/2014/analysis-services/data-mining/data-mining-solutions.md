@@ -14,12 +14,12 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516549"
 ---
 # <a name="data-mining-solutions"></a>Soluções de mineração de dados
   Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
@@ -35,7 +35,7 @@ ms.locfileid: "48161766"
  [Passo a passo de solução](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> Relacional versus Soluções multidimensionais  
- Uma solução de mineração de dados pode ser baseada em dados multidimensionais, ou seja, um cubo existente, ou em dados puramente relacionais, como as tabelas e exibições em um data warehouse, ou em arquivos de texto, pastas de trabalho do Excel ou outras fontes de dados externas.  
+ Uma solução de mineração de dados pode ser com base em dados multidimensionais-ou seja, um cubo existente – ou em dados puramente relacionais, como as tabelas e exibições em um data warehouse, ou em arquivos de texto, do Excel pastas de trabalho ou outras fontes de dados externas.  
   
 -   Você pode criar objetos de mineração de dados dentro de uma solução de banco de dados multidimensional existente.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48161766"
  Criar a estrutura de mineração baseada em dados em um cubo OLAP. Os modelos que você cria dos dados OLAP podem ser salvos como uma dimensão de mineração de dados ou você pode salvar o conjunto de dados e seus modelos como um novo cubo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Projetos de Mineração de dados](data-mining-projects.md)  
+ [Projetos de mineração de dados](data-mining-projects.md)  
   
  [Processando objetos de Mineração de dados](processing-data-mining-objects.md)  
   
@@ -79,13 +79,13 @@ ms.locfileid: "48161766"
   
 |Tarefas|Tópicos|  
 |-----------|------------|  
-|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)|  
+|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)|  
 |Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de Mineração de dados](processing-data-mining-objects.md)|  
 |Personalize um modelo de mineração aplicando filtros aos dados de treinamento, escolhendo um algoritmo diferente ou definindo parâmetros de algoritmo avançados.|[Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)|  
-|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar modelos de mineração a uma estrutura &#40;Analysis Services - mineração de dados&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Atualize e gerencie as soluções de mineração de dados.|Link TBD|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais de mineração de dados &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [Tutoriais de Data Mining &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

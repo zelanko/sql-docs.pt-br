@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506080"
 ---
 # <a name="decimal-digits"></a>Dígitos decimais
 O *dígitos decimais* de dados decimais e numéricos de tipos é definido como o número máximo de dígitos à direita da vírgula decimal, ou a escala dos dados. Para colunas de número de ponto flutuantes aproximadas ou parâmetros, a escala é indefinida, porque o número de dígitos à direita da vírgula decimal não é fixo. Para datetime ou intervalo de dados que contém um componente de segundos, os dígitos decimais é definido como o número de dígitos à direita da vírgula decimal no componente de segundos de dados.  
@@ -33,7 +33,7 @@ O *dígitos decimais* de dados decimais e numéricos de tipos é definido como o
 |Tipo SQL|Dígitos decimais|  
 |--------------|--------------------|  
 |Todos os caracteres e tipos binários [a]|n/d|  
-|SQL_DECIMAL<br />SQL_NUMERIC|O número definido de dígitos à direita da vírgula decimal. Por exemplo, a escala de uma coluna definida como NUMERIC(10,3) é 3. Isso pode ser um número negativo para dar suporte ao armazenamento de números muito grandes sem usar a notação exponencial; Por exemplo, "12000" poderiam ser armazenadas como "12" com uma escala de – 3.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|O número definido de dígitos à direita da vírgula decimal. Por exemplo, a escala de uma coluna definida como NUMERIC(10,3) é 3. Isso pode ser um número negativo para dar suporte ao armazenamento de números muito grandes sem usar a notação exponencial; Por exemplo, "12000" poderiam ser armazenadas como "12" com uma escala de -3.|  
 |Todos os tipos numéricos exatos que não sejam SQL_DECIMAL e SQL_NUMERIC [a]|0|  
 |Todos os tipos de dados aproximados [a]|n/d|  
 |SQL_TYPE_DATE e todos os tipos de intervalo com nenhum componente de segundos [a]|n/d|  
@@ -44,7 +44,7 @@ O *dígitos decimais* de dados decimais e numéricos de tipos é definido como o
   
  Os valores retornados para os dígitos decimais não correspondem aos valores em um campo de descritor. Os valores podem vir do SQL_DESC_SCALE ou o campo SQL_DESC_PRECISION, dependendo do tipo de dados, conforme mostrado na tabela a seguir.  
   
-|Tipo SQL|Campo de descritor correspondente<br /><br /> dígitos decimais|  
+|Tipo SQL|Campo de descritor correspondente<br /><br /> Dígitos decimais|  
 |--------------|----------------------------------------------------------|  
 |Todos os caracteres e tipos binários|n/d|  
 |Todos os tipos numéricos exatos|SCALE|  

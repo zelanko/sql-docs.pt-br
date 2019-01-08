@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354827"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usando o controle ReportViewer do WinForms
   Para exibir relatórios que foram implantados em um servidor de relatório ou relatórios existentes no sistema de arquivos local, você pode usar o controle ReportViewer do WinForms para renderizá-los em um aplicativo do Windows.  
@@ -42,7 +42,7 @@ ms.locfileid: "48170396"
   
  Depois que o controle for adicionado ao formulário, a marcação inteligente **Tarefas do ReportViewer** será exibida e solicitará a seleção de um relatório.  
   
- Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Depois que a opção **\<Server Report>** for selecionada, serão exibidas duas propriedades adicionais: **URL do Servidor de Relatório** e **Caminho do Relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
+ Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Após o  **\<relatório do servidor >** opção estiver selecionada, serão exibidas duas propriedades adicionais: **Url do servidor de relatório** e **caminho do relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
   
  ![Selecionar servidor de relatório](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selecionar servidor de relatório")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  Navegue até o local em que instalou o projeto Exemplos de Relatórios do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Para baixar as amostras de relatório, acesse [Amostras de relatório do AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Para baixar as amostras de relatório, acesse [Amostras de relatório do AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Selecione o arquivo Sales Order Detail.rdl e clique no botão **Adicionar**.  
   

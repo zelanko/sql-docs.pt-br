@@ -10,12 +10,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190286"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408618"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
   As tabelas com otimização de memória são incluídas no backup como parte de backups regulares de banco de dados. Quanto às tabelas baseadas em disco, o CHECKSUM de dados e os pares de arquivos delta são validados como parte do backup de banco de dados para detectar corrupção do armazenamento.  
@@ -44,11 +44,11 @@ ms.locfileid: "48190286"
 ### <a name="estimating-size-of-full-database-backup"></a>Estimando o tamanho do backup de banco de dados completo  
   
 > [!IMPORTANT]  
->  É recomendável que você não use o valor de BackupSizeInBytes para estimar o tamanho do backup para O OLTP na Memória.  
+>  É recomendável que você não use o valor de BackupSizeInBytes para estimar o tamanho do backup para O OLTP in-memory.  
   
  O primeiro cenário de carga de trabalho é para (principalmente) inserir. Neste cenário, a maioria dos arquivos de dados estará no estado Ativo, totalmente carregados e com muito poucas linhas excluídas. O tamanho do backup do banco de dados estará próximo do tamanho dos dados na memória.  
   
- O segundo cenário de carga de trabalho é para operações frequentes de inserção, exclusão e atualização: no pior caso, cada um dos pares de arquivos de ponto de verificação será 50% carregado, após a contabilidade das linhas excluídas. Dessa forma, o tamanho do backup de banco de dados terá pelo menos 2 vezes o tamanho dos dados na memória. Além disso, alguns pares de arquivos de ponto de verificação nos estados Origem de mesclagem e Necessário para backup/alta disponibilidade se somarão ao tamanho do backup de banco de dados.  
+ É o segundo cenário de carga de trabalho para operações de atualização, exclusão e inserção frequentes: Na pior das hipóteses, cada um dos pares de arquivos de ponto de verificação será 50% carregado, após a contagem das linhas excluídas. Dessa forma, o tamanho do backup de banco de dados terá pelo menos 2 vezes o tamanho dos dados na memória. Além disso, alguns pares de arquivos de ponto de verificação nos estados Origem de mesclagem e Necessário para backup/alta disponibilidade se somarão ao tamanho do backup de banco de dados.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backups diferenciais de bancos de dados com tabelas com otimização de memória  
  O armazenamento de tabelas com otimização de memória consiste em dados e arquivos delta, conforme descrito em [Durabilidade de tabelas com otimização de memória](memory-optimized-tables.md). O backup diferencial de um banco de dados com tabelas com otimização de memória contém os seguintes dados:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exponential functions
@@ -14,12 +13,12 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c8327f2f39e5c90d6bbf4d990430ccecfc50273
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00aea33b9ee240229cc399650f4c227e86f19507
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077112"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752098"
 ---
 # <a name="exp-ssis-expression"></a>EXP (Expressão SSIS)
   Retorna o expoente para a base e de uma expressão numérica. A função EXP complementa a ação da função LN e, às vezes, é chamado de antilogaritmo.  
@@ -65,7 +64,7 @@ EXP(0)
  Retorna 1.  
   
 ## <a name="see-also"></a>Consulte também  
- [LOG &#40;expressão do SSIS&#41;](log-ssis-expression.md)   
- [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
+ [LOG &#40;Expressão SSIS&#41;](log-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

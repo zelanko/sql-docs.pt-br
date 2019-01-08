@@ -18,12 +18,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598a0dcfd221add02cf09297687cff17c897c4e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507772"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
   Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076536"
   
  Para criar um novo diagrama, clique com o botão direito do mouse em qualquer lugar do painel **Organizador de Diagramas** , clique em **Novo Diagrama**.  
   
- Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas a exibição da fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, que você adicione tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualização das relações — especialmente como várias tabelas de fatos são adicionadas ao diagrama e de dimensão tabelas estão relacionadas a várias tabelas de fatos.  
+ Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas a exibição da fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, que você adicione tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualizar relações especialmente no que são adicionadas ao diagrama de várias tabelas de fatos e dimensão tabelas estão relacionadas a várias tabelas de fatos.  
   
  Para reduzir a poluição visual quando você quer apenas exibir um subconjunto das tabelas da exibição da fonte de dados, é possível definir subdiagramas (chamados simplesmente de diagramas) formados por subconjuntos das tabelas, exibições e consultas nomeadas da exibição da fonte de dados. Você pode usar diagramas para agrupar itens da exibição da fonte de dados de acordo com as necessidades dos negócios ou da solução.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076536"
   
  ![Captura de tela do espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela do espaço de trabalho de diagrama, menu de atalho")  
   
- Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o espaço de trabalho, arraste-os do painel de Tabelas em vez disso.  
+ Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o workspace, arraste-os do painel de Tabelas em vez disso.  
   
 ##  <a name="bkmk_findtables"></a> Localizar tabelas em um diagrama  
  Se o esquema for grande, poderá ser difícil rolar uma determinada tabela no painel **Diagrama** . No entanto, as ferramentas a seguir facilitam a localização de uma tabela em um diagrama.  
@@ -69,9 +69,9 @@ ms.locfileid: "48076536"
   
      Para centralizar a exibição em uma tabela que já está incluída no diagrama, selecione a tabela no painel **Tabelas** .  
   
--   Localizador de tabelas do painel **Diagrama** – o localizador de tabela é um ícone de 4 setas na intersecção das barras de rolagem vertical e horizontal no canto direito inferior do painel **Diagrama** . Ele abre uma representação em miniatura do diagrama atual no painel Diagrama. Você pode usar essa miniatura para alterar a exibição do painel Diagrama para qualquer local no diagrama.  
+-   Localizador de tabelas **diagrama** localizador de tabela: O painel é um ícone de 4 setas, localizado na interseção das barras de rolagem vertical e horizontal no canto inferior direito das **diagrama** painel. Ele abre uma representação em miniatura do diagrama atual no painel Diagrama. Você pode usar essa miniatura para alterar a exibição do painel Diagrama para qualquer local no diagrama.  
   
--   Use a caixa de diálogo **Localizar Tabela** – Clique com o botão direito do mouse em uma área livre do painel Diagrama e clique em **Localizar Tabela**. Ou clique no comando **Localizar Tabela** na barra de ferramentas ou no menu **Exibição da Fonte de Dados** .  
+-   Use o **localizar tabela** diálogo caixa-Right click em uma área livre no painel de diagrama e clique **localizar tabela**. Ou clique no comando **Localizar Tabela** na barra de ferramentas ou no menu **Exibição da Fonte de Dados** .  
   
      Você pode digitar cadeias de caracteres e caracteres curinga na caixa Filtro para exibir subconjuntos das tabelas no diagrama.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48076536"
  Para evitar esse problema, adicione todas as tabelas primeiro, antes de fazer algum ajuste final. Os objetos devem agora manter sua posição no diagrama quando você abri-lo novamente mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
- [Designer de exibição da fonte de dados &#40;Analysis Services - dados multidimensionais&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

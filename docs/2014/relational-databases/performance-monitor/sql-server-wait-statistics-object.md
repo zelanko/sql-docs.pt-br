@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
@@ -13,19 +13,19 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3255ea68fe69631b266286cfdb78b33096a42625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759458"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Objeto Wait Statistics
   O objeto de desempenho **SQLServer:Wait Statistics** contém contadores de desempenho que relatam informações sobre o status de espera.  
   
  A tabela a seguir lista os contadores contidos no objeto Wait Statistics (Estatísticas de Espera).  
   
-|Contadores de Estatísticas de Espera do SQL Server|Description|  
+|Contadores de Estatísticas de Espera do SQL Server|Descrição|  
 |-----------------------------------------|-----------------|  
 |**Esperas de bloqueio**|Estatísticas dos processos que esperam por um bloqueio.|  
 |**Esperas de buffer de log**|Estatísticas dos processos que esperam pela disponibilização de buffer de log.|  
@@ -38,11 +38,11 @@ ms.locfileid: "48124206"
 |**Espera de objetos de memória isenta de threads**|Estatísticas dos processos que esperam alocadores de memória isenta de threads.|  
 |**Esperas de propriedade de transação**|Estatísticas pertinentes a processos de sincronização de acesso à transação.|  
 |**Espera pelo trabalhador**|Estatísticas pertinentes a processos que esperam pela disponibilização do trabalhador.|  
-|**Esperas da sincronização do espaço de trabalho**|Estatísticas pertinentes a processos de sincronização de acesso ao espaço de trabalho.|  
+|**Esperas da sincronização do workspace**|Estatísticas pertinentes a processos de sincronização de acesso ao workspace.|  
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|Description|  
+|Item|Descrição|  
 |----------|-----------------|  
 |**Tempo de espera médio (ms)**|Tempo médio do tipo de espera selecionado.|  
 |**Tempo de espera cumulativo (ms) por segundo**|Tempo de espera agregado, por segundo, do tipo de espera selecionado.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808868"
 ---
 # <a name="osql-utility"></a>Utilitário osql
   O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -46,7 +45,7 @@ ms.locfileid: "48123696"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -110,7 +109,7 @@ C:\>osql
  Especifica o número de segundos antes de um comando expirar. Se não for especificado um valor de *time_out* , os comandos não vão atingir o tempo limite.  
   
  **-h** *headers*  
- Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deve haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, não **-h -1**).  
+ Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deve haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, e não **-h -1**).  
   
  **-s** *col_separator*  
  Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar caracteres que têm um significado especial para o sistema operacional (por exemplo, |; & \< >), coloque-o entre aspas duplas (").  
@@ -207,7 +206,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Além das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] dentro do **osql**, os comandos a seguir também estão disponíveis.  
   
-|Comando|Description|  
+|Comando|Descrição|  
 |-------------|-----------------|  
 |GO|Executa todas as instruções inseridas depois do último GO.|  
 |RESET|Apaga as instruções inseridas.|  
@@ -337,7 +336,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Comentário &#40;MDX&#41;](/sql/mdx/comment-mdx)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;Comentário&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

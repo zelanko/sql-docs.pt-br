@@ -16,12 +16,12 @@ ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d25153a3c84340ad6feea43aa969ef52d358fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717714"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543467"
 ---
 # <a name="the-significance-of-cursor-location"></a>A importância da posição do cursor
 Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos podem ser um arquivo de paginação de disco, memória, arquivos temporários no disco ou armazenamento temporário até mesmo no banco de dados. O cursor é chamado de um *cliente* cursor quando esses recursos estão localizados no computador cliente. O cursor é chamado de um *servidor* cursor quando esses recursos estão localizados no servidor.  
@@ -36,6 +36,6 @@ Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos 
 ## <a name="server-side-cursors"></a>Cursores do lado do servidor  
  No ADO, chame para um cursor do lado do servidor usando o **adUseServer CursorLocationEnum.** Com um cursor do lado do servidor, o servidor gerencia o conjunto de resultados usando os recursos fornecidos pelo computador do servidor. O cursor do lado do servidor retorna apenas os dados solicitados pela rede. Esse tipo de cursor às vezes, pode fornecer desempenho melhor do que o cursor do lado do cliente, especialmente em situações em que o tráfego excessivo na rede é um problema.  
   
- No entanto, é importante ressaltar que é de um cursor do lado do servidor — pelo menos temporariamente — consuma recursos do servidor preciosos para cada cliente do Active Directory. Você deve planejar adequadamente para garantir que seu hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes do Active Directory. Além disso, um cursor do lado do servidor pode ser lento porque fornece apenas acesso de linha única — nenhum cursor de lote está disponível.  
+ No entanto, é importante ressaltar que – pelo menos temporariamente - um cursor do lado do servidor está consumindo recursos preciosos server para cada cliente do Active Directory. Você deve planejar adequadamente para garantir que seu hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes do Active Directory. Além disso, um cursor do lado do servidor pode ser lento porque ele fornece acesso somente de única linha - nenhum cursor de lote está disponível.  
   
  Cursores de servidor são úteis quando a inserção, atualização ou exclusão de registros. Com cursores do lado do servidor, você pode ter várias instruções ativas na mesma conexão.

@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515848"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
     
@@ -46,7 +46,7 @@ ms.locfileid: "48221036"
   
 -   A. [IMPORTAÇÃO de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
   
--   B. [Importação de dados XML em uma linha existente](#existing_row)  
+-   b. [Importação de dados XML em uma linha existente](#existing_row)  
   
 -   C. [Importação em massa dados XML de um arquivo que contém um DTD](#file_contains_dtd)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48221036"
 -   E. [Exportar dados XML em massa](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importação em massa de dados XML como um fluxo de bytes binários  
- Ao importar dados XML em massa de um arquivo que contém uma declaração de codificação que você deseja aplicar, especifique a opção SINGLE_BLOB na cláusula OPENROWSET (BULK...). A opção SINGLE_BLOB assegura que o analisador XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa os dados de acordo com o esquema de codificação especificado na declaração XML.  
+ Ao importar dados XML em massa de um arquivo que contém uma declaração de codificação que você deseja aplicar, especifique a opção SINGLE_BLOB na cláusula OPENROWSET (BULK…). A opção SINGLE_BLOB assegura que o analisador XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe os dados de acordo com o esquema de codificação especificado na declaração XML.  
   
 #### <a name="sample-table"></a>Tabela de exemplo  
  Para testar o exemplo A, você deve criar a tabela de exemplo `T`.  
@@ -97,7 +97,7 @@ SELECT * FROM OPENROWSET(
   
 -   Especifique uma página de código na opção CODEPAGE da consulta que corresponda ao esquema de codificação usado na declaração XML.  
   
--   Faça a correspondência ou resolva as definições de agrupamento do banco de dados com um esquema de codificação XML não Unicode.  
+-   Faça a correspondência ou resolva as definições de ordenação do banco de dados com um esquema de codificação XML não Unicode.  
   
  [&#91;Início&#93;](#top)  
   
@@ -151,7 +151,7 @@ GO
   
  Para resolver esse problema, você pode importar dados XML de um arquivo de dados que contém um DTD usando a função `OPENROWSET(BULK...)` e especificando a opção `CONVERT` na cláusula de comando `SELECT` . A sintaxe básica do comando é:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  Antes de poder testar esse exemplo de importação em massa, crie um arquivo (`C:\temp\Dtdfile.xml`) que contém a seguinte instância de exemplo:  

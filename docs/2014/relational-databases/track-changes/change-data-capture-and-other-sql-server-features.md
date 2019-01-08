@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -13,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75fa2640cae19ce441c467672c1b66e85bd3c169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213604"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747740"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server
   Este tópico descreve como os seguintes recursos interagem com a captura de dados de alteração:  
@@ -48,7 +47,7 @@ ms.locfileid: "48213604"
  Para obter informações sobre o espelhamento de banco de dados, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
- A captura de dados de alteração e a replicação transacional podem coexistir no mesmo banco de dados, mas a população das tabelas de alteração ocorre de modo diferente quando os dois recursos estão habilitados. A captura de dados de alteração e a replicação transacional sempre usam o mesmo procedimento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para ler alterações no log de transações. Quando o change data capture está habilitado por conta própria, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamadas de trabalho do agente `sp_replcmds`. Quando os dois recursos estão habilitados no mesmo banco de dados, o Log Reader Agent chama `sp_replcmds`. Esse agente preenche as tabelas de alteração e do banco de dados de distribuição. Para obter mais informações, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ A captura de dados de alteração e a replicação transacional podem coexistir no mesmo banco de dados, mas a população das tabelas de alteração ocorre de modo diferente quando os dois recursos estão habilitados. A captura de dados de alteração e a replicação transacional sempre usam o mesmo procedimento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para ler alterações no log de transações. Quando a captura de dados de alteração é habilitada por iniciativa própria, um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chama `sp_replcmds`. Quando os dois recursos estão habilitados no mesmo banco de dados, o Log Reader Agent chama `sp_replcmds`. Esse agente preenche as tabelas de alteração e do banco de dados de distribuição. Para obter mais informações, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Considere um cenário em que a captura de dados de alteração está habilitada no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e há duas tabelas habilitadas para captura. Para preencher a alteração de tabelas, o trabalho de captura chama `sp_replcmds`. O banco de dados está habilitado para replicação transacional, e é criada uma publicação. Agora, o Agente de Leitor de Log é criado para o banco de dados, e o trabalho de captura é excluído. O Agente de Leitor de Log continua a examinar o log do último número de sequência de log confirmado na tabela de alteração. Isso assegura a consistência de dados nas tabelas de alteração. Se a replicação transacional estiver desabilitada nesse banco de dados, o Log Reader Agent será removido e o trabalho de captura, recriado.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48213604"
   
 -   Se um banco de dados for restaurado para outro servidor, por padrão a captura de dados de alteração será desabilitada, e todos os metadados relacionados serão excluídos.  
   
-     Para manter o change data capture, use o `KEEP_CDC` opção ao restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para manter a captura de dados de alteração, use a opção `KEEP_CDC` quando restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Se um banco de dados for desanexado e anexado ao mesmo servidor ou a outro servidor, a captura de dados de alteração permanecerá habilitada.  
   

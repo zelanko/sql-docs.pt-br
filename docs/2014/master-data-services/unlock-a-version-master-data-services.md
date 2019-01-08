@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unlocking versions [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2893e96ca672c3f97b380ada623fe38a0c56fc87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfe3d83f83f24e6867e3555855e79049c4bf0ec2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203732"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798098"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Desbloquear uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], desbloqueie uma versão de um modelo para permitir alterações para os membros do modelo e seus atributos.  
@@ -29,7 +28,7 @@ ms.locfileid: "48203732"
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   O status da versão deverá ser **Bloqueado**. Para obter mais informações, consulte [Bloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md).  
   
@@ -48,6 +47,6 @@ ms.locfileid: "48203732"
 -   [Bloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

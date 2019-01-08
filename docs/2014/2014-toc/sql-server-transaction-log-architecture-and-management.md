@@ -10,12 +10,12 @@ ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0880f2c8591c1b0bd75bf2d11fe99321bb294e4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164866"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351930"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>Arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "48164866"
 ## <a name="additional-reading"></a>Leitura adicional  
  Recomendamos a leitura dos artigos e livros a seguir, que fornecem mais informações sobre o log de transações.  
   
- [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Gerenciamento de log de transações do SQL Server, por Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

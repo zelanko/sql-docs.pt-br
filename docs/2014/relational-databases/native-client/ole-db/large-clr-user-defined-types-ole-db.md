@@ -12,12 +12,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398129"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
   Este tópico aborda as alterações feitas ao OLE DB no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
@@ -77,7 +77,7 @@ ms.locfileid: "48152752"
   
  As seguintes colunas também são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Description|  
+|Identificador de coluna|Tipo|Descrição|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  
@@ -102,7 +102,7 @@ ms.locfileid: "48152752"
   
  As seguintes colunas adicionais são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Description|  
+|Identificador de coluna|Tipo|Descrição|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  
@@ -118,13 +118,13 @@ ms.locfileid: "48152752"
 |Tipo de dados de associação|UDT para servidor|Não UDT para servidor|UDT de servidor|Não UDT de servidor|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Compatível (5)|Erro (1)|Compatível (5)|Erro (4)|  
-|DBTYPE_BYTES|Compatível (5)|N/A|Compatível (5)|N/A|  
-|DBTYPE_WSTR|Com suporte (2), (5)|N/A|Com suporte (3), (5), (6)|N/A|  
-|DBTYPE_BSTR|Com suporte (2), (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_STR|Com suporte (2), (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_IUNKNOWN|Compatível (6)|N/A|Compatível (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|Compatível (5)|N/D|Compatível (5)|N/D|  
+|DBTYPE_WSTR|Com suporte (2), (5)|N/D|Com suporte (3), (5), (6)|N/D|  
+|DBTYPE_BSTR|Com suporte (2), (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_STR|Com suporte (2), (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_IUNKNOWN|Compatível (6)|N/D|Compatível (6)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Legenda dos símbolos  
   

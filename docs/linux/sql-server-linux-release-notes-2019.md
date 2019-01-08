@@ -4,36 +4,36 @@ description: Este artigo contém as notas de versão e recursos com suporte para
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: HT
+ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269829"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306193"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de versão para versão prévia de 2019 do SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
-As notas de versão a seguir se aplicam à visualização de 2019 do SQL Server em execução no Linux. Este artigo é dividido em seções para cada versão. Cada versão tem um link para um artigo de suporte que descrevem alterações de atualização cumulativa, bem como links para downloads de pacotes Linux.
+As notas de versão a seguir se aplicam à visualização de 2019 do SQL Server em execução no Linux. Este artigo é dividido em seções para cada versão. Cada versão tem um link para um artigo de suporte que descrevem alterações CU, bem como links para downloads de pacotes Linux.
 
 > [!TIP]
 > Para saber sobre novos recursos de Linux do SQL Server 2019, consulte [o que há de novo no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
-## <a name="supported-platforms"></a>Plataformas compatíveis
+## <a name="supported-platforms"></a>Plataformas com suporte
 
 | Plataforma | Sistema de Arquivos | Guia de Instalação |
 |-----|-----|-----|
 | Área de trabalho, servidor e estação de trabalho do Red Hat Enterprise Linux 7.3 ou 7.4 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-ubuntu.md) | 
-| Docker Engine 1.8 + no Windows, Mac ou Linux | N/A | [Guia de instalação](quickstart-install-connect-docker.md) | 
+| Docker Engine 1.8 + no Windows, Mac ou Linux | N/D | [Guia de instalação](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > Para obter mais informações, examine os [requisitos de sistema](sql-server-linux-setup.md#system) para o SQL Server no Linux. Para a política de suporte mais recente do SQL Server 2017, consulte o [política de suporte técnico para o Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
@@ -48,6 +48,7 @@ A tabela a seguir lista o histórico de versão de visualização do SQL Server 
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
+| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
@@ -55,13 +56,33 @@ A tabela a seguir lista o histórico de versão de visualização do SQL Server 
 
 Se você tiver configurado o repositório de versão prévia (**mssql-server-visualização**), você receberá os pacotes mais recentes do CTP do SQL Server quando você executar novas instalações. Se você precisar de imagens de contêiner do Docker, consulte as imagens oficiais para [Microsoft SQL Server no Linux para o mecanismo do Docker](https://hub.docker.com/r/microsoft/mssql-server/). Para obter mais informações sobre a configuração do repositório, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
-Se você estiver atualizando os pacotes existentes do SQL Server, execute o comando de atualização apropriado para cada pacote obterá a atualização cumulativa mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
+Se você estiver atualizando os pacotes existentes do SQL Server, execute o comando de atualização apropriado para cada pacote obter o CU mais recente. Para obter instruções de atualização específica para cada pacote, consulte os guias de instalação a seguir:
 
 - [Instalar o pacote do SQL Server](sql-server-linux-setup.md#upgrade)
 - [Instalar o pacote de pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Instalar a visualização de 2019 do SQL Server R Services do Machine Learning e o suporte do Python no Linux](sql-server-linux-setup-machine-learning.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP22"></a> CTP 2.2 (dezembro de 2018)
+
+As seções a seguir fornecem os locais de pacote e problemas conhecidos para o CTP 2.2 de versão. Para saber mais sobre os novos recursos para Linux no SQL Server 2019, consulte o [o que há de novo no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacote manual ou off-line, você pode baixar os pacotes Debian e RPM com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 15.0.1200.24-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Pacote RPM SLES | 15.0.1200.24-2 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Pacote Debian do Ubuntu 16.04 | 15.0.1200.24-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de extensibilidade de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+#### <a id="msdtc"></a> Coordenador de transações distribuídas da Microsoft
+
+Atualmente, o MSDTC requer transações não autenticados. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para o SQL Server no Linux ou usa um aplicativo de cliente do Windows para iniciar uma transação distribuída no SQL Server no Linux, em seguida, MSDTC no servidor/cliente Windows é necessário para usar a opção "não Autenticação necessária".
 
 ## <a id="CTP21"></a> CTP 2.1 (novembro de 2018)
 
@@ -79,7 +100,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-#### <a id="msdtc"></a> Coordenador de transações distribuídas da Microsoft
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Coordenador de transações distribuídas da Microsoft
 
 Atualmente, o MSDTC requer transações não autenticados. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para o SQL Server no Linux ou usa um aplicativo de cliente do Windows para iniciar uma transação distribuída no SQL Server no Linux, em seguida, MSDTC no servidor/cliente Windows é necessário para usar a opção "não Autenticação necessária".
 
@@ -99,7 +120,7 @@ Para instalações de pacote manual ou off-line, você pode baixar os pacotes De
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-#### <a id="msdtc"></a> Coordenador de transações distribuídas da Microsoft
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Coordenador de transações distribuídas da Microsoft
 
 Atualmente, o MSDTC requer transações não autenticados. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para o SQL Server no Linux ou usa um aplicativo de cliente do Windows para iniciar uma transação distribuída no SQL Server no Linux, em seguida, MSDTC no servidor/cliente Windows é necessário para usar a opção "não Autenticação necessária".
 

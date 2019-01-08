@@ -14,12 +14,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6926eae9c92a80e271c786a325e94f58b6ab647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 307773a82206cc1c804a41525b733175ffbb12da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540174"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurar a transformação Comando OLE DB
   Para adicionar e configurar uma transformação Comando OLE DB, o pacote já deve incluir pelo menos uma tarefa Fluxo de Dados e uma origem, como, por exemplo, uma origem de arquivo simples ou uma origem de OLE DB. Essa transformação é normalmente usada para executar consultas parametrizadas.  
@@ -32,13 +32,13 @@ ms.locfileid: "48229766"
   
 3.  Clique na guia **Fluxo de Dados** e, na **Caixa de Ferramentas**, arraste a transformação Comando OLE DB para a superfície de design.  
   
-4.  Conecte a transformação Comando OLE DB ao fluxo de dados, arrastando um conector – a seta verde ou vermelha – de uma origem de dados ou uma transformação anterior para a transformação Comando OLE DB.  
+4.  Conecte a transformação Comando OLE DB ao fluxo de dados arrastando um conector (a seta verde ou vermelha) de uma fonte de dados ou de uma transformação anterior para a transformação Comando OLE DB.  
   
 5.  Com o botão direito do mouse, clique no componente e selecione Editar ou Mostrar **Editor Avançado**.  
   
 6.  Na guia **Gerenciadores de Conexões** , selecione um gerenciador de conexões OLE DB na lista **Gerenciador de Conexões** . Para obter mais informações, consulte [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)** , na caixa **SqlCommand** .  
+7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)** na caixa **SqlCommand**.  
   
 8.  No **Editor de Valores de Cadeias de Caracteres**, digite a instrução SQL parametrizada, com o uso de um ponto de interrogação (?) como o marcador para cada parâmetro.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48229766"
 15. Para salvar o pacote atualizado, clique em **Salvar** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação comando OLE DB](data-flow/transformations/ole-db-command-transformation.md)   
+ [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
  [Transformações do Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](control-flow/data-flow-task.md)  

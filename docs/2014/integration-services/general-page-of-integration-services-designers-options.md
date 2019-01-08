@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150917"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750109"
 ---
 # <a name="general-page"></a>Página Geral
   Use a página **Geral** da página **Designers do Integration Services** na caixa de diálogo **Opções** para especificar as opções de carregamento, exibição e atualização de pacotes.  
@@ -37,7 +36,7 @@ ms.locfileid: "48150917"
  Selecione para exibir um aviso ao carregar um pacote que não está assinado.  
   
  **Mostrar rótulos de restrição de precedência**  
- Selecione qual rótulo—Êxito, Falha ou Conclusão—será exibido em restrições de precedência ao exibir pacotes em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Selecione qual rótulo – Êxito, Falha ou Conclusão – será exibido em restrições de precedência ao exibir pacotes em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Idioma do script**  
  Selecione o idioma padrão de scripts para novas tarefas e componentes de Script.  
@@ -56,6 +55,6 @@ ms.locfileid: "48150917"
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
- [Estender pacotes com scripts](extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho | Microsoft Docs'
+title: 'Lição 4: Definir uma Conexão de dados e uma tabela de dados para o relatório filho | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184306"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365408"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho
   Depois que você criar o relatório pai, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório filho. Neste tutorial, a conexão de dados é com o banco de dados AdventureWorks2008. Você também tem a opção de se conectar ao banco de dados AdventureWorks2012.  
@@ -57,11 +57,11 @@ ms.locfileid: "48184306"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     Você também pode criar a consulta clicando **construtor de consultas**e, em seguida, verifique se a consulta clicando em **executar consulta** botão. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como instalar o **AdventureWorks2008** versão da AdventureWorks, consulte [passo a passo: Instalando o banco de dados AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Você também pode criar a consulta clicando **construtor de consultas**e, em seguida, verifique se a consulta clicando em **executar consulta** botão. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como instalar o **AdventureWorks2008** versão da AdventureWorks, consulte [passo a passo: Installing the AdventureWorks Database](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 10. Sobre o **escolha métodos para gerar** página, desmarque a opção **crie métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)** e, em seguida, clique em **concluir**.  
   
-     Agora você concluiu Configurando o ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) como fonte de dados para seu relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
+     Agora você concluiu Configurando o ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) como fonte de dados para seu relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
   
 11. Salve o arquivo.  
   

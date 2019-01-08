@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LEN function
@@ -14,12 +13,12 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bb672601f964e259e22f0fda2f28aed6365242f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04ce15704920ce8ac110946019883f153c57b05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799858"
 ---
 # <a name="len-ssis-expression"></a>LEN (Expressão SSIS)
   Retorna o número de caracteres em uma expressão character. Se a cadeia de caracteres incluir espaços em branco à esquerda e à direita, a função os incluirá na contagem. LEN retorna valores idênticos para a mesma cadeia de caracteres de byte único e duplo.  
@@ -67,6 +66,6 @@ LEN(@MachineName)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

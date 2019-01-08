@@ -10,12 +10,12 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670385"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395179"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrar dados do DB2 para o SQL Server (DB2ToSQL)
 Depois de ter sincronizado com êxito com objetos convertidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode migrar dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -84,10 +84,10 @@ Para exibir mensagens de migração, certifique-se de que o painel de saída est
   
     -   Para realizar **migração de dados do lado do servidor**, selecione o **mecanismo de migração de dados do lado do servidor** opção o **configurações de projeto** caixa de diálogo.  
   
-4.  Clique com botão direito **esquemas** no Gerenciador de metadados do DB2 e clique **migrar dados**. Também é possível migrar dados para objetos individuais ou categorias de objetos: clique com botão direito do objeto ou sua pasta pai; Selecione o **migrar dados** opção.  
+4.  Clique com botão direito **esquemas** no Gerenciador de metadados do DB2 e clique **migrar dados**. Também é possível migrar dados para objetos individuais ou categorias de objetos: Clique com botão direito do objeto ou sua pasta pai; Selecione o **migrar dados** opção.  
   
     > [!NOTE]  
-    > Se o SSMA para DB2 pacote de extensão não está instalado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e se **mecanismo de migração de dados do lado do servidor** estiver selecionada, ao migrar os dados para o banco de dados de destino, o seguinte erro é encontrado: ' Componentes do SSMA a migração de dados não foram encontrados no SQL Server, não será possível realizar a migração de dados do lado do servidor. Verifique se o pacote de extensão está instalado corretamente '. Clique em **Cancelar** para finalizar a migração de dados.  
+    > Se o SSMA para DB2 pacote de extensão não está instalado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e se **mecanismo de migração de dados do lado do servidor** estiver selecionada, ao migrar os dados para o banco de dados de destino, o seguinte erro é encontrado: ' Componentes SSMA de migração de dados não foram encontrados no SQL Server, não será possível realizar a migração de dados do lado do servidor. Verifique se o pacote de extensão está instalado corretamente '. Clique em **Cancelar** para finalizar a migração de dados.  
   
 5.  No **conectar-se ao DB2** caixa de diálogo, insira as credenciais de conexão e, em seguida, clique em **Connect**. Para obter mais informações sobre como se conectar ao DB2, consulte [conectar-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   

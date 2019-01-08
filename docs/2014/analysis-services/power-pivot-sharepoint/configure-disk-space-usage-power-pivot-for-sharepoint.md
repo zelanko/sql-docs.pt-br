@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354513"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
   Uma implantação PowerPivot para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados PowerPivot para agilizar recargas. Todo banco de dados PowerPivot que é carregado em memória primeiro é armazenado em cache em disco para agilizar a recarga posterior para atender novas solicitações. Por padrão, o PowerPivot para SharePoint usa todo o espaço disponível em disco para armazenar em cache seus bancos de dados, mas pode modificar este comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizada.  
@@ -51,11 +51,11 @@ ms.locfileid: "48069628"
   
  Em nível de sistema, você pode criar alertas de email que notifiquem quando o espaço em disco for baixo. O Microsoft System Center inclui um recurso de alerta de email. Você também pode usar o Gerenciador de Recursos do Servidor de Arquivo, o Agendador de Tarefas ou o script PowerShell para configurar alertas. Os links a seguir especificam informações úteis para configurar notificações sobre espaço em disco insuficiente:  
   
--   [O que há de novo no Gerenciador de recursos de servidor de arquivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [O que há de novo no Gerenciador de recursos de servidor de arquivos](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para o Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para o Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Definindo alertas de espaço em disco insuficiente no Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Definindo alertas de espaço em disco insuficiente no Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Como limitar a quantidade de espaço em disco usada para armazenar arquivos em cache  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069628"
   
 3.  Em Uso de Disco, defina um valor (em gigabytes) para **Total de espaço em disco** para definir um limite superior na quantidade de espaço usado para fins de cache. O padrão é 0, que permite ao Analysis Services usar todo o espaço disponível em disco.  
   
-4.  Em Uso de Disco, na configuração **Excluir bancos de dados armazenados em cache nas últimas ‘n’ horas** , especifique os critérios usados por último para esvaziar o cache quando o espaço em disco atingir o limite máximo.  
+4.  Uso do disco, nos **excluir armazenados em cache bancos de dados nas últimas ' n'horas** configuração, especifique os critérios usados por último para esvaziar o cache quando o espaço em disco está no limite máximo.  
   
      O padrão são 4 horas, o que significa que todos os bancos de dados que ficaram inativos por 4 horas ou mais serão excluídos do sistema de arquivos. Bancos de dados que estão inativos, mas que permanecem em memória, são descarregados e depois excluídos do sistema de arquivos.  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788478"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e as restrições nos valores dessas propriedades.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Assinaturas anônimas são permitidas.|  
 ||**false**|Assinaturas anônimas não são permitidas.|  
@@ -83,7 +82,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**Assinante**|Registros de conflito são armazenados no Assinante que causou o conflito. Não há suportada para [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes *.*|  
 ||**ambos**|Registros de conflito são armazenados no Publicador e no Assinante.|  
 |**conflict_retention**||Uma **int** que especifica o período de retenção em dias, para o qual os conflitos são retidos. Definindo *conflict_retention* à **0** significa que nenhuma limpeza de conflito é necessária.|  
-|**Descrição**||Descrição da publicação.|  
+|**description**||Descrição da publicação.|  
 |**dynamic_filters**|**true**|Publicação é filtrada com base em uma cláusula dinâmica.|  
 ||**false**|A publicação não é filtrada dinamicamente.|  
 |**enabled_for_internet**|**true**|A publicação está habilitada para a Internet. O FTP (Protocolo de Transferência de Arquivo) pode ser usado para transferir os arquivos de instantâneo para um Assinante. Os arquivos de sincronização para a publicação são colocados no diretório C:\Arquivos de Programas\Microsoft SQL Server\MSSQL\Repldata\ftp.|  
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Remove as informações de publicação do Active Directory.|  
 |**replicate_ddl**|**1**|Instruções DDL (Linguagem de Definição de Dados) executadas no Publicador são replicadas.|  
 ||**0**|Instruções DDL não são replicadas.|  
-|**retention**||Esse é um **int** que representa o número de *retention_period_unit* unidades para o qual salvar as alterações para a publicação determinada. Se a assinatura não estiver sincronizada dentro do período de retenção e as alterações pendentes que por ventura tenha recebido tiverem sido removidas por uma operação de limpeza no Distribuidor, a assinatura irá expirar e deverá ser reiniciada. O período máximo de retenção permitido é o número de dias entre 31 de dezembro de 9999 e a data atual.<br /><br /> Observação: O período de retenção para publicações de mesclagem tem um período de cortesia de 24 horas por dia para acomodar assinantes em fusos horários diferentes.|  
+|**retention**||Esse é um **int** que representa o número de *retention_period_unit* unidades para o qual salvar as alterações para a publicação determinada. Se a assinatura não estiver sincronizada dentro do período de retenção e as alterações pendentes que por ventura tenha recebido tiverem sido removidas por uma operação de limpeza no Distribuidor, a assinatura irá expirar e deverá ser reiniciada. O período máximo de retenção permitido é o número de dias entre 31 de dezembro de 9999 e a data atual.<br /><br /> Observação: O período de retenção para publicações de mesclagem tem um período de tolerância de 24 horas para acomodar Assinantes em fusos horários diferentes.|  
 |**retention_period_unit**|**day**|O período de retenção é especificado em dias.|  
 ||**week**|O período de retenção é especificado em semanas.|  
 ||**month**|O período de retenção é especificado em meses.|  
@@ -119,13 +118,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inativo**|Publicação com status inativo.|  
 |**sync_mode**|**nativo** ou<br /><br /> **BCP nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
 ||**character**<br /><br /> ou **bcp de caractere**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Observação: depois de usar partition_groups, se quiser reverter usando **setupbelongs**e defina **use_partition_groups = false** na **changemergearticle**, isso pode não ser reflitam corretamente depois que um instantâneo é tirado. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como Inactive, modificar a **use_partition_groups**e, em seguida, defina o status como Active Directory.|**true**|A publicação usa partições pré-computadas.|  
+|**use_partition_groups**<br /><br /> Observação: Depois de usar partition_groups, se quiser reverter usando **setupbelongs**e defina **use_partition_groups = false** na **changemergearticle**, isso pode não ser corretamente refletida após um instantâneo é tirado. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como Inactive, modificar a **use_partition_groups**e, em seguida, defina o status como Active Directory.|**true**|A publicação usa partições pré-computadas.|  
 ||**false**|A publicação não usa partições pré-computadas.|  
 |**validate_subscriber_info**||Lista as funções que estão sendo usadas para recuperar informações do Assinante. Depois, valida o critério de filtro dinâmico que está sendo usado pelo Assinante para verificar se as informações serão particionadas consistentemente.|  
 |**web_synchronization_url**||Valor padrão do URL da Internet usado para sincronização da Web.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para *propriedade*.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que alterações na publicação não invalidam o instantâneo. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  

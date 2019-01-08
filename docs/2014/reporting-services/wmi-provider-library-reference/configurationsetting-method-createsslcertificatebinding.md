@@ -13,12 +13,12 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93914da7f225fca03a5a078d1dd1d5b2c7890546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514374"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Método CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
   Cria uma associação de Certificado SSL.  
@@ -74,7 +74,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  O valor IPAddress especificado não corresponde a um IPAddress deste computador.  
   
-3.  O IPAddress especificado é um IPAddress DHCP (muda periodicamente) – no lugar dele, use o endereço IP Curinga (0.0.0.0).  
+3.  O IPAddress especificado é um IPAddress DHCP (muda periodicamente) – no lugar dele, use o endereço IP curinga (0.0.0.0).  
   
 4.  O IPAddress especificado não corresponde ao endereço IP de uma reserva de URL, tampouco existe uma reserva de URL com nome de host ou curinga.  
   
@@ -84,6 +84,6 @@ public void CreateSSLCertificateBinding(string application,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

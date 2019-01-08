@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518983"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
   Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar a dimensão de um banco de dados existente em um projeto ou banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você pode usar o Designer de Dimensão para fazer o seguinte:  
@@ -41,9 +41,9 @@ ms.locfileid: "48177816"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|Description|  
+|Tab|Descrição|  
 |---------|-----------------|  
-|**Estrutura da Dimensão**|Use essa guia para trabalhar com a estrutura de uma dimensão – para examinar ou criar o esquema de exibição da fonte de dados de uma dimensão, para trabalhar com atributos, e para organizar atributos em hierarquias definidas pelo usuário.|  
+|**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão para examinar ou criar o esquema de exibição de fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
 |**Relações de atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  
 |**Traduções**|Use essa guia para adicionar e editar conversões de metadados de dimensão em linguagens diferentes.|  
 |**Navegador**|Use essa guia para examinar os membros de uma dimensão processada e para revisar as conversões de metadados de dimensão.|  

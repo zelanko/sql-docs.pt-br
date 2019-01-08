@@ -11,12 +11,12 @@ ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36eb4d030933594900d4f73c180fd92cc0323d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 533514facc1b34d9a8fa03a71d983ed2f01d2137
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532400"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Pesquisando relatórios e outros itens (Construtor de Relatórios e SSRS)
   Você pode usar o Gerenciador de Relatórios para pesquisar um servidor de relatório à procura de itens específicos por nome ou descrição. Você pode procurar por relatórios publicados, modelos de relatório, pastas, fontes de dados compartilhadas e recursos. Você não pode procurar por agendas, proprietários, atribuições de função, instantâneos específicos no histórico de relatório ou assinaturas. A pesquisa é executada no banco de dados do servidor de relatórios no qual os itens estão armazenados.  
@@ -26,7 +26,7 @@ ms.locfileid: "48145766"
   
 -   Para procurar por itens no Gerenciador de Relatórios, digite uma cadeia de caracteres de pesquisa na caixa de texto **Pesquisar** na parte superior da página. As pesquisas começam no nó superior na hierarquia da pasta e continua até cada ramificação. Se você não tiver permissão para acessar uma ramificação específica, essa ramificação será ignorada. Isso se aplica às pastas Meus Relatórios que pertencem a outros usuários e a outras pastas que geralmente não estão disponíveis. Somente os relatórios e itens para os quais você tem permissão para exibir são incluídos nos resultados da pesquisa.  
   
--   Para procurar por um item por nome ou descrição, especifique toda ou parte do texto que deseja coincidir. A cadeia de caracteres de pesquisa não faz distinção entre maiúsculas e minúsculas. Você não pode usar os operadores de pesquisa como símbolos de mais (+) ou menos (-) para exigir ou excluir critérios de pesquisa.  
+-   Para procurar por um item por nome ou descrição, especifique toda ou parte do texto que deseja coincidir. A cadeia de caracteres de pesquisa não faz distinção entre maiúsculas e minúsculas. Você não pode usar os operadores de pesquisa, como símbolos de mais (+) ou menos (-), para exigir ou excluir critérios de pesquisa.  
   
 -   Para procurar um texto específico em um relatório, use a barra de ferramentas na parte superior do relatório.  
   

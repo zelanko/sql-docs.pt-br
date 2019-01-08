@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519247"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     –ou–  
+     -ou-  
   
      Selecione o modelo. Em seguida, no menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Para adicionar um filtro na tabela aninhada em um modelo de mineração  
   
-1.  No  **\<nome > filtro de modelo** caixa de diálogo, clique em uma linha vazia na grade, em **coluna da estrutura de mineração**.  
+1.  No  **\<nome > filtro de modelos** caixa de diálogo, clique em uma linha vazia na grade, em **coluna da estrutura de mineração**.  
   
 2.  Selecione o nome da tabela aninhada na lista suspensa.  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Essas são as únicas condições disponíveis para a tabela aninhada na caixa de diálogo **Filtro de Modelos** , pois você está restringindo a tabela de casos a apenas aqueles que têm um determinado valor na tabela aninhada. Você definirá o valor da condição na tabela aninhada na próxima etapa.  
   
-4.  Clique na caixa **Valor** e no botão **(…)** para compilar uma expressão.  
+4.  Clique o **valor** caixa e, em seguida, clique no **(...)**  botão para criar uma expressão.  
   
      O  **\<nome > filtro** caixa de diálogo é aberta. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

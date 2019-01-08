@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cd116bbb0305f56302f679881ef0a2a795739eb3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 277f2b8195aa4238a490d37faaf81abdafc0008c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641393"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538735"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Definir senha de administrador para fazer logon em nós nos serviços de diretório do AD restaurar o modo (DSRM) - Analytics Platform System
 Directory Services Restore DSRM (modo) é um modo de inicialização para reparo ou recuperação de serviços de domínio Active Directory (AD DS). Ele é usado para fazer logon para os nós de dispositivo AD depois que o AD DS falhou ou quando o AD DS precisa ser restaurado. A senha do DSRM foi inicializada durante a configuração de dispositivo no site do fornecedor de hardware e deve ser alterada pelo administrador do dispositivo. O Analytics Platform System tem dois AD DS (controladores de domínio);  **_appliance_domain_-AD01** e  **_appliance_domain_-AD02**. Para cada nó de dispositivo do AD, altere a senha do DSRM usando as etapas a seguir.  
   
 ## <a name="HowToDSRM"></a>Para redefinir a senha de administrador  
   
-1.  Abra uma janela de Prompt de comando em um nó de dispositivo do AD ***appliance_domain *– AD*xx***máquina virtual.  
+1.  Abra uma janela de Prompt de comando em um nó de dispositivo do AD ***appliance_domain *-AD*xx***máquina virtual.  
   
 2.  No prompt de comando, digite `ntdsutil`.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,45 +14,45 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795179"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Classe de evento Audit Broker Conversation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Broker Conversation** para relatar mensagens de auditoria relacionadas à segurança de diálogo do Service Broker.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Conversation  
   
-|Coluna de dados|Tipo|Description|Número da coluna|Filtrável|  
+|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
-|**BigintData1**|**bigint**|O número de sequência da mensagem.|52|não|  
+|**BigintData1**|**bigint**|O número de sequência da mensagem.|52|Não|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
-|**Erro**|**int**|O número de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|31|não|  
-|**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **158** para **Audit Broker Conversation**.|27|não|  
+|**Erro**|**int**|O número de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|31|Não|  
+|**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **158** para **Audit Broker Conversation**.|27|Não|  
 |**EventSubClass**|**int**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. A tabela a seguir lista os valores de subclasse de evento para esse evento.|21|Sim|  
-|**FileName**|**nvarchar**|A razão para a falha no logon. Se o logon teve êxito, esta coluna estará vazia.|36|não|  
-|**GUID**|**uniqueidentifier**|A ID de conversa da caixa de diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|não|  
+|**FileName**|**nvarchar**|A razão para a falha no logon. Se o logon teve êxito, esta coluna estará vazia.|36|Não|  
+|**GUID**|**uniqueidentifier**|A ID de conversa da caixa de diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
 |**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função **HOST_NAME** .|8|Sim|  
-|**IntegerData**|**int**|O número de fragmento da mensagem.|25|não|  
+|**IntegerData**|**int**|O número de fragmento da mensagem.|25|Não|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  
-|**ObjectId**|**int**|A ID de usuário do serviço de destino.|22|não|  
-|**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|não|  
-|**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
-|**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|não|  
+|**ObjectId**|**int**|A ID de usuário do serviço de destino.|22|Não|  
+|**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|Não|  
+|**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|não|  
+|**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
 |**TextData**|**ntext**|Para erros, contém uma mensagem que descreve a razão da falha. Um dos valores seguintes:<br /><br /> **Certificado não encontrado**. O usuário especificado para segurança de protocolo do diálogo não tem certificado.<br /><br /> **Não está em um período de tempo válido**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado expirou.<br /><br /> **O certificado é muito grande para a alocação de memória**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado é muito grande. O tamanho máximo de certificado a que Service Broker oferece suporte são 32.768 bytes.<br /><br /> **Chave privada não encontrada**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas não existe chave privada associada ao certificado.<br /><br /> **Tamanho da chave privada do certificado incompatível com o provedor de criptografia**. A chave privada para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave privada deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave pública do certificado incompatível com o provedor de criptografia**. A chave pública para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave pública deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave privada do certificado incompatível com a chave de troca de chaves criptografada**. O tamanho de chave especificado na chave de troca de chave não corresponde ao tamanho da chave privada para o certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.<br /><br /> **Tamanho da chave pública do certificado incompatível com a assinatura do cabeçalho de segurança**. O cabeçalho de segurança contém uma assinatura que não pode ser validada com a chave pública do certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.|1|Sim|  
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|Description|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|No Security Header|Durante uma conversa segura, o Service Broker recebeu uma mensagem que não contém uma chave de sessão. Quando uma conversa segura é estabelecida, o protocolo de diálogo requer que todas as mensagens na conversa contenham uma chave de sessão.|  
 |2|No Certificate|O Service Broker não pôde localizar um certificado utilizável para um dos participantes na conversa. Para proteger a conversa, o banco de dados deve conter um certificado para o remetente e o destinatário da conversa.|  

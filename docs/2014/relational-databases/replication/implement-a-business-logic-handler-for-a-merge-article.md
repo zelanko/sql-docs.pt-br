@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816888"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
   Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a programação de replicação o RMO (Replication Management Objects).  
@@ -59,7 +58,7 @@ ms.locfileid: "48224656"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Local padrão|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -132,7 +131,7 @@ ms.locfileid: "48224656"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Local padrão|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -183,7 +182,7 @@ ms.locfileid: "48224656"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - um nome amigável que você usa ao acessar o manipulador de lógica de negócios.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -um valor de `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - um valor de `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Para implantar um manipulador de lógica de negócios  
   
@@ -215,7 +214,7 @@ ms.locfileid: "48224656"
   
 4.  Defina a conexão da etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades do artigo na etapa 3 foram definidas incorretamente ou o artigo não existe. Para obter mais informações, consulte [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de artigo na etapa 3 foram definidas incorretamente ou o artigo não existe. Para obter mais informações, consulte [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Defina o nome amigável do manipulador de lógica de negócios para <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Esse é o valor da propriedade <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> especificada ao registrar o manipulador de lógica de negócios.  
   

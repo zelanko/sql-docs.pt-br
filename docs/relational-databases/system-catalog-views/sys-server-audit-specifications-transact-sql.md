@@ -20,25 +20,25 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510004"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém informações sobre as especificações de auditoria do servidor em uma auditoria do SQL Server de uma instância de servidor. Para obter mais informações sobre o SQL Server Audit, consulte [SQL Server Audit &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da especificação de servidor.|  
 |**server_specification_id**|**Int**|ID do **server_specification**.|  
 |**create_date**|**Datetime**|Data de criação da especificação de servidor de auditoria.|  
 |**modified_date**|**Datetime**|Data da última alteração feita na especificação de auditoria de servidor.|  
-|**is_state_enabled**|**tinyint**|Estado da especificação de auditoria:<br /><br /> 0 – DESABILITADA<br /><br /> 1 – HABILITADA|  
+|**is_state_enabled**|**tinyint**|Estado da especificação de auditoria:<br /><br /> 0 - DESABILITADO<br /><br /> 1 - HABILITADO|  
 |**audit_GUID**|**uniqueidentifier**|GUID da auditoria que contém essa especificação. Usada durante a enumeração das especificações de auditoria do servidor membro durante inicialização do servidor.|  
   
 ## <a name="permissions"></a>Permissões  

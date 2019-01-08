@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
@@ -13,12 +12,12 @@ ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31421597871bfef0c02a15ce83bf486ea9cc6646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c334b90f412ee0835ef574fa3c9bac1c4e35ea46
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770068"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -36,7 +35,7 @@ ms.locfileid: "48048416"
 ## <a name="explanation"></a>Explicação  
  Este é um erro geral que pode ocorrer independentemente do uso de replicação. Para um servidor em uma topologia de replicação, geralmente o erro ocorre porque a conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é alterada usando o Gerenciador de Controle de Serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows em vez do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Ao tentar executar um trabalho de agente após alterar a conta de serviço, pode ocorrer falha no trabalho com uma mensagem de erro semelhante à seguinte:  
   
- "Executado como usuário: \<Conta_de_usuário >. Subsistema de instantâneos de replicação de replicação: agente \<AgentName > falhou. Executado como usuário: \<Conta_de_usuário >. O cliente não possui o privilégio exigido. A etapa falhou. `[SQLSTATE 42000] (Error 14151)`. A etapa falhou."  
+ "Executado como usuário: \<A conta do usuário >. Subsistema de instantâneos de replicação de replicação: agente \<AgentName > falhou. Executado como usuário: \<A conta do usuário >. O cliente não possui o privilégio exigido. A etapa falhou. `[SQLSTATE 42000] (Error 14151)`. A etapa falhou."  
   
  Esse problema ocorre porque o Gerenciador de Controle de Serviços do Windows não é capaz de conceder as permissões solicitadas para a nova conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

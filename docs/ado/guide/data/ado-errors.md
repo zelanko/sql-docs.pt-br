@@ -13,12 +13,12 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509107"
 ---
 # <a name="ado-run-time-errors"></a>Erros de tempo de execução do ADO
 Erros ADO são relatados para o seu programa como erros de tempo de execução. Você pode usar o mecanismo de interceptação de erro de sua linguagem de programação para interceptar e tratá-los. Por exemplo, no Visual Basic, use o **On Error** instrução. No Visual C++, ele depende do método que você está usando para acessar as bibliotecas ADO. Com #import, usar um **try-catch** bloco. Caso contrário, os programadores de C++ precisará recuperar explicitamente o objeto de erro chamando **GetErrorInfo**. O seguinte procedimento de sub-rotina do Visual Basic demonstra como interceptar um erro ADO:
@@ -87,7 +87,7 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- A mensagem de erro inclui cada parte das informações fornecidas pelo Visual Basic **Err** do objeto, exceto para o **LastDLLError** valor, que não se aplica aqui. O número de erro informa o erro ocorrido. A descrição é útil em casos em que você não deseja tratar o erro por conta própria. Você pode simplesmente passá-lo ao longo para o usuário. Embora normalmente você desejará usar mensagens personalizadas para seu aplicativo, você não pode prever cada erro; a descrição fornece alguma dica em relação o que deu errado. No código de exemplo, o erro foi relatado o **Conexão** objeto. Você verá o tipo do objeto ou o ID programática aqui — não um nome de variável.
+ A mensagem de erro inclui cada parte das informações fornecidas pelo Visual Basic **Err** do objeto, exceto para o **LastDLLError** valor, que não se aplica aqui. O número de erro informa o erro ocorrido. A descrição é útil em casos em que você não deseja tratar o erro por conta própria. Você pode simplesmente passá-lo ao longo para o usuário. Embora normalmente você desejará usar mensagens personalizadas para seu aplicativo, você não pode prever cada erro; a descrição fornece alguma dica em relação o que deu errado. No código de exemplo, o erro foi relatado o **Conexão** objeto. Você verá o objeto tipo ou identificação programática aqui – não um nome de variável.
 
 > [!NOTE]
 >  O Visual Basic **Err** objeto contém apenas informações sobre o erro mais recente. O ADO **erros** coleção da **Conexão** objeto contém um **erro** objeto para cada erro gerado pela operação mais recente do ADO. Use o **erros** coleção em vez de **Err** objeto para lidar com vários erros. Para obter mais informações sobre o **erros** coleção, consulte [erros do provedor](../../../ado/guide/data/provider-errors.md). No entanto, se não houver não válido **Conexão** objeto, o **Err** objeto é a única fonte para obter informações sobre erros ADO.

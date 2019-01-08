@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd8b82c7cb8e33e525a6b82730a138fb42759a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77394dc55b6f8146e9c98ffd55a21bfb41785ec9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756448"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
   Quando for necessário executar muitos pacotes, será conveniente usar outros servidores que estejam disponíveis. Este método de usar outros servidores para executar pacotes quando os pacotes estão sob o controle de um pacote pai é chamado balanceamento de carga. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o balanceamento de carga é um procedimento manual que deve ser projetado pelos proprietários dos pacotes. Balanceamento de carga não é executado automaticamente pelos servidores. Além disso, os pacotes que estão em execução nos servidores remotos devem ser pacotes completos, não tarefas individuais em outros pacotes.  
@@ -55,7 +54,7 @@ ms.locfileid: "48187526"
   
  A tabela a seguir fornece links a tópicos que o guiam pelo processo.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Implementação de pacotes filho](../implementation-of-child-packages.md)|Descreve a instalação de pacotes e a criação de trabalhos do SQL Server Agent para execução dos pacotes.|  
 |[Implementação do pacote pai](../implementation-of-the-parent-package.md)|Descreve a criação do pacote pai que contém muitas tarefas de Executar Trabalho do SQL Server Agent. Cada tarefa executa um dos pacotes filhos.|  

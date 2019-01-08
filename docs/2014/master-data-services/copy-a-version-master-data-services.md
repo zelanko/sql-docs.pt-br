@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], copying
@@ -14,12 +13,12 @@ ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8b505f6eb819c0375e2fa50a12c8d6e4b707b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a42204b6cc095a5a285e5e68aa1aaf7a905668e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131736"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765378"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copie uma versão do modelo para criar uma nova versão dele.  
@@ -29,7 +28,7 @@ ms.locfileid: "48131736"
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-copy-a-version"></a>Para copiar uma versão  
   
@@ -46,9 +45,9 @@ ms.locfileid: "48131736"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Alterar um nome de versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+-   [Alterar o nome de uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

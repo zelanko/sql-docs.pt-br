@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761848"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarefa Transferir Procedimentos Armazenados Mestres
   A tarefa Transferir Procedimentos Armazenados Mestres transfere um ou mais procedimentos armazenados definidos pelo usuário entre bancos de dados **mestre** em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir um procedimento armazenado do banco de dados **mestre** , o proprietário do procedimento deve ser dbo.  
@@ -46,7 +45,7 @@ ms.locfileid: "48150226"
  A tarefa Transferir Procedimentos Armazenados Mestres não informa o progresso incremental da transferência de logon; ela apenas informa 0% e 100% de conclusão.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido no `ExecutionValue` propriedade da tarefa, retorna o número de procedimentos armazenados transferidos. Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir procedimentos armazenados mestres, informações sobre a transferência de procedimento armazenado pode se tornar disponível a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ O valor de execução definido na propriedade da tarefa `ExecutionValue` retorna o número de procedimentos armazenados transferidos. Atribuindo uma variável definida pelo usuário à `ExecValueVariable` propriedade da tarefa Transferir Procedimentos Armazenados Mestres, as informações sobre a transferência de procedimentos armazenados podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Procedimentos Armazenados Mestres inclui as seguintes entradas de log personalizadas:  
@@ -55,7 +54,7 @@ ms.locfileid: "48150226"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects Essa entrada de log informa que a transferência foi concluída. A entrada do log contém a hora de término.  
   
- Além disso, uma entrada de log para o `OnInformation` evento informa o número de procedimentos armazenados que foram transferidos e uma entrada de log para o `OnWarning` evento foi criado para cada procedimento armazenado no destino que é substituído.  
+ Além disso, uma entrada de log para o evento `OnInformation` informa o número de procedimentos armazenados que foram transferidos e uma entrada de log para o evento `OnWarning` é gravada para cada procedimento armazenado no destino que é substituído.  
   
 ## <a name="security-and-permissions"></a>Segurança e permissões  
  O usuário deve ter permissão para exibir a lista do procedimento armazenado no banco de dados **mestre** na origem e deve ser um membro da função de servidor sysadmin ou ter permissão para procedimentos armazenados criados no banco de dados **mestre** no servidor de destino.  
@@ -65,9 +64,9 @@ ms.locfileid: "48150226"
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da tarefa procedimentos armazenados mestres de transferência &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa procedimentos armazenados mestres de transferência &#40;página de procedimentos armazenado&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48150226"
 -   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Transferir tarefa de objetos do SQL Server](transfer-sql-server-objects-task.md)   
+ [Tarefa Transferir Objetos do SQL Server](transfer-sql-server-objects-task.md)   
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

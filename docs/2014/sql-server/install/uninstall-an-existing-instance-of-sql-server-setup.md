@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -17,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9961b074839559bca04d1860084d46fd94ce1b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363818"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
   Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste tópico, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -99,7 +98,7 @@ ms.locfileid: "48085906"
   
 1.  Se o processo de desinstalação não for concluído com êxito, tente corrigir o problema que causou a falha na desinstalação. Os seguintes artigos podem ajudá-lo a compreender a causa da falha na desinstalação:  
   
-    -   [Como identificar problemas de instalação do SQL Server 2008 nos arquivos de log de instalação](http://support.microsoft.com/kb/955396/en-us)  
+    -   [Como identificar problemas de instalação do SQL Server 2008 nos arquivos de log de instalação](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

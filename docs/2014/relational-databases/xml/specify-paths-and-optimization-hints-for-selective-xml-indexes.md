@@ -10,12 +10,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73cfcc602ee7a7ef273da39126dbd4da596b6594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533996"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
   Este tópico descreve como especificar caminhos de nós a serem indexados e dicas de otimização de indexação ao criar ou alterar índices XML seletivos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48133516"
  Para obter mais informações sobre índices XML seletivos, veja [Índices XML Seletivos &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Noções básicas sobre tipos XQuery e tipos do SQL Server em XML não tipado  
- Os índices XML seletivos dão suporte a dois sistemas de tipos: tipos XQuery e tipos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O caminho indexado pode ser usado para corresponder a uma expressão XQuery ou para corresponder ao tipo de retorno do método value() do tipo de dados XML.  
+ Os índices XML seletivos dão suporte a dois sistemas de tipos: Tipos XQuery e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos. O caminho indexado pode ser usado para corresponder a uma expressão XQuery ou para corresponder ao tipo de retorno do método value() do tipo de dados XML.  
   
 -   Quando um caminho a ser indexado não é anotado, ou é anotado com a palavra-chave XQUERY, o caminho corresponde a uma expressão XQuery. Há duas variações para caminhos de nós anotados de XQUERY:  
   
@@ -72,7 +72,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- O modo de mapeamento especificado pelo usuário permite especificar um tipo e uma cardinalidade para que o nó obtenha melhor desempenho. Entretanto, esse desempenho aprimorado é obtido desistindo-se da segurança (pois uma conversão pode falhar) porque apenas o tipo especificado corresponde ao índice XML seletivo.  
+ O modo de mapeamento especificado pelo usuário permite especificar um tipo e uma cardinalidade para que o nó obtenha melhor desempenho. Entretanto, essa melhoria de desempenho é obtida abrindo mão da segurança, porque uma conversão pode falhar, bem como da generalidade, porque apenas o tipo especificado corresponde ao índice XML seletivo.  
   
  Os tipos XQuery com suporte para ocorrências XML não tipadas são:  
   
@@ -101,8 +101,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos correspondem ao valor retornado do método value().  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos dão suporte a esta dica de otimização: SINGLETON.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos dão suporte a esta dica de otimização: SINGLETON.  
   
  É obrigatório especificar um tipo para caminhos que retornam tipos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use o mesmo tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você usaria no método value().  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>Escolhendo os nós a serem indexados  
  É possível usar os dois princípios simples a seguir para identificar o subconjunto correto de nós a ser adicionado a um índice XML seletivo.  
   
-1.  **Princípio 1**: para avaliar determinada expressão XQuery, indexe todos os nós que você precisa examinar.  
+1.  **Princípio 1**: Para avaliar determinada expressão XQuery, indexe todos os nós que você precisa examinar.  
   
     -   Indexe todos os nós cuja existência ou valor é usado na expressão XQuery.  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Nó `b`, porque um predicado é aplicado ao nó`b` na expressão XQuery.  
   
-2.  **Princípio 2**: para obter o melhor desempenho, indexe todos os nós necessários para avaliar determinada expressão XQuery. Se você indexar apenas alguns dos nós, o índice XML seletivo melhorará somente a avaliação de subexpressões que incluam nós indexados.  
+2.  **Princípio 2**: Para obter melhor desempenho, indexe todos os nós que são necessários para avaliar determinada expressão XQuery. Se você indexar apenas alguns dos nós, o índice XML seletivo melhorará somente a avaliação de subexpressões que incluam nós indexados.  
   
  Para melhorar o desempenho da instrução SELECT mostrada acima, é possível criar o seguinte índice XML seletivo:  
   
@@ -351,15 +351,15 @@ WHERE T.xmldata.exist('
   
  O uso de dicas de otimização é opcional. Sempre é possível aceitar os mapeamentos padrão, que são confiáveis, mas que podem não proporcionar um desempenho e um armazenamento ideais.  
   
- Algumas dicas de otimização, por exemplo, a dica SINGLETON, apresentam restrições aos seus dados. Em alguns casos, erros podem ser gerados quando essas restrições não são atendidas.  
+ Algumas dicas de otimização, como a dica SINGLETON, apresentam restrições aos dados. Em alguns casos, erros podem ser gerados quando essas restrições não são atendidas.  
   
 ### <a name="benefits-of-optimization-hints"></a>Benefícios de dicas de otimização  
  A tabela a seguir identifica as dicas de otimização que dão suporte a um armazenamento mais eficiente ou a um melhor desempenho.  
   
 |Dica de otimização|Armazenamento mais eficiente|Melhor desempenho|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Sim|não|  
-|**SINGLETON**|não|Sim|  
+|**node()**|Sim|Não|  
+|**SINGLETON**|Não|Sim|  
 |**DATA TYPE**|Sim|Sim|  
 |**MAXLENGTH**|Sim|Sim|  
   
@@ -368,17 +368,17 @@ WHERE T.xmldata.exist('
   
 |Dica de otimização|Tipos de dados XQuery|Tipos de dados SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Sim|não|  
+|**node()**|Sim|Não|  
 |**SINGLETON**|Sim|Sim|  
-|**DATA TYPE**|Sim|não|  
-|**MAXLENGTH**|Sim|não|  
+|**DATA TYPE**|Sim|Não|  
+|**MAXLENGTH**|Sim|Não|  
   
 ### <a name="node-optimization-hint"></a>Dica de otimização node()  
- Aplica-se a: tipos de dados XQuery  
+ Aplica-se a: Tipos de dados XQuery  
   
  Você pode usar a otimização node() para especificar um nó cujo valor não seja obrigatório para avaliar a consulta típica. Essa dica reduz os requisitos de armazenamento quando a consulta típica só precisa avaliar a existência do nó. (Por padrão, um índice XML seletivo armazena o valor de todos os nós promovidos, exceto de tipos de nós complexos.)  
   
- Considere o seguinte exemplo:  
+ Considere o exemplo a seguir:  
   
 ```tsql  
 SELECT T.record FROM myXMLTable T  
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Se uma consulta exigir o valor de um nó que tenha sido indexado com a dica node(), o índice XML seletivo não poderá ser usado.  
   
 ### <a name="singleton-optimization-hint"></a>Dica de otimização SINGLETON  
- Aplica-se a: tipos de dados XQuery ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Aplica-se a: XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados  
   
  A dica de otimização SINGLETON especifica a cardinalidade de um nó. Essa dica melhora o desempenho da consulta, pois sabe-se antecipadamente que um nó é exibido no máximo uma vez em seu pai ou ancestral.  
   
@@ -403,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Se a dica SINGLETON for especificada, mas um nó aparecer mais de uma vez em seu pai ou ancestral, um erro será gerado quando o índice for criado (de dados existentes) ou quando uma consulta for executada (de novos dados).  
   
 ### <a name="data-type-optimization-hint"></a>Dica de otimização DATA TYPE  
- Aplica-se a: tipos de dados XQuery  
+ Aplica-se a: Tipos de dados XQuery  
   
  A dica de otimização CREATE DATABASE permite especificar um tipo de dados XQuery ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o nó indexado. O tipo de dados é usado para a coluna na tabela de dados do índice XML seletivo que corresponde ao nó indexado.  
   
  Quando a conversão de um valor existente no tipo de dados especificado falha, a operação de inserção (no índice) não falha; entretanto, um valor nulo é inserido na tabela de dados do índice.  
   
 ### <a name="maxlength-optimization-hint"></a>Dica de otimização MAXLENGTH  
- Aplica-se a: tipos de dados XQuery  
+ Aplica-se a: Tipos de dados XQuery  
   
  A dica de otimização MAXLENGTH permite limitar o comprimento dos dados xs:string. MAXLENGTH não é relevante para tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , desde que você especifique o comprimento quando especificar os tipos de dados VARCHAR ou NVARCHAR.  
   

@@ -18,22 +18,22 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 30ae865060ff3d667de8f18c6d73f4b7087f0780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707694"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204925"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera o proprietário de um objeto no banco de dados atual.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Esse procedimento armazenado só funciona com os objetos disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) em vez disso. **sp_changeobjectowner** altera o esquema e o proprietário. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse procedimento armazenado irá alterar proprietários de objetos somente quando o proprietário atual e o novo possuírem esquemas que tenham o mesmo nome que seus nomes de usuário do banco de dados.  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  Um novo requisito de permissão foi adicionado a esse procedimento armazenado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

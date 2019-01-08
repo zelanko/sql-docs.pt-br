@@ -10,12 +10,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529948"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Monitorar o Backup Gerenciado do SQL Server para Windows Azure
   O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem medidas internas para identificar problemas e erros durante processos de backup e adotar uma ação corretiva quando possível.  No entanto, há determinadas situações onde a intervenção do usuário é necessária. Este tópico descreve as ferramentas que você pode usar para determinar o estado de integridade geral dos backups e identifica todos os erros que precisam ser resolvidos.  
@@ -125,15 +125,15 @@ Essas contagens agregadas podem ser usadas para monitorar a integridade do siste
   
  **Arquitetura de notificação:**  
   
--   **Gerenciamento de baseado em políticas:** duas políticas são definidas para monitorar a integridade do backup: **política de integridade de sistema do Smart Admin**e o **política de integridade ação do Smart Admin usuário**. A Política de Integridade do Sistema do Smart Admin avalia os erros críticos, como a falta de Credenciais do SQL ou credenciais desse tipo inválidas e os erros de conectividade e relata a integridade do sistema. Esses normalmente requerem uma ação manual para corrigir o problema subjacente. A Política de Integridade de Ação do Usuário do Smart Admin avalia os avisos, como backups corrompidos e itens semelhantes.  Talvez eles não exijam nenhuma ação, mas apenas um aviso de um evento. Espera-se que esses problemas sejam resolvidos automaticamente pelo agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+-   **Gerenciamento baseado em políticas:** Duas políticas são definidas para monitorar a integridade do backup: **Inteligente de diretiva de integridade do sistema de administração**e o **inteligente de política de integridade de ação do usuário de administrador**. A Política de Integridade do Sistema do Smart Admin avalia os erros críticos, como a falta de Credenciais do SQL ou credenciais desse tipo inválidas e os erros de conectividade e relata a integridade do sistema. Esses normalmente requerem uma ação manual para corrigir o problema subjacente. A Política de Integridade de Ação do Usuário do Smart Admin avalia os avisos, como backups corrompidos e itens semelhantes.  Talvez eles não exijam nenhuma ação, mas apenas um aviso de um evento. Espera-se que esses problemas sejam resolvidos automaticamente pelo agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
--   **SQL Server Agent** trabalho: A notificação é executada usando um trabalho do SQL Server Agent que tem três etapas de trabalho. Na primeira etapa do trabalho, ele detecta se o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para um banco de dados ou instância. Se ele encontrar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitado e configurado, executará a segunda etapa: um cmdlet do PowerShell que avalia o status de integridade examinando as políticas de gerenciamento baseado em políticas do SQL Server. Se ele encontrar um erro ou aviso, ocorrerá uma falha, que disparará a terceira etapa, que é enviar uma notificação por email com o relatório de erro/aviso.  No entanto, esse trabalho do SQL Server Agent não está habilitado por padrão. Para habilitar o trabalho de notificação de email, use o **smart_admin.sp_set_backup_parameter** procedimento armazenado do sistema.  O procedimento a seguir descreve as etapas com mais detalhes:  
+-   **SQL Server Agent** trabalho: A notificação é executada usando um trabalho do SQL Server Agent que tem três etapas de trabalho. Na primeira etapa do trabalho, ele detecta se o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para um banco de dados ou instância. Se ele encontrar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitado e configurado, executará a segunda etapa: um cmdlet do PowerShell que avalia o status de integridade examinando as políticas de gerenciamento baseado em políticas do SQL Server. Se ele encontrar um erro ou aviso, falha que em seguida, ele disparará a terceira etapa: A terceira etapa envia uma notificação por email com o relatório de erro/aviso.  No entanto, esse trabalho do SQL Server Agent não está habilitado por padrão. Para habilitar o trabalho de notificação de email, use o **smart_admin.sp_set_backup_parameter** procedimento armazenado do sistema.  O procedimento a seguir descreve as etapas com mais detalhes:  
   
 ##### <a name="enabling-email-notification"></a>Habilitando a notificação por email  
   
 1.  Se o Database Mail ainda não estiver configurado, use as etapas descritas em [configurar o Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Conjunto de banco de dados como o sistema de email para o sistema de alerta do SQL Server: clique com botão direito **SQL Server Agent**, selecione **sistema de alerta**, verifique o **habilitar perfil de email** caixa, selecione  **Database Mail** como o **sistema de email**e selecione um perfil de email criado anteriormente.  
+2.  Definir banco de dados como o sistema de email para o sistema de alerta do SQL Server: Clique com botão direito **SQL Server Agent**, selecione **sistema de alerta**, verifique o **habilitar perfil de email** caixa, selecione **Database Mail** como o  **Sistema de email**e selecione um perfil de email criado anteriormente.  
   
 3.  Execute a consulta a seguir em uma janela de consulta e forneça o endereço de email para o qual você deseja que a notificação seja enviada:  
   
@@ -199,7 +199,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Usando o PowerShell para configurar o monitoramento de integridade personalizado  
  O **Test-SqlSmartAdmin** cmdlet pode ser usado para criar o monitoramento de integridade personalizadas. Por exemplo, a opção de notificação descrita na seção anterior pode ser configurada no nível da instância.  Se você tiver várias instâncias do SQL Server configuradas para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], o cmdlet do PowerShell poderá ser usado para criar scripts ao coletar o status e a integridade dos backups de todas as instâncias.  
   
- O **Test-SqlSmartAdmin** cmdlet avalia os erros e avisos retornados pelas políticas de gerenciamento baseado em SQL Server políticas e relata um status acumulado.  Por padrão, esse cmdlet usa as políticas do sistema. Para incluir qualquer política personalizada, use o parâmetro `–AllowUserPolicies`.  
+ O **Test-SqlSmartAdmin** cmdlet avalia os erros e avisos retornados pelas políticas de gerenciamento baseado em SQL Server políticas e relata um status acumulado.  Por padrão, esse cmdlet usa as políticas do sistema. Para incluir qualquer política personalizada, use o parâmetro `-AllowUserPolicies`.  
   
  A seguir é mostrado um exemplo de script PowerShell que retorna um relatório de erros e avisos com base nas políticas do sistema e qualquer política de usuário criada:  
   
@@ -250,16 +250,16 @@ smart_backup_files;
   
  Veja a seguir uma explicação detalhada do status diferente retornado:  
   
--   **Disponível - a:** este é um arquivo de backup normal. O backup foi concluído e também foi verificado que está disponível no armazenamento do Windows Azure.  
+-   **Disponível - r:** Este é um arquivo de backup normal. O backup foi concluído e também foi verificado que está disponível no armazenamento do Windows Azure.  
   
--   **Cópia em andamento – b:** esse status é especificamente para bancos de dados do grupo de disponibilidade. Se o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detectar uma interrupção na cadeia de logs de backup, ele primeiro tentará identificar o backup que pode ter causado essa interrupção. Ao localizar o arquivo de backup, ele tenta copiar o arquivo para o armazenamento do Windows Azure. Quando o processo de cópia estiver em andamento, ele exibirá esse status.  
+-   **Cópia em andamento-b:** Esse status é especificamente para bancos de dados do grupo de disponibilidade. Se o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detectar uma interrupção na cadeia de logs de backup, ele primeiro tentará identificar o backup que pode ter causado essa interrupção. Ao localizar o arquivo de backup, ele tenta copiar o arquivo para o armazenamento do Windows Azure. Quando o processo de cópia estiver em andamento, ele exibirá esse status.  
   
--   **Cópia com falha – f:** semelhante à cópia em andamento, isso é bancos de dados do grupo de disponibilidade t específico. Se o processo de cópia falhar, o status será marcado como F.  
+-   **Falha na cópia - f:** Semelhante à cópia em andamento, isso é bancos de dados do grupo de disponibilidade t específico. Se o processo de cópia falhar, o status será marcado como F.  
   
--   **Corrompido – c:** se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é não é possível verificar o arquivo de backup no armazenamento executando um comando RESTORE HEADER_ONLY mesmo após várias tentativas, ele marcará este arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
+-   **Corrompido – c:** Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é não é possível verificar o arquivo de backup no armazenamento executando um comando RESTORE HEADER_ONLY mesmo após várias tentativas, ele marcará este arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
   
--   **Excluído – d:** o arquivo correspondente não foi encontrado no armazenamento do Windows Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup se o arquivo excluído resultar em uma interrupção na cadeia de backup.  
+-   **Excluído – d:** O arquivo correspondente não foi encontrado no armazenamento do Windows Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup se o arquivo excluído resultar em uma interrupção na cadeia de backup.  
   
--   **Desconhecido – u:** esse status indica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ainda não foi possível verificar a existência do arquivo e suas propriedades no armazenamento do Windows Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  
+-   **Desconhecido – u:** Esse status indica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ainda não foi possível verificar a existência do arquivo e suas propriedades no armazenamento do Windows Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  
   
   

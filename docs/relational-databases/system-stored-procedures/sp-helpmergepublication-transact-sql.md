@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754118"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
 |nome|**sysname**|Nome da publicação.|  
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo de publicação estão disponíveis para serem retirados pelo Agente de Mesclagem quando o instantâneo é entregue por meio do FTP.|  
 |ftp_login|**sysname**|O nome de usuário é usado para se conectar ao serviço FTP.|  
 |conflict_retention|**int**|Especifica o período de retenção, em dias, durante o qual os conflitos são retidos. Quando o número de dias especificado for ultrapassado, a linha de conflito será limpa na tabela de conflitos.|  
-|keep_partition_changes|**int**|Especifica se otimização de sincronização está ocorrendo para esta publicação. **keep_partition_changes** tem um padrão de **0**. Um valor de **0** significa que a sincronização não é otimizada e as partições enviadas a todos os assinantes são verificadas quando dados são alterados em uma partição.<br /><br /> **1** significa que a sincronização é otimizada e somente assinantes com linhas nas partições alteradas são afetados.<br /><br /> Observação: Por padrão, publicações de mesclagem usam partições pré-calculadas que fornecem um grau maior de otimização que essa opção. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Especifica se otimização de sincronização está ocorrendo para esta publicação. **keep_partition_changes** tem um padrão de **0**. Um valor de **0** significa que a sincronização não é otimizada e as partições enviadas a todos os assinantes são verificadas quando dados são alterados em uma partição.<br /><br /> **1** significa que a sincronização é otimizada e somente assinantes com linhas nas partições alteradas são afetados.<br /><br /> Observação: Por padrão, as publicações de mesclagem usam partições pré-calculadas que fornecem um grau maior de otimização do que essa opção. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. Um valor de **0** significa que não é permitido copiar.|  
 |allow_synctoalternate|**int**|Especifica se um parceiro de sincronização alternativo tem permissão para sincronizar com esse Publicador. Um valor de **0** significa um parceiro de sincronização não é permitido.|  
 |validate_subscriber_info|**nvarchar(500)**|Lista as funções que estão sendo usadas para recuperar informações do Assinante e validar os critérios de filtragem de linha com parâmetros no Assinante. Ajuda a verificar se as informações estão consistentemente particionadas com cada mesclagem.|  

@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513915"
 ---
-# <a name="deployment-script-files---partition-and-role-deployment-options"></a>Arquivos de Script de implantação – partição e opções de implantação de função
+# <a name="deployment-script-files---partition-and-role-deployment-options"></a>Arquivos de script de implantação – Partição e opções de implantação de função
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê as opções de implantação de partição e de função do \< *nome do projeto*>. deploymentoptions arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa as opções de implantação de partição e de função do atual projeto quando o \< *nome do projeto*>. deploymentoptions arquivo é criado. Para obter mais informações sobre parâmetros de configuração, consulte [Compreendendo os arquivos de entrada usados para criar o script de implantação](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "37981036"
   
 -   As funções e os membros de função existentes no banco de dados de destino são retidos e nenhuma nova função será implantada.  
   
--   **Nota** Quando funções e membros existentes são retidos, as permissões associadas a essas funções são redefinidas como nenhuma. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o Assistente para Implantação do Analysis Service, consulte “Retenção de funções e membros” na Base de Dados de Conhecimento Microsoft.  
+-   **Nota** Quando funções e membros existentes são retidos, as permissões associadas a essas funções são redefinidas como nenhuma. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o Assistente de implantação do serviço de análise, consulte 'Reter funções e membros' na Base de dados de Conhecimento Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificando as opções de implantação de partição e de função  
  Talvez você precise implantar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto usando opções de partição e de função diferentes das armazenadas na \< *nome do projeto*>. deploymentoptions arquivo. Por exemplo, você talvez queira manter as partições existentes, funções e membros da função, em vez de substituir todas as partições existentes, funções e membros, conforme indicado na \< *nome do projeto*>. deploymentoptions arquivo.  
@@ -50,11 +50,11 @@ ms.locfileid: "37981036"
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interativamente, e na página **Opções de implantação de partição e de função** , especifique as novas opções de implantação para as partições e funções.  
   
-     — ou —  
+     -ou-  
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para ser executado em modo de arquivo de resposta. (Para obter mais informações sobre o modo de arquivo de resposta, consulte [Executando o Assistente de Implantação do Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).)  
   
-     — ou —  
+     -ou-  
   
 -   Abra o \< *nome do projeto*>. deploymentoptions em qualquer editor de texto e manualmente alterar as opções. As opções para PartitionDeployment são DeployPartitions, RetainPartitions. As opções para RoleDeployment são DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   

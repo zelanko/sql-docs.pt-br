@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119834"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756958"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Estes pontos de extremidade são valores `datetime` e são armazenados em variáveis do pacote para uso posterior.  
@@ -101,12 +100,12 @@ ms.locfileid: "49119834"
 3.  Na página **Conjunto de Resultados** do **Editor da tarefa Executar SQL**, mapeie o resultado de ExtractStartTime para a variável do pacote ExtractStartTime e o resultado de ExtractEndTime para a variável do pacote ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando você usa uma expressão para definir o valor de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variável, a expressão é avaliada toda vez que o valor da variável é acessado.  
+    >  Quando você usa uma expressão para definir o valor de uma variável [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a expressão é avaliada sempre que o valor da variável é acessado.  
   
 ## <a name="next-step"></a>Próxima etapa  
  Depois de calcular o ponto inicial e final para um intervalo de alterações, a próxima etapa é determinar se os dados de alteração estão prontos.  
   
- **Próximo tópico:** [Determinar se os dados de alteração estão prontos](determine-whether-the-change-data-is-ready.md)  
+ **Próximo tópico:** [Determinar se os dados de alterações estão protos](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar variáveis em pacotes](../use-variables-in-packages.md)   

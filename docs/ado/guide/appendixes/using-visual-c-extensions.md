@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544180"
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -34,7 +34,7 @@ ms.locfileid: "51350520"
 ## <a name="binding-entries"></a>Entradas de vinculação
  As extensões do Visual C++ para ADO mapear campos de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para variáveis de C/C++. A definição de um mapeamento entre um campo e uma variável é chamada um *associação de entrada*. Macros de fornecem entradas de associação para dados numéricos, de comprimento fixo e comprimento variável. As variáveis de C/C++ e entradas de vinculação são declaradas em uma classe derivada da classe de extensões do Visual C++, **CADORecordBinding**. O **CADORecordBinding** classe é definida internamente, as macros de entrada de associação.
 
- ADO internamente mapeia os parâmetros nessas macros para um banco de dados OLE **DBBINDING** estruturar e cria um banco de dados OLE **acessador** objeto para gerenciar a movimentação e a conversão de dados entre variáveis e campos. OLE DB define dados como que consiste de três partes: um *buffer* onde os dados são armazenados; um *status* que indica se um campo foi armazenado com êxito no buffer ou como a variável deve ser restaurada para o campo; e o *comprimento* dos dados. (Consulte [dados de configuração (OLE DB) e Obtendo](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)na referência do OLE DB do programador, para obter mais informações.)
+ ADO internamente mapeia os parâmetros nessas macros para um banco de dados OLE **DBBINDING** estruturar e cria um banco de dados OLE **acessador** objeto para gerenciar a movimentação e a conversão de dados entre variáveis e campos. OLE DB define dados como que consiste de três partes: Um *buffer* onde os dados são armazenados; um *status* que indica se um campo foi armazenado com êxito no buffer ou como a variável deve ser restaurada para o campo; e o *comprimento* dos dados. (Consulte [dados de configuração (OLE DB) e Obtendo](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)na referência do OLE DB do programador, para obter mais informações.)
 
 ## <a name="header-file"></a>Arquivo de cabeçalho
  Inclua o seguinte arquivo em seu aplicativo para usar as extensões do Visual C++ para ADO:
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Famílias de macros são fornecidas para os dados de comprimento fixo, como **adDate** ou **adBoolean**; numérico dados, como **adTinyInt**, **adInteger**, ou **adDouble**; e os dados de comprimento variável, como **adChar**, **adVarChar** ou **adVarBinary**. Todos os tipos numéricos, exceto para **adVarNumeric**, também são tipos de comprimento fixo. Cada família tem diferentes conjuntos de parâmetros para que você pode excluir as informações de associação não são de interesse.
 
- Para obter mais informações, consulte [tipos de dados do apêndice a:](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referência do OLE DB do programador.
+ Para obter mais informações, consulte [apêndice a: Tipos de dados](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referência do programador do OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniciar associação de entradas
  **BEGIN_ADO_BINDING**(*Class*)
@@ -111,7 +111,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Entradas de associação de término
  **END_ADO_BINDING**()
 
-|Parâmetro|Description|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |*Classe*|Classe na qual as variáveis de C/C++ e entradas de vinculação são definidas.|
 |*Ordinal*|Número ordinal, contando a partir de um, do **Recordset** campo correspondente à sua variável de C/C++.|
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Ao definir os dados, *Status* pode ser definido como **adFldNull** para indicar o **Recordset** campo deve ser definido como null.
 
-|Constante|Valor|Description|
+|Constante|Valor|Descrição|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Um valor de campo de não-nulo foi retornado.|
 |**adFldBadAccessor**|1|Associação era inválida.|
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|Valor é assinado e o tipo de dados da variável não estiver assinado.|
 |**adFldDataOverFlow**|6|Valor é maior do que podem ser armazenados no tipo de dados da variável.|
 |**adFldCantCreate**|7|Tipo de coluna desconhecido e o campo já está aberto.|
-|**adFldUnavailable**|8|Não foi possível determinar o valor do campo — por exemplo, em um campo de novo, não atribuído com nenhum valor padrão.|
+|**adFldUnavailable**|8|Valor do campo não pôde ser determinado-por exemplo, em um campo de novo e não atribuído sem nenhum valor padrão.|
 |**adFldPermissionDenied**|9|Ao atualizar, sem permissão para gravar dados.|
 |**adFldIntegrityViolation**|10|Durante a atualização, o valor do campo violaria integridade da coluna.|
 |**adFldSchemaViolation**|11|Durante a atualização, o valor do campo violaria o esquema de coluna.|

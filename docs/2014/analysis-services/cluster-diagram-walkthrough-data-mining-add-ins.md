@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057086"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419997"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de Cluster (Suplementos de Mineração de Dados)
   Depois de criar um modelo de clustering, você pode importá-lo no Visio usando a **Cluster** forma e, em seguida, continuar a personalizar e aprimorar o layout. O **formas de mineração de dados para Visio** incluem os seguintes controles personalizados para trabalhar com diagramas de mineração de dados:  
@@ -33,7 +33,7 @@ ms.locfileid: "48057086"
   
 -   **Layout de mineração de dados** barra de ferramentas  
   
-     Essas opções são adicionadas ao espaço de trabalho do Visio para ajudá-lo a interagir com a forma de mineração de dados. As opções são diferentes dependendo do tipo de modelo de mineração de dados que você está usando.  
+     Essas opções são adicionadas ao workspace do Visio para ajudá-lo a interagir com a forma de mineração de dados. As opções são diferentes dependendo do tipo de modelo de mineração de dados que você está usando.  
   
 ## <a name="build-a-cluster-diagram"></a>Criar um diagrama de cluster  
  Este passo a passo demonstra como criar e personalizar um diagrama de clustering no Visio.  
@@ -73,9 +73,9 @@ ms.locfileid: "48057086"
   
 7.  Deixe a opção **número de linhas no gráfico**, como 5.  
   
-     Essa opção não altera o número de clusters no modelo; ela apenas limita o número de atributos que podem ser exibidos como recursos de cada cluster.  
+     Essa opção não altera o número de clusters no modelo. ela apenas limita o número de atributos que podem ser exibidos como recursos de cada cluster.  
   
-     No entanto, a opção age como um filtro nos dados do gráfico e, portanto, você não poderá aumentar o número de itens posteriormente.  
+     No entanto, a opção atua como um filtro nos dados do gráfico, portanto, você não pode aumentar o número de itens mais tarde.  
   
 8.  Clique em **Avançado**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057086"
   
      ![Clique em Avançado para escolher as cores da forma](media/dm13-visio-clusteroptions-advanced.gif "clique em Avançado para escolher as cores da forma")  
   
-     **Dica:** algumas cores podem ser alterados posteriormente usando temas do Visio e controles de edição de formas. No entanto, os temas do Visio também substituirão algumas dessas seleções de cor. Portanto, é recomendável começar com as cores padrão e gradualmente aplicar alterações.  
+     **Dica:** Algumas cores podem ser alterados posteriormente usando temas do Visio e controles de edição de formas. No entanto, os temas do Visio também substituirão algumas dessas seleções de cor. Portanto, é recomendável começar com as cores padrão e gradualmente aplicar alterações.  
   
 9. Clique em **concluir** para criar o gráfico.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48057086"
   
      No entanto, se você aplicar qualquer formatação especial diferente do padrão gerado pelo assistente, inclusive os planos de fundo, esses números poderão não ser visíveis.  
   
-     **Controle deslizante**  
+     **Slider**  
      Filtra as linhas entre clusters. Mover o controle deslizante para cima remove tudo exceto as associações mais importantes.  
   
      **Sombreamento**  

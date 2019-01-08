@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185076"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752838"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar o Provedor do PowerShell para eventos estendidos
   É possível gerenciar Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do uso do provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. A subpasta XEvent está disponível sob a unidade SQLSERVER. É possível acessar a pasta por meio do uso de um dos métodos a seguir:  
   
--   Em um prompt de comando, digite `sqlps`, e pressione ENTER. Tipo `cd xevent`, e pressione ENTER. A partir daí, você pode usar o **cd** e `dir` comandos (ou **Set-Location** e **Get-Childitem** cmdlets) para navegar até o nome do servidor e o nome da instância.  
+-   Em um prompt de comando, digite `sqlps` e pressione ENTER. Digite `cd xevent` e pressione ENTER. A partir daí, você pode usar o **cd** e `dir` comandos (ou **Set-Location** e **Get-Childitem** cmdlets) para navegar até o nome do servidor e o nome da instância.  
   
 -   No Pesquisador de Objetos, expanda o nome de instância, expanda **Gerenciamento**, clique com o botão direito do mouse em **Eventos Estendidos**e clique em **Iniciar PowerShell**. Isso inicia o PowerShell no seguinte caminho:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185076"
   
 -   Os scripts devem ser salvos com uma extensão .ps1.  
   
--   A política de execução do PowerShell deve permitir que o script seja executado. Para definir a política de execução, use o cmdlet **Set-Executionpolicy** . (Para obter mais informações, digite `get-help set-executionpolicy -detailed`, e pressione ENTER.)  
+-   A política de execução do PowerShell deve permitir que o script seja executado. Para definir a política de execução, use o cmdlet **Set-Executionpolicy** . (Para obter mais informações, digite `get-help set-executionpolicy -detailed` e pressione ENTER.)  
   
  O script a seguir cria uma nova sessão denominada 'TestSession.'  
   
@@ -113,6 +112,6 @@ $session.Create()
 ## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)   
- [Ferramentas de Eventos Estendidos](extended-events-tools.md)  
+ [Ferramentas de eventos estendidos](extended-events-tools.md)  
   
   

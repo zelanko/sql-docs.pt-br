@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521189"
 ---
 # <a name="create-mining-model-dmx"></a>CRIAR UM MODELO DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Use uma cláusula de previsão para descrever como a coluna de previsão é usada. A seguinte tabela descreve as duas possíveis cláusulas.  
   
-|\<Previsão > cláusula|Description|  
+|\<Previsão > cláusula|Descrição|  
 |---------------------------|-----------------|  
 |**PREDICT**|Esta coluna pode ser prevista pelo modelo e pode ser fornecida em casos de entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Você pode usar a lista de parâmetros para ajustar o desempenho e a funcionalidade de um modelo de mineração. A sintaxe da lista de parâmetros é a seguinte:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  Para obter uma lista dos parâmetros que estão associados com cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  

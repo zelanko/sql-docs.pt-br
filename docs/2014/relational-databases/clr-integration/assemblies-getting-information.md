@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: clr
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], metadata
@@ -14,12 +14,12 @@ ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9433234aae4bbe09e8ad8c08bfa457c61bede8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760318"
 ---
 # <a name="getting-information-about-assemblies"></a>Obtendo informações sobre assemblies
   As exibições do catálogo e as funções a seguir podem ser consultadas para pesquisar metadados sobre assemblies.  

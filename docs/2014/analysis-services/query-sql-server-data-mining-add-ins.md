@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079416"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418457"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Consulta (Suplementos de Mineração de Dados do SQL Server)
   ![Botão de modelo de consulta, faixa de opções mineração de dados](media/dmc-query.gif "botão de modelo de consulta, faixa de opções mineração de dados")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079416"
   
  O assistente de **Consulta** também fornece um editor avançado para criar ou modificar modelos de mineração de dados, para gerar consultas personalizadas ou trabalhar com estruturas que não têm suporte nas outras ferramentas, como conjuntos de dados aninhados.  
   
--   Use o editor de texto para digitar ou colar em instruções de extensões DMX que você criou em outro lugar.  
+-   Use o editor de texto para digitar ou colar nas instruções de extensões DMX (Data Mining) que você criou em outro lugar.  
   
 -   Use o Construtor de Consultas interativo para compor uma instrução DMX personalizada com a ajuda de modelos e caixas de diálogo.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48079416"
  A qualquer momento, você poderá clicar em **Avançado** para alternar para o **Editor de Consulta Avançada de Mineração de Dados**, que lhe proporcionará mais controle sobre cada parte da instrução DMX. Para obter mais informações sobre como usar a ferramentas de edição de consulta avançada, consulte [Editor de consultas de mineração de dados avançados](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Para usar o **consulta** do assistente, você deve estar conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Além disso, o servidor deve conter pelo menos um modelo de mineração de dados de um tipo apropriado. Se não houver nenhum modelo de mineração disponível, você poderá criar um desses modelos usando os assistentes fornecidos no Cliente de Mineração de Dados para Excel. Para obter informações sobre como criar um novo modo de mineração usando um assistente, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).  
+ Para usar o assistente de **Consulta** , você deve estar conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Além disso, o servidor deve conter pelo menos um modelo de mineração de dados de um tipo apropriado. Se não houver nenhum modelo de mineração disponível, você poderá criar um desses modelos usando os assistentes fornecidos no Cliente de Mineração de Dados para Excel. Para obter informações sobre como criar um novo modo de mineração usando um assistente, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implantando e dimensionando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779888"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>A introdução do CDC Designer Console
   A seção descreve os procedimentos de instalação para o Change Data Capture Designer para Oracle da Attunity.  
@@ -40,11 +39,11 @@ ms.locfileid: "48107746"
   
  **Banco de dados Oracle**  
   
--   Banco de dados Oracle 10g versão 2: 10.2.0.1-10.2.0.5 (patchset a partir de abril de 2010)  
+-   Oracle banco de dados 10g versão 2: 10.2.0.1-10.2.0.5 (patchset a partir de abril de 2010)  
   
--   Banco de dados Oracle 11g versão 1: 11.1.0.6-11.1.0.7 (patchset a partir de setembro de 2008)  
+-   Oracle banco de dados 11g versão 1: 11.1.0.6-11.1.0.7 (patchset a partir de setembro de 2008)  
   
--   Banco de dados Oracle 11g versão 2: 11.2.0.1-11.2.0.3 (patchset a partir de setembro de 2011)  
+-   Oracle banco de dados 11g versão 2: 11.2.0.1-11.2.0.3 (patchset a partir de setembro de 2011)  
   
  **Banco de dados do SQL Server**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107746"
   
 -   Cliente Oracle 11.x  
   
- **Observação**: você deve usar a versão de 32 bits ou 64 bits deste software de acordo com a versão do Oracle CDC Designer console instalado.  
+ **Observação**: Você deve usar a versão de 32 bits ou 64 bits deste software de acordo com a versão do Oracle CDC Designer console instalado.  
   
  O CDC Designer Console da Oracle usa o provedor do Oracle ODBC para comunicar-se com o banco de dados Oracle de origem.  
   

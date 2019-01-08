@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571216"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398169"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parâmetros  
  *pInstanceNames*  
- [Saída] Quando esta função for retornada, conterá os nomes das instâncias de LocalDB nomeadas e padrão na estação de trabalho do usuário.  
+ [Saída] Quando essa função retornar, contém os nomes dos nomeadas e instâncias de LocalDB na estação de trabalho do usuário padrão.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB localizadas na estação de trabalho do usuário.  
+ [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB encontrada na estação de trabalho do usuário.  
   
 ## <a name="returns"></a>Retorna  
  S_OK  

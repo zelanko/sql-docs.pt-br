@@ -13,17 +13,17 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69cc3a0d32c12c71b3909bda23dea93417475f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215715"
 ---
 # <a name="data-source-example"></a>Exemplo de fonte de dados
 Em computadores que executam o Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT da estação de trabalho/Windows 2000 Professional ou Microsoft Windows® 95/98, dados da máquina informações de origem são armazenadas no registro. Dependendo de qual registro chave as informações são armazenadas em, a fonte de dados é conhecida como um *fonte de dados de usuário* ou um *fonte de dados do sistema*. Fontes de dados do usuário são armazenadas na chave HKEY_CURRENT_USER e estão disponíveis somente para o usuário atual. Fontes de dados do sistema são armazenadas na chave HKEY_LOCAL_MACHINE e podem ser usadas por mais de um usuário em um único computador. Eles também podem ser usados pelos serviços de todo o sistema, que podem então obter acesso à fonte de dados, mesmo se nenhum usuário está conectado à máquina. Para obter mais informações sobre fontes de dados do sistema e de usuário, consulte [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
   
- Suponha que um usuário tem três fontes de dados de usuário: pessoal e o inventário, que usam um DBMS Oracle; e a folha de pagamento, que usa um DBMS do Microsoft SQL Server. Os valores do registro para fontes de dados podem ser:  
+ Suponha que um usuário tem três fontes de dados de usuário: Pessoal e o inventário, que usam um DBMS Oracle; e a folha de pagamento, que usa um DBMS do Microsoft SQL Server. Os valores do registro para fontes de dados podem ser:  
   
 ```  
 HKEY_CURRENT_USER  
@@ -47,7 +47,7 @@ HKEY_CURRENT_USER
                          Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
                          Description : REG_SZ : Payroll database  
                          Server : REG_SZ : PYRLL1  
-                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
+                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
                          OEMTOANSI : REG_SZ : No  
                          LastUser : REG_SZ : smithjo  
                          Database : REG_SZ : Payroll  

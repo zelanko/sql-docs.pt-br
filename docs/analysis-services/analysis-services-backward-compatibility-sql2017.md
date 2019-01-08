@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037514"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072423"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (2017 do SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,10 +32,10 @@ Os seguintes recursos foram preteridos nessa versão:
 |Multidimensional|Mineração de dados|
 |Multidimensional|Grupos de medidas vinculados remotos|
 |Tabular|Modelos no nível de compatibilidade 1100 e 1103|
-|Tabular|Propriedades do modelo de objeto tabulares: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Tabular|Propriedades do modelo de objeto tabulares: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
 |Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
-|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: XEvent<br />-Leitura de rastreamento: XEvent<br />-   Reprodução de rastreamento: nenhuma|  
+|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: XEvent<br />-Leitura de rastreamento: XEvent<br />-Reprodução de rastreamento: None|  
 
 
 ## <a name="discontinued-features"></a>Recursos descontinuados

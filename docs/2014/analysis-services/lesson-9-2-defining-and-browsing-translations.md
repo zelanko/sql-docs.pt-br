@@ -11,12 +11,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a955d01840995c269f94de4d83a038c0b26cc725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39db8cb33e2adbf24ff03b6ad84dfefe0e8bfb81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504645"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
   Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte [traduções da dimensão](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [traduções de cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções &#40;do Analysis Services&#41;](translations-analysis-services.md).  
@@ -45,9 +45,9 @@ ms.locfileid: "48142978"
   
 6.  Na linha para o **legenda** de objeto para o **nome do mês** de atributo, digite `Mes del Año` no **Espanhol (Espanha)** coluna de tradução e `Mois d'Année` no **Francês (França)** coluna de tradução.  
   
-     Observe que, quando você insere essas traduções, um sinal de reticências (**…**) é exibido. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
+     Observe que, quando você insere essas traduções, um sinal de reticências (**...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
   
-7.  Clique nas reticências (**…**) para obter a tradução no idioma **Espanhol (Espanha)** do atributo **Nome do Mês** .  
+7.  Clique no botão de reticências (**...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
   
      A caixa de diálogo **Tradução de Dados de Atributo** é exibida.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142978"
   
      ![Caixa de diálogo de tradução de dados do atributo](../../2014/tutorials/media/l9-translations-4.gif "caixa de diálogo tradução de dados de atributo")  
   
-9. Clique em **OK**e clique nas reticências (**…**) para obter a tradução no idioma **Francês (França)** do atributo **Nome do Mês** .  
+9. Clique em **Okey**e, em seguida, clique no botão de reticências (**...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
   
 10. Na lista **Colunas de tradução** , selecione **FrenchMonthName**e clique em **OK**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48142978"
      Observe que agora os nomes de mês e de medida são exibidos em francês.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 10: definindo funções administrativas](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Lição 10: Definindo funções administrativas](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversões de dimensão](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

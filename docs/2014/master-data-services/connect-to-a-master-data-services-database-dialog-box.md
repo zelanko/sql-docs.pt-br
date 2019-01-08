@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvconnect.f1
@@ -13,12 +12,12 @@ ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b326d1f46641e0530eafdf8568354ad69ff103d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5214722aea9ea3fb1d04519d414b4c86ebb33de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810108"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Caixa de diálogo Conectar-se a um Banco de Dados do Master Data Services
   Use a caixa de diálogo **Conectar a um Banco de Dados do Master Data Services** para selecionar um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -32,10 +31,10 @@ ms.locfileid: "48225806"
 ## <a name="select-database"></a>Selecionar banco de dados  
  Especifique as informações para conexão com uma instância local ou remota do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que hospeda o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para conexão com uma instância remota, o banco de dados deve estar habilitado para conexões remotas.  
   
-|Nome do controle|Description|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Instância do SQL Server**|Especifique o nome da instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] na qual deseja hospedar o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pode ser uma instância padrão ou nomeada em um computador local ou remoto. Especifique as informações digitando:<br /><br /> Um ponto (.) para se conectar à instância padrão no computador local.<br /><br /> O nome do servidor ou o endereço IP para conectar à instância padrão no computador local ou remoto especificado.<br /><br /> O nome do servidor ou o endereço IP e o nome da instância para conexão à instância nomeada no computador local ou remoto especificado. Especifique essas informações no formato *server_name*\\*instance_name*.|  
-|**Tipo de autenticação**|Selecione o tipo de autenticação a ser usado ao conectar à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. As credenciais que você usa para se conectar determinam os bancos de dados exibidos na lista suspensa **Banco de dados do Master Data Services** . Os tipos de autenticação incluem:<br /><br /> **Usuário Atual – Segurança Integrada**: usa a Autenticação Integrada do Windows para conexão usando as credenciais da conta do Windows do usuário atual. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa as credenciais do Windows do usuário que fez logon no computador e abriu o aplicativo. Não é possível especificar credenciais diferentes do Windows no aplicativo. Para conectar-se com credenciais diferentes do Windows, faça logon no computador como esse usuário e abra o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Conta do SQL Server**: usa uma conta do SQL Server para a conexão. Quando você seleciona essa opção, os campos **Nome de usuário** e **Senha** são habilitados e você deve especificar credenciais de uma conta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**Tipo de autenticação**|Selecione o tipo de autenticação a ser usado ao conectar à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. As credenciais que você usa para se conectar determinam os bancos de dados exibidos na lista suspensa **Banco de dados do Master Data Services** . Os tipos de autenticação incluem:<br /><br /> **Usuário atual – segurança integrada**: Usa a autenticação integrada do Windows para se conectar usando as credenciais da conta de usuário atual do Windows. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa as credenciais do Windows do usuário que fez logon no computador e abriu o aplicativo. Não é possível especificar credenciais diferentes do Windows no aplicativo. Para conectar-se com credenciais diferentes do Windows, faça logon no computador como esse usuário e abra o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Conta do SQL Server**: Usa uma conta do SQL Server para se conectar. Quando você seleciona essa opção, os campos **Nome de usuário** e **Senha** são habilitados e você deve especificar credenciais de uma conta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Nome de usuário**|Especifique o nome da conta de usuário que será usada para conexão à instância especificada do SQL Server. A conta deve fazer parte da função **sysadmin** na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .<br /><br /> Quando o **Tipo de autenticação** é **Usuário Atual – Segurança Integrada**, a caixa **Nome de usuário** é somente leitura e exibe o nome da conta de usuário do Windows que está conectada no computador.<br /><br /> Quando o **Tipo de autenticação** é **Conta do SQL Server**, a caixa **Nome de usuário** está habilitada e você deve especificar credenciais para uma conta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na instância especificada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Senha**|Especifique a senha associada à conta de usuário:<br /><br /> Quando o **Tipo de autenticação** é **Usuário Atual – Segurança Integrada**, a caixa **Senha** é somente leitura e as credenciais da conta do usuário do Windows especificada são usadas para a conexão.<br /><br /> Quando o **Tipo de autenticação** é **Conta do SQL Server**, a caixa **Senha** está habilitada e você deve especificar a senha associada à conta de usuário especificada.|  
 |**Connect**|Conecte-se à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com as credenciais especificadas.|  

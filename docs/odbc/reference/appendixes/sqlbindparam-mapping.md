@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26f9bdc0564b98132bb5ec413c99917e78e4d62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855174"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544432"
 ---
 # <a name="sqlbindparam-mapping"></a>Mapeamento SQLBindParam
-**SQLBindParam** não pode realmente ser chamado preterido porque ele nunca houve no ODBC; no entanto, ainda representa funções duplicadas — o Gerenciador de Driver precisa exportá-lo porque o ISO e abra grupo compatível com aplicativos utilizarão. Porque **SQLBindParameter** contém toda a funcionalidade dos **SQLBindParam**, **SQLBindParam** serão mapeados na parte superior da **SQLBindParameter** (quando o driver subjacente é um ODBC 3 *. x* driver). Um ODBC 3 *. x* driver não precisa implementar **SQLBindParam**.  
+**SQLBindParam** não pode realmente ser chamado preterido porque nunca foi lá em ODBC; no entanto, ela ainda representa funções duplicadas – precisa exportá-lo porque o ISO e abra grupo compatível com aplicativos usará o Gerenciador de Driver. Porque **SQLBindParameter** contém toda a funcionalidade dos **SQLBindParam**, **SQLBindParam** serão mapeados na parte superior da **SQLBindParameter** (quando o driver subjacente é um ODBC 3 *. x* driver). Um ODBC 3 *. x* driver não precisa implementar **SQLBindParam**.  
   
 ## <a name="remarks"></a>Comentários  
  Quando esta chamada para **SQLBindParam** é feita:  

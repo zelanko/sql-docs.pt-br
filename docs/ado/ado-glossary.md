@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291762"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528024"
 ---
 # <a name="ado-glossary-terms"></a>Termos do glossário ADO
 Este tópico define termos relevantes à ADO.
@@ -74,7 +74,7 @@ Este tópico define termos relevantes à ADO.
 
  COM (Component Object Model) um binário padrão que permite que objetos interoperem em um ambiente de rede, independentemente da linguagem na qual eles foram desenvolvidos ou em quais computadores eles residem. COM base em tecnologias incluem controles ActiveX, automação e vinculação e incorporação de objetos (OLE). COM permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Ele define como expõe o objeto em si e como essa exposição funciona entre processos e entre redes. COM também define o ciclo de vida do objeto.
 
- Arquivo binário de componente COM — como. dll,. ocx e alguns arquivos .exe — que dá suporte ao padrão COM para fornecer a objetos. Esse arquivo contém o código para um ou mais fábricas de classes, classes COM, mecanismos de entrada do registro, código de carregamento e assim por diante.
+ Arquivo binário do COM componente - como. dll,. ocx e alguns arquivos .exe - que dá suporte ao padrão COM por fornecer objetos. Esse arquivo contém o código para um ou mais fábricas de classes, classes COM, mecanismos de entrada do registro, código de carregamento e assim por diante.
 
  Um operador que compara duas expressões e retorna um valor booliano de operador de comparação.
 

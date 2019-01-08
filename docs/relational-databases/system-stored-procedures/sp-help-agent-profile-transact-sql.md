@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_help_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 737c65e0b8e2e089eed21225dfaa9d127a0fc349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794888"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  [  **@agent_type=**] *agent_type*  
  É o tipo de agente. *agent_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
@@ -56,13 +55,13 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|A ID do perfil.|  
 |**profile_name**|**sysname**|Exclusivo para o tipo de agente.|  
 |**agent_type**|**int**|**1** = o agente de instantâneo<br /><br /> **2** = log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
 |**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
-|**Descrição**|**varchar(3000)**|Descrição do perfil.|  
+|**description**|**varchar(3000)**|Descrição do perfil.|  
 |**def_profile**|**bit**|Especifica se este perfil será o padrão para esse tipo de agente.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

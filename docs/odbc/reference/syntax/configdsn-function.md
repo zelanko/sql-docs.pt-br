@@ -20,16 +20,16 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1f199d5f3318181aa03499c31d9597f2348fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655374"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210084"
 ---
 # <a name="configdsn-function"></a>Função ConfigDSN
 **Conformidade com**  
- Introduziu versão: ODBC 1.0  
+ Versão introduzida: ODBC 1.0  
   
  **Resumo**  
  **ConfigDSN** adiciona, modifica ou exclui as fontes de dados das informações do sistema. Ele pode solicitar ao usuário informações de conexão. Ele pode estar na DLL do driver ou uma DLL de instalação separado.  
@@ -70,7 +70,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **ConfigDSN** retornar FALSE, um associado  *\*pfErrorCode* valor é postado no buffer de erro do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de valor de palavra-chave inválido|O *lpszAttributes* argumento continha um erro de sintaxe.|  

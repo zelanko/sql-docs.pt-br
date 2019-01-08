@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -20,12 +20,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806568"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Usar cláusulas HAVING e WHERE na mesma consulta (Visual Database Tools)
   Em algumas instâncias, talvez você deseje excluir linhas individuais de grupos (usando uma cláusula WHERE) antes de aplicar um critério aos grupos como um todo (usando uma cláusula HAVING).  
@@ -36,7 +36,7 @@ ms.locfileid: "48221916"
   
 -   A cláusula HAVING é aplicada às linhas no conjunto de resultados. Somente os grupos que atendem os critérios de HAVING são exibidos na saída da consulta. Você pode aplicar apenas uma cláusula HAVING em colunas que também são exibidas na cláusula GROUP BY ou em uma função de agregação.  
   
- Por exemplo, imagine que você está unindo as tabelas `titles` e `publishers` para criar uma consulta que mostra o preço médio do livro de um conjunto de editoras. Você pode querer ver o preço médio de apenas um conjunto específico de editoras – talvez somente as editoras no estado da Califórnia. Além disso, desejar ver o preço médio apenas se estiver acima de R$ 10,00.  
+ Por exemplo, imagine que você está unindo as tabelas `titles` e `publishers` para criar uma consulta que mostra o preço médio do livro de um conjunto de editoras. Você quer ver o preço médio de um único conjunto específico de editoras, talvez somente as editoras no estado da Califórnia. Além disso, desejar ver o preço médio apenas se estiver acima de R$ 10,00.  
   
  Você pode definir o primeiro critério incluindo uma cláusula WHERE, que descarta todas as editoras que não estejam na Califórnia, antes de calcular os preços médios. O segundo critério requer uma cláusula HAVING, porque o critério está baseado nos resultados de agrupamento e resumo dos dados. A instrução SQL resultante se parecerá com esta:  
   

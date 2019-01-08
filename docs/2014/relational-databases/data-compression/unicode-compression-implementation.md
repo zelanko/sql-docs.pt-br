@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
@@ -13,12 +13,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756018"
 ---
 # <a name="unicode-compression-implementation"></a>Implementação da compactação Unicode
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa uma implementação do algoritmo SCSU (Esquema de Compactação Padrão para Unicode) para compactar valores Unicode que são armazenados em objetos compactados por linha ou página. Para esses objetos compactados, a compactação Unicode é automática para as colunas `nchar(n)` e `nvarchar(n)`. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena dados Unicode como 2 bytes, seja qual for a localidade. Isso é conhecido como codificação UCS-2. Para algumas localidades, a implementação da compactação SCSU no SQL Server pode economizar até 50 por cento em espaço de armazenamento.  
@@ -27,10 +27,10 @@ ms.locfileid: "48084698"
  A compactação Unicode dá suporte aos tipos de dados de comprimento fixo `nchar(n)` e `nvarchar(n)`. Os valores de dados armazenados fora da linha ou em colunas `nvarchar(max)` não são compactados.  
   
 > [!NOTE]  
->  Não há suporte para compactação Unicode para `nvarchar(max)` , mesmo se ele é armazenado na linha de dados. Porém, este tipo de dados ainda pode aproveitar a compactação de página.  
+>  A Compactação de Unicode não terá suporte para obter dados `nvarchar(max)` mesmo se forem armazenados em linha. Porém, este tipo de dados ainda pode aproveitar a compactação de página.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Atualizando a partir de versões anteriores do SQL Server  
- Quando um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], as alterações feitas devido à compactação Unicode não são feitas em nenhum objeto do banco de dados, compactado ou não. Depois que o banco de dados é atualizado, os objetos são afetados da seguinte maneira:  
+ Quando um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], as alterações feitas devido à compactação Unicode não são feitas em nenhum objeto de banco de dados, compactado ou não. Depois que o banco de dados é atualizado, os objetos são afetados da seguinte maneira:  
   
 -   Se o objeto não for compactado, nenhuma alteração será feita e o objeto continuará funcionando como antes.  
   

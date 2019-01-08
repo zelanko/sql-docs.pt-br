@@ -11,12 +11,12 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416687"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
   Nesta lição, você renomeará muitas das colunas em cada tabela que você importou. A renomeação torna as colunas mais identificáveis e fáceis de navegar em ambos os designers de modelos, e também pelos usuários que selecionam campos em um aplicativo cliente. Para obter mais informações, consulte [Renomear uma tabela ou coluna &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48152947"
  Tempo estimado para concluir esta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 2: Adicionar dados](lesson-2-add-data.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 2: Adicionar dados](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Renomear colunas  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48152947"
 2.  Clique duas vezes o **CustomerKey** coluna Nome e, em seguida, digite `Customer  Id`, e pressione ENTER.  
   
     > [!TIP]  
-    >  Você também pode renomear uma coluna na propriedade **Nome da Coluna** na janela **Propriedades** da coluna ou na Exibição de Diagrama.  
+    >  Você também pode renomear uma coluna na **nome da coluna** propriedade da coluna **propriedades** janela, ou na exibição de diagrama.  
   
 3.  Renomeie as colunas restantes na tabela **Cliente** , bem como as colunas nas tabelas restantes, substituindo o nome de origem pelo nome amigável:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48152947"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Distância do Trabalho|  
   
-     **Date**  
+     **Data**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "48152947"
     |Preço do Revendedor|Preço do Revendedor|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|Descrição|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  
@@ -144,7 +144,7 @@ ms.locfileid: "48152947"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internet Sales**  
+     **Vendas pela Internet**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -172,6 +172,6 @@ ms.locfileid: "48152947"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para continuar este tutorial, vá para a próxima lição: [Lição 4: Marcar como Tabela de Data](lesson-3-mark-as-date-table.md).  
+ Para continuar este tutorial, vá para a próxima lição: [Lição 4: Marcar como tabela de data](lesson-3-mark-as-date-table.md).  
   
   

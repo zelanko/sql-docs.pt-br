@@ -11,19 +11,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196576"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404191"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar a segurança dinâmica usando filtros de linha
   Nesta lição suplementar, você criará uma função adicional que implementa a segurança dinâmica. A segurança dinâmica oferece segurança em nível de linha com base no nome de usuário ou na id de logon do usuário conectado no momento. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Para implementar a segurança dinâmica, você deverá adicionar uma tabela a seu modelo contendo os nomes de usuários Windows desses usuários que podem criar uma conexão com o modelo como uma fonte de dados e procurar objetos e dados do modelo. O modelo criado usando este tutorial está no contexto da Adventure Works Corp.; entretanto, para concluir esta lição, você deve adicionar uma tabela contendo os usuários de seu próprio domínio. Você não precisará das senhas para os nomes de usuários que serão adicionados. Para criar uma tabela Employee Security, com um exemplo pequeno de usuários de seu próprio domínio, você usará o recurso Colar, colando dados de funcionário de uma planilha do Excel. Em um cenário do mundo real, a tabela que contém nomes de usuários adicionada a um modelo normalmente empregaria uma tabela de um banco de dados real como uma fonte de dados; por exemplo, uma tabela real dimEmployee.  
   
- Para implementar a segurança dinâmica, você usará duas novas funções DAX: [função USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [função LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula especifica um valor da tabela Employee Security e passa esse valor para a função USERNAME, que especifica o nome de usuário do usuário registrado que pertence a esta função. O usuário pode procurar apenas nos dados especificados pelos filtros de linha da função. Neste cenário, você especificará que os funcionários de vendas só podem procurar dados de vendas pela internet para as regiões de vendas das quais eles são membro.  
+ Para implementar a segurança dinâmica, você usará duas novas funções DAX: [Função USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [função LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula especifica um valor da tabela Employee Security e passa esse valor para a função USERNAME, que especifica o nome de usuário do usuário registrado que pertence a esta função. O usuário pode procurar apenas os dados especificados pelos filtros de linha da função. Neste cenário, você especificará que os funcionários de vendas só podem procurar dados de vendas pela internet para as regiões de vendas das quais eles são membro.  
   
  Para concluir esta lição suplementar, você executará uma série de tarefas. Essas tarefas que são exclusivas deste cenário de modelo de tabela do Adventure Works, mas não se aplicariam necessariamente a um cenário do mundo real, são identificadas como tal. Cada tarefa inclui informações adicionais que descrevem o propósito da tarefa.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48196576"
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Conexões Existentes**.  
   
-2.  Na caixa de diálogo **Conexões Existentes**, verifique se a conexão da fonte de dados **Adventure Works DB do SQL** está selecionada e clique em **Abrir**.  
+2.  Na caixa de diálogo **Conexões Existentes** , verifique se a conexão da fonte de dados **Adventure Works DB do SQL** está selecionada e clique em **Abrir**.  
   
-     Se a caixa de diálogo Credenciais de Representação aparecer, digite as credenciais de representação usadas na Lição 2: Adicionar dados.  
+     Se a caixa de diálogo de credenciais de representação aparecer, digite as credenciais de representação usadas na lição 2: Adicione dados.  
   
 3.  Na página **Escolher Como Importar os Dados** , deixe marcada a opção **Selecionar itens em uma lista de tabelas e exibições para escolher os dados a serem importados** e clique em **Avançar**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48196576"
   
 8.  Na página **Selecionar Tabelas e Exibições** , clique em **Concluir**.  
   
-     A nova tabela será adicionada ao espaço de trabalho do modelo. Objetos e dados da tabela de origem dimSalesTerritory são importados para a nova tabela Sales Territory em seu Modelo de Tabela de Vendas pela Internet AW.  
+     A nova tabela será adicionada ao workspace do modelo. Objetos e dados da tabela de origem dimSalesTerritory são importados para a nova tabela Sales Territory em seu Modelo de Tabela de Vendas pela Internet AW.  
   
 9. Depois que a tabela for importada, clique em **Fechar**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48196576"
      Note que a propriedade ativa desta relação é False, o que significa que ela está inativa. Isso ocorre porque a tabela Internet Sales já tem outra relação ativa que é usada em medidas.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Ocultar a tabela Employee Security de aplicativos cliente  
- Nesta tarefa, você ocultará a tabela Employee Security, impedindo que ela apareça na lista de campo de um aplicativo cliente. Lembre-se de que, ao ocultar uma tabela, você não a protege. Os usuários ainda poderão consultar dados da tabela Employee Security se souberem como fazê-lo. Para proteger os dados da tabela Employee Security, impedindo que usuários possam consultar seus dados, você aplicará um filtro em uma tarefa posterior.  
+ Nesta tarefa, você ocultará a tabela Employee Security, impedindo que ela apareça na lista de campos de um aplicativo cliente. Lembre-se de que, ao ocultar uma tabela, você não a protege. Os usuários ainda poderão consultar dados da tabela Employee Security se souberem como fazê-lo. Para proteger os dados da tabela Employee Security, impedindo que usuários possam consultar seus dados, você aplicará um filtro em uma tarefa posterior.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>Para ocultar a tabela Employee de aplicativos cliente  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196576"
  Nesta tarefa, você criará uma nova função de usuário. Esta função incluirá um filtro de linha que define quais linhas da tabela Sales Territory são visíveis a usuários. O filtro é aplicado na direção de relação um para muitos a todas as outras tabelas relacionadas a Sales Territory. Você também aplicará um filtro simples que protege a tabela Employee Security inteira contra a consulta por qualquer usuário que seja membro da função.  
   
 > [!NOTE]  
->  A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro à função Funcionários de Vendas por Região que também existe como um membro em uma função criada na [Lição 12: Criar funções](../analysis-services/lesson-11-create-roles.md), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Quer dizer, o usuário terá as maiores permissões determinadas pela combinação de funções.  
+>  A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro para funcionários de vendas por função de território que também existe como um membro em uma função criada em [lição 12: Criar funções](../analysis-services/lesson-11-create-roles.md), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Quer dizer, o usuário terá as maiores permissões determinadas pela combinação de funções.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para criar uma função de usuário Sales Employees by Territory  
   

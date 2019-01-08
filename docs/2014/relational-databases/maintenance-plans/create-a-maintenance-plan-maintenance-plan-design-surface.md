@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
@@ -13,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5906e66db0ab0cee320aed86a90e82b85a8fa73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775788"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
   Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
@@ -35,7 +34,7 @@ ms.locfileid: "48142869"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
@@ -161,10 +160,10 @@ ms.locfileid: "48142869"
          Define como uma restrição funciona entre duas tarefas.  
   
          Lista**Operação de avaliação**    
-         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
+         Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Restrição**, **expressão**, **Expression and Constraint**, e **Expression or Constraint**.  
   
          Lista**Valor**   
-         Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**. **Êxito** é o padrão.  
+         Especifique o valor de restrição: **Sucesso**, **falha**, ou **conclusão**. **Êxito** é o padrão.  
   
         > [!NOTE]  
         >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha**e azul para **Conclusão**.  
@@ -200,7 +199,7 @@ ms.locfileid: "48142869"
   
     3.  Na caixa de diálogo **Propriedades de Conexão** , na caixa **Nome da conexão** , insira o nome da conexão que você está criando.  
   
-    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite um nome de servidor** , digite o nome do SQL Server que deseja usar ou clique nas reticências **(…)** e selecione um servidor na caixa de diálogo **SQL Server** . Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
+    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite o nome do servidor**, digite o nome do SQL Server que deseja usar ou clique nas reticências **(...)** e selecione um servidor na caixa de diálogo **SQL Server**. Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
   
     5.  Em **Insira as informações para fazer logon no servidor**, selecione **Usar Segurança Integrada do Windows NT** ou **Usar nome de usuário e senha específicos**. Se você optar por usar um nome e uma senha de usuário específicos, insira essas informações nas caixas **Nome de usuário** e **Senha** , respectivamente.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "48142869"
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name*.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)**  e selecione o caminho para o nome de arquivo ou pasta do **localizar pasta – * * * server_name* ou **localizar arquivos de banco de dados-* * * nome_do_servidor* caixas de diálogo.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "48142869"
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name*.  
+     As seguintes opções estão disponíveis no **Visualizador do arquivo de Log-* * * nome_do_servidor* caixa de diálogo.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
@@ -254,7 +253,7 @@ ms.locfileid: "48142869"
      **Resumo do arquivo de log**  
      Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
   
-     **Date**  
+     **Data**  
      Exibe a data do evento.  
   
      **Origem**  

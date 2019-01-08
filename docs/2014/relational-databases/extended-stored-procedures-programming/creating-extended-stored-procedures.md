@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,12 +15,12 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47c73cfe13a0fe611e2323694cca82738e618787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749068"
 ---
 # <a name="creating-extended-stored-procedures"></a>Criando procedimentos armazenados estendidos
     
@@ -45,7 +43,7 @@ ms.locfileid: "48120308"
   
  Estes arquivos são necessários para criar uma DLL de procedimento armazenado estendido.  
   
-|Arquivo|Description|  
+|Arquivo|Descrição|  
 |----------|-----------------|  
 |Srv.h|Arquivo de cabeçalho da API do Procedimento Armazenado Estendido|  
 |Opends60.lib|Biblioteca de importação para Opends60.dll|  
@@ -64,7 +62,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) é uma extensão de compilador específica da Microsoft. Se seu compilador não aceitar esta diretiva, você deverá exportar esta função no arquivo DEF, na seção EXPORTS.  
   
- Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado com o rastreamento de sinalizador - T260 ou se um usuário com privilégios de administrador do sistema executa DBCC TRACEON (260), e se o armazenado estendido DLL de procedimento não dá suporte a __GetXpVersion(), uma mensagem de aviso (erro 8131: o procedimento armazenado estendido A DLL '% s' não exporta \__GetXpVersion().) é impressa no log de erro. (Observe que \__GetXpVersion() começa com dois sublinhados.)  
+ Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado com o rastreamento de sinalizador - T260 ou se um usuário com privilégios de administrador do sistema executa DBCC TRACEON (260), e se o armazenado estendido DLL de procedimento não dá suporte a __GetXpVersion(), uma mensagem de aviso (erro 8131: Procedimento armazenado estendido DLL '% s' não exporta \__GetXpVersion().) é impressa no log de erro. (Observe que \__GetXpVersion() começa com dois sublinhados.)  
   
  Se a DLL de procedimento armazenado estendido exportar __GetXpVersion(), mas a versão retornada pela função for menor que aquela exigida pelo servidor, uma mensagem de aviso informando a versão retornada pela função e a versão esperada pelo servidor será impressa no log de erros. Se você receber essa mensagem, você está retornando um valor incorreto de \__GetXpVersion(), ou você está compilando com uma versão mais antiga de SRV.  
   

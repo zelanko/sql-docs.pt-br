@@ -12,12 +12,12 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525064"
 ---
 # <a name="odbc-api-reference"></a>Referência de API do ODBC
 Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação de C. Descrições incluem o seguinte:  
@@ -42,7 +42,7 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   Referências a funções relacionadas  
   
- O nível de conformidade padrão da CLI pode ser uma das seguintes opções: 92 ISO, Open Group, ODBC ou obsoleto. Uma função marcada como em conformidade com ISO 92 também aparece no Open Group versão 1, como Open Group é um superconjunto puro de 92 ISO. Uma função marcada como compatível com o Open grupo também aparece no ODBC 3. *x*, pois o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum padrão. Uma função marcada como preterida foi preterida no ODBC 3. *x*.  
+ O nível de conformidade padrão da CLI pode ser uma das seguintes opções: ISO-92, abra o grupo, ODBC, ou preterido. Uma função marcada como em conformidade com ISO 92 também aparece no Open Group versão 1, como Open Group é um superconjunto puro de 92 ISO. Uma função marcada como compatível com o Open grupo também aparece no ODBC 3. *x*, pois o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum padrão. Uma função marcada como preterida foi preterida no ODBC 3. *x*.  
   
  Manipulação de informações de diagnóstico é descrita na [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função. O texto associado a valores SQLSTATE está incluído para fornecer uma descrição da condição, mas não se destina para prescrever um texto específico.  
   

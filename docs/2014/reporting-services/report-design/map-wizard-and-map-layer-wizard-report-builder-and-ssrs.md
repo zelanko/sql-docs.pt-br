@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362908"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
   O Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -32,7 +32,7 @@ ms.locfileid: "49072320"
   
 -   **Fonte de dados espaciais.** O local ou a conexão com uma fonte que fornece dados espaciais, por exemplo, o nome de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um banco de dados que contém dados espaciais ou o nome de um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.).  
   
--   **.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
+-   **Spatial data.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
   
 -   **Dados analíticos.** Dados analíticos a serem usados para variar a exibição do mapa, por exemplo, vendas anuais da loja.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49072320"
   
  Clique no título da página do assistente para obter o respectivo conteúdo de ajuda. As páginas exibidas variarão de acordo com as suas escolhas de tipo de mapa, a fonte de dados espaciais e a fonte de dados analíticos.  
   
-1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   [O que são dados espaciais?](#SpatialData)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "49072320"
   
     -   [Qual é a diferença entre um Mapa Básico, um Mapa de Bolha e um Mapa Analítico?](#MapType)  
   
-    -   **Escolher visualização de mapa: polígonos**  
+    -   **Escolha visualização de mapa: Polígonos**  
   
-    -   **Escolher visualização de mapa: linhas**  
+    -   **Escolha visualização de mapa: Linhas**  
   
-    -   **Escolher visualização de mapa: pontos**  
+    -   **Escolha visualização de mapa: Pontos**  
   
 4.  **Escolha uma conexão com uma fonte de dados**. Escolha uma conexão de fonte de dados ou crie uma com uma fonte de dados externa que contenha dados analíticos a serem exibidos no mapa.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072320"
   
  Depois que adicionar um mapa ou camada do mapa e visualizar o relatório, você poderá alterar as opções do mapa e da camada do mapa que definir nos assistentes. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Para obter instruções passo a passo sobre como adicionar um mapa a um relatório, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md).  
+ Para obter mais informações sobre mapas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Para obter instruções passo a passo adicionar um mapa a um relatório, consulte [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072320"
  No Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], adicione os arquivos .shp e .dbf ao projeto de relatório e especifique o nome do arquivo .shp como a fonte de dados espaciais.  
   
 ###  <a name="GetShapefiles"></a> Onde posso obter arquivos de forma ESRI?  
- Há arquivos de forma ESRI disponíveis na Web. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
+ Há arquivos de forma ESRI disponíveis na Web. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> O que é uma consulta espacial do SQL Server?  
  Uma consulta espacial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma consulta de conjunto de dados que especifica dados do tipo de dados SQLGeometry ou SQLGeography de um banco de dados relacionais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -149,7 +149,7 @@ ms.locfileid: "49072320"
   
  Quando você executa a consulta no designer de consulta, o conjunto de resultados exibe uma coluna com dados espaciais que aparecem como texto. Por exemplo, uma linha poderia conter dados espaciais que constituem um único ponto e a linha seguinte poderia conter dados espaciais que definissem um conjunto de pontos. Cada linha se torna um elemento do mapa. Você pode variar a exibição de cada elemento do mapa como uma unidade indivisível.  
   
- Para obter mais informações, consulte "Types of Spatial Data" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obter mais informações, consulte "Types of Spatial Data" nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072320"
   
 -   **Híbrido.** Exibe a combinação de **Rodoviário** e **Aéreo** .  
   
- Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [solucionar problemas de relatórios: relatórios de mapa &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e em "Planning for Maps" no [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+ Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [solucionar problemas de relatórios: Mapear relatórios &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Planning for Maps" no [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49072320"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ## <a name="see-also"></a>Consulte também  
- [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

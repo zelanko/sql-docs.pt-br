@@ -20,25 +20,25 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518808"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada dicionário usado em índices columnstore otimizados para memória xVelocity. Dicionários são usados para codificar alguns, mas não todos os tipos de dados; portanto, nem todas as colunas em um índice columnstore têm dicionários. Um dicionário pode existir como um dicionário primário (para todos os segmentos) e, possivelmente, para outros dicionários secundários usados para um subconjunto de segmentos da coluna.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
 |**column_id**|**int**|ID da coluna columnstore começando com 1. A primeira coluna tem a ID = 1, a segunda coluna tem a ID = 2, etc.|  
 |**dictionary_id**|**int**|Pode haver dois tipos de dicionários, globais e locais, associados um segmento de coluna. Um dictionary_id 0 representa o dicionário global que é compartilhado entre todos os segmentos de coluna (uma para cada grupo de linhas) para essa coluna.|  
 |**version**|**int**|Versão de formato do dicionário.|  
-|**type**|**int**|Tipo de dicionário:<br /><br /> 1 – hash dicionário que contém **int** valores<br /><br /> 2 – Não usado<br /><br /> 3 – Dicionário de hash que contém valores de cadeia de caracteres<br /><br /> 4 – hash de dicionário que contém **float** valores<br /><br /> Para obter mais informações sobre dicionários, consulte [guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**int**|Tipo de dicionário:<br /><br /> 1 - hash dicionário que contém **int** valores<br /><br /> 2 - não usado<br /><br /> 3 - dicionário de hash que contém os valores de cadeia de caracteres<br /><br /> 4 - hash dicionário que contém **float** valores<br /><br /> Para obter mais informações sobre dicionários, consulte [guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|A última ID de dados no dicionário.|  
 |**entry_count**|**bigint**|Número de entradas no dicionário.|  
 |**on_disc_size**|**bigint**|Tamanho do dicionário em bytes.|  

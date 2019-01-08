@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237102"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762818"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   O Agente de Mesclagem de Replicação é um executável utilitário que aplica o instantâneo inicial contido nas tabelas do banco de dados aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador depois que o instantâneo inicial foi criado e reconcilia conflitos de acordo com as regras que você configura ou usando um resolvedor personalizado que você cria.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237102"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -164,14 +163,14 @@ ms.locfileid: "50237102"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Merge Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|Description|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
 |**2**|Especifica que o SSL é usado, e que o certificado é verificado.|  
 
  > [!NOTE]  
- >  Um certificado SSL válido é definido com um nome de domínio totalmente qualificado do SQL Server. Em ordem para o agente para se conectar com êxito ao definir - EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro de nome do Alias deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
+ >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
   
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../security/security-overview-replication.md).  
   
@@ -181,7 +180,7 @@ ms.locfileid: "50237102"
   
  Especifica o tipo de troca de dados durante a sincronização, que pode ser um dos seguintes:  
   
-|Valor ExchangeType|Description|  
+|Valor ExchangeType|Descrição|  
 |------------------------|-----------------|  
 |**1**|O agente deve carregar alterações de dados do Assinante para o Publicador.|  
 |**2**|O agente deve baixar alterações de dados do Publicador para o Assinante.|  
@@ -200,7 +199,7 @@ ms.locfileid: "50237102"
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Especifica o nível de convergência que o Merge Agent deve usar e pode ser um dos seguintes:  
   
-|Valor ForceConvergenceLevel|Description|  
+|Valor ForceConvergenceLevel|Descrição|  
 |---------------------------------|-----------------|  
 |**0** (padrão)|Padrão. Executa uma mesclagem padrão sem convergência adicional.|  
 |**1**|Impõe convergência para todas as gerações.|  
@@ -221,7 +220,7 @@ ms.locfileid: "50237102"
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Especifica a quantidade de histórico registrada durante uma operação de mesclagem. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Registre a mensagem de status de agente final, detalhes finais da sessão e qualquer erro.|  
 |**1**|Registre detalhes incrementais da sessão em cada status da sessão, incluindo porcentagem concluída, além da mensagem de status final do agente, detalhes finais da sessão e qualquer erro.|  
@@ -243,7 +242,7 @@ ms.locfileid: "50237102"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Especifica o nome de logon usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword** *internet_proxy_password*  
  Especifica a senha usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -326,7 +325,7 @@ ms.locfileid: "50237102"
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Especifica se existe um banco de dados do Assinante.  
   
-|Valor SubscriberDBAddOption|Description|  
+|Valor SubscriberDBAddOption|Descrição|  
 |---------------------------------|-----------------|  
 |**0**|Use o banco de dados existente (padrão).|  
 |**1**|Crie um banco de dados de Assinante novo, vazio.|  
@@ -372,7 +371,7 @@ ms.locfileid: "50237102"
  **-Validate** [**0**|**1**|**2**|**3**]  
  Especifica se a validação deve ser feita no final da mensagem de mesclagem e, se for, o tipo de validação. O valor **3** é o valor recomendado.  
   
-|Valor de validação|Description|  
+|Valor de validação|Descrição|  
 |--------------------|-----------------|  
 |**0** (padrão)|Nenhuma validação.|  
 |**1**|Validação só de número de linhas.|  

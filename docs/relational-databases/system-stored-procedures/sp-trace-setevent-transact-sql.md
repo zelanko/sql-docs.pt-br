@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739904"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266097"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
-|Número do evento|Nome do evento|Description|  
+|Número do evento|Nome do evento|Descrição|  
 |------------------|----------------|-----------------|  
 |0-9|Reservado|Reservado|  
 |10|RPC:Completed|Ocorre quando uma RPC (chamada de procedimento remoto) é concluída.|  
@@ -209,17 +209,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |178|Evento Audit Database Operation|Ocorre quando ocorrem operações de banco de dados, tal como ponto de verificação ou notificação de consulta de assinatura.|  
 |180|Evento Audit Database Object Access|Ocorre quando são acessados objetos de banco de dados, tal como esquemas.|  
 |181|TM: Begin Tran starting|Ocorre quando uma solicitação BEGIN TRANSACTION é iniciada.|  
-|182|TM: Begin Tran completed|Ocorre quando uma solicitação BEGIN TRANSACTION é concluída.|  
+|182|TM: Begin Tran concluída|Ocorre quando uma solicitação BEGIN TRANSACTION é concluída.|  
 |183|TM: Promote Tran starting|Ocorre quando uma solicitação PROMOTE TRANSACTION é iniciada.|  
-|184|TM: Promote Tran completed|Ocorre quando uma solicitação PROMOTE TRANSACTION é concluída.|  
+|184|TM: Promote Tran concluída|Ocorre quando uma solicitação PROMOTE TRANSACTION é concluída.|  
 |185|TM: Commit Tran starting|Ocorre quando uma solicitação COMMIT TRANSACTION é iniciada.|  
-|186|TM: Commit Tran completed|Ocorre quando uma solicitação COMMIT TRANSACTION é concluída.|  
+|186|TM: Commit Tran concluída|Ocorre quando uma solicitação COMMIT TRANSACTION é concluída.|  
 |187|TM: Rollback Tran starting|Ocorre quando uma solicitação ROLLBACK TRANSACTION é iniciada.|  
-|188|TM: Rollback Tran completed|Ocorre quando uma solicitação ROLLBACK TRANSACTION é concluída.|  
+|188|TM: Rollback Tran concluída|Ocorre quando uma solicitação ROLLBACK TRANSACTION é concluída.|  
 |189|Lock: Timeout (timeout > 0)|Ocorre quando uma solicitação para um bloqueio em um recurso, como uma página, expira.|  
-|190|Progress Report: Online Index Operation|Relata o progresso de uma operação de criação de índice online quando o processo de criação está sendo executado.|  
-|191|TM: Save Tran starting|Ocorre quando uma solicitação SAVE TRANSACTION é iniciada.|  
-|192|TM: Save Tran completed|Ocorre quando uma solicitação SAVE TRANSACTION é concluída.|  
+|190|Relatório de progresso: Operação de índice online|Relata o progresso de uma operação de criação de índice online quando o processo de criação está sendo executado.|  
+|191|TM: Salvar Tran starting|Ocorre quando uma solicitação SAVE TRANSACTION é iniciada.|  
+|192|TM: Save Tran concluída|Ocorre quando uma solicitação SAVE TRANSACTION é concluída.|  
 |193|Background Job Error|Ocorre quando um trabalho em segundo plano é terminado de maneira anormal.|  
 |194|OLEDB Provider Information|Ocorre quando uma consulta distribuída é executada e coleta informações que correspondem à conexão de provedor.|  
 |195|Mount Tape|Ocorre quando uma solicitação de montagem de fita é recebida.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Aviso de bitmap|Indica quando os filtros do bitmap foram desabilitados em uma consulta.|  
 |213|Database Suspect Data Page|Indica quando uma página é adicionada para o **suspect_pages** na tabela **msdb**.|  
 |214|Limite de CPU excedido|Indica quando o Administrador de Recursos detecta que uma consulta excedeu o valor do limite de CPU em (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indica quando uma função do gatilho LOGON ou do classificador Administrador de Recursos inicia a execução.|Indica quando uma função do gatilho LOGON ou do classificador Administrador de Recursos inicia a execução.|  
+|215|PreConnect:Starting|Indica quando uma função do gatilho LOGON ou do classificador Administrador de Recursos inicia a execução.|  
 |216|PreConnect:Completed|Indica quando uma função do gatilho LOGON ou do classificador Administrador de Recursos conclui a execução.|  
 |217|Guia de plano bem-sucedido|Indica que o SQL Server produziu com sucesso um plano de execução para uma consulta ou lote, que continha um guia de plano.|  
 |218|Guia de plano malsucedido|Indica que o SQL Server não pôde produzir um plano de execução, para uma consulta ou lote, que continha um guia de plano. O SQL Server tentou gerar um plano de execução para esta consulta ou lote sem aplicar o guia de plano. Um guia de plano inválido pode ser a causa deste problema. Você pode validar o guia de plano usando a função de sistema sys.fn_validate_plan_guide.|  
@@ -244,7 +244,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  A tabela a seguir lista as colunas que podem ser adicionadas a um evento.  
   
-|Número da coluna|Nome da coluna|Description|  
+|Número da coluna|Nome da coluna|Descrição|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valor de texto dependente da classe de evento capturada no rastreamento.|  
 |2|**BinaryData**|Valor binário dependente da classe de evento capturada no rastreamento.|  
@@ -330,7 +330,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|Description|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |0|Nenhum erro.|  
 |1|Erro desconhecido.|  

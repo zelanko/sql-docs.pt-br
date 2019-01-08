@@ -15,28 +15,28 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395150"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Instalação do modo do SharePoint do Reporting Services (SharePoint 2010 e SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no SharePoint modo é uma coleção de componentes de servidor que fornecem geração de relatórios e entrega, com base em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] produtos do SharePoint.  
   
- A execução do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint fornece o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e recursos de alerta de dados. Para obter mais informações sobre recursos no modo do SharePoint, veja a seção “Suporte a recursos e diferenças de comportamento por modo de servidor” em [Servidor de Relatório do Reporting Services](../reporting-services-report-server.md)  
+ A execução do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint fornece o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e recursos de alerta de dados. Para obter mais informações sobre recursos no modo do SharePoint, consulte a seção "Recurso de suporte e comportamento diferenças por modo de servidor" em [servidor de relatório do Reporting Services](../reporting-services-report-server.md)  
   
  Há duas instalações fundamentais necessárias ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint:  
   
-|Instalação|Description|  
+|Instalação|Descrição|  
 |------------------|-----------------|  
 |O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint.|O suplemento instala páginas e recursos de interface do usuário [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um servidor front-end de Web do SharePoint. Os recursos de interface do usuário incluem o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], páginas de administração na Administração Central do SharePoint, páginas de recursos usadas em bibliotecas de documentos do SharePoint e páginas de alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório instalado no modo do SharePoint|O servidor de relatório controla o processamento e a renderização de dados e de relatórios, bem como a assinatura e o processamento de Alerta de Dados O servidor de relatório no modo do SharePoint é projetado e instalado como um Serviço Compartilhado do SharePoint.|  
   
  Para instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], use a mídia de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: instalar o Reporting Services em um existente Farm do SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
+ Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: Instalar o Reporting Services em um farm existente do SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Combinações do SharePoint e do servidor e suplemento Reporting Services com suporte &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -49,18 +49,18 @@ ms.locfileid: "48170816"
   
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Adicionar um servidor de relatório a um Farm &#40;expansão SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Adicionar um servidor de relatório a um farm &#40;Expansão do SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Adicionar um front-end da Web do Reporting Services a um farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configurar o email para um relatório dos serviços de aplicativo de serviço &#40;SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Provisionar assinaturas e alertas para aplicativos de serviço SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Claims to Windows Token Service &#40;C2WTS&#41; e o Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura e fluxo de trabalho de alertas de dados](../reporting-services-data-alerts.md#AlertingWF)   
- [Gerenciador de alertas de dados para os administradores de alerta](../data-alert-manager-for-alerting-administrators.md)  
+ [Arquitetura de alertas de dados e fluxo de trabalho](../reporting-services-data-alerts.md#AlertingWF)   
+ [Gerenciador de Alertas de dados para administradores de alertas](../data-alert-manager-for-alerting-administrators.md)  
   
   

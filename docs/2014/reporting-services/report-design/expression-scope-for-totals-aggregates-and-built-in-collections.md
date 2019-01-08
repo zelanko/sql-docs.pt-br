@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204876"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412023"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Escopo das expressões para totais, agregações e coleções internas (Construtor de Relatórios e SSRS)
   Quando você escrever expressões, descobrirá que o termo *escopo* é usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada, o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância. Você verá o termo *escopo* em tópicos relacionados a avaliações de expressão, sintaxe de função de agregação, visibilidade condicional e também em mensagens de erro relacionadas a estas áreas. Use as descrições a seguir para diferenciar qual significado de *escopo* se aplica:  
@@ -71,7 +71,7 @@ ms.locfileid: "48204876"
      A expressão a seguir gera os anos de intervalo entre SellStartDate e LastReceiptDate. Esses campos estão em dois conjuntos de dados diferentes, DataSet1 e DataSet2. A [Função First &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-first-function.md), que é uma função de agregação, retorna o primeiro valor de SellStartDate em DataSet1 e o primeiro valor de LastReceiptDate em DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Escopo de domínio** Também chamado de escopo de sincronização. Um tipo de escopo de dados que se aplica à avaliação de expressão para regiões de dados aninhadas. O escopo de domínio é usado para especificar agregações em todas as instâncias de um grupo, de modo que instâncias aninhadas possam ser alinhadas e facilmente comparadas. Por exemplo, você pode alinhar o intervalo e a altura para minigráficos inseridos em uma tabela, de modo que os valores fiquem alinhados.  
@@ -163,15 +163,15 @@ ms.locfileid: "48204876"
   
   
 ##  <a name="Nulls"></a> Suprimindo valores nulos ou zeros em uma célula  
- Para muitos relatórios, cálculos com escopo de grupos podem criar muitas células que têm valores nulos ou zeros (0). Para reduzir a desordem em relatórios, adicione uma expressão para retornar espaços em branco se o valor de agregação for 0. Para obter mais informações, consulte "Exemplos que suprimem valores nulos ou zeros" em [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Para muitos relatórios, cálculos com escopo de grupos podem criar muitas células que têm valores nulos ou zeros (0). Para reduzir a desordem em relatórios, adicione uma expressão para retornar espaços em branco se o valor de agregação for 0. Para obter mais informações, consulte "Exemplos que suprimem valores nulos ou zeros" em [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
   
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Criando grupos de hierarquia recursiva &#40;relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Criar grupos de hierarquia recursiva &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

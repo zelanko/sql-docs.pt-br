@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408313"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executar o Console do SSMA (AccessToSQL)
 Microsoft fornece um conjunto robusto de comandos do arquivo de script e opções de linha de comando para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -25,7 +25,7 @@ Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair d
   
 **Comando**  
   
-Criar novo projeto: cria um novo projeto SSMA.  
+Criar-novo projeto: Cria um novo projeto SSMA.  
   
 **Script**  
   
@@ -62,7 +62,7 @@ Criar novo projeto: cria um novo projeto SSMA.
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ Atributo 'Substituir-if-exists' está **falsos** por padrão.
   
 **Comando**  
   
-Abrir projeto: abre um projeto existente.  
+Abrir projeto: Abre um projeto existente.  
   
 **Script**  
   
@@ -91,11 +91,11 @@ Abrir projeto: abre um projeto existente.
   
 />  
 ```  
-**Observação:** aplicativo de Console do SSMA para Access dá suporte à compatibilidade com versões anteriores. Você poderá abrir projetos criados por uma versão anterior do SSMA.  
+**Observação:** Aplicativo de Console do SSMA para Access dá suporte a compatibilidade com versões anteriores. Você poderá abrir projetos criados por uma versão anterior do SSMA.  
   
 **Comando**  
   
-projeto salvar: salva o projeto de migração.  
+Salvar projeto: Salva o projeto de migração.  
   
 **Script**  
   
@@ -106,7 +106,7 @@ projeto salvar: salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto: fecha o projeto de migração.  
+Fechar projeto: Fecha o projeto de migração.  
   
 **Script**  
   
@@ -149,7 +149,7 @@ Definição de servidor é recuperada do atributo nome definido para cada conex�
 ```  
 **Comando**  
   
-carga-acesso-banco de dados: usada para carregar arquivos de banco de dados do access  
+carga-acesso-banco de dados: Usado para carregar arquivos de banco de dados do access  
   
 **Script**  
   
@@ -325,7 +325,7 @@ ou em
 ## <a name="migration-script-file-commands"></a>Comandos de arquivo de Script de migração  
 Os comandos de migração converter o esquema de banco de dados de destino para o esquema de origem e migra dados para o servidor de destino.  
   
-A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   
@@ -452,7 +452,7 @@ ou em
 ```  
 **Comando**  
   
-Vincular tabelas: este comando vincula a tabela de origem (acesso) para a tabela de destino.  
+Vincular tabelas: Esse comando vincula a tabela de origem (acesso) para a tabela de destino.  
   
 **Script**  
   
@@ -478,7 +478,7 @@ ou em
 ```  
 **Comando**  
   
-tabelas desvincular: este comando desvincula a tabela de origem (acesso) da tabela de destino.  
+Desvincular-tabelas: Esse comando desvincula a tabela de origem (acesso) da tabela de destino.  
   
 **Script**  
   
@@ -508,7 +508,7 @@ O comando de preparação de migração inicia o mapeamento de esquema entre os 
   
 **Comando**  
   
-mapa de esquema: o mapeamento de esquema de banco de dados de origem ao esquema de destino.  
+mapa de esquema: Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
   
 **Script**  
   
@@ -527,7 +527,7 @@ mapa de esquema: o mapeamento de esquema de banco de dados de origem ao esquema 
 ## <a name="manageability-commands"></a>Comandos de capacidade de gerenciamento  
 Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem.  
   
-A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   

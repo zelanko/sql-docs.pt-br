@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207552"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410183"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  
@@ -65,7 +65,7 @@ ms.locfileid: "48207552"
   
 2.  Clique na guia **Assinaturas** . Como alternativa, clique no link **Minhas Assinaturas** na parte superior do gerenciador de relatórios  
   
-3.  Selecione a assinatura que você deseja modificar. O seguinte ícone indica uma assinatura controlada por dados: ![ícone da assinatura controlada por dados](../media/hlp-16subscriptiondd.gif "ícone da assinatura controlada por dados")  
+3.  Selecione a assinatura que você deseja modificar. O ícone a seguir indica uma assinatura controlada por dados: ![Ícone de assinatura controlada por dados](../media/hlp-16subscriptiondd.gif "ícone de assinatura controlada por dados")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar uma assinatura controlada por dados existente (Modo do SharePoint)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207552"
   
 -   **Requisitos de dados**. Você deve ter uma fonte de dados externa acessível que contenha dados de assinante.  
   
--   **Requisitos de usuário**. O autor da assinatura deve ter permissão para "Gerenciar relatórios" e "Gerenciar todas as assinaturas". Para obter mais informações sobre permissões de nível de item de tarefa, consulte [tarefas e permissões](../security/tasks-and-permissions.md). O autor também tem que ter as credenciais necessárias para acessar a fonte de dados externa que contém dados de assinante.  
+-   **Requisitos de usuário**. O autor da assinatura deve ter permissão para "Gerenciar relatórios" e "Gerenciar todas as assinaturas". Para obter mais informações sobre permissões de tarefa em nível de item, consulte [Tarefas e Permissões](../security/tasks-and-permissions.md). O autor também tem que ter as credenciais necessárias para acessar a fonte de dados externa que contém dados de assinante.  
   
 ##  <a name="bkmk_define_query"></a> Definir uma consulta que recupera informações de assinatura  
  Uma assinatura controlada por dados deve especificar uma consulta ou um comando que recupere dados de assinante. A consulta deve produzir uma linha para cada assinante. Se você estiver usando a extensão de entrega de email, a consulta deverá retornar um alias de email válido para cada assinante. O número de entregas feitas se baseia no número de linhas retornadas pela consulta. Se o conjunto de linhas for composto por 10.000 linhas, a assinatura entregará 10.000 relatórios.  
@@ -98,12 +98,12 @@ ms.locfileid: "48207552"
 ##  <a name="bkmk_run_subscription"></a> Executar uma assinatura  
  Você configura as condições para o processamento da assinatura. Você pode configurar uma agenda ou pode disparar a assinatura para coincidir com as atualizações para um instantâneo de execução do relatório.  
   
- ![Observação](../media/rs-fyinote.png "Observação") enquanto não há nenhum recurso na interface do usuário que você pode usar para executar uma assinatura imediatamente, você pode usar um script simples do Windows PowerShell para disparar uma assinatura para ser executado. Para obter mais informações, consulte o "Script: executar (acionar) uma única assinatura" seção [usar o PowerShell para a alteração e lista Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Observação](../media/rs-fyinote.png "Observação") enquanto não há nenhum recurso na interface do usuário que você pode usar para executar uma assinatura imediatamente, você pode usar um script simples do Windows PowerShell para disparar uma assinatura para ser executado. Para obter mais informações, consulte o "Script: Executar (acionar) uma única assinatura"seção [usar o PowerShell para a alteração e lista Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Agenda e condições para execução de assinaturas controladas por dados é o mesmo que processamento para assinaturas padrão.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gerenciar e excluir uma assinatura controlada por dados  
- Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para obter mais informações, consulte [crie e gerencie assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
+ Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  Para excluir uma assinatura controlada por dados, selecione-a na página Minhas Assinaturas ou na página Assinaturas de um relatório e clique em **Excluir**.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48207552"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Página Assinaturas &#40;Gerenciador de Relatórios&#41;](../subscriptions-page-report-manager.md)   
  [Página Minhas Assinaturas &#40;Gerenciador de Relatórios&#41;](../my-subscriptions-page-report-manager.md)  
   

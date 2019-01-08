@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531764"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 Este artigo lista SSMA para MySQL alterações em cada versão. 
@@ -189,7 +189,7 @@ A versão de julho de 2010 do SSMA para MySQL contém os seguintes recursos:
   
 4.  **Aprimoramentos para a conversão de objeto:**  
   
-    -   Conversão de objetos de Metabase do MySQL – procedimentos, funções, exibições, gatilhos e instruções.  
+    -   Conversão de objetos de Metabase do MySQL - procedimentos, funções, exibições, gatilhos e instruções.  
     -   Suporte limitado para tipos de dados espaciais em tabelas.  
     -   Opção de converter funções de MySQL para procedimentos armazenados do SQL Server  
     -   Opção de aplicar o mapeamento de modos SQL e o conjunto de caracteres durante a conversão do objeto  
@@ -210,4 +210,4 @@ A versão de janeiro de 2010 do SSMA para MySQL é a versão inicial. Continha o
   
 -   Adicionado suporte para a migração para os dois locais do SQL Server e SQL do Azure.  
   
--   **Recurso de instantâneo:** migração de esquema e dados do MySQL tabelas/índices/restrições.
+-   **Recurso de instantâneo:** Migração de esquema e dados do MySQL tabelas/índices/restrições.

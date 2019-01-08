@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -17,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770078"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   A replicação ponto a ponto fornece uma a solução, expandida e de alta disponibilidade, para manter cópias de dados em várias instâncias de servidor, também denominadas *nós*. Criada na base da replicação transacional, a replicação ponto a ponto se propaga de forma transacional, de acordo com as alterações em tempo real. Ativa aplicativos que requerem operações expandidas de leitura para distribuir as leituras de clientes em vários nós. Como os dados são mantidos em todos os nós em tempo quase real, a replicação ponto a ponto fornece redundância de dados, o que amplia a disponibilidade de dados.  
@@ -73,7 +72,7 @@ ms.locfileid: "48216156"
   
  Cada local tem um banco de dados e um servidor de aplicativo, que são usados por engenheiros de suporte à medida que eles digitam e atualizam informações sobre as chamadas de cliente. A topologia é particionada por tempo. Por isso, as atualizações ocorrem apenas no nó que está atualmente aberto para negócios e, em seguida, elas fluem para outros bancos de dados participantes. Essa topologia oferece as seguintes vantagens:  
   
--   Independência sem isolamento: cada escritório pode inserir, atualizar ou excluir dados, de forma independente, mas também compartilhá-los, porque eles são replicados em todos os outros bancos de dados.  
+-   Independência sem isolamento: Cada escritório pode inserir, atualizar, ou excluir dados de forma independente, mas também pode compartilhar os dados porque ela é replicada para todos os outros bancos de dados participantes.  
   
 -   Disponibilidade superior no caso de falha ou permissão de manutenção em um ou mais dos bancos de dados participantes.  
   

@@ -16,12 +16,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529090"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Criar uma cópia de um modelo de mineração
   A criação de uma cópia de um modelo de mineração é útil quando você deseja criar rapidamente vários modelos de mineração com base nos mesmos dados. Após copiar o modelo, você pode editar a nova cópia alterando parâmetros ou adicionando um filtro.  
@@ -38,7 +38,7 @@ ms.locfileid: "48116236"
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     –ou–  
+     -ou-  
   
      Selecione o modelo. No menu **Modelo de Mineração** , selecione **Novo Modelo de Mineração**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48116236"
   
 1.  Selecione o modelo de mineração.  
   
-2.  Na janela **Propriedades** , clique na caixa de texto da propriedade **Filtro** e, em seguida, clique no botão de criação **(…)** .  
+2.  No **propriedades** janela, clique na caixa de texto para o **filtro** propriedade e clique em build **(...)**  botão.  
   
 3.  Altere as condições do filtro.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48116236"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](delete-a-filter-from-a-mining-model.md)  
   
   

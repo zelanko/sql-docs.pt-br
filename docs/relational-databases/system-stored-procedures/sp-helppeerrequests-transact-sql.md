@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppeerrequests_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0562b43ca4534fa76f8cd9ff1ab9d132a1eba74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700684"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802228"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +47,12 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica uma solicitação.|  
 |**publicação**|**sysname**|Nome da publicação para a qual a solicitação de status foi enviada.|  
 |**sent_date**|**datetime**|Data e hora de envio da solicitação de status.|  
-|**Descrição**|**nvarchar(4000)**|Informações que podem ser usadas para identificar solicitações de status individuais definidas pelo usuário.|  
+|**description**|**nvarchar(4000)**|Informações que podem ser usadas para identificar solicitações de status individuais definidas pelo usuário.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

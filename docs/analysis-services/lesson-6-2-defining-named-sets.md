@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507659"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>Lição 6-2 - definir conjuntos nomeados
+# <a name="lesson-6-2---defining-named-sets"></a>Lição 6-2: definindo conjuntos nomeados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Um conjunto nomeado é uma linguagem MDX (Multidimensional Expressions) que retorna um conjunto de membros de dimensão. Os conjuntos nomeados podem ser definidos e salvos como parte da definição de cubo; você também pode criar conjuntos nomeados em aplicativos cliente. É possível criar conjuntos nomeados combinando dados de cubo, operadores aritméticos, números e funções. Os conjuntos nomeados podem ser usados em consultas MDX em aplicativos cliente e também podem ser usados para definir conjuntos em subcubos. Um subcubo é uma coleção de conjuntos em interjunção que restringe o espaço do cubo ao subespaço definido para instruções subsequentes. Definir um espaço de cubo restrito é um conceito fundamental para a geração de scripts de MDX.  
@@ -68,7 +68,7 @@ Nas tarefas deste tópico, você definirá dois conjuntos nomeados: um chamado P
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    Agora que o primeiro conjunto para a expressão de conjunto Exists já foi definido, você poderá adicionar o segundo conjunto – o conjunto de membros da dimensão Revendedor que contém o maior número de funcionários.  
+    Agora que você definiu o primeiro conjunto de Exists expressão de conjunto, você estará pronto para adicionar o segundo conjunto – o conjunto de membros da dimensão revendedor que contém o maior número de funcionários.  
   
 7.  Na guia **Metadados** no painel **Ferramentas de Cálculo** , expanda **Número de Funcionários** na dimensão Revendedor, expanda **Membros**e **Todos os Revendedores**.  
   
@@ -118,22 +118,22 @@ Nas tarefas deste tópico, você definirá dois conjuntos nomeados: um chamado P
   
 5.  Expanda a dimensão Produto e adicione Categoria e Subcategoria à área de linha, conforme mostrado na imagem a seguir.  
   
-    ![Os membros do atributo subcategoria](../analysis-services/media/l6-named-set-03.gif "membros do atributo subcategoria")  
+    ![Membros do atributo subcategoria](../analysis-services/media/l6-named-set-03.gif "membros do atributo subcategoria")  
   
 6.  No painel **Metadados** , na dimensão **Produto** , arraste **Produtos Principais** para a área de filtro.  
   
     Observe que apenas o membro **Bicicleta** do atributo **Categoria** e os membros das subcategorias de **Bicicleta** permanecem no cubo. Isto ocorre porque o conjunto nomeado **Produtos de Núcleo** é usado para definir um subcubo. Esse subcubo limita os membros do atributo **Categoria** na dimensão **Produto** dentro do subcubo aos membros do conjunto nomeado **Produtos Principais** , como mostra a imagem a seguir.  
   
-    ![Conjunto nomeado de membros de produto principal](../analysis-services/media/l6-named-set-04.gif "conjunto nomeado de membros de produto principal")  
+    ![Conjunto nomeado de membros do produto principal](../analysis-services/media/l6-named-set-04.gif "conjunto nomeado de membros do produto principal")  
   
 7.  No painel **Metadados** , expanda **Revendedor**, adicione **Grandes Revendedores** à área de filtro.  
   
     Observe que a medida Valor das Vendas do Revendedor no painel Dados exibe apenas o valor das vendas de bicicletas dos grandes revendedores. Observe também que agora o painel Filtro exibe os dois conjuntos nomeados que são usados para definir esse subcubo específico, como mostra a imagem a seguir.  
   
-    ![Painel de filtro que contém dois denominado define](../analysis-services/media/l6-named-set-05.gif "define um painel de filtro que contém dois denominado")  
+    ![Define um painel de filtro que contém dois nomeados](../analysis-services/media/l6-named-set-05.gif "define um painel de filtro que contém dois nomeados")  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 7: Definindo indicadores chave de desempenho & #40; KPIs & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lição 7: Definindo indicadores chave de desempenho &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

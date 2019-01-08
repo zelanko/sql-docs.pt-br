@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - limiting values [SQLXML]
@@ -19,12 +17,12 @@ ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77415951f7f581eb75604668fca4f5d573a69675
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751108"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field e sql:limit-value (SQLXML 4.0)
   O XML Bulk Load processa as anotações `sql:limit-field` e `sql:limit-value` por suas definições. Para obter mais informações, consulte [Filtrando valores usando SQL: limit-campo e SQL: limit-valor de &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  

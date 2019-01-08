@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747918"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionando redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
@@ -97,6 +96,6 @@ ms.locfileid: "48051306"
 13. Clique em **OK** para fechar a caixa de diálogo **Editor de Transformação Scripts** .  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 4: adicionando um destino de arquivo simples] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Etapa 4: Adicionando um destino de arquivo simples] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

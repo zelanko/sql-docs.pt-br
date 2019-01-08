@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529114"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,24 +26,24 @@ ms.locfileid: "34025033"
   
  Os meios de expressão de uma fonte de dados variam de acordo com o tipo de fonte de dados. Por exemplo, uma fonte de dados relacional é diferenciada pela cadeia de caracteres de conexão. Para obter mais informações sobre fontes dados, consulte [Data Sources in Multidimensional Models](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Independentemente da fonte de dados usada, a exibição de fonte de dados (DSV) contém os metadados da fonte de dados. Portanto, as associações de um cubo ou outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são expressas como associações ao DSV. Essas associações podem incluir associações a objetos lógicos — como exibições, colunas calculadas e relações que não existem fisicamente na fonte de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adiciona uma coluna calculada que encapsula a expressão para o DSV e, em seguida, associa a medida OLAP correspondente a essa coluna no DSV. Para obter mais informações sobre DSVs, consulte [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Independentemente da fonte de dados usada, a exibição de fonte de dados (DSV) contém os metadados da fonte de dados. Portanto, as associações de um cubo ou outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são expressas como associações ao DSV. Essas associações podem incluir associações a objetos de objetos lógicos, como exibições, colunas calculadas e relações que não existem fisicamente na fonte de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adiciona uma coluna calculada que encapsula a expressão para o DSV e, em seguida, associa a medida OLAP correspondente a essa coluna no DSV. Para obter mais informações sobre DSVs, consulte [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Cada objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é associado à fonte de dados em seu próprio modo. Além disso, as associações de dados desses objetos e a definição da fonte de dados podem ser fornecidas de forma incorporada com a definição do objeto databound (por exemplo, a dimensão) ou associações fora de linha, como conjunto separado de definições.  
   
 ## <a name="analysis-services-data-types"></a>Tipos de dados do Analysis Services  
  Os tipos de dados que são usado em associações devem corresponder aos tipos de dados suportados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os seguintes tipos de dados estão definidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo de dados do Analysis Services|Description|  
+|Tipo de dados do Analysis Services|Descrição|  
 |---------------------------------|-----------------|  
 |BigInt|Um inteiro de 64 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int64 no Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I8 no OLE DB.|  
 |Bool|Um valor booliano. Esse tipo de dados é mapeado para o tipo de dados Boolean no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_BOOL no OLE DB.|  
-|Moeda|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
-|Data|Dados de data, armazenados como um número de ponto flutuante com precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Esse tipo de dados é mapeado para o tipo de dados DateTime no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_DATE no OLE DB.|  
+|CURRENCY|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
+|data|Dados de data, armazenados como um número de ponto flutuante com precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Esse tipo de dados é mapeado para o tipo de dados DateTime no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_DATE no OLE DB.|  
 |Double|Um número de ponto flutuante de precisão dupla dentro do intervalo de -1,79E +308 a 1,79E +308. Esse tipo de dados é mapeado para o tipo de dados Double no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R8 no OLE DB.|  
 |Integer|Um inteiro de 32 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I4 no OLE DB.|  
 |Single|Um número de ponto flutuante de precisão única dentro do intervalo de -3,40E +38 a 3,40E +38. Esse tipo de dados é mapeado para o tipo de dados Single no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R4 no OLE DB.|  
 |SmallInt|Um inteiro com sinal de 16 bits. Esse tipo de dados é mapeado para o tipo de dados Int16 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I2 no OLE DB.|  
-|TinyInt|Um inteiro com sinal de 8 bits. Esse tipo de dados é mapeado para o tipo de dados SByte no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I1 no OLE DB.<br /><br /> Observação: se uma fonte de dados contiver campos do tipo de dados tinyint e a propriedade AutoIncrement for definida como True, eles serão convertidos em inteiros na exibição da fonte de dados.|  
+|TinyInt|Um inteiro com sinal de 8 bits. Esse tipo de dados é mapeado para o tipo de dados SByte no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I1 no OLE DB.<br /><br /> Observação: Se uma fonte de dados contiver campos do tipo de dados tinyint e a propriedade AutoIncrement for definida como True, eles serão convertidos em inteiros na exibição da fonte de dados.|  
 |UnsignedBigInt|Um inteiro não assinado de 64 bits. Esse tipo de dados é mapeado para o tipo de dados UInt64 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI8 no OLE DB.|  
 |UnsignedInt|Um inteiro não assinado de 32 bits. Esse tipo de dados é mapeado para o tipo de dados UInt32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI4 no OLE DB.|  
 |UnsignedSmallInt|Um inteiro sem sinal de 16 bits. Esse tipo de dados é mapeado para o tipo de dados UInt16 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_UI2 no OLE DB.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025033"
  Todos os dados recebidos da fonte de dados são convertidos para o tipo do [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado na associação (normalmente durante o processamento). Ocorrerá um erro caso a conversão não possa ser executada (por exemplo, de String para Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] define o tipo de dados na associação para aquele que melhor corresponda ao tipo de fonte na fonte de dados. Por exemplo, os tipos de SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset são mapeados para [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date e o tipo de SQL Time é mapeado para String.  
   
 ## <a name="bindings-for-dimensions"></a>Associações para dimensões  
- Cada atributo de uma dimensão é associado a uma coluna em um DSV. Todos os atributos de uma dimensão devem ser provenientes de uma única fonte de dados. Entretanto, os atributos podem ser associados a colunas em tabelas diferentes. As relações entre as tabelas estão definidas no DSV. No caso de ter mais de um conjunto de relações para a mesma tabela, pode ser necessário introduzir uma consulta nomeada no DSV para funcionar como uma tabela 'alias'. Expressões e filtros são definidos no DSV com o uso de cálculos e consultas nomeados.  
+ Cada atributo de uma dimensão é associado a uma coluna em um DSV. Todos os atributos de uma dimensão devem ser provenientes de uma única fonte de dados. Entretanto, os atributos podem ser associados a colunas em tabelas diferentes. As relações entre as tabelas estão definidas no DSV. No caso em que mais de um conjunto de relações existe para a mesma tabela, pode ser necessário introduzir uma consulta nomeada no DSV para atuar como uma tabela 'alias'. Expressões e filtros são definidos no DSV com o uso de cálculos e consultas nomeados.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Associações para MeasureGroups, medidas e partições  
  Cada grupo de medidas tem as seguintes associações padrão:  
@@ -125,7 +125,7 @@ ms.locfileid: "34025033"
   
 -   Cada coluna de tabela não aninhada é associada a uma coluna na tabela da caixa ou a tabela relacionada à tabela da caixa (seguindo uma relação muitos para um ou um para um). O DSV define as relações entre as tabelas.  
   
--   Cada coluna da tabela aninhada está associada à tabela de fontes. As colunas de propriedade da coluna da tabela aninhada são associadas às colunas na tabela de fontes ou a tabela relacionada à tabela de fontes. (Novamente, a associação segue uma relação muitos para um ou um para um.) As associações do modelo de mineração não fornecem o caminho de junção para a tabela aninhada. Em vez disso, as relações definidas no DSV fornecem essas informações.  
+-   Cada coluna da tabela aninhada está associada à tabela de fontes. As colunas de propriedade da coluna da tabela aninhada são associadas às colunas na tabela de fontes ou a tabela relacionada à tabela de fontes. (Novamente, a associação segue uma relação muitos para um ou um para um.) Os model bindings de mineração não fornecem o caminho de junção para a tabela aninhada. Em vez disso, as relações definidas no DSV fornecem essas informações.  
   
 ### <a name="bindings-for-an-olap-mining-model"></a>Associações para modelos de mineração OLAP  
  Os modelos de mineração OLAP não têm o equivalente de um DSV. Portanto, as associações de dados devem remover as ambiguidades entre colunas e fontes de dados. Por exemplo, um modelo de mineração pode ter base no cubo Vendas e as colunas podem basear-se em Qtd, Valor e Nome do Produto. Como alternativa, um modelo de mineração pode basear-se em Produto e as colunas podem em Nome do Produto, Cor do Produto e uma tabela aninhada com a Qtd. de Vendas.  
@@ -145,7 +145,7 @@ ms.locfileid: "34025033"
   
  As associações incorporadas são especificadas pela inclusão do objeto de coleção opcional **Bindings** com o comando de processamento. A coleção opcional **Bindings** contém os elementos a seguir.  
   
-|Propriedade|Cardinalidade|Tipo|Description|  
+|Propriedade|Cardinalidade|Tipo|Descrição|  
 |--------------|-----------------|----------|-----------------|  
 |**Associação**|0-n|**Associação**|Fornece uma coleção de novas associações.|  
 |**DataSource**|0-1|**DataSource**|Substitui **DataSource** do servidor que seria usado.|  
@@ -154,9 +154,9 @@ ms.locfileid: "34025033"
  Todos os elementos relacionados a associações incorporadas são opcionais. Para qualquer elemento não especificado, o ASSL usa a especificação contida no DDL do objeto persistido. A especificação de **DataSource** ou **DataSourceView** no comando **Process** é opcional. Se **DataSource** ou **DataSourceView** for especificado, eles não serão instanciados e não persistirão depois que o comando **Process** for concluído.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definição do tipo de associação fora de linha  
- Dentro da coleção fora de linha **Bindings** , o ASSL permite uma coleção de associações de vários objetos, sendo cada um deles uma **Associação**. Cada **Associação** tem uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do **objeto** elemento **processo** comandos, exceto que o \< *objeto* > \< */Object*> marcas não estão presentes.  
+ Dentro da coleção fora de linha **Bindings** , o ASSL permite uma coleção de associações de vários objetos, sendo cada um deles uma **Associação**. Cada **Associação** tem uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do **objeto** elemento **processo** comandos, exceto que o \< *objeto* > \< */Objeto*> marcas não estão presentes.  
   
- Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, **DimensionID**). Depois de identificar o objeto de maneira mais específica possível com o formulário \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é **fonte**. Um caso comum a observar é que **Source** é uma propriedade no **DataItem**, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca **DataItem** ; em vez disso, você simplesmente especifica a propriedade **Source** como se estivesse diretamente na coluna a ser vinculada.  
+ Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, **DimensionID**). Depois de identificar o objeto de maneira mais específica possível com a forma \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é **fonte**. Um caso comum a observar é que **Source** é uma propriedade no **DataItem**, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca **DataItem** ; em vez disso, você simplesmente especifica a propriedade **Source** como se estivesse diretamente na coluna a ser vinculada.  
   
  As**KeyColumns** são identificadas pela ordem na coleção **KeyColumns** . Não é possível especificar, por exemplo, apenas a primeira e a terceira colunas de um atributo, pois não há como indicar que a segunda coluna de chave deve ser ignorada. Todas as colunas de chave devem estar presentes na associação fora de linha de um atributo de dimensão.  
   

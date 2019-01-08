@@ -18,12 +18,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22df70966fe1bac4f9a825a97c7998d6900af02a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529638"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Criar um Projeto de Analysis Services (SSDT)
   Você pode definir um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou Assistente para Importação de Banco de Dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ler o conteúdo de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se não houver uma solução carregada no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a criação de um novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará automaticamente uma nova solução. Caso contrário, o novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] será adicionado à solução existente. As práticas recomendadas para o desenvolvimento de soluções exigem a criação de projetos separados para tipos diferentes de dados de aplicativo, usando uma única solução se os projetos forem relacionados. Por exemplo, você pode ter uma única solução que contém projetos separados para pacotes de Integration Services, bancos de dados do Analysis Services e relatórios do Reporting Services que são todos usados pelo mesmo aplicativo de negócios.  
@@ -59,7 +59,7 @@ ms.locfileid: "48168096"
   
 5.  Para adicionar o projeto novo à solução existente, na lista suspensa **Solução** , selecione **Adicionar à Solução**.  
   
-     — ou —  
+     -ou-  
   
      Para criar uma nova solução, na lista suspensa **Solução** , selecione **Criar nova Solução**. Para criar uma nova pasta para a nova solução, selecione **Criar diretório para a solução**. Em **Nome da Solução**, digite o nome da nova solução.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48168096"
 ##  <a name="bkmk_ProjectFolders"></a> Pastas do projeto do Analysis Services  
  Um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém as pastas a seguir, usadas para organizar os itens incluídos no projeto.  
   
-|Pasta|Description|  
+|Pasta|Descrição|  
 |------------|-----------------|  
 |Fontes de dados|Contém as fontes de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente de Fonte de Dados e os edita no Designer de Fonte de Dados.|  
 |Exibições da fonte de dados|Contém as exibição da fonte de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente de Exibição da Fonte de Dados e os edita no Designer de Exibição da Fonte de Dados.|  
@@ -133,7 +133,7 @@ ms.locfileid: "48168096"
   
  A pasta de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode conter os tipos de arquivo listados na tabela a seguir.  
   
-|Tipo de arquivo|Description|  
+|Tipo de arquivo|Descrição|  
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivo de definição de projeto (.dwproj)|Contém metadados sobre itens, configurações e referências de assembly definidos e incluídos no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurações de usuário do projeto (.dwproj.user)|Contém informações de configuração para o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para um usuário específico.|  
@@ -151,17 +151,17 @@ ms.locfileid: "48168096"
   
  Os modelos de item, listados na tabela a seguir, estão disponíveis na categoria Itens de Projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na caixa de diálogo **Adicionar Novo Item** .  
   
-|Categoria|Modelo de item|Description|  
+|Categoria|Modelo de item|Descrição|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Itens de projeto|Cube|Inicia o Assistente para Cubos para adicionar um cubo novo ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||fonte de dados|Inicia o Assistente para Fonte de Dados para adicionar uma nova fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||Exibição da fonte de dados|Inicia o Assistente de Exibição da Fonte de Dados para adicionar uma nova exibição da fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||Exibição da Fonte de Dados|Inicia o Assistente de Exibição da Fonte de Dados para adicionar uma nova exibição da fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Função de banco de dados|Adiciona uma nova função de banco de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, em seguida, exibe o Designer de Funções para a nova função de banco de dados.|  
 ||Dimensão|Inicia o Assistente para Dimensões para adicionar uma nova dimensão de banco de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Estrutura de mineração|Use o Assistente de Data Mining para adicionar uma nova estrutura de mineração e um novo modelo de mineração ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de projeto do Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Criar projetos do Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

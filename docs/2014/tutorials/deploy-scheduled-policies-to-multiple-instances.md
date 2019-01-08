@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518618"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implantar diretivas agendadas em várias instâncias
   Usando Servidores Registrados, você poderá implantar políticas agendadas em servidores gerenciados a partir de um local central. Você poderá implantar diretivas agendadas a partir de um grupo de servidores local ou de um Servidor Central de Gerenciamento.  
@@ -36,7 +36,7 @@ ms.locfileid: "48128266"
   
 -   As instâncias em que você implantará as diretivas agendadas deve estar executando o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ou uma versão posterior. A automação requer que as diretivas sejam armazenadas localmente, o que não tem suporte em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Os servidores onde você deseja implantar as diretivas agendadas devem ser registrados em servidores registrados em qualquer um de **grupos de servidores locais** ou o **servidores de gerenciamento Central** nó. Para obter mais informações, consulte os tópicos a seguir:  
+-   Os servidores onde você deseja implantar as diretivas agendadas devem ser registrados em servidores registrados em qualquer um de **grupos de servidores locais** ou o **servidores de gerenciamento Central** nó. Para mais informações, consulte os seguintes tópicos:  
   
     -   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48128266"
  Este tutorial mostrou como executar avaliações sob demanda e planejadas das diretivas de práticas recomendadas em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Próximo  
- Este tutorial está concluído. Para retornar ao início, consulte [Tutorial: avaliando práticas recomendadas pelo gerenciamento baseado em políticas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Este tutorial está concluído. Para retornar ao início, consulte [Tutorial: Avaliando práticas recomendadas usando o gerenciamento baseado em políticas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Para ver uma lista dos [!INCLUDE[ssDE](../includes/ssde-md.md)] tutoriais, clique em [tutoriais do mecanismo de banco de dados](../relational-databases/database-engine-tutorials.md).  
   

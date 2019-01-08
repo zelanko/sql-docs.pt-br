@@ -1,4 +1,5 @@
 ---
+title: Propriedades de log do Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999338"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071923"
 ---
 # <a name="log-properties"></a>Propriedades do log
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999338"
  O valor padrão desta propriedade é em branco, que por sua vez, assume FlightRecorderTraceDef.xml como padrão.  
   
 ## <a name="query-log"></a>Log de consultas  
- **Aplica-se a:** somente modo de servidor multidimensional  
+ **Aplica-se a:** Somente o modo de servidor multidimensional  
   
  **QueryLog\QueryLogFileName**  
  Uma propriedade de cadeia de caracteres que especifica o nome do arquivo de log de consultas. Esta propriedade só se aplicará quando um arquivo de disco for usado para log, em vez de uma tabela de banco de dados (o comportamento padrão).  
@@ -156,9 +157,6 @@ ms.locfileid: "37999338"
  Uma propriedade booliana que especifica se deve ser criada a tabela de log de consultas.  
   
  O valor padrão desta propriedade é falso, o que indica que o servidor não criará a tabela de log automaticamente e não registrará os eventos de consulta.  
-  
-> [!NOTE]  
->  Para obter mais informações sobre como configurar o log de consultas, consulte [Configurar o log de consultas do Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

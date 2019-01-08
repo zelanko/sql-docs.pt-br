@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405471"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de dados com suporte (SSAS tabular)
   Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula DAX (Data Analysis Expressions).  
@@ -38,14 +38,14 @@ ms.locfileid: "48086896"
   
 ||||  
 |-|-|-|  
-|Tipo de dados em modelo|Tipos de dados em DAX|Description|  
+|Tipo de dados em modelo|Tipos de dados em DAX|Descrição|  
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes) <sup>1, 2</sup>|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
-|Boolean|Booliano|Um valor True ou False.|  
+|Booliano|Booliano|Um valor True ou False.|  
 |Texto|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
 |data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
 |CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
-|N/A|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
+|N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  <sup>1</sup> fórmulas DAX não dão suporte para tipos de dados que são menores do que aqueles listados na tabela.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48086896"
   
  As seguintes expressões DAX ilustram esse comportamento:  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`, retorna `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` retorna `"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`, retorna `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")` retorna `"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`, retorna `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")` retorna `"Expression is false"`  
   
  As conversões são executadas implicitamente para tipos numéricos ou de data/hora conforme a descrição na seguinte tabela:  
   
@@ -192,7 +192,7 @@ ms.locfileid: "48086896"
  Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados &#40;Tabular do SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Importar dados &#40;Tabular do SSAS&#41;](../import-data-ssas-tabular.md)  
+ [Fontes de dados &#40;SSAS de Tabela&#41;](../data-sources-ssas-tabular.md)   
+ [Importar dados &#40;SSAS de Tabela&#41;](../import-data-ssas-tabular.md)  
   
   

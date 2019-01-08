@@ -10,12 +10,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 5d7ec4b9332230fd0e98aaf7a41caeae6d5a7662
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634884"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407920"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Conectar-se ao SQL Server (OracleToSQL)
 Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja migrar para o. Para acessar o **conectar-se ao SQL Server** caixa de diálogo do **arquivo** menu, clique em **conectar-se ao SQL Server**.  

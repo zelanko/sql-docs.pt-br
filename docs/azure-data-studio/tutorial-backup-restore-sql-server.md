@@ -1,7 +1,8 @@
 ---
-title: Fazer backup e restaurar um banco de dados usando o Studio de dados do Azure | Microsoft Docs
+title: Fazer backup e restaurar um banco de dados
+titleSuffix: Azure Data Studio
 description: Saiba como fazer backup e restaurar um banco de dados usando o Studio de dados do Azure
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207125"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e restauração usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e restauração de bancos de dados usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Neste tutorial, você aprenderá a usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ Este tutorial requer o SQL Server *TutorialDB*. Para criar o *TutorialDB* banco 
 
 - [Conectar e consultar usando SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Este tutorial requer conexão com um banco de dados do SQL Server. Banco de dados SQL do Azure tem backups automáticos, portanto, Studio do Azure Data não realizar backup de banco de dados SQL e restaurar. Para obter detalhes, consulte [Saiba mais sobre backups automáticos de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Fazer backup de um banco de dados
 
-1. Abra o painel de banco de dados TutorialDB (Abra o **servidores** barra lateral (**CTRL + G**), expanda **bancos de dados**, clique com botão direito **TutorialDB**, e selecione **gerenciar**). 
+1. Abra o painel de banco de dados TutorialDB (Abra o **servidores** barra lateral (**CTRL + G**), expanda **bancos de dados**, clique com botão direito **TutorialDB**, e selecione **gerenciar**).
 
 2. Abra o **banco de dados de Backup** caixa de diálogo (clique em **Backup** no **tarefas** widget).
 

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764664"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502286"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do Management Objects (SMO) compartilhado do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 &nbsp;&nbsp;**a.    Código Distribuível.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.    Direito de Uso e Distribuição. Se você concordar com os termos abaixo:**
-*   Você poderá copiar e distribuir a forma de código-objeto do software (“Código Distribuível”) nos programas que você desenvolve e
+*   Você pode copiar e distribuir a forma de código de objeto do software ("Código distribuível") nos programas que você desenvolve; e
 *   Você poderá permitir que os distribuidores dos seus programas copiem e distribuam o Código Distribuível como parte desses programas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisitos para Distribuição. Para qualquer Código Distribuível que você distribuir, será necessário**
@@ -93,9 +93,9 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **11.   EFEITO LEGAL.** Este contrato descreve alguns direitos legais. Você pode ter outros direitos de acordo com as leis do seu país. Você também pode ter direitos em relação à parte de quem o software foi adquirido. Este contrato não altera seus direitos previstos nas leis do seu país, caso essas leis não o permitam.
 
-**12.   ISENÇÃO DE GARANTIA. O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA". VOCÊ ASSUME O RISCO DE USÁ-LO. A MICROSOFT NÃO CONCEDE CONDIÇÕES OU GARANTIAS CONTRATUAIS. VOCÊ PODE TER DIREITOS DE CONSUMIDOR ADICIONAIS OU GARANTIAS ESTATUTÁRIAS PREVISTOS EM LEIS LOCAIS, QUE ESTE CONTRATO NÃO PODE ALTERAR. ATÉ O LIMITE PERMITIDO PELAS LEIS LOCAIS, A MICROSOFT EXCLUI AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO.**
+**12.   ISENÇÃO DE GARANTIA. O SOFTWARE É FORNECIDO “NO ESTADO EM QUE SE ENCONTRA”. VOCÊ ASSUME O RISCO DE USÁ-LO. A MICROSOFT NÃO CONCEDE CONDIÇÕES OU GARANTIAS CONTRATUAIS. VOCÊ PODE TER DIREITOS DE CONSUMIDOR ADICIONAIS OU GARANTIAS ESTATUTÁRIAS PREVISTOS EM LEIS LOCAIS, QUE ESTE CONTRATO NÃO PODE ALTERAR. ATÉ O LIMITE PERMITIDO PELAS LEIS LOCAIS, A MICROSOFT EXCLUI AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO.**
 
-**PARA A AUSTRÁLIA - Você tem garantias estatutárias resguardadas pela Lei de Consumo Australiana, e nada nestes termos se destina a afetar esses direitos.**
+**PARA A AUSTRÁLIA – Você tem garantias estatutárias resguardadas pela Lei de Consumo Australiana e nada nestes termos se destina a afetar esses direitos.**
 
 **13.   LIMITAÇÕES E EXCLUSÕES DE RECURSOS E DANOS. VOCÊ PODE RECUPERAR DA MICROSOFT E DE SEUS FORNECEDORES APENAS DANOS DIRETOS NO VALOR DE ATÉ US$ 5,00. VOCÊ NÃO PODERÁ REAVER OUTROS DANOS, INCLUINDO DANOS CONSEQUENCIAIS, POR LUCROS CESSANTES, ESPECIAIS, INDIRETOS OU INCIDENTAIS.**
 Essa limitação se aplica a

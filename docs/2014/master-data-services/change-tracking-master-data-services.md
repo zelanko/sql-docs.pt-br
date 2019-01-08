@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7969d47e3f6c1f8aaeed091c30dca9d60a992fa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d07587aae5362fae6c92fafaf9345207e68369
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162952"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802938"
 ---
 # <a name="change-tracking-master-data-services"></a>Controle de alterações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode usar grupos de controle de alterações para executar uma ação quando um valor de atributo muda. Use o controle de alterações quando você não souber qual será o novo valor, mas desejar saber se houve alterações.  
@@ -33,8 +32,8 @@ ms.locfileid: "48162952"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Adicionar atributos a um grupo de controle de alterações.|[Adicionar atributos a um grupo de controle de alteração &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|Criar uma regra de negócios que inicie ações com base em alterações de atributos.|[Iniciar ações com base em alterações de valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Adicionar atributos a um grupo de controle de alterações.|[Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Criar uma regra de negócios que inicie ações com base em alterações de atributos.|[Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   

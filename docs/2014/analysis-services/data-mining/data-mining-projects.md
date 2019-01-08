@@ -11,15 +11,15 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7e0d0abca91a6d9a17d7f7e55eb881208f8a16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106586"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356403"
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
-  Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
+  Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de workspace. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
   
  Este tópico fornece as informações básicas necessárias para entender e criar projetos de mineração de dados.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48106586"
   
  Um único projeto de mineração de dados pode fazer referência a diversas fontes de dados. Embora um modelo de mineração possa usar somente uma fonte de dados de cada vez, o projeto pode ter vários desenhos de modelos em diferentes fontes de dados.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte a dados de muitos provedores externos, e a Mineração de Dados do SQL Server pode usar dados relacionais e de cubo como uma fonte de dados. Porém, se você desenvolver ambos os tipos de projetos — modelos baseados em fontes relacionais e modelos baseados em cubos OLAP — poderá querer desenvolvê-los e gerenciá-los em projetos separados.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte a dados de muitos provedores externos, e a Mineração de Dados do SQL Server pode usar dados relacionais e de cubo como uma fonte de dados. No entanto, se você desenvolver ambos os tipos de modelos baseados em cubos OLAP e modelos de projetos com base em fontes relacionais-talvez você queira desenvolver e gerenciá-los em projetos separados.  
   
 -   Geralmente, os modelos que são baseados em um cubo OLAP devem ser desenvolvidos dentro da solução de design OLAP. Uma razão é que os modelos baseados em um cubo devem processá-lo para atualizar os dados. Geralmente, você só deverá usar dados de cubo quando esse for o meio principal de armazenamento de dados e acesso, ou quando precisar das agregações, dimensões e atributos criados pelo projeto multidimensional.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48106586"
   
  Estas visualizações são temporárias e são fechadas sem salvar quando você encerra a sessão com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Portanto, se você precisar exportar estas visualizações para outro aplicativo para apresentação ou análise adicional, use os comandos **Copiar** fornecidos em cada guia ou painel da interface do visualizador.  
   
- Os Suplementos de Mineração de dados para o Excel também fornecem um modelo de Visio que você pode usar para representar seus modelos em um diagrama de Visio, e anotar e modificar o diagrama usando as ferramentas do Visio. Para obter mais informações, consulte [Suplementos de mineração de dados do Microsoft SQL Server 2008 SP2 do Microsoft Office 2007](http://go.microsoft.com/fwlink/?LinkID=123146).  
+ Os Suplementos de Mineração de dados para o Excel também fornecem um modelo de Visio que você pode usar para representar seus modelos em um diagrama de Visio, e anotar e modificar o diagrama usando as ferramentas do Visio. Para obter mais informações, consulte [Suplementos de mineração de dados do Microsoft SQL Server 2008 SP2 do Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
   
 
   
@@ -198,16 +198,16 @@ ms.locfileid: "48106586"
 |Tarefas|Tópicos|  
 |-----------|------------|  
 |Descreve como trabalhar com colunas de estrutura de mineração|[Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)|  
-|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar modelos de mineração a uma estrutura &#40;Analysis Services - mineração de dados&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Fornece links para recursos que ajudam a personalizar os algoritmos que criam modelos de mineração|[Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)|  
 |Fornece links para informações sobre cada um dos visualizadores de modelo de mineração|[Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)|  
-|Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)|  
-|Saiba sobre como processar opções e permissões|[Processando objetos de Mineração de dados](processing-data-mining-objects.md)|  
-|Fornece mais informações sobre Analysis Services|[Bancos de dados modelo multidimensionais &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)|  
+|Saiba sobre como processar opções e permissões|[Processando objetos de mineração de dados](processing-data-mining-objects.md)|  
+|Fornece mais informações sobre Analysis Services|[Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de mineração de dados](data-mining-designer.md)   
- [Criar Multidimensional modelos usando o SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Banco de dados do espaço de trabalho &#40;Tabular do SSAS&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Data Mining Designer](data-mining-designer.md)   
+ [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Banco de dados de workspace &amp;#40;SSAS de Tabela&amp;#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

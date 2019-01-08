@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
@@ -14,17 +13,17 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e436ba6a981ac03ca5f4b194e9dc257a22aba7a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221656"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354048"
 ---
 # <a name="extended-events"></a>Eventos estendidos
   Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
   
- Você pode encontrar mais informações sobre os Eventos Estendidos na Web em [Eventos Estendidos do SQL Server](http://blogs.msdn.com/b/extended_events/).  
+ Você pode encontrar mais informações sobre os Eventos Estendidos na Web em [Eventos Estendidos do SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário (**Assistente de Nova Sessão** e **Nova Sessão**) para criar, modificar, exibir e analisar os dados da sessão.  
@@ -34,7 +33,7 @@ ms.locfileid: "48221656"
   
  A tabela a seguir descreve os conceitos em Eventos Estendidos.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Pacotes de eventos estendidos do SQL Server](sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos usados para obter e processar dados quando uma sessão de Eventos Estendidos é executada.|  
 |[Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Descreve os consumidores de evento que podem receber dados durante uma sessão de evento.|  
@@ -99,7 +98,7 @@ ms.locfileid: "48221656"
 |Descreve como usar os Eventos Estendidos com o Rastreamento de Eventos do Windows para monitorar a atividade do sistema.|[Monitorar a atividade do sistema usando Eventos Estendidos](monitor-system-activity-using-extended-events.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](../data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](../data-tier-applications/data-tier-applications.md)   
  [Suporte ao DAC para objetos e versões do SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implantar um aplicativo da camada de dados](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitorar aplicativos da camada de dados](../data-tier-applications/monitor-data-tier-applications.md)   

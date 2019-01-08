@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014393"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545661"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Excluir um filtro de um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014393"
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     –ou–  
+     -ou-  
   
      Selecione o modelo. No menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "34014393"
 3.  Pressione a tecla Backspace ou Delete.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhar dados do caso de um modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
- [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Detalhar dados do caso a partir do modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
+ [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

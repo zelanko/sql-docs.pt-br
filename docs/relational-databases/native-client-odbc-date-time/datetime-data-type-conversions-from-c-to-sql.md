@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c75f80d190926044fdffd80a9b0b75ad225246a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706674"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417217"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversões do tipo de dados datetime do C para SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,51 +35,51 @@ ms.locfileid: "47706674"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/D|N/D|1,10,11|N/D|N/D|N/D|N/D|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/D|N/D|N/D|N/D|1,10,11|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|N/D|N/D|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/D|N/D|N/D|N/D|N/D|N/D|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
   
 ## <a name="key-to-symbols"></a>Legenda dos símbolos  
   
--   **-**: Nenhuma conversão é suportada. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
+-   **-**: Não há suporte a nenhuma conversão. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
   
--   **1**: se os dados fornecidos não forem válidos, um registro de diagnóstico é gerado com SQLSTATE 22007 e a mensagem "formato de datetime inválido".  
+-   **1**: Se os dados fornecidos não forem válidos, um registro de diagnóstico será gerado com SQLSTATE 22007 e a mensagem "Formato de datetime inválido".  
   
--   **2**: campos de hora devem ser zero ou um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Truncamento fracionário".  
+-   **2**: Os campos de hora devem ser zero ou um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Truncamento fracionário".  
   
--   **3**: frações de segundo devem ser zero ou um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Truncamento fracionário".  
+-   **3**: Os segundos fracionais devem ser zero ou um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Truncamento fracionário".  
   
--   **4**: o componente de data será ignorado.  
+-   **4**: O componente de data é ignorado.  
   
--   **5**: o fuso horário é definido como a configuração de fuso horário do cliente.  
+-   **5**: O fuso horário é definido com a configuração de fuso horário do cliente.  
   
--   **6**: a hora é definida como zero.  
+-   **6**: A hora é definida como zero.  
   
--   **7**: a data é definida como a data atual.  
+-   **7**: A data é definida com a data atual.  
   
--   **8**: a hora é convertida do fuso horário do cliente para UTC. Se ocorrer um erro durante esta conversão, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Estouro do campo datetime".  
+-   **8**: A hora é convertida do fuso horário do cliente para UTC. Se ocorrer um erro durante esta conversão, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Estouro do campo datetime".  
   
--   **9**: a cadeia de caracteres é analisada e convertida em uma data, datetime, datetimeoffset ou valor de tempo, dependendo do primeiro caractere de pontuação encontrado e a presença dos componentes restantes. A cadeia de caracteres é então convertida no tipo de destino, seguindo as regras na tabela anterior para o tipo de origem descoberto por este processo. Se for detectado um erro ao analisar os dados, um registro de diagnóstico será gerado com SQLSTATE 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão". Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo ao qual esses tipos dão suporte, um registro de diagnóstico será gerado com SQLSATE 22007 e a mensagem "Formato de datetime inválido".  
+-   **9**: A cadeia de caracteres é analisada e convertida em um valor date, datetime, datetimeoffset ou time, dependendo do primeiro caractere de pontuação encontrado e da presença dos componentes restantes. A cadeia de caracteres é então convertida no tipo de destino, seguindo as regras na tabela anterior para o tipo de origem descoberto por este processo. Se for detectado um erro ao analisar os dados, um registro de diagnóstico será gerado com SQLSTATE 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão". Para os parâmetros datetime e smalldatetime, se o ano estiver fora do intervalo ao qual esses tipos dão suporte, um registro de diagnóstico será gerado com SQLSATE 22007 e a mensagem "Formato de datetime inválido".  
   
      Para datetimeoffset, o valor deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC, por isso o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC. Se o valor não estiver no intervalo de UTC com suporte, um registro de diagnóstico será gerado com SQLSTATE 22007 e a mensagem "Formato de datetime inválido".  
   
--   **10**: se ocorrer truncamento com perda de dados, um registro de diagnóstico é gerado com SQLSTATE 22008 e a mensagem "formato de hora inválido". Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor.  
+-   **10**: Se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Formato de hora inválido". Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor.  
   
--   **11**: se o tamanho de bytes dos dados não é igual ao tamanho da estrutura exigida pelo tipo de SQL, um registro de diagnóstico é gerado com SQLSTATE 22003 e a mensagem "Valor numérico fora do intervalo".  
+-   **11**: Se o comprimento de bytes dos dados não for igual ao tamanho da estrutura exigida pelo tipo SQL, um registro de diagnóstico será gerado com SQLSTATE 22003 e a mensagem "Valor numérico fora do intervalo".  
   
--   **12**: se o comprimento de bytes dos dados for 4 ou 8, os dados são enviados para o servidor no formato bruto smalldatetime ou datetime com TDS. Se o comprimento de bytes dos dados corresponder exatamente ao tamanho de SQL_TIMESTAMP_STRUCT, os dados serão convertidos no formato TDS para datetime2.  
+-   **12**: Se o comprimento de bytes dos dados for 4 ou 8, os dados serão enviados para o servidor no formato TDS bruto smalldatetime ou datetime. Se o comprimento de bytes dos dados corresponder exatamente ao tamanho de SQL_TIMESTAMP_STRUCT, os dados serão convertidos no formato TDS para datetime2.  
   
--   **13**: se ocorrer truncamento com perda de dados, um registro de diagnóstico é gerado com SQLSTATE 22001 e a mensagem "Dados de cadeia de caracteres, truncados à direita".  
+-   **13**: Se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22001 e a mensagem "Dados de cadeia de caracteres truncados à direita".  
   
-     O número de dígitos das frações de segundo (a escala) é determinado pelo tamanho da coluna de destino, de acordo com a seguinte tabela:  
+     O número de dígitos de frações de segundo (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir:  
   
     ||||  
     |-|-|-|  
@@ -92,7 +92,7 @@ ms.locfileid: "47706674"
   
      Um tamanho de coluna zero implica em tamanho ilimitado para tipos de caracteres de comprimento variável no ODBC (9 dígitos, a menos que a regra de 3 dígitos para SQL_C_TYPE_TIMESTAMP se aplique). A especificação de um tamanho de coluna zero com um tipo de caractere de comprimento fixo é um erro.  
   
--   **N/d**: existente [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e o comportamento anterior é mantido.  
+-   **N/D**: O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

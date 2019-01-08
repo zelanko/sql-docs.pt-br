@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afppigtask.f1
@@ -14,12 +13,12 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b5f0fb11e7dc5395ddb64d1b68dd8ee96083d16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30340a873846e20911a7f14694f9602c17d960e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152966"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749408"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarefa de Pig de HDInsight do Azure
 Use a **Tarefa de Pig do Azure HDInsight** para executar o script do Pig em um cluster Azure HDInsight.
@@ -38,8 +37,8 @@ Para adicionar uma **Tarefa do Pig do Azure HDInsight**, arraste e solte-a no De
   
 5.  Há duas maneiras de especificar o script do Pig a ser executado:
   
-    1.  **Script em linha**: especifique o campo **Script** digitando em linha o script a ser executado na caixa de diálogo **Inserir Script**.
+    1.  **Script em linha**: Especifique o **Script** campo digitando o script seja executado em embutido o **Inserir Script** caixa de diálogo.
   
-    2.  **Arquivo de script**: carregue o arquivo de script para o Armazenamento de Blobs do Azure e especifique o campo **BlobName**. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
+    2.  **Arquivo de script**: Carregue o arquivo de script para o armazenamento de BLOBs do Azure e especifique o **BlobName** campo. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
   
      Se ambos estiverem especificados, o arquivo de script será usado e o script embutido será ignorado.

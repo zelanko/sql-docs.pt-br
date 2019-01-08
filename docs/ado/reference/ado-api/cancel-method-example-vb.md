@@ -15,12 +15,12 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aee3589b8b67cba8ca43cda7110326003cd539e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541398"
 ---
 # <a name="cancel-method-example-vb"></a>Exemplo do método Cancel (VB)
 Este exemplo usa o [Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método para cancelar um comando em execução em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto se a conexão está ocupado.  
@@ -57,7 +57,7 @@ Public Sub Main()
     ' Begin a transaction, then execute a command asynchronously  
     Cnxn.BeginTrans  
     Cnxn.Execute strCmdChange, , adAsyncExecute  
-    ' do something else for a little while –  
+    ' do something else for a little while -  
     ' use i = 1 to 32000 to allow completion  
     Dim i As Integer  
     For i = 1 To 1000  

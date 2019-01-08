@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysarticles
@@ -19,24 +18,24 @@ ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7eb6fb6bbaba72e6adb85f73c540b7d752021db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9764c33f311aa799935a51301c2c5237abfc9d6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759818"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (exibição de sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **sysarticles** expõe propriedades de artigo de exibição. Essa exibição é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|A coluna de identidade que fornece um número de ID exclusivo para o artigo.|  
 |**creation_script**|**nvarchar(255)**|O script de esquema para o artigo.|  
 |**del_cmd**|**nvarchar(255)**|O comando para executar em DELETE; caso contrário, construir do log.|  
-|**Descrição**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
+|**description**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
 |**filtro**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usado para filtragem horizontal.|  

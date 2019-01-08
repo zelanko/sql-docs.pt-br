@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019563"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525839"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lição 3-3-modificando a dimensão produto
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lição 3-3 – modificando a dimensão produto
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Nas tarefas deste tópico, você usará um cálculo nomeado para fornecer nomes mais descritivos às linhas de produto, definir uma hierarquia na dimensão Produto e especificar o nome do membro (Todos) para a hierarquia. Você também agrupará atributos nas pastas de exibição.  
@@ -58,7 +58,7 @@ Você pode adicionar um cálculo nomeado a uma tabela em uma exibição de fonte
   
 2.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Linha de Produto**.  
   
-3.  Na janela Propriedades no lado direito da tela, clique no campo de propriedade **NameColumn** na parte inferior da janela e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** . (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
+3.  Na janela Propriedades no lado direito da tela, clique o **NameColumn** propriedade de campo na parte inferior da janela e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo. (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
   
 4.  Selecione **ProductLineName** na parte inferior da lista **Coluna de origem** e clique em **OK**.  
   
@@ -66,7 +66,7 @@ Você pode adicionar um cálculo nomeado a uma tabela em uma exibição de fonte
   
 5.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Chave do Produto (Product Key)**.  
   
-6.  Na janela Propriedades, clique no campo de propriedade **NameColumn** e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+6.  Na janela Propriedades, clique o **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 7.  Selecione **EnglishProductName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -183,7 +183,7 @@ Se os dados subjacentes permitirem, você também deve definir relações de atr
 [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Definir cálculos nomeados em uma exibição da fonte de dados & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Criar hierarquias definidas pelo usuário](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurar o nível &#40;All&#41; para hierarquias de atributo](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ABS function
@@ -14,12 +13,12 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 845f467ec50b01f2405a593ab40ee94c02a178c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 445ced2ff3b8d8cb46a8f247d41d7757ba039767
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766298"
 ---
 # <a name="abs-ssis-expression"></a>ABS (Expressão SSIS)
   Retorna o valor positivo absoluto de uma expressão numérica.  
@@ -56,6 +55,6 @@ ABS(@HighTemperature - @LowTemperature)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

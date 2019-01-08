@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806938"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices e Chaves (Visual Database Tools)
   Use essa caixa de diálogo para criar ou modificar índices, chaves primárias e chaves exclusivas. Para acessar essa caixa de diálogo, abra a definição da tabela com o índice ou chave; clique com o botão direito do mouse na grade de definição da tabela e depois clique em **Índices/Chaves**.  
@@ -40,7 +40,7 @@ ms.locfileid: "48076787"
  Quando expandida, mostra as propriedades de **Colunas**, **É Exclusivo**e **Tipo**.  
   
  **Colunas**  
- Lista as ordens de classificação escolhidas para as colunas na chave ou índice e fornece acesso a uma caixa de diálogo em que as ordens de classificação podem ser definidas. Para exibir a caixa de diálogo, clique em **Colunas** e depois clique no botão de reticências (…) que aparece à direita do campo de propriedade.  
+ Lista as ordens de classificação escolhidas para as colunas na chave ou índice e fornece acesso a uma caixa de diálogo em que as ordens de classificação podem ser definidas. Para exibir a caixa de diálogo, clique em **Colunas** e depois clique no botão de reticências (...) que aparece à direita do campo de propriedade.  
   
  **É Exclusivo**  
  Indica se os dados digitados no índice ou na chave precisam ser exclusivos. Não está disponível em índices XML.  
@@ -55,7 +55,7 @@ ms.locfileid: "48076787"
  Mostra o nome da chave ou índice. Quando um novo índice é criado ele recebe um nome padrão com base na tabela da janela ativa no Designer de tabelas. O nome pode ser alterado a qualquer momento.  
   
  **Descrição**  
- Fornece um local para a descrição da chave ou do índice. Para redigir uma descrição mais detalhada, clique em **Descrição** e depois clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+ Fornece um local para a descrição da chave ou do índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
  **Categoria do Designer de Tabelas**  
  Quando expandida, mostra as informações para **Criar como Clusterizado**.  

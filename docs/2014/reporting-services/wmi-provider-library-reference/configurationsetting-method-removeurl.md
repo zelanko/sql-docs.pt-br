@@ -13,12 +13,12 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ab7dc3ea75201bd011b85f80169d50e2ba0d37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518891"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Método RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Remove uma URL reservada para o servidor de relatório. Se houver várias URLs a serem removidas, isso deverá ser feito individualmente chamando-se esta API.  
@@ -58,7 +58,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>Comentários  
  *UrlString* não inclui o nome do Diretório Virtual – o método [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) é fornecido para essa finalidade.  
   
- Antes de chamar o [ReserveURL](configurationsetting-method-reserveurl.md) método, você deve fornecer um valor para a propriedade de configuração VirtualDirectory para o *aplicativo* parâmetro. Use o método [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) para definir a propriedade VirtualDirectory.  
+ Antes de chamar o método [ReserveURL](configurationsetting-method-reserveurl.md) , forneça um valor para a propriedade de configuração VirtualDirectory do parâmetro *Application* . Use o método [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) para definir a propriedade VirtualDirectory.  
   
  Se um Certificado SSL foi fornecido por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nenhuma outra URL precisar dele, ele será removido.  
   
@@ -68,6 +68,6 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

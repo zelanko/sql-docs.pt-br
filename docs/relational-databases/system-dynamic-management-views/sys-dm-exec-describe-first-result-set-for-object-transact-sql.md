@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c63c004b3a7ac631a4914c681f7613b0bb010dd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728184"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409154"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>Tabela retornada  
  Estes metadados comuns são retornados como um conjunto de resultados com uma linha para cada coluna nos metadados de resultados. Cada linha descreve o tipo e a nulidade da coluna no formato descrito na seção a seguir. Se a primeira instrução não existir para todo caminho de controle, um conjunto de resultados com zero linhas será retornado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica se a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
 |**column_ordinal**|**int**|Contém a posição ordinal da coluna no conjunto de resultados. Posição da primeira coluna será especificada como 1.|  
@@ -62,9 +62,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contém o nome do tipo de dados. Inclui argumentos (como comprimento, precisão, escala) especificados para o tipo de dados da coluna. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de CLR definido pelo usuário, NULL será retornado nessa coluna.|  
 |**max_length**|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption 'text in row'**.|  
-|**Precisão**|**tinyint**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**precisão**|**tinyint**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**scale**|**tinyint**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
-|**collation_name**|**sysname**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
+|**collation_name**|**sysname**|Nome da ordenação da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
 |**user_type_database**|**sysname**|Para tipos de CLR e de alias, contém o nome do banco de dados no qual o tipo é definido. Caso contrário, é NULL.|  
 |**user_type_schema**|**sysname**|Para tipos de CLR e de alias, contém o nome do esquema no qual o tipo é definido. Caso contrário, é NULL.|  
@@ -102,7 +102,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  A tabela a seguir lista os tipos de erros e suas descrições  
   
-|error_type|error_type|Description|  
+|error_type|error_type|Descrição|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Todos os erros que não são descritos de outra forma.|  
 |2|SYNTAX|Um erro de sintaxe ocorreu no lote.|  
@@ -111,7 +111,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|O resultado não pôde ser determinado devido a um procedimento armazenado de CLR que poderia retornar o primeiro resultado.|  
 |6|CLR_TRIGGER|O resultado não pôde ser determinado devido a um gatilho CLR que poderia retornar o primeiro resultado.|  
 |7|EXTENDED_PROCEDURE|O resultado não pôde ser determinado devido a um procedimento armazenado estendido que poderia retornar o primeiro resultado.|  
-|8|UNDECLARED_PARAMETER|O resultado não pôde ser determinado por que o tipo de dados de uma ou mais das colunas do conjunto de resultados depende de um parâmetro não declarado.|  
+|8|UNDECLARED_PARAMETER|O resultado não pôde ser determinado porque o tipo de dados de um ou mais das colunas do conjunto de resultados depende potencialmente de um parâmetro não declarado.|  
 |9|RECURSION|O resultado não pôde ser determinado porque o lote contém uma instrução recursiva.|  
 |10|TEMPORARY_TABLE|O resultado não pôde ser determinado porque o lote contém uma tabela temporária e não é compatível com **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|O resultado não pôde ser determinado porque o lote contém uma instrução que não é compatível com **sp_describe_first_result_set** (por exemplo, FETCH, REVERT, etc.).|  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinando a função sys.dm_exec_describe_first_result_set_for_object e uma tabela ou exibição  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>b. Combinando a função sys.dm_exec_describe_first_result_set_for_object e uma tabela ou exibição  
  O exemplo a seguir usa os dois a exibição de catálogo do sistema Procedures e o **DM exec_describe_first_result_set_for_object** função para exibir metadados para os conjuntos de resultados de todos os procedimentos armazenados no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.  
   
 ```  

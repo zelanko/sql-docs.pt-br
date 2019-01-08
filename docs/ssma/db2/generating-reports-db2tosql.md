@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663856"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390801"
 ---
 # <a name="generating-reports-db2tosql"></a>Geração de relatórios (DB2ToSQL)
 Os relatórios de determinadas atividades executadas usando os comandos são gerados no Console do SSMA no nível da árvore de objeto.  
@@ -86,7 +86,7 @@ Use o procedimento a seguir para gerar relatórios:
 ### <a name="synchronize-target"></a>Sincronizar-target:  
 O comando **destino sincronizar** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de sincronização. Em seguida, um arquivo por nome **TargetSynchronizationReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
-**Observação:** se o caminho de pasta é fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
+**Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -101,7 +101,7 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
 ```  
 **nome do objeto:** Especifica os objetos considerados para sincronização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**em caso de erro:** Especifica se é necessário especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**em caso de erro:** Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   
@@ -112,7 +112,7 @@ O comando **destino sincronizar** tem **erros de relatório para** parâmetro, q
 ### <a name="refresh-from-database"></a>atualização-do-banco de dados:  
 O comando **atualização de banco de dados** tem **erros de relatório para** parâmetro, que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo por nome **SourceDBRefreshReport&lt;n&gt;. XML** é criado no local especificado, onde **&lt;n&gt;** é o número de arquivo exclusivo que é incrementada com um dígito com cada execução do mesmo comando.  
   
-**Observação:** se o caminho de pasta é fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
+**Observação:** Se o caminho da pasta for fornecido, 'relatório-erros-to' parâmetro torna-se um atributo opcional para o destino do comando' Sincronizar-'.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -129,7 +129,7 @@ O comando **atualização de banco de dados** tem **erros de relatório para** p
 ```  
 **nome do objeto:** Especifica os objetos considerados para a atualização (ele também pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-**em caso de erro:** Especifica se é necessário especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
+**em caso de erro:** Especifica se deve especificar os erros de atualização como avisos ou erros. Opções disponíveis para em caso de erro:  
   
 -   report-total-as-warning  
   

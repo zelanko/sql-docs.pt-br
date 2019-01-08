@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211706"
 ---
 # <a name="sqlbrowseconnect-function"></a>Função SQLBrowseConnect
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLBrowseConnect** dá suporte a um método iterativo de descoberta e enumerar os atributos e valores de atributo necessárias para se conectar a uma fonte de dados. Cada chamada para **SQLBrowseConnect** retorna níveis sucessivos de atributos e valores de atributo. Quando todos os níveis tiverem sido enumerados, uma conexão à fonte de dados é concluída e uma cadeia de caracteres de conexão completa é retornada pelo **SQLBrowseConnect**. Um código de retorno de SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO indica que todas as informações de conexão tem sido especificadas e o aplicativo agora está conectado à fonte de dados.  
@@ -74,7 +74,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLBrowseConnect** retorna SQL_NEED_DATA, um valor SQLSTATE associado, SQL_SUCCESS_WITH_INFO ou SQL_ERROR pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* sql_handle_stmt e uma *identificador de ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBrowseConnect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *OutConnectionString* não era grande o suficiente para retornar a cadeia de caracteres de conexão resultado procurar inteira, portanto, a cadeia de caracteres foi truncada. O buffer **StringLength2Ptr* contém o comprimento da cadeia de caracteres de conexão de resultados completo procurar. (A função retornará SQL_NEED_DATA.)|  

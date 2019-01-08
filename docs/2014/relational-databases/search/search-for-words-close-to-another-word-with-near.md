@@ -20,15 +20,15 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502847"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
-  Você pode usar um termo de proximidade (NEAR) em um [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado ou [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) função para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> O termo de proximidade personalizada  
  A condição de proximidade personalizada introduz os novos recursos a seguir:  
@@ -51,7 +51,7 @@ ms.locfileid: "48149016"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [,... *n* ]  
   
  |  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48149016"
  )  
   
 > [!NOTE]  
->  Para obter mais informações sobre a sintaxe < custom_proximity_term >, consulte [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
+>  Para obter mais informações sobre a sintaxe <custom_proximity_term>, veja [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
  Por exemplo, você pode procurar 'John' dentro de duas condições de 'Smith', da seguinte maneira:  
   
@@ -107,9 +107,9 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Não é possível combinar uma condição de proximidade personalizada com uma condição de proximidade genérica (*term1* NEAR *term2*), uma condição geracional (ISABOUT …), ou uma condição ponderada (FORMSOF …).  
+ Não é possível combinar um termo de proximidade personalizada com um termo de proximidade genérica (*term1* NEAR *term2*), uma condição geracional (ISABOUT...) ou uma condição ponderada (FORMSOF...).  
   
-### <a name="example-using-the-custom-proximity-term"></a>Exemplo: usando a condição de proximidade personalizada  
+### <a name="example-using-the-custom-proximity-term"></a>Exemplo: Usando o termo de proximidade personalizada  
  O exemplo a seguir pesquisa a tabela `Production.Document` do banco de dados de exemplo `AdventureWorks2012` para todos os resumos de documento que contêm o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Um termo de proximidade genérico indica que todos os termos de pesquisa especificados devem ocorrer em um documento para que uma correspondência seja retornada, independentemente do número de termos não relacionados à pesquisa (a *distância*) entre os termos de pesquisa. A sintaxe básica é:  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,…*n* ]  
+ { *search_term* {NEAR | ~} *search_term* } [,... *n* ]  
   
  Por exemplo, nos exemplos a seguir, as palavras 'fox' e 'chicken' ambos devem aparecer, em qualquer ordem, para gerar uma correspondência:  
   
@@ -169,7 +169,7 @@ GO
 -   `CONTAINSTABLE(table_name, column_name, 'fox ~ chicken')`  
   
 > [!NOTE]  
->  Para obter informações sobre a sintaxe < generic_proximity_term >, consulte [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
+>  Para obter informações sobre a sintaxe <generic_proximity_term>, veja [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
  Para obter mais informações, veja “[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)”, mais adiante neste tópico.  
   
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Você não pode combinar uma condição de proximidade genérica com uma condição de proximidade personalizada, como `NEAR((term1,term2),5)`, uma condição ponderada (ISABOUT …), ou uma condição geracional (FORMSOF …).  
+ Você não pode combinar um termo de proximidade genérica com um termo de proximidade personalizadas, como `NEAR((term1,term2),5)`, uma condição ponderada (ISABOUT...) ou uma condição geracional (FORMSOF...).  
   
-### <a name="example-using-the-generic-proximity-term"></a>Exemplo: usando a condição de proximidade genérica  
+### <a name="example-using-the-generic-proximity-term"></a>Exemplo: Usando o termo de proximidade genérica  
  O exemplo a seguir usa a condição de proximidade genérica para procurar o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
 ```  

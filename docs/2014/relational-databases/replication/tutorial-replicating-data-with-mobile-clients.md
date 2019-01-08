@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: replicando dados com clientes móveis | Microsoft Docs'
+title: 'Tutorial: Replicando dados com clientes móveis | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5a95b157761cc9a61d09271b5e081a65cd45998
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750968"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutorial: Replicando dados com clientes móveis
   A replicação é uma boa solução para o problema de mover dados entre um servidor central e clientes móveis que são conectados apenas ocasionalmente. Usando os assistentes de replicação, você pode configurar e administrar uma topologia de replicação facilmente. Este tutorial mostra como você deve configurar uma topologia de replicação para clientes móveis.  
@@ -27,7 +26,7 @@ ms.locfileid: "48056236"
  Neste tutorial você usará a replicação de mesclagem para publicar dados de um banco de dados central para um ou mais usuários móveis de forma que cada usuário obtenha um subconjunto dos dados filtrado exclusivamente. A primeira lição mostra como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar uma publicação. Lições posteriores mostram como criar e sincronizar uma assinatura.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial é destinado a usuários que estão familiarizados com operações fundamentais de bancos de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, é necessário concluir o [Tutorial: Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
+ Este tutorial é destinado a usuários que estão familiarizados com operações fundamentais de bancos de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, você deve concluir [Tutorial: Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
  Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48056236"
   
 -   [Lição 1: Publicando dados usando replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [Lição 2: Criando uma assinatura na publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [Lição 2: Criando uma assinatura para a publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [Inicie o tutorial](merge/merge-replication.md)  
   

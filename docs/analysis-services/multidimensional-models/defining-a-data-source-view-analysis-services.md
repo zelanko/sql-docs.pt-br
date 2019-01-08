@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523099"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
+  Uma exibição da fonte de dados contém o modelo lógico do esquema usado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional objetos – ou seja, cubos, dimensões e estruturas de mineração. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
   
 -   Contém os metadados que representam os objetos selecionados, de uma ou mais fontes de dados subjacentes, ou os metadados que serão usados para gerar um armazenamento de dados relacional subjacente se você estiver seguindo a abordagem de cima para baixo para a geração de esquemas.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025843"
   
  O Assistente de Exibição da Fonte de Dados usa sua resposta para fazer a correspondência entre os nomes de colunas e criar relações entre as tabelas diferentes na DSV. Você pode especificar qualquer um dos critérios listados na tabela a seguir.  
   
-|Critérios de correspondência de nomes|Description|  
+|Critérios de correspondência de nomes|Descrição|  
 |----------------------------|-----------------|  
 |**Mesmo nome que a chave primária**|O nome da coluna de chave estrangeira da tabela de origem é igual ao nome da coluna de chave primária da tabela de destino. Por exemplo, a coluna de chave estrangeira `Order.CustomerID` é igual à coluna de chave primária `Customer.CustomerID`.|  
 |**Mesmo nome que a tabela de destino**|O nome da coluna de chave estrangeira da tabela de origem é igual ao nome da tabela de destino. Por exemplo, a coluna de chave estrangeira `Order.Customer` é igual à coluna de chave primária `Customer.CustomerID`.|  
@@ -127,13 +127,13 @@ ms.locfileid: "34025843"
   
 ## <a name="see-also"></a>Consulte também  
  [Como adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Definir chaves primárias lógicas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Definir cálculos nomeados em uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Definir consultas nomeadas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Trabalhar com diagramas em Designer de exibição de fonte de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Explorar dados em uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Excluir uma exibição da fonte de dados &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Definir chaves primárias lógicas em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Explorar dados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Excluir uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

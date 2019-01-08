@@ -1,5 +1,5 @@
 ---
-title: Atributos CSDLBI para Design de relatório | Microsoft Docs
+title: Atributos CSDLBI para Design de relatórios | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0a7e461f9c4f41267e63467cd5ecd14ce5403ab5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c7f4b1ef3b46e4564ffc4622b39e8326adf443a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044560"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407896"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+  Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
 ## <a name="model-attributes"></a>Atributos de Modelo  
  Estes atributos são definidos em um subelemento de um elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
   
-|Nome do atributo|Tipo de dados|Description|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |Cultura|Texto|Indica a cultura usada para formatos de conversor de moedas. Se for omitido, pt-BR será usado.|  
 |IsRightToLeft|Booliano|Indica se os valores de campos de texto devem ser lidos da direita para a esquerda por padrão|  
@@ -31,7 +31,7 @@ ms.locfileid: "34044560"
 ## <a name="entity-attributes"></a>Atributos da entidade  
  Estes atributos são definidos em um subelemento de um elemento EntitySet ou EntityType de CSDL.  
   
-|Nome do atributo|Tipo de dados|Description|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade.|  
@@ -48,22 +48,22 @@ ms.locfileid: "34044560"
 ## <a name="field-attributes"></a>Atributos de campo  
  Estes atributos são definidos em um subelemento de uma propriedade CSDL ou elemento [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) .  
   
-|Nome do atributo|Tipo de dados|Description|  
+|Nome do atributo|Tipo de dados|Descrição|  
 |--------------------|---------------|-----------------|  
 |**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
-|**Caption**|Texto|O nome para exibição da entidade. Se ele for omitido, o **ReferenceName** do campo será usado.|  
+|**Caption**|Texto|O nome para exibição da entidade. Se omitido, o campo **ReferenceName** é usado.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado do campo.|  
 |**Oculto**|Booliano|Indica se o campo deve ser exibido. O padrão é **false**; isso significa que o campo é exibido.|  
 |**DisplayFolder**|Texto|O nome (caminho completo) da pasta na qual este campo é exibido. Se ele for omitido, o campo será exibido na raiz do modelo.|  
-|**ContextualNameRule**|Enum|Um valor que indica se e como o nome da propriedade deve ser modificado com base no contexto no qual é usado. Os valores possíveis são:  **None**,  **Role**,  **Merge**.|  
-|**Alinhamento**|Enum|Um valor que indica como os valores de campos devem ser alinhados em uma apresentação de tabela. Os valores possíveis são **Default**, **Center**, **Left**, **Right**. Se ele for omitido, o padrão determina o alinhamento com base no tipo de dados do campo.|  
-|**FormatString**|Texto|Uma cadeia de caracteres no formato .NET que indica como o valor do campo deve ser formatado por padrão. Se for omitida, o seguinte formato será assumido:<br /><br /> Campos - Datetime: data curta regional ou "d"<br /><br /> -Função de agregação de campos ponto flutuante e campos integrais com um padrão: número regional ou "n"<br /><br /> -Função de agregação inteiros sem nenhum padrão: número decimal regional ou "d"<br /><br /> Para todos os outros tipos de campos, nenhuma cadeia de caracteres de formato se aplica.|  
+|**ContextualNameRule**|Enum|Um valor que indica se e como o nome da propriedade deve ser modificado com base no contexto no qual é usado. Os valores possíveis são:  **None**, **função**, **Merge**.|  
+|**Alinhamento**|Enum|Um valor que indica como os valores de campos devem ser alinhados em uma apresentação de tabela. Os valores possíveis são **Default**, **Center**, **Left**, **Right**. Se omitido, o padrão determina o alinhamento com base no tipo de dados do campo.|  
+|**FormatString**|Texto|Uma cadeia de formato .NET que indica como o valor do campo deve ser formatado por padrão. Se for omitida, o seguinte formato será assumido:<br /><br /> Campos - Datetime: data curta regional ou "d"<br /><br /> -Função de agregação de campos ponto flutuante e integral com um padrão: número regional ou "n"<br /><br /> -Função de agregação inteiros sem nenhum padrão: número decimal regional ou "d"<br /><br /> Para todos os outros tipos de campos, nenhuma cadeia de caracteres de formato se aplica.|  
 |**Unidades**|Texto|O símbolo que se aplica a valores de campos para expressar unidades. Se ele for omitido, as unidades são consideradas desconhecidas.|  
-|**Largura**|Integer|A largura preferencial em caracteres que deve ser reservada para exibir os valores do campo em uma apresentação de tabela. Se ela for omitida, uma largura padrão se baseará no tipo de dados do campo.|  
-|**SortDirection**|Enum|Um valor que indica como os valores de campos costumam ser classificados. Os valores possíveis são **Default**, **Ascending**, **Descending**. Se ele for omitido, o valor padrão atribuirá uma direção de classificação com base no tipo de dados do campo.|  
+|**Width**|Integer|A largura preferencial em caracteres que deve ser reservado para exibir os valores do campo em uma apresentação de tabela. Se omitido, uma largura padrão se baseia no tipo de dados do campo.|  
+|**SortDirection**|Enum|Um valor que indica como os valores de campos costumam ser classificados. Os valores possíveis são **Default**, **Ascending**, **Descending**. Se omitido, o valor padrão atribuirá que uma direção de classificação baseia-se nos dados do campo de tipo.|  
 |**IsRightToLeft**|Booliano|Indica se o campo contém texto que deve ser lido da direita para a esquerda. Se ele for omitido, a configuração do modelo será assumida.|  
-|**OrderBy**|MemberRef|Uma referência a outro campo dentro do modelo que define a ordem de classificação para os valores deste campo. Os valores para os dois campos devem ter um mapeamento 1:1 ou o comportamento de classificação será indefinido. Se ela for omitida, o campo será classificado com base em seu próprio valor.|  
-|**Sumário**|Enum|Uma enumeração que descreve o subtipo ou o conteúdo do campo. Se ela for omitida, nenhum subtipo específico será assumido, a menos que o tipo de dados do campo seja Binary, caso em que Image será assumido. Para obter uma lista completa dos tipos de conteúdo com suporte, consulte a documentação de AMO.|  
+|**OrderBy**|MemberRef|Uma referência a outro campo dentro do modelo que define a ordem de classificação para valores desse campo. Os valores para os dois campos devem ter um mapeamento 1:1 ou o comportamento de classificação será indefinido. Se ela for omitida, o campo será classificado com base em seu próprio valor.|  
+|**Sumário**|Enum|Uma enumeração que descreve o subtipo ou o conteúdo do campo. Se omitido, Nenhum subtipo específico será considerado, a menos que o tipo de dados do campo seja Binary, caso em que Image será assumido. Para obter uma lista completa dos tipos de conteúdo com suporte, consulte a documentação de AMO.|  
 |**DefaultAggregateFunction**|Enum|Um valor que indica a função padrão, caso exista, que costuma ser usada para agregar este campo. Os valores possíveis são **None**, **Sum**, **Average**, **Count**, **Min**, **Max**. Se ele for omitido, **Sum** será assumido para campos numéricos e **None** para todos os outros campos.|  
 |**IsSimpleMeasure**|Booliano|Indica se uma medida é meramente uma agregação simples de um campo numérico. Estas agregações podem ser definidas facilmente na consulta quando necessário e, portanto, devem ser omitidas da definição modelo para melhorar o desempenho. Se ela for omitida, **false** será assumido.|  
 |**KPI**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelemento|Indica que o elemento de medida será usado como um KPI. O subelemento de KPI usa os elementos KpiGoal e KpiStauts para definir a imagem de exibição associada e os intervalos de destino.|  

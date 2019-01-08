@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
@@ -13,12 +12,12 @@ ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bad83198d31fb2733e0bcc15c5a6a2d19a2b9189
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 547003b601fc0bc4d6f68a0f4a59b9f54ccaaa56
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224486"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641277"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Configurar a opção de configuração de servidor de aumento de prioridade
   Este tópico descreve como configurar a opção de configuração **aumento de prioridade** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use a opção **aumento de prioridade** para especificar se o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser executado em uma prioridade mais alta de agendamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 ou Windows 2008 R2 do que outros processos no mesmo computador. Se você definir essa opção como 1, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará em uma base de prioridade de 13 no agendador do Windows 2008 ou do Windows Server 2008 R2. O padrão é 0, que é uma base de prioridade de 7.  
@@ -40,7 +39,7 @@ ms.locfileid: "48224486"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção de aumento de prioridade](#FollowUp)  
+-   **Acompanhamento:**  [Depois de configurar a opção de aumento de prioridade](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48224486"
   
 4.  Interrompa e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-configure-the-priority-boost-option"></a>Para configurar a opção de aumento de prioridade  
   
@@ -91,7 +90,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção de aumento de prioridade  
+##  <a name="FollowUp"></a> Acompanhar: Depois de configurar a opção de aumento de prioridade  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

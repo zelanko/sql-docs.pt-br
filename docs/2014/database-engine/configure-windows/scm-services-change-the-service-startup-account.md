@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server services, startup account changes
@@ -15,12 +14,12 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbd2042a5286c337867032e3950c9f7214aad2c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153169"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641247"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>Alterar a conta de inicialização de serviço do SQL Server (SQL Server Configuration Manager)
   Este tópico descreve como usar o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alterar as opções de inicialização dos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as contas de serviço usadas pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o PowerShell. Para obter mais informações sobre como selecionar uma conta de serviço adequada, consulte [Configurar contas de serviço e permissões do Windows](configure-windows-service-accounts-and-permissions.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "48153169"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Servidores clusterizados  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48153169"
   
 -   Atualização de SKU (SKU do[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] para não Express)  
   
-     Durante a instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é configurado para usar a conta de Serviço de Rede, mas desabilitado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager pode alterar a conta atribuída para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de agente, mas o serviço não pode ser habilitado ou iniciado. Depois da atualização da SKU do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] para não Express, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não é habilitado automaticamente, mas pode ser habilitado quando necessário usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e alterando o modo de início do serviço para Manual ou Automático.  
+     Durante a instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é configurado para usar a conta de Serviço de Rede, mas desabilitado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager pode alterar a conta atribuída para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas o serviço não pode ser habilitado ou iniciado. Depois da atualização da SKU do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] para não Express, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não é habilitado automaticamente, mas pode ser habilitado quando necessário usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e alterando o modo de início do serviço para Manual ou Automático.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
   

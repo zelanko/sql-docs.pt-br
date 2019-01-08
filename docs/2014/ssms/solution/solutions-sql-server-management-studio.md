@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -16,12 +16,12 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ae4b0fbcad05a9faba84a1eb7a47b4f34ce21d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200066"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761698"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
   A solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  

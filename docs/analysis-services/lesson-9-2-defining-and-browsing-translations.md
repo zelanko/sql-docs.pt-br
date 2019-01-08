@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535008"
 ---
-# <a name="lesson-9-2---defining-and-browsing-translations"></a>Lição 9-2-Definindo e procurando traduções
+# <a name="lesson-9-2---defining-and-browsing-translations"></a>Lição 9-2: definindo e procurando traduções
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte [Traduções de cubo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduções de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)e [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
@@ -45,17 +45,17 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
 6.  Na linha do objeto **Legenda** no atributo **Nome do Mês** , digite **Mes del Año** na coluna de tradução para o **Espanhol (Espanha)** e **Mois d'Année** na coluna de tradução para o **Francês (França)** .  
   
-    Observe que, quando você insere essas traduções, um sinal de reticências (**…**) é exibido. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
+    Observe que, quando você insere essas traduções, um sinal de reticências (**...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
   
-7.  Clique nas reticências (**…**) para obter a tradução no idioma **Espanhol (Espanha)** do atributo **Nome do Mês** .  
+7.  Clique no botão de reticências (**...** ) para o **Espanhol (Espanha)** tradução para o **nome do mês** atributo.  
   
     A caixa de diálogo **Tradução de Dados de Atributo** é exibida.  
   
 8.  Na lista **Colunas de tradução** , selecione **SpanishMonthName**, conforme mostrado na imagem a seguir.  
   
-    ![Caixa de diálogo de conversão de dados do atributo](../analysis-services/media/l9-translations-4.gif "caixa de diálogo tradução de dados de atributo")  
+    ![Caixa de diálogo de tradução de dados do atributo](../analysis-services/media/l9-translations-4.gif "caixa de diálogo tradução de dados de atributo")  
   
-9. Clique em **OK**e clique nas reticências (**…**) para obter a tradução no idioma **Francês (França)** do atributo **Nome do Mês** .  
+9. Clique em **Okey**e, em seguida, clique no botão de reticências (**...** ) para o **francês (França)** tradução para o **nome do mês** atributo.  
   
 10. Na lista **Colunas de tradução** , selecione **FrenchMonthName**e clique em **OK**.  
   

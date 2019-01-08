@@ -18,19 +18,19 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c49bbaa5e143f241997e6ff707d84b641c3118a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517467"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é uma API COM de baixo nível usada para acessar dados. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte de OLE DB a aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é compatível com o OLE DB versão 2.0.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client é um provedor compatível com 2.0 de versão do OLE DB.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48093266"
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [Transações](../../native-client-ole-db-transactions/transactions.md)  
+-   [Transactions](../../native-client-ole-db-transactions/transactions.md)  
   
 -   [Erros](../../native-client-ole-db-errors/errors.md)  
   

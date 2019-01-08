@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357601"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -91,11 +90,11 @@ ms.locfileid: "48120569"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem de OLE DB**, clique em um dos seguintes tópicos:  
   
--   [Editor de origem OLE DB &#40;página do Gerenciador de Conexão&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Editor de origem de OLE DB &#40;Página Gerenciador de Conexões&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor de origem OLE DB &#40;página de colunas&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor de Origem de OLE DB &#40;Página Colunas&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor de origem OLE DB &#40;página de saída de erro&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor de Origem OLE DB &#40;Página Saída de Erro&#41;](../ole-db-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120569"
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo do Wiki, [SSIS with Oracle Connectors (SSIS com Conectores Oracle)](http://go.microsoft.com/fwlink/?LinkId=220670)em social.technet.microsoft.com.  
+ Artigo do Wiki, [SSIS with Oracle Connectors (SSIS com Conectores Oracle)](https://go.microsoft.com/fwlink/?LinkId=220670)em social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [Destino OLE DB](ole-db-destination.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](../integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

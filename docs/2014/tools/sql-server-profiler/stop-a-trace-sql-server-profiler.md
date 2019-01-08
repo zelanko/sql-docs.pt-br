@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], stopping
@@ -14,12 +13,12 @@ ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51fa35e63cd4c6445108136f62fde6e20515fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a84673b88ce6401986655a16fd407cafea6f3af1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823830"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Interromper um rastreamento (SQL Server Profiler)
   Este tópico descreve como interromper um rastreamento que está sendo executado, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

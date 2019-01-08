@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 9: testar o pacote de tutoriais da Lição 1 | Microsoft Docs'
+title: 'Etapa 9: Testando o pacote de Tutorial da lição 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba98c694b99eb1ab81836a5d1f23a5cd4ea0d545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 069f9ca26aa59c8edb8b97f1acbdf336a61b7d9b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196996"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793978"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Etapa 9: Testando o pacote de tutorial da Lição 1
   Nesta lição, você executou as seguintes tarefas:  
@@ -49,7 +48,7 @@ ms.locfileid: "48196996"
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Adicionando loop](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lição 2: Adicionando um loop](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Execução de projetos e pacotes](packages/run-integration-services-ssis-packages.md)  

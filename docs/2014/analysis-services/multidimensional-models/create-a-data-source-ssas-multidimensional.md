@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412473"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
   Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48049486"
 >  Por padrão, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não salva senhas com a cadeia de conexão. Se a senha não for salva, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pedirá que você a digite sempre que necessário. Se você escolheu salvar a senha, a senha será armazenada em formato criptografado na cadeia de conexão de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa informações de senha para fontes de dados usando a chave de criptografia do banco de dados que contém a fonte de dados. Com as informações da conexão criptografadas, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para alterar a conta de serviço ou a senha do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou não será possível recuperar as informações criptografadas. Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definindo informações de representação para objetos de mineração de dados  
- As consultas de mineração de dados podem ser executadas no contexto da conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas também podem ser executadas no contexto do usuário que está enviando a consulta ou no contexto de um usuário especificado. O contexto no qual uma consulta é executada pode afetar seus resultados. Para mineração de dados `OPENQUERY` digite operações, convém que a consulta de mineração de dados para executar no contexto do usuário atual ou no contexto de um usuário especificado (independentemente do usuário que executa a consulta) em vez de no contexto da conta de serviço. Isso possibilita a execução da consulta com credenciais de segurança limitadas. Para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represente o usuário atual ou um usuário especificado, selecione a opção **Usar um nome de usuário e uma senha específicos** ou **Usar as credenciais do usuário atual** .  
+ As consultas de mineração de dados podem ser executadas no contexto da conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas também podem ser executadas no contexto do usuário que está enviando a consulta ou no contexto de um usuário especificado. O contexto no qual uma consulta é executada pode afetar seus resultados. Para operações do tipo `OPENQUERY` de mineração de dados, convém executar a consulta de mineração de dados no contexto do usuário atual ou no contexto de um usuário especificado (independentemente do usuário que está executando a consulta) e não no contexto da conta de serviço. Isso possibilita a execução da consulta com credenciais de segurança limitadas. Para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represente o usuário atual ou um usuário especificado, selecione a opção **Usar um nome de usuário e uma senha específicos** ou **Usar as credenciais do usuário atual** .  
   
 ##  <a name="bkmk_steps"></a> Criar uma fonte de dados usando o Assistente para Fontes de Dados  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049486"
   
 3.  Na página **Selecione como definir a conexão** , escolha **Criar uma fonte de dados com base em uma conexão já existente ou em uma nova conexão** e clique em **Novo** para abrir o **Gerenciador de Conexões**.  
   
-     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, presumiremos uma conexão de banco de dados do SQL Server.  
+     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, vamos supor que uma conexão de banco de dados do SQL Server.  
   
 4.  Selecione o provedor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework ou de OLE DB nativo a ser usado para a conexão.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48049486"
   
 -   Designar uma fonte de dados como a fonte de dados primária. A fonte de dados primária é a usada para criar uma exibição da fonte de dados.  
   
--   Uma fonte de dados primária deve dar suporte a `OpenRowset` função.  Para obter mais informações sobre esta função no SQL Server, consulte <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Uma fonte de dados primária deve dar suporte à função `OpenRowset`.  Para obter mais informações sobre esta função no SQL Server, consulte <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Use a abordagem a seguir para combinar dados de várias fontes de dados:  
   

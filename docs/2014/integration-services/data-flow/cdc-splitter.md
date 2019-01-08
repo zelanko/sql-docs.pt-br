@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
@@ -13,17 +12,17 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd69d23338510b08a450504c477c23d076ffaf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754688"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Valor da operação|Saída|Description|  
+|Valor da operação|Saída|Descrição|  
 |------------------------|------------|-----------------|  
 |1|DELETE|Linha excluída|  
 |2|Insert|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
@@ -41,11 +40,11 @@ ms.locfileid: "48086246"
   
  A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código de Erro**: definida como 1.  
+-   **Código de erro**: Definido como 1.  
   
--   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
+-   **Coluna de erro**: A coluna de origem que está causando o erro (para erros de conversão).  
   
--   **Colunas de Linha de erro**: as colunas de entrada da linha que causou o erro.  
+-   **Colunas de linha de erro**: As colunas de entrada da linha que causou o erro.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurando o Separador de CDC  
  Não há nenhuma propriedade configurável para o separador de CDC.  

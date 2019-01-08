@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bb77d40ee2635d210346e459dcfbd9aed619ed4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511418"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34016613"
   
  A lista a seguir descreve algumas considerações adicionais para escolher o atributo previsível para usar no teste:  
   
--   Alguns tipos de modelos de mineração de dados podem prever vários attributes — como redes neurais que podem explorar as relações entre muitos atributos.  
+-   Alguns tipos de modelos de mineração de dados podem prever vários atributos, como redes neurais, que podem explorar as relações entre muitos atributos.  
   
--   Outros tipos de modelos de mineração, como modelos de clustering, não necessariamente têm um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
+-   Outros tipos de mineração, modelos, como modelos de clustering-não necessariamente não tem um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
   
 -   Criar um gráfico de dispersão ou medir a exatidão de um modelo de regressão exige que você escolha um atributo previsível contínuo como o resultado. Nesse caso, você não pode especificar um valor de destino. Se você estiver criando algo diferente de um gráfico de dispersão, a coluna da estrutura de mineração subjacente também terá que ter um tipo de conteúdo **Discreto** ou **Discretizado**.  
   
--   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **Valor de Previsão**, o gráfico medirá somente a efetividade do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
+-   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **valor de previsão**, o gráfico medirá somente a efetividade do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
   
 -   Se você quiser incluir diversos modelos e compará-los em um único gráfico de precisão, todos os modelos deverão usar a mesma coluna previsível.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34016613"
 5.  Se quiser determinar o nível de elevação para um modelo, selecione um valor de resultado específico para medir, escolhendo na lista **Valor de Previsão** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Escolher e mapear o modelo de dados de teste](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Escolha um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Escolher e mapear dados de testes modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
+ [Escolher um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

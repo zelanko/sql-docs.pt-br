@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 3: testar o pacote de tutoriais da Lição 3 | Microsoft Docs'
+title: 'Etapa 3: Testando o pacote de Tutorial da lição 3 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c89d07cd3361d8bbb6648a57bbc2c05c167cf38e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac6cb097990c33564c29dad6918c0b8cc883530d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751298"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testando o pacote de tutorial da Lição 3
   Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  
@@ -47,6 +46,6 @@ ms.locfileid: "48076506"
 -   Embora as semânticas das informações geradas para o `PipelineExecutionPlan` e `PipelineExecutionTrees` eventos estão além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados na **detalhes** guia de o **configurar Logs de SSIS** caixa de diálogo. Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lição 4: Adicionando redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

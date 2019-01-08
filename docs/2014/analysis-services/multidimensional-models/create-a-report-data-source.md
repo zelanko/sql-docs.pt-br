@@ -11,12 +11,12 @@ ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187346"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407973"
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
   Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
@@ -51,14 +51,14 @@ ms.locfileid: "48187346"
   
 5.  Em **Cadeia de Conexão**, especifique o nome do servidor do Analysis Services, o nome do banco de dados, o nome do cubo e todas as configurações opcionais.  
   
-     Cadeia de conexão: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Cadeia de conexão: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  Se houver mais de um cubo, você deve especificar um nome de cubo.  
   
-     (Opcional) Os cubos podem ter perspectivas que fornecem aos usuários uma exibição de seleção em que apenas determinadas dimensões e/ou grupos de medidas ficam visíveis no cliente. Para especificar uma perspectiva, insira o nome da perspectiva como um valor para a propriedade Cubo: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Opcional) Os cubos podem ter perspectivas que fornecem aos usuários uma exibição de seleção em que apenas determinadas dimensões e/ou grupos de medidas ficam visíveis no cliente. Para especificar uma perspectiva, insira o nome da perspectiva como um valor para a propriedade Cubo: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Opcional) Os cubos podem ter traduções de dados e metadados especificadas para diversos idiomas no modelo. Para ver as traduções (dados e metadados), você precisa adicionar a propriedade "Identificador de Localidade" à cadeia de conexão: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Opcional) Os cubos podem ter traduções de dados e metadados especificadas para diversos idiomas no modelo. Para ver as traduções (dados e metadados), você precisará adicionar a propriedade "Identificador de localidade" à cadeia de conexão: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Em **Credenciais**, especifique como o servidor de relatório obtém credenciais para acessar a fonte de dados externa.  
   

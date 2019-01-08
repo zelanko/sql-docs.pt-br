@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706424"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532116"
 ---
 # <a name="interval-data-type-precision"></a>Precisão do tipo de dados de intervalo
 Precisão para um tipo de dados de intervalo inclui o intervalo à esquerda de precisão, a precisão de intervalo e a precisão de segundos.  
   
- O campo à esquerda de um intervalo é um sinal numérico. O número máximo de dígitos para o campo à esquerda é determinado por uma quantidade chamada *intervalo à esquerda de precisão,* que é uma parte da declaração de tipo de dados. Por exemplo, a declaração: intervalo HOUR(5) para minuto tem um intervalo à esquerda de precisão de 5; o campo de hora pode assumir valores de –99999 99999. O intervalo de precisão inicial está contido no campo SQL_DESC_DATETIME_INTERVAL_PRECISION do registro do descritor.  
+ O campo à esquerda de um intervalo é um sinal numérico. O número máximo de dígitos para o campo à esquerda é determinado por uma quantidade chamada *intervalo à esquerda de precisão,* que é uma parte da declaração de tipo de dados. Por exemplo, a declaração: INTERVALO HOUR(5) para minuto tem uma precisão à esquerda do intervalo de 5; o campo de hora pode assumir valores de-99999 99999. O intervalo de precisão inicial está contido no campo SQL_DESC_DATETIME_INTERVAL_PRECISION do registro do descritor.  
   
  A lista de campos que um tipo de dados de intervalo é composto de é chamada *precisão de intervalo*. Não é um valor numérico, como o termo "precisão" implicar. Por exemplo, a precisão de intervalo do tipo INTERVAL DAY TO segundo é a lista dia, hora, minuto, segundo. Não há nenhum campo de descritor que contém esse valor; a precisão de intervalo sempre pode ser determinada pelo tipo de dados de intervalo.  
   

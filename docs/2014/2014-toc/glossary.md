@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519480"
 ---
 # <a name="glossary"></a>Glossário
   
@@ -39,7 +39,7 @@ ms.locfileid: "49120473"
 |Termo|Definição|  
 |----------|----------------|  
 |action|Uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo.|  
-|ActiveX Data Objects|Uma interface de acesso a dados que se comunica com fontes de dados compatíveis com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
+|ActiveX Data Objects|Uma interface de acesso a dados que se comunica com fontes de dados em conformidade com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
 |ActiveX Data Objects (Multidimensional)|Um conjunto de interfaces de acesso a dados baseadas em objeto de alto nível e independente de idioma, otimizado para aplicativos de dados multidimensionais.|  
 |host do adaptador|A classe abstrata raiz Adapter, que define o handshake entre o adaptador e o servidor StreamInsight no ponto de interação ENQUEUE. Ela fornece todos os serviços de adaptador obrigatórios, como o gerenciamento de memória e a manipulação de exceção.|  
 |ADO|Uma interface de acesso a dados que se comunica com fontes de dados compatíveis com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
@@ -175,10 +175,10 @@ ms.locfileid: "49120473"
 |emissor do certificado|A autoridade de certificação que emitiu o certificado ao sujeito.|  
 |Cliente CLM|Um pacote de ferramentas do cliente CLM (Certificate Lifecycle Manager) que ajuda usuários finais a gerenciarem seus cartões inteligentes. As ferramentas incluem o controle de autoatendimento de cartão inteligente, o controle de personalização de cartão inteligente e o controle de atualização de perfil de certificado. Ver o controle de autoatendimento de cartão inteligente, o controle de personalização de cartão inteligente e o controle de atualização de perfil de certificado.|  
 |gerenciador de certificados|Um usuário do CLM (Certificate Lifecycle Manager) com as permissões de CLM apropriadas para administrar outros usuários de CLM ou administrar o próprio aplicativo CLM.|  
-|portal da Web do gerenciador de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Este portal permite aos administradores de certificado administrarem os certificados e cartões inteligentes de outros usuários. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
+|portal da Web do gerenciador de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Este portal permite que os administradores de certificado administrar outros usuários certificados e cartões inteligentes. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
 |Controle de atualização de perfil de certificado|Um controle ActiveX que automatiza a atualização de perfis de CLM (Certificate Lifecycle Manager) em computadores cliente.|  
 |revogação de certificado|O processo de revogar um certificado digital.|  
-|assinante de certificado|Um usuário que precisa de certificados com ou sem cartões inteligentes. Assinantes de certificado podem acessar algumas funções que só podem ser executadas para os próprios certificados do usuário.|  
+|assinante de certificado|Um usuário que precisa de certificados com ou sem cartões inteligentes. Assinantes do certificado podem acessar um pequeno número de funções que só pode ser executada para que os certificados do usuário.|  
 |portal da Web do assinante de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Este componente do servidor de CLM interage diretamente com usuários em um modo de autoatendimento. A funcionalidade específica se baseia nas associações e permissões do grupo Active Directory. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
 |modelo de certificado|Uma construção Windows que especifica o formato e o conteúdo de certificados com base no seu uso planejado. Ao solicitar um certificado de uma CA (autoridade de certificação) corporativa Windows, os solicitadores de certificado podem optar entre diversos tipos de certificados com base em modelos de certificado.|  
 |aplicador de alterações|Um objeto que executa a detecção e a manipulação de conflitos, bem como a aplicação de alterações em um lote de alterações.|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120473"
 |Auditoria CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a geração e a exibição de modelos de política CLM, definindo políticas de gerenciamento em um modelo de perfil e gerando relatórios de CLM.|  
 |Credenciais de CLM|Informações de conta de usuário que podem ser usadas para autenticar um usuário para o CLM (Certificate Lifecycle Manager). Essas credenciais podem estar na forma de credenciais de domínio ou de senhas antigas.|  
 |Inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite ao usuário especificar o fluxo de trabalho e os dados serem coletados, emitindo certificados através de um modelo. Essa permissão estendida só se aplica a modelos de perfis.|  
-|Agente de inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a um usuário ou grupo executar solicitações de certificado em nome de outro usuário. O assunto do certificado emitido conterá o nome do usuário de destino, e não o nome do solicitante.|  
+|Agente de inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a um usuário ou grupo executar solicitações de certificado em nome de outro usuário. Assunto do certificado emitido conterá o nome do usuário de destino, em vez do nome do solicitante.|  
 |Recuperação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação da recuperação de chave de criptografia a partir do banco de dados de autoridade de certificação.|  
-|Renovação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de um usuário, cuja data de validade está próxima, por um novo certificado com um novo período de validade.|  
+|Renovação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de usuário que esteja perto de sua data de validade com um novo certificado que tem um novo período de validade.|  
 |Relatórios CLM|Informações de auditoria que pertencem a atividades de gerenciamento de credencial no CLM (Certificate Lifecycle Manager).|  
 |Registro de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula.|  
 |Recuperação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação da recuperação de chave de criptografia a partir do banco de dados de autoridade de certificação.|  
-|Renovação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de um usuário, cuja data de validade está próxima, por um novo certificado com um novo período de validade.|  
-|Revogação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se o computador de um usuário ou cartão inteligente fica comprometido (roubado).|  
-|Cartão inteligente desbloqueado em solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que habilita a redefinição do PIN (número de identificação pessoal de usuário) de um cartão inteligente, permitindo o acesso ao material principal de um cartão inteligente e seu restabelecimento.|  
-|Revogação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se o computador de um usuário ou cartão inteligente fica comprometido (roubado).|  
+|Renovação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de usuário que esteja perto de sua data de validade com um novo certificado que tem um novo período de validade.|  
+|Revogação de solicitação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se de um usuário computador ou cartão inteligente fica comprometido (roubado).|  
+|Cartão inteligente desbloqueado em solicitação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite usuário identificação número pessoal (PIN de um cartão inteligente) a serem redefinidas, permitindo o acesso ao material da chave em um cartão inteligente e material ser restabelecida.|  
+|Revogação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se de um usuário computador ou cartão inteligente fica comprometido (roubado).|  
 |vetor de relógio|Uma coleção de elementos de vetor de relógio que representa atualizações em uma réplica. Qualquer alteração que ocorra entre 0 e a contagem em escala está contida no vetor.|  
 |elemento de vetor de relógio|Um par de valores, consistindo em uma chave de réplica e uma contagem em escala que representam uma alteração em uma réplica.|  
 |função CLR|Uma função criada em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no CLR (Common Language Runtime) do .NET Framework.|  
@@ -243,7 +243,7 @@ ms.locfileid: "49120473"
 |ponto de código|A combinação mínima de bits que pode representar uma unidade de texto codificado para processamento ou troca.|  
 |latência fria|O tempo que decorre quando o fluxo de trabalho está sendo usado pela primeira vez e o XOML ou XAML precisa ser compilado.|  
 |espera passiva|Um segundo data center que oferecer disponibilidade em algumas horas ou dias.|  
-|agrupamento|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
+|ordenação|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
 |coleção|Um objeto que contém um conjunto de objetos relacionados. A posição de um objeto na coleção pode alterar sempre que uma alteração ocorre na coleção; portanto, a posição de qualquer objeto específico em uma coleção pode variar.|  
 |item de coleta|Uma instância de um tipo de coletor que é criado com um conjunto específico de propriedades de entrada e a frequência de coleção; isso é usado para coletar tipos específicos de dados.|  
 |modo de coleta|A frequência com que dados são coletados e carregados no data warehouse de gerenciamento.|  
@@ -260,7 +260,7 @@ ms.locfileid: "49120473"
 |filtro de colunas|Um filtro que restringe colunas que precisam ser incluídas como parte de uma publicação de instantâneo, transacional ou de mesclagem.|  
 |Perfil Padrão de Coluna|Um relatório contendo um conjunto de expressões regulares que abrangem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.|  
 |conjunto de colunas|Uma representação em XML sem tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada.|  
-|agrupamento em nível de coluna|Suportando vários agrupamentos em uma única instância.|  
+|ordenação em nível de coluna|Suportando várias ordenações em uma única instância.|  
 |restrição em nível de coluna|Uma definição de restrição especificada dentro de uma definição de coluna quando uma tabela é criada ou alterada.|  
 |Grade de Colunas|Uma estrutura de grade editável no Designer de Tabela que lista as colunas de uma tabela e informações adicionais sobre cada coluna.|  
 |índice columnstore|Armazena cada coluna em um conjunto separado de páginas de disco em vez de armazenar várias linhas por página.|  
@@ -737,7 +737,7 @@ ms.locfileid: "49120473"
 |caixa estreita alta|O valor mais alto que não é um valor discrepante em um gráfico de caixa.|  
 |Dica de|Uma opção ou estratégia especificada para aplicação pelo processador de consultas do SQL Server em instruções SELECT, INSERT, UPDATE ou DELETE. A dica substitui qualquer plano de execução que o otimizador de consulta possa selecionar para uma consulta.|  
 |histórico|Uma lista das ações do usuário dentro de um programa, como comandos inseridos em um shell do sistema operacional, menus passados usando Gopher ou links seguidos usando um navegador da Web.|  
-|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo: "O SQL Server somente dá suporte a colocação em espera no nível de conexão".|  
+|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo:  "O SQL Server dá suporte à suspensão somente no nível de conexão".|  
 |controle|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |dados de validação|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |repositório de controle|A estrutura de mineração de dados que é usada para armazenar em cache os dados de controle. Ele contém referências aos dados de controle.|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120473"
 |fita inicial|Em um conjunto de mídias que usa dispositivos de backup de fita, a primeira fita em uma família de mídia.|  
 |junção interna|Uma operação que recupera linhas de várias tabelas de origem por meio da comparação dos valores de colunas compartilhadas entre as tabelas de origem. Uma junção interna exclui linhas de uma tabela de origem que não têm nenhuma linha correspondente nas outras tabelas de origem.|  
 |autenticação pessoalmente|Autenticação física para concluir uma transação de solicitação de certificado. Por exemplo, um usuário final que solicita que seu PIN (número de identificação pessoal) seja desbloqueado visitará um gerente de certificado pessoalmente para fornecer autenticação pessoalmente com identificação, por exemplo um crachá de funcionário ou carteira de habilitação.|  
-|InProc|Uma circunstância onde o código do objeto COM é carregado de um arquivo de DLL e está localizado no mesmo processo que o cliente.|  
+|InProc|Uma circunstância em que o código do objeto COM é carregado de um arquivo DLL e está localizado no mesmo processo que o cliente.|  
 |adaptador de entrada|Um adaptador que aceita fluxos de eventos de entrada de origens externas, tais como bancos de dados, arquivos, ticker feeds, portas de rede, dispositivos de fabricação etc.|  
 |membro de entrada|Um membro cujo valor é carregado diretamente da fonte de dados em vez de ser calculado de outros dados.|  
 |conjunto de entrada|O conjunto de dados fornecido a uma expressão de valor de linguagem MDX na qual a expressão opera.|  
@@ -969,7 +969,7 @@ ms.locfileid: "49120473"
 |Microsoft SQL Server|Uma família de sistemas de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
 |Microsoft SQL Server 2008 Express|Uma versão lightweight e inserível do Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express com Advanced Services|Um sistema de gerenciamento e criação de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
-|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar da plataforma de dados do SQL Server Express que inclui a ferramenta de gerenciamento gráfico: SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar da plataforma de dados do SQL Server Express que inclui a ferramenta de gerenciamento gráfico:  SQL Server Management Studio (SMSS) Express.|  
 |Manuais Online do Microsoft SQL Server|Uma coleção de documentação eletrônica que inclui a documentação completa fornecida com o Microsoft SQL Server.|  
 |Business Intelligence do Microsoft SQL Server|A plataforma de infraestrutura de dados e BI baseada no Microsoft SQL Server que consiste no Microsoft SQL Server Integration Services, Relational Engine, Master Data Services, Reporting Services e no Analysis Services.|  
 |Microsoft SQL Server Compact|Um sistema de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
@@ -1008,7 +1008,7 @@ ms.locfileid: "49120473"
 |aplicativo de servidor multi-threaded|Um aplicativo que cria vários threads dentro de um único processo para atender a solicitações de vários usuários ao mesmo tempo.|  
 |multiusuário|Pertencente a qualquer sistema de computador que pode ser usado por mais de uma pessoa. Embora um microcomputador compartilhado por várias pessoas possa ser considerado um sistema multiusuário, o termo geralmente é reservado para máquinas que podem ser acessadas simultaneamente por várias pessoas através de instalações de comunicações ou terminais de rede.|  
 |mutex|Uma técnica de programação que garante que apenas um programa ou rotina possa acessar algum recurso, como um local de memória, uma porta de E/S ou um arquivo, em geral através de semáforos que são sinalizadores usados em programas para coordenar as atividades de mais de um programa ou rotina.|  
-|Meus Relatórios|Um espaço de trabalho personalizado.|  
+|Meus Relatórios|Um workspace personalizado.|  
 |Minhas Assinaturas|Uma página que lista todas as assinaturas que um usuário possui.|  
 |cache nomeado|Uma unidade configurável de armazenamento de memória que tem políticas associadas a ela e está disponível em todos os hosts de cache em um cluster de cache.|  
 |instância nomeada|Uma instalação do SQL Server que recebe um nome para diferenciá-la de outras instâncias nomeadas e da instância padrão no mesmo computador.|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120473"
 |chave privada|A metade secreta de um par de chaves criptográficas que é usada com um algoritmo de chave pública. As chaves privadas costumam ser usadas para descriptografar uma chave de sessão simétrica, assinar digitalmente dados ou descriptografar dados que foram criptografados com a chave pública correspondente.|  
 |cache pró-ativo|Um sistema que gerencia a obsolescência dos dados em um cubo pelo qual os objetos no armazenamento MOLAP são atualizados e processados automaticamente em cache enquanto as consultas são redirecionadas para o armazenamento ROLAP.|  
 |cache de procedimento|A parte do pool de memória do SQL Server que é usada para armazenar planos de execução de procedimentos armazenados, gatilhos e lotes Transact-SQL.|  
-|modelo de perfil|O núcleo de todas as atividades de gerenciamento do CLM (Certificate Lifecycle Manager). O modelo de perfil fornece uma única unidade administrativa que inclui todas as informações necessárias para gerenciar o vários certificados que podem ser requeridos por uma comunidade de usuários ao longo do ciclo de vida do certificado. Um modelo de perfil também inclui informações relativas ao local final desses certificados, que podem se basear em software (ou seja, armazenados no computador local) ou em hardware (armazenados em um cartão inteligente). Um modelo de perfil não pode incluir certificados baseados em software e certificados baseados em cartão inteligente.|  
+|modelo de perfil|O núcleo de todas as atividades de gerenciamento do CLM (Certificate Lifecycle Manager). O modelo de perfil fornece uma única unidade administrativa que inclui todas as informações necessárias para gerenciar o vários certificados que podem ser requerido por uma comunidade de usuários em todo o ciclo de vida do certificado. Um modelo de perfil também inclui informações relativas ao local final desses certificados, que podem se basear em software (ou seja, armazenados no computador local) ou em hardware (armazenados em um cartão inteligente). Um modelo de perfil não pode incluir certificados baseados em software e certificados baseados em cartão inteligente.|  
 |gráfico de ganho|Um diagrama que exibe o aumento teórico no ganho que é associado ao uso de vários modelos de dados.|  
 |programável|Capaz de aceitar instruções para executar uma tarefa ou uma operação. Ser programável é uma característica de computadores.|  
 |página de propriedades|Uma caixa de diálogo que exibe informações sobre um objeto na interface.|  
@@ -1425,7 +1425,7 @@ ms.locfileid: "49120473"
 |número de série|Um número atribuído a um item de inventário específico para identificá-lo e diferenciá-lo de itens semelhantes com o mesmo número de item.|  
 |serialização|O processo de converter as informações do estado de um objeto em um formato que pode ser armazenado ou transportado. Durante a serialização, um objeto grava seu estado atual no armazenamento temporário ou persistente. Posteriormente, o objeto pode ser recriado por meio da leitura ou desserialização, o estado do objeto de armazenamento.|  
 |servidor|Um computador que fornece recursos compartilhados, como arquivos ou impressoras, para usuários da rede.|  
-|agrupamento do servidor|O agrupamento de uma instância do SQL Server.|  
+|ordenação do servidor|A ordenação de uma instância do SQL Server.|  
 |cursor de servidor|Um cursor implementado no servidor.|  
 |nome do servidor|Um nome que identifica exclusivamente um computador servidor em uma rede.|  
 |assinatura de servidor|Uma assinatura em uma publicação de mesclagem com um valor de prioridade atribuído usada para detecção de conflito e resolução.|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120473"
 |sleep|Suspender a operação sem finalizar.|  
 |fatia|Um subconjunto dos dados em um cubo, especificado por meio da limitação de uma ou mais dimensões por membros da dimensão.|  
 |Segmentações de dados|Um recurso que fornece controles de filtragem com um clique, facilitando a restrição da parte de um conjunto de dados que está sendo examinada.|  
-|janela deslizante|Uma janela de tamanho L fixo que acompanha uma linha de tempo de acordo com os eventos do fluxo. Com todos os eventos na linha de tempo, uma nova janela é criada, começando na hora de início do evento.|  
+|janela deslizante|Uma janela de tamanho L fixo que se move ao longo de uma linha do tempo de acordo com os eventos do fluxo. Com todos os eventos na linha do tempo, uma nova janela é criada, começando na hora de início do evento.|  
 |instalação integrada|Integrar atualizações, patches ou pacotes de serviço nos arquivos de instalação de base do software original, de forma que os arquivos resultantes permitam uma instalação de uma única etapa do software atualizado.|  
 |instalação integrada|Um tipo de instalação que integra os arquivos de instalação de base de um sistema operacional ou programa aos seus pacotes de serviço, atualizações ou patches, e permite que eles sejam instalados em uma única etapa.|  
-|cartão inteligente|Um dispositivo de plástico (do tamanho de um cartão de crédito ou menor) com um microprocessador inserido e uma pequena quantidade de armazenamento que é usado, com um código de acesso, para habilitar a autenticação baseada em certificado. Cartões inteligentes armazenam certificados, chaves públicas e privadas, senhas e outros tipos de informações pessoais com segurança.|  
+|cartão inteligente|Um dispositivo (tamanho de cartão de crédito ou menor) plástico com um microprocessador inserido e uma pequena quantidade de armazenamento que é usado, com um código de acesso, para habilitar a autenticação baseada em certificado. Cartões inteligentes armazenam certificados, chaves públicas e privadas, senhas e outros tipos de informações pessoais com segurança.|  
 |Controle de personalização de cartão inteligente|Um controle ActiveX que executa todas as atividades de gerenciamento de aplicativos de cartão inteligente do CLM (Certificate Lifecycle Manager) em um computador cliente.|  
 |perfil de cartão inteligente|Um perfil do CLM (Certificate Lifecycle Manager) criado quando uma solicitação é executada usando um modelo de perfil que inclui somente modelos de certificado baseados em cartão inteligente.|  
 |leitor de cartão inteligente|Um dispositivo que é instalado em computadores para habilitar o uso de cartões inteligentes para recursos de segurança aprimorados.|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120473"
 |eixo x|A linha de referência horizontal em uma grade, tabela ou gráfico que tem dimensões horizontais e verticais.|  
 |XML for Analysis|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
 |XMLA|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
-|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamada de: consulta XML, XQL.|  
+|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamada: XML Query, XQL.|  
 |XSL|Um vocabulário XML que é usado para transformar dados XML em outro formato, como HTML, por meio de uma folha de estilo que define as regras de apresentação.|  
 |XSL Transformation|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  
 |XSLT|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  

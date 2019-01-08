@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b981d40631de5185f2e62c11be8f4c8b8eec880b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8f2eb4aa4cc3d31868ed74788d1e9f4e1ff9ab4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791998"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Criação automática de código (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os valores numéricos podem ser gerados automaticamente para o atributo de código, ou para qualquer outro atributo numérico. Quando códigos são gerados automaticamente, não está impedido de inserir outros valores para códigos; um valor inicial é definido automaticamente.  
@@ -29,12 +28,12 @@ ms.locfileid: "48214626"
 ## <a name="generating-other-attribute-values"></a>Gerando outros valores de atributo  
  Os administradores podem gerar valores automaticamente para atributos que não sejam código, criando regras de negócio. Eles podem especificar um valor inicial e especificar o número de acréscimo em cada valor subsequente.  
   
- Quando você insere valores de atributo no MDS, em uma das ferramentas ou usando o processo de preparo, o valor de atributo pode ficar em branco. Quando forem aplicadas regras de negócio, os valores serão incrementados com base no valor existente mais alto. Por exemplo, se sua regra for "Atributo padrão para um valor gerado que inicia em 1 e é incrementado de 4" e o valor atual mais alto para o atributo for 700, o valor do próximo membro adicionado será 704.  
+ Quando você insere valores de atributo no MDS, em uma das ferramentas ou usando o processo de preparo, o valor de atributo pode ficar em branco. Quando forem aplicadas regras de negócio, os valores serão incrementados com base no valor existente mais alto. Por exemplo, se a regra for "Atributo padrão para um valor gerado que inicia em 1 e é incrementado de 4" e o valor atual mais alto para o atributo for 700, o valor do próximo membro adicionado será 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Excluindo automaticamente valores gerados  
- Depois que um administrador habilita valores gerados automaticamente para o atributo de código, os usuários podem excluir acidentalmente um membro que tinha um valor de código que eles desejam reutilizar. A mensagem de erro "O código de membro já foi usado por um membro que foi excluído" será exibida. Há duas soluções possíveis:  
+ Depois que um administrador habilita valores gerados automaticamente para o atributo de código, os usuários podem excluir acidentalmente um membro que tinha um valor de código que eles desejam reutilizar. A mensagem de erro "o código de membro já é usado por um membro que foi excluído" aparecerá. Há duas soluções possíveis:  
   
--   Na área funcional **Gerenciamento de Versão** , um administrador pode inverter a transação que ocorreu quando o membro foi excluído. Entretanto, isto significa que todos os atributos do membro anterior e a associação em hierarquias e coleções são restaurados. Para obter mais informações, consulte [reverter uma transação &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   Na área funcional **Gerenciamento de Versão** , um administrador pode inverter a transação que ocorreu quando o membro foi excluído. No entanto, isso significa que todos os atributos e a associação em hierarquias e coleções do membro anterior é restaurado. Para obter mais informações, consulte [reverter uma transação &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
 -   Um administrador pode usar o processo de preparo para excluir o membro permanentemente. Para obter mais informações, consulte [desativar ou excluir membros por meio do processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   

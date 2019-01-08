@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358418"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "50146741"
      Alterne para a guia **Mensagens** para visualizar o número de registros retornados, os erros, as instruções de consulta e qualquer outra mensagem associada à execução da consulta. Por exemplo, se você executar uma instrução DAX em um modelo em execução no modo Consulta Direta, poderá visualizar a instrução Transact-SQL que é gerada pelo mecanismo analítico na memória xVelocity (VertiPaq).  
   
 ##  <a name="BKMK_Building_Queries"></a> Compilar e executar uma consulta MDX em um modelo de tabela usando um modelo  
- Este exemplo mostra como criar uma consulta MDX no SQL Server Management Studio, usando um banco de dados modelo de tabela como a fonte de dados. Para repetir este exemplo em seu computador, você pode [baixar o projeto de exemplo de modelo de tabela Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
+ Este exemplo mostra como criar uma consulta MDX no SQL Server Management Studio, usando um banco de dados modelo de tabela como a fonte de dados. Para repetir este exemplo em seu computador, você pode [baixar o projeto de exemplo de modelo de tabela Adventureworks](https://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
 >  Você não pode usar consultas MDX em modelos de tabela que foram implantados no modo Consulta Direta. No entanto, você pode enviar consultas equivalentes usando as consultas de tabela DAX com o comando EVALUATE. Para obter mais informações, consulte [parâmetros para consultas DAX](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
@@ -166,7 +166,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referência de modelo do Analysis Services  
  Os seguintes modelos são fornecidos para funcionar com bancos de dados do Analysis Services e os objetos no banco de dados, incluindo estruturas e modelos de mineração, cubos e modelos de tabela:  
   
-|Categoria|Modelo de item|Description|  
+|Categoria|Modelo de item|Descrição|  
 |--------------|-------------------|-----------------|  
 |DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar o DMX SELECT FROM  *\<modelo >*. Instrução de conteúdo para recuperar o conteúdo do conjunto de linhas de esquema do modelo de mineração para um modelo de mineração especificado.|  
 ||Valores de Coluna Contínuos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução com o DMX `RangeMin` e `RangeMax` funções para recuperar um conjunto de valores de um determinado intervalo de colunas contínuas em um modelo de mineração especificado.|  

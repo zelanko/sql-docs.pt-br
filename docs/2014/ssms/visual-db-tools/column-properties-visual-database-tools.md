@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757578"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
   Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
@@ -110,8 +110,8 @@ ms.locfileid: "48120298"
  **Categoria do Designer de Tabelas**  
  Expande para mostrar as propriedades restantes.  
   
- **Agrupamento**  
- Mostra a configuração de agrupamento da coluna selecionada. Para alterar a configuração, clique em **Agrupamento** e, então, clique nas reticências **(…)** à direita do valor.  
+ **Ordenação**  
+ Mostra a configuração de ordenação da coluna selecionada. Para alterar a configuração, clique em **Ordenação** e, então, clique nas reticências **(…)** à direita do valor.  
   
  **Categoria Especificação de Coluna Computada**  
  Expande para mostrar propriedades para **Fórmula** e **É Persistido**. Se a coluna for computada, a fórmula também será exibida. Para editar a fórmula, expanda essa categoria e edite na propriedade **Fórmula** .  

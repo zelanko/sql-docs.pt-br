@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772198"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
   Este tópico descreve como trabalhar com perfis do Agente de Replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). O comportamento de cada agente de replicação é controlado por um conjunto de parâmetros que podem ser definidos através dos perfis de agente. Cada agente tem um perfil padrão, e alguns têm perfis adicionais predefinidos; em um determinado momento, apenas um perfil está ativo para um agente.  
@@ -62,7 +61,7 @@ ms.locfileid: "48169779"
   
     -   Exclua um perfil  
   
--   **Acompanhamento:**  [Depois de alterar parâmetros do agente](#FollowUp)  
+-   **Acompanhamento:**  [Depois de alterar parâmetros de agente](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48169779"
   
 1.  Se a caixa de diálogo **Perfis do Agente** exibir perfis para mais de um agente, selecione um agente.  
   
-2.  Clique no botão de propriedades (**…**) ao lado do perfil.  
+2.  Clique no botão de propriedades (**…**) ao lado de um perfil.  
   
 3.  Exiba os parâmetros e valores na caixa de diálogo **Propriedades do Perfil \<ProfileName>**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "48169779"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Para criar um perfil novo de agente  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169779"
   
     -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - uma descrição do perfil.  
   
-    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -defina essa propriedade como `true` se todos os trabalhos de agente novos para essa <xref:Microsoft.SqlServer.Replication.AgentType> usarão este perfil por padrão.  
+    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - defina essa propriedade para `true` se todos os trabalhos de agente novos para essa <xref:Microsoft.SqlServer.Replication.AgentType> utilizarão, por padrão, esse perfil.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> para criar o perfil no servidor.  
   
@@ -259,9 +258,9 @@ ms.locfileid: "48169779"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, verifique se o Distribuidor existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar `false`, verifique se o Distribuidor existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> . Passe um valor <xref:Microsoft.SqlServer.Replication.AgentType> para reduzir os perfis retornados a um tipo específico de agente de replicação.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A>. Passe um valor <xref:Microsoft.SqlServer.Replication.AgentType> para reduzir os perfis retornados a um tipo específico de agente de replicação.  
   
 5.  Obtenha o objeto desejado <xref:Microsoft.SqlServer.Replication.AgentProfile> dos <xref:System.Collections.ArrayList>retornados, nos quais a propriedade <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> do objeto corresponda ao nome do perfil.  
   
@@ -279,13 +278,13 @@ ms.locfileid: "48169779"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.AgentProfile> . Defina o nome do perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, o nome especificado estava incorreto ou o perfil não existe no servidor.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se este método retornar `false`, o banco de dados com o nome especificado estava incorreto ou o perfil não existe no servidor.  
   
 4.  Verifique se a propriedade <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> é definida como <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, o que indica um perfil de cliente. Você não deve remover um perfil que possui um valor de <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> para <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>.  
   
 5.  Chame o método <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> para remover o perfil definido pelo usuário representado por esse objeto do servidor.  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de alterar parâmetros de agente  
+##  <a name="FollowUp"></a> Acompanhar: Depois de alterar parâmetros de agente  
  As alterações do parâmetro de agente entrarão em vigor na próxima vez o agente for iniciado. Se o agente ficar executando continuamente, será necessário parar e reiniciar o agente.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751118"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
   Em tempo de execução, os executáveis (pacotes e contêineres Loop Foreach, Loop For, de Sequência e de host da tarefa) geram eventos. Por exemplo, um evento OnError será gerado quando acontecer um erro. Você pode criar manipuladores de eventos personalizados para esses eventos a fim de estender a funcionalidade do pacote e fazer com que os pacotes sejam mais fáceis de administrar em tempo de execução. Os manipuladores de eventos podem executar tarefas como:  
@@ -46,7 +45,7 @@ ms.locfileid: "48122836"
   
  ![Pacote, Loop For, host da tarefa e tarefa Executar SQL](media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host da tarefa e tarefa Executar SQL")  
   
- Só o pacote tem um manipulador de eventos, para seu evento `OnError`. Se ocorrer um erro quando a tarefa Executar SQL é executado, o `OnError` manipulador de eventos para o pacote é executado. O diagrama a seguir mostra a sequência de chamadas que faz com que o `OnError` manipulador de eventos para o pacote seja executado.  
+ Só o pacote tem um manipulador de eventos, para seu evento `OnError`. Se ocorrer um erro quando a tarefa Executar SQL for executada, o manipulador de eventos `OnError` do pacote entrará em execução. O diagrama a seguir mostra a sequência de chamadas que faz o manipulador de eventos `OnError` do pacote executar.  
   
  ![Fluxo do manipulador de eventos](media/mw-dts-eventhandlers.gif "Fluxo do manipulador de eventos")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48122836"
 |**OnProgress**|Manipulador de eventos do evento **OnProgress** . Esse evento é gerado por um executável quando um progresso mensurável é feito pelo executável.|  
 |**OnQueryCancel**|Manipulador de eventos do evento **OnQueryCancel** . Esse evento é gerado por um executável para determinar se deve parar de ser executado.|  
 |**OnTaskFailed**|Manipulador de eventos do evento **OnTaskFailed** . Esse evento é gerado por uma tarefa quando ela falha.|  
-|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a **RaiseChangeEvent** propriedade da variável como `False`. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a **RaiseChangeEvent** propriedade da variável como `False`. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Manipulador de eventos do evento **OnWarning** . Esse evento é gerado por um executável quando ocorre um aviso.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configuração de um manipulador de eventos  

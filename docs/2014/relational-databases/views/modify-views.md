@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513220"
 ---
 # <a name="modify-views"></a>Modificar exibições
   Depois de definir uma exibição, é possível alterar sua definição [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem descartar e recriar a exibição usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48167006"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   A modificação de uma exibição não afeta qualquer objeto dependente, como os procedimentos armazenados ou gatilhos; a menos que, a definição da exibição mude de tal maneira que o objeto dependente não seja mais válido.  
   
@@ -66,13 +66,13 @@ ms.locfileid: "48167006"
   
     1.  Marque ou desmarque as caixas de seleção de qualquer elemento que você deseja adicionar ou remover.  
   
-    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela…** e selecione as colunas adicionais que deseja incluir na exibição na caixa de diálogo **Adicionar Tabela** .  
+    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela...** e selecione as colunas adicionais que deseja adicionar à exibição na caixa de diálogo **Adicionar Tabela**.  
   
     3.  Clique com o botão direito do mouse na barra de título da tabela que deseja remover e selecione **Remove**.  
   
 4.  No menu **Arquivo**, clique em **Salvar***nome da exibição*.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-modify-a-view"></a>Para modificar uma exibição  
   

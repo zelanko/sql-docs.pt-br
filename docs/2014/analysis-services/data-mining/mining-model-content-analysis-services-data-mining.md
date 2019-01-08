@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3a0cb21136253767f009cb19604c8a0ea7e4c71a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503401"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   Depois de projetar e processar um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém o *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
@@ -171,7 +171,7 @@ ms.locfileid: "50148001"
   
  Por exemplo, em uma árvore de classificação, o valor de suporte indica o número de casos que têm a combinação descrita de atributos.  
   
- Em uma árvore de decisão, a soma de suporte em cada nível de uma árvore é somada ao suporte do nó pai. Por exemplo, se um modelo com 1200 casos for dividido igualmente por sexo e, em seguida, subdividido igualmente por três valores de Renda (Baixa, Média e Alta), os nós filho do nó (2), que são os nós (4), (5) e (6), sempre serão somados ao mesmo número de casos do nó (2).  
+ Em uma árvore de decisão, a soma de suporte em cada nível de uma árvore é somada ao suporte do nó pai. Por exemplo, se um modelo com 1200 casos for dividido igualmente por sexo e, em seguida, subdividido igualmente por três valores para nós de baixa renda, média e alta o filho do nó (2), que são nós (4), (5) e (6), soma é sempre o mesmo número de casos do nó (2).  
   
 |ID e atributos de nó|Contagem de suporte|  
 |---------------------------------|-------------------|  
@@ -225,7 +225,7 @@ ms.locfileid: "50148001"
 |9|Estatísticas|Indica um valor numérico que representa uma estatística para um regressor.|  
 |10|Nome exclusivo do nó|Indica que o valor não deve ser tratado como numérico ou cadeia de caracteres, mas como o identificador exclusivo de outro nó de conteúdo em um modelo.<br /><br /> Por exemplo, em um modelo de rede neural, as IDs fornecem ponteiros de nós na camada de saída aos nós na camada oculta e ponteiros de nós na camada oculta aos nós na camada de entrada.|  
 |11|Interceptação|Indica um valor numérico que representa a interceptação em uma fórmula de regressão.|  
-|12|Periodicidade|Indica que o valor denota uma estrutura periódica em um modelo.<br /><br /> Aplica-se somente a modelos de série temporal que contêm um modelo ARIMA.<br /><br /> Observação: o algoritmo MTS detecta estruturas periódicas automaticamente com base nos dados de treinamento. Devido a isso, as periodicidades no modelo final podem incluir valores de periodicidade que não foram fornecidos como parâmetros durante a criação do modelo.|  
+|12|Periodicidade|Indica que o valor denota uma estrutura periódica em um modelo.<br /><br /> Aplica-se somente a modelos de série temporal que contêm um modelo ARIMA.<br /><br /> Observação: O algoritmo MTS detecta estruturas periódicas automaticamente com base nos dados de treinamento. Devido a isso, as periodicidades no modelo final podem incluir valores de periodicidade que não foram fornecidos como parâmetros durante a criação do modelo.|  
 |13|Ordem regressiva automática|Indica que o valor representa o número de séries regressivas automáticas.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |14|Ordem de média de movimentação|Representa um valor que representa o número de médias de movimentação em uma série.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |15|Ordem de diferença|Indica que o valor representa um valor que indica quantas vezes a série é diferenciada.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
@@ -249,7 +249,7 @@ ms.locfileid: "50148001"
   
 -   A**probabilidade de nó** sempre é menor ou igual à **probabilidade marginal**.  
   
- Por exemplo, se a população de todos os clientes em uma árvore de decisão for dividida igualmente por sexo (e nenhum valor estiver ausente) a probabilidade dos nós filho deve ser 0,5. Porém, suponha que cada um dos nós para gênero seja dividido igualmente pelos níveis de renda (Alta, Média e Baixa). Nesse caso, a pontuação de MARGINAL_PROBABILITY para cada nó filho sempre deve ser 0,33, mas o valor de NODE_PROBABILTY será o produto de todas as probabilidades que levam a esse nó e, assim, sempre será menor que o valor de MARGINAL_PROBABILITY.  
+ Por exemplo, se a população de todos os clientes em uma árvore de decisão for dividida igualmente por sexo (e nenhum valor estiver ausente) a probabilidade dos nós filho deve ser 0,5. No entanto, suponha que cada um de nós para gênero seja dividida igualmente pelos níveis de renda – alta, média e baixa. Nesse caso, a pontuação de MARGINAL_PROBABILITY para cada nó filho sempre deve ser 0,33, mas o valor de NODE_PROBABILTY será o produto de todas as probabilidades que levam a esse nó e, assim, sempre será menor que o valor de MARGINAL_PROBABILITY.  
   
 |Nível de nó/atributo e valor|Probabilidade marginal|Probabilidade de nó|  
 |----------------------------------------|--------------------------|----------------------|  
@@ -267,9 +267,9 @@ ms.locfileid: "50148001"
   
  A tabela a seguir fornece links para tópicos de cada tipo de algoritmo.  
   
--   **Tópicos de conteúdo de modelo:** explicam o significado de cada tipo de nó para cada tipo de algoritmo e fornece orientações sobre quais nós são mais adequados em um determinado tipo de modelo.  
+-   **Tópicos de conteúdo do modelo:** Explicar o significado de cada tipo de nó para cada tipo de algoritmo e fornece orientações sobre quais nós são mais adequados em um determinado tipo de modelo.  
   
--   **Tópicos de consulta:** fornecem exemplos de consultas de um tipo de modelo específico e orientação para interpretar os resultados.  
+-   **Tópicos de consulta:** Forneça exemplos de consultas de um determinado tipo de modelo e orientação sobre como interpretar os resultados.  
   
 |Algoritmo ou tipo de modelo|model content|Consultando modelos de mineração|  
 |-----------------------------|-------------------|----------------------------|  

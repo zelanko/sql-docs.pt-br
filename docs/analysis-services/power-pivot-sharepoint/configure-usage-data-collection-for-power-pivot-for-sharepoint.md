@@ -1,5 +1,5 @@
 ---
-title: Configurar a coleta de dados de uso para (PowerPivot para SharePoint | Microsoft Docs
+title: Configurar a coleta de dados de uso para (Power Pivot para SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026873"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420277"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34026873"
   
 4.  Na seção **Eventos para o log** , marque ou desmarque as caixas de seleção para habilitar ou desabilitar os seguintes eventos do Analysis Services:  
   
-    |Evento|Description|  
+    |Evento|Descrição|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Conexões**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é usado para monitorar conexões de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que são feitas em nome de um usuário.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Uso de Dados de Carregamento**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é usado para monitorar solicitações que carregam dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na memória do servidor. Um evento de carregamento é gerado para arquivos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] carregadas de um banco de dados de conteúdo ou de cache.|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026873"
 ##  <a name="jobs"></a> Configure os trabalhos de timer usados em coleta de dados de uso  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são movidos para locais diferentes no sistema de coleta de dados de uso por dois trabalhos do temporizador:  
   
--   O trabalho do temporizador “Importação de Dados de Uso do Microsoft SharePoint Foundation” move o uso do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o banco de dados de aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+-   O trabalho de timer "Importação de dados do Microsoft SharePoint Foundation uso" move [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] uso para o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados de aplicativo de serviço.  
   
--   O trabalho do temporizador “Processamento de Painel de Gerenciamento do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ” move os dados para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , que é a fonte de dados dos relatórios administrativos internos.  
+-   O "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalho de timer de processamento de painel de gerenciamento" os dados a serem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho que é a fonte de dados para relatórios administrativos internos.  
   
  Se você precisar atualizar os relatórios administrativos que aparecem com maior frequência no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , siga estas etapas.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "34026873"
  Para obter mais informações sobre como os dados de uso são coletados e armazenados, consulte [Coleta de dados de uso do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Defina categorias de resposta de consulta rápida, média e lenta para fins de relatórios  
- O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. Categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] corresponderá a uma das categorias com base no tempo para conclusão.  
+ O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. As categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] corresponderá a uma das categorias com base no tempo para conclusão.  
   
  As informações de resposta da consulta são usadas em relatórios de atividades. Dentro dos relatórios, cada categoria é usada diferentemente para revelar melhor as tendências de desempenho do sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Por exemplo, são totalmente excluídas solicitações triviais pois isso remove ruídos nos dados e mostra tendências mais significativas que usam as categorias restantes. Em contraste, estatísticas de solicitação Demorado ou Excedido são proeminentes no relatório de forma que administradores ou proprietários de pasta de trabalho podem adotar uma ação corretiva imediatamente.  
   
@@ -179,14 +179,14 @@ ms.locfileid: "34026873"
   
  A tabela a seguir mostra os valores padrão da configuração da coleta de dados de uso.  
   
-|Configuração|Valor padrão|Tipo|Intervalo válido|  
+|Configuração|Valor Padrão|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<habilitado >|Booliano|Estes valores são habilitados ou desabilitados.|  
 |**Query Reporting interval**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
 |**Usage data history**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
 |Limite Superior de Resposta Trivial|500 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
 |Limite superior de resposta rápida|1000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta rápida.|  
-|Limite superior de resposta esperada|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
+|Limite Superior de Resposta Esperado|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
 |Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
   
 ## <a name="see-also"></a>Consulte também  
