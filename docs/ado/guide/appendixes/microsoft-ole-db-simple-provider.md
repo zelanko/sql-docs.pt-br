@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604636"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209045"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Visão geral do Microsoft OLE DB Provider simples
 O Microsoft OLE DB simples provedor OSP () permite que o ADO para acessar os dados para o qual um provedor tenha sido escrito usando o [Kit de ferramentas do OLE DB simples provedor (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Provedores simples destinam-se para acessar fontes de dados que exigem suporte de OLE DB apenas fundamental, como matrizes na memória ou documentos XML.
@@ -45,7 +45,7 @@ MSDAOSP
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para SQL Server.|
 |**Fonte de dados**|Especifica o nome de um servidor.|
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  O DSO XML usa uma heurística interna para converter os nós em uma árvore XML em capítulos hierárquico **conjunto de registros**.
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Observe que as marcas de portfólio e informações não são representadas no hierárquica **conjunto de registros**. Para obter uma explicação de como o DSO XML converte árvores XML hierárquicos **conjuntos de registros**, consulte as regras a seguir. A coluna $Text é abordada na seção a seguir.

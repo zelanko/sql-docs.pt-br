@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543577"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
   O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
@@ -75,7 +75,7 @@ ms.locfileid: "48091616"
   
     -   Defina o valor do parâmetro **@working_directory** para a pasta de instantâneos usada pelo principal.  
   
-4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner** . Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
+4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner**. Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
   
     -   Snapshot Agent (para todas as publicações)  
   

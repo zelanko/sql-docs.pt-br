@@ -20,12 +20,12 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b531feb33d9d555296f428fb01778a7b7627d851
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef98000391ec6c39012603795b7f11a34c68183
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778874"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208135"
 ---
 # <a name="sqlremovedriver-function"></a>Função SQLRemoveDriver
 **Conformidade com**  
@@ -62,7 +62,7 @@ BOOL SQLRemoveDriver(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLRemoveDriver** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Não foi encontrado no registro do componente|O instalador não foi possível remover as informações do driver porque ele não existe no registro ou não pôde ser encontrado no registro.|  

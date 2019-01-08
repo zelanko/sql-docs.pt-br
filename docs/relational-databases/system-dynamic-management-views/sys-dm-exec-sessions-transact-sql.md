@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535187"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705696"
   
  As exibições de gerenciamento dinâmico. DM exec_requests, DM exec_sessions e exec_connections mapeiam para o [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) tabela do sistema.  
   
-> **Observação:** chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_sessions**.  
+> **OBSERVAÇÃO:** Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nome da coluna|Tipo de dados|Descrição e informações específicas de versão|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica a sessão associada a cada conexão primária ativa. Não permite valor nulo.|  
 |login_time|**datetime**|Hora em que sessão foi estabelecida. Não permite valor nulo.|  
-|host_name|**nvarchar(128)**|Nome da estação de trabalho cliente específica de uma sessão. O valor é NULL para sessões internas. Permite valor nulo.<br /><br /> **Observação de segurança:** o aplicativo cliente fornece o nome da estação de trabalho e pode fornecer dados imprecisos. Não confie em HOST_NAME como um recurso de segurança.|  
+|host_name|**nvarchar(128)**|Nome da estação de trabalho cliente específica de uma sessão. O valor é NULL para sessões internas. Permite valor nulo.<br /><br /> **Observação de segurança:** O aplicativo cliente fornece o nome da estação de trabalho e pode fornecer dados inexatos. Não confie em HOST_NAME como um recurso de segurança.|  
 |program_name|**nvarchar(128)**|Nome do programa cliente que iniciou a sessão. O valor é NULL para sessões internas. Permite valor nulo.|  
 |host_process_id|**int**|ID do processo do programa cliente que iniciou a sessão. O valor é NULL para sessões internas. Permite valor nulo.|  
 |client_version|**int**|Versão de protocolo TDS da interface usada pelo cliente para conexão com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705696"
 |login_name|**nvarchar(128)**|Nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a sessão está sendo executada atualmente. Para o nome de logon original que criou a sessão, consulte original_login_name. Pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado nome de logon ou um nome de usuário de domínio autenticado do Windows. Não permite valor nulo.|  
 |nt_domain|**nvarchar(128)**|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Domínio de Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
 |nt_user_name|**nvarchar(128)**|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nome do usuário do Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
-|status|**nvarchar(30)**|Status da sessão. Valores possíveis:<br /><br /> **Executando** -um ou mais solicitações atualmente em execução<br /><br /> **Em repouso** -não há solicitações atualmente em execução<br /><br /> **Inativo** – sessão foi redefinida devido ao pooling de conexão e agora está em estado de pré-logon.<br /><br /> **Pré-conexão** -sessão está no classificador administrador de recursos.<br /><br /> Não permite valor nulo.|  
+|status|**nvarchar(30)**|Status da sessão. Valores possíveis:<br /><br /> **Executando** -um ou mais solicitações atualmente em execução<br /><br /> **Em repouso** -não há solicitações atualmente em execução<br /><br /> **Inativo** -sessão foi redefinida devido ao pooling de conexão e agora está em estado de pré-logon.<br /><br /> **Pré-conexão** -sessão está no classificador administrador de recursos.<br /><br /> Não permite valor nulo.|  
 |context_info|**varbinary(128)**|Valor CONTEXT_INFO da sessão. As informações de contexto são definidas pelo usuário usando o [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) instrução. Permite valor nulo.|  
 |cpu_time|**int**|Tempo da CPU, em milissegundos, usado por essa sessão. Não permite valor nulo.|  
 |memory_usage|**int**|Número de páginas de 8 KB de memória usado por essa sessão. Não permite valor nulo.|  
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>B. Localizando cursores demorados  
+### <a name="b-finding-long-running-cursors"></a>b. Localizando cursores demorados  
  O exemplo a seguir localiza os cursores abertos para mais um intervalo de tempo especificado, que criou os cursores e em qual sessão os cursores estão.  
   
 ```sql  

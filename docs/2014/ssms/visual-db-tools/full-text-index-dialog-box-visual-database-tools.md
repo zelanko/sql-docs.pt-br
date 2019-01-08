@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
@@ -12,12 +12,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822740"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Caixa de diálogo Índice de Texto Completo (Visual Database Tools)
   Essa caixa de diálogo permite que você crie um índice de texto completo, para executar pesquisas de texto completo em colunas baseadas em texto nas suas tabelas de banco de dados. Um índice de texto completo baseia-se em um índice regular, assim você deve criá-lo primeiro. O índice regular deve ser criado em uma coluna não nula exclusiva, e é melhor escolher uma coluna com valores baixos em vez de uma coluna com valores altos.  
@@ -42,7 +42,7 @@ ms.locfileid: "48080426"
  Quando expandida, mostra **Colunas** e o **Nome do Catálogo de Texto Completo**.  
   
  **Colunas**  
- Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para consultar a lista completa, clique no botão de reticências (**…**) à esquerda do campo de propriedade.  
+ Exibe uma lista de nomes de colunas pesquisável de texto completo separados por vírgula. Para ver a lista completa, clique no botão de reticências (**...**) à esquerda do campo de propriedade.  
   
  **Full-Text Catalog Name**  
  Exibe o nome do catálogo de texto completo no qual este índice de texto completo é armazenado. Para armazenar o índice em um catálogo diferente, clique no nome do catálogo e escolha outro na lista suspensa.  
@@ -63,7 +63,7 @@ ms.locfileid: "48080426"
  Indica se você pode executar uma pesquisa de texto completo usando este índice de texto completo.  
   
  **Definição de Rastreamento de alterações**  
- Descreve o status do controle de alterações para este índice: Manual, Automático ou Desligado.  
+ Descreve o status de controle de alterações para este índice: Manual, automático ou desligado.  
   
  **Rastreamento Concluído**  
  Mostra se o rastreamento mais recente foi concluído. Se este valor de propriedade for Não, um rastreamento está em progresso no momento.  
@@ -87,7 +87,7 @@ ms.locfileid: "48080426"
  Exibe a data e a hora em que o próximo rastreamento iniciará.  
   
  **Tipo do Rastreamento Atual ou Último**  
- Exibe o tipo do rastreamento atual ou mais recente: Completo, Incremental, Atualização ou Propagação Automática.  
+ Exibe o tipo do rastreamento atual ou mais recente: Completo, Incremental, atualização ou propagação automática.  
   
  **Nome do Índice Exclusivo**  
  Exibe uma lista de todos os nomes de colunas neste banco de dados que têm índices de uma única coluna exclusivos. Estas colunas podem ser usadas para criar um índice de texto completo.  

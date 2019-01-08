@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - autohide [SQL Server Management Studio]
@@ -15,17 +15,17 @@ ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c63e159490e462a3598b3a19a4f51f900ef3485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817118"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Compreender o gerenciamento de janelas do SQL Server Management Studio
   As janelas de ferramenta do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] são um sistema altamente funcional, flexível e eficiente que permite que você:  
   
--   Maximize a área de trabalho de usuário para desenvolvimento e administração.  
+-   Maximize o workspace de usuário para desenvolvimento e administração.  
   
 -   Reduza o número de janelas não usadas exibidas simultaneamente.  
   

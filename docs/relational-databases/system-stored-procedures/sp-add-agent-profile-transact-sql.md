@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752148"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_id=** ] *profile_id*  
  É a ID associada ao perfil inserido recentemente. *profile_id* está **int** e é um parâmetro OUTPUT opcional. Se especificado, o valor será definido como a nova ID do perfil.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  É o nome do perfil. *profile_name* está **sysname**, sem padrão.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  É o tipo de agente de replicação. *agent_type* está **int**, sem padrão e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
@@ -66,11 +65,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** indica um perfil de sistema. **1** indica um perfil personalizado. Somente perfis personalizados podem ser criados usando esse procedimento armazenado; Portanto, o único valor válido é **1**. Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria perfis de sistema.  
   
- [  **@description=** ] **'***descrição***'**  
+ [  **@description=** ] **'**_descrição_**'**  
  É uma descrição do perfil. *Descrição* está **nvarchar(3000)**, sem padrão.  
   
  [  **@default=** ] *padrão*  
- Indica se o perfil é o padrão para *agent_type * *.* *padrão* está **bit**, com um padrão de **0**. **1** indica que o perfil que está sendo adicionado se torne o novo perfil padrão para o agente especificado por *agent_type*.  
+ Indica se o perfil é o padrão para *agent_type **.* *padrão* está **bit**, com um padrão de **0**. **1** indica que o perfil que está sendo adicionado se torne o novo perfil padrão para o agente especificado por *agent_type*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

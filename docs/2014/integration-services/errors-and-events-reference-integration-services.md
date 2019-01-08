@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -16,12 +15,12 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91edbee0aea90cb4248acc92606d01385abe0ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736e5d7e614a1df300dd5d283994c54702114dea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791208"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referência de erros e eventos (Integration Services)
   Esta seção da documentação contém informações sobre vários erros e eventos relacionados ao [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Causa e informações de resolução estão incluídas para mensagens de erro.  
@@ -33,7 +32,7 @@ ms.locfileid: "48140600"
   
 ## <a name="error-messages"></a>Mensagens de erro  
   
-|Nome simbólico de erro|Description|  
+|Nome simbólico de erro|Descrição|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto, um gerenciador de conexões de Cache já carregou um arquivo de cache no cache na memória.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica que o pacote não pode ser executado porque ocorreu uma falha na conexão especificada.|  
@@ -52,7 +51,7 @@ ms.locfileid: "48140600"
 ## <a name="events-sqlispackage"></a>Eventos (SQLISPackage)  
  Para obter mais informações, consulte [Eventos registrados por um pacote do Integration Services](performance/events-logged-by-an-integration-services-package.md).  
   
-|Evento|Description|  
+|Evento|Descrição|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Indica que um pacote foi iniciado.|  
 |SQLISPackage_12289|Indica que um pacote concluiu a execução com êxito.|  
@@ -66,7 +65,7 @@ ms.locfileid: "48140600"
 ## <a name="events-sqlisservice"></a>Eventos (SQLISService)  
  Para obter mais informações, consulte [Eventos registrados pelo serviço do Integration Services](service/events-logged-by-the-integration-services-service.md).  
   
-|Evento|Description|  
+|Evento|Descrição|  
 |-----------|-----------------|  
 |SQLISService_256|Indica que o serviço está prestes a ser iniciado.|  
 |SQLISService_257|Indica que o serviço foi iniciado.|  

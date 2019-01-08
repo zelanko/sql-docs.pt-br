@@ -15,15 +15,15 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41dadd067fc62de6316c5258d660c757febc0fbc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535369"
 ---
 # <a name="prepared-property-example-vb"></a>Exemplo da propriedade Prepared (VB)
-Este exemplo demonstra a [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade abrindo duas [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos — um preparado e não preparado.  
+Este exemplo demonstra a [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade abrindo duas [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos - um preparado e outro não preparado.  
   
 ```  
 'BeginPreparedVB  

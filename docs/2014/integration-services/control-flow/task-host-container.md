@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.taskhostcontainer.f1
@@ -16,12 +15,12 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 377ec6b276d2cc83b296a9d0676f39bc9039ca80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 010b6d8c59e99c4715d349881922bb5b01153e2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790928"
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
   O contêiner do host da tarefa encapsula uma única tarefa. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o host da tarefa não é configurado separadamente, ele é configurado quando você define as propriedades da tarefa que ele encapsula. Para obter mais informações sobre as tarefas que os contêineres do host da tarefa encapsulam, consulte [Tarefas do Integration Services](integration-services-tasks.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "48165236"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres do Integration Services](integration-services-containers.md)  

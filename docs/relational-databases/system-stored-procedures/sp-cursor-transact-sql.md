@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210515"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662515"
   
 ||  
 |-|  
-|**Aplica-se ao**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Aplica-se ao**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  É um parâmetro necessário que designa qual operação o cursor executará. *optype* requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Nome|Description|  
+|Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|É usado para atualizar uma ou mais linhas no buffer de busca.  As linhas especificadas em *rownum* são novamente acessadas e atualizadas.|  
-|0x0002|Delete (excluir)|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são novamente acessadas e excluídas.|  
+|0x0002|DELETE|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são novamente acessadas e excluídas.|  
 |0X0004|INSERT|Insere dados sem precisar criar um SQL **inserir** instrução.|  
 |0X0008|REFRESH|É usado para preencher novamente o buffer a partir de tabelas subjacentes e pode ser usado para atualizar a linha se uma atualização ou exclusão falhar devido a controle de simultaneidade otimista, ou após UPDATE.|  
 |0X10|LOCK|Faz com que um SQL Server U bloqueio seja adquirido na página que contém a linha especificada. Esse bloqueio é compatível com Bloqueios S, mas não com Bloqueios X ou outros Bloqueios U. Pode ser usado para implementar bloqueio a curto prazo.|  
 |0X20|SETPOSITION|É usado somente quando o programa for emitir um subsequentes do SQL Server posicionado instrução DELETE ou UPDATE.|  
-|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscado, a operação poderá falhar a verificação de simultaneidade e o resultado de retorno não pode ser garantido.|  
+|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscado, a operação poderá causar falha na verificação de simultaneidade e o resultado de retorno não poderá ser garantido.|  
   
  *rowNum*  
  Especifica qual das linhas no buffer de busca o cursor irá afetar, atualizar ou excluir.  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  Quando um único parâmetro é usado, uma instrução UPDATE pode ser enviada com a seguinte sintaxe:  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  Se UPDATE \<nome da tabela > for especificado, qualquer valor especificado para o *tabela* parâmetro será ignorado.  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o  *\<nome da tabela >* instrução Update construída é aquele especificado ou que adotou o padrão o *tabela* parâmetro.  
+ exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o  *\<nome da tabela >* a atualização construída instrução é aquele especificado ou usado como padrão pelo *tabela* parâmetro.  
   
 > [!NOTE]  
 >  É possível enviar um parâmetro como um parâmetro nomeado, isto é, "`@VALUES`". Neste caso, nenhum outro parâmetro nomeado pode ser usado.  

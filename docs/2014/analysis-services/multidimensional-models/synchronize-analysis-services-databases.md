@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352166"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
@@ -41,7 +41,7 @@ ms.locfileid: "50147847"
  Para sincronizar bancos de dados, execute o Assistente para Sincronizar Banco de Dados para sincronizar imediatamente os bancos de dados, ou use-o para gerar um script de sincronização que possa ser executado posteriormente. Qualquer abordagem pode ser usada para aumentar a disponibilidade e a escalabilidade de seus bancos de dados e seu cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](http://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## <a name="prerequisites"></a>Prerequisites  
  No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre as funções de administrador do servidor e permissões de banco de dados, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "50147847"
  Desative o processamento de agregação lento se ele estiver em uso no servidor de origem. As agregações que estão sendo processadas em segundo plano podem interferir na sincronização de banco de dados. Para obter mais informações sobre como definir esta propriedade de servidor, consulte [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  O tamanho do banco de dados é um fator para determinar se a sincronização é uma abordagem adequada. Não há requisitos de hardware, mas se a sincronização estiver muito lenta, considere a sincronização de vários servidores em paralelo, como descrito neste artigo técnico: [Práticas recomendadas de sincronização do Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
+>  O tamanho do banco de dados é um fator para determinar se a sincronização é uma abordagem adequada. Não há nenhum requisito de disco rígido, mas se a sincronização estiver muito lenta, considere a sincronização de vários servidores em paralelo, conforme descrito neste artigo técnico: [Práticas recomendadas de sincronização do Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Assistente para Sincronizar Banco de Dados  
  Use o Assistente para Sincronizar Banco de Dados para executar a sincronização unidirecional de um banco de dados de origem para um de destino ou para gerar um script que especifique uma operação de sincronização de banco de dados. Você pode sincronizar partições locais e remotas durante o processo de sincronização e optar ou não por incluir funções.  

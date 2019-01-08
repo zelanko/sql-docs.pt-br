@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath operators [SQLXML]
@@ -18,12 +16,12 @@ ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 069da117ce5866d1a19b4b404f02f57a0cdd3c83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae0350a239414b4e20299cf42d46ebc5b9a69023
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807188"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
   O exemplo a seguir mostra como os operadores Boolianos são especificados em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

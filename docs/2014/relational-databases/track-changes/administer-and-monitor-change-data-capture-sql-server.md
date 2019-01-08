@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788898"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
   Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
@@ -32,7 +31,7 @@ ms.locfileid: "51560163"
  Para entender o comportamento do trabalho de captura, você deve entender como os parâmetros configuráveis são usados pelo `sp_cdc_scan`.  
   
 #### <a name="maxtrans-parameter"></a>Parâmetro maxtrans  
- O parâmetro *maxtrans* especifica o número máximo de transações que podem ser processadas em um único ciclo de verificação do log. Se, durante a verificação, o número de transações a serem processadas alcançar esse limite, nenhuma transação adicional é incluídas na verificação atual. Após a conclusão de um ciclo de verificação, o número de transações que foram processadas sempre será menor ou igual ao *maxtrans*.  
+ O parâmetro *maxtrans* especifica o número máximo de transações que podem ser processadas em um único ciclo de verificação do log. Se, durante a verificação, o número de transações a serem processadas alcançar esse limite, nenhuma transação adicional será incluída na verificação atual. Após a conclusão de um ciclo de verificação, o número de transações que foram processadas sempre será menor ou igual ao *maxtrans*.  
   
 #### <a name="maxscans-parameter"></a>Parâmetro maxscans  
  O parâmetro *maxscans* especifica o número máximo de ciclos de verificação que tentaram esgotar o log antes de retornar (continuous = 0) ou executar waitfor (continuous = 1).  
@@ -76,7 +75,7 @@ ms.locfileid: "51560163"
  Quando uma limpeza é executada, a marca d'água baixa para todas as instâncias de captura é atualizada inicialmente em uma única transação. Ela tenta remover entradas obsoletas das tabelas de alterações e da tabela cdc.lsn_time_mapping. O valor limite configurável restringe a quantidade de entradas excluídas em qualquer instrução única. A não execução da exclusão de qualquer tabela individual não impedirá a tentativa de operação nas tabelas restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personalização do trabalho de limpeza  
- Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam em `lsn` em vez do tempo, qualquer número de estratégias pode ser usado para determinar o menor `lsn` manter nas tabelas de alteração. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar todas as tabelas de alterações do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de captura da instância.  
+ Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam em `lsn` em vez do tempo, qualquer número de estratégias pode ser usado para determinar o menor `lsn` manter nas tabelas de alteração. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar as tabelas de alteração de todas as do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de instância de captura.  
   
 ##  <a name="Monitor"></a> Monitorar o processo de captura de dados de alterações  
  O monitoramento do processo de captura de dados de alteração permite determinar se as alterações estão sendo gravadas corretamente e com latência razoável nas tabelas de alteração. O monitoramento também pode ajudar a identificar os erros que podem ocorrer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém duas exibições de gerenciamento dinâmico para ajudar a monitorar a captura de dados de alterações: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

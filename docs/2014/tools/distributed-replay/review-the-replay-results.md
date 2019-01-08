@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792828"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
   Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir**. Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -51,12 +51,12 @@ ms.locfileid: "48181326"
 ## <a name="event-class-column-mapping"></a>Mapeamento de coluna de classe de evento  
  As figura a seguir lista as colunas do rastreamento de resultado disponíveis para cada tipo de classe de evento que é capturada durante a reprodução.  
   
- ![Mapeamento de coluna de classe de evento](../../database-engine/media/eventclassmappings.gif "mapeamento de coluna de classe de evento")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
-|Nome da coluna de dados|Tipo de Dados|Description|ID da coluna|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|`nvarchar`|O nome da classe de evento.|1|  
 |EventSequence|`bigint`|Para erros de provedor, e erros e avisos internos, esta é a sequência de eventos de captura que corresponde ao erro ou aviso.<br /><br /> Para todas as outras classes de eventos, esta é a sequência do evento nos dados de rastreamento originais.|2|  
@@ -80,6 +80,6 @@ ms.locfileid: "48181326"
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Requisitos do Distributed Replay](distributed-replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](configure-distributed-replay.md)  
+ [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

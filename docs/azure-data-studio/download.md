@@ -1,7 +1,8 @@
 ---
-title: Baixe e instale o Azure Data Studio | Microsoft Docs
+title: Baixe e instale o
+titleSuffix: Azure Data Studio
 description: Download e instalação do Azure Data Studio no Windows, macOS ou Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
-ms.translationtype: HT
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217804"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030650"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixe e instale o Azure Data Studio
 
@@ -160,7 +161,7 @@ Para verificar se há atualizações mais recentes, clique no ícone de engrenag
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL com suporte
 
-* Esta versão do Azure Data Studio funciona com todas as [versões com suporte do SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e no SQL Data Warehouse do Azure. O Azure Data Studio também fornece suporte de versão prévia para instância gerenciada do SQL Server.
+* Esta versão do Azure Data Studio funciona com todas as [versões com suporte do SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) e fornece suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e no SQL Data Warehouse do Azure. O Azure Data Studio também fornece suporte de versão prévia para instância gerenciada do SQL Server.
 
 ## <a name="move-user-settings"></a>Mover as configurações do usuário
 

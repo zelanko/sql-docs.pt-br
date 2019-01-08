@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
@@ -15,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88367f2c01be6ba0cf6edaf2760d3f1e8f2c9482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799108"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
   Este tópico descreve como criar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48073217"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   No máximo 32.767 bancos de dados podem ser especificados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -78,14 +77,14 @@ ms.locfileid: "48073217"
   
 4.  Para criar o banco de dados aceitando todos os valores padrão, clique em **OK**; do contrário, passe para as etapas opcionais a seguir.  
   
-5.  Para alterar o nome do proprietário, clique em (**…**) para selecionar outro proprietário.  
+5.  Para alterar o nome do proprietário, clique em (**...**) para selecionar outro proprietário.  
   
     > [!NOTE]  
     >  A opção **Usar indexação de texto completo** sempre está marcada e esmaecida porque, a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todos os bancos de dados de usuários são habilitados para texto completo.  
   
-6.  Para alterar os valores padrão dos arquivos de dados primários e de log de transação, na grade **Arquivos de banco de dados** , clique na célula apropriada e digite o novo valor. Para obter mais informações, consulte [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md).  
+6.  Para alterar os valores padrão dos arquivos de dados primários e de log de transação, na grade **Arquivos de banco de dados** , clique na célula apropriada e digite o novo valor. Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](add-data-or-log-files-to-a-database.md).  
   
-7.  Para alterar o agrupamento do banco de dados, selecione a página **Opções** e depois marque um agrupamento na lista.  
+7.  Para alterar a ordenação do banco de dados, selecione a página **Opções** e depois marque uma ordenação na lista.  
   
 8.  Para alterar o modelo de recuperação, selecione a página **Opções** e marque um modelo de recuperação na lista.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48073217"
   
 12. Para criar o banco de dados, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
@@ -136,6 +135,6 @@ GO
  [Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
+ [Adicionar arquivos de dados ou de log a um banco de dados](add-data-or-log-files-to-a-database.md)  
   
   

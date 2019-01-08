@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b62f749bf308684a5d47386011339505b8a23bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2dcccbdf117b52f32801020bb7a119ee429dbd7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780058"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Funções do usuário para o serviço Change Data Capture para Oracle da Attunity
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  
@@ -129,7 +128,7 @@ ms.locfileid: "48222886"
   
  O administrador de banco de dados Oracle pode obter scripts SQL de Oracle que precisam ser executados, para que possam ser avaliados antes de serem executados. O administrador de banco de dados Oracle também pode executar scripts SQL de Oracle diretamente do Console de Designer do Oracle CDC.  
   
- Se o administrador de banco de dados Oracle escolher usar o console de Designer do Oracle CDC, as credenciais de administrador não serão mantidas com exceção do contexto (caixa de diálogo) no qual eles foram usados.  
+ Se o administrador do Oracle Database escolher usar o console do Oracle CDC Designer, as credenciais de administrador não serão mantidas com exceção do contexto (caixa de diálogo) no qual eles foram usados.  
   
  O administrador de banco de dados Oracle funciona em coordenação com o administrador do Serviço Oracle CDC na configuração de Instâncias Oracle CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

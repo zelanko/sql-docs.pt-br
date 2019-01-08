@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.recordsetdest.f1
@@ -18,12 +17,12 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfbf931bc28893b328ce4ac869278b012c6658c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdf206c36bdb9956c6444fe6b22f229ef4fdf6e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805018"
 ---
 # <a name="recordset-destination"></a>Destino do Conjunto de Registros
   O destino do conjunto de registros cria e popula um conjunto de registros ADO na memória. A forma do conjunto de registros é definida na entrada para o destino de conjunto de registros no tempo de design.  
@@ -41,7 +40,7 @@ ms.locfileid: "48063887"
   
 -   [Propriedades comuns](../common-properties.md)  
   
--   [Propriedades personalizadas do destino do conjunto de registros](recordset-destination-custom-properties.md)  
+-   [Propriedades personalizadas do destino Conjunto de Registros](recordset-destination-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   

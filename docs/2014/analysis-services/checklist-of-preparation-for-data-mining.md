@@ -11,12 +11,12 @@ ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519935"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Lista de verificação de preparação para mineração de dados
   Embora os suplementos de mineração de dados tornem as experiências com modelos algo fácil e divertido, quando você precisar obter resultados repetíveis e acionáveis, deverá aguardar um tempo suficiente para formular requisitos empresariais básicos e para obter e preparar dados. Esta seção fornece uma lista de verificação para ajudá-lo a planejar sua investigação e descreve os problemas comuns.  
@@ -40,18 +40,18 @@ ms.locfileid: "48057566"
   
 -   Qual é a quantidade de dados que você tem? Há dados suficientes para modelar?  
   
-     Não precisa ser uma quantidade enorme – é melhor que seja menor e equilibrada.  
+     Ele não precisa ser um enorme - menor e com balanceamento de pode ser melhor.  
   
 -   Os dados são de várias origens ou uma única origem?  
   
 -   Os dados já foram processados e limpos? Existem mais dados de entrada disponíveis?  
   
--   Você sabe como eles foram manipulados antes de você os receber – como os dados podem ter sido truncados, resumidos ou convertidos?  
+-   Você sabe como eles foram manipulados antes de você o recebeu - como dados talvez foram truncados, resumidos ou convertidos?  
   
 -   Os dados de entrada têm alguns resultados de exemplo que podem ser usados para treinamento?  
   
  **Entendo que o nível de integridade de dados, que temos e o nível que precisamos.**  
- Dados incorretos podem afetar a qualidade do modelo ou impedir que o modelo seja até mesmo criado. Você deve ter um bom entendimento da distribuição e do significado dos dados, e como eles chegaram a esse estado. Você precisará compreender se é possível ou apropriado simplificar os dados rotulando, truncando tipos de dados numéricos ou resumindo.  
+ Dados incorretos podem afetar a qualidade do modelo ou impedir que o modelo seja até mesmo criado. Você deve ter um bom entendimento da distribuição e do significado dos dados, e como eles chegaram a esse estado. Você precisará entender se for possível ou apropriado simplificar os dados rotulando, truncando tipos de dados numéricos ou resumindo.  
   
 -   Rótulos de dados: estão claros e corretos?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48057566"
 -   Se você combinou conjuntos de dados, verificou se há várias colunas que representam os mesmos dados?  
   
  **Eu sei onde os dados de origem estão armazenados, de onde vieram e como são processados. O processo pode ser repetido com facilidade, se necessário.**  
- Os conjuntos de dados únicos são bons para experiências, mas, se você quiser mover o modelo para produção, vai querer planejar como o processo de limpeza pode ser aplicado aos dados operacionais. Além disso, se você tiver dados operacionais, precisará saber como eles podem ter sido alterados antes de você os obter; precisará certamente saber como eles foram arredondados ou resumidos.  
+ Conjuntos de dados únicos são bons para experiências, mas se você quiser mover o modelo em produção, convém pensar com antecedência sobre como o processo de limpeza pode ser aplicado aos dados operacionais. Além disso, se você tiver dados operacionais, você precisa saber como ele pode ter sido alterado antes de você acertou-você precisará saber como ele foi arredondado ou resumido, certamente.  
   
 -   Você deseja ser capaz de repetir a experiência?  
   

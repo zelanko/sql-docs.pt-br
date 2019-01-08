@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a24c1da04128c2da01b4496e511f22f15f1f8efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808828"
 ---
 # <a name="tracing-and-replaying-events"></a>Rastreando e reproduzindo eventos
   No SMO, os objetos `Trace` e `Replay` no namespace <xref:Microsoft.SqlServer.Management.Trace> fornecem acesso de programação à funcionalidade [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], usada para monitorar uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Você pode capturar e salvar dados sobre cada evento em um arquivo ou tabela para análise posterior. Por exemplo, é possível monitorar um ambiente de produção para observar quais procedimentos estão impedindo o desempenho devido à lentidão na execução.  
@@ -53,11 +51,11 @@ ms.locfileid: "48188716"
   
 -   Reproduzir arquivos ou tabelas de rastreamento.  
   
- Os dados de rastreamento a partir de `Trace` e `Replay` objetos podem ser usados pelo aplicativo de SMO ou podem ser examinado manualmente usando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Os dados de rastreamento também são compatíveis com o [rastreamento do SQL](../../sql-trace/sql-trace.md) procedimentos armazenados que também fornecem capacidades de rastreamento.  
+ Os dados de rastreamento a partir de `Trace` e `Replay` objetos podem ser usados pelo aplicativo de SMO ou podem ser examinado manualmente usando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Os dados de rastreamento também são compatíveis com os procedimentos armazenados [SQL Trace](../../sql-trace/sql-trace.md) que também fornecem capacidades de rastreamento.  
   
  Os objetos de rastreamento SMO residem no namespace <xref:Microsoft.SqlServer.Management.Trace>, que requer uma referência ao arquivo Microsoft.SQLServer.ConnectionInfo.dll.  
   
- O `Trace` e `Replay` objetos requerem uma <xref:Microsoft.SqlServer.Management.Common.ServerConnection> <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> objeto para estabelecer uma conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> reside no namespace <xref:Microsoft.SqlServer.Management.Common>, que requer uma referência ao arquivo Microsoft.SQLServer.ConnectionInfo.dll.  
+ Os objetos `Trace` e `Replay` exigem um objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection><xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> para estabelecer uma conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> reside no namespace <xref:Microsoft.SqlServer.Management.Common>, que requer uma referência ao arquivo Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Os objetos `Trace` e `Replay` não têm suporte em uma plataforma de 64 bits.  

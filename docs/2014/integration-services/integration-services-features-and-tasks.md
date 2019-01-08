@@ -14,24 +14,24 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524868"
 ---
 # <a name="integration-services-features-and-tasks"></a>Recursos e tarefas do Integration Services
-  Encontre informações que qualquer pessoa — designer, desenvolvedor, analista ou administrador — precisa para criar e desenvolver [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. Em seguida, aprenda a incorporar esses pacotes em seus aplicativos e sites da Web.  
+  Encontre informações que qualquer pessoa-designer, desenvolvedor, analista ou administrador-precisa para criar e desenvolver [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. Em seguida, aprenda a incorporar esses pacotes em seus aplicativos e sites da Web.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Serviços de integração &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md)  
   
  [Pacotes do SSIS &#40;Integration Services&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Serviços de integração &#40;SSIS&#41; conexões](connection-manager/integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](connection-manager/integration-services-ssis-connections.md)  
   
- [Serviços de integração &#40;SSIS&#41; projetos](integration-services-ssis-projects-and-solutions.md)  
+ [Projetos do Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md)  
   
  [Serviços de integração &#40;SSIS&#41; parâmetros](integration-services-ssis-package-and-project-parameters.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48142796"
   
  [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)  
   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)  
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  
   
- [Serviços de integração &#40;SSIS&#41; manipuladores de eventos](integration-services-ssis-event-handlers.md)  
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  
   
  [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md)  
   

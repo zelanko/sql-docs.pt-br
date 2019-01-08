@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220936"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811158"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
   As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
@@ -70,7 +70,7 @@ ms.locfileid: "48220936"
   
 -   As instruções INSERT devem fornecer valores para todas as colunas NOT NULL que não têm restrições DEFAULT.  
   
--   Para qualquer coluna exceto computada, identidade ou `timestamp` colunas, os valores são opcionais para qualquer coluna que permite valores nulos ou qualquer coluna NOT NULL que tenha uma definição DEFAULT.  
+-   Para qualquer coluna exceto computada, identidade ou colunas `timestamp`, os valores são opcionais para qualquer coluna que permita nulos ou qualquer coluna NOT NULL que tenha uma definição DEFAULT.  
   
  Quando uma instrução INSERT, UPDATE ou DELETE faz referência a uma exibição que tenha um gatilho INSTEAD OF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] chama o gatilho em vez de tomar qualquer ação direta contra qualquer tabela. O gatilho deve usar as informações apresentadas nas tabelas inseridas e excluídas para construir as instruções necessárias para implementar a ação solicitada nas tabelas base, mesmo quando o formato das informações nas tabelas inseridas e excluídas construído para a exibição for diferente do formato dos dados nas tabelas base.  
   

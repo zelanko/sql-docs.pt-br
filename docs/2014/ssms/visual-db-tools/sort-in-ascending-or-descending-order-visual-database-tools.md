@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - descending sorts
@@ -13,18 +13,18 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 589ff3685d24b02499d0d250063f6ed885b66841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdf37ab5b61e74ab04b9b58162325b580675c493
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822148"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>Classificar em ordem crescente ou decrescente (Visual Database Tools)
   Você pode classificar os resultados da consulta em ordem crescente ou decrescente em uma ou mais das colunas do conjunto de resultados usando as palavras-chaves `ASC` ou `DESC` com a cláusula `ORDER BY` .  
   
 > [!NOTE]  
->  A ordem de classificação é determinada em parte pela sequência de agrupamento da coluna. Você pode alterar a sequência de agrupamento na [Caixa de Diálogo de Agrupamento](visual-database-tools.md).  
+>  A ordem de classificação é determinada em parte pela sequência de ordenação da coluna. Você pode alterar a sequência de ordenação na [Caixa de Diálogo de Ordenação](visual-database-tools.md).  
   
  O procedimento seguinte supõe que você tenha uma consulta aberta no Designer de Consulta e Visualização que usa a cláusula ORDER BY para ordenar uma ou mais colunas.  
   

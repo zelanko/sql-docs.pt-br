@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351551"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
   Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no nível do banco de dados. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Este tópico revisa as diferenças e os benefícios de usar o modelo de banco de dados independente em comparação com o modelo de logon/usuário tradicional e Windows ou as regras de firewall em nível de servidor. Cenários específicos, lógica de negócios do aplicativo ou a capacidade de gerenciamento ainda podem exigir o uso do modelo tradicional de logon/usuário e regras de firewall em nível de servidor.  
@@ -32,9 +32,9 @@ ms.locfileid: "48851803"
  A entidade de segurança importante é que o logon (no banco de dados mestre) e o usuário (no banco de dados do usuário) devem existir e estar relacionados entre si. Isso significa que a conexão com o banco de dados do usuário tem uma dependência no momento do logon no banco de dados mestre, e isso limita a capacidade do banco de dados de ser movido para um host [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente ou servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . E se, por algum motivo, uma conexão com o banco de dados mestre não estiver disponível (por exemplo, um failover estiver em andamento), o tempo geral de conexão aumenta ou a conexão pode atingir o tempo limite. Consequentemente, isso pode reduzir escalabilidade da conexão.  
   
 ## <a name="contained-database-user-model"></a>Modelo de usuário de banco de dados independente  
- O logon no banco de dados mestre não está presente no modelo de usuário de banco de dados independente. Em vez disso, o processo de autenticação ocorre no banco de dados do usuário e o usuário no banco de dados não tem um logon associado no banco de dados mestre. O modelo de usuário de banco de dados independente dá suporte à autenticação do Windows (em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e à autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para se conectar como um usuário de banco de dados independente, a cadeia de conexão sempre deve conter um parâmetro para o banco de dados do usuário para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] saiba qual banco de dados é responsável por gerenciar o processo de autenticação. A atividade do usuário de banco de dados independente está limitada ao banco de dados responsável pela autenticação. Portanto, ao se conectar como um usuário de banco de dados independente, a conta de usuário do banco de dados deve ser criada independentemente em cada banco de dados de que o usuário precisará. Para alterar os bancos de dados, os usuários [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devem criar uma nova conexão. Usuários de bancos de dados independentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem alterar bancos de dados se um usuário idêntico estiver presente em outro banco de dados.  
+ O logon no banco de dados mestre não está presente no modelo de usuário de banco de dados independente. Em vez disso, o processo de autenticação ocorre no banco de dados do usuário e o usuário no banco de dados não tem um logon associado no banco de dados mestre. O modelo de usuário de banco de dados independente dá suporte à autenticação do Windows (em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e à autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para se conectar como um usuário de banco de dados independente, a cadeia de conexão sempre deve conter um parâmetro para o banco de dados do usuário para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] saiba qual banco de dados é responsável por gerenciar o processo de autenticação. A atividade do usuário de banco de dados independente está limitada ao banco de dados responsável pela autenticação. Portanto, ao se conectar como um usuário de banco de dados independente, a conta de usuário do banco de dados deve ser criada independentemente em cada banco de dados de que o usuário precisará. Para alterar os bancos de dados, os usuários [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devem criar uma nova conexão. Os usuários de bancos de dados independentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão alterar bancos de dados se um usuário idêntico estiver presente em outro banco de dados.  
   
- Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], nenhuma alteração é necessária na cadeia de conexão ao alternar do modelo tradicional para o modelo de usuário de banco de dados independente. Para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nome do banco de dados deve ser adicionado à cadeia de conexão se não ainda estiver presente.  
+ Para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], nenhuma alteração é necessária na cadeia de conexão ao alternar do modelo tradicional para o modelo de usuário de banco de dados independente. Para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nome do banco de dados deve ser adicionado à cadeia de conexão se não ainda estiver presente.  
   
 > [!IMPORTANT]  
 >  Ao usar o modelo tradicional, as funções de nível de servidor e permissões de nível de servidor podem limitar o acesso a todos os bancos de dados. Ao usar o modelo de banco de dados independente, os proprietários e os usuários do banco de dados a permissão ALTER ANY USER podem conceder acesso ao banco de dados. Isso reduz o controle de acesso dos logons do servidor com privilégios altos e expande o controle de acesso para incluir os usuários do banco de dados com privilégios altos.  
@@ -49,9 +49,9 @@ ms.locfileid: "48851803"
   
  Para obter mais informações sobre as regras de firewall do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , veja os seguintes tópicos:  
   
--   [Firewall de banco de dados SQL do Azure](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Firewall de banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Como: definir as configurações do Firewall (Banco de Dados SQL do Azure)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Como: Definir configurações de Firewall (banco de dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f23c4817ff1a09c7d25b636049c22410003da002
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812288"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   Este tópico descreve como realizar alterações às etapas de um trabalho mestre do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,13 +36,13 @@ ms.locfileid: "48221156"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Um trabalho mestre do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser destino em ambos os servidores, local e remoto.  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- A menos que seja membro da função de servidor fixa **sysadmin** , você poderá modificar somente trabalhos de sua propriedade. Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ A menos que seja membro da função de servidor fixa **sysadmin** , você poderá modificar somente trabalhos de sua propriedade. Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -56,15 +56,15 @@ ms.locfileid: "48221156"
   
 4.  Clique com o botão direito do mouse no trabalho no qual você deseja modificar etapas e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, em **Selecione uma página**, selecione **Etapas**.  
+5.  No **propriedades do trabalho – * * * job_name* caixa de diálogo **selecionar uma página**, selecione **etapas**.  
   
-6.  Clique em **Editar** para abrir a caixa de diálogo **Propriedades da Etapa de Trabalho –***job_step_name*. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página avançada&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Clique em **edite** para abrir o **propriedades da etapa de trabalho – * * * job_step_name* caixa de diálogo. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página Avançado&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Quando terminar, clique em **OK**.  
   
-8.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, clique em **OK**.  
+8.  No **propriedades do trabalho – * * * job_name* caixa de diálogo, clique em **Okey**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Para realizar alterações às etapas de um trabalho mestre do SQL Server Agent  
   

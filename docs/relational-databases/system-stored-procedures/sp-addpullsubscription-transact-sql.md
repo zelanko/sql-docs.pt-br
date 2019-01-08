@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802496"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Especifica se existe um Agente de Distribuição autônomo para esta publicação. *independent_agent* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, há um Distribution Agent autônomo para essa publicação. Se **falsos**, há um agente de distribuição para cada par de banco de dados publicador/assinante do banco de dados. *independent_agent* é uma propriedade da publicação e deve ter o mesmo valor aqui, pois ele tem no publicador.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- É o tipo de assinatura. *subscription_type* está **nvarchar(9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que você deseja criar uma assinatura sem registrá-la no publicador. Nesse caso, você deve especificar um valor de **anônimo**. Isso é necessário em casos nos quais você não pode estabelecer um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão com o publicador durante a configuração de assinatura.  
+ É o tipo de assinatura. *subscription_type* está **nvarchar(9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que você deseja criar uma assinatura sem registrá-la no publicador. Nesse caso, você deve especificar um valor de **anônimo**. Isso é necessário em casos nos quais você não pode estabelecer uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Publicador durante configuração da assinatura.  
   
  [  **@description=**] **'***descrição***'**  
  É a descrição da publicação. *Descrição* está **nvarchar(100)**, com um padrão NULL.  
@@ -67,7 +66,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **'***update_mode***'**  
  É o tipo de atualização. *update_mode* está **nvarchar (30)**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**somente leitura** (padrão)|A assinatura é somente leitura. Qualquer alteração no Assinante não será mandada de volta ao Publicador. Deve ser usado quando não são feitas atualizações no Assinante.|  
 |**Synctran**|Habilita suporte para assinaturas de atualização imediata.|  

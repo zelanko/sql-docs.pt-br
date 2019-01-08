@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209835"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +49,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicação***'**  
+ [ **@publication**=] **'**_publicação_**'**  
  É o nome da publicação a ser alterada. *publicação*está **sysname**, sem padrão  
   
- [ **@article** =] **'***artigo***'**  
+ [ **@article** =] **'**_artigo_**'**  
  É o nome do artigo a ser alterado. *artigo* está **sysname**, sem padrão.  
   
- [ **@subscriber** =] **'***assinante***'**  
+ [ **@subscriber** =] **'**_assinante_**'**  
  É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
   
- [  **@property=**] **'***propriedade***'**  
+ [  **@property=**] **'**_propriedade_**'**  
  É a propriedade a ser alterada para a assinatura determinado. *propriedade* está **nvarchar (30)**, e pode ser um dos valores na tabela.  
   
- [  **@value=**] **'***valor***'**  
+ [  **@value=**] **'**_valor_**'**  
  É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)**, e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|Description|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* está **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
- [  **@publisher =** ] **'***publisher***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
+ [  **@publisher =** ] **'**_publisher_**'**  
+ Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

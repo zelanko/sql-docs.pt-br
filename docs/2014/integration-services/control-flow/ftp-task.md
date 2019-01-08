@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805447"
 ---
 # <a name="ftp-task"></a>Tarefa FTP
   A tarefa FTP carrega e baixa arquivos de dados, bem como gerencia diretórios em servidores. Por exemplo, um pacote pode baixar arquivos de dados de um servidor remoto ou de um local de Internet como parte de um fluxo de trabalho de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode usar a tarefa FTP para os seguintes propósitos:  
@@ -49,7 +48,7 @@ ms.locfileid: "48079166"
 ## <a name="predefined-ftp-operations"></a>Operações de FTP predefinidas  
  A tarefa FTP inclui um conjunto predefinido de operações. A tabela a seguir descreve essas operações.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Enviar arquivos|Envia um arquivo do computador local para o servidor FTP.|  
 |Receber arquivos|Salva um arquivo do servidor FTP no computador local.|  
@@ -63,7 +62,7 @@ ms.locfileid: "48079166"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Entradas de log personalizadas disponíveis na tarefa FTP  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |`FTPOperation`|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
@@ -76,8 +75,8 @@ ms.locfileid: "48079166"
  Para obter mais informações sobre como definir essas propriedades de forma programática, consulte <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa FTP &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa FTP &#40;página de transferência de arquivos&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Editor da Tarefa FTP &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa FTP &#40;página Transferência de Arquivos&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

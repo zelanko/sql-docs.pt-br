@@ -14,12 +14,12 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527251"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parâmetro (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
@@ -70,9 +70,9 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **obter * * * DataType* ou **definir * * * DataType*.  
+ Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **Obtenha**_DataType_ ou **definir**_DataType_.  
   
- Há uma exceção notável: não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
+ Há uma exceção notável: Não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
   
 ```  
 public boolean getBoolean()  

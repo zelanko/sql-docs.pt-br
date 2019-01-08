@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077626"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328306"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
   As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### <a name="to-find-using-regular-expressions"></a>Para fazer localização usando expressões regulares  
   
-1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante operações de **Localização Rápida**, **Localizar nos Arquivos**, **Substituição Rápida**ou **Substituir nos Arquivos** , selecione a opção **Usar** em **Opções de Localização**e escolha **Expressões Regulares**.  
+1.  Para habilitar o uso de expressões regulares na **localizar** campo durante **QuickFind**, **FindinFiles**, **substituição rápida**, ou  **Substituir nos arquivos** operações, selecionadas o **uso** opção sob **opções de busca** e escolha **expressões regulares**.  
   
 2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
@@ -40,7 +38,7 @@ ms.locfileid: "48077626"
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|para obter informações sobre a ferramenta de configuração e recursos adicionais.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -62,11 +60,11 @@ ms.locfileid: "48077626"
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
-|Mínimo — zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
-|Mínimo - um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
-|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 correspondem a qualquer sequência de 4 dígitos.|  
+|Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
+|Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
+|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9] ^ 4 correspondem a qualquer sequência de quatro dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
 |Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
@@ -86,7 +84,7 @@ ms.locfileid: "48077626"
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -121,7 +119,7 @@ ms.locfileid: "48077626"
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expression|Sintaxe|Description|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077626"
 ## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar texto com curingas](search-text-with-wildcards.md)  
-  
-  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,12 +16,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807108"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
   O Designer de Consulta e Exibição fornece recursos internos para alguns tipos de consulta - Selecionar, Inserir Resultados, Inserir Valores, Atualizar, Excluir e Criar Tabela - e também oferece suporte a expressões de consultas UNION, pesquisa de texto completo e CASE.  

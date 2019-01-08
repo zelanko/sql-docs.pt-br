@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799648"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Direcionar o fluxo de CDC de acordo com o tipo de alteração
   Para adicionar e configurar uma Transformação de separador de CDC, o pacote deverá conter pelo menos uma tarefa de Fluxo de Dados e uma origem CDC.  
@@ -37,11 +36,11 @@ ms.locfileid: "48069256"
   
 6.  Selecione uma das saídas a seguir:  
   
-    -   Excluir saída: a saída para onde as linhas de alteração DELETE são direcionadas.  
+    -   Exclua saída: A saída em que linhas de alteração DELETE são direcionadas.  
   
-    -   Inserir saída: a saída para onde as linhas de alteração INSERT são direcionadas.  
+    -   Inserir saída: A saída em que as linhas de alteração INSERT são direcionadas.  
   
-    -   Saída de atualização: a saída para onde as linhas de alteração UPDATE antes/depois e as linhas de alteração Mesclar são direcionadas.  
+    -   Atualizar saída: A saída onde antes/depois da alteração na atualização linhas e mesclagem linhas de alteração são direcionadas.  
   
 7.  Opcionalmente, você pode configurar as propriedades avançadas usando a caixa de diálogo **Editor Avançado** .  
   
@@ -54,6 +53,6 @@ ms.locfileid: "48069256"
      Para obter mais informações sobre como usar o separador de CDC, consulte Componentes de CDC para Microsoft SQL Server Integration Services.  
   
 ## <a name="see-also"></a>Consulte também  
- [Divisor de CDC](cdc-splitter.md)  
+ [Separador de CDC](cdc-splitter.md)  
   
   

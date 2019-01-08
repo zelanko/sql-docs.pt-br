@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7834ce4de7b4fa788dcdfb72c9f38510a11a9fac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215795"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
   Este tópico explica como restaurar o banco de dados **master** com base em um backup de banco de dados completo.  
@@ -42,7 +42,7 @@ ms.locfileid: "48187006"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir restaura o banco de dados `master` na instância do servidor padrão. O exemplo assume que a instância do servidor já está sendo executada no modo de usuário único. O exemplo inicia o `sqlcmd` e executa uma instrução `RESTORE DATABASE` que restaura um backup de banco de dados completo de `master` de um dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S***\<ComputerName>*\\*\<InstanceName>*.  
   
 ```  

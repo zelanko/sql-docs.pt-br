@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], extended events
@@ -17,12 +16,12 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692ea51fed686ae3d6cea000a1f4e05e1c09e85b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf37fbc1b5402e825d38b5f19326484d7b1afd12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816518"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Determinar quais consultas estão mantendo bloqueios
   Muitas vezes, os administradores de banco de dados precisam identificar a origem de bloqueios que estão obstruindo o desempenho do banco de dados.  

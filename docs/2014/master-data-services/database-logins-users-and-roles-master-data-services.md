@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,33 +17,33 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795408"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Logons, usuários e funções de banco de dados (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui logons, usuários e funções que são instalados automaticamente na instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que hospeda o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Esses logons, usuários e funções não devem ser modificados.  
   
 ## <a name="logins"></a>Logons  
   
-|Logon|Description|  
+|Logon|Descrição|  
 |-----------|-----------------|  
 |`mds_dlp_login`|Permite a criação de assemblies UNSAFE.<br /><br /> - Logon desabilitado com senha gerada aleatoriamente.<br /><br /> – É mapeado para o dbo do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> – Para o msdb, mds_clr_user é mapeado para esse logon.<br /><br /> <br /><br /> Para obter mais informações, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Logon habilitado usado para notificações.<br /><br /> No msdb e no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user é mapeado para esse logon.|  
   
 ## <a name="msdb-users"></a>Usuários de msdb  
   
-|Usuário|Description|  
+|User|Descrição|  
 |----------|-----------------|  
 |`mds_clr_user`|Não usado.<br /><br /> Mapeia para mds_dlp_login.|  
-|`mds_email_user`|Usado para notificações.<br /><br /> Mapeado para mds_dlp_login.<br /><br /> É um membro da função DatabaseMailUserRole.|  
+|`mds_email_user`|Usado para notificações.<br /><br /> Mapeado para mds_dlp_login.<br /><br /> É um membro da função: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuários de banco de dados do Master Data Services  
   
-|Usuário|Description|  
+|User|Descrição|  
 |----------|-----------------|  
 |`mds_email_user`|Usado para notificações.<br /><br /> Tem permissão SELECT para o esquema de mdm.<br /><br /> Tem permissão EXECUTE para o tipo de tabela definida pelo usuário mdm.MemberGetCriteria.<br /><br /> Tem permissão EXECUTE para o procedimento armazenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|É proprietário dos esquemas mdm e mdq. O esquema padrão é mdm.<br /><br /> Não está associado a um logon.|  
@@ -52,13 +51,13 @@ ms.locfileid: "48208986"
   
 ## <a name="master-data-services-database-role"></a>Função de banco de dados do Master Data Services  
   
-|Role|Description|  
+|Role|Descrição|  
 |----------|-----------------|  
 |`mds_exec`|Esta função contém a conta designada no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando você cria um aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e designa uma conta para o pool de aplicativos. A função mds_exec tem:<br /><br /> **EXECUTE** permissão em todos os esquemas.<br /><br /> **ALTER**, **inserir**, e **selecione** permissão nessas tabelas:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **Selecione** permissão nessas tabelas:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **Selecione** permissão sobre esses modos de exibição:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Esquemas  
   
-|Role|Description|  
+|Role|Descrição|  
 |----------|-----------------|  
 |`mdm`|Contém todo o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e objetos do Service Broker diferentes das funções contidas no esquema mdq.|  
 |`mdq`|Contém funções de banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas aos resultados da filtragem de membros com base nas expressões regulares ou similaridade e para formatação de emails de notificação.|  

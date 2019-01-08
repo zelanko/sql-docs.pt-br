@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805668"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de pacote
   Este tópico descreve como copiar os itens de fluxo de controle, itens de fluxo de dados e gerenciadores de conexões dentro de um pacote ou entre pacotes.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200516"
 4.  Selecione os itens de fluxo de controle ou de dados que deseja copiar. Para selecionar vários itens de uma vez, pressione a tecla Shift e clique no item ou selecione os itens como um grupo, arrastando o ponteiro pelos itens que deseja selecionar.  
   
     > [!IMPORTANT]  
-    >  As restrições de precedência e caminhos que conectam itens não são selecionadas automaticamente quando você seleciona dois itens que elas conectam. Para copiar um fluxo de trabalho ordenado — um segmento do fluxo de controle ou do fluxo de dados — certifique-se de que tenha copiado também as restrições de precedência e os caminhos.  
+    >  As restrições de precedência e caminhos que conectam itens não são selecionadas automaticamente quando você seleciona dois itens que elas conectam. Para copiar um fluxo de trabalho ordenado – um segmento do fluxo de controle ou do fluxo de dados – certifique-se de que tenha copiado também as restrições de precedência e os caminhos.  
   
 5.  Clique com o botão direito do mouse em um item selecionado e clique em **Copiar**.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48200516"
 6.  Clique com o botão direito do mouse na área **Gerenciadores de Conexões** e clique em **Colar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fluxo de controle](control-flow/control-flow.md)   
+ [Fluxo de Controle](control-flow/control-flow.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](connection-manager/integration-services-ssis-connections.md)   
  [Copiar itens do projeto](../../2014/integration-services/copy-project-items.md)  

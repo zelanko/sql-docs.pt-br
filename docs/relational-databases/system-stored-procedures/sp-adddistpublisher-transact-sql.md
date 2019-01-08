@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206565"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  É o nome do banco de dados de distribuição. *distributor_db* está **sysname**, sem padrão. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
  [  **@security_mode=**] *security_mode*  
- É o modo de segurança implementado. Esse parâmetro é usado apenas pelos agentes de replicação para conexão ao Publicador para assinaturas de atualização na fila ou com um Publicador que não seja do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *security_mode* está **int**, e pode ser um destes valores.  
+ É o modo de segurança implementado. Esse parâmetro só é usado por agentes de replicação para se conectar ao publicador para assinaturas de atualização enfileirada ou com um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *security_mode* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Agentes de replicação no Distribuidor usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão com o Publicador.|  
 |**1** (padrão)|Agentes de replicação no Distribuidor usam a Autenticação do Windows para conexão com o Publicador.|  
@@ -91,7 +90,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [  **@thirdparty_flag =**] *thirdparty_flag*  
  É quando o Publicador é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* está **bit**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Banco de dados diferente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -99,7 +98,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher_type**=] **'***publisher_type***'**  
  Especifica o tipo do Publicador quando o Publicador não é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* é sysname, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (padrão)|Especifica um Editor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Especifica um Publicador Oracle padrão.|  

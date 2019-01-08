@@ -4,20 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2a73bd30ab72cc293f8cbd0dcebc2b123d6538e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818748"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opções (Ambiente: página Fontes e Cores)
+# <a name="options-environment-fonts-and-colors-page"></a>Opções (ambiente: Fonts and Colors Page)
   A caixa de diálogo **Opções** permite que você determine um esquema personalizado de fontes e cores para diversos elementos da interface do usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No menu **Ferramentas** , clique em **Opções** , expanda a pasta **Ambiente** e selecione **Fontes e Cores**.  
   
  As alterações no esquema de cores não são implementadas durante a sessão em que foram feitas. Você pode avaliar as alterações de cores abrindo outra instância do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e produzindo as condições sob as quais espera que suas alterações se apliquem.  
@@ -29,8 +29,8 @@ ms.locfileid: "51031804"
 |Termo|Definição|  
 |----------|----------------|  
 |Editor de Texto|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte no Editor de Texto afetam a aparência do texto em seu editor de texto padrão. Documentos abertos em um editor de texto fora do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não serão afetados por essas configurações.|  
-|Impressora|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte da impressora afetam a aparência do texto impresso em documentos.<br /><br /> Dica: Conforme necessário, você pode selecionar uma fonte padrão para impressão diferente daquela usada para exibição no Editor de texto. Isso pode ser útil ao imprimir códigos que contenham caracteres de um byte e caracteres de dois bytes.|  
-|[Janelas de Ferramentas Todo o Texto **]**|Alterações nas configurações de vídeo de estilo, tamanho e cor da fonte neste item afetam a aparência do texto nas janelas de ferramentas que têm painéis de saída no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por exemplo, janela Saída, janela Resultados de Texto e assim por diante.<br /><br /> Observação: alterações no texto dos itens [Janelas de Ferramentas Todo o Texto] não entram em vigor durante a sessão em que foram feitas. Você pode avaliar essas alterações abrindo outra instância do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|Impressora|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte da impressora afetam a aparência do texto impresso em documentos.<br /><br /> Dica: Conforme necessário, você pode selecionar uma fonte padrão para impressão diferente daquela usada para exibição no Editor de Texto. Isso pode ser útil ao imprimir códigos que contenham caracteres de um byte e caracteres de dois bytes.|  
+|[Janelas de Ferramentas Todo o Texto **]**|Alterações nas configurações de vídeo de estilo, tamanho e cor da fonte neste item afetam a aparência do texto nas janelas de ferramentas que têm painéis de saída no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por exemplo, janela Saída, janela Resultados de Texto e assim por diante.<br /><br /> Observação: Alterações no texto dos itens [todos os Windows de ferramenta de texto] não entram em vigor durante a sessão em que foram feitas. Você pode avaliar essas alterações abrindo outra instância do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Janela Localizar Resultados|Alterações nas configurações de exibição de estilo, tamanho e cor da fonte deste item afetam a aparência do texto na janela Localizar Resultados.|  
 |Janela Saída|Alterações nas configurações de vídeo de estilo, tamanho e cor da fonte deste item afetam a aparência do texto na janela Saída.|  
 |Resultados da Grade|Alterações nas configurações de exibição de estilo, tamanho e cor da fonte desse item afetam a aparência do texto na área **Resultados da Grade** da janela Consulta.|  
@@ -42,7 +42,7 @@ ms.locfileid: "51031804"
  O botão **Usar Padrões** redefine os valores de fonte e de cor padrão do item de lista que você selecionou na lista **Mostrar configurações de** .  
   
  **Fonte (em negrito indica fontes que têm largura fixa)**  
- Exibe todas as fontes instaladas em seu sistema. Quando essa lista suspensa é aberta pela primeira vez, a fonte atual do elemento que você escolheu na lista **Mostrar configurações de** é selecionada. Fontes fixas, que são mais fáceis de alinhar em um editor, aparecem em negrito.  
+ Exibe todas as fontes instaladas em seu sistema. Quando essa lista suspensa é aberta pela primeira vez, a fonte atual do elemento que você escolheu na lista **Mostrar configurações de** é selecionada. As fontes fixas, que são mais fáceis de serem alinhadas em um editor, aparecem em negrito.  
   
  **Tamanho**  
  Lista tamanhos de ponto disponíveis para a fonte selecionada. Alterar o tamanho da fonte afeta todas as entradas de **Itens de exibição** de uma seleção em **Mostrar configurações de** .  
@@ -55,9 +55,9 @@ ms.locfileid: "51031804"
   
  Alguns itens de exibição incluem:  
   
--   Margem de indicador: a margem à esquerda do Editor de Códigos onde os ícones dos pontos de interrupção e de indicadores são exibidos.  
+-   Margem de indicadores: A margem à esquerda do Editor de códigos onde os ícones de indicador e os pontos de interrupção são exibidos.  
   
--   Texto recolhível: um bloco de texto ou código que pode ser inserido ou extraído da exibição no Editor de Códigos (apenas XML).  
+-   Texto recolhível: Um bloco de texto ou código que pode ser alternado para dentro e fora do modo de exibição dentro inserido (apenas XML).  
   
  **Primeiro plano do item**  
  Exibe as cores disponíveis que você pode escolher para o primeiro plano do item selecionado em **Itens de exibição**. Como alguns itens estão relacionados, deve ser mantido um esquema de exibição consistente. Por exemplo, alterar a cor do primeiro plano do texto também altera a cor do primeiro plano de elementos como Cadeias de caracteres.  
@@ -82,6 +82,6 @@ ms.locfileid: "51031804"
   
 ## <a name="see-also"></a>Consulte também  
  [Codificação de cores nos editores de consulta](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [Opções de &#40;Editor de texto: página guia Editor e barra de Status&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [Opções de &#40;Editor de texto: Página guia Editor e barra de Status&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

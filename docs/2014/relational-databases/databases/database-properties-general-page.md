@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration"
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f80b9d8c2fb07928debc38077f05913eb6718fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: baa29270bb95bdf8f44ecd3dd5e064bbeb1f5d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821670"
 ---
 # <a name="database-properties-general-page"></a>Propriedades de Banco de Dados (página Geral)
   Use essa página para exibir ou modificar propriedades do banco de dados selecionado.  
@@ -51,8 +50,8 @@ ms.locfileid: "48215496"
  **Número de Usuários**  
  Exibe o número de usuários conectados ao banco de dados.  
   
- **Nome do Agrupamento**  
- Exibe o agrupamento usado para o banco de dados. O agrupamento pode ser alterado na página **Opções** .  
+ **Nome da Ordenação**  
+ Exibe a ordenação usada para o banco de dados. A ordenação pode ser alterada na página **Opções**.  
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

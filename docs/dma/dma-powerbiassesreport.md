@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208285"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidado criados pelo Assistente de migração de dados com o Power BI
 
@@ -40,7 +40,7 @@ Os relatórios a seguir estão incluídos:
 
 - [Preparação de atualização no local](#on-premises-upgrade-readiness--details)
 
-  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para seus bancos de dados avaliados.
+  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para seus bancos de dados avaliados.
 
 - [Paridade de recursos locais](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ Os relatórios a seguir estão incluídos:
 
 - [Preparação de atualização de banco de dados SQL do Azure](#azure-sql-db-upgrade-readiness--details)
 
-  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para bancos de dados avaliados para migrações de BD SQL do Azure.
+  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para bancos de dados avaliados para migrações de BD SQL do Azure.
 
 - [Recursos do banco de dados SQL sem suporte do Azure](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ Você pode modificar esses relatórios para trabalhar com seu ambiente, alterand
 
 ![Relatórios de painel](../dma/media/DashboardReport.png)
 
-O painel mostra detalhes sobre todas as suas avaliações. Você pode usar as segmentações de dados no lado esquerdo para filtrar por instância ou banco de dados. Você pode usar o gráfico de barras para fazer uma busca detalhada em categorias específicas para ver onde estão os problemas.
+O painel mostra detalhes sobre todas as suas avaliações. Você pode usar as segmentações de dados no lado esquerdo para filtrar por instância ou banco de dados. Você pode usar o gráfico de barras para fazer uma busca detalhada em categorias específicas para ver onde estão os problemas.
 
 Para fazer drill down, selecione o círculo com a seta para baixo no canto superior direito do gráfico de barras.
 
 ![Busca detalhada de categoria](../dma/media/CategoryDrillDown.png)
 
-A sequência de busca detalhada é definida conforme mostrado na imagem a seguir (sob **eixo**). Para alterar a sequência, arraste colunas para a ordem desejada.
+A sequência de busca detalhada é definida conforme mostrado na imagem a seguir (sob **eixo**). Para alterar a sequência, arraste colunas para a ordem desejada.
 
 ![Visualizações de eixo de gráfico de barras](../dma/media/VisualizationsAxis.png)
 
-Este modo de exibição se torna ainda mais eficiente quando você filtrar pela primeira vez por um banco de dados específico e, em seguida, fazer drill down até os problemas de categoria específica. No exemplo a seguir, o banco de dados de RH é selecionado por exemplo **SQL01** para exibir todos os objetos que estão impedindo que as migrações (alterações recentes).
+Este modo de exibição se torna ainda mais eficiente quando você filtrar pela primeira vez por um banco de dados específico e, em seguida, fazer drill down até os problemas de categoria específica. No exemplo a seguir, o banco de dados de RH é selecionado por exemplo **SQL01** para exibir todos os objetos que estão impedindo que as migrações (alterações recentes).
 
 ![Últimas alterações do banco de dados de RH](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ Este modo de exibição se torna ainda mais eficiente quando você filtrar pela 
 
 ![Relatório de preparação de atualização no local](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Este relatório mostra um instantâneo do são de seus bancos de dados como pronto para migrar para uma versão posterior do SQL Server. Os dados neste relatório vêm de dbo. UpgradeSuccessFactor\_OnPrem exibição no banco de dados DMAReporting.
+Este relatório mostra um instantâneo do são de seus bancos de dados como pronto para migrar para uma versão posterior do SQL Server. Os dados neste relatório vêm de dbo. UpgradeSuccessFactor\_OnPrem exibição no banco de dados DMAReporting.
 
-Filtragem por instância e o nome do banco de dados e usando os cartões de pontuação na parte superior, você pode ver qual versão do banco de dados poderia ser migrado muito. Por exemplo, se você filtrar por banco de dados AdventureWorks 2012, você pode ver que o banco de dados está pronto para mover para todas as versões do SQL Server listadas no relatório. Isso é determinado, garantindo que não há nenhuma alteração significativa para esse nível de compatibilidade de banco de dados.
+Filtragem por instância e o nome do banco de dados e usando os cartões de pontuação na parte superior, você pode ver qual versão do banco de dados poderia ser migrado muito. Por exemplo, se você filtrar por banco de dados AdventureWorks 2012, você pode ver que o banco de dados está pronto para mover para todas as versões do SQL Server listadas no relatório. Isso é determinado, garantindo que não há nenhuma alteração significativa para esse nível de compatibilidade de banco de dados.
 
 ![Atualizar o fator de sucesso para o banco de dados AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ Filtragem por instância e o nome do banco de dados e usando os cartões de pont
 
 Use esse relatório para destacar os novos recursos que podem ser usados para o banco de dados na versão do SQL Server de destino.
 
-Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior realça a quais objetos são afetados pelo recurso. No exemplo a seguir, o **banco de dados de ampliação para economia de armazenamento** está selecionado e uma tabela é listada que poderiam se beneficiar desse recurso.
+Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior realça a quais objetos são afetados pelo recurso. No exemplo a seguir, o **banco de dados de ampliação para economia de armazenamento** está selecionado e uma tabela é listada que poderiam se beneficiar desse recurso.
 
 ![Recomendação de recurso para o Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ Quando você seleciona um recurso no gráfico de funil, os dados na parte inferi
 
 ![Relatório de preparação para atualização de banco de dados SQL do Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Este relatório mostra a preparação do banco de dados para migrar para o V12 de banco de dados SQL do Azure. Os dados desse relatório vêm de dbo. Modo de exibição UpgradeSuccessRanking no banco de dados DMAReporting.
+Este relatório mostra a preparação do banco de dados para migrar para o V12 de banco de dados SQL do Azure. Os dados desse relatório vêm de dbo. Modo de exibição UpgradeSuccessRanking no banco de dados DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Relatório de paridade de recursos do Azure
 
@@ -120,7 +120,7 @@ Este relatório mostra a preparação do banco de dados para migrar para o V12 d
 
 Use esse relatório para destacar as *recursos de nível de instância* que não são suportados pelo V12 de banco de dados SQL do Azure.
 
-Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e recursos de banco de dados que não têm suporte. No exemplo a seguir, esse recurso está selecionado: **não há suporte para Always on a configuração do grupo de disponibilidade no Azure SQL Database**.  
+Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e recursos de banco de dados que não têm suporte. No exemplo a seguir, esse recurso é selecionado: **Sempre na disponibilidade configuração do grupo não tem suporte no Azure SQL Database**.  
 
 ![O recurso de grupo de disponibilidade do AlwaysOn](../dma/media/Feature_AlwaysOnAvailability.png)
 

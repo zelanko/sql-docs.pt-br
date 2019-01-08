@@ -1,10 +1,10 @@
 ---
-title: 'Passo a passo: adicionando e alterando um diagrama de banco de dados | Microsoft Docs'
+title: 'Passo a passo: Adicionando e alterando um diagrama de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,12 +14,12 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822620"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
   Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
@@ -44,7 +44,7 @@ ms.locfileid: "48195516"
   
 3.  Clique com o botão direito do mouse no nó Diagramas de Banco de Dados e escolha **Novo Diagrama de Banco de Dados**.  
   
-     Se o banco de dados não tiver os objetos necessários para criar diagramas, a mensagem a seguir será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
+     Se o banco de dados não tiver os objetos necessários para criar diagramas, a seguinte mensagem será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
   
      A caixa de diálogo **Adicionar Tabela** será exibida.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195516"
   
 1.  Clique com o botão direito do mouse na tabela `Address` . No menu de atalho, aponte para **Exibição de Tabela**e clique em **Padrão**.  
   
-     A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
+     A grade da tabela mostra três colunas: **Nome da coluna**, **tipo de dados**, e **permitir nulos**.  
   
 2.  Clique com o botão direito do mouse na tabela `Address` , clique em **Exibir Tabela** e selecione **Chaves**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195516"
   
 2.  No **Escolher nome** caixa de diálogo, clique em **Okey** para aceitar o nome padrão `Table1`.  
   
-     Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
+     Uma nova grade de tabela aparece com três colunas: **Nome da coluna**, **tipo de dados**, e **permitir nulos**.  
   
 3.  Adicione as seguintes informações para `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195516"
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-     Duas caixas de diálogo são exibidas: **Relação de Chaves Estrangeiras** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
+     São exibidas duas caixas de diálogo: **Relação de chave estrangeira** em segundo plano e **tabelas e colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   

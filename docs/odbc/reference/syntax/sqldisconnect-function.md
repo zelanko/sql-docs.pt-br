@@ -20,16 +20,16 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d211fff7cdc008988dd9f984e64838c8903c6dc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813944"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203945"
 ---
 # <a name="sqldisconnect-function"></a>Função SQLDisconnect
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLDisconnect** fecha a conexão associada com um identificador de conexão específica.  
@@ -39,7 +39,7 @@ ms.locfileid: "47813944"
 ```  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,7 +52,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLDisconnect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_DBC e uma *manipular* dos *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDisconnect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01002|Erro de desconexão|Ocorreu um erro durante a desconexão. No entanto, a desconexão foi bem-sucedida. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527858"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Ativar ou desativar o dispositivo de energia para o Analytics Platform System
 Este tópico descreve como a liga / desliga sua Systemappliance de plataforma de análise que está executando o Parallel Data Warehouse. Use este tópico quando um dispositivo do Analytics Platform System é movido, ou a potência em um dispositivo após uma falha catastrófica de energia.  
@@ -39,15 +39,15 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
 > [!WARNING]  
 > Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída antes que a próxima etapa é executada, a menos que indicado o contrário. Executando etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros quando o dispositivo é ligado em um momento posterior.  
   
-1.  Conectar-se ao nó de controle do PDW (***PDW_region *-CTL01** ) e faça logon com a conta de administrador de domínio de dispositivo do Analytics Platform System.  
+1.  Conectar-se ao nó de controle do PDW (**_PDW_region_-CTL01** ) e faça logon com a conta de administrador de domínio de dispositivo do Analytics Platform System.  
   
 2.  Execute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para abrir o **Configuration Manager**.  
   
 3.  No Configuration Manager, sob o **topologia de depósito de dados paralela** menu, clique no **Status dos serviços** guia e, em seguida, clique em **parar região** para interromper os serviços do PDW.   
   
-4.  Conectar-se para ***appliance_domain *-HST01** e faça logon com a conta de administrador de domínio do dispositivo.  
+4.  Conectar-se ao  **_appliance_domain_-HST01** e faça logon com a conta de administrador de domínio do dispositivo.  
   
-5.  Usando o **Gerenciador de Cluster de Failover** conecte-se para o ***appliance_domain *-WFOHST01** cluster, se não é automaticamente conectado e, em seguida, no painel de navegação, clique em **funções**. No **funções** painel:  
+5.  Usando o **Gerenciador de Cluster de Failover** conecte-se para o  **_appliance_domain_-WFOHST01** do cluster, se não é automaticamente conectado e, em seguida, no painel de navegação, clique em **Funções**. No **funções** painel:  
   
     1.  Multisseleção de todas as máquinas virtuais. Clique com botão direito-los e, em seguida, selecione **desligar**.  
   
@@ -55,9 +55,9 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
   
 6.  Fechar o **Gerenciador de Cluster de Failover** aplicativo.  
   
-7. Desligar todos os servidores, exceto ***appliance_domain *-HST01**.  
+7. Desligar todos os servidores, exceto  **_appliance_domain_-HST01**.  
   
-8. Desligar o ***appliance_domain *-HST01** server.  
+8. Desligar o  **_appliance_domain_-HST01** server.  
   
 9. Desligue a unidades de distribuição de alimentação (PDUs).  
   
@@ -70,25 +70,25 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
   
 1.  Ligue o unidades de distribuição de alimentação (PDU) e aguarde até que as opções para iniciar automaticamente.  
   
-2.  Ligar o ***appliance_domain *-HST01** server.  
+2.  Ligar o  **_appliance_domain_-HST01** server.  
   
-3.  Faça logon no ***appliance_domain *-HST01** como o administrador de domínio do dispositivo.  
+3.  Faça logon no  **_appliance_domain_-HST01** como o administrador de domínio do dispositivo.  
   
-4.  Iniciar o **Gerenciador do Hyper-V** programa (**virtmgmt.msc**) e conecte-se ao ***appliance_domain *-HST01** se não conectado por padrão.  
+4.  Iniciar o **Gerenciador do Hyper-V** programa (**virtmgmt.msc**) e conecte-se à  **_appliance_domain_-HST01** se não conectado por padrão.  
   
-    1.  Se você não pode se conectar por nome porque o ***PDW_region *-AD01** é não em execução, tente conectar-se usando o endereço IP.  
+    1.  Se você não pode se conectar por nome porque o  **_PDW_region_-AD01** é não em execução, tente conectar-se usando o endereço IP.  
   
-    2.  No **máquinas virtuais** painel, localize ***PDW_region *-AD01** e confirme se ele está em execução. Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
+    2.  No **máquinas virtuais** painel, localize  **_PDW_region_-AD01** e confirme se ele está em execução. Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
   
 5.  Ligar o restante dos servidores no dispositivo.  
   
 6.  Enquanto estiver em **HST01** estiver conectado como administrador de domínio do dispositivo, no **Gerenciador do Hyper-V**:  
   
-    1.  Conectar-se para ***appliance_domain *-HST02**.  
+    1.  Conectar-se ao  **_appliance_domain_-HST02**.  
   
-    2.  No **máquinas virtuais** painel, localize ***PDW_region *-AD02** e confirme se ele está em execução.  Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
+    2.  No **máquinas virtuais** painel, localize  **_PDW_region_-AD02** e confirme se ele está em execução.  Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
   
-7.  Usando o **Gerenciador de Cluster de Failover** conectar-se para o ***appliance_domain *-WFOHST01** do cluster, se não é automaticamente conectado e, em seguida, no **navegação** painel, clique em **Funções**. No **funções** painel:  
+7.  Usando o **Gerenciador de Cluster de Failover** conectar-se para o  **_appliance_domain_-WFOHST01** do cluster, se não é automaticamente conectado e, em seguida, no  **Navegação** painel, clique em **funções**. No **funções** painel:  
   
     1.  Multisseleção de todas as máquinas virtuais, clique com botão direito-los e, em seguida, clique em **iniciar**.  
   
@@ -98,7 +98,7 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
   
 8. Desconecte **HST01** se desejar.  
   
-9. Conectar-se para ***PDW_region *-CTL01** usando a conta de administrador de domínio do dispositivo.  
+9. Conectar-se ao  **_PDW_region_-CTL01** usando a conta de administrador de domínio do dispositivo.  
   
 10. Execute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para iniciar o **Configuration Manager**.  
   

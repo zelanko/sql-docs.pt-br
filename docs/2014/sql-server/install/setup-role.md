@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130556"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352839"
 ---
 # <a name="setup-role"></a>Função de instalação
   Use esta página para especificar se deseja usar a página de Seleção de Recursos para selecionar recursos individuais ou se deseja instalar usando uma função de instalação.  
@@ -32,7 +32,7 @@ ms.locfileid: "48130556"
   
  Opcionalmente, você poderá adicionar uma instância do mecanismo de banco de dados relacional à sua instalação se precisar hospedar bancos de dados em um farm do SharePoint. Se o farm já estiver configurado, essa opção poderá ser ignorada.  
   
- Depois que a Instalação é concluída, você deve configurar o software usando uma das seguintes abordagens: Ferramenta de Configuração do PowerPivot, cmdlets PowerShell ou Administração Central do SharePoint 2010. Ao contrário do que acontecia nas versões anteriores, a Instalação não executa mais nenhuma tarefa de configuração para uma instalação do PowerPivot.  
+ Após a conclusão da instalação, você deve configurar o software usando uma das seguintes abordagens: Ferramenta de configuração do PowerPivot, cmdlets do PowerShell ou Administração Central do SharePoint 2010. Ao contrário do que acontecia nas versões anteriores, a Instalação não executa mais nenhuma tarefa de configuração para uma instalação do PowerPivot.  
   
  Uma instalação baseada em função não inclui o aplicativo cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot para Excel. O aplicativo cliente é instalado separadamente.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48130556"
  Quando o sistema operacional não for um controlador de domínio, por padrão o Mecanismo de Banco de Dados e o Reporting Services usarão a conta NTAUTHORITY\NETWORK SERVICE, o Integration Services usará a conta NTAUTHORITY\NETWORK SERVICE e o Iniciador do Daemon de Filtro de Texto Completo do SQL usará a conta NTAUTHORITY\LOCAL SERVICE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalando o PowerPivot para SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Requisitos de hardware e Software (PowerPivot para SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Instalando o PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Requisitos de hardware e Software (PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Seleção de recursos](../../../2014/sql-server/install/feature-selection.md)  
   
   

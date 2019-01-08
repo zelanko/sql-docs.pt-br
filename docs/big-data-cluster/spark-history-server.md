@@ -1,20 +1,21 @@
 ---
-title: Depurar e diagnosticar aplicativos do Spark em clusters de grandes dados do SQL Server no servidor de histórico do Spark
-description: Depurar e diagnosticar aplicativos do Spark em clusters de grandes dados do SQL Server no servidor de histórico do Spark
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Depuração/diagnosticar aplicativos Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Use o servidor de histórico do Spark para depurar e diagnosticar aplicativos Spark em execução em clusters de grandes dados do SQL Server 2019.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460861"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029740"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depurar e diagnosticar aplicativos do Spark em clusters de grandes dados do SQL Server no servidor de histórico do Spark
 
@@ -25,7 +26,7 @@ Este artigo fornece orientação sobre como usar o servidor de histórico Spark 
 A experiência do usuário de servidor do histórico de Spark do código-fonte aberto é aprimorada com informações, que incluem dados específicos do trabalho e visualização interativa de fluxos de trabalho gráfico e os dados para o cluster de big data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Abra a Web da interface do usuário pela URL do servidor de histórico Spark
-Substituir do servidor de histórico do Spark, navegando até a URL a seguir, abra `<Ipaddress>` e `<Port>` com informações específicas do cluster de big data. Obter mais informações podem ser referenciadas: [cluster de big data de implantar o SQL Server](quickstart-big-data-cluster-deploy.md)
+Substituir do servidor de histórico do Spark, navegando até a URL a seguir, abra `<Ipaddress>` e `<Port>` com informações específicas do cluster de big data. Obter mais informações podem ser referenciadas: [Implantar um cluster de big data do SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Selecione a ID do trabalho e clique em **dados** no menu de ferramenta para obte
 
 + Verifique as **entradas**, **saídas**, e **operações de tabela** selecionando as guias separadamente.
 
-    ![Guias de dados](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Guias de dados do servidor de histórico do Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Copiar todas as linhas clicando no botão **cópia**.
 
-    ![Cópia de dados](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Copiar todas as linhas](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Salvar todos os dados como arquivo CSV clicando no botão **csv**.
 
-    ![Dados de salvamento](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Salvar dados como arquivos CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Pesquisa digitando palavras-chave no campo **pesquisa**, o resultado da pesquisa será exibida imediatamente.
 
-    ![Pesquisa de dados](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Pesquisar por palavras-chave](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Clique no cabeçalho de coluna para classificar a tabela, clique no sinal de adição para expandir uma linha para mostrar mais detalhes ou clique no sinal de menos para recolher uma linha.
 
-    ![Tabela de dados](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Funcionalidade de tabela de dados](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Baixar um único arquivo clicando no botão **Download parcial** que coloque à direita, em seguida, o arquivo selecionado é baixado para um lugar local. Se o arquivo não existir mais, ele abrirá uma nova guia para mostrar as mensagens de erro.
 
-    ![Linha de download de dados](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Baixe uma linha de dados](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Copiar caminho completo ou relativo, selecionando o **Copiar caminho completo**, **Copiar caminho relativo** que se expande de menu download. Para arquivos do armazenamento do azure data lake **aberto no Gerenciador de armazenamento do Azure** iniciará o Gerenciador de armazenamento do Azure. E localize a pasta exata ao entrar.
 
-    ![Caminho de cópia de dados](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Copiar um caminho completo ou relativo](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Clique em navegar o número abaixo da tabela de páginas quando muito muitas linhas para exibir em uma única página. 
 
@@ -100,10 +101,10 @@ Selecione a ID do trabalho e clique em **Graph** no menu de ferramenta para obte
 + Reproduzir o trabalho clicando o **reprodução** botão e parar a qualquer momento clicando no botão Parar. A exibição de tarefas na cor para mostrar o status diferentes durante a reprodução:
 
     + Verde para bem-sucedido: O trabalho foi concluído com êxito.
-    + Laranja para repetida: instâncias das tarefas que falharam, mas não afetam o resultado final do trabalho. Essas tarefas tinham duplicar ou repita instâncias que podem ter êxito posteriormente.
+    + Laranja para repetida: Instâncias das tarefas que falharam, mas não afetam o resultado final do trabalho. Essas tarefas tinham duplicar ou repita instâncias que podem ter êxito posteriormente.
     + Azul para execução: A tarefa está em execução.
-    + Branco para espera ou ignorada: A tarefa está esperando para ser executado ou o estágio foi ignorada.
-    + Vermelho para falha: A tarefa falhou.
+    + Branco para espera ou ignorados: A tarefa está esperando para ser executado ou o estágio foi ignorada.
+    + Falha em vermelho para: Falha da tarefa.
 
     ![amostra de cor do gráfico, em execução](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Selecione a ID do trabalho e clique em **diagnóstico** no menu de ferramenta pa
 ### <a name="data-skew"></a>Distorção de dados
 Clique em **distorção de dados** guia correspondente distorcidas as tarefas são exibidas com base nos parâmetros especificados. 
 
-+ **Especificar parâmetros** -a primeira seção exibe os parâmetros, que são usados para detectar a distorção de dados. A regra interna é: dados da tarefa lidos é maior que três vezes os média de dados de tarefa de leitura e a leitura de dados de tarefa são mais de 10 MB. Se você quiser definir sua própria regra para tarefas distorcidas, você pode escolher seus parâmetros, o **estágio distorcido**, e **distorcer Char** seção será atualizada adequadamente. 
++ **Especificar parâmetros** -a primeira seção exibe os parâmetros, que são usados para detectar a distorção de dados. A regra interna é: Dados da tarefa lidos é maior que três vezes os tarefa médio da leitura dos dados e a leitura de dados de tarefa são maior que 10 MB. Se você quiser definir sua própria regra para tarefas distorcidas, você pode escolher seus parâmetros, o **estágio distorcido**, e **distorcer Char** seção será atualizada adequadamente. 
 
 + **Distorcida estágio** -a segunda seção exibe os estágios, que tem Inclinado tarefas que atendem aos critérios especificados acima. Se houver mais de uma tarefa distorcida em um estágio, a tabela de estágio distorcido exibe apenas a tarefa mais distorcida (por exemplo, os maiores data para distorção de dados). 
 
     ![Section2 de distorção de dados](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **Inclinar o gráfico** – quando uma linha na tabela de preparo distorção é selecionada, a exibição do gráfico de distorção de obter mais detalhes de distribuições de tarefa com base em dados de leitura e o tempo de execução. As tarefas distorcidas são marcadas em vermelho e as tarefas normais são marcadas em azul. Para considerações sobre desempenho, o gráfico exibe apenas tarefas de exemplo até 100. Os detalhes da tarefa são exibidos no painel inferior direito.
++ **Inclinar o gráfico** - quando uma linha na tabela de preparo distorção é selecionada, a exibição do gráfico de distorção de obter mais detalhes de distribuições de tarefa com base em dados de leitura e o tempo de execução. As tarefas distorcidas são marcadas em vermelho e as tarefas normais são marcadas em azul. Para considerações sobre desempenho, o gráfico exibe apenas tarefas de exemplo até 100. Os detalhes da tarefa são exibidos no painel inferior direito.
 
     ![Remoções3 de distorção de dados](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

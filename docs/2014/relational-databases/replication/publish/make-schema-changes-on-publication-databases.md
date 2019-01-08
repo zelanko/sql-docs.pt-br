@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815428"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
   A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -58,7 +57,7 @@ ms.locfileid: "48203026"
   
 -   As alterações de esquema estão sujeitas a qualquer restrição imposta por [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por exemplo, ALTER TABLE não lhe permite ALTER colunas de chave primária.  
   
--   O mapeamento de tipo de dados só é executado para o instantâneo inicial. As alterações de esquema não são mapeadas para versões anteriores de tipos de dados. Por exemplo, se a instrução `ALTER TABLE ADD datetime2 column` é usado em [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], o tipo de dados não será convertido em `nvarchar` para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] assinantes. Em alguns casos, as alterações de esquema são bloqueadas no Publicador.  
+-   O mapeamento de tipo de dados só é executado para o instantâneo inicial. As alterações de esquema não são mapeadas para versões anteriores de tipos de dados. Por exemplo, se a instrução `ALTER TABLE ADD datetime2 column` for usada no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], o tipo de dados não será convertido em `nvarchar` para Assinantes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Em alguns casos, as alterações de esquema são bloqueadas no Publicador.  
   
 -   Se uma publicação é definida para permitir a propagação de alterações de esquema, alterações de esquema são propagadas independentemente de como a opção de esquema correspondente é definida para um artigo na publicação. Por exemplo, se você selecionar não replicar restrições de chave estrangeira para um artigo de tabela, mas então emitir um comando ALTER TABLE que adiciona uma chave estrangeira à tabela no Publicador, a chave estrangeira será acrescentada à tabela no Assinante. Para evitar isso, desabilite a propagação de alterações de esquema antes de emitir o comando ALTER TABLE.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48203026"
   
 -   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
   
-     Para obter mais informações, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
+     Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
   
 -   Não há suporte para adicionar uma coluna de identidade a uma tabela publicada, pois isso pode resultar em não convergência quando a coluna é replicada no Assinante. Os valores na coluna de identidade no Publicador dependerão da ordem em que as linhas para a tabela afetada forem armazenadas fisicamente. As linhas podem ser armazenadas de forma diversa no Assinante; assim, o valor da coluna de identidade pode ser diferente para as mesmas linhas.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48203026"
   
 -   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
   
-     Para obter mais informações, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
+     Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
   
 -   A coluna a ser descartada não pode ser usada nas cláusulas de filtro de nenhum artigo de nenhuma publicação no banco de dados.  
   

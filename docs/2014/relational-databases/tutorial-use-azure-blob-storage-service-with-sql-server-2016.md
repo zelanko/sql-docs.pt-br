@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810968"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Tutorial: arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Tutorial: arquivos de dados do SQL Server no serviço de armazenamento do Microsoft Azure
   Bem-vindo ao tutorial de arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure. Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de armazenamento de Blob do Windows Azure.  
   
  O suporte à integração do SQL Server no serviço de armazenamento de blob do Windows Azure é um aprimoramento do SQL Server 2014. Para uma visão geral da funcionalidade e dos benefícios do uso dessa funcionalidade, consulte [arquivos de dados do SQL Server no Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  

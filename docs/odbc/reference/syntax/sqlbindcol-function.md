@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515950"
 ---
 # <a name="sqlbindcol-function"></a>Função SQLBindCol
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLBindCol** associa buffers de dados de aplicativo para colunas no conjunto de resultados.  
@@ -52,14 +52,14 @@ SQLRETURN SQLBindCol(
  [Entrada] Identificador de instrução.  
   
  *ColumnNumber*  
- [Entrada] Número do resultado definido coluna para se associar. As colunas são numeradas em ordem crescente de coluna, começando em 0, onde a coluna 0 é a coluna de indicador. Se não forem usados marcadores — ou seja, o atributo da instrução SQL_ATTR_USE_BOOKMARKS é definido como SQL_UB_OFF —, em seguida, a coluna de números começam em 1.  
+ [Entrada] Número do resultado definido coluna para se associar. As colunas são numeradas em ordem crescente de coluna, começando em 0, onde a coluna 0 é a coluna de indicador. Se os indicadores não são usados – ou seja, o atributo da instrução SQL_ATTR_USE_BOOKMARKS é definido como SQL_UB_OFF - números da coluna iniciam em 1.  
   
  *TargetType*  
- [Entrada] O identificador do tipo de dados C a \* *TargetValuePtr* buffer. Quando ele está recuperando dados da fonte de dados com **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, ou **SQLSetPos**, o driver converterá os dados desse tipo; Quando ele envia dados à fonte de dados com **SQLBulkOperations** ou **SQLSetPos**, o driver converte os dados desse tipo. Para obter uma lista de tipos de dados válidos do C e identificadores de tipo, consulte o [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção apêndice d: tipos de dados.  
+ [Entrada] O identificador do tipo de dados C a \* *TargetValuePtr* buffer. Quando ele está recuperando dados da fonte de dados com **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, ou **SQLSetPos**, o driver converterá os dados desse tipo; Quando ele envia dados à fonte de dados com **SQLBulkOperations** ou **SQLSetPos**, o driver converte os dados desse tipo. Para obter uma lista de tipos de dados válidos do C e identificadores de tipo, consulte o [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção no Apêndice d: Tipos de dados.  
   
  Se o *TargetType* argumento é um tipo de dados de intervalo, a precisão de à esquerda do intervalo de padrão (2) e a precisão de segundos de intervalo padrão (6), conforme definido nos campos de SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION Descartar, respectivamente, são usados para os dados. Se o *TargetType* argumento é SQL_C_NUMERIC, a precisão padrão (definido pelo driver) e padrão de escala (0), conforme definido nos campos de SQL_DESC_PRECISION e SQL_DESC_SCALE a descartar, é usado para os dados. Se qualquer escala ou precisão padrão não for apropriada, o aplicativo deve definir explicitamente o campo de descritor apropriado por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**.  
   
- Você também pode especificar um tipo de dados estendido C. Para obter mais informações, consulte [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+ Você também pode especificar um tipo de dados estendido C. Para obter mais informações, consulte [Tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
  [Entrada/saída adiada] Ponteiro para o buffer de dados para associar à coluna. **SQLFetch** e **SQLFetchScroll** retornar dados nesse buffer. **SQLBulkOperations** retorna dados nesse buffer quando *operação* é SQL_FETCH_BY_BOOKMARK; recupera dados desse buffer quando *operação* é SQL_ADD ou SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** retorna dados nesse buffer quando *operação* é SQL_REFRESH; recupera dados desse buffer quando *operação* é SQL_UPDATE.  
@@ -114,7 +114,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLBindCol** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBindCol** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação do atributo de tipo de dados restrito|(DM) a *ColumnNumber* argumento era 0 e o *TargetType* argumento não era SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o valor especificado para o argumento *BufferLength* foi menor que 0.<br /><br /> (DM) o driver foi um ODBC 2. *x* driver, o *ColumnNumber* argumento foi definido como 0 e o valor especificado para o argumento *BufferLength* não era igual a 4.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados específicos do driver SQL da coluna correspondente.<br /><br /> O argumento *ColumnNumber* era 0 e o driver não oferece suporte a indicadores.<br /><br /> O driver dá suporte a apenas o ODBC 2. *x* e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) apêndice d: tipos de dados.<br /><br /> O driver dá suporte apenas a versões ODBC anteriores 3,50 e o argumento *TargetType* foi SQL_C_GUID.|  
+|HYC00|Recurso opcional não implementado|A driver ou fonte de dados não suporta a conversão especificada pela combinação da *TargetType* argumento e o tipo de dados específicos do driver SQL da coluna correspondente.<br /><br /> O argumento *ColumnNumber* era 0 e o driver não oferece suporte a indicadores.<br /><br /> O driver dá suporte a apenas o ODBC 2. *x* e o argumento *TargetType* foi um dos seguintes:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> e qualquer um dos tipos de dados de intervalo C listados na [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice d: Tipos de dados.<br /><br /> O driver dá suporte apenas a versões ODBC anteriores 3,50 e o argumento *TargetType* foi SQL_C_GUID.|  
 |HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *StatementHandle* não suporta a função.|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>Colunas de associação  
  Para associar uma coluna, um aplicativo chama **SQLBindCol** e passa o número da coluna, tipo, endereço e comprimento de um buffer de dados e o endereço de um buffer de comprimento/indicador. Para obter informações sobre como esses endereços são usados, consulte "Endereços de Buffer", posteriormente nesta seção. Para obter mais informações sobre colunas de associação, consulte [SQLBindCol usando](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- O uso desses buffers é adiado; ou seja, o aplicativo associa-os no **SQLBindCol** , mas o driver acessa-os de outras funções — ou seja, **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos**. É responsabilidade do aplicativo para certificar-se de que os ponteiros especificado na **SQLBindCol** permanecem válidos, desde que a associação permanece em vigor. Se o aplicativo permite que esses ponteiros se tornem inválidos — por exemplo, ela libera um buffer — e, em seguida, chamar uma função que espera que eles sejam válidos, as consequências são indefinidas. Para obter mais informações, consulte [Buffers adiados](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ O uso desses buffers é adiado; ou seja, o aplicativo associa-os no **SQLBindCol** , mas o driver acessa-os de outras funções - ou seja, **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos**. É responsabilidade do aplicativo para certificar-se de que os ponteiros especificado na **SQLBindCol** permanecem válidos, desde que a associação permanece em vigor. Se o aplicativo permite que esses ponteiros para se tornar inválido, por exemplo, ele libera um buffer - e, em seguida, chama uma função que espera que eles sejam válidos, as consequências são indefinidas. Para obter mais informações, consulte [Buffers adiados](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  A associação permanece em vigor até que ele é substituído por uma nova associação, a coluna não está associada ou a instrução é liberada.  
   
@@ -232,11 +232,11 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Endereços de buffer  
  O *endereço do buffer* é o endereço real do buffer de dados ou de comprimento/indicador. O driver calcula o endereço do buffer antes que ele grava os buffers (por exemplo, durante o tempo de busca). Ele é calculado da fórmula a seguir, que usa os endereços especificados na *TargetValuePtr* e *StrLen_or_IndPtr* argumentos, o deslocamento de associação e o número da linha:  
   
- *Ligado a endereço* + *associação deslocamento* + ((*número de linha* – 1) x *tamanho do elemento*)  
+ *Ligado a endereço* + *associação deslocamento* + ((*número de linha* - 1) x *tamanho do elemento*)  
   
  onde as variáveis da fórmula são definidas conforme descrito na tabela a seguir.  
   
-|Variável|Description|  
+|Variável|Descrição|  
 |--------------|-----------------|  
 |*Ligado a endereço*|Para os buffers de dados, o endereço especificado com o *TargetValuePtr* argumento **SQLBindCol**.<br /><br /> Para os buffers de comprimento/indicador, o endereço especificado com o *StrLen_or_IndPtr* argumento **SQLBindCol**. Para obter mais informações, consulte "Comentários adicionais" na seção "Descritores e SQLBindCol".<br /><br /> Se o endereço associado for 0, nenhum valor de dados é retornado, mesmo se o endereço calculada pela fórmula anterior é diferente de zero.|  
 |*Deslocamento de associação*|Se a associação por linha for usada, o valor armazenado no endereço especificado com o atributo da instrução SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Se a associação for usada ou se o valor do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR for um ponteiro nulo, *associação de deslocamento* é 0.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65092404fede7f5dd8cd04e64092c46cefcfab44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048936"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803018"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plano de manutenção (Propriedades do Subplano)
   Use a caixa de diálogo **Plano de Manutenção (Propriedades do Subplano)** para especificar um nome, uma descrição e um agendamento para um subplano do plano de manutenção. Clique em **Propriedades do Subplano** na guia **Design** do plano de manutenção ou clique duas vezes em um subplano na grade de designer para exibir essa caixa de diálogo.  

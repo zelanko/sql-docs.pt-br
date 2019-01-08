@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Compilar um widget de visão personalizada no estúdio de dados do Azure | Microsoft Docs'
+title: 'Tutorial: Criar um widget de visão personalizada'
+titleSuffix: Azure Data Studio
 description: Este tutorial demonstra como compilar widgets de Insights personalizados e adicioná-los ao banco de dados e servidor painéis no estúdio de dados do Azure.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356337"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030030"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Compilar um widget de visão personalizada
+# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Criar um widget de visão personalizada
 
 Este tutorial demonstra como usar suas próprias consultas de análise para compilar widgets insight personalizado.
 

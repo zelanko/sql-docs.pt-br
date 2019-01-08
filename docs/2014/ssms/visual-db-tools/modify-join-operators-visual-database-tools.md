@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
@@ -14,12 +14,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dfc560a935373a9495edc884a892937fbd13161
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815808"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de junção (Visual Database Tools)
   Por padrão, o [Designer de Consulta e Exibição](visual-database-tools.md) une tabelas que usam um sinal de igual (um equijoin), o qual faz corresponder valores nas duas colunas de junção. Se desejar, você pode alterar o operador usado para comparar valores nas colunas de junção.  

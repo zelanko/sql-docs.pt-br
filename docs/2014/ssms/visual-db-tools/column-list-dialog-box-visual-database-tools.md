@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
@@ -12,17 +12,17 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2018bbfba6d7282c6e9ab27d9d2923bf69e59048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815768"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas (Visual Database Tools)
   Ao escrever consultas, pode ser útil exibir a lista de colunas disponíveis nos objetos com valores de tabela selecionados.  
   
- Para acessar essa caixa de diálogo, no menu **Designer de Consultas** , no Painel Diagrama, clique com o botão direito do mouse no cabeçalho do objeto com valor de tabela e, em seguida, clique em **Propriedades**. Na janela **Propriedades** , clique no campo **Lista de Colunas** . Em seguida, clique nas reticências **(…)** à direita do campo.  
+ Para acessar essa caixa de diálogo, no menu **Designer de Consultas** , no Painel Diagrama, clique com o botão direito do mouse no cabeçalho do objeto com valor de tabela e, em seguida, clique em **Propriedades**. Na janela **Propriedades** , clique no campo **Lista de Colunas** . Em seguida, clique nas reticências **(...)** à direita do campo.  
   
  +Essa caixa de diálogo fornece a lista de colunas do objeto com valor de tabela selecionado e de propriedades básicas, como tipos de dados e se as colunas permitem valores nulos.  
   

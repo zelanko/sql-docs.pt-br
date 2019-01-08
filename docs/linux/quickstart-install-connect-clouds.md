@@ -1,30 +1,31 @@
 ---
-title: Introdução ao SQL Server na nuvem | Microsoft Docs
+title: Introdução ao SQL Server (no Linux) na nuvem
+titleSuffix: SQL Server
 description: Neste início rápido mostra como executar o SQL Server no Linux na nuvem de sua escolha.
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682974"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160534"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Guia de início rápido: Executar o SQL Server na nuvem
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>Guia de início rápido: Executar o SQL Server na nuvem
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) ou Ubuntu na nuvem de sua escolha. Vá para [provisionar uma máquina virtual do Linux do SQL Server no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para executar o SQL Server no Linux no Azure.
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> Se você optar por executar uma edição paga do SQL Server, você precisará usar sua própria licença (BYOL).
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Criar um AMI Linux com pelo menos 2 GB de memória do marketplace 
@@ -64,4 +65,4 @@ Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configure para conexões remotas: 
     * Vá para o [regras de Firewall](https://console.cloud.google.com/networking/firewalls)
-    * Adicionar uma regra de entrada para permitir o tráfego na porta de escuta do SQL Server (tcp de padrão: 1433)
+    * Adicionar uma regra de entrada para permitir o tráfego na porta de escuta do SQL Server (padrão tcp: 1433)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 132d4acdbe47d3e790131834c6a71486dcd660d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782388"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Criar um membro folha (Master Data Services)
   Na [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando desejar adicionar dados mestres a seu sistema e não estiver usando tabelas de preparo ou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar dados.  

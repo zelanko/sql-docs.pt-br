@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458e0707f36bde18f6128ae302c7e5826fb5680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821920"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
   Especifica o primeiro banco de dados que o Orientador de Otimização do Mecanismo de Banco de Dados conecta ao ajustar uma carga de trabalho.  
@@ -36,11 +35,11 @@ ms.locfileid: "48078586"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `TuningOptions` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48078586"
 |**Elementos filho**|None|  
   
 ## <a name="remarks"></a>Comentários  
- Use `DatabaseToConnect` para especificar o nome do primeiro banco de dados ao qual você deseja que o orientador de otimização do mecanismo de banco de dados para se conectar quando ele inicia a sessão de ajuste. Você pode especificar apenas um banco de dados com esse elemento. Se forem especificados vários nomes de banco de dados, o Orientador de Otimização do Mecanismo de Banco de Dados retornará um erro.  
+ Use o `DatabaseToConnect` para especificar o nome do primeiro banco de dados que o Orientador de Otimização do Mecanismo de Banco de Dados conectará quando iniciar a sessão de ajuste. Você pode especificar apenas um banco de dados com esse elemento. Se forem especificados vários nomes de banco de dados, o Orientador de Otimização do Mecanismo de Banco de Dados retornará um erro.  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso, veja a [Amostra do arquivo de entrada XML com carga de trabalho embutida &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

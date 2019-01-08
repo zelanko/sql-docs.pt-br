@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904976"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394247"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
   Você pode controlar se é preciso repetir cabeçalhos de linha e coluna em todas as páginas de uma região de dados tablix com várias páginas. Uma região de dados tablix pode ser uma tabela, uma matriz ou uma lista.  
@@ -25,7 +25,7 @@ ms.locfileid: "48904976"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Cabeçalhos de grupo de linhas e colunas são criados automaticamente quando você adiciona grupos usando o Assistente de nova tabela ou matriz ou o Assistente de novo gráfico, adicionando campos ao painel agrupamento ou usando menus de contexto. Se a região de dados de tablix tiver apenas uma área de corpo de tablix e nenhum cabeçalho de grupo, as linhas e as colunas serão os membros do tablix.  
+ Cabeçalhos de grupos de linhas e colunas são criados automaticamente quando você adiciona grupos usando o assistente de Nova Tabela ou de Novo Gráfico, adicionando campos ao painel Agrupamento ou usando menus de contexto. Se a região de dados de tablix tiver apenas uma área de corpo de tablix e nenhum cabeçalho de grupo, as linhas e as colunas serão os membros do tablix.  
   
  Para membros estáticos, você pode exibir as linhas adjacentes superiores ou as colunas adjacentes em várias páginas.  
   

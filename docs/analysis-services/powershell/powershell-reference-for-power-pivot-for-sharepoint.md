@@ -1,5 +1,5 @@
 ---
-title: Referência do PowerShell para PowerPivot para SharePoint | Microsoft Docs
+title: Referência do PowerShell para Analysis Services Power Pivot para SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 231a7fdeac135743ab38af9fbe4a7c4373c34990
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027966"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072403"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Referência do PowerShell para PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Esta seção lista os cmdlets PowerShell usados para configurar ou administrar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obter mais informações sobre como habilitar os cmdlets e exibir a ajuda interna, consulte [Configuração do Power Pivot usando o Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
 
 >[!NOTE] 
->Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
+>Este artigo pode conter exemplos e informações desatualizadas. Use o cmdlet Get-Help para a versão mais recente.
   
 ## <a name="cmdlet-list"></a>Lista de cmdlets  
  Para ver uma lista de cmdlets do prompt do PowerShell:  
@@ -43,7 +43,7 @@ ms.locfileid: "34027966"
 |[Cmdlet Set-PowerPivotSystemService](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Cmdlet Update-PowerPivotSystemService](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- Observação: os Cmdlets a seguir só trabalham com o SharePoint 2010, ao qual o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não dá suporte.  
+ Observação: Os Cmdlets a seguir só trabalham com o SharePoint 2010, que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não oferece suporte.  
   
 -   Get-PowerPivotEngineService  
   

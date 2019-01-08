@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
@@ -14,12 +13,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784538"
 ---
 # <a name="master-database"></a>Banco de dados mestre
   O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
@@ -39,33 +38,33 @@ ms.locfileid: "48095856"
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|não|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
-|AUTO_CLOSE|OFF|não|  
+|AUTO_CLOSE|OFF|Não|  
 |AUTO_CREATE_STATISTICS|ON|Sim|  
-|AUTO_SHRINK|OFF|não|  
+|AUTO_SHRINK|OFF|Não|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|não|  
+|CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> não<br /><br /> não|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|não|  
-|ENCRYPTION|OFF|não|  
+|DB_CHAINING|ON|Não|  
+|ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
-|READ_COMMITTED_SNAPSHOT|OFF|não|  
+|READ_COMMITTED_SNAPSHOT|OFF|Não|  
 |RECOVERY|SIMPLE|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|não|  
+|Opções do Service Broker|DISABLE_BROKER|Não|  
 |TRUSTWORTHY|OFF|Sim|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -75,7 +74,7 @@ ms.locfileid: "48095856"
   
 -   Adicionando arquivos ou grupos de arquivos.  
   
--   Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  
+-   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
 -   Alteração do proprietário do banco de dados. **master** pertence a **sa**.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48095856"
     >  A recriação de **master** recria todos os bancos de dados do sistema.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Recompilar bancos de dados do sistema](rebuild-system-databases.md)  
+ [Recriar bancos de dados do sistema](rebuild-system-databases.md)  
   
  [Bancos de dados do sistema](system-databases.md)  
   

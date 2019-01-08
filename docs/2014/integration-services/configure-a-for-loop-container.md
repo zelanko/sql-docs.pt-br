@@ -14,17 +14,17 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126157"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350839"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar um contêiner Loop For
   Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For**.  
   
- Para obter um exemplo do contêiner Loop For, consulte [Loops SSIS que não falham](http://go.microsoft.com/fwlink/?LinkId=240295) em bimonkey.com.  
+ Para obter um exemplo do contêiner Loop For, consulte [Loops SSIS que não falham](https://go.microsoft.com/fwlink/?LinkId=240295) em bimonkey.com.  
   
 ### <a name="to-configure-the-for-loop-container"></a>Para configurar um contêiner Loop For  
   

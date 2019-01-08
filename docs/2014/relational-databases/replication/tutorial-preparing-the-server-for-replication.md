@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: preparando o servidor para replicação | Microsoft Docs'
+title: 'Tutorial: Preparando o servidor para replicação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813988"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Preparando o servidor para replicação
   É importante planejar a segurança antes de configurar a topologia de replicação. Este tutorial mostra a melhor forma de garantir a segurança de uma topologia de replicação e também como configurar a distribuição, que é a primeira etapa na replicação de dados. É preciso concluir este tutorial antes de qualquer outro.  
@@ -40,9 +39,9 @@ ms.locfileid: "48228236"
   
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
   
--   [Lição 1: Criando contas do Windows para replicação](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Lição 1: Criando Windows contas para replicação](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Lição 2: Preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Lição 2: Preparando a pasta de instantâneo](lesson-2-preparing-the-snapshot-folder.md)  
   
 -   [Lição 3: Configurando a distribuição](lesson-3-configuring-distribution.md)  
   

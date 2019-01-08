@@ -20,16 +20,16 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f38a9c6814c65593ab452e646a8b1f184e2095de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edcffe36c0185276fae89f800e1bbcfc5bc33b33
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676574"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214517"
 ---
 # <a name="configtranslator-function"></a>Função ConfigTranslator
 **Conformidade com**  
- Versão introduziu: ODBC 2.0  
+ Versão introduzida: ODBC 2.0  
   
  **Resumo**  
  **ConfigTranslator** retorna uma opção de conversão padrão para um tradutor. Ele pode estar no tradutor de DLL ou uma DLL de instalação separado.  
@@ -56,7 +56,7 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **ConfigTranslator** retornar FALSE, um associado  *\*pfErrorCode* valor é postado no buffer de erro do instalador por uma chamada para **SQLPostInstallerError**e pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido ou nulo.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|Erro específico do driver ou do tradutor|Um erro específico do driver para o qual não há nenhum erro de instalador ODBC definido. O *SzError* argumento em uma chamada para o **SQLPostInstallerError** função deve conter a mensagem de erro específico do driver.|  

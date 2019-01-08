@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351649"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
   Para consultar dados no painel do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione o nó superior na árvore do Gerenciador do Utilitário, identificado como “Utility<UCP_Name>\\(ComputerName\UCP).” O painel inclui dados resumidos e dados detalhados de todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e todos os aplicativos da camada de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Para atualizar dados no painel, clique com o botão direito do mouse no nó superior da árvore do Gerenciador do Utilitário e selecione **Atualizar**.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101506"
  O status detalhado para cada parâmetro de integridade é listado em indicadores deslizantes. A fração à direita dos indicadores deslizantes mostra a quantidade de aplicativos da camada de dados em cada categoria de status. Para obter mais informações sobre como exibir o status de integridade de aplicativos individuais da camada de dados, ou para exibir ou alterar definições de configuração de política, veja [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Histórico de utilização de armazenamento do Utility  
- O histórico de utilização é mostrado em um gráfico de tempo na parte inferior do painel do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+ O histórico de utilização é mostrado em um gráfico de tempo na parte inferior do painel do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  Use os botões de opção à esquerda da área de exibição para alterar o período de relatório do gráfico.  
   

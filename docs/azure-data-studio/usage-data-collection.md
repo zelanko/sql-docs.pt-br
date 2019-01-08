@@ -1,7 +1,8 @@
 ---
-title: Habilitar ou desabilitar a coleta de dados de uso e relatório para o Studio de dados do Azure de falhas | Microsoft Docs
+title: Habilitar ou desabilitar a coleta de dados de uso e relatório de falhas
+titleSuffix: Azure Data Studio
 description: Este artigo explica como controlar se os dados de relatório de falhas e uso são coletados e enviados à Microsoft.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356477"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030100"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Habilitar ou desabilitar a coleta de dados de uso para [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ Para silenciar todos os eventos de telemetria da [!INCLUDE[name-sos](../includes
     "telemetry.enableTelemetry": false
 ```
 
-**Aviso importante**: essa opção requer a reinicialização do [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrem em vigor. 
+**Aviso importante**: Essa opção requer a reinicialização do [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrem em vigor. 
 
 ## <a name="how-to-disable-crash-reporting"></a>Como desabilitar o relatório de falhas
 
@@ -41,7 +42,7 @@ Para desabilitar o relatório de falhas, de **arquivo** > **preferências** > **
     "telemetry.enableCrashReporter": false
 ```
 
-**Aviso importante**: essa opção requer a reinicialização do [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrem em vigor.
+**Aviso importante**: Essa opção requer a reinicialização do [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrem em vigor.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 - [Configurações de espaço de trabalho e usuário](settings.md)

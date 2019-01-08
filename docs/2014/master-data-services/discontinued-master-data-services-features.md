@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d54486dfbedc54b8b21e4f515682fab00ebe057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761298"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Recursos do Master Data Services descontinuados no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>Recursos descontinuados do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Recursos descontinuados  
  Não há recursos descontinuados nesta versão.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>Recursos descontinuados do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Recursos descontinuados  
   
 ### <a name="security"></a>Segurança  
  Para tornar a atribuição de segurança mais fácil, você não pode mais atribuir permissões de objeto de modelo a objetos da Hierarquia Derivada, da Hierarquia Explícita e do Grupo de Atributos.  
@@ -63,7 +62,7 @@ ms.locfileid: "48201418"
   
  No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais exportar membros para o Excel. Para trabalhar com membros no Excel, use o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
-### <a name="transactions"></a>Transactions  
+### <a name="transactions"></a>Transações  
  No **Explorer** área funcional, os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter alterações feitas nos dados no **Explorer**. Os administradores ainda podem reverter as transações para todos os usuários a **gerenciamento de versões** área funcional.  
   
  Agora, as anotações são permanentes e não podem ser excluídas. Anteriormente, as anotações eram consideradas transações e podiam ser excluídas com a reversão da transação.  

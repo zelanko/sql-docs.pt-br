@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604614"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209905"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Esse recurso está em um estado de visualização. Não usa uma dependência na implementação específica desse recurso porque o recurso pode ser alterado ou removido em uma versão futura.  
->   
+> 
 >  Quando está em um estado de visualização, a equipe de operações do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] pode ativar ou desativar a coleta de dados para esse DMV:  
->   
+> 
 >  -   Quando ativado, o DMV retorna dados atuais à medida que são agregados.  
 > -   Quando desativado, o DMV retorna os dados históricos, que podem estar obsoletos.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47604614"
   
  Para cada banco de dados de usuário, há uma linha para cada hora na forma contínua. Mesmo se o banco de dados estiver ocioso durante aquela hora, há uma linha, e o valor de usage_in_seconds para esse banco de dados será 0. O uso de armazenamento e as informações de SKU são acumuladas para a hora adequadamente.  
   
-|Colunas|Tipo de Dados|Description|  
+|Colunas|Tipo de Dados|Descrição|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|A hora (UTC) em incrementos de hora.|  
 |database_name|**nvarchar**|Nome do banco de dados de usuário.|  

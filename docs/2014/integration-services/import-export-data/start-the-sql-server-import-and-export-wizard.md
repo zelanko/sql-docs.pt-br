@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -16,40 +15,40 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a01ae02feae938c952096216b89858c007aee4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351396"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Executar o Assistente de Importação e Exportação do SQL Server
   O Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o método mais simples para criar pacotes básicos e copiar dados entre fontes de dados. Para obter mais informações sobre o assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Para obter um vídeo que demonstra como usar o SQL Server Assistente de importação e exportação para criar um pacote que exporte dados de um banco de dados do SQL Server para uma planilha do Microsoft Excel, consulte [exportando dados do SQL Server para o Excel (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+ Para obter um vídeo que demonstra como usar o SQL Server Assistente de importação e exportação para criar um pacote que exporte dados de um banco de dados do SQL Server para uma planilha do Microsoft Excel, consulte [exportando dados do SQL Server para o Excel (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Para iniciar o Assistente de Importação e Exportação do SQL Server  
   
 -   Sobre o **iniciar** , aponte para **todos os programas**, aponte para**Microsoft SQL Server** e, em seguida, clique em **importar e exportar dados**.  
   
-     — ou —  
+     -ou-  
   
      Na [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique com botão direito a **pacotes do SSIS** pasta e clique **SSISImport e Assistente para exportação de**.  
   
-     — ou —  
+     -ou-  
   
      Na [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no **Project** menu, clique em **SSISImport e Assistente para exportação de**.  
   
-     — ou —  
+     -ou-  
   
      Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bancos de dados, um banco de dados com o botão direito, aponte para **tarefas**e, em seguida, clique em **importar dados** ou **exportar dados**.  
   
-     — ou —  
+     -ou-  
   
      Em uma janela de prompt de comando, execute o DTSWizard.exe, localizado em C:\Arquivos de Programas\Microsoft SQL Server\100\DTS\Binn.  
   
     > [!NOTE]  
-    >  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). No entanto, algumas fontes de dados, como Access ou Excel, só têm um provedor de 32 bits disponível. Para funcionar com essas fontes de dados, talvez seja necessário instalar e executar a versão de 32 bits do assistente. Para instalar a versão de 32 bits do assistente, selecione Ferramentas de cliente ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
+    >  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). No entanto, algumas fontes de dados, como Access ou Excel, só têm um provedor de 32 bits disponível. Para funcionar com essas fontes de dados, talvez seja necessário instalar e executar a versão de 32 bits do assistente. Para instalar a versão de 32 bits do assistente, selecione Ferramentas de Cliente ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>Para importar ou exportar dados usando o Assistente de Importação e Exportação do SQL Server  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48100336"
     > [!NOTE]  
     >  O provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle não suporta os tipos de dados Oracle BLOB, CLOB, NCLOB, BFILE e UROWID. Portanto, a origem de OLE DB não pode extrair dados de tabelas que contêm colunas com esses tipos de dados.  
   
-     Os destinos de dados disponíveis incluem [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provedores de dados, provedores OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access e o destino de arquivo simples.  
+     Os destinos de dados disponíveis incluem provedores de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], provedores OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access e o destino de arquivos simples.  
   
 3.  Defina as opções do tipo de destino que você selecionou.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48100336"
   
         |Propriedade|Valor|  
         |--------------|-----------|  
-        |Agrupamento|Latin1_General_CS_AS_KS_WS|  
+        |Ordenação|Latin1_General_CS_AS_KS_WS|  
         |modelo de recuperação|Completo|  
         |Usar indexação de texto completo|True|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48100336"
   
          Se a fonte for um provedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)], você também poderá usar a opção para copiar resultados da consulta, fornecendo a cadeia DBCommand como a consulta.  
   
-         Se a fonte de dados é um modo de exibição, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard converte automaticamente o modo de exibição em uma tabela no destino.  
+         Se os dados da fonte forem uma exibição, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converterá a exibição automaticamente para uma tabela no destino.  
   
     -   Indique se a tabela de destino será descartada e recriada e se as inserções de identidade serão habilitadas.  
   
@@ -122,13 +121,13 @@ ms.locfileid: "48100336"
   
      Ao salvar o pacote, você poder definir o nível de proteção do pacote e, se esse nível de proteção usar uma senha, fornecer a senha. Para obter mais informações sobre níveis de proteção do pacote, consulte [controle de acesso para dados confidenciais em pacotes](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Se o assistente for iniciado de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você não pode executar o pacote do assistente. Em vez disso, o pacote será adicionado ao projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do qual você iniciou o assistente. Em seguida, você pode executar o pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Se o assistente for iniciado a partir de um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], não será possível executar o pacote a partir do assistente. Em vez disso, o pacote será adicionado ao projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do qual você iniciou o assistente. Você poderá então executar o pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a opção para salvar o pacote criado pelo assistente não está disponível.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assistente de exportação e importação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Criar pacotes nas Ferramentas de Dados do SQL Server](../create-packages-in-sql-server-data-tools.md)  
   
   

@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089636"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391709"
 ---
 # <a name="lesson-11-create-partitions"></a>Lição 11: Criar partições
-  Nesta lição, você criará partições para dividir a tabela Internet Sales em partes lógicas menores que podem ser processadas (Atualizadas) independentemente de outras partições. Por padrão, cada tabela que você inclui no modelo tem uma partição que contém todas as colunas e linhas da tabela. No caso da tabela Internet Sales, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela.  Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
+  Nesta lição, você criará partições para dividir a tabela Internet Sales em partes lógicas menores que podem ser processadas (Atualizadas) independentemente de outras partições. Por padrão, cada tabela incluída em seu modelo tem uma partição que inclui todas as linhas e colunas da tabela. Para a tabela de vendas pela Internet, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela.  Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de realizar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 10: Criar hierarquias](lesson-9-create-hierarchies.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 10: Criar hierarquias](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Criar partições  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089636"
   
 6.  Clique em **Validar**.  
   
-     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque na [lição 3: renomear colunas](rename-columns.md), você renomeou essas colunas na tabela de vendas pela Internet no modelo a ser diferente das mesmas colunas na origem.  
+     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque no [lição 3: Renomear colunas](rename-columns.md), você renomeou essas colunas na tabela de vendas pela Internet no modelo a ser diferente das mesmas colunas na origem.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2006 na tabela de vendas pela Internet  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089636"
      O **processo dados** caixa de diálogo, em seguida, aparece e exibe os detalhes do processo para cada partição. Observe que um número diferente de linhas para cada partição é transferido. Isso acontece porque cada partição inclui somente as linhas referentes ao ano especificado na cláusula WHERE da Instrução SQL: Não há nenhum dado para o ano 2010.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Para continuar este tutorial, vá para a próxima lição: [Lição 12: Criar funções](lesson-11-create-roles.md).  
+ Para continuar este tutorial, vá para a próxima lição: Lição: [Lição 12: Criar funções](lesson-11-create-roles.md).  
   
   

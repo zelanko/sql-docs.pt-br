@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -18,12 +16,12 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224036"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800008"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicando um XSL Transformation (provedor SQLXMLOLEDB)
   Neste exemplo de aplicativo ADO, uma consulta SQL é executada e uma transformação em XSL é aplicada ao resultado. Definindo a propriedade ClientSideXML como True impõe o processamento do conjunto de linhas no lado do cliente. O dialeto do comando é definido como {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque a consulta SQL é especificada em um modelo e esse dialeto precisa ser especificado ao executar um modelo. A propriedade xsl Especifica o arquivo XSL a ser usado para aplicar a transformação. O valor da propriedade de caminho Base é usado para pesquisar o arquivo XSL. Se você especificar um caminho no valor da propriedade xsl, o caminho é relativo ao caminho especificado na propriedade do caminho de Base.  
@@ -40,7 +38,7 @@ ms.locfileid: "48224036"
   
  A propriedade xsl é especificada no aplicativo; Portanto, a transformação XSL é aplicada ao documento XML que é gerado no cliente e o resultado é uma tabela de duas colunas.  
   
- Para executar o comando de modelo, o dialeto do modelo XML – {5d531cb2-e6ed-11d2-b252-00c04f681b71} – precisa ser especificado.  
+ Para executar o comando de modelo, o dialeto do modelo XML – {5d531cb2-e6ed-11d2-b252-00c04f681b71} - deve ser especificado.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Além disso, este exemplo especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para o provedor de dados, o que requer a instalação de software cliente de rede adicional. Para obter mais informações, consulte [requisitos de sistema do SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  

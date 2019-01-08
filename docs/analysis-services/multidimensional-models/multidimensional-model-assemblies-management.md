@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025663"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215785"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX (Multidimensional Expressions) e extensões DMX (Data Mining) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e extensões DMX (extensões DMX) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
   
  Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite adicionar assemblies a uma instância ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os assemblies permitem criar funções externas definidas pelo usuário usando qualquer CLR (Common Language Runtime), como o Microsoft Visual Basic .NET ou o Microsoft Visual C#. Você também pode usar linguagens de automação COM (Component Object Model), como o Microsoft Visual Basic ou o Microsoft Visual C++.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025663"
   
  Um assembly com novos procedimentos e funções pode ser adicionado ao servidor. É possível usar assemblies para aprimorar ou adicionar funcionalidade personalizada que não foi fornecida pelo servidor. Usando os assemblies, você pode adicionar novas funções para o MDX, extensões DMX ou procedimentos armazenados. Os assemblies são carregados do local onde o aplicativo personalizado é executado e uma cópia do arquivo binário do assembly é salva com os dados do banco de dados no servidor. Quando um assembly é removido, o assembly copiado também é removido do servidor.  
   
- Os assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
+ Assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
   
  Assemblies podem ser adicionados a objetos <xref:Microsoft.AnalysisServices.Server> ou <xref:Microsoft.AnalysisServices.Database> . Os assemblies de servidor podem ser chamados por qualquer usuário conectado ao servidor ou qualquer objeto no servidor. Os assemblies de banco de dados só podem ser chamados por objetos <xref:Microsoft.AnalysisServices.Database> ou usuários conectados ao banco de dados.  
   
@@ -71,13 +71,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 ## <a name="security"></a>Segurança  
  A segurança dos assemblies baseia-se no modelo de segurança .NET Framework, que é um modelo de segurança de acesso por código. O .NET Framework oferece suporte a um mecanismo de segurança de acesso por código assumindo que o tempo de execução pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos protegidos pela segurança de código de acesso .NET Framework geralmente são envolvidos pelo código gerenciado que demanda a permissão correspondente antes de permitir o acesso ao recurso. A demanda para a permissão é satisfatória apenas quando todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
   
- Para os assemblies, a permissão de execução é passada com a propriedade **PermissionSet** no objeto **Assembly** . As permissões que o código gerenciado recebe são determinadas pela política de segurança em vigor. Existem três níveis de política que estão em vigor em um ambiente de host não[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : empresa, computador e usuário. A lista efetiva de permissões que o código recebe é determinada pela interseção das permissões obtidas por esses três níveis.  
+ Para os assemblies, a permissão de execução é passada com a propriedade **PermissionSet** no objeto **Assembly** . As permissões que o código gerenciado recebe são determinadas pela política de segurança em vigor. Já existem três níveis de política em vigor em um não - [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ambiente hospedado: enterprise, computador e usuário. A lista efetiva de permissões que o código recebe é determinada pela interseção das permissões obtidas por esses três níveis.  
   
- O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   
-|Configuração de permissões|Description|  
+|Configuração de permissões|Descrição|  
 |------------------------|-----------------|  
 |**Safe**|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade **PermissionSet** .|  
 |**ExternalAccess**|Fornece o mesmo acesso que a configuração **Safe** , com a habilidade adicional de acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
@@ -102,7 +102,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Você não deve confiar na localização dos assemblies no mesmo domínio do aplicativo, pois o limite do domínio de aplicativo e dos assemblies que vão para cada domínio são definidos pela implementação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurações de segurança para procedimentos armazenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Definindo a segurança para procedimentos armazenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definindo procedimentos armazenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

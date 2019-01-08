@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], relational operators
@@ -17,12 +15,12 @@ ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7eb55c1802048075b4105802090db05f0373959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804424"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -80,7 +78,7 @@ ms.locfileid: "48165856"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
  Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que tenham um **SalesPersonID** valor inferior a 270 do atributo:  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: MemberToStr (MDX) | Microsoft Docs
+title: MemberToStr=1=«membro»=retorna (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9bd0b59cca8560ae615e7044f13161a01f26835b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528469"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  Retorna uma cadeia de caracteres formatada em linguagem MDX que corresponde a um membro especificado.  
+  Retorna uma cadeia de caracteres formatada para MDX que corresponde a um membro especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,8 +32,8 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Remarks  
- Esta função retorna uma cadeia de caracteres que contém o nome exclusivo de um membro. Ele é normalmente usado para passar o nome exclusivo de um membro para uma função externa.  
+## <a name="remarks"></a>Comentários  
+ Esta função retorna uma cadeia de caracteres que contém o nome exclusivo de um membro. Ele geralmente é usado para passar o nome exclusivo de um membro para uma função externa.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo seguinte retorna a cadeia de caracteres [Geography].[Geography].[Country].&[United States]:  
@@ -47,6 +47,6 @@ MemberToStr(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531367"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor da Tarefa Executar SQL (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar SQL** para configurar a tarefa Executar SQL e fornecer a instrução SQL executada pela tarefa.  
@@ -47,7 +47,7 @@ ms.locfileid: "48079436"
 >  Quando a tarefa Executar SQL usa um gerenciador de conexões ADO ou ODBC, a propriedade **CodePage** não fica disponível. Se a sua solução requer o uso de uma página de código, utilize um gerenciador de conexões OLE DB ou ADO.NET com a tarefa Executar SQL.  
   
  **TypeConversionMode**  
- Quando você define essa propriedade como `Allowed`, a tarefa Executar SQL tentará converter o parâmetro de saída e resultados para os dados de tipo da variável os resultados da consulta são atribuídos. Isso se aplica ao tipo de conjunto de resultados de **Linha única** .  
+ Quando você definir essa propriedade como `Allowed`, a Tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados estão atribuídos. Isso se aplica ao tipo de conjunto de resultados de **Linha única** .  
   
  **ResultSet**  
  Especifique o tipo de resultado esperado pela instrução SQL que está sendo executada. Escolha entre **Linha Simples**, **Conjunto de Resultados Completo**, **XML**, ou **Nenhum**.  
@@ -55,7 +55,7 @@ ms.locfileid: "48079436"
  **ConnectionType**  
  Escolha o tipo de gerenciador de conexões a ser usado para conectar-se à fonte de dados. Os tipos de conexão disponíveis incluem **OLE DB**, **ODBC**, **ADO**, **ADO.NET** e **SQLMOBILE**.  
   
- **Tópicos relacionados:** [Gerenciador de conexões do OLE DB](connection-manager/ole-db-connection-manager.md)e [Gerenciador de conexões ODBC](connection-manager/odbc-connection-manager.md)e [Gerenciador de conexões ADO](connection-manager/ado-connection-manager.md)e [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)e [Gerenciador de conexões do SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md), [Gerenciador de Conexão ODBC](connection-manager/odbc-connection-manager.md), [Gerenciador de Conexão do ADO](connection-manager/ado-connection-manager.md), [Gerenciador de Conexão ADO.NET](connection-manager/ado-net-connection-manager.md), [do SQL Server Gerenciador de Conexão do Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexão**  
  Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…**>.  
@@ -65,11 +65,11 @@ ms.locfileid: "48079436"
   
  Dependendo do tipo de gerenciador de conexões que a tarefa Executar SQL utiliza, você deve usar marcadores de parâmetro específicos em instruções SQL com parâmetros.  
   
- **Tópicos Relacionados:** seção Executando comandos SQL com parâmetros em [Tarefa Executar SQL](control-flow/execute-sql-task.md)  
+ **Tópicos relacionados:** Executando a seção comandos SQL com parâmetros em [tarefa Executar SQL](control-flow/execute-sql-task.md)  
   
  As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a fonte como uma instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **Instrução SQL**é exibida.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém uma instrução Transact-SQL. Definindo essa opção, a opção dinâmica **FileConnection**é exibida.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48079436"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Entrada direta  
  **SQLStatement**  
- Digite a instrução SQL a ser executada na caixa de opções ou clique no botão Procurar (...) para digitar a instrução SQL na caixa de diálogo **Digitar Consulta SQL** , ou clique em **Construir Consulta** para redigir a instrução usando a caixa de diálogo **Construtor de Consultas** .  
+ Digite a instrução SQL a ser executada na caixa de opções ou clique no botão Procurar (...) para digitar a instrução SQL na caixa de diálogo **Inserir Consulta SQL** ou clique em **Construir Consulta** para redigir a instrução usando a caixa de diálogo **Construtor de Consultas**.  
   
  **Tópicos relacionados:** [Construtor de Consultas](../../2014/integration-services/query-builder.md)  
   
@@ -104,13 +104,13 @@ ms.locfileid: "48079436"
  **FileConnection**  
  Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
  Selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,12 +16,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792308"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  
@@ -32,7 +31,7 @@ ms.locfileid: "48163466"
 ## <a name="system-variables-for-packages"></a>Variáveis do sistema para pacotes  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para pacotes.  
   
-|Variável do sistema|Tipo de dados|Description|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|O manipulador de um objeto de Evento do Windows que a tarefa pode sinalizar para indicar que a execução da tarefa deve ser interrompida.|  
 |`ContainerStartTime`|DateTime|A hora de início do contêiner.|  
@@ -60,14 +59,14 @@ ms.locfileid: "48163466"
 ## <a name="system-variables-for-containers"></a>Variáveis do sistema para contêineres  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para os contêineres Loop For, Loop Foreach e Sequência.  
   
-|Variável do sistema|Tipo de dados|Description|Contêiner|  
+|Variável do sistema|Tipo de dados|Descrição|Contêiner|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|A localidade que o contêiner usa.|Contêiner Loop For<br /><br /> Contêiner Loop Foreach<br /><br /> Contêiner de sequência|  
   
 ## <a name="system-variables-for-tasks"></a>Variáveis do sistema para tarefas  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para tarefas.  
   
-|Variável do sistema|Tipo de dados|Description|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|Cadeia de caracteres|O nome da tarefa.|  
 |`LocaleId`|Int32|A localidade que a tarefa usa.|  
@@ -78,7 +77,7 @@ ms.locfileid: "48163466"
 ## <a name="system-variables-for-event-handlers"></a>Variáveis do sistema para Manipuladores de Eventos  
  A tabela seguinte descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para manipuladores de eventos. Nem todas as variáveis estão disponíveis para todos os manipuladores de eventos.  
   
-|Variável do sistema|Tipo de dados|Description|Manipulador de eventos|  
+|Variável do sistema|Tipo de dados|Descrição|Manipulador de eventos|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Cancelar**|Booliano|Indica se a execução do manipulador de eventos é interrompida quando ocorre um erro, aviso ou cancelamento de consulta.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnWarning<br /><br /> Manipulador de eventos OnQueryCancel|  
 |**ErrorCode**|Int32|O identificador do erro.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnInformation<br /><br /> Manipulador de eventos OnWarning|  
@@ -90,7 +89,7 @@ ms.locfileid: "48163466"
 |**ProgressCountHigh**|Int32|A parte alta de um valor de 64 bits que indica o número total de operações processadas pelo evento OnProgress.|Manipulador de eventos OnProgress|  
 |`ProgressCountLow`|Int32|A parte baixa de um valor de 64 bits que indica o número total de operações processadas pelo evento OnProgress.|Manipulador de eventos OnProgress|  
 |**ProgressDescription**|Cadeia de caracteres|Descrição do progresso.|Manipulador de eventos OnProgress|  
-|`Propagate`|Booliano|Indica se o evento é propagado para um manipulador de eventos de nível mais alto.<br /><br /> Observação: O valor da `Propagate` variável é desconsiderada durante a validação do pacote.<br /><br /> Se você definir `Propagate` como `False` em um pacote filho, isto não impedirá que um evento seja propagado até o pacote pai.|Todos os manipuladores de eventos|  
+|`Propagate`|Booliano|Indica se o evento é propagado para um manipulador de eventos de nível mais alto.<br /><br /> Observação: O valor da variável `Propagate` é desconsiderado durante a validação do pacote.<br /><br /> Se você definir `Propagate` como `False` em um pacote filho, isto não impedirá que um evento seja propagado até o pacote pai.|Todos os manipuladores de eventos|  
 |`SourceDescription`|Cadeia de caracteres|A descrição do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  
 |`SourceID`|Cadeia de caracteres|O identificador exclusivo do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  
 |**SourceName**|Cadeia de caracteres|O nome do executável no manipulador de eventos que ativou o evento.|Todos os manipuladores de eventos|  

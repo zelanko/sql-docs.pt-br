@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,12 +16,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103240"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812098"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
   Permissões de folha se aplicam aos valores de atributos para todos os membros folha de uma entidade.  
@@ -35,7 +34,7 @@ ms.locfileid: "48103240"
   
 -   As permissões atribuídas aos atributos **Name** e **Code** não são impostas.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|Os membros folha são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
 |**Update (atualizar)**|Os membros de folha são exibidos e o usuário pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
@@ -44,11 +43,11 @@ ms.locfileid: "48103240"
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários apenas com permissões de atributo não podem adicionar ou remover membros.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
 |**Update (atualizar)**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  

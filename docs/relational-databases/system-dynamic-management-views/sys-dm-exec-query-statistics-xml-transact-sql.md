@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819098"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabela retornada
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID da sessão. Não permite valor nulo.|
 |request_id|**int**|ID da solicitação. Não permite valor nulo.|
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML estatísticas parcial. Anulável.|
 
 ## <a name="remarks"></a>Comentários
-Essa função do sistema está disponível começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Essa função do sistema está disponível começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte o artigo [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta.  
   
@@ -64,7 +64,7 @@ Essa função do sistema funciona em ambos **standard** e **leve** infraestrutur
   -  [SET STATISTICS PROFILE EM](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  o `query_post_execution_showplan` evento estendido.  
   
-**Lightweight** infraestrutura de criação de perfil de estatísticas estão disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pode ser habilitado:
+**Lightweight** infraestrutura de criação de perfil de estatísticas estão disponível em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e pode ser habilitado:
   -  Globalmente usando o rastreamento de sinalizador 7412.
   -  Usando o [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) evento estendido.
   

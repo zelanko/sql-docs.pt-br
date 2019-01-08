@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070916"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524994"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL
   Este tópico descreve como usar uma instrução SQL parametrizada na tarefa Executar SQL e criar mapeamentos entre variáveis e os parâmetros na instrução SQL.  
@@ -82,10 +82,10 @@ ms.locfileid: "48070916"
   
     |Tipo de conexão|Nome do Parâmetro|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2,...|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL e OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
 10. Na lista **Nome da Variável** , selecione uma variável. Para obter mais informações, consulte [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -106,6 +106,6 @@ ms.locfileid: "48070916"
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
  [Parâmetros e códigos de retorno na tarefa Executar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)  
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  
   
   

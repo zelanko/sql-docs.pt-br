@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196806"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351469"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Referência do desenvolvedor para o SQL Server 2014
   Os recursos e tecnologias a seguir permitem que você desenvolva aplicativos que acessem dados em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "48196806"
 ## <a name="programming-reference-sections"></a>Seções da Referência de programação  
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; conceitos de programação da integração](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [XML nativo](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [XML nativo](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [programação do SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "48196806"
 ## <a name="other-programming-resources"></a>Outros recursos de programação  
  O desenvolvimento de um aplicativo de acesso a dados pode exigir o uso de uma ou mais das seguintes tecnologias:  
   
- [Acessando dados no Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Acessando dados no Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [Driver do SQL Server para PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [Driver do SQL Server para PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

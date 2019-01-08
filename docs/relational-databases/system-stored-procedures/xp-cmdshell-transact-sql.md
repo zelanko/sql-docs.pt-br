@@ -18,12 +18,12 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 252e3c5f2738b5f3e87632be86ba9f4b6c1cfbc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782794"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211515"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** pode ser habilitado e desabilitado usando o gerenciamento baseado em políticas ou executando **sp_configure**. Para obter mais informações, consulte [configuração da área da superfície](../../relational-databases/security/surface-area-configuration.md) e [opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Se **xp_cmdshell** é executado dentro de um lote e retorna um erro, o lote falhará. É uma alteração de comportamento. Em versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o lote continuaria a ser executado.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Conta proxy xp_cmdshell  
@@ -128,7 +128,7 @@ REVERT ;
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>B. Não retornando nenhuma saída  
+### <a name="b-returning-no-output"></a>b. Não retornando nenhuma saída  
  O exemplo a seguir usa `xp_cmdshell` para executar uma cadeia de caracteres de comando sem retornar a saída ao cliente.  
   
 ```  

@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512778"
 ---
 # <a name="attribute-relationships"></a>Relações de Atributo
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atributos dentro de uma dimensão sempre estão relacionados diretamente ou indiretamente ao atributo de chave. Quando você define uma dimensão com base em um esquema em estrela, onde todos os atributos de dimensão são derivados da mesma tabela relacional, uma relação de atributo é automaticamente definida entre o atributo de chave e cada atributo não chave da dimensão. Quando você define uma dimensão com base em um esquema de floco de neve, onde todos os atributos de dimensão derivam de várias tabelas relacionadas, uma relação de atributo é automaticamente definida da seguinte maneira:  
@@ -80,7 +80,7 @@ ms.locfileid: "48081579"
   
 -   O atributo Cidade como uma relação com o atributo Cliente.  
   
- Para navegar por dados no cubo, você também pode criar uma hierarquia definida pelo usuário que não representa uma hierarquia natural nos dados (que é chamado um *ad-hoc* ou *reporting* hierarquia). Por exemplo, você pode criar uma hierarquia definida pelo usuário com base em `{Age, Gender}`. Os usuários não percebem diferenças em como duas hierarquias se comportam, apesar dos benefícios da hierarquia natural quanto às estruturas de agregação e indexação — ocultas do usuário — das relações naturais nos dados de origem.  
+ Para navegar por dados no cubo, você também pode criar uma hierarquia definida pelo usuário que não representa uma hierarquia natural nos dados (que é chamado um *ad-hoc* ou *reporting* hierarquia). Por exemplo, você pode criar uma hierarquia definida pelo usuário com base em `{Age, Gender}`. Os usuários não percebem diferenças em como as duas hierarquias se comportam, embora a hierarquia natural se beneficia da agregação e indexação estruturas - ocultadas do usuário - dessa conta das relações naturais nos dados de origem.  
   
  A propriedade `SourceAttribute` de um nível determina qual atributo é usado para descrever o nível. A propriedade `KeyColumns` no atributo especifica a coluna na exibição da fonte de dados que fornece os membros. A propriedade `NameColumn` no atributo pode especificar um nome de coluna diferente para os membros.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48081579"
  Você pode usar consultas MDX para recuperar dados de relações de atributo, na forma de propriedades de membro com a palavra-chave `PROPERTIES` da instrução MDX `SELECT`. Para obter mais informações sobre como usar MDX para recuperar propriedades do membro, consulte [usando propriedades de membro &#40; MDX &#41; ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](attributes-and-attribute-hierarchies.md)   
+ [Atributos e hierarquias de atributos](attributes-and-attribute-hierarchies.md)   
  [Referência de propriedades de atributo de dimensão](../multidimensional-models/dimension-attribute-properties-reference.md)   
- [Hierarquias de usuário](user-hierarchies.md)   
+ [Hierarquias do usuário](user-hierarchies.md)   
  [Propriedades de hierarquia do usuário](user-hierarchies-properties.md)  
   
   

@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076693"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806588"
 ---
 # <a name="autotranslation-of-character-data"></a>Tradução automática de dados de caracteres
   Dados de caractere, como ANSI de caracteres variáveis declaradas com SQL_C_CHAR ou dados armazenados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o **char**, **varchar**, ou **texto** tipos de dados, pode representa apenas um número limitado de caracteres. Os dados de caractere armazenados que usam um byte por caractere podem representar apenas 256 caracteres. Os valores armazenados em variáveis SQL_C_CHAR são interpretados usando a ACP (página de código ANSI) do computador cliente. Os valores armazenados usando **char**, **varchar**, ou **texto** tipos de dados no servidor são avaliados usando a ACP do servidor.  
   
- Se o servidor e o cliente tiverem a mesma ACP, eles não terão problemas na interpretação dos valores armazenados em SQL_C_CHAR, **char**, **varchar**, ou **texto** objetos. Se o servidor e o cliente tiverem ACPs diferentes, os dados SQL_C_CHAR do cliente podem ser interpretados como um caractere diferente no servidor se ele é usado no **char**, **varchar**, ou **texto** colunas, variáveis ou parâmetros. Por exemplo, um byte do caractere que contém o valor 0xA5 é interpretado como o caractere Ñ em um computador usando a página de código 437 e é interpretado conforme a iene entrar (¥) em um computador executando a página de código 1252.  
+ Se o servidor e o cliente tiverem a mesma ACP, eles não terão problemas na interpretação dos valores armazenados em SQL_C_CHAR, **char**, **varchar**, ou **texto** objetos. Se o servidor e o cliente tiverem ACPs diferentes, os dados SQL_C_CHAR do cliente podem ser interpretados como um caractere diferente no servidor se ele é usado no **char**, **varchar**, ou **texto** colunas, variáveis ou parâmetros. Por exemplo, um byte do caractere que contém o valor 0xA5 é interpretado como o caractere?? em um computador usando o código de página 437 e é interpretado conforme a iene entrar (?) em um computador executando a página de código 1252.  
   
  Dados de Unicode são armazenados usando dois bytes por caractere. Todos os caracteres estendidos são abordados pela especificação de Unicode. Dessa forma, todos os caracteres Unicode são interpretados da mesma maneira por todos os computadores.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076693"
   
  Como todas essas conversões são feitas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client em execução no cliente, a ACP do servidor deve ser uma das páginas de código instaladas no computador cliente.  
   
- Fazer as conversões de caractere por Unicode assegura a conversão adequada de todos os caracteres que existem nas duas páginas de código. Se um caractere existir em uma página de código, mas não em outra, entretanto, o caractere não poderá ser representado na página de código de destino. Por exemplo, a página de código 1252 tem o símbolo de marca registrada (®), enquanto a página de código 437 não tem.  
+ Fazer as conversões de caractere por Unicode assegura a conversão adequada de todos os caracteres que existem nas duas páginas de código. Se um caractere existir em uma página de código, mas não em outra, entretanto, o caractere não poderá ser representado na página de código de destino. Por exemplo, a página de código 1252 tem o símbolo de marca registrada (?), enquanto a página de código 437 não tem.  
   
  A configuração AutoTranslate não tem nenhum efeito sobre essas conversões:  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48076693"
   
 ## <a name="see-also"></a>Consulte também  
  [Processando resultados &#40;ODBC&#41;](processing-results-odbc.md)   
- [Suporte a agrupamentos e a Unicode](../collations/collation-and-unicode-support.md)  
+ [Suporte a ordenações e a Unicode](../collations/collation-and-unicode-support.md)  
   
   
