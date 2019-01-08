@@ -14,12 +14,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369488"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
   O tipo de dados espacial de geografia, `geography`, representa dados em um sistema de coordenadas de terra redonda. Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` tipo de dados armazena dados de elipsoidais (Terra redonda), como coordenadas de latitude e longitude GPS.  
@@ -105,7 +105,7 @@ ms.locfileid: "51018741"
 ###  <a name="gml"></a> Construindo uma instância de geografia de entrada de texto GML  
  O `geography` tipo de dados fornece um método que gera uma `geography` instância de GML, uma representação XML de um `geography` instância. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
- Para obter mais informações sobre Geography Markup Language, veja a Especificação do OGC: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Para obter mais informações sobre Geography Markup Language, consulte a especificação do OGC: [Especificações do OGC, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Para construir qualquer tipo de instância de geografia de entrada GML**  
  [GeomFromGML &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

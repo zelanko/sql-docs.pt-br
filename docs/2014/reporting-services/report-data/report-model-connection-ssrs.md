@@ -11,12 +11,12 @@ ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 121f1265e567636fb979a84c609861bc0e558dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b1355893e9134723e9f073327b3da1d4803cf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359018"
 ---
 # <a name="report-model-connection-ssrs"></a>Conexão de modelo de relatório (SSRS)
   Para incluir dados de um modelo de relatório, é necessário ter um conjunto de dados baseado em um modelo de relatório como uma fonte de dados. Diferentemente de outras fontes de dados de relatório, não há nenhuma extensão de dados para um modelo de relatório. No Construtor de Relatórios, procure e selecione o modelo diretamente no servidor de relatório. Em Designer de Relatórios, você especifica a URL para o modelo de relatório.  
@@ -49,7 +49,7 @@ ms.locfileid: "48119766"
   
  Os parâmetros de relatório são criados com valores de propriedade padrão que talvez precisem ser modificados. Por padrão, cada parâmetro de relatório é do tipo de dados **Texto**. Se os dados subjacentes forem de outro tipo de dados, será necessário alterar o tipo de dados de parâmetro.  
   
- Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -84,7 +84,7 @@ ms.locfileid: "48119766"
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
   

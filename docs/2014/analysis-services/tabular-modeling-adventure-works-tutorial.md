@@ -11,12 +11,12 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083276"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373678"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modelagem de tabela (Tutorial do Adventure Works)
   Este tutorial fornece lições sobre como criar um modelo de tabela do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "48083276"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Banco de dados de exemplo AdventureWorksDW Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de exemplo, consulte [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Banco de dados de exemplo AdventureWorksDW Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de exemplo, consulte [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou posterior (para uso com o recurso Analisar no Excel na lição 11)  
   
@@ -68,20 +68,20 @@ ms.locfileid: "48083276"
   
 |Lição|Tempo estimado para concluir|  
 |------------|--------------------------------|  
-|[Lição 1: criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
-|[Lição 2: adicionar dados](lesson-2-add-data.md)|20 minutos|  
-|[Lição 3: renomear colunas](rename-columns.md)|20 minutos|  
-|[Lição 4: marcar como tabela de data](lesson-3-mark-as-date-table.md)|3 minutos|  
-|[Lição 5: criar relações](lesson-4-create-relationships.md)|10 minutos|  
-|[Lição 6: criar colunas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
-|[Lição 7: criar medidas](lesson-6-create-measures.md)|30 minutos|  
-|[Lição 8: criar indicadores chave de desempenho](lesson-7-create-key-performance-indicators.md)|15 minutos|  
-|[Lição 9: criar perspectivas](lesson-8-create-perspectives.md)|5 minutos|  
-|[Lição 10: criar hierarquias](lesson-9-create-hierarchies.md)|20 minutos|  
-|[Lição 11: criar partições](lesson-10-create-partitions.md)|15 minutos|  
-|[Lição 12: criar funções](lesson-11-create-roles.md)|15 minutos|  
-|[Lição 13: analisar no Excel](lesson-12-analyze-in-excel.md)|20 minutos|  
-|[Lição 14: implantar](lesson-13-deploy.md)|5 minutos|  
+|[Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
+|[Lição 2: Adicionar dados](lesson-2-add-data.md)|20 minutos|  
+|[Lição 3: Renomear colunas](rename-columns.md)|20 minutos|  
+|[Lição 4: Marcar como tabela de data](lesson-3-mark-as-date-table.md)|3 minutos|  
+|[Lição 5: Criar relações](lesson-4-create-relationships.md)|10 minutos|  
+|[Lição 6: Criar colunas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
+|[Lição 7: Criar medidas](lesson-6-create-measures.md)|30 minutos|  
+|[Lição 8: Criar indicadores chave de desempenho](lesson-7-create-key-performance-indicators.md)|15 minutos|  
+|[Lição 9: Criar perspectivas](lesson-8-create-perspectives.md)|5 minutos|  
+|[Lição 10: Criar hierarquias](lesson-9-create-hierarchies.md)|20 minutos|  
+|[Lição 11: Criar partições](lesson-10-create-partitions.md)|15 minutos|  
+|[Lição 12: Criar funções](lesson-11-create-roles.md)|15 minutos|  
+|[Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md)|20 minutos|  
+|[Lição 14: Implantar](lesson-13-deploy.md)|5 minutos|  
   
 ## <a name="supplemental-lessons"></a>Lições suplementares  
  Este tutorial também inclui [Lições complementares](../tutorials/supplemental-lessons.md). Os tópicos desta seção não são necessários para concluir o tutorial, mas podem ser úteis para a melhor compreensão dos recursos de criação do modelo de tabela avançado.  
@@ -94,6 +94,6 @@ ms.locfileid: "48083276"
 |[Configurar propriedades de relatório para relatórios do Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurar propriedades de relatório para relatórios do Power View|30 minutos|  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para iniciar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
+ Para começar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
   
   

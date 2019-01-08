@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085472"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590180"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de clustering de sequências (Tutorial de mineração de dados intermediário)
-  Agora que você criou o **Clustering de sequências com região** modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de Clustering de sequência no **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contém cinco guias: **diagrama de Cluster**, **perfis de Cluster**, **características do Cluster**,  **ClusterDiscrimination**, e **transições de estado**. Para obter mais informações sobre como usar esse visualizador, consulte [procurar um modelo usando o Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Agora que você criou o **Clustering de sequências com região** modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de Clustering de sequência no **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contém cinco guias: **Diagrama de cluster**, **perfis de Cluster**, **características de Cluster**, **ClusterDiscrimination**, e **detransiçõesdeestado**. Para obter mais informações sobre como usar esse visualizador, consulte [procurar um modelo usando o Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Guia diagrama de cluster](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085472"
  [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> Guia discriminação de cluster  
- O **discriminação do Cluster** guia o ajuda a comparar dois clusters, para determinar quais atributos distinguem um cluster específico de outro cluster. A guia contém quatro colunas: **variáveis**, **valores**, **Cluster 1**, e **Cluster 2**.  Você pode escolher qualquer cluster para usar como **Cluster 1** e **Cluster 2**.  
+ O **discriminação do Cluster** guia o ajuda a comparar dois clusters, para determinar quais atributos distinguem um cluster específico de outro cluster. A guia contém quatro colunas: **Variáveis**, **valores**, **Cluster 1**, e **Cluster 2**.  Você pode escolher qualquer cluster para usar como **Cluster 1** e **Cluster 2**.  
   
  O **variáveis** coluna indica o nome do atributo, que pode ser um nome de coluna ou combinação de nome de coluna e a palavra **transição**. O **valores** coluna mostra o valor exato do atributo ou transição. As barras sombreadas nas colunas **Cluster 1** e **Cluster 2** indicam a força do atributo nos clusters que estão sendo comparados. Quanto mais longa for a barra, mais será provável que o cluster inclua casos com esse atributo.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085472"
   
 1.  No **discriminação do Cluster** guia, para **Cluster 1**, selecione `Pacific Cluster`.  
   
-     Por padrão, a seleção para **Cluster 2** alterações **complemento do Pacífico * * * Cluster**.  
+     Por padrão, a seleção para **Cluster 2** alterações **complemento do Cluster do Pacífico**.  
   
      O principal atributo que distingue `Pacific Cluster` de todos os outros casos é a região. A região é um atributo tão forte para o clustering que obscurece outros atributos. Para impedir esse efeito, tente comparar vários clusters menores uns aos outros. Quando você fizer isso, a lista de atributos mudará e poderá incluir mais transições entre modelos.  
   

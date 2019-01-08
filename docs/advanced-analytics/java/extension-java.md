@@ -1,24 +1,24 @@
 ---
-title: Extensão da linguagem Java no SQL Server 2019 | Microsoft Docs
-description: Execute o código Java em 2019 do SQL Server usando a extensão da linguagem Java.
+title: Extensão da linguagem Java no SQL Server 2019 - serviços do SQL Server Machine Learning
+description: Instalar, configurar e validar a extensão da linguagem Java em SQL Server de 2019 para sistemas Linux e Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/12/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696405"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431709"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Extensão da linguagem Java no SQL Server 2019 
 
-A partir do SQL Server 2019, você pode executar código Java personalizado [estrutura de extensibilidade](../concepts/extensibility-framework.md) como um complemento para a instância do mecanismo de banco de dados. 
+Na visualização de 2019 do SQL Server no Windows e Linux, você pode executar código Java personalizado [estrutura de extensibilidade](../concepts/extensibility-framework.md) como um complemento para a instância do mecanismo de banco de dados. 
 
 A estrutura de extensibilidade é uma arquitetura para a execução de código externo: Java (começando no SQL Server 2019), [Python (a partir do SQL Server 2017)](../concepts/extension-python.md), e [R (a partir do SQL Server 2016)](../concepts/extension-r.md). Execução de código é isolada de processos do mecanismo de core, mas totalmente integrada com a execução da consulta do SQL Server. Isso significa que você pode enviar dados de qualquer consulta do SQL Server para o tempo de execução externo e consumir ou manter os resultados de volta no SQL Server.
 
@@ -26,7 +26,7 @@ Assim como acontece com qualquer extensão de linguagem de programação, o sist
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Um servidor de SQL 2019 é necessária. Versões anteriores não têm integração Java. 
+Uma instância do SQL Server 2019 preview é necessária. Versões anteriores não têm integração Java. 
 
 Requisitos de versão de Java variam entre Windows e Linux. O Java Runtime Environment (JRE) é o requisito mínimo, mas JDKs são úteis se você precisar que o compilador Java ou os pacotes de desenvolvimento. Porque o JDK está completa, se você instalar o JDK, JRE não é necessário.
 
@@ -46,7 +46,7 @@ No Windows, é recomendável instalar o JDK em padrão /Program arquivos / pasta
 
 ## <a name="install-on-linux"></a>Instalar no Linux
 
-Você pode instalar o [banco de dados mecanismo e a extensão de Java juntos](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation), ou adicionar suporte a Java em uma instância existente. Os exemplos a seguir adicionar a extensão de Java a uma instalação existente.  
+Você pode instalar o [banco de dados mecanismo e a extensão de Java juntos](../../linux/sql-server-linux-setup-machine-learning.md#install-all), ou adicionar suporte a Java em uma instância existente. Os exemplos a seguir adicionar a extensão de Java a uma instalação existente.  
 
 ```bash
 # RedHat install commands
@@ -65,6 +65,29 @@ Depois de concluir a instalação, a próxima etapa é [configurar a execução 
 
 > [!Note]
 > Em um dispositivo conectado à internet, as dependências de pacote são baixadas e instaladas como parte da instalação do pacote principal. Para obter mais detalhes, incluindo a instalação offline, consulte [instalar o aprendizado de máquina do SQL Server no Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+
+### <a name="grant-permissions-on-linux"></a>Conceder permissões no Linux
+
+Para fornecer permissões para executar as classes Java do SQL Server, você precisará definir permissões.
+
+Para conceder a leitura e acesso para arquivos ou arquivos de classe jar de execução, execute o seguinte **chmod** comando em cada arquivo de classe ou jar. É recomendável colocar seus arquivos de classe em um jar ao trabalhar com o SQL Server. Para obter ajuda na criação de um jar, consulte [como criar um arquivo jar](#create-jar).
+
+```cmd
+chmod ug+rx <MyJarFile.jar>
+```
+Você também precisará conceder permissões de mssql_satellite no arquivo jar ou de diretório para leitura/execução.
+
+* Se você estiver chamando os arquivos de classe do SQL Server, mssql_satellite precisa ler/executará as permissões no *cada* diretório na hierarquia de pastas da raiz até o pai direto.
+
+* Se você estiver chamando um arquivo jar do SQL Server, é suficiente para executar o comando no próprio arquivo jar.
+
+```cmd
+chown mssql_satellite:mssql_satellite <directory>
+```
+
+```cmd
+chown mssql_satellite:mssql_satellite <MyJarFile.jar>
+```
 
 <a name="install-on-windows"></a>
 
@@ -98,38 +121,32 @@ JAVA_HOME é uma variável de ambiente que especifica o local do interpretador d
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-permissions-to-java-executables"></a>Conceder permissões para executáveis de Java
+### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>Conceder acesso a pasta do JDK de não-padrão (somente Windows)
 
-Por padrão, a conta sob a qual executar processos externos não tem acesso aos arquivos JRE ou JDK. Nesta seção, execute o seguinte script do PowerShell para conceder permissões para permitir o acesso.
+Você pode ignorar esta etapa se você tiver instalado o JDK/JRE na pasta padrão. 
 
-1. Localize e copie o local da instalação do JDK ou o JRE. Por exemplo, ele pode ser C:\Program Files\Java\jdk-10.0.2.
+Para uma instalação de pasta não padrão, execute as **icacls** comandos de um *com privilégios elevados* linha para conceder acesso ao **SQLRUsergroup** e contas de serviço do SQL Server (no  **ALL_APPLICATION_PACKAGES**) para acessar o JVM e o classpath de Java. Os comandos serão recursivamente conceder acesso a todos os arquivos e pastas no caminho de diretório especificado.
 
-2. Abra o PowerShell com direitos de administrador. Se você estiver familiarizado com essa tarefa, consulte [deste artigo](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) para obter dicas.
+#### <a name="sqlrusergroup-permissions"></a>Permissões de SQLRUserGroup
 
-3. Execute o seguinte script para conceder **SQLRUserGroup** permissões para os executáveis do Java. 
+Para uma instância nomeada, acrescente o nome de instância ao SQLRUsergroup (por exemplo, `SQLRUsergroupINSTANCENAME`).
 
-  **SQLRUserGroup** Especifica as permissões em quais processos externos executados. Por padrão, os membros desse grupo têm permissão para o R e Python programa arquivos instalados pelo SQL Server, mas não o Java. Para executar arquivos executáveis de Java, você deverá dar **SQLRUserGroup** permissão para fazer isso.
+```cmd
+icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-   $Acl.SetAccessRule($Ar)
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
-4. Execute o seguinte script para conceder **todos os pacotes de aplicativos** também permissões. 
+#### <a name="appcontainer-permissions"></a>Permissões do AppContainer
 
-  No SQL Server de 2019, contêineres Substituir contas de trabalho como o mecanismo de isolamento, com processos em execução dentro de contêineres, sob a identidade da conta de serviço do Launchpad, que é membro de **SQLRUserGroup**. Para obter mais informações, consulte [diferenças em um servidor de SQL 2019 instalar](../install/sql-machine-learning-services-ver15.md).
+```cmd
+icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-   $Acl.SetAccessRule($Ar) 
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
+### <a name="add-the-jre-path-to-javahome"></a>Adicionar o caminho do JRE JAVA_HOME
+Você também precisará adicionar o caminho para o JRE na variável de ambiente JAVA_HOME do sistema. Se você tiver apenas um JRE instalado, você pode fornecer o caminho da pasta JRE. No entanto, se você tiver um JDK instalado, você precisará fornecer o caminho completo para a JVM, na pasta do JRE em JDK, como este: "C:\Program Files\Java\jdk1.8.0_191\jre\bin\server".
 
-5. Repita as duas etapas anteriores em quaisquer pastas de classpath de Java que contém os arquivos. class ou. jar que você deseja executar no SQL Server. Por exemplo, se você mantiver seu programas compilados em um caminho como C:\JavaPrograms\my-app, conceda **SQLRUserGroup** e **todos os pacotes de aplicativos** permissão na pasta para que os programas podem ser carregados.
+Para criar uma variável de sistema, use o painel de controle > sistema e segurança > sistema acessem **propriedades avançadas do sistema**. Clique em **variáveis de ambiente** e, em seguida, crie uma nova variável de sistema para JAVA_HOME.
 
-  Certifique-se de conceder permissões no caminho completo, começando na pasta raiz. Permissão na pasta recipiente não será suficiente para carregar seu código.
+![Variável de ambiente para o início do Java](../media/java/env-variable-java-home.png "de instalação para Java")
 
 <a name="configure-script-execution"></a>
 
@@ -162,6 +179,18 @@ Se você já estiver familiarizado com os serviços de aprendizado de máquina, 
 * Transmissão usando o parâmetro de sp_execute_external_script @r_rowsPerRead não tem suporte neste CTP.
 
 * Particionamento usando o parâmetro de sp_execute_external_script @input_data_1_partition_by_columns não tem suporte neste CTP.
+
+<a name="create-jar"></a>
+
+## <a name="how-to-create-a-jar-file-from-class-files"></a>Como criar um arquivo jar de arquivos de classe
+
+Navegue até a pasta que contém o arquivo de classe e execute este comando:
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+Verifique se o caminho para **jar.exe** faz parte da variável de caminho do sistema. Como alternativa, especifique o caminho completo para o jar que pode ser encontrado em /bin na pasta do JDK: `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## <a name="next-steps"></a>Próximas etapas
 

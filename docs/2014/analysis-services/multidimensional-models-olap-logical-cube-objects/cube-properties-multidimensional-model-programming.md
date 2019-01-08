@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084606"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371438"
 ---
 # <a name="cube-properties"></a>Propriedades do cubo
   Os cubos têm várias propriedades que você pode definir para afetar o comportamento de todo o cubo. Essas propriedades são resumidas na tabela a seguir.  
@@ -48,7 +48,7 @@ ms.locfileid: "48084606"
   
  Para obter mais informações sobre como definir as propriedades do cubo, consulte [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Especifica o prefixo comum usado para nomes de agregação.|  
 |`Collation`|Especifica o identificador de localidade (LCID) e o sinalizador de comparação, separados por um sublinhado: por exemplo, Latin1_General_C1_AS.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48084606"
 |`Visible`|Determina a visibilidade do cubo.|  
   
 > [!NOTE]  
->  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Consulte também  
  [Cache pró-ativo &#40;partições&#41;](partitions-proactive-caching.md)  

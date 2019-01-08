@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Habilitar o tabela uso exemplo insight o widget espaço no estúdio de dados do Azure | Microsoft Docs'
+title: 'Tutorial: Habilitar o widget de insight de exemplo do tabela espaço em uso'
+titleSuffix: Azure Data Studio
 description: Este tutorial demonstra como habilitar o tabela uso exemplo insight o widget espaço no painel de banco de dados do estúdio de dados do Azure.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355987"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030350"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar a tabela espaço uso exemplo insight widget [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

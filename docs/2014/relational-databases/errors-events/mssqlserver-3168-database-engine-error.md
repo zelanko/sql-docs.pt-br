@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2813b3d43b86ec495912feeaf1052f1c5b97ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117436"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370175"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
     
@@ -48,7 +48,7 @@ ms.locfileid: "48117436"
 -   Um usuário tenta restaurar um banco de dados do sistema a partir de um backup executado no mesmo servidor. Porém, o servidor estava executando uma compilação diferente quando o backup aconteceu. Isto é, o servidor foi atualizado desde a realização do backup.  
   
 ## <a name="user-action"></a>Ação do usuário  
- O processo de restauração nessa situação está claramente envolvido e só é usado em último caso. Para obter mais informações, consulte “[Não é possível restaurar backups de banco de dados do sistema em um build diferente do SQL Server](http://support.microsoft.com/kb/264474)”.  
+ O processo de restauração nessa situação está claramente envolvido e só é usado em último caso. Para obter mais informações, consulte “[Não é possível restaurar backups de banco de dados do sistema em um build diferente do SQL Server](https://support.microsoft.com/kb/264474)”.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  

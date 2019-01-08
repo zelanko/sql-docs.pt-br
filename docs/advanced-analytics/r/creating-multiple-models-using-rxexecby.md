@@ -1,5 +1,6 @@
 ---
-title: Criando vários modelos usando rxExecBy (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Criando vários modelos usando rxExecBy - serviços do SQL Server Machine Learning
+description: Use a função rxExecBy da biblioteca RevoScaleR criar vários modelos minidespejos nos dados da máquina armazenados no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b83abad65689e3e12310251d09199f5aa0e7c3cb
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5d61d7fee7afbf28f4ef72b7ecbae02853f52d25
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085122"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645295"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Criar vários modelos usando rxExecBy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 CTP 2.0 inclui uma nova função, **rxExecBy**, que dá suporte ao processamento paralelo de vários modelos relacionados. Em vez de treinar um modelo muito grande com base nos dados de várias entidades semelhantes, o cientista de dados pode criar rapidamente vários modelos relacionados, cada uma usando dados específicos a uma única entidade.
+O **rxExecBy** função RevoScaleR dá suporte ao processamento paralelo de vários modelos relacionados. Em vez de treinar um modelo grande com base nos dados de várias entidades semelhantes, um cientista de dados pode criar rapidamente vários modelos relacionados, cada uma usando dados específicos a uma única entidade. 
 
-Por exemplo, suponha que são o monitoramento de falhas do dispositivo e captura de dados para muitos tipos diferentes de equipamentos. Usando rxExecBy, você pode fornecer um único conjunto de dados grande como entrada, especifique uma coluna na qual estratificar o conjunto de dados, como o tipo de dispositivo e, em seguida, criar vários modelos de dispositivos individuais.
+Por exemplo, suponha que você está monitorando falhas do dispositivo, a captura de dados para muitos tipos diferentes de equipamentos. Usando rxExecBy, você pode fornecer um único conjunto de dados grande como entrada, especifique uma coluna na qual estratificar o conjunto de dados, como o tipo de dispositivo e, em seguida, criar vários modelos de dispositivos individuais.
 
-Esse processo tem sido chamado processamento "pleasingly paralelo", porque ele usa uma tarefa que foi um pouco oneroso para o cientista de dados ou na melhor das hipóteses entediante e a torna uma operação rápida e simple.
+Esse caso de uso foi denominado ["pleasingly paralelo"](https://en.wikipedia.org/wiki/Embarrassingly_parallel) porque ela interrompe um grande problema complicado em partes componentes para processamento simultâneo.
 
 Os aplicativos típicos dessa abordagem incluem de previsão para medidores inteligentes de domésticos individuais, criar projeções de receita para linhas de produto separado ou criação de modelos para aprovações de empréstimos que são adaptadas às ramificações bancária individual.
 
@@ -37,7 +38,7 @@ A função rxExecBy de RevoScaleR destina-se de paralelo de alto volume de proce
 
 ## <a name="rxexecby-syntax-and-examples"></a>rxExecBy sintaxe e exemplos
 
-**rxExecBy** usa quatro entradas, uma das entradas que estão sendo um objeto de fonte de dados ou conjunto de dados que pode ser particionado em um site FTP **chave** coluna. A função retorna uma saída para cada partição. A forma da saída depende da função que é passada como um argumento e, em seguida, por exemplo, se você passar uma função de modelagem como rxLinMod, você poderia retornar um modelo treinado separado para cada partição do conjunto de dados.
+**rxExecBy** usa quatro entradas, uma das entradas que estão sendo um objeto de fonte de dados ou conjunto de dados que pode ser particionado em um site FTP **chave** coluna. A função retorna uma saída para cada partição. A forma da saída depende da função que é passada como um argumento. Por exemplo, se você passar uma função de modelagem como rxLinMod, você poderia retornar um modelo treinado separado para cada partição do conjunto de dados.
 
 ### <a name="supported-functions"></a>Funções suportadas
 
@@ -51,7 +52,7 @@ Análise ou transformação: `rxCovCor`
 
 O exemplo a seguir demonstra como criar vários modelos usando o conjunto de dados de companhia aérea, que é particionado na coluna [DayOfWeek]. A função definida pelo usuário, `delayFunc`, é aplicada a cada uma das partições por chamada rxExecBy. A função cria modelos separados para as segundas-feiras, às terças, e assim por diante.
 
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language = N'R'
 , @script = N'
@@ -68,7 +69,7 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 Se você receber o erro `varsToPartition is invalid`, verifique se o nome da coluna de chave ou colunas foi digitado corretamente. A linguagem R diferencia maiusculas de minúsculas.
 
-Observe que neste exemplo não é otimizado para o SQL Server, e você pode em muitos casos obter melhor desempenho usando o SQL para agrupar os dados. No entanto, usando rxExecBy, você pode criar trabalhos paralelos de R.
+Esse exemplo específico não é otimizado para o SQL Server, e você pode em muitos casos obter melhor desempenho usando o SQL para agrupar os dados. No entanto, usando rxExecBy, você pode criar trabalhos paralelos de R.
 
 O exemplo a seguir ilustra o processo em R, usando o SQL Server como o contexto de computação:
 

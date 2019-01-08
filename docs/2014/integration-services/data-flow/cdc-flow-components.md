@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359998"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -172,7 +171,7 @@ ms.locfileid: "49120134"
 ## <a name="cdc-state"></a>Estado CDC  
  Cada grupo de CDC tem um estado associado a ele, que é representado por uma cadeia de caracteres com um formato específico. Para obter mais informações, consulte [CDC Control Task](../control-flow/cdc-control-task.md). A tabela a seguir mostra os valores possíveis de estado de CDC.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |0-(INITIAL)|O estado que existe antes que qualquer pacote seja executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Este é o estado que existe quando o pacote de carga inicial é iniciado. Isto ocorre depois da chamada da operação **MarkInitialLoadStart** para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
@@ -205,17 +204,17 @@ ms.locfileid: "49120134"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [CDC no SSIS para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543)em mattmasson.com.  
+-   Entrada de blog, [CDC no SSIS para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543)em mattmasson.com.  
   
--   Entrada de blog sobre como configurar o serviço de CDC, [CDC para Oracle no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)em blogs.msdn.com.  
+-   Entrada de blog sobre como configurar o serviço de CDC, [CDC para Oracle no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)em blogs.msdn.com.  
   
--   Artigo técnico [Instalando o Change Data Capture do Microsoft SQL Server 2012 para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)em social.technet.microsoft.com.  
+-   Artigo técnico [Instalando o Change Data Capture do Microsoft SQL Server 2012 para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)em social.technet.microsoft.com.  
   
--   Artigo técnico [Solucionando problemas de configuração do Microsoft Change Data Capture para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)em social.technet.microsoft.com.  
+-   Artigo técnico [Solucionando problemas de configuração do Microsoft Change Data Capture para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)em social.technet.microsoft.com.  
   
--   Artigo técnico [Solucionando erros de instância CDC no Microsoft Change Data Capture para Oracle da Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)em social.technet.microsoft.com.  
+-   Artigo técnico [Solucionando erros de instância CDC no Microsoft Change Data Capture para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)em social.technet.microsoft.com.  
   
--   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
+-   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Controle de CDC](../control-flow/cdc-control-task.md)  

@@ -1,5 +1,5 @@
 ---
-title: Eventos estendidos para serviços de aprendizado de máquina do SQL Server | Microsoft Docs
+title: Eventos estendidos para monitoramento de processos de R e Python - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 43fbd32cf1bead610e4cdae9b59983fe5ad1b15e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aefc4fd3ba5fa1ba69e8e29575037f5e7ac6789a
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202678"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644875"
 ---
-# <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos estendidos para serviços de aprendizado de máquina do SQL Server
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos estendidos para serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O SQL Server fornece um conjunto de eventos estendidos para usar em operações relacionadas à solução de problemas de [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], bem como Python ou R trabalhos enviados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-**Aplica-se a:** R Services do SQL Server 2016, SQL Server 2017 serviços de aprendizado de máquina
+**Aplica-se a:**  SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
 
-## <a name="sql-server-events-for-machine-learning"></a>Eventos do SQL Server para o aprendizado de máquina
+## <a name="sql-server-events-for-machine-learning"></a>Eventos do SQL Server para o machine learning
 
 Para exibir uma lista de eventos relacionados ao SQL Server, execute a seguinte consulta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```SQL
+```sql
 SELECT o.name AS event_name, o.description
 FROM sys.dm_xe_objects o
 JOIN sys.dm_xe_packages p
@@ -37,17 +37,17 @@ AND p.name = 'SQLSatellite';
 Para obter informações gerais sobre como usar eventos estendidos, consulte [ferramentas de eventos estendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 
 > [!TIP]
-> Para eventos estendidos gerado pelo SQL Server, experimente o novo [SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). Esse novo recurso no Management Studio exibe um visualizador em tempo real para os eventos estendidos e é menos intrusivo para o SQL Server de um rastreamento do Profiler semelhante.
+> Para o evento estendido gerado pelo SQL Server, experimente a nova [SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). Esse novo recurso no Management Studio exibe um visualizador dinâmico de eventos estendidos e é menos intrusivo ao SQL Server que um rastreamento do Profiler semelhante.
 
 ## <a name="additional-events-specific-to-machine-learning-components"></a>Eventos adicionais específicos para componentes de aprendizado de máquina
 
-Eventos estendidos adicionais estão disponíveis para os componentes que estão relacionadas a e usadas por serviços de aprendizado de máquina do SQL Server, como o [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]e o BXLServer, o processo de satélite que inicia o tempo de execução de R. Esses eventos estendidos adicionais são acionados a partir de processos externos e, portanto, devem ser capturadas usando um utilitário externo.
+Eventos estendidos adicionais estão disponíveis para os componentes que são relacionados a e usados por serviços do SQL Server Machine Learning, como o [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]e o BXLServer, o processo de satélite que inicia o tempo de execução de R. Esses eventos estendidos adicionais são acionados de processos externos e, portanto, devem ser capturadas usando um utilitário externo.
 
-Para obter mais informações sobre como fazer isso, consulte a seção [coleta de eventos a partir de processos externos](#bkmk_externalevents).
+Para obter mais informações sobre como fazer isso, consulte a seção [coletando eventos de processos externos](#bkmk_externalevents).
 
 ##  <a name="bkmk_xeventtable"></a> Tabela de eventos estendidos
 
-|Evento|Description|Observações|  
+|Evento|Descrição|Observações|  
 |-----------|-----------------|---------|  
 |connection_accept|Ocorre quando uma nova conexão é aceita. Este evento serve para registrar todas as tentativas de conexão.||  
 |failed_launching|Falha na inicialização.|Indica um erro.|  
@@ -60,7 +60,7 @@ Para obter mais informações sobre como fazer isso, consulte a seção [coleta 
 |satellite_data_chunk_sent|Acionado quando a conexão por satélite conclui o envio de uma única parte de dados.|O evento informa o número de linhas enviadas, o número de colunas, o número de pacotes SNI utilizados e o tempo decorrido durante o envio da parte, em milissegundos. As informações podem ajudá-lo a compreender quanto tempo é gasto para passar diferentes tipos de dados e quantos pacotes são usados.|  
 |satellite_data_receive_completion|Acionado quando todos os dados necessários de uma consulta são recebidos por meio de uma conexão por satélite.|Acionado somente a partir de processo externo. Confira instruções sobre a coleta de eventos a partir de processos externos.|  
 |satellite_data_send_completion|Acionado quando todos os dados necessários de uma sessão são enviados por meio de uma conexão por satélite.||  
-|satellite_data_send_start|Acionado quando começa a transmissão de dados.| Transmissão de dados começa imediatamente antes da primeira parte de dados é enviada.|  
+|satellite_data_send_start|Acionado quando a transmissão de dados é iniciado.| Transmissão de dados é iniciado antes que a primeira parte de dados é enviada.|  
 |satellite_error|Usado para rastreamento de erro de satélite do SQL||  
 |satellite_invalid_sized_message|O tamanho da mensagem não é válido||  
 |satellite_message_coalesced|Usado para rastreamento de união de mensagens em camada de rede||  
@@ -80,25 +80,25 @@ Para obter mais informações sobre como fazer isso, consulte a seção [coleta 
 |satellite_data_chunk_sent|Acionado quando a conexão por satélite conclui o envio de uma única parte de dados.|Contém informações sobre o número de colunas, de linhas, de pacotes e o tempo decorrido com o envio das partes.|  
 |satellite_sessionId_mismatch|ID de sessão da mensagem não é esperada||  
   
-###  <a name="bkmk_externalevents"></a> Coleta de eventos a partir de processos externos
+###  <a name="bkmk_externalevents"></a> Coletar eventos de processos externos
 
-Serviços de aprendizado de máquina do SQL Server inicia alguns serviços que são executados fora do processo do SQL Server. Para captar eventos relacionados a esses processos externos, você deve criar um arquivo de configuração de rastreamento de eventos e coloque o arquivo no mesmo diretório que o executável do processo.  
+Serviços do SQL Server Machine Learning inicia alguns serviços que são executados fora do processo do SQL Server. Para capturar eventos relacionados a esses processos externos, você deve criar um arquivo de configuração de rastreamento de eventos e coloque o arquivo no mesmo diretório que o executável do processo.  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Para capturar eventos relacionados ao Launchpad, coloque o arquivo *.config* no diretório Binn da instância do SQL Server.  Uma instalação padrão, isso seria:
+    Para capturar eventos relacionados ao Launchpad, coloque o arquivo *.config* no diretório Binn da instância do SQL Server.  Em uma instalação padrão, isso seria:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
-+ **BXLServer** é o processo de satélite que dá suporte à extensibilidade do SQL com linguagens de script externo, como R ou Python. Uma instância separada do BxlServer será iniciada para cada instância de idiomas externos.
++ **O BXLServer** é o processo de satélite que dá suporte à extensibilidade do SQL com linguagens de script externo, como R ou Python. Uma instância separada do BxlServer é iniciada para cada instância de linguagem externo.
   
-    Para captar eventos relacionados ao BXLServer, coloque o *. config* arquivo no diretório de instalação de R ou Python.  Uma instalação padrão, isso seria:
+    Para capturar eventos relacionados ao BXLServer, coloque o *. config* arquivo no diretório de instalação do R ou Python.  Em uma instalação padrão, isso seria:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-O arquivo de configuração deve ter o mesmo nome do executável, usando o formato "[nome].xevents.xml". Em outras palavras, os arquivos devem ser nomeados da seguinte forma:
+O arquivo de configuração deve ser o mesmo nome que o executável, usando o formato "[nome] xevents". Em outras palavras, os arquivos devem ser nomeados da seguinte forma:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`
@@ -124,7 +124,7 @@ O arquivo de configuração tem o seguinte formato:
 + Para configurar o rastreamento, edite o *nome da sessão* espaço reservado, o espaço reservado para o nome do arquivo (`[SessionName].xel`) e os nomes dos eventos que você deseja capturar, por exemplo, `[XEvent Name 1]`, `[XEvent Name 1]`).  
 + Qualquer número de marcas de pacote de eventos pode aparecer e será coletado desde que o atributo de nome está correto.
 
-### <a name="example-capturing-launchpad-events"></a>Exemplo: captando eventos do Launchpad
+### <a name="example-capturing-launchpad-events"></a>Exemplo: Captura de eventos do Launchpad
 
 O exemplo a seguir mostra a definição de um rastreamento de eventos para o serviço Launchpad:
 
@@ -147,7 +147,7 @@ O exemplo a seguir mostra a definição de um rastreamento de eventos para o ser
 + Coloque o arquivo *.config* no diretório Binn da instância do SQL Server.
 + Este arquivo deve ser nomeado `Launchpad.xevents.xml`.
 
-### <a name="example-capturing-bxlserver-events"></a>Exemplo: captando eventos do BXLServer  
+### <a name="example-capturing-bxlserver-events"></a>Exemplo: Captura de eventos do BXLServer  
 
 O exemplo a seguir mostra a definição de um rastreamento de eventos para o executável BXLServer.
   
@@ -177,6 +177,6 @@ O exemplo a seguir mostra a definição de um rastreamento de eventos para o exe
 + Coloque o arquivo *.config* no mesmo diretório que o executável BXLServer.
 + Este arquivo deve ser nomeado `bxlserver.xevents.xml`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Relatórios de gerenciamento personalizado de Studio para serviços de aprendizado de máquina](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+[Relatórios de Studio de gerenciamento personalizado para serviços de Machine Learning](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

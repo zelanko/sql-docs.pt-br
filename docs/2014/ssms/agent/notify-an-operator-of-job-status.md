@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server], jobs
@@ -17,12 +17,12 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7762daa362b73f981603f7d32a41b8084327e1f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185316"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369178"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   Este tópico descreve como definir opções de notificação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou o SQL Server Management Objects, de forma que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possa enviar notificações a operadores sobre trabalhos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48185316"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48185316"
   
     -   **Quando o trabalho for concluído** , para notificar o operador independentemente do status de conclusão.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Para notificar um operador sobre o status do trabalho  
   
@@ -92,12 +92,12 @@ ms.locfileid: "48185316"
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_notification   
     @alert_name = N'Test Alert',   
-    @operator_name = N'François Ajenstat',   
+    @operator_name = N'Fran??ois Ajenstat',   
     @notification_method = 1 ;  
     GO  
     ```  
@@ -107,6 +107,6 @@ ms.locfileid: "48185316"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para notificar um operador sobre o status do trabalho**  
   
- Use o `Job` classe usando uma linguagem de programação que você escolher, como Visual Basic, Visual c# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use a classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

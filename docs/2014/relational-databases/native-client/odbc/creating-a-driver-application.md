@@ -23,12 +23,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a37b10e3df4bad15aa2d9fdcb23157cd8a1456a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192846"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362168"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Criando um aplicativo de driver ODBC do SQL Server Native Client
   A arquitetura ODBC tem quatro componentes que executam as funções a seguir.  
@@ -107,7 +107,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Uma decisão de design que deve ser tomada no início do processo de criação de um aplicativo é se ele precisa ter várias chamadas ODBC pendentes ao mesmo tempo. Há dois métodos de suporte a várias chamadas ODBC simultâneas, que são descritos nos próximos tópicos desta seção. Para obter mais informações, consulte o [referência do programador de ODBC](http://go.microsoft.com/fwlink/?LinkId=45250).  
+ Uma decisão de design que deve ser tomada no início do processo de criação de um aplicativo é se ele precisa ter várias chamadas ODBC pendentes ao mesmo tempo. Há dois métodos de suporte a várias chamadas ODBC simultâneas, que são descritos nos próximos tópicos desta seção. Para obter mais informações, consulte o [referência do programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

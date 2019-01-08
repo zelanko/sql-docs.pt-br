@@ -11,18 +11,18 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193932"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368388"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemplo de uma configuração de privilégios mínimos para o PowerPivot para SharePoint 2013
   Este tópico descreve um exemplo da configuração do PowerPivot para SharePoint 2013 com privilégios mínimos. A configuração utiliza uma conta diferente para cada um dos três componentes e cada conta tem o nível mínimo de privilégios.  
   
 ## <a name="summary-of-accounts"></a>Resumo de contas  
- O PowerPivot para SharePoint 2013 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e as permissões](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ O PowerPivot para SharePoint 2013 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e as permissões](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  A tabela a seguir resume as três contas usadas neste exemplo de uma configuração com privilégios mínimos.  
   

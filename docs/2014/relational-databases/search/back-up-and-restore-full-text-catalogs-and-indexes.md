@@ -17,18 +17,18 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39b23832aecdbfadfe1907e2b50e9993a45edd76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 932263934fe7ce93a50caec468d7f1444ccae181
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372488"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Fazer backup e restaurar índices e catálogos de texto completo
   Este tópico explica como fazer backup e restauração de índices de texto completo criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo de texto completo é um conceito lógico e não reside em um grupo de arquivos. Por isso, para fazer backup de um catálogo de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário identificar cada grupo de arquivos que contém um índice de texto completo do catálogo e fazer backup de cada um deles. Depois, faça backup desses grupos de arquivos, um por um.  
   
 > [!IMPORTANT]  
->  É possível importar catálogos de texto completo durante a atualização de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado é um arquivo de banco de dados em seu próprio grupo de arquivos. Para fazer backup de um catálogo importado, basta fazer backup do grupo de arquivos correspondente. Para obter mais informações, veja [Fazendo backup e restaurando catálogos de texto completo](http://go.microsoft.com/fwlink/?LinkID=121052), nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  É possível importar catálogos de texto completo durante a atualização de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado é um arquivo de banco de dados em seu próprio grupo de arquivos. Para fazer backup de um catálogo importado, basta fazer backup do grupo de arquivos correspondente. Para obter mais informações, veja [Fazendo backup e restaurando catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkID=121052), nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Fazendo backup dos índices de texto completo de um catálogo de texto completo  
   

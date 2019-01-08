@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 677da53a1bc27c4e64a91f04d242635fe2df4471
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192156"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372758"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cofre de chaves do Azure permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia Aproveite o serviço Azure Key Vault como um [gerenciamento extensível de chaves &#40;EKM&#41; ](extensible-key-management-ekm.md) provedor para proteger seu chaves de criptografia.  
@@ -30,90 +30,90 @@ ms.locfileid: "48192156"
   
 -   [Usos de EKM](#Uses)  
   
--   [Etapa 1: Configurar o Key Vault para uso pelo SQL Server](#Step1)  
+-   [Etapa 1: Como configurar o Key Vault para uso pelo SQL Server](#Step1)  
   
--   [Etapa 2: Instalar o conector do SQL Server](#Step2)  
+-   [Etapa 2: Instalação do SQL Server Connector](#Step2)  
   
 -   [Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Cofre de chaves](#Step3)  
   
 -   [Exemplo a: Transparent Data Encryption usando uma chave assimétrica do Cofre de chaves](#ExampleA)  
   
--   [Exemplo b: criptografia de Backups usando uma chave assimétrica do Cofre de chaves](#ExampleB)  
+-   [Exemplo b: Criptografia de Backups usando uma chave assimétrica do Cofre de chaves](#ExampleB)  
   
--   [Exemplo c: criptografia de nível de coluna usando uma chave assimétrica do Cofre de chaves](#ExampleC)  
+-   [Exemplo c: Criptografia de nível de coluna usando uma chave assimétrica do Cofre de chaves](#ExampleC)  
   
 ##  <a name="Uses"></a> Usos de EKM  
- Uma organização pode usar criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger dados confidenciais. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a criptografia inclui [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [criptografia em nível de coluna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e [criptografia de Backup](../../backup-restore/backup-encryption.md). Em todos esses casos, os dados são criptografados usando uma chave de criptografia simétrica de dados. A chave de criptografia simétrica de dados é ainda mais protegida ao criptografar com uma hierarquia de chaves armazenadas em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Como alternativa, a arquitetura de provedor EKM permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger as chaves de criptografia de dados usando uma chave assimétrica armazenada fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um provedor criptográfico externo. Usar a arquitetura de provedor EKM acrescenta uma camada adicional de segurança e permite que as organizações separem o gerenciamento de chaves e dados.  
+ Uma organização pode usar criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger dados confidenciais. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a criptografia inclui [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [criptografia em nível de coluna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e [criptografia de Backup](../../backup-restore/backup-encryption.md). Em todos esses casos, os dados são criptografados usando uma chave de criptografia simétrica de dados. A chave de criptografia simétrica de dados é ainda mais protegida ao criptografar com uma hierarquia de chaves armazenadas em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Como alternativa, a arquitetura de provedor EKM permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteja as chaves de criptografia de dados usando uma chave assimétrica armazenada fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um provedor de criptografia externo. Usar a arquitetura de provedor EKM acrescenta uma camada adicional de segurança e permite que as organizações separem o gerenciamento de chaves e dados.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector para o Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aproveitar o escalonável e de alto desempenho e o serviço de Cofre de chaves altamente disponível como um provedor EKM para proteção de chave de criptografia. O serviço de Cofre de chaves pode ser usado com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalações em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] máquinas virtuais do Azure e para servidores locais. O serviço de chave de cofre também fornece a opção de usar rigidamente módulos de segurança de hardware (HSM) monitorados e controlados para um nível mais alto de proteção para as chaves de criptografia assimétrica. Para obter mais informações sobre o cofre de chaves, consulte [Cofre de Chaves do Azure](http://go.microsoft.com/fwlink/?LinkId=521401).  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector para o Azure Key Vault permite que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aproveite o serviço do cofre de chave altamente disponível, escalonável e de alto desempenho como um provedor EKM para proteção de chave de criptografia. O serviço do cofre de chave pode ser usado com instalações do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Máquinas Virtuais [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do Azure e para servidores locais. O serviço de chave de cofre também fornece a opção de usar rigidamente módulos de segurança de hardware (HSM) monitorados e controlados para um nível mais alto de proteção para as chaves de criptografia assimétrica. Para obter mais informações sobre o cofre de chaves, consulte [Cofre de Chaves do Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  A imagem a seguir resume o fluxo do processo de EKM usando o cofre da chave. Os números de etapa do processo na imagem não devem corresponder aos números de etapa de instalação que seguem a imagem.  
   
  ![EKM do SQL Server usando o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server usando o Azure Key Vault")  
   
-##  <a name="Step1"></a> Etapa 1: Configurar o Key Vault para uso pelo SQL Server  
- Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando um cofre não existir, o administrador do Azure em sua organização que é designada para gerenciar chaves de criptografia pode criar um cofre, gerar uma chave assimétrica no cofre e, em seguida, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521403) .  
+##  <a name="Step1"></a> Etapa 1: Configuração do Key Vault para uso pelo SQL Server  
+ Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521403) .  
   
 > [!IMPORTANT]  
->  Se você tiver várias assinaturas do Azure, você deve usar a assinatura que contém [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+>  Se tiver várias assinaturas do Azure, você deve usar a assinatura que contém o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-1.  **Crie um cofre:** Crie um cofre usando as instruções na seção **Criar um cofre da chave** da [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402). Registre o nome do cofre. Este tópico usa **ContosoKeyVault** como o nome da chave de cofre.  
+1.  **Crie um cofre:** Criar um cofre usando as instruções a **criar um cofre de chaves** seção [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Registre o nome do cofre. Este tópico usa **ContosoKeyVault** como o nome da chave de cofre.  
   
-2.  **Gere uma chave assimétrica no cofre:** a chave assimétrica no cofre de chaves é usada para proteger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chaves de criptografia. Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são delegadas ao Azure Key Vault e são protegidas pela segurança de chave de cofre.  
+2.  **Gere uma chave assimétrica no cofre:** A chave assimétrica no cofre de chave é usada para proteger chaves de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são delegadas ao Azure Key Vault e são protegidas pela segurança de chave de cofre.  
   
      Há várias maneiras de gerar uma chave assimétrica e armazená-la no cofre. Externamente, você pode gerar uma chave e importá-la para o cofre como um arquivo .pfx. Ou criar a chave diretamente no cofre usando as APIs do cofre da chave.  
   
-     O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector exige as chaves assimétricas sejam RSA de 2048 bits e o nome da chave só pode usar os caracteres "a-z", "A-Z", "0-9", e "-". Neste documento, o nome da chave assimétrica é conhecido como **ContosoMasterKey**. Substitua isso pelo nome exclusivo usado para a chave.  
+     O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requer que as chaves assimétricas sejam RSA de 2048 bits e o nome da chave só pode usar caracteres que contenham "a-z", "A-Z", "0-9" e "-". Neste documento, o nome da chave assimétrica é conhecido como **ContosoMasterKey**. Substitua isso pelo nome exclusivo usado para a chave.  
   
     > [!IMPORTANT]  
     >  Importar a chave assimétrica é altamente recomendável para cenários de produção, pois ela permite que o administrador garanta a chave em um sistema de caução de chaves. Se a chave assimétrica for criada no cofre, ela não pode ser mantida em garantia porque a chave privada nunca pode deixar o cofre. As chaves usadas para proteger dados críticos devem ser mantidas em garantia. A perda de uma chave assimétrica resultará em dados irrecuperáveis permanentemente.  
   
     > [!IMPORTANT]  
-    >  O cofre da chave dá suporte a várias versões da mesma chave nomeada. As chaves usadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector não deve estar com controle de versão ou revertidas. Se o administrador deseja distribuir a chave usada para criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , uma nova chave com um nome diferente deve ser criada no cofre e usada para criptografar DEK.  
+    >  O cofre da chave dá suporte a várias versões da mesma chave nomeada. As chaves usadas pelo Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não devem estar com controle de versão ou reversão. Se o administrador deseja distribuir a chave usada para criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , uma nova chave com um nome diferente deve ser criada no cofre e usada para criptografar DEK.  
   
-     Para obter mais informações sobre como importar uma chave no cofre de chave ou criar uma chave no cofre de chave (não recomendado para um ambiente de produção), consulte a seção **Adicionar uma chave ou um segredo no cofre chave** em [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402).  
+     Para obter mais informações sobre como importar uma chave no cofre de chave ou criar uma chave no cofre de chave (não recomendado para um ambiente de produção), consulte a seção **Adicionar uma chave ou um segredo no cofre chave** em [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
-3.  **Obtenha as Entidades de Serviço do Active Directory do Azure para uso com o SQL Server:** Quando a empresa se inscreve para um serviço de nuvem da Microsoft, ela recebe um Active Directory do Azure. Crie **as entidades de serviço** no Azure Active Directory para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uso (para autenticar-se ao Azure Active Directory) ao acessar o Cofre de chaves.  
+3.  **Obtenha o Azure Active Directory as entidades de serviço a ser usado para o SQL Server:** Quando a empresa se inscreve para um serviço de nuvem da Microsoft, ela recebe um Active Directory do Azure. Crie **Entidades de serviço** no Active Directory do Azure para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uso (para autenticar-se com o Active Directory do Azure) ao acessar o cofre de chave.  
   
-    -   Uma **entidade de serviço** será necessária uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrador para acessar o cofre durante a configuração [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a criptografia.  
+    -   Uma **Entidade de serviço** será necessária para que o administrador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] acesse o cofre durante a configuração de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a criptografia.  
   
-    -   Outra **entidade de serviço** será necessária a [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para acessar o cofre para descodificar chaves usadas na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia.  
+    -   Outra **Entidade de serviço** será necessária pelo [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para acessar o cofre para descodificar chaves usadas na criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-     Para obter mais informações sobre como registrar um aplicativo e gerar uma entidade de serviço, consulte a seção **Registrar um aplicativo com o Active Directory do Azure** em [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402). O processo de registro retorna uma **ID do aplicativo** (também conhecida como uma **ID DO CLIENTE**) e uma **Chave de autenticação** (também conhecida como um **Segredo**) para cada **Entidade de serviço**do Active Directory do Azure. Quando usado na `CREATE CREDENTIAL` instrução, o hífen deverá ser removido dos **ID do cliente**. Registre isso para uso nos scripts abaixo:  
+     Para obter mais informações sobre como registrar um aplicativo e gerar uma entidade de serviço, consulte a seção **Registrar um aplicativo com o Active Directory do Azure** em [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). O processo de registro retorna uma **ID do aplicativo** (também conhecida como uma **ID DO CLIENTE**) e uma **Chave de autenticação** (também conhecida como um **Segredo**) para cada **Entidade de serviço**do Active Directory do Azure. Quando usado na `CREATE CREDENTIAL` instrução, o hífen deverá ser removido dos **ID do cliente**. Registre isso para uso nos scripts abaixo:  
   
-    -   **Entidade de serviço** para um logon **sysadmin** : **CLIENTID_sysadmin_login** e **SECRET_sysadmin_login**  
+    -   **Entidade de serviço** para um **sysadmin** logon: **CLIENTID_sysadmin_login** e **SECRET_sysadmin_login**  
   
     -   **Entidade de serviço** para o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** e **SECRET_DBEngine**.  
   
-4.  **Conceda permissão para as entidades de serviço acessar o Cofre de chaves:** ambos os a **CLIENTID_sysadmin_login** e **CLIENTID_DBEngineService entidades** exigem o **obter** , **lista**, **wrapKey**, e **unwrapKey** permissões no cofre de chaves. Se você pretende criar chaves por meio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] você também precisará conceder a **criar** permissão no cofre de chaves.  
+4.  **Conceda permissão para as entidades de serviço acessar o Cofre de chaves:** Os dois os **CLIENTID_sysadmin_login** e **CLIENTID_DBEngineService entidades** exigem o **obter**, **lista**,  **wrapKey**, e **unwrapKey** permissões no cofre de chaves. Se você pretende criar chaves por meio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também precisará conceder a permissão **criar** no cofre de chave.  
   
     > [!IMPORTANT]  
     >  Os usuários devem ter pelo menos as operações **wrapKey** e **unwrapKey** para o cofre da chave.  
   
-     Para obter mais informações sobre como conceder permissões para o cofre, consulte a seção **Autorizar o uso pelo aplicativo da chave ou segredo** em [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402).  
+     Para obter mais informações sobre como conceder permissões para o cofre, consulte a seção **Autorizar o uso pelo aplicativo da chave ou segredo** em [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
      Links para a documentação do Azure Key Vault  
   
-    -   [O que é o Azure Key Vault?](http://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [O que é o Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Introdução ao Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Referência dos [Cmdlets do Cofre de Chaves do Azure](http://go.microsoft.com/fwlink/?LinkId=521403) do PowerShell  
+    -   Referência dos [Cmdlets do Cofre de Chaves do Azure](https://go.microsoft.com/fwlink/?LinkId=521403) do PowerShell  
   
-##  <a name="Step2"></a> Etapa 2: Instalar o conector do SQL Server  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector é baixado e instalado pelo administrador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computador. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está disponível como um download do conector do [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700).  Procure **SQL Server Connector para Microsoft Azure Key Vault**, examine os detalhes, requisitos de sistema e instruções de instalação e escolha baixar o conector e iniciar a instalação usando **Executar**. Examine e aceite a licença e continue.  
+##  <a name="Step2"></a> Etapa 2: Instalação do SQL Server Connector  
+ O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é baixado e instalado pelo administrador do computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está disponível para download no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Procure **SQL Server Connector para Microsoft Azure Key Vault**, examine os detalhes, requisitos de sistema e instruções de instalação e escolha baixar o conector e iniciar a instalação usando **Executar**. Examine e aceite a licença e continue.  
   
  Por padrão, o conector é instalado em **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Esse local pode ser alterado durante a instalação. (Se alterado, ajuste os scripts a seguir).  
   
  Ao concluir a instalação, os seguintes itens são instalados no computador:  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**: isso é o provedor EKM criptográfico DLL que precisa ser registrado com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE CRYPTOGRAPHIC PROVIDER.  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Esse é o DLL de provedor EKM criptográfico que precisa ser registrado com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE CRYPTOGRAPHIC PROVIDER.  
   
--   **Azure Key Vault SQL Server Connector**: Isso é um serviço Windows que permite que o provedor EKM criptográfico se comunique com o cofre de chave.  
+-   **Conector do SQL Server do Azure Key Vault**: Isso é um serviço Windows que permite que o provedor EKM criptográfico se comunique com o cofre de chave.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalação do conector também permite que você baixe opcionalmente os scripts de exemplo para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia.  
+ A instalação do Connector [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também permite que você baixe opcionalmente os scripts de exemplo para criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Step3"></a> Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Cofre de chaves  
+##  <a name="Step3"></a> Etapa 3: Configurar o SQL Server para usar um provedor EKM para o Key Vault  
   
 ###  <a name="Permissions"></a> Permissões  
  Para concluir esse processo todo é necessária a permissão CONTROL SERVER ou associação na função de servidor fixa **sysadmin** . Ações específicas requerem as seguintes permissões:  
@@ -156,7 +156,7 @@ ms.locfileid: "48192156"
     GO   
     ```  
   
-2.  A instalação uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de credencial para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logon de administrador para usar o Cofre de chaves para instalar e gerenciar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cenários de criptografia.  
+2.  Instalação de uma credencial [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um logon de administrador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar o cofre de chave a fim de configurar e gerenciar cenários de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
     >  O **IDENTITY** argumento de `CREATE CREDENTIAL` requer o nome do Cofre de chaves. O **segredo** argumento de `CREATE CREDENTIAL` requer o  *\<ID do cliente >* (sem hifens) e  *\<segredo >* a serem passados juntos sem um espaço entre eles.  
@@ -214,7 +214,7 @@ ms.locfileid: "48192156"
   
 ## <a name="examples"></a>Exemplos  
   
-###  <a name="ExampleA"></a> Exemplo a: Transparent Data Encryption usando uma chave assimétrica do Cofre de chaves  
+###  <a name="ExampleA"></a> Exemplo a: Criptografia transparente de dados usando uma chave assimétrica do Key Vault  
  Depois de concluir as etapas acima, crie uma credencial e um logon, crie uma chave de criptografia do banco de dados protegida pela chave assimétrica no cofre de chave. Use a chave de criptografia do banco de dados para criptografar um banco de dados com TDE.  
   
  Criptografar um banco de dados requer permissão CONTROL no banco de dados.  
@@ -279,7 +279,7 @@ ms.locfileid: "48192156"
   
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-###  <a name="ExampleB"></a> Exemplo b: criptografia de Backups usando uma chave assimétrica do Cofre de chaves  
+###  <a name="ExampleB"></a> Exemplo b: Criptografia de backups usando uma chave assimétrica do Key Vault  
  Há suporte para backups criptografados começando com [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. O exemplo a seguir cria e restaura um backup criptografado e uma chave de criptografia de dados protegida pela chave assimétrica no cofre de chave.  
   
 ```  
@@ -301,7 +301,7 @@ GO
   
  Para obter mais informações sobre opções de backup, consulte [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
-###  <a name="ExampleC"></a> Exemplo c: criptografia de nível de coluna usando uma chave assimétrica do Cofre de chaves  
+###  <a name="ExampleC"></a> Exemplo c: Criptografia de nível de coluna usando uma chave assimétrica do Key Vault  
  O exemplo a seguir cria uma chave simétrica protegida pela chave assimétrica no cofre de chave. Em seguida, a chave simétrica é usada para criptografar dados no banco de dados.  
   
  Este exemplo usa a chave assimétrica CONTOSO_KEY armazenada no cofre de chave, que foi importada ou criada anteriormente, como descrito na [Etapa 3, seção 3](#Step3) acima. Para usar essa chave assimétrica no banco de dados `ContosoDatabase` , você deve executar a instrução CREATE ASYMMETRIC KEY novamente, para fornecer ao banco de dados `ContosoDatabase` uma referência para a chave.  

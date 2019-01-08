@@ -23,12 +23,12 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 275503157f0bfbc004463f3bc567cfbef4a3fc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117038"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370138"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.  
@@ -43,7 +43,7 @@ ms.locfileid: "48117038"
   
 ##  <a name="bkmk_configuration_requirements"></a> Requisitos de configuração  
   
--   A entrega de email do servidor de relatório é implementada em CDO (Collaboration Data Objects) e requer um servidor SMTP local ou remoto ou um encaminhador SMTP. Não há suporte ao SMTP em todos os sistemas operacionais Windows. Se você estiver usando a edição com base em Itanium do Windows Server 2008, não haverá suporte ao SMTP. Para obter mais informações sobre as opções de configuração fornecidas por CDO, consulte [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) (em inglês) no MSDN.  
+-   A entrega de email do servidor de relatório é implementada em CDO (Collaboration Data Objects) e requer um servidor SMTP local ou remoto ou um encaminhador SMTP. Não há suporte ao SMTP em todos os sistemas operacionais Windows. Se você estiver usando a edição com base em Itanium do Windows Server 2008, não haverá suporte ao SMTP. Para obter mais informações sobre as opções de configuração fornecidas por CDO, consulte [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) (em inglês) no MSDN.  
   
 -   Uma conta de serviço do Servidor de Relatório deve ter permissão no servidor SMTP para enviar email.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48117038"
 
   
 ##  <a name="bkmk_example_config_file"></a> Configuração de email do servidor de relatório de exemplo  
- O exemplo a seguir ilustra as configurações no arquivo RSreportserver.config para um servidor SMTP remoto. Para ler sobre as descrições de configuração e valores válidos, consulte [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os Manuais Online ou a documentação do produto CDO.  
+ O exemplo a seguir ilustra as configurações no arquivo RSreportserver.config para um servidor SMTP remoto. Par ler sobre as descrições de configuração e valores válidos, consulte [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlnos Manuais Online doe or the CDO product documentation.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -106,7 +106,7 @@ ms.locfileid: "48117038"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Opções de configuração para a configuração de para: campo em uma mensagem  
+##  <a name="bkmk_setting_TO_field"></a> Opções de configuração para a configuração de para: Campo em uma mensagem  
  As assinaturas definidas pelo usuário que forem criadas de acordo com as permissões concedidas pela tarefa **Gerenciar assinaturas individuais** contêm um nome de usuário predefinido que tem como base a conta de usuário do domínio. Quando o usuário cria a assinatura, o nome do destinatário no campo **Para:** é endereçado a si mesmo, usando a conta do usuário do domínio da pessoa que está criando a assinatura.  
   
  Se você estiver usando um servidor ou encaminhador SMTP que use contas de email diferentes da conta de usuário do domínio, a entrega do relatório falhará quando o servidor SMTP tentar entregar o relatório para esse usuário.  
@@ -115,9 +115,9 @@ ms.locfileid: "48117038"
   
 1.  Abra RSReportServer.config com um editor de texto.  
   
-2.  Definir `SendEmailToUserAlias` para `False`.  
+2.  Defina `SendEmailToUserAlias` como `False`.  
   
-3.  Definir `DefaultHostName` para o sistema de nome de domínio (DNS) ou endereço IP do encaminhador ou servidor SMTP.  
+3.  Defina `DefaultHostName` como o nome DNS (Sistema de Nome de Domínio) ou o endereço IP do servidor ou encaminhador SMTP.  
   
 4.  Salve o arquivo.  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48117038"
 ##  <a name="bkmk_options_remote_SMTP"></a> Opções de configuração para o serviço SMTP remoto  
  A conexão entre o servidor de relatório e um encaminhador ou servidor SMTP é determinada pelos seguintes parâmetros de configuração:  
   
--   `SendUsing` Especifica um método para enviar mensagens. Você pode escolher entre um serviço de rede SMTP ou um diretório local de retirada de serviço SMTP. Para usar um serviço SMTP remoto, este valor deve ser definido como **2** no arquivo RSReportServer.config.  
+-   `SendUsing` especifica um método para o envio de mensagens. Você pode escolher entre um serviço de rede SMTP ou um diretório local de retirada de serviço SMTP. Para usar um serviço SMTP remoto, este valor deve ser definido como **2** no arquivo RSReportServer.config.  
   
--   `SMTPServer` Especifica o encaminhador ou servidor SMTP remoto. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.  
+-   `SMTPServer` especifica o encaminhador ou servidor SMTP remoto. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.  
   
--   `From` Define o valor que aparece na **de:** linha de uma mensagem de email. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.  
+-   `From` define o valor que aparece na linha **De:** de uma mensagem de email. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.  
   
  Outros valores usados para o serviço SMTP remoto incluem os seguintes (observe que não é necessário especificar esses valores, a menos que deseje substituir os valores padrão).  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48117038"
     > [!NOTE]  
     >  Certifique-se de que você não defina `SMTPServer` se você estiver usando um servidor SMTP local.  
   
--   `From` Define o valor que aparece na **de:** linha de uma mensagem de email. Esse valor é necessário.  
+-   `From` define o valor que aparece na linha **De:** de uma mensagem de email. Esse valor é necessário.  
   
  
   
@@ -178,19 +178,19 @@ ms.locfileid: "48117038"
   
 2.  Abra o arquivo RSReportServer.config em um editor de texto.  
   
-3.  Verifique <`UrlRoot`> é definido como o endereço de URL do servidor de relatório. Esse valor é definido quando você configura o servidor de relatório e já deveria estar preenchido. Se não estiver definido, digite o endereço da URL do servidor de relatório.  
+3.  Verifique se <`UrlRoot`> está configurado como o endereço URL do servidor de relatório. Esse valor é definido quando você configura o servidor de relatório e já deveria estar preenchido. Se não estiver definido, digite o endereço da URL do servidor de relatório.  
   
 4.  Na seção Entrega, localize <`ReportServerEmail`>.  
   
 5.  Em <`SMTPServer`>, digite o nome do servidor SMTP. Esse valor pode ser um endereço IP, um nome UNC de um computador em sua intranet corporativa ou um nome de domínio totalmente qualificado.  
   
-6.  Verifique se <`SendUsing`> está definido como 2. Se estiver definido como outro valor, o servidor de relatório não está configurado para usar um serviço SMTP remoto.  
+6.  Verifique que <`SendUsing`> esteja definido como 2. Se estiver definido como outro valor, o servidor de relatório não está configurado para usar um serviço SMTP remoto.  
   
 7.  Em <`From`>, digite o nome de uma conta que tenha permissão para enviar email a partir do servidor SMTP.  
   
 8.  Salve o arquivo.  
   
-     O servidor de relatório usará as novas configurações automaticamente; você não precisa reiniciar o serviço. Você pode especificar configurações adicionais de SMTP para configurar mais como o servidor SMTP é usado para entrega de email do servidor de relatório. Para obter mais informações, consulte [Configurando um servidor de relatório para entrega de email](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+     O servidor de relatório usará as novas configurações automaticamente; você não precisa reiniciar o serviço. Você pode especificar configurações adicionais de SMTP para configurar mais como o servidor SMTP é usado para entrega de email do servidor de relatório. Para obter mais nos Manuais Online doformações, consulte [Configurnos Manuais Online dog a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlnos Manuais Online doe.  
   
 
   

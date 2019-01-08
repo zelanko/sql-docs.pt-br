@@ -13,12 +13,12 @@ ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1ebde4d8b1303e3a845bf4ce9fdc03d3ba6c6a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167466"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589550"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lição 3: Configurando a distribuição
   Nesta lição você configurará a distribuição no Publicador e definirá as permissões necessárias nos bancos de dados de publicação e distribuição. Se você já tiver configurado o Distribuidor, antes de começar a lição será necessário desabilitar primeiramente a publicação e a distribuição. Não faça isto se for preciso manter uma topologia de replicação existente.  
@@ -36,11 +36,11 @@ ms.locfileid: "48167466"
   
      O Assistente para Configuração de Distribuição é iniciado.  
   
-3.  Sobre o **distribuidor** página, selecione **'***\<ServerName >***' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e de log**e, em seguida, clique em **próxima**.  
+3.  Sobre o **distribuidor** página, selecione **'**_\<ServerName >_**' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e de log**e, em seguida, clique em **próxima**.  
   
 4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Avançar**.  
   
-5.  Insira **\\\\**\<*Machine_Name>***\repldata** na caixa de texto **Pasta de instantâneos**, em que \<*Machine_Name>* é o nome do Publicador e, em seguida, clique em **Avançar**.  
+5.  Insira **\\\\**\<_Machine_Name>_**\repldata** na caixa de texto **Pasta de instantâneos**, em que \<*Machine_Name>* é o nome do Publicador e, em seguida, clique em **Avançar**.  
   
 6.  Aceite os valores padrão das páginas restantes do assistente.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48167466"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Segurança**, clique com o botão direito do mouse em **Logons**e selecione **Novo Logon**.  
   
-2.  Na página **Geral**, clique em **Pesquisar**, insira \<*Machine_Name>***\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, em que \<*Machine_Name>* é o nome do servidor do Publicador local. Em seguida, clique em **Verificar Nomes** e em **OK**.  
+2.  Na página **Geral**, clique em **Pesquisar**, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, em que \<*Machine_Name>* é o nome do servidor do Publicador local. Em seguida, clique em **Verificar Nomes** e em **OK**.  
   
 3.  Na página **Mapeamento de Usuário** , na lista **Usuários mapeados para este logon** , selecione os bancos de dados de **distribuição** e de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48167466"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar Distribuição](configure-distribution.md)   
- [Replication Agent Security Model](security/replication-agent-security-model.md)  
+ [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)  
   
   

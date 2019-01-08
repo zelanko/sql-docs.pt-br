@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113347"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773468"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
   Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
@@ -88,7 +88,7 @@ ms.locfileid: "48113347"
  Mostra o nome do índice espacial. Quando um novo índice é criado, é dado um nome padrão baseado na tabela da janela ativa no Designer de Tabela. O nome pode ser alterado a qualquer momento.  
   
  **Descrição**  
- Descreve o índice. Para redigir uma descrição mais detalhada, clique em **Descrição** e depois clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
+ Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências (**…**) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
   
  **Categoria do Designer de Tabelas**  
  Quando expandida, mostra informações sobre as propriedades desse índice espacial.  
@@ -109,7 +109,7 @@ ms.locfileid: "48113347"
  **Bloqueios de página permitidos**  
  Especifica se o bloqueio de página é permitido no índice. A permissão ou não dos bloqueios de página afeta o desempenho do banco de dados.  
   
- **Recalcular****estatísticas**   
+ **Recalcular****estatísticas**  
  Especifica se as novas estatísticas deverão ser recalculadas quando o índice for criado. Ao se recalcular estatísticas retarda-se a criação dos índices, mas em geral melhora-se o desempenho da consulta.  
   
  **Bloqueios de Linha Permitidos**  

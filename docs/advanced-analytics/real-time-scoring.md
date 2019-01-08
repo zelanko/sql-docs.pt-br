@@ -1,5 +1,5 @@
 ---
-title: Pontuação em tempo real no aprendizado de máquina do SQL Server | Microsoft Docs
+title: Pontuação usando o procedimento sp_rxPredict armazenado - serviços do SQL Server Machine Learning em tempo real
 description: Gere previsões usando sp_rxPredict, pontuação de entradas de dados em relação a um modelo previamente treinado escritos em R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713509"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645155"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação com sp_rxPredict no aprendizado de máquina do SQL Server em tempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Você pode chamar sp\_rxPredict como você faria com qualquer outro procedimento
 
 Como o formato binário é o mesmo que é usado pela função de previsão, você pode usar a tabela de dados e modelos do exemplo anterior.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

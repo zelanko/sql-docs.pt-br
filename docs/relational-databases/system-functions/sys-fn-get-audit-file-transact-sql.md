@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018331"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980042"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir descreve o conteúdo do arquivo de auditoria que pode ser retornado por essa função.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |event_time|**datetime2**|Data e hora em que a ação auditável é acionada. Não permite valor nulo.|  
 |sequence_number|**int**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias. Não permite valor nulo.|  
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id de evento definido pelo usuário passado como um argumento para **sp_audit_write**. **NULO** para eventos do sistema (padrão) e diferente de zero para evento definido pelo usuário. Para obter mais informações, consulte [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Usado para registrar quaisquer informações adicionais que o usuário deseje registrar no |log de auditoria usando o **sp_audit_write** procedimento armazenado.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Aplica-se a**: apenas SQL Server (começando com 2016) |  
-|transaction_id |**bigint** | **Aplica-se a**: apenas SQL Server (começando com 2016) |  
-|client_ip |**nvarchar(128)** | **Aplica-se a**: SQL do Azure + SQL Server (começando com o 2017) |  
-|application_name |**nvarchar(128)** | **Aplica-se a**: SQL do Azure + SQL Server (começando com o 2017) |  
-|duration_milliseconds |**bigint** | **Aplica-se a**: somente a banco de dados SQL do Azure |  
-|response_rows |**bigint** | **Aplica-se a**: somente a banco de dados SQL do Azure |  
-|affected_rows |**bigint** | **Aplica-se a**: somente a banco de dados SQL do Azure |  
-|connection_id |GUID | **Aplica-se a**: somente a banco de dados SQL do Azure |
-|data_sensitivity_information |nvarchar(4000) | **Aplica-se a**: somente a banco de dados SQL do Azure |
+|sequence_group_id |**varbinary** | **Aplica-se ao**: SQL Server somente (começando com 2016) |  
+|transaction_id |**bigint** | **Aplica-se ao**: SQL Server somente (começando com 2016) |  
+|client_ip |**nvarchar(128)** | **Aplica-se ao**: Azure SQL DB + SQL Server (começando com o 2017) |  
+|application_name |**nvarchar(128)** | **Aplica-se ao**: Azure SQL DB + SQL Server (começando com o 2017) |  
+|duration_milliseconds |**bigint** | **Aplica-se ao**: Somente a banco de dados SQL do Azure |  
+|response_rows |**bigint** | **Aplica-se ao**: Somente a banco de dados SQL do Azure |  
+|affected_rows |**bigint** | **Aplica-se ao**: Somente a banco de dados SQL do Azure |  
+|connection_id |GUID | **Aplica-se ao**: Somente a banco de dados SQL do Azure |
+|data_sensitivity_information |nvarchar(4000) | **Aplica-se ao**: Somente a banco de dados SQL do Azure |
   
 ## <a name="remarks"></a>Comentários  
  Se o *file_pattern* argumento passado para **fn_get_audit_file** faz referência a um caminho ou arquivo não existir, ou se o arquivo não for um arquivo de auditoria, o **MSG_INVALID_AUDIT_FILE**mensagem de erro é retornada.  
   
 ## <a name="permissions"></a>Permissões  
- - **SQL Server**: requer que o **CONTROL SERVER** permissão.  
- - **Banco de dados SQL do Azure**: requer que o **banco de dados de controle** permissão.     
+ - **SQL Server**: Requer a permissão **CONTROL SERVER** .  
+ - **Banco de dados SQL do Azure**: Requer o **banco de dados de controle** permissão.     
     - Administradores de servidor podem acessar os logs de auditoria de todos os bancos de dados no servidor.
     - Administradores de servidor não podem acessar somente os logs de auditoria do banco de dados atual.
     - Os BLOBs que não atendem aos critérios acima serão ignorados (uma lista de blobs ignorados será exibida na mensagem de saída de consulta), e a função retornará os logs somente de blobs para o qual o acesso é permitido.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  Este exemplo lê de um arquivo chamado `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  Este exemplo lê de um arquivo chamado `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

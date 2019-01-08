@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439498"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidade e escalabilidade no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700897"
 
 - Ativo/Ativo não tem suporte no momento. Ativo/Passivo (failover) é a única configuração WSFC com suporte para o Analysis Services.
 - Ao realizar clustering do Analysis Services, verifique se todos os nós que participam do cluster são executado em hardware idêntico ou muito semelhante e se o contexto operacional de cada nó é o mesmo quanto à versão do sistema operacional e service packs, versão do Analysis Services e service packs (ou atualizações cumulativas) e o modo de servidor.
-- Evite readaptar um nó Passivo como o nó Ativo de outra carga de trabalho. Os ganhos de curto prazo na utilização de computador serão perdidos em caso de uma situação de failover real se o nó não puder lidar com ambas as cargas de trabalho.
+- Evite readaptar um nó passivo como o nó ativo de outra carga de trabalho. Os ganhos de curto prazo na utilização de computador serão perdidos em caso de uma situação de failover real se o nó não puder lidar com ambas as cargas de trabalho.
  
- Instruções e informações detalhadas sobre a implantação do Analysis Services em um cluster de failover são fornecidas neste white paper: [Como Clusterizar o SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Embora elas tenham sido escritas para o SQL Server 2012, essas diretrizes ainda se aplicam às versões mais recentes do Analysis Services.  
+ Instruções detalhadas e informações de plano de fundo para a implantação do Analysis Services em um cluster de failover são fornecidas neste white paper: [Como criar clusters do SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Embora elas tenham sido escritas para o SQL Server 2012, essas diretrizes ainda se aplicam às versões mais recentes do Analysis Services.  
   
 ## <a name="see-also"></a>Consulte também  
  [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forçar a afinidade para bancos de dados tabulares do Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Forçar a afinidade a NUMA para Bancos de Dados Tabulares do Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Um estudo de caso do Analysis Services: Usando modelos de tabela em uma solução comercial em larga escala](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

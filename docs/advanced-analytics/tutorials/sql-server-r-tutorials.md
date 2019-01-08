@@ -1,109 +1,52 @@
 ---
-title: Tutoriais do SQL Server R | Microsoft Docs
+title: Visão de geral de tutorial do R do SQL Server - aprendizagem de máquina do SQL Server
+description: Introdução para os tutoriais da linguagem R para análise do SQL Server no banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1a6329acbc4d05faa073196b1e5e8d54d78442a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4353d50ecfd8aac3ada1c71baf1be78f13c51b11
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202088"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596527"
 ---
-# <a name="sql-server-r-tutorials"></a>Tutoriais do SQL Server R
+# <a name="sql-server-r-language-tutorials"></a>Tutoriais da linguagem R do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo fornece uma lista de tutoriais e exemplos que demonstram o uso de R com o SQL Server 2016 ou 2017 do SQL Server. Por meio desses exemplos e demonstrações, você aprenderá:
+Este artigo descreve os tutoriais da linguagem R para análise no banco de dados em [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) ou [serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md).
 
-+ Como executar R do T-SQL
-+ Quais são os contextos de computação local e remoto e como você pode executar código R usando o computador do SQL Server
-+ Como encapsular o código R em um procedimento armazenado
-+ Otimizando o código R para um ambiente de produção do SQL
-+ Cenários do mundo real para incorporar o aprendizado de máquina em aplicativos
++ Saiba como encapsular e executar código R em procedimentos armazenados.
++ Serialize e salvar modelos baseados em r em bancos de dados do SQL Server.
++ Saiba mais sobre os contextos de computação local e remoto e quando usá-los.
++ Explore as bibliotecas do Microsoft R para tarefas de aprendizado de máquina e ciência de dados.
 
-Para obter informações sobre os requisitos e a instalação, consulte [pré-requisitos](#bkmk_Prerequisites).
+<a name="bkmk_sqltutorials"></a>
 
-## <a name="bkmk_sqltutorials"></a>Tutoriais de R
+## <a name="r-quickstarts-and-tutorials"></a>Tutoriais e guias de início rápido R
 
-A menos que indicado de outra forma, os tutoriais foram desenvolvidos para o SQL Server 2016 R Services e devem trabalhar nos serviços de aprendizado de máquina do SQL Server de 2017 sem alterações significativas.
+| Link | Descrição |
+|------|-------------|
+| [Guia de início rápido: Usando o R no T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Primeiro de vários guias de início rápido, com este ilustrando a sintaxe básica para chamar uma função do R usando um editor de consultas T-SQL como o SQL Server Management Studio. |
+| [Tutorial: Aprenda a análise de R no banco de dados para cientistas de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Para desenvolvedores de R novos no SQL Server, este tutorial explica como executar tarefas comuns de dados ciência no SQL Server. Carregar e visualizar dados, treinar e salvar um modelo para o SQL Server e usar o modelo de análise preditiva. |
+| [Tutorial: Aprenda a análise de R no banco de dados para desenvolvedores do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Criar e implantar uma solução completa de R, usando apenas [!INCLUDE[tsql](../../includes/tsql-md.md)] ferramentas. Concentra-se sobre como mover uma solução para produção. Você aprenderá a encapsular o código R em um procedimento armazenado, salvar um modelo do R em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fazer chamadas parametrizadas para o modelo do R para previsão. |
+| [Tutorial: Aprofundamento RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Saiba como usar as funções nos pacotes RevoScaleR. Mover dados entre R e o SQL Server e o comutador contextos de computação para atender a uma determinada tarefa. Criar modelos e gráficos e movê-los entre seu ambiente de desenvolvimento e o servidor de banco de dados. |
 
-Todos os tutoriais fazem uso extensivo de recursos no pacote RevoScaleR para o SQL Server contextos de computação.
+<a name ="bkmk_samples"></a>
 
-+ [Mergulho profundo de ciência de dados com R e SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+## <a name="code-samples"></a>Exemplos de código
 
-  Saiba como usar as funções dos pacotes de RevoScaleR. Mover dados entre R e o SQL Server e o comutador de computação contextos de acordo com uma determinada tarefa. Criar modelos e gráficos e movê-los entre o ambiente de desenvolvimento e o servidor de banco de dados.
+| Link | Descrição |
+|------|-------------|
+| [Criar um modelo preditivo usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Saiba como uma empresa de aluguel de Esqui pode usar o aprendizado de máquina para prever o futuras locações, que ajuda a equipe e plano de negócios para atender às demandas futuras. |
+| [Executar o cliente clustering usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Use o aprendizado sem supervisão para clientes do segmento com base em dados de vendas. |
 
-  **Público-alvo:** para cientistas de dados ou desenvolvedores que já estão familiarizados com a linguagem R, e que desejam saber mais sobre os pacotes de R aprimorados e as funções no Microsoft R pela Revolution Analytics.
+## <a name="see-also"></a>Confira também
 
-  **Requisitos:** conhecimentos básicos sobre R. Acesso a um servidor com o SQL Server R Services ou serviços de aprendizado de máquina com R. Para obter ajuda da instalação, consulte [pré-requisitos](#bkmk_Prerequisites).
++ [Extensão do R para o SQL Server](../concepts/extension-r.md)
++ [Tutoriais de serviços do SQL Server Machine Learning](machine-learning-services-tutorials.md)
 
-+ [Análise de R no banco de dados para desenvolvedores em SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-  Criar e implantar uma solução completa de R, usando apenas o [!INCLUDE[tsql](../../includes/tsql-md.md)] ferramentas.
-
-  Se concentra na movimentação de uma solução em produção. Você aprenderá a encapsular o código R em um procedimento armazenado, salvar um modelo do R em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fazer chamadas parametrizadas para o modelo do R para previsão.
-
-  **Público-alvo:** para desenvolvedores do SQL, os desenvolvedores de aplicativos ou profissionais SQL que oferecem suporte a soluções de R e quiser saber como implantar modelos de R para o SQL Server.
-
-  **Requisitos:** nenhum ambiente R é necessária. Todo o código R é fornecido e você pode criar a solução completa usando apenas o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e inteligência de negócios familiares e ferramentas de desenvolvimento do SQL. No entanto, alguns dados de Conhecimento básico de R é útil.
-
-  Você deve ter acesso a um SQL Server com a linguagem R instalado e habilitado. Para obter ajuda da instalação, consulte [pré-requisitos](#bkmk_Prerequisites).
-
-+ [Início rápido: Usando o R em T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-
-  Este guia de início rápido aborda a sintaxe básica para usar o R no [!INCLUDE[tsql](../../includes/tsql-md.md)].
-
-  Saiba como chamar o tempo de execução de R de T-SQL, encapsular funções R no código SQL e executar um procedimento armazenado que salva a saída de R e modelos de R em uma tabela do SQL.
-
-  **Público-alvo:** para as pessoas que são novos para o recurso e para aprender os conceitos básicos de chamar o R de um procedimento armazenado.
-
-  **Requisitos:** nenhum conhecimento de R ou SQL é necessário. No entanto, é necessário que o SQL Server Management Studio ou outro cliente que possa se conectar a um banco de dados e executar o T-SQL. É recomendável livre [extensão MSSQL para o código do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) se você estiver familiarizado com consultas T-SQL.
-
-  Você também deve ter acesso a um servidor com o SQL Server R Services ou serviços de aprendizado de máquina com R já está habilitado. Para obter ajuda da instalação, consulte [pré-requisitos](#bkmk_Prerequisites).
-
-+ [Passo a passo de ponta a ponta sobre a ciência de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-
-  Demonstra o processo de ciência de dados do início ao fim, como obter dados e salvá-lo para o SQL Server, analisar os dados com R e criar gráficos.
-
-  Você aprenderá a mover elementos gráficos entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e R e engenharia de recurso de comparação no T-SQL com funções de R. Por fim, você aprenderá como usar o modelo de previsão em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a pontuação do lote e pontuação de única linha.
-
-  **Público-alvo:** para pessoas que estão familiarizadas com R e ferramentas de desenvolvedor, como SQL Server Management Studio.
-
-  **Requisitos:** você deve ter acesso a um ambiente de desenvolvimento de R e saber como executar comandos de R. Uso do PowerShell é necessário para baixar o conjunto de dados de táxi cidade de Nova York. Você deve ter acesso a um servidor com o SQL Server R Services ou serviços de aprendizado de máquina com R já está habilitado. Para obter ajuda da instalação, consulte [pré-requisitos](#bkmk_Prerequisites).
-
-## <a name ="bkmk_samples"></a>Exemplos de produtos
-
-Esses exemplos e demonstrações são fornecidas pela equipe de desenvolvimento do SQL Server para realçar as várias maneiras que você pode usar a análise incorporada em aplicativos do mundo real.
-
-+ [Criar um modelo de previsão usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
-
-  Saiba como uma empresa de aluguel ski pode usar o aprendizado de máquina para prever locações futuras, que ajuda a equipe e plano de negócios para atender às demandas futuras.
-
-+ [Executar o cliente clustering usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
-
-  Use o aprendizado sem supervisão aos clientes de segmento, com base em dados de vendas.
-
-## <a name="bkmk_Prerequisites"></a>Pré-requisitos
-
-Para usar esses tutoriais e exemplos, você deve instalar um dos seguintes produtos de servidor:
-
-+ SQL Server 2016 R Services (no banco de dados)
-  
-  Dá suporte a R. Certifique-se instalar a recursos de aprendizado de máquina e, em seguida, habilitar scripts externos.
-
-+ Serviços de aprendizado de máquina do SQL Server de 2017 (no banco de dados)
-  
-  Dá suporte a R ou Python. Você deve selecionar a recurso e o idioma para instalação de aprendizado de máquina e, em seguida, habilitar scripts externos.
-
-Depois de executar a instalação do SQL Server, não se esqueça destas etapas importantes:
-
-+ Habilitar o recurso de execução do script externo, executando `sp_configure 'external scripts enabled', 1`
-+ Reiniciar o servidor
-+ Verifique se o serviço que chama o tempo de execução externo tem as permissões necessárias
-+ Verifique se o logon do SQL ou a conta de usuário do Windows tem as permissões necessárias para se conectar ao servidor, a leitura de dados e para criar os objetos de banco de dados necessários para o exemplo
-
-Se você tiver problemas, consulte este artigo para alguns problemas comuns: [Solucionando problemas de serviços de aprendizado de máquina](../machine-learning-troubleshooting-faq.md)

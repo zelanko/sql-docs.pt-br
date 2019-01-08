@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145651"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542198"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -58,7 +58,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="examples"></a>Exemplos  
  Você pode experimentar usar os seguintes exemplos na janela de consulta MDX do SSMS usando o cubo do Adventure Works.  
   
- **Exemplo 1 – demonstra a sintaxe mínima**  
+ **Exemplo 1: demonstra a sintaxe mínima**  
   
  O primeiro exemplo mostra a sintaxe mínima para **DrilldownLevel**. O único argumento necessário é uma expressão definida. Observe que quando você executa essa consulta, você obtém o pai [todas as categorias] e os membros do próximo nível para baixo: Acessórios, Bicicletas, e assim por diante. Embora esse exemplo seja simple, ele demonstra a finalidade básica da **DrilldownLevel** função, que é detalhar para o próximo nível abaixo.  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Exemplo 4 – incluindo membros calculados**  
+ **Exemplo 4 - incluindo os membros calculados**  
   
  O último exemplo mostra um membro calculado, que aparece na parte inferior do resultado definido quando você adiciona o **include_calculated_members** sinalizador. Observe que o sinalizador é especificado como quarto parâmetro.  
   

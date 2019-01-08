@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089716"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371518"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
   Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
   
  Para obter informações adicionais sobre como usar modelos de clustering, consulte os seguintes tópicos:  
   
--   [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089716"
   
  A implementação da Microsoft fornece duas opções: EM evolutivo e não evolutivo. Por padrão, no EM evolutivo, os primeiros 50.000 registros são usados para propagar a verificação inicial. Se esse processo for bem-sucedido, o modelo só usará esses dados. Se não for possível ajustar o modelo com 50.000 registros, serão lidos mais 50.000. No EM não evolutivo, o conjunto de dados inteiro é lido independentemente do tamanho. Esse método pode criar clusters mais precisos, mas os requisitos de memória podem ser significativos. Como o EM evolutivo atua em um buffer local, a iteração através dos dados é muito mais rápida e o algoritmo usa muito melhor o cache de memória da CPU do que o EM não evolutivo. Além disso, o EM evolutivo é três vezes mais rápido do que o EM não evolutivo, mesmo que seja possível ajustar os dados na memória principal. Na maioria dos casos, a melhoria do desempenho não diminui a qualidade do modelo completo.  
   
- Para obter um relatório técnico que descreve a implementação do EM no algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, consulte [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)(Dimensionando clustering EM [Maximização de Expectativa] para bancos de dados grandes).  
+ Para obter um relatório técnico que descreve a implementação do EM no algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, consulte [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(Dimensionando clustering EM [Maximização de Expectativa] para bancos de dados grandes).  
   
 ### <a name="k-means-clustering"></a>Cluster K-Means  
  O cluster K-means é um método conhecido de atribuir a associação de clusters minimizando as diferenças entre os itens de um cluster e maximizando a distância entre os clusters. Em K-means, a palavra “means” (médio) refere-se ao *centroide* do cluster, que é um ponto de dados escolhido arbitrariamente e refinado de modo iterativo até representar a média real de todos os pontos de dados do cluster. O “K” refere-se a um número arbitrário de pontos que são usados para propagar o processo de cluster. O algoritmo K-means calcula as distâncias euclidianas quadradas entre os registros de dados de um cluster e o vetor que representa a média do cluster e é convertido em um conjunto final de K clusters quando essa soma atinge um valor mínimo.  
@@ -160,13 +160,13 @@ ms.locfileid: "48089716"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo dá suporte aos seguintes sinalizadores de modelagem. Você define sinalizadores de modelagem ao criar a estrutura de mineração ou o modelo de mineração. Os sinalizadores de modelagem especificam como os valores de cada coluna são controlados durante a análise.  
   
-|Sinalizador de modelagem|Description|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
+|MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|A coluna não pode conter um valor nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
   
 ## <a name="requirements"></a>Requisitos  
- Um modelo de clustering deve conter uma coluna de chave e colunas de entrada. Você também pode definir colunas de entrada como sendo previsíveis. As colunas definidas como `Predict Only` não são usados para criar clusters. A distribuição desses valores nos clusters é calculada após a criação dos clusters.  
+ Um modelo de clustering deve conter uma coluna de chave e colunas de entrada. Você também pode definir colunas de entrada como sendo previsíveis. As colunas definidas como `Predict Only` não são usadas para criar clusters. A distribuição desses valores nos clusters é calculada após a criação dos clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
@@ -182,6 +182,6 @@ ms.locfileid: "48089716"
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8b845336b032d377b113508f6d53b9602675435b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372378"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Adicionando conhecimento a uma base de dados de conhecimento
   Este tópico descreve as maneiras pelas quais você pode adicionar um conhecimento a uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Antes de executar operações de qualidade de dados, você tem que ter conhecimento sobre os dados. Para adquirir esse conhecimento, crie e mantenha uma base de dados de conhecimento de qualidade de dados e adicione a ela conhecimentos relacionados a um tipo específico de fonte de dados. A base de dados de conhecimento é um repositório de conhecimento sobre seus dados que permitem que você entenda seus dados e mantenha sua integridade.  
@@ -41,14 +41,14 @@ ms.locfileid: "51030163"
   
 -   Para obter mais informações na documentação, consulte [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
--   Para obter um vídeo que demonstra como executar a descoberta da base de dados de conhecimento, clique em [here](http://msdn.microsoft.com/sqlserver/hh323825.aspx).  
+-   Para obter um vídeo que demonstra como executar a descoberta da base de dados de conhecimento, clique em [here](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
 ##  <a name="ManageDomain"></a> Gerenciar valores de dados em um domínio  
  O DQS permite que você altere e aumente interativamente os metadados que são gerados pela atividade de descoberta da base de dados de conhecimento assistida por computador. Faça isso na atividade Gerenciamento de Domínio, onde é possível aplicar uma alteração a um valor de dados específico.  
   
 -   Para obter mais informações na documentação, consulte [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
--   Para obter um vídeo que demonstra como executar o gerenciamento de domínio, clique [aqui](http://msdn.microsoft.com/sqlserver/hh323825.aspx). Observe que, nesse vídeo, você pode alterar os valores de domínio na página Gerenciando Valores de Domínio do assistente de Descoberta da Base de Dados de Conhecimento. Também é possível executar essas etapas na página Valores de Domínio da atividade Gerenciamento de Domínio.  
+-   Para obter um vídeo que demonstra como executar o gerenciamento de domínio, clique [aqui](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Observe que, nesse vídeo, você pode alterar os valores de domínio na página Gerenciando Valores de Domínio do assistente de Descoberta da Base de Dados de Conhecimento. Também é possível executar essas etapas na página Valores de Domínio da atividade Gerenciamento de Domínio.  
   
 ##  <a name="DQSFile"></a> Importar um conhecimento de um arquivo .dqs  
  Você pode importar um domínio de um arquivo de dados .dqs para uma base de dados de conhecimento existente ou pode importar uma base de dados de conhecimento completa de um .dqs para uma nova base de dados de conhecimento. Para fazer isso, primeiro você precisa exportar um domínio ou base de dados de conhecimento existente para um arquivo .dqs. Um arquivo .dqs que contém um domínio inclui todos os dados de domínio, um arquivo .dqs que contém uma base de dados de conhecimento conterá todo as informações de base de dados de conhecimento, inclusive domínios e a política de correspondência.  

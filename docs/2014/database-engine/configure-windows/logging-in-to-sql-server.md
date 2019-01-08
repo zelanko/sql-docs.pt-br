@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
@@ -22,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4f3e9da57e718790ac071ebc1411ec8a33d23f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201776"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369308"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
   Você pode fazer o logon para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  
@@ -35,7 +34,7 @@ ms.locfileid: "48201776"
  Quando você faz o logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma ferramenta de administração gráfica, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é solicitado que você forneça o nome do servidor, um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha, se necessário. Se você fizer logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, não precisará fornecer um logon do SQL Server cada vez que acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa sua conta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para fazer o logon automaticamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução na autenticação de modo misto ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Modo de Autenticação do Windows) e você optar por fazer o logon usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário fornecer um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha. Quando possível, use a Autenticação do Windows.  
   
 > [!NOTE]  
->  Se você selecionou um agrupamento que diferencia maiúsculas e minúsculas ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também diferenciará maiúsculas e minúsculas.  
+>  Se você selecionou uma ordenação que diferencia maiúsculas e minúsculas ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também diferenciará maiúsculas e minúsculas.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>Formate para especificar o nome de SQL Server  
  Ao se conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a instância padrão (uma instância não nomeada), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância nomeada (como SQLEXPRESS), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Adicione uma barra e o nome da instância.  
@@ -83,9 +82,9 @@ WHERE session_id = @@SPID;
   
  Os recursos a seguir podem ajudá-lo a solucionar um problema de conexão.  
   
--   [Como solucionar problemas na conexão ao Mecanismo de Banco de Dados do SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Como solucionar problemas na conexão ao Mecanismo de Banco de Dados do SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Etapas para solucionar problemas de conectividade do SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Etapas para solucionar problemas de conectividade do SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Escolher um modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md)  

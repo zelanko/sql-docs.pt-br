@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608674"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591400"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +42,22 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **' * * * publicação '*  
+ [**@publication=**] **'**_publicação '_  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [**@rowcount_only=**] *rowcount_only*  
  Especifica se apenas a contagem de linhas da tabela deve ser retornada. *rowcount_only* está **smallint** e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: Quando um artigo for filtrado horizontalmente, uma operação de contagem de linhas é executada em vez de uma operação de soma de verificação.|  
+|**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: Quando um artigo é filtrado horizontalmente, uma operação de número de linhas é executada em vez de uma operação de soma de verificação.|  
 |**1** (padrão)|Só execute uma verificação de número de linhas.|  
-|**2**|Execute uma verificação de número de linhas e soma de verificação binária.<br /><br /> Observação: Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes versão 7.0, só uma validação de número de linhas é executada.|  
+|**2**|Execute uma verificação de número de linhas e soma de verificação binária.<br /><br /> Observação: Para os Assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 , só uma validação de número de linhas é executada.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  É o método usado para calcular a contagem de linhas. *full_or_fast* está **tinyint** e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
 |**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápido do que contar linhas na tabela atual. No entanto, porque [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é lentamente atualizado, o número de linhas pode não ser preciso.|  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Especifica se o Agente de Distribuição deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de replicação não desligará. Se **1**, o agente de replicação desligará após o último artigo é validado.  
   
- [ **@publisher** =] **'***publisher***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
+ [ **@publisher** =] **'**_publisher_**'**  
+ Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

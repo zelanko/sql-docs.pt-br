@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595646"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591180"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'***object_statement***'**  
- É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato *proprietário ***.*** objeto*.  
+ [  **@name =** ] **'**_object_statement_**'**  
+ É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato _proprietário_**.** _objeto_.  
   
  Se *object_statement* é uma instrução, ele pode ser uma instrução CREATE.  
   
- [  **@username =** ] **'***security_account***'**  
+ [  **@username =** ] **'**_security_account_**'**  
  É o nome da entidade de segurança para a qual são retornadas permissões. *security_account* está **sysname**, com um padrão NULL, que retorna todos os objetos de banco de dados atual. *security_account* deve existir no banco de dados atual.  
   
- [  **@grantorname =** ] **'***concessor***'**  
+ [  **@grantorname =** ] **'**_concessor_**'**  
  É o nome da entidade de segurança que concedeu permissões. *concessor* está **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
   
- [  **@permissionarea =** ] **'***tipo***'**  
+ [  **@permissionarea =** ] **'**_tipo_**'**  
  É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)**, com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -67,7 +67,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Proprietário**|**sysname**|Nome do proprietário do objeto.|  
 |**Objeto**|**sysname**|Nome do objeto.|  
@@ -108,7 +108,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>B. Listando as permissões de um usuário  
+### <a name="b-listing-the-permissions-for-a-user"></a>b. Listando as permissões de um usuário  
  O exemplo seguinte lista todas as permissões que usuário `Judy` tem no banco de dados atual.  
   
 ```  

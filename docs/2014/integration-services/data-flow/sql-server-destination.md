@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -19,12 +18,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375718"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
   O destino do SQL Server conecta-se a um banco de dados local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e efetua carregamentos de dados em massa em tabelas e modos de exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é possível usar o destino do SQL Server em pacotes que acessam um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor remoto. Em vez disso, os pacotes devem usar o destino OLE DB. Para obter mais informações, consulte [OLE DB Destination](ole-db-destination.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "48159882"
  Usuários que executam pacotes que incluem o destino do SQL Server precisam da permissão "Criar objetos globais". Você pode conceder esta permissão aos usuários usando a ferramenta Política de Segurança Local, aberta no menu **Ferramentas Administrativas** . Se você receber uma mensagem de erro ao executar um pacote que usa o destino do SQL Server, assegure-se de que a conta que executa o pacote tenha a permissão "Criar objetos globais".  
   
 ## <a name="bulk-inserts"></a>Inserções em massa  
- Se tentar usar o destino do SQL Server para carregar dados em massa em um banco de dados de um SQL Server remoto, você poderá ver uma mensagem de erro semelhante à seguinte: "Um registro OLE DB está disponível. Fonte: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrição: “Não foi possível fazer o carregamento em massa porque o objeto de mapeamento de arquivo SSIS 'Global\DTSQLIMPORT ' não pôde ser aberto. Erro de sistema operacional código 2 (O sistema não pode achar o arquivo especificado.). Certifique-se de estar acessando um servidor local via "segurança do Windows."  
+ Se você tentar usar o destino do SQL Server para carregar dados em massa em um banco de dados do SQL Server remoto, você poderá ver uma mensagem de erro semelhante à seguinte: "Um registro OLE DB está disponível. Origem: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrição: "Pode não carregar em massa porque o objeto de mapeamento de arquivo SSIS 'Global\DTSQLIMPORT' não pôde ser aberto. Erro de sistema operacional código 2 (O sistema não pode achar o arquivo especificado.). Certifique-se de estar acessando um servidor local via "segurança do Windows."  
   
  O destino do SQL Server oferece a mesma inserção de dados em alta velocidade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que a tarefa de Inserção em Massa fornece, porém, usando o destino do SQL Server, você pode aplicar transformações em dados de coluna antes de os dados serem carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -92,11 +91,11 @@ ms.locfileid: "48159882"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino do SQL Server**, clique em um dos seguintes tópicos:  
   
--   [Editor de destinos SQL &#40;página do Gerenciador de Conexão&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Editor de Destinos SQL &#40;página Gerenciador de Conexões&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Editor de destinos SQL &#40;página mapeamentos&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Editor de Destinos SQL &#40;página Mapeamentos&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor de destinos SQL &#40;página Avançado&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor de Destinos SQL &#40;página Avançado&#41;](../sql-destination-editor-advanced-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -118,11 +117,11 @@ ms.locfileid: "48159882"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=199482)(Você pode receber o erro “Não é possível preparar a inserção em massa do SSIS para a inserção de dados” em sistemas habilitados para UAC), em support.microsoft.com.  
+-   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482)(Você pode receber o erro “Não é possível preparar a inserção em massa do SSIS para a inserção de dados” em sistemas habilitados para UAC), em support.microsoft.com.  
   
--   Artigo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
+-   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
   
--   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
+-   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](data-flow.md)  

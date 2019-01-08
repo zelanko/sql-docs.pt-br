@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060426"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367758"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
   O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
@@ -113,7 +113,7 @@ ms.locfileid: "48060426"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como tendo dois estados possíveis: `Missing` e `Existing`. Um valor nulo é tratado como um `Missing` valor.  
+ Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Um valor nulo é tratado como `Missing`.  
   
  Aplica-se à coluna do modelo de mineração.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060426"
 ## <a name="requirements"></a>Requisitos  
  A tabela de casos deve ter uma coluna de ID de caso. Opcionalmente, a tabela de casos pode conter outras colunas que armazenam atributos sobre o caso.  
   
- O algoritmo MSC exige informações de sequência, armazenadas como uma tabela aninhada. A tabela aninhada deve ter uma única coluna Key Sequence. Um `Key Sequence` coluna pode conter qualquer tipo de dados que podem ser classificados, incluindo tipos de dados de cadeia de caracteres, mas a coluna deve conter valores exclusivos para cada caso. Além disso, antes de processar o modelo, você deve assegurar que a tabela de casos e a tabela aninhada sejam classificadas em ordem crescente na chave que relaciona as tabelas.  
+ O algoritmo MSC exige informações de sequência, armazenadas como uma tabela aninhada. A tabela aninhada deve ter uma única coluna Key Sequence. Uma coluna `Key Sequence` pode conter qualquer tipo de dados que possa ser armazenado, inclusive tipos de dados de cadeia de caracteres, mas a coluna deve conter valores exclusivos para cada caso. Além disso, antes de processar o modelo, você deve assegurar que a tabela de casos e a tabela aninhada sejam classificadas em ordem crescente na chave que relaciona as tabelas.  
   
 > [!NOTE]  
 >  Se você criar um modelo que use o algoritmo MSC, mas não use uma coluna de sequência, o modelo resultante não conterá nenhuma sequência, mas simplesmente clusterizará casos com base em outros atributos incluídos no modelo.  
@@ -137,15 +137,15 @@ ms.locfileid: "48060426"
   
 ## <a name="remarks"></a>Comentários  
   
--   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC não dá suporte ao uso de PMML para criar modelos de mineração.  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte ao detalhamento, ao uso de modelos de mineração OLAP e ao uso de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo msc](microsoft-sequence-clustering-algorithm.md)   
- [Exemplos de consulta de modelo de Clustering de sequência](clustering-model-query-examples.md)   
- [Mining Model Content para modelos de Clustering de sequência &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

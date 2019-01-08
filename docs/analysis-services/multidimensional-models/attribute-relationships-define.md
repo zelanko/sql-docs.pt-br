@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b97a8d3c28b4b7b012efe12f1e3469ca409834b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e49207e99887e13cdd5321821e7325b4a2dac7dc
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023033"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983957"
 ---
-# <a name="attribute-relationships---define"></a>Atributo relações - definir
+# <a name="attribute-relationships---define"></a>Relações de atributo – Definir
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os atributos representam o principal bloco de construção de uma dimensão. Uma dimensão contém um conjunto de atributos organizados com base em relações de atributo.  
   
@@ -30,13 +30,11 @@ ms.locfileid: "34023033"
   
 -   Resulta na seleção de agregações mais efetivas pelos algoritmos de design de agregação, contanto que as hierarquias definidas pelo usuário tenham sido definidas ao longo dos caminhos de relação.  
   
-    > [!NOTE]  
-    >  Para obter mais informações sobre a importância e implicações de definir e configurar relações de atributo, consulte a seção “Enhancing query performance” (Aprimorando o desempenho de consulta), no [SQL Server 2005 Analysis Services Performance Guide (Guia de Desempenho do SQL Server 2005 Analysis Services)](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="attribute-relationship-considerations"></a>Considerações de relação de atributo  
  Quando os dados subjacentes permitirem, também é necessário definir relações de atributo exclusivas entre atributos. Para definir relações de atributo exclusivas, use a guia **Relações de Atributo** do Designer de Dimensão.  
   
- Qualquer atributo que tenha uma relação de saída deve ter uma chave exclusiva relacionada ao respectivo atributo. Em outras palavras, um membro em um atributo de origem deve identificar um e somente um membro em um atributo relacionado. Por exemplo, considere a relação Cidade -> Estado. Nesta relação, o atributo de origem é Cidade e o atributo relacionado é Estado. O atributo de origem é o lado “muitos” e o lado relacionado é o lado “um” da relação muitos para um. A chave para o atributo de origem seria Cidade + Estado. Para obter mais informações, consulte [Criar, modificar ou excluir uma relação de atributo](../../analysis-services/multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md).  
+ Qualquer atributo que tenha uma relação de saída deve ter uma chave exclusiva relacionada ao respectivo atributo. Em outras palavras, um membro em um atributo de origem deve identificar um e somente um membro em um atributo relacionado. Por exemplo, considere a relação Cidade -> Estado. Nesta relação, o atributo de origem é Cidade e o atributo relacionado é Estado. O atributo de origem é o lado "muitos" e o lado relacionado é o lado "um" da relação muitos-para-um. A chave para o atributo de origem seria Cidade + Estado. Para obter mais informações, consulte [Criar, modificar ou excluir uma relação de atributo](../../analysis-services/multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md).  
   
  Para obter mais informações sobre as propriedades de uma relação de atributo, consulte [Configurar propriedades de relação de atributo](../../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md).  
   
@@ -44,6 +42,6 @@ ms.locfileid: "34023033"
 >  Definir incorretamente relações de atributo pode causar resultados de consulta inválidos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Relações de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relações de Atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365778"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
   Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
@@ -92,19 +92,19 @@ ms.locfileid: "48218216"
   
  Examine [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql), pois esse procedimento armazenado de sistema desempenha uma função importante nos níveis de condição de falha.  
   
-|Nível|Condição|Description|  
+|Nível|Condição|Descrição|  
 |-----------|---------------|-----------------|  
 |0|Nenhum failover ou reinicialização automática|Indica que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha. Esse nível destina-se apenas a fins de manutenção do sistema.|  
 |1|Failover ou reinicialização quando o servidor estiver inativo|Indica que uma reinicialização ou failover de servidor será disparado se a seguinte condição for gerada:<br /><br /> O serviço SQL Server está inativo.|  
 |2|Failover ou reinicialização em caso de servidor sem resposta|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).|  
-|3*|Failover ou reinicialização em caso de erros críticos de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.|  
-|4|Failover ou reinicialização em caso de erros moderados de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de recurso’.|  
-|5|Failover ou reinicialização em qualquer condição de falha qualificada|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de sistema’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de recurso’.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna ‘erro de processamento de consulta’.|  
+|3*|Failover ou reinicialização em caso de erros críticos de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.|  
+|4|Failover ou reinicialização em caso de erros moderados de servidor|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de recurso'.|  
+|5|Failover ou reinicialização em qualquer condição de falha qualificada|Indica que uma reinicialização ou failover de servidor será disparado uma destas condições for gerada:<br /><br /> O serviço SQL Server está inativo.<br /><br /> A instância do SQL Server não está respondendo (a DLL do Recurso não pode receber dados de sp_server_diagnostics nas configurações de HealthCheckTimeout).<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de sistema'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'erro de recurso'.<br /><br /> O procedimento armazenado de sistema sp_server_diagnostics retorna 'query_processing error'.|  
   
  *Valor padrão  
   
 ####  <a name="respond"></a> Respondendo a falhas  
- Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para obter mais informações sobre essas configurações, consulte [\<Recursos> Propriedades: guia Políticas](http://technet.microsoft.com/library/cc725685.aspx).  
+ Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para obter mais informações essas configurações, consulte [ \<recursos > Propriedades: Guia políticas](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Para obter mais informações sobre como manter a integridade do quórum, veja [Configuração de modos de quorum e votação do WSFC &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

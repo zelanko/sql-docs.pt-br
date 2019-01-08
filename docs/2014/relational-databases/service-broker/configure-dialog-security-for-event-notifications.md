@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
@@ -12,12 +12,12 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359518"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar segurança de caixa de diálogo para notificações de evento
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser configurada para notificações de eventos que enviam mensagens a um agente de serviços em um servidor remoto. A segurança de diálogo deve ser configurada manualmente, de acordo com o modelo de segurança total de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . O modelo de segurança total habilita criptografia e decodificação de mensagens enviadas para e de servidores remotos. Embora as notificações de eventos sejam enviadas em uma única direção, outras mensagens, como erros, também são retornadas para a direção oposta.  
@@ -28,11 +28,11 @@ ms.locfileid: "48191396"
 > [!IMPORTANT]  
 >  Todos os certificados devem ser criados com datas válidas de início e de validade.  
   
- **Etapa 1: Estabeleça um número da porta de TCP e o nome do serviço de destino.**  
+ **Etapa 1: Estabeleça o nome do serviço um TCP porta número e de destino.**  
   
  Estabeleça a porta de TCP pela qual o servidor de origem e o servidor de destino receberão mensagens. Você também deve determinar o nome do serviço de destino.  
   
- **Etapa 2: Configure criptografia e compartilhamento de certificados para autenticação em nível de banco de dados.**  
+ **Etapa 2: Configure a criptografia e compartilhamento de certificados para autenticação em nível de banco de dados.**  
   
  Efetue as ações abaixo nos servidores de origem e de destino.  
   
@@ -52,20 +52,20 @@ ms.locfileid: "48191396"
 |Servidor de origem|Servidor de destino|  
 |-------------------|-------------------|  
 |[Crie um certificado](/sql/t-sql/statements/create-certificate-transact-sql) a partir do arquivo de backup do certificado de destino, especificando o usuário do banco de dados de destino como o proprietário.|Crie um certificado a partir do arquivo de backup do certificado de origem, especificando o usuário do banco de dados de origem como o proprietário.|  
-|[Conceda permissão](/sql/t-sql/statements/grant-transact-sql) para criar a notificação de eventos para o usuário do banco de dados de origem. Para obter mais informações sobre essa permissão, consulte [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql).|Conceda a permissão REFERENCES ao usuário do banco de dados de destino no contrato de notificações de eventos existentes do [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Conceda permissão](/sql/t-sql/statements/grant-transact-sql) para criar a notificação de eventos para o usuário do banco de dados de origem. Para obter mais informações sobre essa permissão, consulte [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql).|Conceda a permissão REFERENCES ao usuário do banco de dados de destino no contrato de notificações de eventos existentes do [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Crie uma associação de serviço remoto](/sql/t-sql/statements/create-remote-service-binding-transact-sql) ao serviço de destino e especifique as credenciais do usuário do banco de dados de destino. A associação do serviço remoto garante que a chave pública no certificado de propriedade do usuário do banco de dados de origem autentique as mensagens enviadas ao servidor de destino.|[Conceda](/sql/t-sql/statements/grant-transact-sql) permissões CREATE QUEUE, CREATE SERVICE e CREATE SCHEMA ao usuário do banco de dados de destino.|  
 ||Caso ainda não esteja conectado ao banco de dados como usuário do banco de dados de destino, faça-o agora.|  
 ||[Crie uma fila](/sql/t-sql/statements/create-queue-transact-sql) para receber as mensagens de notificação de eventos e [crie um serviço](/sql/t-sql/statements/create-service-transact-sql) para entregar as mensagens.|  
 ||[Conceda permissão SEND](/sql/t-sql/statements/grant-transact-sql) no serviço de destino ao usuário do banco de dados de origem.|  
 |Forneça o identificador do agente de serviços do banco de dados de origem para o servidor de destino. Esse identificador pode ser obtido consultando-se a coluna **service_broker_guid** da exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . Para uma notificação de eventos de nível de servidor, use o identificador do service broker do **msdb**.|Forneça o identificador do agente de serviços do banco de dados de destino para o servidor de origem.|  
   
- **Etapa 4: Crie rotas e configure autenticação em nível de servidor.**  
+ **Etapa 4: Criar rotas e configure autenticação em nível de servidor.**  
   
  Efetue as ações abaixo nos servidores de origem e de destino.  
   
 |Servidor de origem|Servidor de destino|  
 |-------------------|-------------------|  
-|[Crie uma rota](/sql/t-sql/statements/create-route-transact-sql) para o serviço de destino e especifique o identificador do service broker do banco de dados de destino e o número da porta de TCP estabelecido.|Crie uma rota para o serviço de origem e especifique o identificador do agente de serviços do banco de dados de origem e o número de porta de TCP estabelecido. Para especificar o serviço de origem, use o seguinte serviço fornecido: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Crie uma rota](/sql/t-sql/statements/create-route-transact-sql) para o serviço de destino e especifique o identificador do service broker do banco de dados de destino e o número da porta de TCP estabelecido.|Crie uma rota para o serviço de origem e especifique o identificador do agente de serviços do banco de dados de origem e o número de porta de TCP estabelecido. Para especificar o serviço de origem, use o seguinte serviço fornecido: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Mude para o banco de dados **mestre** para configurar a autenticação no nível de servidor.|Mude para o banco de dados **mestre** para configurar a autenticação no nível de servidor.|  
 |Se não existir uma chave mestra para o banco de dados de **mestre** , [crie uma chave mestra](/sql/t-sql/statements/create-master-key-transact-sql).|Se não existir uma chave mestra para o banco de dados de **mestre** , crie uma chave mestra.|  
 |[Crie um certificado](/sql/t-sql/statements/create-certificate-transact-sql) que autentique o banco de dados.|Crie um certificado que autentique o banco de dados.|  

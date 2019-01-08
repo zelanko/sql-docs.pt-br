@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129127"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365768"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -57,7 +56,7 @@ ms.locfileid: "48129127"
   
  De modo contrário, às vezes você pode desejar que os pacotes pai e filho falhem em conjunto como uma unidade, ou que não incorra a sobrecarga adicional de outro processo. Por exemplo, se um processo filho falhar e o processamento subsequente no processo pai do pacote depender do sucesso do processo filho, o pacote filho deveria ser executado no processo do pacote pai.  
   
- Por padrão, a propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False`, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `True`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como `True`, você não pode depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../install-windows/install-integration-services.md)  
+ Por padrão, a propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False`, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `True`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como `True`, você não poderá depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Estendendo transações  
  A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](../inherited-transactions.md).  
@@ -98,14 +97,14 @@ ms.locfileid: "48129127"
  Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Acessando variáveis de pacote pai  
- Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Quando você insere o nome da variável de pacote pai na página de **Script** no **Editor da Tarefa Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+ Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Ao inserir o nome da variável de pacote pai na página **Script** do **Editor da Tarefa de Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: Acessando variáveis em um pacote pai](https://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurando a tarefa Executar Pacote  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa Executar Pacote](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -117,8 +116,8 @@ ms.locfileid: "48129127"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog [SSIS: você deve executar pacotes filho em processo ou out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Você deve executar pacotes filho em processo ou fora de processo? ](https://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
   
--   Entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
   

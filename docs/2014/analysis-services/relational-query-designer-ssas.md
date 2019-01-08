@@ -13,12 +13,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e0c556930dc843f9a512f09f26ae9187dcd0c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374658"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
   O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem recuperados de bancos de dados relacionais do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -83,11 +83,11 @@ ms.locfileid: "48132506"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
   
- Para obter mais informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para obter mais informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|Description|  
+|Agregado|Descrição|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Count|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48132506"
 |Max|Retorna o valor máximo em um grupo. Implementa a agregação SQL MAX.|  
 |StDev|Retorna o desvio padrão estatístico de todos os valores de um grupo. Implementa a agregação SQL STDEV.|  
 |StDevP|Retorna o desvio padrão estatístico para a população de todos os valores da expressão especificada de um grupo. Implementa a agregação SQL STDEVP.|  
-|SUM|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
+|Sum|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
 |Var|Retorna a variação estatística de todos os valores do grupo. Implementa a agregação SQL VAR.|  
 |VarP|Retorna a variação estatística para a população de todos os valores do grupo. Implementa a agregação SQL VARP.|  
 |Avg Distinct|Retorna médias exclusivas. Implementa uma combinação da agregação AVG e da palavra-chave DISTINCT.|  
@@ -123,7 +123,7 @@ ms.locfileid: "48132506"
 -   **Detecção Automática** Alterna o recurso de detecção automática que cria automaticamente relações entre tabelas. Se a detecção automática estiver ativada, o designer de consulta criará relações a partir de chaves estrangeiras nas tabelas; caso contrário, você deverá criar as relações manualmente. Quando você seleciona tabelas no painel **Exibição do banco de dados** , a detecção automática tenta criar relações automaticamente. Se você ativar a detecção automática depois de criar junções manualmente, essas junções serão descartadas.  
   
     > [!IMPORTANT]  
-    >  Ao usar com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] os metadados necessários à criação de junções não são fornecidos e as relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
+    >  Durante o uso com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , os metadados necessários à criação de junções não são fornecidos e as relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
   
 -   **Adicionar Relação** Adiciona uma relação à lista de **Relações** .  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48132506"
   
 -   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com...  
+-   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 -   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "48132506"
   
  Esses dados representam valores da fonte de dados no momento em que você executa a consulta.  
   
- A ordem de classificação do conjunto de resultados é determinada pela ordem em que os dados são recuperados da fonte de dados. A ordem de classificação pode ser alterada com a modificação direta do texto da consulta. Para obter mais informações sobre como usar a cláusula GROUP BY em uma consulta, consulte "GROUP BY (Transact-SQL)" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ A ordem de classificação do conjunto de resultados é determinada pela ordem em que os dados são recuperados da fonte de dados. A ordem de classificação pode ser alterada com a modificação direta do texto da consulta. Para obter mais informações sobre como usar a cláusula GROUP BY em uma consulta, consulte "GROUP BY (Transact-SQL)" nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consultas gráficas fornece os botões a seguir para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  
@@ -199,7 +199,7 @@ ms.locfileid: "48132506"
 ### <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte.|  
@@ -263,6 +263,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- Quando você insere o nome da tabela `ContactType`, é o equivalente a criar a instrução SQL `SELECT * FROM ContactType`.  
+ Quando você insere o nome da tabela `ContactType`, isso equivale a criar a instrução SQL `SELECT * FROM ContactType`.  
   
   

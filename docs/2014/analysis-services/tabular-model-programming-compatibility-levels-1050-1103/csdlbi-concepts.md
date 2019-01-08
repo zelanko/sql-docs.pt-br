@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146512"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376998"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  
   
  Esta seção explica como a representação CSDLBI é mapeada para modelos de dados (de tabela e multidimensionais) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], juntamente com exemplos de cada tipo de modelo.  
   
- Exemplos obtidos no banco de dados de exemplo AdventureWorks são usados para ilustrar esses conceitos, disponíveis em Codeplex. Para obter mais informações sobre os exemplos, consulte [exemplos do Adventure Works para SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
+ Exemplos obtidos no banco de dados de exemplo AdventureWorks são usados para ilustrar esses conceitos, disponíveis em Codeplex. Para obter mais informações sobre os exemplos, consulte [exemplos do Adventure Works para SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Estrutura de um modelo de tabela na CSDLBI  
  Um documento CSDLBI que descreve um modelo de relatório e seus dados começa com a instrução xsd, seguida pela definição de um modelo.  
@@ -125,27 +125,27 @@ ms.locfileid: "50146512"
 ## <a name="additions-to-support-multidimensional-models"></a>Adições para oferecer suporte aos modelos multidimensionais  
  A versão 1.0 das anotações da CSDLBI oferecia suporte apenas a modelos de tabela. Na versão 1.1, foi adicionado suporte para modelos multidimensionais (cubos OLAP) criados usando ferramentas tradicionais de desenvolvimento de BI. Portanto, agora você pode emitir uma solicitação XML para um modelo multidimensional e receber uma definição CSDLBI do modelo, para uso em relatórios.  
   
- **Cubos:** um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados tabular pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
+ **Cubos:** Um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados tabular pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
   
  De qualquer forma, a representação de um cubo é muito semelhante a de um banco de dados modelo de tabela. O nome do cubo e o cubo correspondem ao nome do banco de dados de tabela e ao identificador do banco de dados.  
   
- **Dimensões:** uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que mesmo não incluída em uma perspectiva, uma dimensão incluída no modelo será representada na saída da CSDL, marcada como `Hidden`.  
+ **Dimensões:** Uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que mesmo não incluída em uma perspectiva, uma dimensão incluída no modelo será representada na saída da CSDL, marcada como `Hidden`.  
   
- **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspectivas:** Um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hierarquias:** hierarquias têm suporte e são representadas na CSDLBI como um conjunto de níveis.  
+ **Hierarquias:** Hierarquias têm suporte e são representadas na CSDLBI como um conjunto de níveis.  
   
- **Membros:** o suporte para o membro padrão foi adicionado e valores padrão são automaticamente adicionados à saída da CSDLBI.  
+ **Membros:** Foi adicionado suporte para o membro padrão e valores padrão são automaticamente adicionados à saída da CSDLBI.  
   
- **Membros calculados:** modelos multidimensionais dão suporte a membros calculados para filhos de **todos os** com um único membro real.  
+ **Membros calculados:** Modelos multidimensionais dão suporte a membros calculados para filhos de **todos os** com um único membro real.  
   
- **Atributos de dimensão:** na saída da CSDLBI, atributos de dimensão têm suporte e automaticamente marcados como não agregável.  
+ **Atributos de dimensão:** Na saída da CSDLBI, os atributos de dimensão são tem suporte e automaticamente marcados como não agregável.  
   
  **KPIs:** KPIs tinham suporte na versão 1.1 da CSDLBI, mas a representação foi alterada. Antes, um KPI era uma propriedade de uma medida. Na versão 1.1, o elemento KPI pode ser adicionado a uma medida  
   
- **Novas propriedades:** atributos adicionais foram adicionados para dar suporte a modelos DirectQuery.  
+ **Novas propriedades:** Atributos adicionais foram adicionados para dar suporte a modelos DirectQuery.  
   
- **Limitações:** não há suporte para a segurança da célula.  
+ **Limitações:** Não há suporte para a segurança da célula.  
   
 ## <a name="see-also"></a>Consulte também  
  [Anotações CSDLBI &#40;CSDL para Business Intelligence&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

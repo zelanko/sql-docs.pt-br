@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137609"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364768"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório, define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  
@@ -46,7 +46,7 @@ ms.locfileid: "48137609"
   
  A tabela a seguir exibe os ícones da barra de ferramentas do painel **Mapa** .  
   
-|Símbolo|Description|Quando usar|  
+|Símbolo|Descrição|Quando usar|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistente de Camada do Mapa|Para adicionar uma camada usando um assistente, clique em **Assistente de nova camada**.|  
 |![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Adicionar Camada|Para adicionar uma camada manualmente, clique em **Adicionar Camada**e clique no tipo de camada do mapa a ser adicionada.|  
@@ -57,7 +57,7 @@ ms.locfileid: "48137609"
   
  Na parte inferior do painel Mapa fica a área de exibição de Mapa. Para alterar o centro ou as opções de zoom do mapa, use as teclas de direção para ajustar o centro do visor e o controle deslizante para ajustar o nível de zoom.  
   
- Para obter mais informações sobre camadas, consulte [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre camadas, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137609"
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
-2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **Ponto**, **Linha**ou **Polígono**.  
+2.  Na barra de ferramentas, clique o **Adicionar camada** botão e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **Ponto**, **linha**, ou **polígono**.  
   
     > [!NOTE]  
     >  Embora seja possível adicionar uma camada do mapa e configurá-la manualmente, é recomendável usar o assistente de camada do mapa para adicionar novas camadas. Para iniciar o assistente por meio da barra de ferramentas do painel Mapa, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -125,9 +125,9 @@ ms.locfileid: "48137609"
   
 1.  Selecione **Geral** na caixa de diálogo **Propriedades do Ponto do Mapa** para alterar as opções de rótulo, dica de ferramenta e tipo de marcador dos seguintes elementos do mapa:  
   
-    -   Todos os pontos dinâmicos ou inseridos em uma camada de ponto. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos substituem essas opções. Para substituir as opções para um ponto inserido específico, use o [Map Embedded Point Properties Dialog Box, marcador](../map-embedded-point-properties-dialog-box-marker.md) página.  
+    -   Todos os pontos dinâmicos ou inseridos em uma camada de ponto. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos substituem essas opções. Para substituir as opções de um ponto inserido específico, use a página [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) .  
   
-    -   O ponto central de todos os polígonos dinâmicos ou inseridos em uma camada de polígono. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos centrais substituem essas opções. Para substituir as opções de um ponto central específico, use a página [Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador](../map-embedded-point-properties-dialog-box-marker.md).  
+    -   O ponto central de todos os polígonos dinâmicos ou inseridos em uma camada de polígono. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos centrais substituem essas opções. Para substituir as opções de um ponto central específico, use a página [Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador](../map-embedded-point-properties-dialog-box-marker.md) .  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137609"
 4.  Em **Nome do arquivo**, digite o local de um Arquivo de Forma ou clique em **Procurar** para selecionar um Arquivo de Forma ESRI.  
   
     > [!NOTE]  
-    >  Se o Arquivo de Forma estiver em seu computador local, os dados espaciais serão inseridos na definição de relatório. Para recuperar os dados dinamicamente quando o relatório for processado, carregue o arquivo ESRI .shp e seu arquivo de suporte .dbf no servidor de relatório. Para obter mais informações, consulte "Como carregar um arquivo ou relatório (Gerenciador de Relatórios)" na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+    >  Se o Arquivo de Forma estiver em seu computador local, os dados espaciais serão inseridos na definição de relatório. Para recuperar os dados dinamicamente quando o relatório for processado, carregue o arquivo ESRI .shp e seu arquivo de suporte .dbf no servidor de relatório. Para obter mais informações, consulte "como: Carregar um arquivo ou relatório (Gerenciador de relatórios) "no [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137609"
 2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique em **Camada Lado a Lado**.  
   
     > [!NOTE]  
-    >  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 3.  Clique com o botão direito do mouse na camada lado a lado no painel Mapa e clique em **Propriedades da Peça**.  
   

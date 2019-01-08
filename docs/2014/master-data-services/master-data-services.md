@@ -11,33 +11,33 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc6765ae4fe00fd2f17317c62a5569825f8b973
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3794e92f2463ed82e19f5ba8a80c6df483e9ade5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174626"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369038"
 ---
 # <a name="master-data-services"></a>Master Data Services
   O[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) é a solução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para gerenciamento de dados mestre. O MDM (gerenciamento de dados mestre) descreve os esforços de uma organização para descobrir e definir listas não transacionais de dados, visando compilar listas mestre sustentáveis. Um projeto MDM em geral inclui uma avaliação e a reestruturação de processos comerciais internos, além da implementação de tecnologia de MDM. O resultado de uma solução MDM com êxito são dados confiáveis e centralizados que podem ser analisados, resultando em melhores decisões comerciais.  
   
- Com o treinamento certo, é provável que um maior número de usuários comerciais consigam implementar uma solução [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Além disso, você pode usar o MDS para gerenciar qualquer domínio; ele não se destina estritamente a gerenciar listas de clientes, produtos ou contas. Quando o MDS é instalado pela primeira vez, ele não inclui a estrutura para nenhum domínio, ou seja, você define os domínios necessários por meio da criação de modelos para eles.  
+ Com o treinamento certo, é provável que um maior número de usuários comerciais consigam implementar uma solução [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Além disso, você pode usar o MDS para gerenciar qualquer domínio; ele não se destina estritamente a gerenciar listas de clientes, produtos ou contas. Quando o MDS é instalado pela primeira vez, ele não inclui a estrutura para todos os domínios-você define os domínios que você precisa com a criação de modelos para eles.  
   
  Outros recursos do Master Data Services incluem hierarquias, segurança granular, transações, controle de versão de dados e regras de negócios.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui os seguintes componentes e ferramentas:  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] bancos de dados e aplicativos da web.  
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar bancos de dados e aplicativos Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo web que você usa para executar tarefas administrativas (como criar uma regra de negócios ou modelo) e que os usuários acessam para atualizar dados.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo Web usado para executar tarefas administrativas (como a criação de um modelo ou de uma regra de negócios) e acessado por usuários para atualizar dados.  
   
 -   MDSModelDeploy.exe, uma ferramenta usada para criar pacotes de seus objetos de modelo e dados para que você possa implantá-los em outros ambientes.  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] serviço Web, que os desenvolvedores podem usar para estender ou desenvolver soluções personalizadas para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   O serviço Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], que os desenvolvedores podem usar para estender ou desenvolver soluções personalizadas para o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 -   O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], que você usa para gerenciar dados e criar novas entidades e atributos.  
   
- Para obter um resumo dos recursos do MDS, consulte o [Portal de serviços de dados do SQL Server Master](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ Para obter um resumo dos recursos do MDS, consulte o [Portal de serviços de dados do SQL Server Master](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  

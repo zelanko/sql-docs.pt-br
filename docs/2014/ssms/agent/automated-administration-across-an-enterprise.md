@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181896"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210175"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
   A automatização de administração em várias instâncias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamada *administração multisservidor*. Use a administração multisservidor para fazer o seguinte:  
@@ -64,7 +64,7 @@ ms.locfileid: "48181896"
  Contém informações sobre como o uso contas não administrativas do Windows ou a conta Sistema Local para o serviço de agente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode afetar os ambientes multisservidores.  
   
  [Definir opções de criptografia em servidores de destino](set-encryption-options-on-target-servers.md)  
- Contém informações sobre como definir a subchave de Registro MsxEncryptChannelOptions do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent em servidores de destino.  
+ Contém informações sobre como definir a subchave de Registro de agente MsxEncryptChannelOptions do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em servidores de destino.  
   
  [Gerenciar trabalhos em toda a empresa](manage-jobs-across-an-enterprise.md)  
  Contém informações sobre a verificação do status de trabalho, alteração de servidores de destino para os trabalhos, sincronização de relógios do servidor de destino e sondagem de servidores mestres para o status de trabalho atual.  

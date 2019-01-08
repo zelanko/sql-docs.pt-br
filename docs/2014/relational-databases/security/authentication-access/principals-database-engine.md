@@ -28,15 +28,15 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084546"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371208"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
-  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
+  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade de segurança depende do escopo da definição da entidade de segurança: Windows, servidor, banco de dados; e se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
   
  **Entidades no nível do Windows**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48084546"
  Cada usuário do banco de dados pertence à função do banco de dados público. Quando permissões específicas não são concedidas ou são negadas a um usuário em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto seguro.  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA e sys  
- Todo o banco de dados inclui duas entidades exibidas como usuários em exibições do catálogo: INFORMATION_SCHEMA e sys. Essas entidades são exigidas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Elas não são entidades, tampouco podem ser modificadas ou descartadas.  
+ Cada banco de dados inclui duas entidades exibidas como usuários em exibições do catálogo: Information_schema e sys. Essas entidades são exigidas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Elas não são entidades, tampouco podem ser modificadas ou descartadas.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Logons do SQL Server com base em certificado  
  Entidades de servidor com nomes entre duas marcas hash (##) são somente para uso interno do sistema. As entidades a seguir são criadas com base em certificados quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é instalado e não devem ser excluídas.  
@@ -88,7 +88,7 @@ ms.locfileid: "48084546"
  Cada banco de dados inclui um **convidado**. As permissões concedidas ao usuário **convidado** são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O **convidado** usuário não pode ser descartado, mas ele pode ser desabilitado Revogando sua do `CONNECT` permissão. O `CONNECT` permissão pode ser revogada executando `REVOKE CONNECT FROM GUEST` dentro de qualquer banco de dados que não seja mestre ou tempdb.  
   
 ## <a name="client-and-database-server"></a>Servidor de banco de dados e cliente  
- Por definição, um cliente e um servidor de banco de dados são entidades de segurança e podem ser protegidos. Essas entidades podem ser autenticadas mutuamente antes que uma conexão de rede segura seja estabelecida. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) protocolo de autenticação, que define como os clientes interagem com um serviço de autenticação de rede.  
+ Por definição, um cliente e um servidor de banco de dados são entidades de segurança e podem ser protegidos. Essas entidades podem ser autenticadas mutuamente antes que uma conexão de rede segura seja estabelecida. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) protocolo de autenticação, que define como os clientes interagem com um serviço de autenticação de rede.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir são incluídos nesta seção dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

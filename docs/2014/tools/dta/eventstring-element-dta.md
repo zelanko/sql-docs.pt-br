@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769508"
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
   Especifica uma carga de trabalho de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] diretamente no arquivo de entrada XML.  
@@ -38,23 +37,23 @@ ms.locfileid: "48156016"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
-|`Weight`|Opcional. Especifica o fator de peso da consulta (um fator de importância) para o evento especificado. Use um `float` tipo de dados para especificar o peso. Por exemplo, `Weight`="100.01". O valor mínimo que você pode especificar para `Weight` é "0."|  
+|`Weight`|Opcional. Especifica o fator de peso da consulta (um fator de importância) para o evento especificado. Use um tipo de dados `float` para especificar o peso. Por exemplo, `Weight`="100.01". O valor mínimo que você pode especificar para `Weight` é "0."|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, tamanho é ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Exigido uma vez se não houver outro tipo de carga de trabalho especificada. Você deve especificar um `EventString`, um `File`, ou uma `Database` elemento filho para o `Workload` pai, mas apenas um tipo pode ser usado. Por exemplo, se você especificar uma carga de trabalho com o `EventString` elemento, em seguida, você também não é possível especificar uma carga de trabalho com o `File` elemento no mesmo arquivo de entrada XML.|  
+|**Ocorrência**|Exigido uma vez se não houver outro tipo de carga de trabalho especificada. É preciso especificar um elemento filho `EventString`, `File` ou  `Database` para o pai `Workload`, mas só pode ser usado um tipo. Por exemplo, se for especificada uma carga de trabalho com o elemento `EventString`, não será possível especificar uma carga de trabalho com o elemento `File` no mesmo arquivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md)|  
+|**Elemento pai**|[Elemento Workload &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

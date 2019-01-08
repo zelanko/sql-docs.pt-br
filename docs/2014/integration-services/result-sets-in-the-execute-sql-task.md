@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366308"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados na tarefa Executar SQL
   Em um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se um conjunto de resultados será retornado à tarefa Executar SQL dependerá do tipo de comando SQL usado pela tarefa. Por exemplo, uma instrução SELECT normalmente retorna um conjunto de resultados, mas uma instrução INSERT não.  
@@ -58,18 +58,18 @@ ms.locfileid: "48053357"
   
  Quando você mapeia uma variável para um conjunto de resultados com o tipo de conjunto de resultados **Linha simples** , a variável deve ter um tipo de dados compatível com o tipo de dados da coluna que o conjunto de resultados contém. Por exemplo, um conjunto de resultados que contém uma coluna com um tipo de dados `String` não pode ser mapeado para uma variável com um tipo de dados numérico. Quando você define o **TypeConversionMode** propriedade `Allowed`, a tarefa Executar SQL tentará converter o parâmetro de saída e resultados para os dados de tipo da variável os resultados da consulta são atribuídos.  
   
- Um conjunto de resultados XML somente pode ser mapeado para uma variável com o tipo de dados `String` ou `Object`. Se a variável tiver o `String` de tipo de dados, a tarefa Executar SQL retorna uma cadeia de caracteres e o código-fonte XML podem consumir os dados XML. Se a variável tiver o `Object` tipo de dados, a tarefa Executar SQL retorna um objeto de modelo de objeto de documento (DOM).  
+ Um conjunto de resultados XML somente pode ser mapeado para uma variável com o tipo de dados `String` ou `Object`. Se a variável tiver o tipo de dados `String`, a tarefa Executar SQL retorna uma cadeia de caracteres e a fonte XML pode consumir os dados XML. Se a variável tiver o tipo de dados `Object`, a tarefa Executar SQL retornará um objeto do Modelo de Objeto de Documento (DOM).  
   
- Um **conjunto de resultados completo** deve ser mapeado para uma variável do `Object` tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](http://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
+ Um **conjunto de resultados completo** deve ser mapeado para uma variável do `Object` tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](https://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
   
  A tabela a seguir resume os tipos de dados de variáveis que podem ser mapeadas para conjuntos de resultados.  
   
 |Tipo de conjunto de resultados|Tipo de dados da variável|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
-|Conjunto de resultados completo|`Object`|Se a tarefa usa um Gerenciador de conexão nativo, inclusive os gerenciadores de conexão ADO, OLE DB, Excel e ODBC, o objeto retornado será ADO `Recordset`.<br /><br /> Se a tarefa usa um Gerenciador de conexão gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão e, em seguida, o objeto retornado é um `System.Data.DataSet`.<br /><br /> Você pode usar uma tarefa Script para acessar o `System.Data.DataSet` do objeto, conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Conjunto de resultados completo|`Object`|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `Recordset` ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)], o objeto retornado será um `System.Data.DataSet`.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto `System.Data.DataSet` , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Se a tarefa usa um Gerenciador de conexão nativo, inclusive os gerenciadores de conexão ADO, OLE DB, Excel e ODBC, o objeto retornado será um `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usa um Gerenciador de conexão gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão, o objeto retornado será um `System.Xml.XmlDocument`.|  
+|XML|`Object`|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usa um Gerenciador de conexão gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão, o objeto retornado será um `System.Xml.XmlDocument`.|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48053357"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Exemplo do CodePlex, [Execute SQL Parameters and Result Sets (em inglês)](http://go.microsoft.com/fwlink/?LinkId=157863), em msftisprodsamples.codeplex.com  
+-   Exemplo do CodePlex, [Execute SQL Parameters and Result Sets (em inglês)](https://go.microsoft.com/fwlink/?LinkId=157863), em msftisprodsamples.codeplex.com  
   
   

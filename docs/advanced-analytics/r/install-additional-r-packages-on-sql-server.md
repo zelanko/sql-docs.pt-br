@@ -1,5 +1,5 @@
 ---
-title: Instalar novos pacotes de R em serviços do SQL Server Machine Learning | Microsoft Docs
+title: Instalar novos pacotes de idioma R - serviços do SQL Server Machine Learning
 description: Adicionar novos pacotes de R para SQL Server 2016 R Services ou serviços SQL Server 2017 Machine Learning (no banco de dados)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697044"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432789"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar novos pacotes de R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

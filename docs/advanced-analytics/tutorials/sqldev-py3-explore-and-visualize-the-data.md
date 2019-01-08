@@ -1,5 +1,5 @@
 ---
-title: Lição 1 explorar e visualizar dados usando o Python e T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Lição 1 explorar e visualizar dados usando o Python e T-SQL – SQL Server Machine Learning
 description: Tutorial que mostra como incorporar o Python no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030966"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645335"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ O procedimento armazenado retorna um Python serializado `figure` objeto como um 
     - O script Python é bastante simple: **matplotlib** `figure` objetos são usados para fazer o gráfico de dispersão e de histograma, e esses objetos são serializados usando a `pickle` biblioteca.
     - O objeto de gráfico do Python é serializado para um **pandas** DataFrame de saída.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ O procedimento armazenado retorna um Python serializado `figure` objeto como um 
 
 2. Agora execute o procedimento armazenado sem argumentos para gerar um gráfico de dados embutidos como consulta de entrada.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Os resultados devem ser algo parecido com isto:
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

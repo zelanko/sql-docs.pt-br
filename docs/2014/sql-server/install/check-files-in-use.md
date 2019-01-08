@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065656"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367766"
 ---
 # <a name="check-files-in-use"></a>Verificar arquivos em uso
   Para evitar a necessidade de reiniciar o Windows após a instalação das atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a página Verificar Arquivos em Uso para identificar processos que estão bloqueando arquivos necessários ao programa de Instalação de atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48065656"
   
  Para eliminar a necessidade de reiniciar o computador após a instalação, a Instalação exibirá uma lista de processos que estão bloqueando arquivos. Pare ou termine os processos e os aplicativos na lista. Em seguida, clique em **Atualizar verificação** para executar a verificação novamente. Clique em **Parar verificação** para encerrar uma verificação que esteja em execução. Se arquivos bloqueados não forem encontrados, a tabela estará vazia. Quando todos os processos bloqueados tiverem sido fechados ou parados, clique em **Avançar** para continuar.  
   
- A Instalação registra as informações nos arquivos de log. Para obter mais informações sobre como exibir os arquivos de log, veja [Como exibir os arquivos de log da instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) e [Como ler um arquivo de log da Instalação do SQL Server](http://go.microsoft.com/fwlink/?LinkID=134490).  
+ A Instalação registra as informações nos arquivos de log. Para obter mais informações sobre como exibir os arquivos de log, consulte [exibir e ler arquivos de Log do SQL Server Setup](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) e [como: Ler um arquivo de Log de instalação do SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  As seguintes informações estão incluídas no arquivo de log:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48065656"
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |Processar|Exibe o nome completo do processo que está usando os arquivos a serem atualizados.|  
 |Tipo|Exibe o tipo de processo.|  

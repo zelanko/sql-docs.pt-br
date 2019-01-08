@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815128"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
   Um sinônimo é um objeto de banco de dados que atende aos seguintes propósitos:  
@@ -64,7 +64,7 @@ ms.locfileid: "48188046"
   
 |||  
 |-|-|  
-|CONTROL|Delete (excluir)|  
+|CONTROL|DELETE|  
 |Execute|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "48188046"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|Delete (excluir)|  
+|UPDATE|DELETE|  
 |Execute|Subseleções|  
   
  Quando você está trabalhando com sinônimos nos contextos declarados anteriormente, o objeto base é afetado. Por exemplo, se um sinônimo fizer referência a um objeto base que está em uma tabela e você inserir uma linha no sinônimo, na verdade você estará inserindo uma linha na tabela referida.  

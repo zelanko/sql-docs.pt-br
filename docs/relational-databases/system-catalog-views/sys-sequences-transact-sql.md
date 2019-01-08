@@ -22,31 +22,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3cffdd8b6040e1740e61043433cc95ca3319f5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832034"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398119"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para objeto de sequência em um banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |\<herdado colunas >||Herda todas as colunas de [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant NOT NULL**|O valor inicial do objeto de sequência. Se o objeto de sequência for reiniciado com ALTER SEQUENCE, ele será reiniciado nesse valor. Quando o objeto de sequência ciclos ele prossegue para a **minimum_value** ou **maximum_value**, e não o **start_value**.|  
 |**increment**|**sql_variant NOT NULL**|O valor usado para incrementar o objeto de sequência depois de cada valor gerado.|  
-|**minimum_value**|**sql_variant NULL**|O valor mínimo que pode ser gerado pelo objeto de sequência. Depois que esse valor for atingido, o objeto de sequência retornará um erro ao tentar gerar mais valores ou reinicializar, se a opção CYCLE tiver sido especificada. Se nenhum MINVALUE foi especificado, essa coluna retornará o valor mínimo que tem suporte do tipo de dados do gerador de sequência.|  
+|**minimum_value**|**sql_variant NULL**|O valor mínimo que pode ser gerado pelo objeto de sequência. Depois que esse valor for atingido, o objeto de sequência retornará um erro ao tentar gerar mais valores ou reinicializar, se a opção CYCLE tiver sido especificada. Se nenhum MINVALUE foi especificado, esta coluna retorna o valor mínimo suportado pelo tipo de dados do gerador de sequência.|  
 |**maximum_value**|**sql_variant NULL**|O valor máximo que pode ser gerado pelo objeto de sequência. Depois que esse valor for atingido, o objeto de sequência começará a retornar um erro ao tentar gerar mais valores ou reinicializar, se a opção CYCLE tiver sido especificada. Se nenhum MAXVALUE foi especificado, essa coluna retornará o valor máximo que tem suporte do tipo de dados do objeto de sequência.|  
 |**is_cycling**|**bit NOT NULL**|Retornará 0 se Nenhum CYCLE foi especificado para o objeto de sequência, e 1, se CYCLE tiver sido especificado.|  
 |**is_cached**|**bit NOT NULL**|Retornará 0 se NO CACHE foi especificado para o objeto de sequência, e 1, se CACHE tiver sido especificado.|  
 |**Tamanho_do_cache**|**int NULL**|Retorna o tamanho do cache especificado para o objeto de sequência. Essa coluna conterá NULL se a sequência tiver sido criada com a opção NO CACHE ou se CACHE tiver sido especificado sem especificar um tamanho de cache. Se o valor especificado pelo tamanho de cache for maior que o número máximo de valores que podem ser retornados pelo objeto de sequência, esse tamanho de cache que não pode ser obtido ainda será exibido.|  
-|**system_type_id**|**tinyint NOT NULL**|ID do tipo do sistema para o tipo de dados do objeto de sequência.|  
+|**system_type_id**|**tinyint NOT NULL**|ID do tipo de sistema para o tipo de dados do objeto de sequência.|  
 |**user_type_id**|**int NOT NULL**|ID do tipo de dados do objeto de sequência conforme definido pelo usuário.|  
-|**Precisão**|**tinyint NOT NULL**|A precisão máxima do tipo de dados.|  
+|**precisão**|**tinyint NOT NULL**|A precisão máxima do tipo de dados.|  
 |**scale**|**tinyint NOT NULL**|A escala máxima do tipo de dados. A escala é retornada junto com a precisão para dar metadados completos aos usuários. A escala é sempre 0 para objetos de sequência porque apenas tipos inteiros são permitidos.|  
 |**Current_value**|**sql_variant NOT NULL**|O último valor forçado. Ou seja, o valor retornado da execução mais recente da função NEXT VALUE FOR ou o último valor da execução de **sp_sequence_get_range** procedimento. Retornará o valor de START WITH se a sequência nunca tiver sido usada.|  
 |**is_exhausted**|**bit NOT NULL**|0 indica que mais valores podem ser gerados a partir da sequência. 1 indica que o objeto de sequência atingiu o parâmetro MAXVALUE e a sequência não está definida como CYCLE. A função NEXT VALUE FOR retornará um erro até que a sequência seja reiniciada com ALTER SEQUENCE.|  

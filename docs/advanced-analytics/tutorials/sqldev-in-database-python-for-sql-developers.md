@@ -1,5 +1,5 @@
 ---
-title: No banco de dados análise do Python para desenvolvedores do SQL | Microsoft Docs
+title: Tutorial de análise do Python no banco de dados para desenvolvedores do SQL - aprendizagem de máquina do SQL Server
 description: Saiba como incorporar código Python em procedimentos armazenados do SQL Server e funções T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560373"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596677"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Análise do Python no banco de dados para desenvolvedores do SQL
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Análise de Python no banco de dados para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste tutorial para programadores SQL, saiba mais sobre a integração do Python criando e implantando uma solução usando de aprendizado de máquina baseada em Python uma [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. 

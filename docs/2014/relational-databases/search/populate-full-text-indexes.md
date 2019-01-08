@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545354"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
@@ -45,12 +45,12 @@ ms.locfileid: "48137486"
 
   
 ### <a name="change-tracking-based-population"></a>População com base em controle de alterações  
- Como opção, você pode usar o controle de alterações para manter um índice de texto completo após a população completa inicial. Há uma pequena sobrecarga associada ao controle de alterações porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém uma tabela em que controla as alterações feitas na tabela base desde a última população. Quando o controle de alterações é usada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém um registro das linhas na tabela base ou exibição indexada que foram modificadas por atualizações, exclusões ou inserções. As alterações de dados por meio de WRITETEXT e UPDATETEXT não são refletidas no índice de texto completo e não são coletadas com o controle de alterações.  
+ Como opção, você pode usar o controle de alterações para manter um índice de texto completo após a população completa inicial. Há uma pequena sobrecarga associada ao controle de alterações porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém uma tabela em que controla as alterações feitas na tabela base desde a última população. Quando é usado o controle de alterações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém um registro das linhas da tabela base ou exibição indexada que foram modificadas por atualizações, exclusões ou inserções. As alterações de dados por meio de WRITETEXT e UPDATETEXT não são refletidas no índice de texto completo e não são coletadas com o controle de alterações.  
   
 > [!NOTE]  
->  Para tabelas que contêm um `timestamp` coluna, você pode usar populações incrementais.  
+>  Para tabelas que contêm uma coluna `timestamp`, você pode usar populações incrementais.  
   
- Quando o controle de alterações é habilitada durante a criação de índice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula completamente o novo índice de texto completo imediatamente após sua criação. Consequentemente, as alterações são controladas e propagadas para o índice de texto completo. Há dois tipos de controle de alterações: automático (opção CHANGE_TRACKING AUTO) e manual (opção CHANGE_TRACKING MANUAL). O controle de alterações automático é o comportamento padrão.  
+ Quando o controle de alterações é habilitado durante a criação do índice, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula completamente o novo índice de texto completo logo após sua criação. Consequentemente, as alterações são controladas e propagadas para o índice de texto completo. Há dois tipos de controle de alterações: automático (opção CHANGE_TRACKING AUTO) e manual (opção CHANGE_TRACKING MANUAL). O controle de alterações automático é o comportamento padrão.  
   
  O tipo de controle de alterações determina como o índice de texto completo é populado, como segue:  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137486"
   
      **Para configurar o controle de alterações com população automática**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING AUTO  
   
      Para obter mais informações, consulte o exemplo “E. Alterando um índice de texto completo para usar o controle de alterações automáticas”, mais adiante neste tópico.  
   
 -   População manual  
   
-     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. Porém, eles não serão propagados para o índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX… Instrução START UPDATE POPULATION . É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
+     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. Porém, eles não serão propagados para o índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX... Instrução START UPDATE POPULATION . É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
      **Para começar a controlar alterações com população manual**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING MANUAL  
   
      Para obter mais informações, consulte o exemplo “C. Criando um índice de texto completo com controle de alterações manual" e "D. Executando uma população manual", posteriormente neste tópico.  
   
  **Para desativar o controle de alterações**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>População incremental baseada em carimbo de data e hora  
  Uma população incremental é um mecanismo alternativo para popular um índice de texto completo manualmente. Você pode executar uma população incremental para um índice de texto completo que tem CHANGE_TRACKING definido como MANUAL ou OFF. Se a primeira população em um índice de texto completo for uma população incremental, ele indexará todas as linhas, tornando-a equivalente a uma população completa.  
   
- O requisito para população incremental é que a tabela indexada deve ter uma coluna do `timestamp` tipo de dados. Se uma coluna `timestamp` não existir, a população incremental não poderá ser executada. Uma solicitação para população incremental em uma tabela sem um `timestamp` coluna resulta em uma operação de população completa. Além disso, se nenhum metadado que afeta o índice de texto completo da tabela foi alterado desde a última população, as solicitações de população incremental serão implementadas como populações completas. Isso inclui alterações de metadados geradas pela alteração de qualquer coluna, índice ou definições de índice de texto completo.  
+ O requisito para população incremental é que a tabela indexada deve ter uma coluna do tipo de dados `timestamp`. Se uma coluna `timestamp` não existir, a população incremental não poderá ser executada. Uma solicitação para população incremental em uma tabela sem uma coluna `timestamp` resulta em uma operação de população completa. Além disso, se nenhum metadado que afeta o índice de texto completo da tabela foi alterado desde a última população, as solicitações de população incremental serão implementadas como populações completas. Isso inclui alterações de metadados geradas pela alteração de qualquer coluna, índice ou definições de índice de texto completo.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna `timestamp` para identificar linhas que foram alteradas desde a última população. A população incremental então atualiza o índice de texto completo com linhas adicionadas, excluídas ou modificadas após a última população ou enquanto a última população estava em andamento. Se uma tabela tiver um volume alto de inserções, usar a população incremental poderá ser mais eficiente do que usar a população manual.  
   
- Ao término de uma população, o Mecanismo de Texto Completo registra um novo valor de `timestamp`. Esse valor é o maior `timestamp` valor SQL Gatherer encontrou. Esse valor será usado quando uma população incremental subsequente for iniciada.  
+ Ao término de uma população, o Mecanismo de Texto Completo registra um novo valor de `timestamp`. Esse valor é o maior valor de `timestamp` que o SQL Gatherer encontrou. Esse valor será usado quando uma população incremental subsequente for iniciada.  
   
  Para executar uma população incremental, execute uma instrução ALTER FULLTEXT INDEX usando a cláusula START INCREMENTAL POPULATION.  
   
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>B. Executando uma população completa em tabela  
+### <a name="b-running-a-full-population-on-table"></a>b. Executando uma população completa em tabela  
  O exemplo a seguir executa uma população completa na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` .  
   
 ```  
@@ -184,7 +184,7 @@ GO
      Use esta página para criar ou gerenciar agendas para um trabalho do SQL Server Agent que inicia uma população incremental de tabela na tabela base ou na exibição indexada do índice de texto completo.  
   
     > [!IMPORTANT]  
-    >  Se a tabela base ou exibição não contiver uma coluna do `timestamp` de tipo de dados, uma população completa é executada.  
+    >  Se a tabela base ou a exibição não contiver uma coluna do tipo de dados `timestamp`, uma população completa será executada.  
   
      As opções são as seguintes:  
   
@@ -200,7 +200,7 @@ GO
          Este procedimento abre a caixa de diálogo **Novo Agendamento da Tabela de Indexação de Texto Completo** , em que é possível modificar o agendamento.  
   
         > [!NOTE]  
-        >  Para obter informações sobre como modificar um trabalho, consulte [modificar um trabalho](../../ssms/agent/modify-a-job.md).  
+        >  Para obter informações sobre como modificar um trabalho, veja [Modificar um trabalho](../../ssms/agent/modify-a-job.md).  
   
     -   Para remover um agendamento, selecione-o e clique em **Excluir**.  
   

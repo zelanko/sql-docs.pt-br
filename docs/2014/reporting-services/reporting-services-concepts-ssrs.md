@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094446"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357159"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -58,7 +58,7 @@ ms.locfileid: "48094446"
  Em um site do SharePoint, use a página de administradores de site do SharePoint para gerenciar permissões de acesso em relatórios e conteúdo de site relacionado a relatórios.  
   
  **Agendas**  
- Em um servidor de relatório nativo, você pode agendar relatórios, conjuntos de dados compartilhados e assinaturas para recuperar dados e entregar relatórios e consultas de conjuntos de dados em horários específicos ou fora dos horários de pico. As agendas podem ser executadas uma vez ou continuamente em intervalos de horas, dias, semanas ou meses. Para obter mais informações, consulte [agendas](subscriptions/schedules.md).  
+ Em um servidor de relatório nativo, você pode agendar relatórios, conjuntos de dados compartilhados e assinaturas para recuperar dados e entregar relatórios e consultas de conjuntos de dados em horários específicos ou fora dos horários de pico. As agendas podem ser executadas uma vez ou continuamente em intervalos de horas, dias, semanas ou meses. Para obter mais informações, consulte [Schedules](subscriptions/schedules.md).  
   
  **Assinaturas e entrega**  
  Uma assinatura é uma solicitação para o fornecimento de um relatório em um horário determinado em resposta a um evento, em formato de arquivo do aplicativo especificado na assinatura. As assinaturas são uma alternativa à execução de um relatório sob demanda. Um relatório sob demanda exige que você selecione ativamente o relatório sempre que quiser exibi-lo. Em contraste, as assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório. Você pode entregar relatórios em uma caixa de entrada de email ou em um compartilhamento de arquivos. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48094446"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece uma arquitetura extensível que você pode usar para personalizar soluções de relatório. O servidor de relatório dá suporte aos seguintes tipos de extensões: autenticação personalizada, processamento de dados, processamento de relatórios, renderização e entrega, e as extensões que estão disponíveis para os usuários são configuráveis no arquivo de configuração RSReportServer.config. Por exemplo, você pode limitar os formatos de exportação que o visualizador de relatório tem permissão para usar. As extensões de entrega e de processamento de relatório são opcionais, mas necessárias se você desejar dar suporte aos controles de distribuição e personalização. Para obter mais informações, consulte [Extensões &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Acesso ao relatório**  
- O acesso sob demanda permite que os usuários selecionem os relatórios a partir de uma ferramenta de visualização de relatório. Dependendo da configuração do servidor de relatório, você pode usar o Gerenciador de relatórios, uma [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web part, uma biblioteca do SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint, um controle ReportViewer inserido ou um navegador com URL acesso. Para obter mais informações sobre o acesso sob demanda aos relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ O acesso sob demanda permite que os usuários selecionem os relatórios a partir de uma ferramenta de visualização de relatório. Dependendo da configuração do servidor de relatório, você poderá usar o Gerenciador de Relatórios, uma Web Part do [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0, uma biblioteca do SharePoint quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] estiver instalado no modo integrado do SharePoint, um controle ReportViewer inserido ou um navegador com o uso de acesso de URL. Para obter mais informações sobre o acesso sob demanda aos relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  As assinaturas são uma alternativa à execução de um relatório sob demanda. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094446"
  **Relatórios e definições de relatório**  
  **RDL.** Uma definição de relatório é um arquivo XML em conformidade com uma gramática XML chamada linguagem RDL. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], você cria uma definição de relatório em uma ferramenta, como o Construtor de Relatórios ou o Designer de Relatórios. A definição inclui elementos que definem as conexões de fontes de dados, as consultas usadas para recuperar dados, as expressões, os parâmetros, as imagens, as caixas de texto, as tabelas e qualquer outro layout de tempo de design. Para obter mais informações, consulte [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Uma definição de relatório no RDLX é um arquivo RDL com extensões internas que habilita a experiência de visualização do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para mais informações, consulte [Visão Geral do Power View](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Uma definição de relatório no RDLX é um arquivo RDL com extensões internas que habilita a experiência de visualização do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para mais informações, consulte [Visão Geral do Power View](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** O Designer de Relatórios do Visual Studio produz arquivos de definição de relatório de cliente (.rdlc) em formato XML a serem usados com o controle ReportViewer.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48094446"
      As credenciais são usadas para criar uma fonte de dados inserida, para executar uma consulta ou para recuperar dados durante o processamento de relatórios. O proprietário da fonte de dados determina o tipo de credenciais que você deve usar para acessar os dados. As credenciais são gerenciadas independentemente da conexão de dados em um servidor de relatório, em um site do SharePoint ou em um computador local em um ambiente de criação de relatório. Dependendo do tipo de fonte de dados, as credenciais podem ser salvas para evitar a solicitação ou podem ser definidas para solicitar o acesso de cada usuário. As credenciais de que você precisa variam de acordo com a origem da conexão à fonte de dados: do computador ou do servidor de relatório. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
  **Conjuntos de dados de relatório**  
- Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. O conjunto de dados depende da conexão de dados que contém informações sobre a fonte de dados externa. Os dados em si não são incluídos na definição de relatório. O conjunto de dados contém um comando de consulta, uma coleção de campos, parâmetros, filtros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e agrupamento. Existem dois tipos de conjuntos de dados:  
+ Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. O conjunto de dados depende da conexão de dados que contém informações sobre a fonte de dados externa. Os dados em si não são incluídos na definição de relatório. O conjunto de dados contém um comando de consulta, uma coleção de campos, parâmetros, filtros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e ordenação. Existem dois tipos de conjuntos de dados:  
   
 -   **Conjuntos de dados compartilhados.** Um conjunto de dados compartilhado é publicado em um servidor de relatório e pode ser usado por vários relatórios. Um conjunto de dados compartilhado deve ser baseado em uma fonte de dados compartilhada. Um conjunto de dados compartilhado pode ser armazenado em cache e programado, criando um plano de atualização do cache.  
   

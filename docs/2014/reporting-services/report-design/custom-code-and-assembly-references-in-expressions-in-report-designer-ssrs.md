@@ -20,12 +20,12 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 834fdb8af069a43f8c0ba1c3960d4516f8400767
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a6f3951ac5b23a84424813b699b2512c15def9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372818"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
   É possível adicionar referências ao código personalizado inserido em um relatório ou aos assemblies personalizados criados e salvos em seu computador e implantá-los no servidor de relatório. Use o código inserido para constantes personalizadas, funções complexas ou funções usadas várias vezes em um mesmo relatório. Use assemblies de código personalizado para manter o código em um único local e compartilhá-lo para uso em vários relatórios. O código personalizado pode incluir novas constantes, variáveis, funções ou sub-rotinas personalizadas. É possível incluir referências somente leitura em coleções internas, como a coleção de Parâmetros. No entanto, não é possível passar conjuntos de valores de dados do relatório para funções personalizadas. Especificamente, não há suporte para agregações personalizadas.  
@@ -51,16 +51,16 @@ ms.locfileid: "48152856"
 2.  Visualizar um relatório com referências a assemblies personalizados no modo local.  
   
 ##  <a name="Common"></a> Incluindo referências em funções usadas frequentemente  
- Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Por conveniência, é possível exibir as funções usadas mais frequentemente na caixa de diálogo **Expressão** , onde elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
+ Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para sua conveniência, você pode exibir as funções mais comumente usadas no **expressão** caixa de diálogo, em que elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
   
  Para usar uma função interna, clique duas vezes no nome da função no painel Item. Uma descrição da função é exibida no painel Descrição e um exemplo de chamada da função é exibido no painel Exemplo. No painel de código, quando você digita o nome da função seguido por um parêntese esquerdo **(**, a ajuda do IntelliSense exibe cada sintaxe válida para a chamada de função. Por exemplo, para calcular o valor máximo de um campo denominado `Quantity` em uma tabela, adicione a expressão simples `=Max(` ao painel Código e use as marcas inteligentes para exibir todas as sintaxes válidas possíveis para a chamada da função. Para concluir este exemplo, digite `=Max(Fields!Quantity.Value)`.  
   
- Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>e [Membros da Biblioteca de Tempo de Execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
+ Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>e [Membros da Biblioteca de Tempo de Execução do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
 ##  <a name="NotCommon"></a> Incluindo referências em funções usadas com menor frequência  
  Para incluir uma referência em outros namespaces de CLR usados com menor frequência, você deve usar uma referência totalmente qualificada, por exemplo, <xref:System.Text.StringBuilder>. O IntelliSense não tem suporte no painel de código da caixa de diálogo **Expressão** para essas funções usadas com menor frequência.  
   
- Para obter mais informações, consulte [Membros da biblioteca em tempo de execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
+ Para obter mais informações, consulte [Membros da biblioteca em tempo de execução do Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
 ##  <a name="External"></a> Incluindo referências em assemblies externos  
  Para incluir uma referência em uma classe em um assembly externo, você deve identificar o assembly para o processador de relatório. Use a página **Referências** da caixa de diálogo **Propriedades do Relatório** para especificar o nome totalmente qualificado do assembly a ser adicionado ao relatório. Na expressão, você deve usar o nome totalmente qualificado para a classe no assembly. As classes em um assembly externo não são exibidas na caixa de diálogo **Expressão** . Você deve fornecer o nome correto para a classe. Um nome totalmente qualificado inclui o namespace, o nome da classe e o nome do membro.  
@@ -68,13 +68,13 @@ ms.locfileid: "48152856"
 ##  <a name="Embedded"></a> Incluindo código inserido  
  Para adicionar código inserido a um relatório, use a guia Código da caixa de diálogo **Propriedades do Relatório** . O bloco de código criado pode conter vários métodos. Os métodos no código inserido devem ser gravados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e devem ser baseados em instância. O processador de relatório adiciona referências automaticamente para os namespaces System.Convert e System.Math. Use a página **Referências** da caixa de diálogo **Propriedades do Relatório** para adicionar referências adicionais do assembly. Para obter mais informações, consulte [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Os métodos no código inserido são disponibilizados por meio de um membro do `Code` definido globalmente. Você os acessa consultando o `Code` membro e o nome do método. O exemplo a seguir chama o método `ToUSD`, que converte o valor no `StandardCost` campo para um valor em dólar:  
+ Os métodos no código inserido são disponibilizados por meio de um membro do `Code` definido globalmente. Você os acessa consultando o membro do `Code` e o nome do método. O exemplo a seguir chama o método `ToUSD` que converte o valor no campo `StandardCost` para um valor em dólar:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Para fazer referência a coleções internas em seu código personalizado, inclua uma referência a interno `Report` objeto:  
+ Para fazer referência às coleções internas no código personalizado, inclua uma referência no objeto `Report` interno:  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -89,7 +89,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- Embora as constantes personalizadas não apareçam na categoria de **Constantes** na caixa de diálogo **Expressão** (que exibe apenas constantes internas), é possível adicionar referências a elas por meio de qualquer expressão, conforme mostrado nos exemplos a seguir. Em uma expressão, uma constante personalizada é tratada um `Variant`.  
+ Embora as constantes personalizadas não apareçam na categoria de **Constantes** na caixa de diálogo **Expressão** (que exibe apenas constantes internas), é possível adicionar referências a elas por meio de qualquer expressão, conforme mostrado nos exemplos a seguir. Em uma expressão, uma constante personalizada é tratada como uma `Variant`.  
   
 ```  
 =Code.MyNote  
@@ -98,7 +98,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- O exemplo a seguir inclui a referência de código e a implementação de código da função `FixSpelling`, que substitui o texto `"Bicycle"` para todas as ocorrências do texto "Bike" no `SubCategory` campo.  
+ O exemplo a seguir inclui a referência e a implementação de código da função `FixSpelling` que substitui o texto `"Bicycle"` para todas as ocorrências do texto "Bike" no campo `SubCategory`.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -122,7 +122,7 @@ End Function
   
  A tabela a seguir inclui exemplos de como fazer referência à coleção interna de `Parameters` no código personalizado:  
   
-|Description|Referência em expressão|Definição de código personalizado|  
+|Descrição|Referência em expressão|Definição de código personalizado|  
 |-----------------|-----------------------------|----------------------------|  
 |Passando uma coleção de parâmetros globais inteira para código personalizado.<br /><br /> Esta função retorna o valor de um parâmetro de relatório específico *MyParameter*.|`=Code.DisplayAParameterValue(Parameters)`|`Public Function DisplayAParameterValue(`<br /><br /> `ByVal parameters as Parameters) as Object`<br /><br /> `Return parameters("MyParameter").Value`<br /><br /> `End Function`|  
 |Passando um parâmetro individual para código personalizado.<br /><br /> Este exemplo retorna o valor do parâmetro passado. Se o parâmetro for um parâmetro de vários valores, a cadeia de caracteres de retorno será uma concatenação de todos os valores.|`=Code.ShowParametersValues(Parameters!DayOfTheWeek)`|`Public Function ShowParameterValues(ByVal parameter as Parameter)` <br />  `as String` <br /> `Dim s as String`  <br />  `If parameter.IsMultiValue then` <br />  `s = "Multivalue: "`  <br /> `For i as integer = 0 to parameter.Count-1` <br />  `s = s + CStr(parameter.Value(i)) + " "`  <br />  `Next` <br /> `Else` <br /> `s = "Single value: " + CStr(parameter.Value)` <br /> `End If` <br />  `Return s` <br /> `End Function`|  
@@ -130,7 +130,7 @@ End Function
 ##  <a name="Custom"></a> Incluindo referências a código em assemblies personalizados  
  Para usar assemblies personalizados em um relatório, você deve primeiro criar o assembly, torná-lo disponível para o Designer de Relatórios, adicionar uma referência ao assembly no relatório e usar uma expressão no relatório para fazer referência aos métodos contidos nesse assembly. Quando o relatório é implantado no servidor de relatório, você deve também implantar o assembly personalizado no servidor de relatório.  
   
- Para obter informações sobre como criar um assembly personalizado e disponibilizá-la para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [usando Assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Para obter informações sobre como criar um assembly personalizado e torná-lo disponível para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Usando assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
  Para consultar o código personalizado em uma expressão, você deve chamar o membro de uma classe dentro do assembly. A maneira de fazer isso depende do método ser estático ou baseado em instância. Os métodos estáticos dentro de um assembly personalizado estão disponíveis globalmente dentro do relatório. É possível acessar métodos estáticos em expressões especificando o namespace, a classe e o nome do método. O exemplo a seguir chama o método `ToGBP`, que converte o valor de **StandardCost** valor de dólar em Libra esterlina:  
   
@@ -161,11 +161,11 @@ End Function
  Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em tempo de execução, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicione o código a um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [Usando Assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Adicionar código a um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
+ [Usando assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Exemplos de relatório (Construtor de Relatórios e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

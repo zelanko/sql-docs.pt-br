@@ -14,21 +14,21 @@ ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02b933104a3106d95f6760cbdcf0abb347716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513484"
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
 Em aplicativos modernos baseados em tela, o usuário rola para trás e para frente por meio dos dados. Para tais aplicativos, retornando a uma linha extraída anteriormente é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, o armazena em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode mover para trás e para a frente no conjunto de resultados.  
   
  Um *cursor rolável* é comumente usado em aplicativos modernos baseados em tela, no qual o usuário rola para frente e para trás por meio dos dados. No entanto, aplicativos devem usar cursores roláveis somente quando cursores de somente avanço não fará o trabalho, como cursores roláveis são geralmente mais caros do que cursores de somente avanço.  
   
- A capacidade de voltar para levanta uma questão não é aplicável a cursores de somente avanço: deve a um cursor rolável detectar as alterações feitas às linhas buscadas previamente? Ou seja, ele deve detectar linhas recentemente inseridas atualizadas e excluídas?  
+ A capacidade de retroceder levanta uma pergunta não é aplicável a cursores de somente avanço: Um cursor rolável deve detectar as alterações feitas em linhas buscadas anteriormente? Ou seja, ele deve detectar linhas recentemente inseridas atualizadas e excluídas?  
   
- Essa pergunta surge porque a definição de um resultado definido — o conjunto de linhas que corresponda a determinados critérios — não informa quando linhas são verificadas para ver se ele correspondem a esses critérios, nem faz estado se linhas devem conter os mesmos dados toda vez que elas sejam buscadas. A omissão antiga torna possível para cursores roláveis detectar se linhas foram inseridas ou excluídas, enquanto o último torna possível para que eles possam detectar dados atualizados.  
+ Essa pergunta surge porque a definição de um conjunto de resultados – o conjunto de linhas que corresponda a determinados critérios - não informa quando linhas são verificadas para ver se elas correspondem a esses critérios, nem faz isso de estado se linhas devem conter os mesmos dados toda vez que elas sejam buscadas. A omissão antiga torna possível para cursores roláveis detectar se linhas foram inseridas ou excluídas, enquanto o último torna possível para que eles possam detectar dados atualizados.  
   
  A capacidade de detectar alterações às vezes é útil, às vezes, não. Por exemplo, um aplicativo de contabilidade precisa de um cursor que ignora todas as alterações; livros de balanceamento é impossível se o cursor mostra as alterações mais recentes. Por outro lado, um sistema de reserva de companhia aérea precisa de um cursor que mostra as alterações mais recentes para os dados. sem cursor, ele deve repetir continuamente o banco de dados para mostrar a disponibilidade mais atualizada de voo.  
   

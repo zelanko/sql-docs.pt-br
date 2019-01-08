@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704364"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591771"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=** ] **'***tabela***'**  
+ [  **@objname=** ] **'**_tabela_**'**  
  É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *tabela* está **nvarchar(776)**, sem padrão.  
   
- [  **@nomsg=**] **'***no_message***'**  
+ [  **@nomsg=**] **'**_no_message_**'**  
  É um parâmetro opcional que imprime o nome da tabela. *no_message* está **varchar(5)**, com um padrão de **msg**. **nomsg** suprime a impressão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -55,7 +55,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** exibe uma coluna indexada decrescente se ela participou de chaves primárias. A coluna indexada de maneira decrescente será listada no conjunto de resultados com um sinal de menos (-) após seu nome. O padrão, uma coluna indexada de maneira crescente, será listada apenas por seu nome.  
   
 ## <a name="remarks"></a>Comentários  
- Executar **sp_help * * * tabela* relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
+ Executando **sp_help**_tabela_ relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

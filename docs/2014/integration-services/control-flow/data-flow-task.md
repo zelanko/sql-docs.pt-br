@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366858"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
@@ -45,18 +44,18 @@ ms.locfileid: "48069576"
  ![Fluxos de dados](../media/mw-dts-09.gif "Fluxos de dados")  
   
 ## <a name="log-entries"></a>Entradas de log  
- O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
-|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
-|`OnPipelinePostPrimeOutput`|Indica que o componente completou sua última chamada para o `PrimeOutput` método. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, essa entrada de log significa que o componente tem linhas de processamento concluídas.|  
-|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método `ProcessInput`. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePostPrimeOutput`|Indica que o componente completou sua última chamada para o método `PrimeOutput`. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, essa entrada de log significa que o componente tem linhas de processamento concluídas.|  
+|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do método `ProcessInput`. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que o componente está prestes a receber sua chamada a partir do método `PrimeOutput`. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
 |`OnPipelineRowsSent`|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método `ProcessInput`. A entrada de log inclui o nome do componente.|  
 |`PipelineBufferLeak`|Fornece informações sobre qualquer componente que manteve buffers ativos depois que o gerenciador de buffers for desativado. Se um buffer ainda estiver ativo, os recursos de buffers não foram liberados e pode haver perdas de memória. A entrada de log fornece o nome do componente e a ID do buffer.|  
-|`PipelineComponentTime`|Reporta o tempo (em milissegundos) que o componente gastou em cada uma das cinco principais etapas de processamento — Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
+|`PipelineComponentTime`|Reporta o tempo (em milissegundos) que o componente gastou em cada uma das cinco principais etapas de processamento – Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |`PipelineExecutionPlan`|Informa o plano de execução do fluxo de dados. O plano de execução fornece informações sobre como os buffers serão enviados para os componentes. Essas informações, em combinação com a entrada de log PipelineExecutionTrees, descrevem o que está ocorrendo na tarefa de Fluxo de Dados.|  
 |`PipelineExecutionTrees`|Informa as árvores de execução sobre o layout do fluxo de dados. O agendador do mecanismo de fluxo de dados usa as árvores para criar o plano de execução do fluxo de dados.|  
 |`PipelineInitialization`|Fornece informações de inicialização sobre a tarefa. Essas informações incluem os diretórios para armazenamento temporário de dados de BLOB, o tamanho do buffer padrão e o número de linhas em um buffer. Dependendo da configuração da tarefa de Fluxo de Dados, várias entradas de log podem ser gravadas.|  
@@ -67,7 +66,7 @@ ms.locfileid: "48069576"
   
 -   [Contadores de desempenho](../performance/performance-counters.md)  
   
--   [Recursos de desempenho de fluxo de dados](../data-flow/data-flow-performance-features.md)  
+-   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Mensagens de amostra de uma tarefa de Fluxo de Dados  
  A tabela a seguir relaciona as mensagens de amostra de entradas de log para um pacote simples. O pacote usa uma origem OLE DB para extrair dados de uma tabela, uma transformação Classificar para classificar os dados e um destino OLE DB para gravar os dados em uma tabela diferente.  
@@ -89,10 +88,10 @@ ms.locfileid: "48069576"
   
  Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento `OnPipelineRowsSent` quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|coluna|Description|Valor|  
+|coluna|Descrição|Valor|  
 |------------|-----------------|-----------|  
-|**PathID**|O valor da `ID` propriedade do caminho entre a origem de OLE DB e a transformação classificação.|1185|  
-|**PathName**|O valor da `Name` propriedade do caminho.|Saída da origem OLE DB|  
+|**PathID**|O valor da propriedade `ID` do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
+|**PathName**|O valor da propriedade `Name` do caminho.|Saída da origem OLE DB|  
 |**ComponentID**|O valor da `ID` propriedade da transformação classificar.|1180|  
 |**ComponentName**|O valor da propriedade `Name` da transformação Classificação.|Sort|  
 |**InputID**|O valor da propriedade `ID` da entrada para a transformação Classificação.|1181|  
@@ -109,12 +108,12 @@ ms.locfileid: "48069576"
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuração programática da tarefa Fluxo de Dados  
  Para obter mais informações sobre como adicionar uma tarefa de fluxo de dados programaticamente em um pacote e definir propriedades de fluxo de dados, clique no tópico a seguir:  
   
--   [Adicionar a tarefa de Fluxo de Dados programaticamente](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [Adicionando a tarefa Fluxo de Dados programaticamente](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Distribuidor de Dados Balanceados](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com.  
+ Vídeo, [Distribuidor de Dados Balanceados](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com.  
   
   

@@ -20,19 +20,19 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506360"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID da auditoria.|  
 |**name**|**sysname**|Nome da auditoria.|  
@@ -40,11 +40,11 @@ ms.locfileid: "47742666"
 |**create_date**|**datetime**|Data em UTC quando a auditoria foi criada.|  
 |**modify_date**|**datetime**|Data em UTC da última alteração feita na especificação de auditoria.|  
 |**principal_id**|**int**|ID do proprietário da auditoria, conforme registrado no servidor.|  
-|**type**|**char(2)**|Tipo de auditoria:<br /><br /> SL – log de eventos de Segurança do NT<br /><br /> AL – log de eventos de Aplicativos do NT<br /><br /> FL – arquivo no sistema de arquivos|  
+|**type**|**char(2)**|Tipo de auditoria:<br /><br /> SL – log de eventos de segurança do NT<br /><br /> AL – log de eventos do aplicativo NT<br /><br /> FL – arquivo no sistema de arquivos|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> 0 – Continuar<br /><br /> 1 – Desligar instância de servidor<br /><br /> 2 – Falha na operação|  
+|**on_failure**|**tinyint**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> 0 - continuar<br /><br /> 1 – desligar instância de servidor<br /><br /> 2 - operação com falha|  
 |**on_failure_desc**|**nvarchar(60)**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – Desabilitado<br /><br /> 1 – Habilitado|  
+|**is_state_enabled**|**tinyint**|0 - desabilitado<br /><br /> 1 – Habilitado|  
 |**queue_delay**|**int**|Tempo máximo, em milissegundos, de espera antes de gravar em disco. Se for 0, a auditoria garantirá uma gravação antes que o evento possa continuar.|  
 |**predicado**|**nvarchar(3000)**|A expressão de predicado que é aplicada ao evento.|  
   

@@ -1,22 +1,22 @@
 ---
-title: Como chamar Java do SQL | Microsoft Docs
+title: Como chamar Java de SQL - serviços do SQL Server Machine Learning
 description: Saiba como chamar classes Java de procedimentos armazenados do SQL Server usando a extensão no SQL Server 2019 da linguagem de programação Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714866"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644755"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>Como chamar Java de 2019 do SQL Server
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>Como chamar Java da visualização do SQL Server de 2019
 
 Ao usar o [extensão da linguagem Java](extension-java.md), o [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema, procedimento armazenado é a interface usada para chamar o tempo de execução do Java. Permissões no banco de dados se aplicam à execução de código Java.
 
@@ -33,7 +33,7 @@ Este artigo explica os detalhes de implementação para classes Java e métodos 
 * "params" é usado para passar parâmetros para uma classe Java. Chamar um método que requer argumentos não for compatível, que torna a única maneira de passar valores de argumento para o seu método de parâmetros. 
 
 > [!Note]
-> Essa observação reafirmar compatíveis e sem suportadas operações específicas para Java no CTP 2.0.
+> Essa observação reafirmar compatíveis e sem suportadas operações específicas para Java no CTP 2. x.
 > * No procedimento armazenado, há suporte para parâmetros de entrada. Não são parâmetros de saída.
 > * Transmissão usando o parâmetro de sp_execute_external_script **@r_rowsPerRead** não tem suporte.
 > * Usando o particionamento **@input_data_1_partition_by_columns** não tem suporte.
@@ -41,7 +41,7 @@ Este artigo explica os detalhes de implementação para classes Java e métodos 
 
 ## <a name="call-spexecuteexternalscript"></a>Chamar sp_execute_external_script
 
-O [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema, procedimento armazenado é a interface usada para chamar o tempo de execução do Java. O exemplo a seguir mostra um sp_execute_external_script usando os parâmetros e a extensão de Java para especificar o caminho, o script e o seu código personalizado.
+Aplicável ao Windows e Linux, o [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema, procedimento armazenado é a interface usada para chamar o tempo de execução do Java. O exemplo a seguir mostra um sp_execute_external_script usando os parâmetros e a extensão de Java para especificar o caminho, o script e o seu código personalizado.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -72,7 +72,7 @@ Depois que você tiver compilado seu classe Java ou classes e colocado o arquivo
 * No Linux, separe os caminhos no CLASSPATH com dois-pontos ":".
 * No Windows, separe os caminhos no CLASSPATH com ponto e vírgula ";"
 
-**Opção 2: Registrar uma variável do sistema**
+**Opção 2: Registre-se uma variável de sistema**
 
 Assim como você criou uma variável de sistema para os executáveis do JDK, você pode criar uma variável de sistema para caminhos de código. Para fazer isso, criou uma variável de ambiente do sistema chamada "CLASSPATH"
 
@@ -152,6 +152,8 @@ Este NullMap deve ser preenchida com o número esperado de colunas e linhas que 
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Próximas etapas
 

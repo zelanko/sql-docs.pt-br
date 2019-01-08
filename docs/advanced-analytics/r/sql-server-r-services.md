@@ -1,5 +1,5 @@
 ---
-title: R Services no SQL Server 2016 | Microsoft Docs
+title: R Services no SQL Server 2016 – serviços de aprendizado de máquina do SQL Server
 description: R no SQL Server para tarefas de R integradas em dados relacionais, incluindo a ciência de dados e modelagem estatística, análise preditiva, visualização de dados e muito mais.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659925"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596507"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services no SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ R Services é um complemento para uma instância do mecanismo de banco de dados 
 
 R Services inclui uma distribuição de base do R, sobreposta com os pacotes de R do enterprise da Microsoft para que você pode carregar e processar grandes quantidades de dados em vários núcleos e agregar os resultados em uma única saída consolidada. Funções de R e algoritmos da Microsoft são desenvolvidos para o dimensionamento e o utilitário: fornecimento de ponta algoritmos de machine learning em um produto de servidor comercial engenharia, modelagem estatística, visualizações de dados e análise preditiva e suporte da Microsoft. 
 
-Bibliotecas do R incluem RevoScaleR, MicrosoftML e outros. Como o R Services é integrado com o mecanismo de banco de dados, você pode manter a análise próxima aos dados e eliminar os custos e riscos de segurança associados à movimentação de dados.
+Incluem bibliotecas do R [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)**](ref-r-microsoftml.md)e outros. Como o R Services é integrado com o mecanismo de banco de dados, você pode manter a análise próxima aos dados e eliminar os custos e riscos de segurança associados à movimentação de dados.
 
 > [!Note]
 > R Services foi renomeado no SQL Server 2017 a ser [serviços do SQL Server Machine Learning](../what-is-sql-server-machine-learning.md), refletindo a adição do Python.
@@ -31,10 +31,10 @@ Bibliotecas do R incluem RevoScaleR, MicrosoftML e outros. Como o R Services é 
 
 SQL Server 2016 é apenas o R. A tabela a seguir descreve os recursos no SQL Server 2016.
 
-| Componente | Description |
+| Componente | Descrição |
 |-----------|-------------|
 | Serviço do Launchpad do SQL Server | Um serviço que gerencia a comunicação entre os tempos de execução R externos e a instância do SQL Server. |
-| Pacotes do R | [**RevoScaleR** ](revoscaler-overview.md) é a biblioteca principal para funções de R. escalonável nessa biblioteca estão entre mais amplamente usados. Transformações de dados e manipulação, resumo estatístico, visualização e muitas formas de modelagem e as análises são encontradas nessas bibliotecas. Além disso, funções nessas bibliotecas distribuir automaticamente as cargas de trabalho entre os núcleos disponíveis para processamento paralelo, com a capacidade de trabalhar em partes de dados que são coordenados e gerenciados pelo mecanismo de cálculo.  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) fornece funções auxiliares para colocar os scripts do R em um procedimento armazenado T-SQL, registrando um procedimento armazenado com um banco de dados e executar o procedimento armazenado de um ambiente de desenvolvimento de R.<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) é para especificar consultas MDX em R.|
+| Pacotes do R | [**RevoScaleR** ](ref-r-revoscaler.md) é a biblioteca principal para funções de R. escalonável nessa biblioteca estão entre mais amplamente usados. Transformações de dados e manipulação, resumo estatístico, visualização e muitas formas de modelagem e as análises são encontradas nessas bibliotecas. Além disso, funções nessas bibliotecas distribuir automaticamente as cargas de trabalho entre os núcleos disponíveis para processamento paralelo, com a capacidade de trabalhar em partes de dados que são coordenados e gerenciados pelo mecanismo de cálculo.  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de sentimento, análise de imagem e análise de texto. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fornece funções auxiliares para colocar os scripts do R em um procedimento armazenado T-SQL, registrando um procedimento armazenado com um banco de dados e executar o procedimento armazenado de um ambiente de desenvolvimento de R.<br/>[**olapR** ](ref-r-olapr.md) é para especificar consultas MDX em R.|
 | Microsoft R Open MRO) | [**MRO** ](https://mran.microsoft.com/open) é a distribuição do código-fonte aberto da Microsoft do R. O pacote e o interpretador são incluídos. Sempre use a versão do MRO instalado pela instalação. |
 | Ferramentas do R | Janelas do console de R e prompts de comando são ferramentas padrão em uma distribuição de R.  |
 | Exemplos de R e scripts |  Pacotes de R e RevoScaleR do código-fonte aberto incluem conjuntos de dados internos para que você pode criar e executar o script usando os dados previamente instalados |
@@ -54,16 +54,16 @@ Por fim, se você estiver usando um [servidor autônomo](r-server-standalone.md)
 
 Iniciar com a instalação, anexar os binários a ferramenta de desenvolvimento favorita e escrever seu primeiro script.
 
-**Etapa 1:** instalar e configurar o software. 
+**Etapa 1:** Instalar e configurar o software. 
 
 + [Instalar o SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
 
-**Etapa 2:** obter experiência prática usando qualquer um destes tutoriais:
+**Etapa 2:** Obter experiência prática usando qualquer um destes tutoriais:
 
-+ [Tutorial: Aprenda a análise de no banco de dados usando o R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [Tutorial: Passo a passo de ponta a ponta com R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Tutorial: Aprenda a análise no banco de dados usando o R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Instruções passo a passo de ponta a ponta com R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**Etapa 3:** adicionar seus pacotes de R favoritas e usá-los junto com pacotes fornecidos pela Microsoft
+**Etapa 3:** Adicione seus pacotes de R favoritas e usá-los junto com pacotes fornecidos pela Microsoft
 
 + [Gerenciamento de pacotes de R para SQL Server](install-additional-r-packages-on-sql-server.md)
 

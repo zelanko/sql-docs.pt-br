@@ -24,12 +24,12 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: debc97cdbf7397779c5a2baec4d1dbb4bbbd8d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91aa2823238691953e7219b027368e642784fdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214253"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350369"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
   Depois de adicionar um mapa ou uma camada do mapa a um relatório usando um assistente, você poderá alterar a aparência do mapa no relatório. Você pode fazer melhorias considerando as seguintes ideias:  
@@ -126,11 +126,11 @@ ms.locfileid: "48214253"
  Para obter mais informações sobre as camadas, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Alterar agrupamento de dados para a camada  
- Você pode personalizar o modo de agregar dados espaciais para suas próprias formas. Para definir as propriedades do grupo para uma camada, selecione a camada no painel Mapa e, no painel Propriedades para a camada, clique em **Grupo**e clique nas reticências (…) para abrir as propriedades do grupo. Nesta caixa de diálogo, você pode especificar expressões de grupo, criar variáveis de grupo e filtrar dados que são usados para agrupar.  
+ Você pode personalizar o modo de agregar dados espaciais para suas próprias formas. Para definir as propriedades do grupo de uma camada, selecione a camada no painel Mapa e, no painel Propriedades da camada, clique em **Grupo** e, em seguida, clique nas reticências (…) para abrir as propriedades do grupo. Nesta caixa de diálogo, você pode especificar expressões de grupo, criar variáveis de grupo e filtrar dados que são usados para agrupar.  
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
- Para obter mais informações, consulte [Dicas de mapa: como importar arquivos de forma no SQL Server e agregar dados espaciais](http://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obter mais informações, consulte [dicas de mapa: Como importar arquivos de forma para o SQL Server e agregar dados espaciais](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   
